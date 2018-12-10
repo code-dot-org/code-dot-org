@@ -158,8 +158,8 @@ fi:
       MC_HOC_2017_04: Auta Agentia tekemään tie joen leveämmän osan yli muuttamalla edellisen tehtävän silmukkaa.
       MC_HOC_2017_04POINT5_Cole: |-
         Pääsit ulos suosta!  Vie palaaja seuraavaksi turvallisesti oranssiin ruutuun. 
-
-
+        
+        
         Auta Agentia raivaamaan polku löytämällä yksinkertainen kuvio ja käytä silmukoita kahden ensimmäisen painelaatan ylittämiseen.
       MC_HOC_2017_04POINT5_RYAN: "Pääsit toiselle puolelle! \\r\n\\r\nVie {currentPlayerName} seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Pääsit toiselle puolelle! \\r\n\\r\nVie {currentPlayerName} seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\\r\n"
@@ -168,8 +168,8 @@ fi:
       MC_HOC_2017_04_Kiki: "Sisäänkäynti Salaiseen Lehtoon johti tälle kauniille keitaalle!  Tämän tason selvittämiseksi pelaajan on päästävä oranssin ruutuun mökissä.  \\r\n\\r\nAuta Agentia toisto-silmukkaa käyttäen pääsemään mökin oven avaavalle painelaatalle."
       MC_HOC_2017_05: |-
         Silmukat eivät ole aina hyödyllisiä. 
-
-
+        
+        
         Nämä kaktukset eivät kasva selkeässä kuviossa, joten silmukka ei poistaisi niitä kunnolla. Sen sijaan annamme sinulle toiminnon tuhoa ja liikuta, joka tekee raskaan työn puolestasi aina, kun Agent kohtaa esteen.
       MC_HOC_2017_05_Cole: "Voi ei, silta ei ole käytössä! \\r\n\\r\nKoodaa Agent rakentamaan silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName} pääsee **lapion** [diamond_shovel] luo."
       MC_HOC_2017_05_Cole_2019: "Voi ei, silta ei ole käytössä! \\r\n\\r\nKoodaa Agent rakentamaan silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName} pääsee **lapion** [diamond_shovel] luo."
@@ -190,13 +190,13 @@ fi:
       MC_HOC_2017_08_Kiki: "Nyt sinun on kaktusten tuhoamisen sijaan asetettava kiviä laavan päälle ja sitten tuhottava punakiveä.  \\r\n\\r\nMuuta toiminto toimimaan tällä tasolla."
       MC_HOC_2017_08_RY: |-
         Nyt sinulla on käytettävissä **KAKSI** toimintoa! 
-
-
+        
+        
         Rakenna niillä nopeasti silta laavan yli pelaajalle {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         Nyt sinulla on käytettävissä **KAKSI** toimintoa! 
-
-
+        
+        
         Rakenna niillä nopeasti pelaajalle silta laavan yli.
       MC_HOC_2017_09_Cole: Auta Agentia toimintojen avulla tuhoamaan jättimäiset hietakuutiot, jotka tukkivat pelaajan tien painelaatalle.
       MC_HOC_2017_09_Kiki: "Tätä aloituskoodia ei voi poistaa.\\r\n\\r\nLisää komentoja luo reitti -toimintoon, jotta työtilan ohjelma siirtää Agentin painelaatalle. "
@@ -212,8 +212,8 @@ fi:
       MC_HOC_2017_13_Cole: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia apuna maailman tutkimisessa."
       MC_HOC_2017_4.5v2: |-
         Pääsit ulos suosta!  Vie palaaja seuraavaksi turvallisesti oranssiin ruutuun. 
-
-
+        
+        
         Auta Agentia raivaamaan polku löytämällä yksinkertainen kuvio ja käytä silmukoita kahden ensimmäisen painelaatan ylittämiseen.
       MC_HOC_2017_Ali: 'Katso alla olevia toimintoja. Miten voit käyttää niitä hornanhenkien välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta hän pääsisi turvallisesti **lumotun kirjan** [book_enchanted] luo?  '
       MC_HOC_2017_Ali_2019: 'Katso alla olevia toimintoja. Miten voit käyttää niitä hornanhenkien välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta hän pääsisi turvallisesti **lumotun kirjan** [book_enchanted] luo?  '

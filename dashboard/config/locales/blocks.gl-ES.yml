@@ -271,9 +271,7 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
-            '"a"': A
             '"s"': S
-            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -282,9 +280,7 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
-            '"a"': A
             '"s"': S
-            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:

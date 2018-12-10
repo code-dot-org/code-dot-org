@@ -104,7 +104,7 @@ sk-SK:
   congrats_guest_speaker_desc: Ako študenti absolvujú kurz informatiky, zvážte jeho
     prepojenie s ich reálným životom napríklad pozvaním prednášajúceho hosťa na vyučovanie.
     Môžete použiť zoznam našich dobrovoľníkov alebo si vyhľadajte študentov informatiky
-    či odborníkov, ktorí vedia inšpirovať vašich študentov aj na diaľku.
+    či odborníkov, ktorí vedia inšpirovať vašich studentov aj nadiaľku.
   congrats_guest_speaker_cta: Nájsť hosťujúceho prezentujúceho
   congrats_third_party_title: Použi svoje nové schopnosti s týmito aplikáciami a webstránkami
   third_party_gradelevel_kto8: 8. ročník
@@ -157,7 +157,7 @@ sk-SK:
     čo vytvoríš, preskúmaj, čo iní vytvorili a navzájom sa obohatíte!
   third_party_khan_btn_learn: Uč sa CS s Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Fórum
-  third_party_appinv_desc: MIT App Inventor je blokovo založený programovací nástroj,
+  third_party_appinv_desc: MIT App Inventor je blokovo založený programovaci nástroj,
     ktorým aj nováčik zvládne programovanie funkčných apiek pre Android. Začiatočník
     zvládne naprogramovať svoju prvú apku za menej ako hodinu, a viac náročné apky
     za podstatne kratší čas ako pri tradičných, textových jazykoch.
@@ -197,7 +197,7 @@ sk-SK:
   third_party_desc_dozens_kto8: Množstvo lekcií pre všetky ročníky ZŠ
   third_party_desc_10to15_3to12: 10 až 15 lekcií zameraných pre deti prvého a druhého
     stupňa ZŠ
-  third_party_desc_25to40_3to12: Od 25 - 40 lekcií, určených pre deti prvého a druhého
+  third_party_desc_25to40_3to12: Od 25-40 lekcií, určených pre deti prvého a druhého
     stupňa ZŠ
   third_party_desc_20_2to8: 20 lekcií zameraných pre deti prvého a druhého stupňa
     ZŠ
@@ -595,7 +595,7 @@ sk-SK:
   sports_athlete_Carmelo: Carmelo Anthony, Olympijské zlatý medailista a NBA All-Star,
     New York Knicks
   sports_athlete_Marco: Marco Belinelli, NBA šampión, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., olympijský zlatý medailista a futbalový hráč,
+  sports_athlete_Neymar: Neymarovi Jr., olympijský zlatý medailista a futbalový hrávač,
     FC Barcelona a národného tímu Brazílie
   sports_athlete_Sarah: Sarah Quita Offringa, šampiónka v surfovaní
   sports_athlete_Marcelo: Marcelo, futbalový šampión, hráč Real Madrid a národného
@@ -1863,7 +1863,7 @@ sk-SK:
   header_stats: Štatistiky
   header_help_us: Pomôžte nám
   header_about: O nás
-  header_teacher_community: Komunita školiteľov
+  header_teacher_community: Komunita učiteľov
   header_help_support: 'Pomoc a podpora '
   header_report_bug: Nahlásiť chybu
   header_tutorials: Návody
@@ -1942,13 +1942,13 @@ sk-SK:
     Alebo sa posuň ešte ďalej a program napíš v texte.
   applab_tile_start_tutorial: Spustiť
   applab_tile_teacher_guide: Zobraziť príručku pre učiteľa
-  account_sign_up_email_opt_in: Môžeme Vám zasielať emailom aktualizácie o lekciách,
-    možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne
-    raz za mesiac)
+  account_sign_up_email_opt_in: Môžeme Vám zasielať emailom aktualizácie o našich
+    školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?
+    (pravidelne raz za mesiac)
   account_sign_up_child_accept_terms: Potvrdzujem, že mám súhlas rodiča alebo zákonného
     zástupcu používať služby Code.org.
   hoc_overview_dance_title: Tanečná Párty
-  hoc_overview_dance_subtitle: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi!
+  hoc_overview_dance_subtitle: Nakódujte Tanečnú Párty pre zdielanie s kamarátmi!
     Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!
   hoc_overview_title: Hodina Kódu s Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hodina Kódu</a> je celosvetové
@@ -2054,15 +2054,14 @@ sk-SK:
   hoc2018_dance_party_subheading: Pomôžte preložiť Tanečnú Párty
   hoc2018_dance_create_your_own_dance_title: Vytvorte si svoju vlastnú Tanečnú Párty
   hoc2018_dance_party_box_title: Tanečná Párty
-  hoc2018_dance_party_box_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj
-    ju kamarátmi!
+  hoc2018_dance_party_box_description: Nakódujte Tanečnú Párty pre zdielanie s kamarátmi!
   hoc2018_dance_party_specs: Jazyk | Formát | Vek 6-106
   hoc2018_dance_party_button: Spustiť
   hoc2018_dance_keep_on_dancing_box_title: Pokračuj v tancovaní
   hoc2018_dance_keep_on_dancing_description: Pokračuj za hranice prvej hodiny s rozšírenými
     nápadmi na projekt.
   hoc2018_dance_keep_on_dancing_specs: Jazyk | Formát | Vek 13+
-  hoc2018_dance_keep_on_dancing_button: Spustiť časť 2
+  hoc2018_dance_keep_on_dancing_button: Začni Časť 2
   hoc2018_dance_teacher_resources_tile1_button: Plán lekcie
   hoc2018_dance_teacher_resources_tile2_title: Tanečná Párty bez počítača
   hoc2018_dance_teacher_resources_tile2_description: Počítače nie sú potrebné! Naučte

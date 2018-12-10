@@ -60,7 +60,7 @@ vi:
         Bạn có thể vẽ 1 hình vuông mỗi cạnh 100 pixel không?\r
         \r
         <br/>\r
-
+        
       2-3 Artist Loops New 10: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
       2-3 Artist Loops New 11: "Hãy làm một thứ gì đó lộng lẫy!\n\\r\n\\r\nSửa lại lệnh của màn chơi trước, lần này thêm lệnh rẽ trái 30 độ vào vòng lặp, và lặp các lệnh 24 lần thay vì 8."
       2-3 Artist Loops New 12: "Vẽ một viên kim cương với các mặt có 100 điểm ảnh.\n"
@@ -113,39 +113,39 @@ vi:
       Artist Autorun Test: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình vuông.
       Dance_Party_01: |-
         *Hãy mở tiệc khiêu vũ nào!*
-
+        
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
-
+        
         * *Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.*
       Dance_Party_01_low: |-
         *Hãy mở tiệc khiêu vũ nào!*
-
+        
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
-
+        
         * *Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.*
       Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
-
+        
         Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
-
-
+        
+        
         **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       Dance_Party_03: "*Bây giờ chúng ta đang quẩy theo nhạc! *\n\nThêm khối <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"nhịp\"</title></block></xml> vào không gian làm việc. Hãy cho vũ công bắt đầu động tác mới sau 6 nhịp."
       Dance_Party_04: |-
         *Phần nhảy này cần một chút đèn flash!*
-
+        
         Hãy tìm một khối mới trong hộp công cụ để thêm hiệu ứng nền vào phía sau các vũ công. Xem hiệu ứng thay đổi khớp theo thời gian với nhạc!
       Dance_Party_05: |-
         Sử dụng một khối mới khác để làm các vũ công thay đổi động tác **sau mỗi 2 nhịp**!
-
+        
         * Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
       Dance_Party_06: |-
         *Chúng ta cần thêm vũ công!*
-
+        
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       Dance_Party_08: |-
         Mỗi vũ công có một bộ _thuộc tính_ kiểm soát vẻ ngoài của vũ công.
-
+        
         Bạn có thể làm một vũ công giống như đang ở trong nền bằng cách làm cho _kích cỡ_ của họ nhỏ hơn. Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích cỡ không?
       Dance_Party_09: |-
         Vũ công có một thuộc tính "sắc thái" để có thể thêm một lớp màu. Hãy thử thay đổi sắc thái của một trong những vũ công.
@@ -158,7 +158,7 @@ vi:
         <title name="PROPERTY">"quy mô"</title>
         <title name="RANGE">"âm trầm"</title>
         </block></xml>
-
+        
         Chương trình này sử dụng âm lượng "bass" của âm nhạc (âm trầm) để điều khiển chiều cao của một vũ công. Bạn cũng có thể làm cho các vũ công khác phản hồi theo nhạc chứ?
       Dance_Party_11.5_test: "Hãy xem khối này:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"VỊT\"</title>\n<title name=\"LAYOUT\">\"vòng tròn\"</title>\n</block></xml>\n\nBây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!\n\nHãy thử sử dụng một số trong các khối \"tất cả vịt\" để viết mã nhằm làm cho tất cả các con vịt nhảy cùng nhau."
       Dance_Party_11: "Khối <xml><block type=\"Dancelab_whenKey\"></block></xml> cho phép bạn chạy mã khi nhấn phím mũi tên lên.\n\nBạn có thể thay đổi động tác nhảy, thay đổi thuộc tính của một vũ công hoặc làm một động tác nhanh chỉ một lần. Cứ thoải mái sáng tạo và tìm kiếm những khối mới!"
@@ -168,47 +168,47 @@ vi:
       Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
       Dance_Party_extras_battle: |-
         # Nhóm nhảy
-
+        
         Dưới đây là một cuộc thi đấu khiêu vũ giữa hai nhóm. Phím mũi tên điều khiển một trong hai vũ công và các phím "w, a, s, d" điều khiển vũ công còn lại. Thi đấu khiêu vũ với một người bạn và sau đó cố gắng cải thiện các bước nhảy.
-
+        
         * Thêm nhiều phím để điều khiển các điệu nhảy
         * Làm cho các vũ công hỗ trợ cũng có phản ứng khi nhấn phím
         * Thay thế vũ công mỗi quãng 4 bằng cách thiết lập khả năng hiển thị của họ
       Dance_Party_extras_every_beat: |-
         # Nốt đen
-
+        
         Hầu hết các điệu múa của chúng tôi đã sử dụng các quãng toàn bộ, nhưng mỗi quãng này bao gồm 4 nốt đen. Điệu nhảy này dùng 'mọi quãng 0,25' để làm cho các vũ công vỗ tay trên mỗi nốt đen.
-
+        
         Múa này cũng sử dụng một khối_điều kiện_ để kiểm soát khi khối 'quãng 0,25' có thể thay đổi những điệu nhảy. Hãy thử thay đổi con số trong các khối có điều kiện để xem cách nó thay đổi những điệu nhảy.
-
+        
         * Thử nghiệm với khác quãng nốt khác (như 0,5 cho nửa nốt hoặc 0,125 cho một phần tám nốt).
         * Thêm một số sự kiện `sau quãng`.
         * Chuyển đổi "quãng" thành "giây" và thử canh thời gian của bạn nhảy theo cách đó.
       Dance_Party_extras_layout: |-
         # Hãy vào đội hình nào!
-
+        
         Kiểm tra các điệu nhảy này sử dụng các khối `giao diện` để thay đổi hình thành các vũ công dự phòng trong suốt buổi khiêu vũ. Hãy thử một trong những IDE để mở rộng nó:
-
+        
         * Tạo một nhóm các vũ công thứ hai trong một giao diện khác
         * Thay đổi giao diện khi nhấn phím
         * Thay đổi một thuộc tính khi các vũ công thay đổi đội hình
       Dance_Party_extras_on_beat: |-
         # Âm trầm, Âm trung và Âm cao
-
+        
         Điệu nhảy này sử dụng sự kiện "đỉnh cao" để kích hoạt các mã khi các bộ phận khác nhau của âm nhạc được bật lớn. Hãy thử tìm tòi với các bài hát khác nhau để xem làm thế nào họ thay đổi những điệu nhảy.
       Dance_Party_extras_speed: |-
         # Nhanh lên, chậm lại
-
+        
         Điệu nhảy cuối cùng này sử dụng các khối `thiết lập tốc độ` để kiểm soát việc mỗi vũ công di chuyển nhanh đến mức nào. Cố gắng thử nghiệm với tốc độ khác nhau trong các điểm khác nhau trong bài hát. Hãy tự do mày mò điệu nhảy này hoặc trở về bất kỳ điệu nhảy nào trước đó để làm cho chúng trông ngầu hơn.
       Dance_Party_extras_visible: |-
         # Họ sẽ đi đâu?
-
+        
         Điệu nhảy này làm xuất hiện và ẩn hai nhóm vũ công khác nhau. Kiểm tra và sau đó thử thêm vào sự tinh tế của riêng của bạn.
-
+        
         * Thêm một nhóm vũ công
         * Hiển thị và ẩn các vũ công bằng cách sử dụng các phím mũi tên
         * Ẩn tất cả các vũ công và chuyển sang một hiệu ứng nền thú vị
-      HOC 2018 Level_1: "Bạn cần có trang thiết bị cho cuộc hành trình phía trước. Hãy tới lấy chiếc ** thuyền **![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) từ trong ** chiếc rương **![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_1: "Bạn cần có trang thiết bị cho cuộc hành trình phía trước. Hãy tới lấy chiếc ** thuyền **![] (https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) từ trong ** chiếc rương **![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
       HOC 2018 Level_10: "Có một ** con mực **![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) đang ẩn nấp ở một nơi nào đó trong đại dương, có thể bạn tìm thấy nó?\n\n"
       HOC 2018 Level_11: Xây dựng một bức tường ** prismarine **![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) quanh khối bê tông đen. Điều này sẽ kích hoạt các ** ống dẫn **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) và hoàn thành thử thách của bạn!
       HOC 2018 Level_12: Chúc mừng! Thế giới đại dương đang chờ bạn. Hãy tạo ra một rạn san hô! Một ngọn núi lửa! Một con tàu đắm! Điều đó tùy thuộc vào bạn.
@@ -222,11 +222,11 @@ vi:
       HOC 2018 Level_9b: "Bạn đã tới rạn san hô, bây giờ tìm kiếm ** Trái tim đại dương **![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Sử dụng san hô màu xanh và đỏ để tới ** rương** kho báu![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       HOC Dance 4_draft: |-
         Sử dụng một khối mới khác để làm các vũ công thay đổi động tác **sau mỗi 2 nhịp**!
-
+        
         * Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
       HOC Dance 5_draft: |-
         *Chúng ta cần thêm vũ công!*
-
+        
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       HOC Dance 9_draft: "Khối <xml><block type=\"Dancelab_whenKey\"></block></xml> cho phép bạn chạy mã khi nhấn phím mũi tên lên.\n\nBạn có thể thay đổi động tác nhảy, thay đổi thuộc tính của một vũ công hoặc làm một động tác nhanh chỉ một lần. Cứ thoải mái sáng tạo và tìm kiếm những khối mới!"
       HOC Dance Freeplay: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.

@@ -127,7 +127,7 @@ pt:
       4-5 Nested Loops 3: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-
+        
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       4-5 Nested Loops 7: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
@@ -206,8 +206,8 @@ pt:
       MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o Agent a criar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: |-
         Conseguiste sair do pântano!  Agora, leva o jogador em segurança até ao quadrado cor de laranja. 
-
-
+        
+        
         Ajuda o Agent a abrir caminho através de um padrão simples e da utilização de ações circulares para passar pelas duas primeiras placas de pressão.
       MC_HOC_2017_04POINT5_RYAN: "Conseguiste passar! \\r\n\\r\nAgora, leva {currentPlayerName} em segurança pelo labirinto para recolher o **machado** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Conseguiste passar! \\r\n\\r\nAgora, leva {currentPlayerName} em segurança pelo labirinto para recolher o **machado** [diamond_axe]\\r\n"
@@ -216,15 +216,15 @@ pt:
       MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou-te a este maravilhoso Oásis!  Para passar este nível, o jogador tem de chegar ao quadrado cor de laranja na cabana.  \\r\n\\r\nUtiliza uma ação circular \"repetir\" para ajudar o Agent a percorrer todo o caminho até à placa de pressão, que abre a porta da cabana."
       MC_HOC_2017_05: |-
         As ações circulares nem sempre são úteis. 
-
-
+        
+        
         Estes catos não crescem num padrão óbvio, pelo que uma ação circular não é capaz de os eliminar corretamente.  Em vez disso, apresentamos-te uma função chamada "destruir e mover", que faz todo o trabalho árduo sempre que o Agent encontra um obstáculo.
       MC_HOC_2017_05_Cole: "Oh não, a ponte foi destruída! \\r\n\\r\nPrograma o Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName} conseguir chegar à **pá** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Oh não, a ponte foi destruída! \\r\n\\r\nPrograma o Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName} conseguir chegar à **pá** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Oh não, a ponte foi destruída! 
-
-
+        
+        
         Ajuda o Agent a reconstruir a ponte para o jogador conseguir chegar à **pá**.
       MC_HOC_2017_05_Kiki: "Está na hora de o jogador sair do Bosque Secreto e continuar a sua aventura, mas a ponte foi destruída! \\r\n\\r\nAjuda o Agent a reconstruir a ponte e leva-o até à tábua de madeira, para o jogador conseguir chegar ao quadrado cor de laranja."
       MC_HOC_2017_06_Cole: "Encontrámos outro rio, mas este é muito mais largo! \\r\n \\r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName} chegar à **picareta** [diamond_pickaxe]. "
@@ -239,13 +239,13 @@ pt:
       MC_HOC_2017_08_Kiki: "Agora, em vez de destruir catos, tens de colocar pedras sobre a lava e destruir arenito.  \\r\n\\r\nMuda a função para que funcione neste nível."
       MC_HOC_2017_08_RY: |-
         Agora, podes escolher entre **DUAS** funções! 
-
-
+        
+        
         Utiliza-as para construir rapidamente uma ponte sobre a lava para {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         Agora, podes escolher entre **DUAS** funções! 
-
-
+        
+        
         Utiliza-as para construir rapidamente uma ponte sobre a lava para o jogador.
       MC_HOC_2017_09_Cole: Utiliza as funções para ajudar o Agent a destruir os blocos gigantes de terra que estão a impedir a passagem do jogador até à placa de pressão.
       MC_HOC_2017_09_Kiki: "Este código inicial não pode ser removido.\\r\n\\r\nAdiciona comandos à função \"criar rasto\" para o programa no espaço de trabalho levar o Agent até à placa de pressão. "
@@ -261,8 +261,8 @@ pt:
       MC_HOC_2017_13_Cole: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código do Agent para te ajudar a explorar este mundo."
       MC_HOC_2017_4.5v2: |-
         Conseguiste sair do pântano!  Agora, leva o jogador em segurança até ao quadrado cor de laranja. 
-
-
+        
+        
         Ajuda o Agent a abrir caminho através de um padrão simples e da utilização de ações circulares para passar pelas duas primeiras placas de pressão.
       MC_HOC_2017_Ali: 'Examina as funções abaixo.  Como é que as podes utilizar para evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao **Livro de Encantamentos** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Examina as funções abaixo.  Como é que as podes utilizar para evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao **Livro de Encantamentos** [book_enchanted]?  '
@@ -372,7 +372,7 @@ pt:
       grade4_arist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-
+        
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
       grade4_artist_nested_loop_flags1: Repita o código dado para criar um moinho de vento.
@@ -380,7 +380,7 @@ pt:
       grade4_artist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-
+        
       grade4_artist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_triangles2: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
       grade4_bee_conditionals_quantum2: "Agora a abelha só quer néctar. Lembre-se,\nnem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores."

@@ -3865,38 +3865,6 @@ is:
       D_Frozen_nested8: "Snúðu forminu 5 eða 6 sinnum í hring.\r\n- Ef þú velur 5
         snúninga, er hver snúningur 72 gráður\r\n-\nEf þú velur 6 snúninga, er hver
         snúningur 60 gráður\r\n<hr/>\r\n\r\nHér er dæmi þar sem Elsa snýr 6 sinnum:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
-      Dance_Party_01: |-
-        *Nú skulum við halda danspartý!
-
-        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
-
-        **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
-      Dance_Party_01_low: |-
-        *Nú skulum við halda danspartý!
-
-        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
-
-        **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
-      Dance_Party_02: |-
-        Nú skulum við láta elginn dansa!
-
-        Dragðu <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> kubbinn inn á vinnusvæðið. Festu hann undir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> kubbinn. Þá ætti dansarinn þinn að byrja að dansa eftir 4 takta.
-
-        **Taktar** eru notaðir til talningar í tónlist. Í þessari æfingu er einn taktur 4 slög.
-      Dance_Party_03: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
-      Dance_Party_04: |-
-        *Þessi dans þarfnast smá glampa!*
-
-        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
-      Dance_Party_3: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
-      Dance_Party_4: |-
-        *Þessi dans þarfnast smá glampa!*
-
-        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       Escape Room Example: "# Flóttaleikur\r\n\r\nÍ smiðju dagsins er ætlunin að vinna
         að gerð apps fyrir flóttaleik!  Þessi áfangi er með leikdæmi sem þú ættir
         að spila til að fá tilfinningu fyrir því sem þú munt skapa.\r\n\r\n# Gerðu
@@ -3938,10 +3906,6 @@ is:
         úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2019: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök
         úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
-      HOC Dance 3_draft: |-
-        *Þessi dans þarfnast smá glampa!*
-
-        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       Harvesting: |-
         Ó nei, ég týndi kortinu og man ekki hvað ég setti niður! Hver sproti gæti orðið að **maís** ![mynd af maís](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)
         , **baunum** ![mynd af baunum](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)

@@ -81,7 +81,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
       Dance short test_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -92,11 +92,11 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
       Dance_Party_01_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník.
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -106,7 +106,7 @@ sk:
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník.
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -137,7 +137,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
       Dance_Party_06_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -171,7 +171,7 @@ sk:
       Dance_Party_1_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník.
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -237,7 +237,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -278,7 +278,7 @@ sk:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník.
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -309,7 +309,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**

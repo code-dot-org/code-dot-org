@@ -18,7 +18,6 @@ gl:
       messages:
         blank: é obrigatorio
         blank_plural: obrigatorio
-        invalid: e inválido
         invalid_plural: inválidas
     attributes:
       user:
@@ -37,10 +36,6 @@ gl:
         gender: Xénero
         edit_header: Editar os Detalles da Conta
         finish_sign_up_header: Remata de crear a túa conta
-        finish_sign_up_subheader: Completa a seguinte información para acabar de crear
-          unha conta de Code.org para <strong>%{email}</strong>.
-        finish_sign_up_subheader_provider: Completa a seguinte información para acabar
-          de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.
         error:
           future: non pode estar no futuro
   hello: Ola, mundo
@@ -91,7 +86,6 @@ gl:
   prize: premio
   more_info: Máis información
   auth:
-    continue_with: Continúa con %{provider}
     sign_in_with: Entre con %{provider}
     signed_in: Sesión iniciada!
     signed_out: Vostede saiu da <a href="%{url}">Code.org</a>.
@@ -105,21 +99,13 @@ gl:
     windowslive: Conta da Microsoft
     microsoft_v2_auth: Conta da Microsoft
     clever: Conta intelixente
-    powerschool: Conta Powerschool
     forgot_password: Esqueceu o seu contrasinal?
-    migration_success: Exito! Actualizacheste para a nosa nova experiencia de conta.
-    demigration_success: A nove experiencia de conta agora está desativada na túa
-      conta.
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
     not_linked: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
       Terá vostede que iniciar sesión escribindo o seu contrasinal.
     use_clever: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
       Terá vostede que iniciar sesión a través do seu Portal Intelixente.
-    unable_to_connect_provider: Non foi posíbel conectar a túa conta de Code.org a
-      o teu %{provider}. Por favor intentao de novo.
-    already_in_use: O teu %{provider} xa está conectado a outra conta de Code.org.
-    already_linked: O teu %{provider} xa está ligado a túa conta de Code.org.
   signup_form:
     email_signup: Rexístrate co teu enderezo de correo electrónico
     student_count: "%{count} alumnos xa crearon unha conta."
@@ -168,7 +154,6 @@ gl:
     field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
-    email_preference_privacy: "(Ver a nosa política de privacidade)"
     email_preference_yes: Si
     email_preference_no: Non
   school_info:
@@ -250,7 +235,6 @@ gl:
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
       remove: "¿Seguro que queres abandonar este grupo?"
-    default_name: Sección sin título
     remove: "(eliminar grupo)"
     type:
       picture: Contrasinal de imaxe
@@ -352,10 +336,6 @@ gl:
       signin: Iniciar Sesión
       signup: Crear unha conta
       already_registered: Xa creaches unha conta?
-      pair_programming: Programación por parellas
-      team: Equipo
-      driver: Logado
-      navigator: Compañeiro
       create: Crear
       applab: Laboratorio de aplicacións
       artist: Artista
@@ -394,18 +374,12 @@ gl:
       example: Solución exemplo
       example_with_number: Solución exemplo %{solution_number}
       submitted_on: Enviado o %{date}
-      last_updated: 'Ultima actialización:'
       unsubmit: Cancelar envío
-      worked_with: Traballou com
-      update_lock_settings: Actualiza as opcións de bloqueo aquí.
-      clear_response: Borrar resposta
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
     email_confirm_wrong_email: "(Enderezo de e-mail errado?)"
     email_resend_confirm: Reenviar instrucións de confirmación
-    new_email_hint: "(asegúrate de que podes recibir mensaxes nesta dirección de correo
-      electrónico)"
     new_password_hint: "(deixe en branco se non quixese facer alteración)"
     current_password_hint: "(necesitamos o seu contrasinal actual para confirmar os
       seus cambios)"

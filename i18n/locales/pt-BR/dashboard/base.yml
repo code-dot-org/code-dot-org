@@ -208,11 +208,11 @@ pt-BR:
     subject: 'Entrar na minha turma (no Code.org)'
     body: |
       Clique no link abaixo para se cadastrar e ver tutoriais de ciência da computação na Code.org (eu serei seu "professor"):
-
+      
       %{link}
-
+      
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
-
+      
       %{name}
   parent_mailer:
     student_associated_subject: 'Informações de login para Code.org'
@@ -528,7 +528,7 @@ pt-BR:
     report_abuse: 'Reportar abuso'
     built_on_code_studio: 'Criado no Code Studio'
     make_my_own_app: 'Criar meu próprio aplicativo'
-    how_it_works: 'Como funciona (Ver o Código)'
+    how_it_works: 'Como funciona'
     try_hour_of_code: 'Faça uma Hora do Código!'
   reference_area:
     title: 'Precisa de ajuda?'

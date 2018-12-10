@@ -111,7 +111,7 @@ sk:
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil celý kruh
       Course 4 Artist 7_callout:
-        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej ploche
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Presuňte do tohto bloku Vašu premennú počítadla
       Course 4 Artist Functions 4_callout:
@@ -127,7 +127,7 @@ sk:
       Course 4 Artist Params 4_callout:
         create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite na tlačidlo "Vytvoriť funkciu".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej ploche
       Course 4 Artist Vars 10_callout:
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
       Course 4 Artist Vars 12_callout:

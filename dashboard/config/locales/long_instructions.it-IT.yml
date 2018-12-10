@@ -1334,13 +1334,13 @@ it:
       Dance_Party_01: |-
         *Organizziamo una festa e balliamo alla grande!*
 
-        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
 
         * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
       Dance_Party_01_low: |-
         *Organizziamo una festa e balliamo alla grande!*
 
-        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
 
         * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
       Dance_Party_02: |-
@@ -1363,7 +1363,7 @@ it:
 
         * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
       Dance_Party_06: |-
-        *Abbiamo bisogno di altri ballerini!*
+        * Abbiamo bisogno di altri ballerini!*
 
         Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
       Dance_Party_08: |-
@@ -1425,7 +1425,7 @@ it:
       Dance_Party_extras_layout: |-
         # Tutti in Formazione!
 
-        Dai un'occhiata a questo ballo che usa il blocco `disponi ... nuovi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
+        Dai un'occhiata a questo ballo che usa il blocco `disponi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
 
         * Crea un secondo gruppo di ballerini con una formazione diversa
         * Cambia la disposizione quando si preme un tasto
@@ -1437,7 +1437,7 @@ it:
       Dance_Party_extras_speed: |-
         # Accelerare, Rallentare
 
-        Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
+        Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimento di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_visible: |-
         # Dove sono andati?
 
@@ -1570,7 +1570,7 @@ it:
 
         * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
       HOC Dance 5_draft: |-
-        *Abbiamo bisogno di altri ballerini!*
+        * Abbiamo bisogno di altri ballerini!*
 
         Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
       HOC Dance 9_draft: |-

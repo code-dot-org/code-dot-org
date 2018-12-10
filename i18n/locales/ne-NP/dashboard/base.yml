@@ -150,11 +150,11 @@ ne:
     subject: 'मेरो कक्षामा आउनुहोस् (Code.org मा)'
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
-
+      
       %{link}
-
+      
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
-
+      
       %{name}
   section:
     type:

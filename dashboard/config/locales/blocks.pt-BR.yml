@@ -102,7 +102,6 @@ pt-BR:
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Dança drop
             MOVES.Floss: Dança do fio dental
@@ -110,7 +109,6 @@ pt-BR:
             MOVES.Clown: Palhaço
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
-            MOVES.XKneel: Ajoelhar
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
@@ -127,7 +125,6 @@ pt-BR:
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Dança drop
             MOVES.Floss: Dança do fio dental
@@ -135,7 +132,6 @@ pt-BR:
             MOVES.Clown: Palhaço
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
-            MOVES.XKneel: Ajoelhar
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
@@ -361,11 +357,10 @@ pt-BR:
           EFFECT:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
-            '"circles"': Círculos
+            '"circles"': Túnel
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
-            '"fireworks"': Fogos de artifício
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
             '"lasers"': Laser de pista de dança
@@ -381,12 +376,7 @@ pt-BR:
           PALETTE:
             '"rave"': Preto e branco
             '"cool"': Tons de azul
-            '"electronic"': Electrônica
-            '"iceCream"': Sorvete
             '"default"': Claro
-            '"neon"': Néon
-            '"tropical"': Tropical
-            '"vintage"': Vintage
             '"warm"': Tons de vermelho
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
@@ -439,12 +429,10 @@ pt-BR:
             '"hearts_red"': Corações
             '"music_notes"': Notas musicais
             '"pineapples"': Abacaxis
-            '"pizzas"': Pizzas
             '"smiling_poop"': Cocô
             '"rain"': Chuva
             '"floating_rainbows"': Arco-íris
             '"spotlight"': Olofote
-            '"color_lights"': Luzes de palco
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'Definir {SPRITE} {PROPERTY} para {VAL} '
@@ -482,7 +470,7 @@ pt-BR:
             '"y"': posição vertical
             '"tint"': tonalidade
       Dancelab_setPropRandom:
-        text: aleatorizar {SPRITE} {PROPERTY}
+        text: randomizar {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -590,7 +578,6 @@ pt-BR:
             '"k"': k
             '"l"': l
             '"m"': m
-            '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
@@ -1159,7 +1146,7 @@ pt-BR:
       aalab_addToSpriteGroup:
         text: adicionar personagem {SPRITE} ao grupo {GROUP}
       aalab_changeGroupPropBy:
-        text: mude o grupo {GROUP} {PROPERTY} por {VAL}
+        text: mude o grupo {GROUP}{PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamanho

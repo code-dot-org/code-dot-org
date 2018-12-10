@@ -380,17 +380,17 @@ sk:
       Dance_Party_02: |-
         Roztancujme tohto soba!
 
-        Presuň blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> na pracovnú plochu. Napoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takty"</title></block></xml>. Tvoj tanečník by mal predviesť nový krok po štyroch taktoch.
+        Presuň blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> na pracovnú plochu. Napoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktoch"</title></block></xml>. Tvoj tanečník by mal predviesť nový krok po štyroch taktoch..
 
 
         **Takty** sa v hudbe používajú na počítanie času. V tomto cvičení sa takt skladá zo štyroch dôb.
       Dance_Party_03: "*Teraz sme to roztočili!* \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"taktoch\"</title></block></xml>
         na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
       Dance_Party_04: |-
         *Tento tanec potrebuje svetlo!*
 
-        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia v čase podľa hudby!
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
       Dance_Party_05: |-
         Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
 
@@ -417,7 +417,7 @@ sk:
 
         Tento program využíva intenzitu "basov" (nízke tóny) v hudbe na kontrolu výšky jedného z tanečníkov. Vieš nastaviť aj druhého tanečníka tak, aby reagoval na hudbu?
       Dance_Party_11.5_test: "Pozri na tento blok:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
-        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačíc\"</title>\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačica\"</title>\n
         \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
         vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
         kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
@@ -426,7 +426,7 @@ sk:
 
         Môžeš zmeniť tanečný krok, upraviť vlastnosti tanečníkov, ale spraviť iba jeden rýchly krok. Buď kreatívny a všimni si nové bloky!
       Dance_Party_11_5: "Pozri na tento blok:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
-        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačíc\"</title>\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačica\"</title>\n
         \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
         vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
         kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
@@ -437,12 +437,12 @@ sk:
       Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdielať s kamarátmi.
       Dance_Party_3: "*Teraz sme to roztočili!* \n\nPridaj druhý blok <xml><block
-        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"taktoch\"</title></block></xml>
         na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
       Dance_Party_4: |-
         *Tento tanec potrebuje svetlo!*
 
-        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia v čase podľa hudby!
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
       Dance_Party_8: Každý tanečník má súbor _vlastností_, ktoré kontrolujú jeho vzhľad.
         Dojem toho, že je tanečník v pozadí, môžeš dosiahnuť tak, že zmenšíš jeho
         _veľkosť_. Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
@@ -503,7 +503,7 @@ sk:
       HOC Dance 3_draft: |-
         *Tento tanec potrebuje svetlo!*
 
-        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia v čase podľa hudby!
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
       HOC Dance 4_draft: |-
         Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
 
@@ -518,7 +518,7 @@ sk:
       HOC Dance 9_draft: |-
         Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožňuje spustiť kód v momente, keď je stlačená šípka hore.
 
-        Môžeš zmeniť tanečný krok, upraviť vlastnosti tanečníkov, alebo spraviť len jeden rýchly krok. Buď kreatívny a všimni si nové bloky!
+        Môžeš zmeniť tanečný krok, upraviť vlastnosti tanečníkov, ale spraviť iba jeden rýchly krok. Buď kreatívny a všimni si nové bloky!
       HOC Dance Freeplay: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdielať s kamarátmi.
       HOC Dance Freeplay_draft: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý

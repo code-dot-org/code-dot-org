@@ -21,16 +21,16 @@ sk:
         desc: Toto je triedna hra. Po predstavení čo sú podmienky, výrazy ak a cykly, trieda môže jednotlivé termíny precvičiť využitím predpripraveného programu, balíčka kariet a stávkou do lotérie.
       Unplug7:
         title: Napísanie piesne
-        desc: Čítanie textu je pre väčšinu študentov viacmenej intuitívne. Vyberieme si aktivitu, ktorá je už všeobecnou znalosťou a spravíme z nej riadne školenie na definovanie a zavolanie funkcií. Keď sa študenti oboznámia s procesom definovania/zavolania funkcií, pridáme ďaľšie funkcie zadávania parametrov, ktoré idú ruka v ruke s volaniami funkcií.
+        desc: Čítanie textu je pre väčšinu študentov viacmenej intuitívne. Vyberieme si aktivitu, ktorá je vlastne všeobecnou znalosťou a spravíme z nej riadne školenie na definovanie a zavolanie funkcií. Keď sa študenti oboznámia s procesom definovania/zavolania funkcií, pridáme ďaľšie funkcie zadávania parametrov, ktoré idú ruka v ruke s volaniami funkcií.
       Unplug8:
         title: Abstrakcia
         desc: Táto aktivita kombinuje každodennú rutinu vašich študentov a Mad-Lib herný štýl myslenia, aby pomohlo vašej triede dozvedieť sa o účinnosti abstrakcie.
       Unplug9:
         title: Štafetové programovanie
-        desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. programovanie na štvorčekovom papieri) a používa jej schopnosti pre zdôraznenie dôležitosti dokončovania programov, ktoré pracujú v sekvencii, a častej kontroly programov kvôli "chybám".
+        desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. programovanie na štvorčekovom papieri) a používa schopnosti z nej pre zdôraznenie dokončenia programov, ktoré pracujú v sekvencií a častej kontroly programov pre "chyby".
       Unplug10:
         title: Internet
-        desc: V tejto lekcii budú študenti predstierať, že putujú internetom, a počas toho sa budú učiť o internetových adresách, protokoloch a DNS.
+        desc: V tejto lekcii budú študenti predstierať, že putujú internetom, počas čoho sa budú učiť o internetových adresách, protokoloch a DNS.
       Unplug11:
         title: Zhrnutie
         desc: Konečné zhrnutie prvej 20-hodinovej série pomôže študentom pripomenúť si ich obľúbené momenty a zároveň im poskytne návod, ako ďalej pokračovať v informatike, ak ich tieto cvičenia zaujali.
@@ -42,10 +42,10 @@ sk:
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
       PlantASeed:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
-        desc: Táto lekcia objasňuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
+        desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       BuildingAFoundation:
         title: Stavanie základov
-        desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí splniť zadanie (dosiahnuť určitú výšku alebo uniesť určitú záťaž) a študenti následne budú diskutovať o tom, ako ostať vytrvalý v prípade problémov.
+        desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí splniť zadanie (dosiahnúť určitu výšku alebo uniesť určitú záťaž) a študenti následne budú diskutovať o tom, ako ostať vytrvalý v prípade problémov.
       GettingLoopy:
         title: Neustále opakovanie
         desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu, ktorú budú na základe inštrukcíí opakovať.
@@ -54,7 +54,7 @@ sk:
         desc: Študenti budú bežať štafetu, kde budú musieť prejsť cez dvor a napísať algoritmus podľa obrázku na základe "Programovania na štvorčekovom papieri". Môžu napísať len jeden príkaz počas jednej otočky a ak niekde nájdu chybu, musia spätne vymazať všetko až po túto chybu.
       Conditionals:
         title: Podmienky
-        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."
       BigEvent:
         title: Veľká udalosť
         desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí, ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo je práve stlačené.
@@ -75,16 +75,16 @@ sk:
         desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje následky.
       ComputationalThinking:
         title: Algoritmické myslenie
-        desc: Študenti použijú kroky výpočtového spôsobu myslenia (rozloženie, zhoda vzorov, abstrakt, algoritmus) aby zistili, ako hrať hru, ktorá nemá návod.
+        desc: Študenti použijú kroky výpočtového spôsobu myslenia (dekompozovanie, zhoda vzorov, abstrakt, algoritmus) pre zistenie, ako hrať hru, ktorá nemá návod na jej hranie.
       FunctionalSuncatchers:
         title: Dekorácie
         desc: Študenti vytvoria algoritmus s premennými a funkciami (kúskami kódu, ktorý chcete používať viackrát) pre vytvorenie dekorácie použitím retiazok a korálkov.
       SongwritingParameters:
-        title: Písanie pesničiek
-        desc: Študenti sa na príklade refrénu v piesni naučia o definovaní a zavolaní funkcií.
+        title: Písanie pesničiek s parametrami
+        desc: Študenti sa na príklade refrénu v piesni naučia o definícií a zavolaní funkcií.
       DiceRace:
         title: 'Algoritmy z reálneho života: Hod kockou'
-        desc: V tejto lekcii sa dozviete, ako používame algoritmy v každodennom živote. V rámci toho študenti identifikujú a napíšu algoritmus pre Hru Hod kockou.
+        desc: V tejto lekcií sa dozviete, ako používame algoritmy v každodennom živote. V rámci toho študenti identifikujú a napíšu algoritmus pre Hru v hode kockou.
       Internet:
         title: Internet
         desc: Študenti posielajú správy predstavujúce rôzne metódy internetového prenosu za pomoci kúskov papiera.
@@ -96,13 +96,13 @@ sk:
         desc: Študenti preskúmajú rozdiely medzi súkromnou informáciu a osobnou informáciou, naučia sa rozlíšiť, čo je bezpečné a nebezpečné zdielať online.
       TangramAlgorithms:
         title: Tangram algoritmy
-        desc: V tejto lekcii si ukážeme niečo dôležité o algoritmoch. Ak budete mať algoritmus jednoduchý, môžete ho použiť mnohými spôsobmi. Ak chete dosiahnuť, aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
+        desc: V tejto lekcií si ukážeme niečo dôležité o algoritmoch. Ak budete mať algoritmus jednoduchý, môžete ho použiť veľa spôsobmi. Ak chete dosiahnúť, aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
       EnvelopeVariables:
         title: Obálkové premenné
-        desc: Premenné v informatike umožňujú voľnosť. V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite aktivitu pred (alebo spolu s) lekciou o abstrakcii pre úplne pochopenie tohto konceptu.
+        desc: Premenné v informatike umožňujú voľnosť. V tejto lekcií sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite aktivitu pred (alebo spolu s) lekciou abstrakcie pre úplne pochopenie tohto konceptu.
       MadGlibs:
         title: Mad Glibs
-        desc: Abstrakcia je jednou z dôležitých zručností, ktoré informatik musí mať. V tejto aktivite budú Vaši študenti analyzovať príbehy a hľadať v nich rozdiely, aby sa mohli od nich abstrahovať. Tieto abstrahované príbehy sa stanú základom pre ďalšie vtipné a veselé príbehy.
+        desc: Abstrahovanie je jednou z dôležitých schopností, ktoré informatik musí mať. V tejto aktivite budú Vaši študenti analyzovať príbehy a hľadať v nich rozdiely, aby sa mohli od nich abstrahovať. Tieto abstrahované príbehy sa stanú základov pre ďaľšie vtipné a veselé príbehy.
       ForLoopFun:
         title: Zábavné opakovanie
         desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
@@ -111,16 +111,16 @@ sk:
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
       BinaryImages:
         title: Binárne obrázky
-        desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantách. Táto lekcia pokračuje v tomto koncepte ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
+        desc: Hosi si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantoch. Táto lekcia pokračuje v tomto koncepte ukázaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
       VideoGamesCoordinatePlanes:
         title: Videohry a súradnicové roviny
-        desc: Pozrite sa, ako videohry, ktoré radi hráte, fungujú vďaka výpočtom. Zistite, ako nám algebrické výrazy a geometrické roviny môžu pomôcť pochopiť fungovanie videohier, a následne začnite plánovať svoju vlastnú, Vami vytvorenú hru.
+        desc: Pozrite sa, ako videohry, ktoré radi hráte, fungujú vďaka výpočtom. Zistite, ako nám algebraické výrazy a geometrické roviny môžu pomocť pochopiť fungovanie videohier a následne začnite plánovať vlastnú, Vami vytvorenú hru.
       Contracts:
         title: Zmluvy, doména a rozsah
-        desc: Kontrakty nám dávajú možnosť pochopiť a diskutovať o funkciách. V tejto lekcii sa pozrieme na to, ako nám Kontrakty môžu pomôcť pochopiť nový programovací jazyk alebo funkciu.
+        desc: Kontrakty nám dávajú možnosť pochopiť a diskutovať o funkciách. V tejto lekcií sa pozrieme na to, ako nám Kontrakty môžu pomôcť pochopiť nový programovací jazyk alebo funkciu.
       DesignRecipe:
         title: Vytvor recept
-        desc: V poslednom kroku študenti napísali niekoľko jednoduchých funkcií - ale sofistikované funkcie potrebujú pozornejší prístup. Recept na Dizajn je štruktúrovaný prístup k písaniu funkcií zahrňujúci písanie testovacích scenárov pre zabezpečenie toho, aby funkcia pracovala tak, ako je požadované.
+        desc: V poslednom kroku študenti napísali niekoľko jednoduchých funkcií - ale sofistikované funkcie potrebujú pozornejší prístup. Recept na Dizajn je štruktúrovaný prístup k písaniu funkcií zahrňujúci písanie testovacích scenárov pre zabezpečenie toho, že funkcia pracuje tak, ako je požadované.
       Booleans:
         title: Pravdivostné hodnoty a logika
         desc: Pravdivostné hodnoty sú štvrtým a posledným typom údajov, s ktorými sa v tomto kurze oboznámime. V nasledujúcej aktivite sa naučíte, čo sú pravdivostné hodnoty a ako nám môžu pomôcť pri písaní funkcií, ktoré majú myslieť logicky
@@ -129,15 +129,15 @@ sk:
         desc: Parametre, ktoré pridáme k funkciám môžu spôsobiť to, že sa výstupy budú líšiť na základe konkrétnych vzorov. Predpokladajme, že chceme, aby parametre s niektorými hodnotami vytvárali výstupy na základe jedného vzoru, ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme podmieňovacie príkazy...
       CollisionDetection:
         title: Kolízna detekcia a Pytagorova veta
-        desc: Určenie, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou väčšiny hier. V tejto lekcii sa pozrieme na to, ako sa Pytagorová veta a vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
+        desc: Určenie, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou väčšiny hier. V tejto lekcií sa pozrieme na to, ako sa Pytagorová veta a vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
         desc: V tejto lekcií sa naučíš niečo o cykloch!
       courseB_unplugged_MRF:
         title: Aktivity bez počítača
-        desc: V tejto lekcii sa naučíte "programovať" Vašich kamarátov!
+        desc: V tejto lekcií sa naučíte "programovať" Vašich kamarátov!
       courseB_unplugged_loopyMRF:
         title: Aktivity bez počítača
-        desc: Tak, ako na hodine "Moji robotickí kamaráti", aj tu budete "programovať" kamarátov, tentokrát však s cyklami!
+        desc: Tak, ako hodine "Moji robotickí kamaráti", aj tu budete "programovať" kamarátov, tentokrát však s cyklami!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivity bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
@@ -154,7 +154,7 @@ sk:
         desc: 'chýbajúci preklad: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
-        desc: Táto lekcia objasňuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
+        desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       courseA_unplugged_happyMaps:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
@@ -169,7 +169,7 @@ sk:
         desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje následky.
       courseC_unplugged_buildingAFoundation:
         title: Stavanie základov
-        desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí splniť zadanie (dosiahnuť určitú výšku alebo uniesť určitú záťaž) a študenti následne budú diskutovať o tom, ako ostať vytrvalý v prípade problémov.
+        desc: Študenti vytvoria stavbu len pomocou poskytnutých zásob. Stavba musí splniť zadanie (dosiahnúť určitu výšku alebo uniesť určitú záťaž) a študenti následne budú diskutovať o tom, ako ostať vytrvalý v prípade problémov.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmus z reálneho života: Papierové lietadielka'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
@@ -187,16 +187,16 @@ sk:
         desc: Študenti budú bežať štafetu, kde budú musieť prejsť cez dvor a napísať algoritmus podľa obrázku na základe "Programovania na štvorčekovom papieri". Môžu napísať len jeden príkaz počas jednej otočky a ak niekde nájdu chybu, musia spätne vymazať všetko až po túto chybu.
       courseD_unplugged_conditionalsCards:
         title: Podmienky s kartami
-        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."
       courseD_unplugged_binaryImages:
         title: Binárne obrázky
-        desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantách. Táto lekcia pokračuje v tomto koncepte ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
+        desc: Hosi si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantoch. Táto lekcia pokračuje v tomto koncepte ukázaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
       courseE_unplugged_diceRace:
         title: 'Algoritmy z reálneho života: Hod kockou'
-        desc: V tejto lekcii sa dozviete, ako používame algoritmy v každodennom živote. V rámci toho študenti identifikujú a napíšu algoritmus pre Hru Hod kockou.
+        desc: V tejto lekcií sa dozviete, ako používame algoritmy v každodennom živote. V rámci toho študenti identifikujú a napíšu algoritmus pre Hru v hode kockou.
       courseE_unplugged_songwritingParameters:
         title: Písanie pesničiek s parametrami
-        desc: Študenti sa na príklade refrénu v piesni naučia o definovaní a zavolaní funkcií.
+        desc: Študenti sa na príklade refrénu v piesni naučia o definícií a zavolaní funkcií.
       courseE_unplugged_internet:
         title: Internet
         desc: Študenti posielajú správy predstavujúce rôzne metódy internetového prenosu za pomoci kúskov papiera.
@@ -204,14 +204,14 @@ sk:
         title: Crowdsourcing
         desc: Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia problémov v oblasti počítačových technológií, je oveľa efektívnejšie riešiť úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám.
       courseE_unplugged_songwriting:
-        title: Písanie pesničiek
-        desc: Študenti sa na príklade refrénu v piesni naučia o definovaní a zavolaní funkcií.
+        title: Písanie pesničiek s parametrami
+        desc: Študenti sa na príklade refrénu v piesni naučia o definícií a zavolaní funkcií.
       courseF_unplugged_tangrams:
         title: Tangram algoritmy
-        desc: V tejto lekcii si ukážeme niečo dôležité o algoritmoch. Ak budete mať algoritmus jednoduchý, môžete ho použiť mnohými spôsobmi. Ak chete dosiahnuť, aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
+        desc: V tejto lekcií si ukážeme niečo dôležité o algoritmoch. Ak budete mať algoritmus jednoduchý, môžete ho použiť veľa spôsobmi. Ak chete dosiahnúť, aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
       courseF_unplugged_envelopeVariables:
         title: Obálkové premenné
-        desc: Premenné v informatike umožňujú voľnosť. V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite aktivitu pred (alebo spolu s) lekciou o abstrakcii pre úplne pochopenie tohto konceptu.
+        desc: Premenné v informatike umožňujú voľnosť. V tejto lekcií sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite aktivitu pred (alebo spolu s) lekciou abstrakcie pre úplne pochopenie tohto konceptu.
       courseF_unplugged_forLoopFun:
         title: Zábavné opakovanie
         desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
@@ -232,7 +232,7 @@ sk:
         desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
       PlantASeed_2018:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
-        desc: Táto lekcia objasňuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
+        desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote na príklade sadenia semienka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
       UnplugHappyMaps_2018:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
@@ -255,13 +255,13 @@ sk:
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       Conditionals_2018:
         title: Podmienky
-        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."
       DigitalFootprint_2018:
         title: Tvoja digitálna stopa
         desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje následky.
       BinaryImages_2018:
         title: Binárne obrázky
-        desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantách. Táto lekcia pokračuje v tomto koncepte ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
+        desc: Hosi si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantoch. Táto lekcia pokračuje v tomto koncepte ukázaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
       PaperPlanes_2018:
         title: 'Algoritmus z reálneho života: Papierové lietadielka'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
@@ -272,7 +272,7 @@ sk:
         title: Binárne náramky
         desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       MoveItMoveIt_2018:
-        title: Posuň, Posuň
+        title: Posuň to, Posuň to
       courseB_unplugged_CnC_2018:
         title: Je super tvoriť a hrať férovo
         desc: Táto lekcia, vytvorená s pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania a potrebe férovosti pri kreatívnej tvorbe.
@@ -285,24 +285,9 @@ sk:
       courseB_unplugged_MRF_2019:
         title: Moji robotickí priatelia
         desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
-      BuildingAFoundation_2019:
-        title: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Podmienky
-        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
-      courseF_unplugged_powerOfWords_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'chýba preklad: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.desc'
+        desc: Pre naučenie sa o podmieňovacích spôsoboch si študenti zahrajú kartovú hru a vytvoria pravidlá ako "ak zahrám červenú kartu, dostanem bod" a "ak zahrám čiernu kartu, ty dostaneš bod."
       GraphPaperProgramming_2019:
         title: Programovanie na milimetrovom papieri
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
@@ -314,22 +299,10 @@ sk:
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       BinaryImages_2019:
         title: Binárne obrázky
-        desc: Hoci si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantách. Táto lekcia pokračuje v tomto koncepte ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
-      courseE_unplugged_privateInformation_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
-      SongwritingParameters_2019:
-        title: 'chýba preklad: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        desc: Hosi si veľa ľudí pod pojmom binárny predstaví len jednotky a nuly, naše predošlé lekcie naučili študentov, že informácie môžu byť reprezentované v rozličných binárnych variantoch. Táto lekcia pokračuje v tomto koncepte ukázaním toho, ako môže počítač ukladať ešte komplexnejšie informácie (ako obrázky či farby) binárnym spôsobom.
       courseE_unplugged_CnC_2019:
         title: Digitálne zdieľanie
         desc: Táto lekcia, vytvorená s pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
-      Internet_2019:
-        title: 'chýba preklad: en-US.data.unplugged.Internet_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'chýba preklad: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'chýba preklad: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Neustále opakovanie
         desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu, ktorú budú na základe inštrukcíí opakovať.

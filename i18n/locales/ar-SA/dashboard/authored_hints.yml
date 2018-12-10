@@ -86,7 +86,7 @@ ar:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           تذكر أن الكود من المتاهة السابقة هو:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -155,7 +155,7 @@ ar:
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           هل تحتاج مساعدة للحصول على الزاوية الصحيحة؟
-
+          
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية الحصول على اللبنات في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
@@ -185,7 +185,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لنقل اللاعب إلى الخريطة!
         MC_HOC_2017_02_Cole_d: تأكد من ان الكائن يتبع المسار المحدد على الخريطة!
@@ -193,7 +193,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لنقل اللاعب إلى الخريطة!
         MC_HOC_2017_02_Cole_d: تأكد من ان الكائن يتبع المسار المحدد على الخريطة!
@@ -201,7 +201,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل الكائن"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لتحريك اللاعب الى المربع البرتقالي.
       MC_HOC_2017_03_Cole_authored_hint:
@@ -213,7 +213,7 @@ ar:
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           لفتح الطريق للاعب يجب الضغط على كلا الزرين.
-
+          
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'استخدم قطعة `انعطف يمينا` لتغيير اتجاه الكائن '
@@ -225,14 +225,14 @@ ar:
         MC_HOC_2017_04_Cole_a: الكائن يحتاج الى `تحرك الى الامام` 7 مرات. كيف يمكنك استخدام حلقة 'كرر' لتحقيق هذا؟
         MC_HOC_2017_04_Cole_c: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_04_Cole_b: بمجرد وصول الكائن الى الزر, الكائن سيفتح الباب للاعب.
       MC_HOC_2017_04_Cole_2019_authored_hint:
         MC_HOC_2017_04_Cole_a: الكائن يحتاج الى `تحرك الى الامام` 7 مرات. كيف يمكنك استخدام حلقة 'كرر' لتحقيق هذا؟
         MC_HOC_2017_04_Cole_c: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_04_Cole_b: بمجرد وصول الكائن الى الزر, الكائن سيفتح الباب للاعب.
       MC_HOC_2017_05_Cole_authored_hint:
@@ -262,13 +262,13 @@ ar:
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل الكائن"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل الكائن"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
       MC_HOC_2017_10_Cole_authored_hint:
@@ -284,19 +284,19 @@ ar:
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           لفتح الطريق للاعب يجب الضغط على كلا الزرين.
-
+          
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
         MC_HOC_2017_08_RY_c: حاول اتباع الخط المنقط لطريق بسيط خلال البركان.
       MC_HOC_2017_Ali_2019_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل"!
-
+          
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
         MC_HOC_2017_08_RY_c: حاول اتباع الخط المنقط لطريق بسيط خلال البركان.
@@ -309,7 +309,7 @@ ar:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -327,7 +327,7 @@ ar:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -346,7 +346,7 @@ ar:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -365,7 +365,7 @@ ar:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -384,7 +384,7 @@ ar:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -401,7 +401,7 @@ ar:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-
+          
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -411,7 +411,7 @@ ar:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -427,7 +427,7 @@ ar:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -446,7 +446,7 @@ ar:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -465,7 +465,7 @@ ar:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -484,7 +484,7 @@ ar:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>

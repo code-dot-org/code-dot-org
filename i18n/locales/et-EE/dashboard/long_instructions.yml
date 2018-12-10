@@ -154,39 +154,39 @@ et:
       CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       Dance_Party_01: |-
         * Korraldame tantsuõhtu! *
-
+        
         Lohista `tee uus` plokk töölauale ja ühenda see `seadista` plokiga, et luua esimene tantsija...
-
+        
         * * võite klõpsata ka vasakul olevat elektripirni, kui soovite rohkem teavet või lisaväljakutseid.*
       Dance_Party_01_low: |-
         * Korraldame tantsuõhtu! *
-
+        
         Lohista `tee uus` plokk töölauale ja ühenda see `seadista` plokiga, et luua esimene tantsija...
-
+        
         * * võite klõpsata ka vasakul olevat elektripirni, kui soovite rohkem teavet või lisaväljakutseid.*
       Dance_Party_02: |-
         Paneme selle põdra tantisma!
-
+        
          <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">uus&#95;tantsija</title>Lohistage<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> plokk töölauale. Ühendage see allpool <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"ühikud"</title></block></xml> plokiga. Sinu tantsija peaks alustama uue liigutusega peale neljandat ühikut.
-
-
+        
+        
         * ühikuid * kasutatakse, et muusikas aega mõõta. Selle juhendi puhul on ühiku pikkuseks neli takti.
       Dance_Party_03: "* Nüüd gruuvime! * \n\nLisa <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">plokk \"ühikud\"<div class=\"notranslate\">6</div></block></xml> oma töölauale. Las tantsija alustab uue liigutusega peale 6 ühikut."
       Dance_Party_04: |-
         *See tants vajab natuke särtsu!*
-
+        
         Otsi oma tööriistakastist uus plokk, mis lisab tantsija taha tasustaefekti. Vaata, kuidas efektid koos muusikaga aja jooksul muutuvad!
       Dance_Party_05: |-
         Kasuta uut plokki, et tantsija **iga 2 ühiku järel** liigutusi muudaks!
-
+        
         * Valides `(järgmine)`, `(Eelmine)`, or `(Juhuslik)` ütleb tantsijale, et ta sooritaks iga kord uue liigutuse kui kood tööle pannakse.
       Dance_Party_06: |-
         *Meil on vaja rohkem tantsijaid!*
-
+        
         Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta kassiga tantsiks.
       Dance_Party_08: |-
         Igal tantsijal on hulk _omadusi_, mis määravad, milline ta välja näeb.
-
+        
         Võid muuta tantsija taustatantsijaks, muutes nende_suuruse_ väiksemaks. Kas saad muuta mõlemad taustatantsijad ühesuuruseks?
       Dance_Party_09: |-
         Tantsijatel on omadus "toon", millega saab neile värvi lisada. Proovi muuta ühe oma tantsija tooni.
@@ -199,35 +199,35 @@ et:
         <title name="PROPERTY">"suurus"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-
+        
         See program kasutab muusika "bassi" -heli (madalad noodid), et kontrollida tantsija pikkust. Kas saad panna ka teise tantsija muusikale vastavalt muutuma?
+      Dance_Party_11.5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n    <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11.5_test: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n    <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> plokk laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse. Ole loominguline ja otsi uusi plokke!"
-      Dance_Party_11_5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n    <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11b: |-
         On aeg tantsuvõistluseks! Kass teeb dabi kui vajutad vasakut nooleklahvi. Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema üks "kõrge plaks", kui vajutatakse ülemist nooleklahvi.
-
+        
         ** Kasuta nooleklahve, et Robot kükitaks-plaksutaks-kükitaks-plaksutaks nii kiiresti kui võimalik! **
       Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       Dance_Party_3: "Lisa teine <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> plokk oma töölauale. Las tantsija alustab uue liigutusega peale 6 ühikut."
       Dance_Party_4: |-
         *See tants vajab natuke särtsu!*
-
+        
         Otsi oma tööriistakastist uus plokk, mis lisab tantsija taha tasustaefekti. Vaata, kuidas efektid koos muusikaga aja jooksul muutuvad!
       Dance_Party_8: "Igal tantsijal on hulk _omadusi_, mis määravad, milline ta välja näeb.\n\nVõid muuta tantsija taustatantsijaks, muutes nende_suuruse_ väiksemaks. Kas saad muuta mõlemad taustatantsijad ühesuuruseks?"
       Dance_Party_extras_layout: |-
         # Võtame joondu!
-
+        
         Vaata seda tantsu, mis kasutab plokki`paigutus`, et muuta taustatantsijate positsioone tantsu jooksul. Proovi seda mõne järgmise ideega edasi arendada:
-
+        
         * Loo teine grupp tantsijaid, kes on paigutunud teist moodi
         * Muuda paigutust kui vajutatakse klahvi
         * Muuda omadust kui tantsijad muudavad positsioone
       Dance_Party_extras_visible: |-
         # Kuhu nad kadusid?
-
+        
         See tants näitab ja peidab kahte erinevat tantsijate rühma. Vaadake tants üle ja proovige midagi põnevat omalt poolt lisada.
-
+        
         * Lisage teine rühma tantsijaid
         * Näita või peida tantsijaid kui bassi heli lööb
         * Kasuta tingimuslauset, et peita tantsijad ainult siis _kui_ treble energia on piisavalt suur
@@ -247,21 +247,18 @@ et:
       HOC 2018 Level_9b: "Sa jõudsid korallrahuni, nüüd otsida sealt ** Mere Süda **! [] (https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Kasuta siniseid ja punaseid koralle, et jõuda aarde ** kirstuni **! [] (https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       HOC Dance 3_draft: |-
         *See tants vajab natuke särtsu!*
-
+        
         Otsi oma tööriistakastist uus plokk, mis lisab tantsija taha tasustaefekti. Vaata, kuidas efektid koos muusikaga aja jooksul muutuvad!
       HOC Dance 4_draft: |-
         Kasuta uut plokki, et tantsija **iga 2 ühiku järel** liigutusi muudaks!
-
+        
         * Valides `(järgmine)`, `(Eelmine)`, or `(Juhuslik)` ütleb tantsijale, et ta sooritaks iga kord uue liigutuse kui kood tööle pannakse.
       HOC Dance 5_draft: |-
         *Meil on vaja rohkem tantsijaid!*
-
+        
         Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta kassiga tantsiks.
       HOC Dance 6_draft: "Igal tantsijal on hulk _omadusi_, mis määravad, milline ta välja näeb.\n\nVõid muuta tantsija taustatantsijaks, muutes nende_suuruse_ väiksemaks. Kas saad muuta mõlemad taustatantsijad ühesuuruseks?"
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> plokk laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse. Ole loominguline ja otsi uusi plokke!"
-      HOC Dance Freeplay: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
-      HOC Dance Freeplay_draft: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
-      HOC Dance Predraw: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       K-1 Bee Loops 2: Kasuta 'korduse' tsüklit, et liikuda ja nektarit koguda ning mett valmistada!
       K-1 Bee Loops 3: Kasuta nektari kogumiseks kolme 'korduse' tsüklit ja valmista mett!
       K-1 Bee Loops 4: Kasuta 'korduste' tsüklit nektari kogumiseks, mee valmistamiseks ja liikumiseks!

@@ -366,7 +366,6 @@ tr:
       minecraft: Minecraft
       flappy: Flappy
       dance: Dans Partisi
-      view_all: Tüm projeleri görüntüle...
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: İlerlemeniz

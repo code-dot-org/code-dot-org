@@ -1037,13 +1037,7 @@ pt-BR:
         com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha
         com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de
         azul. Linha 4 - sombras de cinza.'
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': Vamos começar
-        com você com a imagem 4x2 que Maddie estava criando, más deixamos de fora
-        os últimos dois quadrados. Termine a imagem descobrindo quais duas cores estão
-        faltando e codifique-as.
       App Lab test: teste
-      AppLab_test02: Resumo de uma frase da atividade. Clique para ver as instruções
-        completas.
       Applab AllTheThings ResourcesTab AllResources: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
@@ -1056,7 +1050,6 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
-      Applab test: Você pode enviar este nível. Apenas para testes!
       Artist - Nested Loops 1: |-
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -1297,119 +1290,23 @@ pt-BR:
       CSD Hackathon Pt 2: "(Clique para ver todas as instruções)"
       CSD Hackathon Week 1: "(Clique para ver todas as instruções)"
       CSD Hackathon Week 2: "(Clique para ver todas as instruções)"
-      CSD U3 Background Discuss: Aqui está um programa que é bem similar com o que
-        você tem escrito, mas pode se comportar de maneira bem diferente. Você vai
-        querer parar e discutir com a classe antes de continuar.
-      CSD U3 Background Experiment: Aqui está um programa que é bem similar com o
-        que você tem escrito, mas pode se comportar de maneira bem diferente. Você
-        vai querer parar e discutir com a classe antes de continuar.
-      CSD U3 Boolean Modify: Modifique o código para que todos os comandos console.log
-        imprimam 'true'
-      CSD U3 Boolean Modify_2018: Modifique o código para que todos os comandos console.log
-        imprimam 'true'
-      CSD U3 Boolean Predict: O que você acha que este código irá fazer quando for
-        executado? Preveja o que cada comando console.log() irá imprimir, e então
-        execute o programa para verificar suas previsões.
-      CSD U3 Boolean Predict_2018: O que você acha que este código irá fazer quando
-        for executado? Preveja o que cada comando console.log() irá imprimir, e então
-        execute o programa para verificar suas previsões.
-      CSD U3 Draw Loop Discuss: Aqui está um programa que é bem similar com o que
-        você tem escrito, mas pode se comportar de maneira bem diferente. Você vai
-        querer parar e discutir com a classe antes de continuar.
-      CSD U3 Draw Loop Experiment: Tente usar algumas das outras funções de formatos
-        que você aprendeu na repetição de desenho. O que acontece quando você utiliza
-        randomNumber() para gerar algumas das entradas? Você vai querer parar e discutir
-        com sua classe antes de continuar.
-      CSD U3 Expressions calculator: Adicione os números de 1 a 10. Multiplique os
-        números de 1 a 10. Verifique suas respostas com um vizinho.
-      CSD U3 Frame Rate: Torne a animação do Gary do Gamelab mais devagar com frameRate()
-      CSD U3 Keypress Boolean-2018: Modifique o código para que todos os comandos
-        console.log imprimam 'true'
-      CSD U3 Keypress Boolean: Modifique o código para que todos os comandos console.log
-        imprimam 'true'
-      CSD U3 Keypress Boolean_2018: Modifique o código para que todos os comandos
-        console.log imprimam 'true'
-      CSD U3 Keypress Watchers: Modifique o código para que todos os comandos console.log
-        imprimam 'true'
-      CSD U3 Keypress Watchers_2018: Modifique o código para que todos os comandos
-        console.log imprimam 'true'
-      CSD U3 L5 Freeplay: Mude o valor de petalSize múltiplas vezes. Como isto muda
-        o seu desenho?
-      CSD U3 L5 Freeplay_2018: Mude o valor de petalSize múltiplas vezes. Como isto
-        muda o seu desenho?
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
-      CSD U3 Random Animation: Use randomNumber() para animar a boca de Gary.
-      CSD U3 Random Choice: Use um bloco randomNumber() para gerar 0 ou 1
-      CSD U3 Random Color: Você poderia usar randomNumber() para escolher cores aleatórias
-        também? Tente definir um ou mais dos canais no bloco rgb com um número aleatório.
-        Qual deve ser o valor máximo?
-      CSD U3 Random Intro: O que você acha que este código vai fazer quando for executado?
-        Faça uma previsão, e então execute este código de 5 a 10 vezes, guardando
-        a saída a cada vez. Compartilhe os seus resultados com seu vizinho.
-      CSD U3 Random Min Max: Usando console.log() escreva um programa que retorna
-        aleatoriamente um número no intervalo que você definiu.
-      CSD U3 Random Width Height: Escolha um formato de bloco e use chamadas para
-        randomNumber() no lugar de um ou mais parâmetros. Certifique-se que você rode
-        algumas vezes para ver o efeito de aleatoriedade.
-      CSD U3 Simple Drawing - Animation 2: Use randomNumber() na posição x e a largura
-        da sua nuvem elíptica para introduzir um pouco de animação.
-      CSD U3 Simple Drawing - Animation: Use randomNumber() na posição x e a largura
-        da sua nuvem elíptica para introduzir um pouco de animação.
-      CSD U3 Simple Drawing - Background: Coloque todo o seu código em uma repetição
-        draw() e então defina o plano de fundo como azul com o bloco background().
       CSD U3 Simple Drawing - Personal Animation: FAÇA isso
       CSD U3 Sprites intro sprites: Faça isso
       CSD U3 Sprites intro sprites_2018 - Validation Test: Faça isso
       CSD U3 Sprites intro sprites_2018: Faça isso
-      CSD U3 Variable Arithmetic pt2: 'Preveja: Quais dois números irão aparecer no
-        console?'
       CSD U3 Variable Arithmetic: Modifique o valor "tamanho" inicial para fazer um
         quadrado maior.
-      CSD U3 Variable Incrementation pt2: 'Preveja: Quais dois números irão aparecer
-        no console?'
-      CSD U3 Variable Incrementation: 'Preveja: Quais dois números irão aparecer no
-        console?'
-      CSD U3 Variables CHALLENGE gamelab gary: Use variáveis para animar o Game Lab
-        Gary
-      CSD U3 Variables Initialize: 'Preveja: O que vai ser mostrado no console?'
       CSD U3 Variables Intro: 'Crie sua própria variável '
-      CSD U3 Variables Random: 'Preveja: O que vai ser mostrado no console?'
       CSD U3 Variables Reassign pt2: Crie e atribua uma nova variável em uma única
         linha.
-      CSD U3 Variables Reassign: 'Preveja: O que vai ser mostrado no console?'
-      CSD U3 Variables Square Random Loop: Teste suas previsões do ultimo nível.
       CSD U3 Variables Square Random: Modifique o valor "tamanho" inicial para fazer
         um quadrado maior.
       CSD U3 Variables Square: Modifique o valor "tamanho" inicial para fazer um quadrado
         maior.
-      CSD U3 Variables TEMPLATE square: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables change circle size: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables change circle size_2018: Mude o valor de petalSize múltiplas
-        vezes. Como isto muda o seu desenho?
       CSD U3 Variables create and assign: Crie e atribua o tamanho em uma única linha
         de código.
-      CSD U3 Variables draw loop newVars: Estenda esse projeto para criar sua própria
-        visualização de arte aleatória com variáveis.
-      CSD U3 Variables multiple assignments: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables naming rules v2-2018: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables naming rules v2: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables naming rules v2_2018: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables naming rules: Mude o valor de petalSize múltiplas vezes. Como
-        isto muda o seu desenho?
-      CSD U3 Variables random assignment: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
-      CSD U3 Variables random with assignment: Mude o valor de petalSize múltiplas
-        vezes. Como isto muda o seu desenho?
-      CSD U3 Variables random with assignment_2018: Mude o valor de petalSize múltiplas
-        vezes. Como isto muda o seu desenho?
-      CSD U3 Variables use value rect: 'Preveja: O que vai ser mostrado no console?'
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique
@@ -3130,9 +3027,6 @@ pt-BR:
       GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
         eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
         fazem.
-      'Game Lab Workshop: Random': Escolha um formato de bloco e use chamadas para
-        randomNumber() no lugar de um ou mais parâmetros. Certifique-se que você rode
-        algumas vezes para ver o efeito de aleatoriedade.
       HOC 2018 Level_1: Colete um barco no baú.
       HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
       HOC 2018 Level_11: Construa um canal usando Prismarinho dentro do Monumento
@@ -4049,14 +3943,6 @@ pt-BR:
         usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com
         sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul.
         Linha 4 - sombras de cinza.'
-      Pixelation - Lesson 15 - Complete 3-bit color: Vamos começar com você com a
-        imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
-        quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
-        codifique-as.
-      Pixelation - Lesson 15 - Complete 3-bit color_2018: Vamos começar com você com
-        a imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
-        quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
-        codifique-as.
       Play Lab Rocket 1: |-
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
@@ -4380,12 +4266,6 @@ pt-BR:
       U3 - Sprites and Mod - X and Y Prop: Faça isso
       U3 - Sprites and Mod - two sprites: Faça isso
       U3 - images - bee free play: Faça isso
-      U3 Variables flower example: Mude o valor de petalSize múltiplas vezes. Como
-        isto muda o seu desenho?
-      U3 Variables gray square: Mude o valor de petalSize múltiplas vezes. Como isto
-        muda o seu desenho?
-      U3 Variables randomize your square: Mude o valor de petalSize múltiplas vezes.
-        Como isto muda o seu desenho?
       U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -5921,34 +5801,6 @@ pt-BR:
       courseD_farmer_condLoops_challenge2_2018: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_2019: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_clone: Colete tudo para completar o nível.
-      courseD_farmer_conditionals2: Mova para o buraco e preencha-o com seis pás de
-        terra, usando o bloco `preencher`.
-      courseD_farmer_conditionals3: Use o menor número de blocos possível para resolver
-        este enigma.
-      courseD_farmer_conditionals5: 'Ajude-me a remover toda esta areia. '
-      courseD_farmer_conditionals8: 'Desafio: Preencha todos estes buracos usando
-        o menor número de blocos possível. '
-      courseD_farmer_while2: Mova para o buraco e preencha-o com seis pás de terra,
-        usando o bloco `preencher`.
-      courseD_farmer_while2_2018: Mova para o buraco e preencha-o com seis pás de
-        terra, usando o bloco `preencher`.
-      courseD_farmer_while2_2019: Mova para o buraco e preencha-o com seis pás de
-        terra, usando o bloco `preencher`.
-      courseD_farmer_while3: Use o menor número de blocos possível para resolver este
-        enigma.
-      courseD_farmer_while3_2018: Use o menor número de blocos possível para resolver
-        este enigma.
-      courseD_farmer_while3_2019: Use o menor número de blocos possível para resolver
-        este enigma.
-      courseD_farmer_while5: 'Ajude-me a remover toda esta areia. '
-      courseD_farmer_while5_2018: 'Ajude-me a remover toda esta areia. '
-      courseD_farmer_while5_2019: 'Ajude-me a remover toda esta areia. '
-      courseD_farmer_while8: 'Desafio: Preencha todos estes buracos usando o menor
-        número de blocos possível. '
-      courseD_farmer_while8_2018: 'Desafio: Preencha todos estes buracos usando o
-        menor número de blocos possível. '
-      courseD_farmer_while8_2019: 'Desafio: Preencha todos estes buracos usando o
-        menor número de blocos possível. '
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
@@ -6046,12 +5898,6 @@ pt-BR:
         aninhado. "
       courseE_bee_concept1_2019: "Colete todo o néctar de cada flor.\nUse um laço
         aninhado. "
-      courseE_bee_concept3: Colete todo o néctar usando o menor número possível de
-        blocos.
-      courseE_bee_concept3_2018: Colete todo o néctar usando o menor número possível
-        de blocos.
-      courseE_bee_concept3_2019: Colete todo o néctar usando o menor número possível
-        de blocos.
       courseE_bee_concept5: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2018: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2019: Ajude a abelha a coletar todo o nectar das flores.
@@ -6583,7 +6429,6 @@ pt-BR:
       grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora. Mova-me
         ao longo do terreno. Se houver um monte de terra, remova-o, e se houver um
         buraco, preencha-o. Dica: use o menu de opções no bloco "se".'
-      grade3_robotFarmer_ConditionalsIntro_5: 'Ajude-me a remover toda esta areia. '
       grade3_robotFarmer_ConditionalsIntro_6: Remova todas as pilhas de terra usando
         o menor número de blocos possível. As novas opções de menu no bloco "enquanto"
         mostram se eu estou em uma pilha de terra ou em um buraco.
@@ -6715,8 +6560,6 @@ pt-BR:
         para coletar todo o néctar."
       grade4_bee_nestedLoops0: Use um laço para coletar todo o néctar.
       grade4_bee_nestedLoops1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
-      grade4_bee_nestedLoops2a: Colete todo o néctar usando o menor número possível
-        de blocos.
       grade4_bee_nestedLoops3: |-
         Colete todo o néctar criando
         um laço aninhado.
@@ -6765,7 +6608,6 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
-      grade4_playLab_proj_example1: instruções
       grade4_playlab_freeplay: "É hora da atividade livre! Divirta-se\ncom todos os
         blocos da sua caixa de ferramentas. "
       grade4_playlab_test: "Use a seta para a direita para atirar tortas.\r\n\r\nEm\nnosso
@@ -6796,8 +6638,6 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade4_review_bee3: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
-      grade4_scaffolded_project1: É incrível o quanto você aprendeu! Vamos juntar
-        tudo para fazer um jogo, passo a passo.
       grade5_artist_binary1: "Binário é uma forma de representar informações\nusando
         apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
         número 0) e \"ligado\" (representada pelo número 1).  \r\n\r\nFoi fornecida\numa
@@ -7044,7 +6884,6 @@ pt-BR:
         rápido.
       gradek_artist_loopsPre: Este é um novo tipo de quebra-cabeça chamado "Artista".
         Brinque com o nível e desenhe algo divertido.
-      group test: Faça um jogo
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
       level 'grade3_Loops_10: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
@@ -7073,13 +6912,7 @@ pt-BR:
         Colete o néctar de cada flor e produza mel
         em cada colmeia usando o menor número possível de blocos.
       level grade3_Loops_2: Desta vez, use um laço para juntar todo o néctar.
-      love_spring_1: Vamos celebrar a Primavera. Nós colocamos algumas sementes no
-        chão para preparar para a estação das flores. Você consegue cobrir todas elas,
-        para que os pássaros não as comam?
       marina_gameLab_play: Clone este nível e faça seus próprios blocos!
-      mike3bit: Vamos começar com você com a imagem 4x2 que Maddie estava criando,
-        más deixamos de fora alguns pixels. Termine a imagem descobrindo quais estão
-        faltando e os codifique.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.

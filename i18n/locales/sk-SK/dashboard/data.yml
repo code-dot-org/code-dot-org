@@ -245,7 +245,7 @@ sk:
         maze_wordsearch_k_3: Presuň ma pre vyhláskovanie slova WEST (západ)
         maze_wordsearch_k_4: Presuň ma pre vyhláskovanie slova NORTH (sever)
         maze_wordsearch_k_6: Presuň ma na východ a potom na juh pre vyhláskovanie slova JUMP (skok)
-        maze_wordsearch_k_9: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova CODE (kód)
+        maze_wordsearch_k_9: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova CODE (kód)
         maze_wordsearch_k_13: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova DEBUG (vyhľadať chyby)
         maze_wordsearch_k_15: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova ABOVE (nad)
         maze_wordsearch_k_16: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova BELOW (pod)
@@ -261,13 +261,13 @@ sk:
         farmer_intro: Úvod k Farmárovi
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakuj x-krát
-        loop_until: Blok "Opakuj do"
-        if: Blok "Ak"
-        if_else: Blok "Ak/inak"
-        if_else_scrat: Blok "Ak/inak"
+        loop_until: Opakuj až po blok
+        if: Ak blok
+        if_else: Ak/inak blok
+        if_else_scrat: Ak/inak blok
         function: Funkcie
-        loop_while: Blok "Kým"
-        loop_for: Blok "Počítadlo"
+        loop_while: Pokiaľ blok
+        loop_for: Blok Počítadlo
         parameters: Funkcie s parametrami
         hoc_wrapup: Zhrnutie Hodiny Kódu
         Unplug1: Čo je to CS?
@@ -276,13 +276,13 @@ sk:
         Unplug4: Algoritmy
         Unplug5: Funkcie
         Unplug6: Podmienky
-        Unplug7: Písanie pesničiek
+        Unplug7: Písanie pesničiek s parametrami
         Unplug8: Abstrakcia
         Unplug9: Štafetové programovanie
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
-        C1_moveitmoveit_unplugged: Posuň, Posuň
+        C1_moveitmoveit_unplugged: Posuň to, Posuň to
         C1_bigevent_unplugged: Veľká udalosť
         C1_getting_loopy: Neustále opakovanie
         C1_pair_programming: Programovanie v páre
@@ -317,7 +317,7 @@ sk:
         C3_maze_level_4: 'Bludisko: Cykly'
         C3_artist_intro: Umelec - Úvod
         C3_artist_functions: Umelec - Funkcie
-        C3_bee_functions: Funkcie s včelou
+        C3_bee_functions: Funkcie včely
         C3_bee_conditionals: Podmienky s včelou
         C3_maze_conditionals: Podmienky v bludisku
         C3_artist_nested_loops: Vnorené cykly
@@ -352,15 +352,15 @@ sk:
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
         CSF_artist_angles: Umelec - Uhly
-        CSF_collector_k1_blocks: 'Základy informatiky: Kolektor'
+        CSF_collector_k1_blocks: 'Základy informatiky: Zberateľ'
         CSF_collector_repeat_loops: Použitie bloku "Opakuj"
-        CSF_collector_text_blocks: 'Základy informatiky: Kolektor'
+        CSF_collector_text_blocks: 'Základy informatiky: Zberateľ'
         CSF_create_functions: Vytvorte funkcie
         CSF_debugging_k1_blocks: Hľadanie a odstraňovanie chýb
         CSF_debugging_text_blocks: Hľadanie a odstraňovanie chýb
         CSF_EF_cs_matters: Na informatike záleží
-        CSF_maze_intro_k1_blocks: Úvod do Code štúdia
-        CSF_maze_intro_text_blocks: Úvod do Code štúdia
+        CSF_maze_intro_k1_blocks: Úvod do Študia kódu
+        CSF_maze_intro_text_blocks: Úvod do Študia kódu
         CSF_my_robotic_friends: Moji robotickí priatelia
         CSF_Power_of_Words: Sila slov
         CSF_Super_Digital_Citizen: Super digitálny občan
@@ -385,7 +385,7 @@ sk:
         csd_concept_hardware_software: 'Ako pracujú počítače: Hardvér a softvér'
         csd_concept_search: Ako funguje vyhľadávanie
         csd_external_amazon_data: Ako sa Big Data používajú v odporúčacom systéme Amazonu a menia naše životy
-        csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
+        csd_external_netflix_data: Ako fungujú navrhovania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
         csd_gamelab_velocity: Rýchlosť
@@ -459,22 +459,22 @@ sk:
         CSF_scrat_loops_K1: Cykly v Dobe ľadovej
         CSF_scrat_loops_CF: Cykly v Dobe ľadovej
         CSF_if_allskins: Blok "If"
-        CSF_ifelse_allskins: Používanie blokov If/Else (Ak/Inak)
-        CSF_ifelseifelse_allskins: Používanie blokov If/Elseif/Else (Ak/Inak ak/Inak)
+        CSF_ifelse_allskins: Používanie blokov If/Else
+        CSF_ifelseifelse_allskins: Používanie blokov If/Elseif/Else
         CSF_loops_AB: Slučky
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmieňovacie výroky
-        csd_gamelab_if_else: Výroky If/Else (Ak/Inak)
+        csd_gamelab_if_else: Výroky If/Else
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Objekty v akcií
         CSF_SpriteLab_SpritesInAction_CDEF: Objekty v akcií
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Voyage Aquatic - Úvod'
-        MC_2018_loops: 'Minecraft: Voyage Aquatic - Cyklus "Opakuj kým"'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic - Opakovania'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic - Podmienky'
         mc_2018_closing: 'Minecraft: Voyage Aquatic - Gratulujeme'
-        hoc_dance_warmup: Tanečná párty - Na úvod
+        hoc_dance_warmup: Tanečná párty - Zahrej sa
         hoc_dance_events: Tanečná Párty - Udalosti
         hoc_dance_properties: Tanečná Párty - Vlastnosti
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
@@ -486,7 +486,7 @@ sk:
         gray_block_explanation: Sivé bloky sa nedajú vymazať. Viete napriek tomu vyriešiť úlohu?
         show_code_explanation: Klikni sem, aby si videl kód programu, ktorý tvoríš
         instructions_repeat_explanation: Inštrukcie pre každú úlohu sú zopakované tu
-        category_explanation: Bloky zostali rovnaké, ale odteraz sú zoradené v kategóriách
+        category_explanation: Bloky ostali rovnaké, ale odteraz sú zoradené v kategóriách
         set_sprite_image: Pripojte blok "priradiť herca k obrázku" k bloku "po začatí príbehu" pre povolenie herca pre tento príbeh
         studio_say_text: Sem medzi tieto úvodzovky zadajte text, ktorý má Váš herec povedať
         jigsaw_click: Klikni na tento blok!
@@ -494,7 +494,7 @@ sk:
         turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" správnym uhlom otočenia
-        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej ploche
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
         repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
@@ -510,7 +510,7 @@ sk:
         house_hint: Je v poriadku, ak obrázok ešte nevyzerá ako dom. Opravíme to v ďaľšej úlohe.
         edit_draw_square: Použi toto tlačidlo, aby si upravil funkciu a pridal opakovací cyklus.
         edit_get_nectar: Použite toto tlačidlo pre úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
-        logic_category: Otvorte panel "Logické" pre bloky "If/Else".
+        logic_category: Otvorte panel "Logické" pre bloky "if/else".
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter "dĺžka"?
         frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
         frozen_circle_function_in_circle_turn: Nezabudni sa po vytvorení každej kružnice otočiť.
@@ -520,7 +520,7 @@ sk:
         playlab_drag_say: Presuňte sem blok "Povedz" a napíšte "ahoj"
         playlab_use_twice: Použite tento blok dvakrát a nezabudnte zmeniť počet umelcov
         playlab_move_girl: Použite blok "posuň doprava" pre posunutie Dievčatka tenistky
-        playlab_play_sound: Pridajte blok "Prehraj zvuk"
+        playlab_play_sound: Pridajte se blok "Prehraj zvuk"
         playlab_arrow_keys: Nezabudnite použiť tieto pre posunutie bosorky po stlačení "Spustiť"
         playlab_add_move: Pridajte bloky "Presunúť" do tohto bloku s opakovaním
         playlab_add_score: Tu pridaj blok skóre
