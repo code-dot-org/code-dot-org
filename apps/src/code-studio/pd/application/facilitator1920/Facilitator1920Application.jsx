@@ -1,4 +1,5 @@
 import {PropTypes} from 'react';
+import {CSF, CSD, CSP} from '../ApplicationConstants';
 
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
@@ -50,3 +51,9 @@ export default class Facilitator1920Application extends FormController {
     window.location.reload(true);
   }
 }
+
+export const ProgramMapping = {
+  'CS Fundamentals (K - 5th grade)': CSF,
+  'CS Discoveries (6 - 10th grade)': CSD,
+  'CS Principles (9 - 12th grade)': CSP
+};
