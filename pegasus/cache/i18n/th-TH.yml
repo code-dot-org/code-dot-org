@@ -757,7 +757,7 @@ th-TH:
   hoc_category_name: ช่วงเวลาของ Code
   csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
   applab_name: แอ๊ปแล็บ
-  gamelab_name: เกมแล๊บ (Game Lab)
+  gamelab_name: เกมแล๊ป (Game Lab)
   codeorg_gradelevel: อายุ 4 - 104 ปี
   codeintl_gradelevel: อายุ 4 - 104 ปี
   khan_gradelevel: มัธยมศึกษาตอนต้นขึ้นไป
@@ -1187,7 +1187,7 @@ th-TH:
   user_header_settings: บัญชีของฉัน
   user_header_logout: ออกจากระบบ
   user_header_signin: เข้าสู่ระบบ
-  user_header_gamelab: เกมแล๊บ (Game Lab)
+  user_header_gamelab: เกมแล๊ป (Game Lab)
   user_header_dance: งานเต้นรำ
   user_header_minecraft: ไมน์คราฟท์
   user_header_view_my_projects: ดูโปรเจกต์ต่าง ๆของฉัน

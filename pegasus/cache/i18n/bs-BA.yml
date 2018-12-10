@@ -243,7 +243,6 @@ bs-BA:
   studiobar_title_nolink: Istraži Studio Kodiranja
   studiobar_elementary_title: Osnovni kursevi
   studiobar_elementary_body: Naša nova tri kursa za K&#8209;5
-  studiobar_dance_title: Plesna zabava
   studiobar_hoc_title: Sat Kodiranja
   studiobar_hoc_body: Nauči programirati sa Angry Birds
   studiobar_flappy_title: Flappy kôd
@@ -1512,10 +1511,8 @@ bs-BA:
   user_header_logout: Odjava
   user_header_signin: Prijava
   user_header_playlab: Play Lab
-  user_header_dance: Plesna zabava
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Počni
-  hoc_overview_dance_title: Plesna zabava
   hoc_overview_start_tutorial: Počni
   hoc2018_creativity_create: Kreiraj
   hoc2018_mc_adventurer_description: Upotrijebi kod da odvedeš Alex ili Steve u avanturu.
@@ -1536,37 +1533,7 @@ bs-BA:
   hoc2018_mc_homepage_join_us: Pridruži nam se
   hoc2018_mc_homepage_try_it: Isprobaj
   hoc2018_mc_continue_learning: Nastavite učiti sa Minecraft-om.
-  hoc2018_dance_party_main_heading: Plesna zabava
-  hoc2018_dance_party_subheading: Pomozite u prevođenju Plesne zabave
-  hoc2018_dance_create_your_own_dance_title: Kreirajte svoju vlastitu plesnu zabavu
-  hoc2018_dance_party_box_title: Plesna zabava
-  hoc2018_dance_party_box_description: Kodirajte svoju vlastitu plesnu zabavu i podijelite
-    je sa svojim prijateljima!
-  hoc2018_dance_party_specs: Jezik | Oblik | Godine 6-106
   hoc2018_dance_party_button: Počni
-  hoc2018_dance_keep_on_dancing_box_title: Nastavite plesati
-  hoc2018_dance_keep_on_dancing_description: Izađite iz okvira prvog sata sa proširenim
-    idejama o projektu.
-  hoc2018_dance_keep_on_dancing_specs: Jezik | Oblik | Godine 13+
-  hoc2018_dance_keep_on_dancing_button: Započnite sa 2. dijelom
-  hoc2018_dance_teacher_resources_title: Resursi za nastavnike
-  hoc2018_dance_teacher_resources_tile1_description: Planovi lekcija, certifikati
-    i filtriranje muzike.
   hoc2018_dance_teacher_resources_tile1_button: Nastavni Plan
-  hoc2018_dance_teacher_resources_tile2_title: Plesna zabava bez granica
-  hoc2018_dance_teacher_resources_tile2_description: 'Nema potrebe za računarima!
-    Naučite koncepte programiranja za plesnu koreografiju skupa. '
   hoc2018_dance_teacher_resources_tile2_button: Izvanmrežna aktivnost
-  hoc2018_dance_featured_student_creations_title: Izdvojene kreacije studenata
-  hoc2018_dance_videos_section_heading: Dobijte inspiraciju
-  hoc2018_dance_video_title_what_is_creativity: Šta je kreativnost?
-  hoc2018_dance_view_creativity_video_playlist: Šta je kreativnost? Pogledajte cijelu
-    seriju (5 minuta)
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: U partnerstvu sa
   hoc2018_dance_amazon_about_future_engineer_button: Nauči više
-  hoc2018_dance_measure: Taktovi
-  hoc2018_dance_measure_colon: 'Taktovi:'
-  hoc2018_dance_video1: Plesna zabava - Uvod
-  hoc2018_dance_video2: Plesna zabava - Događaji
-  hoc2018_dance_video3: Plesna zabava - Osobenosti
-  hoc2018_dance_video4: Plesna zabava - Zahvale
