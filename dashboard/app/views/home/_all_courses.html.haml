@@ -25,10 +25,25 @@
     Script::DANCE_PARTY_NAME
   ]
 
+  wide_blocks = [
+    "applab",
+    "widgets",
+    "gamelab",
+    "weblab",
+    Script::TWENTY_HOUR_NAME,
+    "unplugged",
+    Script::EXPRESS_NAME,
+    Script::PRE_READER_EXPRESS_NAME,
+  ]
+
 .all-course-blocks
   - tall_blocks.each do |script_name|
     %div{id: script_name}
       = render partial: 'shared/course_tall_block', locals: { id: script_name }
+
+  - wide_blocks.each do |script_name|
+    %div{id: script_name}
+      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
 
 .csf-courses-header
   .row
