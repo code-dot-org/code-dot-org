@@ -112,6 +112,10 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Heç biri
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ az:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Heç biri
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Heç biri
@@ -178,6 +186,7 @@ az:
             '"right"': sağa
             '"space"': kosmos
             '"x"': x
+            '"y"': 'y'
       gamelab_changePropBy:
         options:
           PROPERTY:
