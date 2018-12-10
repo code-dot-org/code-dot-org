@@ -136,17 +136,11 @@ export class CourseBlocksHoc extends Component {
     isInternational: PropTypes.bool,
   };
 
-  getFirstRowTiles = () => {
-    if (this.props.isInternational) {
-      return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
-    } else {
-      return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
-    }
-  };
-
   componentDidMount() {
-    // First row, dynamically created based on isInternational value
-    const tiles = this.getFirstRowTiles();
+    const tiles = this.props.isInternational
+      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
     });
