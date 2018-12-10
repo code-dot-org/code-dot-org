@@ -62,7 +62,7 @@ fil:
         Maaari ka bang makagawa ng parisukat na may mga gilid na mga 100 pixels?\r
         \r
         <br/>\r
-        
+
       2-3 Artist Loops New 10: Ngayon ay ating ikonekta ang isang bungkos ng mga V nang sama-sama sa isang loop.
       2-3 Artist Loops New 11: "Oras na para gumawa ng isang bagay na maganda!\n\\r\n\\r\nGawin muli ang code mula sa huling palaisipan, ngunit sa oras na ito, magdagdag ng pagliko sa kaliwa nang 30 degrees sa loob ng loop. Ngayon, ulitin ito nang 24 na beses sa halip na 8."
       2-3 Artist Loops New 12: 'Gumuhit ng dyamante na may mga gilid na 100 pixels. '
@@ -72,7 +72,7 @@ fil:
         Ngayon, magguhit ng kahit anong gusto mo!\r
         <br/><br/>\r
         \r
-        
+
       2-3 Artist Loops New 2: |-
         Narito ang parehong palaisipan na kakalutas lang natin, pero sa oras na ito, maaari lang tayong gumamit ng isang `move forward` na bloke at isang `turn` na bloke.\r
         \r
@@ -85,7 +85,7 @@ fil:
         \r
         <br/>\r
         \r
-        
+
       2-3 Artist Nested Loops 10: I-loop ang code na ito nang 12 beses para makumpleto ang pattern.
       2-3 Artist Nested Loops 11: I-loop ang code na ito nang 4 beses para makumpleto ang pattern, lumiko nang 90 degrees pagkatapos nang bawat bilog.
       2-3 Artist Nested Loops 12: I-loop ang code na ito nang 12 beses para makumpleto ang mga kulot.
@@ -300,7 +300,7 @@ fil:
         \r
         ![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif)
         I-click para makita ng isang GIF sa mga hakbang na mga ito
-        
+
         r
       AppLab Intro 2 - Edit place1: |-
         Sa iyong huling screen, binigyan mo ang iyong karakter ng pagpipilian sa pagitan ng mga aksyon o mga lugar. Pumili ng isa sa mga ito at simulang gumawa ng screen para dito!\r
@@ -497,7 +497,7 @@ fil:
         \r
         **Ipakita sa Akin:** ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)</details>\r
         \r
-        
+
       AppLab Intro 4 - Video designMode: "# Patiunang Pagpapakita sa Design na Mode"
       AppLab Intro 4 - Video onEvent: "# Paggamit ng onEvent"
       AppLab Intro 4 - Video share your work: "# Gawin at Ibahagi ang Iyong App!"
@@ -782,7 +782,7 @@ fil:
         * Magdagdag ng draw na loop sa yiong programa (dapat mayroon ka lang isa).\r
         * Gamitin ang lasso na tagapili (i-click, i-hold, at kaladkarin) para mapili ang lahat ng iyong code at ilagay ito sa loob ng iyong draw na loop. Ang Ctrl-Z ay hahayaan kang ulitin ang iyong mga kamalian na nagawa mo.\r
         * Magdagdag ng code sa iyong programa na nag-update sa mga `sprite x`, `sprite y`, p `sprite.rotation` na mga katangian ng sprite para sila ay gagalaw. Kakailanganin mong i-update ang mga ito gamit ang `randomNumber()`.\r
-        
+
       CSD U3 Draw Loop Plugged update your scene_2018: |
         # Palawakin ang Iyong Eksena\r
         \r
@@ -797,7 +797,7 @@ fil:
         * Magdagdag ng draw na loop sa yiong programa (dapat mayroon ka lang isa).\r
         * Gamitin ang lasso na tagapili (i-click, i-hold, at kaladkarin) para mapili ang lahat ng iyong code at ilagay ito sa loob ng iyong draw na loop. Ang Ctrl-Z ay hahayaan kang ulitin ang iyong mga kamalian na nagawa mo.\r
         * Magdagdag ng code sa iyong programa na nag-update sa mga `sprite x`, `sprite y`, p `sprite.rotation` na mga katangian ng sprite para sila ay gagalaw. Kakailanganin mong i-update ang mga ito gamit ang `randomNumber()`.\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
