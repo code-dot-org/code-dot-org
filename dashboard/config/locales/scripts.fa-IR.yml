@@ -1271,6 +1271,14 @@ fa:
           stages:
             Creating Functions:
               name: ساختن تابع ها
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+          title: 'ماینکرافت: سفر قهرمانان'
+          description_short: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
+          description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با
+            کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           stages:
             Building a Foundation:
