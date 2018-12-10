@@ -62,6 +62,9 @@ module Pd::Application
     PROGRAM_OPTIONS = PROGRAMS.values
     VALID_COURSES = PROGRAMS.keys.map(&:to_s)
 
+    YES_COMMIT = 'Yes, I can commit to this requirement'
+    NO_COMMIT = 'No, I can’t commit to this requirement'
+
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
@@ -280,7 +283,28 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
 
-        have_led_pd: [YES, NO],
+        have_led_adults: [YES, NO],
+
+        csf_summit_requirement: [YES_COMMIT, NO_COMMIT],
+        csf_workshop_requirement: [YES_COMMIT, NO_COMMIT],
+        csf_community_requirement: [YES_COMMIT, NO_COMMIT],
+
+        csd_csp_fit_weekend_requirement: [YES_COMMIT, NO_COMMIT],
+        csd_csp_which_fit_weekend: [
+          'fake workshop',
+          TEXT_FIELDS[:not_sure_please_explain],
+          TEXT_FIELDS[:unable_to_attend_please_explain]
+        ],
+        csd_csp_workshop_requirement: [YES_COMMIT, NO_COMMIT],
+
+        csd_training_requirement: [YES_COMMIT, NO_COMMIT],
+        csp_training_requirement: [YES_COMMIT, NO_COMMIT],
+
+        csd_csp_summer_workshop_requirement: [YES_COMMIT, NO_COMMIT],
+        csd_csp_deeper_learning_requirement: [YES_COMMIT, NO_COMMIT],
+        development_and_preparation_requirement: [YES_COMMIT, NO_COMMIT],
+
+        csd_csp_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
 
         groups_led_pd: [
           'K-12 teachers',
@@ -319,6 +343,10 @@ module Pd::Application
 
         program
         code_org_facilitator
+
+        teaching_experience
+        have_led_adults
+        development_and_preparation_requirement
 
         currently_involved_in_cs_education
         grades_taught

@@ -6,56 +6,71 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES, NONE} from '../ApplicationConstants';
+import {CSF, CSD, CSP} from '../ApplicationConstants';
+import {ProgramMapping} from './Facilitator1920Application';
 
 export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
   static labels = PageLabels.section3ExperienceAndCommitments;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section3ExperienceAndCommitments),
-    "gradesTaught_other",
-    "gradesCurrentlyTeaching_other",
-    "subjectsTaught_other",
-    "experienceLeading_other"
   ];
 
   render() {
+    const program = ProgramMapping[this.props.data.program] || 'CS Program';
     return (
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section3ExperienceAndCommitments}</h3>
-
         {this.radioButtonsFor("teachingExperience")}
+        {this.radioButtonsFor("haveLedAdults")}
 
-        {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          [TextFields.otherPleaseList] : "other"
-        })}
+        <p>
+          The Code.org Facilitator Development Program is an intensive, year-long
+          commitment that kicks off your time as a Code.org facilitator. The high-level
+          program commitments for the first year are listed below. Please indicate
+          whether you can reasonably meet these commitments, and note that we expect
+          that you would continue facilitating beyond this first year.
+        </p>
 
-        {this.props.data.teachingExperience === YES &&
+        {
+          program === CSF &&
           <div>
-            {this.checkBoxesWithAdditionalTextFieldsFor("gradesTaught", {
-              [TextFields.otherWithText] : "other"
-            })}
-
-            {this.checkBoxesWithAdditionalTextFieldsFor("gradesCurrentlyTeaching", {
-              [TextFields.otherWithText] : "other"
-            })}
-
-            {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTaught", {
-              [TextFields.otherWithText] : "other"
-            })}
-
-            {this.radioButtonsFor("yearsExperience")}
-
-            {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
-              <div>
-                {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  [TextFields.otherWithText] : "other"
-                })}
-
-              </div>
-            }
+            {this.radioButtonsFor("csfSummitRequirement")}
+            {this.radioButtonsFor("csfWorkshopRequirement")}
+            {this.radioButtonsFor("csfCommunityRequirement")}
           </div>
         }
+
+        {
+          program !== CSF &&
+          <div>
+            {this.radioButtonsFor("csdCspFitWeekendRequirement")}
+            {this.checkBoxesWithAdditionalTextFieldsFor("csdCspWhichFitWeekend", {
+              [TextFields.notSurePleaseExplain] : "other",
+              [TextFields.unableToAttendPleaseExplain] : "other"
+            })}
+            {this.radioButtonsFor("csdCspWorkshopRequirement")}
+
+            {
+              program === CSD &&
+              <div>
+                {this.radioButtonsFor("csdTrainingRequirement")}
+              </div>
+            }
+
+            {
+              program === CSP &&
+              <div>
+                {this.radioButtonsFor("cspTrainingRequirement")}
+              </div>
+            }
+
+            {this.radioButtonsFor("csdCspSummerWorkshopRequirement")}
+            {this.radioButtonsFor("csdCspDeeperLearningRequirement")}
+          </div>
+        }
+
+        {this.radioButtonsFor("developmentAndPreparationRequirement")}
       </FormGroup>
     );
   }
@@ -65,44 +80,34 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
    */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
+    const program = ProgramMapping[data.program] || 'CS Program';
 
-    if (data.teachingExperience === YES) {
+    if (program === CSF) {
       requiredFields.push(
-        "gradesTaught",
-        "gradesCurrentlyTeaching",
-        "subjectsTaught",
-        "yearsExperience"
+        "csfSummitRequirement",
+        "csfWorkshopRequirement",
+        "csfCommunityRequirement"
       );
     }
 
-    if (data.yearsExperience && data.yearsExperience !== NONE) {
+    if (program !== CSF) {
       requiredFields.push(
-        "experienceLeading",
-        "completedPd"
+        "csdCspFitWeekendRequirement",
+        "csdCspWhichFitWeekend",
+        "csdCspWorkshopRequirement",
+        "csdCspSummerWorkshopRequirement",
+        "csdCspDeeperLearningRequirement"
       );
+    }
+
+    if (program === CSD) {
+      requiredFields.push("csdTrainingRequirement");
+    }
+
+    if (program === CSP) {
+      requiredFields.push("cspTrainingRequirement");
     }
 
     return requiredFields;
-  }
-
-  /**
-   * @override
-   */
-  static processPageData(data) {
-    const changes = {};
-
-    if (data.teachingExperience !== YES) {
-      changes.gradesTaught = undefined;
-      changes.gradesCurrentlyTeaching = undefined;
-      changes.subjectsTaught = undefined;
-      changes.yearsExperience = undefined;
-    }
-
-    if (!data.yearsExperience || data.yearsExperience === NONE) {
-      changes.experienceLeading = undefined;
-      changes.completedPd = undefined;
-    }
-
-    return changes;
   }
 }

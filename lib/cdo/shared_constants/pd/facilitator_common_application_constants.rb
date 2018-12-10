@@ -39,6 +39,20 @@ module Pd
       },
 
       section_3_experience_and_commitments: {
+        teaching_experience: 'Do you have experience as a classroom teacher?',
+        have_led_adults: 'Have you led learning experiences for adults?',
+        csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (<Workshop Date> in <Workshop Location>)?',
+        csf_workshop_requirement: 'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
+        csf_community_requirement: 'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
+        csd_csp_fit_weekend_requirement: 'Can you commit to attending one, 3-day 2019 Facilitator-in-Training Workshop?',
+        csd_csp_which_fit_weekend: 'Please indicate which FiT Workshop you are able to attend.',
+        csd_csp_workshop_requirement: 'Can you commit to leading 2019-20 academic year workshops hosted by your assigned Regional Partner (generally four days across the academic year)?',
+        csd_training_requirement: 'Can you commit to attending __one__ 2- or 3-day training in the spring of 2020 to prepare to co-lead five-day summer workshops?',
+        csp_training_requirement: 'Can you commit to attending __two__ 2- or 3-day trainings in the spring of 2020 to prepare to co-lead five-day summer workshops?',
+        csd_csp_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
+        csd_csp_deeper_learning_requirement: 'Can you commit to engaging in the Deeper Learning Program, a series of written reflections and peer reviews for each unit of the curriculum throughout the year?',
+        development_and_preparation_requirement: 'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?',
+        csd_csp_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?'
       },
 
       section_4_leading_students: {
@@ -117,7 +131,9 @@ module Pd
       how_heard_code_org_staff: 'A Code.org staff member (please share name):'.freeze,
       how_heard_regional_partner: 'A Code.org Regional Partner (please share name):'.freeze,
       not_available_for_teachercon: "I'm not available for either TeacherCon. (Please Explain):".freeze,
-      not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze
+      not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze,
+      not_sure_please_explain: 'Not sure (Please explain):'.freeze,
+      unable_to_attend_please_explain: "I'm not able to attend any of the above workshop dates. (Please explain):".freeze
     }.freeze
   end
 end
