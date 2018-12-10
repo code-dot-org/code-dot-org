@@ -159,7 +159,7 @@ sk:
             'Maze: Conditionals':
               name: 'Bludisko: Podmienky'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             'Studio: Create a Game':
               name: 'Play Lab: Vytvor hru'
             'Studio: Create a Story':
@@ -495,7 +495,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             The Big Event:
               name: Veľká udalosť
         ScienceP3OLPT2:
@@ -614,7 +614,7 @@ sk:
             'New Artist: Functions':
               name: 'Nový Umelec: Funkcie'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
         grade1:
           stages:
             Debugging:
@@ -1455,7 +1455,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelcom
             Envelope Variables:
@@ -1488,7 +1488,7 @@ sk:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
         coursed-2018:
@@ -1562,7 +1562,7 @@ sk:
                 úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti
                 v sekvenovaní a odstraňovaní chýb.
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelecom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
@@ -1724,7 +1724,7 @@ sk:
             Spelling Bee:
               name: Hláskovanie
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Copyright and Creativity:
@@ -1758,7 +1758,9 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty
-          description: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi!
+          description_short: Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara, a 25 ďalší!
+          description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
           stages:
@@ -1844,8 +1846,8 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty (slabé pripojenie)
-          description_short: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s
-            kamarátmi! (Táto verzia je pre pomalé pripojenie)
+          description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi!
+            (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
           stages:
             Relay Programming:
