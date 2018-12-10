@@ -96,8 +96,8 @@ en-GB:
       MC_HOC_2017_04: Change the loop from the last puzzle to help the Agent make a path over the wider part of this river.
       MC_HOC_2017_04POINT5_Cole: |-
         You made it out of the swamp!  Now, get the player safely to the orange square. 
-        
-        
+
+
         Help The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.
       MC_HOC_2017_04POINT5_RYAN: "You made it across! \\r\n\\r\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "You made it across! \\r\n\\r\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\\r\n"
@@ -106,15 +106,15 @@ en-GB:
       MC_HOC_2017_04_Kiki: "The entry to the Secret Grove led to this beautiful Oasis!  To pass this level, the player needs to get to the orange square in the cabana.  \\r\n\\r\nUse a `repeat` loop to help the Agent get all the way up to the pressure plate, which opens the cabana door."
       MC_HOC_2017_05: |-
         Loops are not always helpful. 
-        
-        
+
+
         These cacti are not growing in an obvious pattern, so a loop would not clear them correctly.  Instead, we've given you a function called `destroy and move` that will do the hard work for you each time the Agent gets to an obstacle.
       MC_HOC_2017_05_Cole: "Oh no, the bridge is out! \\r\n\\r\nCode the Agent to rebuild the bridge using the `place` block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Oh no, the bridge is out! \\r\n\\r\nCode the Agent to rebuild the bridge using the `place` block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Oh no, the bridge is out! 
-        
-        
+
+
         Help the Agent rebuild the bridge so that the player can get to the **shovel**.
       MC_HOC_2017_05_Kiki: "It's time for the player to leave the Secret Grove and continue the adventure, but the bridge is out! \\r\n\\r\nHelp the Agent rebuild the bridge, then move to the wooden plank so that the player can get to the orange square."
       MC_HOC_2017_06_Cole: "Another river, but this one is much wider! \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. "
@@ -129,13 +129,13 @@ en-GB:
       MC_HOC_2017_08_Kiki: "Now, instead of destroying cacti, you will need to place stone over lava, then destroy sandstone.  \\r\n\\r\nChange the function to work for this level."
       MC_HOC_2017_08_RY: |-
         Now there are **TWO** functions to choose from! 
-        
-        
+
+
         Use these functions to quickly build a bridge across the lava for {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         Now there are **TWO** functions to choose from! 
-        
-        
+
+
         Use these functions to quickly build a bridge across the lava for the player.
       MC_HOC_2017_09_Cole: Use functions to help the Agent destroy the giant blocks of dirt that are blocking the player's path to the pressure plate.
       MC_HOC_2017_09_Kiki: "This starting code cannot be removed.\\r\n\\r\nAdd commands to the `create trail` function so that the program in the workspace will get the Agent to the pressure plate. "
@@ -151,8 +151,8 @@ en-GB:
       MC_HOC_2017_13_Cole: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
       MC_HOC_2017_4.5v2: |-
         You made it out of the swamp!  Now, get the player safely to the orange square. 
-        
-        
+
+
         Help The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.
       MC_HOC_2017_Ali: 'Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  '
