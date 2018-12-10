@@ -2075,6 +2075,7 @@ class User < ActiveRecord::Base
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     authentication_options.with_deleted.each(&:really_destroy!)
+    self.primary_contact_info = nil
 
     districts.clear
     self.district_as_contact = nil
