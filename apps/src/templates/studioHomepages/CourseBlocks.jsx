@@ -133,7 +133,6 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    rowCount: PropTypes.number.isRequired,
     isInternational: PropTypes.bool,
   };
 
@@ -186,10 +185,7 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc
-            rowCount={1}
-            isInternational={!this.props.isEnglish}
-          />
+          <CourseBlocksHoc isInternational={!this.props.isEnglish}/>
         </ContentContainer>
 
         {!this.props.isEnglish && (
