@@ -539,6 +539,7 @@ ko:
             '"right"': 오른쪽으로
             '"space"': 우주
             '"x"': x
+            '"y"': 예
       Dancelab_whenPeak:
         text: "{RANGE} 피크일 때"
         options:
