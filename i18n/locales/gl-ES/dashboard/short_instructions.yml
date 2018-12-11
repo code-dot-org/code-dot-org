@@ -402,7 +402,7 @@ gl:
       4-5 Nested Loops 3: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       4-5 Nested Loops 5: Repite o código dado para crear un muiño de vento.
       4-5 Nested Loops 6: "Podes debuxar un hexágono repetindo o\ncódigo do triángulo?"
       4-5 Nested Loops 7: "Repite este debuxo 10 veces. Canto\nnecesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)"
@@ -1326,7 +1326,7 @@ gl:
       grade4_arist_nested_loop_triangles5: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       grade4_arist_nested_loop_triangles6: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_functions1: "Olá. Min artista zumbi. Min ama debuxar!\nAxúdame a debuxar os lentes cadrados. Pista: a tira entre as lentes é\n25 pixels menor que a lonxitude do cadrado."
       grade4_artist_functions2: "As funcións permiten que definas novos bloques! Movemos\nos bloques para debuxar un cadrado para dentro dunha función chamada \"debuxa un cadrado\".\nPodes usar a función \"debuxa un cadrado\" para crear os lentes? Os cadrados están separados por 75 pixels."
@@ -1346,7 +1346,7 @@ gl:
       grade4_artist_nested_loop_triangles5: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       grade4_artist_nested_loop_triangles6: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_parameters_squares1: "Clica en \"editar\" para cubrir a definición\nda función \"debuxe un cadrado\" e agregar un parámetro. Debe recibir un parámetro lonxitude, como no triángulo. Desta vez, debuxa 3 cadrados: 25, 50 e 75\npixels de lonxitude e separados cada un por 100 pixels."
       grade4_artist_parameters_triangles2: "Percibes algo diferente\nsobre estes bloques de función? Clica en \"Executar\" para ver o que acontece."
