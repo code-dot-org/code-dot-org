@@ -70,6 +70,10 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -89,6 +93,10 @@ my:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
