@@ -710,9 +710,9 @@ pl:
       Course 4 Play Labs For Loops 5a: |-
         W tym puzzlu, pies będzie zatrzyma Twój czas.
         Pies będzie przeliczał od 0 do 30 poprzez "inkrementację". Zmienna "inkrementacji" na początku przyjmie wartość 1.
-        
+
         Czy potrafisz zrobić to tak, aby za każdym razem, kiedy klikniesz na psa, zmienna inkrementacji zwiększyła się o 2? Kliknij strzałkę do przodu aby uruchomić pętlę.
-        
+
         Uruchom pętlę kilka razy, klikając na psa przed każdą z nich.
       Course 4 Play Labs For Loops 6: Przypomnij sobie, że liczba pierwsza to liczba całkowita, która dzieli się tylko przez siebie i przez 1. Użyj funkcji "is_prime" (czy to liczba pierwsza), by wypowiadać tylko liczb pierwsze miedzy 1 a 100.
       Course 4 Play Labs For Loops 6a: |-
@@ -813,7 +813,7 @@ pl:
       Guess The Number_2018: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
       HOC 2018 Level_1: Weź łódkę z kufra.
       HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
-      HOC 2018 Level_11: 'Zbuduj kanał z Prismarine wewnątrz Oceanicznego Monumentu.  '
+      HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
       HOC 2018 Level_12: 'Zaprojektuj swój własny podwodny świat, to Ty decydujesz!'
       HOC 2018 Level_2: 'Skieruj się do końca doku.'
       HOC 2018 Level_3: 'Kieruj się przez otwarte morza do dorsza.'

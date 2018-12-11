@@ -382,17 +382,18 @@ pl:
           EFFECT:
             '"none"': Żaden
             '"rand"': "(Losowy)"
-            '"circles"': Tunel
+            '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
             '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
             '"splatter"': Plamy farby
             '"rainbow"': Tęcza
             '"snowflakes"': Śnieg
-            '"text"': Tytuł piosenki
+            '"text"': Tytuły piosenek
             '"sparkles"': Migotanie
             '"spiral"': Spirala
             '"disco"': Kwadraty
@@ -400,8 +401,12 @@ pl:
           PALETTE:
             '"rave"': Czarno-białe
             '"cool"': Niebieskie
+            '"electronic"': Elektroniczny
+            '"iceCream"': Lody
             '"default"': Jasne
+            '"neon"': Neon
             '"tropical"': Tropikalne
+            '"vintage"': Starocie
             '"warm"': Czerwone
       Dancelab_setDanceSpeed:
         text: ustaw prędkość tańca {SPRITE} na {SPEED}
@@ -454,10 +459,13 @@ pl:
             '"hearts_red"': Serca
             '"music_notes"': Nuty
             '"pineapples"': Ananasy
+            '"pizzas"': Pizze
             '"smiling_poop"': Kupa
             '"rain"': Deszcz
-            '"floating_rainbows"': Tęcza
+            '"floating_rainbows"': Tęcze
+            '"smile_face"': Uśmiechy
             '"spotlight"': Reflektor
+            '"color_lights"': Światła rampy
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'ustaw {SPRITE} {PROPERTY} na {VAL} '
@@ -603,6 +611,7 @@ pl:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': 'n'
             '"o"': o
             '"p"': p
             '"q"': q
