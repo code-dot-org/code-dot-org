@@ -3677,6 +3677,8 @@ zh-TW:
           stages:
             Artist:
               name: 藝術家
+        aquatic:
+          title: 'Minecraft: 水上巡航'
         sconyers:
           stages:
             Digital Design:
