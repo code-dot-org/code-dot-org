@@ -36,10 +36,10 @@ cs:
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -57,10 +57,10 @@ cs:
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -100,10 +100,10 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -119,10 +119,10 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -180,11 +180,11 @@ cs:
           {DO1} {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Tleskají vysoko
+            MOVES.ClapHigh: Clap High
             MOVES.Clown: Šaškují
-            MOVES.Dab: Poklepávají
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Roll: Naklánění

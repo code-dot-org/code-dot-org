@@ -36,7 +36,7 @@ cs:
         Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
       2-3 Artist Debugging 9: |-
         Něco nefunguje!
-        
+
         Kód pro tento stonek je chybný. Zvládneš vymyslet, jak umělce navést na správnou cestu?
       2-3 Artist Debugging Assessment 1: "Tento tvar je příliš malý. Můžeš jej udělat větší? Rada: mělo by to být delší na každé straně o 75 pixelů."
       2-3 Artist Free Play: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
@@ -159,7 +159,7 @@ cs:
       2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení veškerého medu.
       2-3 Bee Loops 4: |-
         Jaká pilná včela!
-        
+
         Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       2-3 Bee Loops 4A: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
       2-3 Bee Loops 5: "Tvar této cesty je jiný než těch ostatních.\n\nZvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?"
@@ -383,7 +383,7 @@ cs:
       4-5 Nested Loops 2: 'Nyní vnoř tento cyklus dovnitř dalšího cyklu k nakreslení 10 trojúhelníků.  Tomu se říká vnořené cykly.  Rada: Všech 10 trojúhelníků vytváří 360 stupňů otáčení.  '
       4-5 Nested Loops 3: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-        
+
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 6: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
       4-5 Nested Loops 7: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
@@ -401,7 +401,7 @@ cs:
       4-5 While Loops Assessment 1: Existuje mnoho děr a hromad.  Pomoz mi vyplnit a odstranit je aby země plochá.
       AB_Debug_PlayLab2: |-
         Proč tato hra nic nedělá?
-        
+
         Najdete nějaké "skryté" chyby?  Některé se dají najít snadně než ostatní.
       Alien Defender: 'Nápad na projekt: Vytvořte obranou hru v Play Lab!'
       Alien Defender_2018: 'Nápad na projekt: Vytvořte obranou hru v Play Lab!'
@@ -441,9 +441,9 @@ cs:
       CSD U5 black white images pixelation_2018: Dokonči tvar X vepsáním nul a jedniček
       CSD U6 params modify clouds: |-
         # Mraky
-        
+
         Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
-        
+
         # Udělejte následující:
         * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
         * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
@@ -451,9 +451,9 @@ cs:
         * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
       CSD U6 params modify clouds_2018: |-
         # Mraky
-        
+
         Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
-        
+
         # Udělejte následující:
         * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
         * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
@@ -461,23 +461,23 @@ cs:
         * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
       CSD U6 params modify planes: |-
         # Ovladání letadel
-        
+
         Tento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.
-        
+
         # Udělejte následující:
         * Vytvořte novou funkci "movePlane(name)", která bude pohybovat libovolným letadlem.
         * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
-        
+
         _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
       CSD U6 params modify planes_2018: |-
         # Ovladání letadel
-        
+
         Tento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.
-        
+
         # Udělejte následující:
         * Vytvořte novou funkci "movePlane(name)", která bude pohybovat libovolným letadlem.
         * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
-        
+
         _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
       CSP student contact info: Zadejte svou e-mailovou adresu.
       CSPU5_U3 - Loops - 4: Použijte Debug příkazy k vytvoření seznamu všech hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
@@ -1475,7 +1475,7 @@ cs:
       grade3_Debugging_TeacherIDo: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       grade3_Loops_10: |-
         Jaká pilná včela!
-        
+
         Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       grade3_Loops_11: "Tvar této cesty je jiný než těch ostatních.\n\nZvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?"
       grade3_Loops_12: Najdeš pro včelu nejrychlejší cestu k sesbírání veškerého nektaru a vyrobení všeho medu?
@@ -1515,7 +1515,7 @@ cs:
       grade4_arist_nested_loop_triangles4: Nakresli zuby v tlamě aligátora!
       grade4_arist_nested_loop_triangles5: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-        
+
       grade4_arist_nested_loop_triangles6: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_functions1: "Nazdar. Já jsem zombie umělec. Mám rád kreslení! Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů než strana čtverce."
       grade4_artist_functions2: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
@@ -1531,7 +1531,7 @@ cs:
       grade4_artist_nested_loop_triangles1: 'Dokonči kód k nakreslení těchto trojúhelníků.  První z nich jsme udělali za tebe.  Rada: 3 trojúhelníky v otáčení 360 stupňů.'
       grade4_artist_nested_loop_triangles5: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-        
+
       grade4_artist_nested_loop_triangles6: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_parameters_squares1: 'Klepni na tlačítko "upravit" definice funkce "nakreslit čtverec" a přidej parametr. Mělo by to být délkový parametr, právě jako trojúhelník. Tentokrát akresli 3 čtverce délky: 25, 50 a 75 pixelů, každý od sebe 100 pixelů.'
       grade4_artist_parameters_triangles2: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
@@ -1576,7 +1576,7 @@ cs:
       grade4_review_bee2: Sesbírej nektar z každého květu a udělej med v každé plástvi.
       grade4_review_bee3: |-
         Jaká pilná včela!
-        
+
         Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       grade5_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0) a \"zapnuto\" (představované číslem 1).  \\r \\r Poskytli jsme mřížku \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním řádku?"
       grade5_artist_binary10: Klepnutím sem se zobrazí pokyny.
@@ -1662,7 +1662,7 @@ cs:
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
       level 'grade3_Loops_10: |-
         Jaká pilná včela!
-        
+
         Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       level 'grade3_Loops_11: "Tvar této cesty je jiný než těch ostatních.\n\nZvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?"
       level 'grade3_Loops_12: Najdeš pro včelu nejrychlejší cestu k sesbírání veškerého nektaru a vyrobení všeho medu?
