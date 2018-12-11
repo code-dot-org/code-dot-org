@@ -421,6 +421,8 @@
   "dontForget": "Унутпа",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Анимация",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "Блокторду сүйрөп дал келтиргиле",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",
