@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/enrolledWorkshops';
+import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import {expect} from 'chai';
 
 describe("Tests for the upcoming workshops page", () => {
