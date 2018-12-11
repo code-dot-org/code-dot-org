@@ -737,6 +737,10 @@ da:
           stages:
             Evaluation Blocks:
               name: Evalueringsblokke
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Spil Laboratoriet
         MikeTest:
           stages:
             Artist Functions:
