@@ -5,7 +5,7 @@ import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
-const EnrolledWorkshops = React.createClass({
+class EnrolledWorkshops extends React.Component {
   render() {
     return (
       <WorkshopTableLoader
@@ -16,7 +16,7 @@ const EnrolledWorkshops = React.createClass({
       </WorkshopTableLoader>
     );
   }
-});
+}
 
 const styles = {
   button: {
@@ -24,43 +24,41 @@ const styles = {
   }
 };
 
-const EnrolledWorkshopsTable = React.createClass({
-  propTypes: {
+class EnrolledWorkshopsTable extends React.Component {
+  static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape)
-  },
+  };
 
-  getInitialState() {
-    return {
-      showCancelModal: false,
-      enrollmentCodeToCancel: undefined
-    };
-  },
+  state = {
+    showCancelModal: false,
+    enrollmentCodeToCancel: undefined
+  };
 
-  cancelEnrollment(event) {
+  cancelEnrollment = (event) => {
     window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
-  },
+  };
 
-  dismissCancelModal(event) {
+  dismissCancelModal = (event) => {
     this.setState({
       showCancelModal: false,
       enrollmentCodeToCancel: undefined
     });
-  },
+  };
 
-  showCancelModal(enrollmentCode) {
+  showCancelModal = (enrollmentCode) => {
     this.setState({
       showCancelModal: true,
       enrollmentCodeToCancel: enrollmentCode
     });
-  },
+  };
 
-  openCertificate(workshop) {
+  openCertificate = (workshop) => {
     if (workshop.course === 'CS Fundamentals') {
       window.open(`/pd/generate_csf_certificate/${workshop.enrollment_code}`);
     } else {
       window.open(`/pd/generate_workshop_certificate/${workshop.enrollment_code}`);
     }
-  },
+  };
 
   renderWorkshopActionButtons(workshop) {
     return (
@@ -93,7 +91,7 @@ const EnrolledWorkshopsTable = React.createClass({
         </Button>
       </div>
     );
-  },
+  }
 
   renderWorkshopsTable() {
     const rows = this.props.workshops.map((workshop, i) => {
@@ -116,7 +114,7 @@ const EnrolledWorkshopsTable = React.createClass({
         </tbody>
       </Table>
     );
-  },
+  }
 
   renderRowForWorkshop(workshop) {
     return (
@@ -162,7 +160,7 @@ const EnrolledWorkshopsTable = React.createClass({
         </td>
       </tr>
     );
-  },
+  }
 
   render() {
     return (
@@ -187,6 +185,6 @@ const EnrolledWorkshopsTable = React.createClass({
       </div>
     );
   }
-});
+}
 
 export {EnrolledWorkshops, EnrolledWorkshopsTable};
