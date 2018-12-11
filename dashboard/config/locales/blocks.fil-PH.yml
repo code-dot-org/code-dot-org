@@ -112,6 +112,10 @@ fil:
         options:
           EFFECT:
             '"none"': Wala
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Wala
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ fil:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Wala
