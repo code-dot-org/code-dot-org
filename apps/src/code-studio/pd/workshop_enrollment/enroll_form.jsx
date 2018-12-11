@@ -104,13 +104,13 @@ export default class EnrollForm extends React.Component {
     if (!this.state.role) {
       return null;
     }
-    var roleString = "";
+    var roleWithDescription = "";
     if (this.state.describe_role) {
-      roleString = `${this.state.role}: ${this.state.describe_role}`;
+      roleWithDescription = `${this.state.role}: ${this.state.describe_role}`;
     } else {
-      roleString = this.state.role;
+      roleWithDescription = this.state.role;
     }
-    return roleString;
+    return roleWithDescription;
   }
 
   gradesTeaching() {
