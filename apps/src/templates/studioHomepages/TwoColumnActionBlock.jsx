@@ -183,7 +183,7 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
+        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-posthoc.jpg')}
         subHeading={i18n.specialAnnouncementHeadingPostHoc2018()}
         description={i18n.specialAnnouncementDescriptionPostHoc2018()}
         buttons={[
