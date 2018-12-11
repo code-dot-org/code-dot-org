@@ -407,7 +407,7 @@ pt:
       4-5 Nested Loops 3: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       4-5 Nested Loops 7: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
@@ -457,7 +457,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -542,7 +542,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -1318,7 +1318,7 @@ pt:
       grade4_arist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
@@ -1334,7 +1334,7 @@ pt:
       grade4_artist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_artist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_squares1: "Clique em \"editar\" para preencher a definição\nda função \"desenhe um quadrado\" e adicionar um parâmetro. Ela deve receber um parâmetro\ncomprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75\npixels de comprimento e separados por 100 pixels cada."
       grade4_artist_parameters_triangles2: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
@@ -1436,7 +1436,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.

@@ -158,6 +158,7 @@ pt:
             '"right"': para a direita
             '"space"': espaço
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -294,7 +295,9 @@ pt:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -303,7 +306,9 @@ pt:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
