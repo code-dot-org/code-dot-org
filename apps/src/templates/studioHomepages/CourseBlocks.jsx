@@ -133,56 +133,26 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    rowCount: PropTypes.number.isRequired,
     isInternational: PropTypes.bool,
   };
 
-  getFirstRowTiles = () => {
-    if (this.props.isInternational) {
-      return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
-    } else {
-      return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
-    }
-  };
-
   componentDidMount() {
-    // First row, dynamically created based on isInternational value
-    const tiles = this.getFirstRowTiles();
+    const tiles = this.props.isInternational
+      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
     });
-
-    // Second row
-    $('#flappy').appendTo(ReactDOM.findDOMNode(this.refs.flappy)).show();
-    $('#infinity').appendTo(ReactDOM.findDOMNode(this.refs.infinity)).show();
-    $('#playlab').appendTo(ReactDOM.findDOMNode(this.refs.playlab)).show();
-    $('#artist').appendTo(ReactDOM.findDOMNode(this.refs.artist)).show();
   }
 
   render() {
     return (
-      <div>
-        <div className="row">
-          <ProtectedStatefulDiv ref="0"/>
-          <ProtectedStatefulDiv ref="1"/>
-          <ProtectedStatefulDiv ref="2"/>
-          <ProtectedStatefulDiv ref="3"/>
-        </div>
-
-        {this.props.rowCount > 1 && (
-          <div>
-            <br/>
-            <br/>
-            <div className="row">
-              {/* TODO: (madelynkasula) If Flappy is in 1st row, what should replace Flappy on line below? */}
-              {/* Can we remove 2nd row? It's never used... */}
-              <ProtectedStatefulDiv ref="flappy"/>
-              <ProtectedStatefulDiv ref="infinity"/>
-              <ProtectedStatefulDiv ref="playlab"/>
-              <ProtectedStatefulDiv ref="artist"/>
-            </div>
-          </div>
-        )}
+      <div className="row">
+        <ProtectedStatefulDiv ref="0"/>
+        <ProtectedStatefulDiv ref="1"/>
+        <ProtectedStatefulDiv ref="2"/>
+        <ProtectedStatefulDiv ref="3"/>
       </div>
     );
   }
@@ -209,10 +179,7 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc
-            rowCount={1}
-            isInternational={!this.props.isEnglish}
-          />
+          <CourseBlocksHoc isInternational={!this.props.isEnglish}/>
         </ContentContainer>
 
         {!this.props.isEnglish && (
