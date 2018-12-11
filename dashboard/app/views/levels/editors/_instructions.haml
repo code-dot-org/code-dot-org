@@ -36,8 +36,22 @@
         markdown-enabled instructions can take advantage of
         = link_to 'various markdown rendering options', 'https://commonmark.org/help/'
         to provide more in-depth (and more vertically intrusive) instruction.
+      %p
+        %strong
+          note
+        that we are in the process of changing our markdown processing library
+        from
+        = link_to 'marked', 'https://marked.js.org/'
+        to
+        = link_to 'remark', 'https://remark.js.org/'
+        , and that transition may involve some changes to how markdown is
+        rendered. To ensure your instructions will continue to work after the
+        transition, please use the "preview in remark" option.
 
       %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
+        %label{ style: 'background: rgb(239, 239, 239)' }
+          %input#remark_preview_toggle{ type: "checkbox" }
+          preview in remark
         #level_long_instructions_preview{ style: 'padding: 20px' }
         %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
           ~ f.text_area :long_instructions, rows: 4
@@ -56,6 +70,11 @@
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', function (editor, change) {
     localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
   }, true);
+
+  document.getElementById('remark_preview_toggle').addEventListener('change', function (change) {
+    mdEditor.setOption('forceRemark', change.target.checked);
+    mdEditor.refresh();
+  });
 
   var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
   if (locallyStoredMarkdown) {
