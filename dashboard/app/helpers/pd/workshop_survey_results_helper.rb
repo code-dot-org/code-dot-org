@@ -201,10 +201,12 @@ module Pd::WorkshopSurveyResultsHelper
 
     summary[:this_workshop] = generate_workshops_survey_summary([workshop], questions)
 
-    related_workshops =
+related_workshops =
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
         [workshop]
-      elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER)
+      elsif current_user.permission?(UserPermission::PROGRAM_MANAGER)
+        Pd::Workshop.where(regional_partner: current_user.regional_partners)
+      elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER)
         Pd::Workshop.organized_by(current_user).where(course: workshop.course)
       else
         Pd::Workshop.facilitated_by(current_user).where(course: workshop.course)
@@ -474,7 +476,7 @@ module Pd::WorkshopSurveyResultsHelper
       facilitator_response_counts.transform_values! {|v| v.slice current_user.id}
     end
 
-    summary[:facilitator_response_counts] = facilitator_response_counts
+    facilitator_response_counts
   end
 
   private
@@ -537,7 +539,10 @@ module Pd::WorkshopSurveyResultsHelper
     # resolve conflicts by taking the sum of the two values
     reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}}
     reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}}
-
+    puts "######"
+    puts reduced_general_questions
+    puts reduce_facilitator_questions
+    puts "######"
     reduced_general_questions.merge reduced_facilitator_questions
   end
 end
