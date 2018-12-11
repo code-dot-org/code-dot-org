@@ -38,23 +38,14 @@ export default class LandingPage extends Component {
   };
 
   render() {
-    const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subHeading = CSF ?
-      i18n.plLandingSubheadingCSF() :
-      i18n.plLandingSubheading();
-    const description = CSF ?
-      i18n.plLandingDescriptionCSF() :
-      i18n.plLandingDescription();
-
     return (
       <div>
         <HeaderImage/>
         <br/>
         {this.props.lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
-            subHeading={subHeading}
-            description={description}
             surveyUrl={this.props.lastWorkshopSurveyUrl}
+            description={i18n.plLandingDescription({course: this.props.lastWorkshopSurveyCourse})}
           />
        )}
         <EnrolledWorkshops/>
@@ -76,12 +67,12 @@ const HeaderImage = () => (
   </div>
 );
 
-export const LastWorkshopSurveyBanner = ({subHeading, description, surveyUrl}) => (
+export const LastWorkshopSurveyBanner = ({description, surveyUrl}) => (
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
     imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
-    subHeading={subHeading}
+    subHeading={i18n.plLandingSubheading()}
     description={description}
     buttons={[
       {
