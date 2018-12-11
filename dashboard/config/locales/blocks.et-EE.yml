@@ -341,6 +341,18 @@ et:
             '"snowflakes"': Lumi
             '"spiral"': Spiraal
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Juhuslik)"
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"swirl"': Hypno
+            '"rainbow"': Vikerkaar
+            '"snowflakes"': Lumi
+            '"spiral"': Spiraal
+            '"disco"': Ruudud
       Dancelab_setDanceSpeed:
         text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
@@ -381,6 +393,17 @@ et:
             '"raining_tacos"': Tacod
             '"spotlight"': Punktvalgus
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Juhuslik)"
+      Dancelab_setForegroundEffectExtended:
+        text: määra esiplaani efekt {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"bubbles"': Mullid
+            '"pineapples"': Ananassid
+            '"rain"': Vihm
+            '"spotlight"': Punktvalgus
+            '"raining_tacos"': Tacod
       Dancelab_setProp:
         text: 'muuda {SPRITE} {PROPERTY} {VAL} '
         options:
@@ -444,6 +467,8 @@ et:
             '"PINEAPPLE"': kõik ananassid
             '"ROBOT"': kõik robotid
             '"SHARK"': kõik haid
+      Dancelab_setTintInline:
+        text: määra {SPRITE} toon {VAL}
       Dancelab_setVisible:
         text: määra {SPRITE} nähtavus {VISIBILITY}
         options:
