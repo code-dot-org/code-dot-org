@@ -1019,7 +1019,7 @@ is:
       Eval Cond 7: |
         Frjáls æfing: Skrifaðu nýtt fall "grænt-form", sem tekur inn heiti forms og býr gegnheilt grænt form. Fallið ætti a.m.k. að ráða við orðin "hringur", "stjarna" og "rétthyrningur", en þú getur bætt við formum að vild. Þú mátt ráða stærð formanna. Ekki gleyma að hafa "annars" hluta!\r
         Þú færð tilbúið eitt dæmi - og hluta af skilgreiningunni!\r
-        
+
       Eval Cond 8: "Frjáls æfing: Segjum að þú viljir eiga bíl við 21 árs aldur, eða eiga eigið fyrirtæki 30 ára. Skrifaðu nýtt fall \"life-goals\" (lífsmarkmið), sem tekur inn aldur og skilar streng, sem lýsir markmiðinu sem þú vilt hafa náð þá. Ekki gleyma að hafa \"annars\" hluta!\\r\n"
       Eval Contracts 1: Notaðu fallið "stjarna" til að búa til rauða stjörnu með 60 díla geisla
       Eval Contracts 10A: Nú skulum við leysa þessa þraut með grænum ferningi sem er 175 dílar á stærð.

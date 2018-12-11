@@ -63,7 +63,7 @@ is:
         Teiknum haus á vélmennið! Getur þú búið til ferning með hliðar sem eru 100 dílar?\r
         \r
         <br/>\r
-        
+
       2-3 Artist Loops New 10: Nú skulum við tengja nokkur V saman í lykkju.
       2-3 Artist Loops New 11: "Tími til að gera eitthvað spennandi!\n\\r\n\\r\nSmíðaðu kóðann úr síðustu þraut, en bættu við vinstri snúningi um 30 gráður innan í lykkjunni. Og endurtaktu hana 24 sinnum í stað 8."
       2-3 Artist Loops New 12: 'Teiknaðu tígul með 100 díla hliðar. '
@@ -73,7 +73,7 @@ is:
         Teiknaðu nú hvað sem þú vilt!\r
         <br/><br/>\r
         \r
-        
+
       2-3 Artist Loops New 2: |-
         Hér er sama þraut og við vorum að leysa, en nú getum við aðeins notað einn `færa áfram` kubb og einn `snúa` kubb.\r
         \r
@@ -86,7 +86,7 @@ is:
         \r
         <br/>\r
         \r
-        
+
       2-3 Artist Nested Loops 10: Endurtaktu kóðann 12 sinnum til að teikna mynstrið.
       2-3 Artist Nested Loops 11: Endurtaktu kóðann 4 sinnum með 90 gráðu snúningi eftir hvern hring.
       2-3 Artist Nested Loops 12: Endurtaktu kóðann 12 sinnum til að ljúka teikningunni.
@@ -447,7 +447,7 @@ is:
         * Ýttu á "Endurhlaða og vista" ef þú sérð enga breytingu á forskoðunarsvæðinu\r
         * Berðu vinnu þína saman við vinnu annars.
         Gættu þess að þið séuð að setja kóða á sömu staði.\r
-        
+
       CSD U2 HTML Adding Paragraphs Template_2018: |
         # Bættu texta í BODY eininguna\r
         \r
@@ -462,7 +462,7 @@ is:
         * Ýttu á "Endurhlaða og vista" ef þú sérð enga breytingu á forskoðunarsvæðinu\r
         * Berðu vinnu þína saman við vinnu annars.
         Gættu þess að þið séuð að setja kóða á sömu staði.\r
-        
+
       CSD U2 HTML Adding Paragraphs pt 2: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -536,7 +536,7 @@ is:
         * Skrifaðu þrjár setningar um eitthver efni innan body taganna á vefsíðunni\r
         * Ýttu á "Endurhlaða og vista" ef þú sérð enga breytingu á forskoðunarsvæðinu\r
         * Berðu verk þitt saman við verk annars. Gættu þess að þið séuð að setja kóða á sama stað.\r
-        
+
       CSD U2 HTML Adding Paragraphs_2018: |
         # Bæta texta í body\r
         \r
@@ -548,7 +548,7 @@ is:
         * Skrifaðu þrjár setningar um eitthver efni innan body taganna á vefsíðunni\r
         * Ýttu á "Endurhlaða og vista" ef þú sérð enga breytingu á forskoðunarsvæðinu\r
         * Berðu verk þitt saman við verk annars. Gættu þess að þið séuð að setja kóða á sama stað.\r
-        
+
       CSD U2 HTML Debug Paragraphs: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -629,7 +629,7 @@ is:
         * Efnisgreinar með innihaldi undir hverjum annars stigs haus\r
         * Vefslóðir allra vefja þar sem þú fannst upplýsingar\r
         * Ekki hafa áhyggjur af útliti eins og er. Þú ert nú að vinna með innihaldið og skipulag þess.\r
-        
+
       CSD U2 Info Page Create: |-
         # Síða fyrir miðlun upplýsinga\r
         \r
@@ -670,7 +670,7 @@ is:
         # Gerðu þetta\r
         \r
         Notaðu annað hvort eigin myndir eða myndir sem þú hefur fundið með Commons leit og bættu þeim við síðurnar sem þú hefur þegar smíðað. Notaðu ímyndinaraflið! Notaðu gátlistann hér hægra megin til að leiða þig í gegnum ferlið sem þarf að fylgja þegar myndum er bætt við.\r
-        
+
       CSD U2 Info Page Final Touches_2018: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -702,7 +702,7 @@ is:
         # Gerðu þetta\r
         \r
         Notaðu annað hvort eigin myndir eða myndir sem þú hefur fundið með Commons leit og bættu þeim við síðurnar sem þú hefur þegar smíðað. Notaðu ímyndinaraflið! Notaðu gátlistann hér hægra megin til að leiða þig í gegnum ferlið sem þarf að fylgja þegar myndum er bætt við.\r
-        
+
       CSD U2 Info Page Images: "# Að setja inn myndir\\r\n\\r\nNú þegar myndir og upplýsingar um eignun þeirra eru til staðar er kominn tími til að hressa upp á nýju síðuna þína.\\r\n\\r\n# Gerðu þetta\\r\n\\r\nLjúktu við að hlaða myndunum upp í Vefsmiðjuna. Notaðu `<img>`\ntög til að setja þær þar sem þú vilt. Gerðu þetta fyrir hverja mynd:\\r\n\\r\n* Hafðu `alt` eigind með lýsingu á myndinni\\r\n* Settu eignun neðan við hverja mynd, þar á meðal\\r\n\\t*\nNafn eða notendaheiti höfundar (ef vitað)\\r\n    * Heiti myndar (ef þekkt)\\r\n    * Vefslóð sem vísar á upprunavefinn\\r\n    * Leyfið sem myndin var birt undir, annað hvort með texta (t.d. CC-BY) eða með skildi frá [Creative Commons vefnum](https://creativecommons.org/about/downloads/).\\r\n\\r\nDæmi:\\r\n\\r\n![Dapur hundur](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\\r\n\\r\nMálverk af síðhærðum Dachs-hundi eftir Flickr notandann Soggydan (ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)\n- CC-BY"
       CSD U2 Inspector Warm Up: |-
         <div style="float: right;
@@ -776,7 +776,7 @@ is:
         # Gerðu þetta\r
         * Bættu HTML í hverja nýja síðu sem þú dróst upp í leiðarvísi verkefnisins.\r
         * Þú getur líka bætt meira HTML í síður sem þú bjóst til áður.\r
-        
+
       CSD U2 add content_2018: |
         # Bæta HTML við\r
         \r
@@ -785,7 +785,7 @@ is:
         # Gerðu þetta\r
         * Bættu HTML í hverja nýja síðu sem þú dróst upp í leiðarvísi verkefnisins.\r
         * Þú getur líka bætt meira HTML í síður sem þú bjóst til áður.\r
-        
+
       CSD U2 add file - OLD: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -852,7 +852,7 @@ is:
         * Vinnið saman að því að ljúka síðunni. Gefið útlitsmótun hennar gaum.\r
         * Berið ykkur saman við aðra til að sjá hvort síðurnar eru eins.\r
         \r
-        
+
       CSD U2 challenge_2018: |
         # Áskorun\r
         \r
@@ -866,7 +866,7 @@ is:
         * Vinnið saman að því að ljúka síðunni. Gefið útlitsmótun hennar gaum.\r
         * Berið ykkur saman við aðra til að sjá hvort síðurnar eru eins.\r
         \r
-        
+
       CSD U2 commenting: |-
         # Athugasemdir\r
         <div style="float:
@@ -958,7 +958,7 @@ is:
         * Búðu til nýja HTML síðu og gefðu henni heiti. (Kíktu á [Kennslustund 6 Þraut 8](/s/csd2/stage/6/puzzle/8) hafir þú gleymt hvernig.)\r
         * Endurtaktu þetta fyrir aðrar síður sem þú vilt bæta við.\r
         \r
-        
+
       CSD U2 create page_2018: |+
         # Búðu til og skírðu nýju síðuna\r
         \r
@@ -968,7 +968,7 @@ is:
         * Búðu til nýja HTML síðu og gefðu henni heiti. (Kíktu á [Kennslustund 6 Þraut 8](/s/csd2/stage/6/puzzle/8) hafir þú gleymt hvernig.)\r
         * Endurtaktu þetta fyrir aðrar síður sem þú vilt bæta við.\r
         \r
-        
+
       CSD U2 debug comments: |-
         # Villuleit\r
         \r
@@ -995,7 +995,7 @@ is:
         * Gættu þess að hver síða hafi síðuhaus sem inniheldur fyrirsögn síðunnar og tenglastiku sem tengir við aðrar síður í vefnum þínum. Þú getur rifjað upp síðuhausa í [Kennslustund 9 Þraut 3](/s/csd2/stage/9/puzzle/3).\r
         * Settu á hverja síðu síðufót sem inniheldur upplýsingar um höfundarrétt fyrir síðuna.\r
         \r
-        
+
       CSD U2 header footer_2018: |-
         # Síðuhausar og síðufætur\r
         \r
@@ -1005,7 +1005,7 @@ is:
         * Gættu þess að hver síða hafi síðuhaus sem inniheldur fyrirsögn síðunnar og tenglastiku sem tengir við aðrar síður í vefnum þínum. Þú getur rifjað upp síðuhausa í [Kennslustund 9 Þraut 3](/s/csd2/stage/9/puzzle/3).\r
         * Settu á hverja síðu síðufót sem inniheldur upplýsingar um höfundarrétt fyrir síðuna.\r
         \r
-        
+
       CSD U2 images intro: "# Myndir\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**Hvernig bæti ég við myndum?**</summary>\\r\nMeð `<img>` taginu getur þú birt myndir á vefsíðu. <br><br>\\r\n\\r\nDæmi:\\r\n<pre>&lt;img src=\"dog.png\"\nalt=\"hundur stekkur\"/&gt;</pre><br><br>\\r\n\\r\nTil að segja vafranum hvaða myndskrá eigi að nota, er upplýsingum bætt inn í &lt;img&gt; tagið innan hornklofanna. Svona upplýsingar í tagi eru nefndar **eigindir** (enska:attribute). Eigindin `src` táknar enska orðið \"source\" sem þýðir \"uppruni\". Hún segir til um hvaðan myndin eigi að koma. Heiti á myndskrám hafa endingar sem segja tölvunni hvers konar myndskrá hún er að vinna með. \nAlgengar skrárendingar mynda eru .jpg, .jpeg, .png. <br><br>\\r\n\\r\nAuk \"src\" eigindar, hafa myndeiningar líka eigindina \"alt\" til að lýsa myndinni í orðum. Það er mikilvægt ef myndin kemur ekki fram eða fyrir fólk sem sér illa.<br><br>\\r\n\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Þá veit tölvan að hún þarf ekki að leita að endatagi.\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er sjálflokandi tag?**</summary>\\r\n`<img>` tagið er dæmi um **sjálflokandi tag** því það byrjar og endar í sama hornklofanum. Til að sýna þetta er sett `/` í lok tagsins framan við hornklofann sem lokar taginu. Sjálflokandi tag þarf ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Af hverju hefur myndtagið ekki endatag?**</summary>\\r\n\"Img\" tagið fyrir myndir er sjálflokandi tag og sjálflokandi tag hefur ekki endatag því það er ekkert efni sem færi á milli byrjunar- og endatags. Allt sem tagið gerir er skilgreint í eigindum þess sem eru í byrjunartaginu.\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er eigind?**</summary>\\r\nEigindir (enska:attributes) eru viðbótarupplýsingar sem bætt er í byrjunartag. Eigindir hafa heiti og gildi. Heitið segir hvers konar upplýsingar er verið að gefa og gildið eru sjálfar upplýsingarnar, sem tagið notar. \\r\n\\r\nTil dæmis hafa &lt;img&gt; tög tvær eigindir, src og alt.\nsrc segir til um heiti myndskrárinnar og alt segir vafranum í orðum hvað efni myndarinnar er.\\r\n</details>\\r\n</div>\\r\n\\r\nUppskriftasíðan mundi líta mun betur út með mynd af kökubitunum, svo við höfum bætt einni á þessa síðu. Hún gæti þó komið betur út annars staðar á síðunni.\\r\n\\r\n# Gerðu þetta\\r\n* Skoðaðu skráalistann vinstra megin við vinnusvæðið og finndu skrána \"scotcheroos.jpeg\"\\r\n* Notaðu greiningartækið (inspector tool) til að finna kóðann sem lét myndina birtast á síðunni.\\r\n* Gakktu úr skugga um að þú og félagi þinn séuð sammála um það hvernig myndtagið virkar.\\r\n* Reyndu að færa myndina efst á síðuna."
       CSD U2 layout style freeplay - OLD: |-
         # Þinn eigin vefur\r
@@ -1026,7 +1026,7 @@ is:
          * `border-radius`\r
          * `border-width`\r
          * `float`\r
-        
+
         * `margin`\r
         \r
         \r
@@ -1117,7 +1117,7 @@ is:
          * lista\r
          * haus\r
         \r
-        
+
       CSD U2 lists intro: |-
         # Listar\r
         <div style="float: right;
@@ -1125,7 +1125,7 @@ is:
         markdown="1">\r
         <details>\r
         <summary>**Tvær tegundir af listum**</summary>\r
-        
+
         Það eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\r
         </details>\r
         <details>\r
@@ -1170,7 +1170,7 @@ is:
         *
         Gættu þess að þú og félagi þinn séuð sammála um hvað tögin gera.\r
         * Lagaðu kóðann í seinni listanum svo að atriðin birtist rétt.\r
-        
+
       CSD U2 lists intro_2018: |-
         # Listar\r
         <div style="float: right;
@@ -1178,7 +1178,7 @@ is:
         markdown="1">\r
         <details>\r
         <summary>**Tvær tegundir af listum**</summary>\r
-        
+
         Það eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\r
         </details>\r
         <details>\r
@@ -1223,7 +1223,7 @@ is:
         *
         Gættu þess að þú og félagi þinn séuð sammála um hvað tögin gera.\r
         * Lagaðu kóðann í seinni listanum svo að atriðin birtist rétt.\r
-        
+
       CSD U2 navigation: |
         # Gerð tenglastiku\r
         \r
@@ -1236,7 +1236,7 @@ is:
         * Afritaðu kóðann fyrir tenglastikuna og bættu tenglastiku efst á listasíðuna.\r
         * Prófaðu tenglana á forskoðunarsvæðinu með því að smella á þá.\r
         \r
-        
+
       CSD U2 navigation_2018: |
         # Gerð tenglastiku\r
         \r
@@ -1249,7 +1249,7 @@ is:
         * Afritaðu kóðann fyrir tenglastikuna og bættu tenglastiku efst á listasíðuna.\r
         * Prófaðu tenglana á forskoðunarsvæðinu með því að smella á þá.\r
         \r
-        
+
       CSD U2 new page: |+
         # Ný síða fyrir vefsetrið.\r
         \r
@@ -1264,7 +1264,7 @@ is:
          * lista\r
          * haus\r
         \r
-        
+
       CSD U2 new page_2018: |+
         # Ný síða fyrir vefsetrið.\r
         \r
@@ -1279,7 +1279,7 @@ is:
          * lista\r
          * haus\r
         \r
-        
+
       CSD U2 ordered list: "# Raðaðir listar\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Tvær tegundir af listum**</summary>\\r\n\nÞað eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er raðaður listi?**</summary>\\r\nRaðaður listi (enska:ordered list) er röð atriða sem eru tölusett.\\r\n<br /><br />\\r\nRaðaður listi er eining með tagið `<ol>`  . Þetta er skammstöfun á enska heitinu \"<strong>O</strong>rdered <strong>L</strong>ist\".\nHvert atriði í listanum er sjálfstæð eining með tagið `<li>`. Þetta er aftur skammstöfun á enska heitinu \"<strong>L</strong>ist <strong>I</strong>tem\".  Listaatriðið er dæmi um einingarbarn (enska:child element), sem er innan í einingarforeldri (enska:parent element), sem hér er raðaði listinn (`<ol>`).\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Hvernig bý ég til raðaðan lista?**</summary>\\r\nÞað gerist í tveimur áföngum: fyrst að búa til listann og svo bæta í hann listaatriðum.  Raðaði listinn er búinn til með því að skrifa listatögin`<ol></ol>`.  Síðan er listaatriðum bætt við **á milli** listataganna.  Búðu til hvert listaatriði með tögunum`<li></li>` og skrifaðu efni atriðisins á milli þeirra.\\r\n<br /><br />\\r\nÞað getur verið hjálplegt að hafa inndrátt á `<li>` tögunum\nsvo það sjáist greinilega að þau eru innan í `<ol>`  taginu.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Dæmi um kóða.**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>Dæmi</td>\\r\n<td>Útkoma</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br>   &lt;li&gt;1. skref &lt;/li&gt; <br>   &lt;li&gt;2. skref &lt;/li&gt;\n<br>   &lt;li&gt;3. skref &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nÞessi síða ætti að hafa raðaðan lista, en það vantar listatögin.\\r\n\\r\n#\nGerðu þetta\\r\n\\r\n* Notaðu tögin `<ol>` og `<li>` til að stilla þessu efni upp í röðuðum lista sem er eins og listinn hér að neðan.\\r\n\\r\n*Vísbending: Það eru ENGAR TÖLUR í sjálfum kóðanum.* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 ordered list_2018: "# Raðaðir listar\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Tvær tegundir af listum**</summary>\\r\n\nÞað eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\\r\n</details>\\r\n<details>\\r\n<summary>**Hvað er raðaður listi?**</summary>\\r\nRaðaður listi (enska:ordered list) er röð atriða sem eru tölusett.\\r\n<br /><br />\\r\nRaðaður listi er eining með tagið `<ol>`  . Þetta er skammstöfun á enska heitinu \"<strong>O</strong>rdered <strong>L</strong>ist\".\nHvert atriði í listanum er sjálfstæð eining með tagið `<li>`. Þetta er aftur skammstöfun á enska heitinu \"<strong>L</strong>ist <strong>I</strong>tem\".  Listaatriðið er dæmi um einingarbarn (enska:child element), sem er innan í einingarforeldri (enska:parent element), sem hér er raðaði listinn (`<ol>`).\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Hvernig bý ég til raðaðan lista?**</summary>\\r\nÞað gerist í tveimur áföngum: fyrst að búa til listann og svo bæta í hann listaatriðum.  Raðaði listinn er búinn til með því að skrifa listatögin`<ol></ol>`.  Síðan er listaatriðum bætt við **á milli** listataganna.  Búðu til hvert listaatriði með tögunum`<li></li>` og skrifaðu efni atriðisins á milli þeirra.\\r\n<br /><br />\\r\nÞað getur verið hjálplegt að hafa inndrátt á `<li>` tögunum\nsvo það sjáist greinilega að þau eru innan í `<ol>`  taginu.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Dæmi um kóða.**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>Dæmi</td>\\r\n<td>Útkoma</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br>   &lt;li&gt;1. skref &lt;/li&gt; <br>   &lt;li&gt;2. skref &lt;/li&gt;\n<br>   &lt;li&gt;3. skref &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nÞessi síða ætti að hafa raðaðan lista, en það vantar listatögin.\\r\n\\r\n#\nGerðu þetta\\r\n\\r\n* Notaðu tögin `<ol>` og `<li>` til að stilla þessu efni upp í röðuðum lista sem er eins og listinn hér að neðan.\\r\n\\r\n*Vísbending: Það eru ENGAR TÖLUR í sjálfum kóðanum.* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 project review: |
@@ -1295,7 +1295,7 @@ is:
         *
         Notaðu athugasemdir og bil í kóðanum til að gera hann skiljanlegri.\r
         * Biddu félaga þinn að hjálpa þér að finna hugsanleg vandamál með vefinn þinn.\r
-        
+
       CSD U2 project review_2018: |
         # Farðu yfir verkefnið\r
         \r
@@ -1309,7 +1309,7 @@ is:
         *
         Notaðu athugasemdir og bil í kóðanum til að gera hann skiljanlegri.\r
         * Biddu félaga þinn að hjálpa þér að finna hugsanleg vandamál með vefinn þinn.\r
-        
+
       CSD U2 project share: |+
         # Deildu verkefninu\r
         \r
@@ -1321,7 +1321,7 @@ is:
         AM.png) hnappinn efst á þessari síðu.\r
         * Afritaðu vefslóðina sem þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\r
         \r
-        
+
       CSD U2 project share_2018: |+
         # Deildu verkefninu\r
         \r
@@ -1333,7 +1333,7 @@ is:
         AM.png) hnappinn efst á þessari síðu.\r
         * Afritaðu vefslóðina sem þú færð og sendu hana í tölvupósti til þeirra sem mega sjá síðuna.\r
         \r
-        
+
       CSD U2 text style freeplay - OLD: |-
         # Stílum bætt við\r
         \r
@@ -1358,7 +1358,7 @@ is:
         markdown="1">\r
         <details>\r
         <summary>**Tvær tegundir af listum**</summary>\r
-        
+
         Það eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\r
         </details>\r
         <details>\r
@@ -1413,7 +1413,7 @@ is:
         markdown="1">\r
         <details>\r
         <summary>**Tvær tegundir af listum**</summary>\r
-        
+
         Það eru tvenns konar listar í HTML: raðaðir (enska:ordered) og óraðaðir (enska:unordered).\r
         </details>\r
         <details>\r
@@ -1476,7 +1476,7 @@ is:
         * Hladdu öllum myndunum upp í verkefnið þitt.  
         [Kennslustund 8 þraut 6](/s/csd2/stage/8/puzzle/6) er með hjálp ef þú þarft.\r
         \r
-        
+
       CSD U2 upload images_2018: |
         # Hlaða upp myndum\r
         \r
@@ -1491,7 +1491,7 @@ is:
         * Hladdu öllum myndunum upp í verkefnið þitt.  
         [Kennslustund 8 þraut 6](/s/csd2/stage/8/puzzle/6) er með hjálp ef þú þarft.\r
         \r
-        
+
       CSD U3 - conditionals - arrows and gears: |-
         # Tannhjól með skilyrðum\r
         \r
@@ -1509,7 +1509,7 @@ is:
         \r
         _Áskorun:
         Getur þú látið eplið hætta að stækka eftir að það er orðið rautt?_\r
-        
+
       CSD U3 Conditionals Apple: |-
         # Meiri æfing með Boole gildi\r
         \r
@@ -1621,7 +1621,7 @@ is:
         selector) (smelltu, haltu og dragðu) til að velja allan kóðann þinn og settu hann í teiknilykkjuna. Með Crtl-Z getur þú afturkallað mistök sem þú gerir.\r
         * Bættu kóða í forritið sem uppfærir þessa eiginleika kvikanna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þeir hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`\r
         \r
-        
+
       CSD U3 Draw Loop Plugged update your scene_2018: |
         # Færa út sviðið\r
         \r
@@ -1638,7 +1638,7 @@ is:
         selector) (smelltu, haltu og dragðu) til að velja allan kóðann þinn og settu hann í teiknilykkjuna. Með Crtl-Z getur þú afturkallað mistök sem þú gerir.\r
         * Bættu kóða í forritið sem uppfærir þessa eiginleika kvikanna: `sprite.x`, `sprite.y` eða `sprite.rotation` svo þeir hreyfist. Þú verður að uppfæra eiginleikana með handahófstölum: `randomNumber()`\r
         \r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
@@ -1685,7 +1685,7 @@ is:
         * Breyttu kóðanum í þessu forriti svo að hinn kvikinn titri á sama og sá fyrri\r
         * Ekki hætta fyrr en forritið lítur út eins og það sem sést í myndinni hér til hægri\r
         \r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite x_2018: |+
         <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif",
         style="float:right;height:150px">\r
@@ -1702,7 +1702,7 @@ is:
         * Breyttu kóðanum í þessu forriti svo að hinn kvikinn titri á sama og sá fyrri\r
         * Ekki hætta fyrr en forritið lítur út eins og það sem sést í myndinni hér til hægri\r
         \r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite y: |
         <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
         style="float:right;height:150px">\r
@@ -1715,7 +1715,7 @@ is:
         * Bættu kubbnum fyrir teiknilykkjuna við neðst í forritinu.\r
         * Færðu þangað alla kubba sem þurfa að vera innan í lykkjunni.\r
         * Ekki hætta fyrr en forritið þitt er eins og það í myndinni hér til hægri\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite y_2018: |
         <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
         style="float:right;height:150px">\r
@@ -1728,7 +1728,7 @@ is:
         * Bættu kubbnum fyrir teiknilykkjuna við neðst í forritinu.\r
         * Færðu þangað alla kubba sem þurfa að vera innan í lykkjunni.\r
         * Ekki hætta fyrr en forritið þitt er eins og það í myndinni hér til hægri\r
-        
+
       CSD U3 Drawing Squares to Corners: |-
         <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
         AM.png" style="float:right;width:150px">\r
@@ -1789,24 +1789,24 @@ is:
         # Teiknimyndasögur með hreyfingu\r
         \r
         Með því að blanda saman myndum, texta og hreyfingum er hægt að skapa áhugaverðar teiknimyndasögur.  Smelltu á "Keyra" til að sjá dæmi.\r
-        
+
       CSD U3 Entertainment Sample 3_2018: |
         # Teiknimyndasögur með hreyfingu\r
         \r
         Með því að blanda saman myndum, texta og hreyfingum er hægt að skapa áhugaverðar teiknimyndasögur.  Smelltu á "Keyra" til að sjá dæmi.\r
-        
+
       CSD U3 Entertainment Sample 4: |
         # Stimplar\r
         \r
         Smelltu á
         "Keyra" til að ræsa forritið, og notaðu svo stimpilinn til að teikna myndir með einföldum litum og stimpluðum dýramyndum.\r
-        
+
       CSD U3 Entertainment Sample 4_2018: |
         # Stimplar\r
         \r
         Smelltu á
         "Keyra" til að ræsa forritið, og notaðu svo stimpilinn til að teikna myndir með einföldum litum og stimpluðum dýramyndum.\r
-        
+
       CSD U3 Input Fish: |-
         # Fiskar með örvum\r
         \r
@@ -2263,7 +2263,7 @@ is:
         \r
         * Skoðaðu kóðann og reyndu að finna út hvernig síðustu tvö inntökin í `rect` kubbnum virka.\r
         * Breyttu tölunum í öðrum `rect` kubbnum til að gera rauða rétthyrninginn lengri en þann bláa.\r
-        
+
       CSD U3 Random Taller Rectangle_2018: |
         <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
         PM.png" style="float:right;height:150px">\r
@@ -2276,7 +2276,7 @@ is:
         \r
         * Skoðaðu kóðann og reyndu að finna út hvernig síðustu tvö inntökin í `rect` kubbnum virka.\r
         * Breyttu tölunum í öðrum `rect` kubbnum til að gera rauða rétthyrninginn lengri en þann bláa.\r
-        
+
       CSD U3 Random background: |-
         # Bakgrunnur\r
         \r
@@ -2392,7 +2392,7 @@ is:
         ## Útbúðu uppkast\r
         \r
         Áður en lengra er haldið ættir þú að taka þér tíma til að teikna upp sviðsetninguna sem þú vilt sjá í lok þessarar æfingar. Notaðu einföld form sem þú þekkir, kvika fyrir persónur og texta sem birtist á skjánum. Þegar uppkastið er tilbúið, munt þú læra um `text` kubbinn og hvernig á að stilla upp sviði.\r
-        
+
       CSD U3 Sprite Movement Left: |-
         <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif"
         style="float: right; margin-left: 20px">\r
@@ -2434,7 +2434,7 @@ is:
         # Gerðu þetta\r
         \r
         Settu hreyfingu í forritið þitt eins og myndin til hægri sýnir. Við höfum þegar bætt inn línu til að uppfæra `plane.x` í teiknilykkjunni en þetta er óklárað.\r
-        
+
       CSD U3 Sprite Movement Right_2018: |
         <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif"
         style="float: right; margin-left: 20px">\r
@@ -2446,7 +2446,7 @@ is:
         # Gerðu þetta\r
         \r
         Settu hreyfingu í forritið þitt eins og myndin til hægri sýnir. Við höfum þegar bætt inn línu til að uppfæra `plane.x` í teiknilykkjunni en þetta er óklárað.\r
-        
+
       CSD U3 Sprites anitab 1: |-
         # Myndir\r
         \r
@@ -2699,7 +2699,7 @@ is:
         style="width:150px; border: 1px solid grey; margin:20px;">\r
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
-        
+
       CSD U3 Variables Challenge_2018: |
         # Áskorun: Að uppfæra breytur\r
         \r
@@ -2714,21 +2714,21 @@ is:
         style="width:150px; border: 1px solid grey; margin:20px;">\r
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
-        
+
       CSD U3 Variables Draw Challenge: |
         # áskorun: Teikna mynd\r
         \r
         _Ráðfærðu þig við kennarann áður en þú reynir við þessa áskorun_\r
         \r
         Notaðu breytur og teiknaðu samsetta mynd þar sem margir hlutir nota sömu breytu fyrir stærð eða staðsetningu. Teiknaðu til dæmis andlit með breytum sem stjórna stærð og/eða stað augna, eyrna og nasa. Þegar teikningin er fullgerð, prófaðu þá að breyta gildum breytnanna til að ganga úr skugga um að allir hlutar myndarinnar breytist saman.\r
-        
+
       CSD U3 Variables Draw Challenge_2018: |
         # áskorun: Teikna mynd\r
         \r
         _Ráðfærðu þig við kennarann áður en þú reynir við þessa áskorun_\r
         \r
         Notaðu breytur og teiknaðu samsetta mynd þar sem margir hlutir nota sömu breytu fyrir stærð eða staðsetningu. Teiknaðu til dæmis andlit með breytum sem stjórna stærð og/eða stað augna, eyrna og nasa. Þegar teikningin er fullgerð, prófaðu þá að breyta gildum breytnanna til að ganga úr skugga um að allir hlutar myndarinnar breytist saman.\r
-        
+
       CSD U3 Variables Draw Poppy: |-
         # Breyta notuð oft\r
         \r
@@ -2922,7 +2922,7 @@ is:
         * **Keyrðu forritið** til að sannreyna spá þína.\r
         * **Kíktu á vakana** og útskýrðu fyrir öðrum það sem þú sérð.\r
         \r
-        
+
       CSD U3 Watcher Predict response_2018: |+
         # Teljaramynstrið vaktað\r
         \r
@@ -2932,7 +2932,7 @@ is:
         * **Keyrðu forritið** til að sannreyna spá þína.\r
         * **Kíktu á vakana** og útskýrðu fyrir öðrum það sem þú sérð.\r
         \r
-        
+
       CSD U3 abstraction velocityX if-statements predict: |-
         #
         Breyta hraða eftir stað\r
@@ -2969,7 +2969,7 @@ is:
         Þegar því er náð getur þú sett þitt persónulega mark á myndina.\r
         \r
         \r
-        
+
       CSD U3 challenge face_2018: |
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\r
@@ -2982,7 +2982,7 @@ is:
         Þegar því er náð getur þú sett þitt persónulega mark á myndina.\r
         \r
         \r
-        
+
       CSD U3 challenge new shape: |-
         <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\r
@@ -3054,7 +3054,7 @@ is:
         \r
         * Skoðaðu kóðann sem býr til ellipsuna.\r
         * Bættu við nýrri ellipsu í öðrum lit.\r
-        
+
       CSD U3 ellipse_2018: |
         <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44
         PM.png" style="float:right;width:150px;">\r
@@ -3067,7 +3067,7 @@ is:
         \r
         * Skoðaðu kóðann sem býr til ellipsuna.\r
         * Bættu við nýrri ellipsu í öðrum lit.\r
-        
+
       CSD U3 fill: |
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
         PM.png" style="float:right;width:200px;">\r
@@ -3083,7 +3083,7 @@ is:
         * Breyttu litnum úr bláu í gult.\r
         * Bættu við nýjum ferningi með því að bæta `rect` kubbi í kóðann fyrir neðan `fill` skipunina ( [Sýndu mér hvar](#triggercallout=rect_block)
         ).  Nýi ferningurinn má vera hvar sem er á skjánum.\r
-        
+
       CSD U3 fill_2018: |
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
         PM.png" style="float:right;width:200px;">\r
@@ -3099,7 +3099,7 @@ is:
         * Breyttu litnum úr bláu í gult.\r
         * Bættu við nýjum ferningi með því að bæta `rect` kubbi í kóðann fyrir neðan `fill` skipunina ( [Sýndu mér hvar](#triggercallout=rect_block)
         ).  Nýi ferningurinn má vera hvar sem er á skjánum.\r
-        
+
       CSD U3 keydown conditional: |-
         # Skipt um kvika\r
         \r
@@ -3376,7 +3376,7 @@ is:
         \r
         \r
         \r
-        
+
       CSDU6 - final project 1: |-
         # Hönnun notendaviðmóts\r
         \r
@@ -3688,7 +3688,7 @@ is:
         \r
         \r
         \r
-        
+
       Color Contrast Checker: "# Litaskil\\r\n\\r\nFólk þarf að geta séð og lesið innihald vefsíðunnar þinnar til að hún komi að gagni. Sumir gætu verið sjóndaprir en aðrir litblindir. Hvernig getur maður hannað með þessar sérþarfir í huga? \\r\n\\r\nEin auðveldasta leið til að tryggja að sem flestir geti lesið innihald vefsíðu er gæta þess að það séu hæfilega skörp litaskil milli lita sem eru notaðir saman á vefsíðu.\\r\n\\r\nhttp://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/\\r\n\\r\n\\r\n#\nGerðu þetta\\r\n\\r\n* Notaðu litaskilamælinn (enska:color contrast checker) til að sjá hve skörp litaskilin eru á milli litanna sem þú ert að nota saman á vefnum þínum."
       Considerations for the 1-to-1 Classroom: |-
         ## 1-1 Tölvustofa\r
@@ -3799,7 +3799,7 @@ is:
         Prófaðu að nota nýja fallið þitt til að safna öllum þessum safa.\r
         \r
         <br/>\r
-        
+
       Course 4 Bee Params 8: "**Áskorun:** Nú er komið hunang til að fást við líka! \\r\n\\r\nEndurskrifaðu fallið svo að það taki inn bæði fjölda eininga af blómasafa og fjölda eininga af hunangi. Hvernig gætir þú notað þessar tölur til að ákveða hvað á að gera?"
       Course 4 EC 1a: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
       Course 4 EC 1b: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!"
@@ -3936,7 +3936,7 @@ is:
         \r
         <hr/>\r
         \r
-        
+
       Course 4 SCV 4: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er.\\r\n\\r\n"
       Course 4 SCV 5: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er.\\r\n\\r\n"
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?  "
@@ -3964,6 +3964,34 @@ is:
         Hér er dæmi þar sem Elsa snýr 6 sinnum:\r
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      Dance_Party_01: |-
+        *Nú skulum við halda danspartý!
+
+        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
+
+        **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
+      Dance_Party_01_low: |-
+        *Nú skulum við halda danspartý!
+
+        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
+
+        **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
+      Dance_Party_02: |-
+        Nú skulum við láta elginn dansa!
+
+        Dragðu <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> kubbinn inn á vinnusvæðið. Festu hann undir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> kubbinn. Þá ætti dansarinn þinn að byrja að dansa eftir 4 takta.
+
+        **Taktar** eru notaðir til talningar í tónlist. Í þessari æfingu er einn taktur 4 slög.
+      Dance_Party_03: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
+      Dance_Party_04: |-
+        *Þessi dans þarfnast smá glampa!*
+
+        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
+      Dance_Party_3: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
+      Dance_Party_4: |-
+        *Þessi dans þarfnast smá glampa!*
+
+        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       Escape Room Example: |-
         # Flóttaleikur\r
         \r
@@ -3999,6 +4027,10 @@ is:
       Geometric Sun: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2018: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2019: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
+      HOC Dance 3_draft: |-
+        *Þessi dans þarfnast smá glampa!*
+
+        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       Harvesting: "Ó nei, ég týndi kortinu og man ekki hvað ég setti niður! Hver sproti gæti orðið að **maís** ![mynd af maís](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **baunum** ![mynd af baunum](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n eða **graskeri** ![mynd af graskeri](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Getur þú skrifað kóða til að taka upp allar afurðirnar óháð tegund?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
       InspirationalArtwork: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
@@ -4251,7 +4283,7 @@ is:
         * Notar minnst 4 mismunandi litaðar fyllingar\r
         * Notar minnst 3 mismunandi litaðar útlínur\r
         * Notar minnst 3 mismunandi kóðakubba með athugasemdum\r
-        
+
       U5 ColorSleuth implement end game: "# Áskorun - Veldu hvernig leikurinn á að enda og útfærðu það\\r\n\\r\nÁskorunin nú felst í að þú bætir við kóða sem kemur alveg frá þér.   Notaðu það sem þú hefur lært. Spjall Alexis og Michael getur líka hjálpað.\\r\n\\r\n**Þetta er síðasti forritunaráfanginn**\\r\n\\r\n* Settu inn allar breytingar og viðbætur við forritið\\r\n* Smelltu svo á **Senda**\\r\n\\r\n**Markmið:** Bæta við kóða sem lætur leikinn enda og sem:\\r\n* Skiptir yfir í skjámyndina `gameOver_screen`\\r\n*\nSýnir hvaða spilari vann leikinn með því að birta textana `player1Win_label` eða `player2Win_label`\\r\n\\r\n*Við höfum lagt til `gameOver_screen` skjámynd í sniðmátinu fyrir þetta verkefni -- Skiptu yfir í Hönnunarstöðu til að sjá hvað er þar*\\r\n\\r\n**Tillögur**\\r\n*\nEf þér dettur ekkert í hug, gætir þú reynt að láta leikslok byggjast á skilyrðinu \"fyrstur í 10\" - fyrsti spilari sem fær 10 stig vinnur.\\r\n* Þú ættir að nota tillöguna sem kom fram í spjallinu og bæta við falli eins og `checkGameOver()` og kalla á það frá `checkCorrect`\\r\n\\r\n<details><summary><strong>Umfram og aukalega:\nHér eru fleiri kostir sem þú getur bætt við að vild [Smelltu til að útvíkka]</strong></summary>\\r\n\\r\n<p>\\r\nHér eru nokkrar hugmyndir um viðbætur eða útvíkkun verkefnisins:\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li>Setja\n\"Byrja aftur\" hnapp á síðasta skjáinn. Hann ætti að núllstilla allt og birta leiksviðið aftur\\r\n</li>\\r\n<li>Bæta við upphafsskjá sem útskýrir reglur leiksins og býður spilara að hefja leikinn (það ætti að vera sjálfvalið)\\r\n</li>\\r\n<li>Gera leikinn erfiðari:</li>\\r\n<uL>\\r\n<li>Gera litina líkari hvor öðrum (við höfum bætt 20 við hvert RGB gildi, prófaðu 15 eða 10).</li>\\r\n    <li>Eða hafa erfiðleikann breytilegan - þú gætir notað slembitölu á bilinu 5 til 20 og bætt henni við RGB gildin. </li>\\r\n    <li>Eða látið leikinn verða smám saman erfiðari - notað breytu fyrir það hve miklu á að bæta við hvert RGB gildi og minnkað innihald breytunnar með tímanum.</li>\\r\n\\t<li>Eða bjóða spilara á upphafsskjánum að velja erfiðleikastig: auðvelt, miðlungs eða erfitt.</li>\\r\n</uL>\\r\n\\r\n<li>Bæta við tímatakmörkun - flettu upp lesningunni um setTimeout sem kallar á fall eftir vissan tíma. (Athugaðu: þú gætir þurft að 'remixa' verkefnið sem frjálst verkefni í App-smiðjunni til að þetta sé hægt).\\r\n</li>\\r\n<li>Þú getur líka notað <code>getTime()</code> í upphafi og lok kóðans til að reikna út hvað leikurinn stóð í langan tíma og notað það til að stilla af skorið.</li>\\r\n</ul>\\r\n</details>\\r\n"
       What is the difference between formative and summative assessment?: 'Eftirfarandi tengill vísar í skilgreiningar á og dæmi um matsaðferðir, bæði mótandi símat og lokamat:'
       aE1: |+
@@ -4264,14 +4296,14 @@ is:
         \r
         Veldu formið sem þér finnst flottast:\r
          - Ferningur (Auðvelt)\r
-        
+
         - Þríhyrningur (Í meðallagi)\r
          - Fimmhyrningur (Erfiðast)\r
         \r
         </div>\r
         <br/>\r
         \r
-        
+
       aE2: "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\"\nstyle=\"width:400px; margin: 0 20px 20px 10px;\"/>\\r\n\\r\n<div style=\"color:\n#7665a0; font-size: 1.6em; line-height: 1.4em;\" >Nú þurfum við nógu margar fyrir alla!\\r\n<br/><br/>\\r\n\\r\nTökum formið sem við vorum að búa til og setjum upp röð af 14 servíettum.  \\r\n<br/>\\r\nEf þú setur lykkju í aðra lykkju er hún nefnd földuð lykkja. \\r\n\\r\nHvernig getur þú endurtekið allan kóðann frá síðasta áfanga þannig að allar 14 servíetturnar raðist upp hlið við hlið?</div>\\r\n"
       aE3: |+
         <img src="https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif"
@@ -4284,7 +4316,7 @@ is:
         Taktu röðina þína með 14 servíettum og saumaðu 14 raðir saman með annarri **ytri lykkju** til að mynda borðdúk á borðið.\r
         </div>\r
         \r
-        
+
       aE3alternate: |2+
         \r
         <div style="color: #7665a0; font-size:
@@ -4292,7 +4324,7 @@ is:
         Þessi valkostur sýnir hvernig myndin yrði ef notandinn veldi fimmhyrndar servíettur og breytti línubreidd og/eða lit.\r
         </div>\r
         \r
-        
+
       aE3alternateB: |2+
         \r
         <div style="color: #7665a0; font-size:
@@ -4300,7 +4332,7 @@ is:
         Þessi valkostur sýnir hvernig myndin yrði ef notandinn veldi þríhyrndar servíettur og gerðist djarfur með kóðann.\r
         </div>\r
         \r
-        
+
       aE4: "\\r\n<div style=\"color: #7665a0; font-size: 1.6em;\nline-height: 1.4em;\" >\\r\nÓ nei! Servíetturnar okkar eru of litlar! \\r\n<br/><br/>\\r\nVið þurfum að tvöfalda stærð þeirra en samt halda borðdúknum í óbreyttri stærð. Hvað tölum getur þú breytt svo að þetta takist?\\r\n<br/><br/>\\r\n(sýnt með þríhyrningum)\\r\n</div>\\r\n\\r\n"
       aE5: |2+
         \r
@@ -4311,7 +4343,7 @@ is:
         Hér er upphaflegi kóðinn þinn sem teiknar röð af servíettum. Settu 4 raðir saman til að búa til mynstur sem fer umhverfis gluggaumgjörðina.\r
         </div>\r
         \r
-        
+
       aE6: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\r
@@ -4338,7 +4370,7 @@ is:
         \r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\r
-        
+
       artistLoopsK2gradek_artist_loops3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4347,7 +4379,7 @@ is:
         \r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\r
-        
+
       artistLoopsK3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4356,7 +4388,7 @@ is:
         \r
         <img src="https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif"
         width="300"/>\r
-        
+
       artistLoopsK4: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4366,7 +4398,7 @@ is:
         <img
         src="https://images.code.org/84b93e1b9dad3ee52a46c767524d3558-image-1467935697224.gif"
         width="300"/>\r
-        
+
       artistLoopsK5: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4376,7 +4408,7 @@ is:
         \r
         <img src="https://images.code.org/f418ccba20b7230baba1328143bd0092-image-1467935762464.gif"
         width="300"/>\r
-        
+
       artistLoopsK6: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4385,7 +4417,7 @@ is:
         \r
         <img src="https://images.code.org/1efb95ca15f66b46145725769d3d279c-image-1467935856461.gif"
         width="300"/>\r
-        
+
       artistLoopsK7: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4395,7 +4427,7 @@ is:
         \r
         <img src="https://images.code.org/af040c27be11c3a639e18c440c8a047c-image-1467936046481.gif"
         width="300"/>\r
-        
+
       artistLoopsK8: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4404,7 +4436,7 @@ is:
         \r
         <img src="https://images.code.org/bf368872da36217b0d19261fc6b84bf6-image-1467936147116.gif"
         width="300"/>\r
-        
+
       artistLoopsK9: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4413,7 +4445,7 @@ is:
         \r
         <img src="https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif"
         width="300"/>\r
-        
+
       artistLoopsKA: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4422,7 +4454,7 @@ is:
         \r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\r
-        
+
       artistLoopsKB: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -4431,7 +4463,7 @@ is:
         \r
         <img src="https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif"
         width="300"/>\r
-        
+
       artistLoopsKFP: |
         Teiknitími!  Notaðu það sem þú hefur lært til að teikna mynd af því sem þú heldur að listamaðurinn hafi séð á sviðinu.\r
         \r
@@ -4469,7 +4501,7 @@ is:
         \r
         </tr>\r
         </table>\r
-        
+
       beeDebugVideo1: Safnaðu öllum blómasafanum.
       collector example: |-
         Safnaðu öllu gullinu með `taka` kubbnum:\r
@@ -4719,7 +4751,7 @@ is:
         \r
         Náðu öllum þremur hrúgunum til að ljúka áfanganum.\r
         \r
-        
+
       courseA_collector_loops2_2018: "Færðu Laurel að fjársjóðnum og notaðu svo \\r\n![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png) til að taka hann upp.\\r\n\\r\nNáðu öllum þremur hrúgunum til að ljúka áfanganum.\\r\n\\r\n"
       courseA_collector_loops3: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
       courseA_collector_loops3_2018: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
@@ -4730,7 +4762,7 @@ is:
         \r
         Náðu öllum þremur hrúgunum til að ljúka áfanganum.\r
         \r
-        
+
       courseA_forVideoTest_artist: Lykkjur gagnast listamanninn líka!
       courseA_harvester_forVideo: Getur þú tínt allan maísinn með aðeins **einum** `færa` kubbi?
       courseA_harvester_loops1: Hjálpaðu hirðinum að tína allan maísinn!
@@ -4954,7 +4986,7 @@ is:
         \r
         Gættu þín á veggjum og kössum!\r
         \r
-        
+
       courseB_starWars_prog1_2018: |-
         ![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
         \r
@@ -4962,7 +4994,7 @@ is:
         \r
         Gættu þín á veggjum og kössum!\r
         \r
-        
+
       courseB_starWars_prog2: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif) Hjálpaðu nú\nBB-8 að safna **öllum** glóandi brotamálminum!  \\r\n\\r\nGættu þín á veggjum og kössum!  \\r\n\\r\n"
       courseB_starWars_prog2_2018: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif) Hjálpaðu nú\nBB-8 að safna **öllum** glóandi brotamálminum!  \\r\n\\r\nGættu þín á veggjum og kössum!  \\r\n\\r\n"
       courseB_starWars_prog3: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)\nHjálpaðu BB-8\nað safna öllum glóandi brotamálminum! \\r\nGættu þín á veggjum og kössum! \\r\n\\r\n"
@@ -5542,7 +5574,7 @@ is:
         <hr/>\r
         \r
         Farðu sömu slóð og áður en notaðu nú endurtekningarlykkju til að safna fjársjóðum sem þú rekst á.\r
-        
+
       courseD_collector_ramp9: Nú er meira af fjársjóði.  Getur þú hjálpað Laurel að safna öllu?
       courseD_collector_until_challenge1: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_farmer_condLoops3: |-
@@ -5856,7 +5888,7 @@ is:
         <hr/>\r
         \r
         Farðu sömu slóð og áður en notaðu nú endurtekningarlykkju til að safna fjársjóðum sem þú rekst á.\r
-        
+
       courseE_collector_ramp9: "Farðu sömu slóð og áður en safnaðu nú öllum fjársjóðum sem finnast.\\r\n"
       courseE_farmer_concept4: Nú skulum við fara dýpra! Allur kóðinn er faldaður í annarri lykkju, en við þurfum að koma listamanninum aftur á sama stað til að teikna næstu línu. Hvaða kóða vantar í endann á ytri lykkjunni til að teikna alla grindina?
       courseE_farmer_functions4b: Notaðu nýja fallið til að leysa þessa þraut.
@@ -6010,27 +6042,27 @@ is:
         \r
         - Stysta hliðin í miðju þessa fernings er 50 dílar á lengd\r
         - Lengsta hliðin yst í spíralnum er 200 dílar á lengd\r
-        
+
       courseF_artist_fwp7_2018: |-
         Ljúktu við `teikna spíral` fallið svo að það biðji líka um lágmarkslengd fyrir miðju spíralsins.\r
         \r
         - Stysta hliðin í miðju þessa fernings er 50 dílar á lengd\r
         - Lengsta hliðin yst í spíralnum er 200 dílar á lengd\r
-        
+
       courseF_artist_fwp8: |-
         Getur þú fundið úr hvernig þú getur teiknað þessa mynd með fallinu sem þú varst að búa til?\r
         \r
         - Rauði spírallinn fer frá 50 og upp í 200 díla\r
         - Blái spírallinn fer frá 25 og upp í 125 díla\r
         - Græni spírallinn fer frá 100 og upp í 300 díla\r
-        
+
       courseF_artist_fwp8_2018: |-
         Getur þú fundið úr hvernig þú getur teiknað þessa mynd með fallinu sem þú varst að búa til?\r
         \r
         - Rauði spírallinn fer frá 50 og upp í 200 díla\r
         - Blái spírallinn fer frá 25 og upp í 125 díla\r
         - Græni spírallinn fer frá 100 og upp í 300 díla\r
-        
+
       courseF_artist_fwp9: "**Frjáls æfing:** Hér fyrir neðan eru föll sem þú hefur skrifað og fleiri sem þú getur leikið þér með. Sjáðu hvaða áhrif það hefur að breyta breidd pennans! Það eru tillögur í vísbendingunum!"
       courseF_artist_fwp9_2018: "**Frjáls æfing:** Hér fyrir neðan eru föll sem þú hefur skrifað og fleiri sem þú getur leikið þér með. Sjáðu hvaða áhrif það hefur að breyta breidd pennans! Það eru tillögur í vísbendingunum!"
       courseF_artist_fwp_challenge1: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
@@ -6238,7 +6270,7 @@ is:
         \r
         \r
         \r
-        
+
       courseF_playlab_variables0: "Þetta er Pegleg sjóræningi. Það er mjög erfitt að skilja hann þessa dagana! \\r\n\\r\nTúlkaðu tal hans með því að breyta þessum textabútum í kóðanum:\\r\n- \"arrrg\" á að vera \"a\"\\r\n- \"ye\" á að vera \"e\"\\r\n\\r\n"
       courseF_playlab_variables1: "Þetta er Pegleg sjóræningi. Það er mjög erfitt að skilja hann þessa dagana! \\r\n\\r\nTúlkaðu tal hans með því að breyta þessum textabútum í kóðanum:\\r\n- \"arrrg\" á að vera \"a\"\\r\n- \"ye\" á að vera \"e\"\\r\n\\r\n"
       courseF_playlab_variables2: "Túlkaðu nú tal Pegleg sjóræningja með því að breyta gildum breytnanna bara á tveimur stöðum!   \\r\n-\n\"arrrg\" ætti að vera \"a\" \\r\n- \"ye\" ætti að vera \"e\"\\r\n\\r\n"
@@ -6275,7 +6307,7 @@ is:
         \r
         \r
         \r
-        
+
       courseF_playlab_variables6c_2018: |-
         Afganginn af þessu stigi munum við nota til að búa til leik sem **þú** stjórnar og sem mun innhalda marga `spyrja` kubba og margar `ef/annars` yrðingar.\r
         \r
@@ -6283,7 +6315,7 @@ is:
         \r
         \r
         \r
-        
+
       courseF_playlab_variables7c: "Bættu við öðrum `spyrja` kubbi til að biðja notandann að giska á lit.  \\r\n\\r\nHafðu `ef/annars` yrðinguna þannig að þitt lykilorð vinni alltaf leikinn en öll önnur lykilorð tapi honum.\\r\n\\r\n\\r\n\\r\n"
       courseF_playlab_variables7c_2018: "Bættu við öðrum `spyrja` kubbi til að biðja notandann að giska á lit.  \\r\n\\r\nHafðu `ef/annars` yrðinguna þannig að þitt lykilorð vinni alltaf leikinn en öll önnur lykilorð tapi honum.\\r\n\\r\n\\r\n\\r\n"
       courseF_playlab_variables8c: "Notaðu `tengja` kubbinn til að gera skilaboðin um sigur/tap persónulegri með því að láta lykilorðið og litinn koma fram í skilaboðunum.\\r\n\\r\n\\r\n"
@@ -6318,7 +6350,7 @@ is:
         \r
         * Hvað eru námseflarnir að gera?\r
         * Hvað eru kennarar að gera?\r
-        
+
       csd-thursday-pedagogy: "# Fimmtudagur - þankar um kennslufræði\n1. hluti\\r\n\\r\n## Einstaklingsmiðaðar leiðbeiningar\\r\n\\r\nHvaða aðferðir hefur þú lært um varðandi að miða leiðbeiningar við einstakar þarfir nemenda í CS Discoveries náminu? Teldu upp minnst tvær hugmyndir. "
       csd-thursday-pedagogy2: |
         # Fimmtudagur - þankar um kennslufræði
@@ -6335,7 +6367,7 @@ is:
         *
         Sástu eitthvað í dag sem þú mundir vilja fylgja eftir allt árið?\r
         * Hvaða markmið varðandi skráningu vonast þú til að geta hjálpað að ná fyrir lok ársins?\r
-        
+
       csd-thursday-unit: "# Fimmtudagur - þankar um eininguna - 1. hluti\n\\r\n\\r\n## Leikjasmiðja\\r\n\\r\nHvernig mundir þú útskýra forritun í Leikjasmiðjunni fyrir nýjum kennara sem hefur áhuga á að nota hana? \\r\n\\r\n* Á hvaða hátt er Leikjasmiðjan kennslutæki fremur en verkfæri fagmanna? \\r\n* Hvaða stuðningur finnst fyrir nemendur sem nota Leikjasmiðjuna?\\r\n"
       csd-thursday-unit2: |-
         # Fimmtudagur - þankar um eininguna - 2. hluti\r
@@ -6376,14 +6408,14 @@ is:
         \r
         * Hvað eru námseflarnir að gera?\r
         * Hvað eru kennarar að gera?\r
-        
+
       csp-thursday-unit: |
         # Fimmtudagur - þankar um eininguna\r
         \r
         ## Tenging milli 1. og 2. einingar\r
         \r
         Hvaða tengingar eða vísanir yfir í 1. einingu gætu kveikt áhuga í fyrstu tímum 2. einingar?\r
-        
+
       csp-thursday-unit2: |
         # Fimmtudagur - þankar um eininguna - 2. hluti\r
         \r
@@ -6392,7 +6424,7 @@ is:
         \r
         Hvert er hlutverk kennarans í þessari einingu,
         þar sem mikið af tölvunarfræðilegu innihaldinu er miðlað gegnum verklegu áfangana sjálfa?\r
-        
+
       csp-tuesday-unit: |
         # Þriðjudagur - þankar um eininguna - 1. hluti\r
         \r
@@ -6400,7 +6432,7 @@ is:
         Kennslustund 4\r
         \r
         Hvernig mundir þú svara kennara sem spyr 'hvert sé markmiðið' með 4. tímanum?\r
-        
+
       csp-tuesday-unit2: |
         # Þriðjudagur - þankar um eininguna\r
         \r
@@ -6408,7 +6440,7 @@ is:
         Tæknileg úrlausnarefni\r
         \r
         Margir hópar lenda í tæknilegum vandræðum í upphafi árs (tölvur ekki tilbúnar, o. fl.). Hvernig mundir þú ráðleggja kennara að nálgast fyrstu eininguna ef þeir eru að lenda í slíkum vandræðum?\r
-        
+
       csp-wednesday-unit: |+
         # Miðvikudagur - þankar um eininguna\r
         \r
@@ -6417,7 +6449,7 @@ is:
         \r
         Í þessari einingu er Internet-hermirinn notaður stíft. Eru einhver ráð til að höndla nemendur sem eru farnir að þreytast á honum í lok einingarinnar?\r
         \r
-        
+
       csp-wednesday-unit2: "# Miðvikudagur - þankar um eininguna - 2. hluti\\r\n\\r\n## Internet-hermir útskýrður\\r\n\\r\nHvernig mundir þú útskýra Internet-herminn fyrir nýjum kennara sem hefur áhuga á að nota hann?\\r\n\\r\n*\nÁ hvaða hátt er Internet-hermirinn kennslutæki fremur en verkfæri fagmanna? \\r\n* Hvaða kennslufræðileg nálgun virðist áhrifaríkust með Internet-herminum? \\r\n"
       frozen circle function in circle: Gerum nú 20 hringi sem skarast og snúum um 18 gráður á milli hringa.
       frozen circle function with parameter: Hér er kubburinn `gera hring` sem getur teiknað hringa í mismunandi stærðum. Getur þú notað hann til að teikna lítinn hring í stærð 5 og annan í stærð 10?
@@ -6635,7 +6667,7 @@ is:
         \r
         - Stysta hliðin í miðju þessa fernings er 50 dílar á lengd\r
         - Lengsta hliðin yst í spíralnum er 200 dílar á lengd\r
-        
+
       grade5_artist_functionparameters_6: |-
         Vel gert! Breyttu nú þessu falli og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r
         \r
@@ -6779,4 +6811,4 @@ is:
         * Notar minnst 4 mismunandi litaðar fyllingar\r
         * Notar minnst 3 mismunandi litaðar útlínur\r
         * Notar minnst 3 mismunandi kóðakubba með athugasemdum\r
-        
+
