@@ -390,7 +390,7 @@ it:
       4-5 Maze Conditionals 5: "Me ... volere ... girasole!<br>\n<br>\nUsa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi."
       4-5 Maze Conditionals 6: |-
         Me ... volere ... girasole!
-        
+
         Usa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi.
       4-5 Maze Conditionals 7: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
       4-5 Maze Conditionals 8: "Il blocco `se-altrimenti` controlla una condizione: SE è vera fa una cosa ALTRIMENTI ne fa un'altra.<br>\n<br>\nProva ad usare questo nuovo blocco per farmi arrivare al girasole.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
@@ -1619,11 +1619,11 @@ it:
       courseB_playlab_events5_2018: Ora aggiungi un evento per fare in modo che il cavaliere si allontani dal drago quando premi la freccia destra.
       courseB_playlab_events6: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
-        
+
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events6_2018: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
-        
+
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events7: Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine! Riproduci anche un suono quando lo colpisce, così sembra più reale.
       courseB_playlab_events7_2018: "1) Fai svanire il cavaliere quando si scontra con il drago.\n2) Riproduci anche un suono quando si colpiscono, così sembra più reale."
@@ -1682,11 +1682,11 @@ it:
       courseC_PlayLab_events9_2018: "Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?\nEsegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!"
       courseC_PlayLab_eventsA: |-
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
-        
+
         Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
       courseC_PlayLab_eventsA_2018: |-
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
-        
+
         Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
       courseC_PlayLab_eventsFP: Crea il tuo gioco. Quando hai finito, clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
       courseC_PlayLab_eventsFP_2018: Crea il tuo gioco. Quando hai finito, clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
@@ -2050,15 +2050,15 @@ it:
       courseD_artist_binary8_predict1_2019: Completa il programma per creare questo disegno.
       courseD_artist_binaryFP: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binaryFP_2018: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binaryFP_2019: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binary_challenge1: In questo esercizio, puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei cicli annidati per completare questo disegno.
       courseD_artist_binary_challenge1_2018: In questo esercizio, puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei cicli annidati per completare questo disegno.
@@ -2090,15 +2090,15 @@ it:
       courseD_artist_nestedLoops2_2019: Questa volta, completa l'esercizio con il minor numero possibile di blocchi.
       courseD_artist_nestedLoops3: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops3_2018: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops3_2019: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops4: Grande! Fai la stessa cosa con questi cerchi.
       courseD_artist_nestedLoops4_2018: Grande! Fai la stessa cosa con questi cerchi.
@@ -2854,7 +2854,7 @@ it:
       courseF_artist_variables_6a: Realizza questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
       courseF_artist_variables_9: |-
         Guarda cosa succede quando ripeti il codice dell'esercizio precedente 30 volte invece di 3!
-        
+
         Per aggiungere un tocco di fantasia, sentiti libero di creare linee di qualsiasi colore o schema.
       courseF_artist_variables_FP: "**Tempo di giocare:** Usa ciò che hai imparato e crea il tuo disegno. \n\nCome puoi usare le variabili con quadrati, pentagoni o esagoni?"
       courseF_artist_variables_challenge1: Puoi creare una variabile `length` (*lunghezza*)  e usarla per creare questo schema?
@@ -3142,7 +3142,7 @@ it:
       grade3_robotFarmer_ConditionalsIntro_11a: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       grade3_robotFarmer_ConditionalsIntro_4: |-
         *"Non so quanta terra c'è in questo mucchio!"*
-        
+
         Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       grade3_robotFarmer_ConditionalsIntro_5: 'Aiutami a rimuovere tutta questa terra.'
       grade3_robotFarmer_ConditionalsIntro_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
