@@ -44,15 +44,33 @@ module Pd
         csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (<Workshop Date> in <Workshop Location>)?',
         csf_workshop_requirement: 'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
         csf_community_requirement: 'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
-        csd_csp_fit_weekend_requirement: 'Can you commit to attending one, 3-day 2019 Facilitator-in-Training Workshop?',
+        csd_csp_fit_weekend_requirement: 'Can you commit to attending one 3-day 2019 Facilitator-in-Training Workshop?',
         csd_csp_which_fit_weekend: 'Please indicate which FiT Workshop you are able to attend.',
         csd_csp_workshop_requirement: 'Can you commit to leading 2019-20 academic year workshops hosted by your assigned Regional Partner (generally four days across the academic year)?',
         csd_training_requirement: 'Can you commit to attending __one__ 2- or 3-day training in the spring of 2020 to prepare to co-lead five-day summer workshops?',
         csp_training_requirement: 'Can you commit to attending __two__ 2- or 3-day trainings in the spring of 2020 to prepare to co-lead five-day summer workshops?',
-        csd_csp_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
+        csd_csp_lead_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
         csd_csp_deeper_learning_requirement: 'Can you commit to engaging in the Deeper Learning Program, a series of written reflections and peer reviews for each unit of the curriculum throughout the year?',
-        development_and_preparation_requirement: 'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?',
-        csd_csp_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?'
+        development_and_preparation_requirement: clean_multiline(
+          'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops
+          (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?'
+        ),
+        csd_csp_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+        csd_csp_no_partner_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          If a nearby region is interested in considering your application, we will share those workshop dates with you.'
+        ),
+        csd_csp_partner_but_no_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          However, summer workshop dates have not yet been finalized for your region. We will coordinate with
+          you once workshop dates and locations are known.'
+        ),
+        csd_csp_partner_with_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          Can you commit to attending one 5-day summer workshop hosted by your assigned Regional Partner?'
+        ),
+        csd_csp_which_summer_workshop: 'Your Regional Partner is hosting summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend.',
+        csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
       },
 
       section_4_leading_students: {
@@ -95,7 +113,6 @@ module Pd
           "Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn
           profile, website, or summarize your relevant past experience. (750 characters max)"
         ),
-
       },
 
       section_6_submission: {

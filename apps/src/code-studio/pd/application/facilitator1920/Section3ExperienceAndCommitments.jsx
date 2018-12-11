@@ -33,17 +33,32 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         </p>
 
         {
-          program === CSF &&
-          <div>
-            {this.radioButtonsFor("csfSummitRequirement")}
-            {this.radioButtonsFor("csfWorkshopRequirement")}
-            {this.radioButtonsFor("csfCommunityRequirement")}
-          </div>
-        }
-
-        {
           program !== CSF &&
           <div>
+            {/* CSD/CSP RP based Qs */}
+            {/* if no RP */}
+            <p>
+              <strong>There is no Regional Partner in your region at this time.</strong>
+            </p>
+            <p>
+              Please note that we prioritize applicants in regions where we currently have a Regional
+              Partner, and there is a need for additional facilitators. Code.org will review your
+              application and contact you if there is a need for facilitators in a nearby region. We are
+              not able to guarantee a space for you in a different location.
+            </p>
+            {this.checkBoxesFor('csdCspNoPartnerSummerWorkshop')}
+            {/* if RP */}
+            <p>
+              <strong>Your Regional Partner is Regional Partner Name.</strong>
+            </p>
+            {/* if RP and RP has no summer workshops */}
+            {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
+            {/* if RP  and RP has workshops */}
+            {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
+            {this.checkBoxesWithAdditionalTextFieldsFor('csdCspWhichSummerWorkshop', {
+              [TextFields.notSurePleaseExplain] : "other",
+            })}
+            {/* normal q's */}
             {this.radioButtonsFor("csdCspFitWeekendRequirement")}
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspWhichFitWeekend", {
               [TextFields.notSurePleaseExplain] : "other",
@@ -65,12 +80,60 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
               </div>
             }
 
-            {this.radioButtonsFor("csdCspSummerWorkshopRequirement")}
+            {this.radioButtonsFor("csdCspLeadSummerWorkshopRequirement")}
             {this.radioButtonsFor("csdCspDeeperLearningRequirement")}
           </div>
         }
 
+        {
+          program === CSF &&
+          <div>
+            {this.radioButtonsFor("csfSummitRequirement")}
+            {this.radioButtonsFor("csfWorkshopRequirement")}
+            {this.radioButtonsFor("csfCommunityRequirement")}
+          </div>
+        }
+
         {this.radioButtonsFor("developmentAndPreparationRequirement")}
+
+        {
+          program === CSF &&
+          <div>
+            <p>
+              Code.org facilitators work with their assigned Regional Partner to host workshops
+              for teachers in their region. Facilitator applicants are assigned to Regional
+              Partners based on the zip code they provide in their application.
+            </p>
+            {/* CSF RP based Qs */}
+            {/* if no RP */}
+            <p>
+              <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
+            </p>
+            <p>
+              Please note that we prioritize applicants in regions where we currently have a
+              Regional Partner supporting CS Fundamentals, and there is a need for additional
+              facilitators. Code.org will review your application and contact you if there is
+              a need for facilitators. We are not able to guarantee a space for you in a
+              different location.
+            </p>
+            {/* if RP does not support CSF (small mapping) */}
+            <p>
+              <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
+            </p>
+            <p>
+              Please note that we prioritize applicants in regions where we currently have a
+              Regional Partner supporting CS Fundamentals, and there is a need for additional
+              facilitators. Code.org will review your application and contact you if there is
+              a need for facilitators. We are not able to guarantee a space for you in a
+              different location.
+            </p>
+            {/* if RP and not in small mapping*/}
+            <p>
+              <strong>Your Regional Partner is Regional Partner Name.</strong>
+            </p>
+            {this.radioButtonsFor('csfGoodStandingRequirement')}
+          </div>
+        }
       </FormGroup>
     );
   }
