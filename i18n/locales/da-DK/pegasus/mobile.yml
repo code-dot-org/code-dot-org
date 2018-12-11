@@ -88,6 +88,7 @@
   third_party_price_299: 'Pris: $2.99/download'
   third_party_price_individual: 'Individuel Pris: Gratis prøveperiode & $25/month'
   third_party_price_school: 'Skolepris: Frie abonnementer & Pro for $2500+'
+  third_party_scratch_btn_site: "Besøg Scratch"
   third_party_curriculum: "Læseplan"
   enter_valid_age: "Angiv venligst en gyldig alder"
   enter_valid_email: "Angiv en gyldig emailadresse"
@@ -158,6 +159,8 @@
   studiobar_title_nolink: "Udforsk Code Studio"
   studiobar_elementary_title: "Grundlæggende kurser"
   studiobar_elementary_body: "Vores tre nye kurser for indskoling og melemtrin"
+  studiobar_dance_title: "Dansefest"
+  studiobar_dance_body: "Lav og del dine egne dansefester"
   studiobar_hoc_title: "Kodetimen"
   studiobar_hoc_body: "Lær at kode med Angry Birds"
   studiobar_flappy_title: "Flappy kode"
@@ -321,6 +324,8 @@
   mc_gradelevel: "Alder 6+"
   mc_platformtext: "Moderne browsere, smartphones, tabletter"
   mc_specs: "Mange sprog | Moderne browsere og tablets | Alder 6+"
+  minecraft_designer: "Minecraft Designer"
+  minecraft_agent_description: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
   minecraft_agent_button: "Start"
   minecraft_designer_button: "Start"
   minecraft_adventurer_button: "Start"
@@ -329,6 +334,11 @@
   sports_watch_video: "Se videoen"
   watch_inspirational_videos: "Før du går i gang, se så én af disse inspirerende videoer"
   video_title_inspire_girl: "Inspirer en pige"
+  video_title_anybody_can_learn: "Alle Kan Lære"
+  video_1min: "1 min"
+  video_2min: "2 min"
+  video_3min: "3 min"
+  video_5min: "5 min"
   speak_another_language: "Taler du et andet sprog?"
   help_translate: "Hjælp os med at oversætte."
   no_internet: "Har du ikke internet?"
@@ -366,6 +376,7 @@
   volunteer_engineer_submission_field_email_desc: "Din e-mail adresse vil aldrig blive delt, men vi sender dig anmodninger fra lærere."
   volunteer_engineer_submission_field_email_placeholder: "Email adresse"
   volunteer_engineer_submission_field_email_preference: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Se vores fortrolighedspolitik)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ja'
   volunteer_engineer_submission_field_email_preference_no: 'Nej'
   volunteer_engineer_submission_final_paragraph: "Du vil være på et kort så lokale lærere kan kontakte dig for kodetimer eller andet frivillige opgaver. Din e-mail og nøjagtige adresse vil aldrig blive delt af os. Men andre oplysninger (herunder omtrentlige placering) vil være offentligt tilgængelig til lokale lærere."
@@ -481,7 +492,7 @@
   dashboard_sections_table_pairing_allowed: "Par programmering"
   dashboard_sections_table_students: "Elever"
   dashboard_sections_table_code: "Holdkode"
-  dashboard_sections_name: "Sektionsnavnet"
+  dashboard_sections_name: 'Sektionsnavnet'
   dashboard_sections_choose_secret: "Hvis du vil oprette konti til dine elever, kan du vælge et hemmeligt <b>ord</b> eller <b>billede</b> for det pågældende hold."
   dashboard_sections_secret_word: "Et <b>ord</b> tillader du kan indstille et hemmeligt ord for hver elev."
   dashboard_sections_secret_picture: "Et <b>billede</b>tillader du kan indstille et billede for hver elev, ideel for yngre elever, der endnu ikke kan skrive."
@@ -491,7 +502,7 @@
   dashboard_sections_close: "Luk"
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en per linje:'
   dashboard_students_new_section: "Du har oprettet et nyt hold! Tilføj nu dine elever ved hjælp af knapperne <b>Tilføj elev</b> og <b>Tilføje flere elever</b> ovenfor."
-  dashboard_students_name: "Navn"
+  dashboard_students_name: 'Navn'
   dashboard_students_progress: "Fremskridt"
   dashboard_students_male: "Mand"
   dashboard_students_female: "Kvinde"
@@ -519,6 +530,7 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_tools: 'Værktøjer: '
   dashboard_curriculum: "Læseplan"
   dashboard_curriculum_overview: "Indskoling og mellemtrin (0.-5. klasse)"
   dashboard_overview: "Oversigt"
@@ -654,7 +666,7 @@
   robomindnl_name: "Programmer en virtuel robot"
   flappy_name: "Lav et Flappy spil"
   bitsbox_name: "Bitsbox - lav et spil"
-  makeschool_name: "Opbygge et iPhone spil i din browser!"
+  makeschool_name: "Lav et iPhone spil i din browser!"
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "Sten, saks, papir"
@@ -677,6 +689,8 @@
   classicmaze_name: "Klassisk labyrint"
   iceage_name: "Is-tid"
   minecraft_name: "Minecraft"
+  starwarsblocks_name: "Star Wars (Blocks)"
+  hoc-encryption_name: Enkel kryptering
   math_category_name: "Matematik"
   hoc_category_name: "Hour of Code"
   applab_name: "App Lab"
@@ -690,7 +704,7 @@
   khanfr_gradelevel: "Mellemskolen +"
   khanpl_gradelevel: "Mellemskolen +"
   tynker_gradelevel: "I alderen 5-13"
-  scratch_gradelevel: "Alder 8+"
+  scratch_gradelevel: "Fra 8 år"
   lightbot_gradelevel: "Alle aldre"
   thinkersmith_gradelevel: "Alle aldre"
   condcards_gradelevel: "Alder 8-12"
@@ -708,7 +722,7 @@
   kodable_gradelevel: "Folkeskole"
   tynkerapp_gradelevel: "I alderen 5-13"
   robomindnl_gradelevel: "Alder 8-13"
-  flappy_gradelevel: "For 4-104-årige"
+  flappy_gradelevel: "Alder 6+"
   bitsbox_gradelevel: "Folkeskole"
   makeschool_gradelevel: "Gymnasium"
   touchdevelop_gradelevel: "Gymnasium"
@@ -718,7 +732,7 @@
   kodableunplugged_gradelevel: "Alder 8-13"
   projguts_gradelevel: "Alder 10-13"
   hourofcode_gradelevel: "For 4-104-årige"
-  frozen_gradelevel: "Fra 8 år"
+  frozen_gradelevel: "For 4-104-årige"
   starwars_gradelevel: "Alder 6+"
   playlab_gradelevel: "For 4-104-årige"
   infinity_gradelevel: "For 4-104-årige"
@@ -734,12 +748,24 @@
   course2_gradelevel: "Fra 6 år (læsning nødvendigt)"
   course3_gradelevel: "Fra 8 år (efter kursus 2)"
   course4_gradelevel: "Fra 10 år (efter kursus 3)"
+  coursea_gradelevel: "Alder 4-7"
+  courseb_gradelevel: "Alder 5-8"
+  coursec_gradelevel: "Alder 6-10"
   coursed_gradelevel: "8. klasse+"
   coursee_gradelevel: "Alder 8-12"
+  coursef_gradelevel: "Alder 9 -13"
+  coursea-2017_gradelevel: Alder 4-7
+  courseb-2017_gradelevel: Alder 5-8
+  coursec-2017_gradelevel: Alder 6-10
   coursed-2017_gradelevel: 8. klasse+
   coursee-2017_gradelevel: Alder 8-12
+  coursef-2017_gradelevel: Alder 9 -13
+  coursea-2018_gradelevel: Alder 4-7
+  courseb-2018_gradelevel: Alder 5-8
+  coursec-2018_gradelevel: Alder 6-10
   coursed-2018_gradelevel: 8. klasse+
   coursee-2018_gradelevel: Alder 8-12
+  coursef-2018_gradelevel: Alder 9 -13
   accelerated_gradelevel: "Fra 10 år (efter kursus 3)"
   codeorg_platformtext: "Moderne browsere, smartphones, tabletter"
   codeintl_platformtext: "Moderne browsere, smartphones, tabletter"
@@ -1079,7 +1105,59 @@
   header_teach: "Undervis"
   header_help_us: "Hjælp os"
   header_about: "Om"
+  header_report_bug: "Rapporter fejl"
   user_header_label: "Hej %{username}"
+  user_header_team: "Hold"
   user_header_settings: "Min konto"
   user_header_logout: "Log ud"
   user_header_signin: "Log ind"
+  user_header_playlab: "Play Lab"
+  user_header_dance: "Dansefest"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Start"
+  applab_tile_teacher_guide: "Vis lærervejledning"
+  account_sign_up_email_opt_in: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+  hoc_overview_dance_title: "Dansefest"
+  hoc_overview_partner_activities_title: "Flere aktiviteter fra partnere"
+  hoc_overview_partner_activities_body: "Webstedet En Times Kodning har over 100 databehandlingsaktiviteter for alle aldre og erfaringsniveauer, udviklet af Code.org og partnere."
+  hoc_overview_partner_activities_link: "Vis aktiviteter"
+  hoc_overview_start_tutorial: "Start"
+  hoc_overview_view_teacher_guide: "Vis lærervejledning"
+  hoc2018_creativity_create: "Opret"
+  hoc2018_creativity_what_will_you_create: "Hvad vil du skabe?"
+  hoc2018_mc_aquatic_description: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
+  hoc2018_mc_hero_description: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
+  hoc2018_mc_designer_title: "Minecraft Designer"
+  hoc2018_mc_start: "Start"
+  hoc2018_mc_no_internet: "Har du ikke internet?"
+  hoc2018_mc_educators_box2_button: "Hent"
+  hoc2018_mc_watch_videos: "Før du går i gang, se så én af disse inspirerende videoer"
+  hoc2018_mc_video_1min: "1 min"
+  hoc2018_mc_video_2min: "2 min"
+  hoc2018_mc_video_3min: "3 min"
+  hoc2018_mc_video_5min: "5 min"
+  hoc2018_mc_video_title_inspire_girl: "Inspirer en pige"
+  hoc2018_mc_video_title_anybody_can_learn: "Alle Kan Lære"
+  hoc2018_mc_homepage_hoc_coming: "En Times Kodning kommer..."
+  hoc2018_mc_homepage_what_create: "Hvad vil du skabe?"
+  hoc2018_mc_homepage_join_us: "Slut dig til os"
+  hoc2018_mc_homepage_try_it: "Prøv det"
+  hoc2018_mc_back_journey: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
+  hoc2018_mc_teacher_guide: "Vis lærervejledning"
+  hoc2018_dance_party_main_heading: "Dansefest"
+  hoc2018_dance_create_your_own_dance_title: "Lav din egen dansefest"
+  hoc2018_dance_party_box_title: "Dansefest"
+  hoc2018_dance_party_box_description: "Kod din egen dansefest, og del den med dine venner!"
+  hoc2018_dance_party_button: "Start"
+  hoc2018_dance_keep_on_dancing_box_title: "Bliv ved med at danse"
+  hoc2018_dance_keep_on_dancing_description: "Overskrid den første time med udvidede projektideer."
+  hoc2018_dance_keep_on_dancing_button: "Start del 2"
+  hoc2018_dance_teacher_resources_title: "Lærerressourcer"
+  hoc2018_dance_teacher_resources_tile1_description: "Timeplaner, certifikater og musikfiltrering."
+  hoc2018_dance_teacher_resources_tile1_button: "Lektionsplan"
+  hoc2018_dance_teacher_resources_tile2_title: "Dansefest unplugged"
+  hoc2018_dance_teacher_resources_tile2_description: "Her er der ikke behov for computere!  Lær kodebegreberne, og lav en koreografi til en dansefest."
+  hoc2018_dance_teacher_resources_tile2_button: "Unplugged aktivitet"
+  hoc2018_dance_amazon_about_future_engineer_button: "Lær mere"
+  hoc2018_dance_amazon_scholarship_programs_button: "Ansøg nu"

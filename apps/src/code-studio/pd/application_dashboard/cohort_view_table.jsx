@@ -64,11 +64,7 @@ export class CohortViewTable extends React.Component {
     this.constructColumns();
   }
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
+  showLocked = () => (this.props.viewType === 'facilitator');
 
   constructColumns() {
     if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
@@ -140,6 +136,16 @@ export class CohortViewTable extends React.Component {
         }
       }
     ];
+
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
+        }
+      });
+    }
 
     if (this.showLocked()) {
       columns.push({

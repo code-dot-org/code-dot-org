@@ -1,0 +1,79 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "setForegroundEffectExtended",
+    "blockText": "set foreground effect {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "None",
+            "\"none\""
+          ],
+          [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
+            "Bubbles",
+            "\"bubbles\""
+          ],
+          [
+            "Confetti",
+            "\"confetti\""
+          ],
+          [
+            "Hearts",
+            "\"hearts_red\""
+          ],
+          [
+            "Music Notes",
+            "\"music_notes\""
+          ],
+          [
+            "Pineapples",
+            "\"pineapples\""
+          ],
+          [
+            "Pizzas",
+            "\"pizzas\""
+          ],
+          [
+            "Poop",
+            "\"smiling_poop\""
+          ],
+          [
+            "Rain",
+            "\"rain\""
+          ],
+          [
+            "Rainbows",
+            "\"floating_rainbows\""
+          ],
+          [
+            "Smiles",
+            "\"smile_face\""
+          ],
+          [
+            "Spotlight",
+            "\"spotlight\""
+          ],
+          [
+            "Stage Lights",
+            "\"color_lights\""
+          ],
+          [
+            "Tacos",
+            "\"raining_tacos\""
+          ]
+        ]
+      }
+    ]
+  }
+}

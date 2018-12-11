@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 export const dropdownStyles = {
   dropdown: {
-    width: 250,
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
@@ -46,7 +45,7 @@ export default class ScriptSelector extends Component {
     return (
       <div>
         <select
-          value={scriptId}
+          value={scriptId || undefined}
           onChange={event => onChange(parseInt(event.target.value))}
           style={dropdownStyles.dropdown}
           id="uitest-course-dropdown"

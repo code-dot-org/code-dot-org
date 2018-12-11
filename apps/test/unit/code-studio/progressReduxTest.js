@@ -580,6 +580,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.unplugged,
             icon: null,
             isUnplugged: true,
@@ -593,6 +594,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
@@ -606,6 +608,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
@@ -621,6 +624,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -634,6 +638,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -647,6 +652,7 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
             name: undefined,
             progression: undefined,
+            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -1192,7 +1198,6 @@ describe('progressReduxTest', () => {
         status: LevelStatus.submitted,
         result: TestResults.ALL_PASS,
         submitted: true,
-        readonly_answers: true,
         pages_completed: [
           -50,
           null,
@@ -1203,5 +1208,23 @@ describe('progressReduxTest', () => {
       });
       assert.strictEqual(result, TestResults.SUBMITTED_RESULT);
     });
+
+    it('returns READONLY_SUBMISSION_RESULT for a readonly submitted level', () => {
+      const result = getLevelResult({
+        status: LevelStatus.submitted,
+        result: TestResults.ALL_PASS,
+        submitted: true,
+        readonly_answers: true,
+        pages_completed: [
+          -50,
+          null,
+          null,
+          null,
+          null
+        ]
+      });
+      assert.strictEqual(result, TestResults.READONLY_SUBMISSION_RESULT);
+    });
+
   });
 });

@@ -55,7 +55,7 @@ video_player: true
       %h2 Teachers & Educators
       #column1content
         -count = 0
-        -DB[:cdo_homepage_teachers].where(site_s:'all').or(site_s:request.site).each do |value|
+        -DB[:cdo_homepage_teachers].where(site_s:['all', request.site]).each do |value|
           -unless count == 0
             %hr.narrow_hr
           =value[:text_s]
@@ -74,7 +74,7 @@ video_player: true
       %h2 Latest Highlights
       #column2content
         -count = 0
-        -DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).order('id').limit(7).each do |value|
+        -DB[:cdo_news_items].where(site_s:['all', request.site]).order('id').limit(7).each do |value|
           -unless count == 0
             %hr.narrow_hr
           %a{:href=>value[:url_s], :target=>'_blank'}

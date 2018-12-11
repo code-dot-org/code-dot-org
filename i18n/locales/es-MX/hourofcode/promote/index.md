@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -7,7 +7,7 @@ nav: promote_nav
 
 <% facebook = {:u=>"http://#{request.host}/es"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDeCódigo' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HoraDeCódigo' %>
 
 # Involucra a tu comunidad en la Hora del Código
 

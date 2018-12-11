@@ -17,4 +17,7 @@ after_fork do |_server, _worker|
 end
 
 require 'cdo/unicorn'
-before_fork $unicorn_upgrade
+before_fork do |server, worker|
+  Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
+  $unicorn_upgrade.call server, worker
+end

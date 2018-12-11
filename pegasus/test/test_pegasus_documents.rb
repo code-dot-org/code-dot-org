@@ -12,6 +12,7 @@ require 'zlib'
 # Runs integration tests against the full Pegasus document repository.
 class PegasusTest < Minitest::Test
   include Rack::Test::Methods
+  include CaptureQueries
 
   def app
     @app ||= Documents.new
@@ -113,8 +114,13 @@ class PegasusTest < Minitest::Test
 
       url = "#{site}#{uri}"
       header 'host', site
+      queries = []
       begin
-        get(uri)
+        attempts = 3
+        loop do
+          queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
+          break if queries.empty? || (attempts -= 1).zero?
+        end
       rescue Exception => e
         # Filter backtrace from current location.
         index = e.backtrace.index(caller(2..2).first)
@@ -139,12 +145,16 @@ class PegasusTest < Minitest::Test
         exceptions = STATUS_EXCEPTIONS[status] || []
         next "[#{url}] returned invalid status #{status}" unless exceptions.include?(url)
       end
-      {url => response.body}
+      {url => {body: response.body, queries: queries}}
     end
     errors, pages = results.partition {|result| result.is_a?(String)}
     assert_equal 0, errors.length, "Page rendering errors:\n#{errors.join("\n\n")}"
 
     pages = pages.reduce(:merge).sort.to_h
+    query_pages = pages.reject {|_, p| p[:queries].empty?}.transform_values {|p| p[:queries]}
+    assert_equal 0, query_pages.length, "Pages with un-cached DB queries:\n\n#{query_pages.map {|p| p.join(":\n")}.join("\n\n")}"
+    pages = pages.transform_values {|p| p[:body]}
+
     routes_file = cache_dir('pegasus_routes.yml.gz')
     if File.exist?(routes_file)
       old_routes = YAML.load(Zlib::GzipReader.new(File.open(routes_file)).read)

@@ -11,9 +11,9 @@ sq:
       draw a triangle: vizato nje trekendesh
       draw a house: vizato një shtëpi
       draw a star: vizato një yll
-      do something: bëj diçka
+      do something: bëj diqka
       jump: hidhu
-      set score: vendos rezultatin
+      set score: vendos pikët
       get nectar: merr nektar
       test: test
       diamond: diamant
@@ -24,5 +24,5 @@ sq:
       move left: lëviz majtas
       collect: mbledh
       turn left: kthehu majtas
-      move forward: levis perpara
+      move forward: lëviz përpara
       turn right: kthehu djathtas

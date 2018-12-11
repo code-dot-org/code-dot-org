@@ -334,6 +334,8 @@ fr-FR:
   studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Cours élémentaires
   studiobar_elementary_body: Nos trois nouveaux cours pour l’école primaire
+  studiobar_dance_title: Fête dansante
+  studiobar_dance_body: Créez et partagez votre propre soirée dansante
   studiobar_hoc_title: L'Heure de Code
   studiobar_hoc_body: Apprends à coder avec Angry Birds
   studiobar_flappy_title: Le code de Flappy
@@ -471,7 +473,7 @@ fr-FR:
   contact_form_topic_outside_us: Je n'habite pas aux États-Unis
   contact_form_topic_contribution: Contribution à titre gratuit
   contact_form_topic_partner: Je souhaiterais être un partenaire
-  contact_form_topic_other: Autres
+  contact_form_topic_other: Autre
   contact_form_label_topic: Sujet
   contact_form_label_email: Votre adresse e-mail
   contact_form_label_message: Message
@@ -541,11 +543,11 @@ fr-FR:
   minecraft_tutorials: Minecraft heure de Code tutoriels
   minecraft_specs: Beaucoup de langues | Les navigateurs modernes et comprimés | Grades
     2 +
-  minecraft_agent_description: Minecraft est de retour dans l'Heure de Code avec une
-    toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  minecraft_agent_description: Minecraft est de retour pour l’Heure de code avec une
+    toute nouvelle activité ! Exploration de Minecraft avec le code.
   minecraft_agent_button: Commencer
-  minecraft_designer_description: Programmez des animaux et d'autres créatures Minecraft
-    dans votre propre version de Minecraft.
+  minecraft_designer_description: Créez un jeu Minecraft. Créez vos propres versions
+    des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
   minecraft_designer_button: Commencer
   minecraft_adventurer_description: Utiliser le code pour prendre Alex ou Steve dans
     une aventure.
@@ -571,7 +573,7 @@ fr-FR:
   minecraft_og_agent: Minecraft est de retour dans l'Heure de Code, et vous êtes le
     héros! Ecrivez le code pour voyagez à travers les biomes de Minecraft.
   sports_page_title: Heure du Code Sports
-  sports_og_title: Heure du Code tutoriels Sports
+  sports_og_title: Persévère. Tout le monde peut apprendre.
   sports_og_description: Choisir entre jouer au basket ou mélanger et combiner les
     autres sports.
   sports_title: Coder ton propre jeu de sports
@@ -1055,7 +1057,7 @@ fr-FR:
   dashboard_correctness: Justesse
   dashboard_correctness_free_response: Réponse libre
   dashboard_correctness_unsubmitted: Non envoyé
-  dashboard_correctness_correct: Correcte
+  dashboard_correctness_correct: Correct
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Envoyé
   dashboard_submission_in_progress: En cours
@@ -1067,7 +1069,7 @@ fr-FR:
   stats_hoc_2013_heading: 'Les statistiques incroyables de l''Heure de Code de l''année
     dernière. En une semaine seulement :'
   stats_hoc_2013_image_alt: Statistiques de l'Heure de Code en 2013
-  dashboard_teacher: Enseignant
+  dashboard_teacher: Professeur
   dashboard_student: Elève
   dashboard_sections_email_question: Est-ce que tous les élèves ont une adresse e-mail
     valide ?
@@ -1196,7 +1198,7 @@ fr-FR:
   robomindnl_name: Programmer un robot virtuel
   flappy_name: Crée un jeu Flappy
   bitsbox_name: Bitsbox — crée un jeu
-  makeschool_name: Construis un jeu pour iPhone dans ton navigateur !
+  makeschool_name: Crée un jeu pour iPhone dans ton navigateur !
   appinventor_name: Heure de Code AppInventor
   blockly_name: Blockly
   projguts_name: Pierre, papier, ciseaux
@@ -1269,7 +1271,7 @@ fr-FR:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
   hoc-encryption_name: Cryptage simple
-  math_category_name: Calculs
+  math_category_name: Math
   hoc_category_name: Heure de Code
   csf_category_name: Fondamentaux d'informatique
   csf_2017_category_name: Fondamental d'informatique (2017)
@@ -1284,7 +1286,7 @@ fr-FR:
   applab_name: Labo des applis
   gamelab_name: Game Lab
   basketball_name: Faire un match de basket
-  sports_name: Sports
+  sports_name: Coder ton propre jeu de sports
   applab_gradelevel: 'Âge recommandé: 13 ans et plus'
   applab_shortdescription_congrats: App Lab est un environnement de programmation
     avec lequel vous pouvez créer des applications simples. Concevez une application,
@@ -1401,7 +1403,7 @@ fr-FR:
   kodableunplugged_platformtext: Débranché
   projguts_platformtext: Débranché
   hourofcode_platformtext: Navigateurs récents, smartphones, tablettes
-  frozen_platformtext: Navigateurs récents + tablettes
+  frozen_platformtext: Navigateurs modernes + tablettes
   starwars_platformtext: Navigateurs modernes + tablettes
   playlab_platformtext: Navigateurs récents, smartphones, tablettes
   monstercoding_platformtext: Navigateurs Web modernes, iOS, Android
@@ -1507,8 +1509,12 @@ fr-FR:
     de créer vos propres œuvres d’art, vos histoires et vos jeux.
   coursea-2017_shortdescription_congrats: Une introduction à l’informatique pour les
     jeunes lecteurs.
+  coursec-2017_shortdescription_congrats: Apprendre les rudiments de l’informatique
+    et de créer vos propres œuvres d’art, vos histoires et vos jeux.
   coursea-2018_shortdescription_congrats: Une introduction à l’informatique pour les
     jeunes lecteurs.
+  coursec-2018_shortdescription_congrats: Apprendre les rudiments de l’informatique
+    et de créer vos propres œuvres d’art, vos histoires et vos jeux.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
     auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg,
@@ -1769,7 +1775,7 @@ fr-FR:
   alice_beyond_gradelevel: Secondaire
   sphero_beyond_gradelevel: 8 ans et plus
   codeorg_beyond_platformtext: Navigateurs modernes, tablettes
-  khan_beyond_platformtext: Navigateurs web modernes
+  khan_beyond_platformtext: Navigateurs web récents
   tynker_beyond_platformtext: Navigateurs Web modernes ($$ requis)
   scratch_beyond_platformtext: N'importe quel navigateur
   lightbot_beyond_platformtext: iOS, Android (ou navigateur Web)
@@ -2090,9 +2096,16 @@ fr-FR:
   csd_2018_name: Découvertes de l'informatique
   full_course_category_name: Cours complets
   user_header_label: Bonjour %{username}
+  user_header_team: Équipe
   user_header_settings: Mon compte
   user_header_logout: Déconnexion
-  user_header_signin: Authentification
+  user_header_signin: Connexion
+  user_header_gamelab: Game Lab
+  user_header_playlab: Labo de jeux
+  user_header_dance: Fête dansante
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  user_header_view_my_projects: Afficher mes projets
   view_all_sections: Afficher toutes les sections
   view_section: Afficher la section
   view_named_section: Afficher %{section_name}
@@ -2130,3 +2143,91 @@ fr-FR:
     avec mon compte Google »:'
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
+  applab_tile_start_tutorial: Commencer
+  applab_tile_teacher_guide: Voir le guide de l'enseignant
+  account_sign_up_email_opt_in: Pouvons-nous vous envoyer des e-mails d’information
+    sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
+    le domaine informatique?
+  account_sign_up_child_accept_terms: Je confirme que j’ai l'autorisation de mes parents
+    ou de mon tuteur légal pour utiliser les services de Code.org.
+  hoc_overview_dance_title: Fête dansante
+  hoc_overview_partner_activities_title: Plus d'activités des partenaires
+  hoc_overview_partner_activities_body: Le site Web Heure de Code propose plus de
+    100 activités informatiques pour tous les âges et tous les niveaux d'expérience,
+    développées par Code.org et ses partenaires.
+  hoc_overview_partner_activities_link: Nouvelles activités
+  hoc_overview_start_tutorial: Commencer
+  hoc_overview_view_teacher_guide: Voir le guide de l'enseignant
+  hoc2018_creativity_create: Créer
+  hoc2018_creativity_what_will_you_create: Qu'allez-vous créer ?
+  hoc2018_mc_page_title: Minecraft heure de Code tutoriels
+  hoc2018_mc_details: Beaucoup de langues | Les navigateurs modernes et comprimés
+    | Grades 2 +
+  hoc2018_mc_aquatic_description: Minecraft est de retour pour l’Heure de code avec
+    une toute nouvelle activité ! Exploration de Minecraft avec le code.
+  hoc2018_mc_hero_title: 'Minecraft : Voyage du héros'
+  hoc2018_mc_hero_description: Minecraft est de retour pour l’Heure de code avec une
+    toute nouvelle activité ! Exploration de Minecraft avec le code.
+  hoc2018_mc_designer_title: Concepteur de Minecraft
+  hoc2018_mc_designer_description: Créez un jeu Minecraft. Créez vos propres versions
+    des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
+  hoc2018_mc_adventurer_title: Aventurier de Minecraft
+  hoc2018_mc_adventurer_description: Utiliser le code pour prendre Alex ou Steve dans
+    une aventure.
+  hoc2018_mc_start: Commencer
+  hoc2018_mc_no_internet: Pas d'internet ?
+  hoc2018_mc_download_adventurer: Télécharger la version offline de Minecraft aventurier.
+  hoc2018_mc_educators_box2_button: Télécharger
+  hoc2018_mc_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
+  hoc2018_mc_videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos inspirantes</a>
+    qui comprennent des modèles et de célébrités
+  hoc2018_mc_careers_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos
+    inspirational</a> mettant en vedette les professionnels dans les domaines de la
+    technologie
+  hoc2018_mc_video_1min: 1 minutes
+  hoc2018_mc_video_2min: 2 minutes
+  hoc2018_mc_video_5min: 5 minutes
+  hoc2018_mc_video_title_steph_curry: Heure de Code avec Steph Curry
+  hoc2018_mc_video_title_sports: Persévère. Tout le monde peut apprendre.
+  hoc2018_mc_video_title_inspire_girl: Encourager une fille
+  hoc2018_mc_video_title_cs_intro: Introduction à la science de l'informatique
+  hoc2018_mc_video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent
+    pas
+  hoc2018_mc_video_title_obama: Le président Obama à propos de l'informatique
+  hoc2018_mc_video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut
+    apprendre
+  hoc2018_mc_video_title_anybody_can_learn: Tout le monde peut apprendre
+  hoc2018_mc_homepage_hoc_coming: L’Heure de code va arriver...
+  hoc2018_mc_homepage_what_create: Qu'allez-vous créer ?
+  hoc2018_mc_homepage_join_us: Rejoignez-nous
+  hoc2018_mc_homepage_try_it: Participez
+  hoc2018_mc_back: Minecraft est de retour pour une toute nouvelle activité de l'Heure
+    de Code!
+  hoc2018_mc_back_journey: Minecraft est de retour pour l’Heure de code avec une toute
+    nouvelle activité ! Exploration de Minecraft avec le code.
+  hoc2018_mc_teacher_guide: Voir le guide de l'enseignant
+  hoc2018_mc_minecraft_education: Minecraft version éducation
+  hoc2018_mc_continue_learning: Continuer à apprendre avec Minecraft.
+  hoc2018_mc_go_to_mc_education: Allez sur Minecraft version éducation
+  hoc2018_dance_party_main_heading: Fête dansante
+  hoc2018_dance_create_your_own_dance_title: Créez votre propre soirée dansante
+  hoc2018_dance_party_box_title: Fête dansante
+  hoc2018_dance_party_box_description: Codez une soirée dansante à partager avec vos
+    amis !
+  hoc2018_dance_party_button: Commencer
+  hoc2018_dance_keep_on_dancing_box_title: Continuez à danser
+  hoc2018_dance_keep_on_dancing_description: Allez au-delà de la première heure avec
+    de longues idées de projets.
+  hoc2018_dance_keep_on_dancing_button: Commencer la partie 2
+  hoc2018_dance_teacher_resources_title: Ressources pédagogiques
+  hoc2018_dance_teacher_resources_tile1_description: Plans de cours, certificats et
+    filtrage de la musique.
+  hoc2018_dance_teacher_resources_tile1_button: Plan de cours
+  hoc2018_dance_teacher_resources_tile2_title: Soirée dansante décontractée
+  hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs !  Apprenez
+    les concepts de codage pour chorégraphier une soirée dansante ensemble.
+  hoc2018_dance_teacher_resources_tile2_button: Activité manuelle
+  hoc2018_dance_amazon_about_future_engineer_button: Pour en savoir plus
+  hoc2018_dance_amazon_scholarship_programs_button: Demander maintenant
+  hoc2018_dance_measure: Mesure
+  hoc2018_dance_measure_colon: 'Mesure:'

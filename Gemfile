@@ -47,17 +47,20 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client'
+gem 'google-api-client', '~> 0.23'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
+# Allow profiling in all environments (including production). It will only be enabled when
+# CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'memory_profiler'
+gem 'rack-mini-profiler'
+
 group :development do
   gem 'annotate'
-  gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
-  gem 'thin'
   gem 'web-console'
 end
 
@@ -74,12 +77,14 @@ group :development, :test do
   gem 'ruby_dep', '~> 1.3.1'
 
   gem 'shotgun'
+  gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -126,6 +131,11 @@ gem 'open_uri_redirections', require: false, group: [:development, :staging, :te
 
 # Ref: https://github.com/tmm1/gctools/pull/17
 gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
+# Optimizes copy-on-write memory usage with GC before web-application fork.
+gem 'nakayoshi_fork'
+# Ref: https://github.com/puma/puma/pull/1646
+gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -159,6 +169,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
@@ -229,7 +240,7 @@ gem 'aws-sdk-cloudwatchlogs', '~> 1'
 gem 'aws-sdk-core', '~> 3'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
-gem 'aws-sdk-firehose', '~> 1'
+gem 'aws-sdk-firehose', '~> 1.6'
 gem 'aws-sdk-rds', '~> 1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
@@ -243,7 +254,8 @@ group :development, :staging do
 end
 
 # Reduce volume of production logs
-gem 'lograge'
+# Ref: https://github.com/roidrage/lograge/pull/252
+gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -321,3 +333,5 @@ gem 'colorize'
 
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
+
+gem 'require_all', require: false

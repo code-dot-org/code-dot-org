@@ -439,9 +439,9 @@ export default class Sprite extends Item {
     this.lastDrawPosition = drawPosition;
   }
 
-  // TODO(ram): make x and y props consistent with Item. In sprites they
-  // represent the top left corner, in items they're the center.
   /**
+   * x and y props are not consistent with Item. In sprites they represent the
+   * top left corner, in items they're the center.
    * @override
    */
   getCenterPos() {

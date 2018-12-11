@@ -103,19 +103,28 @@ hr:
         craft_callout_preplaced: Stavili smo malo blokovi za početak
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Stavili smo malo blokovi za početak
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
           li to završiti?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
           li to završiti?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može
+          li to završiti?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Place Wall_callout:
         craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
@@ -123,14 +132,25 @@ hr:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
           da se krene naprijed?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu
+          da se krene naprijed?
       Underground Iron_callout:
         craft_what_is_iron: Meni ovo glačalo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Meni ovo glačalo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Meni ovo glačalo!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Koristi blok "napravi krug"
           i promijeni veličinu.
       frozen cross rotate_callout:
+        replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???"
+          s brojem
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???"
+          s brojem
+      frozen cross rotate_test_callout:
         replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???"
           s brojem
       frozen cross_callout:
@@ -145,7 +165,19 @@ hr:
       frozen freeplay_callout:
         snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih
           pahuljica!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih
+          pahuljica!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih
+          pahuljica!
       frozen line_callout:
+        move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri
+          pokretanju" da bi Elsa išla naprijed
+      frozen line_b_callout:
+        move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri
+          pokretanju" da bi Elsa išla naprijed
+      frozen line_test_callout:
         move_elsa_forward: Dovuci blok "idi naprijed" i prikači ga ispod bloka "pri
           pokretanju" da bi Elsa išla naprijed
       frozen perpendicular_callout:
@@ -153,13 +185,31 @@ hr:
           izborniku određuje koliko će se Elsa okrenuti
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
       frozen square iterative_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
       frozen square loop 3x_callout:
         replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop 3x_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop 3x_test_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
       frozen square loop_callout:
         replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square loop_test_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
       frozen square snowflake_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square snowflake_b_callout:
+        replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
+      frozen square snowflake_test_callout:
         replace_questions: Koristi padajući izbornik da bi zamijenio "???" s brojem
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju

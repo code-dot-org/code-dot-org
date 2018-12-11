@@ -1,8 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "locationPointer",
-    "blockText": "pointer position",
-    "returnType": "Location"
-  }
-}

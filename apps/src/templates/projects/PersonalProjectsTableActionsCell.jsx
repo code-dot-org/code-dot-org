@@ -4,9 +4,15 @@ import QuickActionsCell from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
+import Button from '../Button';
 import i18n from '@cdo/locale';
-import {showPublishDialog} from './publishDialog/publishDialogRedux';
-import {unpublishProject} from './projectsRedux';
+import {
+  startRenamingProject,
+  cancelRenamingProject,
+  saveProjectName,
+  remix,
+} from './projectsRedux';
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
 export const styles = {
   xIcon: {
@@ -16,74 +22,102 @@ export const styles = {
 
 class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
-    isPublished: PropTypes.bool.isRequired,
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
-    showPublishDialog: PropTypes.func.isRequired,
-    unpublishProject: PropTypes.func.isRequired,
+    showDeleteDialog: PropTypes.func.isRequired,
+    isEditing: PropTypes.bool,
+    isSaving: PropTypes.bool,
+    startRenamingProject: PropTypes.func.isRequired,
+    updatedName: PropTypes.string,
+    cancelRenamingProject: PropTypes.func.isRequired,
+    saveProjectName: PropTypes.func.isRequired,
+    remix: PropTypes.func.isRequired,
   };
 
-  state = {
-    deleting: false,
-    publishing: false,
-    unpublishing: false,
-    renaming: false,
-    remixing: false
+  onDelete = () => {
+    this.props.showDeleteDialog(this.props.projectId);
   };
 
-  onPublish = () => {
-    this.props.showPublishDialog(this.props.projectId, this.props.projectType);
+  onRename = () => {
+    this.props.startRenamingProject(this.props.projectId);
   };
 
-  onUnpublish = () => {
-    this.props.unpublishProject(this.props.projectId);
+  onCancel = () => {
+    this.props.cancelRenamingProject(this.props.projectId);
+  };
+
+  onSave = () => {
+    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
+  };
+
+  onRemix = () => {
+    this.props.remix(this.props.projectId, this.props.projectType);
   };
 
   render() {
+    const {isEditing, isSaving} = this.props;
+
     return (
-      <QuickActionsCell>
-        <PopUpMenu.Item
-          onClick={() => console.log("Rename was clicked")}
-        >
-          {i18n.rename()}
-        </PopUpMenu.Item>
-        <PopUpMenu.Item
-          onClick={() => console.log("Remix was clicked")}
-        >
-          {i18n.remix()}
-        </PopUpMenu.Item>
-        {this.props.isPublished && (
-          <PopUpMenu.Item
-            onClick={this.onUnpublish}
-          >
-            {i18n.unpublish()}
-          </PopUpMenu.Item>
-        )}
-        {!this.props.isPublished && (
-          <PopUpMenu.Item
-            onClick={this.onPublish}
-          >
-            {i18n.publish()}
-          </PopUpMenu.Item>
-        )}
-        <MenuBreak/>
-        <PopUpMenu.Item
-          onClick={() => console.log("Delete was clicked")}
-          color={color.red}
-        >
-          <FontAwesome icon="times-circle" style={styles.xIcon}/>
-          {i18n.delete()}
-        </PopUpMenu.Item>
-      </QuickActionsCell>
+      <div>
+        {!isEditing  &&
+          <QuickActionsCell>
+            <PopUpMenu.Item
+              onClick={this.onRename}
+            >
+              {i18n.rename()}
+            </PopUpMenu.Item>
+            <PopUpMenu.Item
+              onClick={this.onRemix}
+            >
+              {i18n.remix()}
+            </PopUpMenu.Item>
+            <MenuBreak/>
+            <PopUpMenu.Item
+              onClick={this.onDelete}
+              color={color.red}
+            >
+              <FontAwesome icon="times-circle" style={styles.xIcon}/>
+              {i18n.delete()}
+            </PopUpMenu.Item>
+          </QuickActionsCell>
+        }
+        {isEditing &&
+          <div>
+            <Button
+              onClick={this.onSave}
+              color={Button.ButtonColor.orange}
+              text={i18n.save()}
+              style={styles.saveButton}
+              disabled={isSaving}
+              className="ui-projects-rename-save"
+            />
+            <br/>
+            <Button
+              onClick={this.onCancel}
+              color={Button.ButtonColor.gray}
+              text={i18n.cancel()}
+            />
+          </div>
+        }
+      </div>
     );
   }
 }
 
 export default connect(state => ({}), dispatch => ({
-  showPublishDialog(projectId, projectType) {
-    dispatch(showPublishDialog(projectId, projectType));
+  showDeleteDialog(projectId) {
+    dispatch(showDeleteDialog(projectId));
   },
-  unpublishProject(projectId) {
-    dispatch(unpublishProject(projectId));
+  startRenamingProject(projectId, updatedName) {
+    dispatch(startRenamingProject(projectId, updatedName));
+  },
+  cancelRenamingProject(projectId) {
+    dispatch(cancelRenamingProject(projectId));
+  },
+  saveProjectName(projectId, updatedName, lastUpdatedAt) {
+    dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
+  },
+  remix(projectId, projectType) {
+    dispatch(remix(projectId, projectType));
   },
 }))(PersonalProjectsTableActionsCell);

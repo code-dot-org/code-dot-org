@@ -1,5 +1,5 @@
 import React from 'react';
-import DeleteProjectDialog from './DeleteProjectDialog';
+import {UnconnectedDeleteProjectDialog as DeleteProjectDialog} from './DeleteProjectDialog';
 import { action } from '@storybook/addon-actions';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
@@ -7,6 +7,7 @@ const PROJECT_ID = 'MY_PROJECT_ID';
 export default storybook => {
   return storybook
     .storiesOf('Dialogs/DeleteProjectDialog', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'dialog open',
@@ -17,6 +18,7 @@ export default storybook => {
             isDeletePending={false}
             projectId={PROJECT_ID}
             onClose={action('close')}
+            deleteProject={() => console.log("Delete project")}
           />
         )
       },
@@ -29,6 +31,7 @@ export default storybook => {
             isDeletePending={true}
             projectId={PROJECT_ID}
             onClose={action('close')}
+            deleteProject={() => console.log("Delete project")}
           />
         )
       }

@@ -9,7 +9,7 @@ const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
 const BACKGROUND_COLOR = color.white;
 const BORDER_COLOR = color.light_gray;
-const STANDARD_PADDING = 20;
+export const STANDARD_PADDING = 20;
 
 const menuStyle = {
   position: 'absolute',
@@ -54,6 +54,7 @@ export default class PopUpMenu extends Component {
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   render() {
@@ -70,6 +71,7 @@ export default class PopUpMenu extends Component {
           className={this.props.className}
           children={this.props.children}
           showTail={this.props.showTail}
+          style={this.props.style}
         />
       </Portal>
     );
@@ -89,6 +91,7 @@ class MenuBubbleUnwrapped extends Component {
     children: PropTypes.any,
     className: PropTypes.string,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   renderMenuItems() {
@@ -122,6 +125,7 @@ class MenuBubbleUnwrapped extends Component {
     const marginLeft = this.props.offset ? this.props.offset.x : -STANDARD_PADDING;
     const style = {
       ...menuStyle,
+      ...this.props.style,
       ...targetPoint,
       marginTop: marginTop,
       marginLeft: marginLeft,
@@ -161,9 +165,7 @@ export class MenuBreak extends Component {
 
 class Item extends Component {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array]).isRequired,
+    children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
     href: PropTypes.string,
     first: PropTypes.bool,
@@ -171,10 +173,11 @@ class Item extends Component {
     color: PropTypes.string,
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
+    style: PropTypes.object,
   };
 
   render() {
-    const {first, last, onClick, children, href, openInNewTab, className} = this.props;
+    const {first, last, onClick, children, href, openInNewTab, className, style} = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className ? `${defaultClassName} ${className}` : defaultClassName;
     if (!href && !onClick) {
@@ -192,6 +195,11 @@ class Item extends Component {
       }
     };
 
+    const wrapperStyle = {
+      ...paddingStyle,
+      ...style,
+    };
+
     // Style for anchors tags nested in divs
     const areaStyle = {
       display: 'block',
@@ -206,7 +214,7 @@ class Item extends Component {
     const target = openInNewTab ? "_blank" : "";
 
     return (
-      <div style={paddingStyle}>
+      <div style={wrapperStyle}>
         {this.props.href &&
           <a
             className={classList}

@@ -1,17 +1,17 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Hour of Code จัดการโดยคณะกรรมการที่ปรึกษาและตรวจสอบ Hour of Code และ สัปดาห์การศึกษาวิชาวิทยาการคอมพิวเตอร์
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[คณะกรรมการที่ปรึกษา](<%= resolve_url('/advisory-committee') %>)ประกอบไปด้วยผู้แทนจากองค์กรการศึกษาระดับอนุบาลถึงมัธยมปลาย, มหาวิทยาลัย, องค์กรไม่หวังผลกำไร, องค์กรหวังผลกำไร, และองค์กรระหว่างประเทศ คณะกรรมการนี้แนะแนวทางสำหรับการรณรงค์ Hour of Code
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[คณะกรรมการตรวจสอบ](<%= resolve_url('/review-committee') %>)ประกอบไปด้วยนักการศึกษาตั้งแต่ชั้นอนุบาลถึงมัธยมปลาย 15 ท่าน ที่ประเมินและแนะนำกิจกรรมโดยใช้กรอบของคณะกรรมการที่ปรึกษา นักการศึกษาเหล่านี้ตรวจสอบกิจกรรมโดยนักเรียนและแผนการสอนโดยครู ซึ่งส่งมาจากหุ้นส่วนด้านกิจกรรม ประเมินค่าทางการศึกษาจากกิจกรรม ความสามารถในการเข้าถึงผู้เรียน และความสารถในการดึงดูดนักเรียนจากกลุ่มที่หลากหลาย
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+งานและการอุทิศของทั้งสองคณะกรรมการได้เป็นส่วนช่วยในความสำเร็จของ Hour of Code และวิสัยทัศน์ที่จะนำเสนอวิชาวิทยาการคอมพิวเตอร์ให้กับนักเรียนทุกคน
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# หุ้นส่วนในละตินอเมริกา
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# หุ้นส่วนในแอฟริกา
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# หุ้นส่วนในออสเตรเลีย
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# หุ้นส่วนในจีน
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# หุ้นส่วนในฝรั่งเศส
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# หุ้นส่วนในอินโดนีเซีย
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# หุ้นส่วนในไอร์แลนด์
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# หุ้นส่วนในอินเดีย
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# หุ้นส่วนในญี่ปุ่น
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# หุ้นส่วนในเนเธอร์แลนด์
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# หุ้นส่วนในนิวซีแลนด์
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# หุ้นส่วนในสหราชอาณาจักร
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,21 +107,15 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# หุ้นส่วนในแคนาดา
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# หุ้นส่วนหลักและบริษัทผู้สนับสนุน
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
-
----
-
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
@@ -131,7 +125,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

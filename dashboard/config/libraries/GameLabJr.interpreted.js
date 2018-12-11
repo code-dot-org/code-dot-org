@@ -27,6 +27,7 @@ createEdgeSprites();
 var inputEvents = [];
 var touchEvents = [];
 var collisionEvents = [];
+var callbacks = [];
 var loops = [];
 var sprites = [];
 var score = 0;
@@ -193,17 +194,35 @@ function forever(loop) {
   loops.push({'condition': function () {return true;}, 'loop': loop});
 }
 
+// Draw loop callbacks
+
+function register(callback) {
+  callbacks.push(callback);
+}
+
 // Sprite and Group creation
 
 function makeNewSpriteLocation(animation, loc) {
   return makeNewSprite(animation, loc.x, loc.y);
 }
 
+function setAnimation(sprite, animation) {
+  sprite.setAnimation(animation);
+  sprite.scale /= sprite.baseScale;
+  sprite.baseScale = 100 / Math.max(
+    100,
+    sprite.animation.getHeight(),
+    sprite.animation.getWidth()
+  );
+  sprite.scale *= sprite.baseScale;
+}
+
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
 
+  sprite.baseScale = 1;
   if (animation) {
-    sprite.setAnimation(animation);
+    setAnimation(sprite, animation);
   }
   sprites.push(sprite);
   sprite.speed = 10;
@@ -247,9 +266,12 @@ function makeNewSprite(animation, x, y) {
     }
   };
   sprite.setScale = function (scale) {
-    sprite.scale = scale;
+    sprite.scale = scale * sprite.baseScale;
   };
-
+  sprite.getScale = function () {
+    return sprite.scale / sprite.baseScale;
+  };
+  
   sprite.say = function (text, time) {
     time = time || 50;
     sprite.things_to_say.push([text, time]);
@@ -306,8 +328,17 @@ function shouldUpdate() {
   return World.frameCount > 1;
 }
 
+function unitVectorTowards(from, to) {
+  var angle = Math.atan2(to.y - from.y, to.x - from.x);
+  return p5.Vector.fromAngle(angle);
+}
+
 function draw() {
   background(World.background_color || "white");
+
+  callbacks.forEach(function (callback) {
+    callback();
+  });
 
   if (shouldUpdate()) {
     // Perform sprite behaviors

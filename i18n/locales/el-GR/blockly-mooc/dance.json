@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Πρέπει να φτιάξετε έναν χορευτή.",
+  "danceFeedbackNoDancers": "Δεν έχετε χορευτές.",
+  "danceFeedbackNoBackground": "Πρέπει να προσθέσετε ένα εφέ φόντου.",
+  "danceFeedbackTooManyDancers": "Προσοχή! Αν βάλετε ένα μπλοκ* «φτιάξε ένα νέο» μέσα σε «κάθε 2 μέτρα», θα δημιουργήσετε πολλούς χορευτές.",
+  "danceFeedbackUseSetSize": "Χρησιμοποιήστε το μπλοκ* 'ορισμός μεγέθους backup_χορευτή2' για να μικρύνετε τον χορευτή.",
+  "danceFeedbackUseSetTint": "Χρησιμοποιήστε το μπλοκ* «ορισμός απόχρωσης» για να αλλάξετε την απόχρωση ενός χορευτή.",
+  "danceFeedbackUseStartMapping": "Δοκιμάστε να προσθέσετε το μπλοκ* <xml> <block type=\"Dancelab_startMapping\"> <title name=\"SPRITE\">δεξιός_ανανάς</title><title name=\"PROPERTY\">«κλίµακα»</title><title name=\"RANGE\">«μπάσα»</title> </block> </xml> στο πρόγραμμά σας.",
+  "danceFeedbackStartNewMove": "Μετά το τέταρτο μέτρο, ο χορευτής σας σας δεν έκανε καμία καινούρια κίνηση.",
+  "danceFeedbackNeedDifferentDance": "Θα πρέπει να χρησιμοποιήσετε έναν διαφορετικό χορό.",
+  "danceFeedbackNeedEveryTwoMeasures": "Βεβαιωθείτε ότι χρησιμοποιείτε το μπλοκ* «κάθε 2 μέτρα»",
+  "danceFeedbackNeedMakeANewDancer": "Χρησιμοποιήστε το μπλοκ* «φτιάξε ένα νέο» για να δημιουργήσετε ένα δεύτερο χορευτή.",
+  "measure": "Μέτρα:"
+}

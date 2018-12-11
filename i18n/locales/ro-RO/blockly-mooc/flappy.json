@@ -99,7 +99,7 @@
   "setSpeedTooltip": "Setează viteza nivelului",
   "shareFlappyTwitter": "Hai să vezi ce joc Flappy am făcut. L-am scris eu cu @codeorg",
   "shareFlappyTwitterDonor": "Ia uite ce joc Flappy am făcut. (Mulțumesc {donor} pentru sprijinirea @codeorg)",
-  "shareGame": "Distribuie jocul tău:",
+  "shareGame": "condivide jocul tău:",
   "soundRandom": "aleator",
   "soundBounce": "saritura",
   "soundCrunch": "criză",
@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "Execută acţiunile de mai jos când Flappy lovește un obstacol.",
   "whenEnterObstacle": "când trece obstacolul",
   "whenEnterObstacleTooltip": "Execută acţiunile de mai jos când Flappy intră într-un obstacol.",
-  "whenRunButtonClick": "Când începe jocul",
+  "whenRunButtonClick": "când începe jocul",
   "whenRunButtonClickTooltip": "Execută acţiunile de mai jos atunci când începe jocul.",
   "yes": "Da"
 }

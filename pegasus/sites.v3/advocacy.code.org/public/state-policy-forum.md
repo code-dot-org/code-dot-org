@@ -14,20 +14,17 @@ The annual State Policy Forum brings together legislators, education officials, 
 
 The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
 
-The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
+The **pre-forum** begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
 
-The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 4:00 pm on Friday, September 28.
+The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 2:30 pm on Friday, September 28.
 
 ## Application Details
 
 * The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition.
-* All may apply to attend the main forum and applications will be approved on a rolling basis. Space is limited, so apply soon.
 * Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**.
 * A limited number of scholarships are available based on need and can be requested in the application form.
-* The application deadline is **August 3, 2018**.
+* Applications are currently closed.
 
-
-<a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target="_blank"><button type="button">Apply today!</button></a>
 
 ## Pictures From Previous Forums
 
@@ -52,13 +49,15 @@ The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 
   <br>
 ### Pre-Forum Workshop (Code.org Advocacy Coalition members)
 
-The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
+The pre-forum begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
 
 * The Advocacy Year in Review and Year Ahead
 * State of Your State
 * Workshops: Funding Advocacy, Grassroots, Communications, Legislation 101
 * Networking
 * Team Planning Time
+
+Download the [agenda](https://advocacy.code.org/2018_state_policy_pre_forum_agenda.pdf).
 
 </p>
 </details>
@@ -70,13 +69,15 @@ The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the op
   <br>
 ### Main Forum (All Participants)
 
-The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include:
+The main forum begins at 2:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 2:30 pm on Friday, September 28. Sessions include:
 
 * The State of K-12 CS
 * Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
 * Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
 * Birds of a Feather Discussions
 * Team Planning Time
+
+Download the [agenda](https://advocacy.code.org/2018_state_policy_main_forum_agenda.pdf).
 
 </p>
 </details>

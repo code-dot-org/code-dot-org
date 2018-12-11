@@ -4,6 +4,11 @@
 
 import color from '@cdo/apps/util/color';
 
+const STATUS_GREEN = {
+  backgroundColor: color.level_perfect,
+  color: color.black
+};
+
 /**
  * Mapping of application statuses to their background and text colors.
  */
@@ -24,10 +29,12 @@ export const StatusColors = {
     backgroundColor: color.level_passed,
     color: color.black
   },
-  'accepted': {
-    backgroundColor: color.level_perfect,
-    color: color.black
-  },
+  'accepted': STATUS_GREEN,
+  'accepted_not_notified': STATUS_GREEN,
+  'accepted_notified_by_partner': STATUS_GREEN,
+  'accepted_no_cost_registration': STATUS_GREEN,
+  'registration_sent': STATUS_GREEN,
+  'paid': STATUS_GREEN,
   'declined': {
     backgroundColor: color.red,
     color: color.white
@@ -39,26 +46,31 @@ export const StatusColors = {
 };
 
 /**
- * Valid statuses for Applications.
+ * Valid statuses for this year's applications.
+ * Format per application type is {value: label}
  */
 export const ApplicationStatuses = {
-  'teacher': [
-    'Unreviewed',
-    'Pending',
-    'Waitlisted',
-    'Accepted',
-    'Declined',
-    'Withdrawn'
-  ],
-  'facilitator': [
-    'Unreviewed',
-    'Pending',
-    'Interview',
-    'Waitlisted',
-    'Accepted',
-    'Declined',
-    'Withdrawn'
-  ]
+  'teacher': {
+    unreviewed: 'Unreviewed',
+    pending: 'Pending',
+    waitlisted: 'Waitlisted',
+    declined: 'Declined',
+    accepted_not_notified: 'Accepted - Not notified',
+    accepted_notified_by_partner: 'Accepted - Notified by partner',
+    accepted_no_cost_registration: 'Accepted - No cost registration',
+    registration_sent: 'Registration Sent',
+    paid: 'Paid',
+    withdrawn: 'Withdrawn'
+  },
+  'facilitator': {
+    unreviewed: 'Unreviewed',
+    pending: 'Pending',
+    interview: 'Interview',
+    waitlisted: 'Waitlisted',
+    accepted: 'Accepted',
+    declined: 'Declined',
+    withdrawn: 'Withdrawn'
+  }
 };
 
 /**

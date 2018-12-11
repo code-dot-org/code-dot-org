@@ -1,11 +1,15 @@
 :ruby
   require 'cdo/user_helpers'
   congrats_data = {}
-  congrats_data[:english] = @is_english
+  congrats_data[:language] = request.language
   congrats_data[:random_donor_twitter] = @random_donor_twitter
+  congrats_data[:hide_dance_followup] = DCDO.get("hide_dance_followup", false)
   if current_user
     congrats_data[:current_user] = current_user
-    congrats_data[:user_age] = UserHelpers.age_from_birthday(current_user[:birthday])
+    # We need to know the user's age to determine whether we should suggest
+    # they use our advanced tools (AppLab & GameLab) and whether they should
+    # see social media sharing links.
+    congrats_data[:under_13] = current_user.under_13?
   end
 
 #congrats-container

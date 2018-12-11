@@ -2,11 +2,11 @@ zh-TW:
   data:
     game:
       name:
-        Unplug1: 計算機科學介紹
+        Unplug1: 電腦科學導論
         Maze: 迷宮
         Multi: 多選項目
-        Unplug2: 計算機式思維
-        Unplug3: 方格紙編程
+        Unplug2: 電腦計算式思維
+        Unplug3: 圖畫紙程式設計
         Artist: 藝術家
         Unplug4: 演算法
         Artist2: 藝術家 2 
@@ -37,6 +37,7 @@ zh-TW:
         NetSim: 網路模擬器
         Custom: 藝術家
         CustomStudio: Play Lab
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: 銅牌
@@ -73,7 +74,7 @@ zh-TW:
         maze_2_15: 偶想要吃向日葵！試著使用「如果」積木，讓我使用最少的積木就能吃到向日葵。
         maze_2_16: 好啦，讓我們再練習一次，這次跟之前差不多，但小心別被「食殭花」給吞了 ！
         maze_2_17: '「如果…否則…」積木會依指定的條件執行相應指令，用這個新學習的積木把我送到向日葵那裡吧！'
-        maze_2_18: 再練習一次「如果…否則…」積木，你能一次就成功嗎？
+        maze_2_18: 再練習一次「如果…否則」積木，你可以一次就完成嗎？
         maze_2_19: 能不能添加 3 個積木帶我走出這個複雜的迷宮？如果你成功了，不管怎樣曲折的路我都能克服！
         turtle_1_1: 嗨！我是個藝術家。你可以寫程式碼來讓我畫出任何東西（幾乎啦）。用一些程式積木來讓我沿著圖上的灰線作畫。
         turtle_1_2: '現在，畫一個正方形。注意：透過選擇新積木「筆跡顏色」，畫上你最喜愛的顏色吧。'
@@ -147,7 +148,7 @@ zh-TW:
         maze_karel_debug_function_1: 你應該改變程式的哪個部分才能幫我移除所有的土堆？
         maze_karel_debug_function_2: 你可以為這個程式除錯嗎？這樣我就可以讓我的地變平坦了。
         maze_karel_debug_function_3: '編輯這個程式，那樣我就可以移除在田地上的所有土堆。 '
-        turtle_5_1: 試著運行這個程式，然後做些改變看看會發生什麼事。你能清楚的知道它是怎麼運作的嗎？（或著刪除它，然後用完全不同的程式碼來取代它）
+        turtle_5_1: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
         turtle_5_2: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
         turtle_5_3: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
         turtle_5_4: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
@@ -177,28 +178,28 @@ zh-TW:
         mazestep_4: 這是迷宮步驟說明
         mazestep_5: 這是迷宮步驟說明
         studio_c2_1: 你能讓這隻狗說出 Hello World 嗎？
-        studio_c2_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
-        studio_c2_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
-        studio_c2_4: 你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？
+        studio_c2_2: 你可以先讓小狗說一些話，然後再讓小貓說一些話嗎？
+        studio_c2_3: 你可以寫個程式讓小狗移動到小貓那裡嗎？
+        studio_c2_4: 你可以寫一個程式，讓小狗移動到小貓那裡，並且在小狗到達小貓那兒時，讓小貓說 hello？
         studio_c2_5: 你可以寫一個程式讓章魚被點擊時說 hello 嗎？
-        studio_c2_6: 你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？
-        studio_c2_7: '「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓恐龍不斷地上下移動嗎？'
+        studio_c2_6: 妳能寫一個程式，用上/下/左/右鍵來控制企鵝移動去碰到所有的目標嗎？
+        studio_c2_7: '「重複無限次」積木可以讓你不斷執行程式。你能把程式積木附加到裡頭，讓恐龍不停的上下移動嗎？'
         studio_c2_8: 你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。
-        studio_c2_9: 你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？
-        studio_c2_10: 你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？
-        studio_c2_11: 創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。
+        studio_c2_9: 你能添加一個積木讓企鵝撞上章魚時就加一分嗎？運行遊戲用方向鍵移動企鵝，直到得分為止。
+        studio_c2_10: 你能添加一些積木來變更背景還有企鵝的速度嗎？用方向鍵移動牠直到得分為止。
+        studio_c2_11: 創造你自己的故事，當你做好後點擊完成，讓你朋友能透過手機玩體驗你的故事。
         studio_c3_story_1: 你能讓這隻狗說出 Hello World 嗎？
-        studio_c3_story_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
-        studio_c3_story_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
-        studio_c3_story_4: 你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？
+        studio_c3_story_2: 你可以先讓小狗說一些話，然後再讓小貓說一些話嗎？
+        studio_c3_story_3: 你可以寫個程式讓小狗移動到小貓那裡嗎？
+        studio_c3_story_4: 你可以寫一個程式，讓小狗移動到小貓那裡，並且在小狗到達小貓那兒時，讓小貓說 hello？
         studio_c3_story_5: 你能夠添加一個積木讓章魚變得快樂嗎？
-        studio_c3_story_6: 創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。
+        studio_c3_story_6: 創造你自己的故事，當你做好後點擊完成，讓你朋友能透過手機玩體驗你的故事。
         studio_c3_game_1: 你可以寫一個程式讓章魚被點擊時說 hello 嗎？
-        studio_c3_game_2: 你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？
-        studio_c3_game_3: '「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓恐龍不斷地上下移動嗎？'
+        studio_c3_game_2: 妳能寫一個程式，用上/下/左/右鍵來控制企鵝移動去碰到所有的目標嗎？
+        studio_c3_game_3: '「重複無限次」積木可以讓你不斷執行程式。你能把程式積木附加到裡頭，讓恐龍不停的上下移動嗎？'
         studio_c3_game_4: 你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。
-        studio_c3_game_5: 你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？
-        studio_c3_game_6: 你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？
+        studio_c3_game_5: 你能添加一個積木讓企鵝撞上章魚時就加一分嗎？運行遊戲用方向鍵移動企鵝，直到得分為止。
+        studio_c3_game_6: 你能添加一些積木來變更背景還有企鵝的速度嗎？用方向鍵移動牠直到得分為止。
         studio_c3_game_7: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
         studio_playlab_1: 企鵝想要說聲 hello，你可以幫幫牠嗎？
         studio_playlab_2: 洞穴男孩（角色 1）和洞穴女孩（角色 2）想互相說聲 hello。你能藉由使用 2 個「說出」積木來幫助他們嗎？
@@ -234,8 +235,8 @@ zh-TW:
         studio_gumball_free_play: 建立屬於你的遊戲或故事。當你做好後點擊完成，讓你的朋友們在他們的手機、平版或電腦上體驗你的遊戲。
         studio_full_sandbox: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
         studio_k1_1: 你能讓這隻狗說出 Hello World 嗎？
-        studio_k1_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
-        studio_k1_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
+        studio_k1_2: 你可以先讓小狗說一些話，然後再讓小貓說一些話嗎？
+        studio_k1_3: 你可以寫個程式讓小狗移動到小貓那裡嗎？
         studio_k1_4: 讓小狗移動到小貓身邊，在小狗到達那兒時，讓小貓跟牠說聲 hello。
         studio_k1_5: 你能夠添加一個積木讓章魚變得快樂嗎？
         studio_k1_6: 創造你自己的故事！讓貓和狗四處走動，並讓牠們說些什麼吧。
@@ -255,8 +256,8 @@ zh-TW:
         studio_ec_sandbox: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
     video:
       name:
-        maze_intro: 迷宮 - 簡介
-        artist_intro: 小藝術家 - 簡介
+        maze_intro: 迷宮簡介
+        artist_intro: 小藝術家簡介
         farmer_intro: 農夫 - 簡介
         flappy_intro: 像素鳥 - 簡介
         loop_times: '「重複... 次」積木'
@@ -275,7 +276,7 @@ zh-TW:
         Unplug4: 演算法
         Unplug5: 函數類別
         Unplug6: 流程類別
-        Unplug7: 寫歌
+        Unplug7: 歌曲創作
         Unplug8: 抽象概念
         Unplug9: 接力編程
         Unplug10: 網際網路 Internet
@@ -350,9 +351,17 @@ zh-TW:
         C4_unplugged_forloops: 計數迴圈（For Loops）
         C4_unplugged_parameters: 用參數寫歌
         C4_unplugged_binary: 二進制（Binary）
+        CSF_artist_angles: 小藝術家中的角度
+        CSF_collector_k1_blocks: '計算機科學基礎：收集器'
+        CSF_collector_text_blocks: '計算機科學基礎：收集器'
+        CSF_create_functions: 建立函式
         CSF_EF_cs_matters: 計算機科學很重要
+        CSF_maze_intro_k1_blocks: Code Studio 介紹
+        CSF_maze_intro_text_blocks: Code Studio 介紹
         CSF_my_robotic_friends: 我的機器人朋友
+        CSF_Super_Digital_Citizen: 超級數位公民
         CSF_stevie_big_project: Stevie 和 Big Project
+        CSF_unspotted_bugs: 沒被發現的蟲蟲
         CSF_zuck_loops_short: 重複迴圈
         frozen_intro: 一小時玩程式介紹
         frozen_loops: 迴圈（Loops）的介紹
@@ -364,6 +373,16 @@ zh-TW:
         infinity_playlab_intro: Play Lab - 簡介
         infinity_playlab_events: Play Lab - 事件（Evnets）
         infinity_playlab_repeat_forever: Play Lab - 重複無限次
+        csd_concept_how_computers_work: 電腦工作原理：介紹
+        csd_concept_computer: '電腦工作原理：電腦是用什麼做的？是電腦嗎？'
+        csd_concept_binary_data: '電腦工作原理：二進位與資料'
+        csd_concept_circuits_logic: '電腦工作原理：電路與邏輯'
+        csd_concept_memory_cpu_input_output: '電腦工作原理：儲存、CPU、輸入與輸出'
+        csd_concept_hardware_software: '電腦工作原理：硬體與軟體'
+        csd_concept_search: 搜尋的工作原理
+        csd_external_amazon_data: Amazon Recommendation Systems 中的大數據是如何改變我們生活的
+        csd_external_netflix_data: Netflix 是如何製作電視節目和電影建議的？
+        csd_external_waze_data: 為什麼有這麼多人對 Waze 著迷？
         csd_gamelab_animation_tab: 動畫頁籤
         csd_gamelab_sprites_2: 動畫角色
         csd_gamelab_velocity: 速度
@@ -377,6 +396,7 @@ zh-TW:
         csp_applab_loops: 迴圈
         csp_concept_what_is_internet: 網際網路是什麼？
         csp_concept_rgb: 關於像素的二三事
+        csp_cs_is_changing_everything: 計算機科學改變了一切
         starwars_intro: '星際大戰：用程式建立一個銀河系 - 介紹'
         starwars_typing: '星際大戰：用程式建立一個銀河系 - JavaScript'
         starwars_events: '星際大戰：用程式建立一個銀河系 - 事件'
@@ -400,12 +420,44 @@ zh-TW:
         mc_2016_events: 一小時玩 Minecraft - 事件 (Events)
         mc_2016_spawn: 一小時玩 Minecraft - 生成 (Spawn)
         mc_2016_congrats: 一小時玩 Minecraft - 恭喜
+        applab_hoc_welcome: 一小時玩 App Lab - 歡迎
+        applab_hoc_setproperty: 一小時玩 App Lab - 屬性設定
+        applab_hoc_onevent: 一小時玩 App Lab - 事件發生
+        applab_hoc_designmode: 一小時玩 App Lab - 設計模式
+        applab_hoc_share: 一小時玩 App Lab - 分享
+        mc_2017_agent_intro: 一小時玩 App Lab - 代理
+        mc_2017_repeat: 一小時玩 App Lab - 重複迴圈
+        mc_2017_functions: 一小時玩 App Lab - 函式
         mc_2017_congratulations: 一小時玩 Minecraft - 恭喜
+        mc_2017_puzzle_1: 一小時玩 App Lab - 代理
+        mc_2017_puzzle_3: 一小時玩 App Lab - 重複迴圈
+        mc_2017_puzzle_8: 一小時玩 App Lab - 函式
+        mc_2017_puzzle_12: 一小時玩 App Lab - 自由發揮
+        applab_intro_welcome: App Lab - 入門
+        applab_intro_events: App Lab - 和它互動
+        applab_intro_sounds: App Lab - 圖像和音效
+        applab_intro_designmode: App Lab - 設計模式
+        applab_intro_share: App Lab - 分享你的程式
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_scrat_loops_K1: 冰河歷險紀中的迴圈
+        CSF_scrat_loops_CF: 冰河歷險紀中的迴圈
+        CSF_if_allskins: 如果積木
+        CSF_ifelse_allskins: 使用如果/否則積木
+        CSF_ifelseifelse_allskins: 使用如果/否則如果/否則積木
         CSF_loops_AB: 迴圈
+        csd_gamelab_booleans: 布林表達式
+        csd_gamelab_conditional_statements: 條件陳述式
+        csd_gamelab_if_else: 如果/否則 陳述式
+        CSF_SpriteLabIntro_CDEF: 這是 Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: 如何在 Sprite Lab 製作角色
+        CDEF_Video_SpritesInAction: 運行中的角色
+        CSF_SpriteLab_SpritesInAction_CDEF: 運行中的角色
+        CSF_StarWars_ProjectIntro: 星際大戰專案介紹
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方
-        run: 點擊「運行」以試試你的程式
+        run: 點擊「運行」按鈕，看看程式的結果
         watch_again: 點擊此處再次觀看影片
         gray_block_explanation: 你不能刪掉灰色的程式積木。這樣你還能完成這道關卡嗎？
         show_code_explanation: 點擊此處以查看你正在做的程式碼

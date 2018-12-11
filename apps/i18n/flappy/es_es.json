@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "Ejecutar las acciones siguientes cuando Flappy choca con un obstáculo.",
   "whenEnterObstacle": "cuando pase un obstáculo",
   "whenEnterObstacleTooltip": "Ejecutar las acciones siguientes cuando Flappy choca con un obstáculo.",
-  "whenRunButtonClick": "cuando el juego comience",
-  "whenRunButtonClickTooltip": "Ejecutar las acciones indicadas debajo cuando comience el juego.",
+  "whenRunButtonClick": "cuando el juego comienza",
+  "whenRunButtonClickTooltip": "Ejecutar las acciones siguientes cuando empieza el juego.",
   "yes": "Sí"
 }

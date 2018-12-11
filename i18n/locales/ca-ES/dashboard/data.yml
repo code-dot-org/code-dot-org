@@ -3,7 +3,7 @@ ca:
     game:
       name:
         Unplug1: Introducció a la informàtica
-        Maze: El laberint
+        Maze: El Laberint
         Multi: Coses d'elecció múltiple
         Unplug2: Pensament computacional
         Unplug3: Programació de paper quadriculat
@@ -14,7 +14,7 @@ ca:
         Farmer: La pagesa
         Unplug6: Condicionals
         Artist3: L'artista 3
-        Unplug7: Composició de la cançó
+        Unplug7: Escriptura de la cançó
         Farmer2: La pagesa 2
         Unplug8: Abstracció
         Artist4: L'artista 4
@@ -233,8 +233,8 @@ ca:
         studio_ec_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin el teu joc als seus mòbils.
     video:
       name:
-        maze_intro: 'Laberint: Introducció'
-        artist_intro: 'Artista: Introducció'
+        maze_intro: Introducció al Laberint
+        artist_intro: Introducció a l'Artista
         farmer_intro: 'Pagesa: introducció'
         flappy_intro: 'Flappy: Introducció'
         loop_times: Bloc Repetir Vegades

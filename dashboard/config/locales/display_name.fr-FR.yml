@@ -1,0 +1,157 @@
+---
+fr:
+  data:
+    display_name:
+      App Lab Intro 8 - Video Images and Sounds: 'Vidéo : Images et sons'
+      App Lab Intro 8 - Video Share Your App: 'Vidéo : Partage ton appli'
+      AppLab Intro 3 - Change Two Buttons: Deux boutons
+      AppLab Intro 3 - Full Text: Deux boutons
+      AppLab Intro 3 - share and keep going: Ceci ou cela
+      AppLab Intro 3 - thisOrThat: Ceci ou cela
+      AppLab Intro 4 - Change Two Buttons: Deux boutons
+      AppLab Intro 4 - Full Text: Deux boutons
+      AppLab Intro 4 - Video Welcome: Bienvenue à Heure de Code
+      AppLab Intro 4 - Video share thisThat: Partage ton travail
+      AppLab Intro 4 - Video share your work: Partage ton travail
+      AppLab Intro 4 - Video share: Partage ton travail
+      AppLab Intro 4 - thisOrThat: Ceci ou cela
+      AppLab Intro 5 - Change Two Buttons: Deux boutons
+      AppLab Intro 5 - Full Text: Deux boutons
+      AppLab Intro 6 - Full Text: Deux boutons
+      AppLab Intro 6 - thisOrThatAddButton Template: Ceci ou cela
+      AppLab Intro 6 - thisOrThatAddButton: Ceci ou cela
+      AppLab Intro 6 - thisOrThatAddScreen: Ceci ou cela
+      AppLab Intro 6 - thisOrThatPersonalize: Ceci ou cela
+      AppLab Intro 6 - thisOrThatSetScreen: Ceci ou cela
+      AppLab Intro 7 - Full Text: Deux boutons
+      AppLab Intro 7 - thisOrThatAddButton: Ceci ou cela
+      AppLab Intro 7 - thisOrThatAddScreen: Ceci ou cela
+      AppLab Intro 7 - thisOrThatPersonalize: Ceci ou cela
+      AppLab Intro 7 - thisOrThatSetScreen: Ceci ou cela
+      CSD Polling Events Map: Attendre les évènements
+      CSD Polling Events Map_2018: Attendre les évènements
+      CSD Timed Loop Map: Boucles temporisées
+      CSD U2 Pair Programming Video: Programmation en Binôme
+      CSD U2 Pair Programming Video_2018: Programmation en Binôme
+      CSD U3 Animation Edit Map: Modifier les images
+      CSD U3 Animation Edit Map_2018: Modifier les images
+      CSD U3 Animation Tab Map: L’onglet Animation
+      CSD U3 Animation Tab Map_2018: L’onglet Animation
+      CSD U3 Drawing Squares to Corners: Utiliser la grille
+      CSD U3 Drawing Squares to Corners_2018: Utiliser la grille
+      CSD U3 Interactive Card Exemplar_2018: Carte interactive
+      CSD U3 L11 Freeplay: Activité libre
+      CSD U3 L11 Freeplay_2018: Activité libre
+      CSD U3 L12 Freeplay: Activité libre
+      CSD U3 L12 Freeplay_2018: Activité libre
+      CSD U3 L13 Freeplay: Activité libre
+      CSD U3 L13 Freeplay_2018: Activité libre
+      CSD U3 L15 Freeplay: Activité libre
+      CSD U3 L15 Freeplay_2018: Activité libre
+      CSD U3 L16 Freeplay: Activité libre
+      CSD U3 L16 Freeplay_2018: Activité libre
+      CSD U3 L17 Freeplay: Activité libre
+      CSD U3 L17 Freeplay_2018: Activité libre
+      CSD U3 L18 Freeplay: Activité libre
+      CSD U3 L18 Freeplay_2018: Activité libre
+      CSD U3 L19 Freeplay: Activité libre
+      CSD U3 L19 Freeplay_2018: Activité libre
+      CSD U3 L3 Freeplay: Activité libre
+      CSD U3 L3 Freeplay_2018: Activité libre
+      CSD U3 L4 Freeplay: Activité libre
+      CSD U3 L4 Freeplay_2018: Activité libre
+      CSD U3 L5 Freeplay: Activité libre
+      CSD U3 L5 Freeplay_2018: Activité libre
+      CSD U3 L6 Freeplay: Activité libre
+      CSD U3 L6 Freeplay_2018: Activité libre
+      CSD U3 L7 Freeplay: Activité libre
+      CSD U3 L7 Freeplay_2018: Activité libre
+      CSD U3 L9 Freeplay: Activité libre
+      CSD U3 L9 Freeplay_2018: Activité libre
+      CSD U3 Plotting Shapes Shape Lab Open: Dessiner des formes
+      CSD U3 Plotting Shapes Shape Lab: Dessiner des formes
+      CSD U3 Plotting Shapes Shape Lab_2018: Dessiner des formes
+      CSD U3 Random Number Map Level: Nombres aléatoires
+      CSD U3 Random Number Map Level_2018: Nombres aléatoires
+      CSD U3 Random Number Map: Nombres aléatoires
+      CSD U3 Variables Map: variables
+      CSD U3 Variables Map_2018: variables
+      CSD U3 functions map: fonctions
+      CSD U6 Event Types: Types d'évènement
+      CSD U6 Event Types_2018: Types d'évènement
+      CSD U6 arrays intro: Introduction sur les Arrays
+      CSD U6 arrays intro_2018: Introduction sur les Arrays
+      CSD U6 arrays video: Introduction sur les Arrays
+      CSD U6 for loop map: Boucles « Pour »
+      CSD U6 for loop map_2018: Boucles « Pour »
+      CSD U6 functions paramters video: Fonctions avec Paramètres
+      CSD U6 functions paramters video_2018: Fonctions avec Paramètres
+      CSD U6 hardware software video: Matériel et logiciels
+      CSD U6 hardware software video_2018: Matériel et logiciels
+      CSD U6 setProperty Map: Dessiner des écrans en codant
+      CSD U6 setProperty Map_2018: Dessiner des écrans en codant
+      'CSD: Sprite Velocity': 'Vidéo : la vitesse'
+      'CSD: Sprite Velocity_2018': 'Vidéo : la vitesse'
+      Dance_Party_extras_battle: Équipes de danse
+      Dance_Party_extras_every_beat: Noires
+      Dance_Party_extras_layout: Soyez informé
+      Dance_Party_extras_on_beat: grave, médium et aigu
+      Dance_Party_extras_speed: Accélérer, ralentir
+      Dance_Party_extras_visible: Où iraient-ils\_?
+      'Internet Simulator: DNS_2018': 'Simulateur de l’Internet : DNS'
+      'Internet Simulator: Packets_2018': 'Simulateur de l’Internet : paquets'
+      'Internet Simulator: Routers_2018': 'Simulateur de l’Internet : routeurs'
+      'Internet Simulator: Sending Binary Messages_2018': 'Simulateur d’Internet :
+        envoi de messages binaires'
+      'Internet Simulator: Sending Numbers_2018': 'Simulateur d’Internet : envoi de
+        nombres'
+      'Internet Simulator: Sending Text_2018': 'Simulateur d’Internet : envoi de texte'
+      MC_HOC_2017_01: Prologue
+      MC_HOC_2017_02_Cole: La ferme
+      MC_HOC_2017_02_Cole_2019: La ferme
+      MC_HOC_2017_02_Kiki: La ferme
+      MC_HOC_2017_02_Will: La ferme
+      MC_HOC_2017_03: Une rivière...
+      MC_HOC_2017_03_Cole: Les bois
+      MC_HOC_2017_03_Cole_2019: Les bois
+      MC_HOC_2017_03_Kiki: Les bois
+      MC_HOC_2017_04POINT5_Cole: Les bois
+      MC_HOC_2017_04POINT5_RYAN: Le désert
+      MC_HOC_2017_04POINT5_RYAN_2019: Le désert
+      MC_HOC_2017_04_Cole: Le marais
+      MC_HOC_2017_04_Cole_2019: Le marais
+      MC_HOC_2017_04_Kiki: Le marais
+      MC_HOC_2017_05_Cole: La rivière
+      MC_HOC_2017_05_Cole_2019: La rivière
+      MC_HOC_2017_05_Josh: La rivière
+      MC_HOC_2017_05_Kiki: La rivière
+      MC_HOC_2017_09_Cole: La grotte
+      MC_HOC_2017_09_Kiki: La grotte
+      MC_HOC_2017_09_RS_CLONE: La grotte
+      MC_HOC_2017_10_Cole: La grotte
+      MC_HOC_2017_10_Cole_old: La grotte
+      MC_HOC_2017_10_Kiki: La grotte
+      MC_HOC_2017_10_RETRY: La grotte
+      MC_HOC_2017_10_RETRY_2019: La grotte
+      MC_HOC_2017_10_RYAN: La grotte
+      MC_HOC_2017_10_RYAN2: La grotte
+      MC_HOC_2017_11_Cole: Le lac gelé
+      MC_HOC_2017_11_Kiki: Le lac gelé
+      MC_HOC_2017_4.5v2: Les bois
+      MC_HOC_2017_FP10x10: Activité libre
+      MC_HOC_2017_FP10x10_RE: Activité libre
+      MC_HOC_2017_Ryan_03: Une rivière...
+      SG U3L07 More Subgoals: Documentation
+      SG U3L08 comments: Commente le code
+      SG U3L08 how to add comments: Commente le code
+      SGU3L2A Introducing Subgoals: Introduis des sous-objectifs
+      The Accelerometer_2018: L’accéléromètre
+      U3L08 how to add comments: Commente le code
+      U3L08 how to add comments_2018: Commente le code
+      courseA_video_Stevie: Stevie et le grand projet
+      courseA_video_Stevie_2018: Stevie et le grand projet
+      courseB_video_Unspotted: Bugs passés inaperçus
+      courseB_video_Unspotted_2018: Bugs passés inaperçus
+      csp2020-applab-test: Bienvenue au Applab!
+      expresslink: Cours Express
+      okToDelete: Testeur

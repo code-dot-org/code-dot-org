@@ -138,7 +138,7 @@
 
   %form{:id=>"census-form", role: "form", onsubmit: "event.preventDefault();", style: "display: none;"}
     .main-census-form
-      %input{id:'school_year', name:'school_year', type:'hidden', value:'2017'}
+      %input{id:'school_year', name:'school_year', type:'hidden', value: hoc_year}
       %input{id:'census_email', name:'submitter_email_address', type:'hidden', value:''}
       %input{id:'census_name', name:'submitter_name', type:'hidden', value:''}
       %input{id:'census_school_id', name:'nces_school_s', type:'hidden', value:''}

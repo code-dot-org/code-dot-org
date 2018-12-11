@@ -3,23 +3,23 @@ sq:
   data:
     game:
       name:
-        Unplug1: Hyrje në Informatikë
+        Unplug1: Hyrje në Shkencë Kompjuterike
         Maze: Labirinti
         Multi: Lojërat me alternativa
-        Unplug2: Të menduarit kompjuterik
-        Unplug3: Programimi me grafikë
+        Unplug2: Te menduarit kompjuterik
+        Unplug3: Programimi Grafik me Letër
         Artist: Artisti
         Unplug4: Algoritmet
         Artist2: Artisti 2
         Unplug5: Funksionet
         Farmer: Fermeri
-        Unplug6: Kushtoret
+        Unplug6: Kushtet
         Artist3: Artisti 3
-        Unplug7: Kompozim këngësh
+        Unplug7: Të Shkruarit Këngë
         Farmer2: Fermeri 2
-        Unplug8: Abstraksion
+        Unplug8: Abstraksioni
         Artist4: Artisti 4
-        Unplug9: Programimi transmetues
+        Unplug9: Programimi i Besuar
         Farmer3: Fermeri 3
         Unplug10: Interneti
         Artist5: Artisti 5
@@ -52,7 +52,7 @@ sq:
         loop_until: blloku Përsërit derisa
         loop_while: blloku Ndërsa
         loop_for: blloku i Numërimit
-        function: Funksionet
+        function: funksione
         parameters: Funksionet me parametra
     level:
       instructions:
@@ -61,7 +61,7 @@ sq:
         maze_2_1: Ky derrkuci po më bezdis. Më ndihmo t'a gjej!
         maze_2_2_5: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në
           ose përndryshe do të ikin puplat!
-        maze_2_3: Më udhëhiq për tek ligësia jeshile! (Kujdes nga TNT)
+        maze_2_3: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
         maze_2_4: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe
           do të nevrikosem!
         maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2
@@ -94,8 +94,9 @@ sq:
         maze_2_17: Blloqet "nëse-përndryshe" kërkojnë një kusht që bën një gjë OSE
           një gjë tjetër. Për të më çuar tek luledielli përpiqu të përodrësh këtë
           bllok të ri.
-        maze_2_18: Edhe një herë praktikohu me bllokun "nëse-përndryshe", mund ta
-          bësh si duhet me përpjekjen e parë?
+        maze_2_18: |-
+          Një praktikë më shumë për bllokun
+          "if-else", a mund ta bësh si duhet me përpjekjen e parë?
         maze_2_19: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të zgjidh
           një maze të vështirësuar? Nëse e bën si duhet, unë mund të ec në çdo rrugë
           të dredhuar pa marrë parasysh gjatësinë.
@@ -341,25 +342,26 @@ sq:
         studio_c2_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
         studio_c2_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
           të thotë diçka ?
-        studio_c2_3: A mund të bësh një program që ta bëjë qenin të lëivzë për tek
-          macja?
-        studio_c2_4: A mund të shkruash një program që e lëviz qenin për tek macja
-          dhe më pas ti thotë "përshëndetje" kur qeni ta arrijë atë?
-        studio_c2_5: A mund të bësh një program që ta bëjë oktapodin të thotë "përshëndetje"
-          kur klikohet?
-        studio_c2_6: A mund të shkruash një program që bën pinguinin të lëvizë rreth
-          e rrotull duke përodrur tastat lart/poshtë/majtas/djathtas për të goditur
+        studio_c2_3: A mund të shkruash një program që ta bëjë këtë qenin të lëvizë
+          për tek macja?
+        studio_c2_4: A mund të shkruash një program që bën qenin të lëviz për tek
+          macja dhe më pas macja ti thotë "përshëndetje" kur qeni ta arrijë atë?
+        studio_c2_5: A mund të shkruash një program që ta bëjë oktapodin të thotë
+          "përshëndetje" kur klikohet?
+        studio_c2_6: A mund të shkruash një program që bën Waddles të lëvizë rreth
+          e rrotull duke përdorur tastat lart/poshtë/majtas/djathtas për të goditur
           të gjthë objektivët?
         studio_c2_7: Blloku "përsërit gjithmonë" të lejon ta ekzekutosh kodin në mënyrë
           të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin lart
           e poshtë vazhdimisht?
-        studio_c2_8: A mund ta bësh pinguinin të thotë "Ouch!" dhe të vendosësh një
-          tingull "gjuajtje" nëse ai përplaset me dinosaurin dhe më pas lëvize atë
-          me shigjetat që ta bësh të mundur këtë gjë?
-        studio_c2_9: A mund të shtoni një bllok për të shënuar një pikë kur pinguini
-          përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
+        studio_c2_8: A mund ta bësh Waddles të thotë "Ouch!" dhe të vendosësh një
+          tingull "gjuajtje" nëse ai shkon drejt dinosaurit dhe më pas ta lëvizësh
+          atë me shigjetat që ta bësh të mundur këtë gjë?
+        studio_c2_9: A mund të shtoni një bllok për të shënuar një pikë kur Waddles
+          përplaset shkon drejt oktapodit dhe më pas ta lëvizësh atë me shigjetat
+          derisa ju të shënoni?
         studio_c2_10: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
-          e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
+          e Waddles dhe më pas lëvize atë me shigjetat derisa të shënosh?
         studio_c2_11: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që të lejosh
           shokët të provojnë lojën në telefonat e tyre.
         studio_c3_story_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?

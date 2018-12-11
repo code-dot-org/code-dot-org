@@ -74,10 +74,10 @@ class Pd::TeacherApplication < ActiveRecord::Base
   has_one :accepted_program, class_name: 'Pd::AcceptedProgram', foreign_key: :teacher_application_id, dependent: :destroy
   accepts_nested_attributes_for :accepted_program, allow_destroy: true
 
-  validates_presence_of :user, unless: :owner_deleted?
+  validates_presence_of :user
   validates_presence_of :application
-  validates_presence_of :primary_email, unless: :owner_deleted?
-  validates_presence_of :secondary_email, unless: :owner_deleted?
+  validates_presence_of :primary_email
+  validates_presence_of :secondary_email
   validates_email_format_of :primary_email, allow_blank: true
   validates_email_format_of :secondary_email, allow_blank: true
   validates_email_format_of :principal_email, allow_blank: true
@@ -101,7 +101,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     secondary_email.try :downcase!
   end
 
-  validate :primary_email_must_match_user_email, if: -> {!owner_deleted? && (primary_email_changed? || user_id_changed?)}
+  validate :primary_email_must_match_user_email, if: -> {primary_email_changed? || user_id_changed?}
   def primary_email_must_match_user_email
     return unless user && move_to_user.blank?
     unless primary_email_matches_user_email?
@@ -440,17 +440,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
     else
       User.find_by_email_or_hashed_email move_to_user
     end
-  end
-
-  # Returns whether the owner of the application, determined by `user_id` is soft-deleted. Returns
-  # false if the user does not exist.
-  # @return [Boolean] Whether the owner of the application is soft-deleted.
-  def owner_deleted?
-    !!User.with_deleted.find_by_id(user_id).try(:deleted?)
-  end
-
-  def clear_data
-    update!(primary_email: '', secondary_email: '')
   end
 
   private

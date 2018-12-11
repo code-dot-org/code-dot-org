@@ -1,0 +1,114 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeNewDanceSprite",
+    "inline": false,
+    "blockText": "make a new {COSTUME}\n called {NAME} at {LOCATION}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "options": [
+          [
+            "Alien",
+            "\"ALIEN\""
+          ],
+          [
+            "Bear",
+            "\"BEAR\""
+          ],
+          [
+            "Cat",
+            "\"CAT\""
+          ],
+          [
+            "Dog",
+            "\"DOG\""
+          ],
+          [
+            "Duck",
+            "\"DUCK\""
+          ],
+          [
+            "Frog",
+            "\"FROG\""
+          ],
+          [
+            "Moose",
+            "\"MOOSE\""
+          ],
+          [
+            "Pineapple",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "Robot",
+            "\"ROBOT\""
+          ],
+          [
+            "Shark",
+            "\"SHARK\""
+          ],
+          [
+            "Unicorn",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "NAME",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "LOCATION",
+        "options": [
+          [
+            "top",
+            "{x: 200, y: 100}"
+          ],
+          [
+            "bottom",
+            "{x: 200, y: 300}"
+          ],
+          [
+            "left",
+            "{x: 100, y: 200}"
+          ],
+          [
+            "right",
+            "{x: 300, y: 200}"
+          ],
+          [
+            "center",
+            "{x: 200, y: 200}"
+          ],
+          [
+            "top left",
+            "{x: 100, y: 100}"
+          ],
+          [
+            "top right",
+            "{x: 300, y: 100}"
+          ],
+          [
+            "bottom left",
+            "{x: 100, y: 300}"
+          ],
+          [
+            "bottom right",
+            "{x: 300, y: 300}"
+          ],
+          [
+            "random",
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}"
+          ]
+        ]
+      }
+    ]
+  }
+}

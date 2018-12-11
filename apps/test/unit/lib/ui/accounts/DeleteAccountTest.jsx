@@ -2,16 +2,15 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import DeleteAccount, {
-  DELETE_VERIFICATION_STRING,
-  buildCheckboxMap,
-} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
+import DeleteAccount, {DELETE_VERIFICATION_STRING} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
+import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
   hasStudents: false,
+  dependentStudents: [],
 };
 
 describe('DeleteAccount', () => {
@@ -71,9 +70,41 @@ describe('DeleteAccount', () => {
     });
 
     describe('for teachers', () => {
-      it('is disabled if not all checkboxes are checked for teacher that has students', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={true}/>);
-        let checkboxes = buildCheckboxMap();
+      it('displays PersonalLoginDialog with dependent student info if depended upon for login', () => {
+        const dependentStudents = [
+          {id: 1, name: 'Student B', username: 'student_b'},
+          {id: 3, name: 'Student A', username: 'student_a'},
+          {id: 2, name: 'Student C', username: 'student_c'},
+        ];
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isTeacher={true}
+            hasStudents={true}
+            dependentStudents={dependentStudents}
+          />
+        );
+        const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
+        deleteAccountButton.simulate('click');
+        const personalLoginDialog = wrapper.find('PersonalLoginDialog');
+        expect(personalLoginDialog).to.exist;
+        const studentElements = personalLoginDialog.find('.uitest-dependent-student');
+        expect(studentElements).to.have.length(3);
+        // Make sure students are sorted alphabetically by name
+        expect(studentElements.at(0)).to.contain.text('Student A');
+        expect(studentElements.at(1)).to.contain.text('Student B');
+        expect(studentElements.at(2)).to.contain.text('Student C');
+      });
+
+      it('is disabled if not all checkboxes are checked', () => {
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isTeacher={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(true, true);
         checkboxes[1].checked = true;
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
@@ -86,8 +117,15 @@ describe('DeleteAccount', () => {
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password not required', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false} isTeacher={true}/>);
-        let checkboxes = buildCheckboxMap();
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isPasswordRequired={false}
+            isTeacher={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(false, true);
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
@@ -99,8 +137,14 @@ describe('DeleteAccount', () => {
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password provided and required', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
-        let checkboxes = buildCheckboxMap();
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isTeacher={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(true, true);
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
@@ -112,7 +156,7 @@ describe('DeleteAccount', () => {
         expect(confirmButton).to.not.have.attr('disabled');
       });
 
-      it('is enabled if checkboxes not required, verification string is correct, and password provided and required', () => {
+      it('is enabled if there are no checkboxes, verification string is correct, and password provided and required', () => {
         const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={false}/>);
         wrapper.setState({
           isDeleteAccountDialogOpen: true,

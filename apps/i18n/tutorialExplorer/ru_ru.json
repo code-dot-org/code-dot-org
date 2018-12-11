@@ -36,7 +36,7 @@
   "filterLength1HourFollow": "Один час с продолжением",
   "filterLengthFewHours": "Несколько часов",
   "filterProgrammingLanguage": "Язык",
-  "filterProgrammingLanguageBlocks": "Блоки",
+  "filterProgrammingLanguageBlocks": "Блоков",
   "filterProgrammingLanguageTyping": "Печать",
   "filterProgrammingLanguageOther": "Другое",
   "filterActivityTypeRobotics": "Робототехника",
@@ -58,5 +58,5 @@
   "hideAllTutorialsButton": "Скрыть задачи на других языках",
   "noTutorialsYourLanguage": "К сожалению нет задач, поддерживаемых на вашем языке. Попробуйте поискать на других языках, нажав кнопку ниже.",
   "bottomGuidelinesLink": "Нажмите здесь, чтобы увидеть критерии и формат руководств для Часа Кода.",
-  "bottomSpecialNeedsLink": "Нажмите здесь, для получения дополнительной информации о поддержке учащихся с особыми требованиями."
+  "bottomSpecialNeedsLink": "Нажмите здесь, для получения дополнительной информации о поддержке студентов с особыми требованиями."
 }

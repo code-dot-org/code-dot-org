@@ -21,7 +21,12 @@ module Pd::Application
       refute application.valid?
     end
 
-    test 'underrepresnted minority percent' do
+    test 'do not require anything if placeholder' do
+      application = build :pd_principal_approval1819_application, form_data: {}.to_json
+      assert application.valid?
+    end
+
+    test 'underrepresented minority percent' do
       application = build :pd_principal_approval1819_application
       application.update_form_data_hash(
         {
@@ -52,6 +57,22 @@ module Pd::Application
       teacher_application = create :pd_teacher1819_application
       principal_application.application_guid = teacher_application.application_guid
       assert principal_application.valid?
+    end
+
+    test 'create placeholder and send mail creates a placeholder and sends principal approval' do
+      teacher_application = create :pd_teacher1819_application
+      Pd::Application::Teacher1819ApplicationMailer.stubs(:principal_approval).returns(
+        mock {|mail| mail.stubs(:deliver_now)}
+      )
+      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).
+        with(instance_of(Pd::Application::Teacher1819Application)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      assert_creates Pd::Application::PrincipalApproval1819Application do
+        Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(teacher_application)
+      end
+
+      assert Pd::Application::PrincipalApproval1819Application.last.placeholder?
     end
   end
 end

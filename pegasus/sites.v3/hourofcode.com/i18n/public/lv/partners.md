@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Programmēšanas stundu vada Programmēšanas stundas un datorzinātnes izglītības nedēļas konsultēšanas un vērtēšanas komitejas.
 
@@ -119,19 +119,13 @@ Abu komiteju darbs un rūpes ir sekmējušas Programmēšanas stundas veiksmi un
 
 ---
 
-# Galvenie reklāmas partneri
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Starptautiskie partneri
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Abu komiteju darbs un rūpes ir sekmējušas Programmēšanas stundas veiksmi un
 
 ---
 
-# Citi partneri
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

@@ -270,7 +270,7 @@
   "localFunction": "Has colocado {funcName} dentro de otra función. Debes mover {funcName} a una ubicación diferente de tu programa.",
   "loseMessage": "¡Has perdido!",
   "makeProjectileDisappear": "desaparecer",
-  "makeProjectileBounce": "rebotar",
+  "makeProjectileBounce": "rebote",
   "makeProjectileAirplane": "hacer aeroplano",
   "makeProjectileBasketball": "hacer baloncesto",
   "makeProjectileDisc": "crear disco",

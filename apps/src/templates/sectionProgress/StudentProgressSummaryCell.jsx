@@ -8,6 +8,7 @@ class StudentProgressSummaryCell extends Component {
     studentId: PropTypes.number.isRequired,
     style: PropTypes.object,
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
+    onSelectDetailView: PropTypes.func,
   };
 
   render() {
@@ -19,7 +20,7 @@ class StudentProgressSummaryCell extends Component {
     const started = (statusCounts.attempted > 0) || (statusCounts.incomplete !== statusCounts.total);
 
     return (
-      <div style={this.props.style}>
+      <div style={this.props.style} onClick={this.props.onSelectDetailView} className="uitest-summary-cell">
         <ProgressBox
           started={started}
           incomplete={incompletePixels}

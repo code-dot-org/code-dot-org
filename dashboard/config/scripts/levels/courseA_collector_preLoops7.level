@@ -35,7 +35,7 @@
     "tts_instructions_override": "Get all three piles! Move Laurel to the treasure, then use get treasure to pick it up.",
     "tts_markdown_instructions_override": "Get all three piles! Move Laurel to the treasure, then use get treasure to pick it up.",
     "shape_shift": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"After you have moved to a square with treasure, use this block to pick it up.\\n<xml>  <block type=\\\"collector_collect\\\"/></xml>\",\"hint_id\":\"courseA_collector_loops2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71326fa9b84ba4474b1a6190191cc7be/courseA_collector_preLoops7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"After you have moved to a square with treasure, use this block to pick it up.\\n\\n<xml>  <block type=\\\"collector_collect\\\"/></xml>\",\"hint_id\":\"courseA_collector_loops2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71326fa9b84ba4474b1a6190191cc7be/courseA_collector_preLoops7.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },

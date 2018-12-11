@@ -80,7 +80,7 @@ sv:
         title: Funktionella Solfångare
         desc: Eleverna skapar en uppsättning instruktioner med variabler och funktioner(delar av en kod som man kan använda om och om igen) för att skapa solfångare av snören och pärlor.
       SongwritingParameters:
-        title: Låtskrivande Med parametrar
+        title: Låtskrivande
         desc: Eleverna använder refrängen i en sång för att lära hur man använder parametrar(vilka gör att en funktion kan användas generellt utan att behöva skrivas om).
       DiceRace:
         title: 'Instruktioner i verkliga livet: Tärnings- spelet'
@@ -171,7 +171,7 @@ sv:
         title: Kalkyleringsprogrammering
         desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade kommandon så att andra elever kan reproducera en teckning.
       courseD_unplugged_relayProgramming:
-        title: Relä programmering
+        title: Stafettprogrammering
         desc: Eleverna får köra en stafett där de springer en sträcka för att skriva en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'. Varje elev får bara skriva en instruktion och har det blivit fel i någon instruktion tidigare måste de sudda ut allt och börja om från början.
       courseD_unplugged_conditionalsCards:
         title: Villkorssatser med kort
@@ -191,7 +191,7 @@ sv:
         title: Crowdsourcing
         desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig i datorvetenskapen, för att lösa ett problem mer effektivt som klass än som individuell elev.
       courseE_unplugged_songwriting:
-        title: Låtskrivande Med parametrar
+        title: Låtskrivande
         desc: Eleverna använder refrängen i en sång för att lära hur man använder parametrar(vilka gör att en funktion kan användas generellt utan att behöva skrivas om).
       courseF_unplugged_tangrams:
         title: Tangram algoritmer(uppsättning av instruktioner)
@@ -247,4 +247,30 @@ sv:
       MoveItMoveIt_2018:
         title: Flytta det, flytta den
       RelayProgramming_2018:
-        title: Relä programmering
+        title: Stafettprogrammering
+      courseB_unplugged_MRF_2019:
+        title: Mina Robotic- vänner
+      Conditionals_2019:
+        title: Villkor
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag drar ett svart kort får du en poäng'.
+      GraphPaperProgramming_2019:
+        title: Kalkyleringsprogrammering
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade kommandon så att andra elever kan reproducera en teckning.
+      RelayProgramming_2018_2019:
+        title: Stafettprogrammering
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Ouppkopplad aktivitet
+      BinaryImages_2019:
+        title: Binära bilder
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har de föregående kurserna visat eleverna att information kan bli presenterad på olika binära sätt. Den här lektionen tar det konceptet vidare genom att visa hur en dator kan lagra även mer komplex information(som bilder och färger) på binärt sätt.
+      GettingLoopy_2019:
+        title: Att bli snurrig
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel koreografi och sedan bli uppmanade att repetera.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Ouppkopplad aktivitet
+      BigEvent_2019:
+        title: Den stora händelsen
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+      BinaryBracelets_2019:
+        title: Binära armband
+        desc: Eleverna konstruerar armband som är en binär representation av första bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras på mer än ett sätt.

@@ -48,7 +48,8 @@
     "use_player": "false",
     "markdown_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
     "hint_prompt_attempts_threshold": 3,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

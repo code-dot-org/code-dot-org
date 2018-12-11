@@ -62,6 +62,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       target: PropTypes.string,
+      id: PropTypes.string,
     })),
   };
 
@@ -103,6 +104,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
+                    id={button.id}
                   />
                   &nbsp;
                   &nbsp;
@@ -155,10 +157,15 @@ export class AdministratorResourcesActionBlock extends Component {
       <TwoColumnActionBlock
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
-        subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
         buttons={[
           {
+            id: 'your_school_professional_learning',
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.yourSchoolProfessionalLearningProgramsButton()
+          },
+          {
+            id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton()
           }
@@ -169,20 +176,75 @@ export class AdministratorResourcesActionBlock extends Component {
 }
 
 export class SpecialAnnouncementActionBlock extends Component {
+  static propTypes = {
+    hocLaunch: PropTypes.string
+  };
 
   render() {
-    return (
-      <TwoColumnActionBlock
-        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-4.png')}
-        subHeading={i18n.specialAnnouncementHeading()}
-        description={i18n.specialAnnouncementDescription()}
-        buttons={[
-          {
-            url: pegasus('/educate/professional-learning-2018'),
-            text: i18n.learnMore()
-          },
-        ]}
-      />
-    );
+    if (this.props.hocLaunch === "actual-hoc") {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Actual()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Actual()}
+          buttons={[
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
+          ]}
+        />
+      );
+    } else if (this.props.hocLaunch === "dance") {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Mc()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Dance()}
+          buttons={[
+            {
+              url: 'https://hourofcode.com/#join',
+              text: i18n.joinUs()
+            },
+            {
+              url: pegasus('/hourofcode/overview'),
+              text: i18n.tryIt()
+            }
+          ]}
+        />
+      );
+    } else if (this.props.hocLaunch === "mc") {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-mc.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018Mc()}
+          description={i18n.specialAnnouncementDescriptionHoc2018Mc()}
+          buttons={[
+            {
+              url: 'https://hourofcode.com/#join',
+              text: i18n.joinUs()
+            },
+            {
+              url: pegasus('/minecraft'),
+              text: i18n.tryIt()
+            }
+          ]}
+        />
+      );
+    } else {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018.jpg')}
+          subHeading={i18n.specialAnnouncementHeadingHoc2018()}
+          description={i18n.specialAnnouncementDescriptionHoc2018()}
+          buttons={[
+            {
+              url: 'https://hourofcode.com/#join',
+              text: i18n.signUpButton()
+            }
+          ]}
+        />
+      );
+    }
   }
 }

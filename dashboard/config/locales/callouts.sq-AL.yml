@@ -108,19 +108,28 @@ sq:
         craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
           Mund të përfundoni atë?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
           Mund të përfundoni atë?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
+          Mund të përfundoni atë?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
       Overworld Place Wall_callout:
         craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
@@ -128,14 +137,25 @@ sq:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
           një komandë për të lëvizur përpara?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
+          një komandë për të lëvizur përpara?
       Underground Iron_callout:
         craft_what_is_iron: Hidhe në erë këtë hekur!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Hidhe në erë këtë hekur!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Hidhe në erë këtë hekur!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
           dhe ndrysho madhësinë.
       frozen cross rotate_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross rotate_test_callout:
         replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
           me një numër
       frozen cross_callout:
@@ -148,7 +168,17 @@ sq:
         frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
       frozen freeplay_callout:
         snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
       frozen line_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_b_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_test_callout:
         move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
           "When Run" për ta bërë Elsën të ecë përpara
       frozen perpendicular_callout:
@@ -156,15 +186,39 @@ sq:
           drop down përcakton sa herë kthehet Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
       frozen square iterative_callout:
         frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_b_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_test_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
       frozen square loop 3x_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_test_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
       frozen square loop_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
+      frozen square loop_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop_test_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
       frozen square snowflake_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_test_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
       grade4_artist_parameters_squares1_callout:

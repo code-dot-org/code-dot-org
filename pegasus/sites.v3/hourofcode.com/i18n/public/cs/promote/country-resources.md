@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Vyžadují minimální čas na přípravu pro organizátory
 - Řídí se samy, což umožňuje žákům postupovat jejich vlastním tempem a podle jejich úrovně
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Připravte si potřebný hardware – počítače nejsou povinné
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Přezkoušejte cvičení na počítačích a zařízeních studentů.** Ujistěte se, že fungují správně (se zvukem a videem).
-- **Prohlédněte si stránku s certifikátem** abyste sami viděli, co obdrží žáci, když výuku dokončí. 
+- **Prohlédněte si stránku s certifikátem** abyste sami viděli, co obdrží žáci, když výuku dokončí.
 - **Poskytněte sluchátka vaší skupině**, nebo řekněte studentům, ať si přinesou vlastní, pokuď cvičení, které jste vybrali nejlépe funguje se zvukem.
 
 ## 3) V závislosti na vámi dostupných počítačích si předem naplánujte

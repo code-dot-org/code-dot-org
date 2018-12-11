@@ -270,7 +270,7 @@
   "localFunction": "Has posat {funcName} dins una altra funció. Hauries de moure {funcName} a un lloc diferent del teu programa.",
   "loseMessage": "Has perdut!",
   "makeProjectileDisappear": "desaparèixer",
-  "makeProjectileBounce": "bota",
+  "makeProjectileBounce": "rebot",
   "makeProjectileAirplane": "",
   "makeProjectileBasketball": "",
   "makeProjectileDisc": "",

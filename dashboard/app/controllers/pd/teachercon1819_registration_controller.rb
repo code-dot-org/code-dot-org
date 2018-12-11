@@ -58,6 +58,8 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
         phone: @application.sanitize_form_data_hash[:phone]
       }.to_json
     }
+
+    puts "script data: #{@script_data.inspect}"
   end
 
   def destroy

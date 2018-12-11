@@ -11,9 +11,10 @@ import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
-  setOAuthProvider,
+  setAuthProviders,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
@@ -33,7 +34,8 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
-  store.dispatch(setOAuthProvider(homepageData.provider));
+  store.dispatch(setAuthProviders(homepageData.providers));
+  store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
 
   let courseId;
   let scriptId;
@@ -118,6 +120,7 @@ function showHomepage() {
         {isTeacher && (
           <TeacherHomepage
             announcement={announcement}
+            hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
@@ -131,6 +134,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
         {!isTeacher && (
@@ -138,8 +142,8 @@ function showHomepage() {
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
-            canLeave={homepageData.canLeave}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
       </div>
@@ -156,13 +160,13 @@ function showHomepage() {
 function getTeacherAnnouncement(override) {
   // Start with default teacher announcement.
   let announcement = {
-    heading: i18n.announcementHeadingYouTubeNoCookie(),
-    buttonText: i18n.learnMore(),
-    description: i18n.announcementDescriptionYouTubeNoCookie(),
-    link: "https://support.code.org/hc/en-us/articles/360006799751",
+    heading: i18n.announcementHeadingBackToSchool2018(),
+    buttonText: i18n.announcementButtonBackToSchool2018(),
+    description: i18n.announcementDescriptionBackToSchool2018(),
+    link: "https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ",
     image: "",
     type: "bullhorn",
-    id: "youtube_nocookie"
+    id: "back_to_school_2018"
   };
 
   // Optional override of teacher announcement (typically via DCDO).

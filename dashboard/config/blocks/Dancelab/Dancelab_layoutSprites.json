@@ -1,0 +1,103 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "layoutSprites",
+    "blockText": "layout {GROUP} as a {FORMAT}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "all aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "all bears",
+            "\"BEAR\""
+          ],
+          [
+            "all cats",
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
+            "all ducks",
+            "\"DUCK\""
+          ],
+          [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
+            "all moose",
+            "\"MOOSE\""
+          ],
+          [
+            "all pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "all robots",
+            "\"ROBOT\""
+          ],
+          [
+            "all sharks",
+            "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "FORMAT",
+        "options": [
+          [
+            "border",
+            "\"border\""
+          ],
+          [
+            "inside square",
+            "\"inner\""
+          ],
+          [
+            "circle",
+            "\"circle\""
+          ],
+          [
+            "grid",
+            "\"grid\""
+          ],
+          [
+            "row",
+            "\"row\""
+          ],
+          [
+            "column",
+            "\"column\""
+          ],
+          [
+            "criss-cross",
+            "\"x\""
+          ],
+          [
+            "plus",
+            "\"plus\""
+          ],
+          [
+            "random",
+            "\"random\""
+          ]
+        ]
+      }
+    ]
+  }
+}

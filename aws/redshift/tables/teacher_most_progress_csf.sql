@@ -73,7 +73,7 @@ FROM (
                 JOIN analysis.course_structure cs 
                   ON cs.stage_id = us.stage_id
                 JOIN dashboard_production_pii.users u on u.id = se.user_id -- teachers
-                JOIN school_years sy on  us.started_at between sy.started_at and sy.ended_at
+                JOIN analysis.school_years sy on  us.started_at between sy.started_at and sy.ended_at
        ) 
        WHERE update_rank = 1 
        GROUP BY 1,2,3,4,5

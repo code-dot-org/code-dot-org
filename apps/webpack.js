@@ -32,6 +32,7 @@ var baseConfig = {
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
       '@cdo/tutorialExplorer/locale': path.resolve(__dirname, 'src', 'tutorialExplorer', 'locale-do-not-import.js'),
+      '@cdo/regionalPartnerSearch/locale': path.resolve(__dirname, 'src', 'regionalPartnerSearch', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),

@@ -4,14 +4,14 @@ id:
     block_categories:
       Actions: Aksi
       Loops: Loop
-      Functions: Fungsi
+      Functions: fungsi
       Color: Warna
       Math: Matematika
       Logic: Logika
-      Variables: Variabel
+      Variables: variabel
       Conditionals: Kondisi
       Events: kegiatan
-      Text: teks
+      Text: Teks
       Input: Masukan
       Start: Mulai
       Booleans: Boolean

@@ -208,7 +208,7 @@ class TextResponsesTable extends Component {
       * where hashedResponse is a hash of rowData.response
       */
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider columns={columns} id="text-responses-table">
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey={({rowIndex}) => rowIndex} />
       </Table.Provider>

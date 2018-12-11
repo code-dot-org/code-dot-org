@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
@@ -7,6 +6,8 @@ import { ImagePreview } from './AniGifPreview';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
 import { openDialog } from '@cdo/apps/redux/instructionsDialog';
+
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 const styles = {
   standard: {
@@ -26,7 +27,7 @@ const styles = {
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {
-    renderedMarkdown: PropTypes.string.isRequired,
+    markdown: PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: PropTypes.bool,
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
@@ -43,7 +44,7 @@ class MarkdownInstructions extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
+    if (prevProps.markdown !== this.props.markdown) {
       this.configureMarkdown_();
     }
   }
@@ -105,7 +106,7 @@ class MarkdownInstructions extends React.Component {
   render() {
     const {
       inTopPane,
-      renderedMarkdown,
+      markdown,
     } = this.props;
 
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
@@ -117,8 +118,9 @@ class MarkdownInstructions extends React.Component {
           inTopPane && styles.inTopPane,
           inTopPane && canCollapse && styles.inTopPaneCanCollapse,
         ]}
-        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
-      />
+      >
+        <UnsafeRenderedMarkdown markdown={markdown} />
+      </div>
     );
   }
 }

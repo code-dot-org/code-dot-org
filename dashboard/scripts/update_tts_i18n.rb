@@ -2,7 +2,6 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR'].freeze
 k1_scripts = Script.all.select(&:text_to_speech_enabled?)
 
 def clean(value)
@@ -21,20 +20,33 @@ def text_translated?(left, right)
   clean(left) != clean(right)
 end
 
-ENABLED_LANGUAGES.each do |lang|
+TextToSpeech::VOICES.keys.each do |lang|
+  next if lang == :'en-US'
+
   I18n.locale = lang
   puts "updating text-to-speech for #{I18n.locale}"
   k1_scripts.each do |script|
     script.levels.each do |level|
       next unless level.is_a?(Blockly)
 
-      # Instructions
+      # Short Instructions
 
-      translated_text = TextToSpeech.sanitize(level.localized_instructions || "")
-      english_text = TextToSpeech.sanitize(level.instructions || "")
+      translated_text = TextToSpeech.sanitize(level.localized_short_instructions || "")
+      english_text = TextToSpeech.sanitize(level.short_instructions || "")
 
       if text_translated?(translated_text, english_text)
         level.tts_upload_to_s3(translated_text)
+      end
+
+      # Long Instructions
+
+      unless script.csf_international? || script.twenty_hour?
+        translated_text = TextToSpeech.sanitize(level.localized_long_instructions || "")
+        english_text = TextToSpeech.sanitize(level.long_instructions || "")
+
+        if text_translated?(translated_text, english_text)
+          level.tts_upload_to_s3(translated_text)
+        end
       end
 
       # Authored Hints

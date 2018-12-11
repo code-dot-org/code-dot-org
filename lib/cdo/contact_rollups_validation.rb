@@ -216,7 +216,7 @@ class ContactRollupsValidation
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE grades_taught IS NOT NULL",
       min: 200_000,
-      max: 400_000
+      max: 800_000
     },
     {
       name: "Check that all contacts with grades taught are "\

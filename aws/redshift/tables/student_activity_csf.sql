@@ -53,7 +53,7 @@ student_activity as
       JOIN dashboard_production_pii.users u_students
         ON u_students.id = us.user_id 
        AND u_students.user_type = 'student'
-      JOIN school_years sy 
+      JOIN analysis.school_years sy 
         on  us.started_at between sy.started_at and sy.ended_at
         AND sy.school_year = cst.school_year),
       

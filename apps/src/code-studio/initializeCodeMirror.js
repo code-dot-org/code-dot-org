@@ -19,8 +19,10 @@ import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import jsonic from 'jsonic';
 import {JSHINT} from 'jshint';
-import marked from 'marked';
-import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import UnsafeRenderedMarkdown from '../templates/UnsafeRenderedMarkdown';
 
 window.JSHINT = JSHINT;
 
@@ -64,8 +66,12 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
     if (previewElement.length > 0) {
       const originalCallback = callback;
       updatePreview = editor => {
-        previewElement.html(marked(editor.getValue(), {renderer: stylelessRenderer}));
-        previewElement.children('details').details();
+        ReactDOM.render(
+          React.createElement(UnsafeRenderedMarkdown, {
+            markdown: editor.getValue()
+          }),
+          previewElement[0],
+        );
       };
 
       callback = (editor, ...rest) => {

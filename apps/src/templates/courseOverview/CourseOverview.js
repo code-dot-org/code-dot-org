@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import $ from 'jquery';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
+import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -38,7 +39,7 @@ const styles = {
   },
   versionDropdown: {
     marginBottom: 13,
-  }
+  },
 };
 
 export default class CourseOverview extends Component {
@@ -73,6 +74,26 @@ export default class CourseOverview extends Component {
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
       utils.navigateToHref(`/courses/${courseName}${queryString}`);
     }
+  };
+
+  onDismissVersionWarning = () => {
+    if (!this.props.scripts[0]) {
+      return;
+    }
+
+    // Because there is no user_course table, store the fact that the version
+    // dialog has been dismissed on the first user_script in the course.
+    const firstScriptId = this.props.scripts[0].id;
+
+    // Fire and forget. If this fails, we'll have another chance to
+    // succeed the next time the warning is dismissed.
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/v1/user_scripts/${firstScriptId}`,
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({version_warning_dismissed: true}),
+    });
   };
 
   render() {
@@ -113,6 +134,7 @@ export default class CourseOverview extends Component {
             notice={i18n.wrongCourseVersionWarningNotice()}
             details={i18n.wrongCourseVersionWarningDetails()}
             dismissible={true}
+            onDismiss={this.onDismissVersionWarning}
           />
         }
         <div style={styles.titleWrapper}>
@@ -140,12 +162,15 @@ export default class CourseOverview extends Component {
         </div>
         {showNotification && <VerifiedResourcesNotification/>}
         {isTeacher &&
-          <CourseOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            id={id}
-            title={title}
-            resources={teacherResources}
-          />
+          <div>
+            <LabeledSectionSelector/>
+            <CourseOverviewTopRow
+              sectionsInfo={sectionsInfo}
+              id={id}
+              title={title}
+              resources={teacherResources}
+            />
+          </div>
         }
         {scripts.map((script, index) => (
           <CourseScript

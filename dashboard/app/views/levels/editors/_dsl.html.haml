@@ -19,9 +19,9 @@
 - if @level.filename
   = "Filename: #{@level.filename}"
 .field
-  = f.label :encrypted, 'Encrypt this entire file'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this entire file"}
   %p Use this if you want to prevent devious students from finding answers in our git repo
-  = boolean_check_box f, :encrypted
+
 .script_text
   = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 

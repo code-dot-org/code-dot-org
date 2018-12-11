@@ -7,6 +7,7 @@ const defaultProps = {
   statusStudentCount: Status.SUCCEEDED,
   hasConfirmedSchool: false,
   adminSetStatus: false,
+  currentlyDistributingDiscountCodes: true,
 };
 
 export default storybook => {
@@ -98,6 +99,15 @@ export default storybook => {
             getsFullDiscount={false}
             initialDiscountCode={null}
             adminSetStatus={true}
+          />
+        )
+      },
+      {
+        name: 'Not currently distributing discount codes',
+        story: () => (
+          <EligibilityChecklist
+            {...defaultProps}
+            currentlyDistributingDiscountCodes={false}
           />
         )
       },

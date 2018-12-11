@@ -3,6 +3,7 @@
 #
 class FileBucket < BucketHelper
   MANIFEST_FILENAME = 'manifest.json'.freeze
+  MAXIMUM_FILENAME_LENGTH = 512
 
   def initialize
     super CDO.files_s3_bucket, CDO.files_s3_directory

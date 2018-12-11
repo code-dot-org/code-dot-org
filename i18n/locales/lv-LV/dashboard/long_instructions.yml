@@ -1,0 +1,104 @@
+lv:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: "Lēkšanas bloks pārvieto mākslinieku bez zīmēšanas.\nUzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara."
+      2-3 Artist 3new: "Sarkanā cepure ir 100 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir par 70 pikseļiem zemāka.\n*(Katras cepures platums ir 50 pikseļi.)*"
+      2-3 Artist 4: Palīdzi man pabeigt māju šim kaķim.
+      2-3 Artist 6: "Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.\nPadoms: visas 3 malas ir vienāda garuma."
+      2-3 Artist 9 NEW: Pabeidz gaisa pūķi
+      2-3 Artist 9 REPLACEMENT: Pabeidz zīmēt šīs kāpnes!
+      2-3 Artist 9: Pabeidz gaisa pūķi
+      2-3 Artist Debugging 1: "Šai cepurei jābūt tikai 50 pikseļus platai. Vai vari to salabot?\n"
+      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\r\n\\r\nVai vari to izveidot 10 pikseļus platāku?"
+      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
+      2-3 Artist Debugging 3: "Manā laivā ir caurums! \\r\n\\r\nVai vari izlabot zīmējumu, lai cauruma nebūtu?"
+      2-3 Artist Debugging 5: "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?"
+      2-3 Artist Debugging 6: |-
+        Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\r
+        \r
+        Izmaini kodu, lai uzzīmētu pēdējo kāju.
+      2-3 Artist Debugging 7: |-
+        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r
+        \r
+        Vai vari to uzzīmēt pareizi?
+      2-3 Artist Debugging 8: |-
+        Skolotājs saka, ka man ir jāpabeidz iesāktais!\r
+        \r
+        Palīdzi man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?
+      2-3 Artist Debugging 9: |-
+        Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt stiebru pareizajā virzienā?
+      2-3 Artist Free Play: Brīvā spēle! Zīmē visu, ko vēlies.
+      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r\n\\r\nKas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
+      2-3 Artist Functions 12 Mike: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 12 a: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 12: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Loops New 12: 'Uzzīmē rombu, kura malas ir 100 pikseļus garas. '
+      2-3 Artist Loops New 13: "Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu vienu rombu!"
+      2-3 Artist Nested Loops 10: Atkārto šo kodu 12 reizes, lai pabeigtu rakstu.
+      2-3 Artist Nested Loops 11: Atkārto šo kodu 4 reizes, lai pabeigtu rakstu, pagriezies par 90 grādiem pēc katra riņķa.
+      2-3 Artist Nested Loops 12: Atkārto šo kodu 12 reizes, lai pabeigtu cilpas.
+      2-3 Artist Nested Loops 2: "Tagad atkārto trīsstūri 6 reizes. Pēc katra trīsstūra nepieciešams pagriezties par 60 grādiem, pirms zīmēt nākamo."
+      2-3 Artist Nested Loops 7: "Lai uzzīmētu sauli, atkārto šo trīsstūri 10 reizes. \n\nTev nepieciešams pārvietoties un pagriezties pēc katra trīsstūra. \n\nTu vari izdomāt cik daudz pagriezties, ja riņķī esošos grādus dali ar trīsstūru skaitu, ko nepieciešams uzzīmēt."
+      2-3 Artist Nested Loops 8: "Tagad attēlā uzzīmēsim zāli.\n\nKatrs zāles stiebrs ir 50 pikseļu attālumā viens no otra."
+      2-3 Artist Nested Loops 9: "Pabeigsim šo zīmējumu, pievienojot mūsu ziedu.\n\nAtkārto rombu 12 reizes, lai uzzīmētu ziedu."
+      2-3 Bee Conditionals 11: "Brīnums, kas tur ir! \nPalīdzi man lidot apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
+      2-3 Bee Conditionals 13: |-
+        Te daudz kas notiek!
+        Lieto visu ko esi iemācījies, lai iegūtu visu nektāru un tad pagatavotu medu.
+      2-3 Bee Conditionals 15: "Šis kāpņu ceļš šķiet jau redzēts. \nVai vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu?"
+      2-3 Bee Conditionals 3: "Skaties cik daudz nektāra!\nPalīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu."
+      2-3 Bee Loops 1: |-
+        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      2-3 Bee Loops 3B: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
+      2-3 Bee Loops 4A: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
+      2-3 Maze 15: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
+      2-3 Maze Loops 18: "Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!\nPamēģini lietot vienu \"Atkārtot\" bloku iekšā citā, lai samazinātu kopējo bloku skaitu."
+      4-5 Artist 1: "Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus gara)\n\n"
+      4-5 Artist 5: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu, izmantojot doto ciklu?
+      4-5 Bee Conditionals 2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      4-5 Nested Loops 5: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
+      4-5 Nested Loops 9: Uzzīmē zobus krokodila mutē!
+      Overworld Move to Sheep: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
+      Overworld Move to Sheep_2018: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
+      Overworld Move to Sheep_2019: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
+      course4_artist_fwp_challenge1: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+      courseA_maze_seq6_2018: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
+      courseA_maze_seq8_2018: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
+      courseB_maze_seq3: '*"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!"*'
+      grade2_PuppyLoops_10: |-
+        Skolotājs saka, ka man ir jāpabeidz iesāktais!\r
+        \r
+        Palīdzi man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?
+      grade2_PuppyLoops_4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
+      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
+      grade2_PuppyLoops_9: |-
+        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r
+        \r
+        Vai vari to uzzīmēt pareizi?
+      grade2_puppy_loops4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
+      grade3_ConditionalsElse_2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade3_Conditionals_10: |-
+        Te daudz kas notiek!
+        Lieto visu ko esi iemācījies, lai iegūtu visu nektāru un tad pagatavotu medu.
+      grade3_Conditionals_12: "Šis kāpņu ceļš šķiet jau redzēts. \nVai vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu?"
+      grade3_Conditionals_2: "Skaties cik daudz nektāra!\nPalīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu."
+      grade3_Conditionals_8: "Brīnums, kas tur ir! \nPalīdzi man lidot apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
+      grade3_Loops_4: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
+      grade3_Loops_6: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
+      grade3_Loops_7: |-
+        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      grade3_Loops_TeacherIDo: |-
+        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      grade3_bee_conditionals_quantum2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade3_maze_nestedLoops4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
+      grade4_arist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
+      grade4_arist_nested_loop_triangles4: Uzzīmē zobus krokodila mutē!
+      grade4_artist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
+      grade4_bee_conditionals_quantum2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade4_review_artist2: "Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.\nPadoms: visas 3 malas ir vienāda garuma."
+      grade4_review_artist3: Lekšanas bloks pārvieto mākslinieku bez zīmēšanas. Zīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara.
+      grade4_review_bee1: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
+      level 'grade3_Loops_4: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
+      level 'grade3_Loops_6: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
+      level 'grade3_Loops_7: |-
+        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.

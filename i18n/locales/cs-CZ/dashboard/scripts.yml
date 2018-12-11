@@ -81,7 +81,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             'Maze: Loops':
               name: 'Bludiště: cykly'
             'Maze: Sequence':
@@ -139,7 +139,7 @@ cs:
             'Maze: Conditionals':
               name: 'Bludiště: podmínky'
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             'Studio: Create a Game':
               name: 'Play Lab: Vytvoření hry'
             'Studio: Create a Story':
@@ -293,7 +293,7 @@ cs:
         20-hour:
           title: Zrychlený úvodní kurz CS
           description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8), ale jistě bude bavit studenty jakéhokoliv věku.
-          description_short: Tento 20ceti hodinový kurz zahrnuje základní pojmy informatiky a programování v kurzech 2-4.
+          description_short: Tento 20 hodinový kurz zahrnuje základní pojmy informatiky a programování z kurzů 2-4.
           description_audience: Stáří 10-13
           stages:
             Abstraction:
@@ -307,11 +307,11 @@ cs:
             Functions:
               name: Funkce
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction to Computer Science:
               name: Úvod do počítačové vědy
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
             Song Writing:
               name: Psaní Písně
             The Artist:
@@ -392,6 +392,11 @@ cs:
           stages:
             Puzzles:
               name: Hádanky
+        cspunit1:
+          description_short: Programování
+          stages:
+            Binary Numbers:
+              name: Binární čísla
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -407,6 +412,7 @@ cs:
             Strings and Images:
               name: Řetězce a obrázky
         cspunit3:
+          description_short: Programování
           stages:
             Creating Functions:
               name: Vytvářející funkce
@@ -443,6 +449,7 @@ cs:
             Wrap-Up:
               name: Rekapitulace
         cspunit2:
+          description_short: Programování
           stages:
             The Internet:
               name: Internet je pro všechny
@@ -595,7 +602,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Happy Maps:
               name: Šťastné mapy
             Move it, Move it:
@@ -603,7 +610,7 @@ cs:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             The Big Event:
               name: Velká událost
         ScienceP3OLPT2:
@@ -637,20 +644,20 @@ cs:
               name: Žvýkačka Play Lab
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           stages:
             Hour of Code 2015:
               name: Hodina kódu 2013
         starwarsblocks:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           stages:
             Hour of Code 2015:
               name: Hodina kódu 2013
         mc:
-          title: Hodina kódu s Minecraftem
+          title: Hodina kódu Minecraftu
           description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství ve světě Minecraftu
           description_short: Prozkoumej svět Minecraftu pomocí kódu
           stages:
@@ -662,6 +669,10 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+        cspunit5:
+          description_short: Programování
+        cspunit4:
+          description_short: Programování
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -709,6 +720,8 @@ cs:
               name: Katedra učitele
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Binární čísla
             The Internet:
               name: Internet
         csp3-2017:
@@ -770,7 +783,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
         grade1:
           stages:
             Events:
@@ -826,6 +839,7 @@ cs:
             'Farmer: While Loops':
               name: 'Farmář - While cykly'
         csd3-2017:
+          title: CSD Jednotka 3 - Animace and hry ('17-'18)
           description_short: "Programování"
           stages:
             Functions:
@@ -875,9 +889,9 @@ cs:
             Welcome!:
               name: Vítejte!
         basketball:
-          title: Vyberte si svůj tým a vytvořte basketbalovou hru
+          title: Vytvoř basketbalovou hru
           description_short: Vytvoř basketbalovou hru
-          description: Vyberte si svůj tým a vytvořte basketbalovou hru
+          description: Vytvoř basketbalovou hru
           stages:
             Bounce:
               name: Odraz
@@ -892,6 +906,8 @@ cs:
               name: Binární náramky
             Binary Images:
               name: Binární obrázky
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:
@@ -981,6 +997,8 @@ cs:
           stages:
             Hour of Code 2013:
               name: Hodina kódu 2013
+        sports:
+          title: Naprogramuj svoji vlastní sportovní hru
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1050,6 +1068,7 @@ cs:
             Functions with Parameters_:
               name: Funkce s Parametry
         csd3-draft:
+          title: 'CSD Jednotka 3 - Programování: Animace and hry'
           stages:
             Variables:
               name: Proměnné
@@ -1241,7 +1260,9 @@ cs:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
+              name: Hodina kódu Minecraftu
+          description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!
+          description: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou! Cestuj hrou Minecraft s kódem.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1284,8 +1305,10 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+          title: CSD Jednotka 3 - Animace and hry
           description_short: "Programování"
         csd3-2018:
+          title: CSD Jednotka 3 - Animace and hry ('18-'19)
           description_short: "Programování"
           stages:
             Variables:
@@ -1308,7 +1331,7 @@ cs:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1322,7 +1345,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             'Functions: Songwriting':
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1338,7 +1361,7 @@ cs:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
         courseb-2018:
           assignment_family_title: Kurz B
           stages:
@@ -1352,7 +1375,7 @@ cs:
           assignment_family_title: Kurz D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1366,9 +1389,9 @@ cs:
             Artist Binary:
               name: Umělecké binární
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1394,7 +1417,7 @@ cs:
             Introduction:
               name: Úvod
             'Functions: Songwriting':
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1402,7 +1425,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
+              name: Hodina kódu Minecraftu
         coursef-2018:
           assignment_family_title: Kurz F
           stages:
@@ -1424,6 +1447,8 @@ cs:
               name: Podmínky s kartami
         csp1-2018:
           stages:
+            Binary Numbers:
+              name: Binární čísla
             The Internet:
               name: Internet
         csp3-2018:
@@ -1449,3 +1474,101 @@ cs:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvé digitální stopy
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umělec
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umělec
+        dance:
+          stages:
+            Dance Party:
+              name: Taneční večírek
+          title: Taneční večírek
+          description_short: S Katy Perry, Madonnou, J. Balvinem, Siou, Keithem Urbanem, Ciarou a 25 dalšími!
+          description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umělec
+        aquatic:
+          stages:
+            Aquatic:
+              name: Vodní
+          description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Taneční večírek
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Taneční večírek
+        dance-extras:
+          title: Nepřestávej tančit
+          description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
+            The Artist:
+              name: Umělec
+        dance-low:
+          stages:
+            Dance Party:
+              name: Taneční večírek
+          description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli! (Tato verze je pro pomalá připojení)
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programování
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Digital Citizenship:
+              name: Digitální občanství
+            'Unplugged: Binary':
+              name: 'Nezapojené: binární'
+            Artist Binary:
+              name: Umělecké binární
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            Nested Loops:
+              name: Vnořené cykly
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Conditionals:
+              name: Podmínky
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programování
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
+            Binary Bracelets:
+              name: Binární náramky
+            'Unplugged: Binary':
+              name: 'Nezapojené: binární'
+            Artist Binary:
+              name: Umělecké binární
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

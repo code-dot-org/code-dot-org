@@ -55,7 +55,7 @@ class SharedBlocklyFunction < ApplicationRecord
         end
         xml.title(name, name: 'NAME')
         xml.statement(name: 'STACK') do
-          xml << stack
+          xml << stack.gsub(/\n */, '')
         end
       end
     end.doc

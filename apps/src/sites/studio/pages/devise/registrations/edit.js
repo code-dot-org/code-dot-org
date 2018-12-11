@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
+import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
@@ -19,10 +22,22 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
+  dependentStudents,
   studentCount,
 } = scriptData;
 
 $(document).ready(() => {
+  const migrateMultiAuthMountPoint = document.getElementById('migrate-multi-auth');
+  if (migrateMultiAuthMountPoint) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <MigrateToMultiAuth/>
+      </Provider>,
+      migrateMultiAuthMountPoint
+    );
+  }
+
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
     link: $('#edit-email-link'),
@@ -33,10 +48,7 @@ $(document).ready(() => {
     emailChangedCallback: onEmailChanged,
   });
 
-  new ChangeUserTypeController(
-    $('#change-user-type-modal-form'),
-    userType,
-  );
+  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
@@ -61,6 +73,7 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
+        dependentStudents={dependentStudents}
         hasStudents={studentCount > 0}
       />,
       deleteAccountMountPoint

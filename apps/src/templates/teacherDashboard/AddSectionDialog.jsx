@@ -9,6 +9,7 @@ import {sectionShape} from './shapes';
 import {
   isAddingSection,
   beginImportRosterFlow,
+  setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
 } from './teacherSectionsRedux';
@@ -23,6 +24,7 @@ class AddSectionDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     section: sectionShape,
     beginImportRosterFlow: PropTypes.func.isRequired,
+    setRosterProvider: PropTypes.func.isRequired,
     setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
   };
@@ -32,6 +34,7 @@ class AddSectionDialog extends Component {
       isOpen,
       section,
       beginImportRosterFlow,
+      setRosterProvider,
       setLoginType,
       handleCancel
     } = this.props;
@@ -49,6 +52,7 @@ class AddSectionDialog extends Component {
             <LoginTypePicker
               title={title}
               handleImportOpen={beginImportRosterFlow}
+              setRosterProvider={setRosterProvider}
               setLoginType={setLoginType}
               handleCancel={handleCancel}
             />
@@ -67,6 +71,7 @@ export default connect(state => ({
   section: state.teacherSections.sectionBeingEdited,
 }), dispatch => ({
   beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
+  setRosterProvider: provider => dispatch(setRosterProvider(provider)),
   setLoginType: loginType => dispatch(editSectionProperties({loginType})),
   handleCancel: () => dispatch(cancelEditingSection()),
 }))(AddSectionDialog);

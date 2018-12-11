@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 La hora del código es conducido por la hora del código ordenador ciencia educación semana asesoramiento y comités de.
 
@@ -119,19 +119,13 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 ---
 
-# Principales socios promocionales
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
 # Socios internacionales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Socios afiliados
+# Curriculum y Compañeros de Tutoriales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

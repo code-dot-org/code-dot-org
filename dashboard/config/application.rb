@@ -23,7 +23,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    if Rails.env.development?
+    unless CDO.chef_managed
+      # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+      # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
@@ -34,7 +36,9 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+    end
 
+    if Rails.env.development?
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
 
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
@@ -119,6 +123,7 @@ module Dashboard
     config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
+    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}

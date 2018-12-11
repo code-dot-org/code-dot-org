@@ -1,43 +1,65 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: <%= hoc_s(:title_how_to_officials).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# Kuidas kogu kogukonda kaasata
 
-[col-33]
+### Näita oma kodukohas, piirkonnas või linnas enda pühendumist arvutiteadustele
 
-![](/images/fit-275/highlight-obama.png)&nbsp;&nbsp;&nbsp;![](/images/fit-246/dan.jpg)
+---
 
-[/col-33]
+</br>
 
-<p style="clear:both">&nbsp;</p>
+## Plaanid kutsuda KoodiTund üritusele rahvasaadiku?
 
-## Get every school participating, every student learning!
+[Vaata meie juhendit](/files/elected-official.pdf), kus on kogu info külastuse planeerimiseks ja suurepärase ürituse korraldamiseks!
 
-1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+![](/images/fit-800/hoc_govs.png)
 
-2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
+Vasakult paremale:* rahvasaadikud Arkansasest, North Carolinast ja Arizonasest KoodiTundi läbi tegemas.*
 
-3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+## Kutsu iga kool osalema ning iga laps õppima!
 
-4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
+### 1. Loe meie 1-leheküljelist juhendit
 
-5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+Vaata [miks arvutiteaduse alane haridus on oluline](/files/hoc-one-pager.pdf) ning kuidas saad KoodiTund toimumisele kaasa aidata.
 
-6. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
+### 2. Kaasa kohalikke koole ja piirkondasid
 
-7. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
-    
-    - Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-    - Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)   
-          
-        
+Kasuta [seda e-kirja](<%= resolve_url('/promote/resources#sample-emails') %>) või [ neid jutupunkte](<%= resolve_url('/promote/stats') %>) algatuseks ning vaata seda[ kuidas-teha juhendit](<%= resolve_url('/how-to') %>) koolidele ja piirkondadele.
 
-8. **Issue a press release.** [Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
+### 3. Korralda KoodiTund üritus
 
-9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+Loe meie[ ürituse korraldamise juhendit](<%= resolve_url('/how-to/events') %>) selle läbiviimiseks, [meedia juhendit](<%= resolve_url('/promote/press-kit') %>) ja teisi planeerimise abivahendeid. Ürituse korraldamine on suurepärane viis KoodiTund kampaania reklaamimiseks ning osalejatenumbrite tõstmiseks.
+
+### 4. Osale Arvutiteaduse hariduse nädala (Computer Science Education Week) üritustel
+
+[Leia klassid ja koolid](<%= resolve_url('/events') %>), kes sinu asulas, linnas või maakonnas KoodiTund kampaaniast osa võtavad.
+
+### 5. Tee vastavasisuline avaldus
+
+Siin on [ näidisavaldus](<%= resolve_url('resources/proclamation') %>), mis toetab Arvutiteaduse hariduse nädalat (Computer Science Education Week) ja selle eesmärke.
+
+### 6. Kirjuta arvamusartikkel
+
+Kaalu arvamusartikli avaldamist kohalikus lehes. Siin on [näidisartikkel](<%= resolve_url('/promote/op-ed') %>), mis toetab Arvuteaduse hariduse nädalay (Computer Science Education Week) ja selle eesmärke.
+
+### 7. Levita infot
+
+[Jaga KoodiTund videot Facebookis](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus)ja[näita oma poolehoidu Twitteris](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Jaga ürituse pilte või videosid, kus koos teiste täiskasvanutega KoodiTund läbi teete. Kasuta **#HourOfCode**, et Code.org (@code.org) seda näeks ja saaks seda edasi jagada. Või kasutage neid näidissäutse:
+
+- *Igal õpilasel (poiss ja tüdruk) peab olema võimalus arvutiteaduse õppida. Liitu meiega ja tee #HourOfCode läbi [https://hourofcode.com](<%= resolve_url('/') %>)*
+- *Meil on hea meel KoodiTund liikumisega liituda. Kas sina oled pundis? #HourOfCode[https://hourofcode.com](<%= resolve_url('/') %>)*
+
+### 8. Avalda pressiteade
+
+[Kasuta seda näidist](<%= resolve_url('/promote/official-press-release') %>) juhisena.
+
+### 9. Kohalik tasand
+
+[Loe lähemalt, kuidas Sinu piirkonnas arvutiteadusi õpetatakse](<%= codeorg_url('/advocacy') %>). Kirjuta ühisavaldusele alla ning sulle saad ülevaateid, millega Code.org hakkama on saanud.
 
 <%= view :signup_button %>

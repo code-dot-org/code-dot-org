@@ -136,6 +136,7 @@ class SubmissionStatusAssessmentsTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.name},
             }
           },
+          transforms: [sortable],
         },
         cell: {
           format: this.nameCellFormatter,

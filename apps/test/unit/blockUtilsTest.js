@@ -11,6 +11,7 @@ import {
 import { parseElement, serialize } from '@cdo/apps/xml.js';
 import { expect } from '../util/configuredChai';
 import sinon from 'sinon';
+import { allowConsoleWarnings } from '../util/testUtils';
 
 describe('block utils', () => {
   describe('cleanBlocks', () => {
@@ -872,6 +873,18 @@ describe('block utils', () => {
 
         valueToCodeStub.restore();
       });
+      it('generates code for a method call with specific this object', () => {
+        createBlock({
+          func: 'sayHi',
+          methodCall: true,
+          thisObject: 'spot',
+          blockText: 'say hi',
+          args: [],
+        }, '', 'test');
+        const code = generator['test_sayHi']();
+
+        expect(code.trim()).to.equal('spot.sayHi();');
+      });
       it('generates code for a object property', () => {
         createBlock({
           name: 'getToy',
@@ -943,6 +956,7 @@ describe('block utils', () => {
       });
     });
     describe('custom inputs', () => {
+      allowConsoleWarnings();
       it('generates code for a statement input', () => {
         createBlock({
           func: 'runThisCallback',
@@ -1048,6 +1062,17 @@ describe('block utils', () => {
 
         expect(code.trim()).to.equal(
           'processAnotherStringValue("some input with a \\"quote\\" in it");');
+      });
+      it('does not throw when there are extra args', () => {
+        createBlock({
+          name: 'extraArgsTest',
+          expression: 'extraArgsTest;',
+          blockText: 'run this program in strict mode',
+          args: [{name: 'EXTRA'}],
+        }, '', 'test');
+        const code = generator['test_extraArgsTest']();
+
+        expect(code.trim()).to.equal('extraArgsTest;');
       });
     });
   });

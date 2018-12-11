@@ -3,10 +3,10 @@ sk:
   devise:
     confirmations:
       confirmed: Vaša e-mailová adresa bola úspešne potvrdená.
-      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako si aktivovať
+      send_instructions: O niekoľko minúť obdržíte e-mail s pokynmi, ako si aktivovať
         účet.
-      send_paranoid_instructions: Ak je Váš email v databáze, o niekoľko minúť obdržíte
-        email s pokynmi, ako si aktivovať účet.
+      send_paranoid_instructions: Ak Vašu e-mailovú adresu už máme v našej v databáze,
+        o niekoľko minúť obdržíte e-mail s pokynmi, ako si aktivovať účet.
     failure:
       already_authenticated: Už ste prihlásený.
       inactive: Vaše konto ešte nebolo aktivované.
@@ -29,12 +29,12 @@ sk:
       success: Úspešné overenie z účtu %{kind}.
     passwords:
       no_token: Na stránku, ktorá obnovuje heslo, je možné vstúpiť len cez odkaz,
-        ktorý sme poslali emailom. Prosím presvedčte sa, či je URL adresa v plnom
+        ktorý sme poslali e-mailom. Prosím presvedčte sa, či je URL adresa v plnom
         tvare a správna.
-      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako si obnoviť
+      send_instructions: O niekoľko minúť obdržíte e-mail s pokynmi, ako si obnoviť
         heslo.
-      send_paranoid_instructions: Ak je Váš email v databáze, o niekoľko minúť obdržíte
-        email s pokynmi, ako si obnoviť heslo.
+      send_paranoid_instructions: Ak Vašu e-mailovú adresu už máme v našej v databáze,
+        o niekoľko minúť obdržíte e-mail s linkom pre obnovu hesla.
       updated: Vaše heslo bolo úspešne zmenené. Ste prihlásený.
       updated_not_active: Vaše heslo bolo úspešne zmenené.
     registrations:
@@ -46,17 +46,18 @@ sk:
       signed_up_but_locked: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie nie
         je možné, pretože Váš účet je uzamknutý.
       signed_up_but_unconfirmed: Správa s potvrdzujúcim odkazom bola odoslaná na Vašu
-        emailovú adresu. Pre aktivovanie účtu otvorte daný odkaz.
+        e-mailovú adresu. Pre aktivovanie účtu otvorte daný odkaz.
       update_needs_confirmation: Úspešne ste aktualizovali konto. Prosím, skontrolujte
-        svoj email a kliknite na potvrdzujúci email, aby sme overili Vašu novú emailovú
+        svoj e-mail a kliknite na potvrdzujúci link, aby sme overili Vašu novú e-mailovú
         adresu.
       updated: Úspešne ste aktualizovali Vaše konto.
     sessions:
       signed_out: Úspešne odhlásení.
     unlocks:
-      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako odomknúť účet.
+      send_instructions: O niekoľko minúť obdržíte e-mail s pokynmi, ako odomknúť
+        účet.
       send_paranoid_instructions: Ak Vaše konto existuje, o niekoľko minúť obdržíte
-        email s pokynmi, ako odomknúť účet.
+        e-mail s pokynmi, ako odomknúť účet.
       unlocked: Váš účet bol úspešne odomknutý. Prosím, prihláste sa, aby ste mohli
         pokračovať.
   errors:
@@ -71,7 +72,7 @@ sk:
         one: '1 chyba zabránila %{resource} uložiť:'
         other: "%{count} chýb zabránilo %{resource} uložiť:"
     invitations:
-      send_instructions: 'Pozvanie bolo odoslané na email: %{email}.'
+      send_instructions: 'Pozvanie bolo odoslané na e-mail: %{email}.'
       invitation_token_invalid: Zadaný kód pozvánky je neplatný!
       updated: Vaše heslo bolo úspešne nastavené. Ste prihlásený.
       no_invitations_remaining: Nezostávajú žiadne pozvánky
@@ -89,5 +90,5 @@ sk:
         someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
           uvedený odkaz.
         accept: Prijať pozvánku
-        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento email.<br />Váš
+        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento e-mail.<br />Váš
           účet sa nevytvorí, pokým neprejdete na odkaz vyššie a nenastavíte si heslo.

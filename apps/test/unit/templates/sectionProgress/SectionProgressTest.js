@@ -20,7 +20,7 @@ describe('SectionProgress', () => {
       setScriptId: ()=>{},
       scriptId: 1,
       section: {
-        id: 1,
+        id: 2,
         script: {id: 123},
         students: studentData
       },
@@ -28,6 +28,7 @@ describe('SectionProgress', () => {
       currentView: ViewType.SUMMARY,
       scriptData: {
         id: 123,
+        path: '/scripts/myscript',
         stages: [
           {
             id: 456,
@@ -59,6 +60,16 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
+  });
+
+  it('shows viewCourse link with section id', () => {
+    const wrapper = shallow(
+      <UnconnectedSectionProgress
+        {...DEFAULT_PROPS}
+      />
+    );
+    const backLink = wrapper.find('SmallChevronLink[link="/scripts/myscript?section_id=2"]');
+    expect(backLink.exists()).to.be.true;
   });
 
   it('summary view shows summary view and legend', () => {

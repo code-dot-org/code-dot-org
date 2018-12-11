@@ -386,9 +386,9 @@ ro:
         text: "Trebuie să muți blocurile din caseta de instrumente în spațiul de lucru. Asigură-te că blocurile sunt puse sub blocul \"când rulezi\" și atunci când consideri că ai găsit soluția potrivită, apasă pe \"Rulează\" și vezi cum pasărea merge la porc."
     C1_maze_loops:
       1:
-        text: "Un lucru la care calculatoarele sunt foarte bune este repetarea unor comenzi. Ca persoana, te-ai plictisi dacă ar trebui să face același lucru de multe ori una după alta. Dar un calculator poate face același lucru de milioane sau chiar miliarde de ori fără să se plictisească, și poate să facă acest lucru foarte bine."
+        text: "Un lucru la care calculatoarele sunt foarte bune este să repete comenzi. Ca persoana, te-ai plictisi foarte tare dacă ar trebui să faci același lucru de multe, multe ori la rând. Dar un calculator poate face același lucru de milioane sau chiar miliarde de ori fără să se plictisească și poate să facă acest lucru foarte bine."
       2:
-        text: "De exemplu, dacă aș vrea să le urez tuturor celor de pe Facebook La Mulți Ani prin e-mail, atunci s-ar putea să îmi trebuiască mai mult de un secol să trimit acele e-mailuri. Dar folosind doar câteva linii de cod, pot face în așa fel încât un sistem să trimită un e-mail tuturor de pe Facebook urândule La Mulți Ani."
+        text: "De exemplu, dacă aș vrea să le urez tuturor celor de pe Facebook La Mulți Ani prin e-mail, atunci s-ar putea să îmi trebuiască mai mult de un secol să scriu acele e-mailuri. Dar, folosind doar câteva linii de cod, pot face în așa fel încât un sistem să trimită un e-mail tuturor de pe Facebook urându-le La Mulți Ani."
       3:
         text: "Pentru a duce pasărea la porc în acest nivel... în loc să tragi trei blocuri Nord în spațiul de lucru, vei folosi blocul \"repetă\". Trage blocul \"repetă\" în spațiul de lucru și introdu numărul 3. Apoi trage blocul \"Mută-mă un spațiu la nord\" în blocul \"repetă\" și apasă \"Rulează\" pentru a verifica dacă este corect. Felicitări, ai reușit!"
     C1_moveitmoveit_unplugged:
@@ -1155,9 +1155,9 @@ ro:
         text: "Acum poti sa construiesti tot ce vrei. Distreaza-te!"
     gumball_intro:
       1:
-        text: "Daca vrei sa iti faci propriul joc, este foarte simplu. Tot ceea ce trebuie este sa stii cateva baze ale programarii si te poti juca jocul pe care l-ai creat."
+        text: "Daca vrei sa iti faci propiul joc, este foarte usor. Tot ce trebuie sa stii sunt cateva lucruri de baza in programare si poti incepe sa te joci jocul pe care l-ai creat."
       2:
-        text: "Ai un joc video favorit? Vom face un pas inainte in crearea jocurilor la fel ca in PlayLab. Jocurile bune au cate o poveste iar fiecare poveste are personaje. Ele vor face lucruri ca vorbit, miscat si interactionat. Poate chiar vor aduna puncte pe baza regurilor jocului. Astazi vom inavata cum toate aceste lucruri unul cate unul impreuna cu personajele distractive va duce la construirea unui joc de la o schema ce poate fi distribuit sau jucat pe un telefon."
+        text: "Ai un joc video favorit? Noi v-om face un pas inainte in crearea jocurilor in PlayLab. Jocurile bune au o poveste si fiecare poveste are actori. Actori care fac lucruri ca vorbit, mers sau care interactioneaza intre ei. Poate chiar sa castige puncte in functie de regulile jocului. Astazi, v-om invata cum sa facem toate aceste lucruri unul cate unul cu actori amuzanti si apoi sa facem un joc din bucati pe care il poti impartasi si juca pe un telefon."
       3:
         text: "Astazi, vom invata cum toate aceste lucruri, unul cate unul, cu actori distractivi si apoi vor construi un joc dintr-o schema ce poate fi distribuita si jucata pe telefon."
       4:
@@ -1187,7 +1187,7 @@ ro:
       2:
         text: "Acesta este blocul 'repeta mereu'. Orice inauntrul acestui bloc se va intampla pentru totdeauna in joc. Daca vrem ca un personaj sa faca ceva in mod repetat fara ca jucatorul sa faca ceva, vom plasa aceste blocuri inauntrul blocului repeta mereu."
       3:
-        text: "In puzzle-ul urmator, telul nostru este sa ajutam personajul sa faca o treaba constant. Invatand cum functioneaza comenzile de repetare, vei salva mult timp atunci cand iti vei construi propriul joc."
+        text: "In urmator puzzel, misiunea noastra este sa ajutam actorul sa faca un lucru constant. Invatand cum functioneaza comanda repeta vei salva o gramada de timp mai tarziu cand iti vei construi propiul joc."
     iceage_intro:
       1:
         text: "Daca vrei sa iti faci propiul joc, este foarte usor. Tot ce trebuie sa stii sunt cateva lucruri de baza in programare si poti incepe sa te joci jocul pe care l-ai creat."

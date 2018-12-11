@@ -17,14 +17,14 @@ export function generateFakePersonalProjects(n) {
 export const stubFakePersonalProjectData = [
   {
     name: "Personal Project 1",
-    updatedAt: '2015-12-31T23:59:59.999-08:00',
+    updatedAt: '2018-12-31T23:59:59.999-08:00',
     type: 'gamelab',
     channel: 'abcd1',
     publishedAt: '2015-12-31T23:59:59.999-08:00'
   },
   {
     name: "Personal Project 2",
-    updatedAt: '2016-11-30T23:59:59.999-08:00',
+    updatedAt: '2017-11-30T23:59:59.999-08:00',
     type: 'applab',
     channel: 'abcd2',
   },
@@ -37,7 +37,7 @@ export const stubFakePersonalProjectData = [
   },
   {
     name: "Personal Project 4",
-    updatedAt: '2016-09-14T23:59:59.999-08:00',
+    updatedAt: '2015-09-14T23:59:59.999-08:00',
     type: 'playlab',
     channel: 'abcd4',
   },

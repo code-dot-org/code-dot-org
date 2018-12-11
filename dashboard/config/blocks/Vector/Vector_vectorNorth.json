@@ -1,0 +1,9 @@
+{
+  "category": "",
+  "config": {
+    "name": "vectorNorth",
+    "expression": "createVector(0, -1)",
+    "blockText": "north",
+    "returnType": "Sprite"
+  }
+}

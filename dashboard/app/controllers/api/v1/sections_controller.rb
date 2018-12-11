@@ -43,7 +43,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.create(
       {
         user_id: current_user.id,
-        name: !params[:name].to_s.empty? ? params[:name].to_s : 'New Section',
+        name: !params[:name].to_s.empty? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
@@ -77,10 +77,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     if script_id
       script = Script.get_from_cache(script_id)
+      return head :bad_request if script.nil?
       # If given a course and script, make sure the script is in that course
       return head :bad_request if course_id && course_id != script.course.try(:id)
       # If script has a course and no course_id was provided, use default course
       course_id ||= script.course.try(:id)
+      # Unhide script for this section before assigning
+      section.toggle_hidden_script script, false
     end
 
     # TODO: (madelynkasula) refactor to use strong params

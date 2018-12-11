@@ -10,10 +10,13 @@
     "blockText": "change {THIS} costume to {ANIMATION}",
     "args": [
       {
+        "name": "THIS",
+        "type": "Sprite"
+      },
+      {
         "name": "ANIMATION",
         "customInput": "costumePicker"
       }
-    ],
-    "methodCall": true
+    ]
   }
 }

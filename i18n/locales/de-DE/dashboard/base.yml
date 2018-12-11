@@ -38,12 +38,13 @@ de:
   next_resource: Nächste Ressource
   cancel: "Abbrechen"
   okay: "Okay"
+  or: "oder"
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
       placeholder: "Code für diesen Abschnitt (ABCDEF)"
-      instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\\_B. wie \"ABCDEF\""
+      instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\_B. wie \"ABCDEF\""
     submit: 'Lehrer hinzufügen'
   add_hint_form:
     placeholder: 'Gebe hier deinen Hinweis ein'
@@ -61,7 +62,7 @@ de:
   more: "MEHR"
   less: "WENIGER"
   beta: "Beta"
-  try_hoc: "Probiere \"The Hour of Code\" aus, klicke hier >>\\_ "
+  try_hoc: "Probiere \"The Hour of Code\" aus, klicke hier >>\_ "
   try_k8intro: "Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)"
   k8intro: "Einführung in die Informatik (15-25 Stunden)"
   already_started: "Schon angefangen? Hier geht es weiter >> "
@@ -80,6 +81,8 @@ de:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-Konto'
+    microsoft_v2_auth: 'Microsoft-Konto'
+    clever: 'Schlau'
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
@@ -201,6 +204,7 @@ de:
     type:
       word: 'Geheimwort'
       email: 'E-Mail'
+      google_classroom: 'Google Classroom'
       clever: 'Schlau'
   follower:
     invite_sent: 'Einladung gesendet'
@@ -243,9 +247,8 @@ de:
         artist: 'Zeichne etwas'
         applab: 'Erstelle eine App'
         gamelab: 'Ein Game Lab Projekt eröffnen.'
-      home: "Home"
       my_dashboard: "Mein Armaturenbrett"
-      courses: "Kurse"
+      course_catalog: "Kurs Katalog"
       project_gallery: "Projekte"
       sections: "Sektionen"
       help_support: "Hilfe und Support"
@@ -257,7 +260,7 @@ de:
       educate_elementary: "Grundschule"
       educate_middle: "Mittelschule"
       educate_high: "High School/Gymnasium"
-      educate_hoc: "Stunde des Codes"
+      educate_hoc: "Hour of Code"
       educate_partner: "Eine Partnerschaft mit uns"
       educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
       educate_community: "Online Community"
@@ -287,10 +290,17 @@ de:
       signin: 'Anmelden'
       signup: 'Konto erstellen'
       already_registered: 'Bereits registriert?'
-      pair_programming: 'Paarprogrammierung'
       team: 'Team'
       driver: 'Bediener'
       navigator: 'Navigator'
+      create: 'Erstellen'
+      applab: 'App-Labor'
+      artist: 'Künstler'
+      gamelab: 'Spielelabor'
+      playlab: 'Spielelabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Tanzparty'
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
@@ -362,8 +372,8 @@ de:
     teacher_student_count_one: Sie haben %{count} Schüler.
     teacher_student_count: Sie haben %{count} Schüler.
     teacher_averages: Im Durchschnitt haben Ihre Schüler %{trophy_average} von %{trophy_max} "Concept Mastery" Trophäen erreicht.
-    teacher_print_certificates: 'Drucken sie Zertifikate für Schüler, die diesen Kurs bestanden haben'
-    teacher_read_blog: Lesen Sie Nachrichten und Neuigkeiten zu unseren Materialien in unserem Lehrer-Blog
+    teacher_print_certificates: 'Drucken sie Zertifikate für Schüler die diesen Kurs bestanden haben'
+    teacher_read_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien in unserem Lehrer-Blog
     classroom: Ihr Klassenzimmer
     student_progress: Dein Lernfortschritt
     student_stats: Du hast %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen gewonnen.
@@ -518,6 +528,8 @@ de:
       body_short: "Entwerfe eine App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden."
       audience: 'Ab 13 Jahren'
       cta: 'Lerne wie'
+    dance:
+      title: 'Tanzparty'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
@@ -535,11 +547,15 @@ de:
       title: "Galerie"
       body: "Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden"
     gamelab:
+      title: "Spielelabor"
+      body: "Spielelabor ist eine Programmierumgebung, in der Sie einfache Animationen und Spiele mit Objekten und Charakteren, die miteinander interagieren, erstellen können."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
     hoc-encryption:
       title: "Einfache Verschlüsselung"
     weblab:
+      title: "Weblabor (Beta)"
+      body: "Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie die in Sekunden."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
     frozen:
@@ -551,12 +567,15 @@ de:
       body: "Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen."
     minecraft:
       title: "Minecraft"
-      body: "Erkunde eine Minecraft-Welt mit Hilfe von Code."
+      body: "Erkunde eine Minecraft-Welt durch programmieren"
     minecraft2016:
       title: "Minecraft"
-      body: "Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+      body: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"
@@ -565,6 +584,7 @@ de:
     unplugged_conditionals:
       title: "Bedingungen"
     widgets:
+      title: "Widgets"
       cta: "Lerne wie"
   gallery:
     students_drew_these_with_code: "Schüler haben diese Bilder mit Code gezeichnet!"
@@ -669,22 +689,14 @@ de:
     title: "Optional: Helfen Sie uns, unsere Fortschritte zur Verbesserung der Vielfalt in der Informatik zu besser verfolgen"
     message: "Bitte verrate uns deine Ethnie (Zutreffendes bitte ankreuzen)"
     races:
-      - 
-        white: "Weiß"
-      - 
-        black: "Schwarz"
-      - 
-        hispanic: "Spanisch oder Latino"
-      - 
-        asian: "Asiatisch"
-      - 
-        hawaiian: "Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner"
-      - 
-        american_indian: "Indianer oder eingeborener Alaskaner"
-      - 
-        other: "Andere"
-      - 
-        opt_out: "Das geht Euch nichts an"
+      white: "Weiß"
+      black: "Schwarz"
+      hispanic: "Spanisch oder Latino"
+      asian: "Asiatisch"
+      hawaiian: "Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner"
+      american_indian: "Indianer oder eingeborener Alaskaner"
+      other: "Andere"
+      opt_out: "Das geht Euch nichts an"
     submit: "Absenden"
     decline: "Schließen"
   zendesk_too_young_message: 'Tut uns leid, jüngere Benutzer dürfen sich für unsere Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a> durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu kontaktieren.'
@@ -845,10 +857,12 @@ de:
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
   return_course_overview: 'Gehe zur Übersicht'
+  view_teacher_guide: 'Lehrer-Leitfaden anzeigen'
   pd:
     form_labels:
       email: 'E-Mail'
       school_name: 'Schulname'
+      school_city: 'Stadt der Schule'
       school_country: 'Land der Schule'
     form_entries:
       gender:
@@ -872,4 +886,5 @@ de:
   cookie_banner:
     accept: 'Ich stimme zu'
   gdpr_dialog:
+    message: 'Daten aus deiner Nutzung dieser Site können in die USA geschickt werden und dort gespeichert und verarbeitet werden.'
     yes: 'Ja'

@@ -128,9 +128,11 @@ class ManageStudentsTable extends Component {
   };
 
   state = {
-    [COLUMNS.NAME]: {
-      direction: 'desc',
-      position: 0
+    sortingColumns: {
+      [COLUMNS.NAME]: {
+        direction: 'asc',
+        position: 0
+      }
     }
   };
 

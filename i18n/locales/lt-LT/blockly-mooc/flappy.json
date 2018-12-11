@@ -34,7 +34,7 @@
   "playSoundLaser": "grok lazerio garsą",
   "playSoundTooltip": "Grok pasirinktą garsą.",
   "reinfFeedbackMsg": "Gali nuspausti mygtuką „Mėginti dar kartą“, kad grįžtum prie savo žaidimo.",
-  "scoreText": "Taškai: {playerScore}",
+  "scoreText": "Rezultatas: {playerScore}",
   "setBackground": "scena =",
   "setBackgroundRandom": " scena = Atsitiktinė",
   "setBackgroundFlappy": "scena = Miestas dieną",
@@ -128,6 +128,6 @@
   "whenEnterObstacle": "kai įveiki kliūtį",
   "whenEnterObstacleTooltip": "Vykdyti pateiktus veiksmus, kai Flappy įeis į kliūtį.",
   "whenRunButtonClick": "kai žaidimas prasideda",
-  "whenRunButtonClickTooltip": "Vykdyti žemiau nurodytus veiksmus, kai žaidimas prasideda.",
+  "whenRunButtonClickTooltip": "Vykdyti nurodytus veiksmus, kai žaidimas prasideda.",
   "yes": "Taip"
 }

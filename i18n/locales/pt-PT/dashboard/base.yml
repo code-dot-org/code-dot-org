@@ -19,7 +19,7 @@ pt:
         password_confirmation: 'Confirmação da palavra-passe'
         current_password: 'Palavra-passe atual'
         locale: 'Idioma'
-        age: 'Idade'
+        age: 'Idade  '
         gender: 'Género'
         edit_header: 'Edita os detalhes da tua conta'
         error:
@@ -35,6 +35,7 @@ pt:
   next_resource: Recurso seguinte
   cancel: "Cancelar"
   okay: "Ok"
+  or: "ou"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -76,7 +77,8 @@ pt:
     google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Outlook'
+    windowslive: 'Conta da Microsoft'
+    microsoft_v2_auth: 'Conta da Microsoft'
     forgot_password: 'Esqueceste-te da palavra-passe?'
     need_confirmation: "Não recebeste as instruções de confirmação?"
     need_unlock: "Não recebeste as instruções de desbloqueio?"
@@ -118,7 +120,7 @@ pt:
     charter: 'Escola por contrato de associação'
     private: 'Privada'
     public: 'Pública'
-    other: 'Outros'
+    other: 'Outro'
     state: 'Estado'
     district: 'Distrito'
     other_district_not_listed: 'Outro distrito'
@@ -211,14 +213,12 @@ pt:
     access_denied: 'Você não tem acesso a este %{model}.'
   nav:
     header:
-      finished_hoc: "Terminei a minha Hora de Código"
+      finished_hoc: "Terminei minha Hora do Código"
       sign_in_to_save: 'Inicia sessão para guardares o teu progresso'
       free_play:
         playlab: 'Criar uma aplicação Play Lab'
         artist: 'Desenhar alguma coisa'
         applab: 'Criar uma aplicação App Lab'
-      home: "Início"
-      courses: "Cursos"
       project_gallery: "Projetos"
       sections: "Turmas"
       help_support: "Ajuda e suporte"
@@ -248,10 +248,15 @@ pt:
       signin: 'Iniciar sessão'
       signup: 'Criar uma conta'
       already_registered: 'Já criaste uma conta?'
-      pair_programming: 'Programação em duplas'
       team: 'Equipa'
       driver: 'Controlador'
       navigator: 'Navegador'
+      create: 'Criar'
+      applab: 'Laboratório de aplicações'
+      artist: 'Artista'
+      playlab: 'Laboratório'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy Bird'
     popup:
       progress_for_user: "progresso de %{name}'s"
       progress: 'O teu progresso'
@@ -487,10 +492,12 @@ pt:
       body: "Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity."
     minecraft:
       title: "Minecraft"
-      body: "Explora um mundo Minecraft através do código."
+      body: "Explora um mundo Minecraft através do código"
     minecraft2016:
       title: "Minecraft"
-      body: "Programe animais e outras criaturas Minecraft na sua própria versão do Minecraft."
+      body: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
@@ -586,15 +593,7 @@ pt:
     save: "Guardar"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Outros"
-      - 
+      other: "Outro"
     submit: "OK"
     decline: "Fechar"
   zendesk_too_young_message: 'Pedimos desculpa, mas os utilizadores mais jovens não podem criar uma conta no nosso site. Podes aceder a <a href="http://support.code.org">support.code.org</a> sem criares uma conta ou podes pedir aos teus pais ou a um professor para entrarem em contacto connosco.'
@@ -667,7 +666,7 @@ pt:
           harassment: 'Ameaças, cyberbullying, assédio'
           offensive: 'Conteúdo ofensivo'
           infringement: 'Violação de direitos de autor'
-          other: 'Outros'
+          other: 'Outro'
         detail: 'Por favor, dá-nos o máximo possível de detalhes relacionados com o conteúdo que estás a denunciar.'
         acknowledge: 'Ao submeter esta informação, aceita que esta será tratada de acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilização%{link_end}'
   peer_review:

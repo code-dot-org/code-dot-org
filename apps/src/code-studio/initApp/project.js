@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -16,6 +16,7 @@ var hasProjectChanged = false;
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
+var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
@@ -29,7 +30,7 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
+  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -86,6 +87,7 @@ var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
+let thumbnailPngBlob = null;
 
 /**
  * Current state of our sources API data
@@ -94,7 +96,8 @@ var currentSources = {
   source: null,
   html: null,
   makerAPIsEnabled: false,
-  animations: null
+  animations: null,
+  selectedSong: null,
 };
 
 /**
@@ -116,7 +119,8 @@ function unpackSources(data) {
     source: data.source,
     html: data.html,
     animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    makerAPIsEnabled: data.makerAPIsEnabled,
+    selectedSong: data.selectedSong,
   };
 }
 
@@ -124,6 +128,11 @@ function unpackSources(data) {
  * Used by getProjectUrl() to extract the project URL.
  */
 const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+
+/**
+ * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ */
+const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
 var projects = module.exports = {
   /**
@@ -393,6 +402,9 @@ var projects = module.exports = {
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
+    },
+    setCurrentSourceVersionId(id) {
+      currentSourceVersionId = id;
     }
   },
 
@@ -477,6 +489,7 @@ var projects = module.exports = {
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.setSelectedSong
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -495,6 +508,10 @@ var projects = module.exports = {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
+      if (currentSources.selectedSong) {
+        sourceHandler.setSelectedSong(currentSources.selectedSong);
+      }
+
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
       }
@@ -508,11 +525,10 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        $(window).on(events.appModeChanged, function (event, callback) {
-          this.saveIfSourcesChanged().then(callback);
-        }.bind(this));
+        if (!appOptions.level.skipRunSave) {
+          $(window).on(events.appModeChanged, this.saveIfSourcesChanged.bind(this));
+        }
 
-        // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
           this.sourceHandler.getLevelSource(currentSources.source).then(response => {
@@ -522,7 +538,11 @@ var projects = module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
+
+        if (!appOptions.level.skipAutosave) {
+          // Autosave every AUTOSAVE_INTERVAL milliseconds
+          window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
+        }
 
         if (current.hidden) {
           if (!this.isFrozen()) {
@@ -551,7 +571,7 @@ var projects = module.exports = {
 
     // Updates the contents of the admin box for admins. We have no knowledge
     // here whether we're an admin, and depend on dashboard getting this right.
-    showProjectAdmin();
+    showProjectAdmin(this);
   },
   projectChanged() {
     hasProjectChanged = true;
@@ -609,6 +629,8 @@ var projects = module.exports = {
           return msg.defaultProjectNameBasketball();
         }
         return msg.defaultProjectNameBounce();
+      case 'dance':
+        return msg.defaultProjectNameDance();
     }
     return msg.defaultProjectName();
   },
@@ -622,7 +644,13 @@ var projects = module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+      case 'calc':
+      case 'dance':
+      case 'eval':
+      case 'flappy':
+      case 'scratch':
+      case 'weblab':
+        return appOptions.app; // Pass through type exactly
       case 'gamelab':
         if (appOptions.droplet) {
           return 'gamelab';
@@ -635,8 +663,6 @@ var projects = module.exports = {
           return 'artist_k1';
         }
         return 'artist';
-      case 'calc':
-        return 'calc';
       case 'craft':
         if (appOptions.level.isAgentLevel) {
           return 'minecraft_hero';
@@ -644,10 +670,10 @@ var projects = module.exports = {
           return 'minecraft_designer';
         } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
+        } else if (appOptions.level.isAquaticLevel) {
+          return 'minecraft_aquatic';
         }
         return 'minecraft_adventurer';
-      case 'eval':
-        return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
@@ -667,12 +693,6 @@ var projects = module.exports = {
           return 'playlab_k1';
         }
         return 'playlab';
-      case 'weblab':
-        return 'weblab';
-      case 'flappy':
-        return 'flappy';
-      case 'scratch':
-        return 'scratch';
       case 'bounce':
         if (appOptions.skinId === 'sports') {
           return 'sports';
@@ -731,7 +751,7 @@ var projects = module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled} have changed.
+   * makerAPIsEnabled, selectedSong} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -770,7 +790,7 @@ var projects = module.exports = {
      */
     const completeAsyncSave = () => new Promise(resolve =>
       this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion, preparingRemix)));
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -785,9 +805,11 @@ var projects = module.exports = {
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} [clientSideRemix] If true this is part of a client-side remix, the initial
+   *   PUT to a new channel ID.
    * @private
    */
-  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion, clientSideRemix) {
     if (!isEditable()) {
       return;
     }
@@ -818,11 +840,17 @@ var projects = module.exports = {
       current.projectType = this.getStandaloneApp();
     }
 
+    if (thumbnailPngBlob) {
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      this.saveThumbnail(blob);
+    }
+
     unpackSources(sourceAndHtml);
 
     if (this.useSourcesApi()) {
       let params = '';
-      if (currentSourceVersionId) {
+      if (currentSourceVersionId && !clientSideRemix) {
         params = `?currentVersion=${currentSourceVersionId}` +
           `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
@@ -856,6 +884,11 @@ var projects = module.exports = {
     } else {
       this.updateChannels_(callback);
     }
+  },
+
+  saveSelectedSong(id) {
+    this.sourceHandler.setSelectedSong(id);
+    return this.save();
   },
 
   /**
@@ -914,8 +947,13 @@ var projects = module.exports = {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        callback({source, html, animations, makerAPIsEnabled});
+        const selectedSong = this.sourceHandler.getSelectedSong();
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
+  },
+
+  getSelectedSong() {
+    return currentSources.selectedSong;
   },
 
   /**
@@ -944,7 +982,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
@@ -1092,9 +1130,9 @@ var projects = module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
-      current.projectType = this.getStandaloneApp();
     }
     this.setName(newName);
     return new Promise((resolve, reject) => {
@@ -1129,27 +1167,19 @@ var projects = module.exports = {
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },
-  serverSideRemix() {
+
+  /** @returns {Promise} resolved after remix (for testing) */
+  async serverSideRemix() {
     if (current && !current.name) {
-      var url = projects.appToProjectUrl();
-      if (url === '/projects/algebra_game') {
-        this.setName('Big Game Template');
-      } else if (url === '/projects/applab' ||
-          url === '/projects/makerlab' ||
-          url === '/projects/gamelab' ||
-          url === '/projects/weblab') {
-        this.setName('My Project');
-      }
+      const url = projects.appToProjectUrl();
+      this.setName(url === '/projects/algebra_game' ? 'Big Game Template' : 'My Project');
     }
     function redirectToRemix() {
-      const url = `${projects.getPathName('remix')}`;
-      location.href = url;
+      utils.navigateToHref(`${projects.getPathName('remix')}`);
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(false, true).then(redirectToRemix);
-    } else if (current.isOwner) {
-      this.sourceHandler.prepareForRemix().then(redirectToRemix);
+      await projects.save(false, true).then(redirectToRemix);
     } else {
       redirectToRemix();
     }
@@ -1171,6 +1201,17 @@ var projects = module.exports = {
    */
   load() {
     var deferred = new $.Deferred();
+
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic = appOptions.share && appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         deferred.resolve();
@@ -1196,10 +1237,10 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              fetchAbuseScoreAndPrivacyViolations(function () {
+              fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
-            }, queryParams('version'), this.useSourcesApi());
+            }, queryParams('version'), sourcesApi);
           }
         });
       } else {
@@ -1214,10 +1255,10 @@ var projects = module.exports = {
         } else {
           fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
-            fetchAbuseScoreAndPrivacyViolations(function () {
+            fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
-          }, queryParams('version'), this.useSourcesApi());
+          }, queryParams('version'), sourcesApi);
         }
       });
     } else {
@@ -1249,6 +1290,23 @@ var projects = module.exports = {
     return current && current.thumbnailUrl;
   },
 
+  setThumbnailUrl() {
+    current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
+    thumbnailChanged = true;
+  },
+
+  /**
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the server.
+   * Use the saveThumbnail method to do that.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  setThumbnailPngBlob(pngBlob) {
+    if (pngBlob) {
+      thumbnailPngBlob = pngBlob;
+      projects.setThumbnailUrl();
+    }
+  },
+
   /**
    * Uploads a thumbnail image to the thumbnail path in the files API. If
    * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
@@ -1256,6 +1314,9 @@ var projects = module.exports = {
    * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
+    if (!pngBlob) {
+      return Promise.reject('PNG blob required.');
+    }
     if (!current) {
       return Promise.reject('Project not initialized.');
     }
@@ -1264,12 +1325,10 @@ var projects = module.exports = {
     }
 
     return new Promise((resolve, reject) => {
-      const thumbnailPath = '.metadata/thumbnail.png';
-      filesApi.putFile(thumbnailPath, pngBlob, () => {
-        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+      filesApi.putFile(THUMBNAIL_PATH, pngBlob, () => {
+        projects.setThumbnailUrl();
         if (!initialCaptureComplete) {
           initialCaptureComplete = true;
-          thumbnailChanged = true;
         }
         resolve();
       }, error => {
@@ -1294,9 +1353,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
- * @param {boolean} useSourcesApi use sources api when true
+ * @param {boolean} sources api to use, if present.
  */
-function fetchSource(channelData, callback, version, useSourcesApi) {
+function fetchSource(channelData, callback, version, sourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1307,12 +1366,12 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (useSourcesApi && channelData.migratedToS3) {
+  if (sourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
     }
-    sources.fetch(url, function (err, data, jqXHR) {
+    sourcesApi.fetch(url, function (err, data, jqXHR) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {
@@ -1369,14 +1428,14 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(callback) {
+function fetchAbuseScoreAndPrivacyViolations(project, callback) {
   const deferredCallsToMake = [new Promise(fetchAbuseScore)];
 
-  if (dashboard.project.getStandaloneApp() === 'playlab') {
+  if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
-    (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.isWebLab())) {
+  } else if ((project.getStandaloneApp() === 'applab') ||
+    (project.getStandaloneApp() === 'gamelab') ||
+    (project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {

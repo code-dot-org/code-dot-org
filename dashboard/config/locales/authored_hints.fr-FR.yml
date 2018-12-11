@@ -248,12 +248,313 @@ fr:
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Quel angle est le plus petit?  À quel angle l’artiste est-il
           debout? '
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
+          carré pour compléer ce design.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez avoir au moins deux danseurs.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Appuyez sur le bloc « lorsque la flèche gauche est appuyée » pour que le Robot fasse un mouvement de danse.
+
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+
+          *Ce niveau se termine après 12 mesures.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
           autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour
           résoudre ce casse-tête.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
+          autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour
+          résoudre ce casse-tête.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vous voyez les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ?
+          Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
+          dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Assurez-vous qu'un danseur apparaît à l'écran.
+
+          *Ce niveau se termine après 4 mesures.*
+        challenges: |-
+          **Défis optionnels**
+          *Choisissez une autre chanson à jouer.
+          *Choisissez un autre qui ressemble à un orignal !
+          *Renommez votre danseur.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          *Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          *Le niveau se termine après 8 mesures.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          *Le niveau se termine après 12 mesures.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
+
+          *Ce niveau se termine après 10 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
+
+          *Ce niveau se termine après 12 mesures.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Défis optionnels**
+
+          *Ajoutez un troisième danseur (ou autant que vous voulez !)
+          *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Deux danseurs doivent avoir une taille autre que 100.
+
+          *Ce niveau se termine après 6 mesures.*
+        challenges: |-
+          **Défis optionnels**
+
+          *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Changez la nuance d'au moins un danseur.
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Les propriétés de deux ou plusieurs danseurs doivent changer.
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          *Soyez créatif !
+
+          *Ce niveau se termine après 8 mesures.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
           qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
@@ -268,7 +569,24 @@ fr:
           l'Agent exécute le code.
         MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous
           pouvez déplacer le joueur avec les touches de direction !
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Faites glisser un bloc « avancer » depuis la boîte
+          à outils vers l'espace de travail et placez-le en dessous du bloc « après
+          exécution ».
+        MC_HOC_2017_01_RETRY_b: N'oubliez pas de cliquer sur « Démarrer » pour que
+          l'Agent exécute le code.
+        MC_HOC_2017_01_RETRY_c: Une fois que l'Agent a exécuté tout le code, vous
+          pouvez déplacer le joueur avec les touches de direction !
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour
+          qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour
+          votre joueur.
+        MC_HOC_2017_02_Cole_b: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_02_Cole_c: Une fois que l'Agent a ouvert la porte, utilisez les
+          touches de direction pour déplacer le joueur sur la carte !
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Faites avancer l'Agent de deux cases en avant pour
           qu'il se tienne sur la plaque de détection.  Cela ouvrira la porte pour
           votre joueur.
@@ -291,10 +609,20 @@ fr:
           utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
         MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir
           en utilisant une boucle « répéter » !
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Une fois que l'Agent est placé sur la plaque de détection,
+          utilisez les touches de direction pour déplacer le joueur jusqu'à la boussole !
+        MC_HOC_2017_03_Cole_b: Le code semble trop long ?  Essayez de le raccourcir
+          en utilisant une boucle « répéter » !
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Traverser ces deux plaques de détection ouvrira
           le chemin pour le joueur. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer
+          l''orientation de l''Agent '
+        MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la
+          hache, il suffit que l'Agent soit sur la première plaque de détection.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Utilisez le bloc « tourner à droite » pour changer
           l''orientation de l''Agent '
         MC_HOC_2017_04POINT5_RYAN_a: Pour permettre à Alex ou Steve d'atteindre la
@@ -307,7 +635,19 @@ fr:
           code jusqu'à trouver ce qui ne va pas."
         MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection,
           cela ouvrira la porte pour le joueur.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: L'Agent a besoin d'« avancer » 7 fois.  Comment pouvez-vous
+          faire cela en utilisant une boucle « répéter » ?
+        MC_HOC_2017_04_Cole_c: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter
+          votre code même si ce n'est pas correct.  Exécutez et recommencez votre
+          code jusqu'à trouver ce qui ne va pas."
+        MC_HOC_2017_04_Cole_b: Une fois que l'Agent est sur la plaque de détection,
+          cela ouvrira la porte pour le joueur.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts
+          de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et**
+          avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Saviez-vous que vous pouvez placer plusieurs bouts
           de code à l'intérieur d'une boucle ?  Essayez de placer une planche **et**
           avancer à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.
@@ -318,10 +658,20 @@ fr:
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien
           de fois *devrait*-elle se répéter ?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Combien de fois cette boucle va-t-elle se répéter ?  Combien
+          de fois *devrait*-elle se répéter ?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Essayez de placer plusieurs instructions à l'intérieur
           d'une boucle « répéter » !
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert
+          la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire
+          en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à
+          outils.
+        MC_HOC_2017_07_Cole_b: Essayez de mélanger les blocs de fonctions avec d'autres
+          blocs de la boîte à outils pour résoudre ce casse-tête.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: Pour résoudre ce casse-tête, découvrez à quoi sert
           la fonction « supprimer obstacle ». Appelez-la autant de fois que nécessaire
           en utilisant le petit bloc vert « supprimer obstacle » depuis la boîte à
@@ -346,6 +696,9 @@ fr:
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement
           ce casse-tête !
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Utilisez des fonctions pour résoudre plus facilement
+          ce casse-tête !
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
           qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
@@ -358,7 +711,16 @@ fr:
           trouver ce qui ne va pas."
         MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
           quelques-unes !
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Appuyez sur « Démarrer » ! \nVous pouvez exécuter votre
+          code même si ce n'est pas correct.  Exécutez et recommencez votre code jusqu'à
+          trouver ce qui ne va pas."
+        MC_HOC_2017_08_RY_b: Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayez-en
+          quelques-unes !
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
+          qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
           qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
       New Minecraft Hero Project_authored_hint:
@@ -601,7 +963,15 @@ fr:
           100 pixels", je tracerais une ligne automatiquement.
         courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le
           bloc "tourner de 90° à droite".
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Si vous utilisez le bloc pour me faire "avancer de
+          100 pixels", je tracerais une ligne automatiquement.
+        courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le
+          bloc "tourner de 90° à droite".
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -616,6 +986,11 @@ fr:
           \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
           combien dois-tu sauter?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant'
+          pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
+          \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
+          combien dois-tu sauter?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant'
           pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant.
           \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de
@@ -639,6 +1014,12 @@ fr:
           - Avancer de 100 + 75 pixels
           - Utiliser une fonction
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Votre programme devrait:
           - Utiliser une fonction
@@ -799,6 +1180,8 @@ fr:
         2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce
           qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre
@@ -811,6 +1194,8 @@ fr:
           - Utiliser une fonction
           - Avancer de 100 + 75 pixels
           - Utiliser une fonction
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: |-
           Si le puzzle semble difficile, essaye de construire ta fonction petit à peit.

@@ -21,7 +21,7 @@ fa:
         name: نمایش نام
         email: ایمیل
         username: نام کاربری
-        password: رمز عبور
+        password: کلمه عبور
         password_confirmation: تکرار کلمه عبور
         current_password: کلمه عبور فعلی
         locale: زبان
@@ -39,8 +39,9 @@ fa:
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
   next_resource: منبع بعدی
-  cancel: لغو کن
+  cancel: لغو
   okay: باشه
+  or: یا
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
   add_teacher_form:
     code:
@@ -85,6 +86,7 @@ fa:
     twitter: توییتر
     facebook: فیس‌بوک
     windowslive: حساب مایکروسافت
+    microsoft_v2_auth: حساب مایکروسافت
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
@@ -115,6 +117,7 @@ fa:
     user_type_student: دانش آموز
     field_is_required: "%s لازم است"
     error: خطایی رخ داد.
+    email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
     email_preference_yes: بله
     email_preference_no: نه
   school_info:
@@ -210,7 +213,7 @@ fa:
         playlab: ایجاد یک برنامه
         artist: چیزی بکش
         applab: ایجاد یک برنامه
-      courses: مراحل
+      course_catalog: کاتالوگ دوره‌ها
       project_gallery: پروژه ها
       educate_hoc: ساعت کد نویسی
     user:
@@ -222,7 +225,13 @@ fa:
       logout: خروج
       signin: ورود
       already_registered: قبلا ثبت نام کرده اید؟?
-      pair_programming: برنامه نویسی دوتایی
+      create: ایجاد
+      applab: آزمایشگاه نرم افزار
+      artist: هنرمند
+      gamelab: کارگاه بازی سازی
+      playlab: آزمایشگاه بازی
+      minecraft: ماینکرفت
+      flappy: فلاپی
     popup:
       progress_for_user: درصد پیشرفت %{name}
       progress: پیشرفت شما
@@ -480,12 +489,14 @@ fa:
       body: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
     minecraft2016:
       title: ماینکرفت
+    aquatic:
+      title: ماینکرفت
     hero:
       title: ماینکرفت
     unplugged:
       audience: سنین بالای 4 سال
     unplugged_conditionals:
-      title: مشروط
+      title: شرطی ها
     widgets:
       cta: یادبگیر چگونه
   gallery:
@@ -561,7 +572,7 @@ fa:
     startover_body: این کار معما را به حالت اولیه اش تنظیم خواهد کرد و تمام داده هایی
       که شما اضافه کرده یا تغییر داده اید را بازنشانی می کند.
     startover_ok: دوباره شروع کنید
-    startover_cancel: لغو کن
+    startover_cancel: لغو
   time:
     hour: ۱ ساعت
     day: روز
@@ -583,14 +594,7 @@ fa:
     save: ذخيره
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: دیگر
-    - 
+      other: دیگر
     submit: ارسال کنید
     decline: ببند
   zendesk_too_young_message: با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی
@@ -637,7 +641,7 @@ fa:
     delete_no: نه
     saved: ذخیره شد
     not_saved: ذخیره نشده
-    cancel: لغو کن
+    cancel: لغو
     delete_confirm_title: آیا مطمئنید می خواهید این پروژه را پاک کنید?
     delete_confirm_text: پاک کردن پروژه تان آن را به طور دائم از لیست پروژه های من
       شما حذف خواهد کرد. هرکسی که لینک را با او به اشتراک گذاشته اید دیگر قادر نخواهد

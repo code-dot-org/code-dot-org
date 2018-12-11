@@ -6,18 +6,26 @@ import styleConstants from '../../styleConstants';
 import Button from "../Button";
 
 const styles = {
-  section: {
+  outerBox: {
     width: styleConstants['content-width'],
     backgroundColor: color.white,
+    borderColor: color.border_gray,
+    boxSizing: "border-box",
+    marginBottom: 20,
+    float: 'left'
+  },
+  solidBorder: {
+    borderStyle: 'solid',
+    borderWidth: 1
+  },
+  dashedBorder: {
     borderStyle: 'dashed',
     borderWidth: 5,
-    borderColor: color.border_gray,
-    boxSizing: "border-box"
   },
   wordBox: {
-    width: styleConstants['content-width']-275,
+    width: styleConstants['content-width']-285,
     paddingLeft: 25,
-    paddingRight: 25
+    paddingRight: 25,
   },
   heading: {
     fontSize: 20,
@@ -29,7 +37,7 @@ const styles = {
   description: {
     fontSize: 14,
     color: color.charcoal,
-    width: styleConstants['content-width']-275,
+    width: styleConstants['content-width']-280,
     paddingTop: 5,
     paddingBottom: 25,
   },
@@ -59,15 +67,20 @@ class SetUpMessage extends Component {
     buttonUrl: PropTypes.string,
     buttonClass: PropTypes.string,
     onClick: PropTypes.func,
+    solidBorder: PropTypes.bool,
   };
 
   render() {
-    const { isRtl, headingText, descriptionText, className, buttonText, buttonUrl, buttonClass, onClick } = this.props;
+    const { isRtl, headingText, descriptionText, className, buttonText, buttonUrl, buttonClass, onClick, solidBorder } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
     const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
+    const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
     return (
-      <div style={styles.section} className={className}>
+      <div
+        style={[styles.outerBox, borderStyle]}
+        className={className}
+      >
         <div style={[styles.wordBox, localeStyle]}>
           <div style={[styles.heading, localeStyle]}>
             {headingText}

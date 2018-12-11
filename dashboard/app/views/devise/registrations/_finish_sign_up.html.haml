@@ -1,0 +1,110 @@
+- SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
+- require 'geocoder'
+- require 'country_codes'
+- location = Geocoder.search(request.ip).try(:first)
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+
+- @page_title = t('activerecord.attributes.user.finish_sign_up_header')
+
+#signup
+  %h1= @page_title
+
+  = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
+    %p
+      - if @user.provider.present?
+        - provider = t("auth.#{@user.provider}")
+        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
+      - else
+        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
+      %span= link_to 'Cancel', users_cancel_path
+
+    = f.hidden_field :locale, value: locale
+    = f.hidden_field :email
+    = f.hidden_field :encrypted_password
+
+    .field-row
+      .field
+        = f.label :user_type, t('signup_form.user_type_label')
+        = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
+      - if @user.errors[:user_type].present?
+        %span.error.padded= t('activerecord.errors.messages.blank')
+
+    .field-row
+      .field
+        #teacher-name-label{style: "display: none;"}
+          = f.label :name, t('activerecord.attributes.user.name').html_safe
+        #student-name-label{style: "display: none;"}
+          = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+        = f.text_field :name, maxlength: 255
+      - if @user.errors[:name].present?
+        %span.error.padded= @user.errors[:name].join(', ')
+
+    .field-row#age-dropdown{style: "display: none;"}
+      .field
+        = f.label :age
+        = f.select :age, age_options, include_blank: true
+      - if @user.errors[:age].present?
+        %span.error.padded= @user.errors[:age].join(', ')
+
+    .field-row#gender-dropdown{style: "display: none;"}
+      .field
+        = f.label :gender, t('signup_form.gender')
+        = f.select :gender, gender_options
+      - if @user.errors[:gender].present?
+        %span.error.padded= @user.errors[:gender].join(', ')
+
+    .field
+      -# Mount point for React SchoolInfoInputs component.
+      #school-info-inputs{style: "display: none;"}
+        = f.fields_for :school_info_attributes do |ff|
+          = ff.hidden_field :school_id
+          = ff.hidden_field :school_name
+          = ff.hidden_field :school_state
+          = ff.hidden_field :school_zip
+          = ff.hidden_field :country
+          = ff.hidden_field :full_address
+
+    .checkbox
+      = f.label :terms_of_service_version do
+        = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
+        = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+        %span#student-consent{style: "display: none;"}
+          = t('signup_form.student_consent')
+        - if @user.errors[:terms_of_service_version].present?
+          %span.error= t('signup_form.accept_terms')
+
+    -# If GDPR applies, show an additional checkbox.
+    - if request.gdpr? || request.params['force_in_eu']
+      = f.hidden_field :data_transfer_agreement_required, value: "1"
+      .checkbox
+        = f.label :data_transfer_agreement_accepted do
+          = f.check_box :data_transfer_agreement_accepted
+          = t('signup_form.agree_us_website')
+          = t('signup_form.my_data_to_us')
+          - if @user.errors[:data_transfer_agreement_accepted].present?
+            %span.error= t('signup_form.accept_terms')
+
+    #email-preference-radio.field{style: "display: none;"}
+      %span
+        = t('signup_form.email_preference_question')
+        = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+        - if @user.errors[:email_preference_opt_in].present?
+          %span.error= t('signup_form.email_preference_required')
+      %span
+        .radio
+          = f.radio_button :email_preference_opt_in, 'yes'
+          = f.label :email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
+        .radio
+          = f.radio_button :email_preference_opt_in, 'no'
+          = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+
+    %button.submit= t('signup_form.go_to_account')
+
+:ruby
+  script_data = {
+    signup: {
+      usIp: us_ip,
+      signUpUID: "#{session[:sign_up_uid]}"
+    }.to_json
+  }
+%script{src: minifiable_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}

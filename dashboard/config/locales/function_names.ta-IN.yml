@@ -17,7 +17,7 @@ ta:
       test: சோதனை
       move right: வலது பக்கம் நகரு
       move up: மேலே நகரு
-      move down: கீழே நகரு
+      move down: கீழே நகர்த்த
       move left: இடது பக்கம் நகரு
       collect: சேகரி
       turn left: இடதுபுறம் திரும்பவும்

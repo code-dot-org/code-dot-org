@@ -108,7 +108,7 @@
   dashboard_action_cancel: "ரத்து செய்"
   dashboard_action_delete_yes: 'ஆம்'
   dashboard_action_delete_no: 'இல்லை'
-  dashboard_students_name: "பெயர்"
+  dashboard_students_name: 'பெயர்'
   dashboard_sequence: "தொடர்வரிசை"
   dashboard_grade_other: "வேறு"
   dashboard_login_none: "மின்னஞ்சல்"
@@ -137,3 +137,9 @@
   user_header_settings: "எனது கணக்கு"
   user_header_logout: "வெளியேறு"
   user_header_signin: "உள்நுழை"
+  applab_tile_start_tutorial: "தொடங்குக"
+  hoc_overview_start_tutorial: "தொடங்குக"
+  hoc2018_creativity_create: "உருவாக்கு"
+  hoc2018_mc_start: "தொடங்குக"
+  hoc2018_mc_homepage_try_it: "இதை முயற்சிக்கவும்"
+  hoc2018_dance_party_button: "தொடங்குக"

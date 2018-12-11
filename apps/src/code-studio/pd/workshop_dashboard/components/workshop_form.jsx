@@ -899,7 +899,7 @@ export class WorkshopForm extends React.Component {
                   name="notes"
                   onChange={this.handleFieldChange}
                   maxLength={65535}
-                  rows={Math.max(5, this.state.notes.split("\n").length + 1)}
+                  rows={Math.max(5, this.state.notes && this.state.notes.split("\n").length + 1)}
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />

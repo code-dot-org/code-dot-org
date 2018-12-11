@@ -1,0 +1,9 @@
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/regionalPartnerSearch.js')}
+
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
+#regional-partner-search{"data-source-page-id" => source_page_id}

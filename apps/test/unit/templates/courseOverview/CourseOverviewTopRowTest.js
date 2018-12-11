@@ -27,7 +27,7 @@ describe('CourseOverviewTopRow', () => {
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('AssignToSection').length, 1);
+    assert.equal(wrapper.find('Connect(AssignToSection)').length, 1);
   });
 
   it('has a button for each resource', () => {

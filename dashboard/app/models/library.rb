@@ -15,8 +15,6 @@ class Library < ApplicationRecord
   SUBDIRECTORY_ATTRIBUTES = []
   EXTENSION = 'interpreted.js'
 
-  after_save {@@all_library_names = nil}
-
   def file_content
     content
   end
@@ -29,11 +27,13 @@ class Library < ApplicationRecord
   end
 
   def self.content_from_cache(name)
-    @@all_library_names ||= Library.distinct.pluck(:name)
-    return nil unless @@all_library_names.include? name
+    if Script.should_cache?
+      @@all_library_names ||= Library.distinct.pluck(:name)
+      return nil unless @@all_library_names.include? name
+    end
 
     Rails.cache.fetch("libraries/#{name}", force: !Script.should_cache?) do
-      Library.find_by(name: name).content
+      Library.find_by(name: name).try(:content)
     end
   end
 end

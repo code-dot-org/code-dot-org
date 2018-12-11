@@ -46,7 +46,7 @@ ca:
       3:
         text: "Els nous blocs treuen 1 palada de terra d'una pila i omplen 1 palada de terra d'un forat."
       4:
-        text: "Les piles i els forats son de diferents mides, per la qual cosa li hauràs de dir a la pagesa quantes palades haurà d'utilitzar."
+        text: "Les piles i els forats són de diferents mides, així que li has de dir a la pagesa quantes palades ha de fer."
     flappy_intro:
       1:
         text: "Hola, sóc la Katie! Una de les coses més emocionants sobre l'informàtica és que un programa informàtic pot ser interactiu."

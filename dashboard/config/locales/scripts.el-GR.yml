@@ -9,7 +9,7 @@ el:
         csp_category_name: Αρχές της Επιστήμης των Υπολογιστών ' 15-'16
         cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
         csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
-        hoc_category_name: Ώρα του Κώδικα
+        hoc_category_name: Η Ώρα του Κώδικα
         math_category_name: Μαθηματικά
       name:
         course1:
@@ -85,7 +85,7 @@ el:
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Flappy:
               name: Πουλάκι
             Getting Loopy:
@@ -148,7 +148,7 @@ el:
             'Maze: Conditionals':
               name: 'Λαβύρινθος: Συνθήκες'
             Songwriting:
-              name: Γράφουμε τραγούδια με παραμέτρους
+              name: Σύνθεση τραγουδιού
             'Studio: Create a Game':
               name: 'Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι'
             'Studio: Create a Story':
@@ -299,7 +299,7 @@ el:
             'Eval: Boolean Operators':
               name: Λογικοί τελεστές
             'Eval: Conditionals':
-              name: Έλεγχοι
+              name: Συνθήκες
             'Eval: Defining Functions':
               name: Σύνθετες συναρτήσεις
             'Eval: Strings and Images':
@@ -357,7 +357,7 @@ el:
             Computational Thinking:
               name: Αλγοριθμική Σκέψη
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Functions:
               name: Συναρτήσεις
             Graph Paper Programming:
@@ -440,6 +440,8 @@ el:
           stages:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
+        cspunit1:
+          description_short: Προγραμματισμός
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -457,6 +459,7 @@ el:
             Strings and Images:
               name: Strings και εικόνες
         cspunit3:
+          description_short: Προγραμματισμός
           stages:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
@@ -493,6 +496,7 @@ el:
             Wrap-Up:
               name: συνοψίζω
         cspunit2:
+          description_short: Προγραμματισμός
           stages:
             The Internet:
               name: Το Διαδίκτυο
@@ -562,6 +566,10 @@ el:
               name: Προσομοιωτής Διαδικτύου
             Welcome!:
               name: Καλώς ήρθατε!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Βασικές αρχές της επιστήμης υπολογιστών
         ECSPD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -655,7 +663,7 @@ el:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Songwriting:
-              name: Γράφουμε τραγούδια με παραμέτρους
+              name: Σύνθεση τραγουδιού
             The Big Event:
               name: Το Μεγάλο Γεγονός
         ScienceP3OLPT2:
@@ -723,6 +731,10 @@ el:
               name: Καλώς ήρθατε!
             Wrap-Up:
               name: συνοψίζω
+        cspunit5:
+          description_short: Προγραμματισμός
+        cspunit4:
+          description_short: Προγραμματισμός
         AlgebraA:
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
@@ -835,7 +847,7 @@ el:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
             Songwriting:
-              name: Γράφουμε τραγούδια με παραμέτρους
+              name: Σύνθεση τραγουδιού
         grade1:
           stages:
             Events:
@@ -900,7 +912,7 @@ el:
             Variables:
               name: Μεταβλητές
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
         grade2:
           stages:
             Flappy:
@@ -916,7 +928,7 @@ el:
             Binary:
               name: Δυαδικό
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Events:
               name: Συμβάντα
             For Loops:
@@ -956,11 +968,15 @@ el:
               name: Δυαδικά Βραχιόλια
             Binary Images:
               name: Δυαδικές Εικόνες
+            Play Lab:
+              name: Εργαστήριο Παιχνιδιού
         csd2-2017:
           stages:
             Lists:
               name: Λίστες
         minecraft:
+          description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
+            δικιά σου έκδοση του Minecraft.
           description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά
             σου έκδοση του Minecraft.
         flappy-impact-study:
@@ -1014,7 +1030,7 @@ el:
             Introduction:
               name: Εισαγωγή
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1096,7 +1112,7 @@ el:
             Introduction:
               name: Εισαγωγή
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             'Real Life Algorithms: Dice Race':
               name: 'Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών'
         csd6-2017:
@@ -1114,7 +1130,7 @@ el:
             Variables:
               name: Μεταβλητές
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Functions:
               name: Συναρτήσεις
         csd3-old:
@@ -1130,7 +1146,7 @@ el:
             Variables:
               name: Μεταβλητές
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Functions:
               name: Συναρτήσεις
             'null':
@@ -1223,7 +1239,7 @@ el:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1257,7 +1273,7 @@ el:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1286,6 +1302,8 @@ el:
           stages:
             Minecraft Hour of Code:
               name: Η Ώρα του Κώδικα με το Minecraft
+          description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια
+            δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1295,7 +1313,7 @@ el:
             Introduction:
               name: Εισαγωγή
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1325,7 +1343,7 @@ el:
             Variables:
               name: Μεταβλητές
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Functions:
               name: Συναρτήσεις
           description_short: Προγραμματισμός
@@ -1335,7 +1353,7 @@ el:
             Variables:
               name: Μεταβλητές
             Conditionals:
-              name: Έλεγχοι
+              name: Συνθήκες
             Functions:
               name: Συναρτήσεις
         csd2-2018:
@@ -1371,7 +1389,7 @@ el:
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
             'Functions: Songwriting':
-              name: Γράφουμε τραγούδια με παραμέτρους
+              name: Σύνθεση τραγουδιού
             Envelope Variables:
               name: Μεταβλητές
             For Loop Fun:
@@ -1439,7 +1457,7 @@ el:
             Introduction:
               name: Εισαγωγή
             'Functions: Songwriting':
-              name: Γράφουμε τραγούδια με παραμέτρους
+              name: Σύνθεση τραγουδιού
             Internet:
               name: Το Διαδίκτυο
             Crowdsourcing:
@@ -1499,3 +1517,104 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
             'Persistence & Frustration: Stevie and the Big Project':
               name: Ο Στίβι και το Μεγάλο Πρότζεκτ
+        frozen-2018:
+          stages:
+            Artist:
+              name: Καλλιτέχνης
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Καλλιτέχνης
+        dance:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+          title: Πάρτι Χορού
+          description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ
+            Ούρμπαν, Κιάρα, και 25 ακόμα!
+          description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
+            με τους φίλους σας.
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Καλλιτέχνης
+        aquatic:
+          stages:
+            Aquatic:
+              name: Υδάτινο
+          title: 'Minecraft: Υδάτινο Ταξίδι'
+          description_short: Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα
+            για την Ώρα του Κώδικα!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        dance-extras:
+          title: Συνεχίστε να Χορεύετε
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Envelope Variables:
+              name: Μεταβλητές
+            For Loop Fun:
+              name: Διασκέδαση με το Βρόχο Για
+            The Artist:
+              name: Ο Καλλιτέχνης
+        dance-low:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Προγραμματισμός Ρελέ
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Digital Citizenship:
+              name: Ψηφιακή υπηκοότητα
+            'Unplugged: Binary':
+              name: 'Εκτός Σύνδεσης: Δυαδικοί'
+            Artist Binary:
+              name: Δυαδικοί Καλλιτέχνη
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Nested Loops:
+              name: Φωλιασμένες Επαναλήψεις
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Conditionals:
+              name: Συνθήκες
+            Internet:
+              name: Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Προγραμματισμός Ρελέ
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Envelope Variables:
+              name: Μεταβλητές
+            For Loop Fun:
+              name: Διασκέδαση με το Βρόχο Για
+            Binary Bracelets:
+              name: Δυαδικά Βραχιόλια
+            'Unplugged: Binary':
+              name: 'Εκτός Σύνδεσης: Δυαδικοί'
+            Artist Binary:
+              name: Δυαδικοί Καλλιτέχνη
+            Internet:
+              name: Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing

@@ -5,6 +5,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const GUTTER = 20;
 const styles = {
@@ -49,6 +50,7 @@ const styles = {
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool,
     isPasswordRequired: PropTypes.bool.isRequired,
     warnAboutDeletingStudents: PropTypes.bool.isRequired,
     checkboxes: PropTypes.objectOf(PropTypes.shape({
@@ -70,6 +72,7 @@ export default class DeleteAccountDialog extends React.Component {
   render() {
     const {
       isOpen,
+      isTeacher,
       isPasswordRequired,
       warnAboutDeletingStudents,
       checkboxes,
@@ -84,6 +87,18 @@ export default class DeleteAccountDialog extends React.Component {
       deleteUser,
       deleteError,
     } = this.props;
+    const checkboxesLength = Object.keys(checkboxes).length;
+
+    const renderedMarkdown = (isTeacher) => {
+      let markdownStr = i18n.deleteAccountDialog_body1();
+
+      if (isTeacher) {
+        markdownStr = `${markdownStr} ${i18n.deleteAccountDialog_body2_teacher()}`;
+      } else {
+        markdownStr = `${markdownStr} ${i18n.deleteAccountDialog_body2_student()}`;
+      }
+      return markdownStr;
+    };
 
     return (
       <BaseDialog
@@ -100,22 +115,19 @@ export default class DeleteAccountDialog extends React.Component {
               style={styles.icon}
             />
             <div style={styles.text}>
-              <strong>{i18n.deleteAccountDialog_body1()}</strong>
-              {i18n.deleteAccountDialog_body2()}
-              <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
-              {i18n.deleteAccountDialog_body4()}
+              <UnsafeRenderedMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents &&
                 <span>
-                  {i18n.deleteAccountDialog_body5()}
-                  <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body6()}</strong>
-                  {i18n.deleteAccountDialog_body7()}
+                  <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_body3()} />
                 </span>
               }
             </div>
           </div>
-          {warnAboutDeletingStudents &&
+          {checkboxesLength > 0 &&
             <div style={styles.section}>
-              <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
+              <strong>
+                {i18n.deleteAccountDialog_checkboxTitle({numCheckboxes: checkboxesLength})}
+              </strong>
               {Object.keys(checkboxes).map(id => {
                 return (
                   <div key={id} style={styles.checkboxContainer}>

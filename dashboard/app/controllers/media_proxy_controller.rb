@@ -26,6 +26,7 @@ class MediaProxyController < ApplicationController
       'audio/basic',
       'audio/mid',
       'audio/mpeg',
+      'audio/mp3',
       'audio/mp4',
       'audio/ogg',
       'audio/vnd.wav'

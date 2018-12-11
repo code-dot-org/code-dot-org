@@ -1,0 +1,917 @@
+---
+sv:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: Hoppa-blocket flyttar konstnären utan att rita. Rita den streckade
+        linjen med hjälp av både hoppa- och ritablock.
+      2-3 Artist 4: Hjälp mig att göra färdigt huset till katten.
+      2-3 Artist 9 NEW: Gör färdigt draken
+      2-3 Artist 9 REPLACEMENT: Fortsätt med att rita upp trappstegen!
+      2-3 Artist 9: Gör färdigt draken
+      2-3 Artist Debugging 10: 'Styrkorset på min spelkontroll är för smalt. Tips:
+        Gör den 10 pixlar bredare'
+      2-3 Artist Debugging 11: Hjälp mig att göra färdigt min vackra snöflinga. Hur
+        många gånger måste jag "Upprepa" för att avsluta den?
+      2-3 Artist Debugging 2: 'Koden för de tre morrhåren du ser är fel. Tips: varje
+        morrhår är 75 pixlar långa. Fixa koden för att rita morrhåren.'
+      2-3 Artist Debugging 3: 'Min båt har ett hål! Kan du fixa det genom att ändra
+        vinkeln på linjen? Tips: den sista vinkeln är 15 grader fel.'
+      2-3 Artist Debugging 5: 'Koden för benet och foten du ser är fel. Tips: Foten
+        är för lång, vi kan behöva ta bort ett steg (medveten ordvits)'
+      2-3 Artist Debugging 6: Ser ut som jag sitter på en stol som saknar ett ben.
+        Ändra blocken för att rita benet.
+      2-3 Artist Debugging 7: Det ser ut som att C ritas baklänges. Kan du göra så
+        att det ser ut som ett C?
+      2-3 Artist Debugging 8: Mitt lyckohjul är inte klart. Hur många gånger måste
+        jag upprepa för att göra färdigt det?
+      2-3 Artist Debugging 9: 'Koden för denna stjälk är felaktig. Tips: Vinkeln är
+        60 grader fel'
+      2-3 Artist Free Play: Frispel! Rita vad du vill.
+      2-3 Artist Functions 11.5: Här är samma "Rita en hexagon"-funktion. Vad händer
+        om du bara vrider 60 grader varje gång du upprepar?
+      2-3 Artist Functions 12 Mike: 'Funktioner är riktigt bra för att rita komplexa
+        saker flera gånger. Kan du använda funktionen "Rita en blomma" för att fylla
+        resten av planteringslådan? (Ledtråd: växterna är alla åtskilda med 100 pixlar)  '
+      2-3 Artist Functions 12 a: 'Funktioner är riktigt bra för att rita komplexa
+        saker flera gånger. Kan du använda funktionen "Rita en blomma" för att fylla
+        resten av planteringslådan? (Ledtråd: växterna är alla åtskilda med 100 pixlar)  '
+      2-3 Artist Functions 12: 'Funktioner är riktigt bra för att rita komplexa saker
+        flera gånger. Kan du använda funktionen "Rita en blomma" för att fylla resten
+        av planteringslådan? (Ledtråd: växterna är alla åtskilda med 100 pixlar)  '
+      2-3 Artist Functions 2: Med funktioner kan du definiera nya block! Vi har flyttat
+        blocken för att rita en kvadrat till en funktion som kallas "Rita en kvadrat".
+        Kan du använda funktionen "Rita en kvadrat" för att skapa glasögonen? kvadraterna
+        är 75 pixlar isär.
+      2-3 Artist Functions 3: Ändra funktionen för att rita en kvadrat med en sidlängd
+        på 115 och rita de större glasögonen. Kvadraterna är nu 45 pixlar isär.
+      2-3 Artist Functions 4: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
+      2-3 Artist Loops 1: Kan du skapa en sexhörning med sidlängden 100 pixlar för
+        att göra färdigt cellen? Kom ihåg att det betyder att du bara behöver vrida
+        60 grader!
+      2-3 Artist Loops 2: Nu ska du använda ett upprepa block för att göra cellen
+        till ett snäckskal.
+      2-3 Artist Loops New 10: Låt oss nu sätta ihop ett antal V:n genom att rita
+        dem i en slinga.
+      2-3 Artist Loops New 12: "Rita en diamant med sidor 100 pixlar.\n \n"
+      2-3 Artist Loops New 13: Rita nu diamanten 3 gånger i en loop.
+      2-3 Artist Loops New 2: Här är lite av koden du använde för att rita rutan.
+        Vad händer om du använder upprepa blocket för att köra den här koden 4 gånger?
+      2-3 Artist Loops New 9: Rita ett enkelt V där båda sidor är 50 pixlar för att
+        göra klart pilen.
+      2-3 Artist Nested Loops 10: Loopa den här koden 12 gånger för att slutföra mönstret.
+      2-3 Artist Nested Loops 11: Loopa den här koden 4 gånger att slutföra mönstret,
+        vänd 90 grader efter varje cirkel.
+      2-3 Artist Nested Loops 12: Loopa den här koden 12 gånger för att göra klart
+        lockarna.
+      2-3 Artist Nested Loops 2: Loopa triangeln 6 gånger. Efter varje triangel måste
+        du vända 60 grader innan nästa ritas.
+      2-3 Artist Nested Loops 4: 'Loopa denna diamant 12 gånger för att rita en blomma.
+        Tips: 12 diamanter är precis som de 12 trianglar du gjorde - hur mycket behöver
+        du svänga efter varje form?'
+      2-3 Artist Nested Loops 5: Fyll i  byggnadens fönster med en kapslad loop. Fönstren
+        är 20 pixlar långa och 20 pixlar isär.
+      2-3 Artist Nested Loops 7: Loopa denna triangel 10 gånger för att rita solen.
+        Du kommer behöva flytta och vända efter varje triangel. Du kan räkna ut hur
+        mycket du behöver vända genom att dividera antalet grader i en cirkel med
+        antalet former.
+      2-3 Artist Nested Loops 8: Låt oss lägga till lite gräs i vår bild. Varje tuva
+        av gräs är 50 pixlar isär.
+      2-3 Artist Nested Loops 9: Vi ska avsluta denna bild genom att lägga till en
+        blomma. Loopa diamanten 12 gånger för att rita din blomma.
+      2-3 Artist Nested Loops Free Play: Fri lek, rita något häftigt med kapslade
+        slingor.
+      2-3 Bee Conditionals 11: Samla nektar där blommorna har nektar.
+      2-3 Bee Conditionals 13: 'Samla nektar och gör honung. Tips: Vad händer om du
+        använder  "om nektar" funktionen för en röd blomma? Kan du klara det med en
+        loop?'
+      2-3 Bee Conditionals 15: Samla nektar från alla fyra blommorna.
+      2-3 Bee Conditionals 3: Hjälp mig samla alla nektar från blommorna och göra
+        honung. Använd en loop.
+      2-3 Bee Debugging 3: Dessa block irriterar mig. Åtgärda felen för att samla
+        all nektar och göra all honung.
+      2-3 Bee Debugging 6: Dessa block irriterar mig. Åtgärda felen för att samla
+        all nektar och göra all honung.
+      2-3 Bee Debugging 9: Dessa block irriterar mig. Åtgärda felen för att samla
+        all nektar och göra all honung.
+      2-3 Bee Functions 10: Lila blommor kan ha antingen 1 eller 0 nektar.  Skapa
+        en funktion som samlar nektar enbart från lila blommor som har nektar.
+      2-3 Bee Functions 2: Funktioner är block av kod som utför en uppgift. Använd
+        funktionen "få 5" för att få 5 nektar i taget. Se till att använda en loop
+        för att få ett perfekt antal block också.
+      2-3 Bee Functions 4: Funktionen "flytta och få nektar" vänder biet, samlar nektar,
+        och vänder sedan tillbaka biet till där det började. Använd funktionen för
+        att samla all nektar.
+      2-3 Bee Loops 1: 'Varje blomma innehåller en enhet nektar. Samla nektar från
+        var och en av blommorna. '
+      2-3 Bee Loops 3A: Kan du använda en loop för att samla all nektar?
+      2-3 Bee Loops 3B: Använd nu det nya upprepa -blocket för att samla all nektar
+        och göra all honung.
+      2-3 Bee Loops 4A: Vad händer om du upprepar denna sekvens 3 gånger? Glöm inte
+        att göra honung i slutet!
+      2-3 Bee Loops 8: Dessa lila blommor har en okänd mängd nektar. Använd "medan
+        nektar" slingan för att samla all nektar. Denna loop kommer att köra så länge
+        villkoret är sant, i detta fall nektar > 0.
+      2-3 Maze 15: Använd två slingor för att komma till  grisen med färre block.
+      2-3 Maze Loops 18: Få mig till Solrosen!
+      4-5 Artist 10: Tryck på "Kör" för att testa koden. Upprepa sedan det tillräckligt
+        många gånger för att slutföra teckningen. Färgerna blir olika varje gång.
+      4-5 Artist 2: Kan du upprepa den här koden för att slutföra kvadraten?
+      4-5 Artist 5: Vilken vinkel ska du använda?
+      4-5 Artist 6: Denna liksidiga triangel har vinklarna 60, 60 och 60 grader. Varje
+        sida är 200 pixlar. Gör färdigt bilden.
+      4-5 Artist Free Draw 1: Rita själv! Rita någonting du är inspirerad att skapa.
+      4-5 Artist Patterns 1: Kan du rita kvadraten med hjälp av en upprepning? Varje
+        sida ska vara 20 pixlar lång.
+      4-5 Artist Patterns 12: Vad händer om du kopierar slingan och vänder åt vänster
+        i stället för höger? Kan du upprepa för att måla vågen?
+      4-5 Artist Patterns 13: Låt oss nu upprepa fyra gånger för att skapa ramen.
+        Tänk på hörnen, du kan inte bara vända 90 grader! Om du behöver upprepa en
+        sväng på 3 grader 60 gånger för att få en halvcirkel, vilka av dessa kodblock
+        kommer då att skapa en fjärdedels cirkel för hörnen?
+      4-5 Artist Patterns 3: Låt oss nu gå ytterligare en nivå djupare! Vi har nästlat
+        hela kodblocket i en annan slinga men du behöver få konstnären tillbaka på
+        plats för att rita nästa linje. Vilket av dessa kodblock kan du lägga i slutet
+        av den yttersta loppen för att rita hela rutnätet?
+      4-5 Artist Patterns 8: Använd en slinga för att rita denna hexagon med sidor
+        på 40 pixlar och vinkeln på 60 graders.
+      4-5 Artist Patterns 9: 'Upprepa nu den koden 3 gånger för att rita hela raden.
+        Ledtråd: varje hexagon är 80 pixlar bred från vänster till höger.'
+      4-5 Artist Patterns Free Play: Lek fritt! Prova att göra ditt eget mönster!
+      4-5 Bee Conditionals 2: Biet vill bara ha nektar just nu. Alla objekt är inte
+        blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma.
+        Om det är en blomma kan du samla nektar.
+      4-5 Bee Conditionals 5: Det skulle kunna finnas en blomma eller en bivaxkaka
+        under de där molnen. Använd blocket "om/annars" för att samla nektar om det
+        är en blomma och annars för att göra honung (för då är det en bivaxkaka).
+      4-5 Bee Conditionals 6: Denna lila blomma kan ha antingen 3, 2 eller 1 nektar.
+        Här är ett "om/annars"-block kombinerat med ett annat om/annars-block för
+        att skapa ett "om, om/annars, annars"-block. Gör klart lösningen på problemet
+        för att samla in den okända mängden nektar.
+      4-5 Bee Conditionals 7: Kom ihåg att lila blommor kan ha 3, 2 eller 1 nektar.
+        Gör färdigt funktionen "kolla lila blomman" och använd den för att samla all
+        nektar från blommorna.
+      4-5 Bee Conditionals 8: Skriv i funktionen "kolla blomman gör honung". Din funktion
+        borde kolla om den lila blomman har 3, 2, eller 1 nektar och samla all nektar.
+        Sedan, gå framåt och göra honung.
+      4-5 Bee Conditionals Assessment 1: |-
+        Uppgift: Denna kod är fel.
+        Gör färdigt funktionen "få nektar eller gör honung", anropa den sen för att samla all nektar och honung. Kom ihåg att lila blommor kan ha 3, 2, eller 1 nektar.
+      4-5 Bee Debugging 1: Dessa bock irriterar mej verkligen. Kan du fixa dem?
+      4-5 Bee Debugging 6: Den lila blomman har en okänd mängd nektar. Fixa blocken
+        för för att få all nektar från blomman.
+      4-5 Bee Nested Loops 4: 'Samla all nektar från varje blomma och gör honung vid
+        varje bivaxkaka. Använd en nästlad loop. '
+      4-5 Bee Nested Loops Assessment 1: Uppgift - samla all nektar och gör all honung
+        genom att använda slingor.
+      4-5 Maze 9: Skapa en slinga med blocket "upprepa tills".
+      4-5 Maze Conditionals 1: Använd blocket "upprepa tills" för att ta zombien till
+        solrosen.
+      4-5 Maze Conditionals 10: "Kan du lägga till bara 3 block för att hjälpa mig
+        att lösa en svårare labyrint? \r\rOm du gör det rätt, kommer jag kunna gå
+        vilken väg som helst oberoende av längden!"
+      4-5 Maze Conditionals 2: Använd blocket "upprepa tills" för att ta zombien till
+        solrosen.
+      4-5 Maze Conditionals 3: 'Använd "om"-blocket för att låta mig välja när jag
+        ska svänga. Tips: du behöver bara ett block till, men lär dig hur man gör
+        det så att du kan göra det själv nästa gång.'
+      4-5 Maze Conditionals 4: Ok, det här är precis som förra pusslet, men du behöver
+        kunna använda "om"-blocket och "upprepa"-blocket tillsammans.
+      4-5 Maze Conditionals 5: Mig vill ha solros! Använd ett "Om"-block för att ta
+        mig dit med minsta antalet block.
+      4-5 Maze Conditionals 6: Mig vill ha solros! Använd ett "Om"-block för att ta
+        mig dit med minsta antalet block.
+      4-5 Maze Conditionals 7: "Okej, vi tränar lite till \n– denna omgång är ganska
+        lik den förra, men se upp för de köttätande växterna!"
+      4-5 Maze Conditionals 8: '"Om/annars"-blocket kontrollerar ett villkor, och
+        gör sen en sak ELLER en annan. Använd det nya blocket för att ta mig till
+        solrosen.'
+      4-5 Maze Conditionals 9: En övning till med "Om/annars"-blocket, kan du få det
+        rätt på första försöket?
+      4-5 Maze Conditionals Assessment 1: Använd blocket "upprepa-tills" och blocket
+        "om-annars" för att ta mig till solrosen med så få block som möjligt.
+      4-5 Nested Loops 12: Kan du rita dessa 36 trianglar med en nästlad slinga?
+      4-5 Nested Loops 3: "Skapa en sol genom att nästla in startkoden i en annan
+        slinga. Detta kallas en nästlad slinga. \r"
+      4-5 Nested Loops 5: Repetera den givna koden för att skapa en väderkvarn.
+      4-5 Nested Loops 6: Kan du rita en hexagon genom att upprepa triangelkoden?
+      4-5 Nested Loops 7: 'Upprepa denna design 10 gånger. Hur många grader måste
+        du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 10?)'
+      4-5 Nested Loops 8: 'Upprepa denna design 6 gånger. Hur många grader måste du
+        rotera varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 6?)'
+      4-5 Nested Loops 9: Rita tänderna i alligatorns mun!
+      4-5 While Loops 1: Flytta mig till hålet och fyll det med två spadtag med jord,
+        använd blocket "fyll".
+      4-5 While Loops 2: Flytta mig till jordhögen och ta bort den med 5 spadtag,
+        använd blocket "ta bort".
+      4-5 While Loops 3: 'Flytta mig till högen och ta bort hela, gå sedan till hålet
+        och fyll det helt.  Tips: Använd så få block som möjligt.'
+      4-5 While Loops 4: 'Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur
+        många spadtag med jord som krävs.  Kan du skriva ett program som fyller det
+        tills marken är jämn?  Tips: Försök att använda en ''medan''-slinga denna
+        gång.'
+      Artist Autorun Test: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
+      Course 4 Artist 13: Spelar fortfarande?  Här är en tom duk där du kan designa
+        vad du vill!
+      Course 4 Artist 6: 'Slutför koden för att rita dessa trianglar. Tips: Det finns
+        3 trianglar inom 360 graders rotation... hur många gånger går 3 i 360?'
+      Course 4 Artist 8: Rita denna sol genom att upprepa hela detta kodblock flera
+        gånger.
+      Course 4 Artist 8a: "Kommer du ihåg denna form? Nu kommer vi låta dig bygga
+        den utan att ge dig någon hjälp på traven!\r\nTips: Det finns 3 trianglar
+        inom 360 graders rotation...hur många gånger går 3 i 360?"
+      Course 4 Artist Binary 1a: "Här är en funktion som tar en binär sträng med 1
+        och 0 för att instruera artisten att följa dem från vänster till höger och
+        uppifrån och ned. Artisten kommer att fylla i kvadraterna när den ser en 1:a
+        och ignorera kvadraten när den ser en 0:a.\r\n\r\nKör koden för att se hur
+        artisten använder binärkoden för att rita ett mönster."
+      Course 4 Artist For Loops 13: Hmmm, dessa former blir större varje gång! Löste
+        vi inte det problemet med variabler? Hur kan vi använda räknar - variabeln
+        för att göra sidorna mindre eftersom det finns fler av dem? Istället för att
+        flytta framåt ett angivet antal steg, prova att flytta framåt med (100 / räknare)
+        pixlar.
+      Course 4 Artist For Loops 4: 'Hur skulle du ändra vad du har lärt dig att rita
+        dessa rutor? De börjar med en som är 15 pixlar lång, den största är 300 pixlar
+        lång och varje ruta är 15 pixlar större än förra. '
+      Course 4 Artist For Loops 6: Fri lek! Prova att använda en for-loop för att
+        rita ett växande mönster av former av din egen design.
+      Course 4 Artist For Loops 6a: Gör tre små ändringar i koden från den sista nivån
+        för att få den här!
+      Course 4 Artist For Loops 8a: Bara en enda liten förändring av koden från den
+        sista bilden kan skapa denna bild. Kan du lista ut vilken förändringen är?
+      Course 4 Artist For Loops Challenge_a: "Kan du lista ut hur du kan använda alla
+        de saker du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd?
+        Klicka här."
+      Course 4 Artist Vars 3: 'Här är en slinga som ritar en kvadrat, men något saknas.
+        Kan du fixa så att den använder variabeln "längd" för att räkna ut hur lång
+        varje sida ska vara? '
+      Course 4 Bee 7: Använd allt du lärt dig hittills för att samla all nektar. Den
+        lila blomman kan ha antingen 3, 2 eller 1 nektar.
+      Course 4 Bee For Loops 11: Vad är fel med denna loop? Se om du kan fixa det
+        och göra så att biet samlar alla nektar.
+      Course 4 Bee Params 1: Använd funktionen "få 3 nektar" som vänder och flyttar
+        för att samla nektar och sen återgår till den ursprungliga platsen. Skriv
+        en sekvens för att samla all nektar med "få 3 nektar"
+      Course 4 Play Lab Params 4: Här är en funktion som kallas "patrol." Redigera
+        den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
+      Course 4 Play Lab Params 8: Använd en "när actor berör" block för att skicka
+        hunden tillbaka till övre vänstra ENDAST om hunden rör vid någon av de andra
+        actors.
+      Course 4 Play Lab Vars 2: Loppet i det sista pusslet var inte särskilt rättvist!
+        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        att samla in 10 flaggor vinner!
+      Course 4 Play Labs For Loops 1: Låt oss låta hunden säga alla nummer från 1
+        till 100. Använd en för-loop och 'räknare' blocket för att säga nummer-variabeln
+        varje gång loopen körs.
+      Course 4 Playlab For Loops 5b: Justera intervallet på dessa 'for' loopar så
+        att de två bokstäverna stannar på exakt samma ställe.
+      Course 4 SCFP 1: Skapa en funktion med parametrar som gör att konstnären kan
+        hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal
+        bildpunkter (med positiva och negativa tal).
+      Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan
+        hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal
+        bildpunkter (med positiva och negativa tal).
+      CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist!
+        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        att samla in 10 flaggor vinner!
+      Dance_Party_01: |-
+        *Nu ska vi ha ett dansparty!*
+
+        Dra ”gör ett nytt”-blocket till arbetsytan och anslut den inuti ”installera”-blocket för att skapa din första dansare.
+
+        * *Du kan även klicka på glödlampan till vänster om du vill ha mer information eller extra utmaningar.*
+      Dance_Party_01_low: |-
+        *Nu ska vi ha ett dansparty!*
+
+        Dra ”gör ett nytt”-blocket till arbetsytan och anslut den inuti ”installera”-blocket för att skapa din första dansare.
+
+        * *Du kan även klicka på glödlampan till vänster om du vill ha mer information eller extra utmaningar.*
+      Dance_Party_02: |-
+        Låt oss få denna älg att dansa!
+
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+
+
+        **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
+      Dance_Party_03: |-
+        *Nu rockar vi!*
+
+        Lägg till ett <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> block till din arbetsyta. Gör så att dansaren startar en ny rörelse efter 6 åtgärder.
+      Dance_Party_04: |-
+        *Denna dans behöver lite effekter!*
+
+        Leta efter ett nytt block i din verktygslåda som lägger till en bakgrundseffekt bakom din dansare. Se effekterna ändras i takt med musiken!
+      Dance_Party_05: |-
+        Använd ett annat nytt block för att få dansaren att ändra rörelse **efter 2 åtgärder**!
+
+        *Att välja ”(nästa)”, ”(föregående)”, eller ”(slumpad)” säger åt dansaren att utföra en annan rörelse varje gång koden körs.
+      Dance_Party_06: |-
+        *Vi behöver fler dansare!*
+
+        Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
+      Dance_Party_08: |-
+        Varje dansare har en uppsättning _properties_ som styr hur den ser ut.
+
+        Du kan göra så att det ser ut som att en dansare är i bakgrunden genom att göra deras _size_ mindre. Kan du göra båda bakgrundsdansarna i samma storlek?
+      Dance_Party_09: |-
+        Dansarna har en egenskap för färgtoner som kan lägga till ett lager av färg. Testa att ändra färgtonen på en av dina dansare.
+        * Färgtonerna kommer att blanda färgen som du väljer med dansarens färger.
+      Dance_Party_10: |-
+        Nu vet vi hur man ändrar en dansares egenskaper. Vi kan även göra så att samma egenskaper automatiskt reagerar på musiken med hjälp av detta block:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
+      Dance_Party_11.5_test: |-
+        Kolla in detta block:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kan du skapa ett gäng dansare på samma gång!
+
+        Testa att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken.
+      Dance_Party_11: |-
+        Detta <xml><block type="Dancelab_whenKey"></block></xml> block låter dig köra kod när uppåtpilen trycks in.
+
+        Du kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!
+      Dance_Party_11_5: |-
+        Kolla in detta block:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kan du skapa ett gäng dansare på samma gång!
+
+        Testa att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken.
+      Dance_Party_11b: Dags för en dansutmaning! Katten klappar när du trycker på
+        vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
+      Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
+        dina vänner.
+      Dance_Party_extras_battle: |-
+        # Dansgrupper
+
+        Här är en danstävling mellan två grupper. Piltangenterna styr den ena dansaren och ”w,a,s,d”-tangenterna styr den andra. Ha en danstävling med en vän och försök sedan att förbättra tävlingen.
+
+        * Lägg till fler tangenter för att styra danserna
+        * Gör så att backgrundsdansarna också reagerar när en tangent trycks in
+        * Växla dansare vid var 4:e åtgärd genom att ange deras synlighet
+      Dance_Party_extras_every_beat: |-
+        # Kvartsnoter
+
+        De flesta av våra danser har använt sig av hela åtgärder, men varje åtgärd består av 4 kvartsnoter. Denna dans använder ”fjärdedelsåtgärder” (0,25) för att göra så att dansaren klappar på varje kvartsnot.
+
+        Denna dans använder också ett _villkorat_ block för att styra när blocket med ”fjärdedelsåtgärder” kan ändra dansen. Testa att ändra siffrorna i det villkorade blocket för att se hur det påverkar dansen.
+
+        * Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
+        * Lägg till några händelser med ”efteråtgärder”.
+        * Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
+      Dance_Party_extras_layout: |-
+        # Uppställning!
+
+        Kolla in denna dans som använder ”layout”-blocket för att ändra bakgrundsdansarnas formation under dansen. Testa någon av dessa idéer för att utveckla det hela:
+
+        * Skapa en andra grupp av dansare i en annan utformning
+        * Ändra utformning när en tangent trycks in
+        * Ändra en egenskap när dansarna ändrar formation
+      Dance_Party_extras_on_beat: |-
+        # Bas, mellanregister och diskant
+
+        Denna dans använder ”topp”-händelser för att starta kod när olika delar av musiken blir hög. Försöka mixtra med olika låtar för att se hur de förändrar dansen.
+      Dance_Party_extras_speed: |-
+        # Öka takten, sakta ner
+
+        Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
+      Dance_Party_extras_visible: |-
+        # Vart tog de vägen?
+
+        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
+
+        * Lägg till en grupp av dansare
+        * Visa och dölj dansare med hjälp av piltangenterna
+        * Dölj alla dansare och växla till en spännande bakgrundseffekt
+      Function intro Ryan: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
+        \ All kod du behöver för att korsa floden är inbyggd i den!\r\n \r\nFäst två
+        av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
+        till rödstensfacklan [redstone_torch]."
+      Function intro Ryan_2019: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
+        \ All kod du behöver för att korsa floden är inbyggd i den!\r\n \r\nFäst två
+        av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
+        till rödstensfacklan [redstone_torch]."
+      HOC 2018 Level_1: Du behöver förnödenheter för resan framåt. Samla en **båt**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        från **kistan** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Det finns en **bläckfisk** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        som gömmer sig någonstans i detta havsmonument – kan du hitta den?
+      HOC 2018 Level_11: Bygg en mur av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        runt den svarta betongen. Detta kommer att aktivera denna **kanal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        och slutföra din utmaning!
+      HOC 2018 Level_12: Grattis! Den öppna vattenlevande världen väntar på dig. Bygg
+        ett korallrev! En vulkan! Ett skeppsvrak! Det är upp till dig.
+      HOC 2018 Level_2: Att ta en av båtarna är mycket lättare än att simma i öppet
+        vatten! Bege dig till slutet av bryggan för att hoppa ombord.
+      HOC 2018 Level_3: Greppa årorna och styr din båt över öppet hav för att fånga
+        **torsk** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Mata torsken till **delfinen** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Använd ett upprepande block för att ta dig över havet snabbare.
+      HOC 2018 Level_5: Det finns ett **skal från en pärlbåtssnäcka** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        gömd någonstans! Utforska skeppsvraket för att nå **kistan** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Det ser kallt ut där ute! Fånga en **lax** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        på vägen till undervattensruinerna.
+      HOC 2018 Level_7a: Du hittade undervattensruinerna. Sök i sandstenen efter en
+        **kista** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        som innehåller en **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        skatt.
+      HOC 2018 Level_8: Först isberg – nu lava? Ta dig igenom denna vulkanö och hitta
+        **tropiska fiskar** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i korallrevet.
+      HOC 2018 Level_9b: Du tog dig till revet, sök nu efter **Havets hjärta** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Använd den blåa och röda korallen för att nå **skattkistan** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      HOC Dance 4_draft: |-
+        Använd ett annat nytt block för att få dansaren att ändra rörelse **efter 2 åtgärder**!
+
+        *Att välja ”(nästa)”, ”(föregående)”, eller ”(slumpad)” säger åt dansaren att utföra en annan rörelse varje gång koden körs.
+      HOC Dance 5_draft: |-
+        *Vi behöver fler dansare!*
+
+        Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
+      HOC Dance 9_draft: |-
+        Detta <xml><block type="Dancelab_whenKey"></block></xml> block låter dig köra kod när uppåtpilen trycks in.
+
+        Du kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!
+      HOC Dance Freeplay: Dags att svänga på höfterna! Skapa en egen dans att dela
+        med dina vänner.
+      HOC Dance Freeplay_draft: Dags att svänga på höfterna! Skapa en egen dans att
+        dela med dina vänner.
+      HOC Dance Predraw: Dags att svänga på höfterna! Skapa en egen dans att dela
+        med dina vänner.
+      K-1 Bee Loops 2: Använd en slinga för att flytta och sedan få nektar och gör
+        honung!
+      K-1 Bee Loops 3: Använd loopar att få nektar och göra honung!
+      K-1 Bee Loops 4: Använd loopar att få nektar, göra honung och flytta!
+      K-1 Bee Loops 5: Använd loopar för att få nektar och honung!
+      K-1 Bee Loops 6: Använd upprepningar för att hämta nektarn, honungen och för
+        att flytta!
+      K-1 Maze Loops 11: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 12: Få mig till grisen! Använda upprepa-loopen.
+      K-1 Maze Loops 2: Använda upprepa blocket för att få mig att komma till grisen!
+      K-1 Maze Loops 8: Få mig till grisen! Använda upprepa-loopen.
+      MC Agent Freeplay: "**Spela fritt:** Nu är det upp till dig! Använd agentens
+        kod för att utforska världen."
+      MC_HOC_2017 Agent Test: "Klicka på \"Kör\" för att flytta spelaren med **piltangenterna**.
+        \n\n\nFör att klara av banan måste du ta dig till dörren och öppna den (med
+        **mellanslag**) så att du kan nå den orangefärgade rutan på insidan."
+      MC_HOC_2017_01: "Klicka på \"Kör\" för att flytta spelaren med **piltangenterna**.
+        \n\n\nFör att klara av banan måste du ta dig till dörren och öppna den (med
+        **mellanslag**) så att du kan nå den orangefärgade rutan på insidan."
+      MC_HOC_2017_01_Cole: Du måste samla på dig alla verktyg på den här resan. Styr
+        med **piltangenterna** och gå till kistan på vägen för att vinna.
+      MC_HOC_2017_01_Kiki: På den här banan ska du klicka på "Kör" under spelfältet
+        och sedan styra spelaren med **piltangenterna**.
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} är fast i huset, men agenten är här
+        för att hjälpa till!\r\n\r\n   \r\nFäst ett \"gå framåt\"-block i det breda
+        \"vid körning\"-blocket i arbetsytan för att ställa agenten på tryckplattan
+        [PressurePlate_Up], tryck sedan på \"Kör\" och använd piltangenterna för att
+        styra {currentPlayerName} ut ur huset och öppna **kistan** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} är fast i huset, men agenten
+        är här för att hjälpa till!\r\n\r\n   \r\nFäst ett \"gå framåt\"-block i det
+        breda \"vid körning\"-blocket i arbetsytan för att ställa agenten på tryckplattan
+        [PressurePlate_Up], tryck sedan på \"Kör\" och använd piltangenterna för att
+        styra {currentPlayerName} ut ur huset och öppna **kistan** [chest]."
+      MC_HOC_2017_02: Spelaren måste ta sig in i den hemliga lunden.  Hjälp agenten
+        öppna porten genom att skriva kod som ställer honom på tryckplattan.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} ska ut på äventyr! Hjälp till genom
+        att hämta **kartan** [map_empty] bakom den låsta dörren på höger sida.\r\n
+        \r\nFäst koden i arbetsytan för att flytta agenten till tryckplattan [PressurePlate_Up]
+        så att {currentPlayerName} kan ta sig förbi. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} ska ut på äventyr! Hjälp till
+        genom att hämta **kartan** [map_empty] bakom den låsta dörren på höger sida.\r\n
+        \r\nFäst koden i arbetsytan för att flytta agenten till tryckplattan [PressurePlate_Up]
+        så att {currentPlayerName} kan ta sig förbi. "
+      MC_HOC_2017_02_Kiki: "Spelaren ska ut på äventyr, men först behövs en fackla
+        som är gömd på andra sidan av den låsta dörren. \n\n\nProgrammera agenten
+        att gå framåt två gånger för att följa den vita vägen och ställa sig på tryckplattan
+        så att han kan öppna dörren åt spelaren."
+      MC_HOC_2017_02_Will: "För att klara av den här banan måste spelaren ställa sig
+        i den orangefärgade rutan i den hemliga lunden, som finns bakom den låsta
+        dörren. \n\n\nKoden i arbetsytan gör att agenten går framåt två gånger för
+        att ställa sig på tryckplattan så dörren öppnas åt Alex eller Steve."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} fortsätter sitt äventyr och behöver
+        **kompassen** [compass] för att förbereda sig för resan.\r\n   \r\nProgrammera
+        agenten att öppna porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsätter sitt äventyr och behöver
+        **kompassen** [compass] för att förbereda sig för resan.\r\n   \r\nProgrammera
+        agenten att öppna porten. "
+      MC_HOC_2017_03_Kiki: "Spelarens äventyr börjar bakom den låsta dörren i den
+        hemliga lunden! \n\n\n\n\nHjälp agenten öppna dörren genom att skriva kod
+        som ställer honom på tryckplattan."
+      MC_HOC_2017_04: Ändra loopen från det senaste pusslet för att hjälpa agenten
+        skapa en väg över den bredare delen av den här floden.
+      MC_HOC_2017_04POINT5_Cole: "Du tog dig ut ur träsket!  Nu måste du hjälpa spelaren
+        till den orangefärgade rutan. \n\n\nHjälp agenten rensa vägen med enkla mönster
+        och loopar för att gå över de två första tryckplattorna."
+      MC_HOC_2017_04POINT5_RYAN: "Du tog dig över! \n\n\nHjälp {currentPlayerName}
+        ta sig genom labyrinten för att plocka upp **yxan** [diamond_axe]."
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du tog dig över! \n\n\nHjälp {currentPlayerName}
+        ta sig genom labyrinten för att plocka upp **yxan** [diamond_axe]."
+      MC_HOC_2017_04_Cole: "Agenten kan sväva över vatten!\r\n \r\nAnvänd en \"upprepa\"-loop
+        för att lösa det här pusslet och hjälpa {currentPlayerName} ta sig till **hinken**
+        [bucket_empty] bakom dörren. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan sväva över vatten!\r\n \r\nAnvänd en
+        \"upprepa\"-loop för att lösa det här pusslet och hjälpa {currentPlayerName}
+        ta sig till **hinken** [bucket_empty] bakom dörren. "
+      MC_HOC_2017_04_Kiki: "Ingången till den hemliga lunden ledde till en vacker
+        oas!  För att klara av den här banan måste spelaren ta sig till den orangefärgade
+        rutan i hyddan. \n\n\nAnvänd en \"upprepa\"-loop för att hjälpa agenten hela
+        vägen till tryckplattan som öppnar dörren till hyddan."
+      MC_HOC_2017_05: "Loopar fungerar inte i alla lägen. \n\n\nKaktusarna växer i
+        ett oregelbundet mönster, så en loop skulle inte rensa bort dem effektivt.
+        \ I stället har vi gett dig funktionen \"förstör och gå\" som sköter grovgörat
+        varje gång agenten stöter på hinder."
+      MC_HOC_2017_05_Cole: "Åh nej, bron är trasig! \n\n\nProgrammera agenten att
+        laga bron med \"placera\"-blocket så att {currentPlayerName} kan ta sig till
+        **spaden** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Åh nej, bron är trasig! \n\n\nProgrammera agenten
+        att laga bron med \"placera\"-blocket så att {currentPlayerName} kan ta sig
+        till **spaden** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Åh nej, bron är trasig! \n\n\nHjälp agenten laga bron
+        så att spelaren kan ta sig till **spaden**."
+      MC_HOC_2017_05_Kiki: "Det har blivit dags för spelaren att lämna den hemliga
+        lunden och fortsätta sitt äventyr, men bron är trasig! \n\n\nHjälp agenten
+        laga bron, gå sedan till träplankan så att spelaren kan ta sig till den orangefärgade
+        rutan."
+      MC_HOC_2017_06_Cole: "Ännu en flod, men mycket bredare!\r\n \r\nFixa koden för
+        att hjälpa agenten bygga en bro så att {currentPlayerName} kan ta sig till
+        **spetshackan** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Ännu en flod, men mycket bredare!\r\n \r\nFixa koden
+        för att hjälpa agenten bygga en bro så att {currentPlayerName} kan ta sig
+        till **spetshackan** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Ännu en flod, men mycket bredare! \n\n\nFixa koden för
+        att hjälpa agenten bygga en bro över floden."
+      MC_HOC_2017_06_Kiki: "Ännu en flod, men mycket bredare! \n\n\nFixa koden för
+        att hjälpa agenten bygga en bro över vattnet."
+      MC_HOC_2017_07_Cole: "Det är is i vägen!\r\n \r\nFunktionen \"rensa väg\" kan
+        hjälpa dig förstöra isen så {currentPlayerName} kan ta sig till gruvvagnen
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Det är is i vägen!\r\n \r\nFunktionen \"rensa väg\"
+        kan hjälpa dig förstöra isen så {currentPlayerName} kan ta sig till gruvvagnen
+        [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Loopar är inte enda sättet att upprepa kod!\r\n\r\nHär
+        har vi gett dig en funktion som heter \"rensa kaktusar\" som rensar bort de
+        tre kaktusarna varje gång den används.  Använd två \"rensa kaktusar\"-block
+        för att rensa vägen till den orangefärgade rutan. "
+      MC_HOC_2017_07a_Kiki: Redigera den här loopen för att hjälpa agenten rensa vägen
+        till den orangefärgade rutan.
+      MC_HOC_2017_08_Cole: "I det här fallet måste du placera block i stället för
+        att förstöra innan du går. \n\n\nAnpassa funktionen så att den fungerar i
+        öknen."
+      MC_HOC_2017_08_Kiki: "I stället för att förstöra kaktusar måste du placera sten
+        över lava och sedan förstöra sandstenen. \n\n\nAnpassa funktionen så att den
+        fungerar på den här banan."
+      MC_HOC_2017_08_RY: "Nu finns **TVÅ** funktioner att välja mellan! \n\n\nAnvänd
+        dem för att bygga en bro över lavan åt {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Nu finns **TVÅ** funktioner att välja mellan! \n\n\nAnvänd
+        dem för att bygga en bro över lavan åt spelaren."
+      MC_HOC_2017_09_Cole: Använd funktioner för att hjälpa agenten förstöra stora
+        jordblock som blockerar spelarens väg till tryckplattan.
+      MC_HOC_2017_09_Kiki: "Den här startkoden kan inte tas bort.\r\n\r\nLägg till
+        kommandon i \"skapa spår\"-funktionen så att programmet i arbetsytan tar agenten
+        till tryckplattan. "
+      MC_HOC_2017_09_RS_CLONE: Fixa den här funktionen för att fylla hålen, kliv sedan
+        på tryckplattan för att rensa vägen till facklan.
+      MC_HOC_2017_10_Cole: Använd funktionerna för att rensa vägen åt gruvvagnen,
+        gå sedan in i Nether-portalen.
+      MC_HOC_2017_10_Cole_old: Försök att bygga en funktion från början som gör det
+        enklare för agenten att bygga färdigt gruvvagnen och ta spelaren till den
+        orangefärgade rutan.
+      MC_HOC_2017_10_Kiki: Försök att bygga en funktion från början som gör det enklare
+        för agenten att bygga färdigt gruvvagnen och ta spelaren till den orangefärgade
+        rutan.
+      MC_HOC_2017_10_RETRY: "Ser du skillnaden mellan de två funktionerna i arbetsytan?\r\n
+        \r\nAnvänd funktionerna med annan kod från verktygslådan för att rensa vägen
+        åt gruvvagnen, hämta sedan **flinta och stål** [flint_and_steel].\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Ser du skillnaden mellan de två funktionerna i arbetsytan?\r\n
+        \r\nAnvänd funktionerna med annan kod från verktygslådan för att rensa vägen
+        åt gruvvagnen, hämta sedan **flinta och stål** [flint_and_steel].\r\n "
+      MC_HOC_2017_10_RYAN: Försök att bygga funktioner från början som gör det enklare
+        för agenten att bygga färdigt gruvvagnen och ta spelaren till den orangefärgade
+        rutan.
+      MC_HOC_2017_10_RYAN2: Försök att bygga funktioner från början som gör det enklare
+        för agenten att bygga färdigt gruvvagnen och ta spelaren till den orangefärgade
+        rutan.
+      MC_HOC_2017_11_Kiki: Nu är det upp till dig! Se vad du kan skapa runt den frusna
+        sjön.
+      MC_HOC_2017_13_Cole: "**Spela fritt:** Nu är det upp till dig! Använd agentens
+        kod för att utforska världen."
+      MC_HOC_2017_4.5v2: "Du tog dig ut ur träsket!  Nu måste du hjälpa spelaren till
+        den orangefärgade rutan. \n\n\nHjälp agenten rensa vägen med enkla mönster
+        och loopar för att gå över de två första tryckplattorna."
+      MC_HOC_2017_Ali: Titta på funktionerna nedan.  Hur kan du använda dem för att
+        undvika gastarna och hjälpa {currentPlayerName} ta sig till den **förtrollade
+        boken** [book_enchanted]?
+      MC_HOC_2017_Ali_2019: Titta på funktionerna nedan.  Hur kan du använda dem för
+        att undvika gastarna och hjälpa {currentPlayerName} ta sig till den **förtrollade
+        boken** [book_enchanted]?
+      MC_HOC_2017_FP10x10: "**Spela fritt:** Nu är det upp till dig! Klarar du av
+        att samla alla diamanter på den här banan? "
+      MC_HOC_2017_FP10x10_RE: "**Spela fritt:** Nu är det upp till dig! Klarar du
+        av att samla alla diamanter på den här banan? "
+      MC_HOC_2017_FP20x20: "**Spela fritt:** Nu är det upp till dig! Använd agentens
+        kod för att utforska världen."
+      MC_HOC_2017_FP20x20_2019: "**Spela fritt:** Nu är det upp till dig! Använd agentens
+        kod för att utforska världen."
+      MC_HOC_2017_Ryan_03: "Visste du att man kan ha mer än ett kodblock i en loop?
+        \n\n\nAnvänd en \"upprepa\"-loop för att hjälpa agenten placera block i vattnet
+        som bildar en bro till andra sidan."
+      MC_HOC_2017_Ryan_05: "Ibland behöver man slå undan sådant som kommer i spelarens
+        väg. \nAnvänd \"förstör\"-blocket för att rensa undan alla kaktusar mellan
+        agenten och tryckplattan."
+      MC_HOC_Kiki_02: Någon måste stå på tryckplattan innan sidodörren öppnas.  Hjälp
+        agenten ställa sig på plattan så att spelaren kan lämna huset.
+      NEW Course 4 Artist Functions 10.1: Använd funktionerna från tidigare pussel
+        för att rita detta mönster.
+      NEW Course 4 Artist Functions 12: Använd funktionen "Rita en linje av kvadrater"
+        från sista pusslet för att rita detta mönster."
+      NEW Course 4 Artist Functions 3: Här är en ny typ av Block. Det kallas ett "Funktions"
+        block. Klicka på "Redigera" för att fylla den med kod för att rita en fyrkant
+        med 100 pixlars sidor. När du är klar med att redigera funktionen, klicka
+        på "Stäng" för att gå tillbaka till ditt program.
+      NEW Course 4 Artist Functions 9: Kan du lösa detta genom att lägga till endast
+        ett block?
+      NEW Course 4 Artist Params 4: Märker du något annorlunda med dessa funktionsblock?
+        Klicka på "Kör" för att se vad som händer.
+      NEW Course 4 Artist Vars 12: Nu ska du återskapa algoritmen från den förra nivån
+        och skapa en pentagon med sidor av 150.
+      NEW Course 4 Artist Vars 4: 'Låt oss försöka igen. Kan du ange variabeln längd
+        för att göra denna coola design med hexagoner? Tips: Det är en multipel av
+        10.'
+      NEW Course 4 Artist Vars 6: "Rita detta mönster genom att släppa variabeln längd
+        på rätt ställen, och sedan ange det rätta värdet för längd. (Ledtråd: det
+        är en multipel av 10).  \r \r se hur du bara behöver ange värdet för längd
+        en gång, och koden använder det rätta värdet överallt? \r \r \r\n"
+      New Minecraft Hero Project: "**Spela fritt:** Nu är det upp till dig! Använd
+        agentens kod för att utforska världen."
+      Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma
+        till fåret.
+      Overworld Move to Sheep_2018: Lägg till ett till "gå framåt"-kommando för att
+        komma till fåret.
+      Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att
+        komma till fåret.
+      Testing Quantum Farmer: 'Wow, jag hittade ett riktigt djupt hål! Jag vet inte
+        hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller
+        det tills marken är jämn?  Tips: Försök att använda en ''medan''-slinga denna
+        gång.'
+      beeDebugVideo1: Samla all nektar.
+      course4_artist_fwp_challenge1: Prova att köra det här programmet och göra ändringar
+        under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller
+        ta bort det och ersätt det med någonting totalt annorlunda)
+      courseD_bee_nestedLoops5: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2018: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2019: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_maze_nestedLoops4: Få mig till Solrosen!
+      courseD_maze_nestedLoops4_2018: Få mig till Solrosen!
+      courseD_maze_nestedLoops4_2019: Få mig till Solrosen!
+      courseE_bee_functions3: Funktioner är block av kod som utför en uppgift. Använd
+        funktionen "få 5" för att få 5 nektar i taget. Se till att använda en loop
+        för att få ett perfekt antal block också.
+      courseE_bee_functions3_2018: Funktioner är block av kod som utför en uppgift.
+        Använd funktionen "få 5" för att få 5 nektar i taget. Se till att använda
+        en loop för att få ett perfekt antal block också.
+      courseE_farmer_concept4: Låt oss nu gå ytterligare en nivå djupare! Vi har nästlat
+        hela kodblocket i en annan slinga men du behöver få konstnären tillbaka på
+        plats för att rita nästa linje. Vilket av dessa kodblock kan du lägga i slutet
+        av den yttersta loppen för att rita hela rutnätet?
+      courseF_bee_for_challenge2: Lös detta pussel med minsta möjliga antal block.
+      courseF_bee_for_challenge2_2018: Lös detta pussel med minsta möjliga antal block.
+      courseF_bee_for_challenge2_2019: Lös detta pussel med minsta möjliga antal block.
+      frozen circle function in circle: Låt oss nu skapa 20 överlappande cirklar.
+        Vrid 18 grader mellan varje cirkel.
+      frozen circle function with parameter: Här är ett "Skapa cirkel"-block som kan
+        skapa cirklar av olika storlekar. Kan du använda den för att skapa en liten
+        cirkel med storleken 5 och en stor cirkel med storleken 10?
+      frozen circle function: Använd det nya blocket "Skapa en cirkel" för att skapa
+        10 överlappande cirklar. Glöm inte att hoppa fram mellan cirklarna.
+      frozen circle: En cirkel är speciell. Kan du lista ut vad för siffra som ska
+        användas istället för frågetecken för att rita en cirkel?
+      frozen cross rotate dense: 'Låt oss upprepa det 90 gånger! Hur många gånger
+        går 90 på 360? Tips: Det är en riktigt låg siffra.'
+      frozen cross rotate: Prova nu att upprepa det 10 gånger. Hur många grader behöver
+        du svänga mellan varje linje?
+      frozen cross: Linda en "Upprepa" block runt dessa kommandon för att skapa ett
+        plustecken. Märkte du Elsa kan flytta framåt och bakåt?
+      frozen diamond mini snowflake: Visste du att varenda snöflinga har en helt unik
+        form? Låt oss skapa en ny snöflinga genom att använda "Upprepa"-blocket och
+        göra ett parallellogram 4 gånger, och svänga höger 90 grader mellan varje
+        parallellogram.
+      frozen diamond snowflake: Nu provar vi att skapa en ny snöflinga genom att använda
+        upprepa-blocket för att göra 10 parallellogram och svänga höger med 36 grader
+        mellan varje.
+      frozen diamond: Använd en upprepning runt dessa block för att skapa ett parallellogram.
+        Det är precis som en rektangel men har olika vinklar. Den här har vinklarna
+        60 grader och 120 graders istället för endast 90 graders vinkel.
+      frozen freeplay: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
+      frozen perpendicular: Nu ska vi se om vi kan göra två linjer i 90 graders vinkel
+        mot varandra. Du kommer att behöva använda blocken "Sväng" och "Gå".
+      frozen snowflake branch: Prova att använda blocket "skapa en snöflinge-gren"
+        för att skapa tre grenar, som blir början på en snöflinga.
+      frozen snowflake full: Prova nu att upprepa det 8 gånger, så att det blir en
+        vacker snöflinga!
+      frozen snowflower: Enkla former kan kombineras och bli avancerade snömönster.
+        Kan du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar
+        med storlek 10?
+      frozen square iterative: Vi verkar vara halvvägs med att göra en kvadrat. Låt
+        oss sätta ihop 4 linjer så att det blir en kvadrat.
+      frozen square loop 3x: Låt oss göra tre kvadrater, och svänga efter varje kvadrat.
+        Se till att svänga 120 grader före varje ny kvadrat.
+      frozen square loop: Hej, heter jag Anna av Arendal! Låt oss göra en kvadrat
+        med blocket "Upprepa" för att använda färre block. Hur många gånger (???)
+        bör "Upprepa"-blocket upprepa blocken inom sig för att göra en kvadrat?
+      frozen square snowflake: Kan du skapa en snöflinga med "Upprepa"-blocket för
+        att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader
+        mellan varje fyrkant?
+      grade2_MakeDogTag_8: Låt oss nu sätta ihop ett antal V:n genom att rita dem
+        i en slinga.
+      grade2_PuppyLoops_10: Mitt lyckohjul är inte klart. Hur många gånger måste jag
+        upprepa för att göra färdigt det?
+      grade2_PuppyLoops_4: Använd två slingor för att komma till  grisen med färre
+        block.
+      grade2_PuppyLoops_8: 'Koden för de tre morrhåren du ser är fel. Tips: varje
+        morrhår är 75 pixlar långa. Fixa koden för att rita morrhåren.'
+      grade2_PuppyLoops_9: Det ser ut som att C ritas baklänges. Kan du göra så att
+        det ser ut som ett C?
+      grade2_puppy_loops4: Använd två slingor för att komma till  grisen med färre
+        block.
+      grade3_ConditionalsElse_2: Biet vill bara ha nektar just nu. Alla objekt är
+        inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma.
+        Om det är en blomma kan du samla nektar.
+      grade3_ConditionalsElse_5: Det skulle kunna finnas en blomma eller en bivaxkaka
+        under de där molnen. Använd blocket "om/annars" för att samla nektar om det
+        är en blomma och annars för att göra honung (för då är det en bivaxkaka).
+      grade3_ConditionalsElse_6: Denna lila blomma kan ha antingen 3, 2 eller 1 nektar.
+        Här är ett "om/annars"-block kombinerat med ett annat om/annars-block för
+        att skapa ett "om, om/annars, annars"-block. Gör klart lösningen på problemet
+        för att samla in den okända mängden nektar.
+      grade3_ConditionalsElse_7: Kom ihåg att lila blommor kan ha 3, 2 eller 1 nektar.
+        Gör färdigt funktionen "kolla lila blomman" och använd den för att samla all
+        nektar från blommorna.
+      grade3_ConditionalsElse_8: Skriv i funktionen "kolla blomman gör honung". Din
+        funktion borde kolla om den lila blomman har 3, 2, eller 1 nektar och samla
+        all nektar. Sedan, gå framåt och göra honung.
+      grade3_ConditionalsElse_9: |-
+        Uppgift: Denna kod är fel.
+        Gör färdigt funktionen "få nektar eller gör honung", anropa den sen för att samla all nektar och honung. Kom ihåg att lila blommor kan ha 3, 2, eller 1 nektar.
+      grade3_ConditionalsElse_TeacherIDo: Det skulle kunna finnas en blomma eller
+        en bivaxkaka under de där molnen. Använd blocket "om/annars" för att samla
+        nektar om det är en blomma och annars för att göra honung (för då är det en
+        bivaxkaka).
+      grade3_Conditionals_10: 'Samla nektar och gör honung. Tips: Vad händer om du
+        använder  "om nektar" funktionen för en röd blomma? Kan du klara det med en
+        loop?'
+      grade3_Conditionals_12: Samla nektar från alla fyra blommorna.
+      grade3_Conditionals_2: Hjälp mig samla alla nektar från blommorna och göra honung.
+        Använd en loop.
+      grade3_Conditionals_8: Samla nektar där blommorna har nektar.
+      grade3_Debugging_6: Dessa block irriterar mig. Åtgärda felen för att samla all
+        nektar och göra all honung.
+      grade3_Debugging_9: Dessa block irriterar mig. Åtgärda felen för att samla all
+        nektar och göra all honung.
+      grade3_Loops_3: Kan du använda en loop för att samla all nektar?
+      grade3_Loops_4: Använd nu det nya upprepa -blocket för att samla all nektar
+        och göra all honung.
+      grade3_Loops_6: Vad händer om du upprepar denna sekvens 3 gånger? Glöm inte
+        att göra honung i slutet!
+      grade3_Loops_7: 'Varje blomma innehåller en enhet nektar. Samla nektar från
+        var och en av blommorna. '
+      grade3_Loops_TeacherIDo: 'Varje blomma innehåller en enhet nektar. Samla nektar
+        från var och en av blommorna. '
+      grade3_bee_conditionals_quantum2: Biet vill bara ha nektar just nu. Alla objekt
+        är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en
+        blomma. Om det är en blomma kan du samla nektar.
+      grade3_maze_loops2: Få mig till Solrosen!
+      grade3_maze_nestedLoops4: Använd två slingor för att komma till  grisen med
+        färre block.
+      grade4_arist_nested_loop_flags1: Repetera den givna koden för att skapa en väderkvarn.
+      grade4_arist_nested_loop_polygons1: 'Upprepa denna design 10 gånger. Hur många
+        grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat
+        med 10?)'
+      grade4_arist_nested_loop_polygons2: 'Upprepa denna design 6 gånger. Hur många
+        grader måste du rotera varje gång du upprepar? (Ledtråd: Vad är 360 dividerat
+        med 6?)'
+      grade4_arist_nested_loop_triangles3: Kan du rita en hexagon genom att upprepa
+        triangelkoden?
+      grade4_arist_nested_loop_triangles4: Rita tänderna i alligatorns mun!
+      grade4_arist_nested_loop_triangles5: "Skapa en sol genom att nästla in startkoden
+        i en annan slinga. Detta kallas en nästlad slinga. \r"
+      grade4_arist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en nästlad
+        slinga?
+      grade4_artist_functions2: Med funktioner kan du definiera nya block! Vi har
+        flyttat blocken för att rita en kvadrat till en funktion som kallas "Rita
+        en kvadrat". Kan du använda funktionen "Rita en kvadrat" för att skapa glasögonen?
+        kvadraterna är 75 pixlar isär.
+      grade4_artist_nested_loop_flags1: Repetera den givna koden för att skapa en
+        väderkvarn.
+      grade4_artist_nested_loop_polygons1: 'Upprepa denna design 10 gånger. Hur många
+        grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat
+        med 10?)'
+      grade4_artist_nested_loop_triangles5: "Skapa en sol genom att nästla in startkoden
+        i en annan slinga. Detta kallas en nästlad slinga. \r"
+      grade4_artist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en
+        nästlad slinga?
+      grade4_artist_parameters_triangles2: Märker du något annorlunda med dessa funktionsblock?
+        Klicka på "Kör" för att se vad som händer.
+      grade4_bee_conditionals_quantum2: Biet vill bara ha nektar just nu. Alla objekt
+        är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en
+        blomma. Om det är en blomma kan du samla nektar.
+      grade4_bee_conditionals_quantum5: Det skulle kunna finnas en blomma eller en
+        bivaxkaka under de där molnen. Använd blocket "om/annars" för att samla nektar
+        om det är en blomma och annars för att göra honung (för då är det en bivaxkaka).
+      grade4_bee_functions3: Funktioner är block av kod som utför en uppgift. Använd
+        funktionen "få 5" för att få 5 nektar i taget. Se till att använda en loop
+        för att få ett perfekt antal block också.
+      grade4_bee_nestedLoops4: 'Samla all nektar från varje blomma och gör honung
+        vid varje bivaxkaka. Använd en nästlad loop. '
+      grade4_frozen_freeplay: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
+      grade4_frozen_functions0: En cirkel är speciell. Kan du lista ut vad för siffra
+        som ska användas istället för frågetecken för att rita en cirkel?
+      grade4_frozen_functions1a: Använd det nya blocket "Skapa en cirkel" för att
+        skapa 10 överlappande cirklar. Glöm inte att hoppa fram mellan cirklarna.
+      grade4_frozen_functions2: Låt oss nu skapa 20 överlappande cirklar. Vrid 18
+        grader mellan varje cirkel.
+      grade4_frozen_functions3: Här är ett "Skapa cirkel"-block som kan skapa cirklar
+        av olika storlekar. Kan du använda den för att skapa en liten cirkel med storleken
+        5 och en stor cirkel med storleken 10?
+      grade4_frozen_functions4: Enkla former kan kombineras och bli avancerade snömönster.
+        Kan du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar
+        med storlek 10?
+      grade4_frozen_nested_loop_diamonds2: Visste du att varenda snöflinga har en
+        helt unik form? Låt oss skapa en ny snöflinga genom att använda "Upprepa"-blocket
+        och göra ett parallellogram 4 gånger, och svänga höger 90 grader mellan varje
+        parallellogram.
+      grade4_frozen_nested_loop_diamonds3: Nu provar vi att skapa en ny snöflinga
+        genom att använda upprepa-blocket för att göra 10 parallellogram och svänga
+        höger med 36 grader mellan varje.
+      grade4_frozen_square: Hej, heter jag Anna av Arendal! Låt oss göra en kvadrat
+        med blocket "Upprepa" för att använda färre block. Hur många gånger (???)
+        bör "Upprepa"-blocket upprepa blocken inom sig för att göra en kvadrat?
+      grade4_frozen_square_loop1: Hej, heter jag Anna av Arendal! Låt oss göra en
+        kvadrat med blocket "Upprepa" för att använda färre block. Hur många gånger
+        (???) bör "Upprepa"-blocket upprepa blocken inom sig för att göra en kvadrat?
+      grade4_frozen_square_loop2: Låt oss göra tre kvadrater, och svänga efter varje
+        kvadrat. Se till att svänga 120 grader före varje ny kvadrat.
+      grade4_frozen_square_loop3: Kan du skapa en snöflinga med "Upprepa"-blocket
+        för att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader
+        mellan varje fyrkant?
+      grade4_review_artist3: Hoppa-blocket flyttar konstnären utan att rita. Rita
+        den streckade linjen med hjälp av både hoppa- och ritablock.
+      grade4_review_bee1: Använd nu det nya upprepa -blocket för att samla all nektar
+        och göra all honung.
+      grade5_artist_for_loops1: 'Rita denna triangel som är 50 pixlar bred. Tips:
+        Använd ett upprepa block.'
+      grade5_artist_for_loops10: "Kan du lista ut hur du kan använda alla de saker
+        du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd? Klicka
+        här."
+      grade5_artist_for_loops5: "En enda liten förändring av koden från den sista
+        bilden kan skapa det här mönstret. Kan du lista ut vilken förändringen är?
+        \r \r Ledtråd: du måste ta bort något!"
+      grade5_artist_parameters_triangles2a: Märker du något annorlunda med dessa funktionsblock?
+        Klicka på "Kör" för att se vad som händer.
+      grade5_artist_variables_hexagons1: 'Låt oss försöka igen. Kan du ange variabeln
+        längd för att göra denna coola design med hexagoner? Tips: Det är en multipel
+        av 10.'
+      grade5_artist_variables_pentagon9: Nu ska du återskapa algoritmen från den förra
+        nivån och skapa en pentagon med sidor av 150.
+      grade5_artist_variables_pentagons1: "Rita detta mönster genom att släppa variabeln
+        längd på rätt ställen, och sedan ange det rätta värdet för längd. (Ledtråd:
+        det är en multipel av 10).  \r \r se hur du bara behöver ange värdet för längd
+        en gång, och koden använder det rätta värdet överallt? \r \r \r\n"
+      grade5_playlab_variables13: Använd en "när actor berör" block för att skicka
+        hunden tillbaka till övre vänstra ENDAST om hunden rör vid någon av de andra
+        actors.
+      grade5_playlab_variables2: Loppet i det sista pusslet var inte särskilt rättvist!
+        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        att samla in 10 flaggor vinner!
+      grade5_playlab_variables9: Här är en funktion som kallas "patrol." Redigera
+        den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
+      level 'grade3_Loops_3: Kan du använda en loop för att samla all nektar?
+      level 'grade3_Loops_4: Använd nu det nya upprepa -blocket för att samla all
+        nektar och göra all honung.
+      level 'grade3_Loops_6: Vad händer om du upprepar denna sekvens 3 gånger? Glöm
+        inte att göra honung i slutet!
+      level 'grade3_Loops_7: 'Varje blomma innehåller en enhet nektar. Samla nektar
+        från var och en av blommorna. '

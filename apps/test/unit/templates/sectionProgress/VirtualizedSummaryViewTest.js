@@ -34,12 +34,15 @@ describe('VirtualizedSummaryView', () => {
           {
             id: 456,
             position: 1,
+            relative_position: 2,
+            lockable: true,
             levels: [
               {id: 789}
             ],
           }
         ]
       },
+      jumpToLessonDetails: () => {}
     };
   });
 

@@ -29,10 +29,10 @@ class AuthenticationOption < ApplicationRecord
   before_validation :normalize_email, :hash_email,
     :remove_student_cleartext_email, :fill_authentication_id
 
-  after_create :set_primary_contact_info
+  validate :email_must_be_unique, :hashed_email_must_be_unique,
+    :cred_type_and_auth_id_must_be_unique
 
-  validate :email_must_be_unique
-  validate :hashed_email_must_be_unique
+  after_create :set_primary_contact_info
 
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
@@ -43,6 +43,7 @@ class AuthenticationOption < ApplicationRecord
     THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
+    MICROSOFT = 'microsoft_v2_auth',
   ]
 
   CREDENTIAL_TYPES = [
@@ -104,6 +105,24 @@ class AuthenticationOption < ApplicationRecord
     }
   end
 
+  # Given credentials from OmniAuth::AuthHash or a similarly-formatted hash, updates the OAuth tokens on the AuthenticationOption.
+  # Expected formatting:
+  # credentials = {
+  #   token: 'some-token',
+  #   refresh_token: 'some-refresh-token',
+  #   expires_at: 123456,
+  # }
+  def update_oauth_credential_tokens(credentials)
+    raise 'AuthenticationOption#update_oauth_credential_tokens can only be called on an OAuth credential type.' unless oauth?
+
+    new_data = data_hash
+    new_data[:oauth_refresh_token] = credentials[:refresh_token] if credentials[:refresh_token].present?
+    new_data[:oauth_token] = credentials[:token]
+    new_data[:oauth_token_expiration] = credentials[:expires_at]
+
+    update(data: new_data.to_json)
+  end
+
   private def email_must_be_unique
     # skip the db lookup if possible
     return unless email_changed? && email.present? && errors.blank?
@@ -121,6 +140,18 @@ class AuthenticationOption < ApplicationRecord
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
       errors.add :email, I18n.t('errors.messages.taken')
+    end
+  end
+
+  private def cred_type_and_auth_id_must_be_unique
+    # skip the db lookup if possible
+    return unless authentication_id.present? &&
+      (credential_type_changed? || authentication_id_changed?) &&
+      errors.blank?
+
+    other = User.find_by_credential(type: credential_type, id: authentication_id)
+    if other && other != user
+      errors.add :credential_type, I18n.t('errors.messages.taken')
     end
   end
 end

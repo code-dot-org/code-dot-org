@@ -1,0 +1,6 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'cdo-ruby', path: '../cdo-ruby'
+cookbook 'sudo-user', path: '../sudo-user'

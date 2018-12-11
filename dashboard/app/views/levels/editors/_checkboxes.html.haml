@@ -1,0 +1,7 @@
+- field_name
+- description
+
+//Field class is excluded so that additional tags/elements can be added under a checkbox
+.aligned-input-group
+  = boolean_check_box f, :"#{field_name}"
+  = f.label :"#{field_name}", "#{description}"

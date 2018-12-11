@@ -4,6 +4,8 @@ module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
 
+    freeze_time
+
     test 'required fields' do
       application = ApplicationBase.new
       refute application.valid?
@@ -64,19 +66,6 @@ module Pd::Application
       application = build :pd_facilitator1819_application, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
-    end
-
-    test 'send_all_decision_notification_emails only sends once per application' do
-      application = create :pd_facilitator1819_application
-      application.update(status: 'declined')
-      application.lock!
-
-      mock_mail = stub
-      mock_mail.stubs(:deliver_now).returns(nil)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
-
-      Pd::Application::ApplicationBase.send_all_decision_notification_emails
-      Pd::Application::ApplicationBase.send_all_decision_notification_emails
     end
 
     test 'total score' do
@@ -239,6 +228,78 @@ module Pd::Application
 
       application.form_data = nil
       assert_nil application.instance_variable_get(:@full_answers)
+    end
+
+    test 'queue_email creates an associated unsent Email record' do
+      application = create :pd_teacher1920_application
+
+      application.expects(:deliver_email).never
+      assert_creates Email do
+        application.queue_email :test_email
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_nil email.sent_at
+    end
+
+    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
+      application = create :pd_teacher1920_application
+
+      application.expects(:deliver_email)
+      assert_creates Email do
+        application.queue_email :test_email, deliver_now: true
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_not_nil email.sent_at
+    end
+
+    test 'record status change with user' do
+      application = create :pd_teacher1920_application
+      workshop_admin = create :workshop_admin
+
+      application.update(status: 'pending')
+      application.update_status_timestamp_change_log(workshop_admin)
+      expected_entry = {
+        title: 'pending',
+        changing_user_id: workshop_admin.id,
+        changing_user_name: workshop_admin.name,
+        time: Time.now
+      }
+
+      assert_equal(
+        [expected_entry],
+        (application.sanitize_status_timestamp_change_log)
+      )
+
+      application.update(status: 'approved')
+      application.update_status_timestamp_change_log(workshop_admin)
+      assert_equal(
+        [
+          expected_entry,
+          expected_entry.dup.update({title: 'approved'})
+        ], application.sanitize_status_timestamp_change_log
+      )
+    end
+
+    test 'record status change without user' do
+      application = create :pd_teacher1920_application
+
+      application.update(status: 'accepted')
+      application.update_status_timestamp_change_log(nil)
+      assert_equal(
+        [{
+          title: 'accepted',
+          changing_user_id: nil,
+          changing_user_name: nil,
+          time: Time.now
+        }],
+        application.sanitize_status_timestamp_change_log
+      )
     end
   end
 end

@@ -371,9 +371,9 @@ mi:
         studio_c2_9: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina tuki
           a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa ki
           te wā ka riro i ētahi piro?
-        studio_c2_10: E taea ana e koe ētahi paraka te tāpiri ki te panoni i te papamuri
-          me te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae noa ki
-          te wā ka riro i ētahi piro?
+        studio_c2_10: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i te papamuri
+          \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae noa ki
+          te wā ka riro i ētahi piro?"
         studio_c2_11: Waihangahia tō ake paki. Mutu ana, pāwhiritia te Mutu kia wātea
           kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
         studio_c3_story_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi
@@ -401,9 +401,9 @@ mi:
         studio_c3_game_5: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina
           tuki a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa
           ki te wā ka riro i ētahi piro?
-        studio_c3_game_6: E taea ana e koe ētahi paraka te tāpiri ki te panoni i te
-          papamuri me te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae
-          noa ki te wā ka riro i ētahi piro?
+        studio_c3_game_6: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i
+          te papamuri \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere
+          tae noa ki te wā ka riro i ētahi piro?"
         studio_c3_game_7: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
           wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
         studio_playlab_1: E hiahia ana a Waddles ki te mihi "kia ora" - māu ia e āwhina?
@@ -694,6 +694,10 @@ mi:
         mc_2016_congrats: Hour of Code Mahimaina - Kupu Whakamiha
         mc_2017_congratulations: Hour of Code Mahimaina - Kupu Whakamiha
         CSF_loops_AB: Ngā Koromeke
+        mc_2018_intro: 'Toihuke: Rerenga Moana Timatanga kōrero'
+        MC_2018_loops: 'Toihuke: Rerenga Moana Wakahoutia tonu ake'
+        mc_2018_conditionals: 'Toihuke: Rerenga Moana Nga Tikanga'
+        mc_2018_closing: 'Toihuke: Rerenga Moana Ngaa Mihi'
     callout:
       text:
         drag_blocks: Tōia tētahi paraka "neke", kātahi me hoatu ki raro i tērā atu

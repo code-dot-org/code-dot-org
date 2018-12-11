@@ -28,13 +28,6 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "get projects template" do
-    get :angular
-
-    assert_response :success
-    assert_template 'projects/projects'
-  end
-
   test 'artist project level has sharing meta tags' do
     channel = 'fake-channel'
     get :show, params: {key: 'artist', channel_id: channel, share: true}

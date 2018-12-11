@@ -1,0 +1,637 @@
+---
+ro:
+  data:
+    long_instructions:
+      2-3 Artist 1 new: "Bună, eu sunt un artist. Poţi să scrii un cod care mă poate
+        face să desenez orice. Foloseşte câteva blocuri de instrucţiuni pentru a mă
+        face să desenez linii gri pe ecran. (Fiecare linie are 100 pixeli lungime)\r\n\r\n"
+      2-3 Artist 12: "Desenează un cerc pentru a termina cercul ochiului!\n\r\n\r\nDacă
+        artistul se întoarce cu un grad la fiecare buclă, de câte repetări ale codului
+        ai nevoie pentru a desena un cerc? "
+      2-3 Artist 2 new: Această casă are un perete pe jumătate terminat. Fiecare latură
+        are 100 pixeli, dar peretele neterminat are doar 50 pixeli. Terminaţi peretele
+      2-3 Artist 3.4: Blocul de salt mută artistul fără a desena. Trasează linia punctată
+        folosind și blocul de salt şi cel de desen. Fiecare linie are 50 de pixeli
+        lungime.
+      2-3 Artist 3new: "Pălăria roşie are înălţimea de 100 pixeli. Terminaţi de desenat
+        o pălărie neagră cu 70 pixeli mai mică. \r\n\r\n*(Notă: Lăţimea fiecărei pălării
+        este de 50 pixeli.)*\n \nContext | Request Context"
+      2-3 Artist 4: Ajută-mă să termin casa pentru această pisică.
+      2-3 Artist 6: "Această casă are nevoie de un acoperiş! Desenaţi triunghiul.
+        \ \r\n\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n
+        \nContext | Request Context"
+      2-3 Artist 7: "Termină de desenat ultimul set de ferestre ale şcolii astfel
+        încât toţi elevii din clasă să poată vedea afară\r\n\r\nLaturile fiecărei
+        ferestre rectangulare au lungimea de 25 pixeli. "
+      2-3 Artist 8: "Este timpul să construim un hambar!\r\n\r\nCreaţi spaţii pentru
+        fiecare animal divizând hambarul în 2 forme pătrate egale.\r\n\r\nSfat:\nDreptunghiul
+        are lăţimea de 200 pixeli şi înălţimea de 100 pixeli.\r\n\r\nExistă mai multe
+        feluri diferite de a rezolva acest puzzlel.\n \nContext | Request Context."
+      2-3 Artist 9 NEW: Finalizează acest zmeu
+      2-3 Artist 9 REPLACEMENT: Termină de desenat aceste scări!
+      2-3 Artist 9: Finalizează acest zmeu
+      2-3 Artist Assessment 1: "**Evaluare:** Termină de desenat ultimul dinte. Acesta
+        are lăţimea şi înălţimea de 25 pixeli."
+      2-3 Artist Debugging 1: "Această pălărie trebuie să aibă lăţimea doar de 50
+        pixeli\r\nPoţi tu să o repari?\r\n\r\n<br/>\r\n \nContext | Request Context\n"
+      2-3 Artist Debugging 10: 'Butonul de direcţie de pe comanda mea de joc este
+        prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli.'
+      2-3 Artist Debugging 11: "Fulgul meu de nea se destrama!\r\n\r\nIti poti da
+        seama ce este in neregula?"
+      2-3 Artist Debugging 2: 'Codul pentru cele trei mustăți pe care le vezi este
+        greșit. Indiciu: fiecare mustață are o lungime egala. Repară acest cod pentru
+        a desena mustățile.'
+      2-3 Artist Debugging 3: 'Barca mea are o gaură! Poți să o repari schimbând unghiul
+        liniei? Indiciu: ultimul unghi este greșit cu 15 grade.'
+      2-3 Artist Debugging 5: 'Codul pentru piciorul și laba piciorului pe care le
+        vezi e greșit. Indiciu: piciorul e prea lung, poate trebuie să mai ștergem
+        un pas?'
+      2-3 Artist Debugging 6: Se pare că stau pe un scaun căruia îi lipsește un picior.
+        Editează blocurile pentru a desena piciorul.
+      2-3 Artist Debugging 7: Se pare că litera C în cod este desenată invers. Poţi
+        să o faci să arate ca un C?
+      2-3 Artist Debugging 8: Morișca mea nu e gata. De câte ori trebuie folosit blocul
+        "repetă" pentru a fi gata?
+      2-3 Artist Debugging 9: "Ceva este oprit! \r \r codul pentru acest nivel este
+        greşit. Poţi să îţi dai seama cum să putem face ca artistul să traseze în
+        mod corect?"
+      2-3 Artist Free Play: Joc liber! Desenează orice ți-ar plăcea.
+      2-3 Artist Functions 11.5: Aici este aceeași funcție "Desenează un hexagon".
+        Ce se întâmplă dacă întorci cu doar 60 de grade de fiecare dată când buclezi?
+      2-3 Artist Functions 12 Mike: 'Funcţiile sunt foarte utile pentru a desena de
+        mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
+        pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
+        de 100 de pixeli)  '
+      2-3 Artist Functions 12 a: 'Funcţiile sunt foarte utile pentru a desena de mai
+        multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
+        pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
+        de 100 de pixeli)  '
+      2-3 Artist Functions 12: 'Funcţiile sunt foarte utile pentru a desena de mai
+        multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
+        pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
+        de 100 de pixeli)  '
+      2-3 Artist Functions 2: Funcțiile îțî permit să construiești blocuri noi! Am
+        mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează un
+        pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele au
+        75 de pixeli între ele.
+      2-3 Artist Functions 3: Editaţi funcţia pentru a desena un pătrat cu latura
+        de 115 şi pentru a desena ochelari mai mari. Distanța dintre pătrate este
+        acum de 45 de pixeli.
+      2-3 Artist Functions 4: Utilizaţi blocul "repetă" pentru a desena aceste trei
+        pătrate.
+      2-3 Artist Loops 1: Puteţi face un hexagon cu laturile de 100 pixeli , pentru
+        a termina celula? Amintește-ți, asta înseamnă că va trebui să te rotești doar
+        60 de grade!
+      2-3 Artist Loops 2: Utilizează acum un bloc "repetă" pentru a-i face celulei
+        un inveliș.
+      2-3 Artist Loops New 10: Hai acum să conectăm o grămadă de V-uri împreună, desenându-le
+        într-o buclă.
+      2-3 Artist Loops New 12: 'Desenează un diamant cu laturi de 100 de pixeli. '
+      2-3 Artist Loops New 13: Deseneaza acum un diamant de 3 ori, folosind o buclă.
+      2-3 Artist Loops New 2: Aici este o parte din codul pe care l-ai folosit pentru
+        a desena acel pătrat. De data aceasta, poti folosi doar un block "muta inainte"
+        si un block "intoarce". Poti folosi un block "repeta" pentru a rezolva acest
+        puzzle?
+      2-3 Artist Loops New 9: Desenează un V simplu cu ambele laturi de 50 de pixeli
+        pentru a completa săgeata.
+      2-3 Artist Nested Loops 10: Pune acest cod în buclă de 12 ori pentru a completa
+        modelul.
+      2-3 Artist Nested Loops 11: Pune acest cod în buclă de 4 ori pentru a finaliza
+        modelul, virează la 90 de grade după fiecare cerc.
+      2-3 Artist Nested Loops 12: Pune acest cod în buclă de 12 ori pentru a finaliza
+        cârlionții.
+      2-3 Artist Nested Loops 2: Acum fă buclă cu triunghiul de 6 ori. După fiecare
+        triunghi va trebui să faci întoarcere de 60 de grade înainte de a-l desena
+        pe următorul.
+      2-3 Artist Nested Loops 4: 'Folosește bucla de 12 ori cu acest diamant pentru
+        a desena o floare. Sugestie: 12 diamante sunt ceva similar celor 12 triunghiuri
+        pe care le-ai făcut mai devreme - cât de mare trebuie să fie întoarcerea după
+        fiecare formă?'
+      2-3 Artist Nested Loops 5: Umple ferestrele acestei clădiri cu o buclă de nesting.
+        Ferestrele au lungimea de 20 de pixeli și sunt la 20 de pixeli distanță între
+        ele.
+      2-3 Artist Nested Loops 7: Folosește bucla de 10 ori cu acest triunghi pentru
+        a desena soarele. Va trebui să muți și să virezi după fiecare triunghi. Poți
+        calcula cât de mare trebuie să fie virajul prin împărțirea numărului de grade
+        dintr-un cerc la numărul de triunghiuri care formează soarele.
+      2-3 Artist Nested Loops 8: Acum hai să adăugăm niște iarbă imaginii noastre.
+        Fiecare smoc de iarbă este plasat la o distanță de 50 pixeli.
+      2-3 Artist Nested Loops 9: Vom finaliza acest desen prin adăugarea unei flori.
+        Pune diamantul în buclă de 12 ori pentru a desena floarea ta.
+      2-3 Artist Nested Loops Free Play: Joc la alegere, desenează ceva super cu bucle
+        de nesting.
+      2-3 Bee Conditionals 11: Colectează nectar din florile care au nectar.
+      2-3 Bee Conditionals 13: |-
+        Colectează nectar și fă miere. Sugestie:
+        ce se întâmplă dacă folosești condiția "dacă nectar" în cazul unei flori roșii? Poți
+        finaliza aceasta cu o buclă?
+      2-3 Bee Conditionals 15: Colectează nectarul din toate cele patru flori.
+      2-3 Bee Conditionals 3: Ajută-mă să adun tot nectarul din flori şi să fac miere.
+        Utilizează o buclă.
+      2-3 Bee Debugging 3: "Repară \neroarea(erorile) pentru a colecta tot nectarul
+        şi a face toată mierea."
+      2-3 Bee Debugging 6: "Ce provocare dulce! Repară \neroarea(erorile) pentru a
+        colecta tot nectarul şi a face toată mierea."
+      2-3 Bee Debugging 9: "Fii rabdator! Repară \neroarea(erorile) pentru a colecta
+        tot nectarul şi a face toată mierea."
+      2-3 Bee Functions 10: "Florile violete pot avea ori 1 ori 0 nectar. Creează
+        \no funcție care colectează nectar numai din flori violete care au nectar."
+      2-3 Bee Functions 2: "Funcţiile sunt blocuri de cod care efectuează \no activitate.
+        Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De
+        asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare
+        ideală de bloc."
+      2-3 Bee Functions 4: "Funcţia \"mută şi obține nectar\" face albina să se întoarcă,
+        să colecteze nectar şi apoi returnează albina la locul de unde a început.
+        Folosește \nfuncţia pentru a colecta tot nectarul."
+      2-3 Bee Loops 1: 'Fiecare floare contine o unitate de nectar. Colecteaza nectarul
+        din fiecare floare. '
+      2-3 Bee Loops 3A: Poti folosi o bucla pentru a colecta tot nectarul?
+      2-3 Bee Loops 3B: Acum foloseste noul bloc de repetitie pentru a colecta tot
+        nectarul si a face toata mierea.
+      2-3 Bee Loops 4A: |-
+        Ce se intampla daca repeti aceasi secventa de 3 ori?
+        Nu uita sa faci mierea la sfarsit!
+      2-3 Bee Loops 8: Aceste flori mov au o cantitate necunoscuta de nectar. Foloseste
+        bucla "cat timp nectar" pentru a colecta tot nectarul. Aceasta bucla va merge
+        atat timp cat conditia este indeplinita, in acest caz nectar > 0.
+      2-3 Maze 15: Utilizează două bucle pentru a ajunge la porc folosind mai puține
+        blocuri.
+      2-3 Maze Loops 18: Du-mă la floarea-soarelui! Foloseste bucla "repeta" pentru
+        a folosi mai putine blocuri.
+      4-5 Artist 10: "Apasă \"Rulează\" să testezi codul. Apoi, repetă-l \nde atâtea
+        ori încât să finalizezi desenul. Culorile vor fi diferite de fiecare dată."
+      4-5 Artist 2: Poți să folosești bucla in acest cod pentru a finaliza pătratul?
+      4-5 Artist 5: Ce unghi folosești?
+      4-5 Artist 6: "Acest triunghi echilateral are unghiuri de 60, 60 \nsi 60 de
+        grade. Fiecare latură este de 200 de pixeli. Finalizează desenul."
+      4-5 Artist Free Draw 1: "Desen liber!  Desenează orice te simți inspirat \nsă
+        creezi."
+      4-5 Artist Patterns 1: |-
+        Poți desena acest pătrat folosind o buclă?
+        Fiecare latură are o lungime de 20 de pixeli.
+      4-5 Artist Patterns 12: "Dacă vei copia acea buclă și vei vira la stânga în
+        loc de \nla dreapta, ce se va întîmpla? Poți repeta acest lucru astfel încât
+        să desenezi acest val?"
+      4-5 Artist Patterns 13: "Haide acum să buclăm tot acel lucru de patru \nori
+        pentru a crea această ramă de tablou. Atenție la colțuri - nu poți \ndoar
+        să virezi la 90 de grade! Dacă buclarea unui viraj de 3 grade de 60 de ori
+        realizează jumatate de cerc, \ncare din aceste blocuri de cod va realiza un
+        sfert de cerc pentru colțuri?"
+      4-5 Artist Patterns 3: Acum, hai să mergem încă un nivel în profunzimea problemei?
+      4-5 Artist Patterns 8: Folosește o buclă pentru a desena acest hexagon cu laturile
+        de 40 de pixeli și unghiuri de 60 de grade.
+      4-5 Artist Patterns 9: Acum repetă acel cod de 3 ori pentru a desena întregul
+        rând. Sugestie, fiecare hexagon are o lățime de 80 de pixeli de la cele mai
+        depărtate puncte de la stînga la dreapta.
+      4-5 Artist Patterns Free Play: Joc la alegere - încearcă-ți mâna și creează
+        pe cont propriu un model al tău!
+      4-5 Bee Conditionals 2: Albina vrea acum doar nectar. Ia aminte, nu toate obiectele
+        sunt flori, așadar verifică mai întâi pentru a aduna nectarul doar din flori.
+      4-5 Bee Conditionals 5: Sub acei nori, ar putea exista o floare sau un fagure
+        de miere. Folosește blocul "dacă/altfel" pentru a colecta nectar dacă acolo
+        este o floare, altfel pentru a face miere (deoarece acolo este un fagure).
+      4-5 Bee Conditionals 6: Această floare violetă ar putea avea ori 3, ori 2 nectaruri
+        sau 1 nectar. Aici un bloc "dacă/altfel" este combinat cu alt bloc "dacă/altfel"
+        pentru a crea un bloc "dacă", "altfel-dacă", "altfel". Completează soluția
+        pentru a colecta o cantitate necunoscută de nectar.
+      4-5 Bee Conditionals 7: Amintește-ți că florile violete pot avea 3, 2 nectaruri
+        sau 1 nectar. Completează funcția "verifică floare violetă" și folosește-o
+        pentru a colecta tot nectarul la flori.
+      4-5 Bee Conditionals 8: Scrie în interiorul funcției "verifică floare fă miere".
+        Funcția ta ar trebui să verifice dacă floarea violetă are 3, 2 nectaruri sau
+        1 nectar și să colecteze tot nectarul. Apoi, mută înainte și fă miere.
+      4-5 Bee Conditionals Assessment 1: "Evaluare: Acest cod este greșit. \nCompletează
+        funcția \"ia nectar sau fă miere\", apoi apeleaz-o pentru a colecta tot nectarul
+        și mierea. Amintește-ți că florile violete pot avea 3, 2 sau 1 nectar."
+      4-5 Bee Debugging 1: Aceste blocuri chiar mă deranjează. Poți tu să le repari?
+      4-5 Bee Debugging 6: Floarea violetă are o cantitate necunoscută de nectar.
+        Repară blocurile pentru obține tot nectarul din floare.
+      4-5 Bee Nested Loops 4: 'Colectează tot nectarul din fiecare floare și fă miere
+        la fiecare fagure. Folosește o buclă imbricată. '
+      4-5 Bee Nested Loops Assessment 1: Evaluare - colectează tot nectarul şi fă
+        toată mierea utilizând bucle.
+      4-5 Maze 9: Creează o buclă cu blocul "repetă până când".
+      4-5 Maze Conditionals 1: Utilizează blocul "repetă până când" pentru a-l duce
+        pe zombie la floarea-soarelui.
+      4-5 Maze Conditionals 10: "Poţi adăuga doar 3 blocuri pentru a ajuta zombiul
+        să rezolve un labirint mai complex? \r \n\r Dacă vei face asta corect, el
+        va putea merge pe orice cale, indiferent de distanță!"
+      4-5 Maze Conditionals 2: Utilizează blocul "repetă până când" pentru a-l duce
+        pe zombie la floarea-soarelui.
+      4-5 Maze Conditionals 3: 'Folosește blocul "dacă" pentru a mă lăsa pe mine să
+        decid când să virez. Sugestie: ai nevoie numai de un bloc în plus, dar învață
+        cum le aranjăm noi ca să poți proceda și tu la fel data viitoare.'
+      4-5 Maze Conditionals 4: Ok, acesta este la fel cu ultimul puzzle dar trebuie
+        să-ți amintești cum ai folosit blocul "dacă" și blocul "repetă" împreună.
+      4-5 Maze Conditionals 5: Eu vreau floarea-soarelui! Folosește un bloc "dacă"
+        pentru a mă duce acolo cu cel mai mic număr de blocuri.
+      4-5 Maze Conditionals 6: Eu vreau floarea-soarelui! Folosește un bloc "dacă"
+        pentru a mă duce acolo cu cel mai mic număr de blocuri.
+      4-5 Maze Conditionals 7: Ok, hai să facem acest lucru din nou pentru exercițiu
+        - acesta nu e foarte diferit, dar fii atent(ă) la plantele carnivore!
+      4-5 Maze Conditionals 8: Blocul "Dacă-altfel" verifică o condiție și apoi face
+        un lucru SAU altul. Pentru a mă duce la floarea-soarelui încearcă să folosești
+        acest bloc nou.
+      4-5 Maze Conditionals 9: Încă un exercițiu cu blocul "Dacă-altfel", poți să
+        reușești din prima încercare?
+      4-5 Maze Conditionals Assessment 1: Folosește "repetă până când" și un bloc
+        "Dacă-altfel" pentru a mă duce la floarea-soarelui în cât mai puține blocuri
+        posibile.
+      4-5 Nested Loops 12: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
+      4-5 Nested Loops 3: "Creează un soare prin a cuibări codul de început în interiorul
+        altei bucle. Aceasta se numește o buclă imbricată.\r"
+      4-5 Nested Loops 5: Buclează codul dat pentru a crea o moară de vânt.
+      4-5 Nested Loops 6: Poţi desena un hexagon folosind buclarea codului pentru
+        desenarea unui triunghi?
+      4-5 Nested Loops 7: 'Reia de 10 ori acest proiect. Cât de mult te-ai întors
+        la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)'
+      4-5 Nested Loops 8: 'Reia de 6 ori acest proiect. Cât de mult te-ai întors la
+        fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 6?)'
+      4-5 Nested Loops 9: Desenează dinţii în gura aligatorului!
+      4-5 While Loops 1: Mută-mă în gaură şi umple-o două lopeţi cu pământ, folosind
+        blocul "umple".
+      4-5 While Loops 2: Mută-mă la grămada de pământ şi apoi înlătur-o cu 5 lopeți,
+        folosind blocul "elimină".
+      4-5 While Loops 3: 'Mută-mă pe grămadă şi mută grămada toată, apoi umple complet
+        gaura. Indicaţie: Foloseşte cât mai puţine blocuri.'
+      4-5 While Loops 4: 'Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi
+        cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple
+        gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla "în
+        timp ce" de data asta.'
+      Artist Autorun Test: Utilizaţi blocul "repetă" pentru a desena aceste trei pătrate.
+      Course 4 Artist 13: Joci? Aici este o pânză albă unde poţi schiţa orice doreşti!
+      Course 4 Artist 6: |-
+        Completează codul pentru a desena aceste triunghiuri.
+        Indicaţie: Există 3 triunghiuri care se rotesc 360 grade...de câte ori intră 3 în 360?
+      Course 4 Artist 8: Desenează acest soare prin buclarea întregii secvențe de
+        cod, de mai multe ori.
+      Course 4 Artist 8a: Îți reamintești această formă? Acum o să te lasăm sa o construiești
+        fară să îți dăm nici un bloc pentru început!
+      Course 4 Artist Binary 1a: "Aici avem o funcție care ia un şir binar format
+        din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de
+        sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede
+        0. \r\n\r\nRulează codul pentru a vedea cum artistul folosește şirul binar
+        pentru a desena acest model."
+      Course 4 Artist For Loops 13: Hmmm, aceste forme devin din ce în ce mai mari
+        de fiecare dată! Nu am rezolvat deja această problemă cu variabile? Cum putem
+        folosi noi variabila numărătoare pentru a micșora laturile având în vedere
+        că acestea sunt mai multe la număr? În loc de a muta înainte pe câte o anumită
+        porțiune prestabilită, încearcă să înaintezi (100 / numărător) pixeli.
+      Course 4 Artist For Loops 4: Utilizaţi "for loop" pentru a desena aceste patrulatere.
+        Ele încep cu 50 pixeli lungime, cel mai mare are 300 pixeli lungime şi fiecare
+        patrulater este cu 25 pixeli mai mare decât ultimul. Ţi-am dat aproape tot
+        codul de care ai nevoie - îţi lipseşte o singură rutină, care este aceea?
+      Course 4 Artist For Loops 6: Joc liber! Încearcă să foloseşti instrucţiunea
+        "for loop" pentru a desena un formă care îşi măreşte dimensiunea cum vrei
+        tu.
+      Course 4 Artist For Loops 6a: Fă trei modificări mici la codul de la ultimul
+        nivel pentru a obţine aceast lucru!
+      Course 4 Artist For Loops 8a: Latura cea mai mică a acestei spirale pătratică
+        este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu
+        10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă
+        pentru a finaliza această imagine minunată?
+      Course 4 Artist For Loops Challenge_a: "Poți să îți dai seama cum să folosești
+        toate lucrurile pe care le-ai învățat ca sa creezi această imagine?\r\r\nAi
+        nevoie de o sugestie?\nClick/apasa aici."
+      Course 4 Artist Vars 3: 'Avem aici o buclă ce desenează un pătrat, dar ceva
+        lipsește. Poți s-o repari astfel încât să folosească variabila "lungime" pentru
+        a ne da seama cât de lungă trebuie să fie fiecare latură? '
+      Course 4 Bee 7: Folosește tot ce ai învățat pânăacum pentru a colecta tot nectarul.
+        Floarea violetă ar putea avea ori 3, ori 2 nectaruri sau 1 nectar.
+      Course 4 Bee For Loops 11: Ce este în neregulă cu acestă buclă? Vezi dacă poți
+        s-o repari și să faci albina să colecteze tot nectarul.
+      Course 4 Bee Params 1: Utilizează funcţia "obține 3 nectaruri", care se întoarce,
+        se mută pentru a colecta nectarul şi apoi revine la locaţia originală. Scrie
+        o secvenţă pentru a colecta tot nectarul folosind "obţine 3 nectaruri."
+      Course 4 Play Lab Params 4: "Aici este o funcţie numită \"patrol.\"\n\r\n\r\nEditeaz-o
+        pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli."
+      Course 4 Play Lab Params 8: Foloseşte blocul de instrucţiuni "cand personajul
+        atinge" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă
+        acesta atinge oricare unul din celelalte personaje.
+      Course 4 Play Lab Vars 2: Cursa în acest ultim puzzle nu a fost foarte corectă!
+        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        decât pisica. Primul care adună 10 steaguri câştigă!
+      Course 4 Play Labs For Loops 1: Hai să facem câinele să pronunțe fiecare număr
+        de la 1 la 100. Foloseşte o buclă şi un o construcţie de instrucţiuni contor
+        pentru a pronunţa variabila contor de fiecare dată când bucla rulează.
+      Course 4 Playlab For Loops 5b: Ajustați intervalul pe acestea 'pentru' bucle,
+        astfel încât cele două personaje să termine în exact același loc.
+      Course 4 SCFP 1: Creează o funcție cu parametri care permite artistului să facă
+        salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli
+        (folosind numere pozitive și negative).
+      Course 4 SCVP 1: Creează o funcție cu parametri care permite artistului să facă
+        salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli
+        (folosind numere pozitive și negative).
+      CourseF_PlayLab_vars2: Cursa în acest ultim puzzle nu a fost foarte corectă!
+        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        decât pisica. Primul care adună 10 steaguri câştigă!
+      K-1 Bee Loops 2: Folosește o buclă pentru a muta şi apoi colectează nectarul
+        şi fă miere!
+      K-1 Bee Loops 3: Foloseşte buclele pentru a coleta nectarul şi produce miere!
+      K-1 Bee Loops 4: Foloseşte buclele pentru a lua nectarul, produce miere şi pentru
+        a muta!
+      K-1 Bee Loops 5: Foloseşte buclele pentru a lua nectarul şi mierea!
+      K-1 Bee Loops 6: Folosește buclele pentru a colecta nectarul, mierea şi pentru
+        mutări!
+      K-1 Maze Loops 11: Du-mă la porc! Foloseşte bucla repetă.
+      K-1 Maze Loops 12: Du-mă la porc! Foloseşte bucla repetă.
+      K-1 Maze Loops 2: Foloseşte bucla repetă pentru a mă duce la porc!
+      K-1 Maze Loops 8: Du-mă la porc! Foloseşte bucla repetă.
+      NEW Course 4 Artist Functions 10.1: Utilizează funcțiile de la puzzle-urile
+        anterioare pentru a desena acest model.
+      NEW Course 4 Artist Functions 12: Foloseştei funcţia "draw a line of squares"
+        din ultimul puzzle pentru a desena acest model
+      NEW Course 4 Artist Functions 3: |-
+        Aici este un nou tip de bloc de instrucţiuni.
+        Poartă numele de "Function block." Apasa "Edit" apoi umple-l cu codul de desen pentru un patrat cu laturile de 100 de pixeli. Cand ai terminat de editat functie, click "Close" si intoarce-te la programul tau.
+      NEW Course 4 Artist Functions 9: Poți rezolva acest lucru prin adăugarea unui
+        singur bloc?
+      NEW Course 4 Artist Params 4: "Observi ceva diferit \nla aceste blocuri de funcţie?
+        Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
+      NEW Course 4 Artist Vars 12: Acum, recrează algoritmul de la ultimul nivel şi
+        creează un pentagon cu laturile de 150.
+      NEW Course 4 Artist Vars 4: 'Hai să-l încercăm din nou. Poți tu seta variabila
+        de lungime pentru a face acest design minunat cu hexagoane? Indiciu: Este
+        un multiplu de 10.'
+      NEW Course 4 Artist Vars 6: "Deseneaza acest model prin mutarea variabilei lungime
+        in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont:
+        este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime doar
+        o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+      Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru
+        a ajunge la oaie.
+      Overworld Move to Sheep_2018: Adauga din nou instructiunea "Mergi inainte" pentru
+        a ajunge la oaie.
+      Overworld Move to Sheep_2019: Adauga din nou instructiunea "Mergi inainte" pentru
+        a ajunge la oaie.
+      Testing Quantum Farmer: 'Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte
+        lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să
+        umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla
+        "în timp ce" de data asta.'
+      course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări
+        pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau
+        şterge-l şi înlocuiește-l cu ceva total diferit)
+      courseD_bee_nestedLoops5: 'Colectează tot nectarul din fiecare floare și fă
+        miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8: 'Colectează tot nectarul din fiecare floare și fă
+        miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2018: 'Colectează tot nectarul din fiecare floare și
+        fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2019: 'Colectează tot nectarul din fiecare floare și
+        fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bounce_events1: Trebuie sa ajungi la steag! Ataseaza un bloc "cand sageata
+        stanga" si apasa "Ruleaza" pentru a misca jucatorul catre steag.
+      courseD_maze_nestedLoops4: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
+      courseD_maze_nestedLoops4_2018: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
+      courseD_maze_nestedLoops4_2019: Du-mă la floarea-soarelui! Foloseste bucla "repeta"
+        pentru a folosi mai putine blocuri.
+      courseE_bee_functions3: "Funcţiile sunt blocuri de cod care efectuează \no activitate.
+        Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De
+        asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare
+        ideală de bloc."
+      courseE_bee_functions3_2018: "Funcţiile sunt blocuri de cod care efectuează
+        \no activitate. Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare
+        dintr-o data. De asemenea, asigură-te că\nfolosești și o buclă pentru a obține
+        o numarătoare ideală de bloc."
+      courseE_farmer_concept4: Acum, hai să mergem încă un nivel în profunzimea problemei?
+      courseF_bee_for_challenge2: Rezolva acest puzzle cu cel mai mic număr de blocuri
+        posibil.
+      courseF_bee_for_challenge2_2018: Rezolva acest puzzle cu cel mai mic număr de
+        blocuri posibil.
+      courseF_bee_for_challenge2_2019: Rezolva acest puzzle cu cel mai mic număr de
+        blocuri posibil.
+      frozen circle function in circle: Acum haideți să creăm 20 de cercuri suprapuse,
+        rotind 18 grade după fiecare cerc.
+      frozen circle function with parameter: Aici este un bloc "Creează cerc", care
+        poate face cercuri de diferite dimensiuni. Îl poţi folosi pentru a crea un
+        mic cerc cu dimensiunea de 5 şi un cerc mai mare de dimensiune 10?
+      frozen circle function: Utilizează noul bloc "Creează cerc" pentru a realiza
+        10 cercuri suprapuse. Nu uita să "sari înainte" printre cercuri.
+      frozen circle: Un cerc este o formă specială. Poți să intuiești cu ce număr
+        să înlocuim semnele de întrebare pentru a desena un cerc?
+      frozen cross rotate dense: 'Hai să îl repetăm de 90 de ori! De câte ori intră
+        90 în 360? Sugestie: Este un număr chiar foarte mic.'
+      frozen cross rotate: Acum, încearcă să îl repeți de 10 ori. Câte grade trebuie
+        să rotești între fiecare linie?
+      frozen cross: Impachetati un bloc "repetare" pentru aceste comenzi sa creati
+        un semn plus. Ati observat ca Elsa poate merge si inainte si inapoi?
+      frozen diamond mini snowflake: Stiai ca fiecare fulg de nea are o forma diferita?
+        Haideti sa realizam un fulg de nea folosind inca un bloc 'Repeta' pentru a
+        repeta un paralelogram de 4 ori, intorcandu-te la dreapta cu 90 de grade intre
+        fiecare paralelogram.
+      frozen diamond snowflake: Acum, hai să creăm un fulg de zăpadă nou utilizând
+        blocul de repetare pentru a repeta un paralelogram de 10 ori, rotind la dreapta
+        cîte 36 de grade între fiecare dintre ele.
+      frozen diamond: |-
+        Utilizati un blocul repeta pentru a crea un paralelogram.
+        Este la fel ca un dreptunghi dar are unghiuri diferite. Acesta are unghi de 60 de grade si de 120 in loc sa aiba toate unghiurile de 90 de grade.
+      frozen freeplay: Ai devenit oficial un artist maestru! Creează un paradis de
+        iarnă.
+      frozen perpendicular: Acum, hai să vedem dacă putem crea două linii care formează
+        un unghi de 90 de grade. Va trebui să folosești blocul ”Întoarce” precum și
+        blocul ”Mută”.
+      frozen snowflake branch: Încearcă să folosești blocul "Creează ramură de fulg
+        de nea" pentru a realiza trei ramuri, care încep să arate ca un fulg de nea.
+      frozen snowflake full: Acum hai să îl repetăm de 8 ori pentru a face un fulg
+        de nea frumos!
+      frozen snowflower: Modele complicate zăpadă pot fi create cu forme foarte simple.
+        Poţi crea un model prin repetarea a 5 cercuri de dimensiunea 5 şi 5 cercuri
+        de dimensiunea 10?
+      frozen square iterative: Se pare că am parcurs jumătate de drum în crearea unui
+        pătrat. Hai să punem 4 linii împreună pentru a crea un pătrat.
+      frozen square loop 3x: Hai să creăm trei pătrate, rotind după fiecare pătrat.
+        Asigură-te că rotești cu 120 de grade înainte de fiecare pătrat nou.
+      frozen square loop: Salutare! Eu sunt Anna din Arendelle. Hai să facem un pătrat
+        cu blocul "Repetă", care folosește mai puține blocuri. De câte ori (???) ar
+        trebui ca blocul "Repetă" să bucleze blocurile în interiorul său pentru a
+        crea un pătrat?
+      frozen square snowflake: Poţi crea un fulg de zăpadă folosind blocul "Repetă"
+        pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
+        roti cu 36 de grade între fiecare pătrat?
+      grade2_MakeDogTag_8: Hai acum să conectăm o grămadă de V-uri împreună, desenându-le
+        într-o buclă.
+      grade2_PuppyLoops_10: Morișca mea nu e gata. De câte ori trebuie folosit blocul
+        "repetă" pentru a fi gata?
+      grade2_PuppyLoops_4: Utilizează două bucle pentru a ajunge la porc folosind
+        mai puține blocuri.
+      grade2_PuppyLoops_8: 'Codul pentru cele trei mustăți pe care le vezi este greșit.
+        Indiciu: fiecare mustață are o lungime egala. Repară acest cod pentru a desena
+        mustățile.'
+      grade2_PuppyLoops_9: Se pare că litera C în cod este desenată invers. Poţi să
+        o faci să arate ca un C?
+      grade2_puppy_loops4: Utilizează două bucle pentru a ajunge la porc folosind
+        mai puține blocuri.
+      grade3_ConditionalsElse_2: Albina vrea acum doar nectar. Ia aminte, nu toate
+        obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul doar
+        din flori.
+      grade3_ConditionalsElse_5: Sub acei nori, ar putea exista o floare sau un fagure
+        de miere. Folosește blocul "dacă/altfel" pentru a colecta nectar dacă acolo
+        este o floare, altfel pentru a face miere (deoarece acolo este un fagure).
+      grade3_ConditionalsElse_6: Această floare violetă ar putea avea ori 3, ori 2
+        nectaruri sau 1 nectar. Aici un bloc "dacă/altfel" este combinat cu alt bloc
+        "dacă/altfel" pentru a crea un bloc "dacă", "altfel-dacă", "altfel". Completează
+        soluția pentru a colecta o cantitate necunoscută de nectar.
+      grade3_ConditionalsElse_7: Amintește-ți că florile violete pot avea 3, 2 nectaruri
+        sau 1 nectar. Completează funcția "verifică floare violetă" și folosește-o
+        pentru a colecta tot nectarul la flori.
+      grade3_ConditionalsElse_8: Scrie în interiorul funcției "verifică floare fă
+        miere". Funcția ta ar trebui să verifice dacă floarea violetă are 3, 2 nectaruri
+        sau 1 nectar și să colecteze tot nectarul. Apoi, mută înainte și fă miere.
+      grade3_ConditionalsElse_9: "Evaluare: Acest cod este greșit. \nCompletează funcția
+        \"ia nectar sau fă miere\", apoi apeleaz-o pentru a colecta tot nectarul și
+        mierea. Amintește-ți că florile violete pot avea 3, 2 sau 1 nectar."
+      grade3_ConditionalsElse_TeacherIDo: Sub acei nori, ar putea exista o floare
+        sau un fagure de miere. Folosește blocul "dacă/altfel" pentru a colecta nectar
+        dacă acolo este o floare, altfel pentru a face miere (deoarece acolo este
+        un fagure).
+      grade3_Conditionals_10: |-
+        Colectează nectar și fă miere. Sugestie:
+        ce se întâmplă dacă folosești condiția "dacă nectar" în cazul unei flori roșii? Poți
+        finaliza aceasta cu o buclă?
+      grade3_Conditionals_12: Colectează nectarul din toate cele patru flori.
+      grade3_Conditionals_2: Ajută-mă să adun tot nectarul din flori şi să fac miere.
+        Utilizează o buclă.
+      grade3_Conditionals_8: Colectează nectar din florile care au nectar.
+      grade3_Debugging_6: "Ce provocare dulce! Repară \neroarea(erorile) pentru a
+        colecta tot nectarul şi a face toată mierea."
+      grade3_Debugging_9: "Fii rabdator! Repară \neroarea(erorile) pentru a colecta
+        tot nectarul şi a face toată mierea."
+      grade3_Loops_3: Poti folosi o bucla pentru a colecta tot nectarul?
+      grade3_Loops_4: Acum foloseste noul bloc de repetitie pentru a colecta tot nectarul
+        si a face toata mierea.
+      grade3_Loops_6: |-
+        Ce se intampla daca repeti aceasi secventa de 3 ori?
+        Nu uita sa faci mierea la sfarsit!
+      grade3_Loops_7: 'Fiecare floare contine o unitate de nectar. Colecteaza nectarul
+        din fiecare floare. '
+      grade3_Loops_TeacherIDo: 'Fiecare floare contine o unitate de nectar. Colecteaza
+        nectarul din fiecare floare. '
+      grade3_bee_conditionals_quantum2: Albina vrea acum doar nectar. Ia aminte, nu
+        toate obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul
+        doar din flori.
+      grade3_maze_loops2: Du-mă la floarea-soarelui! Foloseste bucla "repeta" pentru
+        a folosi mai putine blocuri.
+      grade3_maze_nestedLoops4: Utilizează două bucle pentru a ajunge la porc folosind
+        mai puține blocuri.
+      grade4_arist_nested_loop_flags1: Buclează codul dat pentru a crea o moară de
+        vânt.
+      grade4_arist_nested_loop_polygons1: 'Reia de 10 ori acest proiect. Cât de mult
+        te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
+        lui 360 la 10?)'
+      grade4_arist_nested_loop_polygons2: 'Reia de 6 ori acest proiect. Cât de mult
+        te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
+        lui 360 la 6?)'
+      grade4_arist_nested_loop_triangles3: Poţi desena un hexagon folosind buclarea
+        codului pentru desenarea unui triunghi?
+      grade4_arist_nested_loop_triangles4: Desenează dinţii în gura aligatorului!
+      grade4_arist_nested_loop_triangles5: "Creează un soare prin a cuibări codul
+        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r"
+      grade4_arist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind
+        o buclă imbricată?
+      grade4_artist_functions2: Funcțiile îțî permit să construiești blocuri noi!
+        Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează
+        un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele
+        au 75 de pixeli între ele.
+      grade4_artist_nested_loop_flags1: Buclează codul dat pentru a crea o moară de
+        vânt.
+      grade4_artist_nested_loop_polygons1: 'Reia de 10 ori acest proiect. Cât de mult
+        te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
+        lui 360 la 10?)'
+      grade4_artist_nested_loop_triangles5: "Creează un soare prin a cuibări codul
+        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r"
+      grade4_artist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind
+        o buclă imbricată?
+      grade4_artist_parameters_triangles2: "Observi ceva diferit \nla aceste blocuri
+        de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
+      grade4_bee_conditionals_quantum2: Albina vrea acum doar nectar. Ia aminte, nu
+        toate obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul
+        doar din flori.
+      grade4_bee_conditionals_quantum5: Sub acei nori, ar putea exista o floare sau
+        un fagure de miere. Folosește blocul "dacă/altfel" pentru a colecta nectar
+        dacă acolo este o floare, altfel pentru a face miere (deoarece acolo este
+        un fagure).
+      grade4_bee_functions3: "Funcţiile sunt blocuri de cod care efectuează \no activitate.
+        Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De
+        asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare
+        ideală de bloc."
+      grade4_bee_nestedLoops4: 'Colectează tot nectarul din fiecare floare și fă miere
+        la fiecare fagure. Folosește o buclă imbricată. '
+      grade4_frozen_freeplay: Ai devenit oficial un artist maestru! Creează un paradis
+        de iarnă.
+      grade4_frozen_functions0: Un cerc este o formă specială. Poți să intuiești cu
+        ce număr să înlocuim semnele de întrebare pentru a desena un cerc?
+      grade4_frozen_functions1a: Utilizează noul bloc "Creează cerc" pentru a realiza
+        10 cercuri suprapuse. Nu uita să "sari înainte" printre cercuri.
+      grade4_frozen_functions2: Acum haideți să creăm 20 de cercuri suprapuse, rotind
+        18 grade după fiecare cerc.
+      grade4_frozen_functions3: Aici este un bloc "Creează cerc", care poate face
+        cercuri de diferite dimensiuni. Îl poţi folosi pentru a crea un mic cerc cu
+        dimensiunea de 5 şi un cerc mai mare de dimensiune 10?
+      grade4_frozen_functions4: Modele complicate zăpadă pot fi create cu forme foarte
+        simple. Poţi crea un model prin repetarea a 5 cercuri de dimensiunea 5 şi
+        5 cercuri de dimensiunea 10?
+      grade4_frozen_nested_loop_diamonds2: Stiai ca fiecare fulg de nea are o forma
+        diferita? Haideti sa realizam un fulg de nea folosind inca un bloc 'Repeta'
+        pentru a repeta un paralelogram de 4 ori, intorcandu-te la dreapta cu 90 de
+        grade intre fiecare paralelogram.
+      grade4_frozen_nested_loop_diamonds3: Acum, hai să creăm un fulg de zăpadă nou
+        utilizând blocul de repetare pentru a repeta un paralelogram de 10 ori, rotind
+        la dreapta cîte 36 de grade între fiecare dintre ele.
+      grade4_frozen_square: Salutare! Eu sunt Anna din Arendelle. Hai să facem un
+        pătrat cu blocul "Repetă", care folosește mai puține blocuri. De câte ori
+        (???) ar trebui ca blocul "Repetă" să bucleze blocurile în interiorul său
+        pentru a crea un pătrat?
+      grade4_frozen_square_loop1: Salutare! Eu sunt Anna din Arendelle. Hai să facem
+        un pătrat cu blocul "Repetă", care folosește mai puține blocuri. De câte ori
+        (???) ar trebui ca blocul "Repetă" să bucleze blocurile în interiorul său
+        pentru a crea un pătrat?
+      grade4_frozen_square_loop2: Hai să creăm trei pătrate, rotind după fiecare pătrat.
+        Asigură-te că rotești cu 120 de grade înainte de fiecare pătrat nou.
+      grade4_frozen_square_loop3: Poţi crea un fulg de zăpadă folosind blocul "Repetă"
+        pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
+        roti cu 36 de grade între fiecare pătrat?
+      grade4_review_artist2: "Această casă are nevoie de un acoperiş! Desenaţi triunghiul.
+        \ \r\n\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n
+        \nContext | Request Context"
+      grade4_review_artist3: Blocul de salt mută artistul fără a desena. Trasează
+        linia punctată folosind și blocul de salt şi cel de desen. Fiecare linie are
+        50 de pixeli lungime.
+      grade4_review_bee1: Acum foloseste noul bloc de repetitie pentru a colecta tot
+        nectarul si a face toata mierea.
+      grade5_artist_for_loops1: 'Desenează acest triunghi de 50 de pixeli mărime.
+        Tip: folosește un bloc "repetă".'
+      grade5_artist_for_loops10: "Poți să îți dai seama cum să folosești toate lucrurile
+        pe care le-ai învățat ca sa creezi această imagine?\r\r\nAi nevoie de o sugestie?\nClick/apasa
+        aici."
+      grade5_artist_for_loops5: Latura cea mai mică a acestei spirale pătratică este
+        de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10
+        pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă
+        pentru a finaliza această imagine minunată?
+      grade5_artist_parameters_triangles2a: "Observi ceva diferit \nla aceste blocuri
+        de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
+      grade5_artist_variables_hexagons1: 'Hai să-l încercăm din nou. Poți tu seta
+        variabila de lungime pentru a face acest design minunat cu hexagoane? Indiciu:
+        Este un multiplu de 10.'
+      grade5_artist_variables_pentagon9: Acum, recrează algoritmul de la ultimul nivel
+        şi creează un pentagon cu laturile de 150.
+      grade5_artist_variables_pentagons1: "Deseneaza acest model prin mutarea variabilei
+        lungime in locurile corecte si apoi setati valoarea corecta pentru lungime.
+        (pont: este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime
+        doar o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+      grade5_playlab_variables13: Foloseşte blocul de instrucţiuni "cand personajul
+        atinge" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă
+        acesta atinge oricare unul din celelalte personaje.
+      grade5_playlab_variables2: Cursa în acest ultim puzzle nu a fost foarte corectă!
+        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        decât pisica. Primul care adună 10 steaguri câştigă!
+      grade5_playlab_variables9: "Aici este o funcţie numită \"patrol.\"\n\r\n\r\nEditeaz-o
+        pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli."
+      level 'grade3_Loops_3: Poti folosi o bucla pentru a colecta tot nectarul?
+      level 'grade3_Loops_4: Acum foloseste noul bloc de repetitie pentru a colecta
+        tot nectarul si a face toata mierea.
+      level 'grade3_Loops_6: |-
+        Ce se intampla daca repeti aceasi secventa de 3 ori?
+        Nu uita sa faci mierea la sfarsit!
+      level 'grade3_Loops_7: 'Fiecare floare contine o unitate de nectar. Colecteaza
+        nectarul din fiecare floare. '

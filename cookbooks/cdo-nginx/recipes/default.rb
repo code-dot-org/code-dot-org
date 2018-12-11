@@ -6,9 +6,8 @@ end
 
 apt_package 'nginx'
 
-run_unicorn = '/run/unicorn'
 %w(dashboard pegasus).each do |app|
-  socket_path = File.join run_unicorn, "#{app}.sock"
+  socket_path = File.join node['cdo-nginx']['socket_path'], "#{app}.sock"
   # Ensure stale socket-files are cleaned up
   # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
   file socket_path do
@@ -41,7 +40,7 @@ template '/etc/nginx/nginx.conf' do
   mode '0644'
   variables ssl_key: cert.key_path,
     ssl_cert: cert.chain_combined_path,
-    run_dir: run_unicorn
+    run_dir: node['cdo-nginx']['socket_path']
   notifies :reload, 'service[nginx]', :immediately
 end
 

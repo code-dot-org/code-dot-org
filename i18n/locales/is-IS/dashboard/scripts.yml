@@ -400,7 +400,7 @@ is:
           description_audience: Fyrir 10-18 ára
           stages:
             Abstraction:
-              name: Greining kjarna
+              name: Útdráttur
             Algorithms:
               name: Algrím
             Computational Thinking:
@@ -512,7 +512,7 @@ is:
         cspunit1:
           title: "(gamalt) CSP Kafli1 - Stafrænar upplýsingar"
           description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum og flytja þær milli manna og tölvutækja. Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
-          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Tvíundartölur
@@ -666,7 +666,7 @@ is:
             PDK5 Intro:
               name: Kynning á PDK5
         cspunit3:
-          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             APIs and Function Parameters:
               name: API og stikar falla
@@ -865,7 +865,7 @@ is:
             Welcome Back!:
               name: Velkomin aftur!
         cspunit2:
-          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Erfið verkefni - Vandamál farandsölumannsins
@@ -1318,6 +1318,7 @@ is:
             Unit 6 lessons:
               name: Kennslustundir 6. einingar
         cspunit4draft:
+          description_short: Gögn
           stages:
             Check Your Assumptions:
               name: Kannaðu hvað þú heldur
@@ -1509,9 +1510,9 @@ is:
             Wrap-Up:
               name: Samantekt
         cspunit5:
-          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
         cspunit4:
-          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Check Your Assumptions:
               name: Kannaðu hvað þú heldur
@@ -1928,6 +1929,8 @@ is:
               name: Álit samnemenda
             Describing Web Pages:
               name: Lýsing vefsíðna
+        CSDU5-Draft:
+          description_short: Gögn
         MikeTest:
           stages:
             Artist Functions:
@@ -1965,7 +1968,7 @@ is:
         gradeKinder:
           stages:
             Debugging:
-              name: Kembing
+              name: Villuleit
             Events:
               name: Atvik
             Events Unplugged:
@@ -2021,7 +2024,7 @@ is:
         grade1:
           stages:
             Debugging:
-              name: Kembing
+              name: Villuleit
             Events:
               name: Atvik
             Events Unplugged:
@@ -2369,7 +2372,7 @@ is:
             Measuring Student Learning:
               name: Mæling á námi nemenda
         basketball:
-          title: Veldu þér lið og búðu til körfuboltaleik
+          title: Velja lið og búa til körfuboltaleik
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
           stages:
@@ -2392,6 +2395,8 @@ is:
               name: Tvíundarmyndir
             RGB Color:
               name: RGB litir
+            Play Lab:
+              name: Leikjasmiðja
         csd2-2017:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:
@@ -2541,7 +2546,7 @@ is:
             Hour of Code 2013:
               name: Klukkustund kóðunar 2013
         sports:
-          title: Kóðaðu íþróttaleik eftir þínu höfði
+          title: Kóðaðu þinn eigin íþróttaleik
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
           stages:
@@ -3594,3 +3599,93 @@ is:
               name: Stafræna fótsporið þitt
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+        frozen-2018:
+          stages:
+            Artist:
+              name: Listamaður
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Listamaður
+        dance:
+          stages:
+            new stage:
+              name: nýr áfangi
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Listamaður
+        coursef-2019:
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          stages:
+            Building a Foundation:
+              name: Að byggja grunn
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            new stage:
+              name: nýr áfangi
+            The Artist:
+              name: Listamaðurinn
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            Binary Bracelets:
+              name: Stafræn armbönd
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
+        csd1-2019:
+          description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
+          stages:
+            Intro to Problem Solving:
+              description_student: 'Bekkurinn vinnur í hópum við að hanna báta úr álpappír svo þeir fljóti með sem þyngsta hleðslu. Í lok tímans hugleiða hóparnir hvaða reynslu þeir öðluðust við þetta verkefni og hvernig það gæti tengst þeim tegundum úrlausna sem þeir munu fást við það sem eftir er af námskeiðinu. '
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi

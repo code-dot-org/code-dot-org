@@ -10,6 +10,7 @@ nl:
       messages:
         blank: "is vereist"
         blank_plural: "is vereist"
+        invalid: "is ongeldig"
         invalid_plural: "zijn ongeldig"
     attributes:
       user:
@@ -26,6 +27,7 @@ nl:
         age: 'Leeftijd'
         gender: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
+        finish_sign_up_header: 'Voltooi het maken van je account'
         error:
           future: kan niet in de toekomst
   hello: "Hallo wereld"
@@ -39,6 +41,7 @@ nl:
   next_resource: Volgende hulpbron
   cancel: "Annuleren"
   okay: "Oké"
+  or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   add_teacher_form:
     code:
@@ -59,7 +62,7 @@ nl:
   courses_page:
     title_student: "Leer meer op Code Studio"
     title_teacher: "Leren met Code Studio"
-  unplugged_activity: 'Losgekoppelde activiteit'
+  unplugged_activity: 'UNPLUGGED ACTIVITEIT'
   of: "van"
   more: "MEER"
   less: "MINDER"
@@ -83,6 +86,7 @@ nl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     clever: 'Slimme Account'
     forgot_password: 'Wachtwoord vergeten?'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
@@ -117,7 +121,7 @@ nl:
     my_data_to_us: "Gegevens over mijn gebruik van deze site mogen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
     user_type_label: "Account type"
-    user_type_teacher: "Leerkracht"
+    user_type_teacher: "Leraar"
     user_type_student: "Leerling"
     field_is_required: "is vereist"
     accept_terms: "Je moet akkoord gaan om een account aan te maken"
@@ -250,9 +254,7 @@ nl:
         applab: 'Maak een App'
         gamelab: 'Maak een Game Lab project'
         weblab: 'Maak een Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "Mijn Dashboard"
-      courses: "Cursussen"
       course_catalog: "Cursuscatalogus"
       project_gallery: "Projecten overzicht"
       sections: "Secties"
@@ -294,10 +296,17 @@ nl:
       signin: 'Aanmelden'
       signup: 'Maak een account aan'
       already_registered: 'Al aangemeld?'
-      pair_programming: 'Programmeren in Tweetallen'
       team: 'Team'
       driver: 'Stuurprogramma'
       navigator: 'Navigator'
+      create: 'Maak'
+      applab: 'App Lab'
+      artist: 'Kunstenaar'
+      gamelab: 'Game Lab'
+      playlab: 'Speel Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dansfeest'
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
@@ -441,7 +450,7 @@ nl:
     more: 'Meer'
     feedback: 'Geef feedback'
     translate: 'Help ons te vertalen naar uw taal'
-    support: 'Ondersteuning'
+    support: 'Help en Gemeenschap'
     support_url: 'http://support.code.org'
     tos_short: 'Voorwaarden'
     tos: 'Gebruiksvoorwaarden'
@@ -511,6 +520,8 @@ nl:
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
+    dance:
+      title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -544,11 +555,15 @@ nl:
       body: "Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol."
     minecraft:
       title: "Minecraft"
-      body: "Ontdek een Minecraft-wereld met code."
+      body: "Ontdek een Minecraft-wereld met code"
     minecraft2016:
+      title: "Minecraft"
+      body: "Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft omgeving."
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -653,20 +668,12 @@ nl:
     save: "Opslaan"
   race_interstitial:
     races:
-      - 
-        white: "Wit"
-      - 
-        black: "Zwart of African American"
-      - 
-        hispanic: "Hispanic of Latino"
-      - 
-        asian: "Aziatisch"
-      - 
-      - 
-      - 
-        other: "Anders"
-      - 
-        opt_out: "Wil ik liever niet zeggen"
+      white: "Wit"
+      black: "Zwart of African American"
+      hispanic: "Hispanic of Latino"
+      asian: "Aziatisch"
+      other: "Anders"
+      opt_out: "Wil ik liever niet zeggen"
     submit: "Insturen"
     decline: "Afsluiten"
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
@@ -683,7 +690,7 @@ nl:
     completed_courses: "Voltooide cursussen"
     all_courses: "Alle cursussen"
   project:
-    projects: "Projecten"
+    projects: "Projecten overzicht"
     create: "Project aanmaken"
     create_a_project: 'Maak een nieuw project aan:'
     new: "Nieuwe maken"
@@ -697,7 +704,7 @@ nl:
     share_link_import_error_body: "Er is iets misgegaan met het importeren van die deelbare koppeling. Probeer het opnieuw."
     exit: "Terug naar de Cursus"
     my_projects: "Mijn Projecten"
-    project_gallery: "Projecten"
+    project_gallery: "Projecten overzicht"
     publish: "Publiceren"
     unpublish: "Depubliceren"
     share: "Delen"
@@ -779,6 +786,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
       email: 'Email'
@@ -793,7 +801,7 @@ nl:
         none: 'Wil ik liever niet zeggen'
       subjects:
         cs: 'informatica'
-        math: 'Wiskunde'
+        math: 'wiskundige'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
       resources:
@@ -810,4 +818,5 @@ nl:
   cookie_banner:
     accept: 'Ik ga akkoord'
   gdpr_dialog:
+    message: 'Gegevens over uw gebruik van deze site kunnen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten.'
     yes: 'Ja'

@@ -6,10 +6,11 @@ import {
 
 const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
-
+const SET_GET_NEXT_FRAME = 'shareDialog/SET_GET_NEXT_FRAME';
 const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
 const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
+const SAVE_REPLAY_LOG  = 'shareDialog/SAVE_REPLAY_LOG';
 
 // Reducer
 
@@ -23,11 +24,15 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_SHARE_DIALOG:
       return {
+        ...state,
         ...initialState,
         isOpen: true,
       };
     case HIDE_SHARE_DIALOG:
-      return initialState;
+      return {
+        ...state,
+        ...initialState,
+      };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
@@ -35,6 +40,7 @@ export default function reducer(state = initialState, action) {
       };
     case UNPUBLISH_SUCCESS:
       return {
+        ...state,
         ...initialState,
         didUnpublish: true,
       };
@@ -42,6 +48,16 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isUnpublishPending: false,
+      };
+    case SET_GET_NEXT_FRAME:
+      return {
+        ...state,
+        getNextFrame: action.func,
+      };
+    case SAVE_REPLAY_LOG:
+      return {
+        ...state,
+        replayLog: action.replayLog
       };
     default:
       return state;
@@ -77,4 +93,12 @@ export function unpublishProject(projectId) {
       );
     });
   };
+}
+
+export function setGetNextFrame(func) {
+  return {type: SET_GET_NEXT_FRAME, func};
+}
+
+export function saveReplayLog(replayLog) {
+  return {type: SAVE_REPLAY_LOG, replayLog};
 }

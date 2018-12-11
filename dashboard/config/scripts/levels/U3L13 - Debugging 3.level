@@ -54,7 +54,8 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -74,7 +75,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Debugging Event-Driven Programs: Logical Errors\r\nYou're getting good at debugging now!\r\n\r\n**Logical Errors: ** Sometimes you can write a program that generates no errors but does not work as you intend. This is the result of **logical errors** in your code. These can be tricky to catch without knowing what your program is supposed to do in the first place, and usually are only found with careful testing of your app's functionality.\r\n<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 150px\">\r\n\r\n**Target Application:** Just as in the last exercise, you'll try to make an app that has two buttons, one for moving forward and one for turning left.\r\n\r\nOnce again we've introduced an error or two (a logical error this time) for you to debug.\r\n\r\n# Do This:\r\n**Run the program ** and experiment to see what's wrong.\r\n\r\n**Debug ** this program so that it works as intended.\r\n\r\n**Run the program ** and try both buttons to make sure they have the intended functionality.",
+    "markdown_instructions": "# Debugging Event-Driven Programs: Logical Errors\r\nYou're getting good at debugging now!\r\n\r\n**Logical Errors:** Sometimes you can write a program that generates no errors but does not work as you intend. This is the result of **logical errors** in your code. These can be tricky to catch without knowing what your program is supposed to do in the first place, and usually are only found with careful testing of your app's functionality.\r\n<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 150px\">\r\n\r\n**Target Application:** Just as in the last exercise, you'll try to make an app that has two buttons, one for moving forward and one for turning left.\r\n\r\nOnce again we've introduced an error or two (a logical error this time) for you to debug.\r\n\r\n# Do This:\r\n**Run the program** and experiment to see what's wrong.\r\n\r\n**Debug** this program so that it works as intended.\r\n\r\n**Run the program** and try both buttons to make sure they have the intended functionality.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
@@ -90,7 +91,19 @@
     "debugger_disabled": "true",
     "encrypted_examples": "QhkBlwDT6oYThweA4DaYpiBTHuwsxkHRoZ+9U7GegE9QLnf4ZmQmXVO++L/L\nvXWZ\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:40:55 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":225,\"changed_by_email\":\"poorva@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

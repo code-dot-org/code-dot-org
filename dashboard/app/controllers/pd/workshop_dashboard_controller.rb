@@ -7,7 +7,7 @@ module Pd
 
       permission_list = []
       regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
-      serialized_partners = regional_partners.all.map do |regional_partner|
+      serialized_partners = regional_partners.order(:name).map do |regional_partner|
         RegionalPartnerSerializer.new(regional_partner).attributes
       end
       if current_user.permission? UserPermission::WORKSHOP_ADMIN

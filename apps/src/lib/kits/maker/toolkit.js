@@ -30,25 +30,10 @@ let currentBoard = null;
  * Enable Maker Toolkit for the current level.
  */
 export function enable() {
-  if (!isAvailable()) {
+  if (!redux.isAvailable(getStore().getState())) {
     throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
   }
   getStore().dispatch(redux.enable());
-}
-
-/**
- * @returns {boolean} whether Maker Toolkit is enabled for the current level
- */
-export function isEnabled() {
-  return redux.isEnabled(getStore().getState());
-}
-
-/**
- * @returns {boolean} whether Maker Toolkit is usable with the current app at all
- */
-export function isAvailable() {
-  const state = getStore().getState();
-  return !!(state && state.maker);
 }
 
 /**
@@ -66,7 +51,7 @@ export function isAvailable() {
  *   Rejects with another error type if something unexpected happens.
  */
 export function connect({interpreter, onDisconnect}) {
-  if (!isEnabled()) {
+  if (!redux.isEnabled(getStore().getState())) {
     return Promise.reject(new Error('Attempted to connect to a maker board, ' +
         'but Maker Toolkit is not enabled.'));
   }
@@ -157,7 +142,7 @@ function shouldRunWithFakeBoard() {
  * and puts maker UI back in a default state.
  */
 export function reset() {
-  if (!isEnabled()) {
+  if (!redux.isEnabled(getStore().getState())) {
     return;
   }
 

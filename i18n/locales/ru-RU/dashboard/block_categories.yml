@@ -3,16 +3,19 @@ ru:
     block_categories:
       Actions: Действия
       Loops: Циклы
-      Functions: Процедуры
+      Functions: функции
       Color: Цвет
       Math: Математика
       Logic: Логика
-      Variables: Переменные
-      Conditionals: Условные операторы
+      Variables: переменные
+      Conditionals: Условные команды
       Events: События
-      Text: текст
+      Text: Текст
       Input: Ввод
       Start: Начать
+      Music: Музыка
+      Dancers: Танцоры
+      Groups: Группы
       Booleans: Логические выражения
       test: тест
       Name: Имя

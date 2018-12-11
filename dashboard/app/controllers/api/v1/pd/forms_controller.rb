@@ -33,6 +33,10 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
   protected
 
+  def create_params
+    params.permit(:form_data)
+  end
+
   # Override to perform custom actions after a successful form creation,
   # e.g. sending confirmation email
   def on_successful_create

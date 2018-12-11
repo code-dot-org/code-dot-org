@@ -2,17 +2,17 @@ ko:
   data:
     game:
       name:
-        Unplug1: 컴퓨터과학(Computer Science, 정보과학) 소개
+        Unplug1: 컴퓨터과학(정보과학) 소개
         Maze: 미로 퍼즐
         Multi: 객관식 선택 문제
-        Unplug2: 컴퓨터과학적(정보과학적)사고
-        Unplug3: 모눈종이 프로그래밍
+        Unplug2: 컴퓨터과학(정보과학)적 사고
+        Unplug3: 모눈 종이 프로그래밍
         Artist: 화가
         Unplug4: 알고리즘
         Artist2: 화가2
         Unplug5: 함수
         Farmer: 농부
-        Unplug6: 조건/선택
+        Unplug6: 조건
         Artist3: 화가3
         Unplug7: 노래 만들기
         Farmer2: 농부2
@@ -74,7 +74,7 @@ ko:
         maze_2_15: 나... 해바라기... 가지고 싶어~! "만약" 블럭을 사용해서, 블럭을 최대한 적게 사용해서 해바라기로 보내 줘.
         maze_2_16: 좋아... 한 번 더 해보자~ - 이번 것도 그렇게 어렵지는 않지만, 식충식물들을 조심해야 돼!
         maze_2_17: '"조건/선택" 블럭은, 검사를 한 다음에 그 결과에 따라 하나의 작업을 실행해 줘. 이 새로운 블럭을 이용해서, 나를 해바라기로 보내 줘.'
-        maze_2_18: '"조건/선택" 블럭을 다시 한 번 사용해 보자~, 한 번에 성공할 수 있을까?'
+        maze_2_18: '"조건/선택" 블록을 다시 한 번 사용해 보겠습니다. 한 번에 성공할 수 있겠어요?'
         maze_2_19: 블럭을 3개 더 붙여서, 좀 더 복잡한 미로를 빠져나갈 수 있도록 할 수 있겠어? 네가 성공하면 난, 아무리 크고 복잡한 미로라고 하더라도 거뜬히 통과할 수 있을 거야.
         turtle_1_1: 저는 예술가입니다. 원하는 모든 것을 그리도록 코드를 작성할 수 있습니다. 그림에서 회색 선을 따라 그릴 수 있도록 블럭들을 사용하세요.
         turtle_1_2: '자! 이제, 사각형을 그려봐. 참고: "색 설정" 블럭을 사용하면 원하는 색을 사용할 수 있어.'
@@ -234,7 +234,7 @@ ko:
         studio_gumball_join_food_fight: 푸드파이트 게임에 참가하세요! "아이템 오른쪽으로 던지기" 명령으로, 바나나 조 (캐릭터 1) 가 안톤 (캐릭터 2) 에게 음식을 던질 수 있게 해주세요. 안톤이 음식에 맞으면 화난 표정으로 바꿔주세요.
         studio_gumball_free_play: "게임이나 이야기를 직접 만들어보세요.\n다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서 실행시켜 볼 수 있게 됩니다."
         studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
-        studio_k1_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
+        studio_k1_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
         studio_k1_2: 강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?
         studio_k1_3: 강아지가 고양이에게 움직이도록 할 수 있을까요?
         studio_k1_4: 강아지를 고양이에게 움직여 닿았을 때, 고양이가 "hello"라고 말하도록 해보세요.
@@ -291,7 +291,7 @@ ko:
         C1_bee_level_intro: 꿀벌 퍼즐 소개
         C1_artist_intro: 예술가 퍼즐 소개
         C1_spelling_bee_intro: 말하는 꿀벌 소개
-        C1_zuck_repeat_loop: 미로 반복
+        C1_zuck_repeat_loop: 미로 퍼즐 반복
         C1_bee_loops: 꿀벌 반복
         C1_maze_loops: 미로 퍼즐 반복
         C1_playlab_storytelling: Play Lab - 스토리 만들기
@@ -314,7 +314,7 @@ ko:
         C2_paper_airplanes: 종이 비행기
         C2_digital_footprint: 디지털 개인정보 흔적
         C2_digital_footprint_v2: 디지털 개인정보 흔적
-        C3_maze_level_4: 미로 반복
+        C3_maze_level_4: 미로 퍼즐 반복
         C3_artist_intro: 예술가 퍼즐 소개
         C3_artist_functions: 예술가 함수
         C3_bee_functions: 꿀벌 함수
@@ -344,7 +344,7 @@ ko:
         C4_function_edit: 함수 수정하기
         C4_function_create: 함수 만들기
         C4_function_parameters: 함수(값 전달)
-        C4_conditionals: 조건/선택
+        C4_conditionals: 조건
         C4_unplugged_algorithms: 탱그램 알고리즘
         C4_unplugged_madlibs: 매드 립스(Mad Libs)
         C4_unplugged_variables: 변수들 싸기(함께 넣기)
@@ -431,7 +431,7 @@ ko:
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
-        run: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
+        run: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
         watch_again: 다시 보기위해 여기를 눌러보세요.
         gray_block_explanation: 회색 블럭들은 삭제할 수 없습니다. 퍼즐을 해결할 수 있나요?
         show_code_explanation: 자신이 만든 프로그램의 코드를 보기 위해 여기를 눌러 보세요.

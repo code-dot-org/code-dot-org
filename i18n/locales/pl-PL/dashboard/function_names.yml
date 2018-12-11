@@ -11,7 +11,7 @@ pl:
       draw a triangle: narysuj trójkąt
       draw a house: narysuj dom
       draw a star: narysuj gwiazdę
-      do something: Zrób coś
+      do something: wykonaj coś
       jump: skocz
       set score: ustaw wynik
       get nectar: pobierz nektar
@@ -19,8 +19,8 @@ pl:
       diamond: diament
       move: idź
       move right: idź w prawo
-      move up: przesuń w górę
-      move down: przesuń w dół
+      move up: idź w górę
+      move down: idź w dół
       move left: idź w lewo
       collect: zbierz
       turn left: skręć w lewo

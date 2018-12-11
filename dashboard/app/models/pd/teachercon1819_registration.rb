@@ -17,11 +17,9 @@
 #  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
-require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
-
 class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Pd::Form
-  include Teachercon1819RegistrationConstants
+  include Pd::Teachercon1819RegistrationConstants
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'

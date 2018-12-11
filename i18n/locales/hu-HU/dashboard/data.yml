@@ -2,7 +2,7 @@ hu:
   data:
     game:
       name:
-        Unplug1: Bevezetés a számítástechnikába
+        Unplug1: Bevezetés a számítógép tudományába
         Maze: A labirintus
         Multi: Feleletválasztós anyagok
         Unplug2: Számítógépes gondolkodás
@@ -14,9 +14,9 @@ hu:
         Farmer: A Farmer
         Unplug6: Feltételek
         Artist3: A művész 3
-        Unplug7: Dalírás
+        Unplug7: Dal iras
         Farmer2: A Farmer 2
-        Unplug8: Változó
+        Unplug8: Absztrakció
         Artist4: A művész 4
         Unplug9: Váltó programozás
         Farmer3: A Farmer 3
@@ -24,7 +24,7 @@ hu:
         Artist5: A Művész 5
         Unplug11: Összefoglaló
         MazeEC: A labirintus
-        Bounce: Visszapattanós
+        Bounce: Ugrál
         Flappy: Flappy madár
         Jigsaw: Kirakós játék
         MazeStep: Labirintus üzemmód
@@ -51,7 +51,7 @@ hu:
         loop_until: Ismételd amíg, blokk
         loop_while: Amig blokk
         loop_for: Számláló blokk
-        function: Függvények
+        function: funkciók
         parameters: Paraméterezett függvények
     level:
       instructions:
@@ -73,7 +73,7 @@ hu:
         maze_2_15: Napraforgót szeretnék! Használj egy "ha" blokkot, hogy a legkevesebb lépésből eljussak odáig.
         maze_2_16: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a húsevő növényekre!
         maze_2_17: A "ha-különben" blokk ellenőriz egy feltételt és aszerint tesz meg valamit VAGY valami mást. Próbálj meg eljuttatni a napraforgóhoz úgy, hogy ezt az új blokkot használod.
-        maze_2_18: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
+        maze_2_18: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
         maze_2_19: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat be tudok járni annak hosszától függetlenül.
         turtle_1_1: Szia, én egy művész vagyok. Te írhatsz nekem olyan kódot, amivel majdnem mindent le tudok rajzolni. Használd a blokkokat, hogy lefessem a képen látható szürke vonalakat.
         turtle_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc színed az új "színbeállítások megadása" blokk segítségével.'
@@ -183,7 +183,7 @@ hu:
         studio_c2_5: Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?
         studio_c2_6: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c2_7: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?
-        studio_c2_8: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
+        studio_c2_8: Meg tudod csinálni, hogy a Waddles azt mondja, "Au!" (Ouch!), és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
         studio_c2_9: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c2_10: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c2_11: Hozz létre egy saját történetet! Ha elkészült, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a történetedet a telefonjaikon.
@@ -196,7 +196,7 @@ hu:
         studio_c3_game_1: Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?
         studio_c3_game_2: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c3_game_3: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?
-        studio_c3_game_4: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
+        studio_c3_game_4: Meg tudod csinálni, hogy a Waddles azt mondja, "Au!" (Ouch!), és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
         studio_c3_game_5: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_6: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
@@ -255,8 +255,8 @@ hu:
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
     video:
       name:
-        maze_intro: Labirintus - Bevezető
-        artist_intro: Művész - Bevezető
+        maze_intro: Labirintus Intro
+        artist_intro: Művész Intro
         farmer_intro: Farmer - Bevezető
         flappy_intro: Flappy - Bevezető
         loop_times: Ismétlés valahányszor blokk
@@ -332,7 +332,7 @@ hu:
         C3_functional_suncatchers: Hasznos díszek
         C3_songwriting_with_parameters: Dalszerzés paraméterekkel
         C4_intro: Bevezető
-        C4_loops_zombie: Ciklusok
+        C4_loops_zombie: hurkok
         C4_bee_conditional: Méh Feltételes mód
         C4_variables_artist: Változók - művész
         C4_variables_playlab: Változók - Játéklabor
@@ -363,7 +363,7 @@ hu:
         infinity_playlab_repeat_forever: Játéklabor - végtelen ciklus
         csp_applab_functions: Bevezetés a függvényekbe
         csp_applab_functions_parameters: Paraméteres függvények
-        csp_applab_loops: Ciklusok
+        csp_applab_loops: hurkok
         alg_1_intro: Számítógép-tudomány az algebrában - bevezetés
         alg_2_eval_block: Számítógép-tudomány az algebrában - kiértékelő blokkok
         alg_3_pemdas: Számítógép-tudomány az algebrában - a műveletek sorrendje
@@ -397,7 +397,7 @@ hu:
         mc_2016_events: Minecraft Kódolás Órája - Események
         mc_2016_congrats: Minecraft Kódolás Órája - Gratulálunk!
         mc_2017_congratulations: Minecraft Kódolás Órája - Gratulálunk!
-        CSF_loops_AB: Ciklusok
+        CSF_loops_AB: hurkok
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

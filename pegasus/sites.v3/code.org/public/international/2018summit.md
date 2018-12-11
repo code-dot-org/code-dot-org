@@ -153,9 +153,18 @@ Please note that Code.org will not have extra devices on hand for participants t
   <summary>**What is the schedule for the week?**</summary>
   <p>
   <br>
-  We are still working on finalizing the summit agenda. We'll post it here as soon as it is available. 
+  Here is a [preview of the summit agenda](https://drive.google.com/file/d/1-1biuaZDQpIdJVbNAE3nKjcheEpYcpYX/view) so you can get a sense of how we'll spend our time together.  
 
-</p>
+  </p>
+</details>
+
+<details>
+  <summary>**What language will be used at the summit?**</summary>
+  <p>
+  <br>
+  All summit sessions will be in English. Unfortunately, we don't have the resources to provide translation services at the summit.   
+
+  </p>
 </details>
 
 <details>

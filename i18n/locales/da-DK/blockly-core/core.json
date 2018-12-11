@@ -50,7 +50,7 @@
     "CONTROLS_IF_IF_TOOLTIP": "Tilføj, fjern eller omarranger sektioner for at omkonfigurere denne hvis blok.",
     "CONTROLS_IF_MSG_ELSE": "ellers",
     "CONTROLS_IF_MSG_ELSEIF": "ellers hvis",
-    "CONTROLS_IF_MSG_IF": "hvis\n",
+    "CONTROLS_IF_MSG_IF": "hvis",
     "CONTROLS_IF_TOOLTIP_1": "Hvis en værdi er sand, så udfør nogle udsagn.",
     "CONTROLS_IF_TOOLTIP_2": "Hvis en værdi er sand, så udfør den første udsagnsblok.  Ellers udfør den anden udsagnsblok.",
     "CONTROLS_IF_TOOLTIP_3": "Hvis den første værdi er sand, så udfør den første udsagnsblok. Ellers, hvis den anden værdi er sand, udfør den anden udsagnsblok.",

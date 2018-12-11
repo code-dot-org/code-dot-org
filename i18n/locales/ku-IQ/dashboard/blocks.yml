@@ -1,0 +1,123 @@
+---
+ku:
+  data:
+    blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': هەڕەمەکی
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': هەڕەمەکی
+      Dancelab_randomColor:
+        text: رەنگێکی هەڕەمەکی
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': ڕاست
+            'false': هەڵە
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": هەڕەمەکی
+      gamelab_randColor:
+        text: رەنگێکی هەڕەمەکی
+      gamelab_randomColor:
+        text: رەنگێکی هەڕەمەکی
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': هەڕەمەکی
+      Mikelab_randomColor:
+        text: رەنگێکی هەڕەمەکی
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': ڕۆژئاوا
+            '"s"': باشور
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': ڕۆژئاوا
+            '"s"': باشور
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": بەرەو پێشەوە
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": لم/وردە بەرد
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": لم/وردە بەرد

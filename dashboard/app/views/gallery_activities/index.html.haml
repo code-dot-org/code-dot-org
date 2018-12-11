@@ -19,7 +19,7 @@
   .row
     .span2
     .span8.infobox
-      = t('gallery.activity_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)).html_safe
+      = t('gallery.activity_count', days: @days, count: number_with_delimiter(brakeman_no_warn(GalleryActivity.pseudocount))).html_safe
     .span2
 
   .row

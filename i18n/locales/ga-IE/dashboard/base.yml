@@ -15,7 +15,7 @@ ga:
       user:
         name: 'Ainm Taispeána'
         name_example: 'Ainm Taispeána<br/>(m.sh. Sárchódálaí nó Sinéad S.)'
-        email: 'Seoladh ríomhphoist'
+        email: 'Ríomhphost'
         parent_email: 'Seoladh ríomhphoist do thuismitheoir'
         personal_email: "Seoladh ríomhphoist pearsanta <a href=\"%{url}\">(cliceáil anseo mura bhfuil seoladh ríomhphoist agat)</a>"
         username: 'Ainm úsáideora'
@@ -39,6 +39,7 @@ ga:
   next_resource: An chéad acmhainn eile
   cancel: "Cealaigh"
   okay: "Ceart go leor"
+  or: "nó"
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
   add_teacher_form:
     code:
@@ -83,6 +84,7 @@ ga:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Cuntas Microsoft'
+    microsoft_v2_auth: 'Cuntas Microsoft'
     clever: 'Cuntas Clever'
     forgot_password: 'Focal faire dearmadta?'
     need_confirmation: "Nach bhfuair tú na treoracha deimhnithe?"
@@ -148,7 +150,7 @@ ga:
     school_organization_zip: 'Cód Poist na Scoile/Eagraíochta'
   signin_form:
     title: 'An bhfuil cuntas agat cheana? Logáil isteach'
-    login: 'Seoladh ríomhphoist'
+    login: 'Ríomhphost'
     login_username: 'Seoladh ríomhphoist nó ainm úsáideora'
     password: 'Focal faire'
     remember: 'Cuimhnigh orm'
@@ -205,7 +207,7 @@ ga:
     type:
       picture: 'Pictiúr mar Fhocal Faire'
       word: 'Focail Rúnda'
-      email: 'Seoladh ríomhphoist'
+      email: 'Ríomhphost'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
@@ -257,9 +259,7 @@ ga:
         applab: 'Déan aip sa tSaotharlann Aipeanna'
         gamelab: 'Déan tionscadal sa tSaotharlann Cluichíochta'
         weblab: 'Tosaigh togra nua i Saotharlann an Ghréasáin (béite)'
-      home: "Baile"
       my_dashboard: "Mo Phainéal"
-      courses: "Cúrsaí"
       course_catalog: "Cúrsaí"
       project_gallery: "Tograí"
       sections: "Rannáin"
@@ -304,10 +304,16 @@ ga:
       signin: 'Logáil isteach'
       signup: 'Cruthaigh cuntas'
       already_registered: 'Cláraithe cheana?'
-      pair_programming: 'Códáil Bheirte'
       team: 'Foireann'
       driver: 'Logáilte isteach'
       navigator: 'Comhpháirtí'
+      create: 'Cruthaigh'
+      applab: 'Saotharlann Aipeanna'
+      artist: 'Ealaíontóir'
+      gamelab: 'An tSaotharlann Cluichíochta'
+      playlab: 'Spraotharlann'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Dul chun cinn %{name}"
       progress: 'Do dhul chun cinn'
@@ -590,6 +596,8 @@ ga:
     minecraft2016:
       title: "Minecraft"
       body: "Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:
@@ -715,22 +723,14 @@ ga:
     title: "Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht a rianú"
     message: "Cad é do chine (cuir tic le gach a mbaineann leatsa)"
     races:
-      - 
-        white: "Den chine geal"
-      - 
-        black: "Den chine gorm nó Afra-Mheiriceánach"
-      - 
-        hispanic: "Easpáinneach nó Latinx"
-      - 
-        asian: "Áiseach"
-      - 
-        hawaiian: "Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin"
-      - 
-        american_indian: "Bundúchasach Meiriceánach/Alascach"
-      - 
-        other: "Eile"
-      - 
-        opt_out: "B'fhearr liom gan freagra a thabhairt"
+      white: "Den chine geal"
+      black: "Den chine gorm nó Afra-Mheiriceánach"
+      hispanic: "Easpáinneach nó Latinx"
+      asian: "Áiseach"
+      hawaiian: "Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin"
+      american_indian: "Bundúchasach Meiriceánach/Alascach"
+      other: "Eile"
+      opt_out: "B'fhearr liom gan freagra a thabhairt"
     submit: "Seol"
     decline: "Dún"
   zendesk_too_young_message: 'Ár leithscéal, ach níl cead ag úsáideoirí óga logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a> gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil linn ar do shon.'
@@ -751,7 +751,7 @@ ga:
     create: "Cruthaigh Togra"
     create_a_project: 'Cruthaigh togra nua:'
     new: "Cruthaigh Togra Nua"
-    rename: "Ainm Nua"
+    rename: "Athainmnigh"
     save: "Sábháil"
     delete: "Scrios"
     import: "Iompórtáil"
@@ -935,7 +935,7 @@ ga:
   view_all_units: 'Gach aonad'
   pd:
     form_labels:
-      email: 'Seoladh ríomhphoist'
+      email: 'Ríomhphost'
       school_name: 'Ainm na Scoile'
       school_city: 'Cathair na Scoile'
       school_country: 'Tír na Scoile'

@@ -1,0 +1,39 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "setForegroundEffect",
+    "blockText": "set foreground effect {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "None",
+            "\"none\""
+          ],
+          [
+            "Rain",
+            "\"rain\""
+          ],
+          [
+            "Tacos",
+            "\"raining_tacos\""
+          ],
+          [
+            "Spotlight",
+            "\"spotlight\""
+          ],
+          [
+            "(Random)",
+            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -55,14 +55,9 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
-  error: {
-    fontSize: 10,
-    color: color.light_gray,
-    display: 'none',
-  },
 };
 
-const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classrooms.length ?
+const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) => classrooms.length ?
   <div>
     {classrooms.map(classroom => (
       <div
@@ -84,17 +79,17 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
       </div>
     ))}
   </div> :
-  <NoClassroomsFound provider={provider}/>
+  <NoClassroomsFound rosterProvider={rosterProvider}/>
 ;
 ClassroomList.propTypes = {
   classrooms: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   selectedId: PropTypes.string,
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const NoClassroomsFound = ({provider}) => {
-  switch (provider) {
+const NoClassroomsFound = ({rosterProvider}) => {
+  switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
@@ -102,7 +97,7 @@ const NoClassroomsFound = ({provider}) => {
             {locale.noClassroomsFound()}
           </p>
           <a href="https://classroom.google.com/">
-              {locale.addRemoveGoogleClassrooms()}
+            {locale.addRemoveGoogleClassrooms()}
           </a>
         </div>
       );
@@ -112,7 +107,7 @@ const NoClassroomsFound = ({provider}) => {
           <p>
             {locale.noClassroomsFound()}
           </p>
-          <a href="https://classroom.google.com/">
+          <a href="https://clever.com/">
             {locale.addRemoveCleverClassrooms()}
           </a>
         </div>
@@ -120,23 +115,50 @@ const NoClassroomsFound = ({provider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const LoadError = ({error}) =>
-  <div>
-    <p>
-      {locale.authorizeGoogleClassroomsText()}
-    </p>
-    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
-      {locale.authorizeGoogleClassrooms()}
-    </a>
-    <p style={styles.error}>
-      {error.status} {error.message}
-    </p>
-  </div>;
+const ROSTERED_SECTIONS_SUPPORT_URL = 'https://support.code.org/hc/en-us/articles/115001319312';
+const LoadError = ({rosterProvider, loginType}) => {
+  switch (rosterProvider) {
+    case OAuthSectionTypes.google_classroom:
+      return (
+        <div>
+          <p>
+            {locale.authorizeGoogleClassroomsText()}
+            {' '}
+            <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
+              {locale.authorizeGoogleClassrooms()}
+            </a>
+          </p>
+          <p>
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+            >
+              {locale.errorLoadingRosteredSectionsSupport()}
+            </a>
+          </p>
+        </div>
+      );
+    default:
+      return (
+        <p>
+          {locale.errorLoadingRosteredSections({type: loginType})}
+          {' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
+      );
+  }
+};
 LoadError.propTypes = {
-  error: loadErrorShape,
+  rosterProvider: PropTypes.string,
+  loginType: PropTypes.string,
 };
 
 class RosterDialog extends React.Component {
@@ -147,7 +169,7 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   };
 
   state = {selectedId: null};
@@ -172,12 +194,15 @@ class RosterDialog extends React.Component {
 
   render() {
     let title = '';
-    switch (this.props.provider) {
+    let loginType = '';
+    switch (this.props.rosterProvider) {
       case OAuthSectionTypes.google_classroom:
         title = locale.selectGoogleClassroom();
+        loginType = locale.loginTypeGoogleClassroom();
         break;
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
+        loginType = locale.loginTypeClever();
         break;
     }
 
@@ -194,13 +219,16 @@ class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
-            <LoadError error={this.props.loadError}/> :
+            <LoadError
+              rosterProvider={this.props.rosterProvider}
+              loginType={loginType}
+            /> :
             this.props.classrooms ?
               <ClassroomList
                 classrooms={this.props.classrooms}
                 onSelect={this.onClassroomSelected}
                 selectedId={this.state.selectedId}
-                provider={this.props.provider}
+                rosterProvider={this.props.rosterProvider}
               /> :
               locale.loading()
           }
@@ -232,7 +260,7 @@ export default connect(state => ({
   isOpen: isRosterDialogOpen(state),
   classrooms: state.teacherSections.classrooms,
   loadError: state.teacherSections.loadError,
-  provider: state.teacherSections.provider,
+  rosterProvider: state.teacherSections.rosterProvider,
 }), {
   handleImport: importOrUpdateRoster,
   handleCancel: cancelImportRosterFlow,

@@ -53,8 +53,6 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
-    instructions
-    markdown_instructions
     authored_hints
     instructions_important
     display_name
@@ -64,6 +62,46 @@ class Level < ActiveRecord::Base
     parent_level_id
     hint_prompt_attempts_threshold
   )
+
+  # Temporary aliases while we transition between naming schemes.
+  # TODO: elijah: migrate the data to these new field names and remove these
+  def short_instructions
+    read_attribute('properties')['short_instructions'] || read_attribute('properties')['instructions']
+  end
+  alias_method :instructions, :short_instructions
+
+  def short_instructions=(value)
+    read_attribute('properties')['short_instructions'] = value
+    read_attribute('properties')['instructions'] = nil
+  end
+  alias_method :instructions=, :short_instructions=
+
+  def short_instructions?
+    !!JSONValue.value(read_attribute('properties')['short_instructions']) ||
+    !!JSONValue.value(read_attribute('properties')['instructions'])
+  end
+  alias_method :instructions?, :short_instructions?
+
+  def long_instructions
+    read_attribute('properties')['long_instructions'] || read_attribute('properties')['markdown_instructions']
+  end
+  alias_method :markdown_instructions, :long_instructions
+
+  def long_instructions=(value)
+    read_attribute('properties')['long_instructions'] = value
+    read_attribute('properties')['markdown_instructions'] = nil
+  end
+  alias_method :markdown_instructions=, :long_instructions=
+
+  def long_instructions?
+    !!JSONValue.value(read_attribute('properties')['long_instructions']) ||
+    !!JSONValue.value(read_attribute('properties')['markdown_instructions'])
+  end
+  alias_method :markdown_instructions?, :long_instructions?
+
+  def self.permitted_params
+    super.concat(['short_instructions', 'long_instructions'])
+  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -81,6 +119,15 @@ class Level < ActiveRecord::Base
   # So, we must do it manually.
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
+
+    # TODO: elijah: migrate the data to these new field names and remove these
+    if attributes.key?('instructions')
+      attributes['short_instructions'] = attributes.delete('instructions')
+    end
+    if attributes.key?('markdown_instructions')
+      attributes['long_instructions'] = attributes.delete('markdown_instructions')
+    end
+
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     if concept_difficulty_attributes
       assign_nested_attributes_for_one_to_one_association(
@@ -224,10 +271,16 @@ class Level < ActiveRecord::Base
 
   def write_custom_level_file
     if should_write_custom_level_file?
-      file_path = LevelLoader.level_file_path(name)
+      file_path = Level.level_file_path(name)
       File.write(file_path, to_xml)
       file_path
     end
+  end
+
+  def self.level_file_path(level_name)
+    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
+    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
+    level_paths.first || Rails.root.join("config/scripts/levels/#{level_name}.level")
   end
 
   def to_xml(options = {})
@@ -362,7 +415,8 @@ class Level < ActiveRecord::Base
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    project_template_level || free_response_upload || game.channel_backed?
+    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
   def key
@@ -467,7 +521,7 @@ class Level < ActiveRecord::Base
   def summary_for_lesson_plans
     summary = summarize
 
-    %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
+    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end
@@ -485,7 +539,7 @@ class Level < ActiveRecord::Base
 
   # Overriden by some child classes
   def get_question_text
-    properties['markdown_instructions']
+    long_instructions
   end
 
   # Used for individual levels in assessments
@@ -512,7 +566,8 @@ class Level < ActiveRecord::Base
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name)
     level = dup
-    level.update!(name: new_name, parent_level_id: id)
+    # specify :published to make should_write_custom_level_file? return true
+    level.update!(name: new_name, parent_level_id: id, published: true)
     level
   end
 

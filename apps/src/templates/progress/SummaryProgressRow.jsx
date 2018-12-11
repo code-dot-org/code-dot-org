@@ -9,6 +9,7 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import {stageLocked} from "./progressHelpers";
 
 export const styles = {
   lightRow: {
@@ -104,7 +105,8 @@ export default class SummaryProgressRow extends React.Component {
     }
 
     const locked = lockedForSection ||
-      levels.every(level => level.status === LevelStatus.locked);
+      levels.every(level => level.status === LevelStatus.locked) ||
+      (lesson.lockable && stageLocked(levels));
 
     const titleTooltipId = _.uniqueId();
     const lockedTooltipId = _.uniqueId();

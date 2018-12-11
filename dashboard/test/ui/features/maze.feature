@@ -5,7 +5,6 @@ Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And element ".csf-top-instructions p" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
 @no_mobile
@@ -43,3 +42,10 @@ Scenario: Submit a valid solution
   Then I wait until I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/16"
   Then check that level 16 on this stage is done
   Then check that level 15 on this stage is not done
+
+  # Make sure the work on level 15 was saved.
+  When I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
+  And I wait for the page to fully load
+  Then I press "runButton"
+  Then I wait until element ".congrats" is visible
+  And element ".congrats" has text "Congratulations! You completed Puzzle 15."

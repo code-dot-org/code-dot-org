@@ -1,62 +1,86 @@
 ---
-title: <%= hoc_s(:title_press_kit) %>
+title: <%= hoc_s(:title_press_kit).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-## Paaano maaakit ang media sa iyong kaganapan sa Hour of Code
+# How to attract media to your Hour of Code event
+
+### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
 *Para sa lahat ng katanungan ng pres at media, kontakin ang <press@code.org>*
 
-### Mga pangunahing payo
+---
+
+## Key Tips
 
 - Ipaalam sa media dalwang linggo bago ang iyong kaganapan sa pamamagitan ng email. Mag-follow up sa email at telepono kung hindi ka nakatanggap ng isang paunang tugon.
 - Hilingin sa isang miyembro ng kawani ng paaralan o sa boluntaryo na kunan ng litrato upang ibahagi online o ipadala sa pahayagan.
 - Magsulat tungkol sa Hour of Code sa iyong website's homepage at sa pahayagan ng iyong paaralan. Ipaskil ang detalye ng iyong kaganapan, at mga litrato ng aktibidad ng estudyante.
-- Sa Facebook at Twitter, magbahagi ng update sa iyong mga plano, ipahayag ang iyong kaganapan at ipaskil ang mga larawan sa panahon ng Dis. 5-11. Gamitin ng hashtag **#HourOfCode** upang ang Code.org ay makita at mailunsad ang iyong kaganapan.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### Hakbang-hakbang na gabay:
+## Step-by-step guide
 
-**1. Planuhin ang iyong kaganapan**
+### 1. Plan your event
 
 - Magplano ng isang pagpupulong upang i-kick off ang Hour of Code.
-- Magpadala [ng isang liham](<%= resolve_url('/promote/resources#sample-emails') %>) sa mga magulang. Hingin sa kanila na ipalaganap ang salita.
-- Magpadala [ng isang liham](<%= resolve_url('/promote/resources#sample-emails') %>) upang imbitahin ang iyong lokal na alkalde, kongresista, gobernador, o maimpluwensyang negosyante na dumalo at magsalita sa iyong mga estudyante.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents and ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Mag-organisa ng aktibidad ng grupo (tulad ng isang pagtatanghal ng isang 'unplugged' programming na mga aktibidad), o ipakita ang gawa ng mga estudyante at ang pinangunahang mga aktibidad.
-- Ipakita ang Code.org's [Hour of Code na video](<%= resolve_url('/') %>) o isa sa mga[ito](<%= resolve_url('/promote/resources#videos') %>) upang magbigay inspirasyon.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these videos](<%= resolve_url('/promote/resources#videos') %>) to inspire students. <br />
 
-**2. Tukuyin ang partikular na lokal na mamamahayag na sakop ang edukasyon o lokal na mga kaganapan.**
+### 2. Identify specific reporters that cover education or local events
 
-Mag-isip ng isang lokal na pahayagan, istasyon ng TV, istasyon ng radyo o blog.
+Like local newspapers, TV station or radio stations, or blogs. <br />
 
-Tumungin online upang makahanao ng kontak na impormasyon ng mamamahayag. Kung hindi mo mahanap ito, tawagan ang publikasyon upang hingin, o mag-email ng pangkalahatang payo@PUBLICATIONNAME.com email address at hilingin na idiretso ang iyong mensahe sa tamang mamamahayag.
+### 3. Contact local media
 
-**3. Kontakin ang lokal na media**
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](<%= resolve_url('/promote/press-kit#sample-emails') %>)**.
 
-Ang pinakamahusay na paraan upang maabot ay sa pamamagitan ng email. Ito ay dapat na maiksi at nakikipag-ugnayan: bakit ang ibang tao ay dapat na may pakialam sa kaganapang ito? Isama ang kontak na impormasyon (kasama ang numero ng cellphone) kung sino ang nasa site sa kaganapan. **Tignan ang isang [halimbawa ng pitch sa media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-**4. Maghanda ng patlang na tanong tungkol sa kaganapan ng iyong paaralan. Narito ang ilang mga halimbawa:**
+### 4. Prepare to field questions about your school event. Here are some examples:
 
-*Bakit ang iyong paaralan ay ginagawa ang Hour of Code?*
+#### Bakit ang iyong paaralan ay ginagawa ang Hour of Code?
 
 Samantalang alam nating lahat na importante sa mga estudyante na matutunan kung paano kontrolin ang tech-saturated na mundo ngayon, maraming mga guro ang walang karanasan sa comouter science at hindi alam kung saan mag-uumpisa. Ang kaganapang ito ay pagkakataon nating lahat upang makita kung ano nga ba ang computer science.
 
-Umaasa kami na ito'y magbibigay ng kislap sa interes sa mga estudyante upang patuloy na matuto. Ang pananaliksik ay nagpapakita na ang mga bata mabilis makuha ang konsepto ng programming bago sila matuto kung oaano magbasa at magsulat. Sa katunayan, ang kanilang utak ay mas makatanggap ng computer languages sa murang edad, kagaya lang ng banyagang wika.
+Umaasa kami na ito'y magbibigay ng kislap sa interes sa mga estudyante upang patuloy na matuto. Ang pananaliksik ay nagpapakita na ang mga bata mabilis makuha ang konsepto ng programming bago sila matuto kung oaano magbasa at magsulat. Sa katunayan, ang kanilang utak ay mas makatanggap ng computer languages sa murang edad, kagaya lang ng banyagang wika. <br /> <br />
 
-*Bakit ito mahalaga?*
+#### Bakit ito mahalaga?
 
-Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. Ngunit 75 n porsiyento ng mga paaralan sa U.S. ay hindi nagtuturo ng computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan.
+Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br />
 
-**Karagdagang detalye at isang quote na magagamit mo sa mga materyal**
+<a id="sample-emails"></a>
 
-"Ang Hour of Code ay dinisenyo upang gawing simple ang code at ipakita na ang computer science ay hindi sobrang hirap—kahit sino ay pwedeng matutunan ang pangunahing kaalaman," sabi ni Hadi Partovi, founder at CEO ng Code.org. "Mahigit 100 milyong mga eatudyante sa buong mundo ay nasubukan na ang Hour of Code. Ang pangangailangan sa kaugnayan ng ika-21 na siglo sa edukasyon ng computer science ay tumawid na sa lahat ng hangganan at walang hangganan.
+## Sample email to send to invite local media to your event
 
-**Tungkol sa Code.org**
+**Subject line**: Local school joins mission to introduce students to computer science
 
-Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Ang pangitain nito na ang bawat estudyante sa bawat paaralan ay dapat na magkaroon ng pagkakataong matuto ng computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Ang Code.org ay suportado ng mapagkawanggawang donasyon mula s mga korporasyon, mga pundasyon at mga mapagbigay na mga tao, kabilang ang Microsoft, Pundasyon ng Infosys, USA, Ang Ballmer Family Giving, Omidyar Network at iba pa. Para sa karagdagang impormasyon, mangyaring bisitahin ang:[<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Ang mga computer ay nasa lahat ng dako, binabago ang bawat industriya sa planeta, ngunir mas kaunti ng kalahati sa lahat ng mga paaralang nagtuturo ng computer science. Ang mga babae at minorya ay lubhang kulang sa pagkatawan sa mga klase ng computer science, at sa industriya ng tech. Ang mabuting balita ay, tayo patungo sa daan upang baguhin ito.
+
+Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Bawat Apple Store sa mundo ay nag-host na ng Hour of Code. Kahit si Presidente Obama ay sumulat ng kanyang unang linya ng code bilang bahagi ng kmpanya.
+
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+
+Sumulat ako para imbitahin ka na dumalo sa aming kickoff na pagtitipon at makita ang mga batang mag-umpisa ng gawain sa [DATE].
+
+Ang Hour of Code, inorganisa ng mga nonprofit Code.org at mahigit 100 na iba pa, ay isang pandaigdigang kilusan na naniniwalang ang mga estudyante ngayon ay handa nang matutuna ng kritikl na kasanayan para sa tagumpay ng ika-21 siglo. Mangyaring sumali sa amin.
+
+Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+
+I look forward to being in touch. <br />
+
+## Additional details and a quote you can use in materials
+
+"Ang Hour of Code ay dinisenyo upang gawing simple ang code at ipakita na ang computer science ay hindi sobrang hirap—kahit sino ay pwedeng matutunan ang pangunahing kaalaman," sabi ni Hadi Partovi, founder at CEO ng Code.org. "Mahigit 100 milyong mga eatudyante sa buong mundo ay nasubukan na ang Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+
+#### Tungkol sa Code.org
+
+Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Its vision is that every student in every school has the opportunity to learn computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para sa karagdagang impormasyon, mangyaring bisitahin ang:[<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Maghanap ng higit pang mga mapagkukunan at halimbawang mga email [dito](<%= resolve_url('/promote') %>).
+Find more resources and sample emails [here](<%= resolve_url('/promote/resources#sample-emails') %>).
 
 <%= view :signup_button %>

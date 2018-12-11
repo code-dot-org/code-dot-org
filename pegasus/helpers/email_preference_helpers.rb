@@ -1,7 +1,7 @@
 require 'cdo/email_validator'
 require 'active_support/core_ext/object'
 require 'active_support/dependencies'
-require_dependency 'cdo/email_preference_constants'
+require_dependency 'cdo/shared_constants/email_preference_constants'
 
 class EmailPreferenceHelper
   include EmailPreferenceConstants

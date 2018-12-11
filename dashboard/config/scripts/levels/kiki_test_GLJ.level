@@ -45,6 +45,7 @@
     "custom_blocks": "[]\n",
     "hide_custom_blocks": "false",
     "custom_helper_library": "function comment(text){\r\n  console.log(\"comment: \" + text);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

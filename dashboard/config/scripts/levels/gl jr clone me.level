@@ -47,6 +47,7 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 12299,
     "markdown_instructions": "Clone this level, and then make your own programs!",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

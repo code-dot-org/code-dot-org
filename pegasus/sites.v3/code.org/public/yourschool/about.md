@@ -23,11 +23,13 @@ _Computer science is the study of computers and algorithms, including their prin
 
 Computer Science is about how to create new technologies, not simply use them.  While many schools offer their students some exposure to computer science in a limited capacity such as an Hour of Code, this report focuses on schools that teach computer science in a class.  These are schools where students learn computer science during the school day (not in after school clubs) and spend a minimum amount of time per semester applying learned concepts through programming (at least 20 hours of programming for high schools and at least 10 hours of programming for elementary and middle schools) While computer science is broader than programming, some direct programming experience is integral to learning the fundamental concepts.  
 
-Each school on our map fits into one of four possible categories:
-1. __Need information.__ This means we don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill it out.
-1. __Offers a computer science class.__ This means that we have data for this school that indicates that it offers a computer science class. 
-1. __Offers limited or no computer science.__ This means that we have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
-1. Inconsistent data. This means that we have  conflicting data points for this school that we have not resolved. If your school is in the category, it may help to get more data. Please fill out the survey [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill out the survey. 
+Each school on our map fits into one of the following possible categories:
+1. __Need information.__ We don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill it out.
+1. __Offers a computer science class.__ We have data that indicates that this school offers a computer science class.
+1. __Historically offered computer science.__ We have data that indicates that this school has taught CS in the past 2 years and we have not received updated information this year. 
+1. __Offers limited or no computer science.__ We have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
+1. __Historically did not offer computer science.__ We have data that indicates that this school did not teach CS in the past 2 years and we have not received updated information this year. 
+1. __Inconsistent data.__ This means that we have  conflicting data points for this school that we have not resolved. If your school is in the category, it may help to get more data. Please fill out the survey [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill out the survey. 
 
 Once we have collected a sufficient amount of information on a school with inconsistent data, we compare responses based on the volume and source to gauge its computer science offering. 
 

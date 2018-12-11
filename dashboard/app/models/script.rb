@@ -78,7 +78,6 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
-  include SerializedProperties
 
   after_save :generate_plc_objects
 
@@ -139,6 +138,7 @@ class Script < ActiveRecord::Base
     script_announcements
     version_year
     is_stable
+    supported_locales
   )
 
   def self.twenty_hour_script
@@ -230,6 +230,20 @@ class Script < ActiveRecord::Base
   # @return [Boolean] Whether this is a valid script ID
   def self.valid_script_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
+  # @return [Array<Script>] An array of modern elementary scripts.
+  def self.modern_elementary_courses
+    Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
+  end
+
+  # @param locale [String] An "xx-YY" locale string.
+  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
+  def self.modern_elementary_courses_available?(locale)
+    @modern_elementary_courses_available = modern_elementary_courses.all? do |script|
+      supported_languages = script.supported_locales || []
+      supported_languages.any? {|s| locale.casecmp?(s)}
+    end
   end
 
   def starting_level
@@ -355,7 +369,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name)
+  def self.get_without_cache(id_or_name, version_year: nil)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -364,13 +378,13 @@ class Script < ActiveRecord::Base
     # names which are strings that may contain numbers (eg. 2-3)
     is_id = id_or_name.to_i.to_s == id_or_name.to_s
     find_by = is_id ? :id : :name
-    script = Script.find_by(find_by => id_or_name)
+    script = Script.with_associated_models.find_by(find_by => id_or_name)
     return script if script
 
     unless is_id
       # We didn't find a script matching id_or_name. Next, look for a script
-      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2018.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name)
+      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
+      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
       return script_with_redirect if script_with_redirect
     end
 
@@ -384,30 +398,37 @@ class Script < ActiveRecord::Base
   #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
   #   get_from_cache('csp1') --> script_cache['csp1'] = <Script redirect_to="csp1-2018">
+  #   get_from_cache('csp1', version_year: '2017') --> script_cache['csp1/2017'] = <Script redirect_to="csp1-2017">
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  def self.get_from_cache(id_or_name)
-    return get_without_cache(id_or_name) unless should_cache?
-    script_cache.fetch(id_or_name.to_s) do
+  # @param version_year [String] If specified, when looking for a script to redirect
+  #   to within a script family, redirect to this version rather than the latest.
+  def self.get_from_cache(id_or_name, version_year: nil)
+    return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
+    cache_key_suffix = version_year ? "/#{version_year}" : ''
+    cache_key = "#{id_or_name}#{cache_key_suffix}"
+    script_cache.fetch(cache_key) do
       # Populate cache on miss.
-      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
+      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
     end
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family.
+  # pointing toward the latest stable script in that family, or to a specific
+  # version_year if one is specified.
   # @param family_name [String] The name of the script family to search in.
+  # @param version_year [String] Version year to return. Optional.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name)
-    script_name =
+  def self.get_script_family_redirect(family_name, version_year: nil)
+    scripts =
       Script.
         where(family_name: family_name).
         all.
         select(&:is_stable).
-        sort_by(&:version_year).
-        last.
-        try(:name)
+        sort_by(&:version_year)
+    scripts.select! {|s| s.version_year == version_year} if version_year
+    script_name = scripts.last.try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
@@ -500,6 +521,19 @@ class Script < ActiveRecord::Base
       Script::COURSEB_NAME,
       Script::COURSE1_NAME
     ].include?(name)
+  end
+
+  def localize_long_instructions?
+    # Don't ever show non-English markdown instructions for Course 1 - 4, the
+    # 20-hour course, or the pre-2017 minecraft courses.
+    !(
+      csf_international? ||
+      twenty_hour? ||
+      [
+        ScriptConstants::MINECRAFT_NAME,
+        ScriptConstants::MINECRAFT_DESIGNER_NAME
+      ].include?(name)
+    )
   end
 
   def beta?
@@ -1079,6 +1113,8 @@ class Script < ActiveRecord::Base
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
+      supported_locales: supported_locales,
+      section_hidden_unit_info: section_hidden_unit_info(user),
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1087,6 +1123,18 @@ class Script < ActiveRecord::Base
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
+  end
+
+  # @return {Hash<string,number[]>}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   script ids for that section, filtered so that the only script id which appears
+  #   is the current script id. This mirrors the output format of
+  #   User#get_hidden_script_ids, and satisfies the input format of
+  #   initializeHiddenScripts in hiddenStageRedux.js.
+  def section_hidden_unit_info(user)
+    return {} unless user&.teacher?
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
@@ -1189,6 +1237,7 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
+      supported_locales: script_data[:supported_locales]
     }.compact
   end
 
@@ -1242,8 +1291,24 @@ class Script < ActiveRecord::Base
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
+    info[:supported_locales] = supported_locale_names
 
     info
+  end
+
+  def supported_locale_names
+    locales = supported_locales || []
+    locales = locales.map {|l| Script.locale_english_name_map[l] || l}
+    locales += ['English']
+    locales.sort.uniq
+  end
+
+  def self.locale_english_name_map
+    @@locale_english_name_map ||=
+      PEGASUS_DB[:cdo_languages].
+        select(:locale_s, :english_name_s).
+        map {|row| [row[:locale_s], row[:english_name_s]]}.
+        to_h
   end
 
   # Get all script levels that are level groups, and return a list of those that are

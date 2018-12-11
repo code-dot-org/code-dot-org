@@ -2,25 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -34,20 +34,34 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
-require 'cdo/shared_constants/pd/principal_approval1819_application_constants'
-
 module Pd::Application
-  class PrincipalApproval1819Application < ApplicationBase
-    include PrincipalApproval1819ApplicationConstants
+  class PrincipalApproval1819Application < PrincipalApprovalApplicationBase
+    include Pd::PrincipalApproval1819ApplicationConstants
 
-    def set_type_and_year
-      self.application_year = YEAR_18_19
-      self.application_type = PRINCIPAL_APPROVAL_APPLICATION
+    # @override
+    def year
+      YEAR_18_19
     end
 
     validates_presence_of :teacher_application
     belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
       primary_key: :application_guid, foreign_key: :application_guid
+
+    def self.create_placeholder_and_send_mail(teacher_application)
+      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(teacher_application).deliver_now
+
+      Pd::Application::PrincipalApproval1819Application.create(
+        form_data: {}.to_json,
+        application_guid: teacher_application.application_guid
+      )
+    end
+
+    # @override
+    def check_idempotency
+      existing_application = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+
+      (!existing_application || existing_application.placeholder?) ? nil : existing_application
+    end
 
     REPLACE_COURSE_NO = "No, this course will be added to the schedule, but it won't replace an existing computer science course"
     def self.options
@@ -103,43 +117,43 @@ module Pd::Application
       }
     end
 
-    def self.required_fields
-      %i(
-        first_name
-        last_name
-        email
-        do_you_approve
-        confirm_principal
-      )
-    end
-
     def dynamic_required_fields(hash)
       [].tap do |required|
-        unless hash[:do_you_approve] == NO
+        unless hash.empty?
           required.concat [
-            :total_student_enrollment,
-            :free_lunch_percent,
-            :white,
-            :black,
-            :hispanic,
-            :asian,
-            :pacific_islander,
-            :american_indian,
-            :other,
-            :committed_to_master_schedule,
-            :hours_per_year,
-            :terms_per_year,
-            :replace_course,
-            :committed_to_diversity,
-            :understand_fee,
-            :pay_fee
+            :first_name,
+            :last_name,
+            :email,
+            :do_you_approve,
+            :confirm_principal
           ]
 
-          if hash[:replace_course] == YES
-            if course == 'csd'
-              required << :replace_which_course_csd
-            elsif course == 'csp'
-              required << :replace_which_course_csp
+          unless hash[:do_you_approve] == NO
+            required.concat [
+              :total_student_enrollment,
+              :free_lunch_percent,
+              :white,
+              :black,
+              :hispanic,
+              :asian,
+              :pacific_islander,
+              :american_indian,
+              :other,
+              :committed_to_master_schedule,
+              :hours_per_year,
+              :terms_per_year,
+              :replace_course,
+              :committed_to_diversity,
+              :understand_fee,
+              :pay_fee
+            ]
+
+            if hash[:replace_course] == YES
+              if course == 'csd'
+                required << :replace_which_course_csd
+              elsif course == 'csp'
+                required << :replace_which_course_csp
+              end
             end
           end
         end
@@ -155,23 +169,6 @@ module Pd::Application
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve]
       ]
-    end
-
-    def underrepresented_minority_percent
-      sanitize_form_data_hash.select do |k, _|
-        [
-          :black,
-          :hispanic,
-          :pacific_islander,
-          :american_indian
-        ].include? k
-      end.values.map(&:to_f).reduce(:+)
-    end
-
-    # @override
-    def check_idempotency
-      # only one per teacher application (guid)
-      Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
     end
   end
 end

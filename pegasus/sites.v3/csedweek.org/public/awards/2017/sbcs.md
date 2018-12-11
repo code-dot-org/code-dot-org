@@ -13,7 +13,7 @@ theme: responsive
 Alexandra Liggins taught herself how to code so she could teach others. Shortly after graduating from the University of Notre Dame, she co-founded South Bend Code School to make coding more accessible to all. In two years’ time, SBCS worked with over 200 students in formal programs as well as over 700 students in greater community outreach.
 
 <figure style="margin:10px">
-  <img src="/images/awards/sbcs_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students at South Bend Code School" />
+  <img src="/images/awards/fit-600/sbcs_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students at South Bend Code School" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students at South Bend Code School
   </figcaption>
@@ -24,7 +24,7 @@ In South Bend Code School’s first program, 19 students (with no prior coding k
 By starting a scholarship fund, South Bend Code School works to provide coding for all by maintaining diverse classrooms of 47% female, 56% underrepresented minorities, and 50% split in socioeconomic diversity. They hope to only add to those numbers of diversity.
 
 <figure style="margin:10px">
-  <img src="/images/awards/sbcs_rep_alex_liggins.jpg" style="display:block;margin:0 auto" width=300 alt="Alexandra Liggins" />
+  <img src="/images/awards/fit-300/sbcs_rep_alex_liggins.jpg" style="display:block;margin:0 auto" width=300 alt="Alexandra Liggins" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Alexandra Liggins</figcaption>
 </figure>
 

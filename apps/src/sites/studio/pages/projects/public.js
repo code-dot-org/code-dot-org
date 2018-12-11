@@ -11,6 +11,8 @@ import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectC
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
+  const script = document.querySelector('script[data-projects]');
+  const projectsData = JSON.parse(script.dataset.projects);
   const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
 
   registerReducers({projects});
@@ -32,8 +34,12 @@ $(document).ready(() => {
           <StartNewProject
             canViewFullList
             canViewAdvancedTools
+            includeDanceParty={projectsData.includeDanceParty}
           />
-          <PublicGallery />
+          <PublicGallery
+            limitedGallery={projectsData.limitedGallery}
+            includeDanceParty={projectsData.includeDanceParty}
+          />
         </div>
       </Provider>,
       publicGallery);

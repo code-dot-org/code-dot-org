@@ -1,7 +1,7 @@
 th:
   data:
     block_categories:
-      Actions: การกระทำ
+      Actions: การดำเนินการ
       Loops: ลูป
       Functions: ฟังก์ชัน
       Color: สี
@@ -10,9 +10,13 @@ th:
       Logic: ตรรกะ
       Variables: ตัวแปร
       Conditionals: เงื่อนไข 
-      Events: เหตุการณ์
+      Events: อีเวนท์
+      Comments: หมายเหตุ (Comment)
       Text: ข้อความ
+      Comment: หมายเหตุ (Comment)
       Start: เริ่มต้น
+      Dancers: นักเต้น
+      Groups: กลุ่ม
       test: ทดสอบ
       Name: ชื่อ
       Function: ฟังก์ชัน

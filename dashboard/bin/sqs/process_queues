@@ -9,9 +9,9 @@ puts "Booting..."
 require 'json'
 require 'pp'
 
+require_relative '../../config/environment'
 require 'sqs/queue_processor_config'
 require 'sqs/queue_processor'
-require_relative '../../config/environment'
 
 # A manager for starting and stopping a set of queue processors based
 # on a JSON config file.

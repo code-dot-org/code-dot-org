@@ -20,7 +20,7 @@ de:
         Artist4: Der Künstler 4
         Unplug9: Relais-Programmierung
         Farmer3: Der Bauer 3
-        Unplug10: Das Internet
+        Unplug10: das Internet
         Artist5: Der Künstler 5
         Unplug11: Zusammenfassung
         MazeEC: Das Labyrinth
@@ -37,6 +37,7 @@ de:
         NetSim: Internet-Simulator
         Custom: Künstler
         CustomStudio: Spielelabor
+        Gamelab: Spielelabor
     trophy:
       name:
         Bronze: Bronze
@@ -73,7 +74,7 @@ de:
         maze_2_15: Ich will Sonnenblume! Verwende einen "Wenn"-Baustein, um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
         maze_2_16: Ok, lass uns das nochmal üben. Das ist wieder beinahe dasselbe, aber hüte dich vor den fleischfressenden Pflanzen!
         maze_2_17: Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung und führen dann entweder eine ODER eine andere Anweisung aus. Verwende diesen neuen Baustein, um mich zur Sonnenblume zu bringen.
-        maze_2_18: Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
+        maze_2_18: Noch eine Übung mit dem „Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
         maze_2_19: Kannst du 3 Bausteine hinzufügen, um mit mir zusammen ein komplizierteres Labyrinth zu lösen? Wenn du es richtig machst, kann ich auf jedem kurvigen Weg entlang gehen, egal wie lang.
         turtle_1_1: Hallo, ich bin ein Künstler. Wenn du den richtigen Code programmiert hast, kann ich fast alles zeichnen. Verwende ein paar Bausteine, und lasse mich über die grauen Linien im Bild zeichnen.
         turtle_1_2: 'Zeichne jetzt ein Quadrat. HINWEIS: Verwende deine Lieblingsfarbe, indem du sie mit dem neuen „Farbe festlegen“-Baustein auswählst.'
@@ -147,7 +148,7 @@ de:
         maze_karel_debug_function_1: Was musst du am Programm ändern, damit es mir hilft, alle Erdhaufen zu entfernen?
         maze_karel_debug_function_2: Kannst du dieses Programm für mich auf Fehler überprüfen und sie beseitigen, damit ich mein Feld flach machen kann?
         maze_karel_debug_function_3: 'Bearbeite das Programm so, dass ich alle Erdhaufen von meinem Feld entferne. '
-        turtle_5_1: Führe dieses Programm aus und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
+        turtle_5_1: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
         turtle_5_2: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
         turtle_5_3: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
         turtle_5_4: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)

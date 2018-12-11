@@ -399,3 +399,23 @@ ms:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+        coursef-2019:
+          stages:
+            The Artist:
+              name: Pelukis
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+        coursee-2019:
+          stages:
+            Conditionals:
+              name: Bersyarat
+            Internet:
+              name: Internet
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Internet:
+              name: Internet

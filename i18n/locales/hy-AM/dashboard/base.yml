@@ -30,6 +30,7 @@ hy:
   next_page: Հաջորդ էջ
   cancel: "վերացնել"
   okay: "Լավ"
+  or: "կամ"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -72,6 +73,7 @@ hy:
     twitter: 'ծլվլոց'
     facebook: 'Facebook'
     windowslive: 'Microsoft Հաշվի'
+    microsoft_v2_auth: 'Microsoft Հաշվի'
     forgot_password: 'Մոռացել եք Ձեր գաղտնաբառը?'
     need_confirmation: "Չէի ստանալ հաստատում հրահանգներ."
     need_unlock: "Չէի ստանում են բացելու հրահանգներ."
@@ -182,7 +184,6 @@ hy:
         playlab: 'Կատարել է Play Lab հավելվածը'
         artist: 'Ոչ ոքի մի բան'
         applab: 'Կատարել App Lab հավելվածը'
-      courses: "Դասընթացներ"
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"
@@ -195,7 +196,12 @@ hy:
       logout: 'Դուրս գալ'
       signin: 'Մուտք գործել'
       already_registered: 'Արդեն գրանցված եք'
-      pair_programming: 'Զույգ Ծրագրավորում'
+      create: 'Ստեղծել'
+      applab: 'App Lab'
+      artist: 'Արտիստ'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'
@@ -324,7 +330,7 @@ hy:
     more: 'More'
     feedback: 'ապահովել հետադարձ կապը'
     translate: 'Օգնեք մեզ թարգմանել Ձեր լեզվով'
-    support: 'աջակցություն'
+    support: 'Help and Community'
     tos_short: 'Պայմաններ'
     tos: 'Ծառայությունների մատուցման պայմաններ'
     privacy: 'Գաղտնիության քաղաքականություն'
@@ -421,8 +427,10 @@ hy:
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
-      body: "Հետազոտել է Minecraft աշխարհը կոդը:"
+      body: "Explore a Minecraft world through code"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"
@@ -523,15 +531,7 @@ hy:
     save: "Save"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Այլ"
-      - 
+      other: "Այլ"
     submit: "Հաստատել"
     decline: "փակել"
   zendesk_too_young_message: 'Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել մեր աջակցության կայքում. Դուք կարող եք թերթել <a href=http://support.code.org> support.code.org </a> առանց մուտք գործելու, կամ խնդրեք ձեր ծնողի կամ մանկավարժի կապնվել մեզ հետ է ձեզ համար.'

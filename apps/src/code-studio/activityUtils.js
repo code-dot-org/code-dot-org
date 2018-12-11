@@ -26,6 +26,9 @@ export const activityCssClass = result => {
   if (result === TestResults.LOCKED_RESULT) {
     return LevelStatus.locked;
   }
+  if (result === TestResults.READONLY_SUBMISSION_RESULT) {
+    return LevelStatus.readonly;
+  }
   if (result === TestResults.FREE_PLAY) {
     return LevelStatus.free_play_complete;
   }

@@ -2,5 +2,6 @@ default['cdo-nginx'] = {
   common_name: 'cdn-code.org',
   ssl_key: {content: ''},
   ssl_cert: {content: ''},
-  ssl_chain: {content: ''}
+  ssl_chain: {content: ''},
+  socket_path: '/run/unicorn'
 }

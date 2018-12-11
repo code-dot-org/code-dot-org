@@ -45,7 +45,7 @@ class LevelsHelperTest < ActionView::TestCase
   test "non-custom level displays localized instruction after locale switch" do
     default_locale = 'en-US'
     new_locale = 'es-ES'
-    @level.instructions = nil
+    @level.short_instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
 
@@ -66,7 +66,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['instructions']
   end
 
   test "custom level displays localized instruction if exists" do
@@ -75,13 +75,13 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     @level = Level.find_by_name 'frozen line'
     options = blockly_options
-    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t("data.short_instructions.#{@level.name}", locale: new_locale), options[:level]['instructions']
 
     reset_view_options
 
-    @level.name = 'this_level_doesnt_exist'
+    @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['instructions']
   end
 
   test "get video choices" do
@@ -603,5 +603,35 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'data_t resolves localized key with trailing dot correctly' do
     assert_equal 'Test trailing dot in value.', data_t('multi.random question', 'Test trailing dot in key.')
+  end
+
+  test 'block options are localized' do
+    toolbox = "<xml><category name=\"Actions\"/></xml>"
+    @level.toolbox_blocks = toolbox
+
+    start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    @level.start_blocks = start
+
+    I18n.locale = :'it-IT'
+    options = blockly_options
+    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
+    new_start = start.sub("details", I18n.t("data.function_names.details"))
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'block options are localized in project-backed levels' do
+    toolbox = "<xml><category name=\"Actions\"/></xml>"
+    start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+
+    project_level = create :maze, toolbox_blocks: toolbox, start_blocks: start
+    @level.project_template_level_name = project_level.name
+
+    I18n.locale = :'it-IT'
+    options = blockly_options
+    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
+    new_start = start.sub("details", I18n.t("data.function_names.details"))
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
   end
 end

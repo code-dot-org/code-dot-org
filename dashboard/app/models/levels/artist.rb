@@ -36,6 +36,7 @@ class Artist < Blockly
     shapeways_url
     disable_sharing
     solution_image_url
+    auto_run
   )
 
   def xml_blocks

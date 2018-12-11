@@ -19,7 +19,7 @@ bs:
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
-        Unplug9: Štafeta Programiranje
+        Unplug9: Prijenos programiranja
         Farmer3: Farmer 3
         Unplug10: Internet
         Artist5: Umjetnik 5
@@ -92,8 +92,8 @@ bs:
           na mesožderke!
         maze_2_17: Blok "ako-inače" provjerava uslov, a onda izvrši ILI jedno ILI
           drugo. Da bi me doveo do suncokreta, probaj koristiti ovaj novi blok.
-        maze_2_18: Još jedna vježba sa "ako-inače" blokom, možeš li je riješiti iz
-          prvog pokušaja?
+        maze_2_18: Još jedna vježba za "ako-inače" blok. Možeš li to uspješno izvršiti
+          od prve?
         maze_2_19: Možeš li dodati samo 3 bloka da bi mi pomogao proći kroz složeniji
           labirint? Ako to napraviš kako treba, mogu hodati po bilo kakvom krivudavom
           putu bez obzira na dužinu.
@@ -476,7 +476,7 @@ bs:
         C2_graph_paper: Papirno Programiranje Grafikona
         C2_conditionals_with_cards: Uvjeti
         C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: Štafeta Programiranje
+        C2_relay_programming: Prijenos programiranja
         C2_paper_airplanes: Avioni od Papira
         C2_digital_footprint: Digitalni otisak stopala
         C2_digital_footprint_v2: Digitalni otisak stopala

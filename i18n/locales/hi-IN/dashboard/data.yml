@@ -31,6 +31,7 @@ hi:
         CSF_loops_AB: फंदे
     callout:
       text:
+        run: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
         craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
         craft_drag_block_callout: '"moveForward();" ब्लॉक को खींचें और उसे दूसरे ब्लॉक के नीचे इस्तेमाल करें'
         craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं

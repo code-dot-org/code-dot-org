@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<block type="behavior_definition" deletable="false" movable="false" editable="false">
+  <mutation>
+    <arg name="this sprite" type="Sprite"/>
+    <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
+  </mutation>
+  <title name="NAME">swimming left and right</title>
+  <statement name="STACK">
+    <block type="controls_if">
+      <mutation elseif="1"/>
+      <value name="IF0">
+        <block type="logic_compare">
+          <title name="OP">EQ</title>
+          <value name="A">
+            <block type="gamelab_getProp">
+              <title name="PROPERTY">"direction"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">0</title>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="gamelab_mirrorSprite">
+          <title name="DIRECTION">"right"</title>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <value name="IF1">
+        <block type="logic_compare">
+          <title name="OP">EQ</title>
+          <value name="A">
+            <block type="gamelab_getProp">
+              <title name="PROPERTY">"direction"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">180</title>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO1">
+        <block type="gamelab_mirrorSprite">
+          <title name="DIRECTION">"left"</title>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="gamelab_moveForward">
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
+          <value name="DISTANCE">
+            <block type="math_number">
+              <title name="NUM">5</title>
+            </block>
+          </value>
+          <next>
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isTouchingEdges">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_edgesDisplace">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_changePropBy">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <title name="NUM">180</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </statement>
+</block>

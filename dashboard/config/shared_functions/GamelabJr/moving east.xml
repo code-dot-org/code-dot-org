@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<block type="behavior_definition" deletable="false" movable="false" editable="false">
+  <mutation>
+    <arg name="this sprite" type="Sprite"/>
+    <description>move a sprite to the right across the screen</description>
+  </mutation>
+  <title name="NAME">moving east</title>
+  <statement name="STACK">
+    <block type="gamelab_moveInDirection">
+      <title name="DIRECTION">"East"</title>
+      <value name="SPRITE">
+        <block type="sprite_parameter_get">
+          <title name="VAR">this sprite</title>
+        </block>
+      </value>
+      <value name="DISTANCE">
+        <block type="math_number">
+          <title name="NUM">5</title>
+        </block>
+      </value>
+    </block>
+  </statement>
+</block>

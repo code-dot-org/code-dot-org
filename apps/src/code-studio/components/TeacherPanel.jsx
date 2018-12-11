@@ -1,17 +1,24 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 export default class TeacherPanel extends React.Component {
   static propTypes = {
     children: PropTypes.node
   };
 
-  state = {open: true};
+  state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
 
-  hide = () => this.setState({open: false});
+  hide = () => {
+    this.setState({open: false});
+    trySetLocalStorage('teacher-panel', 'closed');
+  };
 
-  show = () => this.setState({open: true});
+  show = () => {
+    this.setState({open: true});
+    trySetLocalStorage('teacher-panel', 'open');
+  };
 
   render() {
     return (

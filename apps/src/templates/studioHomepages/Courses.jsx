@@ -29,6 +29,8 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
@@ -37,7 +39,15 @@ class Courses extends Component {
   }
 
   render() {
-    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips } = this.props;
+    const {
+      isEnglish,
+      isTeacher,
+      isSignedOut,
+      userId,
+      showInitialTips,
+      modernElementaryCoursesAvailable,
+      hocLaunch,
+    } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -76,19 +86,22 @@ class Courses extends Component {
               isSignedOut={isSignedOut}
               showInitialTips={showInitialTips}
               userId={userId}
+              hocLaunch={hocLaunch}
             />
           </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish/>
+          <CoursesStudentEnglish hocLaunch={hocLaunch}/>
         )}
 
         {/* Non-English */}
         {(!isEnglish) && (
           <CourseBlocksAll
             isEnglish={false}
+            showModernElementaryCourses={modernElementaryCoursesAvailable}
+            hocLaunch={hocLaunch}
           />
         )}
       </div>

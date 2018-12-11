@@ -1,0 +1,22 @@
+{
+  "category": "",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "setFrameDelay",
+    "blockText": "set {THIS} frame delay {VAL}",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      },
+      {
+        "name": "VAL",
+        "type": "Number"
+      }
+    ]
+  }
+}

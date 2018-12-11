@@ -532,7 +532,7 @@
   "uk": {
     "full_name": "United Kingdom",
     "default_language": "gb",
-    "solr_country_code": "gb",
+    "country_code": "gb",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",

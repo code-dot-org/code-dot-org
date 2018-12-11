@@ -4,7 +4,7 @@ it:
     game:
       name:
         Unplug1: Cos'è l'informatica
-        Maze: Il labirinto
+        Maze: Il Labirinto
         Multi: Materiale con Risposte Multiple
         Unplug2: Pensiero computazionale
         Unplug3: Programmazione su carta a quadretti
@@ -60,23 +60,23 @@ it:
         maze_2_2: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi
           "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi a raggiungerlo. '
         maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
-        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maiale. Evita
-          la dinamite (TNT) o le mie piume salteranno in aria!
+        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maialino.
+          Evita la dinamite (TNT) o le mie piume salteranno in aria!
         maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite
           (TNT)
-        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maiale.
+        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maialino.
           Altrimenti potrei arrabbiarmi!
-        maze_2_5: C'è un modo per arrivare a quello sciocco maiale aggiungendo solo
+        maze_2_5: C'è un modo per arrivare a quello sciocco maialino aggiungendo solo
           due blocchi. Riesci a trovarlo?
         maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
-        maze_2_7: Aiutami a catturare questo maialaccio utilizzando il minor numero
+        maze_2_7: Aiutami a catturare il maialino cattivo utilizzando il minor numero
           possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
         maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. In
           questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte
           le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti",
           "vai avanti", "gira a destra".'
         maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
-          farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.
+          farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maialino.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo
           esercizio aggiungendo solo 4 blocchi?'
         maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole.
@@ -177,7 +177,7 @@ it:
         maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante
           palate di terra saranno necessarie per riempirla completamente. Riesci a
           scrivere un programma che la riempie fino a quando il terreno è livellato?
-          Suggerimento: usa le opzioni nel menù a discesa del blocco "mentre".'
+          Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
         maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando
           il minor numero possibile di blocchi.
         maze_karel_1_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad usare
@@ -189,7 +189,7 @@ it:
           rimuovilo.
         maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è
           un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il
-          menu a discesa delle opzioni del blocco "se".'
+          menù a discesa (▼) delle opzioni del blocco "se".'
         turtle_2_1: 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare
           un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi
           blocchi, ma ora sono stati organizzati in categorie.'
@@ -321,7 +321,7 @@ it:
           sostituiscilo con qualcosa di totalmente diverso)
         maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione
           "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maiale.
+        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
         maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere
           contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
@@ -351,13 +351,15 @@ it:
         studio_c2_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
           <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c2_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
         studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
           dica "Ciao" quando il cane lo raggiunge.
-        studio_c2_5: Riesci a scrivere un programma per far dire "Ciao" al polpo quando
-          viene cliccato?
+        studio_c2_5: |-
+          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
           tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
           / a destra in modo da fargli raggiungere tutte le bandierine?
@@ -378,9 +380,9 @@ it:
           per far provare la storia ai tuoi amici sui loro smartphone.
         studio_c3_story_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c3_story_2: Fai in modo che il cane dica qualcosa e poi il gatto gli
-          risponda.
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
           fino al gatto?
         studio_c3_story_4: Fai arrivare il cane fino al gatto e fai in modo che il
@@ -523,8 +525,9 @@ it:
           su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_k1_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
         studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
@@ -560,7 +563,7 @@ it:
           "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
     video:
       name:
-        maze_intro: Introduzione a "Il Labirinto"
+        maze_intro: 'Labirinto - Corso 2: Introduzione'
         artist_intro: Artista - Introduzione
         farmer_intro: Introduzione a "La Contadina"
         flappy_intro: Introduzione a "Flappy"
@@ -624,7 +627,7 @@ it:
         C3_bee_functions: 'Ape: Funzioni'
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli Annidati
+        C3_artist_nested_loops: Cicli annidati
         C3_farmer_while: Cicli "Mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
@@ -691,6 +694,9 @@ it:
           CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
+        csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
+          sui film?
+        csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
         csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
@@ -770,6 +776,7 @@ it:
         mc_2017_puzzle_1: L'Ora del Codice con Minecraft - L'Agente
         mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
         mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
+        mc_2017_puzzle_12: L'Ora del Codice con Minecraft - Tempo di giocare
         hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
         hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
         hint_videos_d_11_4_first: 'Video suggerimenti: D.11.4 Prima di tutto'
@@ -793,6 +800,7 @@ it:
         CSF_skinOverview_Harvester: La Contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Cicli con BB-8
         CSF_harvester_skinOverview_K-1: La Contadina
         CSF_harvester_loops_K1: Cicli con la Contadina
         CSF_scrat_loops_K1: Cicli con l'Era Glaciale
@@ -803,11 +811,21 @@ it:
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratori dei Personaggi
+        csd_gamelab_if_else: Dichiarazioni Se/altrimenti
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio
           dei Personaggi
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
+        mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
+        MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
+        mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
+        mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
+        hoc_dance_warmup: Ballando col codice - Riscaldamento
+        hoc_dance_events: Ballando col codice - Eventi
+        hoc_dance_properties: Ballando col codice - Proprietà
+        hoc_dance_congrats: Ballando col codice - Parte la festa!
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

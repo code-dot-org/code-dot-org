@@ -21,6 +21,11 @@ class ScriptsController < ApplicationController
       redirect_to canonical_path
       return
     end
+
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
   end
 
   def index
@@ -122,6 +127,7 @@ class ScriptsController < ApplicationController
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
+      supported_locales: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -13,6 +14,7 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
+import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -46,6 +48,8 @@ class ScriptOverview extends React.Component {
     currentCourseId: PropTypes.number,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStageState: PropTypes.object,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
@@ -68,6 +72,8 @@ class ScriptOverview extends React.Component {
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       versions,
+      hiddenStageState,
+      selectedSectionId,
     } = this.props;
 
     let scriptProgress = NOT_STARTED;
@@ -77,6 +83,9 @@ class ScriptOverview extends React.Component {
       scriptProgress = IN_PROGRESS;
     }
 
+    const isHiddenUnit = !!selectedSectionId && !!scriptId &&
+      isScriptHiddenForSection(hiddenStageState, selectedSectionId, scriptId);
+
     return (
       <div>
         {onOverviewPage && (
@@ -84,8 +93,13 @@ class ScriptOverview extends React.Component {
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
+              showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
             />
+            {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+                (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+              <LabeledSectionSelector/>
+            }
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}
@@ -97,8 +111,6 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
-              scriptHasLockableStages={scriptHasLockableStages}
-              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
             />
           </div>
         )}
@@ -126,4 +138,6 @@ export default connect(state => ({
   currentCourseId: state.progress.courseId,
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
+  hiddenStageState: state.hiddenStage,
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(UnconnectedScriptOverview);

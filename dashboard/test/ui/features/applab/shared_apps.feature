@@ -91,7 +91,7 @@ Feature: App Lab Scenarios
   # typing into a contenteditable div (which is what our Applab textareas are)
   # See https://code.google.com/p/selenium/issues/detail?id=4467
   # Also doesnt seem to be working for ie
-  @no_safari
+  @no_safari_yosemite
   @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page

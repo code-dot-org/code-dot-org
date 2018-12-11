@@ -33,7 +33,7 @@
   "playSoundSplash": "철푸덕 소리 출력",
   "playSoundLaser": "레이저 소리 출력",
   "playSoundTooltip": "선택 소리 출력",
-  "reinfFeedbackMsg": "다시 시도하기 버튼을 눌러 게임을 다시 시작할 수 있습니다.",
+  "reinfFeedbackMsg": "다시 시작하기 버튼을 눌러 게임을 다시 시작할 수 있습니다.",
   "scoreText": "점수 : {playerScore}",
   "setBackground": "배경 설정",
   "setBackgroundRandom": "랜덤 배경 설정",
@@ -102,7 +102,7 @@
   "shareGame": "게임 공유하기:",
   "soundRandom": "random(랜덤)",
   "soundBounce": "튕기게 하기",
-  "soundCrunch": "부서지는 소리",
+  "soundCrunch": "부서짐 소리",
   "soundDie": "아픔 소리",
   "soundHit": "때리는 소리",
   "soundPoint": "점수 소리",
@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "플래피가 물체에 부딪치면 아래 동작을 실행합니다.",
   "whenEnterObstacle": "물체를 통과하면",
   "whenEnterObstacleTooltip": "물체를 통과하면 아래 동작을 실행합니다.",
-  "whenRunButtonClick": "게임을 시작하면",
-  "whenRunButtonClickTooltip": "게임을 시작하면 아래 동작을 실행합니다.",
+  "whenRunButtonClick": "게임이 시작되면",
+  "whenRunButtonClickTooltip": "게임이 시작되면 아래 동작을 실행합니다.",
   "yes": "예"
 }

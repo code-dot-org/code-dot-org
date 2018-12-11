@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Ang Hour of Code is hinihimok ng Hour of Code and Computer Science Education Week Advisory at Review Committees.
 
@@ -119,31 +119,25 @@ Ang dalawang trabahaho ng komite at dedikasyon ay isang kontribusyon sa tagumpay
 
 ---
 
-# Mga Pangunahing Kasosyong Pang-promosyon
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Mga Internasyonal na Kasosyo
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Mga Kasosyo sa Aktibidad
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Mga Kasosyo sa Imprastraktura at Mga Gamit
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Karagdagang mga Kasosyo
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

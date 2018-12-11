@@ -18,7 +18,7 @@ ne:
         Farmer2: The Farmer 2
         Unplug8: Abstraction
         Artist4: The Artist 4
-        Unplug9: Relay Programming
+        Unplug9: Relay programming
         Farmer3: The Farmer 3
         Unplug10: The Internet
         Artist5: The Artist 5
@@ -73,7 +73,7 @@ ne:
         maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.
         maze_2_16: Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!
         maze_2_17: The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right on your first try?
+        maze_2_18: "One more practice of the \"if-else\" block, can you\nget it right on your first try?"
         maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
         turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'अब, वर्ग  बनाउनुहोस्। NOTE: use your favorite color by picking it in the new "set color" block.'
@@ -177,28 +177,28 @@ ne:
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
         studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when it is clicked?
-        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?
-        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let friends try your story on their phones.
+        studio_c2_2: "Can you make the dog say something\nand then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this\ndog move to the cat?"
+        studio_c2_4: "Can you write a program that makes\nthe dog move to the cat, and have the cat say \"hello\" when the dog reaches\nhim?"
+        studio_c2_5: "Can you write a program to make the\noctopus say \"hello\" when it is clicked?"
+        studio_c2_6: "Can you write a program to make Waddles\nmove around using the up / down / left /right keys to hit all of the targets?"
+        studio_c2_7: "The \"repeat forever\" block allows\nyou to run code continuously. Can you attach blocks to move this dinosaur\nup and down repeatedly?"
+        studio_c2_8: "Can you have Waddles say \"Ouch!\"\nand play a \"hit\" sound if he runs into the dinosaur, and then move him with\nthe arrows to make that happen?"
+        studio_c2_9: "Can you add a block to score a point\nwhen Waddles runs into the octopus, and then move him with the arrows until\nyou score?"
+        studio_c2_10: "Can you add blocks to change the background\nand the speed of Waddles, and then move him with the arrows until you score?"
+        studio_c2_11: "Create your own story. When you're\ndone, click Finish to let friends try your story on their phones."
         studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello" when it is clicked?
-        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?
-        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
+        studio_c3_story_2: "Can you make the dog say something\nand then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this\ndog move to the cat?"
+        studio_c3_story_4: "Can you write a program that makes\nthe dog move to the cat, and have the cat say \"hello\" when the dog reaches\nhim?"
+        studio_c3_story_5: "Can you add a block to make the octopus\nhappy?"
+        studio_c3_story_6: "Create your own story. When you're\ndone, click Finish to let friends try your story on their phones."
+        studio_c3_game_1: "Can you write a program to make the\noctopus say \"hello\" when it is clicked?"
+        studio_c3_game_2: "Can you write a program to make Waddles\nmove around using the up / down / left /right keys to hit all of the targets?"
+        studio_c3_game_3: "The \"repeat forever\" block allows\nyou to run code continuously. Can you attach blocks to move this dinosaur\nup and down repeatedly?"
+        studio_c3_game_4: "Can you have Waddles say \"Ouch!\"\nand play a \"hit\" sound if he runs into the dinosaur, and then move him with\nthe arrows to make that happen?"
+        studio_c3_game_5: "Can you add a block to score a point\nwhen Waddles runs into the octopus, and then move him with the arrows until\nyou score?"
+        studio_c3_game_6: "Can you add blocks to change the background\nand the speed of Waddles, and then move him with the arrows until you score?"
         studio_c3_game_7: Create your own game. When you're done, click Finish to let friends try your game on their phones.
         studio_playlab_1: Waddles wants to say "hello" - can you help him?
         studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?
@@ -234,10 +234,10 @@ ne:
         studio_gumball_free_play: Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Create your own game. When you're done, click Finish to let friends try your game on their phones.
         studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_2: "Can you make the dog say something\nand then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this\ndog move to the cat?"
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_5: "Can you add a block to make the octopus\nhappy?"
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
@@ -309,7 +309,7 @@ ne:
         C2_graph_paper: Graph Paper Programming
         C2_conditionals_with_cards: Conditionals
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_relay_programming: Relay programming
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint

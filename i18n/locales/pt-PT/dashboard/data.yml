@@ -6,7 +6,7 @@ pt:
         Maze: O Labirinto
         Multi: Perguntas de escolha múltipla
         Unplug2: Pensamento computacional
-        Unplug3: Programação em Papel Quadriculado
+        Unplug3: Programação de papel milimetrico
         Artist: O Artista
         Unplug4: Algoritmos
         Artist2: O Artista 2
@@ -14,15 +14,15 @@ pt:
         Farmer: O Agricultor
         Unplug6: Condicionais
         Artist3: O Artista 3
-        Unplug7: Escrevendo uma Canção
+        Unplug7: escrita de canção
         Farmer2: O Agricultor 2
         Unplug8: Abstração
         Artist4: O Artista 4
-        Unplug9: Programação Relay
+        Unplug9: Programação por revezamento
         Farmer3: O Agricultor 3
         Unplug10: A Internet
         Artist5: O Artista 5
-        Unplug11: Sumário
+        Unplug11: Resumo
         MazeEC: O Labirinto
         Bounce: Bounce
         Flappy: Flappy Bird
@@ -182,7 +182,7 @@ pt:
         studio_c2_4: Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?
         studio_c2_5: Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?
         studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
-        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?
+        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua do programa. Consegues usar blocos para mover esse dinossauro para cima e para baixo repetidamente?
         studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?
         studio_c2_9: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
@@ -195,7 +195,7 @@ pt:
         studio_c3_story_6: Crie sua própria história. Quando tiver terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
         studio_c3_game_1: Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?
         studio_c3_game_2: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
-        studio_c3_game_3: O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?
+        studio_c3_game_3: O bloco "repita infinitamente" possibilita a execução contínua do programa. Consegues usar blocos para mover esse dinossauro para cima e para baixo repetidamente?
         studio_c3_game_4: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?
         studio_c3_game_5: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
@@ -309,7 +309,7 @@ pt:
         C2_graph_paper: Programação de papel milimetrico
         C2_conditionals_with_cards: Condicionais
         C2_binary_bracelets: Pulseiras binárias
-        C2_relay_programming: Programação Relay
+        C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
         C2_digital_footprint: Seu rastro digital
         C2_digital_footprint_v2: Seu rastro digital
@@ -332,7 +332,7 @@ pt:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: Ciclos
+        C4_loops_zombie: ciclos
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -363,7 +363,7 @@ pt:
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com parâmetros
-        csp_applab_loops: Ciclos
+        csp_applab_loops: ciclos
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -388,11 +388,11 @@ pt:
         mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
         mc_2016_congrats: Minecraft Hora de Código - Parabéns
         mc_2017_congratulations: Minecraft Hora de Código - Parabéns
-        CSF_loops_AB: Ciclos
+        CSF_loops_AB: ciclos
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco
-        run: Clica em "Executar" para experimentares o teu programa
+        run: Clica em "Correr" para experimentares o teu programa
         watch_again: Clica aqui para voltares a ver o vídeo
         gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue resolver o desafio assim mesmo?
         show_code_explanation: Clique aqui para ver o código do programa que você está criando

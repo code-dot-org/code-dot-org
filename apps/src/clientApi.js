@@ -93,6 +93,28 @@ class CollectionsApi {
     });
     return ajaxInternal('PUT', path, success, error);
   }
+
+  _withBeforeFirstWriteHook(fn) {
+    if (this._beforeFirstWriteHook) {
+      this._beforeFirstWriteHook(err => {
+        // continuing regardless of error status from hook...
+        fn();
+      });
+      this._beforeFirstWriteHook = null;
+    } else {
+      fn();
+    }
+  }
+
+  /*
+   * Register a hook that will be called before the first write to the project
+   * using the files API. (This allows the starting project data to be written
+   * on a deferred basis, thereby preventing writes to user projects with
+   * default starting data)
+   */
+  registerBeforeFirstWriteHook(hook) {
+    this._beforeFirstWriteHook = hook;
+  }
 }
 
 class AssetsApi extends CollectionsApi {
@@ -171,20 +193,22 @@ class AssetsApi extends CollectionsApi {
       },
       error);
   }
+
+  /*
+   * Create or update an asset
+   * @param filename {String} filename to be created or updated
+   * @param data {Blob} asset data
+   * @param success {Function} callback when successful (includes xhr parameter)
+   * @param error {Function} callback when failed
+   */
+  putAsset(filename, data, success = () => {}, error = () => {}) {
+    this._withBeforeFirstWriteHook(() => {
+      ajaxInternal('PUT', this.basePath(filename), success, error, data);
+    });
+  }
 }
 
 class FilesApi extends CollectionsApi {
-  _withBeforeFirstWriteHook(fn) {
-    if (this._beforeFirstWriteHook) {
-      this._beforeFirstWriteHook(err => {
-        // continuing regardless of error status from hook...
-        fn();
-      });
-      this._beforeFirstWriteHook = null;
-    } else {
-      fn();
-    }
-  }
   /*
    * Get the version history for this project
    * @param success {Function} callback when successful (includes xhr parameter)
@@ -329,16 +353,6 @@ class FilesApi extends CollectionsApi {
         }
       },
       error);
-  }
-
-  /*
-   * Register a hook that will be called before the first write to the project
-   * using the files API. (This allows the starting project data to be written
-   * on a deferred basis, thereby preventing writes to user projects with
-   * default starting data)
-   */
-  registerBeforeFirstWriteHook(hook) {
-    this._beforeFirstWriteHook = hook;
   }
 
   /*

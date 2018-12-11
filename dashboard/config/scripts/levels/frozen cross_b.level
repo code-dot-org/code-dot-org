@@ -1,0 +1,128 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-08-31T21:49:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "elsa",
+    "x": "200",
+    "y": "200",
+    "start_direction": "180",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false",
+    "slider_speed": "0.2",
+    "instructions": "Draw a line that is **100** pixels long, then move back to the center before turning **90 degrees**. Repeat **4** times.",
+    "impressive": "false",
+    "use_modal_function_editor": "false",
+    "ideal": "5",
+    "use_contract_editor": "false",
+    "callout_json": "[]",
+    "embed": "false",
+    "disable_sharing": "false",
+    "permitted_errors": "0",
+    "markdown_instructions": "*\"Time to make something new!\"*  \r\n  \r\nDraw a line that is **100** pixels long, then move back to the center before turning **90 degrees**.  \r\nRepeat the instructions **4** times to make this shape.\r\n  \r\n",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "parent_level_id": 14488,
+    "name_suffix": "_b",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "discard_background": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/742a43ca043d279aeeae2bfd5b84193a=levelbuilder/38806.png",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:14 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 05:13:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:14:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:15:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:15:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:35:43 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:38:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 19:53:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:54:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" id="repeat_toolbox_qtip2"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="jump_to">
+          <title name="VALUE">13</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="36, 45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="36, 45,60,90,120,180">90</title>
+        </block>
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+          <title name="TIMES" config="3-10">4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+              <title name="TIMES" config="3-10">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant_dropdown">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE" config="50,100,150,200,300">100</title>
+                  <next>
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="36, 45,60,90,120,180">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

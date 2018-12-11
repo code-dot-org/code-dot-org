@@ -39,6 +39,8 @@ $(document).ready(() => {
     }
   });
   poolField.addEventListener('change', fixupJson);
+
+  $(".alert.alert-success").delay(5000).fadeOut(1000);
 });
 
 let config;

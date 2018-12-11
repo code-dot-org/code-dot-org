@@ -1,0 +1,20 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getAnim",
+    "blockText": "{SPRITE}'s costume",
+    "returnType": "String",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      }
+    ]
+  }
+}

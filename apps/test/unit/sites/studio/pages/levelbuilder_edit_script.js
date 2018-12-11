@@ -21,6 +21,10 @@ describe("the level builder page init script", () => {
       },
       beta: false,
       levelKeyList: [],
+      locales: [
+        ["English", "en-US"],
+        ["French", "fr-FR"]
+      ]
     });
   });
 

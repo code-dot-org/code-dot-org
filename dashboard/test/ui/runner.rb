@@ -54,6 +54,8 @@ def main(options)
   $failed_features = 0
 
   start_time = Time.now
+  ENV['GIT_BRANCH'] = GIT_BRANCH
+  ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
   report_tests_starting
@@ -61,6 +63,9 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
+  rescue => e
+    ChatClient.log "Exception: #{e.message}", color: 'red'
+    raise
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -71,7 +76,10 @@ def main(options)
 
   # If we aborted for some reason we may have no run results, and should
   # exit with a failure code.
-  return 1 if run_results.nil?
+  if run_results.nil?
+    ChatClient.log "Test run abandoned with no run results", color: 'red'
+    return 1001
+  end
 
   report_tests_finished start_time, run_results
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
@@ -90,6 +98,7 @@ def parse_options
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
+    options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.html = nil
     options.maximize = nil
@@ -128,6 +137,7 @@ def parse_options
         options.dashboard_domain = 'localhost-studio.code.org:3000'
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
+        options.advocacy_domain = 'localhost-advocacy.code.org:3000'
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -184,6 +194,9 @@ def parse_options
       end
       opts.on("-V", "--verbose", "Verbose") do
         options.verbose = true
+      end
+      opts.on("-VV", "--very-verbose", "Very verbose, extra debug logging") do
+        ENV['VERY_VERBOSE'] = true
       end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
@@ -592,7 +605,9 @@ def cucumber_arguments_for_browser(browser, options)
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@chrome_before_62') if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
-  arguments += skip_tag('@no_safari') if browser['browserName'] == 'Safari'
+  # browser version 0 implies the latest version.
+  arguments += skip_tag('@no_older_chrome') if browser['browserName'] == 'chrome' && (browser['version'].to_i != 0 && browser['version'].to_i <= 67)
+  arguments += skip_tag('@no_safari_yosemite') if browser['browserName'] == 'Safari' && browser['platform'] == 'OS X 10.10'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
@@ -647,6 +662,7 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
+  run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"

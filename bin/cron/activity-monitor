@@ -4,7 +4,7 @@
 # number of browsers has attempted a level without anybody finishing it successfully.
 #
 # Currently data is sent to LogEntries for collection and collation via TCP-based log. This
-# script collects a 1 hour period worth of data, analyzes it, and reports.
+# script collects a 4 hour period worth of data, analyzes it, and reports.
 #
 # FUTURE THOUGHTS: This is the only reason we use LogEntries. We could probably just use a
 #   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
@@ -63,7 +63,7 @@ HARD_LEVEL_ATTEMPTS_PER_HOUR = {
 
 MINIMUM_ATTEMPTS_PER_HOUR = 10
 
-HOURS_TO_TEST = 2
+HOURS_TO_TEST = 4
 
 $user_agent_cache = {}
 def browser_name(user_agent)

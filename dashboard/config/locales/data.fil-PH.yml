@@ -62,8 +62,8 @@ fil:
           akong makapunta doon. '
         maze_2_1: Ang baboy na ito dumadampi sa aking mga balahibo. Tulungan mo akong
           mahanap siya!
-        maze_2_2_5: Sundan ang landas at akayin mo ako sa pasaway na baboy. Iwasan
-          ang mga TNT para hindi lilipad ang mga balahibo!
+        maze_2_2_5: Sundan ang landas at gabayan ako papunta sa pasaway na baboy.
+          Iwasan ang TNT para hindi lilipad ang mga balahibo!
         maze_2_3: Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)
         maze_2_4: Maging kalmado at tulungan akong hanapin ang masamang baboy. Kung
           hindi maaari akong magalit!
@@ -100,7 +100,7 @@ fil:
         maze_2_17: Ang "if-else" na mga bloke ay nagsururi sa kondisyon, at pagkatapos
           ay gagawin niya ang isang bagay o yung isa. Para madala mo ako sa mirasol,
           subukang gamitin ang bagong bloke na ito.
-        maze_2_18: Isa pang pagsasanay sa "if-else" na bloke, makakukuha mo ba ito
+        maze_2_18: Isa pang pagsasanay sa mga "if-else" na bloke, magagawa mo ba ito
           nang tama sa unang pagsubok lang?
         maze_2_19: Maaari ka bang magdagdag ng 3 bloke lang para matulungan akong
           lutasin ang mas kumplikadong pasikut-sikot? Kung magawa mo ito ng tama,
@@ -312,24 +312,24 @@ fil:
           maging patag ang lupain ko?
         maze_karel_debug_function_3: 'Baguhin ang programang ito para matanggal ko
           ang lahat ng mga tambak na nasa lupain ko. '
-        turtle_5_1: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
-        turtle_5_2: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
-        turtle_5_3: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
-        turtle_5_4: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
-        turtle_5_5: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
-        turtle_5_6: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago
-          para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana?
-          (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
+        turtle_5_1: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+        turtle_5_2: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+        turtle_5_3: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+        turtle_5_4: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+        turtle_5_5: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+        turtle_5_6: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago
+          para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito
+          gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
         maze_3_1: Kailangan kong mapuntahan ang baboy na yan! Mag-type ng ilang mga
           tawag para sa move(); upang makuha ko na ulit ang aking mga itlog.
         maze_3_2: Sulatan mo ako ng isang programa, para makarating ako hanggang sa
@@ -360,63 +360,62 @@ fil:
         mazestep_4: Paglalarawan sa hakbang ng maze dito
         mazestep_5: Paglalarawan sa hakbang ng maze dito
         studio_c2_1: Maari mo bang pasabihin ang asong ito nang "hello world"?
-        studio_c2_2: Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos
-          ay sasagot ang pusa?
-        studio_c2_3: Marunong ka bang magsulat ng isang programa na maglipat sa asong
-          ito papunta sa pusa?
-        studio_c2_4: Marunong ka bang magsulat ng isang programa na maglipat sa aso
-          papunta sa pusa, at kapag nakarating na ang aso ay sasabihan siya ng pusa
-          na "hello"?
-        studio_c2_5: Marunong ka bang magsulat ng isang programa para magsabi ang
-          pugitang ito ng "hello" kapag ito ay pinindot?
-        studio_c2_6: Maari ka bang magsulat ng isang programa para mapagalaw si Waddles
-          sa paligid gamit ang taas / baba / kaliwa / kanan na mga keys para matamaan
+        studio_c2_2: Maaari mo bang mapagawa ang aso na magsalita ng isang bagay at
+          pagkatapos ay pasalitain naman ang pusa?
+        studio_c2_3: Maaari ka bang magsulat ng programa para mapagalaw ang aso papunta
+          sa pusa?
+        studio_c2_4: Maaari ka bang magsulat ng programa na nagpagawa sa aso na lumakad
+          papunta sa pusa, at pasabihin ang pusa ng "hello" kapag ang aso ay nakarating
+          na sa kanya?
+        studio_c2_5: Maari ka bang magsulat ng programa para mapasabi ang pugita nang
+          "hello" kapag na-click ito?
+        studio_c2_6: Maaari ka bang magsulat ng programa para mapagalaw sa pagilid
+          si Waddles gamit ang taas / baba / kaliwa / kanan na mga key para matamaan
           ang lahat ng mga target?
-        studio_c2_7: Ang "repeat forever" na bloke ay nagbibigay-daan sa iyo para
-          mapatakbo mo ang iyong code ng paulit-ulit. Maaari mo bang ilakip ang mga
-          bloke para mapagalaw ang dinosaur pataas at pababa nang paulit-ulit?
-        studio_c2_8: Magagawa mo bang turuan si Waddles na magsasabi ng "Aray!" at
-          magpatugtog ng "hit" na tunog kapag nabangga niya ang dinosaur, at pagkatapos
-          pagalawin siya gamit ang mga arrows para mangyari iyon?
-        studio_c2_9: Maari ka bang magdagdag ng bloke para makakuha ng puntos kapag
-          nakatagpo si Waddles ng pugita, at pagkatapos ay ilipat siya gamit ang mga
-          arrow na keys hanggang sa makapuntos ka?
-        studio_c2_10: Maari ka bang magdagdag ng mga bloke para baguhin ang background
-          at ang bilis ni Waddles, at pagkatapos ilipat siya gamit ang mga arrow na
-          keys hanggang sa makapuntos ka?
-        studio_c2_11: Lumikha ng sarili mong kuwento. Kapag tapos ka na, pindutin
-          ang "Finish" para masubukan ng iyong mga kaibigan ang iyong kuwento sa kanilang
-          mga telepono.
+        studio_c2_7: Ang "repeat forever" na bloke ay nagbibigay-daan sa iyo na mapatakbo
+          ang code nang paulit-ulit. Maaari ka bang maglakip ng mga bloke para mapagalaw
+          ang dinosaur na ito pataas at pababa nang paulit-ulit?
+        studio_c2_8: Maaari mo bang pasabihin si Waddles nang "Aray!" at magpatugtog
+          ng "hit" na tunog kapag nakabangga siya sa dinosaur, at pagkatapos ay pagalawin
+          siya gamit ang mga arrow para mangyari ang mga ito?
+        studio_c2_9: Maaari ka bang magdagdag ng isang bloke para makaiskor ng puntos
+          kapag si Waddles ay nakatagpo ng isang pugita, at pagkatapos pagalawin siya
+          gamit ang mga arrow hanggang sa makakapuntos ka?
+        studio_c2_10: Maaari ka bang magdagdag ng mga bloke para palitan ang background
+          at ang bilis ni Waddles, at pagkatapos pagalawin siya gamit ang mga arrow
+          hanggang sa makapuntos ka?
+        studio_c2_11: Maglikha ng iyong sariling istorya. Kapag tapos ka na, i-click
+          ang Finish para hayaan ang iyong mga kaibigan na subukan ang istorya sa
+          kanilang mga telepono.
         studio_c3_story_1: Maari mo bang pasabihin ang asong ito nang "hello world"?
-        studio_c3_story_2: Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos
-          ay sasagot ang pusa?
-        studio_c3_story_3: Marunong ka bang magsulat ng isang programa na maglipat
-          sa asong ito papunta sa pusa?
-        studio_c3_story_4: Marunong ka bang magsulat ng isang programa na maglipat
-          sa aso papunta sa pusa, at kapag nakarating na ang aso ay sasabihan siya
-          ng pusa na "hello"?
-        studio_c3_story_5: Maaari mo bang idagdag ang bloke para maging masaya ang
-          pugita?
-        studio_c3_story_6: Lumikha ng sarili mong kuwento. Kapag tapos ka na, pindutin
-          ang "Finish" para masubukan ng iyong mga kaibigan ang iyong kuwento sa kanilang
-          mga telepono.
-        studio_c3_game_1: Marunong ka bang magsulat ng isang programa para magsabi
-          ang pugitang ito ng "hello" kapag ito ay pinindot?
-        studio_c3_game_2: Maari ka bang magsulat ng isang programa para mapagalaw
-          si Waddles sa paligid gamit ang taas / baba / kaliwa / kanan na mga keys
-          para matamaan ang lahat ng mga target?
+        studio_c3_story_2: Maaari mo bang mapagawa ang aso na magsalita ng isang bagay
+          at pagkatapos ay pasalitain naman ang pusa?
+        studio_c3_story_3: Maaari ka bang magsulat ng programa para mapagalaw ang
+          aso papunta sa pusa?
+        studio_c3_story_4: Maaari ka bang magsulat ng programa na nagpagawa sa aso
+          na lumakad papunta sa pusa, at pasabihin ang pusa ng "hello" kapag ang aso
+          ay nakarating na sa kanya?
+        studio_c3_story_5: Maaari ka bang magdagdag ng bloke para mapasaya ang pugita?
+        studio_c3_story_6: Maglikha ng iyong sariling istorya. Kapag tapos ka na,
+          i-click ang Finish para hayaan ang iyong mga kaibigan na subukan ang istorya
+          sa kanilang mga telepono.
+        studio_c3_game_1: Maari ka bang magsulat ng programa para mapasabi ang pugita
+          nang "hello" kapag na-click ito?
+        studio_c3_game_2: Maaari ka bang magsulat ng programa para mapagalaw sa pagilid
+          si Waddles gamit ang taas / baba / kaliwa / kanan na mga key para matamaan
+          ang lahat ng mga target?
         studio_c3_game_3: Ang "repeat forever" na bloke ay nagbibigay-daan sa iyo
-          para mapatakbo mo ang iyong code ng paulit-ulit. Maaari mo bang ilakip ang
-          mga bloke para mapagalaw ang dinosaur pataas at pababa nang paulit-ulit?
-        studio_c3_game_4: Magagawa mo bang turuan si Waddles na magsasabi ng "Aray!"
-          at magpatugtog ng "hit" na tunog kapag nabangga niya ang dinosaur, at pagkatapos
-          pagalawin siya gamit ang mga arrows para mangyari iyon?
-        studio_c3_game_5: Maari ka bang magdagdag ng bloke para makakuha ng puntos
-          kapag nakatagpo si Waddles ng pugita, at pagkatapos ay ilipat siya gamit
-          ang mga arrow na keys hanggang sa makapuntos ka?
-        studio_c3_game_6: Maari ka bang magdagdag ng mga bloke para baguhin ang background
-          at ang bilis ni Waddles, at pagkatapos ilipat siya gamit ang mga arrow na
-          keys hanggang sa makapuntos ka?
+          na mapatakbo ang code nang paulit-ulit. Maaari ka bang maglakip ng mga bloke
+          para mapagalaw ang dinosaur na ito pataas at pababa nang paulit-ulit?
+        studio_c3_game_4: Maaari mo bang pasabihin si Waddles nang "Aray!" at magpatugtog
+          ng "hit" na tunog kapag nakabangga siya sa dinosaur, at pagkatapos ay pagalawin
+          siya gamit ang mga arrow para mangyari ang mga ito?
+        studio_c3_game_5: Maaari ka bang magdagdag ng isang bloke para makaiskor ng
+          puntos kapag si Waddles ay nakatagpo ng isang pugita, at pagkatapos pagalawin
+          siya gamit ang mga arrow hanggang sa makakapuntos ka?
+        studio_c3_game_6: Maaari ka bang magdagdag ng mga bloke para palitan ang background
+          at ang bilis ni Waddles, at pagkatapos pagalawin siya gamit ang mga arrow
+          hanggang sa makapuntos ka?
         studio_c3_game_7: Lumikha ng sarili mong laro. Kapag tapos ka na, pindutin
           ang "Finish" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga
           telepono.
@@ -540,13 +539,13 @@ fil:
           ang "Finish" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga
           telepono.
         studio_k1_1: Maari mo bang pasabihin ang asong ito nang "hello world"?
-        studio_k1_2: Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos
-          ay sasagot ang pusa?
-        studio_k1_3: Marunong ka bang magsulat ng isang programa na maglipat sa asong
-          ito papunta sa pusa?
+        studio_k1_2: Maaari mo bang mapagawa ang aso na magsalita ng isang bagay at
+          pagkatapos ay pasalitain naman ang pusa?
+        studio_k1_3: Maaari ka bang magsulat ng programa para mapagalaw ang aso papunta
+          sa pusa?
         studio_k1_4: Papuntahin ang aso sa pusa at ang pusa ay magsasabi ng "hello"
           kapag nakarating na siya doon.
-        studio_k1_5: Maaari mo bang idagdag ang bloke para maging masaya ang pugita?
+        studio_k1_5: Maaari ka bang magdagdag ng bloke para mapasaya ang pugita?
         studio_k1_6: Lumikha ng sarili mong istorya! Pagalain sa paligid ang pusa
           at aso, at pagsalitain sila ng kahit na ano.
         maze_wordsearch_k_1: Galawin ako para mabaybay ang salitang SILANGAN

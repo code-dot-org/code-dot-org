@@ -1,0 +1,59 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "setBackgroundEffect",
+    "blockText": "set background effect {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "None",
+            "\"none\""
+          ],
+          [
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
+            "Squares",
+            "\"disco\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Diamonds",
+            "\"diamonds\""
+          ],
+          [
+            "Bubbles",
+            "\"splatter\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Snow",
+            "\"snowflakes\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
+            "(Random)",
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]"
+          ]
+        ]
+      }
+    ]
+  }
+}

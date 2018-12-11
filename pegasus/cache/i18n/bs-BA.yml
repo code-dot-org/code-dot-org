@@ -403,11 +403,11 @@ bs-BA:
     | Dob 6-10
   starwars_platform_text: Savremeni browser-i, mobiteli, tableti
   mc_name: Sata Kodiranja Minecraft-a
-  mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu
-    kroz Minecraft svijet.
-  mc_shortdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu
-    kroz Minecraft svijet.
-  mc_gradelevel: Dob 4-104
+  mc_longdescription: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz
+    Minecraft svijet
+  mc_shortdescription: Koristi blokove koda da bi poveo Steve ili Alex u avanturu
+    kroz Minecraft svijet
+  mc_gradelevel: Uzrast 6+
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
   minecraft_agent_button: Počni
   minecraft_designer_button: Počni
@@ -581,7 +581,7 @@ bs-BA:
     za kodiranje sa mojim studentima
   petition_age: Starost
   dashboard_announce_learn_more_button: Nauči više
-  dashboard_landing_title: Početna stranica za nastavnike
+  dashboard_landing_title: Početna Stranica za Učitelje
   dashboard_landing_welcome: Dobrodošli na novu i poboljšanu kontrolnu ploču za nastavnike.
   dashboard_landing_video: Pregledaj ovaj video
   dashboard_landing_watch_video: za obilazak novih značajki!
@@ -721,7 +721,7 @@ bs-BA:
   dashboard_students_reset_picture: Možete bilo kada ponovno postaviti učenikovu tajnu
     sliku odabirom <b>Prikaži tajnu</b>, a zatim <b>Resetuj tajnu</b>. Tako će se
     stvoriti nova tajna slika za tog učenika, koju će moći koristiti nakon prijave.
-  dashboard_students_secret_word_title: Tajna Riječ
+  dashboard_students_secret_word_title: Tajne riječi
   dashboard_students_secret_word: Tajna Riječ
   dashboard_students_reset_word: 'Možete bilo kada ponovno postaviti učenikove tajne
     riječi odabirom <b>Prikaži tajnu</b>, a zatim <b>Resetuj tajnu</b>. Učenik će
@@ -919,7 +919,7 @@ bs-BA:
   kodable_gradelevel: Osnovna škola
   tynkerapp_gradelevel: Dob 5-13
   robomindnl_gradelevel: Dob 8-13
-  flappy_gradelevel: Dob 4-104
+  flappy_gradelevel: Uzrast 6+
   bitsbox_gradelevel: Osnovna škola
   makeschool_gradelevel: Srednja škola
   touchdevelop_gradelevel: Srednja škola
@@ -928,7 +928,7 @@ bs-BA:
   thinkersmith2_gradelevel: Dob 8+
   kodableunplugged_gradelevel: Dob 8-13
   projguts_gradelevel: Dob 10-13
-  hourofcode_gradelevel: Dob 4-104
+  hourofcode_gradelevel: Uzrast 6+
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Uzrast 6+
   playlab_gradelevel: Dob 4-104
@@ -984,7 +984,7 @@ bs-BA:
   kodableunplugged_platformtext: Izvanmrežno
   projguts_platformtext: Izvanmrežno
   hourofcode_platformtext: Savremeni browser-i, mobiteli, tableti
-  frozen_platformtext: Savremeni browser-i + tableti
+  frozen_platformtext: Savremeni preglednici + tableti
   starwars_platformtext: Savremeni preglednici + tableti
   playlab_platformtext: Savremeni browser-i, mobiteli, tableti
   csfirst_platformtext: Savremeni browser-i
@@ -1506,6 +1506,34 @@ bs-BA:
   header_help_support: 'Pomoć i podrška '
   header_documentation: Dokumentacija
   user_header_label: Zdravo, %{username}
+  user_header_team: Tim
   user_header_settings: Moj račun
   user_header_logout: Odjava
   user_header_signin: Prijava
+  user_header_playlab: Play Lab
+  user_header_flappy: Flappy
+  applab_tile_start_tutorial: Počni
+  hoc_overview_start_tutorial: Počni
+  hoc2018_creativity_create: Kreiraj
+  hoc2018_mc_adventurer_description: Upotrijebi kod da odvedeš Alex ili Steve u avanturu.
+  hoc2018_mc_start: Počni
+  hoc2018_mc_no_internet: Nemaš Internet?
+  hoc2018_mc_download_adventurer: Preuzmi offline verziju Minecraft Pustolov.
+  hoc2018_mc_watch_videos: Prije nego počneš, pogledaj ove inspirativne isječke
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_sports: Daj sve od sebe. Svako može naučiti.
+  hoc2018_mc_video_title_inspire_girl: Inspiriši djevojčicu
+  hoc2018_mc_video_title_cs_intro: Uvod u Računarstvo
+  hoc2018_mc_video_title_schools_dont_teach: Ono što većina škola ne podučava
+  hoc2018_mc_video_title_obama: Predsjednik Obama o računarstvu
+  hoc2018_mc_video_title_hoc_is_here: Sat Kodiranja je ovdje - Svako može naučiti
+  hoc2018_mc_video_title_anybody_can_learn: Svako može naučiti
+  hoc2018_mc_homepage_join_us: Pridruži nam se
+  hoc2018_mc_homepage_try_it: Isprobaj
+  hoc2018_mc_continue_learning: Nastavite učiti sa Minecraft-om.
+  hoc2018_dance_party_button: Počni
+  hoc2018_dance_teacher_resources_tile1_button: Nastavni Plan
+  hoc2018_dance_teacher_resources_tile2_button: Izvanmrežna aktivnost
+  hoc2018_dance_amazon_about_future_engineer_button: Nauči više

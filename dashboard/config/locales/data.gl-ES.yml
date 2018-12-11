@@ -19,7 +19,7 @@ gl:
         Farmer2: O Agricultor 2
         Unplug8: Abstracción
         Artist4: O Artista 4
-        Unplug9: Programación baixo presión
+        Unplug9: Programación por relevos
         Farmer3: O Agricultor 3
         Unplug10: A Internet
         Artist5: O Artista 5
@@ -92,8 +92,9 @@ gl:
           pero ten coidado cos comilóns!
         maze_2_17: Os bloques "se-senón" verifican unha condición, e axiña, fan unha
           cousa OU outra. Para me levar para o xirasol tenta usar este novo bloque.
-        maze_2_18: Practica unha vez máis o bloque "se-senón", consegues á primeira
-          tentativa?
+        maze_2_18: |-
+          Imos praticar o uso do bloque "se-senón" unha vez máis. Consegues
+          acertar na primeira tentativa?
         maze_2_19: Podes agregar máis 3 bloques para me axudares a resolver este complexo
           labirinto? Se conseguires podes andar en calquera camiño con curvas calquera
           que sexa o tamaño.
@@ -572,7 +573,7 @@ gl:
         C2_graph_paper: Programación en Papel Cadriculado
         C2_conditionals_with_cards: Condicionais
         C2_binary_bracelets: Pulseiras Binarias
-        C2_relay_programming: Programación baixo presión
+        C2_relay_programming: Programación por relevos
         C2_paper_airplanes: Avións de papel
         C2_digital_footprint: A túa pegada dixital
         C2_digital_footprint_v2: A túa pegada dixital
@@ -651,7 +652,7 @@ gl:
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque
-        run: Preme en "Executar" para probares o teu programa
+        run: Preme en "Correr" para probares o teu programa
         watch_again: Clica aqui para voltares a ver o vídeo
         gray_block_explanation: Os bloques cinza non poden ser excluídos. Consegue
           igualmente resolver o desafío?

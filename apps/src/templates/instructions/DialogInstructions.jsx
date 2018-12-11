@@ -2,8 +2,6 @@ import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
-import processMarkdown from 'marked';
-import renderer from "../../util/StylelessRenderer";
 
 /**
  * Component for displaying our instructions in the context of a modal dialog
@@ -22,9 +20,6 @@ class DialogInstructions extends React.Component {
   };
 
   render() {
-    const renderedMarkdown = this.props.longInstructions ?
-      processMarkdown(this.props.longInstructions, { renderer }) : undefined;
-
     const showInstructions = !(this.props.imgOnly || this.props.hintsOnly);
     const showImg = !this.props.hintsOnly;
     return (
@@ -33,9 +28,9 @@ class DialogInstructions extends React.Component {
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
-        instructions={showInstructions ?  this.props.shortInstructions : undefined}
+        shortInstructions={showInstructions ?  this.props.shortInstructions : undefined}
         instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
-        renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
+        longInstructions={showInstructions ?  this.props.longInstructions : undefined}
         imgURL={showImg ? this.props.imgURL : undefined}
       />
     );

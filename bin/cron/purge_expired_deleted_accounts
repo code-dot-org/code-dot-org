@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+#
+# purge_expired_deleted_accounts
+#
+# This script locates accounts that were soft-deleted more than 28 days ago and
+# performs a hard-delete on those accounts, permanently removing the account
+# data from our system.
+#
+# In particular, this script is a thin entry point, parsing arguments and
+# passing them on.  The actual logic for locating and purging accounts
+# lives in ExpiredDeletedAccountPurger.
+#
+# @see Technical Spec: Hard-deleting accounts
+# https://docs.google.com/document/d/1l2kB4COz8-NwZfNCGufj7RfdSm-B3waBmLenc6msWVs/edit
+#
+
+require 'active_support/core_ext/numeric/time'
+require 'date'
+require 'optparse'
+require_relative '../../lib/cdo/only_one'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script locates accounts that were soft-deleted more than 28 days ago and
+    performs a hard-delete on those accounts, permanently removing the account
+    data from our system.
+
+    Options:
+  BANNER
+
+  opts.on('--dry-run', 'Report expected results without deleting anything') do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+# Make sure we're the only copy of this script running.
+exit(1) unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../dashboard/lib/expired_deleted_account_purger'
+ExpiredDeletedAccountPurger.new(options).purge_expired_deleted_accounts!

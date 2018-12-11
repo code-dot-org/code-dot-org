@@ -56,6 +56,7 @@
   user_header_options[:show_pairing_dialog] = show_pairing_dialog
   user_header_options[:session_pairings] = session[:pairings]
   user_header_options[:loc_prefix] = 'nav.user.'
+  user_header_options[:level] = level
 
   require 'cdo/hamburger'
 
@@ -130,7 +131,7 @@
   - script_data = script.summarize_header
   - stage_data = (@stage || script_level.stage).summarize
   -# If caching, we don't know the sign in state, and should be nil
-  - signed_in = @public_caching ? 'null' : !current_user.nil?
+  - signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
   :javascript
     //<![CDATA[
     dashboard.header.build(

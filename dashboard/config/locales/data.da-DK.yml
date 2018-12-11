@@ -3,7 +3,7 @@ da:
   data:
     game:
       name:
-        Unplug1: Introduktion til datalogi
+        Unplug1: Introduktion til programmering
         Maze: Labyrinten
         Multi: Flere valgs ting
         Unplug2: Data-Tænkning
@@ -15,7 +15,7 @@ da:
         Farmer: Landmanden
         Unplug6: Betingelser
         Artist3: Kunstneren 3
-        Unplug7: Sangskrivning
+        Unplug7: Sang Skrivning
         Farmer2: Landmanden 2
         Unplug8: Abstraktion
         Artist4: Kunstneren 4
@@ -581,7 +581,7 @@ da:
         C3_functional_suncatchers: Funktionelle solfangere
         C3_songwriting_with_parameters: Sangskrivning med parametre
         C4_intro: Introduktion
-        C4_loops_zombie: Sløjfer
+        C4_loops_zombie: Løkker
         C4_bee_conditional: Bi betingelser
         C4_variables_artist: Variable - Kunstner
         C4_variables_playlab: Variable - Play Lab
@@ -612,7 +612,7 @@ da:
         infinity_playlab_repeat_forever: Play Lab - gentag for evigt
         csp_applab_functions: Introduktion til funktioner
         csp_applab_functions_parameters: Funktioner med parametre
-        csp_applab_loops: Sløjfer
+        csp_applab_loops: Løkker
         csp_concept_rgb: Lidt om pixel
         starwars_intro: 'Star Wars: Byg en Galakse med Code - Introduktion'
         starwars_typing: 'Star Wars: Byg en Galakse med Code - JavaScript'
@@ -632,11 +632,11 @@ da:
         iceage_intro: Ice Age kodetime - Introduktion
         iceage_events: Ice Age kodetime - begivenheder
         iceage_repeat: Ice Age kodetime - gentagelseskommandoer
-        CSF_loops_AB: Sløjfer
+        CSF_loops_AB: Løkker
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
-        run: Tryk "Kør" for at starte dit program
+        run: Tryk på "Kør" for at prøve dit program
         watch_again: Klik her for at se videoen igen
         gray_block_explanation: Blokke, der er grå kan ikke slettes. Kan du løse gåden
           alligevel?

@@ -19,7 +19,7 @@ describe('ChangeUserTypeForm', () => {
     let onChange, wrapper;
 
     const initialValues= {
-      currentEmail: 'initialEmail@example.com',
+      email: 'initialEmail@example.com',
       emailOptIn: 'no',
     };
 
@@ -43,7 +43,7 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        currentEmail: changedEmail
+        email: changedEmail
       });
     });
 
@@ -160,7 +160,7 @@ describe('ChangeUserTypeForm', () => {
     it('focuses on the email field if there is an email validation error', () => {
       wrapper.setProps({
         validationErrors: {
-          currentEmail: 'Something is wrong with the email'
+          email: 'Something is wrong with the email'
         }
       });
 

@@ -137,12 +137,12 @@ describe('determineInstructionsConstants', () => {
     const hasContainedLevels = false;
     const overlayVisible = false;
 
-    it('sets longInstructions to markdownInstructions regardless of locale', () => {
+    it('sets longInstructions to markdown instructions regardless of locale', () => {
       const locales = ['fr-fr', ENGLISH_LOCALE, undefined];
       const results = locales.map(locale => determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: 'markdown',
+          shortInstructions: 'non-markdown',
+          longInstructions: 'markdown',
         },
         skin: {},
         locale,
@@ -157,11 +157,11 @@ describe('determineInstructionsConstants', () => {
       });
     });
 
-    it('sets longInstructions to be non-markdown instructions if no markdownInstructions given', () => {
+    it('sets longInstructions to be non-markdown instructions if no markdown instructions given', () => {
       const result = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: undefined,
+          shortInstructions: 'non-markdown',
+          longInstructions: undefined,
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -178,8 +178,8 @@ describe('determineInstructionsConstants', () => {
       // only given non-markdown
       const result = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: undefined,
+          shortInstructions: 'non-markdown',
+          longInstructions: undefined,
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -194,8 +194,8 @@ describe('determineInstructionsConstants', () => {
       // only given markdown
       const result2 = determineInstructionsConstants({
         level: {
-          instructions: undefined,
-          markdownInstructions: 'markdown',
+          shortInstructions: undefined,
+          longInstructions: 'markdown',
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -210,8 +210,8 @@ describe('determineInstructionsConstants', () => {
       // given both
       const result3 = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: 'markdown',
+          shortInstructions: 'non-markdown',
+          longInstructions: 'markdown',
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -231,13 +231,13 @@ describe('determineInstructionsConstants', () => {
     const hasContainedLevels = false;
     const overlayVisible = false;
 
-    it('sets long and short instructions for english locale', () => {
+    it('sets long and short instructions for all locales', () => {
       // en_us and undefined should both be treated as english
-      ['en_us', undefined].forEach(locale => {
+      ['en_us', undefined, 'fr_fr'].forEach(locale => {
         const result = determineInstructionsConstants({
           level: {
-            instructions: 'non-markdown',
-            markdownInstructions: 'markdown',
+            shortInstructions: 'non-markdown',
+            longInstructions: 'markdown',
           },
           skin: {},
           locale,
@@ -260,39 +260,12 @@ describe('determineInstructionsConstants', () => {
       });
     });
 
-    it('does not set long instructions if non-english locale', () => {
-      const result = determineInstructionsConstants({
-        level: {
-          instructions: 'non-markdown',
-          markdownInstructions: 'markdown',
-        },
-        skin: {},
-        locale: 'fr-fr',
-        noInstructionsWhenCollapsed,
-        showInstructionsInTopPane,
-        hasContainedLevels,
-        overlayVisible
-      });
-      assert.deepEqual(result, {
-        noInstructionsWhenCollapsed,
-        shortInstructions: 'non-markdown',
-        shortInstructions2: undefined,
-        longInstructions: undefined,
-        hasContainedLevels,
-        overlayVisible,
-        teacherMarkdown: undefined,
-        levelVideos: undefined,
-        mapReference: undefined,
-        referenceLinks: undefined
-      });
-    });
-
     it('does not set long instructions if identical to short-instructions, and ' +
         'showInstructionsInTopPane is true', () => {
       const result = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: 'non-markdown',
+          shortInstructions: 'non-markdown',
+          longInstructions: 'non-markdown',
         },
         skin: {},
         ENGLISH_LOCALE,
@@ -319,8 +292,8 @@ describe('determineInstructionsConstants', () => {
       const inputOutputTable =  [[15, 5], [20, 10]];
       const result = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: undefined,
+          shortInstructions: 'non-markdown',
+          longInstructions: undefined,
           inputOutputTable
         },
         skin: {},
@@ -334,8 +307,8 @@ describe('determineInstructionsConstants', () => {
 
       const result2 = determineInstructionsConstants({
         level: {
-          instructions: 'non-markdown',
-          markdownInstructions: 'markdown',
+          shortInstructions: 'non-markdown',
+          longInstructions: 'markdown',
           inputOutputTable
         },
         skin: {},
@@ -351,9 +324,9 @@ describe('determineInstructionsConstants', () => {
     it('substitutes images in instructions', () => {
       const result = determineInstructionsConstants({
         level: {
-          instructions: 'Instructions with [image1]',
+          shortInstructions: 'Instructions with [image1]',
           instructions2: 'Instructions with [image2]',
-          markdownInstructions: undefined
+          longInstructions: undefined
         },
         skin: {
           instructions2ImageSubstitutions: {

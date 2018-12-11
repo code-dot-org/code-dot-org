@@ -766,6 +766,8 @@ mi:
               name: Kōmore Ā-Rua
             Binary Images:
               name: Ngā Atahanga Tāhūrua
+            Play Lab:
+              name: Taiwhanga Tākaro
         csd2-2017:
           stages:
             Peer Review:
@@ -1276,3 +1278,67 @@ mi:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
+        frozen-2018:
+          stages:
+            Artist:
+              name: Rehetoi
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Rehetoi
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Rehetoi
+        aquatic:
+          title: 'Toihuke: Rerenga Moana'
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Te Hanga Tūāpapa
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke
+            The Artist:
+              name: Te Rehetoi
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            Digital Citizenship:
+              name: Te Kirirarautanga Matihiko
+            'Unplugged: Binary':
+              name: 'Momotu: Tāhūrua'
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Te Hanga Tūāpapa
+            Nested Loops:
+              name: Ngā Koromeke Tauroto
+            Conditionals:
+              name: Ngā Here
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke
+            Binary Bracelets:
+              name: Kōmore Ā-Rua
+            'Unplugged: Binary':
+              name: 'Momotu: Tāhūrua'
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu

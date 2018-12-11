@@ -26,6 +26,8 @@
 module Pd
   class WorkshopDailySurvey < ActiveRecord::Base
     include JotFormBackedForm
+    include SharedWorkshopConstants
+    include Pd::WorkshopSurveyConstants
 
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
@@ -50,7 +52,7 @@ module Pd
     end
 
     def set_day_from_form_id
-      self.day = self.class.get_day_for_form_id(form_id)
+      self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
@@ -62,26 +64,46 @@ module Pd
       :day
     )
 
-    VALID_DAYS = (0..5).freeze
+    # Different categories have different valid days
+    VALID_DAYS = {
+      LOCAL_CATEGORY => (0..5).to_a.freeze,
+      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
+      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+    }
 
-    validates_inclusion_of :day, in: VALID_DAYS
+    validate :day_for_subject
 
-    def self.get_form_id_for_day(day)
-      get_form_id 'local', "day_#{day}"
+    def self.get_form_id_for_subject_and_day(subject, day)
+      # Day could be an int, or an integer as a string, or a string saying "pre/post workshop"
+      get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ /\d+/) ? "day_#{day}" : day
     end
 
-    def self.get_day_for_form_id(form_id)
-      VALID_DAYS.find {|d|  get_form_id_for_day(d) == form_id}
+    def self.get_day_for_subject_and_form_id(subject, form_id)
+      VALID_DAYS[CATEGORY_MAP[subject]].find {|d|  get_form_id_for_subject_and_day(subject, d) == form_id}
     end
 
     def self.all_form_ids
-      VALID_DAYS.map do |day|
-        get_form_id_for_day day
-      end
+      FORM_CATEGORIES.map do |category|
+        VALID_DAYS[category].map do |day|
+          get_form_id category, "day_#{day}"
+        end
+      end.flatten.compact
     end
 
     def self.unique_attributes
       [:user_id, :pd_workshop_id, :day]
+    end
+
+    private
+
+    def day_for_subject
+      unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
+        errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+      end
     end
   end
 end

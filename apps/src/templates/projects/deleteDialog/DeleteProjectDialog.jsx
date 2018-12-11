@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import i18n from '@cdo/locale';
+import { hideDeleteDialog, deleteProject } from './deleteProjectDialogRedux';
 
 const styles = {
   dialog: {
@@ -12,15 +14,18 @@ const styles = {
   },
 };
 
-export default class DeleteProjectDialog extends Component {
+class DeleteProjectDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     projectId: PropTypes.string,
     isDeletePending: PropTypes.bool,
-    onClose: PropTypes.func,
+    onClose: PropTypes.func.isRequired,
+    deleteProject: PropTypes.func.isRequired,
   };
 
   close = () => this.props.onClose();
+
+  delete = () => this.props.deleteProject(this.props.projectId);
 
   render() {
     return (
@@ -45,9 +50,9 @@ export default class DeleteProjectDialog extends Component {
           />
           <Button
             text={i18n.delete()}
-            onClick={() => console.log("Confirm delete was clickeds")}
+            onClick={this.delete}
             color={Button.ButtonColor.orange}
-            className="no-mc"
+            className="no-mc ui-confirm-project-delete-button"
             isPending={this.props.isDeletePending}
             pendingText={i18n.deleting()}
           />
@@ -56,3 +61,18 @@ export default class DeleteProjectDialog extends Component {
     );
   }
 }
+
+export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
+
+export default connect(state => ({
+  isOpen: state.deleteDialog.isOpen,
+  isDeletePending: state.deleteDialog.isDeletePending,
+  projectId: state.deleteDialog.projectId,
+}), dispatch => ({
+  onClose() {
+    dispatch(hideDeleteDialog());
+  },
+  deleteProject(projectId) {
+    return dispatch(deleteProject(projectId));
+  },
+}))(DeleteProjectDialog);

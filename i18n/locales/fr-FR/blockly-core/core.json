@@ -161,7 +161,7 @@
     "LISTS_SET_INDEX_HELPURL": "https://github.com/google/blockly/wiki/Lists#in_list_..._set",
     "LISTS_SET_INDEX_INPUT_TO": "comme",
     "LISTS_SET_INDEX_INSERT": "insérer dans",
-    "LISTS_SET_INDEX_SET": "fixer",
+    "LISTS_SET_INDEX_SET": "définir",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST": "Insère l’élément au début d’une liste.",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END": "Insère l’élément à la position indiquée dans une liste. #1 est le dernier élément.",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START": "Insère l’élément à la position indiquée dans une liste. #1 est le premier élément.",

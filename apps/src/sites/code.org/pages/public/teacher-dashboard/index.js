@@ -60,10 +60,9 @@ function renderSectionAssessments(section, validScripts) {
   const store = getStore();
   store.dispatch(setSection(section));
 
-  const scriptId = store.getState().scriptSelection.scriptId;
-  store.dispatch(asyncLoadAssessments(section.id, scriptId));
-
   store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    const scriptId = store.getState().scriptSelection.scriptId;
+    store.dispatch(asyncLoadAssessments(section.id, scriptId));
     ReactDOM.render(
       <Provider store={store}>
         <SectionAssessments />
@@ -418,7 +417,7 @@ function main() {
         $scope.section.$promise.then(section =>
           renderSyncOauthSectionControl({
             sectionId: section.id,
-            provider: scriptData.provider
+            rosterProvider: section.login_type
           })
         );
       });
@@ -596,9 +595,11 @@ function main() {
 
     $scope.react_progress = true;
     $scope.$on('section-progress-rendered', () => {
-      $scope.section.$promise.then(script =>
-        renderSectionProgress(script, $scope.script_list)
-      );
+      $scope.section.$promise.then(script => {
+        $scope.script_list.$promise.then(validScripts => {
+          renderSectionProgress(script, validScripts);
+        });
+      });
     });
   }]);
 
@@ -624,9 +625,19 @@ function main() {
     $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.react_text_responses = true;
     $scope.$on('text-responses-table-rendered', () => {
-      $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
+      $scope.section.$promise.then(section => {
+        $scope.script_list.$promise.then(validScripts => {
+          renderTextResponsesTable(section, validScripts);
+        });
+      });
     });
   }]);
 
@@ -666,6 +677,12 @@ function main() {
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.script_list = sectionsService.validScripts();
 
     $scope.assessmentsLoaded = false;
@@ -676,9 +693,11 @@ function main() {
 
     $scope.react_assessments = true;
     $scope.$on('section-assessments-rendered', () => {
-      $scope.section.$promise.then(script =>
-        renderSectionAssessments(script, $scope.script_list)
-      );
+      $scope.section.$promise.then(script => {
+        $scope.script_list.$promise.then(scriptList => (
+          renderSectionAssessments(script, scriptList)
+        ));
+      });
     });
   }]);
 

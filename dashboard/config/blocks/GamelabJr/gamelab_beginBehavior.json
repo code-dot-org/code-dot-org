@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "beginBehavior",
+    "blockText": "begin {BEHAVIOR}",
+    "inline": false,
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

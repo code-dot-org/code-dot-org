@@ -24,13 +24,24 @@
 #
 
 class Dancelab < GamelabJr
+  serialized_attrs %w(
+    default_song
+  )
+
+  def self.skins
+    ['dance']
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.gamelab,
+        game: Game.dance,
         level_num: 'custom',
         properties: {
+          block_pools: [
+            "Dancelab",
+          ],
           helper_libraries: [
             "DanceLab",
           ],
@@ -43,5 +54,14 @@ class Dancelab < GamelabJr
   end
 
   def common_blocks(type)
+  end
+
+  def self.hoc_songs
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest.json')[:body].read
+    manifest = JSON.parse(manifest_json)
+    manifest['songs'].map do |song|
+      name = "#{song['text']}#{song['pg13'] ? ' (PG-13)' : ''}"
+      [name, song['id']]
+    end
   end
 end

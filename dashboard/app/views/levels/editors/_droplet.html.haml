@@ -14,20 +14,21 @@
   = f.label :palette_category_at_start
   = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
 .field
-  = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
-  = boolean_check_box f, :droplet_tooltips_disabled
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
 .field
-  = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
-  = boolean_check_box f, :lock_zero_param_functions
-
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
 .field
-  = f.label :text_mode_at_start, 'Text mode (showing code) at start'
-  = f.radio_button :text_mode_at_start, 'false'
-  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
-  = f.radio_button :text_mode_at_start, 'blocks'
-  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
-  = f.radio_button :text_mode_at_start, 'true'
-  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
+  = f.label :text_mode_at_start, 'Code View When Level Starts'
+  %p What mode the code is presented as when the level loads
+  .aligned-input-group
+    = f.radio_button :text_mode_at_start, 'false', :checked => true
+    = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
+  .aligned-input-group
+    = f.radio_button :text_mode_at_start, 'blocks'
+    = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
+  .aligned-input-group
+    = f.radio_button :text_mode_at_start, 'true'
+    = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 :ruby
   script_data = {
     pageOptions: {

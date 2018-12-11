@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Pead tegema tantsija.",
+  "danceFeedbackNoDancers": "Teil ei ole tantsijad.",
+  "danceFeedbackNoBackground": "Pead lisama taustaefekti.",
+  "danceFeedbackTooManyDancers": "Ole ettevaatlik! Kui paned ploki `iga 2 ühiku järel`sisse ploki `tee uus`, loote palju tantsijad.",
+  "danceFeedbackUseSetSize": "Kasuta plokki \"määra tausta_tantsija2 suurus\", et tantsija väiksemaks muuta.",
+  "danceFeedbackUseSetTint": "Kasuta `määra toon` plokki, et muuta tantsija värvi.",
+  "danceFeedbackUseStartMapping": "Proovi lisada <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">parempoolne_ananass</title><title name=\"PROPERTY\">\"suurus\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> plokk oma programmile.",
+  "danceFeedbackStartNewMove": "Sinu tantsija ei teinud peale neljandat ühikut uut liigutust.",
+  "danceFeedbackNeedDifferentDance": "Sa pead teist tantsu kasutama.",
+  "danceFeedbackNeedEveryTwoMeasures": "Tee kindlaks, et kasutad plokki `iga 2 ühiku järel`",
+  "danceFeedbackNeedMakeANewDancer": "Kasuta `tee uus`plokki, et luua teine tantsija.",
+  "measure": "Ühik:"
+}

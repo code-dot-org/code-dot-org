@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -51,7 +51,7 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+[**Bli med Nova Scotia på Kodetimen (3min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
@@ -90,45 +90,45 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# Slik gjer du det for organisasjonar
 
-## Use this handout to recruit corporations
+## Bruk denne utskrifta til å rekruttere bedrifter
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Prøv leksjonane sjølv:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Vi har ein god variasjon av morosame, timeslange øvingar, utarbeida av mange partnarar. Nye øvingar blir klare til Kodetimen før <%= campaign_date('full') %>.
 
 **For alle leksjonane i Kodetimen gjeld:**
 
-- Require minimal prep-time for organizers
+- Minimal førebuingstid for arrangør
 - Er tilrettelagt for at elevane skal arbeide på eiga hand, i eige tempo og tilpasset eige ferdigheitsnivå
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Planlegg det du treng av utstyr - datamaskiner er valfrie
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Den beste opplevinga av Kodetimen vil være med datamaskiner med internett. Men du treng ikkje ei datamaskin til kvar elev, og Kodetimen kan også bli gjennomført heilt utan datamaskiner.
 
-- **Prøv ut leksjonane på elevane sine datamaskiner eller nettbrett.**Ver viss på at dei fungerer sikkeleg med lyd og video.
-- **Sjekk ut gratulasjons-sida** for å sjå kva elevane vil få sjå når dei er ferdige. 
-- **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+- **Prøv ut leksjonane på elevane sine datamaskiner eller nettbrett.** Ver viss på at dei fungerer som dei skal med lyd og video.
+- **Sjekk ut gratulasjons-sida** for å sjå kva elevane vil få sjå når dei er ferdige.
+- **Tilby høyretelefonar til gruppa di**, eller be elevane om å ta med sine eigne, dersom øvinga du vel passar best med lyd.
 
 ## 3) Planlegg ut frå tilgjengeleg utstyr
 
-- **Ikkje nok maskiner til alle elevane?** Prøv [parprogrammering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+- **Ikkje nok maskiner til alle elevane?** Prøv [parprogrammering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Når deltakarar går i par, hjelper dei kvarandre og er mindre avhengige av læraren.
 - **Er internettlinja treg?** Planlegg å vise videoane for heile klassa samla, slik at alle elev ikkje lastar ned kvar sin video. Eller prøv dei leksjonene som ikkje treng tilgang til nettet.
 
 ## 4) For å inspirere elevane - Vis ein video!
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Vis elevane ein inspirerande video for å dra i gang Kodetimen. For eksempel:
 
-- Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
+- Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eitt minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
+- [Lanseringsvideoen for Kodetimen 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) eller [videoen for Kodetimen 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Gi ein kort introduksjon for å gi elevane tenning**
 
 <% elsif @country == 'pe' %>
 
@@ -136,7 +136,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <
 
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 

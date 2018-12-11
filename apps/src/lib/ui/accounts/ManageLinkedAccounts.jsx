@@ -62,16 +62,12 @@ class ManageLinkedAccounts extends React.Component {
     return authOption.credentialType === OAUTH_PROVIDERS.CLEVER && this.props.isCleverStudent;
   };
 
+  // Given an array of authentication options, returns a boolean indicating whether or not the user can log in
   userHasLoginOption = (authOptions) => {
-    // It's the user's last authentication option
-    if (authOptions.length === 0) {
-      return false;
-    }
-
-    // If the user's only authentication options are email addresses, a password is required for login
-    const credentialTypes = authOptions.map(option => option.credentialType);
-    const uniqueCredentialTypes = _.uniq(credentialTypes);
-    if (uniqueCredentialTypes.length === 1 && uniqueCredentialTypes[0] === 'email') {
+    // If it's the user's last authentication option or all of the user's authentication options are email addresses,
+    // a password is required to log in
+    const allEmailOptions = _.every(authOptions, ['credentialType', 'email']);
+    if (allEmailOptions) {
       return this.props.userHasPassword;
     }
 

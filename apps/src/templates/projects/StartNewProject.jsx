@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import NewProjectButtons from './NewProjectButtons.jsx';
+import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import color from '../../util/color';
@@ -29,6 +29,7 @@ export default class StartNewProject extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
+    includeDanceParty: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -45,13 +46,37 @@ export default class StartNewProject extends React.Component {
 
   render() {
     const { canViewAdvancedTools, canViewFullList } = this.props;
+    const { includeDanceParty } = this.props;
     const { showFullList } = this.state;
+    const GAMES_AND_EVENTS =  includeDanceParty ?
+      ['spritelab', 'dance','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'] :
+      ['spritelab','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'];
+
+    const FOURTH_BASIC_DEFAULT_PROJECT_TYPE =
+      includeDanceParty ? 'dance' : 'flappy';
+
+    const DEFAULT_PROJECT_TYPES_ADVANCED = [
+      'spritelab',
+      'artist',
+      'applab',
+      'gamelab'
+    ];
+
+    const DEFAULT_PROJECT_TYPES_BASIC = [
+      'spritelab',
+      'artist',
+      'minecraft_designer',
+      FOURTH_BASIC_DEFAULT_PROJECT_TYPE
+    ];
+
+    const defaultProjectTypes = canViewAdvancedTools ?
+      DEFAULT_PROJECT_TYPES_ADVANCED : DEFAULT_PROJECT_TYPES_BASIC;
+
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
-          projectTypes={this.props.projectTypes}
-          canViewAdvancedTools={canViewAdvancedTools}
+          projectTypes={defaultProjectTypes}
         />
 
         {canViewFullList &&
@@ -68,38 +93,38 @@ export default class StartNewProject extends React.Component {
         <div style={{clear: 'both'}}/>
 
         {showFullList &&
-        <div>
-          <NewProjectButtons
-            description={i18n.projectGroupPlaylab()}
-            projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupEvents()}
-            projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupArtist()}
-            projectTypes={['artist', 'frozen']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupMinecraft()}
-            projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
-          />
-          {canViewAdvancedTools &&
+          <div>
             <NewProjectButtons
-              description={i18n.projectGroupAdvancedTools()}
-              projectTypes={['applab', 'gamelab', 'weblab']}
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
             />
-          }
-          <NewProjectButtons
-            description={i18n.projectGroupPreReader()}
-            projectTypes={['playlab_k1', 'artist_k1']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupMath()}
-            projectTypes={['calc', 'eval']}
-          />
-        </div>
+            <NewProjectButtons
+              description={i18n.projectGroupEvents()}
+              projectTypes={GAMES_AND_EVENTS}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupArtist()}
+              projectTypes={['artist', 'frozen']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMinecraft()}
+              projectTypes={['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
+            />
+            {canViewAdvancedTools &&
+              <NewProjectButtons
+                description={i18n.projectGroupAdvancedTools()}
+                projectTypes={['applab', 'gamelab', 'weblab']}
+              />
+            }
+            <NewProjectButtons
+              description={i18n.projectGroupPreReader()}
+              projectTypes={['playlab_k1', 'artist_k1']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMath()}
+              projectTypes={['calc', 'eval']}
+            />
+          </div>
         }
         <div style={styles.spacer}/>
       </div>

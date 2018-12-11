@@ -106,9 +106,10 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
     def local_workshop_daily_survey_report
-      unless @workshop.local_summer? || @workshop.teachercon?
+      unless @workshop.local_summer? || @workshop.teachercon? ||
+        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) && @workshop.workshop_starting_date > Date.new(2018, 8, 1))
         return render status: :bad_request, json: {
-          error: 'Only call this route for 5 day summer workshops, local or TeacherCon'
+          error: 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'
         }
       end
 
@@ -124,9 +125,12 @@ module Api::V1::Pd
     private
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
-    # NOT a workshop organizer - the filter is the user's name.
+    # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.
     def facilitator_name_filter
-      current_user.facilitator? && !(current_user.workshop_organizer? || current_user.program_manager?) ? current_user.name : nil
+      return nil if current_user.workshop_admin? || current_user.workshop_organizer? || current_user.program_manager?
+      return current_user.name if current_user.facilitator?
+
+      raise "Unexpected permission for #{current_user.id}. Expected at least one of facilitator, workshop_admin, workshop_organizer, program_manager"
     end
   end
 end

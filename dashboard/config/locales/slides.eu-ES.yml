@@ -623,15 +623,15 @@ eu:
           "Hasi" botoian eta ikusi txoria habira joaten.
     C1_maze_loops:
       1:
-        text: Konputagailuak aginduak errepikatzen oso onak dira. Pertsona izanda,
-          zu, oso segituan aspertuko zinateke zerbait behin eta berriz egin beharko
-          bazenu. Konputagailuak, ordea, gauza berdina milaka edo milioika aldiz oso
-          ondo egin dezake aspertu gabe.
+        text: Konputagailuak aginduak errepikatzen oso onak dira. Pertsona arrunta,
+          alabaina, azkar asko asper daiteke zerbait behin eta berriz egin behar duenean.
+          Konputagailuak, ordea, gauza berdina milaka edo milioika aldiz egin dezake,
+          inoiz aspertu gabe eta erabat ondo eginik.
       2:
-        text: Adibidez, Facebook-en dauden guztiei e-mailak bidalita zoriondu nahiko
-          banie, mezu horiek guztiak idazten mende oso bat emango nuke. Pixka bat
-          programatuta, Facebook-eko pertsona guztiei zoriontzeko programa bat egin
-          dezaket.
+        text: Adibidez, Facebooken izen emanda dauden guztiak emailez zoriondu nahiko
+          banitu, mezuak idazten mende osoa emango nuke. Pixka bat programatuta, aldiz,
+          Facebooken dauden pertsona guztiak epostaz banan-bana zoriontzeko sistema
+          bidera nezake.
       3:
         text: Txoria txerrira eramateko maila honetan... hiru ipar bloke eraman ordez
           lan-eremura, "errepikatu" blokea erabiliko duzu. Eraman "errepikatu" blokea
@@ -2503,16 +2503,16 @@ eu:
         text: Orain nahi duzuna eraiki dezakezu! Gozatu!
     gumball_intro:
       1:
-        text: Oso erraza da zure joko garatzea. Programazioko oinarri batzuk jakinda,
-          segituan has zaitezke jolasean zeuk sortutako jokoan.
+        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
+          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
       2:
-        text: Bideo-joko faboritorik ba al daukazu? Pausu bat emango dugu PlayLab-ekin
-          jokoak sortu ahal izateko. Joko onek istorio bat izan ohi dute eta istorio
-          guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien artean
-          elkar eragiten dute. Agian puntuan batu ere egingo dituzte jokoaren arauen
-          arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola
-          egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen
-          eta telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
+          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
+          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
+          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
+          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
+          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
+          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
       3:
         text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
           ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta

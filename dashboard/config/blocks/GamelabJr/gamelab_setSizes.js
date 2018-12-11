@@ -4,11 +4,11 @@ function setSizes(sprite,property,val) {
     return;
   }
   if (property == "height") {
-    sprite.height=(sprite.height*val/100);
+    sprite.height = sprite.animation.getHeight() * val / 100;
   }
   else if (property == "width") {
-   	sprite.width=(sprite.width*val/100);
+   	sprite.width = sprite.animation.getWidth() * val / 100;
   } else {
-    sprite.scale=val/100;
+    sprite.setScale(sprite.getScale() * val / 100);
   }
 }

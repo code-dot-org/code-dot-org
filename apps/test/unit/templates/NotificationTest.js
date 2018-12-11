@@ -70,17 +70,21 @@ describe('Notification', () => {
           </div>
           <div>
             <div>
-              {announcement.heading}
+              <div>
+                {announcement.heading}
+              </div>
+              <div>
+                {announcement.description}
+              </div>
             </div>
             <div>
-              {announcement.description}
+              <Button
+                href={announcement.link}
+                text={announcement.buttonText}
+                target="_blank"
+              />
             </div>
           </div>
-          <Button
-            href={announcement.link}
-            text={announcement.buttonText}
-            target="_blank"
-          />
         </div>
         <div/>
       </div>
@@ -103,11 +107,14 @@ describe('Notification', () => {
           </div>
           <div>
             <div>
-              {information.notice}
+              <div>
+                {information.notice}
+              </div>
+              <div>
+                {information.details}
+              </div>
             </div>
-            <div>
-              {information.details}
-            </div>
+            <div/>
           </div>
         </div>
         <div/>
@@ -131,11 +138,14 @@ describe('Notification', () => {
           </div>
           <div>
             <div>
-              {success.notice}
+              <div>
+                {success.notice}
+              </div>
+              <div>
+                {success.details}
+              </div>
             </div>
-            <div>
-              {success.details}
-            </div>
+            <div/>
           </div>
         </div>
         <div/>
@@ -159,11 +169,14 @@ describe('Notification', () => {
           </div>
           <div>
             <div>
-              {failure.notice}
+              <div>
+                {failure.notice}
+              </div>
+              <div>
+                {failure.details}
+              </div>
             </div>
-            <div>
-              {failure.details}
-            </div>
+            <div/>
           </div>
         </div>
         <div/>
@@ -187,11 +200,14 @@ describe('Notification', () => {
           </div>
           <div>
             <div>
-              {warning.notice}
+              <div>
+                {warning.notice}
+              </div>
+              <div>
+                {warning.details}
+              </div>
             </div>
-            <div>
-              {warning.details}
-            </div>
+            <div/>
           </div>
         </div>
         <div/>
@@ -215,17 +231,21 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              {findCourse.notice}
+              <div>
+                {findCourse.notice}
+              </div>
+              <div>
+                {findCourse.details}
+              </div>
             </div>
             <div>
-              {findCourse.details}
+              <Button
+                href={findCourse.link}
+                text={findCourse.buttonText}
+                target="_blank"
+              />
             </div>
           </div>
-          <Button
-            href={findCourse.link}
-            text={findCourse.buttonText}
-            target="_blank"
-          />
         </div>
         <div/>
       </div>

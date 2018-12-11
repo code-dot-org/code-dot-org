@@ -42,7 +42,7 @@ class LessonSelector extends Component {
               value={lesson.position}
               key={lesson.id}
             >
-              {lesson.position}: {lesson.name}
+              {lesson.lockable ? '--' : `${lesson.relative_position}:`} {lesson.name}
             </option>
           ))}
         </select>

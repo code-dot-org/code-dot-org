@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)      not null
-#  pool        :string(255)      not null
+#  pool        :string(255)      default(""), not null
 #  category    :string(255)
 #  config      :text(65535)
 #  helper_code :text(65535)
@@ -20,21 +20,25 @@
 
 class Block < ApplicationRecord
   include MultiFileSeeded
-  after_save {@@all_pool_names = nil}
+
+  DEFAULT_POOL = 'Vanilla'.freeze
 
   def self.all_pool_names
     @@all_pool_names ||= Block.distinct.pluck(:pool)
   end
 
   def self.for(*types)
+    types = types.to_set.add(DEFAULT_POOL)
     types.map {|type| Block.load_and_cache_by_pool(type)}.flatten.compact
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Block.all_pool_names.include? pool
-      Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
-        Block.where(pool: pool).map(&:block_options)
-      end
+    if Script.should_cache? && !Block.all_pool_names.include?(pool)
+      return nil
+    end
+
+    Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
+      Block.where(pool: pool).map(&:block_options)
     end
   end
 
@@ -75,7 +79,11 @@ class Block < ApplicationRecord
   end
 
   def write_additional_files
-    File.write js_path, helper_code if helper_code.try(:present?)
+    if helper_code.try(:present?)
+      File.write js_path, helper_code
+    else
+      delete_additional_files
+    end
   end
 
   def delete_additional_files

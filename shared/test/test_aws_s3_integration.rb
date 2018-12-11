@@ -63,6 +63,53 @@ class AwsS3IntegrationTest < Minitest::Test
     assert_equal 'video/mp4', object.content_type
   end
 
+  def test_s3_presigned_url_upload
+    random = Random.new(0)
+    key = "presigned_test_key-#{random.rand}"
+
+    # VCR records the particular signed URL's response in the Net::HTTP call below,
+    # so we force generation of the same URL each time
+    forced_url = "http://cdo-temp.s3.amazonaws.com/presigned_test_key-0.5488135039273248?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJKADNJLDLSFUAK2Q/20180928/us-east-1/s3/aws4_request&X-Amz-Date=20180928T074343Z&X-Amz-Expires=900&X-Amz-Signature=42bda69aface60ce44de2392261f5a7a1d838efac84a1531533cc969acee6a41&X-Amz-SignedHeaders=host"
+    Aws::S3::Presigner.any_instance.stubs(:presigned_url).returns(forced_url)
+
+    presigned_url = AWS::S3.presigned_upload_url(TEST_BUCKET, key)
+    parsed_url = URI.parse(presigned_url)
+    body = 'Testing S3 presigned upload'
+    Net::HTTP.start(parsed_url.host) do |http|
+      http.send_request("PUT", parsed_url.request_uri, body, {"content-type": ""})
+    end
+
+    downloaded = AWS::S3.download_from_bucket(TEST_BUCKET, key)
+    assert_equal body, downloaded
+  end
+
+  def test_s3_presigned_url_delete
+    random = Random.new(0)
+    key = 'test-delete-key'
+    test_value = random.rand.to_s
+    VCR.use_cassette('awss3integration/s3_presigned_url_delete-create') do
+      AWS::S3.upload_to_bucket(TEST_BUCKET, key, test_value, no_random: true)
+    end
+
+    forced_url = "https://cdo-temp.s3.amazonaws.com/test-delete-key?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJKADNJLDLSFUAK2Q%2F20180929%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180929T003520Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=a4b2c58fe84adf4f4ac42087bb4bac1bc410814040c93ba4b24b58a322e7a6e6"
+    Aws::S3::Presigner.any_instance.stubs(:presigned_url).returns(forced_url)
+
+    VCR.use_cassette('awss3integration/s3_presigned_url_delete-get_present') do
+      downloaded = AWS::S3.download_from_bucket(TEST_BUCKET, key)
+      assert_equal test_value, downloaded
+    end
+
+    presigned_url = AWS::S3.presigned_delete_url(TEST_BUCKET, key)
+    parsed_url = URI.parse(presigned_url)
+    Net::HTTP.start(parsed_url.host) do |http|
+      http.send_request("DELETE", parsed_url.request_uri)
+    end
+
+    VCR.use_cassette('awss3integration/s3_presigned_url_delete-get_deleted') do
+      refute AWS::S3.exists_in_bucket(TEST_BUCKET, key)
+    end
+  end
+
   def test_aws_s3_acl_options
     client = AWS::S3.connect_v2!
     all_users_uri = 'http://acs.amazonaws.com/groups/global/AllUsers'

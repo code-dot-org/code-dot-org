@@ -27,7 +27,7 @@
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. \r\n\r\n<br/>\r\nEdit the `jump` function so that it uses the `actor` parameter to make the correct character jump. ",
+    "markdown_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one.\r\n\r\nEdit the `jump` function so that it uses the `actor` parameter to make the correct character jump.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -38,9 +38,19 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "hint_prompt_attempts_threshold": 2,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 00:10:04 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "functions_with_params": 1

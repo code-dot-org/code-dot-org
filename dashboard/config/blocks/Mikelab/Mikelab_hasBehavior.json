@@ -1,0 +1,19 @@
+{
+  "category": "Booleans",
+  "config": {
+    "func": "hasBehavior",
+    "blockText": "{SPRITE} is currently {BEHAVIOR}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ],
+    "returnType": "Boolean"
+  }
+}

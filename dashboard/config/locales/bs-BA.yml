@@ -40,6 +40,7 @@ bs:
   next_resource: Sljedeći resurs
   cancel: Poništi
   okay: U redu
+  or: ili
   heading_x_of_y: "%{heading} (strana %{x} od %{y})"
   add_teacher_form:
     code:
@@ -84,6 +85,7 @@ bs:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Račun
+    microsoft_v2_auth: Microsoft Račun
     clever: Pametni račun
     forgot_password: Zaboravio/la si šifru?
     need_confirmation: Nisi primio/la upute za potvrdu?
@@ -213,7 +215,6 @@ bs:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
         applab: Napravi Aplikaciju
-      courses: Kursevi
       project_gallery: Projekti
       help_support: Pomoć i podrška
       documentation: Dokumentacija
@@ -231,15 +232,19 @@ bs:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte
       label: Zdravo, %{username}
-      stats: Moj napredak
+      stats: Code Studio
       settings: Moj račun
       logout: Odjava
       signin: Prijava
       signup: Napravi račun
       already_registered: Jeste li već registrirani?
-      pair_programming: Programiranje u Paru
       team: Tim
       navigator: Partner
+      create: Kreiraj
+      applab: Laboratorij za Aplikacije
+      artist: Umjetnik
+      playlab: Play Lab
+      flappy: Flappy
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
@@ -387,7 +392,7 @@ bs:
     more: Više
     feedback: Pošalji povratne informacije
     translate: Pomozi nam prevesti na vaš jezik
-    support: Podrška
+    support: Pomoć i Zajednica
     support_url: http://support.code.org
     tos_short: Uvjeti
     tos: Uvjeti
@@ -427,7 +432,7 @@ bs:
     bounce_og_title: Pogledaj moju igru Odbijanja
     flappy_og_title: Pogledaj moju Flappy igricu
     studio_og_title: Pogledaj moju aplikaciju Laboratorija Igrica
-    check_out_what_i_made: Pogledaj što sam napravio
+    check_out_what_i_made: Pogledaj šta sam napravio
     og_description: Sam/a sam napisao/la kôd na Code.org
     phone_number_not_allowed: Izgleda da ovdje ima telefonski broj. Pokušaj promijeniti
       tekst.
@@ -480,6 +485,8 @@ bs:
       title: Infinity Play Lab (Beskonačni Laboratorij Igranja)
       body: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj
         igraju karakteri Disney Beskonačnost.
+    minecraft:
+      body: Istražite svijet Minecraft-a putem koda
     unplugged:
       body: Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u
         svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare
@@ -594,14 +601,7 @@ bs:
     save: Snimi
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Ostalo
-    - 
+      other: Ostalo
     submit: Potvrdi
     decline: Zatvori
   zendesk_too_young_message: Nažalost, mlađi korisnici se ne mogu prijaviti na našu

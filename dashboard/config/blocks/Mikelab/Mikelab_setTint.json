@@ -1,0 +1,24 @@
+{
+  "category": "Actions",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "setTint",
+    "blockText": "change color of {SPRITE} to {COLOR}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ],
+    "methodCall": true
+  }
+}

@@ -28,6 +28,7 @@
 module Pd
   class WorkshopFacilitatorDailySurvey < ActiveRecord::Base
     include JotFormBackedForm
+    include Pd::WorkshopSurveyConstants
 
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
@@ -61,20 +62,40 @@ module Pd
       :day
     )
 
-    VALID_DAYS = (1..5).freeze
+    # Different categories have different valid days
+    # Not identical to the one in WorkshopDailySurvey
+    VALID_DAYS = {
+      LOCAL_CATEGORY => (1..5).to_a.freeze,
+      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
+      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+    }
 
-    validates_inclusion_of :day, in: VALID_DAYS
+    validate :day_for_subject
 
-    def self.form_id
-      get_form_id 'local', 'facilitator'
+    def self.form_id(subject)
+      get_form_id CATEGORY_MAP[subject], FACILITATOR_FORM_KEY
     end
 
     def self.all_form_ids
-      [form_id]
+      CATEGORY_MAP.keys.map do |subject|
+        form_id(subject)
+      end
     end
 
     def self.unique_attributes
       [:user_id, :pd_session_id, :facilitator_id]
+    end
+
+    private
+
+    def day_for_subject
+      unless VALID_DAYS[Pd::WorkshopDailySurvey::CATEGORY_MAP[pd_workshop.subject]].include? day
+        errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+      end
     end
   end
 end

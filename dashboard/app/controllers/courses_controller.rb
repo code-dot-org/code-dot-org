@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
+        @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
         courses = Course.valid_courses(user: current_user)
@@ -35,6 +36,11 @@ class CoursesController < ApplicationController
       return
     when 'csp'
       redirect_to "/courses/csp-2018#{redirect_query_string}"
+      return
+    end
+
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
     end
 

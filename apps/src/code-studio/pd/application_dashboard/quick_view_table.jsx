@@ -5,8 +5,12 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import { StatusColors } from './constants';
+import {
+  StatusColors,
+  ApplicationStatuses
+} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const styles = {
   table: {
@@ -30,7 +34,7 @@ const styles = {
 export class QuickViewTable extends React.Component {
   static propTypes = {
     path: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired,
+    applications: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -56,15 +60,23 @@ export class QuickViewTable extends React.Component {
           direction,
           position: 0
         }
-      }
+      },
+
+      // track live in-memory changes, to avoid unnecessary API refresh
+      applicationsDelta: {}
     };
   }
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
+  showLocked = () => (this.props.viewType === 'facilitator');
+
+  handlePrincipalApprovalButtonsChange = (applicationId, principal_approval) => {
+    this.setState({
+      applicationsDelta: {
+        ...this.state.applicationsDelta,
+        [applicationId]: {principal_approval}
+      }
+    });
+  };
 
   formatBoolean(bool) {
     return bool ? "Yes" : "No";
@@ -117,9 +129,9 @@ export class QuickViewTable extends React.Component {
         transforms: [sortable]
       },
       cell: {
-        format: (status) => {
-          return _.upperFirst(status);
-        },
+        format: (status) => (
+          ApplicationStatuses[this.props.viewType][status] || _.upperFirst(status)
+        ),
         transforms: [
           (status) => ({
             style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -143,21 +155,36 @@ export class QuickViewTable extends React.Component {
 
     if (this.props.viewType === 'teacher') {
       columns.push({
-        property: 'principal_approval',
+        property: 'principal_approval_state',
         header: {
           label: 'Principal Approval',
           transforms: [sortable]
+        },
+        cell: {
+          format: this.formatPrincipalApprovalCell
         }
       }, {
         property: 'meets_criteria',
         header: {
-          label: 'Meets Criteria',
+          label: 'Meets Minimum Requirements',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'meets_scholarship_criteria',
+        header: {
+          label: 'Meets Scholarship Requirements',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
           transforms: [sortable]
         }
       }, {
         property: 'total_score',
         header: {
-          label: 'Total Score',
+          label: 'Bonus Points',
           transforms: [sortable]
         }
       });
@@ -179,10 +206,10 @@ export class QuickViewTable extends React.Component {
     },{
       property: 'id',
       header: {
-        label: 'View Application',
+        label: 'Actions',
       },
       cell: {
-        format: this.formatViewButton
+        format: this.formatActionsCell
       }
     });
 
@@ -207,8 +234,14 @@ export class QuickViewTable extends React.Component {
   };
 
   constructRows() {
-    let rows = this.props.data;
+    let rows = this.props.applications;
     rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    if (Object.keys(this.state.applicationsDelta).length > 0) {
+      rows = rows.map(row => ({
+        ...row,
+        ...this.state.applicationsDelta[row.id]
+      }));
+    }
     return rows;
   }
 
@@ -236,7 +269,7 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatViewButton = (id) => {
+  formatActionsCell = (id) => {
     return (
       <Button
         bsSize="xsmall"
@@ -245,6 +278,27 @@ export class QuickViewTable extends React.Component {
       >
         View Application
       </Button>
+    );
+  };
+
+  formatPrincipalApprovalCell = (principal_approval_state, props) => {
+    if (principal_approval_state) {
+      return (
+        <span>
+          {principal_approval_state}
+        </span>
+      );
+    }
+
+    return (
+      <div>
+        <PrincipalApprovalButtons
+          applicationId={props.rowData.id}
+          showSendEmailButton={true}
+          showNotRequiredButton={true}
+          onChange={this.handlePrincipalApprovalButtonsChange}
+        />
+      </div>
     );
   };
 

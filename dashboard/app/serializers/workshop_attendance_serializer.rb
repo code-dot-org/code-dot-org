@@ -3,7 +3,7 @@
 # Table name: workshop_attendance
 #
 #  id         :integer          not null, primary key
-#  teacher_id :integer          not null
+#  teacher_id :integer
 #  segment_id :integer          not null
 #  status     :string(255)
 #  created_at :datetime

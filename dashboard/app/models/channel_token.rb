@@ -37,7 +37,7 @@ class ChannelToken < ActiveRecord::Base
       # your own channel
       find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
         # Get a new channel_id.
-        channel = create_channel ip, storage_app, data: data
+        channel = create_channel ip, storage_app, data: data, standalone: false
         _, ct.storage_app_id = storage_decrypt_channel_id(channel)
       end
     end
@@ -51,7 +51,7 @@ class ChannelToken < ActiveRecord::Base
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil, remix_parent_id: nil)
+  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -65,6 +65,7 @@ class ChannelToken < ActiveRecord::Base
       ip: ip,
       type: type,
       remix_parent_id: remix_parent_id,
+      standalone: standalone,
     )
   end
 end

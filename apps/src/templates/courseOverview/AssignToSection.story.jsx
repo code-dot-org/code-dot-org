@@ -1,5 +1,5 @@
 import React from 'react';
-import AssignToSection from './AssignToSection';
+import {UnconnectedAssignToSection as AssignToSection} from './AssignToSection';
 
 const defaultProps = {
   courseId: 30,
@@ -21,7 +21,8 @@ const defaultProps = {
       id: 338,
       name: "section_with_course"
     }
-  ]
+  ],
+  updateHiddenScript: () => {},
 };
 
 export default storybook => {

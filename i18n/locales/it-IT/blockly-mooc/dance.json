@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "È necessario creare un ballerino.",
+  "danceFeedbackNoDancers": "Non hai nessun ballerino.",
+  "danceFeedbackNoBackground": "Devi aggiungere un effetto di sfondo.",
+  "danceFeedbackTooManyDancers": "Fai attenzione! Se inserisci il blocco `crea un nuovo` all’interno del blocco `ogni 2 battute`, creerai un esercito di ballerini.",
+  "danceFeedbackUseSetSize": "Usa il blocco `imposta dimensioni del ballerino_sullo_sfondo2` per rimpicciolire quel ballerino.",
+  "danceFeedbackUseSetTint": "Usa il blocco `imposta la tonalità` per modificare la tonalità di un ballerino.",
+  "danceFeedbackUseStartMapping": "Prova ad aggiungere al tuo programma il blocco<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>.",
+  "danceFeedbackStartNewMove": "Dopo la quarta battuta il tuo ballerino non stava eseguendo una nuova mossa.",
+  "danceFeedbackNeedDifferentDance": "È necessario utilizzare uno stile di ballo differente.",
+  "danceFeedbackNeedEveryTwoMeasures": "Assicurati di stare utilizzando il blocco `ogni 2 battute` ",
+  "danceFeedbackNeedMakeANewDancer": "Usa il blocco `crea un nuovo` per creare un nuovo ballerino.",
+  "measure": "Battuta:"
+}

@@ -1,6 +1,18 @@
 lv:
   data:
     callouts:
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
       Course 4 Artist 4_callout:
         repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu pilnu apli
       Course 4 Artist 7_callout:
@@ -86,9 +98,15 @@ lv:
         craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Izmanto bloku "zīmē apli" un maini izmēru.
       frozen cross rotate_callout:
+        replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen cross rotate_test_callout:
         replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
       frozen cross_callout:
         repeat_blocks_1: "(1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem darba vietā"
@@ -99,19 +117,45 @@ lv:
         frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
       frozen freeplay_callout:
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
       frozen line_callout:
+        move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
+      frozen line_b_callout:
+        move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
+      frozen line_test_callout:
         move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu
       frozen perpendicular_callout:
         turn_elsa: Izmanto "Pagriezties" bloku, lai Elza pagrieztos. Skaitlis izkrītošajā izvēlnē nosaka, par cik Elza pagriezīsies
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Izmanto bloku "zīmēt sniegpārsliņas zaru"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Izmanto bloku "zīmēt sniegpārsliņas zaru"
       frozen square iterative_callout:
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+      frozen square iterative_b_callout:
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+      frozen square iterative_test_callout:
         frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
       frozen square loop 3x_callout:
         replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop 3x_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop 3x_test_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
       frozen square loop_callout:
         replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square loop_test_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
       frozen square snowflake_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square snowflake_b_callout:
+        replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
+      frozen square snowflake_test_callout:
         replace_questions: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru

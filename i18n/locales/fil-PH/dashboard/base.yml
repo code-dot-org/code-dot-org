@@ -39,6 +39,7 @@ fil:
   next_resource: Susunod na resource
   cancel: "Kanselahin"
   okay: "Okey"
+  or: "o"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
@@ -83,6 +84,7 @@ fil:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
+    microsoft_v2_auth: 'Account sa Microsoft'
     clever: 'Clever na Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
@@ -256,9 +258,7 @@ fil:
         applab: 'Lumikha ng App'
         gamelab: 'Gumawa ng Game Lab na proyekto'
         weblab: 'Gumawa ng Web Lab (beta) na proyekto'
-      home: "Home"
       my_dashboard: "Aking Dashboard"
-      courses: "Mga kurso"
       course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
@@ -303,10 +303,16 @@ fil:
       signin: 'Sign in'
       signup: 'Gumawa ng account'
       already_registered: 'Nakarehistro na?'
-      pair_programming: 'Pair programming'
       team: 'Koponan'
       driver: 'Maglog-in'
       navigator: 'Kasama'
+      create: 'I-create'
+      applab: 'App na Lab'
+      artist: 'Artista'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progreso ni %{name}"
       progress: 'Progreso mo'
@@ -473,7 +479,7 @@ fil:
     more: 'More'
     feedback: 'Magbigay ng feedback'
     translate: 'Magboluntaryo na magsali ng ating nilalaman'
-    support: 'Suporta'
+    support: 'Tulong at Komunidad'
     support_url: 'http://support.code.org/'
     tos_short: 'Mga Alituntunin'
     tos: 'Mga Palatuntunan'
@@ -585,10 +591,12 @@ fil:
       body: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
     minecraft:
       title: "Minecraft"
-      body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code."
+      body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code"
     minecraft2016:
       title: "Minecraft"
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
@@ -716,22 +724,14 @@ fil:
     title: "Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science"
     message: "Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop sa iyo)"
     races:
-      - 
-        white: "Puti"
-      - 
-        black: "Itim o Aprikano-Amerikano"
-      - 
-        hispanic: "Hispano o Latino"
-      - 
-        asian: "Asyano"
-      - 
-        hawaiian: "Katutubong Hawayano o ibang pang nasa Pasipiko"
-      - 
-        american_indian: "Amerikanong-Indiyano/Katutubong Alaska"
-      - 
-        other: "Iba"
-      - 
-        opt_out: "Mas gustong hindi sabihin"
+      white: "Puti"
+      black: "Itim o Aprikano-Amerikano"
+      hispanic: "Hispano o Latino"
+      asian: "Asyano"
+      hawaiian: "Katutubong Hawayano o ibang pang nasa Pasipiko"
+      american_indian: "Amerikanong-Indiyano/Katutubong Alaska"
+      other: "Iba"
+      opt_out: "Mas gustong hindi sabihin"
     submit: "Ipasa"
     decline: "Isara"
   zendesk_too_young_message: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'

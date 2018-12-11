@@ -47,6 +47,7 @@
     "parent_level_id": 11952,
     "markdown_instructions": "Check out this new \"if-else\" block - it lets you run one set of code _if_ a condition is true, and a different set of code if it's false. Inside it we're using another new block that tells you _if_ two sprites are touching.\r\n\r\nSee if you can make both the dog and cat stop moving when they run into each other.",
     "show_type_hints": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

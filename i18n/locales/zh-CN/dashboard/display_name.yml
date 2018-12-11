@@ -1,0 +1,117 @@
+zh-CN:
+  data:
+    display_name:
+      AB_Debug_Artist1: '小艺术家调试模式 #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: '视频：设计模式'
+      App Lab Intro 8 - Video Getting Started: '视频：开始'
+      App Lab Intro 8 - Video Images and Sounds: '视频：图像和声音'
+      App Lab Intro 8 - Video Share Your App: '视频：分享应用程序'
+      AppLab Intro 3 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 3 - Change Text 2: 更改文本
+      AppLab Intro 3 - Change Text: 更改文本
+      AppLab Intro 3 - onEvent mouseOut: 使用 mouseout
+      AppLab Intro 4 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 4 - Change Text 2: 更改文本
+      AppLab Intro 4 - Change Text: 更改文本
+      AppLab Intro 4 - Video Welcome: 欢迎来到《编程一小时》
+      AppLab Intro 4 - Video setProperty: 开始
+      AppLab Intro 5 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 5 - Change Text 2: 更改文本
+      AppLab Intro 5 - Change Text: 更改文本
+      AppLab Intro 6 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 6 - Change Text 2: 更改文本
+      AppLab Intro 6 - Video welcome: 开始
+      AppLab Intro 7 - Change Screen Color: 更改屏幕颜色
+      AppLab Intro 7 - Change Text 2: 更改文本
+      CSD Polling Events Map: 轮询事件
+      CSD Polling Events Map_2018: 轮询事件
+      CSD Timed Loop Map: 定时的循环
+      CSD U2 Heading Sizes: 标题大小
+      CSD U2 Heading Sizes_2018: 标题大小
+      CSD U2 Heading Test: 标题和段落
+      CSD U2 Heading Test_2018: 标题和段落
+      CSD U2 Inspector Warm Up: 浏览HTML
+      CSD U2 Inspector Warm Up_2018: 浏览HTML
+      CSD U2 Layout Properties Map: 布局属性
+      CSD U2 Layout Properties Map_2018: 布局属性
+      CSD U2 Pair Programming Video: 结对编程
+      CSD U2 Pair Programming Video_2018: 结对编程
+      CSD U2 RGB intro: RGB部件
+      CSD U2 RGB intro_2018: RGB部件
+      CSD U2 Style Sheet Map: CSS和样式表
+      CSD U2 Style Sheet Map_2018: CSS和样式表
+      CSD U2 images map: HTML 中的图像
+      CSD U2 images map_2018: HTML 中的图像
+      CSD U3 Animation Tab Map: 动画标签页
+      CSD U3 Animation Tab Map_2018: 动画标签页
+      CSD U3 Draw Loop Map: 绘制循环
+      CSD U3 L11 Freeplay: 自由发挥
+      CSD U3 L11 Freeplay_2018: 自由发挥
+      CSD U3 L12 Freeplay: 自由发挥
+      CSD U3 L12 Freeplay_2018: 自由发挥
+      CSD U3 L13 Freeplay: 自由发挥
+      CSD U3 L13 Freeplay_2018: 自由发挥
+      CSD U3 L15 Freeplay: 自由发挥
+      CSD U3 L15 Freeplay_2018: 自由发挥
+      CSD U3 L16 Freeplay: 自由发挥
+      CSD U3 L16 Freeplay_2018: 自由发挥
+      CSD U3 L17 Freeplay: 自由发挥
+      CSD U3 L17 Freeplay_2018: 自由发挥
+      CSD U3 L18 Freeplay: 自由发挥
+      CSD U3 L18 Freeplay_2018: 自由发挥
+      CSD U3 L19 Freeplay: 自由发挥
+      CSD U3 L19 Freeplay_2018: 自由发挥
+      CSD U3 L3 Freeplay: 自由发挥
+      CSD U3 L3 Freeplay_2018: 自由发挥
+      CSD U3 L4 Freeplay: 自由发挥
+      CSD U3 L4 Freeplay_2018: 自由发挥
+      CSD U3 L5 Freeplay: 自由发挥
+      CSD U3 L5 Freeplay_2018: 自由发挥
+      CSD U3 L6 Freeplay: 自由发挥
+      CSD U3 L6 Freeplay_2018: 自由发挥
+      CSD U3 L7 Freeplay: 自由发挥
+      CSD U3 L7 Freeplay_2018: 自由发挥
+      CSD U3 L9 Freeplay: 自由发挥
+      CSD U3 L9 Freeplay_2018: 自由发挥
+      CSD U3 Random Number Map Level: 随机数
+      CSD U3 Random Number Map Level_2018: 随机数
+      CSD U3 Random Number Map: 随机数
+      CSD U3 Sprite Properties Map: 精灵属性
+      CSD U3 Sprite Properties Map_2018: 精灵属性
+      CSD U3 The Draw Loop Map: 绘制循环
+      CSD U3 The Draw Loop Map_2018: 绘制循环
+      CSD U3 Variables Map: 变量
+      CSD U3 Variables Map_2018: 变量
+      CSD U3 collisions build isTouching: 碰撞检测
+      CSD U3 collisions build isTouching_2018: 碰撞检测
+      CSD U3 functions map: 函数
+      CSD U4 Mult Screen Map: 多屏幕应用程序
+      CSD U4 Mult Screen Map_2018: 多屏幕应用程序
+      CSD U6 Event Types: 事件类型
+      CSD U6 Event Types_2018: 事件类型
+      CSD U6 arrays intro: 数组的简介
+      CSD U6 arrays intro_2018: 数组的简介
+      CSD U6 arrays video: 数组的简介
+      CSD U6 for loop map: 计数循环
+      CSD U6 for loop map_2018: 计数循环
+      CSD U6 functions paramters video: 有参数的函数
+      CSD U6 functions paramters video_2018: 有参数的函数
+      CSD U6 setProperty Map: 使用代码设计屏幕
+      CSD U6 setProperty Map_2018: 使用代码设计屏幕
+      CourseEF_video_IntroSpriteLab: 这是精灵实验室
+      CourseEF_video_IntroSpriteLab_2019: 这是精灵实验室
+      Dance_Party_extras_battle: 舞蹈团队
+      Dance_Party_extras_every_beat: 四分注释
+      Dance_Party_extras_layout: 进入阵型
+      Dance_Party_extras_on_beat: 低音、中音和高音
+      Dance_Party_extras_speed: 加速、 减速
+      Dance_Party_extras_visible: 让他们去哪儿？
+      MC_HOC_2017_FP10x10: 自由发挥
+      MC_HOC_2017_FP10x10_RE: 自由发挥
+      SG U3L07 More Subgoals: 使用文档
+      courseA_video_Stevie: 斯蒂夫和大项目
+      courseA_video_Stevie_2018: 斯蒂夫和大项目
+      courseB_video_Unspotted: 没有斑点的Bug
+      courseB_video_Unspotted_2018: 没有斑点的Bug
+      expresslink: 快速课程
+      harvey_pixelation: 像素化的部件

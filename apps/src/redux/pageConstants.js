@@ -5,8 +5,8 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = new Set([
   'skinId',
   'showNextHint',
-  'ttsInstructionsUrl',
-  'ttsMarkdownInstructionsUrl',
+  'ttsShortInstructionsUrl',
+  'ttsLongInstructionsUrl',
   'assetUrl',
   'channelId',
   'hasDataMode',

@@ -671,6 +671,10 @@ export function reload() {
   window.location.reload();
 }
 
+export function currentLocation() {
+  return window.location;
+}
+
 /**
  * Wrapper for window.location.href which we can stub in unit tests.
  * @param {string} href Location to navigate to.

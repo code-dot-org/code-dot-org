@@ -101,7 +101,7 @@
   "dropletBlock_moveFast_description": "Ändrar en uppsättning karaktärer till att gå snabbt.",
   "dropletBlock_moveFast_param0": "typ",
   "dropletBlock_moveFast_param0_description": "Typ av karaktär som ska ändras ('slumpmässig', 'Stormtrooper', 'Rebellpilot', 'Puffer-gris', 'Mynock', 'Mus-droid', 'Tauntaun' eller 'Probot').",
-  "dropletBlock_playSound_description": "Spela upp det valda ljudet.",
+  "dropletBlock_playSound_description": "Spela det valda ljudet.",
   "dropletBlock_playSound_param0": "ljud",
   "dropletBlock_playSound_param0_description": "Namn på ljudet som ska spelas.",
   "dropletBlock_removePoints_description": "Ta bort poäng från poängsumman.",

@@ -1,0 +1,13 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "draggable",
+    "blockText": "being draggable",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ]
+  }
+}

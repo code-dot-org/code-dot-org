@@ -123,6 +123,8 @@ sl:
               name: Labirint
             'Maze: Conditionals':
               name: 'Labirint: Pogoji'
+            Songwriting:
+              name: Napiši pesem
             'Studio: Create a Game':
               name: 'Play Lab: ustvari igrico'
             'Studio: Create a Story':
@@ -395,6 +397,8 @@ sl:
               name: Dajmo, dajmo
             'Real-life Algorithms: Plant a Seed':
               name: 'Življenjski algoritmi: Zasadi seme'
+            Songwriting:
+              name: Napiši pesem
             The Big Event:
               name: Veliki dogodek
         ScienceP3OLPT2:
@@ -455,6 +459,8 @@ sl:
           stages:
             Digital Citizenship:
               name: Digitalno državljanstvo
+            Songwriting:
+              name: Napiši pesem
         grade1:
           stages:
             Events:
@@ -550,12 +556,15 @@ sl:
           stages:
             Binary Images:
               name: Binarne slike
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:
               name: Seznami
         minecraft:
           title: Minecraft Ura za kodo Oblikovalec
+          description_short: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici Minecrafta.
           description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici Minecrafta.
           stages:
             Minecraft Hour of Code Designer:
@@ -906,6 +915,8 @@ sl:
               name: Veliki dogodek
             Conditionals with Cards:
               name: Pogojniki s kartami
+            'Functions: Songwriting':
+              name: Napiši pesem
             Envelope Variables:
               name: Spremeljivke v ovojnicah
             For Loop Fun:
@@ -964,6 +975,8 @@ sl:
               name: Graditi temelje
             Introduction:
               name: Uvod
+            'Functions: Songwriting':
+              name: Napiši pesem
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1004,3 +1017,71 @@ sl:
               name: Čebelica črkuje besede
             Move It, Move It:
               name: Premakni se, premakni
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umetnik
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umetnik
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umetnik
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Graditi temelje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami
+            The Artist:
+              name: Umetnik
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Digital Citizenship:
+              name: Digitalno državljanstvo
+            'Unplugged: Binary':
+              name: 'Brez prijave: Binarno'
+            Artist Binary:
+              name: Umetnik Binarno
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Graditi temelje
+            Nested Loops:
+              name: Gnezdenje zank
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Conditionals:
+              name: Pogoji
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami
+            'Unplugged: Binary':
+              name: 'Brez prijave: Binarno'
+            Artist Binary:
+              name: Umetnik Binarno
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

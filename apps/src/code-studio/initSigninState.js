@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import { getStore } from './redux';
-import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
+import { setUserSignedIn, setUserType } from '@cdo/apps/code-studio/progressRedux';
 import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 
 /**
@@ -19,10 +19,10 @@ export function getUserSignedInFromCookieAndDom() {
     return true;
   } else {
     // We did not have a cookie, meaning we're probably not signed in. Because
-    // we want ot replicate the logic in user_header.haml, also check to see if
+    // we want to replicate the logic in user_header.haml, also check to see if
     // the server had populated our DOM with a user id.
-    const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-    return !!(nameSpan && nameSpan.dataset.id);
+    const displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+    return !!(displayNameSpan && displayNameSpan.dataset.id);
   }
 }
 
@@ -30,10 +30,13 @@ export function getUserSignedInFromCookieAndDom() {
  * Determines signin state and dispatches to the store. Shows a dialog asking
  * the user for their age or to sign in if necessary.
  */
-export default function initSigninState() {
+export default function initSigninState(userType) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+    if (userType) {
+      store.dispatch(setUserType(userType));
+    }
 
     const div = document.createElement('div');
     ReactDOM.render(

@@ -1,0 +1,952 @@
+---
+pt:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: |-
+        O bloco pule move o artista sem desenhar.
+        Desenhe a linha tracejada usando os bloco pule e desenhe.
+      2-3 Artist 4: Ajude-me a completar a casa para o gato.
+      2-3 Artist 9 NEW: Terminar este papagaio
+      2-3 Artist 9 REPLACEMENT: Termine o desenho destas escadas!
+      2-3 Artist 9: Terminar este papagaio
+      2-3 Artist Debugging 10: "O controlo de direção no meu controlador\ndo jogo
+        é muito estreito. \r\n\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
+      2-3 Artist Debugging 11: Ajude-me a terminar meu lindo floco de neve. Quantas
+        vezes preciso "repetir" para terminá-lo?
+      2-3 Artist Debugging 2: 'O código para os três bigodes que você vê está errado.
+        Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
+        desenhar os bigodes.'
+      2-3 Artist Debugging 3: |-
+        Meu barco tem um buraco! Você consegue corrigi-lo
+        alterando o ângulo da linha? Dica: o último ângulo está 15 graus fora de lugar.
+      2-3 Artist Debugging 5: |-
+        O código para a perna e para o pé que você vê
+        está errado. Dica: o pé está muito comprido, pode ser necessário excluir um passo (pé... passo... trocadilho)
+      2-3 Artist Debugging 6: |-
+        Parece que estou sentado em uma cadeira
+        sem uma perna. Edite os blocos para desenhar a perna.
+      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+        voltar a transformá-lo num C?"
+      2-3 Artist Debugging 8: |-
+        Meu cata-vento não está pronto. Quantas
+        vezes eu preciso repetir para terminá-lo?
+      2-3 Artist Debugging 9: |-
+        O código para este caule está incorreto. Dica:
+        o ângulo está 60 graus fora de lugar
+      2-3 Artist Free Play: Atividade livre! Desenhe o que você quiser.
+      2-3 Artist Functions 11.5: |-
+        Aqui está a mesma função "Desenhe um hexágono".
+        O que acontece se você virar apenas 60 graus a cada repetição?
+      2-3 Artist Functions 12 Mike: |-
+        Funções são ótimas para desenhar
+        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
+        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
+        por um comprimento de 100 pixels)
+      2-3 Artist Functions 12 a: |-
+        Funções são ótimas para desenhar
+        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
+        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
+        por um comprimento de 100 pixels)
+      2-3 Artist Functions 12: |-
+        Funções são ótimas para desenhar
+        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
+        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
+        por um comprimento de 100 pixels)
+      2-3 Artist Functions 2: |-
+        As funções permitem que você defina novos blocos! Movemos
+        os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
+        Você consegue usar a função "desenhe um quadrado" para criar os óculos? Os quadrados são separados
+        por 75 pixels.
+      2-3 Artist Functions 3: |-
+        Edite a função para desenhar um quadrado com
+        lados de 115 pixels de comprimento e desenhe os óculos maiores. Agora, os quadrados estão separados por 45 pixels.
+      2-3 Artist Functions 4: |-
+        Use o bloco "repita" para desenhar esses
+        3 quadrados.
+      2-3 Artist Loops 1: |-
+        Você consegue fazer um hexágono com lados de
+        100 pixels de comprimento para terminar a célula? Lembre-se, isso significa que você só vai
+        precisar virar 60 graus!
+      2-3 Artist Loops 2: |-
+        Agora, use um bloco "repita" para transformar a célula em uma
+        concha.
+      2-3 Artist Loops New 10: |-
+        Agora vamos conectar um monte de V's,
+        desenhando-os em um laço.
+      2-3 Artist Loops New 12: Desenhe um diamante com lados de 100 pixels.
+      2-3 Artist Loops New 13: Agora, desenhe o diamante 3 vezes em um laço.
+      2-3 Artist Loops New 2: |-
+        Aqui temos alguns dos códigos que você usou para desenhar
+        aquele quadrado. O que acontece se você usar o bloco repita para executar esse código 4 vezes?
+      2-3 Artist Loops New 9: |-
+        Desenhe um V simples com ambos os lados com 50
+        pixels para completar a seta.
+      2-3 Artist Nested Loops 10: |-
+        Repita este código 12 vezes para completar
+        o padrão.
+      2-3 Artist Nested Loops 11: |-
+        Repita este código 4 vezes para completar
+        o padrão, vire 90 graus após cada círculo.
+      2-3 Artist Nested Loops 12: |-
+        Repita este código 12 vezes para completar
+        as espirais.
+      2-3 Artist Nested Loops 2: |-
+        Agora, repita o triângulo 6 vezes. Depois
+        de cada triângulo, você precisa virar 60 graus antes de desenhar o próximo.
+      2-3 Artist Nested Loops 4: |-
+        Repita este diamante 12 vezes para desenhar
+        uma flor. Dica: 12 diamantes são como os 12 triângulos que você fez - quanto
+        você precisa virar depois de cada forma?
+      2-3 Artist Nested Loops 5: |-
+        Preencha as janelas deste edifício com
+        um laço aninhado. As janelas têm 20 pixels de comprimento e são separadas por 20 pixels.
+      2-3 Artist Nested Loops 7: |-
+        Repita esse triângulo 10 vezes para desenhar
+        o sol. Você vai precisar mover e virar depois de cada triângulo. Você pode descobrir
+        quanto virar dividindo o número de graus em um círculo pelo
+        número de formas que o compõem.
+      2-3 Artist Nested Loops 8: |-
+        Agora, vamos adicionar um pouco de grama à imagem.
+        Cada tufo de grama é separado por 50 pixels.
+      2-3 Artist Nested Loops 9: |-
+        Vamos terminar essa imagem adicionando
+        uma flor. Repita o diamante 12 vezes para desenhar sua flor.
+      2-3 Artist Nested Loops Free Play: |-
+        Atividade livre. Desenhe algo legal
+        com laços aninhados.
+      2-3 Bee Conditionals 11: Colete néctar onde as flores têm néctar.
+      2-3 Bee Conditionals 13: |-
+        Colete néctar e produza mel. Dica:
+        o que acontece se você usar a condição "se houver néctar" em uma flor vermelha? Você pode
+        completar isso com um laço?
+      2-3 Bee Conditionals 15: Colete néctar das quatro flores.
+      2-3 Bee Conditionals 3: |-
+        Ajude-me a coletar todo o néctar das
+        flores e a produzir mel. Use um laço.
+      2-3 Bee Debugging 3: |-
+        Esses blocos estão me incomodando. Conserte o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      2-3 Bee Debugging 6: |-
+        Esses blocos estão me incomodando. Conserte o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      2-3 Bee Debugging 9: |-
+        Esses blocos estão me incomodando. Conserte o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      2-3 Bee Functions 10: |-
+        As flores roxas podem ter 1 ou 0 néctar.  Crie
+        uma função que coleta néctar apenas das flores que têm néctar.
+      2-3 Bee Functions 2: |-
+        Funções são blocos de código que realizam
+        uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
+        de usar um laço para obter um contador de bloco ideal.
+      2-3 Bee Functions 4: |-
+        A função "mova e obtenha néctar" vira
+        a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
+        a função para coletar todo o néctar.
+      2-3 Bee Loops 1: |-
+        Cada flor contém uma unidade de néctar. Colete
+        o néctar de cada uma das flores.
+      2-3 Bee Loops 3A: Você consegue usar um laço para coletar todo o néctar?
+      2-3 Bee Loops 3B: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
+      2-3 Bee Loops 4A: O que acontece se você repetir esta sequência 3 vezes? Não
+        se esqueça de fazer o mel no final!
+      2-3 Bee Loops 8: |-
+        Essas flores roxas têm uma quantidade desconhecida de
+        néctar. Use o laço "enquanto houver néctar" para coletar todo o néctar. Esse laço
+        será executado enquanto a condição for verdadeira, neste caso, enquanto néctar > 0.
+      2-3 Maze 15: Use dois laços para chegar até o porco usando menos blocos.
+      2-3 Maze Loops 18: Leve-me até o girassol!
+      4-5 Artist 10: |-
+        Pressione "Executar" para testar o código. Em seguida, repita o código
+        o número suficiente de vezes para completar o desenho. As cores serão diferentes toda vez.
+      4-5 Artist 2: Você pode repetir esse código para completar o quadrado?
+      4-5 Artist 5: Que ângulo você usa?
+      4-5 Artist 6: |-
+        Esse triângulo equilátero tem ângulos de 60, 60
+        e 60 graus. Cada lado tem 200 pixels. Complete o desenho.
+      4-5 Artist Free Draw 1: |-
+        Desenho livre! Desenhe o que você estiver inspirado
+        a criar.
+      4-5 Artist Patterns 1: |-
+        Você pode desenhar esse quadrado usando um laço?
+        Cada lado tem 20 pixels de comprimento.
+      4-5 Artist Patterns 12: |-
+        Se você copiar esse laço e virar para a esquerda ao invés
+        da direita, o que acontece? Você pode repetir isso para desenhar essa onda?
+      4-5 Artist Patterns 13: |-
+        Agora vamos repetir tudo quatro
+        vezes para criar a moldura dessa imagem. Preste atenção aos cantos - você não pode
+        simplesmente virar 90 graus! Se repetir uma ação de virar 3 graus 60 vezes faz um semicírculo,
+        qual desses blocos de código vai fazer um quarto de círculo para os cantos?
+      4-5 Artist Patterns 3: |-
+        Agora, vamos nos aprofundar mais um nível!
+        Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o
+        artista no lugar para desenhar a próxima reta. Qual desses blocos de código você
+        pode colocar no final do laço mais externo para desenhar toda a grade?
+      4-5 Artist Patterns 8: |-
+        Use um laço para desenhar esse hexágono com
+        lados de 40 pixels e ângulos de 60 graus.
+      4-5 Artist Patterns 9: |-
+        Agora, repita o código 3 vezes para desenhar a
+        a linha inteira. Dica: cada hexágono tem 80 pixels de largura da extrema esquerda
+        à extrema direita.
+      4-5 Artist Patterns Free Play: |-
+        Atividade livre - experimente criar
+        seu próprio padrão!
+      4-5 Bee Conditionals 2: |-
+        Agora a abelha só quer néctar. Lembre-se,
+        nem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
+      4-5 Bee Conditionals 5: |-
+        Deve haver uma flor ou uma colmeia
+        sob essas nuvens. Use o bloco se/senão para coletar néctar se houver uma
+        uma flor, senão para produzir mel (porque há, então, uma colmeia).
+      4-5 Bee Conditionals 6: |-
+        Essa flor roxa pode ter 1,
+        2 ou 3 néctares. Aqui um bloco se-senão está combinado com outro bloco se-senão
+        para criar um bloco se, senão-se, senão. Complete a solução para coletar a
+        quantidade desconhecida de néctar.
+      4-5 Bee Conditionals 7: |-
+        Lembre-se de que as flores roxas podem ter
+        1, 2 ou 3 néctares. Complete a função "verifique a flor roxa" e use-a
+        para coletar todo o néctar das flores.
+      4-5 Bee Conditionals 8: |-
+        Escreva uma função dentro do bloco chamado
+        "verifique a flor e produza mel". Sua função deve verificar quanto néctar a
+        flor roxa tem e coletá-lo, avançar e então produzir mel.
+      4-5 Bee Conditionals Assessment 1: |-
+        Avaliação: esse código está errado.
+        Complete a função "colete néctar ou produza mel" e então chame-a para coletar
+        todo o néctar e produzir o mel. Lembre-se, as flores roxas podem ter 1, 2 ou 3 néctares.
+      4-5 Bee Debugging 1: |-
+        Estes blocos estão me incomodando. Você pode
+        consertá-los?
+      4-5 Bee Debugging 6: |-
+        A flor roxa tem uma quantidade desconhecida de
+        néctar. Conserte os blocos para coletar todo o néctar da flor.
+      4-5 Bee Nested Loops 4: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      4-5 Bee Nested Loops Assessment 1: |-
+        Avaliação - colete todo o
+        néctar e produza todo o mel usando laços.
+      4-5 Maze 9: Crie um laço com o bloco "repita até".
+      4-5 Maze Conditionals 1: |-
+        Use o bloco repita até para levar o
+        zumbi até o girassol.
+      4-5 Maze Conditionals 10: "Consegues adicionar apenas 3 blocos para ajudar o
+        zombie a completar um labirinto mais complexo? \r\n\r\nSe conseguires, ele
+        pode andar em qualquer caminho curvo independentemente do seu tamanho!"
+      4-5 Maze Conditionals 2: |-
+        Use o bloco repita até para levar o
+        zumbi até o girassol.
+      4-5 Maze Conditionals 3: |-
+        Use o bloco "se" para me deixar decidir
+        quando virar. Dica: você precisa de somente mais um bloco, mas aprenda como o configuramos
+        para que você possa fazer isso sozinho na próxima vez.
+      4-5 Maze Conditionals 4: |-
+        Ok, esse desafio é como o último,
+        mas você precisa se lembrar de como usou o bloco "se" e o bloco "repita"
+        juntos.
+      4-5 Maze Conditionals 5: |-
+        Mim querer girassol! Use um bloco "se"
+        para que eu chegue lá com o menor número de blocos possível.
+      4-5 Maze Conditionals 6: |-
+        Mim querer girassol! Use um bloco "se"
+        para que eu chegue lá com o menor número de blocos possível.
+      4-5 Maze Conditionals 7: |-
+        Ok, vamos praticar mais uma vez
+        - essa parte não é muito diferente, mas fique de olho nas carnívoras!
+      4-5 Maze Conditionals 8: |-
+        Os blocos "se-senão" verificam uma condição
+        e, em seguida, fazem uma coisa OU outra. Para me levar ao girassol, tente
+        usar esse novo bloco.
+      4-5 Maze Conditionals 9: |-
+        Vamos praticar o uso do bloco "se-senão" mais uma
+        vez, você consegue fazer corretamente na primeira tentativa?
+      4-5 Maze Conditionals Assessment 1: |-
+        Use um bloco "repita até" e
+        um bloco "se-senão" para me levar até o girassol no menor número de blocos possível.
+      4-5 Nested Loops 12: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
+      4-5 Nested Loops 3: "Crie um sol aninhando o código inicial\ndentro de outro
+        laço. Chamamos isso de laço aninhado.\r"
+      4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
+      4-5 Nested Loops 6: |-
+        Você pode desenhar um hexágono repetindo o
+        código do triângulo?
+      4-5 Nested Loops 7: |-
+        Repita esse design 10 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
+      4-5 Nested Loops 8: |-
+        Repita esse design 6 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      4-5 Nested Loops 9: Desenhe o dente na boca do crocodilo!
+      4-5 While Loops 1: |-
+        Mova-me para o buraco e preencha-o com
+        duas pás de terra, usando o bloco "preencha".
+      4-5 While Loops 2: |-
+        Mova-me para o monte de terra e remova-o
+        com 5 pás de terra, usando o bloco "remova".
+      4-5 While Loops 3: |-
+        Mova-me para o monte e remova toda a
+        terra, então mova-me para o buraco e preencha-o completamente. Dica: use o menor número de
+        blocos possível.
+      4-5 While Loops 4: |-
+        Uau, eu encontrei um buraco realmente fundo! Eu não
+        sei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o
+        até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
+      Artist Autorun Test: |-
+        Use o bloco "repita" para desenhar esses
+        3 quadrados.
+      Course 4 Artist 13: |-
+        Ainda jogando?  Temos aqui uma tela em branco
+        na qual você pode projetar o que quiser!
+      Course 4 Artist 6: |-
+        Complete o código para desenhar esses triângulos.
+        Dica: 3 triângulos em uma rotação de 360 graus.
+      Course 4 Artist 8: |-
+        Desenhe esse sol repetindo todo este bloco de código
+        12 vezes.
+      Course 4 Artist 8a: |-
+        Lembra-se dessa forma? Agora vamos te deixar construí-la sem te dar qualquer bloco parar começar.
+        Dica: Existem 3 triângulos dentro da rotação de 360º... Quantas  vezes 3 cabe em 360?
+      Course 4 Artist Binary 1a: |-
+        Temos aqui uma função que recebe uma string
+        binária de 1's e 0's e instrui o artista a mover-se da esquerda para
+        a direita, de cima para baixo, preenchendo os quadrados nos quais ele vê um 1 e ignorando
+        os que têm um 0. Execute esse código para ver como o artista usa números binários para desenhar
+        este padrão.
+      Course 4 Artist For Loops 13: |-
+        Hmm, essas formas estão ficando cada vez
+        maiores! Já não tínhamos resolvido esse problema com variáveis? Como
+        podemos usar a variável contador para deixar os lados menores conforme a forma tem
+        mais lados? Ao invés de avançar por uma quantidade definida, avance (100 /
+        contador) pixels.
+      Course 4 Artist For Loops 4: |-
+        Use um laço "para" para desenhar esses quadrados.
+        Eles começam com 50 pixels de comprimento, o maior tem 300 pixels de comprimento, e cada quadrado
+        é 25 pixels maior que o anterior. Foi fornecida a maior parte do código
+        de que você vai precisar - está faltando um bloco, qual?
+      Course 4 Artist For Loops 6: |-
+        Atividade livre: tente usar um laço "para"
+        para desenhar um padrão crescente de formas com seu próprio design.
+      Course 4 Artist For Loops 8a: |-
+        A menor reta nessa espiral quadrada
+        tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
+        anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
+      Course 4 Artist For Loops Challenge_a: |-
+        Você consegue descobrir como usar tudo que aprendeu para criar essa imagem?
+
+        Precisa de uma dica? Clique aqui.
+      Course 4 Artist Vars 3: |-
+        Temos aqui um laço que desenha um quadrado, mas
+        algo está faltando. Você pode consertá-lo para que ele use a variável "comprimento"
+        para descobrir qual deve ser o tamanho de cada lado?
+      Course 4 Bee 7: |-
+        Use tudo o que você aprendeu até agora para coletar
+        todo o néctar. A flor roxa pode ter 1, 2 ou 3 néctares.
+      Course 4 Bee For Loops 11: |-
+        O que está errado nesse laço? Veja se
+        você consegue arrumá-lo e fazer a abelha coletar todo o néctar.
+      Course 4 Bee Params 1: |-
+        Use a função "obtenha 3 néctares" que
+        vira, move-se para coletar o néctar e então retorna à posição original.
+        Escreva uma sequência para coletar todo o néctar usando "obtenha 3 néctares".
+      Course 4 Play Lab Params 4: |-
+        Aqui temos uma função chamada "patrulhe".
+        Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
+      Course 4 Play Lab Params 8: |-
+        Use um bloco "quando tocar" para enviar
+        o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
+      Course 4 Play Lab Vars 2: |-
+        Essa corrida não foi muito justa! Altere
+        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        gato. O primeiro a coletar 10 bandeiras vence!
+      Course 4 Play Labs For Loops 1: |-
+        Vamos fazer o cão falar todos
+        os números de 1 a 100. Use um laço para e o bloco contador para que ele fale o valor da variável
+        contador a cada vez que o laço for executado.
+      CourseF_PlayLab_vars2: |-
+        Essa corrida não foi muito justa! Altere
+        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        gato. O primeiro a coletar 10 bandeiras vence!
+      Function intro Ryan: "Uma **função** chamada \"construir ponte\" está no teu
+        espaço de trabalho.  Todo o código de que precisas para atravessar o rio está
+        incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu espaço
+        de trabalho para arranjar o caminho e levar {currentPlayerName} até à Tocha
+        de Redstone [redstone_torch]."
+      Function intro Ryan_2019: "Uma **função** chamada \"construir ponte\" está no
+        teu espaço de trabalho.  Todo o código de que precisas para atravessar o rio
+        está incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu
+        espaço de trabalho para arranjar o caminho e levar {currentPlayerName} até
+        à Tocha de Redstone [redstone_torch]."
+      HOC 2018 Level_1: "Precisas de abastecimentos para a viagem que se avizinha.
+        Coleciona um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        escondida algures neste Monumento do Oceano, consegues encontrá-la?\n\n"
+      HOC 2018 Level_11: Constrói uma parede de **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        à volta do betão preto. Isto ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        e completará o desafio!
+      HOC 2018 Level_12: Parabéns! O mundo aquático aberto está à tua espera. Constrói
+        um recife de coral! Um vulcão! Um Navio Encalhado! A escolha é tua.
+      HOC 2018 Level_2: Os barcos tornam as coisas mais fáceis em comparação com nadar!
+        Vai até ao final do cais para embarcar.
+      HOC 2018 Level_3: Pega nos remos e pilota o teu barco pelo alto mar para apanhar
+        **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Vamos dar bacalhau ao **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Usa um bloco de repetição para atravessar o oceano mais rápido.
+      HOC 2018 Level_5: Há uma **concha de nautilóide** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        escondida algures! Explora o navio encalhado para chegares ao **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Que frio está! Apanha um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        a caminho das ruínas subaquáticas.
+      HOC 2018 Level_7a: "Encontraste as ruínas subaquáticas. Procura o arenito para
+        um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Primeiro icebergs e agora lava? Atravessa esta ilha vulcânica
+        e encontra o **peixe tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        no recife de coral.\n\n"
+      HOC 2018 Level_9b: "Chegaste ao recife de coral, agora procura o **Heart of
+        the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      K-1 Bee Loops 2: |-
+        Use um laço para mover e então coletar o néctar e
+        produzir mel!
+      K-1 Bee Loops 3: Use laços para coletar o néctar e fabricar o mel!
+      K-1 Bee Loops 4: |-
+        Use laços para obter néctar, produzir mel e
+        para mover!
+      K-1 Bee Loops 5: Use laços para obter néctar e mel!
+      K-1 Bee Loops 6: Use laços para coletar néctar, fabricar mel e para se mover!
+      K-1 Maze Loops 11: Leve-me até o porco! Use o laço repita.
+      K-1 Maze Loops 12: Leve-me até o porco! Use o laço repita.
+      K-1 Maze Loops 2: Use o bloco repita para me levar até o porco!
+      K-1 Maze Loops 8: Leve-me até o porco! Use o laço repita.
+      MC Agent Freeplay: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
+        do Agent para te ajudar a explorar este mundo."
+      MC_HOC_2017 Agent Test: "Clica em \"Executar\" para mover o jogador com as **teclas
+        de seta**.  \r\n\r\nPara passar de nível, tens de chegar à porta e abri-la
+        (com a **barra de espaço**) para chegar ao quadrado cor de laranja que se
+        encontra dentro."
+      MC_HOC_2017_01: "Clica em \"Executar\" para mover o jogador com as **teclas
+        de seta**.  \r\n\r\nPara passar de nível, tens de chegar à porta e abri-la
+        (com a **barra de espaço**) para chegar ao quadrado cor de laranja que se
+        encontra dentro."
+      MC_HOC_2017_01_Cole: Tens de recolher todas as ferramentas nesta jornada. Desloca-te
+        com as **teclas de seta** e chega ao baú no caminho para vencer
+      MC_HOC_2017_01_Kiki: 'Para jogar este nível, clica no botão cor de laranja "Executar"
+        abaixo da área de jogo e move o jogador com as **teclas de seta**.  '
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} está preso dentro da casa, mas o
+        Agent está aqui para ajudar!   \r\n \r\n   \r\nEncaixa um bloco \"avançar\"
+        no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
+        à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
+        de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
+        \ "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} está preso dentro da casa, mas
+        o Agent está aqui para ajudar!   \r\n \r\n   \r\nEncaixa um bloco \"avançar\"
+        no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
+        à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
+        de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
+        \ "
+      MC_HOC_2017_02: O jogador precisa de entrar naquele bosque secreto.  Ajuda o
+        Agent a abrir o portão, escrevendo código que o leve até à placa de pressão.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} embarcou numa aventura! Para o ajudar,
+        chega ao **mapa** [map_empty] atrás da porta fechada à direita. \r\n \r\nEncaixa
+        o código no espaço de trabalho para mover o Agent para a placa de pressão
+        [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} embarcou numa aventura! Para
+        o ajudar, chega ao **mapa** [map_empty] atrás da porta fechada à direita.
+        \r\n \r\nEncaixa o código no espaço de trabalho para mover o Agent para a
+        placa de pressão [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
+      MC_HOC_2017_02_Kiki: "O jogador embarcou numa aventura, mas primeiro tem de
+        chegar à tocha que está escondida do outro lado daquela porta fechada. \r\n\r\nPrograma
+        o Agent para avançar duas vezes e seguir o caminho branco para chegar à placa
+        de pressão e abrir a porta ao jogador."
+      MC_HOC_2017_02_Will: "Para terminar este nível, o jogador tem de chegar ao quadrado
+        cor de laranja dentro do Bosque Secreto atrás da porta fechada.  \r\n\r\nO
+        código no espaço de trabalho faz com que o Agent avance duas vezes, chegando
+        à placa de pressão e abrindo a porta a Alex ou Steve."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} continua na sua aventura e precisa
+        da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
+        o Agent para abrir o portão. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na sua aventura e precisa
+        da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
+        o Agent para abrir o portão. "
+      MC_HOC_2017_03_Kiki: "A aventura do jogador começa atrás da porta fechada, no
+        Bosque Secreto!  \r\n\r\n\r\nAjuda o Agent a abrir a porta, escrevendo código
+        que o leve até à placa de pressão."
+      MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o
+        Agent a criar um caminho sobre a parte mais larga deste rio.
+      MC_HOC_2017_04POINT5_Cole: "Conseguiste sair do pântano!  Agora, leva o jogador
+        em segurança até ao quadrado cor de laranja. \n\n\nAjuda o Agent a abrir caminho
+        através de um padrão simples e da utilização de ações circulares para passar
+        pelas duas primeiras placas de pressão."
+      MC_HOC_2017_04POINT5_RYAN: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
+        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
+        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
+      MC_HOC_2017_04_Cole: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
+        uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
+        a chegar ao **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_04_Cole_2019: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
+        uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
+        a chegar ao **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou-te a este maravilhoso
+        Oásis!  Para passar este nível, o jogador tem de chegar ao quadrado cor de
+        laranja na cabana.  \r\n\r\nUtiliza uma ação circular \"repetir\" para ajudar
+        o Agent a percorrer todo o caminho até à placa de pressão, que abre a porta
+        da cabana."
+      MC_HOC_2017_05: "As ações circulares nem sempre são úteis. \n\n\nEstes catos
+        não crescem num padrão óbvio, pelo que uma ação circular não é capaz de os
+        eliminar corretamente.  Em vez disso, apresentamos-te uma função chamada \"destruir
+        e mover\", que faz todo o trabalho árduo sempre que o Agent encontra um obstáculo."
+      MC_HOC_2017_05_Cole: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o Agent
+        para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
+        conseguir chegar à **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o
+        Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
+        conseguir chegar à **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Oh não, a ponte foi destruída! \n\n\nAjuda o Agent a reconstruir
+        a ponte para o jogador conseguir chegar à **pá**."
+      MC_HOC_2017_05_Kiki: "Está na hora de o jogador sair do Bosque Secreto e continuar
+        a sua aventura, mas a ponte foi destruída! \r\n\r\nAjuda o Agent a reconstruir
+        a ponte e leva-o até à tábua de madeira, para o jogador conseguir chegar ao
+        quadrado cor de laranja."
+      MC_HOC_2017_06_Cole: "Encontrámos outro rio, mas este é muito mais largo! \r\n
+        \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
+        chegar à **picareta** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Encontrámos outro rio, mas este é muito mais largo!
+        \r\n \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
+        chegar à **picareta** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
+        o código para ajudar o Agent a construir uma ponte sobre este rio."
+      MC_HOC_2017_06_Kiki: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
+        o código para ajudar o Agent a construir uma ponte sobre a água."
+      MC_HOC_2017_07_Cole: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
+        pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
+        pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
+        [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "As ações circulares não são a única forma de repetir código!
+        \ \r\n\r\nVê só, apresentamos-te uma função chamada \"eliminar catos\" que
+        trata da tarefa árdua de eliminar três catos sempre que é utilizada.  Utiliza
+        dois blocos \"eliminar catos\" para abrir caminho até ao quadrado cor de laranja. "
+      MC_HOC_2017_07a_Kiki: Agora, edita esta ação circular para ajudar o Agent a
+        abrir caminho até ao quadrado cor de laranja.
+      MC_HOC_2017_08_Cole: "Agora, em vez de destruir antes de te moveres, tens de
+        colocar um bloco.  \r\n\r\nMuda a função apresentada para que funcione no
+        deserto."
+      MC_HOC_2017_08_Kiki: "Agora, em vez de destruir catos, tens de colocar pedras
+        sobre a lava e destruir arenito.  \r\n\r\nMuda a função para que funcione
+        neste nível."
+      MC_HOC_2017_08_RY: "Agora, podes escolher entre **DUAS** funções! \n\n\nUtiliza-as
+        para construir rapidamente uma ponte sobre a lava para {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Agora, podes escolher entre **DUAS** funções! \n\n\nUtiliza-as
+        para construir rapidamente uma ponte sobre a lava para o jogador."
+      MC_HOC_2017_09_Cole: Utiliza as funções para ajudar o Agent a destruir os blocos
+        gigantes de terra que estão a impedir a passagem do jogador até à placa de
+        pressão.
+      MC_HOC_2017_09_Kiki: "Este código inicial não pode ser removido.\r\n\r\nAdiciona
+        comandos à função \"criar rasto\" para o programa no espaço de trabalho levar
+        o Agent até à placa de pressão. "
+      MC_HOC_2017_09_RS_CLONE: Corrige esta função para preencher os buracos. Depois,
+        calca a placa de pressão para abrir caminho até à tocha.
+      MC_HOC_2017_10_Cole: Utiliza as funções para abrir caminho até à vagoneta e
+        atravessar o Portal do Submundo.
+      MC_HOC_2017_10_Cole_old: Experimenta construir uma função desde o início para
+        que seja mais fácil para o Agent terminar esta vagoneta e levar o jogador
+        até ao quadrado cor de laranja.
+      MC_HOC_2017_10_Kiki: Experimenta construir uma função desde o início para que
+        seja mais fácil para o Agent terminar esta vagoneta e levar o jogador até
+        ao quadrado cor de laranja.
+      MC_HOC_2017_10_RETRY: "Consegues descobrir a diferença entre as duas funções
+        no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
+        ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
+        \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Consegues descobrir a diferença entre as duas funções
+        no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
+        ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
+        \r\n "
+      MC_HOC_2017_10_RYAN: Experimenta construir funções desde o início para que seja
+        mais fácil para o Agent terminar esta vagoneta e levar o jogador até ao quadrado
+        cor de laranja.
+      MC_HOC_2017_10_RYAN2: Experimenta construir funções desde o início para que
+        seja mais fácil para o Agent terminar esta vagoneta e levar o jogador até
+        ao quadrado cor de laranja.
+      MC_HOC_2017_11_Kiki: Agora tudo depende de ti! Vamos ver o que consegues criar
+        à volta deste lago congelado.
+      MC_HOC_2017_13_Cole: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
+        do Agent para te ajudar a explorar este mundo."
+      MC_HOC_2017_4.5v2: "Conseguiste sair do pântano!  Agora, leva o jogador em segurança
+        até ao quadrado cor de laranja. \n\n\nAjuda o Agent a abrir caminho através
+        de um padrão simples e da utilização de ações circulares para passar pelas
+        duas primeiras placas de pressão."
+      MC_HOC_2017_Ali: 'Examina as funções abaixo.  Como é que as podes utilizar para
+        evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao **Livro
+        de Encantamentos** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Examina as funções abaixo.  Como é que as podes utilizar
+        para evitar os Ghasts e ajudar {currentPlayerName} a chegar em segurança ao
+        **Livro de Encantamentos** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10: "**Jogo livre:** Agora tudo depende de ti! És capaz de
+        recolher todos os diamantes neste nível? "
+      MC_HOC_2017_FP10x10_RE: "**Jogo livre:** Agora tudo depende de ti! És capaz
+        de recolher todos os diamantes neste nível? "
+      MC_HOC_2017_FP20x20: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
+        do Agent para te ajudar a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Jogo livre:** Agora tudo depende de ti! Utiliza
+        o código do Agent para te ajudar a explorar este mundo."
+      MC_HOC_2017_Ryan_03: "Sabias que podes colocar mais do que um bloco de código
+        numa ação circular?  \r\n\r\nUtiliza a ação circular \"repetir\" para ajudar
+        o Agent a construir uma ponte sobre o rio, colocando blocos na água."
+      MC_HOC_2017_Ryan_05: "Às vezes, precisas de derrubar o que se encontra no caminho
+        do teu jogador.  \r\nUtiliza o bloco \"destruir\" para eliminar todos os catos
+        entre o Agent e a placa de pressão."
+      MC_HOC_Kiki_02: Alguém tem de estar na placa de pressão para a porta lateral
+        se abrir. Ajuda o Agent a chegar à placa, para o jogador conseguir sair da
+        casa.
+      NEW Course 4 Artist Functions 12: |-
+        Use a função "desenhe uma linha de quadrados"
+        do último desafio para desenhar esse padrão."
+      NEW Course 4 Artist Functions 3: |-
+        Temos aqui um novo tipo de bloco.
+        Ele é chamado de "bloco de função". Clique em "Executar" para ver o que ele pode fazer.
+      NEW Course 4 Artist Functions 9: |-
+        Qual bloco você precisa adicionar
+        para que o triângulo fique em cima do quadrado?
+      NEW Course 4 Artist Params 4: |-
+        Você percebe algo diferente
+        sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
+      NEW Course 4 Artist Vars 12: |-
+        Modifique esse algoritmo para que ele use
+        a variável "lados" ao invés de um número fixo para desenhar um pentágono. Substitua
+        o número 5 pela variável "lados" e use o bloco "defina lados para".
+      NEW Course 4 Artist Vars 4: |-
+        Vamos tentar novamente. Agora, vamos fazer
+        esse design bacana com hexágonos de 60 pixels.
+      NEW Course 4 Artist Vars 6: |-
+        Você pode me ajudar a desenhar esse padrão
+        colocando o bloco da variável "comprimento" nos lugares corretos?
+      New Minecraft Hero Project: "**Jogo livre:** Agora tudo depende de ti! Utiliza
+        o código do Agent para te ajudar a explorar este mundo."
+      Overworld Move to Sheep: Adiciona um segundo comando "mover para a frente" para
+        chegares às ovelhas.
+      Overworld Move to Sheep_2018: Adiciona um segundo comando "mover para a frente"
+        para chegares às ovelhas.
+      Overworld Move to Sheep_2019: Adiciona um segundo comando "mover para a frente"
+        para chegares às ovelhas.
+      Testing Quantum Farmer: |-
+        Uau, eu encontrei um buraco realmente fundo! Eu não
+        sei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o
+        até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
+      course4_artist_fwp_challenge1: Tenta executar este programa e faz as alterações
+        para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
+        por algo totalmente diferente)
+      courseD_bee_nestedLoops5: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8_2018: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_bee_nestedLoops8_2019: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      courseD_maze_nestedLoops4: Leve-me até o girassol!
+      courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
+      courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
+      courseE_bee_functions3: |-
+        Funções são blocos de código que realizam
+        uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
+        de usar um laço para obter um contador de bloco ideal.
+      courseE_bee_functions3_2018: |-
+        Funções são blocos de código que realizam
+        uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
+        de usar um laço para obter um contador de bloco ideal.
+      courseE_farmer_concept4: |-
+        Agora, vamos nos aprofundar mais um nível!
+        Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o
+        artista no lugar para desenhar a próxima reta. Qual desses blocos de código você
+        pode colocar no final do laço mais externo para desenhar toda a grade?
+      frozen circle function in circle: |-
+        Agora vamos criar 20 círculos
+        sobrepostos, virando 18 graus entre cada círculo.
+      frozen circle function with parameter: |-
+        Temos aqui um bloco "crie um círculo"
+        que pode fazer círculos de tamanhos diferentes. Você pode usar isso para criar
+        um pequeno círculo de tamanho 5 e um círculo maior de tamanho 10?
+      frozen circle function: |-
+        Use o novo bloco "crie um círculo" para
+        criar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos.
+      frozen circle: |-
+        Um círculo é uma forma especial. Você pode descobrir
+        que número usar para substituir os pontos de interrogação para desenhar um círculo?
+      frozen cross rotate dense: |-
+        Vamos repetir isso 90 vezes! Quantas
+        vezes 90 cabe em 360? Dica: é um número realmente pequeno.
+      frozen cross rotate: |-
+        Agora, tente repetir isso 10 vezes. Quantos graus
+        você precisa virar entre cada reta?
+      frozen cross: |-
+        Use o bloco "repita" para criar um sinal de adição. Você
+        percebeu que Elsa pode se mover para a frente e para trás?
+      frozen diamond mini snowflake: |-
+        Você sabia que cada floco de neve tem
+        uma forma diferente? Vamos criar um novo floco de neve usando o bloco "repita"
+        para repetir um paralelogramo 4 vezes, virando 90 graus à direita entre cada
+        paralelogramo.
+      frozen diamond snowflake: |-
+        Agora, vamos criar um novo floco de neve
+        usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
+        à direita entre cada um.
+      frozen diamond: Use uma repetição em torno desses blocos para criar um paralelogramo.
+        É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus
+        e 120 graus em vez de todos os ângulos de 90 graus.
+      frozen freeplay: |-
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
+      frozen perpendicular: |-
+        Agora, vamos ver se podemos criar duas retas
+        que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
+        e também o bloco "mova".
+      frozen snowflake branch: |-
+        Tente usar o bloco "crie um floco de neve do tipo ramificado”
+        para criar três ramificações, o que começa a parecer um floco de neve.
+      frozen snowflake full: |-
+        Agora, vamos repetir isso 8 vezes para fazer um
+        belo floco de neve!
+      frozen snowflower: |-
+        Padrões de neve complexos podem ser criados com
+        formas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho
+        5 e 5 círculos de tamanho 10?
+      frozen square iterative: |-
+        Parece que estamos na metade do caminho para fazer
+        um quadrado. Vamos juntar 4 retas para criar um quadrado.
+      frozen square loop 3x: |-
+        Vamos criar três quadrados, virando depois
+        de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.
+      frozen square loop: |-
+        Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado
+        com o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco
+        "repita" deve repetir os blocos dentro dele para fazer um quadrado?
+      frozen square snowflake: |-
+        Você consegue criar um floco de neve usando o bloco
+        "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
+        graus entre cada quadrado?
+      grade2_MakeDogTag_8: |-
+        Agora vamos conectar um monte de V's,
+        desenhando-os em um laço.
+      grade2_PuppyLoops_10: |-
+        Meu cata-vento não está pronto. Quantas
+        vezes eu preciso repetir para terminá-lo?
+      grade2_PuppyLoops_4: Use dois laços para chegar até o porco usando menos blocos.
+      grade2_PuppyLoops_8: 'O código para os três bigodes que você vê está errado.
+        Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
+        desenhar os bigodes.'
+      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+        voltar a transformá-lo num C?"
+      grade2_puppy_loops4: Use dois laços para chegar até o porco usando menos blocos.
+      grade3_ConditionalsElse_2: |-
+        Agora a abelha só quer néctar. Lembre-se,
+        nem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
+      grade3_ConditionalsElse_5: |-
+        Deve haver uma flor ou uma colmeia
+        sob essas nuvens. Use o bloco se/senão para coletar néctar se houver uma
+        uma flor, senão para produzir mel (porque há, então, uma colmeia).
+      grade3_ConditionalsElse_6: |-
+        Essa flor roxa pode ter 1,
+        2 ou 3 néctares. Aqui um bloco se-senão está combinado com outro bloco se-senão
+        para criar um bloco se, senão-se, senão. Complete a solução para coletar a
+        quantidade desconhecida de néctar.
+      grade3_ConditionalsElse_7: |-
+        Lembre-se de que as flores roxas podem ter
+        1, 2 ou 3 néctares. Complete a função "verifique a flor roxa" e use-a
+        para coletar todo o néctar das flores.
+      grade3_ConditionalsElse_8: |-
+        Escreva uma função dentro do bloco chamado
+        "verifique a flor e produza mel". Sua função deve verificar quanto néctar a
+        flor roxa tem e coletá-lo, avançar e então produzir mel.
+      grade3_ConditionalsElse_9: |-
+        Avaliação: esse código está errado.
+        Complete a função "colete néctar ou produza mel" e então chame-a para coletar
+        todo o néctar e produzir o mel. Lembre-se, as flores roxas podem ter 1, 2 ou 3 néctares.
+      grade3_ConditionalsElse_TeacherIDo: |-
+        Deve haver uma flor ou uma colmeia
+        sob essas nuvens. Use o bloco se/senão para coletar néctar se houver uma
+        uma flor, senão para produzir mel (porque há, então, uma colmeia).
+      grade3_Conditionals_10: |-
+        Colete néctar e produza mel. Dica:
+        o que acontece se você usar a condição "se houver néctar" em uma flor vermelha? Você pode
+        completar isso com um laço?
+      grade3_Conditionals_12: Colete néctar das quatro flores.
+      grade3_Conditionals_2: |-
+        Ajude-me a coletar todo o néctar das
+        flores e a produzir mel. Use um laço.
+      grade3_Conditionals_8: Colete néctar onde as flores têm néctar.
+      grade3_Debugging_6: |-
+        Esses blocos estão me incomodando. Conserte o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      grade3_Debugging_9: |-
+        Esses blocos estão me incomodando. Conserte o(s)
+        erro(s) para coletar todo o néctar e produzir todo o mel.
+      grade3_Loops_3: Você consegue usar um laço para coletar todo o néctar?
+      grade3_Loops_4: Agora, use o novo bloco repita para coletar todo o néctar e
+        produzir todo o mel.
+      grade3_Loops_6: O que acontece se você repetir esta sequência 3 vezes? Não se
+        esqueça de fazer o mel no final!
+      grade3_Loops_7: |-
+        Cada flor contém uma unidade de néctar. Colete
+        o néctar de cada uma das flores.
+      grade3_Loops_TeacherIDo: |-
+        Cada flor contém uma unidade de néctar. Colete
+        o néctar de cada uma das flores.
+      grade3_bee_conditionals_quantum2: |-
+        Agora a abelha só quer néctar. Lembre-se,
+        nem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
+      grade3_maze_loops2: Leve-me até o girassol!
+      grade3_maze_nestedLoops4: Use dois laços para chegar até o porco usando menos
+        blocos.
+      grade4_arist_nested_loop_flags1: Repita o código dado para criar um moinho de
+        vento.
+      grade4_arist_nested_loop_polygons1: |-
+        Repita esse design 10 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
+      grade4_arist_nested_loop_polygons2: |-
+        Repita esse design 6 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      grade4_arist_nested_loop_triangles3: |-
+        Você pode desenhar um hexágono repetindo o
+        código do triângulo?
+      grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do crocodilo!
+      grade4_arist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
+        de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_arist_nested_loop_triangles6: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
+      grade4_artist_functions2: |-
+        As funções permitem que você defina novos blocos! Movemos
+        os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
+        Você consegue usar a função "desenhe um quadrado" para criar os óculos? Os quadrados são separados
+        por 75 pixels.
+      grade4_artist_nested_loop_flags1: Repita o código dado para criar um moinho
+        de vento.
+      grade4_artist_nested_loop_polygons1: |-
+        Repita esse design 10 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
+      grade4_artist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
+        de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_artist_nested_loop_triangles6: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
+      grade4_artist_parameters_triangles2: |-
+        Você percebe algo diferente
+        sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
+      grade4_bee_conditionals_quantum2: |-
+        Agora a abelha só quer néctar. Lembre-se,
+        nem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
+      grade4_bee_conditionals_quantum5: |-
+        Deve haver uma flor ou uma colmeia
+        sob essas nuvens. Use o bloco se/senão para coletar néctar se houver uma
+        uma flor, senão para produzir mel (porque há, então, uma colmeia).
+      grade4_bee_functions3: |-
+        Funções são blocos de código que realizam
+        uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
+        de usar um laço para obter um contador de bloco ideal.
+      grade4_bee_nestedLoops4: |-
+        Colete todo o néctar de cada flor
+        e produza mel em cada colmeia. Use um laço aninhado.
+      grade4_frozen_freeplay: |-
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
+      grade4_frozen_functions0: |-
+        Um círculo é uma forma especial. Você pode descobrir
+        que número usar para substituir os pontos de interrogação para desenhar um círculo?
+      grade4_frozen_functions1a: |-
+        Use o novo bloco "crie um círculo" para
+        criar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos.
+      grade4_frozen_functions2: |-
+        Agora vamos criar 20 círculos
+        sobrepostos, virando 18 graus entre cada círculo.
+      grade4_frozen_functions3: |-
+        Temos aqui um bloco "crie um círculo"
+        que pode fazer círculos de tamanhos diferentes. Você pode usar isso para criar
+        um pequeno círculo de tamanho 5 e um círculo maior de tamanho 10?
+      grade4_frozen_functions4: |-
+        Padrões de neve complexos podem ser criados com
+        formas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho
+        5 e 5 círculos de tamanho 10?
+      grade4_frozen_nested_loop_diamonds2: |-
+        Você sabia que cada floco de neve tem
+        uma forma diferente? Vamos criar um novo floco de neve usando o bloco "repita"
+        para repetir um paralelogramo 4 vezes, virando 90 graus à direita entre cada
+        paralelogramo.
+      grade4_frozen_nested_loop_diamonds3: |-
+        Agora, vamos criar um novo floco de neve
+        usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
+        à direita entre cada um.
+      grade4_frozen_square: |-
+        Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado
+        com o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco
+        "repita" deve repetir os blocos dentro dele para fazer um quadrado?
+      grade4_frozen_square_loop1: |-
+        Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado
+        com o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco
+        "repita" deve repetir os blocos dentro dele para fazer um quadrado?
+      grade4_frozen_square_loop2: |-
+        Vamos criar três quadrados, virando depois
+        de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.
+      grade4_frozen_square_loop3: |-
+        Você consegue criar um floco de neve usando o bloco
+        "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
+        graus entre cada quadrado?
+      grade4_review_artist3: |-
+        O bloco pule move o artista sem desenhar.
+        Desenhe a linha tracejada usando os bloco pule e desenhe.
+      grade4_review_bee1: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
+      grade5_artist_for_loops1: |-
+        Desenhe este triângulo que tem 50 pixels.
+        Dica: use um bloco repita.
+      grade5_artist_for_loops10: |-
+        Você consegue descobrir como usar tudo que aprendeu para criar essa imagem?
+
+        Precisa de uma dica? Clique aqui.
+      grade5_artist_for_loops5: |-
+        A menor reta nessa espiral quadrada
+        tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
+        anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
+      grade5_artist_parameters_triangles2a: |-
+        Você percebe algo diferente
+        sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
+      grade5_artist_variables_hexagons1: |-
+        Vamos tentar novamente. Agora, vamos fazer
+        esse design bacana com hexágonos de 60 pixels.
+      grade5_artist_variables_pentagon9: |-
+        Modifique esse algoritmo para que ele use
+        a variável "lados" ao invés de um número fixo para desenhar um pentágono. Substitua
+        o número 5 pela variável "lados" e use o bloco "defina lados para".
+      grade5_artist_variables_pentagons1: |-
+        Você pode me ajudar a desenhar esse padrão
+        colocando o bloco da variável "comprimento" nos lugares corretos?
+      grade5_playlab_variables13: |-
+        Use um bloco "quando tocar" para enviar
+        o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
+      grade5_playlab_variables2: |-
+        Essa corrida não foi muito justa! Altere
+        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        gato. O primeiro a coletar 10 bandeiras vence!
+      grade5_playlab_variables9: |-
+        Aqui temos uma função chamada "patrulhe".
+        Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
+      level 'grade3_Loops_3: Você consegue usar um laço para coletar todo o néctar?
+      level 'grade3_Loops_4: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
+      level 'grade3_Loops_6: O que acontece se você repetir esta sequência 3 vezes?
+        Não se esqueça de fazer o mel no final!
+      level 'grade3_Loops_7: |-
+        Cada flor contém uma unidade de néctar. Colete
+        o néctar de cada uma das flores.

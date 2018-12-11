@@ -1,5 +1,6 @@
 import React from 'react';
 import Notification from './Notification';
+import {action} from '@storybook/addon-actions';
 
 const information = {
   notice: "Did you know Clark Kent grew up in Kansas?",
@@ -171,6 +172,32 @@ export default storybook => {
             buttonLink="/"
             newWindow={true}
             analyticId="sample_announcement"
+          />
+        )
+      },
+      {
+        name: 'Two buttons and a link',
+        description: `Notification box that contains two buttons and a link`,
+        story: () => (
+          <Notification
+            type="bullhorn"
+            {...announcement}
+            detailsLinkText="And here's an extra link."
+            detailsLink="/"
+            buttons={[
+              {
+                text: "Learn more",
+                link: "/more",
+                newWindow: true,
+                onClick: action('onClickPopupMore')
+              },
+              {
+                text: "Learn less",
+                link: "/less",
+                newWindow: true,
+                onClick: action('onClickPopupLess')
+              }
+            ]}
           />
         )
       },

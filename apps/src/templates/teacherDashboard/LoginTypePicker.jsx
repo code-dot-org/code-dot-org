@@ -22,14 +22,16 @@ class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     handleImportOpen: PropTypes.func,
+    setRosterProvider: PropTypes.func,
     setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     // Provided by Redux
-    provider: PropTypes.string,
+    providers: PropTypes.arrayOf(PropTypes.string),
   };
 
-  openImportDialog = () => {
+  openImportDialog = (provider) => {
+    this.props.setRosterProvider(provider);
     this.props.handleCancel(); // close this dialog
     this.props.handleImportOpen(); // open the roster dialog
   };
@@ -37,15 +39,15 @@ class LoginTypePicker extends Component {
   render() {
     const {
       title,
-      provider,
+      providers,
       setLoginType,
       handleImportOpen,
       handleCancel,
       disabled,
     } = this.props;
-    const withGoogle = provider === OAuthSectionTypes.google_classroom;
-    const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
-    const withClever = provider === OAuthSectionTypes.clever;
+    const withGoogle = providers && providers.includes(OAuthSectionTypes.google_classroom);
+    const withMicrosoft = providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
+    const withClever = providers && providers.includes(OAuthSectionTypes.clever);
     const anyImportOptions = (withGoogle || withMicrosoft || withClever) &&
       (typeof handleImportOpen === 'function');
 
@@ -122,7 +124,7 @@ class LoginTypePicker extends Component {
 }
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
-  provider: state.teacherSections.provider,
+  providers: state.teacherSections.providers,
 }))(LoginTypePicker);
 
 const PictureLoginCard = (props) => (
@@ -172,7 +174,7 @@ const GoogleClassroomCard = (props) => (
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
     buttonText={i18n.loginTypeGoogleClassroomButton()}
-    onClick={() => props.onClick('google')}
+    onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
     disabled={props.disabled}
   />
 );
@@ -183,7 +185,7 @@ const MicrosoftClassroomCard = (props) => (
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
     buttonText={i18n.loginTypeMicrosoftClassroomButton()}
-    onClick={() => props.onClick('microsoft')}
+    onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
     disabled={props.disabled}
   />
 );
@@ -194,7 +196,7 @@ const CleverCard = (props) => (
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
     buttonText={i18n.loginTypeCleverButton()}
-    onClick={() => props.onClick('clever')}
+    onClick={() => props.onClick(OAuthSectionTypes.clever)}
     disabled={props.disabled}
   />
 );

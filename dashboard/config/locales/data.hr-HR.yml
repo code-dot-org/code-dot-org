@@ -3,7 +3,7 @@ hr:
   data:
     game:
       name:
-        Unplug1: Uvod u računalstvo
+        Unplug1: Uvod u Informatiku
         Maze: Labirint
         Multi: Materijali za višestruki izbor
         Unplug2: Razmišljati poput računala
@@ -15,11 +15,11 @@ hr:
         Farmer: Farmer
         Unplug6: Uvjeti
         Artist3: Umjetnik 3
-        Unplug7: Skladanje pjesama
+        Unplug7: Skladanje pjesmi
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
-        Unplug9: Programiranje u smjenama
+        Unplug9: Odnosno programiranje
         Farmer3: Farmer 3
         Unplug10: Internet
         Artist5: Umjetnik 5
@@ -483,7 +483,7 @@ hr:
         C2_graph_paper: Grafičko programiranje
         C2_conditionals_with_cards: Uvjeti
         C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: Programiranje u smjenama
+        C2_relay_programming: Odnosno programiranje
         C2_paper_airplanes: Papirnati avioni
         C2_digital_footprint: Tvoj digitalni trag
         C2_digital_footprint_v2: Tvoj digitalni trag

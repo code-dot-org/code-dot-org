@@ -22,10 +22,10 @@ describe('ProjectCardGrid', () => {
     const viewAllProjects = wrapper.instance().viewAllProjects;
 
     // Should show all project types.
-    expect(wrapper).to.have.exactly(7).descendants(ProjectAppTypeArea);
+    expect(wrapper).to.have.exactly(8).descendants(ProjectAppTypeArea);
     expect(wrapper.find(ProjectAppTypeArea).first()).to.have.props({
-      labKey: "playlab",
-      labName: "Stories and Games with Play Lab",
+      labKey: "gamelab",
+      labName: "Game Lab",
       numProjectsToShow: 4,
     });
 
@@ -40,7 +40,7 @@ describe('ProjectCardGrid', () => {
 
     // Show all project types.
     viewAllProjects();
-    expect(wrapper).to.have.exactly(7).descendants(ProjectAppTypeArea);
+    expect(wrapper).to.have.exactly(8).descendants(ProjectAppTypeArea);
 
     // Filter to only show Minecraft projects.
     onSelectApp('minecraft');

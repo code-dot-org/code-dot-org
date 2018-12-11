@@ -73,3 +73,7 @@ it:
         caccia al Golem di Ferro e attaccare gli zombie.
       Valentine_playlab_01_failure_message_override: Quasi!  Prova ancora.
       WhileAdventure_failure_message_override: Congratulazioni! Hai raccolto X monete!
+      kikiTesta_failure_message_override: Congratulazioni! Hai raccolto X monete!
+      sample1_failure_message_override: Congratulazioni! Hai raccolto X monete!
+      sample4_failure_message_override: Congratulazioni! Hai raccolto X monete!
+      sample8_failure_message_override: Congratulazioni! Hai raccolto X monete!

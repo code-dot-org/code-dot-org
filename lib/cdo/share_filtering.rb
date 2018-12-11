@@ -1,6 +1,7 @@
 require 'cdo/regexp'
 require 'cdo/geocoder'
 require 'cdo/web_purify'
+require 'dynamic_config/gatekeeper'
 
 USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
 PLAYLAB_APP_INDICATOR = 'studio_'.freeze
@@ -44,7 +45,8 @@ module ShareFiltering
   end
 
   def self.should_filter_program(program)
-    program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
-        program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+    Gatekeeper.allows('webpurify', default: true) &&
+      program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
+          program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 end

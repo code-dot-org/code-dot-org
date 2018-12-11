@@ -8,6 +8,7 @@ module MysqlConsoleHelper
       "--host=#{db.host}",
       "--database=#{db.path[1..-1]}",
     ]
+    command << "--port=#{db.port}" if db.port
     command << "--execute=\"#{args}\"" unless args.empty?
     command << "--password=#{db.password}" unless db.password.nil?
 

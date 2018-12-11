@@ -23,12 +23,12 @@ vi:
       user:
         name: Tên hiển thị
         name_example: Tên hiển thị<br/>(ví dụ như Cool Coder hoặc Jane S.)
-        email: Địa chỉ email
+        email: Thư điện tử
         parent_email: Email của phụ huynh/người giám hộ
         personal_email: Địa chỉ email cá nhân <a href="%{url}">(nhấp vào đây nếu bạn
           không có địa chỉ email)</a>
         username: tài khoản
-        password: mật khẩu
+        password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu hiện tại
         locale: Ngôn ngữ
@@ -48,6 +48,7 @@ vi:
   next_resource: Tài nguyên tiếp theo
   cancel: Huỷ
   okay: Đồng ý
+  or: hoặc
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
   add_teacher_form:
     code:
@@ -68,7 +69,7 @@ vi:
   courses: Các khóa học
   courses_page:
     title_student: Học Khoa học Máy tính
-    title_teacher: Dạy Khoa học Máy tính
+    title_teacher: Giảng dạy với Code Studio
   unplugged_activity: Hoạt động không dùng máy
   of: của
   more: NHIỀU HƠN
@@ -94,6 +95,7 @@ vi:
     twitter: Twitter
     facebook: Facebook
     windowslive: Tài khoản Microsoft
+    microsoft_v2_auth: Tài khoản Microsoft
     clever: Tài khoản Clever
     powerschool: Tài khoản Powerschool
     forgot_password: Quên mật khẩu?
@@ -171,6 +173,7 @@ vi:
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
+    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
   school_info:
@@ -196,7 +199,7 @@ vi:
     school_organization_zip: Zip Code của trường/tổ chức
   signin_form:
     title: Đã có một tài khoản? Đăng nhập
-    login: Địa chỉ email
+    login: Thư điện tử
     login_username: Email hoặc tên tài khoản
     password: Mật khẩu
     remember: Nhớ mật khẩu
@@ -254,7 +257,7 @@ vi:
     type:
       picture: Mật khẩu bằng ảnh
       word: Mật khẩu bằng từ ngữ
-      email: Địa chỉ email
+      email: Thư điện tử
       google_classroom: Google Classroom
       clever: Clever
   follower:
@@ -314,9 +317,7 @@ vi:
         applab: Tạo một ứng dụng
         gamelab: Tạo một dự án trò chơi
         weblab: Tạo một dự án Web thử nghiệm (beta)
-      home: Trang chủ
       my_dashboard: Bảng điều khiển của tôi
-      courses: Các khóa học
       course_catalog: Danh mục khóa học
       project_gallery: chương trình
       sections: Mục
@@ -360,10 +361,17 @@ vi:
       signin: Đăng nhập
       signup: Tạo tài khoản
       already_registered: Bạn đã đăng ký?
-      pair_programming: Lập trình đôi
       team: Nhóm
       driver: Người lái xe
       navigator: Định hướng
+      create: Tạo
+      applab: Phòng thí nghiệm ứng dụng
+      artist: Họa sĩ
+      gamelab: Kho Trò chơi
+      playlab: Phòng trò chơi
+      minecraft: Minecraft
+      flappy: Flappy bird
+      dance: Bữa tiệc khiêu vũ
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
@@ -658,7 +666,7 @@ vi:
     more: Nhiều hơn
     feedback: Cung cấp thông tin phản hồi
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
-    support: Hỗ trợ
+    support: Trợ giúp và Cộng đồng
     tos_short: Các điều khoản của Code.org
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
@@ -748,6 +756,8 @@ vi:
         và chia sẻ ứng dụng của bạn trong vài giây.
       audience: Lứa tuổi 13 +
       cta: Học cách làm
+    dance:
+      title: Bữa tiệc khiêu vũ
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
@@ -795,15 +805,17 @@ vi:
         các nhân vật Disney Infinity nổi tiếng.
     minecraft:
       title: Minecraft
-      body: Khám phá thế giới Minecraft thông qua mã.
+      body: Hãy khám phá thế giới Minecraft qua những đoạn mã
     minecraft2016:
       title: Minecraft
       body: Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft
         của riêng bạn.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt
-        đầu cuộc hành trình Minecraft với việc lập trình.
+      body: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code!
+        Cuộc hành trình đi qua Minecraft với mật mã.
     sports:
       body: Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao.
     text-compression:
@@ -978,14 +990,14 @@ vi:
     message: Vui lòng cho chúng tôi biết chủng tộc của bạn (hãy đánh dấu vào tất cả
       các mục thích hợp)
     races:
-    - white: Màu trắng
-    - black: Người da đen hoặc người Mỹ gốc Phi
-    - hispanic: Người Hispanic hoặc Latino
-    - asian: Châu á
-    - hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
-    - american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
-    - other: Khác
-    - opt_out: Không thích nói
+      white: Màu trắng
+      black: Người da đen hoặc người Mỹ gốc Phi
+      hispanic: Người Hispanic hoặc Latino
+      asian: Châu á
+      hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
+      american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
+      other: Khác
+      opt_out: Không thích nói
     submit: Gửi
     decline: Đóng
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
@@ -1168,9 +1180,10 @@ vi:
     xem lại câu trả lời của bạn.
   hidden_stage: Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của
     bạn về bài học nào bạn nên vào.
+  view_teacher_guide: Xem hướng dẫn cho giáo viên
   pd:
     form_labels:
-      email: Địa chỉ email
+      email: Thư điện tử
       school_name: Tên trường
       school_city: Thành phố của trường
       school_country: Quốc gia
@@ -1190,4 +1203,6 @@ vi:
   cookie_banner:
     accept: Tôi đồng ý
   gdpr_dialog:
+    message: Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu
+      trữ hoặc xử lý tại Hoa Kỳ.
     true: Đồng ý

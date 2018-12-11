@@ -7,7 +7,7 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
   * Unit Tests - Used to test client-side functionality of some of our levels, applab, and applab controls
   * Integration Tests - Used to test level solutions and some block behaviors
 * Dashboard directory
-  * Ruby tests - All of the server side business logic testing is through here. 
+  * Ruby tests - All of the server side business logic testing is through here.
   * UI tests - Used to test overall functionality. Intended to run across browsers. Runs either on Saucelabs or with a local Chromedriver
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
  * Shared directory
@@ -31,7 +31,7 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 ### Using CircleCI
 
-By default, commits on branches will be tested using CircleCI, which performs a full install, build, and runs tests for changed sub-projects. 
+By default, commits on branches will be tested using CircleCI, which performs a full install, build, and runs tests for changed sub-projects.
 
 Tests are run for the last commit in any given push. E.g., if you make 5 commits, push them all, only the last commit will get tested.
 
@@ -60,6 +60,10 @@ Worth noting:
 * `rake test:apps`, `rake test:pegasus`, `rake test:blockly_core` ... etc  - runs tests for specific sub-project
 * `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
 * `rake test:changed:apps` - runs apps tests if sub-project folder has changed
+
+### Shared Tests
+`cd shared && ruby -Itest ./test/path/to/your/test.rb` will run the specified
+test file in the shared directory.
 
 ### Apps Tests
 `npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.

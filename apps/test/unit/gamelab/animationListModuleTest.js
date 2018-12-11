@@ -62,7 +62,7 @@ describe('animationListModule', function () {
       expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/123/bar?version=latestVersion');
     });
 
-    it(`returns the sourceUrl passed through the media proxy if it's an aboslute url`, function () {
+    it(`returns the sourceUrl passed through the media proxy if it's an absolute url`, function () {
       const insecureProps = {sourceUrl: 'http://bar'};
       expect(animationSourceUrl(key, insecureProps, '123'))
           .to.equal(`//${document.location.host}/media?u=http%3A%2F%2Fbar`);
@@ -496,7 +496,27 @@ describe('animationListModule', function () {
       });
     });
 
-    it('Uses media proxy for absolute URLs', function () {
+    it('Does not use media proxy for curriculum.code.org absolute URLs', function () {
+      const sourceUrl = 'https://curriculum.code.org/some-absolute-url';
+      const serializedList = {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl,
+          }
+        }
+      };
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
+        orderedKeys: ['foo'],
+        propsByKey: {
+          'foo': {
+            sourceUrl,
+          }
+        }
+      });
+    });
+
+    it('Uses media proxy for non-curriculum.code.org absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {

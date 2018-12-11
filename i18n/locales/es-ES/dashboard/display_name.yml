@@ -1,0 +1,161 @@
+es:
+  data:
+    display_name:
+      AB_Debug_Artist1: 'Artista de la depuración #1 (AB)'
+      Alien Defender: Defensor alienígena
+      Alien Defender_2018: Defensor alienígena
+      App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo diseño'
+      App Lab Intro 8 - Video Getting Started: 'Vídeo: Cómo empezar'
+      App Lab Intro 8 - Video Images and Sounds: 'Vídeo: Imágenes y sonidos'
+      App Lab Intro 8 - Video Make It Interactive: 'Vídeo: Hazlo interactivo'
+      App Lab Intro 8 - Video Share Your App: 'Vídeo: Comparte tu aplicación'
+      AppLab Intro 3 - Change Screen Color: Cambiar color de la pantalla
+      AppLab Intro 3 - Change Text 2: Cambiar texto
+      AppLab Intro 3 - Change Text: Cambiar texto
+      AppLab Intro 3 - Change Two Buttons: Dos botones
+      AppLab Intro 3 - Full Text: Dos botones
+      AppLab Intro 3 - onEvent before: Mas practica onEvent
+      AppLab Intro 3 - onEvent intro: Hacer que funcionen los botones
+      AppLab Intro 3 - onEvent mouseInOut: Mas practica onEvent
+      AppLab Intro 3 - onEvent mouseOut: Usar mouseout
+      AppLab Intro 3 - onEvent mouseOver: Usar mouseOver
+      AppLab Intro 3 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 3 - playSound: Usar playSound
+      AppLab Intro 3 - share and keep going: Tal o cual
+      AppLab Intro 3 - stopSound: Usar playSound
+      AppLab Intro 3 - thisOrThat: Tal o cual
+      AppLab Intro 4 - Change Screen Color: Cambiar color de la pantalla
+      AppLab Intro 4 - Change Text 2: Cambiar texto
+      AppLab Intro 4 - Change Text: Cambiar texto
+      AppLab Intro 4 - Change Two Buttons: Dos botones
+      AppLab Intro 4 - Full Text: Dos botones
+      AppLab Intro 4 - Video Welcome: Bienvenido a la Hora del Código
+      AppLab Intro 4 - Video designMode: Vistazo al modo de diseño
+      AppLab Intro 4 - Video onEvent: Usar onEvent
+      AppLab Intro 4 - Video setProperty: Iniciando
+      AppLab Intro 4 - Video share thisThat: Comparte tu diseño
+      AppLab Intro 4 - Video share your work: Comparte tu diseño
+      AppLab Intro 4 - Video share: Comparte tu diseño
+      AppLab Intro 4 - Video sneak designMode: Vistazo al modo de diseño
+      AppLab Intro 4 - Video using onEvent: Usar onEvent
+      AppLab Intro 4 - onEvent before: Mas practica onEvent
+      AppLab Intro 4 - onEvent intro: Hacer que funcionen los botones
+      AppLab Intro 4 - onEvent mouseOver: Usar mouseOver
+      AppLab Intro 4 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 4 - playSound: Usar playSound
+      AppLab Intro 4 - stopSound: Usar playSound
+      AppLab Intro 4 - thisOrThat design: Tal o cual diseño
+      AppLab Intro 4 - thisOrThat template: Tal o cual diseño
+      AppLab Intro 4 - thisOrThat: Tal o cual
+      AppLab Intro 5 - Change Screen Color: Cambiar color de la pantalla
+      AppLab Intro 5 - Change Text 2: Cambiar texto
+      AppLab Intro 5 - Change Text: Cambiar texto
+      AppLab Intro 5 - Change Two Buttons: Dos botones
+      AppLab Intro 5 - Full Text: Dos botones
+      AppLab Intro 5 - addButton: Usar playSound
+      AppLab Intro 5 - go further: Usar playSound
+      AppLab Intro 5 - onEvent intro: Hacer que funcionen los botones
+      AppLab Intro 5 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 5 - playSound: Usar playSound
+      AppLab Intro 5 - rate it app: Usar playSound
+      AppLab Intro 5 - setScreen: Usar playSound
+      AppLab Intro 5 - share keep going: Usar playSound
+      AppLab Intro 5 - socialTemplate: Usar playSound
+      AppLab Intro 6 - Change Screen Color: Cambiar color de la pantalla
+      AppLab Intro 6 - Change Text 2: Cambiar texto
+      AppLab Intro 6 - Full Text: Dos botones
+      AppLab Intro 6 - Video welcome: Iniciando
+      AppLab Intro 6 - animalSoundBoard: Usar playSound
+      AppLab Intro 6 - blankApp: Usar playSound
+      AppLab Intro 6 - onEvent intro: Hacer que funcionen los botones
+      AppLab Intro 6 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 6 - playSound Template: Usar playSound
+      AppLab Intro 6 - playSound: Usar playSound
+      AppLab Intro 6 - quizApp: Usar playSound
+      AppLab Intro 6 - thisOrThatAddButton Template: Tal o cual
+      AppLab Intro 6 - thisOrThatAddButton: Tal o cual
+      AppLab Intro 6 - thisOrThatAddScreen: Tal o cual
+      AppLab Intro 6 - thisOrThatPersonalize: Tal o cual
+      AppLab Intro 6 - thisOrThatSetScreen: Tal o cual
+      AppLab Intro 7 - Change Screen Color: Cambiar color de la pantalla
+      AppLab Intro 7 - Change Text 2: Cambiar texto
+      AppLab Intro 7 - Full Text: Dos botones
+      AppLab Intro 7 - onEvent intro: Hacer que funcionen los botones
+      AppLab Intro 7 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 7 - playSound: Usar playSound
+      AppLab Intro 7 - thisOrThatAddButton: Tal o cual
+      AppLab Intro 7 - thisOrThatAddScreen: Tal o cual
+      AppLab Intro 7 - thisOrThatPersonalize: Tal o cual
+      AppLab Intro 7 - thisOrThatSetScreen: Tal o cual
+      CDEF_video_SpritesInAction: Como hacer un sprite
+      CDEF_video_SpritesInAction_2019: Como hacer un sprite
+      CSD Board Buttons Map: Botones e interruptores
+      CSD Board Buttons Map_2018: Botones e interruptores
+      CSD Board Sensors Map: Sensores análogos
+      CSD Board Sensors Map_2018: Sensores análogos
+      CSD Booleans Map: Booleanos y operadores de comparación
+      CSD Booleans Map_2018: Booleanos y operadores de comparación
+      CSD U2 Pair Programming Video: Programación de pares
+      CSD U2 Pair Programming Video_2018: Programación de pares
+      CSD U3 Animation Tab Map: La pestaña de animación
+      CSD U3 Animation Tab Map_2018: La pestaña de animación
+      CSD U3 L11 Freeplay: Juego libre
+      CSD U3 L11 Freeplay_2018: Juego libre
+      CSD U3 L12 Freeplay: Juego libre
+      CSD U3 L12 Freeplay_2018: Juego libre
+      CSD U3 L13 Freeplay: Juego libre
+      CSD U3 L13 Freeplay_2018: Juego libre
+      CSD U3 L15 Freeplay: Juego libre
+      CSD U3 L15 Freeplay_2018: Juego libre
+      CSD U3 L16 Freeplay: Juego libre
+      CSD U3 L16 Freeplay_2018: Juego libre
+      CSD U3 L17 Freeplay: Juego libre
+      CSD U3 L17 Freeplay_2018: Juego libre
+      CSD U3 L18 Freeplay: Juego libre
+      CSD U3 L18 Freeplay_2018: Juego libre
+      CSD U3 L19 Freeplay: Juego libre
+      CSD U3 L19 Freeplay_2018: Juego libre
+      CSD U3 L3 Freeplay: Juego libre
+      CSD U3 L3 Freeplay_2018: Juego libre
+      CSD U3 L4 Freeplay: Juego libre
+      CSD U3 L4 Freeplay_2018: Juego libre
+      CSD U3 L5 Freeplay: Juego libre
+      CSD U3 L5 Freeplay_2018: Juego libre
+      CSD U3 L6 Freeplay: Juego libre
+      CSD U3 L6 Freeplay_2018: Juego libre
+      CSD U3 L7 Freeplay: Juego libre
+      CSD U3 L7 Freeplay_2018: Juego libre
+      CSD U3 L9 Freeplay: Juego libre
+      CSD U3 L9 Freeplay_2018: Juego libre
+      CSD U3 Sprite Properties Map: Propiedades de Sprites
+      CSD U3 Sprite Properties Map_2018: Propiedades de Sprites
+      CSD U3 Variables Map: variables
+      CSD U3 Variables Map_2018: variables
+      CSD U3 functions map: funciones
+      CSD U6 arrays intro: Introducción a los Arrays
+      CSD U6 arrays intro_2018: Introducción a los Arrays
+      CSD U6 arrays video: Introducción a los Arrays
+      CSD U6 for loop map: Bucles Para
+      CSD U6 for loop map_2018: Bucles Para
+      CSD U6 functions paramters video: Funciones con parámetros
+      CSD U6 functions paramters video_2018: Funciones con parámetros
+      CourseEF_video_IntroSpriteLab: Este es el Sprite lab
+      CourseEF_video_IntroSpriteLab_2019: Este es el Sprite lab
+      CourseEF_video_MakeSprite: Como hacer un sprite
+      CourseEF_video_MakeSprite_2019: Como hacer un sprite
+      Dance_Party_extras_battle: Compañías de baile
+      Dance_Party_extras_every_beat: Negras
+      Dance_Party_extras_layout: Todos en formación
+      Dance_Party_extras_on_beat: Graves, medios y agudos
+      Dance_Party_extras_speed: Acelerar, frenar
+      Dance_Party_extras_visible: '¿Dónde están?'
+      MC_HOC_2017_FP10x10: Juego libre
+      MC_HOC_2017_FP10x10_RE: Juego libre
+      SG U3L07 More Subgoals: Documentacion
+      Text Compression_2018: Compresión de texto
+      courseA_video_Stevie: Stevie y el gran proyecto
+      courseA_video_Stevie_2018: Stevie y el gran proyecto
+      courseB_video_Unspotted: Errores desapercibidos
+      courseB_video_Unspotted_2018: Errores desapercibidos
+      coursee_explore_4: Defensor alienígena
+      expresslink: Curso Rápido

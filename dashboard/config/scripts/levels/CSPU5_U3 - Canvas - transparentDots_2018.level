@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the colors of your dots so they have a fully transparent stroke and partially transparent fill. (Click to see full instructions)",
-    "markdown_instructions": "# Changing Colors in Canvas\r\n\r\nWe would like to make our dots transparent so that we can see when they are drawn on top of each other. To set the color and transparency of shapes you draw on your canvas, you need to change both the **stroke** or outline color and the **fill** color. The functions `setStrokeColor` and `setFillColor` can be used to set those colors. \r\n\r\nThese functions **accept strings of the form `\"rgba(100, 200, 100, 0.5)\"` as input**. The first three values in the string are RGB values and the last value is the transparency, as represented by a decimal number between 0 and 1.0.  All together it looks like this:\r\n\r\n![](https://images.code.org/5f5692259df092ce4e000cbdf5a7df1b-image-1448077147778.png)\r\n<img src=\"https://images.code.org/e833a63e31dca7d5e8357c0b856dc7cc-image-1448244247180.gif\" style=\"float: right; width: 150px\">\r\n\r\n# Do This:\r\n\r\n**Before the loop: ** \r\n* **Add a `setStrokeColor` command** to set the stroke to **fully transparent**.\r\n* **Add a `setFillColor` command** to set your dots to full black and mostly transparent **(try a value of 0.2)**.",
+    "markdown_instructions": "# Changing Colors in Canvas\r\n\r\nWe would like to make our dots transparent so that we can see when they are drawn on top of each other. To set the color and transparency of shapes you draw on your canvas, you need to change both the **stroke** or outline color and the **fill** color. The functions `setStrokeColor` and `setFillColor` can be used to set those colors. \r\n\r\nThese functions **accept strings of the form `\"rgba(100, 200, 100, 0.5)\"` as input**. The first three values in the string are RGB values and the last value is the transparency, as represented by a decimal number between 0 and 1.0.  All together it looks like this:\r\n\r\n![](https://images.code.org/5f5692259df092ce4e000cbdf5a7df1b-image-1448077147778.png)\r\n<img src=\"https://images.code.org/e833a63e31dca7d5e8357c0b856dc7cc-image-1448244247180.gif\" style=\"float: right; width: 150px\">\r\n\r\n# Do This:\r\n\r\n**Before the loop:** \r\n* **Add a `setStrokeColor` command** to set the stroke to **fully transparent**.\r\n* **Add a `setFillColor` command** to set your dots to full black and mostly transparent **(try a value of 0.2)**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -43,9 +43,19 @@
     "encrypted_examples": "WRCRgKhecuQUdnISgn5v5T+7LUBDP5x+S72W5EKTUDtqmaQaemX3ipzOx2E4\nIH4c\n",
     "parent_level_id": 6947,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:40:05 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

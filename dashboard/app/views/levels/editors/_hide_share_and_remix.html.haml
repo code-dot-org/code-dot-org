@@ -1,3 +1,2 @@
 .field.hide_share_and_remix
-  = f.label :hide_share_and_remix, 'Hide Share and Remix buttons in header'
-  = boolean_check_box f, :hide_share_and_remix
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_share_and_remix, description: "Hide Share and Remix buttons in header"}

@@ -1,0 +1,15 @@
+{
+  "category": "",
+  "config": {
+    "func": "push",
+    "blockText": "set velocity {VECTOR}",
+    "args": [
+      {
+        "name": "VECTOR",
+        "type": "Sprite"
+      }
+    ],
+    "methodCall": true,
+    "thisObject": "this"
+  }
+}

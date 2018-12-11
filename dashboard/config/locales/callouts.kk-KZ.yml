@@ -105,10 +105,15 @@ kk:
         craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
           аласын ба?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
+          аласын ба?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай
           аласын ба?
       Overworld Move to Sheep_callout:
@@ -117,9 +122,14 @@ kk:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу"
           батырмасын басыңыз
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу"
+          батырмасын басыңыз
       Overworld Place Wall_callout:
         craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
@@ -127,14 +137,23 @@ kk:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
           үшін код еңгіз?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу
+          үшін код еңгіз?
       Underground Iron_callout:
         craft_what_is_iron: Осы темірді өнде!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Осы темірді өнде!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Осы темірді өнде!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: '"Шеңбер салу" блогын қолданыңыз
           және көлемін өзгертіңіз.'
       frozen cross rotate_callout:
+        replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen cross rotate_test_callout:
         replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen cross_callout:
         repeat_blocks_1: "(1) Осы блокты пайдаланып және сұр түсті блоктын айналасына
@@ -147,7 +166,17 @@ kk:
         frozen_diamond_repeat: Осы форманы жасау үшін қайталау блогын пайдаланыңыз.
       frozen freeplay_callout:
         snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
       frozen line_callout:
+        move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
+          үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
+      frozen line_b_callout:
+        move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
+          үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
+      frozen line_test_callout:
         move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
           үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
       frozen perpendicular_callout:
@@ -155,13 +184,31 @@ kk:
           санды таңдап Эльзаны қанша рет бұру керек анықтаңыз
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"Ақша қар бұтағын құру" блогын пайдаланып көріңіз'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"Ақша қар бұтағын құру" блогын пайдаланып көріңіз'
       frozen square iterative_callout:
+        frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
+      frozen square iterative_b_callout:
+        frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
+      frozen square iterative_test_callout:
         frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
       frozen square loop 3x_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop 3x_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop 3x_test_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen square loop_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop_test_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen square snowflake_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square snowflake_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square snowflake_test_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Функцияға параметрлер беру үшін басыңыз

@@ -1896,7 +1896,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  instructions: msg.hoc2015_move_right_instructions(),
+  shortInstructions: msg.hoc2015_move_right_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -1959,7 +1959,7 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  instructions: msg.hoc2015_move_right_down_instructions(),
+  shortInstructions: msg.hoc2015_move_right_down_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2002,7 +2002,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  instructions: msg.hoc2015_move_backtrack_instructions(),
+  shortInstructions: msg.hoc2015_move_backtrack_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2049,7 +2049,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  instructions: msg.hoc2015_move_diagonal_instructions(),
+  shortInstructions: msg.hoc2015_move_diagonal_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2115,7 +2115,7 @@ levels.js_hoc2015_move_around = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  instructions: msg.hoc2015_move_around_instructions(),
+  shortInstructions: msg.hoc2015_move_around_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2161,7 +2161,7 @@ levels.js_hoc2015_move_finale = {
      [0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
-  instructions: msg.hoc2015_move_finale_instructions(),
+  shortInstructions: msg.hoc2015_move_finale_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2237,7 +2237,7 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  instructions: msg.hoc2015_event_two_items_instructions(),
+  shortInstructions: msg.hoc2015_event_two_items_instructions(),
   instructions2: msg.hoc2015_event_two_items_instructions2(),
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
@@ -2336,7 +2336,7 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
-  instructions: msg.hoc2015_event_four_items_instructions(),
+  shortInstructions: msg.hoc2015_event_four_items_instructions(),
   instructions2: msg.hoc2015_event_four_items_instructions2(),
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': 'rgba(0, 0, 0, 0.5)',
@@ -2408,7 +2408,7 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  instructions: msg.hoc2015_score_instructions(),
+  shortInstructions: msg.hoc2015_score_instructions(),
   instructions2: msg.hoc2015_score_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
@@ -2524,7 +2524,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  instructions: msg.hoc2015_win_lose_instructions(),
+  shortInstructions: msg.hoc2015_win_lose_instructions(),
   instructions2: msg.hoc2015_win_lose_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
@@ -2638,7 +2638,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_add_characters_instructions(),
+  shortInstructions: msg.hoc2015_add_characters_instructions(),
   instructions2: msg.hoc2015_add_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
@@ -2738,7 +2738,7 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_chain_characters_instructions(),
+  shortInstructions: msg.hoc2015_chain_characters_instructions(),
   instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1800, // 60 seconds
@@ -2823,7 +2823,7 @@ levels.js_hoc2015_multiply_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_multiply_characters_instructions(),
+  shortInstructions: msg.hoc2015_multiply_characters_instructions(),
   instructions2: msg.hoc2015_multiply_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 2250, // 75 seconds
@@ -2938,7 +2938,7 @@ levels.js_hoc2015_change_setting = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  instructions: msg.hoc2015_change_setting_instructions(),
+  shortInstructions: msg.hoc2015_change_setting_instructions(),
   instructions2: msg.hoc2015_change_setting_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
@@ -3102,9 +3102,9 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': msg.hoc2015_event_free_instructions(),
+  'shortInstructions': msg.hoc2015_event_free_instructions(),
   'instructions2': msg.hoc2015_event_free_instructions2(),
-  'markdownInstructions': js_hoc2015_event_free_markdown,
+  'longInstructions': js_hoc2015_event_free_markdown,
   'markdownInstructionsWithClassicMargins': true,
   'callouts': [
     {
@@ -3573,7 +3573,7 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free,  {
   msgStringOverrides: {
     moveSprite: 'goSprite'
   },
-  markdownInstructions: null,
+  longInstructions: null,
   markdownInstructionsWithClassicMargins: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \

@@ -98,6 +98,8 @@ export const joinedSections = [
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
     assignedTitle: "Course 2",
     linkToAssigned: "https://studio.code.org/s/course2",
+    currentUnitTitle: "Unit 3",
+    linkToCurrentUnit: "https://studio.code.org/s/course2-unit3",
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
     code: "ClassTwoCode",

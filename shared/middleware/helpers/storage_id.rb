@@ -17,6 +17,16 @@ def create_storage_id_cookie
   storage_id
 end
 
+def destroy_storage_id_cookie
+  response.delete_cookie(
+    storage_id_cookie_name,
+    {
+      domain: ".#{request.shared_cookie_domain}",
+      path: '/',
+    }
+  )
+end
+
 def storage_decrypt(encrypted)
   decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
   decrypter.decrypt

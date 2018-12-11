@@ -50,6 +50,7 @@ class Applab < Blockly
     debugger_disabled
     makerlab_enabled
     teacher_markdown
+    helper_libraries
   )
 
   # List of possible skins, the first is used as a default.

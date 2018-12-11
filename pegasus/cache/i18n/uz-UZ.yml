@@ -339,6 +339,7 @@ uz-UZ:
     bloklaridan foydalaning.
   mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
+  mc_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   minecraft_agent_button: Boshlash
   minecraft_designer_button: Boshlash
   minecraft_adventurer_button: Boshlash
@@ -518,6 +519,12 @@ uz-UZ:
   touchdevelop_gradelevel: Yuqori sinflar
   blockly_gradelevel: Barcha yoshdagilar uchun
   boxisland_gradelevel: Boshlang‘ich sinflar
+  codeorg_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  codeintl_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  flappy_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  hourofcode_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  playlab_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  teacherled_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   w3schools_beyond_name: HTML bilib oling
   lightbot_beyond_gradelevel: Barcha yoshdagilar uchun
   codecademy_beyond_gradelevel: Yuqori sinflar
@@ -535,3 +542,13 @@ uz-UZ:
   flappy_shortcode: qanot qoqmoq
   header_courses: Kurslar
   header_educate_hoc: Dasturlash soati
+  applab_tile_start_tutorial: Boshlash
+  hoc_overview_start_tutorial: Boshlash
+  hoc2018_creativity_create: Yaratmoq
+  hoc2018_mc_start: Boshlash
+  hoc2018_mc_video_title_inspire_girl: Qizlarni ruhlantiring
+  hoc2018_mc_homepage_join_us: Bizga qo'shiling
+  hoc2018_mc_homepage_try_it: Sinab ko‘ring
+  hoc2018_dance_party_button: Boshlash
+  hoc2018_dance_teacher_resources_tile1_button: Dars rejasi
+  hoc2018_dance_amazon_about_future_engineer_button: Ko‘proq bilish

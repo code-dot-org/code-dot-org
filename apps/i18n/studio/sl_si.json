@@ -318,7 +318,7 @@
   "moveSpriteN": "premakni igralca {spriteIndex}",
   "moveDroid": "",
   "moveDroidN": "",
-  "to": "k",
+  "to": "na",
   "toXY": "x, y",
   "moveDown": "premakni se dol",
   "moveDownTooltip": "Premakni igralca dol.",

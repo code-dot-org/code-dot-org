@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_78_CSP_3_1_3'
+wrong 'I only'
+wrong 'I and II only'
+wrong 'III only'
+right 'I, II, and III'
+markdown <<MARKDOWN
+A teacher gives out three Diagnostic Tests in her Geometry class during the school year. The first test is held in September, the second in February, and the final one in April of the school year.  She maintains a record of the Test Id,  Student Number, Student Name, Question Number, Student Score (binary score of 1 or 0).  Which of the following can she NOT do, without collecting additional information?
+I. She can analyze how many students get the correct answer for a given question in a Diagnostic Test
+II. She can compare performance of a Student across the 3 tests
+III. She can calculate average score of students in a class for all three Diagnostic Tests.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.1.3** and Essential Knowledge statements: **3.1.3A, 3.1.3B, 3.1.3C**
+<hr>
+ (A) This is incorrect. The teacher can not only analyze how many students get the correct answer for a given question, but she can also compare performance of a Student across the 3 tests, and calculate average score of students in a class for all three Diagnostic Tests.
+
+<hr>
+ (B) This is incorrect. The teacher can not only analyze how many students get the correct answer for a given question, and compare performance of a Student across the 3 tests, but she can also calculate average score of students in a class for all three Diagnostic Tests.
+
+<hr>
+ (C) This is incorrect. The teacher can not only calculate average score of students in a class for all three Diagnostic Tests, but she can also analyze how many students get the correct answer for a given question, and she can also compare performance of a Student across the 3 tests.
+
+<hr>
+ (D) This is correct. The teacher can calculate average score of students in a class for all three Diagnostic Tests, analyze how many students get the correct answer for a given question, and also compare performance of a Student across the 3 tests.
+
+MARKDOWN

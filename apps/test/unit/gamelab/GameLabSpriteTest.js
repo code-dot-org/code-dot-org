@@ -1,6 +1,5 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {
   forEveryBooleanPermutation,
@@ -21,54 +20,6 @@ describe('GameLabSprite', function () {
   beforeEach(function () {
     gameLabP5 = createGameLabP5();
     createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
-  });
-
-  describe('method aliases', function () {
-    let testSprite;
-
-    beforeEach(function () {
-      testSprite = createSprite();
-    });
-
-    it('aliases setSpeed to setSpeedAndDirection', function () {
-      spy(testSprite, 'setSpeed');
-      testSprite.setSpeedAndDirection();
-      expect(testSprite.setSpeed.calledOnce).to.be.true;
-    });
-
-    it('aliases remove to destroy', function () {
-      spy(testSprite, 'remove');
-      testSprite.destroy();
-      expect(testSprite.remove.calledOnce).to.be.true;
-    });
-
-    it('aliases animation.changeFrame to setFrame', function () {
-      testSprite.addAnimation('label', createTestAnimation());
-      stub(testSprite.animation, 'changeFrame');
-      testSprite.setFrame();
-      expect(testSprite.animation.changeFrame.calledOnce).to.be.true;
-    });
-
-    it('aliases animation.nextFrame to nextFrame', function () {
-      testSprite.addAnimation('label', createTestAnimation());
-      stub(testSprite.animation, 'nextFrame');
-      testSprite.nextFrame();
-      expect(testSprite.animation.nextFrame.calledOnce).to.be.true;
-    });
-
-    it('aliases animation.previousFrame to previousFrame', function () {
-      testSprite.addAnimation('label', createTestAnimation());
-      stub(testSprite.animation, 'previousFrame');
-      testSprite.previousFrame();
-      expect(testSprite.animation.previousFrame.calledOnce).to.be.true;
-    });
-
-    it('aliases animation.stop to pause', function () {
-      testSprite.addAnimation('label', createTestAnimation());
-      stub(testSprite.animation, 'stop');
-      testSprite.pause();
-      expect(testSprite.animation.stop.calledOnce).to.be.true;
-    });
   });
 
   describe('property aliases', function () {
@@ -342,13 +293,13 @@ describe('GameLabSprite', function () {
     beforeEach(function () {
       sprite = createSprite(0, 0);
 
-      // We manually preload animations onto p5.projectAnimations for the use of
+      // We manually preload animations onto p5._predefinedSpriteAnimations for the use of
       // setAnimation.
       projectAnimations = {
         [ANIMATION_LABEL]: createTestAnimation(8),
         [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
       };
-      gameLabP5.p5.projectAnimations = projectAnimations;
+      gameLabP5.p5._predefinedSpriteAnimations = projectAnimations;
     });
 
     it('throws if the named animation is not found in the project', function () {
@@ -460,8 +411,8 @@ describe('GameLabSprite', function () {
     beforeEach(function () {
       sprite = createSprite(0, 0);
 
-      // Manually preload animations onto p5.projectAnimations
-      gameLabP5.p5.projectAnimations = {
+      // Manually preload animations onto p5._predefinedSpriteAnimations
+      gameLabP5.p5._predefinedSpriteAnimations = {
         [LOOPING_ANIMATION]: createTestAnimation(3, true),
         [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
       };

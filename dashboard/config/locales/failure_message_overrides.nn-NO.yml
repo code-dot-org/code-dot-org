@@ -88,6 +88,8 @@ nn:
       MC HOC 2016 Village Test_failure_message_override: Du må få Jerngolemane til
         å jakte på og angripe zombiane for å vinne.
       WhileAdventure_failure_message_override: Gratulerer! Du har samla X myntar!
+      courseC19_playLab_EOC3_failure_message_override: Du må leggje til to eller fleire
+        nye aktørar til spelet ditt og kode dei til å røre på seg.
       courseE_playLab_scaffold3_failure_message_override: Du må leggje til to eller
         fleire nye aktørar til spelet ditt og kode dei til å røre på seg.
       courseE_playLab_scaffold3_2018_failure_message_override: Du må leggje til to

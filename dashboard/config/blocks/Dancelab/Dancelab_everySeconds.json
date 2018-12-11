@@ -1,0 +1,33 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "everySeconds",
+    "blockText": "every {N} {UNIT} ",
+    "args": [
+      {
+        "name": "N",
+        "type": "ClampedNumber(0.1,)",
+        "field": true
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "measures",
+            "\"measures\""
+          ],
+          [
+            "seconds",
+            "\"seconds\""
+          ]
+        ]
+      }
+    ],
+    "eventLoopBlock": true,
+    "color": [
+      322,
+      0.9,
+      0.95
+    ]
+  }
+}

@@ -46,7 +46,7 @@ schools as
 (
   select 
     sp.id as studio_person_id, 
-    coalesce(schools_pd_2016.school_id, schools_pd_2017.school_id, su.school_id) school_id
+    coalesce(su.school_id, schools_pd_2016.school_id, schools_pd_2017.school_id) school_id
   from dashboard_production_pii.studio_people sp
     left join schools_users su on su.studio_person_id = sp.id 
     left join schools_pd_2016 on schools_pd_2016.studio_person_id = sp.id
@@ -92,6 +92,18 @@ trained_2017 as
     end as regional_partner
   from analysis_pii.teachers_trained_2017 tt
     join dashboard_production_pii.users u on u.id = tt.user_id
+),
+-- all teachers trained in 2017
+trained_2018 as
+(
+  select 
+    studio_person_id,
+    course,
+    '2018-19' as school_year,
+    rp.name regional_partner,
+    tt.regional_partner_id
+  from analysis_pii.teachers_trained_2018 tt
+    join dashboard_production_pii.regional_partners rp on rp.id = tt.regional_partner_id
 )
 select 
   t.*, 
@@ -110,5 +122,16 @@ select
 from trained_2017 t
   join schools sc on sc.studio_person_id = t.studio_person_id
   left join dashboard_production_pii.regional_partners rp on rp.name = t.regional_partner
+  
+union all
+
+select 
+  t.*, 
+  sc.school_id
+from trained_2018 t
+  join schools sc on sc.studio_person_id = t.studio_person_id
 
 with no schema binding;
+
+GRANT ALL PRIVILEGES ON analysis.csp_csd_teachers_trained TO GROUP admin;
+GRANT SELECT ON analysis.csp_csd_teachers_trained TO GROUP reader, GROUP reader_pii;

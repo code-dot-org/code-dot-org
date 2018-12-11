@@ -32,13 +32,11 @@ end
 # CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
 # https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
 # Detect Circle environment just to be safe.
-def sources_s3_dir(environment)
+def sources_s3_dir(environment, project_directory)
   if environment == :production
     'sources'
-  # Check that we're executing in a Rack environment and not a standalone script, because cron jobs execute as root
-  # which are not in the project directory and can't shell out to get the current git revision.
-  elsif environment == :test && !ENV['CIRCLECI'] && ENV['RACK_ENV']
-    "sources_#{environment}/#{GitUtils.git_revision_short}"
+  elsif environment == :test && !ENV['CIRCLECI']
+    "sources_#{environment}/#{GitUtils.git_revision_short(project_directory)}"
   else
     "sources_#{environment}"
   end
@@ -79,7 +77,8 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
-    'default_hoc_mode'            => false, # overridden by 'hoc_mode' DCDO param, except in :test
+    'default_hoc_mode'            => 'soon-hoc', # overridden by 'hoc_mode' DCDO param, except in :test
+    'default_hoc_launch'          => 'dance', # overridden by 'hoc_launch' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -88,6 +87,7 @@ def load_configuration
     'localize_apps'               => false,
     'name'                        => hostname,
     'newrelic_logging'            => rack_env == :production,
+    'netsim_enable_metrics'       => [:staging, :test].include?(rack_env),
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'partners'                    => %w(),
@@ -105,11 +105,7 @@ def load_configuration
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
-    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_properties_table'     => "#{rack_env}_properties",
-    'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
@@ -126,7 +122,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => sources_s3_dir(rack_env),
+    'sources_s3_directory'        => sources_s3_dir(rack_env, root_dir),
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -140,8 +136,6 @@ def load_configuration
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
-    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
-
     # test environment should use precompiled, minified, digested assets like production,
     # unless it's being used for unit tests. This logic should be kept in sync with
     # the logic for setting config.assets.* under dashboard/config/.
@@ -151,6 +145,7 @@ def load_configuration
     config.merge! global_config
     config.merge! local_config
 
+    config['bundler_use_sudo']    ||= config['chef_managed']
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['cdn_enabled']         ||= config['chef_managed']
@@ -262,7 +257,21 @@ class CDOImpl < OpenStruct
     site_url('advocacy.code.org', path, scheme)
   end
 
-  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+  def hourofcode_url(path = '', scheme = '')
+    site_url('hourofcode.com', path, scheme)
+  end
+
+  # No curriculum languages are currently enabled; as of November 2018,
+  # enabling a language here will redirect _all_ links to CB for that language
+  # to the language-specific version of that content, even though we only
+  # generate language-specific versions of CB content for the subset of content
+  # we are actively translating.
+  #
+  # TODO: (elijah) figure out a better way to link to locale-specific CB
+  # content, and reenable some languages here.
+  #
+  # When enabled, this should look something like Set['/es-mx', '/it-it', '/th-th']
+  CURRICULUM_LANGUAGES = Set[]
 
   def curriculum_url(locale, path = '')
     locale = '/' + locale.downcase.to_s
@@ -441,4 +450,12 @@ end
 
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
+end
+
+def shared_constants_dir(*dirs)
+  lib_dir('cdo', 'shared_constants', *dirs)
+end
+
+def shared_constants_file
+  lib_dir('cdo', 'shared_constants.rb')
 end

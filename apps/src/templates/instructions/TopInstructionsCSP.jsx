@@ -4,8 +4,6 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import processMarkdown from 'marked';
-import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import FeedbacksList from "./FeedbacksList";
 import TeacherFeedback from "./TeacherFeedback";
@@ -27,7 +25,6 @@ import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -110,7 +107,7 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    markdown: PropTypes.string,
+    longInstructions: PropTypes.string,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -118,7 +115,7 @@ class TopInstructions extends Component {
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    ttsLongInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -128,11 +125,18 @@ class TopInstructions extends Component {
     user: PropTypes.number
   };
 
-  state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
-      experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
-    feedbacks: []
-  };
+  constructor(props) {
+    super(props);
+
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      (window.location.search).includes('user_id');
+
+    this.state = {
+      tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+      feedbacks: [],
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+    };
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -146,7 +150,7 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
-    if (this.props.viewAs === ViewType.Student && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)) {
+    if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
         method: 'GET',
@@ -259,7 +263,7 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
     ];
-    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
+    const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
     // Only display the help tab when there are one or more videos or
@@ -269,21 +273,9 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-
-    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
-
-    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
-
-    const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
-
-    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && (displayFeedbackDevTeacher || displayFeedbackStable);
-
-    const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
+    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+    const displayFeedback = displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -348,8 +340,7 @@ class TopInstructions extends Component {
                 <div>
                   <Instructions
                     ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
+                    longInstructions={this.props.longInstructions}
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
@@ -370,7 +361,6 @@ class TopInstructions extends Component {
                 {this.props.viewAs === ViewType.Teacher &&
                   <TeacherFeedback
                     ref="commentTab"
-                    withUnreleasedFeatures={displayFeedbackDevTeacher}
                   />
                 }
                 {this.props.viewAs === ViewType.Student &&
@@ -402,11 +392,11 @@ export default connect(state => ({
   expandedHeight: state.instructions.expandedHeight,
   maxHeight: Math.min(state.instructions.maxAvailableHeight,
     state.instructions.maxNeededHeight),
-  markdown: state.instructions.longInstructions,
+  longInstructions: state.instructions.longInstructions,
   noVisualization: state.pageConstants.noVisualization,
   collapsed: state.instructions.collapsed,
   documentationUrl: state.pageConstants.documentationUrl,
-  ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+  ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,

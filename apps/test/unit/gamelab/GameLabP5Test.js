@@ -53,7 +53,9 @@ describe('GameLabP5', function () {
           top: 0,
           width: 400,
           height: 400
-        })
+        }),
+        offsetWidth: 400,
+        offsetHeight: 400,
       };
       gameLabP5.p5._curElement.elt = fakePlaySpaceElement;
     });

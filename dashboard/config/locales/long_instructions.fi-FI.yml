@@ -1,0 +1,624 @@
+---
+fi:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: Hyppää-lohko siirtää taiteilijan ilman, että se piirtää. Piirrä
+        katkoviiva käyttämällä sekä hyppää- että piirrä-lohkoja.
+      2-3 Artist 4: Auta minua saamaan valmiiksi talo tälle kissalle.
+      2-3 Artist 9 NEW: Viimeistele tämä leija
+      2-3 Artist 9 REPLACEMENT: Piirrä portaat loppuun!
+      2-3 Artist 9: Viimeistele tämä leija
+      2-3 Artist Debugging 10: 'Minun peliohjaimen suunta-näppäimistö on liian kapea.
+        Vihje: Laajenna sitä 10 kuvapistettä'
+      2-3 Artist Debugging 11: Auta minua viimeistelemään kaunis lumihiutaleeni. Kuinka
+        monta kertaa minun täytyy "toistaa" saadakseni sen valmiiksi?
+      2-3 Artist Debugging 2: 'Koodi näkemällesi kolmelle viikselle on väärä. Vihje:
+        kukin viiksi on 75 kuvapistettä pitkä. Korjaa tämä koodi piirtääksesi viikset.'
+      2-3 Artist Debugging 3: 'Veneessäni on reikä! Voitko korjata sen muuttamalla
+        linjan kulmaa? Vihje: viimeinen kulma on väärässä 15 astetta.'
+      2-3 Artist Debugging 5: 'Koodi näkemällesi jalalle ja jalkaterälle on väärä.
+        Vihje: jalkaterä on liian pitkä, meidän täytyy ehkä poistaa askel (tehty kompa)'
+      2-3 Artist Debugging 6: Näyttää, että istun tuolilla, josta puuttuu jalka. Muokkaa
+        lohkoja piirtääksesi jalan.
+      2-3 Artist Debugging 7: "Näyttää, että koodissa oleva C on piirretty takaperin.
+        \nVoitko tehdä sen näyttämään C:ltä?"
+      2-3 Artist Debugging 8: Minun kärrynpyörä ei ole valmis. Kuinka monta kertaa
+        minun täytyy toistaa saadakseni sen valmiiksi?
+      2-3 Artist Debugging 9: 'Tämä rungon koodi on virheellinen. Vihje: Kulma on
+        pielessä 60 astetta'
+      2-3 Artist Free Play: Vapaapeli! Piirrä ihan mitä tahansa.
+      2-3 Artist Functions 11.5: Tässä on sama "Piirrä kuusikulmio" -funktio. Mitä
+        tapahtuu, jos käännät vain 60 astetta joka kerta kun teet silmukan?
+      2-3 Artist Functions 12 Mike: 'Funktiot ovat todella upeita toimintoja kun piirretään
+        monimutkaisia asioita useita kertoja. Voitko käyttää "Piirrä kukka"-funktiota
+        täyttääksesi loput kylvökoneen laatikosta?(Vihje: kasvit erotettiin toisistaan
+        100 kuvapisteen pituudella)  '
+      2-3 Artist Functions 12 a: 'Funktiot ovat todella upeita toimintoja kun piirretään
+        monimutkaisia asioita useita kertoja. Voitko käyttää "Piirrä kukka"-funktiota
+        täyttääksesi loput kylvökoneen laatikosta?(Vihje: kasvit erotettiin toisistaan
+        100 kuvapisteen pituudella)  '
+      2-3 Artist Functions 12: 'Funktiot ovat todella upeita toimintoja kun piirretään
+        monimutkaisia asioita useita kertoja. Voitko käyttää "Piirrä kukka"-funktiota
+        täyttääksesi loput kylvökoneen laatikosta?(Vihje: kasvit erotettiin toisistaan
+        100 kuvapisteen pituudella)  '
+      2-3 Artist Functions 2: Funktioilla voit määrittää uusia lohkoja! Olemme siirtäneet
+        neliöiden piirtämislohkot funktioon nimeltä "piirrä neliö". Voitko käyttää
+        "piirrä neliö"-funktiota lasien luomiseksi? Neliöt ovat 75 kuvapistettä kumpikin.
+      2-3 Artist Functions 3: Muokkaa funktiota piirtääksesi neliön minkä sivu on
+        115 kuvapistettä pitkä ja piirrä isommat lasit. Nyt neliöt ovat 45 kuvapistettä
+        kumpikin.
+      2-3 Artist Functions 4: Käytä "toista" lohkoa piirtääksesi nämä 3 neliötä.
+      2-3 Artist Loops 1: Voitko tehdä kuusikulmion, jonka sivut ovat 100 kuvapistettä
+        pitkiä valmistaaksesi solun? Muista, että tämä tarkoittaa, että sinun tarvitsee
+        vain kääntyä 60 astetta!
+      2-3 Artist Loops 2: Käytä nyt toista-lohkoa tehdäksesi solusta kuoren.
+      2-3 Artist Loops New 10: Nyt yhdistetään joukko V-kirjaimia, piirretään ne silmukassa.
+      2-3 Artist Loops New 12: 'Piirrä timantti, jossa sivut on 100 kuvapistettä.
+
+'
+      2-3 Artist Loops New 13: Nyt piirrä timantti 3 kertaa silmukassa.
+      2-3 Artist Loops New 2: Tässä on jotain siitä koodista, jota käytit piirtääksesi
+        neliön. Mitä tapahtuu, jos käytät toista-lohkoa suorittaaksesi tämän koodin
+        4 kertaa?
+      2-3 Artist Loops New 9: Piirrä yksinkertainen V, jonka molemmat sivut ovat 50
+        kuvapistettä, jotta nuolen kuva täydentyy.
+      2-3 Artist Nested Loops 10: Tee silmukka tälle koodille 12 kertaa täydentääksesi
+        kuviosi.
+      2-3 Artist Nested Loops 11: Tee silmukka tälle koodille 4 kertaa täydentääksesi
+        kuvion, käänny 90 astetta jokaisen ympyrän jälkeen.
+      2-3 Artist Nested Loops 12: Tee silmukka tälle koodille 12 kertaa täydentääksesi
+        kiharat.
+      2-3 Artist Nested Loops 2: Tee nyt silmukka tälle kolmiolle 6 kertaa. Joka kolmion
+        jälkeen sinun täytyy kääntyä 60 astetta ennen seuraavan piirtämistä.
+      2-3 Artist Nested Loops 4: 'Tee toistosilmukka tälle timantille 12 kertaa piirtääksesi
+        kukka. Vinkki: 12 timanttia on kuten 12 kolmiota, jotka teit - kuinka paljon
+        sinun täytyy kääntyä kunkin muodon jälkeen?'
+      2-3 Artist Nested Loops 5: Piirrä tähän rakennukseen ikkunat käyttämällä sisäkkäistä
+        silmukkaa. Ikkunat ovat 20 pikseliä leveitä ja 20 pikseliä erillään toisistaan.
+      2-3 Artist Nested Loops 7: Silmukoi tätä kolmiota 10 kertaa piirtääksesi auringon.
+        Sinun täytyy liikkua ja kääntyä jokaisen kolmion jälkeen. Voit selvittää,
+        kuinka paljon pitää kääntyä jakamalla ympyrän asteiden lukumäärän tarvittavien
+        kuvioiden lukumäärällä.
+      2-3 Artist Nested Loops 8: "Lisätäänpä vähän ruohoa kuvaamme. \nJokainen ruohotupsu
+        on 50 pikseliä toisistaan erillään."
+      2-3 Artist Nested Loops 9: |-
+        Viimeistelemme kuvan lisäämällä siihen kukan.
+        Silmukoi timanttia 12 kertaa piirtääksesi kukan.
+      2-3 Artist Nested Loops Free Play: Vapaata piirtoa. Piirrä jotain kivaa sisäkkäisillä
+        silmukoilla.
+      2-3 Bee Conditionals 11: Kerää mettä siellä missä kukissa on mettä.
+      2-3 Bee Conditionals 13: "Kerää mettä ja tee hunajaa. Vinkki: \nmitä tapatuu
+        jos käytät \"jos mettä\"-ehtoa punaiseen kukkaan? \nVoitko ratkaista tämän
+        käyttämällä silmukkaa?"
+      2-3 Bee Conditionals 15: Kerää mettä kaikista neljästä kukasta.
+      2-3 Bee Conditionals 3: |-
+        Auta minua keräämään kaikki mesi
+        kukista ja tekemään hunajaa. Käytä silmukkaa.
+      2-3 Bee Debugging 3: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
+        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
+      2-3 Bee Debugging 6: 'Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
+        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi. '
+      2-3 Bee Debugging 9: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
+        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
+      2-3 Bee Functions 10: Violeteissa kukissa voi olla mettä joko 1 tai 0.  Luo
+        funktio, joka kerää mettä vain sellaisista violeteista kukista, joissa on
+        mettä.
+      2-3 Bee Functions 2: |-
+        Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
+        Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,
+        jotta pärjäisit järkevällä koodilohkomäärällä.
+      2-3 Bee Functions 4: |-
+        "Liiku ja kerää mettä"-funktio kääntää mehiläistä,
+        kerää meden ja sitten palauttaa mehiläisen lähtöpaikkaansa.
+        Käytä funktiota kerätäksesi kaiken meden.
+      2-3 Bee Loops 1: 'Jokainen kukka sisältää yhden verran mettä. Kerää mesi jokaisesta
+        kukasta. '
+      2-3 Bee Loops 3A: Osaatko käytää silmukkaa kaiken meden keräämiseen?
+      2-3 Bee Loops 3B: Nyt käytä uutta toista-lohkoa saadaksesi kaiken meden kerättyä
+        ja hunajan tehtyä.
+      2-3 Bee Loops 4A: Mitä tapahtuu, jos toistat komentosarjan kolme kertaa? Älä
+        unohda tehdä hunajaa lopussa!
+      2-3 Bee Loops 8: Violeteissa kukissa on tuntematon määrä mettä. Käytä "niin
+        kauan kuin mettä" -silmukkaa kerätäksesi kaiken meden. Tätä silmukkaa suoritetaan
+        niin kauan kuin ehto on tosi, tässä tapauksessa kun mettä > 0.
+      2-3 Maze 15: Mene possun luo, mutta vähennä lohkojen määrää käyttämällä kahta
+        silmukkaa.
+      2-3 Maze Loops 18: Vie minut auringonkukan luo!
+      4-5 Artist 10: Paina "Suorita" testataksesi koodia. Toista sitten niin monta
+        kertaa että piirustus on valmis. Värit vaihtuvat joka kerta.
+      4-5 Artist 2: Osaatko tehdä koodiin silmukan saadaksesi neliön valmiiksi?
+      4-5 Artist 5: Mitä kulmaa käytät?
+      4-5 Artist 6: Tasasivuisen kolmion kulmat ovat 60, 60 ja 60 astetta. Kukin sivu
+        on 200 kuvapistettä. Täydennä piirros.
+      4-5 Artist Free Draw 1: Vapaa piirto! Piirrä mitä ikinä oletkaan insproitunut
+        luomaan.
+      4-5 Artist Patterns 1: Osaatko piirtää tämän neliön käyttämällä silmukkaa? Jokainen
+        sivu on 20 pikseliä pitkä.
+      4-5 Artist Patterns 12: Mitä tapahtuu, jos kopioit tämän silmukan ja käännät
+        vasemmalle oiken sijaan? Osaatko toistaa tuon piirtääksesi aallon?
+      4-5 Artist Patterns 13: "Kerrataanpa koko juttu neljä kertaa, jotta saadaan
+        kehykset tähän piirustukseen. Ole tarkkaavainen kulmissa, et voi vain kääntyä
+        90 astetta!\r\n\r Jos 3 asteen silmukka pitää toistaa 60 kertaa, jotta saa
+        puoliympyrän, millä näistä koodipalikoista saa aikaan kulmaan neljännesympyrän?"
+      4-5 Artist Patterns 3: Mennäänpä tasoa syvemmälle! Olemme laittaneet kokonaisen
+        koodipalikan toisen silmukan sisään, mutta nyt on saatava taiteilija paikalle
+        piirtämään seuraava viiva. Mikä näistä koodipalikoista pitää laittaa ulommaisimman
+        silmukan loppuun, jotta saadaan piirrettyä kokonainen ristikko?
+      4-5 Artist Patterns 8: Käytä silmukkaa ja piirrä tämä kuusikulmio, jossa on
+        40 kuvapisteen sivut ja 60 asteen kulmat.
+      4-5 Artist Patterns 9: "Toista tämä koodi 3 kertaa ja piirrä kokonainen rivi.\r\n\r\nJokainen
+        kuusikulmio on 80 kuvapistettä mitattuna äärimmäisestä pisteestä vasemmalla
+        oikean reunan äärimmäiseen pisteeseen."
+      4-5 Artist Patterns Free Play: Vapaa peli - koeta piirtää oma kuvio!
+      4-5 Bee Conditionals 2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi, jotta
+        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+        pilvet eivät piilottelee samaa asiaa!"
+      4-5 Bee Conditionals 5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\r\n\r\nJos
+        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\r\nMuussa tapauksessa,
+        tee hunajaa (koska pilven alla on hunajakenno)."
+      4-5 Bee Conditionals 6: "En ole varma, kuinka paljon mettä tässä kukassa on,
+        mutta tiedän, että sillä on 1, 2 tai 3 mettä.\r\n\r\nYhdistä vaihtoehtoiset
+        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\r\n\r\nMuista,
+        meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
+      4-5 Bee Conditionals 7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\r\n\r\nTee
+        valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien
+        kaiken meden talteen."
+      4-5 Bee Conditionals 8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\r\n\r\nFunktiosi
+        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\r\nMene
+        sitten eteenpäin ja tee hunajaa."
+      4-5 Bee Conditionals Assessment 1: "Tehtävä: Tämä pilvi joko piilottelee kukkaa,
+        jossa on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\r\n\r\nTäydennä
+        'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai
+        hunaja.\r\n"
+      4-5 Bee Debugging 1: "Nämä palikat todellakin häiritsevät minua.\r\n\r\nOsaatko
+        korjata ne?"
+      4-5 Bee Debugging 6: Violetissa kukassa on tuntematon määrä mettä. Korjaa lohkot
+        siten, että kaikki mesi saadaan kerättyä.
+      4-5 Bee Nested Loops 4: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      4-5 Bee Nested Loops Assessment 1: 'Tehtävä: Kerää kaikki mesi ja tee kaikki
+        hunaja käyttämällä silmukoita.'
+      4-5 Maze 9: "Meillä on uusi palikka, 'toista kunnes'.\r\nSen kanssa voimme toistaa
+        käskyjä kunnes zombie pääsee auringonkukan luo.\r\n\r\nKäytä uutta 'toista
+        kunnes' -palikkaa tämän tehtävän ratkaisemiseen niin vähillä käskyillä kuin
+        mahdollista."
+      4-5 Maze Conditionals 1: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
+        luo.
+      4-5 Maze Conditionals 2: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
+        luo.
+      4-5 Maze Conditionals 3: "Käytä 'jos'-palikkaa ja auta minua päättämään milloin
+        käännyt.\r\n"
+      4-5 Maze Conditionals 4: Ok, ratkaise tämä tehtävä samoin kuin edellinen. Sinun
+        on muistettava, kuinka käytit 'jos' ja 'toista kunnes'-palikoita yhdessä.
+      4-5 Maze Conditionals 5: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi
+        minut sinne käyttäen mahdollisimman pientä määrää lohkoja.
+      4-5 Maze Conditionals 6: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi
+        minut sinne käyttäen mahdollisimman pientä määrää lohkoja.
+      4-5 Maze Conditionals 7: Tämän tehtävän ratkaisu ei ole kovin erilainen, mutta
+        varo ahmijoita!
+      4-5 Maze Conditionals 8: "'Jos/muuten' -palikka tarkistaa ehdon, ja sitten se
+        tekee yhden asian TAI toisen.\r\n\r\nKäytä tätä uutta palikkaa ja vie minut
+        auringonkukan luo."
+      4-5 Maze Conditionals 9: "Vielä yksi harjoitustehtävä 'jos/muuten' -palikalla!\r\n\r\nKulje
+        sitä pitkin sormellasi ja kokeile, saatko sen oikein sen ensi yrittämällä."
+      4-5 Maze Conditionals Assessment 1: 'Tehtävä: Käytä ''toista kunnes'' ja ''jos/muuten''
+        -palikoita ja vie minut auringonkukan luo. Käytä mahdollisimman vähiä palikoita.'
+      4-5 Nested Loops 12: Osaatko piirtää nämä 36 kolmiota käyttäen sisäkkäistä silmukkaa?
+      4-5 Nested Loops 5: Liitä annettu koodi silmukkaan. Tee tuulimylly.
+      4-5 Nested Loops 6: Osaatko piirtää kuusikulmion kolmiokoodia toistamalla?
+      4-5 Nested Loops 7: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka monta astetta
+        sinun on käännyttävä joka toistolla?"
+      4-5 Nested Loops 8: "Toista tämä kuvio 6 kertaa.\r\n\r\nKuinka monta astetta
+        sinun on käännyttävä joka toistolla? "
+      4-5 Nested Loops 9: Piirrä alligaattorin suuhun hampaat!
+      4-5 While Loops 1: Liikuta minut kuoppaan ja täytä se kahdella multalapiollisella,
+        käytä 'täytä'-palikkaa.
+      4-5 While Loops 2: Liikuta minut multakasan luo. Poista kasa kauhomalla lapiolla
+        5 kertaa. Käytä 'poista1'-palikkaa.
+      4-5 While Loops 3: "Tee tämä tehtävä käyttämällä niin vähän palikoita kuin mahdollista!\r\n\r\nLiikuta
+        minut kasan luo ja poista kaikki multa, siirry sitten kuopan luo ja täytä
+        se kokonaan."
+      4-5 While Loops 4: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka monta multalapiollista
+        tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
+        kunnes maa on tasainen?  "
+      Artist Autorun Test: Käytä "toista" lohkoa piirtääksesi nämä 3 neliötä.
+      Course 4 Artist 13: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle
+        voit piirtää, mitä haluat!
+      Course 4 Artist 6: "Täydennä koodi ja piirrä nämä kolmiot. \r\n\r\nJokaisen
+        tasakylkisen kolmion sivut ovat 100 kuvapistettä pitkiä. "
+      Course 4 Artist 8: Toista koko koodipalikka useita kertoja ja piirrä aurinko.
+      Course 4 Artist 8a: Muistatko tämän muodon? Nyt saat rakentaa ilman valmiita
+        aloituspalikoita!
+      Course 4 Artist For Loops 13: Hmm, muodothan kasvavat kerta kerralta! Tämän
+        ongelman voi ratkaista variaabeleilla. Kuinka laskuri-variaabelia käytetään
+        sivujen pienentämiseen, nyt kun sivuja on enemmän? Sen sijaan, että siirtyisit
+        eteenpäin asettamalla luvun, yritä liikkua eteenpäin (100/laskuri) kuvapisteillä.
+      Course 4 Artist For Loops Challenge_a: "Keksitkö, kuinka voit käyttää kaikkia
+        oppimiasi asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin, napsauta
+        tästä."
+      Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
+        kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
+        pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
+        [redstone_torch] luo."
+      Function intro Ryan_2019: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
+        kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
+        pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
+        [redstone_torch] luo."
+      MC Agent Freeplay: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia apuna
+        maailman tutkimisessa."
+      MC_HOC_2017 Agent Test: "Napsauttamalla Suorita voit liikuttaa pelaajaa **nuolinäppäimillä**.
+        \ \r\n\r\nTämän tason selvittämiseksi sinun on päästävä ovelle ja avattava
+        se (**välilyönnillä**), jotta pääset sisällä olevaan oranssiin ruutuun."
+      MC_HOC_2017_01: "Napsauttamalla Suorita voit liikuttaa pelaajaa **nuolinäppäimillä**.
+        \ \r\n\r\nTämän tason selvittämiseksi sinun on päästävä ovelle ja avattava
+        se (**välilyönnillä**), jotta pääset sisällä olevaan oranssiin ruutuun."
+      MC_HOC_2017_01_Cole: Sinun on kerättävä kaikki työkalut tällä matkalla. Liiku
+        käyttämällä **nuolinäppäimiä**. Voitat pääsemällä polulla olevalle arkulle.
+      MC_HOC_2017_01_Kiki: 'Paina tämän tason pelaamiseksi oranssia Suorita-painiketta
+        pelialueen alla ja liikuta pelaajaa sitten **nuolinäppäimillä**.  '
+      MC_HOC_2017_01_RETRY: "{currentPlayerName} on ansassa talon sisällä, mutta Agent
+        on paikalla auttamassa!   \r\n \r\n   \r\nNapsauta liiku eteenpäin -lohko
+        kun suoritetaan -lohkon päälle työtilassa, jotta Agent pääsee painelaatalle
+        [PressurePlate_Up]. Paina sitten Suorita ja liikuta {currentPlayerName} nuolinäppäimillä
+        ulos talosta ottamaan **arkku** [chest].  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} on ansassa talon sisällä, mutta
+        Agent on paikalla auttamassa!   \r\n \r\n   \r\nNapsauta liiku eteenpäin -lohko
+        kun suoritetaan -lohkon päälle työtilassa, jotta Agent pääsee painelaatalle
+        [PressurePlate_Up]. Paina sitten Suorita ja liikuta {currentPlayerName} nuolinäppäimillä
+        ulos talosta ottamaan **arkku** [chest].  "
+      MC_HOC_2017_02: Pelaajan on päästävä Salaiseen Lehtoon. Auta Agentia avaamaan
+        ovi kirjoittamalla koodi, jolla hän siirtyy painelaatalle.
+      MC_HOC_2017_02_Cole: "{currentPlayerName} on lähdössä seikkailuun! Hanki apua
+        hakemalla **kartta** [map_empty] oikealla olevan lukitun oven takaa. \r\n
+        \r\nNapsauta koodi työtilaan liikuttaaksesi Agent painelaatalle [PressurePlate_Up],
+        jotta {currentPlayerName} pääsee läpi."
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} on lähdössä seikkailuun! Hanki
+        apua hakemalla **kartta** [map_empty] oikealla olevan lukitun oven takaa.
+        \r\n \r\nNapsauta koodi työtilaan liikuttaaksesi Agent painelaatalle [PressurePlate_Up],
+        jotta {currentPlayerName} pääsee läpi."
+      MC_HOC_2017_02_Kiki: "Pelaaja on lähtenyt seikkailulle, mutta alkuun hänen on
+        haettava soihtu, joka on piilotettu lukitun oven toiselle puolelle. \r\n\r\nOhjelmoi
+        Agent liikkumaan eteenpäin kahdesti valkoista polkua pitkin painelaatalle,
+        jotta hän voi avata pelaajalle oven."
+      MC_HOC_2017_02_Will: "Tämän tason selvittämiseksi pelaajan on päästävä oranssiin
+        ruutuun Salaisessa Lehdossa, joka sijaitsee lukitun oven takana.  \r\n\r\nTyötilan
+        koodi saa Agentin liikkumaan kaksi kertaa eteenpäin painelaatalle ja avaamaan
+        oven Alexille tai Stevelle."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} jatkaa seikkailua ja tarvitsee **kompassin**
+        [compass] valmistautuakseen matkalle.  \r\n   \r\nKoodaa Agent avaamaan portti. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} jatkaa seikkailua ja tarvitsee
+        **kompassin** [compass] valmistautuakseen matkalle.  \r\n   \r\nKoodaa Agent
+        avaamaan portti. "
+      MC_HOC_2017_03_Kiki: "Pelaajan seikkailu alkaa lukitun oven takana Salaisessa
+        Lehdossa!  \r\n\r\n\r\nAuta Agentia avaamaan ovi kirjoittamalla koodi, jolla
+        hän siirtyy painelaatalle."
+      MC_HOC_2017_04: Auta Agentia tekemään tie joen leveämmän osan yli muuttamalla
+        edellisen tehtävän silmukkaa.
+      MC_HOC_2017_04POINT5_Cole: "Pääsit ulos suosta!  Vie palaaja seuraavaksi turvallisesti
+        oranssiin ruutuun. \n\n\nAuta Agentia raivaamaan polku löytämällä yksinkertainen
+        kuvio ja käytä silmukoita kahden ensimmäisen painelaatan ylittämiseen."
+      MC_HOC_2017_04POINT5_RYAN: "Pääsit toiselle puolelle! \r\n\r\nVie {currentPlayerName}
+        seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Pääsit toiselle puolelle! \r\n\r\nVie {currentPlayerName}
+        seuraavaksi turvallisesti sokkelon läpi hakemaan **kirves** [diamond_axe]\r\n"
+      MC_HOC_2017_04_Cole: "Agent voi liikkua veden yli!  \r\n \r\nRatkaise tämä tehtävä
+        käyttämällä toisto-silmukkaa ja auta pelaajaa {currentPlayerName} pääsemään
+        oven takana olevan **ämpärin** [bucket_empty] luo. "
+      MC_HOC_2017_04_Cole_2019: "Agent voi liikkua veden yli!  \r\n \r\nRatkaise tämä
+        tehtävä käyttämällä toisto-silmukkaa ja auta pelaajaa {currentPlayerName}
+        pääsemään oven takana olevan **ämpärin** [bucket_empty] luo. "
+      MC_HOC_2017_04_Kiki: "Sisäänkäynti Salaiseen Lehtoon johti tälle kauniille keitaalle!
+        \ Tämän tason selvittämiseksi pelaajan on päästävä oranssin ruutuun mökissä.
+        \ \r\n\r\nAuta Agentia toisto-silmukkaa käyttäen pääsemään mökin oven avaavalle
+        painelaatalle."
+      MC_HOC_2017_05: "Silmukat eivät ole aina hyödyllisiä. \n\n\nNämä kaktukset eivät
+        kasva selkeässä kuviossa, joten silmukka ei poistaisi niitä kunnolla. Sen
+        sijaan annamme sinulle toiminnon tuhoa ja liikuta, joka tekee raskaan työn
+        puolestasi aina, kun Agent kohtaa esteen."
+      MC_HOC_2017_05_Cole: "Voi ei, silta ei ole käytössä! \r\n\r\nKoodaa Agent rakentamaan
+        silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName} pääsee **lapion**
+        [diamond_shovel] luo."
+      MC_HOC_2017_05_Cole_2019: "Voi ei, silta ei ole käytössä! \r\n\r\nKoodaa Agent
+        rakentamaan silta uudelleen aseta-lohkon avulla, jotta {currentPlayerName}
+        pääsee **lapion** [diamond_shovel] luo."
+      MC_HOC_2017_05_Josh: "Voi ei, silta ei ole käytössä! \r\n\r\nAuta Agentia rakentamaan
+        silta uudelleen, jotta pelaaja pääsee **lapion** luo."
+      MC_HOC_2017_05_Kiki: "Pelaajan on aika lähteä Salaisesta Lehdosta ja jatkaa
+        seikkailuaan, mutta siltaa ei voi käyttää! \r\n\r\nAuta Agentia rakentamaan
+        silta uudelleen ja siirry sitten puulaudan luokse, jotta pelaaja voi päästä
+        oranssiin ruutuun."
+      MC_HOC_2017_06_Cole: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
+        Agentia rakentamaan silta, jotta {currentPlayerName} pääsee **hakun** [diamond_pickaxe]
+        luo. "
+      MC_HOC_2017_06_Cole_2019: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
+        Agentia rakentamaan silta, jotta {currentPlayerName} pääsee **hakun** [diamond_pickaxe]
+        luo. "
+      MC_HOC_2017_06_Josh: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
+        Agentia rakentamaan silta joen yli korjaamalla tämä koodi."
+      MC_HOC_2017_06_Kiki: "Taas joki, mutta paljon leveämpi sellainen!  \r\n\r\nAuta
+        Agentia rakentamaan silta veden poikki korjaamalla tämä koodi."
+      MC_HOC_2017_07_Cole: "Edessä on jäätä!  \r\n \r\nRaivaa polku -toiminto voi
+        auttaa sinua tuhoamaan jään ja viemään pelaajan {currentPlayerName} kaivosvaunulle
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Edessä on jäätä!  \r\n \r\nRaivaa polku -toiminto
+        voi auttaa sinua tuhoamaan jään ja viemään pelaajan {currentPlayerName} kaivosvaunulle
+        [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Silmukat eivät ole ainoa tapa toistaa koodia!  \r\n\r\nTässä
+        olemme antaneet sinulle toiminnon raivaa kaktukset, joka tekee raskaan työn
+        puolestasi ja poistaa kolme kaktusta aina, kun käytät sitä. Käyttämällä kahta
+        raivaa kaktukset -lohkoa voit avata tien oranssiin ruutuun. "
+      MC_HOC_2017_07a_Kiki: Auta Agentia raivaamaan tie oranssiin ruutuun muokkaamalla
+        tätä silmukkaa.
+      MC_HOC_2017_08_Cole: "Nyt sinun on tuhoamisen sijaan asetettava kuutio ennen
+        liikkumista \n\n\nMuuta annettu toiminto toimimaan aavikolla."
+      MC_HOC_2017_08_Kiki: "Nyt sinun on kaktusten tuhoamisen sijaan asetettava kiviä
+        laavan päälle ja sitten tuhottava punakiveä.  \r\n\r\nMuuta toiminto toimimaan
+        tällä tasolla."
+      MC_HOC_2017_08_RY: "Nyt sinulla on käytettävissä **KAKSI** toimintoa! \n\n\nRakenna
+        niillä nopeasti silta laavan yli pelaajalle {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Nyt sinulla on käytettävissä **KAKSI** toimintoa! \n\n\nRakenna
+        niillä nopeasti pelaajalle silta laavan yli."
+      MC_HOC_2017_09_Cole: Auta Agentia toimintojen avulla tuhoamaan jättimäiset hietakuutiot,
+        jotka tukkivat pelaajan tien painelaatalle.
+      MC_HOC_2017_09_Kiki: "Tätä aloituskoodia ei voi poistaa.\r\n\r\nLisää komentoja
+        luo reitti -toimintoon, jotta työtilan ohjelma siirtää Agentin painelaatalle. "
+      MC_HOC_2017_09_RS_CLONE: Korjaa tämä toiminto täyttämään aukot ja astu painelaatalle
+        avataksesi tien soihdulle.
+      MC_HOC_2017_10_Cole: Raivaa tie kaivosvaunulle komentojen avulla ja kävele hornaportaaliin.
+      MC_HOC_2017_10_Cole_old: Yritä rakentaa alusta asti toiminto, joka helpottaa
+        Agentin tehtävää rakentaa kaivosvaunu loppuun ja saada pelaaja oranssiin ruutuun.
+      MC_HOC_2017_10_Kiki: Yritä rakentaa alusta asti toiminto, joka helpottaa Agentin
+        tehtävää rakentaa kaivosvaunu loppuun ja saada pelaaja oranssiin ruutuun.
+      MC_HOC_2017_10_RETRY: "Näetkö eron työtilassasi olevien toimintojen välillä?
+        \r\n \r\nRaivaa kaivosvaunulle toe näillä toiminnoilla ja työkalupakin koodeilla
+        ja ota **tulukset** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Näetkö eron työtilassasi olevien toimintojen välillä?
+        \r\n \r\nRaivaa kaivosvaunulle toe näillä toiminnoilla ja työkalupakin koodeilla
+        ja ota **tulukset** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RYAN: Yritä rakentaa alusta asti toimintoja, jotka helpottavat
+        Agentin tehtävää rakentaa kaivosvaunu loppuun ja saada pelaaja oranssiin ruutuun.
+      MC_HOC_2017_10_RYAN2: Yritä rakentaa alusta asti toimintoja, jotka helpottavat
+        Agentin tehtävää rakentaa kaivosvaunu loppuun ja saada pelaaja oranssiin ruutuun.
+      MC_HOC_2017_11_Kiki: Nyt määräät sinä! Katso, mitä voit luoda tämän jäätyneen
+        järven ympärille.
+      MC_HOC_2017_13_Cole: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia
+        apuna maailman tutkimisessa."
+      MC_HOC_2017_4.5v2: "Pääsit ulos suosta!  Vie palaaja seuraavaksi turvallisesti
+        oranssiin ruutuun. \n\n\nAuta Agentia raivaamaan polku löytämällä yksinkertainen
+        kuvio ja käytä silmukoita kahden ensimmäisen painelaatan ylittämiseen."
+      MC_HOC_2017_Ali: 'Katso alla olevia toimintoja. Miten voit käyttää niitä hornanhenkien
+        välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta hän pääsisi
+        turvallisesti **lumotun kirjan** [book_enchanted] luo?  '
+      MC_HOC_2017_Ali_2019: 'Katso alla olevia toimintoja. Miten voit käyttää niitä
+        hornanhenkien välttämiseen ja pelaajan {currentPlayerName} auttamiseen, jotta
+        hän pääsisi turvallisesti **lumotun kirjan** [book_enchanted] luo?  '
+      MC_HOC_2017_FP10x10: "**Vapaa peli:** Nyt määräät sinä! Saatko haastettua itsesi
+        keräämään kaikki tämän tason timantit? "
+      MC_HOC_2017_FP10x10_RE: "**Vapaa peli:** Nyt määräät sinä! Saatko haastettua
+        itsesi keräämään kaikki tämän tason timantit? "
+      MC_HOC_2017_FP20x20: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia
+        apuna maailman tutkimisessa."
+      MC_HOC_2017_FP20x20_2019: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia
+        apuna maailman tutkimisessa."
+      MC_HOC_2017_Ryan_03: "Tiesitkö, että voit laittaa silmukkaan enemmän kuin yhden
+        koodijonon?  \r\n\r\nKäytä toisto-silmukkaa auttaaksesi Agentia rakentamaan
+        silta joen yli asettamalla kuutioita veteen."
+      MC_HOC_2017_Ryan_05: "Joskus sinun on kaadettava asioita, jotka ovat pelaajan
+        tiellä.  \r\nKäytä tuhoa-kuutiota raivaamaan kaikki kaktukset Agentin ja painelaatan
+        väliltä."
+      MC_HOC_Kiki_02: Ovi aukeaa vasta, kun joku on painelaatalla. Auta Agentia pääsemään
+        laatalle, jotta pelaaja voi lähteä talosta.
+      New Minecraft Hero Project: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin
+        koodia apuna maailman tutkimisessa."
+      Overworld Move to Sheep: Lisää toinen "liiku eteenpäin" -komento, jotta pääset
+        lampaiden luo.
+      Overworld Move to Sheep_2018: Lisää toinen "liiku eteenpäin" -komento, jotta
+        pääset lampaiden luo.
+      Overworld Move to Sheep_2019: Lisää toinen "liiku eteenpäin" -komento, jotta
+        pääset lampaiden luo.
+      Testing Quantum Farmer: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka monta multalapiollista
+        tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
+        kunnes maa on tasainen?  "
+      course4_artist_fwp_challenge1: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia
+        ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa
+        sen ja korvata sen jollain täysin uudella ohjelmalla)
+      courseD_bee_nestedLoops5: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8_2018: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8_2019: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      courseD_bounce_events1: Mene lipulle! Liitä lohko "kun nuoli vasemmalle" -lohkoon
+        ja paina "Suorita" liikuttaaksesi pelaajan lipulle.
+      courseD_maze_nestedLoops4: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops4_2018: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops4_2019: Vie minut auringonkukan luo!
+      courseE_bee_functions3: |-
+        Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
+        Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,
+        jotta pärjäisit järkevällä koodilohkomäärällä.
+      courseE_bee_functions3_2018: |-
+        Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
+        Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,
+        jotta pärjäisit järkevällä koodilohkomäärällä.
+      courseE_farmer_concept4: Mennäänpä tasoa syvemmälle! Olemme laittaneet kokonaisen
+        koodipalikan toisen silmukan sisään, mutta nyt on saatava taiteilija paikalle
+        piirtämään seuraava viiva. Mikä näistä koodipalikoista pitää laittaa ulommaisimman
+        silmukan loppuun, jotta saadaan piirrettyä kokonainen ristikko?
+      frozen circle function in circle: Luodaanpa 20 osittain päällekkäistä ympyrää
+        siten, että käännytään 18 astetta kunkin ympyrän jälkeen.
+      frozen circle function with parameter: Tässä on "Luo ympyrä"-lohko joka tekee
+        erikokoisia ympyröitä. Osaatko luoda sen avulla pienen ympyrän koko 5 ja suuremman
+        ympyrän kokoa 10?
+      frozen circle function: Käytä uutta "Luo ympyrä"-lohkoa luodaksesi 10 limittäistä
+        ympyrää. Älä unohda hypätä eteenpäin ympyröiden välissä.
+      frozen circle: Ympyrä on erityinen muoto. Keksitkö millä luvulla voit korvata
+        kysymysmerkit piirtääksesi ympyrän?
+      frozen cross rotate dense: 'Toistetaanpa se 90 kertaa! Kuinka monta kertaa 90
+        menee 360:een? Vihje: Se on todella pieni luku.'
+      frozen cross rotate: Kokeile nyt toistaa se 10 kertaa. Kuinka monta astetta
+        pitää kääntyä viivojen välillä?
+      frozen cross: Käytä plusmerkin tekemiseen "toista"-lohkoa komentojen ympärillä.
+        Huomasitko, että Elsa voi liikkua eteen- ja taaksepäin?
+      frozen diamond mini snowflake: Tiesitkö että jokainen lumihiutale on eri muotoinen?
+        Tehdäänpä uusi lumihiutale käyttäen "toista"-lohkoa toistamaan suunnikas neljä
+        kertaa ja kääntyen 90 astetta oikealle suunnikkaiden välillä.
+      frozen diamond snowflake: Tehdäänpä nyt lumihiutale käyttäen toista-lohkoa toistamaan
+        suunnikas 10 kertaan ja kääntyen oikealle 36 astetta suunnikkaiden välillä.
+      frozen diamond: Toista nämä lohkojen ympärillä avulla voit luoda suunnikas.
+        Se on aivan suorakulmion mutta eri näkökulmista. Tässä on 60 astetta ja 120
+        asteen kulmat eikä kaikki 90 asteen kulmia.
+      frozen freeplay: Olet nyt virallisesti mestaritaiteilija! Luo talven ihmemaa.
+      frozen perpendicular: Katsotaanpa voimmeko luoda kaksi viivaa, jotka ovat 90
+        asteen kulmassa toisiinsa nähden. Käytä sekä "käänny"-lohkoa että "liiku"-lohkoa.
+      frozen snowflake branch: Kokeile käyttää "Luo lumihiutalehaara"-lohkoa kolmen
+        haaran luomiseen, mikä alkaa näyttää lumihiutaleelta.
+      frozen snowflake full: Toista sitä nyt 8 kertaa tehdäksesi kauniin lumihiutaleen!
+      frozen snowflower: Monimutkaisia lumikuvioita voi luoda hyvin yksinkertaisista
+        muodoista. Osaatko tehdä kuvion toistamalla 5 ympyrää kokoa 5 ja 5 ympyrää
+        kokoa 10?
+      frozen square iterative: Näyttää siltä että olemme puolivälissä neliön piirtämisessä.
+        Yhdistetäänpä 4 viivaa, niin muodostuu neliö.
+      frozen square loop 3x: Luodaanpa kolme neliötä, kääntyen kunkin neliön jälkeen.
+        Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.
+      frozen square loop: Hei, olen Arendellen Anna! Tehdäänpä neliö käyttäen "Toista"-lohkoa,
+        jolloin tarvitaan vähemmän lohkoja. Kuinka monta kertaa (???) "Toista"-lohkossa
+        olevat lohkot pitää toistaa?
+      frozen square snowflake: Osaatko luoda lumihiutaleen käyttäen "toista"-lohkoa
+        10 neliön tekemiseen ja "käänny"-lohkoa 36 asteen käännökseen neliöiden välillä?
+      grade2_MakeDogTag_8: Nyt yhdistetään joukko V-kirjaimia, piirretään ne silmukassa.
+      grade2_PuppyLoops_10: Minun kärrynpyörä ei ole valmis. Kuinka monta kertaa minun
+        täytyy toistaa saadakseni sen valmiiksi?
+      grade2_PuppyLoops_4: Mene possun luo, mutta vähennä lohkojen määrää käyttämällä
+        kahta silmukkaa.
+      grade2_PuppyLoops_8: 'Koodi näkemällesi kolmelle viikselle on väärä. Vihje:
+        kukin viiksi on 75 kuvapistettä pitkä. Korjaa tämä koodi piirtääksesi viikset.'
+      grade2_PuppyLoops_9: "Näyttää, että koodissa oleva C on piirretty takaperin.
+        \nVoitko tehdä sen näyttämään C:ltä?"
+      grade2_puppy_loops4: Mene possun luo, mutta vähennä lohkojen määrää käyttämällä
+        kahta silmukkaa.
+      grade3_ConditionalsElse_2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi, jotta
+        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+        pilvet eivät piilottelee samaa asiaa!"
+      grade3_ConditionalsElse_5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\r\n\r\nJos
+        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\r\nMuussa tapauksessa,
+        tee hunajaa (koska pilven alla on hunajakenno)."
+      grade3_ConditionalsElse_6: "En ole varma, kuinka paljon mettä tässä kukassa
+        on, mutta tiedän, että sillä on 1, 2 tai 3 mettä.\r\n\r\nYhdistä vaihtoehtoiset
+        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\r\n\r\nMuista,
+        meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
+      grade3_ConditionalsElse_7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\r\n\r\nTee
+        valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien
+        kaiken meden talteen."
+      grade3_ConditionalsElse_8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\r\n\r\nFunktiosi
+        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\r\nMene
+        sitten eteenpäin ja tee hunajaa."
+      grade3_ConditionalsElse_9: "Tehtävä: Tämä pilvi joko piilottelee kukkaa, jossa
+        on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\r\n\r\nTäydennä
+        'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai
+        hunaja.\r\n"
+      grade3_ConditionalsElse_TeacherIDo: "Noiden pilvien alta löytyy joko kukka tai
+        hunajakenno!\r\n\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
+        mettä.\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
+      grade3_Conditionals_10: "Kerää mettä ja tee hunajaa. Vinkki: \nmitä tapatuu
+        jos käytät \"jos mettä\"-ehtoa punaiseen kukkaan? \nVoitko ratkaista tämän
+        käyttämällä silmukkaa?"
+      grade3_Conditionals_12: Kerää mettä kaikista neljästä kukasta.
+      grade3_Conditionals_2: |-
+        Auta minua keräämään kaikki mesi
+        kukista ja tekemään hunajaa. Käytä silmukkaa.
+      grade3_Conditionals_8: Kerää mettä siellä missä kukissa on mettä.
+      grade3_Debugging_6: 'Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
+        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi. '
+      grade3_Debugging_9: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
+        kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
+      grade3_Loops_3: Osaatko käytää silmukkaa kaiken meden keräämiseen?
+      grade3_Loops_4: Nyt käytä uutta toista-lohkoa saadaksesi kaiken meden kerättyä
+        ja hunajan tehtyä.
+      grade3_Loops_6: Mitä tapahtuu, jos toistat komentosarjan kolme kertaa? Älä unohda
+        tehdä hunajaa lopussa!
+      grade3_Loops_7: 'Jokainen kukka sisältää yhden verran mettä. Kerää mesi jokaisesta
+        kukasta. '
+      grade3_Loops_TeacherIDo: 'Jokainen kukka sisältää yhden verran mettä. Kerää
+        mesi jokaisesta kukasta. '
+      grade3_bee_conditionals_quantum2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi,
+        jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+        pilvet eivät piilottelee samaa asiaa!"
+      grade3_maze_loops2: Vie minut auringonkukan luo!
+      grade3_maze_nestedLoops4: Mene possun luo, mutta vähennä lohkojen määrää käyttämällä
+        kahta silmukkaa.
+      grade4_arist_nested_loop_flags1: Liitä annettu koodi silmukkaan. Tee tuulimylly.
+      grade4_arist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
+        monta astetta sinun on käännyttävä joka toistolla?"
+      grade4_arist_nested_loop_polygons2: "Toista tämä kuvio 6 kertaa.\r\n\r\nKuinka
+        monta astetta sinun on käännyttävä joka toistolla? "
+      grade4_arist_nested_loop_triangles3: Osaatko piirtää kuusikulmion kolmiokoodia
+        toistamalla?
+      grade4_arist_nested_loop_triangles4: Piirrä alligaattorin suuhun hampaat!
+      grade4_arist_nested_loop_triangles6: Osaatko piirtää nämä 36 kolmiota käyttäen
+        sisäkkäistä silmukkaa?
+      grade4_artist_functions2: Funktioilla voit määrittää uusia lohkoja! Olemme siirtäneet
+        neliöiden piirtämislohkot funktioon nimeltä "piirrä neliö". Voitko käyttää
+        "piirrä neliö"-funktiota lasien luomiseksi? Neliöt ovat 75 kuvapistettä kumpikin.
+      grade4_artist_nested_loop_flags1: Liitä annettu koodi silmukkaan. Tee tuulimylly.
+      grade4_artist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
+        monta astetta sinun on käännyttävä joka toistolla?"
+      grade4_artist_nested_loop_triangles6: Osaatko piirtää nämä 36 kolmiota käyttäen
+        sisäkkäistä silmukkaa?
+      grade4_bee_conditionals_quantum2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi,
+        jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+        pilvet eivät piilottelee samaa asiaa!"
+      grade4_bee_conditionals_quantum5: "Noiden pilvien alta löytyy joko kukka tai
+        hunajakenno!\r\n\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
+        mettä.\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
+      grade4_bee_functions3: |-
+        Funktiot ovat koodilohkoja, jotka suorittavat jonkin tehtävän.
+        Käytä "ota 5"-fuktiota kerätäksesi 5 mettä kerralla. Käytä silmukkaa,
+        jotta pärjäisit järkevällä koodilohkomäärällä.
+      grade4_bee_nestedLoops4: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      grade4_frozen_freeplay: Olet nyt virallisesti mestaritaiteilija! Luo talven
+        ihmemaa.
+      grade4_frozen_functions0: Ympyrä on erityinen muoto. Keksitkö millä luvulla
+        voit korvata kysymysmerkit piirtääksesi ympyrän?
+      grade4_frozen_functions1a: Käytä uutta "Luo ympyrä"-lohkoa luodaksesi 10 limittäistä
+        ympyrää. Älä unohda hypätä eteenpäin ympyröiden välissä.
+      grade4_frozen_functions2: Luodaanpa 20 osittain päällekkäistä ympyrää siten,
+        että käännytään 18 astetta kunkin ympyrän jälkeen.
+      grade4_frozen_functions3: Tässä on "Luo ympyrä"-lohko joka tekee erikokoisia
+        ympyröitä. Osaatko luoda sen avulla pienen ympyrän koko 5 ja suuremman ympyrän
+        kokoa 10?
+      grade4_frozen_functions4: Monimutkaisia lumikuvioita voi luoda hyvin yksinkertaisista
+        muodoista. Osaatko tehdä kuvion toistamalla 5 ympyrää kokoa 5 ja 5 ympyrää
+        kokoa 10?
+      grade4_frozen_nested_loop_diamonds2: Tiesitkö että jokainen lumihiutale on eri
+        muotoinen? Tehdäänpä uusi lumihiutale käyttäen "toista"-lohkoa toistamaan
+        suunnikas neljä kertaa ja kääntyen 90 astetta oikealle suunnikkaiden välillä.
+      grade4_frozen_nested_loop_diamonds3: Tehdäänpä nyt lumihiutale käyttäen toista-lohkoa
+        toistamaan suunnikas 10 kertaan ja kääntyen oikealle 36 astetta suunnikkaiden
+        välillä.
+      grade4_frozen_square: Hei, olen Arendellen Anna! Tehdäänpä neliö käyttäen "Toista"-lohkoa,
+        jolloin tarvitaan vähemmän lohkoja. Kuinka monta kertaa (???) "Toista"-lohkossa
+        olevat lohkot pitää toistaa?
+      grade4_frozen_square_loop1: Hei, olen Arendellen Anna! Tehdäänpä neliö käyttäen
+        "Toista"-lohkoa, jolloin tarvitaan vähemmän lohkoja. Kuinka monta kertaa (???)
+        "Toista"-lohkossa olevat lohkot pitää toistaa?
+      grade4_frozen_square_loop2: Luodaanpa kolme neliötä, kääntyen kunkin neliön
+        jälkeen. Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.
+      grade4_frozen_square_loop3: Osaatko luoda lumihiutaleen käyttäen "toista"-lohkoa
+        10 neliön tekemiseen ja "käänny"-lohkoa 36 asteen käännökseen neliöiden välillä?
+      grade4_review_artist3: Hyppää-lohko siirtää taiteilijan ilman, että se piirtää.
+        Piirrä katkoviiva käyttämällä sekä hyppää- että piirrä-lohkoja.
+      grade4_review_bee1: Nyt käytä uutta toista-lohkoa saadaksesi kaiken meden kerättyä
+        ja hunajan tehtyä.
+      grade5_artist_for_loops10: "Keksitkö, kuinka voit käyttää kaikkia oppimiasi
+        asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin, napsauta tästä."
+      level 'grade3_Loops_3: Osaatko käytää silmukkaa kaiken meden keräämiseen?
+      level 'grade3_Loops_4: Nyt käytä uutta toista-lohkoa saadaksesi kaiken meden
+        kerättyä ja hunajan tehtyä.
+      level 'grade3_Loops_6: Mitä tapahtuu, jos toistat komentosarjan kolme kertaa?
+        Älä unohda tehdä hunajaa lopussa!
+      level 'grade3_Loops_7: 'Jokainen kukka sisältää yhden verran mettä. Kerää mesi
+        jokaisesta kukasta. '

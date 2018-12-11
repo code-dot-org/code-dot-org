@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_124_CSP_6_1_1'
+wrong 'IPv6 format allows for 96 times more IP addresses. This will ensure that we will have enough IP addresses to address the exponential demand for IP addresses in the future.'
+wrong 'IPv6 allows for 2^32 times more IP addresses. This will ensure that we will have enough IP addresses to address the exponential demand for IP addresses in the future.'
+wrong 'Pv6 format allows for 32 times more IP addresses. This will ensure that we will have enough IP addresses to address the exponential demand for IP addresses in the future.'
+right 'IPv6 allows for 2^96 times more IP addresses. This will ensure that we will have enough IP addresses to address the exponential demand for IP addresses in the future.'
+markdown <<MARKDOWN
+Internet Protocol version 4 (IPV4) uses a 32 bit binary number to represent an IP address. Internet Protocol version 6 (IPv6 ) uses a 128 bit binary number to represent the same. Which one of the following BEST describes the reason for this changeover in IP address representation?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.1.1** and Essential Knowledge statements: **6.1.1H**
+<hr>
+ (A) This is incorrect. Increasing the number of bits to represent the IP address will increase the number of available addresses exponentially - 2^(129-32) = 2^96 more addresses.
+
+<hr>
+ (B) This is incorrect. Increasing the number of bits to represent the IP address will increase the number of available addresses exponentially - 2^(129-32) = 2^96 more addresses.
+
+<hr>
+ (C) This is incorrect. Increasing the number of bits to represent the IP address will increase the number of available addresses exponentially - 2^(129-32) = 2^96 more addresses.
+
+<hr>
+ (D) This is correct. Increasing the number of bits to represent the IP address will increase the number of available addresses exponentially - 2^(129-32) = 2^96 more addresses.
+
+MARKDOWN

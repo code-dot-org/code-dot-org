@@ -129,11 +129,15 @@ bg:
         snowflake_dropdown: Използвайте това падащо меню, за да създадете различни снежинки!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Тази малка инструкция казва на компютъра да изпълни ГОЛЯМА част от кода със същото име в работното пространство.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Тази малка инструкция казва на компютъра да изпълни ГОЛЯМА част от кода със същото име в работното пространство.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
@@ -150,17 +154,25 @@ bg:
         MC_HOC_2017_02_Cole_1: Сега вашият герой си има другарче!  Можете да напишете код на Agent, за да ви помогне да преминавате през нивата.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Това е цикъл „повтари“! Щракнете върху него в работното пространство и добавете код, който желаете да се изпълнява отново и отново.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Това е цикъл „повтари“! Щракнете върху него в работното пространство и добавете код, който желаете да се изпълнява отново и отново.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent може да се носи над водата, но героят не може!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent може да се носи над водата, но героят не може!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Щракнете върху това в работното пространство и добавете код, който да се повтаря отново и отново!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Не можете да изхвърлите тези блокове, но можете да ги редактирате!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Не можете да изхвърлите тези блокове, но можете да ги редактирате!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent може да се носи над лавата, но героят не може!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent може да се носи над лавата, но героят не може!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent може да се носи над лавата, но героят не може!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent може да се носи над лавата, но героят не може!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Щракни върху категориите за да видиш блоковете в кутията с инструменти! Плъзни блокове в работната област, за да ги добавиш към твоята програма
@@ -197,17 +209,25 @@ bg:
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
       Overworld Place Wall_callout:
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Повторете действията като поставите блокове тук вътре
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Щракни тук, за да се покаже мрежата.
@@ -239,9 +259,13 @@ bg:
         craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
       Underground Iron_callout:
         craft_what_is_iron: Изкопай това желязо!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Изкопай това желязо!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Изкопай това желязо!
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
@@ -265,9 +289,13 @@ bg:
         courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
@@ -281,6 +309,10 @@ bg:
         frozen_circle_function_with_parameter_circle: Използвайте "създайте кръг" блок и променете размера.
       frozen cross rotate_callout:
         replace_questions_degree: Използвайте падащото меню, за да замените "???" с номер
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Използвайте падащото меню, за да замените "???" с номер
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Използвайте падащото меню, за да замените "???" с номер
       frozen cross_callout:
         repeat_blocks_1: "(1) използвайте този блок и го сложете около сивите блокове в работната област"
         repeat_blocks_2: (2) преместете блокът за повторение тук и поставете сивите блокове вътре
@@ -290,19 +322,45 @@ bg:
         frozen_diamond_repeat: Използвайте блок за повторение, за да създадете тази форма.
       frozen freeplay_callout:
         snowflake_dropdown: Използвайте това падащо меню, за да създадете различни снежинки!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Използвайте това падащо меню, за да създадете различни снежинки!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Използвайте това падащо меню, за да създадете различни снежинки!
       frozen line_callout:
+        move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока "При стартиране", за  да накарате Елза да се движи напред
+      frozen line_b_callout:
+        move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока "При стартиране", за  да накарате Елза да се движи напред
+      frozen line_test_callout:
         move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока "При стартиране", за  да накарате Елза да се движи напред
       frozen perpendicular_callout:
         turn_elsa: Използвайте "завърта" блок, за да се завърти Елза. Числото в падащото меню определя колко Елза ще се завърти
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Използвайте блок "създаване клонче на снежинка" 
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Използвайте блок "създаване клонче на снежинка" 
       frozen square iterative_callout:
+        frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
+      frozen square iterative_test_callout:
         frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
       frozen square loop 3x_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop 3x_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop 3x_test_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
       frozen square loop_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop_test_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
       frozen square snowflake_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square snowflake_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square snowflake_test_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.

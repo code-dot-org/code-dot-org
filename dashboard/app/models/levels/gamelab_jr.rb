@@ -29,7 +29,12 @@ class GamelabJr < Gamelab
     custom_blocks
     hide_custom_blocks
     use_default_sprites
+    block_pools
   )
+
+  def shared_blocks
+    Block.for(*block_pools.presence || type)
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -39,6 +44,9 @@ class GamelabJr < Gamelab
         level_num: 'custom',
         properties: {
           show_debug_watch: true,
+          block_pools: [
+            "gamelab",
+          ],
           helper_libraries: [
             "GameLabJr",
           ],
@@ -55,62 +63,13 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Start">
   <block type="when_run" />
-  <block type="gamelab_setup" />
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
-<category name="World">
-  <block type="gamelab_setBackground">
-    <value name="COLOR">
-      <block type="colour_picker"></block>
-    </value>
-  </block>
-  <block type="gamelab_showTitleScreen" />
-  <block type="gamelab_hideTitleScreen" />
-</category>
-<category name="Sprites" custom="Sprite">
-  <block type="gamelab_makeNewSprite" />
-  <block type="gamelab_makeNewSpriteLocation" />
-  <block type="gamelab_location_picker">
-    <title name="LOCATION">{"x": 0, "y": 0}</title>
-  </block>
-  <block type="gamelab_setAnimation" />
-  <block type="gamelab_setTint">
-    <value name="COLOR">
-      <block type="colour_picker"></block>
-    </value>
-  </block>
-  <block type="gamelab_removeTint" />
-  <block type="gamelab_moveUp" />
-  <block type="gamelab_moveDown" />
-  <block type="gamelab_moveLeft" />
-  <block type="gamelab_moveRight" />
-  <block type="gamelab_setPosition" />
-  <block type="gamelab_displace" />
-  <block type="gamelab_destroy" />
-  <block type="gamelab_firstTouched" />
-  <block type="gamelab_secondTouched" />
-</category>
-<category name="Groups">
-  <block type="gamelab_makeNewGroup" />
-  <block type="gamelab_add" />
-  <block type="gamelab_groupLength" />
-</category>
-<category name="Events">
-  <block type="gamelab_whenPressedAndReleased" />
-  <block type="gamelab_whenUpArrow" />
-  <block type="gamelab_whenDownArrow" />
-  <block type="gamelab_whenLeftArrow" />
-  <block type="gamelab_whenRightArrow" />
-  <block type="gamelab_whileUpArrow" />
-  <block type="gamelab_whileDownArrow" />
-  <block type="gamelab_whileLeftArrow" />
-  <block type="gamelab_whileRightArrow" />
-  <block type="gamelab_whenStartAndStopTouching" />
-  <block type="gamelab_whenTouching" />
-  <block type="gamelab_whileTouching" />
-  <block type="gamelab_clickedOn" />
-</category>
+<category name="World" />
+<category name="Sprites" custom="Sprite" />
+<category name="Groups" />
+<category name="Events" />
 <category name="Math">
   <block type="math_number" />
   <block type="math_change">

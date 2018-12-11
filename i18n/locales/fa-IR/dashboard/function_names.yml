@@ -13,16 +13,16 @@ fa:
       draw a star: رسم یک ستاره
       do something: یه کاری بکن
       jump: پرش
-      set score: قرار دادن امتیاز
+      set score: تنظیم امتیاز
       get nectar: گرفتن شهد
       test: آزمایش
       diamond: الماس
       move: حرکت
-      move right: برو راست
+      move right: برو به راست
       move up: برو بالا
       move down: برو پایین
-      move left: برو چپ
+      move left: برو به چپ
       collect: جمع آوری
       turn left: بپیچ به چپ
-      move forward: به جلو حرکت کردن
+      move forward: برو جلو
       turn right: بپیچ به راست
