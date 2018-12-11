@@ -412,6 +412,9 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const isDeepDive = this.state.subject === "Deep Dive";
+    const showMapChoice = isCsf && !isDeepDive;
+
     return (
       <FormGroup>
         <ControlLabel>
@@ -434,7 +437,7 @@ export class WorkshopForm extends React.Component {
         }
         <Row>
           <Col smOffset={1}>
-            {isCsf && this.renderOnMapRadios(validation)}
+            {showMapChoice && this.renderOnMapRadios(validation)}
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
