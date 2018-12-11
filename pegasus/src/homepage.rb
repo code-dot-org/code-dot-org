@@ -105,10 +105,21 @@ class Homepage
   end
 
   def self.get_actions
-    youtube_id = "nKIu9yen5nc"
-    download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
-    facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
-    twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+    # Show a Latin American specific video to users browsing in Spanish or
+    # Portuguese to promote LATAM HOC.
+    latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+    show_latam_videos = DCDO.get("show_latam_videos", nil)
+    if latam_language_codes.include?(I18n.locale) && show_latam_videos
+      youtube_id = "EGgdCryC8Uo"
+      download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
+      twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
+    else
+      youtube_id = "nKIu9yen5nc"
+      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
+      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+    end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
     if hoc_mode == "actual-hoc"
