@@ -6,7 +6,7 @@ sk:
         text: po {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': taktoch
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_changeColorBy:
         text: zmeň {COLOR} {METHOD} o {AMOUNT}
@@ -75,6 +75,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -158,7 +159,7 @@ sk:
         text: 'každé {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': taktoch
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_everySecondsRange:
         text: 'každé {N} {UNIT} od {START} do {STOP} '
@@ -184,6 +185,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -193,7 +195,7 @@ sk:
         text: aktuálny čas v {UNIT}
         options:
           UNIT:
-            '"measures"': taktoch
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_ifDanceIs:
         text: |-
@@ -218,7 +220,7 @@ sk:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': taktoch
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_jumpTo:
         text: "{SPRITE} skoč {LOCATION}"
@@ -231,7 +233,7 @@ sk:
             "{x: 200, y: 200}": v strede
             "{x: 100, y: 100}": vľavo hore
             "{x: 300, y: 100}": vpravo hore
-            "{x: 100, y: 300}": vľavo hore
+            "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_layoutSprites:
@@ -283,7 +285,7 @@ sk:
             "{x: 200, y: 200}": v strede
             "{x: 100, y: 100}": vľavo hore
             "{x: 300, y: 100}": vpravo hore
-            "{x: 100, y: 300}": vľavo hore
+            "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_makeNewDanceSpriteGroup:
@@ -360,17 +362,39 @@ sk:
             '"spiral"': Špirála
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Náhodné)"
       Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          nastav efekt pozadia
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Žiadne
             '"rand"': "(Náhodné)"
+            '"circles"': Kruhy
             '"color_cycle"': Farby
             '"diamonds"': Diamanty
+            '"disco_ball"': Disco guľa
+            '"fireworks"': Ohňostroj
             '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový tanečný parket
+            '"splatter"': Fŕkanie farby
             '"rainbow"': Dúha
             '"snowflakes"': Sneženie
+            '"text"': Názvy pesničky
+            '"sparkles"': Trblietky
             '"spiral"': Špirála
             '"disco"': Štvorce
+            '"stars"': Hviezdy
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Chladný
+            '"electronic"': Elektro
+            '"iceCream"': Zmrzlina
+            '"default"': Svetlý
+            '"neon"': Neón
+            '"tropical"': Trópy
+            '"vintage"': Vintage
+            '"warm"': Teplý
       Dancelab_setDanceSpeed:
         text: nastav {SPRITE} rýchlosť tanca na {SPEED}
         options:
@@ -418,15 +442,24 @@ sk:
             '"none"': Žiadne
             '"rand"': "(Náhodné)"
             '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts_red"': Srdiečka
+            '"music_notes"': Noty
             '"pineapples"': Ananásov
+            '"pizzas"': Pizze
+            '"smiling_poop"': Hovienka
             '"rain"': Dážď
+            '"floating_rainbows"': Dúhy
+            '"smile_face"': Smajlíci
             '"spotlight"': Reflektor
+            '"color_lights"': Javiskové svetlá
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'nastav {SPRITE} {PROPERTY} na {VAL} '
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -450,6 +483,7 @@ sk:
             '"UNICORN"': všetky jednorožce
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -460,6 +494,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -514,6 +549,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -528,6 +564,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
@@ -637,7 +674,7 @@ sk:
             "{x: 50, y: 50}": vľavo hore
             "{x: 350, y: 50}": vpravo hore
             "{x: 200, y: 200}": v strede
-            "{x: 50, y: 350}": vľavo hore
+            "{x: 50, y: 350}": vľavo dole
             "{x: 350, y: 350}": vpravo dole
             '"random"': náhodný
       gamelab_setProp:
@@ -653,6 +690,7 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
+            '"width"': šírka
             '"height"': výška
       gamelab_setup:
         text: nastavenie
@@ -727,7 +765,7 @@ sk:
             "{x: 200, y: 200}": v strede
             "{x: 100, y: 100}": vľavo hore
             "{x: 300, y: 100}": vpravo hore
-            "{x: 100, y: 300}": vľavo hore
+            "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_createNewSprite2:
         options:
@@ -739,7 +777,7 @@ sk:
             "{x: 200, y: 200}": v strede
             "{x: 100, y: 100}": vľavo hore
             "{x: 300, y: 100}": vpravo hore
-            "{x: 100, y: 300}": vľavo hore
+            "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_destroyAll:
         options:
