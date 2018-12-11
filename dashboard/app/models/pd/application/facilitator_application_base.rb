@@ -63,7 +63,7 @@ module Pd::Application
     VALID_COURSES = PROGRAMS.keys.map(&:to_s)
 
     YES_COMMIT = 'Yes, I can commit to this requirement'
-    NO_COMMIT = 'No, I can’t commit to this requirement'
+    NO_COMMIT = "No, I can't commit to this requirement"
 
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
@@ -134,7 +134,7 @@ module Pd::Application
         plan_on_teaching: [
           YES,
           NO,
-          "I don’t know yet",
+          "I don't know yet",
           TEXT_FIELDS[:other_with_text]
         ],
 
@@ -190,7 +190,7 @@ module Pd::Application
           'Middle school ',
           'High school ',
           'Post-secondary ',
-          'N/A: I don’t have classroom teaching experience'
+          "N/A: I don't have classroom teaching experience"
         ],
 
         experience_teaching_this_course: [
@@ -204,7 +204,7 @@ module Pd::Application
         grades_currently_teaching: [
           *GRADES,
           TEXT_FIELDS[:other_with_text],
-          'None - I don’t currently teach'
+          "None - I don't currently teach"
         ],
 
         subjects_taught: [
@@ -300,11 +300,30 @@ module Pd::Application
         csd_training_requirement: [YES_COMMIT, NO_COMMIT],
         csp_training_requirement: [YES_COMMIT, NO_COMMIT],
 
-        csd_csp_summer_workshop_requirement: [YES_COMMIT, NO_COMMIT],
+        csd_csp_lead_summer_workshop_requirement: [YES_COMMIT, NO_COMMIT],
         csd_csp_deeper_learning_requirement: [YES_COMMIT, NO_COMMIT],
         development_and_preparation_requirement: [YES_COMMIT, NO_COMMIT],
 
         csd_csp_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
+
+        csd_csp_no_partner_summer_workshop: [
+          'Yes, I understand that I must commit to a 5-day summer workshop. I will coordinate with Code.org once dates are finalized.'
+        ],
+
+        csd_csp_partner_but_no_summer_workshop: [
+          'Yes, I understand that I must commit to a 5-day summer workshop. I will coordinate with Code.org once dates are finalized.'
+        ],
+
+        csd_csp_partner_with_summer_workshop: [YES_COMMIT, NO_COMMIT],
+
+        csd_csp_which_summer_workshop: [
+          'fake workshop',
+          TEXT_FIELDS[:not_sure_please_explain],
+          "I'm not able to attend any of the above"
+
+        ],
+
+        csf_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
 
         groups_led_pd: [
           'K-12 teachers',
