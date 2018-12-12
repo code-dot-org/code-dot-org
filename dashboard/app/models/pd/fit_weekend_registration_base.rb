@@ -94,15 +94,9 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
     ].freeze
   end
 
+  # Override in derived class to peform validations
   def validate_required_fields
-    hash = sanitize_form_data_hash
-
-    if hash.try(:[], :able_to_attend) == NO
-      # then we don't care about the rest of the fields
-      return
-    end
-
-    super
+    raise 'Abstract method must be overridden by inheriting class'
   end
 
   def dynamic_required_fields(hash)
@@ -140,7 +134,7 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
   # While this could be a bool, we are using strings for parity with Teachercon1819Registration
   # which has more complex answers.
   def accepted_seat_simplified
-    accepted? ? 'Yes' : 'No'
+    accepted? ? YES : NO
   end
 
   def course_name
