@@ -308,6 +308,8 @@ sk-SK:
   studiobar_title_nolink: Preskúmajte Code Studio
   studiobar_elementary_title: Základné kurzy
   studiobar_elementary_body: Naše tri nové kurzy pre K&#8209;5
+  studiobar_dance_title: Tanečná Párty
+  studiobar_dance_body: Vytvorte a zdielajte svoju vlastnú Tanečnú Párty
   studiobar_hoc_title: Hodina Kódu
   studiobar_hoc_body: Naučte sa programovať s Angry Birds
   studiobar_flappy_title: Flappy kód
@@ -438,7 +440,7 @@ sk-SK:
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
   homepage_slot_text_link_administrators: Prines Informatiku na tvoju školu
-  homepage_header_codestudio: Viac ako 25 miliónov vytvorených projektov na code.org
+  homepage_header_codestudio: Viac ako 25 miliónov projektov vytvorených na code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Darovať
@@ -510,7 +512,7 @@ sk-SK:
   mc_gradelevel: Vek 4-104
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
   mc_specs: Mnoho jazykov| Moderné prehliadače a tablety | Vek 6-106 rokov
-  minecraft_agent: 'Minecraft: Cesta Hrdinu'
+  minecraft_agent: Minecraft Cesta Hrdinu
   minecraft_designer: Minecraft Dizajnér
   minecraft_adventurer: Minecraft Objavovateľ
   minecraft_tutorials: Kurz Minecraft Hodina Kódu
@@ -940,7 +942,7 @@ sk-SK:
     vyššie na tlačidlo <b>synchronizácia študentov v Učebni Google</b>.
   dashboard_students_new_section: Vytvorili ste novú triedu! Teraz pridajte vašich
     študentov pomocou tlačidla <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>.
-  dashboard_students_name: Meno
+  dashboard_students_name: 'Meno: '
   dashboard_students_progress: Pokrok
   dashboard_students_male: Muž
   dashboard_students_female: Žena
@@ -1466,8 +1468,8 @@ sk-SK:
   coursea_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
-  coursed_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom choďte
-    ďalej s algoritmami, vnorenými slučkami, podmienkami a ďalším.
+  coursed_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte
+    ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
   coursee_shortdescription_congrats: Rýchlo pokryme pojmy v kurzoch C & D a poďme
     ďalej s funkciami.
   coursef_shortdescription_congrats: Naučme sa všetky pojmy zo základov informatiky
@@ -1475,8 +1477,8 @@ sk-SK:
   coursea-2017_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
-  coursed-2017_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom choďte
-    ďalej s algoritmami, vnorenými slučkami, podmienkami a ďalším.
+  coursed-2017_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte
+    ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
   coursee-2017_shortdescription_congrats: Rýchlo pokryme pojmy v kurzoch C & D a poďme
     ďalej s funkciami.
   coursef-2017_shortdescription_congrats: Naučme sa všetky pojmy zo základov informatiky
@@ -1484,8 +1486,8 @@ sk-SK:
   coursea-2018_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
     ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
-  coursed-2018_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom choďte
-    ďalej s algoritmami, vnorenými slučkami, podmienkami a ďalším.
+  coursed-2018_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte
+    ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
   coursee-2018_shortdescription_congrats: Rýchlo pokryme pojmy v kurzoch C & D a poďme
     ďalej s funkciami.
   coursef-2018_shortdescription_congrats: Naučme sa všetky pojmy zo základov informatiky
@@ -1861,7 +1863,7 @@ sk-SK:
   header_stats: Štatistiky
   header_help_us: Pomôžte nám
   header_about: O nás
-  header_teacher_community: Komunita školiteľov
+  header_teacher_community: Komunita učiteľov
   header_help_support: 'Pomoc a podpora '
   header_report_bug: Nahlásiť chybu
   header_tutorials: Návody
@@ -1872,7 +1874,7 @@ sk-SK:
   full_course_category_name: Všetky kurzy
   user_header_label: Ahoj %{username}
   user_header_team: Tím
-  user_header_settings: Môj účet
+  user_header_settings: Nastavenia účtu
   user_header_logout: Odhlásiť sa
   user_header_signin: Prihlásiť sa
   user_header_create: 'Vytvoriť '
@@ -1880,6 +1882,7 @@ sk-SK:
   user_header_artist: 'Umelec '
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
+  user_header_dance: Tanečná Párty
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Zobraziť všetky projekty...
@@ -1928,7 +1931,7 @@ sk-SK:
     triedy kliknete na tlačidlo “Obnoviť heslo” v stĺpci "Heslo".
   syncing_students: Synchronizácia vašich študentov
   syncing_students_instructions: 'Ak zoznam študentov vo vašej Code.org triede nie
-    je aktuálny oproti vašej Google Classrrom, kliknite na tlačidlo "Sunchronizovať
+    je aktuálny oproti vašej Google Classroom, kliknite na tlačidlo "Sunchronizovať
     študentov z Google Classroom" na záložke "Správa študentov":'
   google_sign_in_instruct: 'Odtiaľto by si mali vybrať možnosť "Prihlásiť sa Google
     konto":'
@@ -1941,6 +1944,12 @@ sk-SK:
   applab_tile_teacher_guide: Zobraziť príručku pre učiteľa
   account_sign_up_email_opt_in: Môžeme Vám zasielať emailom aktualizácie o našich
     školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?
+    (pravidelne raz za mesiac)
+  account_sign_up_child_accept_terms: Potvrdzujem, že mám súhlas rodiča alebo zákonného
+    zástupcu používať služby Code.org.
+  hoc_overview_dance_title: Tanečná Párty
+  hoc_overview_dance_subtitle: Nakódujte Tanečnú Párty pre zdielanie s kamarátmi!
+    Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!
   hoc_overview_title: Hodina Kódu s Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hodina Kódu</a> je celosvetové
     hnutie, ktorého sa zúčastňujú desiatky miliónov študentov z viac ako 180 krajín.
@@ -1973,7 +1982,7 @@ sk-SK:
   hoc2018_mc_aquatic_title: Minecraft Vodné Dobrodužstvo
   hoc2018_mc_aquatic_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
-  hoc2018_mc_hero_title: 'Minecraft: Cesta Hrdinu'
+  hoc2018_mc_hero_title: Minecraft Cesta Hrdinu
   hoc2018_mc_hero_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
     Prejdi sa po Minecrafte s kódom.
   hoc2018_mc_designer_title: Minecraft Dizajnér
@@ -1993,7 +2002,7 @@ sk-SK:
   hoc2018_mc_educators_box2_title: Stiahnuť príručku
   hoc2018_mc_educators_box2_desc: Tieto materiály Vám pomôžu efektívne viesť Hodinu
     Kódu a zaujať Vašich študentov informatikou.
-  hoc2018_mc_educators_box2_button: Stiahnuť
+  hoc2018_mc_educators_box2_button: Stiahni
   hoc2018_mc_educators_box3_title: Zúčastniť sa workshopu pre študentov
   hoc2018_mc_educators_box3_desc: Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte
     workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov.
@@ -2041,15 +2050,33 @@ sk-SK:
   hoc2018_mc_short_description_shorter: Pomocou kreativity, schopnosti riešiť problémy
     a sily kódu objav a vybuduj podvodný svet.
   hoc2018_mc_journey: Cesta Minecraftom s pomocou kódu.
+  hoc2018_dance_party_main_heading: Tanečná Párty
+  hoc2018_dance_party_subheading: Pomôžte preložiť Tanečnú Párty
+  hoc2018_dance_create_your_own_dance_title: Vytvorte si svoju vlastnú Tanečnú Párty
+  hoc2018_dance_party_box_title: Tanečná Párty
+  hoc2018_dance_party_box_description: Nakódujte Tanečnú Párty pre zdielanie s kamarátmi!
   hoc2018_dance_party_specs: Jazyk | Formát | Vek 6-106
   hoc2018_dance_party_button: Spustiť
+  hoc2018_dance_keep_on_dancing_box_title: Pokračuj v tancovaní
+  hoc2018_dance_keep_on_dancing_description: Pokračuj za hranice prvej hodiny s rozšírenými
+    nápadmi na projekt.
+  hoc2018_dance_keep_on_dancing_specs: Jazyk | Formát | Vek 13+
+  hoc2018_dance_keep_on_dancing_button: Začni Časť 2
   hoc2018_dance_teacher_resources_tile1_button: Plán lekcie
+  hoc2018_dance_teacher_resources_tile2_title: Tanečná Párty bez počítača
+  hoc2018_dance_teacher_resources_tile2_description: Počítače nie sú potrebné! Naučte
+    sa spoločne programátorské koncepty pre vytvorenie choreografie tanečnej párty.
   hoc2018_dance_teacher_resources_tile2_button: Aktivity bez počítača
   hoc2018_dance_video_title_what_is_creativity: Čo je Kreativita?
   hoc2018_dance_view_creativity_video_playlist: Čo je Kreativita? Pozrieť všetky videá
+    (5 min.)
   hoc2018_dance_amazon_about_future_engineer_button: Zistiť viac
   hoc2018_dance_amazon_scholarship_programs_button: Použiť teraz
   hoc2018_aquatic_video1: Minecraft Vodné Dobrodružstvo - Gratulujeme
   hoc2018_aquatic_video2: Minecraft Vodné Dobrodružstvo - Cykly
   hoc2018_aquatic_video3: Minecraft Vodné Dobrodružstvo - Podmienky
   hoc2018_aquatic_video4: Minecraft Vodné Dobrodružstvo - Gratulujeme
+  hoc2018_dance_video1: Tanečná Párty - Úvod
+  hoc2018_dance_video2: Tanečná Párty - Udalosti
+  hoc2018_dance_video3: Tanečná Párty - Vlastnosti
+  hoc2018_dance_video4: Tanečná Párty - Gratulujeme

@@ -2,7 +2,7 @@
 #
 # Table name: user_levels
 #
-#  id               :integer          not null, primary key
+#  id               :integer          unsigned, not null, primary key
 #  user_id          :integer          not null
 #  level_id         :integer          not null
 #  attempts         :integer          default(0), not null

@@ -248,23 +248,8 @@ def current_block_xml
 end
 
 def clear_main_block_space
-  # Do our async wait on the JavaScript side instead of polling over the wire.
-  # See https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/JavascriptExecutor.html
-  # and https://www.rubydoc.info/gems/selenium-webdriver/3.8.0/Selenium/WebDriver/Driver#execute_async_script-instance_method
-  result = @browser.execute_async_script <<-JS
-    var callback = arguments[arguments.length - 1];
-    var waitStart = Date.now();
-    var timeoutMs = 5000;
-    (function checkForAndClearMainBlockSpace() {
-      if (Blockly.mainBlockSpace) {
-        Blockly.mainBlockSpace.clear();
-        callback();
-      } else if (Date.now() - waitStart > timeoutMs){
-        callback('Timeout reached: Unable to clear Blockly.mainBlockSpace');
-      } else {
-        setTimeout(checkForAndClearMainBlockSpace(), 100);
-      }
-    }())
-  JS
-  expect(result).to be_nil
+  wait_until do
+    @browser.execute_script("return Blockly && !!Blockly.mainBlockSpace")
+  end
+  @browser.execute_script("Blockly.mainBlockSpace.clear()")
 end

@@ -629,6 +629,17 @@ describe('project.js', () => {
       project.saveThumbnail(STUB_BLOB).then(done);
     });
 
+    it('fails if pngBlob is not provided', done => {
+      setData({});
+
+      const promise = project.saveThumbnail(undefined);
+      promise.catch(e => {
+        expect(e).to.contain('PNG blob required.');
+        expect(filesApi.putFile).not.to.have.been.called;
+        done();
+      });
+    });
+
     it('fails if project is not initialized', done => {
       setData(undefined);
 

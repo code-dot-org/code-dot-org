@@ -5,15 +5,15 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# מדריך למתנדבים
 
 ### Make a difference in a classroom today!
 
 ---
 
-## Why volunteer?
+## למה להתנדב?
 
-Check out some testimony from past volunteers:
+קרא סיפורים של מתנדבים:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”

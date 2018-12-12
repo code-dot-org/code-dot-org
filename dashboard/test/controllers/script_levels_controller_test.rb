@@ -600,6 +600,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute session['warden.user.user.key']
   end
 
+  test "show with the reset param should destroy the storage_id cookie when not logged in" do
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 200
+    # Ensure storage_id is set to empty value and domain is correct
+    cookie_header = response.header['Set-Cookie']
+    assert cookie_header.include?("#{storage_id_cookie_name}=;")
+    assert cookie_header.include?("domain=.test.host;")
+  end
+
+  test "show with the reset param should not create a new storage_id cookie when logged in" do
+    sign_in(create(:user))
+
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 302
+    # Ensure storage_id is not being set
+    cookie_header = response.header['Set-Cookie']
+    refute cookie_header.include?("#{storage_id_cookie_name}=")
+  end
+
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
     get :reset, params: {script_id: Script::HOC_NAME}

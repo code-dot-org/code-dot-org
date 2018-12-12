@@ -359,11 +359,12 @@ et-EE:
   minecraft_adventurer: Minecraft Seikleja
   minecraft_tutorials: Minecraft KoodiTund - juhendid
   minecraft_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
+  minecraft_start_tutorial: Alusta õpetusega
   minecraft_agent_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
   minecraft_agent_button: Alusta
-  minecraft_designer_description: Programmeri loomi ja teisi Minecrafti olendeid sinu
-    enda Minecrafti versioonis.
+  minecraft_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
+    omaenda Minecrafti versioonis.
   minecraft_designer_button: Alusta
   minecraft_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   minecraft_adventurer_button: Alusta
@@ -1551,8 +1552,8 @@ et-EE:
   hoc2018_mc_hero_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
   hoc2018_mc_designer_title: Minecraft Kujundaja
-  hoc2018_mc_designer_description: Programmeri loomi ja teisi Minecrafti olendeid
-    sinu enda Minecrafti versioonis.
+  hoc2018_mc_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
+    omaenda Minecrafti versioonis.
   hoc2018_mc_adventurer_title: Minecraft Seikleja
   hoc2018_mc_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   hoc2018_mc_start: Alusta
@@ -1635,6 +1636,10 @@ et-EE:
   hoc2018_dance_amazon_scholarship_programs_button: Taotle nüüd
   hoc2018_dance_measure: Ühik
   hoc2018_dance_measure_colon: 'Ühik:'
+  hoc2018_aquatic_video1: 'Minecraft: Voyage Aquatic - sissejuhatus'
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - tsüklid
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - tingimused
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - palju õnne
   hoc2018_dance_video1: Tantsuõhtu - Sissejuhatus
   hoc2018_dance_video2: Tantsuõhtu - sündmused
   hoc2018_dance_video3: Tantsuõhtu - omadused

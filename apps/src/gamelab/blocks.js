@@ -15,6 +15,26 @@ let sprites = () => {
   });
 };
 
+// This color palette is limited to colors which have different hues, therefore
+// it should not contain different shades of the same color such as
+// ['#ff0000', '#cc0000', '#880000'].
+const limitedColours = [
+  // fully-saturated primary colors
+  '#ff0000', // RED
+  '#00ff00', // GREEN
+  '#0000ff', // BLUE
+
+  // fully-saturated secondary colors
+  '#ffff00', // YELLOW
+  '#00ffff', // CYAN
+  '#ff00ff', // MAGENTA
+
+  // some "tertiary" colors
+  '#ff8800', // ORANGE
+  '#8800ff', // PURPLE
+  '#0088ff', // LIGHT BLUE
+];
+
 const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -127,6 +147,20 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+    },
+  },
+  limitedColourPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = {
+        colours: limitedColours,
+        columns: 3,
+      };
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldColour('#ff0000', undefined, options), 'VAL');
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
     },
   },
 };
