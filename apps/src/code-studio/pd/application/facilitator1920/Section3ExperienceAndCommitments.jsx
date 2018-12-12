@@ -116,6 +116,45 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
     });
   }
 
+  renderCsdCspWhichFitWeekend() {
+    if (this.state.fitWorkshops && this.state.fitWorkshops.length > 0) {
+      const options = this.state.fitWorkshops.map(workshop =>
+        `${workshop.dates} in ${workshop.location}`
+      );
+      options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
+
+      const textFieldMap = {
+        [TextFields.notSurePleaseExplain] : "other",
+        [TextFields.unableToAttendPleaseExplain] : "other"
+      };
+
+      return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
+        "csdCspWhichFitWeekend",
+        options,
+        textFieldMap
+      );
+    }
+  }
+
+  renderCsdCspWhichSummerWorkshop() {
+    if (this.state.summerWorkshops && this.state.summerWorkshops.length > 0) {
+      const options = this.state.summerWorkshops.map(workshop =>
+        `${workshop.dates} in ${workshop.location}`
+      );
+      options.push(TextFields.notSurePleaseExplain, "I'm not able to attend any of the above");
+
+      const textFieldMap = {
+        [TextFields.notSurePleaseExplain] : "other"
+      };
+
+      return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
+        "csdCspWhichSummerWorkshop",
+        options,
+        textFieldMap
+      );
+    }
+  }
+
   render() {
     const program = ProgramMapping[this.props.data.program] || 'CS Program';
     return (
@@ -157,28 +196,23 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
                   <strong>Your Regional Partner is {this.state.regionalPartnerName}.</strong>
                 </p>
                 {
-                  !this.props.data.regionalPartnerSummerWorkshopIds &&
+                  !this.state.summerWorkshops &&
                   <div>
                     {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
                   </div>
                 }
                 {
-                  this.props.data.regionalPartnerSummerWorkshopIds &&
+                  this.state.summerWorkshops &&
                   <div>
                     {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
-                    {this.checkBoxesWithAdditionalTextFieldsFor('csdCspWhichSummerWorkshop', {
-                      [TextFields.notSurePleaseExplain] : "other",
-                    })}
+                    {this.renderCsdCspWhichSummerWorkshop()}
                   </div>
                 }
               </div>
             }
 
             {this.radioButtonsFor("csdCspFitWeekendRequirement")}
-            {this.checkBoxesWithAdditionalTextFieldsFor("csdCspWhichFitWeekend", {
-              [TextFields.notSurePleaseExplain] : "other",
-              [TextFields.unableToAttendPleaseExplain] : "other"
-            })}
+            {this.renderCsdCspWhichFitWeekend()}
             {this.radioButtonsFor("csdCspWorkshopRequirement")}
 
             {

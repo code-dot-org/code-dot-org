@@ -290,11 +290,7 @@ module Pd::Application
         csf_community_requirement: [YES_COMMIT, NO_COMMIT],
 
         csd_csp_fit_weekend_requirement: [YES_COMMIT, NO_COMMIT],
-        csd_csp_which_fit_weekend: [
-          'fake workshop',
-          TEXT_FIELDS[:not_sure_please_explain],
-          TEXT_FIELDS[:unable_to_attend_please_explain]
-        ],
+
         csd_csp_workshop_requirement: [YES_COMMIT, NO_COMMIT],
 
         csd_training_requirement: [YES_COMMIT, NO_COMMIT],
@@ -315,13 +311,6 @@ module Pd::Application
         ],
 
         csd_csp_partner_with_summer_workshop: [YES_COMMIT, NO_COMMIT],
-
-        csd_csp_which_summer_workshop: [
-          'fake workshop',
-          TEXT_FIELDS[:not_sure_please_explain],
-          "I'm not able to attend any of the above"
-
-        ],
 
         csf_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
 
