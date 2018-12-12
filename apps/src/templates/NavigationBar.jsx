@@ -7,6 +7,7 @@ const styles = {
     height: 50,
     width: '100%',
     backgroundColor: color.purple,
+    marginBottom: 20
   },
   linkBox: {
     display: 'inline',
@@ -25,9 +26,10 @@ export default class NavigationBar extends React.Component {
     activeLink: this.props.defaultActiveLink,
   };
 
-  changeActiveLink = (linkId) => {
+  changeActiveLink = (linkId, linkUrl) => {
     event.preventDefault();
     this.setState({activeLink: linkId});
+    window.history.replaceState(null, null, linkUrl);
   };
 
   render() {
@@ -39,11 +41,11 @@ export default class NavigationBar extends React.Component {
           <div
             key={link.id}
             style={styles.linkBox}
-            onClick={() => this.changeActiveLink(link.id)}
+            onClick={() => this.changeActiveLink(link.id, link.url)}
           >
             <NavigationBarLink
               label={link.label}
-              active={link.id === this.state.activeLink}
+              active={link.url === this.state.activeLink}
             />
           </div>
         ))}

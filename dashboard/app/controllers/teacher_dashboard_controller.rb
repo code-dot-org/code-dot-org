@@ -1,0 +1,2 @@
+class TeacherDashboardController < ApplicationController
+end

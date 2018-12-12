@@ -476,6 +476,7 @@ describe('entry tests', () => {
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
     'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'teacher_dashboard/index':              './src/sites/studio/pages/teacher_dashboard/index.js'
   };
 
   var internalEntries = {
