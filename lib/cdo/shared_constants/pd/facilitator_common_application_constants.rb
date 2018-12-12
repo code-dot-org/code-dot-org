@@ -41,7 +41,7 @@ module Pd
       section_3_experience_and_commitments: {
         teaching_experience: 'Do you have experience as a classroom teacher?',
         have_led_adults: 'Have you led learning experiences for adults?',
-        csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (<Workshop Date> in <Workshop Location>)?',
+        csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (May 17-19, 2019 in Atlanta, GA)?',
         csf_workshop_requirement: 'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
         csf_community_requirement: 'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
         csd_csp_fit_weekend_requirement: 'Can you commit to attending one 3-day 2019 Facilitator-in-Training Workshop?',

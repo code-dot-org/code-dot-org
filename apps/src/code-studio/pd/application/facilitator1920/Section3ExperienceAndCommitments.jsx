@@ -9,12 +9,112 @@ import {
 import {CSF, CSD, CSP} from '../ApplicationConstants';
 import {ProgramMapping} from './Facilitator1920Application';
 
+const PARTNERS_WITHOUT_CSF = [2, 3, 4, 44, 55, 80];
+const PARTNER_WORKSHOPS_API_ENDPOINT = '/api/v1/pd/regional_partner_workshops/find?';
+
 export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
   static labels = PageLabels.section3ExperienceAndCommitments;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section3ExperienceAndCommitments),
+    "regionalPartnerId"
   ];
+
+  state = {
+    loadingFitWorkshops: true,
+    loadingSummerWorkshops: false,
+    partner: null,
+    loadError: false
+  };
+
+  componentDidMount() {
+    const program = ProgramMapping[this.props.data.program];
+
+    this.loadFitWorkshops();
+
+    if (program === CSD || program === CSP) {
+      this.loadSummerWorkshops();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.loadFitWorkshopsRequest) {
+      this.loadFitWorkshopsRequest.abort();
+    }
+    if (this.loadSummerWorkshopsRequest) {
+      this.loadSummerWorkshopsRequest.abort();
+    }
+  }
+
+  loadFitWorkshops() {
+    const queryParams = {
+      course: ProgramMapping[this.props.data.program],
+      subject: 'Code.org Facilitator Weekend',
+      zip_code: this.props.data.zipCode,
+      state: this.props.data.state
+    };
+
+    const url = PARTNER_WORKSHOPS_API_ENDPOINT + $.param(queryParams);
+    this.loadFitWorkshopsRequest = $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done((data) => {
+      this.loadFitWorkshopsRequest = null;
+
+      this.handleChange({
+        regionalPartnerId: data.id
+      });
+
+      // Update state with all the partner workshop data to display
+      this.setState({
+        loadingFitWorkshops: false,
+        fitWorkshops: data.workshops,
+        regionalPartnerName: data.name
+      });
+    }).error(() => {
+      this.setState({
+        loadingFitWorkshops: false,
+        loadError: true
+      });
+    });
+  }
+
+  loadSummerWorkshops() {
+    this.setState({loadingSummerWorkshops: true});
+
+    const queryParams = {
+      course: ProgramMapping[this.props.data.program],
+      subject: '5-day Summer',
+      zip_code: this.props.data.zipCode,
+      state: this.props.data.state
+    };
+
+    const url = PARTNER_WORKSHOPS_API_ENDPOINT + $.param(queryParams);
+    this.loadSummerWorkshopsRequest = $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done((data) => {
+      this.loadSummerWorkshopsRequest = null;
+
+      this.handleChange({
+        regionalPartnerId: data.id,
+      });
+
+      // Update state with all the partner workshop data to display
+      this.setState({
+        loadingSummerWorkshops: false,
+        summerWorkshops: data.workshops,
+        regionalPartnerName: data.name
+      });
+    }).error(() => {
+      this.setState({
+        loadingSummerWorkshops: false,
+        loadError: true
+      });
+    });
+  }
 
   render() {
     const program = ProgramMapping[this.props.data.program] || 'CS Program';
@@ -35,30 +135,45 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         {
           program !== CSF &&
           <div>
-            {/* CSD/CSP RP based Qs */}
-            {/* if no RP */}
-            <p>
-              <strong>There is no Regional Partner in your region at this time.</strong>
-            </p>
-            <p>
-              Please note that we prioritize applicants in regions where we currently have a Regional
-              Partner, and there is a need for additional facilitators. Code.org will review your
-              application and contact you if there is a need for facilitators in a nearby region. We are
-              not able to guarantee a space for you in a different location.
-            </p>
-            {this.checkBoxesFor('csdCspNoPartnerSummerWorkshop')}
-            {/* if RP */}
-            <p>
-              <strong>Your Regional Partner is Regional Partner Name.</strong>
-            </p>
-            {/* if RP and RP has no summer workshops */}
-            {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
-            {/* if RP  and RP has workshops */}
-            {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
-            {this.checkBoxesWithAdditionalTextFieldsFor('csdCspWhichSummerWorkshop', {
-              [TextFields.notSurePleaseExplain] : "other",
-            })}
-            {/* normal q's */}
+            {
+              !this.props.data.regionalPartnerId &&
+              <div>
+                <p>
+                  <strong>There is no Regional Partner in your region at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a Regional
+                  Partner, and there is a need for additional facilitators. Code.org will review your
+                  application and contact you if there is a need for facilitators in a nearby region. We are
+                  not able to guarantee a space for you in a different location.
+                </p>
+                {this.checkBoxesFor('csdCspNoPartnerSummerWorkshop')}
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is {this.state.regionalPartnerName}.</strong>
+                </p>
+                {
+                  !this.props.data.regionalPartnerSummerWorkshopIds &&
+                  <div>
+                    {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
+                  </div>
+                }
+                {
+                  this.props.data.regionalPartnerSummerWorkshopIds &&
+                  <div>
+                    {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
+                    {this.checkBoxesWithAdditionalTextFieldsFor('csdCspWhichSummerWorkshop', {
+                      [TextFields.notSurePleaseExplain] : "other",
+                    })}
+                  </div>
+                }
+              </div>
+            }
+
             {this.radioButtonsFor("csdCspFitWeekendRequirement")}
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspWhichFitWeekend", {
               [TextFields.notSurePleaseExplain] : "other",
@@ -104,34 +219,46 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
               for teachers in their region. Facilitator applicants are assigned to Regional
               Partners based on the zip code they provide in their application.
             </p>
-            {/* CSF RP based Qs */}
-            {/* if no RP */}
-            <p>
-              <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
-            </p>
-            <p>
-              Please note that we prioritize applicants in regions where we currently have a
-              Regional Partner supporting CS Fundamentals, and there is a need for additional
-              facilitators. Code.org will review your application and contact you if there is
-              a need for facilitators. We are not able to guarantee a space for you in a
-              different location.
-            </p>
-            {/* if RP does not support CSF (small mapping) */}
-            <p>
-              <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
-            </p>
-            <p>
-              Please note that we prioritize applicants in regions where we currently have a
-              Regional Partner supporting CS Fundamentals, and there is a need for additional
-              facilitators. Code.org will review your application and contact you if there is
-              a need for facilitators. We are not able to guarantee a space for you in a
-              different location.
-            </p>
-            {/* if RP and not in small mapping*/}
-            <p>
-              <strong>Your Regional Partner is Regional Partner Name.</strong>
-            </p>
-            {this.radioButtonsFor('csfGoodStandingRequirement')}
+
+            {
+              !this.props.data.regionalPartnerId &&
+              <div>
+                <p>
+                  <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is {this.state.regionalPartnerName}.</strong>
+                </p>
+                {this.radioButtonsFor('csfGoodStandingRequirement')}
+              </div>
+            }
           </div>
         }
       </FormGroup>
