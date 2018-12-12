@@ -14,6 +14,7 @@ def get_social_metadata_for_page(request)
   }
 
   images = {
+    kids_with_ipads: {path: "/images/default-og-image.png", width: 1220, height: 640},
     celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.png", width: 1220, height: 640},
     creativity: {path: "/images/social-media/code-2018-creativity.png", width: 1200, height: 630},
     cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
@@ -62,8 +63,8 @@ def get_social_metadata_for_page(request)
       "default" => {
         title: hoc_s(:social_hoc2018_code_org_what_create),
         description: hoc_s(:social_hoc2018_every_student),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        image: images[:kids_with_ipads],
+        video: videos[:what_most_schools_dont_teach]
       }
     },
     "csedweek.org" => {
