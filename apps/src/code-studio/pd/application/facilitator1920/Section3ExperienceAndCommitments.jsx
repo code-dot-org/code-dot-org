@@ -63,14 +63,13 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       this.loadFitWorkshopsRequest = null;
 
       this.handleChange({
-        regionalPartnerId: data.id
-      });
-
-      // Update state with all the partner workshop data to display
-      this.setState({
-        loadingFitWorkshops: false,
+        regionalPartnerId: data.id,
         fitWorkshops: data.workshops,
         regionalPartnerName: data.name
+      });
+
+      this.setState({
+        loadingFitWorkshops: false
       });
     }).error(() => {
       this.setState({
@@ -100,13 +99,12 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
 
       this.handleChange({
         regionalPartnerId: data.id,
-      });
-
-      // Update state with all the partner workshop data to display
-      this.setState({
-        loadingSummerWorkshops: false,
         summerWorkshops: data.workshops,
         regionalPartnerName: data.name
+      });
+
+      this.setState({
+        loadingSummerWorkshops: false
       });
     }).error(() => {
       this.setState({
@@ -117,8 +115,8 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   }
 
   renderCsdCspWhichFitWeekend() {
-    if (this.state.fitWorkshops && this.state.fitWorkshops.length > 0) {
-      const options = this.state.fitWorkshops.map(workshop =>
+    if (this.props.data.fitWorkshops && this.props.data.fitWorkshops.length > 0) {
+      const options = this.props.data.fitWorkshops.map(workshop =>
         `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
@@ -137,8 +135,8 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   }
 
   renderCsdCspWhichSummerWorkshop() {
-    if (this.state.summerWorkshops && this.state.summerWorkshops.length > 0) {
-      const options = this.state.summerWorkshops.map(workshop =>
+    if (this.props.data.summerWorkshops && this.props.data.summerWorkshops.length > 0) {
+      const options = this.props.data.summerWorkshops.map(workshop =>
         `${workshop.dates} in ${workshop.location}`
       );
       options.push(TextFields.notSurePleaseExplain, "I'm not able to attend any of the above");
@@ -312,12 +310,31 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         "csfWorkshopRequirement",
         "csfCommunityRequirement"
       );
+
+      if (data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(data.regionalPartnerId)) {
+        requiredFields.push("csfGoodStandingRequirement");
+      }
     }
 
     if (program !== CSF) {
+      if (!data.regionalPartnerId) {
+        requiredFields.push("csdCspNoPartnerSummerWorkshop");
+      }
+      if (data.regionalPartnerId) {
+        if (data.summerWorkshops && data.summerWorkshops.length > 0) {
+          requiredFields.push(
+            "csdCspPartnerWithSummerWorkshop",
+            "csdCspWhichSummerWorkshop"
+          );
+        } else {
+          requiredFields.push("csdCspPartnerButNoSummerWorkshop");
+        }
+      }
+      if (data.fitWorkshops && data.fitWorkshops.length > 0) {
+        requiredFields.push("csdCspWhichFitWeekend");
+      }
       requiredFields.push(
         "csdCspFitWeekendRequirement",
-        "csdCspWhichFitWeekend",
         "csdCspWorkshopRequirement",
         "csdCspSummerWorkshopRequirement",
         "csdCspDeeperLearningRequirement"
