@@ -69,7 +69,7 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
         ReactDOM.render(
           React.createElement(UnsafeRenderedMarkdown, {
             markdown: editor.getValue(),
-            forceRemark: editor.getOption('forceRemark')
+            forceRemark: !editor.getOption('useMarked')
           }),
           previewElement[0],
         );
