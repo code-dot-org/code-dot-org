@@ -1,14 +1,13 @@
 function preload() {
   p5.instance._predefinedSpriteAnimations = {};
   p5.instance._pauseSpriteAnimationsByDefault = <%- animationOpts.pauseAnimationsByDefault -%>;
-  var animationListJSON = <%- animationOpts.animationListJSON -%>;
+  var animationListJSON = <%- animationListJSON -%>;
   var orderedKeys = animationListJSON.orderedKeys;
   var allAnimationsSingleFrame = <%- animationOpts.allAnimationsSingleFrame -%>;
-  for (var i = 0; i < orderedKeys.length; i++) {
-    var key = orderedKeys[i];
+  orderedKeys.forEach(function (key) {
     var props = animationListJSON.propsByKey[key];
     var frameCount = allAnimationsSingleFrame ? 1 : props.frameCount;
-    var image = loadImage(props.sourceUrl, function () {
+    var image = loadImage(props.rootRelativePath, function () {
       var spriteSheet = loadSpriteSheet(
           image,
           props.frameSize.x,
@@ -19,7 +18,7 @@ function preload() {
       p5.instance._predefinedSpriteAnimations[props.name].looping = props.looping;
       p5.instance._predefinedSpriteAnimations[props.name].frameDelay = props.frameDelay;
     });
-  }
+  });
 
   function wrappedExportedCode(stage) {
     if (stage === 'preload') {
