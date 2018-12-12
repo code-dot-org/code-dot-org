@@ -26,9 +26,9 @@ export default class NavigationBar extends React.Component {
     activeLink: this.props.defaultActiveLink,
   };
 
-  changeActiveLink = (linkId, linkUrl) => {
+  changeActiveLink = (linkUrl) => {
     event.preventDefault();
-    this.setState({activeLink: linkId});
+    this.setState({activeLink: linkUrl});
     window.history.replaceState(null, null, linkUrl);
   };
 
@@ -39,9 +39,9 @@ export default class NavigationBar extends React.Component {
       <div style={styles.navBar}>
         {links.map(link => (
           <div
-            key={link.id}
+            key={link.url}
             style={styles.linkBox}
-            onClick={() => this.changeActiveLink(link.id, link.url)}
+            onClick={() => this.changeActiveLink(link.url)}
           >
             <NavigationBarLink
               label={link.label}
