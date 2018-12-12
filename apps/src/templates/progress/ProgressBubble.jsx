@@ -182,30 +182,31 @@ class ProgressBubble extends React.Component {
         }}
       >
         <div
-          style={style}
           data-tip data-for={tooltipId}
           aria-describedby={tooltipId}
           className={"uitest-bubble"}
         >
-          <div
-            style={{
-              fontSize: level.paired ? 14 : 16,
-              ...styles.contents,
-              ...(level.isConceptLevel && styles.diamondContents)
-            }}
-          >
-            {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-            {pairingIconEnabled && level.paired && <FontAwesome icon="users"/>}
-            {!hideNumber && (
-              <span>
-                {/*Text will not show up for smallBubble, but it's presence
-                  causes bubble to be properly aligned vertically
-                  */}
-                {smallBubble ? '' : number}
-              </span>
-            )}
-            {!this.props.hideToolTips && tooltip}
+          <div style={style}>
+            <div
+              style={{
+                fontSize: level.paired ? 14 : 16,
+                ...styles.contents,
+                ...(level.isConceptLevel && styles.diamondContents)
+              }}
+            >
+              {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
+              {pairingIconEnabled && level.paired && <FontAwesome icon="users"/>}
+              {!hideNumber && (
+                <span>
+                  {/*Text will not show up for smallBubble, but it's presence
+                    causes bubble to be properly aligned vertically
+                    */}
+                  {smallBubble ? '' : number}
+                </span>
+              )}
+            </div>
           </div>
+          {!this.props.hideToolTips && tooltip}
         </div>
       </div>
     );
