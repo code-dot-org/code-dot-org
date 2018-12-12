@@ -47,16 +47,17 @@ export default {
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
     const zipAssetPrefix = appName + '/assets/';
 
-    const appAssets = generateAppAssets({
+    const { appAssets, animationListJSON } = this.generateAppAssetsAndJSON({
       code,
       animationOpts,
       rootRelativeAssetPrefix,
       zipAssetPrefix,
     });
-    animationOpts.animationListJSON = this.rewriteAnimationListSourceUrls(
-      animationOpts.animationListJSON,
-      appAssets);
-    const exportCode = exportGamelabCodeEjs({ code, animationOpts });
+    const exportCode = exportGamelabCodeEjs({
+      code,
+      animationOpts,
+      animationListJSON,
+    });
 
     if (expoMode) {
       appAssets.push({
@@ -119,9 +120,13 @@ export default {
     }
 
     return new Promise((resolve, reject) => {
-      $.when(...staticDownloads, ...(appAssets.map(
-        (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
-      ))).then(
+      $.when(...staticDownloads, ...(appAssets.map(assetToDownload => {
+        if (assetToDownload.blob) {
+          return $.Deferred().resolve([assetToDownload.blob]);
+        } else {
+          return download(assetToDownload.url, assetToDownload.dataType || 'text');
+        }
+      }))).then(
         ([gamelabApiText], [p5Text], [p5playText], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/gamelab-api.j" : "gamelab-api.js"),
               gamelabApiText);
@@ -158,7 +163,11 @@ export default {
   },
 
   generateExportableAnimationListJSON(animationList) {
-    const { pendingFrames, propsByKey, orderedKeys, ...rest} = animationList;
+  // Some information in the animationList doesn't belong in the exported version
+  // This function currently removes:
+  // pendingFrames from the top level
+  // blob and dataURI from each animation
+  const { pendingFrames, propsByKey, orderedKeys, ...rest} = animationList;
     const exportAnimationList = {
       orderedKeys,
       propsByKey: {},
@@ -172,39 +181,32 @@ export default {
     return JSON.stringify(exportAnimationList);
   },
 
-  rewriteAnimationListSourceUrls(animationListJSON, appAssets) {
-    const animationList = JSON.parse(animationListJSON);
+  rewriteAnimationListSourceUrls(animationList, appAssets) {
     const { propsByKey, ...rest } = animationList;
     const rewrittenAnimationList = { propsByKey: {}, ...rest };
     Object.entries(propsByKey).forEach(([key, anim]) => {
-      const { sourceUrl } = anim;
-      const appAsset = appAssets.find(asset => asset.sourceUrl === sourceUrl);
+      const appAsset = appAssets.find(asset => asset.key === key);
       const { rootRelativePath } = appAsset || {};
       rewrittenAnimationList.propsByKey[key] = {
         ...anim,
         rootRelativePath,
       };
     });
-    return JSON.stringify(rewrittenAnimationList);
+    return rewrittenAnimationList;
   },
 
   async exportApp(appName, code, animationOpts, suppliedExpoOpts) {
     const expoOpts = suppliedExpoOpts || {};
-    const { animationList } = animationOpts;
-    const expandedAnimationOpts = {
-      ...animationOpts,
-      animationListJSON: this.generateExportableAnimationListJSON(animationList),
-    };
     if (expoOpts.mode === 'expoPublish') {
       return await this.publishToExpo(
           appName,
           code,
-          expandedAnimationOpts);
+          animationOpts);
     }
     return this.exportAppToZip(
         appName,
         code,
-        expandedAnimationOpts,
+        animationOpts,
         expoOpts.mode === 'expoZip'
       ).then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
@@ -259,11 +261,12 @@ export default {
       hasDataAPIs: false,
     });
 
-    const appAssets = generateAppAssets({ code, animationOpts });
-    animationOpts.animationListJSON = this.rewriteAnimationListSourceUrls(
-      animationOpts.animationListJSON,
-      appAssets);
-    const exportCode = exportGamelabCodeEjs({ code, animationOpts });
+    const { appAssets, animationListJSON } = this.generateAppAssetsAndJSON({ code, animationOpts });
+    const exportCode = exportGamelabCodeEjs({
+      code,
+      animationOpts,
+      animationListJSON,
+    });
 
     const files = {
       'App.js': { contents: appJs, type: 'CODE'},
@@ -303,9 +306,13 @@ export default {
       assetLocation: 'appassets/',
     });
 
-    const assetDownloads = appAssets.map(asset =>
-      download(asset.url, asset.dataType || 'text')
-    );
+    const assetDownloads = appAssets.map(asset => {
+      if (asset.blob) {
+        return $.Deferred().resolve(asset.blob);
+      } else {
+        return download(asset.url, asset.dataType || 'text');
+      }
+    });
 
     const downloadedAssets = await Promise.all(assetDownloads);
     const assetUploads = downloadedAssets.map(downloadedAsset =>
@@ -329,64 +336,75 @@ export default {
     const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
 
     return expoURL;
+  },
+
+  generateAppAssetsAndJSON(params) {
+    const {
+      animationOpts,
+      code = '',
+      rootRelativeAssetPrefix = '',
+      zipAssetPrefix = ''
+    } = params;
+    const { animationList } = animationOpts;
+    const { propsByKey: animationPropsByKey } = animationList;
+
+    const appAssets = dashboard.assets.listStore.list().map(asset => {
+      const filename = asset.filename.replace(/^\/+/g, '');
+      return {
+        url: assetPrefix.fixPath(asset.filename),
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename: filename,
+      };
+    });
+
+    const animAssets = Object.entries(animationPropsByKey).map(([key, anim]) => {
+      const { blob, sourceUrl } = anim;
+      // If we have a sourceUrl, use it for the filename and url. Otherwise (in
+      // cases where we only have a Blob), generate a filename/url from the key:
+      const filename = sourceUrl ? sourceUrl.replace(/^\/+/g, '') : `${key}.png`;
+      const url = sourceUrl ? assetPrefix.fixPath(sourceUrl) : filename;
+      return {
+        blob,
+        key,
+        sourceUrl,
+        url,
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename,
+      };
+    });
+
+    const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    const allSounds = code.match(soundRegex) || [];
+    const uniqueSounds = [...(new Set(allSounds))];
+    const soundAssets = uniqueSounds.map(soundProtocolUrl => {
+      const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
+      const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
+      return {
+        url: soundOriginUrl,
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename,
+        searchUrl: soundProtocolUrl,
+      };
+    });
+
+    const rewrittenAnimList = this.rewriteAnimationListSourceUrls(animationList, animAssets);
+
+    return {
+      appAssets: [
+        ...appAssets,
+        ...animAssets,
+        ...soundAssets,
+      ],
+      animationListJSON: this.generateExportableAnimationListJSON(rewrittenAnimList),
+    };
   }
 };
-
-function generateAppAssets(params) {
-  const {
-    animationOpts,
-    code = '',
-    rootRelativeAssetPrefix = '',
-    zipAssetPrefix = ''
-  } = params;
-  const { animationList } = animationOpts;
-  const { propsByKey: animationPropsByKey } = animationList;
-
-  const appAssets = dashboard.assets.listStore.list().map(asset => {
-    const filename = asset.filename.replace(/^\/+/g, '');
-    return {
-      url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: rootRelativeAssetPrefix + filename,
-      zipPath: zipAssetPrefix + filename,
-      dataType: 'binary',
-      filename: filename,
-    };
-  });
-
-  const animAssets = Object.values(animationPropsByKey).map(anim => {
-    const filename = anim.sourceUrl.replace(/^\/+/g, '');
-    return {
-      sourceUrl: anim.sourceUrl,
-      url: assetPrefix.fixPath(anim.sourceUrl),
-      rootRelativePath: rootRelativeAssetPrefix + filename,
-      zipPath: zipAssetPrefix + filename,
-      dataType: 'binary',
-      filename,
-    };
-  });
-
-  const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-  const allSounds = code.match(soundRegex) || [];
-  const uniqueSounds = [...(new Set(allSounds))];
-  const soundAssets = uniqueSounds.map(soundProtocolUrl => {
-    const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
-    const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
-    return {
-      url: soundOriginUrl,
-      rootRelativePath: rootRelativeAssetPrefix + filename,
-      zipPath: zipAssetPrefix + filename,
-      dataType: 'binary',
-      filename,
-      searchUrl: soundProtocolUrl,
-    };
-  });
-
-  return [
-    ...appAssets,
-    ...animAssets,
-    ...soundAssets,
-  ];
-}
 
 // TODO: for expoMode, replace spaces in asset filenames or wait for this fix
 // to make it into Metro Bundler:
