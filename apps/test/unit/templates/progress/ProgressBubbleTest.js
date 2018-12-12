@@ -59,7 +59,8 @@ describe('ProgressBubble', () => {
       />
     );
 
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
   });
 
@@ -71,7 +72,8 @@ describe('ProgressBubble', () => {
       />
     );
 
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_not_tried);
   });
 
@@ -85,7 +87,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_not_tried);
     assert.equal(div.props().style.borderColor, color.level_perfect);
   });
@@ -100,7 +103,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_passed);
     assert.equal(div.props().style.borderColor, color.level_perfect);
   });
@@ -116,7 +120,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_submitted);
     assert.equal(div.props().style.borderColor, color.level_submitted);
     assert.equal(div.props().style.color, color.white);
@@ -133,7 +138,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_review_rejected);
     assert.equal(div.props().style.borderColor, color.level_review_rejected);
     assert.equal(div.props().style.color, color.white);
@@ -150,7 +156,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
     assert.equal(div.props().style.borderColor, color.level_perfect);
     assert.equal(div.props().style.color, color.white);
@@ -166,7 +173,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.transform, 'rotate(45deg)');
   });
 
@@ -181,7 +189,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.transform, 'rotate(45deg)');
     assert.equal(div.props().style.borderRadius, 2);
   });
@@ -215,8 +224,8 @@ describe('ProgressBubble', () => {
         smallBubble={true}
       />
     );
-
-    assert.equal(wrapper.find('div').at(1).props().style.width, 9);
+    const tooltipDiv = wrapper.find('div').at(1);
+    assert.equal(tooltipDiv.find('div').at(1).props().style.width, 9);
   });
 
   it('renders a progress pill for unplugged lessons', () => {
