@@ -11,7 +11,7 @@ export default storybook => {
         description: 'NavigationBar used on Teacher Dashboard',
         story: () => (
           <NavigationBar
-            defaultActiveLink = "progres"
+            defaultActiveLink = "progress"
             links = {teacherDashboardLinks}
           />
         )
