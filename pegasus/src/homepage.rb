@@ -108,17 +108,16 @@ class Homepage
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
-    show_latam_videos = DCDO.get("show_latam_videos", nil)
-    if latam_language_codes.include?(I18n.locale) && show_latam_videos
+    if latam_language_codes.include?(I18n.locale)
       youtube_id = "EGgdCryC8Uo"
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
     else
-      youtube_id = "VYqHGIR7a_k"
-      download_path = "//videos.code.org/social/creativity-is.mp4"
-      facebook = "https://www.facebook.com/Code.org/videos/279676706209196/"
-      twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/1051805228859834368"
+      youtube_id = "nKIu9yen5nc"
+      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
+      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
@@ -141,6 +140,22 @@ class Homepage
           text: "homepage_action_text_try_it",
           type: "cta_button_hollow_white",
           url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "post-hoc"
+      [
+        {
+          text: "homepage_action_text_learn",
+          type: "cta_button",
+          url: CDO.studio_url("/courses"),
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
         }
       ]
     else
@@ -204,7 +219,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/images/homepage/ap-feature-2017.jpg",
+          image: "/shared/images/courses/logo_tall_teacher2.jpg",
           links:
             [
               {
@@ -275,25 +290,6 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      last_block =
-        if DCDO.get('hoc_launch', CDO.default_hoc_launch) == 'dance'
-          {
-            id: 'dance-nonen',
-            title: 'studiobar_dance_title',
-            text: 'studiobar_dance_body',
-            url: '/dance',
-            image: '/shared/images/courses/logo_tall_dance.jpg'
-          }
-        else
-          {
-            id: 'flappy-nonen',
-            title: 'studiobar_flappy_title',
-            text: 'studiobar_flappy_body',
-            url: CDO.studio_url('/s/flappy/reset'),
-            image: '/shared/images/courses/logo_tall_flappy.jpg'
-          }
-        end
-
       [
         {
           id: "students-nonen",
@@ -313,7 +309,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/images/homepage/ap-feature-2017.jpg"
+          image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
           id: "hoc-nonen",
@@ -326,14 +322,14 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
-          id: last_block[:id],
+          id: 'dance-nonen',
           type: "blockshort",
-          title: last_block[:title],
-          text: last_block[:text],
+          title: 'studiobar_dance_title',
+          text: 'studiobar_dance_body',
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: last_block[:url],
-          image: last_block[:image]
+          url: '/dance',
+          image: '/shared/images/courses/logo_tall_dance.jpg'
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
@@ -355,38 +351,18 @@ class Homepage
   end
 
   def self.show_single_hero
-    hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-    if hoc_launch == "mc"
-      "mc"
-    elsif hoc_launch == "dance"
-      "dance"
-    else
-      "hoc2018"
-    end
-  end
-
-  def self.show_single_hero_mobile_gap
-    false
+    "create"
   end
 
   def self.get_heroes_arranged(request)
-    hoc2018_hero = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018.jpg"}]
-    hoc2018_hero_mc = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018_mc.jpg"}]
-    hoc2018_hero_dance = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018_dance.jpg"}]
+    hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if show_single_hero
-      hoc_marketing_mode = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-      heroes_arranged = if hoc_marketing_mode == "mc"
-                          hoc2018_hero_mc
-                        elsif hoc_marketing_mode == "dance"
-                          hoc2018_hero_dance
-                        else
-                          hoc2018_hero
-                        end
+    if show_single_hero == "create"
+      heroes_arranged = hero_create
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -441,7 +417,6 @@ class Homepage
       "MC Hammer", "Miley Cyrus", "OutKast", "Selena Gomez", "Sia", "Village People", "The Weeknd", "will.i.am",
       "Yolanda Be Cool"
     ]
-
     DCDO.get("hoc2018_dance_stars", stars)
   end
 end
