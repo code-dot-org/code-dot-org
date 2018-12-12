@@ -4107,8 +4107,8 @@ vi:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
           description_short: Minecraft đã trở lại với hoạt động mới cho Giờ Lập Trình!
-          description: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động
-            mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình.
+          description: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour
+            of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
           stages:
             Intro to AppLab - Your First App:
@@ -4927,12 +4927,31 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
+          title: Bữa tiệc khiêu vũ
+          description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara và 25 nghệ sĩ khác!
+          description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
+            bè của mình!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Họa sĩ
         aquatic:
           title: Minecraft Chuyến thám hiểm đại dương
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
+        dance-extras:
+          title: Hãy Tiếp tục Nhảy
+          description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
+            án mở rộng.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -4949,3 +4968,65 @@ vi:
               name: Cho vòng lặp vui vẻ
             new stage:
               name: giai đoạn mới
+            The Artist:
+              name: nghệ sĩ
+        dance-low:
+          stages:
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Chương trình chuyển tiếp
+            Digital Citizenship:
+              name: Dân kỹ thuật số
+            'Unplugged: Binary':
+              name: 'Chưa hoạt động: nhị phân'
+            Artist Binary:
+              name: Nghệ sĩ nhị phân
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Xây dựng nền tảng
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
+            Nested Loops:
+              name: Vòng lặp lồng nhau
+            Nested Loops with Frozen:
+              name: Vòng lặp lồng với Frozen
+            Conditionals:
+              name: Điều kiện
+            Internet:
+              name: Kết nối mạng
+            Crowdsourcing:
+              name: Đa nguồn
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Chương trình chuyển tiếp
+            Envelope Variables:
+              name: Các biến phong bì
+            For Loop Fun:
+              name: Cho vòng lặp vui vẻ
+            Binary Bracelets:
+              name: Vòng đeo tay nhị phân
+            'Unplugged: Binary':
+              name: 'Chưa hoạt động: nhị phân'
+            Artist Binary:
+              name: Nghệ sĩ nhị phân
+            Internet:
+              name: Kết nối mạng
+            Crowdsourcing:
+              name: Đa nguồn
+        csd1-2019:
+          stages:
+            CS Discoveries Pre-survey:
+              name: Tiền khảo sát CS Discoveries
+            Intro to Problem Solving:
+              name: Giới thiệu phần giải quyết vấn đề
+            The Problem Solving Process:
+              name: Quá trình giải quyết vấn đề
+            Exploring Problem Solving:
+              name: Khám phá Giải quyết vấn đề
+            What is a Computer?:
+              name: Máy tính là gì?

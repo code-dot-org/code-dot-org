@@ -137,19 +137,28 @@ ar:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
+          منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld Move to Sheep_callout:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
       Overworld Place Wall_callout:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
@@ -157,9 +166,14 @@ ar:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
           إضافة أمر للتقدم؟
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
+          إضافة أمر للتقدم؟
       Underground Iron_callout:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Underground Iron_2018_callout:
+        craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
+      Underground Iron_2019_callout:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"

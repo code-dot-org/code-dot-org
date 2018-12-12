@@ -124,6 +124,7 @@ da:
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
+    email_preference_privacy: "(Se vores fortrolighedspolitik)"
     email_preference_yes: Ja
     email_preference_no: Nej
   school_info:
@@ -287,6 +288,7 @@ da:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Dansefest
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
@@ -505,6 +507,8 @@ da:
     applab:
       title: App Lab
       audience: Alder 13+
+    dance:
+      title: Dansefest
     hoc:
       title: Klassisk labyrint
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
@@ -547,6 +551,8 @@ da:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En
+        rejse gennem Minecraft ved hjælp af kode.
     unplugged:
       audience: Alder 4+
     unplugged_conditionals:
@@ -735,6 +741,7 @@ da:
       name: Eskalerede
   flex_category:
     required: Oversigt
+  view_teacher_guide: Vis lærervejledning
   pd:
     form_labels:
       email: E-mail
@@ -749,6 +756,7 @@ da:
         cs: Datalogi
         math: Matematik
         science: Videnskab
+        la: Sprog kunst
       resources:
         kodable: Kodable
       robotics:

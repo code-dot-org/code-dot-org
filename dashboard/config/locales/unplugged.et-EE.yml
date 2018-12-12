@@ -485,3 +485,36 @@ et:
         desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad
           reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta
           kaardi, saad sina punkti."'
+      GraphPaperProgramming_2019:
+        title: Millimeetripaberi programmeerimine
+        desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi
+          (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
+      RelayProgramming_2018_2019:
+        title: Relee programmeerimine
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida tähendab olla digitaalne kodanik.
+      BinaryImages_2019:
+        title: Binaarsed pildid
+        desc: Kuigi paljude inimeste jaoks on binaarandmed kõigest nullid ja ühed,
+          õppisid õpilased eelmistel kursustel, et teavet saab esitada mitmel binaarsel
+          kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse,
+          kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks
+          pilte ja värve).
+      GettingLoopy_2019:
+        title: Muutub tsükliliseks
+        desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste)
+          programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad
+          peavad siis kordama.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida teha, kui keegi on internetis pahatahtlik.
+      BigEvent_2019:
+        title: Suursündmus
+        desc: Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused,
+          mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil
+          ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.
+      BinaryBracelets_2019:
+        title: Binaarsed käevõrud
+        desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul.
+          Õpilased õpivad, et andmeid saab salvestada mitmel kujul.

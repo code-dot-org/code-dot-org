@@ -682,6 +682,21 @@ hu:
       Crack Random Substitution_2018: Utasítások
       Crack a Caesar Cipher: Utasítások
       Crack a Caesar Cipher_2018: Utasítások
+      Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+      Dance_Party_01_low: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd az „összeállítás“ blokkba.
+      Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot kezdjen!
+      Dance_Party_03: Most állítsd be, hogy a táncos 6 ütem után kezdjen új mozdulatot!
+      Dance_Party_04: Adj háttéreffektet a programodhoz.
+      Dance_Party_05: Egy másik új blokkal érd el, hogy a táncos 2 ütemenként változtasson a mozgásán.
+      Dance_Party_06: Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt táncoljon a macskával.
+      Dance_Party_08: Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos színét.
+      Dance_Party_10: A „követés megkezdése“ blokkal érd el, hogy a másik táncos is reagáljon a zenére.
+      Dance_Party_11.5_test: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
+      Dance_Party_11: A „felfelé nyíl megnyomásakor“ blokkal a felfelé nyíl megnyomására tudsz kódot futtatni. Próbáld meg elérni, hogy a táncos egy gyors mozdulatot végezzen, amikor megnyomod a felfelé nyilat.
+      Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
+      Dance_Party_11b: Állítsd be, hogy a Robot egyszer „drop“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „floss“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a drop-floss mozdulatokat olyan gyorsan, ahogyan csak tudod!
+      Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
       Farmer for Authored Hint testing: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       Farmer for TTS testing: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       Find the Wizard: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
@@ -975,25 +990,35 @@ hu:
       New Minecraft Hero Project: "**Szabad játék:**  Most szabadon barangolhatsz!"
       Overworld Avoid Monsters: Nem jó ötlet nekimenni a Creepereknek. Óvatosan haladj el a Creeperek között, hogy épségben hazaérj.
       Overworld Avoid Monsters_2018: Nem jó ötlet nekimenni a Creepereknek. Óvatosan haladj el a Creeperek között, hogy épségben hazaérj.
+      Overworld Avoid Monsters_2019: Nem jó ötlet nekimenni a Creepereknek. Óvatosan haladj el a Creeperek között, hogy épségben hazaérj.
       Overworld Chop Tree - allthethings: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd a fát.
       Overworld Chop Tree: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd a fát.
       Overworld Chop Tree_2018: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd a fát.
+      Overworld Chop Tree_2019: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd a fát.
       Overworld Chop Trees: Házat kell építenünk, mielőtt lemegy a nap. Ehhez sok fára van szükségünk. Vágd ki mind a három fát.
       Overworld Chop Trees_2018: Házat kell építenünk, mielőtt lemegy a nap. Ehhez sok fára van szükségünk. Vágd ki mind a három fát.
+      Overworld Chop Trees_2019: Házat kell építenünk, mielőtt lemegy a nap. Ehhez sok fára van szükségünk. Vágd ki mind a három fát.
       Overworld Free Play 20x20: Gratulálunk, minden feladványt megoldottál! Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig tanultál.
       Overworld Free Play 20x20_2018: Gratulálunk, minden feladványt megoldottál! Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig tanultál.
+      Overworld Free Play 20x20_2019: Gratulálunk, minden feladványt megoldottál! Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig tanultál.
       Overworld House Frame Chosen: Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
       Overworld House Frame Chosen_2018: Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
+      Overworld House Frame Chosen_2019: Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az ismételd parancs jól fog jönni.
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
       Overworld Move to Sheep_2018: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
+      Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy elérd a bárányt.
       Overworld Place Wall: Minden ház egy fallal kezdődik. Építsd meg az első részt úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot teszel.
       Overworld Place Wall_2018: Minden ház egy fallal kezdődik. Építsd meg az első részt úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot teszel.
+      Overworld Place Wall_2019: Minden ház egy fallal kezdődik. Építsd meg az első részt úgy, hogy az ismételd blokkba egy elhelyez és egy előrelépni blokkot teszel.
       Overworld Plant Crops: Jó gondolat előre tervezni. Ültess növényeket a tó mindkét partján, hogy később ne legyél éhes.
       Overworld Plant Crops_2018: Jó gondolat előre tervezni. Ültess növényeket a tó mindkét partján, hogy később ne legyél éhes.
+      Overworld Plant Crops_2019: Jó gondolat előre tervezni. Ültess növényeket a tó mindkét partján, hogy később ne legyél éhes.
       Overworld Powered Minecart: Szép munka! Nagyon sok nyersanyagot gyűjtöttél, és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől a házad bejáratáig.
       Overworld Powered Minecart_2018: Szép munka! Nagyon sok nyersanyagot gyűjtöttél, és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől a házad bejáratáig.
+      Overworld Powered Minecart_2019: Szép munka! Nagyon sok nyersanyagot gyűjtöttél, és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől a házad bejáratáig.
       Overworld Shear Sheep: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy gyapjút gyűjts a két báránytól.
       Overworld Shear Sheep_2018: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy gyapjút gyűjts a két báránytól.
+      Overworld Shear Sheep_2019: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy gyapjút gyűjts a két báránytól.
       PDK5 Conditionals 1: A lila virágokban 1 vagy 0 nektár lehet, de pontosan nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár! A "ha" blokkal ellenőrizd, hogy a nektárok száma egyenlő-e 1.
       PDK5 Functions 2: A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.
       PS - test - pixelation: Egészítsd ki az X alakot nullák és egyesek begépelésével
@@ -1026,12 +1051,16 @@ hu:
       U4L02 - Objects - Template1_2018: Sablon
       Underground Avoiding Lava: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
       Underground Avoiding Lava_2018: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
+      Underground Avoiding Lava_2019: Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
       Underground If Statements: A dolgok kezdenek trükkösek lenni. Három vöröskő ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot, hogy macskakővel takard le a lávát, ha lávával találkozol.
       Underground If Statements_2018: A dolgok kezdenek trükkösek lenni. Három vöröskő ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot, hogy macskakővel takard le a lávát, ha lávával találkozol.
+      Underground If Statements_2019: A dolgok kezdenek trükkösek lenni. Három vöröskő ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot, hogy macskakővel takard le a lávát, ha lávával találkozol.
       Underground Iron: Nem jó ötlet belesétálni a folyékony lávába. Takard le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz ki.
       Underground Iron_2018: Nem jó ötlet belesétálni a folyékony lávába. Takard le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz ki.
+      Underground Iron_2019: Nem jó ötlet belesétálni a folyékony lávába. Takard le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz ki.
       Underground Mining Coal: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
       Underground Mining Coal_2018: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
+      Underground Mining Coal_2019: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
       aE7: "Hogyha lemásolod a ciklust és balra fordulsz jobb helyett, mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?"
       aE8: "Most ismételjük a ciklust négyszer, hogy elkészüljön ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal kapunk a sarkokhoz egy negyed kört?"
       beeDebugVideo1: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
@@ -1084,12 +1113,16 @@ hu:
       courseC_maze_debugging10: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az 1 számjegy jelöli) állapotokat használjuk.\\r\n\\r\nEgy \"képpontokból\" álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a művésszel a \"01010101\" bináris sorozatot az első sorban?"
       courseD_artist_binary1_2018: "A bináris az információ ábrázolása mindössze 2 állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az 1 számjegy jelöli) állapotokat használjuk.\\r\n\\r\nEgy \"képpontokból\" álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a művésszel a \"01010101\" bináris sorozatot az első sorban?"
+      courseD_artist_binary1_2019: "A bináris az információ ábrázolása mindössze 2 állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az 1 számjegy jelöli) állapotokat használjuk.\\r\n\\r\nEgy \"képpontokból\" álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a művésszel a \"01010101\" bináris sorozatot az első sorban?"
       courseD_artist_binary4: Meg tudod rajzolni ezt a mintát mindössze három bináris számjegy (0 és 1) ismétlésével?
       courseD_artist_binary4_2018: Meg tudod rajzolni ezt a mintát mindössze három bináris számjegy (0 és 1) ismétlésével?
+      courseD_artist_binary4_2019: Meg tudod rajzolni ezt a mintát mindössze három bináris számjegy (0 és 1) ismétlésével?
       courseD_artist_binary6: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_artist_binary6_2018: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
+      courseD_artist_binary6_2019: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_artist_binary7: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
       courseD_artist_binary7_2018: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
+      courseD_artist_binary7_2019: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
       courseD_autorun_binary4_2019: Meg tudod rajzolni ezt a mintát mindössze három bináris számjegy (0 és 1) ismétlésével?
       courseD_autorun_binary6_2019: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_autorun_binary7_2019: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
@@ -1122,6 +1155,7 @@ hu:
       courseE_artist_functions1_2018: "Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel rövidebb, mint a négyzet oldala."
       courseE_bee_concept1: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
       courseE_bee_concept1_2018: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
+      courseE_bee_concept1_2019: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
       courseE_bee_functions1: Gyűjtsd össze az összes virág összes nektárját!
       courseE_bee_functions1_2018: Gyűjtsd össze az összes virág összes nektárját!
       courseE_bee_functions3: A függvények olyan kódot tartalmazó blokkok, amelyek elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre 5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj a számlálóra is.

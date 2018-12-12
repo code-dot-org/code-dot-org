@@ -112,6 +112,10 @@ ga:
         options:
           EFFECT:
             '"none"': Dada
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Dada
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ ga:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Dada
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Dada
@@ -274,6 +282,15 @@ ga:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': uile
       Mikelab_getProp:
         options:
           PROPERTY:

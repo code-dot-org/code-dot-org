@@ -55,8 +55,8 @@ mi:
       Dancelab_jumpTo:
         options:
           LOCATION:
-            "{x: 100, y: 200}": whakamauī
-            "{x: 300, y: 200}": whakamatau
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -64,11 +64,11 @@ mi:
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
-            "{x: 100, y: 200}": whakamauī
-            "{x: 300, y: 200}": whakamatau
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -93,7 +93,7 @@ mi:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': noa
             '2': fast
             '4': very fast
             '0.5': slow
@@ -103,7 +103,7 @@ mi:
           GROUP:
             sprites: katoa
           SPEED:
-            '1': normal
+            '1': noa
             '2': fast
             '4': very fast
             '0.5': slow
@@ -146,10 +146,10 @@ mi:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': whakarunga
-            '"left"': whakamauī
-            '"down"': whakararo
-            '"right"': whakamatau
+            '"up"': runga
+            '"left"': mauī
+            '"down"': raro
+            '"right"': matau
             '"space"': tuarangi
             '"x"': x
       gamelab_changePropBy:
@@ -168,8 +168,8 @@ mi:
       gamelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': whakamatau
-            '"left"': whakamauī
+            '"right"': matau
+            '"left"': mauī
       gamelab_randColor:
         text: tae matapōkere
       gamelab_randomColor:
@@ -194,30 +194,30 @@ mi:
       gamelab_turn:
         options:
           DIRECTION:
-            '"right"': whakamatau
-            '"left"': whakamauī
+            '"right"': matau
+            '"left"': mauī
       gamelab_whenKey:
         options:
           KEY:
-            '"up"': whakarunga
-            '"down"': whakararo
-            '"left"': whakamauī
-            '"right"': whakamatau
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
             '"space"': tuarangi
       gamelab_whenPressedAndReleased:
         options:
           DIR:
-            "'up'": whakarunga
-            "'down'": whakararo
-            "'left'": whakamauī
-            "'right'": whakamatau
+            "'up'": runga
+            "'down'": raro
+            "'left'": mauī
+            "'right'": matau
       gamelab_whileKey:
         options:
           KEY:
-            '"up"': whakarunga
-            '"down"': whakararo
-            '"left"': whakamauī
-            '"right"': whakamatau
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
             '"space"': tuarangi
       Mikelab_changePropBy:
         options:
@@ -226,8 +226,17 @@ mi:
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 100, y: 200}": whakamauī
-            "{x: 300, y: 200}": whakamatau
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': katoa
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -245,8 +254,8 @@ mi:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': whakamatau
-            '"left"': whakamauī
+            '"right"': matau
+            '"left"': mauī
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -316,6 +325,8 @@ mi:
             "'sand'": oneone
             "'darkPrismarine'": poromoana uriuri
             "'seaLantern'": rama moana
+      craft_log:
+        text: kārere takiputa {MESSAGE}
       craft_moveForward:
         text: neke ki mua
       craft_placeBlock:

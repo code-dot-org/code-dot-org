@@ -1,13 +1,13 @@
 ---
 title: <%= hoc_s(:title_partners).inspect %>
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+KoodiTund kampaaniat juhivad Hour of Code ja Computer Science Education Week nõuandvad ja järelvalve komiteed.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Nõuandev komitee](%= resolve_url('/advisory-committee') %) liikmed on haridusasutuste, ülikoolide, mittetulundusorganisatsioonide, ettevõtete ja rahvusvaheliste organisatsioonide esindajad. See komitee juhib Hour of Code kampaania strateegiat.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Järelvalve komitee](%= resolve_url('/review-committee') %) koosneb 15-st haridustöötajast, kes hindab ja soovitab tegevusi lähtuvalt nõustava komitee visioonist. Need haridustöötajad hindavad iseseisvaks õppimiseks mõeldud tegevusi ning õpetajate juhendeid, mille on koostanud sajad partnerid. Hinnatakse hariduslikku väärtust ning seda, kui paljudele erinevatele õpilastele tegevus huvi pakuks.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Mõlema komitee tegevus on kaasa aidanud Hour of Code edule ning eesmärgile pakkuda igale õpilasele võimalust õppida arvutiteadusi.
 
 <% if @country == 'la' %>
 
@@ -113,31 +113,31 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Peamised partnerid ja korporatiivtoetajad
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# International Partners
+# Rahvusvahelised partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Tunniplaani ja juhendite koostamise partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastruktuuri ja vahendite partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Täiendavad partnerid
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

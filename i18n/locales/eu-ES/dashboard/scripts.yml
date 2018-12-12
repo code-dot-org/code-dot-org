@@ -1405,3 +1405,51 @@ eu:
               name: Gutun-azaleko aldagarriak
             For Loop Fun:
               name: Begizta jostarirako
+            The Artist:
+              name: Artista
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Txandaka programatzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            Digital Citizenship:
+              name: Hiritartasun digitala
+            'Unplugged: Binary':
+              name: 'Desnkonektatua: binarioa'
+            Artist Binary:
+              name: Artista bitarra
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Oinarri bat Eraikitzen
+            Nested Loops:
+              name: Kabiatutako begiztak
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            Conditionals:
+              name: Baldintzak
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Txandaka programatzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            Envelope Variables:
+              name: Gutun-azaleko aldagarriak
+            For Loop Fun:
+              name: Begizta jostarirako
+            Binary Bracelets:
+              name: Eskumuturreko bitarrak
+            'Unplugged: Binary':
+              name: 'Desnkonektatua: binarioa'
+            Artist Binary:
+              name: Artista bitarra
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

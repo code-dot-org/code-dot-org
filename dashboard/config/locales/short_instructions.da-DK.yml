@@ -873,6 +873,9 @@ da:
       Overworld Avoid Monsters_2018: Det er en dårlig idé at løbe direkte ind i en
         sniger. Prøv i stedet at liste dig forbi dem, så du kan komme i sikkerhed
         i dit hus.
+      Overworld Avoid Monsters_2019: Det er en dårlig idé at løbe direkte ind i en
+        sniger. Prøv i stedet at liste dig forbi dem, så du kan komme i sikkerhed
+        i dit hus.
       Overworld Chop Tree - allthethings: Træ er en meget vigtig ressource. Det bliver
         brugt til mange ting. Gå hen til træet, og brug "ødelæg blok"-kommandoen for
         at hugge det i stykker.
@@ -882,9 +885,14 @@ da:
       Overworld Chop Tree_2018: Træ er en meget vigtig ressource. Det bliver brugt
         til mange ting. Gå hen til træet, og brug "ødelæg blok"-kommandoen for at
         hugge det i stykker.
+      Overworld Chop Tree_2019: Træ er en meget vigtig ressource. Det bliver brugt
+        til mange ting. Gå hen til træet, og brug "ødelæg blok"-kommandoen for at
+        hugge det i stykker.
       Overworld Chop Trees: Vi skal bygge et hus, inden solen går ned. Der skal bruges
         en masse træ til et hus. Hug alle tre træer i stykker.
       Overworld Chop Trees_2018: Vi skal bygge et hus, inden solen går ned. Der skal
+        bruges en masse træ til et hus. Hug alle tre træer i stykker.
+      Overworld Chop Trees_2019: Vi skal bygge et hus, inden solen går ned. Der skal
         bruges en masse træ til et hus. Hug alle tre træer i stykker.
       Overworld Free Play 20x20: Tillykke! Du har gennemført alle vores hovedbrud!
         Nu skal du udvinde, bygge og skabe noget unikt ved at bruge alt det, du har
@@ -892,22 +900,34 @@ da:
       Overworld Free Play 20x20_2018: Tillykke! Du har gennemført alle vores hovedbrud!
         Nu skal du udvinde, bygge og skabe noget unikt ved at bruge alt det, du har
         lært indtil videre.
+      Overworld Free Play 20x20_2019: Tillykke! Du har gennemført alle vores hovedbrud!
+        Nu skal du udvinde, bygge og skabe noget unikt ved at bruge alt det, du har
+        lært indtil videre.
       Overworld House Frame Chosen: Byg resten af huset med de materialer du synes
         bedst om. "gentag"-kommandoen er nok ret smart her.
       Overworld House Frame Chosen_2018: Byg resten af huset med de materialer du
         synes bedst om. "gentag"-kommandoen er nok ret smart her.
+      Overworld House Frame Chosen_2019: Byg resten af huset med de materialer du
+        synes bedst om. "gentag"-kommandoen er nok ret smart her.
       Overworld Move to Sheep: Tilføje en "flyt fremad"-blok mere for at komme hen
         til fårene.
       Overworld Move to Sheep_2018: Tilføje en "flyt fremad"-blok mere for at komme
+        hen til fårene.
+      Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
       Overworld Place Wall: Alle husbyggerier starter med en væg. Byg den første del
         af dit hus ved at placere "placér"- og "ryk fremad"-kommandoerne inde i gentagelsessløjfen.
       Overworld Place Wall_2018: Alle husbyggerier starter med en væg. Byg den første
         del af dit hus ved at placere "placér"- og "ryk fremad"-kommandoerne inde
         i gentagelsessløjfen.
+      Overworld Place Wall_2019: Alle husbyggerier starter med en væg. Byg den første
+        del af dit hus ved at placere "placér"- og "ryk fremad"-kommandoerne inde
+        i gentagelsessløjfen.
       Overworld Plant Crops: Det er godt at lægge planer i forvejen. Plant afgrøder
         på begge sider af vandet, så du ikke bliver sulten senere.
       Overworld Plant Crops_2018: Det er godt at lægge planer i forvejen. Plant afgrøder
+        på begge sider af vandet, så du ikke bliver sulten senere.
+      Overworld Plant Crops_2019: Det er godt at lægge planer i forvejen. Plant afgrøder
         på begge sider af vandet, så du ikke bliver sulten senere.
       Overworld Powered Minecart: Godt klaret! Du har samlet masser af ressourcer
         og bygget et beskedent hjem. Nu skal du lægge skinner fra kanten af kortet
@@ -915,9 +935,14 @@ da:
       Overworld Powered Minecart_2018: Godt klaret! Du har samlet masser af ressourcer
         og bygget et beskedent hjem. Nu skal du lægge skinner fra kanten af kortet
         og frem til din fordør.
+      Overworld Powered Minecart_2019: Godt klaret! Du har samlet masser af ressourcer
+        og bygget et beskedent hjem. Nu skal du lægge skinner fra kanten af kortet
+        og frem til din fordør.
       Overworld Shear Sheep: Nu skal der klippes får! Brug "klip"-kommandoen for at
         samle uld fra begge får.
       Overworld Shear Sheep_2018: Nu skal der klippes får! Brug "klip"-kommandoen
+        for at samle uld fra begge får.
+      Overworld Shear Sheep_2019: Nu skal der klippes får! Brug "klip"-kommandoen
         for at samle uld fra begge får.
       PDK5 Functions 2: Funktioner lader dig definere nye blokke! Vi har flyttet blokkene
         for at tegne en firkant til en funktion kaldet "tegn en firkant". Kan du bruge
@@ -946,20 +971,31 @@ da:
       Underground Avoiding Lava_2018: Under disse blokke er der lava, som vi skal
         have dækket til, inden vi kan fortsætte. Her får du brug for en "hvis"-kommando.
         Tilføj en "ryk fremad"-kommando på det rigtige sted for at udvinde disse blokke.
+      Underground Avoiding Lava_2019: Under disse blokke er der lava, som vi skal
+        have dækket til, inden vi kan fortsætte. Her får du brug for en "hvis"-kommando.
+        Tilføj en "ryk fremad"-kommando på det rigtige sted for at udvinde disse blokke.
       Underground If Statements: Nu bliver det svært. Du skal udvinde tre rødsten,
         men du må ikke falde i lavaen. Brug en "hvis"-kommando til at lægge brosten
         over lavaen med.
       Underground If Statements_2018: Nu bliver det svært. Du skal udvinde tre rødsten,
         men du må ikke falde i lavaen. Brug en "hvis"-kommando til at lægge brosten
         over lavaen med.
+      Underground If Statements_2019: Nu bliver det svært. Du skal udvinde tre rødsten,
+        men du må ikke falde i lavaen. Brug en "hvis"-kommando til at lægge brosten
+        over lavaen med.
       Underground Iron: Det er en dårlig idé at gå rundt på lava. Byg en bro af brosten,
         og udvind mindst to jernblokke.
       Underground Iron_2018: Det er en dårlig idé at gå rundt på lava. Byg en bro
+        af brosten, og udvind mindst to jernblokke.
+      Underground Iron_2019: Det er en dårlig idé at gå rundt på lava. Byg en bro
         af brosten, og udvind mindst to jernblokke.
       Underground Mining Coal: Du finder de mest værdifulde ressourcer under jorden,
         men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker
         kul.
       Underground Mining Coal_2018: Du finder de mest værdifulde ressourcer under
+        jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst
+        to stykker kul.
+      Underground Mining Coal_2019: Du finder de mest værdifulde ressourcer under
         jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst
         to stykker kul.
       aE7: Hvis du kopierer denne løkke og drejer til venstre i stedet for højre,
@@ -1118,6 +1154,8 @@ da:
       courseE_bee_concept1: "Saml al nektaren fra hver blomst.\nBrug et indlejret
         loop. "
       courseE_bee_concept1_2018: "Saml al nektaren fra hver blomst.\nBrug et indlejret
+        loop. "
+      courseE_bee_concept1_2019: "Saml al nektaren fra hver blomst.\nBrug et indlejret
         loop. "
       courseE_bee_functions1: Saml al nektaren fra alle blomster.
       courseE_bee_functions1_2018: Saml al nektaren fra alle blomster.

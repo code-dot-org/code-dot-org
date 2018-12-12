@@ -91,7 +91,7 @@ es-MX:
   prize: Premio
   more_info: 'Más información '
   auth:
-    continue_with: Conectate con %{provider}
+    continue_with: Continuar con %{provider}
     sign_in_with: Iniciar sesión con %{provider}
     signed_in: "¡Sesión iniciada!"
     signed_out: Haz finalizado tu sesión en <a href="%{url}">Code.org</a>.
@@ -120,7 +120,7 @@ es-MX:
     already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
     already_linked: El %{provider} ya está vinculada a tu cuenta Code.org.
   signup_form:
-    email_signup: Regístrate con tu correo electrónico
+    email_signup: Regístrate con tu dirección de correo electrónico
     student_count: "%{count} estudiantes ya se han registrado."
     teacher_count: "%{count} maestros ya se han registrado."
     overview: Crea una cuenta para ver tu progreso o administrar tu grupo. <a href="/">
@@ -394,7 +394,7 @@ es-MX:
       playlab: Laboratorio de juegos
       minecraft: Minecraft
       flappy: Flappy
-      dance: Fiesta de Baile
+      dance: Fiesta de baile
       view_all: Ver todos los proyectos...
     popup:
       progress_for_user: progreso de %{name}
@@ -430,6 +430,7 @@ es-MX:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualizar los ajustes de bloqueo aquí.
@@ -817,7 +818,7 @@ es-MX:
       audience: Mayores de 13 años
       cta: Aprende cómo
     dance:
-      title: Fiesta de Baile
+      title: Fiesta de baile
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones lo han
@@ -847,7 +848,7 @@ es-MX:
       audience: Mayores de 13 años
       cta: Aprende cómo
     hoc-encryption:
-      title: Encripción simple
+      title: Encriptación Simple
       body: Los estudiantes aprenderán técnicas para crear y modificar mensajes cifrados.
     weblab:
       title: Web Lab (beta)
@@ -875,6 +876,8 @@ es-MX:
       title: Minecraft
     hero:
       title: Minecraft
+      body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva!
+        Viaja a través de Minecraft con códigos."
     sports:
       title: Спорт
       body: "¡Elige entre un partido de baloncesto o una mezcla y combinación de todos
@@ -1314,6 +1317,7 @@ es-MX:
   return_unit_overview: Ir al resumen de la unidad
   return_course_overview: Ve a la vista general de la unidad
   view_all_units: Ver todas las unidades
+  view_teacher_guide: Ver la guía del profesor
   pd:
     form_labels:
       first_name: Nombre
@@ -1374,15 +1378,15 @@ es-MX:
         ict: ICT
         math: Matemáticas
         science: Ciencia
-        history: Historia/ Estudios Sociales
+        history: Historia / Estudios Sociales
         la: Linguistica
-        efl: Ingles como lengua extranjera
-        music: Musica
+        efl: Inglés como Lengua Extranjera
+        music: Música
         art: Arte
         other: 'Otros:'
       resources:
-        bootstrap: Bootstrap
-        codecademy: Codecademy
+        bootstrap: Arranque
+        codecademy: CodeCademy
         csfirst: Google CS First
         khan: Khan Academy
         kodable: Kodable
@@ -1401,56 +1405,56 @@ es-MX:
         wonder: Wonder Workshop
         other: 'Otros:'
       workshop_course:
-        csf_af: Fundamentos de ciencias de la computación. (curso A-F)
-        csf_express: Fundamentos de Ciencias de la Computacion (Express o Pre-Express)
-        csd: Descubrimientos de la informática
+        csf_af: Fundamentos de CS (Cursos A-F)
+        csf_express: Fundamentos de CS (Pre-Express o Express)
+        csd: Descubrimientos de Ciencias de la Computación
         csp: "'16-'17 Principios de CS"
       email_opt_in:
         opt_in_yes: Sí
         opt_in_no: 'No'
     international_opt_in:
       title: Asistencia al taller
-      intro: Gracias por tomar tiempo para recibir entrenamiento en Code.org. nuestra
-        misión de brindar oportunidades de educacion en ciencias de computacion a
-        todos los niños en todas las escuelas alrededor del mundo no seria posible
-        sin ti.
-      instructions: Por favor rellena el formulario para indicar que 1) asististe
-        a un taller asistido por uno de nuestros socios internacionales, y 2) estas
+      intro: Gracias por tomarte el tiempo para recibir entrenamiento en el currículum
+        Code.org. Nuestra misión de brindar oportunidades de educación en ciencias
+        de la computación a todos los niños en todas las escuelas alrededor del mundo
+        no seria posible sin ti.
+      instructions: Por favor rellena el formulario debajo para indicar que 1) asististe
+        a un taller asistido por uno de nuestros socios internacionales, y 2) estás
         de acuerdo en compartir tu información con nuestros socios internacionales
-        en tu país así ellos puedan ayudarte en tu viaje como un profesor de informática.
-      thanks: Gracias por enviarnos su solicitud! buscaremos brindarle apoyo y le
-        haremos saber sobre el curriculum de Code.org y herramientas. Por favor comparte
-        tus dadas y retroalimentacion con nosotros escribiéndonos a <a href='%{support_email_url}'>support@code.org</a>
+        en tu país, así ellos puedan ayudarte en tu viaje como un profesor de informática.
+      thanks: "¡Gracias por enviarnos tu solicitud! Buscaremos apoyarte mientras obtienes
+        el currículum de Code.org y sus herramientas. Por favor comparte tus dudas
+        y sugerencias con nosotros escribiéndonos a <a href='%{support_email_url}'>support@code.org</a>
         o publicando en el <a href='%{teacher_forum_url}' target='_blank'>foro de
-        profesores</a>!
+        maestros</a>!"
     logged_out:
-      heading: Gracias por su interés en el programa de aprendizaje profesional!
-      body: Para empezar, primero que nada necesitas entrar en tu cuenta de Code.org.
-        si quieres mas información sobre el programa antes de empezar tu solicitud,
-        por favor revisa el<a href="%{url}">resume des programa</a>.
+      heading: "¡Gracias por tu interés en el Programa de Aprendizaje Profesional!"
+      body: Para empezar, necesitas entrar en tu cuenta de Code.org. Si quieres mas
+        información acerca del programa antes de empezar tu solicitud, por favor revisa
+        el<a href="%{url}">Programa de Aprendizaje Internacional</a>.
     not_teacher:
-      body: Gracias por su interés en el programa de aprendizaje profesional de Code.org!
-        actualmente estas dentro de una cuenta de estudiante. si quiere una cuenta
-        de profesor ir a su<a href="%{user_settings}"> configuracion </a> de usuario
-        para darse de alta como profesor.
+      body: ¡Gracias por tu interés en el Programa de Aprendizaje Profesional de Code.org!
+        Actualmente estás registrado dentro de una cuenta de estudiante. Por favor,
+        o crea una cuenta de profesor o<a href="%{user_settings}">ve a tus ajustes
+        de usuario</a> para darte de alta como profesor.
       more: Si te gustaría mas información sobre el programa antes de comenzar tu
         solicitud, por favor revisa la <a href="%{pl_overview}"> descripción de programa
         de aprendizaje profesional</a>.
     no_teacher_email:
       body: Tu cuenta no tiene una dirección de correo electrónico. por favor<a href="%{user_registration}">visita
-        la configuración de tu cuenta</a> y agrega tu Email antes de completar este
-        formulario.
+        la configuración de tu cuenta</a> y agrega tu dirección de correo electrónico
+        antes de completar este formulario.
   courses_category: Cursos Completos
   cookie_banner:
     message: Si continúas navegando en nuestro sitio web o haces clic en "Acepto",
-      aceptas que se almacenes cookies en tu ordenador o dispositivo.
-    more_information: Lee la Política de Privacidad de Code.org.
+      aceptas el almacenamiento de cookies en tu computadora o dispositivo.
+    more_information: Mira la Política de Privacidad de Code.org.
     accept: De acuerdo
   gdpr_dialog:
     heading: "¿Aceptas utilizar un sitio web con sede en los Estados Unidos?"
     message: Es posible que los datos de su utilización de este sitio web se envíen
       y almacenen en Estados Unidos.
-    link_intro: Para más información, mira nuestra
+    link_intro: Para más información, mire nuestra
     privacy_policy: política de privacidad
-    logout: Cerrar sesión
+    logout: Cerrar Sesión
     true: Sí

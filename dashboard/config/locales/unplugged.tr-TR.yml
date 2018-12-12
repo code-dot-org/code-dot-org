@@ -486,3 +486,39 @@ tr:
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada
           eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir
           puan alırsın gibi kurallar yaratacaklar
+      GraphPaperProgramming_2019:
+        title: Grafik Kağıdı Programlama
+        desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
+          kullanarak sınfı bir çizim oluşturmaya yönlendirir.
+      RelayProgramming_2018_2019:
+        title: Röle Programlama
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Bilgisayarsız Etkinlik
+        desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
+      BinaryImages_2019:
+        title: İkili Sistemle Resimler
+        desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir.
+          Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini
+          gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık
+          bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu
+          öğretecek.
+      courseE_unplugged_CnC_2019:
+        title: Dijital Paylaşım
+      GettingLoopy_2019:
+        title: Döngüselleşme
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında
+          bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu
+          tekrar etmeyi öğrenecekler.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Bilgisayarsız Etkinlik
+        desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
+          öğreneceksiniz.
+      BigEvent_2019:
+        title: Büyük Olay
+        desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+          öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
+          öğrenciler basılan tuşa göre eylemde bulunacak.
+      BinaryBracelets_2019:
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
+          Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.

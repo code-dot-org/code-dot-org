@@ -13,7 +13,7 @@ uk:
         course1:
           title: Курс 1
           description: Курс 1 розроблений для того, щоб учні, котрі лише вчаться читати, могли створювати комп'ютерні програми, які навчать співпрацювати з іншими, розвивати навички розв'язування задач та наполегливість у пошуку рішень. До кінця цього курсу учні навчаться створювати власну гру або історію, якою зможуть поділитися з іншими. Рекомендується для 1 класу.
-          description_short: Курс 1 призначений для початківців у читанні.
+          description_short: Вступ до інформатики для початківців у читанні.
           description_audience: Вік 4-6
           stages:
             'Artist: Loops':
@@ -55,7 +55,7 @@ uk:
         course2:
           title: Курс 2
           description: Курс 2 розроблено для учнів, котрі вміють читати, але не мають попереднього досвіду програмування. Протягом навчання учні створюватимуть програми для розв'язування задач та розроблятимуть інтерактивні ігри чи історії, якими зможуть поділитися з іншими. Рекомендується для 2-5 класів.
-          description_short: Курс 2 призначено для учнів, котрі вміють читати.
+          description_short: Вступ до інформатики для учнів, котрі вміють читати.
           description_audience: Вік 6 + (необхідне читання)
           stages:
             'Artist: Debugging':
@@ -264,6 +264,8 @@ uk:
           description: Вивчайте функціональне програмування через алгебру
           description_short: Вивчайте функціональне програмування через алгебру
           stages:
+            'Eval: Boolean Operators':
+              name: Логічні оператори
             'Eval: Conditionals':
               name: Умови
             'Eval: Strings and Images':
@@ -300,6 +302,8 @@ uk:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Next Steps:
+              name: Наступні Кроки
             Teacher Dashboard:
               name: Панель вчителя
             Unplugged lessons:
@@ -387,7 +391,7 @@ uk:
         flappy:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
-          description_short: Створіть власну гру в Пурха менш, ніж за 10 хвилин!
+          description_short: Створіть власну гру в Пурха!
           stages:
             Flappy Code:
               name: Код Пурха
@@ -423,6 +427,8 @@ uk:
         cspunit1:
           description_short: Програмування
           stages:
+            Binary Numbers:
+              name: Двійкові Числа
             Personal Innovations:
               name: Особисті інновації
         algebraPD:
@@ -464,6 +470,8 @@ uk:
           stages:
             Evaluation Blocks:
               name: Оцінкові блоки
+            Next Steps:
+              name: Наступні Кроки
             Strings and Images:
               name: Рядки та зображення
             Teacher Dashboard:
@@ -578,6 +586,8 @@ uk:
               name: 'Оцінка: умови'
             Evaluation Blocks:
               name: Оцінкові блоки
+            Next Steps:
+              name: Наступні Кроки
             Strings and Images:
               name: Рядки та зображення
             Teacher Dashboard:
@@ -597,6 +607,8 @@ uk:
           stages:
             Best Practices for Teaching Computer Science:
               name: Успішні методики викладання інформатики
+            Next Steps:
+              name: Наступні Кроки
         ECSPD2:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -637,6 +649,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        Equity-OnlinePD:
+          stages:
+            Next Steps:
+              name: Наступні Кроки
         sciencePD2b-iZone:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -807,6 +823,8 @@ uk:
               name: Панель вчителя
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Двійкові Числа
             Personal Innovations:
               name: Особисті інновації
             The Internet:
@@ -1577,6 +1595,8 @@ uk:
           stages:
             Personal Innovations:
               name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
             The Internet:
               name: Інтернет
         csp3-2018:
@@ -1635,6 +1655,9 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        dance-extras:
+          title: Продовжуємо танцювати
+          description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1645,7 +1668,57 @@ uk:
               name: Конвертні змінні
             For Loop Fun:
               name: Ігри з циклами
+            The Artist:
+              name: Художник
         dance-low:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals with Cards:
+              name: Листівки та умови
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Естафетне програмування
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Binary Bracelets:
+              name: Двійкові браслети
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг

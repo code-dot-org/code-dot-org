@@ -280,6 +280,9 @@ pt-BR:
         
         * passo um
         * passo dois
+      AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
+      AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
       Artist Autorun Test: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique em \"Executar\". "
       Big Game Animation 1: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
@@ -400,11 +403,54 @@ pt-BR:
         </block></xml>
         
         Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
-      Dance_Party_11.5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
+      Dance_Party_11.5_test: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
       Dance_Party_11: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml> permite executar o código quando a seta para cima for selecionada.\n\nVocê pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!"
+      Dance_Party_11_5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
       Dance_Party_11b: |-
         É hora do concurso de dança! O gato dança dab quando você pressiona a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      Dance_Party_extras_battle: |-
+        # Equipes de dança
+        
+        Aqui está uma disputa de dança entre duas equipes. As teclas de seta controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
+        
+        * Adicione mais teclas para controlar as danças
+        * Faça com que os dançarinos auxiliares também respondam quando as teclas são pressionadas
+        * Alterne o dançarino a cada 4 compassos, definindo sua visibilidade
+      Dance_Party_extras_every_beat: |-
+        # Semínimas
+        
+        A maioria de nossas danças usou compassos inteiros, mas cada compasso é composto de 4 semínimas. Esta dança usa `a cada 0,25 compassos` para fazer o dançarino aplaudir a cada semínima.
+        
+        Esta dança também usa um bloco _condicional_ para controlar quando o bloco `a cada 0,25 compassos' pode mudar a dança. Tente mudar os números no bloco condicional para ver como isso muda a dança.
+        
+        * Experimente outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
+        * Adicione alguns eventos `após o compasso`.
+        * Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
+      Dance_Party_extras_layout: |-
+        # Vamos entrar em formação!
+        
+        Confira esta dança que usa o bloco `layout` para mudar a formação dos dançarinos auxiliares durante a dança. Tente um destes ides para estendê-la:
+        
+        * Crie um segundo grupo de dançarinos em um layout diferente
+        * Mude o layout quando uma tecla é pressionada
+        * Altere uma propriedade quando os dançarinos mudam de formação
+      Dance_Party_extras_on_beat: |-
+        # Grave, médio e agudo
+        
+        Esta dança usa eventos de "pico" para acionar o código quando diferentes partes da música ficam altas. Tente mexer com músicas diferentes para ver como eles mudam a dança.
+      Dance_Party_extras_speed: |-
+        # Acelerar, retardar
+        
+        Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+      Dance_Party_extras_visible: |-
+        # Onde eles foram?
+        
+        Esta dança mostra e oculta dois grupos diferentes de dançarinos. Confira e tente adicionar seu próprio toque.
+        
+        * Adicionar outro grupo de dançarinos
+        * Mostrar e ocultar dançarinos usando as teclas de seta
+        * Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
       Eval Booleans Free Play: "Atividade livre: experimente criar algo\nvocê mesmo usando booleanos."
       Eval Design Recipe Free Play: "Atividade livre: use a receita de design\npara criar algumas funções com seu próprio design"
       Eval Strings Images .1: "Até agora, lidamos com um único\ntipo de dado, os números. Outro tipo de dados é a string, que é uma combinação\nde letras, números, ou outros caracteres envolvidos entre aspas. Execute a\nstring \"Olá, mundo!\" e veja o que acontece."
@@ -435,6 +481,9 @@ pt-BR:
         
         Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
       HOC Dance 9_draft: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml> permite executar o código quando a seta para cima for selecionada.\n\nVocê pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!"
+      HOC Dance Freeplay: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      HOC Dance Freeplay_draft: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
       K-1 Bee Loops 2: "Use um laço \"repita\" para mover e então coletar o néctar e\nproduzir mel!"
       K-1 Bee Loops 3: "Use três laços \"repita\" para coletar o néctar\ne\nfabricar o mel!"
       K-1 Bee Loops 4: "Use laços \"repita\" para obter néctar, produzir\nmel e\npara mover!"
@@ -552,6 +601,7 @@ pt-BR:
       New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
       Overworld Move to Sheep: Adicione um segundo comando "andar à frente" para chegar à ovelha.
       Overworld Move to Sheep_2018: Adicione um segundo comando "andar à frente" para chegar à ovelha.
+      Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para chegar à ovelha.
       PS fr prediction q1: 'O que *você* acha que vai acontecer? '
       Play Lab Rocket 3: "Excelente! Agora, você consegue atualizar essa função para\nque nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,\nos exemplos e a definição da função para lançar um foguete a 40 metros por segundo."
       Testing Quantum Farmer: "Uau, que demais! \\r\n\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
@@ -945,6 +995,7 @@ pt-BR:
         Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
       courseC_collector_prog9: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_prog9_2019: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA: Ajude Laurel a coletar todo o tesouro.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
@@ -963,24 +1014,35 @@ pt-BR:
       courseC_harvester_loops_forVid: Colete todo os milhos e as abóboras.
       courseC_maze_programming8: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming8_2018: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_2019: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming8_predict1: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming8_predict1_2018: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_2019: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming_challenge1: 'O pássaro precisa de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018: 'O pássaro precisa de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
+      courseC_maze_programming_challenge1_2019: 'O pássaro precisa de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma vez*.
       courseD_bee_conditionals3_2018: Você só pode coletar nectar das flores, mas você pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma vez*.
+      courseD_bee_conditionals3_2019: Você só pode coletar nectar das flores, mas você pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma vez*.
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bounce_events1: Vá até a bandeira! Anexe um bloco ao bloco "quando seta para esquerda" e clique em "Executar" para mover o jogador até a bandeira.
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
+      courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
+      courseD_iceage_loops6_2019: Você consegue adicionar um laço para chegar até a noz?
       courseD_iceage_loops7: 'Scrat realmente quer aquela noz! '
+      courseD_iceage_loops7_2019: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8: 'Você consegue corrigir este código? '
+      courseD_iceage_loops8_2019: 'Você consegue corrigir este código? '
       courseD_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
+      courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       courseD_maze_nestedLoops4_2018: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       courseD_maze_nestedLoops4_2019: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
@@ -989,12 +1051,16 @@ pt-BR:
       courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until6: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until6_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_ramp5: Evite o gelo com rachadura!
@@ -1070,6 +1136,7 @@ pt-BR:
       frozen square loop: "Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado\ncom o bloco \"repita\", que usa menos blocos. Quantas vezes (???) o bloco\n\"repita\" deve repetir os blocos dentro dele para fazer um quadrado?"
       frozen square snowflake: "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?"
       grade2_CaringForNewPet_11: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      grade2_CaringForNewPet_3D: '*"Siga este caminho para me levar até o porco!"*'
       grade2_MakeDogTag_8: "Agora vamos conectar um monte de \"V\"\nem um laço."
       grade2_MakeDogTag_9: "Hora de fazer algo atrativo!\n\nReconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita\na ação 24 vezes, em vez de 8."
       grade2_PuppyLoops_10: |-
@@ -1088,6 +1155,7 @@ pt-BR:
       grade2_collector_9: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
+      grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
       grade2_puppy_loops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"

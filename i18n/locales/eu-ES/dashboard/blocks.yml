@@ -30,17 +30,17 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           MOVE:
+            '"rand"': Ausazkoa
+            MOVES.Roll: Biratu
             MOVES.ClapHigh: Txalo Haundi
-            MOVES.Clown: Pailazoa
             MOVES.Dab: Mihi-arrain
             MOVES.DoubleJam: Urdaiazpiko bikoitza
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Roll: Biratu
+            MOVES.Clown: Pailazoa
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
-            '"rand"': Ausazkoa
           DIR:
             '1': "→"
             "-1": "←"
@@ -48,17 +48,17 @@ eu:
         text: "{SPRITE} egin {MOVE} {DIR} betirako"
         options:
           MOVE:
+            '"rand"': Ausazkoa
+            MOVES.Roll: Biratu
             MOVES.ClapHigh: Txalo Haundi
-            MOVES.Clown: Pailazoa
             MOVES.Dab: Mihi-arrain
             MOVES.DoubleJam: Urdaiazpiko bikoitza
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Roll: Biratu
+            MOVES.Clown: Pailazoa
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
-            '"rand"': Ausazkoa
           DIR:
             '1': "→"
             "-1": "←"
@@ -86,14 +86,15 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           MOVE:
+            '"rand"': Ausazkoa
+            MOVES.Roll: Biratu
             MOVES.ClapHigh: Txalo Haundi
-            MOVES.Clown: Pailazoa
             MOVES.Dab: Mihi-arrain
             MOVES.DoubleJam: Urdaiazpiko bikoitza
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Roll: Biratu
+            MOVES.Clown: Pailazoa
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
           DIR:
@@ -103,14 +104,15 @@ eu:
         text: "{SPRITE} egin {MOVE} {DIR} behin"
         options:
           MOVE:
+            '"rand"': Ausazkoa
+            MOVES.Roll: Biratu
             MOVES.ClapHigh: Txalo Haundi
-            MOVES.Clown: Pailazoa
             MOVES.Dab: Mihi-arrain
             MOVES.DoubleJam: Urdaiazpiko bikoitza
             MOVES.Drop: Bota
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
-            MOVES.Roll: Biratu
+            MOVES.Clown: Pailazoa
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
           DIR:
@@ -203,7 +205,7 @@ eu:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ausazkoa
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -230,7 +232,11 @@ eu:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Ausazkoa
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Ausazkoa
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': Ausazkoa
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -262,6 +268,10 @@ eu:
         options:
           EFFECT:
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Ausazkoa
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': Ausazkoa
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -531,6 +541,12 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ezkerrera
+            "{x: 300, y: 200}": eskuinera
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": ezkerrera

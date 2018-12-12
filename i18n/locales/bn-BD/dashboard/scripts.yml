@@ -865,3 +865,33 @@ bn:
           stages:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            The Artist:
+              name: শিল্পী
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: রিলে-স্যুইচ প্রোগ্রামিং
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
+        coursee-2019:
+          stages:
+            Nested Loops:
+              name: নেষ্টেড লুপ
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
+            Conditionals:
+              name: শর্তযুক্ত
+            Internet:
+              name: ইন্টারনেট
+        express-2019:
+          stages:
+            Relay Programming:
+              name: রিলে-স্যুইচ প্রোগ্রামিং
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
+            Internet:
+              name: ইন্টারনেট

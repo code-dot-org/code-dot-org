@@ -9,6 +9,7 @@ import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
@@ -830,11 +831,12 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
-  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare ||
+        window.appOptions.disableSocialShare ||
+        options.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.sendToPhone = false;
   } else {
 
     // set up the twitter share url
@@ -868,6 +870,13 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   }
 
   options.assetUrl = this.studioApp_.assetUrl;
+
+  // An early optimization; only render the container for
+  // DownloadReplayVideoButton if we think we're actually going to use it.
+  // @see DownloadReplayVideoButton.hasReplayVideo
+  options.downloadReplayVideo =
+    getStore().getState().pageConstants.appType === 'dance' &&
+    window.appOptions.signedReplayLogUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
@@ -935,6 +944,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var params = $.param({
             level_source: options.response.level_source_id,
             channel_id: options.channelId,
+            type: project.getStandaloneApp(),
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -955,6 +965,19 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         $(sendToPhone).hide();
       }
     });
+  }
+
+  var downloadReplayVideoContainer = sharingDiv.querySelector('#download-replay-video-container');
+  if (downloadReplayVideoContainer) {
+    const onDownloadError = () => $('#download-replay-video-error').show();
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <DownloadReplayVideoButton
+          onError={onDownloadError}
+        />
+      </Provider>,
+      downloadReplayVideoContainer
+    );
   }
 
   return sharingDiv;

@@ -1,14 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { reload } from '@cdo/apps/utils';
-import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
 import queryString from "query-string";
 
 const styles = {
@@ -50,7 +47,16 @@ const styles = {
   },
 };
 
-const sessionStorageKey = 'anon_over13';
+/*
+ * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
+ * We want users seeing that dialog to have to input their age, so using
+ * a different session storage key here.
+ */
+const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
+
+export const signedOutOver13 = () => {
+  return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
+};
 
 class AgeDialog extends Component {
   state = {
@@ -67,18 +73,8 @@ class AgeDialog extends Component {
   };
 
   setSessionStorage = (over13) => {
-    sessionStorage.setItem(sessionStorageKey, over13);
-
-    // When opening a new tab, we'll have a new session (and thus show this dialog),
-    // but may still be using a storage_id for a previous user. Clear that cookie
-    // and reload
-    const cookieName = environmentSpecificCookieName('storage_id');
-    if (cookies.get(cookieName)) {
-      cookies.remove(cookieName, {path: '/', domain: '.code.org'});
-      reload();
-    } else {
-      this.setState({open: false});
-    }
+    sessionStorage.setItem(AGE_DIALOG_SESSION_KEY, over13);
+    this.setState({open: false});
   };
 
   componentDidMount() {
@@ -106,11 +102,11 @@ class AgeDialog extends Component {
   };
 
   render() {
-    const { signedIn} = this.props;
+    const { signedIn } = this.props;
 
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    if (signedIn || sessionStorage.getItem(AGE_DIALOG_SESSION_KEY)) {
       return null;
     }
 

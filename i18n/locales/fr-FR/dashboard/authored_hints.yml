@@ -176,7 +176,7 @@ fr:
         challenges: |-
           **Défis optionnels**
           
-          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance short test_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -187,7 +187,7 @@ fr:
         challenges: |-
           **Défis optionnels**
           
-          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_01_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -233,14 +233,7 @@ fr:
         challenges: |-
           **Défis optionnels**
           
-          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Comment puis-je réussir ce niveau ?**
-          
-          *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
-          
-          *Ce niveau se termine après 12 mesures.*
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_06_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -289,7 +282,7 @@ fr:
           *Les propriétés de deux ou plusieurs danseurs doivent changer.
           
           *Ce niveau se termine après 8 mesures.*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           
@@ -297,6 +290,13 @@ fr:
           
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          
+          *Soyez créatif !
+          
+          *Ce niveau se termine après 8 mesures.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           
@@ -333,7 +333,7 @@ fr:
         challenges: |-
           **Défis optionnels**
           
-          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -407,7 +407,7 @@ fr:
         challenges: |-
           **Défis optionnels**
           
-          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml> <block type = "Dancelab_atTimestamp"> <title name = "TIMESTAMP"> ??? </ title> <title name = "UNIT" > "mesures" </ title> </ block> </ xml>.
+          Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -798,6 +798,8 @@ fr:
         courseC_artist_prog2_b: Vous avez des problèmes pour tourner ? Utilisez le bloc "tourner de 90° à droite".
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Votre programme devrait:
@@ -807,6 +809,8 @@ fr:
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant' pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de combien dois-tu sauter?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant' pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de combien dois-tu sauter?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Essaie d'utiliser le bloc 'sauter en avant' pour aller du sommet d'un carré à l'endroit où tu veux commencer le suivant. \n\nSi tes carrés font 20 pixels de côté et sont séparés de 20 pixels, de combien dois-tu sauter?"
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre deuxième carré.
@@ -821,6 +825,12 @@ fr:
           - Avancer de 100 + 75 pixels
           - Utiliser une fonction
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Votre programme devrait:
           - Utiliser une fonction

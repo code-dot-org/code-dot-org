@@ -225,12 +225,306 @@ cs:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
           bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Potřebuješ mít alespoň dva tanečníky.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační
+          body pro otočení doprava nebo doleva.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -623,6 +917,8 @@ cs:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
@@ -639,7 +935,12 @@ cs:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_bee_conditionals_challenge2_authored_hint:
@@ -654,6 +955,17 @@ cs:
           </statement>
           </block></xml>
       courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
 

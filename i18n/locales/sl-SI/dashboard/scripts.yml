@@ -1039,3 +1039,49 @@ sl:
               name: Spremeljivke v ovojnicah
             For Loop Fun:
               name: Zabava s "for" zankami
+            The Artist:
+              name: Umetnik
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Digital Citizenship:
+              name: Digitalno državljanstvo
+            'Unplugged: Binary':
+              name: 'Brez prijave: Binarno'
+            Artist Binary:
+              name: Umetnik Binarno
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Graditi temelje
+            Nested Loops:
+              name: Gnezdenje zank
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Conditionals:
+              name: Pogoji
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami
+            'Unplugged: Binary':
+              name: 'Brez prijave: Binarno'
+            Artist Binary:
+              name: Umetnik Binarno
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

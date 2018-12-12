@@ -1426,3 +1426,51 @@ si:
               name: ආවරණය කරන ලද විචල්‍ය
             For Loop Fun:
               name: For ලුපයේ සතුට
+            The Artist:
+              name: කලාකරුවා
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            Digital Citizenship:
+              name: ඩිජිටල් පුරවැසිකම
+            'Unplugged: Binary':
+              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
+            Artist Binary:
+              name: කලාකරු ද්විමය
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: පදනමක් තැනීම
+            Nested Loops:
+              name: නැවත නැවත සිදුවන ලුප
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Internet:
+              name: අන්තර්ජාලය
+            Crowdsourcing:
+              name: Crowdsourcing වැඩසටහන
+        express-2019:
+          stages:
+            Relay Programming:
+              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            Envelope Variables:
+              name: ආවරණය කරන ලද විචල්‍ය
+            For Loop Fun:
+              name: For ලුපයේ සතුට
+            Binary Bracelets:
+              name: ද්විමය වළලු
+            'Unplugged: Binary':
+              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
+            Artist Binary:
+              name: කලාකරු ද්විමය
+            Internet:
+              name: අන්තර්ජාලය
+            Crowdsourcing:
+              name: Crowdsourcing වැඩසටහන

@@ -66,7 +66,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until {@browser.find_element(selection_criteria)}
+  wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
 When /^I go to the newly opened tab$/ do
@@ -1392,6 +1392,11 @@ end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
+end
+
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
   wait_for_jquery
 end
 

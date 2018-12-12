@@ -414,6 +414,8 @@ fi:
         lampaiden luo.
       Overworld Move to Sheep_2018: Lisää toinen "liiku eteenpäin" -komento, jotta
         pääset lampaiden luo.
+      Overworld Move to Sheep_2019: Lisää toinen "liiku eteenpäin" -komento, jotta
+        pääset lampaiden luo.
       Testing Quantum Farmer: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka monta multalapiollista
         tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
         kunnes maa on tasainen?  "

@@ -1573,3 +1573,51 @@ ga:
               name: Athróga i gClúdach Litreach
             For Loop Fun:
               name: Spraoi le Lúba
+            The Artist:
+              name: An tEalaíontóir
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Códáil sealaíochta
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Digital Citizenship:
+              name: Saoránacht Dhigiteach
+            'Unplugged: Binary':
+              name: 'Díphlugáilte: Dénártha'
+            Artist Binary:
+              name: 'Ealaíontóir: Dénártha'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Dúshraith a Leagan
+            Nested Loops:
+              name: Lúba Neadaithe
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Conditionals:
+              name: Coinníollacha
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Códáil sealaíochta
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Envelope Variables:
+              name: Athróga i gClúdach Litreach
+            For Loop Fun:
+              name: Spraoi le Lúba
+            Binary Bracelets:
+              name: Bráisléid Dhénártha
+            'Unplugged: Binary':
+              name: 'Díphlugáilte: Dénártha'
+            Artist Binary:
+              name: 'Ealaíontóir: Dénártha'
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú

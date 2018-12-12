@@ -73,13 +73,6 @@ et:
           **Lisaväljakutse**
           
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Kuidas ma siit tasemelt läbi saan?**
-          
-          * Sinu tants peab sisaldama erinevaid liigutusi laulu esimese 12 ühiku jooksul.
-          
-          *See tase lõppeb peale 12 ühikut.*
       Dance_Party_06_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
@@ -129,6 +122,13 @@ et:
           
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_11.5_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+          
+          * Ole lihtsalt loov!
+          
+          *See tase lõppeb peale 8 ühikut*
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
           
@@ -612,4 +612,6 @@ et:
           </block>
           </xml>
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!

@@ -585,10 +585,13 @@ en:
         dance_callout_06: Add your new dancer here
       Dance_Party_07_callout: {}
       Dance_Party_1_callout: {}
-      Dance_Party_11.5_callout: {}
+      Dance_Party_11.5_test_callout:
+        dance_party_11.5_groups: Look here for "all ducks" blocks
       Dance_Party_11_callout:
         dance_callout_11_a: New block!
         dance_callout_11_b: New block!
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Look here for "all ducks" blocks
       Dance_Party_11b_callout: {}
       Dance_Party_2_callout: {}
       Dance_Party_4_callout: {}
@@ -640,6 +643,8 @@ en:
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       HOC Dance 0_draft_callout: {}
       HOC Dance 1_callout: {}
@@ -769,9 +774,13 @@ en:
         craft_callout_preplaced: We've put some blocks here to get you started
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: We've put some blocks here to get you started
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Hit "Run" to try your program
@@ -779,9 +788,14 @@ en:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Hit "Run" to try your program
         craft_drag_block_callout: Drag a "move forward" block and snap it below the other block
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Hit "Run" to try your program
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the other block
       Overworld Place Wall_callout:
         craft_inside_repeat: Repeat actions by placing blocks in here
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repeat actions by placing blocks in here
       PDAlg 13-16 Sam Extension Puzzle_callout: {}
       PDAlg 17-20 Luigi Extension Puzzle_callout: {}
@@ -812,6 +826,8 @@ en:
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
@@ -882,9 +898,13 @@ en:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Iron_callout:
         craft_what_is_iron: Mine this iron!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Mine this iron!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Mine this iron!
       WebLab PS test - 1-12_callout:
         version_history_button: Check out version history
@@ -1075,6 +1095,8 @@ en:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
       courseC_artist_prog1_callout: {}
       courseC_artist_prog1_2018_callout: {}
       courseC_artist_prog1_2019_callout: {}
@@ -1083,24 +1105,33 @@ en:
       courseC_artist_prog2_2019_callout: {}
       courseC_collector_loops_challenge2_callout: {}
       courseC_collector_loops_challenge2_2018_callout: {}
+      courseC_collector_loops_challenge2_2019_callout: {}
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson.
+      courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog7_2018_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+      courseC_collector_prog7_2019_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: {}
       courseC_collector_prog8_2018_callout: {}
+      courseC_collector_prog8_2019_callout: {}
       courseC_collector_prog9_callout: {}
       courseC_collector_prog9_2018_callout: {}
+      courseC_collector_prog9_2019_callout: {}
       courseC_collector_progA_callout: {}
       courseC_collector_progB_callout: {}
       courseC_collector_prog_challenge1_callout: {}
       courseC_collector_prog_challenge1_2018_callout: {}
+      courseC_collector_prog_challenge1_2019_callout: {}
       courseC_collector_prog_challenge2_callout: {}
       courseC_collector_prog_challenge2_2018_callout: {}
+      courseC_collector_prog_challenge2_2019_callout: {}
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_harvester_loops1_2018_callout:
@@ -1119,9 +1150,13 @@ en:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
@@ -1129,40 +1164,60 @@ en:
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseC_maze_programming4_2019_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: {}
       courseC_maze_programming5_2018_callout: {}
+      courseC_maze_programming5_2019_callout: {}
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
         courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
       courseC_maze_programming7_2018_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
         courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
       courseC_starWars_loops10_callout: {}
       courseC_starWars_loops10_2018_callout: {}
+      courseC_starWars_loops10_2019_callout: {}
       courseC_starWars_loops10_predict2_callout: {}
       courseC_starWars_loops10_predict2_2018_callout: {}
+      courseC_starWars_loops10_predict2_2019_callout: {}
       courseC_starWars_loops11_callout: {}
       courseC_starWars_loops11_2018_callout: {}
+      courseC_starWars_loops11_2019_callout: {}
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
       courseC_starWars_loops2_2018_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+      courseC_starWars_loops2_2019_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
       courseC_starWars_loops4_callout: {}
       courseC_starWars_loops4_2018_callout: {}
+      courseC_starWars_loops4_2019_callout: {}
       courseC_starWars_loops5_callout: {}
       courseC_starWars_loops5_2018_callout: {}
+      courseC_starWars_loops5_2019_callout: {}
       courseC_starWars_loops6_callout: {}
       courseC_starWars_loops6_2018_callout: {}
+      courseC_starWars_loops6_2019_callout: {}
       courseC_starWars_loops7_callout: {}
       courseC_starWars_loops7_2018_callout: {}
+      courseC_starWars_loops7_2019_callout: {}
       courseC_starWars_loops8_callout: {}
       courseC_starWars_loops8_2018_callout: {}
+      courseC_starWars_loops8_2019_callout: {}
       courseC_starWars_loops9_callout: {}
       courseC_starWars_loops9_2018_callout: {}
+      courseC_starWars_loops9_2019_callout: {}
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
@@ -1171,8 +1226,11 @@ en:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops1a_2018_callout:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops_challenge2_callout: {}
       courseD_artist_nestedLoops_challenge2_2018_callout: {}
+      courseD_artist_nestedLoops_challenge2_2019_callout: {}
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
@@ -1182,12 +1240,16 @@ en:
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
@@ -1205,6 +1267,7 @@ en:
       courseD_collector_debugging_challenge2_2018_callout: {}
       courseD_collector_nested_loops_challenge2_callout: {}
       courseD_collector_nested_loops_challenge2_2018_callout: {}
+      courseD_collector_nested_loops_challenge2_2019_callout: {}
       courseD_collector_nested_loops_challenge2a_callout: {}
       courseD_collector_ramp10_callout: {}
       courseD_collector_ramp8_callout:
@@ -1214,6 +1277,8 @@ en:
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
       courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
+      courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
@@ -1268,6 +1333,8 @@ en:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2019_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condForVideo_callout:
@@ -1306,6 +1373,7 @@ en:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_artist_concept_challenge2_callout: {}
       courseE_artist_concept_challenge2_2018_callout: {}
+      courseE_artist_concept_challenge2_2019_callout: {}
       courseE_artist_embed_functions8_callout: {}
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Let's start by using this block to help create the first square.
@@ -1315,13 +1383,20 @@ en:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseE_artist_functions2_2018_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions8_2018_callout: {}
+      courseE_artist_functions8_2019_callout: {}
       courseE_artist_functions8a_2018_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseE_artist_functions8a_2019_callout:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions8b_2018_callout: {}
+      courseE_artist_functions8b_2019_callout: {}
       courseE_artist_functions8c_2018_callout: {}
+      courseE_artist_functions8c_2019_callout: {}
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge_callout2: If you don't like this design, change it to anything you want!
@@ -1331,14 +1406,21 @@ en:
       courseE_artist_functions_challenge1_2018_callout:
         courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
       courseE_artist_functions_challenge2_2018_callout:
         courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
+      courseE_artist_functions_challenge2_2019_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
       courseE_artist_functions_predict1_callout: {}
       courseE_artist_functions_predict1_2018_callout: {}
+      courseE_artist_functions_predict1_2019_callout: {}
       courseE_artist_predict1_callout: {}
       courseE_artist_predict1_2018_callout: {}
       courseE_artist_ramp10_callout: {}
@@ -1369,17 +1451,25 @@ en:
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions10a1_2018_callout: {}
+      courseE_farmer_functions10a1_2019_callout: {}
       courseE_farmer_functions10b_callout: {}
       courseE_farmer_functions10b_2018_callout: {}
       courseE_farmer_functions11_predict_callout: {}
       courseE_farmer_functions11_predict_2018_callout: {}
+      courseE_farmer_functions11_predict_2019_callout: {}
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+      courseE_farmer_functions13_2019_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions1a_2018_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+      courseE_farmer_functions1a_2019_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions2a_callout:
         courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
@@ -1389,13 +1479,18 @@ en:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions2b_2018_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+      courseE_farmer_functions2b_2019_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions2ba_callout: {}
       courseE_farmer_functions2ba_2018_callout: {}
+      courseE_farmer_functions2ba_2019_callout: {}
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions3c_callout: {}
       courseE_farmer_functions3c1_2018_callout: {}
+      courseE_farmer_functions3c1_2019_callout: {}
       courseE_farmer_functions3c_2018_callout: {}
+      courseE_farmer_functions3c_2019_callout: {}
       courseE_farmer_functions4b_callout: {}
       courseE_farmer_functions4b_2018_callout: {}
       courseE_farmer_functions5b_callout: {}
@@ -1405,12 +1500,15 @@ en:
       courseE_farmer_functions6c_callout: {}
       courseE_farmer_functions6c_2018_callout: {}
       courseE_farmer_functions7a1_2018_callout: {}
+      courseE_farmer_functions7a1_2019_callout: {}
       courseE_farmer_functions7b_callout: {}
       courseE_farmer_functions7b_2018_callout: {}
       courseE_farmer_functions8a1_2018_callout: {}
+      courseE_farmer_functions8a1_2019_callout: {}
       courseE_farmer_functions8b_callout: {}
       courseE_farmer_functions8b_2018_callout: {}
       courseE_farmer_functions9a1_2018_callout: {}
+      courseE_farmer_functions9a1_2019_callout: {}
       courseE_farmer_functions9b_callout: {}
       courseE_farmer_functions9b_2018_callout: {}
       courseE_farmer_functions9b_clone_callout: {}
@@ -1832,6 +1930,7 @@ en:
       grade2_MakeDogTag_BFP_callout: {}
       grade2_collector_10_callout: {}
       grade2_collector_10_2018_callout: {}
+      grade2_collector_10_2019_callout: {}
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
       grade2_collector_8_callout: {}
@@ -1839,8 +1938,10 @@ en:
       grade2_collector_9a_callout: {}
       grade2_collector_A_callout: {}
       grade2_collector_A_2018_callout: {}
+      grade2_collector_A_2019_callout: {}
       grade2_collector_A_predict1_callout: {}
       grade2_collector_A_predict1_2018_callout: {}
+      grade2_collector_A_predict1_2019_callout: {}
       grade2_maze_intro10_callout: {}
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.

@@ -64,7 +64,7 @@ it:
   courses_page:
     title_student: "Impara su Code Studio"
     title_teacher: "Insegna Informatica"
-  unplugged_activity: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+  unplugged_activity: 'Attività Tradizionale'
   of: "di"
   more: "DI PIÙ"
   less: "DI MENO"
@@ -225,6 +225,7 @@ it:
     code_with_teacher: '%{section_code} con %{teacher_name}'
     confirm:
       remove: 'Sicuro di voler abbandonare questa classe?'
+    default_name: "sezione senza nome\n"
     remove: '(elimina classe)'
     type:
       picture: 'Password Immagine'
@@ -326,6 +327,7 @@ it:
       signin: 'Accedi'
       signup: 'Crea un account'
       already_registered: 'Sei già iscritto?'
+      pair_programming: 'un paio di programmi'
       team: 'Squadra'
       driver: 'Conducente'
       navigator: 'Navigatore'
@@ -337,6 +339,7 @@ it:
       spritelab: 'Laboratorio dei Personaggi'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Ballando col codice'
       view_all: 'Guarda tutti i progetti...'
     popup:
       progress_for_user: "%{name} in corso"
@@ -371,6 +374,7 @@ it:
       example: 'Esempio di soluzione'
       example_with_number: 'Esempio di soluzione n. %{solution_number}'
       submitted_on: 'Risposte inviate:'
+      last_updated: 'Ultimo aggiornamento:'
       unsubmit: 'Annulla l''invio delle risposte'
       worked_with: 'Ha lavorato in coppia con'
       update_lock_settings: 'Aggiorna le impostazioni di blocco qui.'
@@ -477,6 +481,7 @@ it:
     announcement_apcsp_recruitment3: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame e potresti vincere <a href='%{gift_url}' target='_blank'>una carta regalo, un laptop, o un altro bel regalo</a>! Condividi <a href='%{video_url}' target='_blank'>questo video</a> acciocché i tuoi studenti possano sentire l'incoraggiamento di altri studenti in tutto il Paese già iscritti all'esame."
     announcement_csp_deadline: "Richiamo finale per gli insegnanti di scuola superiore! Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione si chiudono il 14 Aprile."
     announcement_applab_export: "Sviluppo App, il nostro ambiente di programmazione basato sul web, ora supporta l'esportazione di codice! È possibile iniziare a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo in qualsiasi ambiente di sviluppo professionale desiderato."
+    announcement_csp_survey: "congratulazioni insegnante principale della scienza del computer il tuo studente principale prende l' esame di scienza del computer partecipano più di 50,000 studenti nel grande esame lanciato in storia. Ora lascia intendere le voci dei tuoi studenti - ricorda loro di completare ricorda loro il tema per completare il sondaggio di fine corso! Sarai in grado di rivedere le risposte dei tuoi studenti e condivideremo anche un rapporto aggiungendo te\"\n"
     announcement_navigation_redesign: "<b>In arrivo cambiamenti nella navigazione del sito</b><br/>\nCon l'arrivo dell'estate, stiamo migliorando la navigazione nel sito Code.org in modo che tu possa avere accesso alle risorse principali da ogni parte del sito. Non appena accederai con la tua utenza di insegnante, ogni pagina avrà una nuova barra di navigazione con collegamenti a: Home, Corsi, Progetti, Classi e Professional Learning."
   move_students:
     new_section_dne: "Ci dispiace, la classe col codice %{new_section_code} non esiste. Inserisci un codice di classe esistente."
@@ -502,7 +507,7 @@ it:
     teacher: 'Insegnante'
   footer:
     thank_you: 'Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>, <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team"> team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors"> consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.'
-    help_from_html: 'Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft, Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.'
+    help_from_html: 'Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google e Microsoft che hanno aiutato a creare questi corsi.'
     help_from_html_old: 'Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questi materiali.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.'
@@ -583,10 +588,12 @@ it:
   upsell:
     applab:
       title: 'Sviluppo App'
-      body: "Sviluppo App è un ambiente di programmazione in cui puoi creare semplici applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript, e infine condividila."
+      body: "Sviluppo App è un ambiente di programmazione in cui puoi creare semplici applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript e infine condividila."
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
       audience: 'Da 13 anni in su'
       cta: 'Scopri come'
+    dance:
+      title: 'Ballando col codice'
     hoc:
       title: 'Labirinto Classico'
       body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
@@ -612,7 +619,7 @@ it:
       title: "Crittografia semplice"
       body: "Gli studenti impareranno tecniche per creare e decifrare un messaggio cifrato."
     weblab:
-      title: "Sviluppo Web (versione provvisoria)"
+      title: "Sviluppo Web"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
@@ -1044,6 +1051,7 @@ it:
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
+        wonder: 'Laboratorio di meraviglie'
         other: "Altro:"
       workshop_course:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'

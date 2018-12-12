@@ -59,7 +59,7 @@ nn:
       instructions:
         maze_2_2: 'Kan du hjelpe meg med å fange den slemme grisen? Set saman et par
           «framover»-blokker og trykk på "Køyr" for å hjelpe meg å komme dit. '
-        maze_2_1: Denne grisen rufser til fjørene mine. Hjelp meg med å finne han!
+        maze_2_1: Denne grisen rufser til fjæra mine. Hjelp meg med å finne han!
         maze_2_2_5: Følg stien og før meg til den tåpelege grisen. Unngå TNT elles
           vil fjørene mine fyke!
         maze_2_3: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
@@ -101,19 +101,19 @@ nn:
         turtle_1_1: Hei, eg er ein kunstnar. Du kan skrive kode som får meg til å
           teikne alt mulig rart. Bruk nokre blokker til å få meg til å teikne på dei
           grå linjene på bildet.
-        turtle_1_2: No kan du prøve å teikne ein firkant. PS! Vel favorittfargen din
+        turtle_1_2: No kan du prøve å teikne eit kvadrat. PS! Vel favorittfargen din
           med "sett farge"-blokka.
-        turtle_1_3: Lag ein firkant ved å bruke berre 3 blokker.
+        turtle_1_3: Lag eit kvadrat ved å bruke berre 3 blokker.
         turtle_1_4: 'Tegn en trekant der kvar av sidene har ulik farge. Bruk "tilfeldig
           farge"-egenskapen som velg ein ny farge kvar gong. Tips: du må finne ut
           kor mykje du skal svinge ved å trykke på talet i "sving"-blokka.'
-        turtle_1_5: 'Som ei øving: Lag ein konvolutt ved å teikne ein trekant og ein
-          firkant.'
-        turtle_1_6: 'Klarer du å teikne denne trekanten og firkanten? Tips: teikn
-          trekanten først, finn ut kor mykje du skal snu før du teiknar firkanten.'
-        turtle_1_7: 'Ok, la oss gjere det litt vanskeligare: Sjå om du klarer å teikne
-          desse grøne glasa. Firkantane er 100 punkt lange på kvar side, og det er
-          50 punkt mellom dei. Ikkje gløym at dei skal teiknast med grønt!'
+        turtle_1_5: 'Som ei øving: Lag ein konvolutt ved å teikne ein trekant og eit
+          kvadrat.'
+        turtle_1_6: 'Klarer du å teikne denne trekanten og kvadratet? Tips: teikn
+          trekanten først, finn ut kor mykje du skal snu før du teiknar kvadratet.'
+        turtle_1_7: 'Ok, la oss gjere det litt vanskelegare: Sjå om du klarer å teikne
+          desse grøne glasa. Kvadrata er 100 punkt lange på kvar side, og det er 50
+          punkt mellom dei. Ikkje gløym at dei skal teiknast med grønt!'
         turtle_1_8: Ok, prøv å finne ut kva som vil å skje hvis du køyrer denne koden
           (eller køyr den ved å trykke "Køyr"). Deretter, gjentar du dette heilt til
           bildet er ferdig. Fargane blir ulike kvar gong.
@@ -179,12 +179,12 @@ nn:
         maze_karel_1_11: 'Det er framleis mørkt ute. Flytt meg langs åkeren. Dersom
           eg støyter på ein jordhaug, fjern den. Dersom eg støyter på eit hol, fyll
           det! Tips: bruk nedtrekksmenyen på "dersom"-blokka.'
-        turtle_2_1: 'Hei. Meg zombie artist. Meg elsker å teikne! Hjelpe meg med å
-          teikne ein firkant med ein spesiell farge. Viktig informasjon: du har tilgang
-          til de samme blokkene, men no er dei omorganiserte i kategoriar.'
+        turtle_2_1: 'Hei. Meg zombie kunstnar. Meg elsker å teikne! Hjelp meg med
+          å teikne eit kvadrat med ein spesiell farge. Viktig informasjon: du har
+          tilgang til dei same blokkene, men no er dei omorganiserte i kategoriar.'
         turtle_2_2: Velkommen til å bruke funksjonar som let deg definerer nye blokker!
-          Prøv den nye "teikne ein firkant" blokka, funnen i kategorien "Funksjonar"
-          til å teikne ei liten 50 x 50 grøn firkant.
+          Prøv den nye "teikne eit kvadrat"-blokka, som du finn i kategorien "Funksjonar"
+          til å teikne eit lite 50 x 50 grønt kvadrat.
         turtle_2_3: Bruk "gjenta"-blokka (i kategorien "Løkker") til å teikne 3 kvadrat
           med størrelse 100, som står 120 grader på kvarandre. Og gjer dette i tre
           ulike, tilfeldige fargar.
@@ -240,16 +240,16 @@ nn:
           slik at den faktisk blir utført og teiknar eit kvadrat.
         turtle_3_2: 'Ved å nytte funksjonen "tegn eit kvadrat" som eksempel: lag ein
           "teikn ein trekant"-funksjon og bruk den.'
-        turtle_3_3: 'Teikn trekanta gjerder rundt kattane og eit firkanta gjerde rundt
-          kua.  Tips: test programmet medan du arbeider.'
-        turtle_3_4: Sjå om du kan tenkje ut korleis du kan bruke "teikn ein firkant"
+        turtle_3_3: 'Teikn trekanta gjerder rundt kattane og eit kvadratisk gjerde
+          rundt kua.  Tips: test programmet medan du arbeider.'
+        turtle_3_4: Sjå om du kan tenkje ut korleis du kan bruke "teikn eit kvadrat"
           og "teikn ein trekant" (og nokre andre blokker) til å teikne eit hus rundt
           løva.
         turtle_3_5: 'No skal du lage ein ny "teikne eit hus"-funksjon, og bruke den
           til å huse to kattar. Tips: lag ein ny funksjon med "gjer noko"-blokka,
           og skriv inn egen tekst for å gi blokka eit namn.'
-        turtle_3_6: 'Ved å bruke "teikn ein firkant" som eksempel: Legg til ein parameter
-          "lengde" til "teikn ein trekant". Teikn så trekantar i ulike storleikar.
+        turtle_3_6: 'Ved å bruke "teikn eit kvadrat" som eksempel: Legg til ein parameter
+          "lengde" til "teikn eit kvadrat". Teikn så trekantar i ulike storleikar.
           (Hint: Klikk på stjerna for å legge til ein ny parameter til ein funksjon)'
         turtle_3_7: Legg til ein parameter "lengde" til "teikn eit hus"-funksjonen,
           og bygg eit stort hus til elefanten (med sider som er 150 piksel lange)
@@ -542,8 +542,8 @@ nn:
         C2_maze_intro: Labyrint-intro
         C2_artist_intro: Kunstner introduksjon
         C2_zuck_repeat_loop: 'Labyrint: Sløyfer'
-        C2_artist_loops: Kunstnar Løkker
-        C2_artist_debugging: Kunstnar Feilsøking
+        C2_artist_loops: 'Kunstnar: Løkker'
+        C2_artist_debugging: 'Kunstnar: Feilsøking'
         C2_bee_loops: Bier Løkker
         C2_bee_debugging: Bier Feilsøking
         C2_bee_conditionals: Bier Vilkår
@@ -557,7 +557,7 @@ nn:
         C2_digital_footprint_v2: Dine digitale fotspor
         C3_maze_level_4: 'Labyrint: Sløyfer'
         C3_artist_intro: Kunstner introduksjon
-        C3_artist_functions: Kunstnar Funksjonar
+        C3_artist_functions: 'Kunstnar: Funksjonar'
         C3_bee_functions: Bier Funksjonar
         C3_bee_conditionals: Bier Vilkår
         C3_maze_conditionals: Labyrint Vilkår
@@ -581,18 +581,18 @@ nn:
         C4_for_loops: For-løkker
         C4_for_loops_bee: For-løkker
         C4_for_loops_no_bee: For-løkker
-        C4_math_artist: Programmer Kunstnaren med Matte
+        C4_math_artist: Programmer kunstnaren med matte
         C4_function_edit: Redigeringsfunksjonar
         C4_function_create: Lag Funksjonar
         C4_function_parameters: Funksjonar med parameter
         C4_conditionals: Betingelser
-        C4_unplugged_algorithms: Algoritmer med Tangrammer
-        C4_unplugged_madlibs: Sprøtt Bibliotek
-        C4_unplugged_variables: Variablar i Konvoluttar
+        C4_unplugged_algorithms: Algoritmar med tangram
+        C4_unplugged_madlibs: Sprøtt bibliotek
+        C4_unplugged_variables: Variablar i konvoluttar
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parameter
         C4_unplugged_binary: Binær
-        CSF_artist_angles: Vinklar i Kunstner
+        CSF_artist_angles: Vinklar i Kunstnar
         CSF_collector_k1_blocks: 'Grunnleggande: Samlaren'
         CSF_collector_repeat_loops: Collector gjenta-løkker
         CSF_collector_text_blocks: 'Grunnleggande: Samlaren'
@@ -700,6 +700,8 @@ nn:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_loops_AB: Løkker
+        hoc_dance_events: Dansefest - hendingar
+        hoc_dance_properties: Dansefest - eigenskapar
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka
@@ -738,7 +740,7 @@ nn:
         get_nectar: Bruk den nye "få nektar"-blokka.
         actions_category: Verktøyboksen har fått ny utsjånad! "Handling"-blokkene
           er her inne nå.
-        draw_square_hint: 'Hint: bruk firkant-løkka du laga i den forrige oppgava.'
+        draw_square_hint: 'Hint: bruk kvadrat-løkka du laga i den forrige oppgava.'
         edit_function: Klikk her for å redigere funksjonen.
         create_function: Klikk her for å åpne "Funksjonar"-menyen og klikk deretter
           "Opprette ein funksjon"-knappen.

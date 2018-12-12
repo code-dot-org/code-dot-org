@@ -798,9 +798,11 @@ nl:
       Dance_Party_08: Kun je beide achtergronddansers dezelfde grootte geven?
       Dance_Party_09: Gebruik het blok 'tint instellen' om de kleur van een danser te veranderen.
       Dance_Party_10: Zorg dat de andere danser ook op de muziek reageert, met behulp van het blok 'begint te volgen'.
-      Dance_Party_11.5: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
+      Dance_Party_11.5_test: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
       Dance_Party_11: Met het blok 'wanneer pijlomhoogtoets ingedrukt' kun je code uitvoeren door op de pijlomhoogtoets te drukken. Proberen de danser een een snelle move te laten doen wanneer je op de pijlomhoogtoets drukt.
+      Dance_Party_11_5: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
       Dance_Party_11b: Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets te drukken, en laat hem een keer de "floss" doen door op de pijlomhoogtoets te drukken. Doe zo snel als je kan de drop-floss!
+      Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       Find the Wizard: Bouw wat je maar wilt. Dit is één voorbeeld van een getal raad spelletje!
       Find the Wizard_2018: Bouw wat je maar wilt. Dit is één voorbeeld van een getal raad spelletje!
       Food Fight!: "We hebben nog een laatste functie toegevoegd die je kunt gebruiken. Programmeer je spel zo dat het de \"niveau_omhoog\" functie aanroept als \"speler_punten\" > 10. Speel het spel en ga voorbij niveau 4 om verder te gaan naar de volgende puzzel.\n"
@@ -1112,25 +1114,35 @@ nl:
       New Sports Project: 'Creëer je eigen spel! Jij bent hier de baas: je kan alle regels wijzigen. Meng verschillende sporten of bouw er één na. Wees creatief! Klik wanneer je klaar bent op ''Voltooien'' om je vrienden je spel te laten proberen op hun telefoons.'
       Overworld Avoid Monsters: Het is een slecht idee om tegen een Creeper aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
       Overworld Avoid Monsters_2018: Het is een slecht idee om tegen een Creeper aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
+      Overworld Avoid Monsters_2019: Het is een slecht idee om tegen een Creeper aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
       Overworld Chop Tree - allthethings: Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.
       Overworld Chop Tree: Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.
       Overworld Chop Tree_2018: Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.
+      Overworld Chop Tree_2019: Hout is een zeer belangrijke grondstof. Veel dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando om hem om te hakken.
       Overworld Chop Trees: We moeten een huis bouwen voordat de zon ondergaat. Voor een huis is veel hout nodig. Hak alle drie bomen om.
       Overworld Chop Trees_2018: We moeten een huis bouwen voordat de zon ondergaat. Voor een huis is veel hout nodig. Hak alle drie bomen om.
+      Overworld Chop Trees_2019: We moeten een huis bouwen voordat de zon ondergaat. Voor een huis is veel hout nodig. Hak alle drie bomen om.
       Overworld Free Play 20x20: Gefeliciteerd! Je hebt al onze puzzels voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen, om zo iets unieks te maken.
       Overworld Free Play 20x20_2018: Gefeliciteerd! Je hebt al onze puzzels voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen, om zo iets unieks te maken.
+      Overworld Free Play 20x20_2019: Gefeliciteerd! Je hebt al onze puzzels voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen, om zo iets unieks te maken.
       Overworld House Frame Chosen: Bouw de rest van je huis met welk materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
       Overworld House Frame Chosen_2018: Bouw de rest van je huis met welk materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
+      Overworld House Frame Chosen_2019: Bouw de rest van je huis met welk materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
       Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Move to Sheep_2018: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
+      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Place Wall: Elk huis begint met een muur. Bouw het eerste deel van je huis door de opdrachten "plaats" en "beweeg vooruit" in de herhalingsloop te plaatsen.
       Overworld Place Wall_2018: Elk huis begint met een muur. Bouw het eerste deel van je huis door de opdrachten "plaats" en "beweeg vooruit" in de herhalingsloop te plaatsen.
+      Overworld Place Wall_2019: Elk huis begint met een muur. Bouw het eerste deel van je huis door de opdrachten "plaats" en "beweeg vooruit" in de herhalingsloop te plaatsen.
       Overworld Plant Crops: Het is slim om vooruit te denken. Plant gewassen aan beide kanten van het water, zodat je later geen honger krijgt.
       Overworld Plant Crops_2018: Het is slim om vooruit te denken. Plant gewassen aan beide kanten van het water, zodat je later geen honger krijgt.
+      Overworld Plant Crops_2019: Het is slim om vooruit te denken. Plant gewassen aan beide kanten van het water, zodat je later geen honger krijgt.
       Overworld Powered Minecart: Goed gedaan! Je verzamelde veel grondstoffen en bouwde een bescheiden huis. Plaats nu een spoor van de rand van de plattegrond naar de deur van je huis.
       Overworld Powered Minecart_2018: Goed gedaan! Je verzamelde veel grondstoffen en bouwde een bescheiden huis. Plaats nu een spoor van de rand van de plattegrond naar de deur van je huis.
+      Overworld Powered Minecart_2019: Goed gedaan! Je verzamelde veel grondstoffen en bouwde een bescheiden huis. Plaats nu een spoor van de rand van de plattegrond naar de deur van je huis.
       Overworld Shear Sheep: Tijd om schapen te scheren! Gebruik het commando "knippen" om wol van beide schapen te krijgen.
       Overworld Shear Sheep_2018: Tijd om schapen te scheren! Gebruik het commando "knippen" om wol van beide schapen te krijgen.
+      Overworld Shear Sheep_2019: Tijd om schapen te scheren! Gebruik het commando "knippen" om wol van beide schapen te krijgen.
       PDK5 Conditionals 1: Paarse bloemen hebben 1 of 0 nektar, maar je weet niet welke. Zorg dat je geen nektar van een paarse bloem haalt, als die geen nektar heeft. Controleer of de nektar gelijk is aan 1 met een "als blok".
       PDK5 Functions 2: Met functies kan je nieuwe blokken definiëren! We hebben de blokken om een vierkant te tekenen in een functie met de naam "teken een vierkant". Kan je de "teken een vierkant" functie gebruiken om de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar.
       PS - test - pixelation: Vervolledig de X vorm door 0'en en 1'en in te voeren
@@ -1148,6 +1160,7 @@ nl:
       Quantum Bee: Paarse bloemen hebben 1 of 0 nektar, maar je weet niet welke. Zorg dat je geen nektar van een paarse bloem haalt, als die geen nektar heeft. Controleer of de nektar gelijk is aan 1 met een "als blok".
       Robot Doodle: 'Project Idee: Creëer een afbeelding of iets dergelijks van de echte wereld. Dit vereis doorzetting en planning!'
       Robot Doodle_2018: 'Project Idee: Creëer een afbeelding of iets dergelijks van de echte wereld. Dit vereis doorzetting en planning!'
+      Robot Doodle_2019: 'Project Idee: Creëer een afbeelding of iets dergelijks van de echte wereld. Dit vereis doorzetting en planning!'
       Robot Drawing: 'Project Idee: Creëer een afbeelding of iets dergelijks van de echte wereld. Dit vereis doorzetting en planning!'
       Robot: 'Project Idee: Creëer een afbeelding of iets dergelijks van de echte wereld. Dit vereis doorzetting en planning!'
       Ryan - 4-5 Bee Conditionals 2: "De bij wil nu alleen nectar.\nNiet alles is een bloem, dus kijk onder ELKE WOLK of daar een bloem is verstopt. Zo ja, verzamel dan de nectar."
@@ -1272,12 +1285,16 @@ nl:
       U4L02 - Objects - Template1_2018: Sjabloon
       Underground Avoiding Lava: Onder sommige van deze blokken zit lava verstopt. Dat moet je bedekken voordat je verder kunt. Een als-opdracht komt hier goed van pas. Voeg op de juiste plaats een "beweeg vooruit"-opdracht toe om deze blokken te delven.
       Underground Avoiding Lava_2018: Onder sommige van deze blokken zit lava verstopt. Dat moet je bedekken voordat je verder kunt. Een als-opdracht komt hier goed van pas. Voeg op de juiste plaats een "beweeg vooruit"-opdracht toe om deze blokken te delven.
+      Underground Avoiding Lava_2019: Onder sommige van deze blokken zit lava verstopt. Dat moet je bedekken voordat je verder kunt. Een als-opdracht komt hier goed van pas. Voeg op de juiste plaats een "beweeg vooruit"-opdracht toe om deze blokken te delven.
       Underground If Statements: Nu wordt het een beetje lastig. Delf 3 redstone, maar val niet in de lava. Gebruik een "als"-instructie om keien te plaatsen op de lava die je ontdekt.
       Underground If Statements_2018: Nu wordt het een beetje lastig. Delf 3 redstone, maar val niet in de lava. Gebruik een "als"-instructie om keien te plaatsen op de lava die je ontdekt.
+      Underground If Statements_2019: Nu wordt het een beetje lastig. Delf 3 redstone, maar val niet in de lava. Gebruik een "als"-instructie om keien te plaatsen op de lava die je ontdekt.
       Underground Iron: Het is niet slim om in gesmolten lava te lopen. Plaats keien om een brug te maken. Delf vervolgens minstens twee blokken ijzer.
       Underground Iron_2018: Het is niet slim om in gesmolten lava te lopen. Plaats keien om een brug te maken. Delf vervolgens minstens twee blokken ijzer.
+      Underground Iron_2019: Het is niet slim om in gesmolten lava te lopen. Plaats keien om een brug te maken. Delf vervolgens minstens twee blokken ijzer.
       Underground Mining Coal: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
       Underground Mining Coal_2018: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
+      Underground Mining Coal_2019: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
       aE7: "Wat gebeurt er als je een andere herhaling maakt zoals deze, maar links draait in plaats van rechts? \\r \n\\r\nKan je dit allemaal herhalen om deze golf te tekenen?"
       aE8: "Laat ons nu het geheel 4 keer herhalen om deze fotokader te creëren. Let op voor de hoeken - je kan enkel 90 graden draaien! \\r \n\\r\nAls een herhaling van 60 keer een 3 graden draai maakt voor een halve cirkel, welke van deze codeblokken zal dan een bijkomend kwart van een cirkel aanmaken voor deze hoeken?"
       allHallows2017: Vang de Code.org werknemers in het potlodendoosje door een vierkant met zijde van 320 pixels te tekenen!
@@ -1562,37 +1579,50 @@ nl:
         Speel het spel en beweeg Waddles met de pijltjes totdat je voldoende punten scoort.
       courseC_artist_loop1: Laten we enkele pizzaz toevoegen!
       courseC_artist_loop1_2018: Laten we enkele pizzaz toevoegen!
+      courseC_artist_loop1_2019: Laten we enkele pizzaz toevoegen!
       courseC_artist_loops1: "*\"Zombie. Teken!\"*\\r\n\\r\nDe zombie wilt een lijn tekenen vanaf zijn positie naar de tuin zonnebloemen. Kan jij hem helpen? \\r\n*(De tuin is 250 pixels veraf)*  "
       courseC_artist_loops1a: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
       courseC_artist_loops1a_2018: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
+      courseC_artist_loops1a_2019: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
       courseC_artist_loops2: Nu de zombie zijn weg kent, help hem gaten te graven langsheen het pad om meer bloemen te planten!
       courseC_artist_loops2a: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
+      courseC_artist_loops2a_2019: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
       courseC_artist_loops3: Uitstekend! Nu de bloemen zijn uitgekomen, laat de zombie een vriend bij hen plaatsen om over hen te waken totdat ze volgroeid zijn.
       courseC_artist_loops3a: Voeg nu een vleermuis toe!
       courseC_artist_loops3a_2018: Voeg nu een vleermuis toe!
+      courseC_artist_loops3a_2019: Voeg nu een vleermuis toe!
       courseC_artist_loops4: De zombie heeft een lege boerderij gevonden! Kan jij het tot leven brengen door elke 100 pixels een sticker te stempel langsheen de rand?
       courseC_artist_loops4a: Probeer 75 pixels vooruit te springen.
       courseC_artist_loops4a_2018: Probeer 75 pixels vooruit te springen.
+      courseC_artist_loops4a_2019: Probeer 75 pixels vooruit te springen.
       courseC_artist_loops5: "Geweldig! Het is nu tijd om binnen een hek te maken om de dieren buiten te houden. \\r\n\\r\n"
       courseC_artist_loops5a: Probeer nieuwe stickers!
       courseC_artist_loops5a_2018: Probeer nieuwe stickers!
+      courseC_artist_loops5a_2019: Probeer nieuwe stickers!
       courseC_artist_loops5b: Probeer lijnen toe te voegen!
       courseC_artist_loops5b_2018: Probeer lijnen toe te voegen!
+      courseC_artist_loops5b_2019: Probeer lijnen toe te voegen!
       courseC_artist_loops6: "Wat zou de zombie binnen de tuin moeten plaatsen? \\r\n\\r\n\\r\n"
       courseC_artist_loops6a: Voeg een andere sticker toe!
       courseC_artist_loops6a_2018: Voeg een andere sticker toe!
+      courseC_artist_loops6a_2019: Voeg een andere sticker toe!
       courseC_artist_loops7a: Speel met lussen en hoeken.
       courseC_artist_loops7a_2018: Speel met lussen en hoeken.
+      courseC_artist_loops7a_2019: Speel met lussen en hoeken.
       courseC_artist_loops8a: Probeer nu iets op jezelf!
       courseC_artist_loops8a_2018: Probeer nu iets op jezelf!
+      courseC_artist_loops8a_2019: Probeer nu iets op jezelf!
       courseC_artist_loopsPre1a: Tijd om die lijn rond te draaien!
       courseC_artist_loopsPre1a_2018: Tijd om die lijn rond te draaien!
+      courseC_artist_loopsPre1a_2019: Tijd om die lijn rond te draaien!
       courseC_artist_loopsPrePre1a: 'Verplaats de artiest naar het centrum van het speelveld. Teken dan een lijn. '
       courseC_artist_loopsPrePre1a_2018: 'Verplaats de artiest naar het centrum van het speelveld. Teken dan een lijn. '
+      courseC_artist_loopsPrePre1a_2019: 'Verplaats de artiest naar het centrum van het speelveld. Teken dan een lijn. '
       courseC_artist_loopsTemplate: Uitstekend! Nu de bloemen zijn uitgekomen, laat de zombie een vriend bij hen plaatsen om over hen te waken totdat ze volgroeid zijn.
       courseC_artist_loopsTemplateA: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
       courseC_artist_loopsTemplateA_2018: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
+      courseC_artist_loopsTemplateA_2019: 'Breng de artiest naar het centrum van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
       courseC_artist_prog5: |-
         Dit huis heeft een nieuw dak nodig! Teken de driehoek. Tip: Alle drie zijdes hebben dezelfde lengte.
       courseC_artist_prog5_2018: |-
@@ -1609,35 +1639,50 @@ nl:
       courseC_artist_prog_challenge2a_2019: 'Help me de gele lijnen op deze weg schilderen! *'
       courseC_collector_loops_challenge2: Verzamel alle schatten!
       courseC_collector_loops_challenge2_2018: Verzamel alle schatten!
+      courseC_collector_loops_challenge2_2019: Verzamel alle schatten!
       courseC_collector_prog2: Verplaats Laurel naar de schatten, maak dan gebruik van `verzamel` om het op te pikken.
       courseC_collector_prog2_2018: Verplaats Laurel naar de schatten, maak dan gebruik van `verzamel` om het op te pikken.
+      courseC_collector_prog2_2019: Verplaats Laurel naar de schatten, maak dan gebruik van `verzamel` om het op te pikken.
       courseC_collector_prog9: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog9_2018: '*"Laten we alle schatten verzamelen!"*'
+      courseC_collector_prog9_2019: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog_challenge1: Kijk aandachtig! Kan jij alle *10* stukken schat verzamelen?
       courseC_collector_prog_challenge1_2018: Kijk aandachtig! Kan jij alle *10* stukken schat verzamelen?
+      courseC_collector_prog_challenge1_2019: Kijk aandachtig! Kan jij alle *10* stukken schat verzamelen?
       courseC_collector_prog_challenge2: Der zijn 20 stukken schat te vinden. Verzamelen ten minste de helft om deze uitdaging te voltooien!
       courseC_collector_prog_challenge2_2018: Der zijn 20 stukken schat te vinden. Verzamelen ten minste de helft om deze uitdaging te voltooien!
+      courseC_collector_prog_challenge2_2019: Der zijn 20 stukken schat te vinden. Verzamelen ten minste de helft om deze uitdaging te voltooien!
       courseC_flappy_embed_events: Hier is een voorbeeld van een spel dat je zo dadelijk zelf gaat maken! Speel het één of twee keer om een idee te krijgen wat je gaat maken.
       courseC_flappy_events1: Voeg het `normaal flapperen` blokje toe aan de `bij een klik` gebeurtenis, klik dan op "Start". Klik of tik op de speelruimte om Flappy naar het doelwit te bewegen.
       courseC_flappy_events10: 'Maak je eigen Flappy spel! '
       courseC_flappy_events10_2018: 'Maak je eigen Flappy spel! '
+      courseC_flappy_events10_2019: 'Maak je eigen Flappy spel! '
       courseC_flappy_events1_2018: Voeg het `normaal flapperen` blokje toe aan de `bij een klik` gebeurtenis, klik dan op "Start". Klik of tik op de speelruimte om Flappy naar het doelwit te bewegen.
+      courseC_flappy_events1_2019: Voeg het `normaal flapperen` blokje toe aan de `bij een klik` gebeurtenis, klik dan op "Start". Klik of tik op de speelruimte om Flappy naar het doelwit te bewegen.
       courseC_flappy_events2: "Probeer een blok toe te voegen dat de snelheid van het level instelt wanneer op de \"Start\" wordt ingeduwd.\nSpeel het spel en flap naar het doelwit om verder te gaan."
       courseC_flappy_events2_2018: "Probeer een blok toe te voegen dat de snelheid van het level instelt wanneer op de \"Start\" wordt ingeduwd.\nSpeel het spel en flap naar het doelwit om verder te gaan."
+      courseC_flappy_events2_2019: "Probeer een blok toe te voegen dat de snelheid van het level instelt wanneer op de \"Start\" wordt ingeduwd.\nSpeel het spel en flap naar het doelwit om verder te gaan."
       courseC_flappy_events3: Plak het `einde spel` blok aan het `wanneer grond geraakt` evenement. Speel het spel en crash de vogel op de grond om door te gaan.
       courseC_flappy_events3_2018: Plak het `einde spel` blok aan het `wanneer grond geraakt` evenement. Speel het spel en crash de vogel op de grond om door te gaan.
+      courseC_flappy_events3_2019: Plak het `einde spel` blok aan het `wanneer grond geraakt` evenement. Speel het spel en crash de vogel op de grond om door te gaan.
       courseC_flappy_events4: Plak een blok aan het `wanneer een obstakel geraakt` evenement zodat het spel eindigt wanneer Flappy crasht in de eerste paar pijpen.
       courseC_flappy_events4_2018: Plak een blok aan het `wanneer een obstakel geraakt` evenement zodat het spel eindigt wanneer Flappy crasht in de eerste paar pijpen.
+      courseC_flappy_events4_2019: Plak een blok aan het `wanneer een obstakel geraakt` evenement zodat het spel eindigt wanneer Flappy crasht in de eerste paar pijpen.
       courseC_flappy_events5: "Voeg een blok toe aan de `bij het raken van een obstakel` gebeurtenis,\nklik dan op \"Start\" om een punt te scoren door Flappy door de eerste reeks buizen te laten vliegen."
       courseC_flappy_events5_2018: "Voeg een blok toe aan de `bij het raken van een obstakel` gebeurtenis,\nklik dan op \"Start\" om een punt te scoren door Flappy door de eerste reeks buizen te laten vliegen."
+      courseC_flappy_events5_2019: "Voeg een blok toe aan de `bij het raken van een obstakel` gebeurtenis,\nklik dan op \"Start\" om een punt te scoren door Flappy door de eerste reeks buizen te laten vliegen."
       courseC_flappy_events6: Kijk of je nog steeds punten kan scoren als je Flappy oftewel een beetje oftewel veel laat flapperen elke keer je klikt.
       courseC_flappy_events6_2018: Kijk of je nog steeds punten kan scoren als je Flappy oftewel een beetje oftewel veel laat flapperen elke keer je klikt.
+      courseC_flappy_events6_2019: Kijk of je nog steeds punten kan scoren als je Flappy oftewel een beetje oftewel veel laat flapperen elke keer je klikt.
       courseC_flappy_events7: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events7_2018: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events7_2019: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events8: "Probeer een **willekeurige** scene te zetten wanneer andere evenementen gebeuren.\nBijvoorbeeld wanneer een obstakel wordt gepasseerd."
       courseC_flappy_events8_2018: "Probeer een **willekeurige** scene te zetten wanneer andere evenementen gebeuren.\nBijvoorbeeld wanneer een obstakel wordt gepasseerd."
+      courseC_flappy_events8_2019: "Probeer een **willekeurige** scene te zetten wanneer andere evenementen gebeuren.\nBijvoorbeeld wanneer een obstakel wordt gepasseerd."
       courseC_flappy_events9: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
       courseC_flappy_events9_2018: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
+      courseC_flappy_events9_2019: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a_2018: Verzamel alle maïs.
@@ -1646,20 +1691,26 @@ nl:
       courseC_maze_debugging10: Los de fouten in dit level op door de blokken op de juiste volgorde te zetten en blokken toe te voegen!
       courseC_maze_debugging_challenge1: '*"Ga ik enkel rond in cirkels?"*'
       courseC_maze_debugging_challenge1_2018: '*"Ga ik enkel rond in cirkels?"*'
+      courseC_maze_debugging_challenge1_2019: '*"Ga ik enkel rond in cirkels?"*'
       courseC_maze_debugging_challenge2: '*"Als ik te vaak ronddraai, kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai` commando''s."*'
       courseC_maze_debugging_challenge2_2018: '*"Als ik te vaak ronddraai, kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai` commando''s."*'
+      courseC_maze_debugging_challenge2_2019: '*"Als ik te vaak ronddraai, kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai` commando''s."*'
       courseC_maze_loops10: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_maze_loops9: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_maze_loops_challenge1: 'Nu wil Scrat proberen gebruikmaken van lussen om zijn eikel te vinden! '
       courseC_maze_loops_challenge1a: 'Nu wil Scrat proberen gebruikmaken van lussen om zijn eikel te vinden! '
       courseC_maze_loops_challenge1a_2018: 'Nu wil Scrat proberen gebruikmaken van lussen om zijn eikel te vinden! '
+      courseC_maze_loops_challenge1a_2019: 'Nu wil Scrat proberen gebruikmaken van lussen om zijn eikel te vinden! '
       courseC_maze_loops_challenge2: "Laten we naar schatten zoeken, gebruik makende van loops!\nHelp de verzamelaar door deze code te debuggen.\nVerzamel alle schatten!"
       courseC_maze_programming1: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseC_maze_programming1_2018: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      courseC_maze_programming1_2019: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseC_maze_programming_challenge1: '*" Het varken verstopt zich! Kan jij me helpen een omweg te vinden?"*'
       courseC_maze_programming_challenge1_2018: '*" Het varken verstopt zich! Kan jij me helpen een omweg te vinden?"*'
+      courseC_maze_programming_challenge1_2019: '*" Het varken verstopt zich! Kan jij me helpen een omweg te vinden?"*'
       courseC_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseC_maze_programming_challenge2_2018: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
+      courseC_maze_programming_challenge2_2019: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseC_playLab_embedded: |-
         Hier is een spel voor jou om te spelen! Om te winnen moet je je pijltjestoetsen gebruiken om de pinguïn op de octopus te laten lopen.\r
         \r
@@ -1669,21 +1720,30 @@ nl:
       courseC_starWars_loops1: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
       courseC_starWars_loops10: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_starWars_loops10_2018: "Je bent geweldig bezig!\nDoe zo voort!"
+      courseC_starWars_loops10_2019: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_starWars_loops10_predict2: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_starWars_loops10_predict2_2018: "Je bent geweldig bezig!\nDoe zo voort!"
+      courseC_starWars_loops10_predict2_2019: "Je bent geweldig bezig!\nDoe zo voort!"
       courseC_starWars_loops1_2018: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
+      courseC_starWars_loops1_2019: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
       courseC_starWars_loops1_predict1: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
       courseC_starWars_loops1_predict1_2018: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
+      courseC_starWars_loops1_predict1_2019: "BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.\nGebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen."
       courseC_starWars_loops2: Om al het schroot te verzamelen, probeer een loop te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
       courseC_starWars_loops2_2018: Om al het schroot te verzamelen, probeer een loop te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
+      courseC_starWars_loops2_2019: Om al het schroot te verzamelen, probeer een loop te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
       courseC_starWars_loops4: In deze puzzel zullen twee `herhaal` lussen je helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
       courseC_starWars_loops4_2018: In deze puzzel zullen twee `herhaal` lussen je helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
+      courseC_starWars_loops4_2019: In deze puzzel zullen twee `herhaal` lussen je helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
       courseC_starWars_loops5: Laat BB-8 zo snel mogelijk alle stukken schroot oppikken!
       courseC_starWars_loops5_2018: Laat BB-8 zo snel mogelijk alle stukken schroot oppikken!
+      courseC_starWars_loops5_2019: Laat BB-8 zo snel mogelijk alle stukken schroot oppikken!
       courseC_starWars_loops7: Kan jij alle stukken schroot oprapen binnen slechts één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde code en plaats het in een lus.
       courseC_starWars_loops7_2018: Kan jij alle stukken schroot oprapen binnen slechts één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde code en plaats het in een lus.
+      courseC_starWars_loops7_2019: Kan jij alle stukken schroot oprapen binnen slechts één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde code en plaats het in een lus.
       courseC_starWars_loops9: Gebruik wat je geleerd hebt om al het schroot op te rapen!
       courseC_starWars_loops9_2018: Gebruik wat je geleerd hebt om al het schroot op te rapen!
+      courseC_starWars_loops9_2019: Gebruik wat je geleerd hebt om al het schroot op te rapen!
       courseD_Frozen_nested1: "Teken een kleine vorm, tussen *20 en 50** pixels breed.\nHet kan elke vorm zijn die je maar wilt.  "
       courseD_Frozen_nested2: Gebruik nu jouw vorm en teken er twee of drie in een rij!
       courseD_Frozen_nested3: Laten we die lijn van vormen ronddraaien!
@@ -1692,36 +1752,49 @@ nl:
       courseD_Frozen_nested7: Draai nu 180 graden en teken het trap patroon opnieuw!
       courseD_Frozen_nested8: Draai die vorm 5 of 6 keer rond in een cirkel.
       courseD_artist_5_2018: Speel met de sneeuwvlokken!
+      courseD_artist_5_2018_2019: Speel met de sneeuwvlokken!
       courseD_artist_7_2018: Draai nu 180 graden en teken het trap patroon opnieuw!
       courseD_artist_8_2018: Draai die vorm 5 of 6 keer rond in een cirkel.
       courseD_artist_binary1: "'Binair' is een manier om informatie te coderen met maar 2 bouwstenen. We gaan hier 'uit' (gecodeerd met het getal 0) en 'aan' (gecodeerd met het nummer 1) gebruiken.\\r\n\\r\nWe hebben alvast een raster met \"pixels\" gemaakt waar je doorheen kan lopen en waarin je ontwerpen kan maken door sommige vierkantjes aan te zetten. Kun je de kunstenaar '01010101' in binair laten tekenen op de eerste regel?"
       courseD_artist_binary1_2018: "'Binair' is een manier om informatie te coderen met maar 2 bouwstenen. We gaan hier 'uit' (gecodeerd met het getal 0) en 'aan' (gecodeerd met het nummer 1) gebruiken.\\r\n\\r\nWe hebben alvast een raster met \"pixels\" gemaakt waar je doorheen kan lopen en waarin je ontwerpen kan maken door sommige vierkantjes aan te zetten. Kun je de kunstenaar '01010101' in binair laten tekenen op de eerste regel?"
+      courseD_artist_binary1_2019: "'Binair' is een manier om informatie te coderen met maar 2 bouwstenen. We gaan hier 'uit' (gecodeerd met het getal 0) en 'aan' (gecodeerd met het nummer 1) gebruiken.\\r\n\\r\nWe hebben alvast een raster met \"pixels\" gemaakt waar je doorheen kan lopen en waarin je ontwerpen kan maken door sommige vierkantjes aan te zetten. Kun je de kunstenaar '01010101' in binair laten tekenen op de eerste regel?"
       courseD_artist_binary4: Kan jij dit patroon tekenen met een lus van een drie-cijferige binaire tekenreeks?
       courseD_artist_binary4_2018: Kan jij dit patroon tekenen met een lus van een drie-cijferige binaire tekenreeks?
+      courseD_artist_binary4_2019: Kan jij dit patroon tekenen met een lus van een drie-cijferige binaire tekenreeks?
       courseD_artist_binary6: Welke 6 cijferige binaire reeks, 11 keer herhaald, tekent dit plaatje?
       courseD_artist_binary6_2018: Welke 6 cijferige binaire reeks, 11 keer herhaald, tekent dit plaatje?
+      courseD_artist_binary6_2019: Welke 6 cijferige binaire reeks, 11 keer herhaald, tekent dit plaatje?
       courseD_artist_binary7: Wat is de korste binaire reeks die je kan gebruiken om dit plaatje te tekenen?
       courseD_artist_binary7_2018: Wat is de korste binaire reeks die je kan gebruiken om dit plaatje te tekenen?
+      courseD_artist_binary7_2019: Wat is de korste binaire reeks die je kan gebruiken om dit plaatje te tekenen?
       courseD_artist_binary8: Voltooi de code om deze afbeelding te tekenen.
       courseD_artist_binary8_2018: Voltooi de code om deze afbeelding te tekenen.
+      courseD_artist_binary8_2019: Voltooi de code om deze afbeelding te tekenen.
       courseD_artist_binary8_predict1: Voltooi de code om deze afbeelding te tekenen.
       courseD_artist_binary8_predict1_2018: Voltooi de code om deze afbeelding te tekenen.
+      courseD_artist_binary8_predict1_2019: Voltooi de code om deze afbeelding te tekenen.
       courseD_artist_binary_challenge0: Probeer gebruik te maken van geneste lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge1_2018: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge1_2019: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge2: Ben jij volhardend genoeg om dit logo terug naar normaal te herstellen?
       courseD_artist_binary_challenge2_2018: Ben jij volhardend genoeg om dit logo terug naar normaal te herstellen?
+      courseD_artist_binary_challenge2_2019: Ben jij volhardend genoeg om dit logo terug naar normaal te herstellen?
       courseD_artist_binary_challenge3: Ben jij volhardend genoeg om dit logo terug naar normaal te herstellen?
       courseD_artist_embed_frozen: Klik op Uitvoeren om een sneeuwvlok design te zien!
       courseD_artist_embed_frozen2: Klik op Uitvoeren om een sneeuwvlok design te zien.
       courseD_artist_nestedLoops9: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
       courseD_artist_nestedLoops9_2018: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
+      courseD_artist_nestedLoops9_2019: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
       courseD_artist_nestedLoops9_predict1: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
       courseD_artist_nestedLoops9_predict1_2018: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
+      courseD_artist_nestedLoops9_predict1_2019: "**Uitdaging:** Kan jij uitvinden hoe een figuur zoals deze te maken?"
       courseD_artist_nestedLoops_challenge1: Kan jij uitvinden hoe een afbeelding als deze te maken?
       courseD_artist_nestedLoops_challenge1_2018: Kan jij uitvinden hoe een afbeelding als deze te maken?
+      courseD_artist_nestedLoops_challenge1_2019: Kan jij uitvinden hoe een afbeelding als deze te maken?
       courseD_artist_nestedLoops_challenge2: Kan jij uitvinden hoe een afbeelding als deze te maken?
       courseD_artist_nestedLoops_challenge2_2018: Kan jij uitvinden hoe een afbeelding als deze te maken?
+      courseD_artist_nestedLoops_challenge2_2019: Kan jij uitvinden hoe een afbeelding als deze te maken?
       courseD_artist_project1: "Teken een kleine vorm, tussen *20 en 50** pixels breed.\nHet kan elke vorm zijn die je maar wilt.  "
       courseD_artist_project1_2018: "Teken een kleine vorm, tussen *20 en 50** pixels breed.\nHet kan elke vorm zijn die je maar wilt.  "
       courseD_artist_project1_2019: "Teken een kleine vorm, tussen *20 en 50** pixels breed.\nHet kan elke vorm zijn die je maar wilt.  "
@@ -1754,8 +1827,10 @@ nl:
       courseD_bee_conditionals1: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1_2018: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
+      courseD_bee_conditionals1_predict1_2019: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals2: 'Controleer onder elke wolk of het een bloem verstopt voordat je nectar verzamelt.  '
       courseD_bee_conditionals2_2018: 'Controleer onder elke wolk of het een bloem verstopt voordat je nectar verzamelt.  '
+      courseD_bee_conditionals2_2019: 'Controleer onder elke wolk of het een bloem verstopt voordat je nectar verzamelt.  '
       courseD_bee_conditionals2_test: 'Controleer onder elke wolk of het een bloem verstopt voordat je nectar verzamelt.  '
       courseD_bee_debugging3: Deze blokken blijven een probleem. Herstel de fout(en) om alle nektar te verzamelen en alle honing te maken.
       courseD_bee_nestedLoops3: Verzamel alle nectar van elke bloem. Gebruik een geneste lus. 
@@ -1770,6 +1845,7 @@ nl:
       courseD_bounce_events12: Maak je eigen Stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
       courseD_bounce_events1s: Plak een blok aan de "als pijltje naar links" gebeurtenis en klik op "Start" om de speler naar het net te bewegen.
       courseD_bounce_events1s_2018: Plak een blok aan de "als pijltje naar links" gebeurtenis en klik op "Start" om de speler naar het net te bewegen.
+      courseD_bounce_events1s_2019: Plak een blok aan de "als pijltje naar links" gebeurtenis en klik op "Start" om de speler naar het net te bewegen.
       courseD_bounce_events2: Plak een blok aan de "als pijltje naar rechts"  en "als pijltje naar links" blokken en druk op 'Uitvoeren'. Verplaats het batje om de doelen te bereiken.
       courseD_bounce_events3: Probeer nu iets gelijks met "als pijltje naar boven" blok. Verplaats het badje met behulp van de pijl naar boven om het doel te bereiken.
       courseD_bounce_events3s: Probeer nu iets gelijks met "als pijltje naar boven" blok. Verplaats het badje met behulp van de pijl naar boven om het doel te bereiken.
@@ -1805,6 +1881,7 @@ nl:
       courseE_artist_ramp8_2_2018: Teken nu een vorm met de artiest!
       courseE_bee_concept1: Verzamel alle nectar van elke bloem. Gebruik een geneste lus. 
       courseE_bee_concept1_2018: Verzamel alle nectar van elke bloem. Gebruik een geneste lus. 
+      courseE_bee_concept1_2019: Verzamel alle nectar van elke bloem. Gebruik een geneste lus. 
       courseE_bee_functions1: Verzamel alle nectar van iedere bloem.
       courseE_bee_functions1_2018: Verzamel alle nectar van iedere bloem.
       courseE_bee_functions3: Functies zijn blokken code die een taak uitvoeren. Gebruik de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om het gewenste totaal te krijgen.

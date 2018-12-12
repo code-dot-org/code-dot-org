@@ -65,10 +65,10 @@ sk:
         okuliarov s rámami v dĺžke 115 pixelov na každej strane.
       2-3 Artist Functions 3: Uprav funkciu pre nakreslenie štvorca s dĺžkou strany
         115 pre nakreslenie väčších okuliarov.
-      2-3 Artist Functions 4 a: Teraz vložme funckiu dovnútra slučky a pridajme extra
-        zabočenia pre nakreslenie týchto troch štvorcov.
+      2-3 Artist Functions 4 a: Teraz vložme funckiu dovnútra cyklu a pridajme ďalšiu
+        otočku, aby sme nakreslili tieto tri štvorce.
       2-3 Artist Functions 4: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
-      2-3 Artist Loops New 10: A teraz pripojme niekoľko Véčiek spolu do slučky.
+      2-3 Artist Loops New 10: A teraz spojme niekoľko Véčiek spolu do cyklu.
       2-3 Artist Loops New 12: 'Nakresli kosoštvorec so stranami dlhými 100 pixelov.
 
 '
@@ -128,8 +128,8 @@ sk:
       2-3 Bee Loops 3A: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       2-3 Bee Loops 3B: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
-      2-3 Bee Loops 4A: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky
-        sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo
+      2-3 Bee Loops 4A: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly sú
+        tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s čo
         najmenším počtom blokov."
       2-3 Bee Loops 8: "Tieto fialové kvetinky majú pri každom spustení tejto úlohy
         iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie
@@ -142,15 +142,15 @@ sk:
         pre zníženie množstva kódu, ktoré potrebujete."
       4-5 Artist 10: Vyskúšaj kód stlačením "Spustiť". Potom to opakuj viackrát pre
         dokončenie kreslenia. Farby sa budú vždy odlišovať.
-      4-5 Artist 5: Čím môžeme nahradiť "???" tak, aby bolo isté, že zomík dokončí
-        túto kresbu použitím poskytnutej slučky?
+      4-5 Artist 5: Čím môžeme nahradiť "???" ak chceme, aby zombík dokončil túto
+        kresbu použitím poskytnutého opakovacieho cyklu?
       4-5 Artist 6: Tento rovnostranný trojuholník má uhly 60, 60 a 60 stupňov Každá
         strana je 200 pixelov dlhá. Dokončite kresbu.
       4-5 Artist Free Draw 1: Voľná ruka v kreslení! Nakreslite čo len chcete.
       4-5 Artist Patterns 1: |-
-        Nakreslite tento štvorec použitím slučky.
+        Nakresli tento štvorec použitím cyklu.
 
-        Každá strana je 20 pixelov dlhá.
+        Každá strana je dlhá 20 pixelov.
       4-5 Artist Patterns 12: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava
         namiesto doprava, čo sa stane? \n\nViete to celé zopakovať pre nakreslenie
         tejto vlny?"
@@ -158,10 +158,10 @@ sk:
         tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť o 90 stupňov!
         \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov
         spraví dodatočný štvrťkruh pre rohy?"
-      4-5 Artist Patterns 3: A poďme o level hlbšie? Vložili sme celý blok s kódom
-        do ďaľšej slučky, ale pre nakreslenie ďaľšej čiary potrebujete dostať umelca
-        naspäť na miesto. Ktorý z týchto blokov s kódom treba dať na koniec najkrajnejšej
-        slučky pre nakreslenie celej mriežky?
+      4-5 Artist Patterns 3: A poďme o level hlbšie! Vložili sme celý blok s kódom
+        do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať
+        na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
+        slučky, aby nakreslil celú mriežku?
       4-5 Artist Patterns 8: Použite slučku pre nakreslenie šesťuholníka so stranou
         40 pixelov a uhlami 60 stupňov.
       4-5 Artist Patterns 9: "A teraz zopakujte tento kód 3x a nakreslite celý riadok.
@@ -254,6 +254,240 @@ sk:
 
         Keď skončíš, môžeš "Zdieľať" tvoju prácu s kamarátmi cez telefón, alebo s linkom. Vytvor si vlastný účet, s ktorým budeš pokračovať v budovaní v App Labe!
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
+      Dance Party 1-validated: "**Skús predvídať:** Tu je postavička s menom `alien1`!
+        \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party 1-validated_2019: "**Skús predvídať:** Tu je postavička s menom
+        `alien1`! \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party 1-validated_simple: "**Skús predvídať:** Tu je postavička s menom
+        `alien1`! \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party 1: "**Skús predvídať:** Tu je postavička s menom `alien1`! Čo myslíš,
+        že sa stane, keď na neho klikneš?"
+      Dance Party 2 Validated: Mimozemšťan bol hrdý na jeho tanečné schopnosti na
+        Marse, ale teraz sa vie hýbať iba zo strany na stranu. Vieš zmeniť správanie
+        v bloku `začne` tak, aby sa začal točiť?
+      Dance Party 2: "Mimozemšťan bol hrdý na jeho tanečné schopnosti na Marse, ale
+        teraz sa vie hýbať iba zo strany na stranu.\n\nVieš zmeniť správanie v bloku
+        <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value
+        name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title
+        name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml>
+        tak, aby sa začal točiť?  "
+      Dance Party 2_2019: "Mimozemšťan bol hrdý na jeho tanečné schopnosti na Marse,
+        ale teraz sa vie hýbať iba zo strany na stranu.\n\nVieš zmeniť správanie v
+        bloku <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value
+        name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title
+        name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml>
+        tak, aby sa začal točiť?  "
+      Dance Party 2_simple: "MImozemšťan sa vie hýbať iba zo strany na stranu.\n\nZmeň
+        správanie v bloku <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
+        \     <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n
+        \         <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n
+        \   </block></xml>, aby sa mimozemšťan začal točiť.  "
+      Dance Party 3 - Validated: "Vytvor novú postavičku s menom `alien2`. \n\nPrikáž
+        mu zmeniť tanečný krok, keď na neho klikneš.  "
+      Dance Party 3: "Vytvor novú postavičku s menom `alien2`. \n\nPrikáž mu zmeniť
+        tanečný krok, keď na neho klikneš.  "
+      Dance Party 3_2019: "Vytvor novú postavičku s menom `alien2`. \n\nPrikáž mu
+        zmeniť tanečný krok, keď na neho klikneš.  "
+      Dance Party 3_simple: |-
+        Vytvor novú postavu nazvanú `alien2`.
+
+        Keď na ňu klikneš, mala by niečo spraviť.
+      Dance Party 4 Validated: "Vytvor tretiu postavičku nazvanú `alien3`. \n\nVieš
+        nastaviť všetkých mimozemšťanov tak, aby boli v jednej línií? Začína mimozemská
+        tanečná párty!"
+      Dance Party 4: "Vytvor tretiu postavičku nazvanú `alien3`. \n\nVieš nastaviť
+        všetkých mimozemšťanov tak, aby boli v jednej línií? Začína mimozemská tanečná
+        párty!"
+      Dance Party 4_2019: "Vytvor tretiu postavičku nazvanú `alien3`. \n\nVieš nastaviť
+        všetkých mimozemšťanov tak, aby boli v jednej línií? Začína mimozemská tanečná
+        párty!"
+      Dance Party 4_simple: "Vytvor tretiu postavičku nazvanú `alien3`. \n\nUmiestni
+        všetkých mimozemšťanov do jednej línie. Začína mimozemská tanečná párty!"
+      Dance Party 5 - Validated: "V tomto programe môžme zmeniť rôzne veci keď klikneš
+        na postavičky. Zmeňme ich farbu! \n\n**Pridaj kód, ktorý zmení farbu každého
+        mimozemšťana, keď na neho klikneš.**"
+      Dance Party 5: "V tomto programe môžme zmeniť rôzne veci keď klikneš na postavičky.
+        Zmeňme ich farbu! \n\n**Pridaj kód, ktorý zmení farbu každého mimozemšťana,
+        keď na neho klikneš.**"
+      Dance Party 5_2019: "V tomto programe môžme zmeniť rôzne veci keď klikneš na
+        postavičky. Zmeňme ich farbu! \n\n**Pridaj kód, ktorý zmení farbu každého
+        mimozemšťana, keď na neho klikneš.**"
+      Dance Party 5_simple: |-
+        V tomto programe môžeš zmeniť rôzne veci.
+
+        Pridaj kód, ktorý zmení farbu každého mimozemšťana, keď na neho klikneš.
+      Dance Party 6 - Validated: |-
+        Títo mimozemšťania tu pobehujú ako zbláznení!
+
+        Použi blok <xml><block type="gamelab_removeAllBehaviors" inline="true">
+              <value name="SPRITE"/>
+            </block></xml>, aby si zastavil mimozemšťana kliknutím na neho.
+      Dance Party 6: |-
+        Títo mimozemšťania tu pobehujú ako zbláznení!
+
+        Použi blok <xml><block type="gamelab_removeAllBehaviors" inline="true">
+              <value name="SPRITE"/>
+            </block></xml>, aby si zastavil mimozemšťana kliknutím na neho.
+      Dance Party 6_2019: |-
+        Títo mimozemšťania tu pobehujú ako zbláznení!
+
+        Použi blok <xml><block type="gamelab_removeAllBehaviors" inline="true">
+              <value name="SPRITE"/>
+            </block></xml>, aby si zastavil mimozemšťana kliknutím na neho.
+      Dance Party 6_simple: "Títo mimozemšťania sú príliš rušní! \n\nPouži blok <xml><block
+        type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n
+        \   </block></xml>, aby si zastavil mimozemšťana kliknutím na neho."
+      Dance Party 7 - Validated: "Na koniec, pridaj zvonček nazvaný `myBell`. \n\nKeď
+        na neho klikneš, nech donúti všetkých mimozemšťanov robiť rovnaký tanečný
+        krok!"
+      Dance Party 7: "Na koniec, pridaj zvonček nazvaný `myBell`. \n\nKeď na neho
+        klikneš, nech donúti všetkých mimozemšťanov robiť rovnaký tanečný krok!"
+      Dance Party 7_2019: "Na koniec, pridaj zvonček nazvaný `myBell`. \n\nKeď na
+        neho klikneš, nech donúti všetkých mimozemšťanov robiť rovnaký tanečný krok!"
+      Dance Party 7_simple: "Na koniec, pridaj zvonček nazvaný `myBell`. \n\nKeď na
+        neho klikneš, nech donúti všetkých mimozemšťanov robiť rovnaký tanečný krok!"
+      Dance Party Freeplay: |-
+        Teraz vytvor svoju vlastnú mimozemskú tanečnú párty! Hľadáš inšpiráciu? Skús tieto nápady:
+        * Vytvor dva zvončeky a prikáž mimozemšťanom robiť odlišný krok pre každý z nich
+        * Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
+      Dance Party Freeplay_2019: |-
+        Teraz vytvor svoju vlastnú mimozemskú tanečnú párty! Hľadáš inšpiráciu? Skús tieto nápady:
+        * Vytvor dva zvončeky a prikáž mimozemšťanom robiť odlišný krok pre každý z nich
+        * Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
+      Dance Party Freeplay_simple: |-
+        Teraz vytvor mimozemskú tanečnú párty! Tu je zopár nápadov:
+        * Vytvor dva zvončeky a prikáž mimozemšťanom robiť odlišný krok pre každý z nich
+        * Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
+      Dance Party Predict: "**Skús predvídať:** Tu je postavička s menom `alien1`!
+        \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party Predict_2019: "**Skús predvídať:** Tu je postavička s menom `alien1`!
+        \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party Predict_simple: "**Čo myslíš?** \n\nTu je postavička s menom `alien1`!
+        \  \n\nKeď na neho klikneš, čo spraví?  "
+      Dance_Events_Example_Video: Použi udalosti, aby bola tvoja tanečná párty interaktívna!
+      Dance_Party_01: |-
+        *Spravme si tanečnú párty!*
+
+        Presuň blok 'vytvor' na pracovnú plochu a pripoj ho do vnútra bloku 'nastavenie', pre vytvorenie tvojho prvého tanečníka.
+
+        * *Ak chceš viac informácií, alebo extra výzvy, môžeš kliknúť na žiarovku vľavo.*
+      Dance_Party_01_low: |-
+        *Spravme si tanečnú párty!*
+
+        Presuň blok 'vytvor' na pracovnú plochu a pripoj ho do vnútra bloku 'nastavenie', pre vytvorenie tvojho prvého tanečníka.
+
+        * *Ak chceš viac informácií, alebo extra výzvy, môžeš kliknúť na žiarovku vľavo.*
+      Dance_Party_02: |-
+        Roztancujme tohto soba!
+
+        Presuň blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> na pracovnú plochu. Napoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktoch"</title></block></xml>. Tvoj tanečník by mal predviesť nový krok po štyroch taktoch..
+
+
+        **Takty** sa v hudbe používajú na počítanie času. V tomto cvičení sa takt skladá zo štyroch dôb.
+      Dance_Party_03: "*Teraz sme to roztočili!* \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"taktoch\"</title></block></xml>
+        na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
+      Dance_Party_04: |-
+        *Tento tanec potrebuje svetlo!*
+
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
+      Dance_Party_05: |-
+        Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
+
+        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodne)` prikáže tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
+      Dance_Party_06: |-
+        *Potrebujeme viac tanečníkov!*
+
+        Vytvor záložného tanečníka s menom 'backup_dancer1', ktorý bude tancovať s mačkou.
+      Dance_Party_08: |-
+        Každý tanečník má súbor _vlastností_, ktoré kontrolujú jeho vzhľad.
+
+        Dojem toho, že je tanečník v pozadí, môžeš dosiahnuť tak, že zmenšíš jeho _veľkosť_. Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
+      Dance_Party_09: |-
+        Tanečníci majú vlastnosť "sfarbenie", ktorá im pridá vrstvu farby. Skús zmeniť sfarbenie niektorého zo svojich tanečníkov.
+        * Sfarbenie zmieša farbu ktorú vyberieš s farbami tvojich tanečníkov.
+      Dance_Party_10: |-
+        Teraz vieme ako zmeniť vlastnosti tanečníkov. Tiež môžme nastaviť tieto vlastnosti tak, aby automaticky reagovali použitím tohto bloku:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_unicorn</title>
+        <title name="PROPERTY">"výška"</title>
+        <title name="RANGE">"basy"</title>
+        </block></xml>
+
+        Tento program využíva intenzitu "basov" (nízke tóny) v hudbe na kontrolu výšky jedného z tanečníkov. Vieš nastaviť aj druhého tanečníka tak, aby reagoval na hudbu?
+      Dance_Party_11.5_test: "Pozri na tento blok:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačica\"</title>\n
+        \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
+        vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
+        kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
+      Dance_Party_11: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožňuje spustiť kód v momente, keď je stlačená šípka hore.
+
+        Môžeš zmeniť tanečný krok, upraviť vlastnosti tanečníkov, ale spraviť iba jeden rýchly krok. Buď kreatívny a všimni si nové bloky!
+      Dance_Party_11_5: "Pozri na tento blok:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"Kačica\"</title>\n
+        \   <title name=\"LAYOUT\">\"kruh\"</title>\n  </block></xml>\n  \nTeraz môžeš
+        vytvoriť viacerých tanečníkov naraz!\n\nSkús použiť niektorý z blokov \"všetky
+        kačice\" na napísanie kódu, ktorý roztancuje všetky kačice spoločne."
+      Dance_Party_11b: |-
+        Je čas na tanečný súboj! Mačka spraví dab, keď stlačíš šípku vľavo. Donúť Robota spraviť "špagát" pri stlačení šípky vpravo a "tlesk" pri stlačení šípky hore.
+
+        **S použitím šípiek donúť Robota tancovať špagát-tlesk-špagát-tlesk ako najrýchlejšie vieš!**
+      Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdielať s kamarátmi.
+      Dance_Party_3: "*Teraz sme to roztočili!* \n\nPridaj druhý blok <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"taktoch\"</title></block></xml>
+        na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
+      Dance_Party_4: |-
+        *Tento tanec potrebuje svetlo!*
+
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
+      Dance_Party_8: Každý tanečník má súbor _vlastností_, ktoré kontrolujú jeho vzhľad.
+        Dojem toho, že je tanečník v pozadí, môžeš dosiahnuť tak, že zmenšíš jeho
+        _veľkosť_. Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
+      Dance_Party_extras_battle: |-
+        # Tanečné skupiny
+
+        Máme tu tanečný súboj medzi dvomi tanečnými skupinami. Šípky ovládajú jedného z tanečníkov a klávesy "w,a,s,d" ovládajú druhého. Daj si tanečný súboj s kamarátmi a potom skús vylepšiť tento súboj.
+
+        * Pridaj viac kláves na ovládanie tanečníkov
+        * Uprav tanečníkov na pozadí tak, aby aj oni reagovali na stlačenia kláves
+        * Vymeň tanečníkov každé 4 takty nastavením ich viditeľnosti
+      Dance_Party_extras_every_beat: |-
+        # Štvrťové noty
+
+        Väčšina našich tanečníkov používala celé takty, ale každý z taktov sa skladá zo 4 štvrťových dôb. Tento tanec využíva `každé 0.25 takty` na to, aby tanečník tlieskal na každú štvťovú dobu.
+
+        Tento tanec využíva tiež blok _podmienka_ na kontrolovanie kedy môže blok `každé 0.25 takty` zmeniť tanec. Skús zmeniť čísla v bloku s podmienkou, aby si videl ako to ovplyvní tanec.
+
+        * Experimentuj s iným dĺžkami dôb (ako 0.5 pre polovičné doby, alebo 0.125 pre osminové doby).
+        * Pridaj nejaké `po` udalosti.
+        * Zmeň "takty" na "sekundy" a skús načasovať svoj tanec týmto spôsobom.
+      Dance_Party_extras_layout: |-
+        # Všetci do formácie!
+
+        Pozri sa na tento tanec, ktorý využíva blok `rozmiestni` na zmenu formácie tanečníkov na pozadí v priebehu tanca. Vyskúšaj niektorý z týchto nápadov na ďalšie vylepšenie:
+
+        * Vytvor druhú skupinu tanečníkov s iným rozmiestnením
+        * Zmeň rozmiestnenie pri stlačení tlačítka
+        * Zmeň vlastnosti pri zmene formácie
+      Dance_Party_extras_on_beat: |-
+        # Basy, Stredy a Výšky
+
+        Tento tanec používa udalosti s "vrcholmi" na spustenie kódu v momente, keď rôzne časti pesničky znejú hlasnejšie. Skús sa pohrať s rôznymi pesničkami, aby si videl ako menia priebeh tanca.
+      Dance_Party_extras_speed: |-
+        # Zrýchli, spomaľ
+
+        Tento finálny tanec využíva blok `nastav rýchlosť` na kontrolovanie, ako rýchlo sa tanečníci hýbu. Skús experimentovať s rôznymi rýchlosťami v rôznych momentoch pesničky. Neváhaj ďalej upravovať tento tanec, alebo sa vráť na ktorýkoľvek predchádzajúci tanec a sprav ho ešte viac cool.
+      Dance_Party_extras_visible: |-
+        # Kam zmizli?
+
+        Tento tanec ukazuje a skrýva dve rôzne skupiny tanečníkov. Pozri si to a potom si uprav tanec podľa vlastného vkusu.
+
+        * Pridaj ďalšiu skupinu tanečníkov
+        * Ukáž a skry tanečníkov so stlačením šípky
+        * Skry všetkých tanečníkov a nastav nejaký zaujímavý efekt pozadia
       Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom \"postav
         most\". Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
         \r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\"
@@ -266,6 +500,31 @@ sk:
         id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
+      HOC Dance 3_draft: |-
+        *Tento tanec potrebuje svetlo!*
+
+        Vo svojich nástrojoch si všimni nový blok, ktorý pridáva efekt na pozadie za tanečníkmi. Sleduj ako sa efekty menia V čase podľa hudby!
+      HOC Dance 4_draft: |-
+        Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
+
+        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodne)` prikáže tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
+      HOC Dance 5_draft: |-
+        *Potrebujeme viac tanečníkov!*
+
+        Vytvor záložného tanečníka s menom 'backup_dancer1', ktorý bude tancovať s mačkou.
+      HOC Dance 6_draft: Každý tanečník má súbor _vlastností_, ktoré kontrolujú jeho
+        vzhľad. Dojem toho, že je tanečník v pozadí, môžeš dosiahnuť tak, že zmenšíš
+        jeho _veľkosť_. Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
+      HOC Dance 9_draft: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožňuje spustiť kód v momente, keď je stlačená šípka hore.
+
+        Môžeš zmeniť tanečný krok, upraviť vlastnosti tanečníkov, ale spraviť iba jeden rýchly krok. Buď kreatívny a všimni si nové bloky!
+      HOC Dance Freeplay: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdielať s kamarátmi.
+      HOC Dance Freeplay_draft: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý
+        môžeš zdielať s kamarátmi.
+      HOC Dance Predraw: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdielať s kamarátmi.
       MC Agent Freeplay: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte
         tento svet."
       MC_HOC_2017 Agent Test: |-
@@ -371,9 +630,9 @@ sk:
         ti môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka
         [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Cykly nie sú jediným spôsobom, ako opakovať kód. \r\n\r\nTu
-        sme ti poskytli funkciu nazývanú \"odstráň kaktusy\", ktorá za teba urobí
-        ťažkú prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch
-        blokov \"odstráň kaktusy\" uvoľni cestu k oranžovému políčku. "
+        sme ti poskytli funkciu nazvanú \"odstráň kaktusy\", ktorá za teba urobí ťažkú
+        prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch blokov
+        \"odstráň kaktusy\" uvoľni cestu k oranžovému políčku. "
       MC_HOC_2017_07a_Kiki: Teraz uprav tento cyklus, aby si pomohol agentovi uvoľniť
         cestu k oranžovému políčku.
       MC_HOC_2017_08_Cole: "Teraz namiesto zničenia a následného pohybu budeš musieť
@@ -444,6 +703,8 @@ sk:
         ku ovci.
       Overworld Move to Sheep_2018: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
+      Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
+        dostal ku ovci.
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
         hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
@@ -456,10 +717,10 @@ sk:
       courseE_bee_functions3_2018: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi
         funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku
         aby si mal ideálny počet blokov.
-      courseE_farmer_concept4: A poďme o level hlbšie? Vložili sme celý blok s kódom
-        do ďaľšej slučky, ale pre nakreslenie ďaľšej čiary potrebujete dostať umelca
-        naspäť na miesto. Ktorý z týchto blokov s kódom treba dať na koniec najkrajnejšej
-        slučky pre nakreslenie celej mriežky?
+      courseE_farmer_concept4: A poďme o level hlbšie! Vložili sme celý blok s kódom
+        do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať
+        na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
+        slučky, aby nakreslil celú mriežku?
       courseF_bee_for_challenge2: Vyriešte túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyriešte túto úlohu použitím čo najmenšieho
@@ -669,7 +930,7 @@ sk:
       frozen square snowflake_test: "Zmeň kód z predchádzajúcej úlohy tak, aby si
         vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky
         o ** 36 stupňov **."
-      grade2_MakeDogTag_8: A teraz pripojme niekoľko Véčiek spolu do slučky.
+      grade2_MakeDogTag_8: A teraz spojme niekoľko Véčiek spolu do cyklu.
       grade2_PuppyLoops_10: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
@@ -724,8 +985,8 @@ sk:
       grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
-      grade3_Loops_6: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky
-        sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo
+      grade3_Loops_6: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly sú
+        tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s čo
         najmenším počtom blokov."
       grade3_Loops_7: |-
         Tieto kvetinky vyzerajú lákavo!
@@ -809,9 +1070,9 @@ sk:
       level 'grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       level 'grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého
         nektáru a vyrobenie všetkého medu.
-      level 'grade3_Loops_6: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky
-        sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo
-        najmenším počtom blokov."
+      level 'grade3_Loops_6: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly
+        sú tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s
+        čo najmenším počtom blokov."
       level 'grade3_Loops_7: |-
         Tieto kvetinky vyzerajú lákavo!
 

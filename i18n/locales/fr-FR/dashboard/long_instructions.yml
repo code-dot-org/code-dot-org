@@ -8751,11 +8751,54 @@ fr:
         </block></xml>
         
         Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
-      Dance_Party_11.5: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
+      Dance_Party_11.5_test: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
       Dance_Party_11: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
+      Dance_Party_11_5: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
       Dance_Party_11b: |-
         Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous appuyez sur la touche fléchée droite.
       Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
+      Dance_Party_extras_battle: |-
+        # Équipes de danse
+        
+        Voici un concours de danse entre deux équipes. Les touches fléchées contrôlent l’un des danseurs et les touches « w,a,s,d » contrôlent l’autre. Avoir une danse avec un ami, puis essayer d'améliorer cette danse.
+        
+        * Ajouter plus de touches pour contrôler les danses
+        * Faire que les danseurs de soutien répondent également lorsque les touches sont enfoncées
+        * Alternez le danseur toutes les 4 mesures en définissant sa visibilité
+      Dance_Party_extras_every_beat: |-
+        # Noires
+        
+        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise « toutes les 0,25 mesures » pour faire applaudir le danseur sur chaque noire.
+        
+        Cette danse utilise également a _conditional_ block pour contrôler quand le bloc « toutes les 0,25 mesures » peut changer la danse. Essayez de changer les nombres dans le bloc conditionnel pour voir comment cela change la danse.
+        
+        * Expérimentez avec d'autres durées de notes (tel que 0,5 pour une blanche ou 0,125 pour une croche).
+        * Ajoutez certains événements « après la mesure ».
+        * Changez les « mesures » en « secondes » et essayez de chronométrer vos danses de cette façon.
+      Dance_Party_extras_layout: |-
+        # Soyons informés !
+        
+        Découvrez cette danse qui utilise le bloc « mise en page » pour modifier la formation des danseurs de secours pendant de la danse. Essayez l’une de ces idées pour l’étendre :
+        
+        * Créez un deuxième groupe de danseurs dans une mise en page différente
+        * Changez la mise en page quand une touche est enfoncée
+        * Modifier une propriété lorsque les danseurs changent de formation
+      Dance_Party_extras_on_beat: |-
+        # grave, médium et aigu
+        
+        Cette danse utilise des événements de « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essayez de bricoler différentes chansons pour voir comment elles changent la danse.
+      Dance_Party_extras_speed: |-
+        # Accélérez, ralentissez
+        
+        Cette danse finale utilise le bloc « vitesse définie » pour contrôler la rapidité avec laquelle chaque danseur se déplace. Essayez d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésitez pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus cool.
+      Dance_Party_extras_visible: |-
+        # Où iraient-ils ?
+        
+        Cette danse montre et cache deux groupes de danseurs différents. Jetez-y un coup d'œil, puis essayez d'ajouter votre propre style.
+        
+        * Ajoutez un autre groupe de danseurs
+        * Affichez et masquez les danseurs à l'aide des touches fléchées
+        * Cachez tous les danseurs et passez à un effet d’arrière plan excitant
       Escape Room Example: |-
         # Room Escape\\r
         \\r
@@ -8810,6 +8853,9 @@ fr:
         
         Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
       HOC Dance 9_draft: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
+      HOC Dance Freeplay: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
+      HOC Dance Freeplay_draft: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
+      HOC Dance Predraw: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Free-Play Inspiration:** You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n\\r\nNotice:\nWe've used the `set alpha` block to make the \"petals\" fade toward the outside."
       InspirationalArtwork: "You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n"
       InspirationalArtwork_2018: "You've now learned everything\nyou need to know to make a pattern like this! \\r\n\\r\nIf this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\\r\n"
@@ -8971,6 +9017,7 @@ fr:
       New Minecraft Hero Project: "**Jeu libre :** à votre tour ! Utilisez le code de l'Agent pour explorer ce monde."
       Overworld Move to Sheep: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
       Overworld Move to Sheep_2018: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
+      Overworld Move to Sheep_2019: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
       PS - test - pixelation: |-
         # Do This\\r
         \\r
@@ -11723,6 +11770,7 @@ fr:
         screen to complete this challenge.
       courseC_artist_loop1: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loop1_2018: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
+      courseC_artist_loop1_2019: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loops1a: "**Free Play:** Let's build something\nbigger, one step at a time!  \\r\n\\r\nUse the `jump to 200 over 200 down` to\nget the artist to the center of the play area, then use the `draw a sticker`\nblock to make a bird appear.  \\r\n\\r\n---\\r\n\\r\nPress \"Finish\" when you\nare happy with what you've made."
       courseC_artist_loops2: |-
         Now that the zombie knows his
@@ -11733,6 +11781,7 @@ fr:
         the next hole
       courseC_artist_loops3a: "So much fun!  \\r\n\\r\nNow, add\na bat sticker right after the bird to make an image like the one below.\\r\n___\\r\n\\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "So much fun!  \\r\n\\r\nNow, add\na bat sticker right after the bird to make an image like the one below.\\r\n___\\r\n\\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2019: "So much fun!  \\r\n\\r\nNow, add\na bat sticker right after the bird to make an image like the one below.\\r\n___\\r\n\\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a: |-
         Edit your code so that you jump
         forward by 75 pixels between stamping the bird and the bat. In this puzzle,
@@ -11752,8 +11801,14 @@ fr:
         one or both of the stickers with a different creature?\\r
         ___\\r
         ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        What happens when you replace
+        one or both of the stickers with a different creature?\\r
+        ___\\r
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b: "What happens when you `move forward`\nthen `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \\r\n-\nTry using the `set pattern` block before you start your loop to make a work\nof art!\\r\n___\\r\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops5b_2018: "What happens when you `move forward`\nthen `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \\r\n-\nTry using the `set pattern` block before you start your loop to make a work\nof art!\\r\n___\\r\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2019: "What happens when you `move forward`\nthen `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \\r\n-\nTry using the `set pattern` block before you start your loop to make a work\nof art!\\r\n___\\r\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops6: "What should the zombie put inside\nof the garden?  \\r\n\\r\nDraw anything you'd like inside of the fence.  Would\nyou like some flowers or a few bugs? \\r\n*(See hints for more suggestions.)*\\r\n\\r\n\\r\n"
       courseC_artist_loops6a: |-
         Add a third sticker anywhere
@@ -11765,6 +11820,15 @@ fr:
         \\r
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2018: |-
+        Add a third sticker anywhere
+        in the loop that you want! What does it look like now?\\r
+        - Change the pattern
+        on your brush for more variety!\\r
+        \\r
+        ___\\r
+        \\r
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2019: |-
         Add a third sticker anywhere
         in the loop that you want! What does it look like now?\\r
         - Change the pattern
@@ -11801,6 +11865,20 @@ fr:
         degree turn.\\r
         \\r
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2019: |-
+        Try changing the `repeat` loop
+        to run a different number of times.  How far do you have to turn to go around
+        in a full circle?\\r
+        - Try changing how many times you spin\\r
+          - Try a 60
+        degree turn for 6 times around\\r
+          - Try a 20 degree turn for 18 times around\\r
+        ___\\r
+        This
+        image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20
+        degree turn.\\r
+        \\r
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a: |-
         Now make something on your own.  What
         happens when you make two separate circles of different stickers?\\r
@@ -11810,6 +11888,14 @@ fr:
         \\r
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loops8a_2018: |-
+        Now make something on your own.  What
+        happens when you make two separate circles of different stickers?\\r
+        ___\\r
+        Need
+        an idea? Try making a design like this one.\\r
+        \\r
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2019: |-
         Now make something on your own.  What
         happens when you make two separate circles of different stickers?\\r
         ___\\r
@@ -11827,6 +11913,11 @@ fr:
         `repeat` block and loop it **6** times.\\r
         - Notice that we have added a 60
         degree turn at the end of each loop to get a full rotation.
+      courseC_artist_loopsPre1a_2019: |-
+        Now, put this code into  a
+        `repeat` block and loop it **6** times.\\r
+        - Notice that we have added a 60
+        degree turn at the end of each loop to get a full rotation.
       courseC_collector_loops_challenge2: |-
         *"Let's hunt for
         treasure - using loops!"*\\r
@@ -11839,35 +11930,57 @@ fr:
         \\r
         Help the collector by debugging this code.
         Get all of the treasure!
+      courseC_collector_loops_challenge2_2019: |-
+        *"Let's hunt for
+        treasure - using loops!"*\\r
+        \\r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       courseC_flappy_events1: "Attach the `flap a normal amount`\nblock to the `when click` event, then press \"Run\".   \\r\n\\r\n---\\r\n\\r\nClick\nor tap on the play space to move Flappy to the target."
       courseC_flappy_events10: "Create your own Flappy game!\n\\r\n\\r\nYou can change the visuals and the rules...even the gravity! \\r\nWhen\nyou're done, click \"Finish\" to share with friends on their phones."
       courseC_flappy_events10_2018: "Create your own Flappy game!\n\\r\n\\r\nYou can change the visuals and the rules...even the gravity! \\r\nWhen\nyou're done, click \"Finish\" to share with friends on their phones."
+      courseC_flappy_events10_2019: "Create your own Flappy game!\n\\r\n\\r\nYou can change the visuals and the rules...even the gravity! \\r\nWhen\nyou're done, click \"Finish\" to share with friends on their phones."
       courseC_flappy_events1_2018: "Attach the `flap a normal amount`\nblock to the `when click` event, then press \"Run\".   \\r\n\\r\n---\\r\n\\r\nClick\nor tap on the play space to move Flappy to the target."
+      courseC_flappy_events1_2019: "Attach the `flap a normal amount`\nblock to the `when click` event, then press \"Run\".   \\r\n\\r\n---\\r\n\\r\nClick\nor tap on the play space to move Flappy to the target."
       courseC_flappy_events2: "The `when run` event allows you\nto run code as soon as your game starts.  \\r\n\\r\nTry adding a block that\nsets the level speed when the \"Run\" button is pressed. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and flap to the target to continue."
       courseC_flappy_events2_2018: "The `when run` event allows you\nto run code as soon as your game starts.  \\r\n\\r\nTry adding a block that\nsets the level speed when the \"Run\" button is pressed. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and flap to the target to continue."
+      courseC_flappy_events2_2019: "The `when run` event allows you\nto run code as soon as your game starts.  \\r\n\\r\nTry adding a block that\nsets the level speed when the \"Run\" button is pressed. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and flap to the target to continue."
       courseC_flappy_events3: "Now we've added the ground.\n\\r\n\\r\nAttach the `end game` block to the `when hit the ground` event. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and crash the bird into the ground to continue."
       courseC_flappy_events3_2018: "Now we've added the ground.\n\\r\n\\r\nAttach the `end game` block to the `when hit the ground` event. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and crash the bird into the ground to continue."
+      courseC_flappy_events3_2019: "Now we've added the ground.\n\\r\n\\r\nAttach the `end game` block to the `when hit the ground` event. \\r\n\\r\n---\\r\n\\r\nPlay\nthe game and crash the bird into the ground to continue."
       courseC_flappy_events4: "Flappy will fly right through\nobstacles unless you write code to make him crash. \\r\n\\r\nAttach a block\nto the `when hit an obstacle` event so that the game ends when Flappy crashes\ninto the first set of pipes."
       courseC_flappy_events4_2018: "Flappy will fly right through\nobstacles unless you write code to make him crash. \\r\n\\r\nAttach a block\nto the `when hit an obstacle` event so that the game ends when Flappy crashes\ninto the first set of pipes."
+      courseC_flappy_events4_2019: "Flappy will fly right through\nobstacles unless you write code to make him crash. \\r\n\\r\nAttach a block\nto the `when hit an obstacle` event so that the game ends when Flappy crashes\ninto the first set of pipes."
       courseC_flappy_events5: "We've added a scoreboard to\ncount points when Flappy passes obstacles.  \\r\n\\r\nAdd a block to the `when\npass an obstacle` event that scores a point, then press \"Run\" to fly Flappy\nthrough the first set of pipes."
       courseC_flappy_events5_2018: "We've added a scoreboard to\ncount points when Flappy passes obstacles.  \\r\n\\r\nAdd a block to the `when\npass an obstacle` event that scores a point, then press \"Run\" to fly Flappy\nthrough the first set of pipes."
+      courseC_flappy_events5_2019: "We've added a scoreboard to\ncount points when Flappy passes obstacles.  \\r\n\\r\nAdd a block to the `when\npass an obstacle` event that scores a point, then press \"Run\" to fly Flappy\nthrough the first set of pipes."
       courseC_flappy_events6: "Click the down arrow inside of\nthe `flap a normal amount` block to pick a different flapping power.  \\r\n\\r\nSee\nif you can still score a point after making Flappy flap either a smaller or\nlarger amount each time you click."
       courseC_flappy_events6_2018: "Click the down arrow inside of\nthe `flap a normal amount` block to pick a different flapping power.  \\r\n\\r\nSee\nif you can still score a point after making Flappy flap either a smaller or\nlarger amount each time you click."
+      courseC_flappy_events6_2019: "Click the down arrow inside of\nthe `flap a normal amount` block to pick a different flapping power.  \\r\n\\r\nSee\nif you can still score a point after making Flappy flap either a smaller or\nlarger amount each time you click."
       courseC_flappy_events7: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
       courseC_flappy_events7_2018: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
+      courseC_flappy_events7_2019: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc à l'évènement `quand l'exécution commence`.
       courseC_flappy_events8: "You can set the background under\nany event, not just when the game starts. \\r\n\\r\nTry setting a **random**\nscene when other events happen...for example, when passing an obstacle."
       courseC_flappy_events8_2018: "You can set the background under\nany event, not just when the game starts. \\r\n\\r\nTry setting a **random**\nscene when other events happen...for example, when passing an obstacle."
+      courseC_flappy_events8_2019: "You can set the background under\nany event, not just when the game starts. \\r\n\\r\nTry setting a **random**\nscene when other events happen...for example, when passing an obstacle."
       courseC_flappy_events9: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_flappy_events9_2018: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
+      courseC_flappy_events9_2019: Pour varier un peu, au lieu de terminer le jeu lorsque Flappy rencontre un obstacle, essaie de remettre le score à 0.
       courseC_maze_loops2_predict1: "Suddenly, a magical block\nappears!  \\r\nWith the `repeat` block, you can loop code over and over.\\r\n\\r\nCan\nyou get the bird to the pig by creating a loop that uses only one `move forward`\nblock inside of a `repeat`?"
       courseC_maze_programming4: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseC_maze_programming4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
       courseC_maze_programming5: |-
         *"Follow this path to get me to
         the pig!"*\\r
         \\r
         Avoid the TNT.
       courseC_maze_programming5_2018: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseC_maze_programming5_2019: |-
         *"Follow this path to get me to
         the pig!"*\\r
         \\r
@@ -11886,6 +11999,12 @@ fr:
         _"Go BB-8!"_\\r
         \\r
         You are doing great! Keep it up!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\r
+        
+        _"Go BB-8!"_\\r
+        \\r
+        You are doing great! Keep it up!
       courseC_starWars_loops11: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep going, BB-8!"_\\r
@@ -11898,7 +12017,14 @@ fr:
         \\r
         You are almost there! This time, choose any
         path you like!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going, BB-8!"_\\r
+        \\r
+        You are almost there! This time, choose any
+        path you like!
       courseC_starWars_loops1_2018: "[](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Go get the scrap metal, BB-8\"_ \\r\n\\r\nUse five of the same blocks to\nget the scrap metal. Scrap metal glows like this: [](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "[](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Go get the scrap metal, BB-8\"_ \\r\n\\r\nUse five of the same blocks to\nget the scrap metal. Scrap metal glows like this: [](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops2: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_\\r
@@ -11906,6 +12032,12 @@ fr:
         To get all the scrap metal, try creating a loop that
         uses only one block inside of a `repeat` block.
       courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\\r
+        \\r
+        To get all the scrap metal, try creating a loop that
+        uses only one block inside of a `repeat` block.
+      courseC_starWars_loops2_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_\\r
         \\r
@@ -11923,6 +12055,12 @@ fr:
         \\r
         In this puzzle, two `repeat` loops will help
         you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\\r
+        \\r
+        In this puzzle, two `repeat` loops will help
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_\\r
@@ -11930,6 +12068,12 @@ fr:
         Loops even work with more than one block
         inside!  Can you loop this sequence?
       courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_\\r
+        \\r
+        Loops even work with more than one block
+        inside!  Can you loop this sequence?
+      courseC_starWars_loops6_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_\\r
         \\r
@@ -11949,6 +12093,13 @@ fr:
         Can you try to get all the scrap metal using just
         one loop? Try programming it all out then finding the repeating code to put
         in a loop.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\\r
+        \\r
+        Can you try to get all the scrap metal using just
+        one loop? Try programming it all out then finding the repeating code to put
+        in a loop.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\\r
@@ -11961,6 +12112,12 @@ fr:
         \\r
         **Challenge:** Combine ideas from the last
         few puzzles to complete this level.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\\r
+        \\r
+        **Challenge:** Combine ideas from the last
+        few puzzles to complete this level.
       courseC_starWars_loops9: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep going!"_\\r
@@ -11968,6 +12125,12 @@ fr:
         Use what you have learned to pick up all of the scrap
         metal!
       courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_\\r
+        \\r
+        Use what you have learned to pick up all of the scrap
+        metal!
+      courseC_starWars_loops9_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep going!"_\\r
         \\r
@@ -12009,6 +12172,7 @@ fr:
         it look like to draw two snowflakes on top of one another?\\r
         
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s try something new. This time, skate in a zig-zag.\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\nDraw a\nstair-step pattern that uses turns between 75 and 105 degrees -- but make\nsure that your left and right turns use the same angle.  \\r\n(You will see\nwhy later.)"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s try something new. This time, skate in a zig-zag.\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\nDraw a\nstair-step pattern that uses turns between 75 and 105 degrees -- but make\nsure that your left and right turns use the same angle.  \\r\n(You will see\nwhy later.)"
       courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Now let’s turn and go back the way we came.\"_\\r\n\\r\nTurn around 180 degrees\nand draw the exact same stair pattern again!  \\r\n\\r\n- The rest of this stage\nwill be easier if you put all of your code inside of a loop to make Elsa  draw,\nturn around 180 degrees, draw, then turn around 180 degrees again.\\r\n\\r\n<hr/>\\r\n\\r\nHere\nis an example of stairs that use a 76 degree turn:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_8_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
@@ -12050,6 +12214,12 @@ fr:
         big problems. Are you persistent enough to restore this logo back to normal?\\r
         \\r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2019: |-
+        There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\\r
+        \\r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge3: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -12063,6 +12233,12 @@ fr:
         - Both shapes have
         50 pixel sides
       courseD_artist_nestedLoops9_predict1_2018: |-
+        **Challenge:**
+        Can you figure out how to make a picture like this?\\r
+        \\r
+        - Both shapes have
+        50 pixel sides
+      courseD_artist_nestedLoops9_predict1_2019: |-
         **Challenge:**
         Can you figure out how to make a picture like this?\\r
         \\r
@@ -12086,6 +12262,15 @@ fr:
         - The *octagons* are made with **45 degree** turns.\\r
         - The *triangles*
         are made with **120 degree** turns.
+      courseD_artist_nestedLoops_challenge1_2019: |-
+        Can you figure
+        out how to make a picture like this?\\r
+        \\r
+        - Both shapes have **50 pixel
+        sides.**\\r
+        - The *octagons* are made with **45 degree** turns.\\r
+        - The *triangles*
+        are made with **120 degree** turns.
       courseD_artist_nestedLoops_challenge2: |-
         Can you figure
         out how to make a picture like this?\\r
@@ -12096,6 +12281,15 @@ fr:
         - The
         third inner loop should make a square.
       courseD_artist_nestedLoops_challenge2_2018: |-
+        Can you figure
+        out how to make a picture like this?\\r
+        \\r
+        - The first inner loop should
+        make an octagon.\\r
+        - The second inner loop should make a hexagon.\\r
+        - The
+        third inner loop should make a square.
+      courseD_artist_nestedLoops_challenge2_2019: |-
         Can you figure
         out how to make a picture like this?\\r
         \\r
@@ -12241,8 +12435,15 @@ fr:
         \\r
         Check to see if there's a flower under the cloud.
         If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_2019: |-
+        *"This cloud is
+        blocking my view!"*\\r
+        \\r
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
       courseD_bee_conditionals7_predict2: "Sometimes a cloud\ncovers a flower, sometimes it covers a honeycomb! \\r\n\\r\nUse the `if/else`\nblock to collect nectar at flowers and make honey at honeycomb. Remember:\nthere will only ever bee *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals7_predict2_2018: "Sometimes a cloud\ncovers a flower, sometimes it covers a honeycomb! \\r\n\\r\nUse the `if/else`\nblock to collect nectar at flowers and make honey at honeycomb. Remember:\nthere will only ever bee *one* honeycomb or *one* flower behind each cloud."
+      courseD_bee_conditionals7_predict2_2019: "Sometimes a cloud\ncovers a flower, sometimes it covers a honeycomb! \\r\n\\r\nUse the `if/else`\nblock to collect nectar at flowers and make honey at honeycomb. Remember:\nthere will only ever bee *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_nestedLoops5: 'Recueille tout le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.'
       courseD_bee_nestedLoops8: 'Recueille tout le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.'
       courseD_bee_nestedLoops8_2018: 'Recueille tout le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.'
@@ -12250,6 +12451,7 @@ fr:
       courseD_bounce_events1: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
       courseD_bounce_events10s: "There is now a hoop at the\ntop.  \\r\n\\r\nAttach the `score point` block to the `when ball in goal` event\nand the `score opponent point` block to the `when ball misses hand` event\nto make a game. \\r\n\\r\n---\\r\n\\r\nSee how many points you can score before\nyour opponent scores twice."
       courseD_bounce_events10s_2018: "There is now a hoop at the\ntop.  \\r\n\\r\nAttach the `score point` block to the `when ball in goal` event\nand the `score opponent point` block to the `when ball misses hand` event\nto make a game. \\r\n\\r\n---\\r\n\\r\nSee how many points you can score before\nyour opponent scores twice."
+      courseD_bounce_events10s_2019: "There is now a hoop at the\ntop.  \\r\n\\r\nAttach the `score point` block to the `when ball in goal` event\nand the `score opponent point` block to the `when ball misses hand` event\nto make a game. \\r\n\\r\n---\\r\n\\r\nSee how many points you can score before\nyour opponent scores twice."
       courseD_bounce_events11s: |-
         Now, you are in control of
         the ball!  Attach the `throw new ball` block in all of the places where the
@@ -12268,12 +12470,24 @@ fr:
         \\r
         See how many points you can score
         before your opponent scores twice!
+      courseD_bounce_events11s_2019: |-
+        Now, you are in control of
+        the ball!  Attach the `throw new ball` block in all of the places where the
+        game needs a new ball.\\r
+        \\r
+        ---\\r
+        \\r
+        See how many points you can score
+        before your opponent scores twice!
       courseD_bounce_events1s: "Get the ball to the hoop!   \\r\nAttach\na block to the `when left arrow` event and press \"Run\" to move the player\nto the net."
       courseD_bounce_events1s_2018: "Get the ball to the hoop!   \\r\nAttach\na block to the `when left arrow` event and press \"Run\" to move the player\nto the net."
+      courseD_bounce_events1s_2019: "Get the ball to the hoop!   \\r\nAttach\na block to the `when left arrow` event and press \"Run\" to move the player\nto the net."
       courseD_bounce_events6s: "Now the basket is at the top.  \\r\n\\r\nAttach\ncode to make the ball bounce when it hits the wall so you can solve this puzzle."
       courseD_bounce_events6s_2018: "Now the basket is at the top.  \\r\n\\r\nAttach\ncode to make the ball bounce when it hits the wall so you can solve this puzzle."
+      courseD_bounce_events6s_2019: "Now the basket is at the top.  \\r\n\\r\nAttach\ncode to make the ball bounce when it hits the wall so you can solve this puzzle."
       courseD_bounce_events7s: "Attach sound blocks to make\nthe net swish when you hit the basket and have the whistle blow when the ball\nmisses your hand.  \\r\n\\r\n---\\r\n\\r\nBounce the ball until it hits the finish\ntarget."
       courseD_bounce_events7s_2018: "Attach sound blocks to make\nthe net swish when you hit the basket and have the whistle blow when the ball\nmisses your hand.  \\r\n\\r\n---\\r\n\\r\nBounce the ball until it hits the finish\ntarget."
+      courseD_bounce_events7s_2019: "Attach sound blocks to make\nthe net swish when you hit the basket and have the whistle blow when the ball\nmisses your hand.  \\r\n\\r\n---\\r\n\\r\nBounce the ball until it hits the finish\ntarget."
       courseD_collector_debugging1: |-
         *"Oh no! I see a problem."*\\r
         \\r
@@ -12304,6 +12518,11 @@ fr:
         \\r
         Fix
         the error(s) to collect all of the treasure.
+      courseD_collector_debugging1a_2019: |-
+        *"Oh no! I see a problem."*\\r
+        \\r
+        Fix
+        the error(s) to collect all of the treasure.
       courseD_collector_debugging2: |-
         *"You can do this!"*\\r
         \\r
@@ -12320,6 +12539,11 @@ fr:
         Fix
         the error(s) to collect all of the treasure.
       courseD_collector_debugging2a_2018: |-
+        *"You can do this!"*\\r
+        \\r
+        Fix
+        the error(s) to collect all of the treasure.
+      courseD_collector_debugging2a_2019: |-
         *"You can do this!"*\\r
         \\r
         Fix
@@ -12344,6 +12568,11 @@ fr:
         will figure this out."*\\r
         \\r
         Fix the error(s) to collect all of the treasure.
+      courseD_collector_debugging3a_2019: |-
+        *"Be persistent and you
+        will figure this out."*\\r
+        \\r
+        Fix the error(s) to collect all of the treasure.
       courseD_collector_debugging4: |-
         *"Don't get frustrated.
         You can do it!"*\\r
@@ -12360,6 +12589,11 @@ fr:
         \\r
         Fix the error(s) to collect all of the treasure.
       courseD_collector_debugging4a_2018: |-
+        *"Don't get frustrated.
+        You can do it!"*\\r
+        \\r
+        Fix the error(s) to collect all of the treasure.
+      courseD_collector_debugging4a_2019: |-
         *"Don't get frustrated.
         You can do it!"*\\r
         \\r
@@ -12388,6 +12622,12 @@ fr:
         \\r
         All of the commands that you need are already here...now
         use your debugging skills to figure out how to solve this puzzle.
+      courseD_collector_debugging5a_2019: |-
+        *"This puzzle is making
+        me loopy!"*\\r
+        \\r
+        All of the commands that you need are already here...now
+        use your debugging skills to figure out how to solve this puzzle.
       courseD_collector_debugging8: |-
         *"So much treasure!"*\\r
         \\r
@@ -12404,6 +12644,11 @@ fr:
         Help
         Laurel fix the code to get all the treasure.
       courseD_collector_debugging8a_2018: |-
+        *"So much treasure!"*\\r
+        \\r
+        Help
+        Laurel fix the code to get all the treasure.
+      courseD_collector_debugging8a_2019: |-
         *"So much treasure!"*\\r
         \\r
         Help
@@ -12428,8 +12673,14 @@ fr:
         \\r
         Help
         Laurel fix the code to get all the treasure.
+      courseD_collector_debugging9a_2019: |-
+        *"It's treasure island!"*\\r
+        \\r
+        Help
+        Laurel fix the code to get all the treasure.
       courseD_collector_nested_loops_challenge2: "*\"Let's\nhunt for treasure - using loops!\"* \\r\n\\r\nHelp the collector reach at least\ntwo piles of treasure using only the blocks in your toolbox. It is possible\nto collect all 4."
       courseD_collector_nested_loops_challenge2_2018: "*\"Let's\nhunt for treasure - using loops!\"* \\r\n\\r\nHelp the collector reach at least\ntwo piles of treasure using only the blocks in your toolbox. It is possible\nto collect all 4."
+      courseD_collector_nested_loops_challenge2_2019: "*\"Let's\nhunt for treasure - using loops!\"* \\r\n\\r\nHelp the collector reach at least\ntwo piles of treasure using only the blocks in your toolbox. It is possible\nto collect all 4."
       courseD_collector_nested_loops_challenge2a: "*\"Let's\nhunt for treasure - using loops!\"* \\r\n\\r\nHelp the collector reach at least\ntwo piles of treasure using only the blocks in your toolbox. It is possible\nto collect all 4."
       courseD_collector_ramp8: |
         This puzzle is a lot like the
@@ -12452,11 +12703,19 @@ fr:
         \\r
         Each plant will have either one piece
         of corn, one head of lettuce, or one pumpkin.
+      courseD_farmer_condLoops3_2019: |-
+        *"Corn, lettuce, AND pumpkins!
+        Help me harvest them all."*\\r
+        \\r
+        Each plant will have either one piece
+        of corn, one head of lettuce, or one pumpkin.
       courseD_farmer_condLoops4a: "*\"Gosh! Now the crops are\ngrowing in clusters!\"*  \\r\n\\r\nHelp the farmer pick all of the lettuce in\neach cluster before moving on to the next bunch. Keep it up until you get\nto the pumpkin!"
       courseD_farmer_condLoops_challenge1: "The pumpkins mark\nthe place where you should turn. *Turn right at the pumpkins.* Otherwise keep\ngoing forward, but remember to collect all of the lettuce or corn along the\nway. \\r\n\\r\n**Each hidden crop has only one corn or lettuce.**"
       courseD_farmer_condLoops_challenge1_2018: "The pumpkins mark\nthe place where you should turn. *Turn right at the pumpkins.* Otherwise keep\ngoing forward, but remember to collect all of the lettuce or corn along the\nway. \\r\n\\r\n**Each hidden crop has only one corn or lettuce.**"
+      courseD_farmer_condLoops_challenge1_2019: "The pumpkins mark\nthe place where you should turn. *Turn right at the pumpkins.* Otherwise keep\ngoing forward, but remember to collect all of the lettuce or corn along the\nway. \\r\n\\r\n**Each hidden crop has only one corn or lettuce.**"
       courseD_farmer_condLoops_challenge2: "*\"It's a vegetable\nmaze!\"* \\r\n\\r\nTurn right at pumpkins, turn left at the lettuce. Collect\neverything to complete the level."
       courseD_farmer_condLoops_challenge2_2018: "*\"It's a vegetable\nmaze!\"* \\r\n\\r\nTurn right at pumpkins, turn left at the lettuce. Collect\neverything to complete the level."
+      courseD_farmer_condLoops_challenge2_2019: "*\"It's a vegetable\nmaze!\"* \\r\n\\r\nTurn right at pumpkins, turn left at the lettuce. Collect\neverything to complete the level."
       courseD_farmer_conditionals4: |-
         *"I don't know how
         much dirt is in this pile!"*\\r
@@ -12475,6 +12734,12 @@ fr:
         \\r
         Help the farmer remove this entire pile
         using a `while` loop.
+      courseD_farmer_while4_2019: |-
+        *"I don't know how
+        much dirt is in this pile!"*\\r
+        \\r
+        Help the farmer remove this entire pile
+        using a `while` loop.
       courseD_farmer_while4_predict1: |-
         *"I don't know how
         much dirt is in this pile!"*\\r
@@ -12482,6 +12747,12 @@ fr:
         Help the farmer remove this entire pile
         using a `while` loop.
       courseD_farmer_while4_predict1_2018: |-
+        *"I don't know how
+        much dirt is in this pile!"*\\r
+        \\r
+        Help the farmer remove this entire pile
+        using a `while` loop.
+      courseD_farmer_while4_predict1_2019: |-
         *"I don't know how
         much dirt is in this pile!"*\\r
         \\r
@@ -12560,8 +12831,10 @@ fr:
         * Get creative! What kind of drawing can you create?
       courseD_playLab_cond3a: "It's time to use what we've\nlearned about conditionals to make this game amazing. \\r\n\\r\nAdd code so\nthat when Pegleg gets to the dragon, he gets two points *if* the dragon is\nhappy. Otherwise, he should get only one point added to his score."
       courseD_playLab_cond3a_2018: "It's time to use what we've\nlearned about conditionals to make this game amazing. \\r\n\\r\nAdd code so\nthat when Pegleg gets to the dragon, he gets two points *if* the dragon is\nhappy. Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond3a_2019: "It's time to use what we've\nlearned about conditionals to make this game amazing. \\r\n\\r\nAdd code so\nthat when Pegleg gets to the dragon, he gets two points *if* the dragon is\nhappy. Otherwise, he should get only one point added to his score."
       courseD_playLab_cond6a: "We don't want the pirate to\nstay in the \"safe zone\" too long!  \\r\n\\r\nAdd code to the `if` statement\nbelow so that if the pirate is in the safe zone, the program will wait one\nsecond, then deduct a point as long as he stays beneath the octopus line."
       courseD_playLab_cond6a_2018: "We don't want the pirate to\nstay in the \"safe zone\" too long!  \\r\n\\r\nAdd code to the `if` statement\nbelow so that if the pirate is in the safe zone, the program will wait one\nsecond, then deduct a point as long as he stays beneath the octopus line."
+      courseD_playLab_cond6a_2019: "We don't want the pirate to\nstay in the \"safe zone\" too long!  \\r\n\\r\nAdd code to the `if` statement\nbelow so that if the pirate is in the safe zone, the program will wait one\nsecond, then deduct a point as long as he stays beneath the octopus line."
       courseD_scrat_ramp3: "There is one extra block that is\ngoing to cause Scrat to crash.  \\r\nThrow it away by disconnecting it from\nthe other blocks and dragging it back to the toolbox."
       courseD_scrat_ramp3_2018: "There is one extra block that is\ngoing to cause Scrat to crash.  \\r\nThrow it away by disconnecting it from\nthe other blocks and dragging it back to the toolbox."
       courseE_artist_concept_challenge1: |-
@@ -12584,6 +12857,16 @@ fr:
         uses only blocks that you have already been shown.  Can you figure out how
         to recreate it?  Feel free to use trial and error. You are not expected to
         get it perfect the first time.
+      courseE_artist_concept_challenge1_2019: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
+        width="200px"/>\\r
+        \\r
+        Now for a challenge!  \\r
+        \\r
+        Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.
       courseE_artist_functions_challenge2: |-
         Not only can you
         jump to some pre-set locations, like the corners of the canvas, you can also
@@ -12597,6 +12880,18 @@ fr:
         name="YPOS">???</title>\\r
             </block></xml>
       courseE_artist_functions_challenge2_2018: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\\r
+        <xml>\\r
+          <block
+        type="jump_to_xy">\\r
+            <title name="XPOS">???</title>\\r
+            <title
+        name="YPOS">???</title>\\r
+            </block></xml>
+      courseE_artist_functions_challenge2_2019: |-
         Not only can you
         jump to some pre-set locations, like the corners of the canvas, you can also
         use a `jump to` command to get to absolutely any spot you like! Try this code
@@ -12692,6 +12987,7 @@ fr:
         need to turn 120 degrees at each corner.
       courseE_bee_concept2: "Help the bee make all of the honey.  \\r\n\\r\nYou\ncan only make honey at a honeycomb, but you can check any space to see if\nthere is a honeycomb."
       courseE_bee_concept2_2018: "Help the bee make all of the honey.  \\r\n\\r\nYou\ncan only make honey at a honeycomb, but you can check any space to see if\nthere is a honeycomb."
+      courseE_bee_concept2_2019: "Help the bee make all of the honey.  \\r\n\\r\nYou\ncan only make honey at a honeycomb, but you can check any space to see if\nthere is a honeycomb."
       courseE_bee_functions2: "Functions are blocks of code that\nperform a task.  \\r\n\\r\nUse the `get 2 nectar` function to collect the nectar\nfrom each flower."
       courseE_bee_functions2_2018: "Functions are blocks of code that\nperform a task.  \\r\n\\r\nUse the `get 2 nectar` function to collect the nectar\nfrom each flower."
       courseE_bee_functions3: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « Obtenir 5 » pour obtenir 5 nectars à la fois. Veille également à utiliser une boucle pour obtenir un compte de bloc idéal.
@@ -12718,6 +13014,21 @@ fr:
       courseE_farmer_concept4: Maintenant, passons à un niveau plus approfondi ! Nous avons imbriqué tout ce bloc de code dans une autre boucle, mais tu dois remettre l'artiste en place pour dessiner la ligne suivante. Lequel de ces blocs de code peux-tu placer à la fin de la boucle ultrapériphérique pour dessiner la grille entière ?
       courseE_farmer_functions2ba: "*\"I feel so functional!\"*\\r\n\\r\nDid\nyou notice that there was repeated code in the last puzzle?  It doesn't work\nto put it all inside of a loop, but we **can** use functions.  \\r\n\\r\nFor\nthis puzzle, we have moved the repeated code into a function called `corn\nand pumpkin`. Now, all you need to do is put the small `corn and pumpkin`\n**function call block** into the code where you need it.\\r\n\\r\n___\\r\n#####\nEach sprout will either grow *one* corn or nothing."
       courseE_farmer_functions2ba_2018: |-
+        *"I feel so functional!"*\\r
+        \\r
+        Did
+        you notice that there was repeated code in the last puzzle?  It doesn't work
+        to put it all inside of a loop, but we **can** use functions.  \\r
+        \\r
+        For
+        this puzzle, we have moved the repeated code into a function called `corn
+        and pumpkin`. Now, all you need to do is put the small `corn and pumpkin`
+        **function call block** into the code where you need it.\\r
+        \\r
+        ___\\r
+        #####
+        Each sprout will either grow *one* corn or nothing.
+      courseE_farmer_functions2ba_2019: |-
         *"I feel so functional!"*\\r
         \\r
         Did

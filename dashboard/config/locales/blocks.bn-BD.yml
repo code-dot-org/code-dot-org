@@ -224,6 +224,11 @@ bn:
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
       Mikelab_getProp:
         options:
           PROPERTY:

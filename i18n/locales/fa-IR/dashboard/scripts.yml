@@ -1455,3 +1455,51 @@ fa:
               name: متغیرهای پاکت
             For Loop Fun:
               name: برای تفریح حلقه ای
+            The Artist:
+              name: هنرمند
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Conditionals:
+              name: شرطی ها
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی

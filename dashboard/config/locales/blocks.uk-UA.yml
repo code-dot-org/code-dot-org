@@ -74,12 +74,16 @@ uk:
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
             '"UNICORN"': всі єдинороги
+          MOVE:
+            '"rand"': "(Випадковий)"
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
         options:
+          MOVE:
+            '"rand"': "(Випадковий)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -271,12 +275,25 @@ uk:
           EFFECT:
             '"color_cycle"': Кольори
             '"disco"': Квадрати
-            '"rainbow"': Кольори
+            '"rainbow"': Веселка
             '"diamonds"': Ромби
             '"splatter"': Бульбашки
             '"swirl"': Гіпноз
+            '"snowflakes"': Сніг
             '"spiral"': Спіраль
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Випадковий)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Випадковий)"
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': "(Випадковий)"
+            '"color_cycle"': Кольори
+            '"diamonds"': Ромби
+            '"swirl"': Гіпноз
+            '"rainbow"': Веселка
+            '"snowflakes"': Сніг
+            '"galaxy"': Відступ
+            '"spiral"': Спіраль
+            '"disco"': Квадрати
       Dancelab_setDanceSpeed:
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
         options:
@@ -315,6 +332,15 @@ uk:
             '"rain"': Дощ
             '"raining_tacos"': Тако
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Випадковий)"
+      Dancelab_setForegroundEffectExtended:
+        text: встановити ефект переднього плану {EFFECT}
+        options:
+          EFFECT:
+            '"rand"': "(Випадковий)"
+            '"bubbles"': Бульбашки
+            '"pineapples"': Ананаси
+            '"rain"': Дощ
+            '"raining_tacos"': Тако
       Dancelab_setProp:
         text: 'встановити {SPRITE} {PROPERTY} у {VAL} '
         options:
@@ -378,6 +404,8 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+      Dancelab_setTintInline:
+        text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setVisible:
         text: встановити для {SPRITE} видимість у {VISIBILITY}
         options:
@@ -444,7 +472,6 @@ uk:
             '"right"': праворуч
             '"space"': космос
             '"x"': x
-            '"0"': Немає коментарів
       Dancelab_whenPeak:
         text: коли досягаємо кінця {RANGE}
         options:
@@ -452,6 +479,8 @@ uk:
             '0': низькі тони
             '1': середні тони
             '2': високі тони
+      Dancelab_whenSetup:
+        text: налаштування
       gamelab_changeColor:
         text: змінити {COLOR} {METHOD} на {AMOUNT}
         options:
@@ -539,6 +568,8 @@ uk:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
+      gamelab_setup:
+        text: налаштування
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -604,6 +635,22 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": вгорі
+            "{x: 200, y: 300}": вниз
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: 200, y: 200}": посередині
+            "{x: 100, y: 100}": верхній лівий кут
+            "{x: 300, y: 100}": верхній правий кут
+            "{x: 100, y: 300}": нижній лівий кут
+            "{x: 300, y: 300}": нижній правий кут
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': усі
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -642,7 +689,9 @@ uk:
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
             '"w"': Зх
+            '"a"': А
             '"s"': Пд
+            '"d"': Г
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -651,7 +700,9 @@ uk:
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
             '"w"': Зх
+            '"a"': А
             '"s"': Пд
+            '"d"': Г
       Mikelab_whileKeyPressed:
         options:
           KEY:

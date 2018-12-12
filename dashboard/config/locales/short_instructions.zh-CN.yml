@@ -206,6 +206,7 @@ zh-CN:
       2-3: 紫色的花可能有或没有花蜜。小心不要从没有花蜜的紫色中采集花蜜。
       2-3level1: 帮助这只鸟往前走来抓住淘气的猪。
       20hr_farmer_stage9_1: 你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备。把我移动到那堆土上面，并使用"移走"块来移除它。
+      20hr_farmer_stage9_10: 我工作的太晚了，外面天都黑了。我没办法知道那些土堆有多大了。所以”当“块上的某些选项消失了。把我挪到田地的另一头，如果遇到一个土堆，就移除它。
       20hr_farmer_stage9_11: 外面还是一片漆黑。让我移动到田地的另一边。如果遇到一个土堆，就移除它。相对的，如果遇到一个洞，就填平他。提示：你可以使用”如果“块的下拉菜单中的选项。
       20hr_farmer_stage9_2: 下一步，把我移动到那个洞，并且用“填充”块来把它填平。这个洞需要两铲子土。
       20hr_farmer_stage9_3: 把我移到那堆土那里，告诉我需要多少铲子才能把这堆土移除。尽量使用少的块来解开这个谜题。
@@ -215,8 +216,10 @@ zh-CN:
       20hr_farmer_stage9_7: 哇，我发现一个很深的洞 ！我不知道它需要多少铲子的土。您能不能编一个程序，往洞里填土直到地面被填平？
       20hr_farmer_stage9_8: 用尽量少的块帮我把田地那边的洞填平。
       20hr_farmer_stage9_9: 请尝试用尽可能少的块来移除所有的土堆。提示：请尝试使用‘当'块
+      20hr_maze_stage2_1: 可以帮我抓住这只淘气猪吗？把两个“向前移动”模块堆在一起，然后按"运行程序"来帮我到达那里。
       20hr_maze_stage2_10: 好的，试试看新的“重复直到”模块，它会一直重复直到我抓到那只讨人厌的猪。
       20hr_maze_stage2_11: 好了，最后一次的练习 —— 你可以只用 4个模块来解决这个问题吗？
+      20hr_maze_stage2_12: 亲爱的人类。我是一只僵尸。我饿了。我必须...... 得到向日葵...... 你可以用5个模块让我到达那里吗？
       20hr_maze_stage2_13: 好的，这道题目很相似，但略有不同。你可以只用5块块解决它吗？
       20hr_maze_stage2_14: 用新的"如果"模块让我来决定什么时候转弯。提示： 你只需要加一个模块，但记住其它模块是怎么排列的，这样下次你就会自己写了。
       20hr_maze_stage2_15: 好啦，这是最后一个谜题了，但你学会怎么一起使用"如果"模块和"重复"模块了么？
@@ -297,12 +300,15 @@ zh-CN:
       4-5 Artist Patterns 9: "现在，重复三次代码来画出整行。\r\n\r\n每个六边形从最左到最右的宽度是80像素。"
       4-5 Artist Patterns Free Play: 自由发挥 - 试着亲手画一个自己的图案！
       4-5 Bee Conditionals - FC Test: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
+      4-5 Bee Conditionals 1 (copy 1): 蜜蜂不能分辨出那是花还是蜂巢。先检查那是花朵还是蜂巢，然后从花里面收集花蜜。
       4-5 Bee Conditionals 1: 云朵挡住了我的视线！检查一下云下面是否有花，然后只从有花的地方收集花蜜。小心，它是能变化的！
       4-5 Bee Conditionals 2 (copy 1): 蜜蜂想在只想要花蜜。记住，不是所有目标都是花，所以检查一下，只从花上采集花蜜。
       4-5 Bee Conditionals 2: "更多的云！\r\n\r\n检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。\r\n\r\n记住：\n不是所有云下面都是一样的东西！"
       4-5 Bee Conditionals 3: 现在，我只想酿蜂蜜。有些云下面有蜂蜜。确保检查了每一朵云！
+      4-5 Bee Conditionals 4 (copy 1): 未知的目标要么是花，要么是蜂巢。如果是花，用“如果/否则”模块来收集花蜜。否则酿蜂蜜（因为它是蜂巢）。
       4-5 Bee Conditionals 4: 有时云下面是花，有时云下面是蜂蜜！用“如果/否则”模块来收集花里的花蜜，否则酿蜂蜜（因为它是蜂巢）。
       4-5 Bee Conditionals 5: "在云底下要么是花，要么是蜂巢！\r\n\r\n如果是花，用“如果/否则”模块来收集花蜜。\r\n否则酿蜂蜜（因为它是蜂巢）。"
+      4-5 Bee Conditionals 6 (copy 1): 紫色的花可能有1个，2个或3个花蜜。这里有一个“如果/否则”模块和另一个“如果/否则”模块混合在一起，成为了一个“如果，否则如果，否则”模块。写出解答来采集未知数量的花蜜。
       4-5 Bee Conditionals 6: "我不确定这朵花有多少花蜜， 但我知道它可能有1个，两个或3个花蜜。\r\n\r\n将一个“如果/否则”模块和另一个“如果/否则”模块混合在一起，成为了一个“如果，否则如果，否则”模块，来采集花里的所有花蜜。\r\n\r\n记住，每次你运行谜题时，花蜜的数量都会变化的！"
       4-5 Bee Conditionals 7: "这些花里可能有一个，两个或三个花蜜。\n\r\n\r\n完成“检查紫色花朵”的函数，然后用它来从所有花里收集花蜜。"
       4-5 Bee Conditionals 8: "完成“检查花朵，酿造蜂蜜”的函数。\r\n\r\n你的函数应该检查紫色的花是否有3个，2个或1个花蜜，然后收集所有的花蜜。\r\n然后，往前移动并酿造蜂蜜。"
@@ -388,22 +394,31 @@ zh-CN:
         为什么这个游戏不能做任何事情？
 
         你能找到"隐藏"的缺陷吗？有些会比较简单。
+      AB_Debug_PlayLab3: 将骑士移动到每个旗帜上。如果出错了，就找到缺陷！
+      AlgPD DR Free Play: 根据自己的单词问题创建一个函数。
       Alien Defender: 项目创意：在游戏实验室里制作一个塔防游戏！
       Alien Defender_2018: 项目创意：在游戏实验室里制作一个塔防游戏！
+      AllTheThings Applab - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': 我们已经帮你创建了视频中曼蒂的4x4图像。你的任务是将12位字节的颜色填充到4x4像素网格中。要求如下：第1行
         - 红色系。第2行 - 绿色系。第3行 - 蓝色系。第4行 - 灰色系。
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
       App Lab test: 测试
+      AppLab_test02: 活动的一句话摘要。点击查看完整说明。
       Applab AllTheThings ResourcesTab AllResources: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab MapReference: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab ReferenceLinks: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      Applab test: 这一关可提交。仅用于测试！
       Artist - Nested Loops 1: 完成代码来画出这些三角形。第一个三角形已经帮你画好了。提示：三个三角形一共旋转了360度。
       Artist - Nested Loops 10: 通过循环已有的模块来画出旗帜上最后一行星星。这些星星都是30像素宽，而且它们之间距离50像素。
       Artist - Nested Loops 11: 你能用嵌套循环画出人行道上的十个正方形吗？每个正方形是30像素。
       Artist - Nested Loops 12: 你能用嵌套循环画出36个三角形吗？
+      Artist - Nested Loops 2: '现在，把这个循环放到另一个循环里，来画出10个三角形。这就叫做嵌套循环。提示：10个三角形完成了360度的旋转。  '
+      Artist - Nested Loops 3: '通过将开始的代码嵌套到另一个循环中来画一个太阳。这就叫做嵌套的循环。  '
       Artist - Nested Loops 5: 循环下面的代码来创建一个风车。
       Artist - Nested Loops 6: 你可以通过循环三角形代码来画一个六边形吗?
+      Artist - Nested Loops 7: 循环这个图形10次。循环里每次需要转多少度呢？（提示：360度除以10是多少？）
+      Artist - Nested Loops 8: 循环这个图形6次。循环里每次需要转多少度呢？（提示：360度除以6是多少？）
       Artist - Nested Loops 9: 在鳄鱼嘴里画上牙齿！
       Artist - Nested Loops Assessment 1: 用嵌套循环来完成这幅画。
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
@@ -411,8 +426,12 @@ zh-CN:
       Auto Open Function Editor: '你能用一个函数里调用其它函数！用你的“形状”函数作为基础，创建三个房子图形，第一个是50像素宽，而每个都比前一个大20像素。用一个计数循环可能会方便一些。 '
       Bee Recommended Blocks test: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       Bergeron Robot Maze1: '可以帮我抓住这只顽皮的猪吗？在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 '
+      Big Game Animation 1 (copy 1): 你已经学习了如何编写简单的线性函数，现在就使用这些函数给游戏增加一些动作吧。点击 "运行"
+        看看游戏现在能做什么（虽然并不多）！可以修改其中的变量，然后单击“完成”继续。
       Big Game Animation 1: 现在, 你已经学会了编写简单的线性函数, 让我们运用这些函数让游戏运动起来。点击 "运行" 查看游戏当前可以做什么
         (不是太多!), 可以尝试更改任意变量，看看变化, 然后单击“完成”继续下一步。
+      Big Game Animation 2 (copy 1): "`更新目标`函数采用目标的当前 x 值, 并返回更新后的值。完成 `更新目标`, 以便每次调用时都增加
+        x 值。x 越大, 目标就运动得越快。"
       Big Game Booleans 1: 在上一次编程游戏的过程中, 我们看到了目标以及危险的精灵穿过了屏幕，但永远不会飞回来。单击 "运行" 查看你的程序究竟是怎样运行的,
         然后单击完成，让那些已经离开屏幕的精灵重新出现。
       Big Game Booleans 5: 这时，危险应该从右向左运行, 你的目标应该从左到右运行, 它们都应该返回到对面的位置上，并反复执行。花一分钟来确保游戏像想要的那样工作,
@@ -517,6 +536,7 @@ zh-CN:
         这样做\r\n* 创建一个新的`movePlane(name)`函数，它可以移动任何飞机。\r\n* 在事件模块内调用`movePlane(name)`函数,
         这样它只在选中复选框时移动。\r\n\r\n_挑战：现在飞机的移动速度太快了。 你能想出如何更改代码, 使它们移动得慢一些吗？_"
       CSDU4 - AppLab - 1: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
+      CSDU4 - Design Mode - 1: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       CSDU6 - Arrays - expressionsAsIndexes: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 - Arrays - indexPractice: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 - for loop - color buttons with for: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
@@ -544,6 +564,7 @@ zh-CN:
       CSPU5_U3 - Keys - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       CSPU5_U3 - Loops - 4: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3 - Loops - 4_2018: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
+      CSPU5_U3L13 - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       CSPU5_U3L15 full clicker app: 完成你的遥控器游戏 ！（点击查看完整的说明）
       CSPU5_U3L15 full clicker app_2018: 完成你的遥控器游戏 ！（点击查看完整的说明）
       Calc Circles of Eval 3: 完成评估模块来匹配此声明。
@@ -862,6 +883,21 @@ zh-CN:
       Dance Party Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_2019: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
+      Dance_Party_01_low: 将`新建`模块拖到工作区，并关联到`设置`模块。
+      Dance_Party_02: 让驼鹿在 4 个小节后做新动作！
+      Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
+      Dance_Party_04: 为程序添加背景效果。
+      Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
+      Dance_Party_06: 创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      Dance_Party_08: 你能让两个伴舞的大小相同吗？
+      Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
+      Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
+      Dance_Party_11.5_test: 使用“所有鸭子”模块，让鸭子一起跳舞。
+      Dance_Party_11: "`当按下上方向键时`模块可以在按下上方向键时运行代码。尝试让舞者在按下上方向键时快速移动。"
+      Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
+      Dance_Party_11b: 让机器人在您按下右方向键时做一次“掉落”动作，在按下上方向键时跳一次“牙线舞”。做掉落-牙线舞动作要尽可能快！
+      Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Eval Free Play: 自由发挥： 用代码来创造艺术吧！
       Eval Strings Images .1: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、 数字或其他用引号引起来的字符的任意组合。运行字符串"你好,
         世界！"，看看会发生什么。
@@ -908,6 +944,7 @@ zh-CN:
       Geometric Pattern: 项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！
       Geometric Sun: 项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！
       Geometric Sun_2018: 项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！
+      Geometric Sun_2019: 项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！
       Get To The Goal: 随便创造一个东西。这是一个猜数游戏的例子！
       'Grade 4 Example PlayLab Project #1': 仔细瞧瞧这个项目，你知道它是怎么做出来的了吗？
       'Grade 4 Example PlayLab Project #2': 仔细瞧瞧这个项目，你知道它是怎么做出来的了吗？
@@ -1223,25 +1260,35 @@ zh-CN:
       New Sports Project: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，创造！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
       Overworld Avoid Monsters: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Avoid Monsters_2018: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
+      Overworld Avoid Monsters_2019: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Chop Tree - allthethings: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
       Overworld Chop Tree: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
       Overworld Chop Tree_2018: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
+      Overworld Chop Tree_2019: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
       Overworld Chop Trees: 我们需要在太阳下山之前建一所房子。房子需要很多木头。砍掉所有的3棵树。
       Overworld Chop Trees_2018: 我们需要在太阳下山之前建一所房子。房子需要很多木头。砍掉所有的3棵树。
+      Overworld Chop Trees_2019: 我们需要在太阳下山之前建一所房子。房子需要很多木头。砍掉所有的3棵树。
       Overworld Free Play 20x20: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
       Overworld Free Play 20x20_2018: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
+      Overworld Free Play 20x20_2019: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
       Overworld House Frame Chosen: 用你喜欢的任何材料建造房子的其余部分。"重复" 指令将会派上用场。
       Overworld House Frame Chosen_2018: 用你喜欢的任何材料建造房子的其余部分。"重复" 指令将会派上用场。
+      Overworld House Frame Chosen_2019: 用你喜欢的任何材料建造房子的其余部分。"重复" 指令将会派上用场。
       Overworld Move to Sheep: 添加第二个 `向前移动` 模块达到绵羊的位置。
       Overworld Move to Sheep_2018: 添加第二个 `向前移动` 模块达到绵羊的位置。
+      Overworld Move to Sheep_2019: 添加第二个 `向前移动` 模块达到绵羊的位置。
       Overworld Place Wall: 每栋房子都是从墙开始的。在重复循环中放置 "放置"和 "向前移动" 指令来建造房子的第一部分。
       Overworld Place Wall_2018: 每栋房子都是从墙开始的。在重复循环中放置 "放置"和 "向前移动" 指令来建造房子的第一部分。
+      Overworld Place Wall_2019: 每栋房子都是从墙开始的。在重复循环中放置 "放置"和 "向前移动" 指令来建造房子的第一部分。
       Overworld Plant Crops: 提前计划很好。在水的两边种庄稼, 这样你以后就不会挨饿了。
       Overworld Plant Crops_2018: 提前计划很好。在水的两边种庄稼, 这样你以后就不会挨饿了。
+      Overworld Plant Crops_2019: 提前计划很好。在水的两边种庄稼, 这样你以后就不会挨饿了。
       Overworld Powered Minecart: 干得好! 你收集了大量的资源, 建造了一个合适的家。现在把铁轨从地图的边缘铺放到你家门口。
       Overworld Powered Minecart_2018: 干得好! 你收集了大量的资源, 建造了一个合适的家。现在把铁轨从地图的边缘铺放到你家门口。
+      Overworld Powered Minecart_2019: 干得好! 你收集了大量的资源, 建造了一个合适的家。现在把铁轨从地图的边缘铺放到你家门口。
       Overworld Shear Sheep: 剪羊毛的时候到了！用 "剪" 指令从两只绵羊身上收集羊毛。
       Overworld Shear Sheep_2018: 剪羊毛的时候到了！用 "剪" 指令从两只绵羊身上收集羊毛。
+      Overworld Shear Sheep_2019: 剪羊毛的时候到了！用 "剪" 指令从两只绵羊身上收集羊毛。
       PDK5 Conditionals 1: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       PDK5 Functions 2: 函数能让你定义新的模块！我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。你能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
       PS - test - pixelation: 通过键入0和1来完成图形X
@@ -1270,6 +1317,7 @@ zh-CN:
       Ram Spritelab Validation Test: 按上方向键
       Robot Doodle: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot Doodle_2018: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
+      Robot Doodle_2019: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot Drawing: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Ryan - 4-5 Bee Conditionals 2: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
@@ -1443,6 +1491,7 @@ zh-CN:
       U3L08 - triangleTwoParams: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
       U3L08 how to add comments: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       U3L08 how to add comments_2018: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
+      U3L13 - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       U3L15 full clicker app: 完成你的遥控器游戏 ！（点击查看完整的说明）
       U3L2 Using Simple Commands (no tooltips): 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
@@ -1462,12 +1511,17 @@ zh-CN:
         "向前移动"指令来挖掘这些模块。
       Underground Avoiding Lava_2018: 熔岩隐藏在这些模块的下面, 你需要在前进之前把它掩盖起来。"如果"指令将在这里派上用场。在正确的位置添加
         "向前移动"指令来挖掘这些模块。
+      Underground Avoiding Lava_2019: 熔岩隐藏在这些模块的下面, 你需要在前进之前把它掩盖起来。"如果"指令将在这里派上用场。在正确的位置添加
+        "向前移动"指令来挖掘这些模块。
       Underground If Statements: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果" 指令将圆石放置在任何未掩盖的熔岩上。
       Underground If Statements_2018: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果" 指令将圆石放置在任何未掩盖的熔岩上。
+      Underground If Statements_2019: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果" 指令将圆石放置在任何未掩盖的熔岩上。
       Underground Iron: 走进熔岩是个坏主意。放置圆石来创建一座桥梁, 然后挖掘至少两个铁模块。
       Underground Iron_2018: 走进熔岩是个坏主意。放置圆石来创建一座桥梁, 然后挖掘至少两个铁模块。
+      Underground Iron_2019: 走进熔岩是个坏主意。放置圆石来创建一座桥梁, 然后挖掘至少两个铁模块。
       Underground Mining Coal: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Underground Mining Coal_2018: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
+      Underground Mining Coal_2019: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Unicorn Tag: 仔细瞧瞧这个项目，你知道它是怎么做出来的了吗？
       Valentine_artist2_01: 编辑程序让艺术家为可爱的小虫画一些草。
       Valentine_artist_01: 帮助艺术家完成大羊驼的心。
@@ -2043,38 +2097,51 @@ zh-CN:
         \r\n\r\n玩游戏和用箭头移动企鹅, 直到你得分足够的分数。"
       courseC_artist_loop1: 让我们添加一些活泼的东西!
       courseC_artist_loop1_2018: 让我们添加一些活泼的东西!
+      courseC_artist_loop1_2019: 让我们添加一些活泼的东西!
       courseC_artist_loops1: "\"僵尸。 画图!\"\r\n\r\n僵尸想画一条线，从它这里到花园向日葵的线。 你能帮他吗？ \r \n*
         (花园在250像素以外) *  "
       courseC_artist_loops1a: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loops1a_2018: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
+      courseC_artist_loops1a_2019: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loops2: 现在, 僵尸知道他的路线, 帮助他沿路挖洞种植更多的花朵!
       courseC_artist_loops2a: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops2a_2018: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
+      courseC_artist_loops2a_2019: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops3: 非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵, 直到他们长大。
       courseC_artist_loops3a: 现在添加一只蝙蝠!
       courseC_artist_loops3a_2018: 现在添加一只蝙蝠!
+      courseC_artist_loops3a_2019: 现在添加一只蝙蝠!
       courseC_artist_loops4: 僵尸发现了一个空农场! 你能帮他把沿着边缘每100 像素贴上动物贴来让农场变热闹/活跃起来吗？
       courseC_artist_loops4a: 尝试向前跳跃75像素。
       courseC_artist_loops4a_2018: 尝试向前跳跃75像素。
+      courseC_artist_loops4a_2019: 尝试向前跳跃75像素。
       courseC_artist_loops5: "很好! 现在是时候做一个围栏, 以防止动物跑出去。  \r\n\r\n"
       courseC_artist_loops5a: 尝试新的贴纸!
       courseC_artist_loops5a_2018: 尝试新的贴纸!
+      courseC_artist_loops5a_2019: 尝试新的贴纸!
       courseC_artist_loops5b: 尝试添加线条!
       courseC_artist_loops5b_2018: 尝试添加线条!
+      courseC_artist_loops5b_2019: 尝试添加线条!
       courseC_artist_loops6: "僵尸应该放在花园里什么？ \r\n\r\n\r\n"
       courseC_artist_loops6a: 添加另一个标签!
       courseC_artist_loops6a_2018: 添加另一个标签!
+      courseC_artist_loops6a_2019: 添加另一个标签!
       courseC_artist_loops7a: 操练循环和角度。
       courseC_artist_loops7a_2018: 操练循环和角度。
+      courseC_artist_loops7a_2019: 操练循环和角度。
       courseC_artist_loops8a: 现在尝试自己练习!
       courseC_artist_loops8a_2018: 现在尝试自己练习!
+      courseC_artist_loops8a_2019: 现在尝试自己练习!
       courseC_artist_loopsPre1a: 是时候把那条线转过来了!
       courseC_artist_loopsPre1a_2018: 是时候把那条线转过来了!
+      courseC_artist_loopsPre1a_2019: 是时候把那条线转过来了!
       courseC_artist_loopsPrePre1a: '把艺术家带到游戏区的中心, 然后画一条线。 '
       courseC_artist_loopsPrePre1a_2018: '把艺术家带到游戏区的中心, 然后画一条线。 '
+      courseC_artist_loopsPrePre1a_2019: '把艺术家带到游戏区的中心, 然后画一条线。 '
       courseC_artist_loopsTemplate: 非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵, 直到他们长大。
       courseC_artist_loopsTemplateA: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loopsTemplateA_2018: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
+      courseC_artist_loopsTemplateA_2019: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_prog1: 试试工具箱里的模块看他们能做什么！
       courseC_artist_prog1_2018: 试试工具箱里的模块看他们能做什么！
       courseC_artist_prog1_2019: 试试工具箱里的模块看他们能做什么！
@@ -2109,51 +2176,73 @@ zh-CN:
       courseC_artist_prog_challenge2a_2019: '*"帮我在这条路上画黄线!"*'
       courseC_collector_loops_challenge2: 得到至少**5**个宝藏!
       courseC_collector_loops_challenge2_2018: 得到至少**5**个宝藏!
+      courseC_collector_loops_challenge2_2019: 得到至少**5**个宝藏!
       courseC_collector_prog1: 试试这些模块，看看你能不能帮助罗瑞尔收集一些宝藏。
       courseC_collector_prog1_2018: 试试这些模块，看看你能不能帮助罗瑞尔收集一些宝藏。
+      courseC_collector_prog1_2019: 试试这些模块，看看你能不能帮助罗瑞尔收集一些宝藏。
       courseC_collector_prog2: 把罗瑞尔移到宝藏上, 然后用 "收藏" 来捡起来。
       courseC_collector_prog2_2018: 把罗瑞尔移到宝藏上, 然后用 "收藏" 来捡起来。
+      courseC_collector_prog2_2019: 把罗瑞尔移到宝藏上, 然后用 "收藏" 来捡起来。
       courseC_collector_prog3: 排列这些模块收集宝藏并通过此关卡。
       courseC_collector_prog3_2018: 排列这些模块收集宝藏并通过此关卡。
+      courseC_collector_prog3_2019: 排列这些模块收集宝藏并通过此关卡。
       courseC_collector_prog4: 排列这些模块来收集所有的宝藏并通过此关卡。
       courseC_collector_prog4_2018: 排列这些模块来收集所有的宝藏并通过此关卡。
+      courseC_collector_prog4_2019: 排列这些模块来收集所有的宝藏并通过此关卡。
       courseC_collector_prog5: 这些模块的顺序不对。你能修好它们吗？
       courseC_collector_prog5_2018: 这些模块的顺序不对。你能修好它们吗？
+      courseC_collector_prog5_2019: 这些模块的顺序不对。你能修好它们吗？
       courseC_collector_prog6: 重新排列模块来收集所有的宝藏。
       courseC_collector_prog6_2018: 重新排列模块来收集所有的宝藏。
+      courseC_collector_prog6_2019: 重新排列模块来收集所有的宝藏。
       courseC_collector_prog7: 使用工具箱中的模块来收集所有的宝藏。
       courseC_collector_prog7_2018: 使用工具箱中的模块来收集所有的宝藏。
+      courseC_collector_prog7_2019: 使用工具箱中的模块来收集所有的宝藏。
       courseC_collector_prog8: '*"继续保持良好的工作! 帮我收集所有的宝藏。“*'
       courseC_collector_prog8_2018: '*"继续保持良好的工作! 帮我收集所有的宝藏。“*'
+      courseC_collector_prog8_2019: '*"继续保持良好的工作! 帮我收集所有的宝藏。“*'
       courseC_collector_prog9: '*"让我们得到所有的宝藏!*'
       courseC_collector_prog9_2018: '*"让我们得到所有的宝藏!*'
+      courseC_collector_prog9_2019: '*"让我们得到所有的宝藏!*'
       courseC_collector_progA: 帮助罗瑞尔收集所有的宝藏。
       courseC_collector_progB: 收集尽可能多的硬币来完成此关!
       courseC_collector_prog_challenge1: 仔细看! 你能收集所有 **10** 块宝藏吗？
       courseC_collector_prog_challenge1_2018: 仔细看! 你能收集所有 **10** 块宝藏吗？
+      courseC_collector_prog_challenge1_2019: 仔细看! 你能收集所有 **10** 块宝藏吗？
       courseC_collector_prog_challenge2: 收集至少**10**个宝藏完成这一挑战!
       courseC_collector_prog_challenge2_2018: 收集至少**10**个宝藏完成这一挑战!
+      courseC_collector_prog_challenge2_2019: 收集至少**10**个宝藏完成这一挑战!
       courseC_flappy_embed_events: 这里有一个游戏的例子, 你要自己来创造! 通过一两次游戏来想想自己要做什么。
       courseC_flappy_events1: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
       courseC_flappy_events10: '创建自己的像素鸟游戏! '
       courseC_flappy_events10_2018: '创建自己的像素鸟游戏! '
+      courseC_flappy_events10_2019: '创建自己的像素鸟游戏! '
       courseC_flappy_events1_2018: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
+      courseC_flappy_events1_2019: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
       courseC_flappy_events2: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
       courseC_flappy_events2_2018: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
+      courseC_flappy_events2_2019: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
       courseC_flappy_events3: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
       courseC_flappy_events3_2018: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
+      courseC_flappy_events3_2019: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
       courseC_flappy_events4: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
       courseC_flappy_events4_2018: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
+      courseC_flappy_events4_2019: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
       courseC_flappy_events5: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
       courseC_flappy_events5_2018: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
+      courseC_flappy_events5_2019: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
       courseC_flappy_events6: 看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。
       courseC_flappy_events6_2018: 看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。
+      courseC_flappy_events6_2019: 看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。
       courseC_flappy_events7: 接下来, 尝试通过将一个模块附加到 "运行时" 事件来更改场景。
       courseC_flappy_events7_2018: 接下来, 尝试通过将一个模块附加到 "运行时" 事件来更改场景。
+      courseC_flappy_events7_2019: 接下来, 尝试通过将一个模块附加到 "运行时" 事件来更改场景。
       courseC_flappy_events8: 当其他事件发生时, 尝试设置一个 **随机** 场景.....比如，当通过一个障碍物时。
       courseC_flappy_events8_2018: 当其他事件发生时, 尝试设置一个 **随机** 场景.....比如，当通过一个障碍物时。
+      courseC_flappy_events8_2019: 当其他事件发生时, 尝试设置一个 **随机** 场景.....比如，当通过一个障碍物时。
       courseC_flappy_events9: 把事情混合起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。
       courseC_flappy_events9_2018: 把事情混合起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。
+      courseC_flappy_events9_2019: 把事情混合起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。
       courseC_harvester_loops1: 使用循环来捡起所有的南瓜。
       courseC_harvester_loops10: 收集所有玉米和南瓜。
       courseC_harvester_loops10_2018: 收集所有玉米和南瓜。
@@ -2210,8 +2299,10 @@ zh-CN:
       courseC_maze_debugging9_2019: 调试这一关，让斯奎特到达橡子。
       courseC_maze_debugging_challenge1: 帮助斯奎特决定往哪条路转，才能得到橡子。
       courseC_maze_debugging_challenge1_2018: 帮助斯奎特决定往哪条路转，才能得到橡子。
+      courseC_maze_debugging_challenge1_2019: 帮助斯奎特决定往哪条路转，才能得到橡子。
       courseC_maze_debugging_challenge2: 帮助斯奎特只用4次`转向`命令来获得橡子。
       courseC_maze_debugging_challenge2_2018: 帮助斯奎特只用4次`转向`命令来获得橡子。
+      courseC_maze_debugging_challenge2_2019: 帮助斯奎特只用4次`转向`命令来获得橡子。
       courseC_maze_loops1: 你能把鸟带到猪那里吗？
       courseC_maze_loops10: 你做得很好! 继续!
       courseC_maze_loops11: 快要成功了！这次，选择你喜欢的路！
@@ -2226,31 +2317,44 @@ zh-CN:
       courseC_maze_loops_challenge1: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge1a: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge1a_2018: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
+      courseC_maze_loops_challenge1a_2019: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge2: 让我们使用循环来寻找宝藏! 通过找出此代码错误来帮助收集者得到所有的宝藏!
       courseC_maze_programming1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseC_maze_programming1_2018: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseC_maze_programming1_2019: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseC_maze_programming2: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming2_2018: 从工具箱中拖出另一个`向前移动`模块来完成代码。
+      courseC_maze_programming2_2019: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming3: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseC_maze_programming3_2018: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
+      courseC_maze_programming3_2019: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseC_maze_programming4: 躲开TNT炸药，否则羽毛会被炸飞！
       courseC_maze_programming4_2018: 躲开TNT炸药，否则羽毛会被炸飞！
+      courseC_maze_programming4_2019: 躲开TNT炸药，否则羽毛会被炸飞！
       courseC_maze_programming5: 躲开TNT炸药！
       courseC_maze_programming5_2018: 躲开TNT炸药！
+      courseC_maze_programming5_2019: 躲开TNT炸药！
       courseC_maze_programming6: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
       courseC_maze_programming6_2018: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseC_maze_programming6_2019: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
       courseC_maze_programming7: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
       courseC_maze_programming7_2018: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
+      courseC_maze_programming7_2019: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
       courseC_maze_programming8: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_2018: '*"保持冷静，帮我找到那只坏猪。"*'
+      courseC_maze_programming8_2019: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_predict1: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_predict1_2018: '*"保持冷静，帮我找到那只坏猪。"*'
+      courseC_maze_programming8_predict1_2019: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming9: '*"现在，用任何方法让我偷偷到达猪那里！"*'
       courseC_maze_programming9_2018: '*"现在，用任何方法让我偷偷到达猪那里！"*'
+      courseC_maze_programming9_2019: '*"现在，用任何方法让我偷偷到达猪那里！"*'
       courseC_maze_programming_challenge1: '猪藏起来了，目标是找到它。 '
       courseC_maze_programming_challenge1_2018: '猪藏起来了，目标是找到它。 '
+      courseC_maze_programming_challenge1_2019: '猪藏起来了，目标是找到它。 '
       courseC_maze_programming_challenge2: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快!
       courseC_maze_programming_challenge2_2018: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快!
+      courseC_maze_programming_challenge2_2019: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快!
       courseC_playLab_embedded: "这里有一个游戏给你玩! 要赢的话, 用你的方向键让企鹅遇到章鱼. \n\r\n一旦你完成了, 你将学会如何做这个游戏!"
       courseC_puppy_loops10: 你做得很好! 继续!
       courseC_puppy_loops11: 快要成功了！这次，选择你喜欢的路！
@@ -2260,26 +2364,38 @@ zh-CN:
       courseC_starWars_loops1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
       courseC_starWars_loops10: 你做得很好! 继续!
       courseC_starWars_loops10_2018: 你做得很好! 继续!
+      courseC_starWars_loops10_2019: 你做得很好! 继续!
       courseC_starWars_loops10_predict2: 你做得很好! 继续!
       courseC_starWars_loops10_predict2_2018: 你做得很好! 继续!
+      courseC_starWars_loops10_predict2_2019: 你做得很好! 继续!
       courseC_starWars_loops11: 快要成功了！这次，选择你喜欢的路！
       courseC_starWars_loops11_2018: 快要成功了！这次，选择你喜欢的路！
+      courseC_starWars_loops11_2019: 快要成功了！这次，选择你喜欢的路！
       courseC_starWars_loops1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
+      courseC_starWars_loops1_2019: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
       courseC_starWars_loops1_predict1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
       courseC_starWars_loops1_predict1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8
         捡起场地中所有的废旧金属。
+      courseC_starWars_loops1_predict1_2019: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8
+        捡起场地中所有的废旧金属。
       courseC_starWars_loops2: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops2_2018: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
+      courseC_starWars_loops2_2019: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops4: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
       courseC_starWars_loops4_2018: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
+      courseC_starWars_loops4_2019: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
       courseC_starWars_loops5: 让 BB-8 尽快拿起所有的废金属!
       courseC_starWars_loops5_2018: 让 BB-8 尽快拿起所有的废金属!
+      courseC_starWars_loops5_2019: 让 BB-8 尽快拿起所有的废金属!
       courseC_starWars_loops6: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops6_2018: 循环里能放多于一个模块！你能循环这个序列吗？
+      courseC_starWars_loops6_2019: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops7: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops7_2018: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
+      courseC_starWars_loops7_2019: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops9: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2018: 用你所学的东西来捡起所有的废铁!
+      courseC_starWars_loops9_2019: 用你所学的东西来捡起所有的废铁!
       courseD_Frozen_nested1: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
       courseD_Frozen_nested2: 现在用你选的形状连续画两或三个！
       courseD_Frozen_nested3: 让我们旋转那个形状的线吧!
@@ -2291,41 +2407,59 @@ zh-CN:
       courseD_Frozen_nested9: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度, 会发生什么？\r\n-
         如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       courseD_artist_1_2018: "画一个**50**像素边长的六边形。\r\n"
+      courseD_artist_1_2018_2019: "画一个**50**像素边长的六边形。\r\n"
       courseD_artist_2_2018: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\r\n"
+      courseD_artist_2_2018_2019: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\r\n"
       courseD_artist_3_2018: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
+      courseD_artist_3_2018_2019: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
       courseD_artist_4_2018: 在线的末尾增加一个小形状！
+      courseD_artist_4_2018_2019: 在线的末尾增加一个小形状！
       courseD_artist_5_2018: 玩一玩雪花功能!
+      courseD_artist_5_2018_2019: 玩一玩雪花功能!
       courseD_artist_6_2018: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
+      courseD_artist_6_2018_2019: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
       courseD_artist_7_2018: 现在，转180度，再次绘制楼梯图案!
       courseD_artist_8_2018: 在一个圆圈内旋转该形状大约5或6次。
       courseD_artist_9_2018: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度, 会发生什么？\r\n-
         如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       courseD_artist_binary1: 用下面的模块来让小画家在第一行画出二进制字符串“01010101”。
       courseD_artist_binary1_2018: 用下面的模块来让小画家在第一行画出二进制字符串“01010101”。
+      courseD_artist_binary1_2019: 用下面的模块来让小画家在第一行画出二进制字符串“01010101”。
       courseD_artist_binary2: 运行代码来看看小艺术家如何用二进制画出这幅图案。
       courseD_artist_binary2_2018: 运行代码来看看小艺术家如何用二进制画出这幅图案。
+      courseD_artist_binary2_2019: 运行代码来看看小艺术家如何用二进制画出这幅图案。
       courseD_artist_binary3: 哪个二进制字符串能让你循环8次来画出这个图像？
       courseD_artist_binary3_2018: 哪个二进制字符串能让你循环8次来画出这个图像？
+      courseD_artist_binary3_2019: 哪个二进制字符串能让你循环8次来画出这个图像？
       courseD_artist_binary4: 你能通过循环3个二进制位（0和1）来画出这个图形吗？
       courseD_artist_binary4_2018: 你能通过循环3个二进制位（0和1）来画出这个图形吗？
+      courseD_artist_binary4_2019: 你能通过循环3个二进制位（0和1）来画出这个图形吗？
       courseD_artist_binary5: "下面的每个二进制字符串表达了这个图片的一行。\r\n\r\n你能重新排列它们，用笑脸代替皱眉吗？"
       courseD_artist_binary5_2018: "下面的每个二进制字符串表达了这个图片的一行。\r\n\r\n你能重新排列它们，用笑脸代替皱眉吗？"
+      courseD_artist_binary5_2019: "下面的每个二进制字符串表达了这个图片的一行。\r\n\r\n你能重新排列它们，用笑脸代替皱眉吗？"
       courseD_artist_binary6: 哪个6位的二进制字符串重复11次后能够画出这个图形?
       courseD_artist_binary6_2018: 哪个6位的二进制字符串重复11次后能够画出这个图形?
+      courseD_artist_binary6_2019: 哪个6位的二进制字符串重复11次后能够画出这个图形?
       courseD_artist_binary7: 能让你重复并画出这个图形的最短的二进制字符串是什么?
       courseD_artist_binary7_2018: 能让你重复并画出这个图形的最短的二进制字符串是什么?
+      courseD_artist_binary7_2019: 能让你重复并画出这个图形的最短的二进制字符串是什么?
       courseD_artist_binary8: 完成代码来创建此图。
       courseD_artist_binary8_2018: 完成代码来创建此图。
+      courseD_artist_binary8_2019: 完成代码来创建此图。
       courseD_artist_binary8_predict1: 完成代码来创建此图。
       courseD_artist_binary8_predict1_2018: 完成代码来创建此图。
+      courseD_artist_binary8_predict1_2019: 完成代码来创建此图。
       courseD_artist_binaryFP: "这是更高分辨率的画布 - 16像素乘以16像素！\r\n\r\n看看你用二进制位能创造出什么？"
       courseD_artist_binaryFP8: "**自由发挥：**用二进制画出任何你想的！ "
       courseD_artist_binaryFP_2018: "这是更高分辨率的画布 - 16像素乘以16像素！\r\n\r\n看看你用二进制位能创造出什么？"
+      courseD_artist_binaryFP_2019: "这是更高分辨率的画布 - 16像素乘以16像素！\r\n\r\n看看你用二进制位能创造出什么？"
       courseD_artist_binary_challenge0: 请尝试使用嵌套循环来完成此图。
       courseD_artist_binary_challenge1: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
       courseD_artist_binary_challenge1_2018: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
+      courseD_artist_binary_challenge1_2019: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
       courseD_artist_binary_challenge2: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_binary_challenge2_2018: 你是否有足够的毅力让这个标志回到正常状态？
+      courseD_artist_binary_challenge2_2019: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_binary_challenge3: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_embed_frozen: 按下运行键来看看雪花设计!
       courseD_artist_embed_frozen2: 按下运行键来看看雪花设计!
@@ -2341,37 +2475,53 @@ zh-CN:
       courseD_artist_nestedLoops1: "画一个三角形来开始这个阶段。\r\n（每条边是100像素长，你需要在每个外角转120度。）"
       courseD_artist_nestedLoops10: 从以前的代码里活动的正方形，但这次只需要7个，并将它们排成一行。
       courseD_artist_nestedLoops10_2018: 从以前的代码里活动的正方形，但这次只需要7个，并将它们排成一行。
+      courseD_artist_nestedLoops10_2019: 从以前的代码里活动的正方形，但这次只需要7个，并将它们排成一行。
       courseD_artist_nestedLoops1_2018: "画一个三角形来开始这个阶段。\r\n（每条边是100像素长，你需要在每个外角转120度。）"
+      courseD_artist_nestedLoops1_2019: "画一个三角形来开始这个阶段。\r\n（每条边是100像素长，你需要在每个外角转120度。）"
       courseD_artist_nestedLoops1a: '现在循环6次三角形。
 
 '
       courseD_artist_nestedLoops1a_2018: '现在循环6次三角形。
 
 '
+      courseD_artist_nestedLoops1a_2019: '现在循环6次三角形。
+
+'
       courseD_artist_nestedLoops2: 这次，用尽可能少的模块完成这关。
       courseD_artist_nestedLoops2_2018: 这次，用尽可能少的模块完成这关。
+      courseD_artist_nestedLoops2_2019: 这次，用尽可能少的模块完成这关。
       courseD_artist_nestedLoops3: "用你的新技能来快速的画出这个建筑物的最后一行窗户。\r\n\r\n窗户是20像素的正方形，每个之间相隔20像素。"
       courseD_artist_nestedLoops3_2018: "用你的新技能来快速的画出这个建筑物的最后一行窗户。\r\n\r\n窗户是20像素的正方形，每个之间相隔20像素。"
+      courseD_artist_nestedLoops3_2019: "用你的新技能来快速的画出这个建筑物的最后一行窗户。\r\n\r\n窗户是20像素的正方形，每个之间相隔20像素。"
       courseD_artist_nestedLoops4: 太好了！用这些圆圈做同样的事情。
       courseD_artist_nestedLoops4_2018: 太好了！用这些圆圈做同样的事情。
+      courseD_artist_nestedLoops4_2019: 太好了！用这些圆圈做同样的事情。
       courseD_artist_nestedLoops5: 如果在圆圈之间你也转90度，会如何？
       courseD_artist_nestedLoops5_2018: 如果在圆圈之间你也转90度，会如何？
+      courseD_artist_nestedLoops5_2019: 如果在圆圈之间你也转90度，会如何？
       courseD_artist_nestedLoops6: 在已有的代码里编辑模块来创建这幅图。
       courseD_artist_nestedLoops7: 用你学到的知识来创建这幅图。
       courseD_artist_nestedLoops7_2018: 用你学到的知识来创建这幅图。
+      courseD_artist_nestedLoops7_2019: 用你学到的知识来创建这幅图。
       courseD_artist_nestedLoops8: 用你在前几关学到的，从头创建这幅图。
       courseD_artist_nestedLoops8_2018: 用你在前几关学到的，从头创建这幅图。
+      courseD_artist_nestedLoops8_2019: 用你在前几关学到的，从头创建这幅图。
       courseD_artist_nestedLoops9: "** 挑战: ** 你能想出如何制作这样的照片吗？"
       courseD_artist_nestedLoops9_2018: "** 挑战: ** 你能想出如何制作这样的照片吗？"
+      courseD_artist_nestedLoops9_2019: "** 挑战: ** 你能想出如何制作这样的照片吗？"
       courseD_artist_nestedLoops9_predict1: "** 挑战: ** 你能想出如何制作这样的照片吗？"
       courseD_artist_nestedLoops9_predict1_2018: "** 挑战: ** 你能想出如何制作这样的照片吗？"
+      courseD_artist_nestedLoops9_predict1_2019: "** 挑战: ** 你能想出如何制作这样的照片吗？"
       courseD_artist_nestedLoopsFP: 现在到你了。用你学到的技能，创造一些自己喜欢的东西吧！
       courseD_artist_nestedLoopsFP_2018: 现在到你了。用你学到的技能，创造一些自己喜欢的东西吧！
+      courseD_artist_nestedLoopsFP_2019: 现在到你了。用你学到的技能，创造一些自己喜欢的东西吧！
       courseD_artist_nestedLoopsPre1: 创建一个三角形来开始这个阶段。
       courseD_artist_nestedLoops_challenge1: 你能想出怎么制作出这样的照片吗？
       courseD_artist_nestedLoops_challenge1_2018: 你能想出怎么制作出这样的照片吗？
+      courseD_artist_nestedLoops_challenge1_2019: 你能想出怎么制作出这样的照片吗？
       courseD_artist_nestedLoops_challenge2: 修复代码来制作这张图！
       courseD_artist_nestedLoops_challenge2_2018: 修复代码来制作这张图！
+      courseD_artist_nestedLoops_challenge2_2019: 修复代码来制作这张图！
       courseD_artist_project1: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
       courseD_artist_project1_2018: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
       courseD_artist_project1_2019: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
@@ -2416,31 +2566,44 @@ zh-CN:
       courseD_bee_conditionals1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals10: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals10_2018: 收集所有的花蜜并制作蜂蜜。
+      courseD_bee_conditionals10_2019: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals1_predict1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals1_predict1_2018: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
+      courseD_bee_conditionals1_predict1_2019: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals2: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals2_2018: '在采集花蜜前，检查每朵云下面是不是有花。  '
+      courseD_bee_conditionals2_2019: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals2_test: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals3: "帮助蜜蜂采集所有的花蜜。\n\r\n\r\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。"
       courseD_bee_conditionals3_2018: "帮助蜜蜂采集所有的花蜜。\n\r\n\r\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。"
+      courseD_bee_conditionals3_2019: "帮助蜜蜂采集所有的花蜜。\n\r\n\r\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。"
       courseD_bee_conditionals4: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals4_2018: 使用尽可能少的模块来收集所有的花蜜。
+      courseD_bee_conditionals4_2019: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals5: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals5_2018: 使用尽可能少的模块来收集所有的花蜜。
+      courseD_bee_conditionals5_2019: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals6: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
       courseD_bee_conditionals6_2018: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
+      courseD_bee_conditionals6_2019: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
       courseD_bee_conditionals7: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_2018: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
+      courseD_bee_conditionals7_2019: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_predict2: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_predict2_2018: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
+      courseD_bee_conditionals7_predict2_2019: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals8: "如果有花，收集花蜜。\r\n否则, 酿蜂蜜（因为那里有蜂窝）。"
       courseD_bee_conditionals8_2018: "如果有花，收集花蜜。\r\n否则, 酿蜂蜜（因为那里有蜂窝）。"
+      courseD_bee_conditionals8_2019: "如果有花，收集花蜜。\r\n否则, 酿蜂蜜（因为那里有蜂窝）。"
       courseD_bee_conditionals9: 收集所有的花蜜或制作蜂蜜。
       courseD_bee_conditionals9_2018: 收集所有的花蜜或制作蜂蜜。
+      courseD_bee_conditionals9_2019: 收集所有的花蜜或制作蜂蜜。
       courseD_bee_conditionals_challenge1: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals_challenge1_2018: 收集所有的花蜜并制作蜂蜜。
+      courseD_bee_conditionals_challenge1_2019: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals_challenge2: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals_challenge2_2018: 收集所有的花蜜并制作蜂蜜。
+      courseD_bee_conditionals_challenge2_2019: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals_challenge3: 收集所有的花蜜或制作蜂蜜。
       courseD_bee_debugging1: 修复错误来收集所有的花蜜。
       courseD_bee_debugging2: 修复错误来收集所有的花蜜。
@@ -2493,17 +2656,22 @@ zh-CN:
       courseD_bounce_events10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       courseD_bounce_events10s: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
       courseD_bounce_events10s_2018: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events10s_2019: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
       courseD_bounce_events11: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"启动新球"模块. 此外，试着改变场景或球拍和球的速度，看看在你对手得两分之前你能得多少分.
       courseD_bounce_events11s: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events11s_2018: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
+      courseD_bounce_events11s_2019: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events12: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。单击完成，让朋友在手机上试试你的游戏。
       courseD_bounce_events12s: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
       courseD_bounce_events12s_2018: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
+      courseD_bounce_events12s_2019: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
       courseD_bounce_events1s: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
       courseD_bounce_events1s_2018: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
+      courseD_bounce_events1s_2019: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
       courseD_bounce_events2: 在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。
       courseD_bounce_events2s: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
       courseD_bounce_events2s_2018: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
+      courseD_bounce_events2s_2019: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
       courseD_bounce_events3: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
       courseD_bounce_events3s: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
       courseD_bounce_events4: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个关卡。
@@ -2511,41 +2679,51 @@ zh-CN:
       courseD_bounce_events5: 我们要将球发向球拍。将一个模块附加到"当球击中桨"模块以确保球能到达目标。
       courseD_bounce_events5s: 将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。
       courseD_bounce_events5s_2018: 将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。
+      courseD_bounce_events5s_2019: 将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。
       courseD_bounce_events6: 现在完成的目标是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
       courseD_bounce_events6s: 添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。
       courseD_bounce_events6s_2018: 添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。
+      courseD_bounce_events6s_2019: 添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。
       courseD_bounce_events7: 将模块附加到每个"当.... 时"中模块。弹起球，直到它击中目标。
       courseD_bounce_events7s: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球, 直到它击中完成目标。
       courseD_bounce_events7s_2018: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球, 直到它击中完成目标。
+      courseD_bounce_events7s_2019: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球, 直到它击中完成目标。
       courseD_collector_debugging1: 修复错误来收集所有的宝藏。
       courseD_collector_debugging1_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging1a: 修复错误来收集所有的宝藏。
       courseD_collector_debugging1a_2018: 修复错误来收集所有的宝藏。
+      courseD_collector_debugging1a_2019: 修复错误来收集所有的宝藏。
       courseD_collector_debugging2: 修复错误来收集所有的宝藏。
       courseD_collector_debugging2_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging2a: 修复错误来收集所有的宝藏。
       courseD_collector_debugging2a_2018: 修复错误来收集所有的宝藏。
+      courseD_collector_debugging2a_2019: 修复错误来收集所有的宝藏。
       courseD_collector_debugging3: 修复错误来收集所有的宝藏。
       courseD_collector_debugging3_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging3a: 修复错误来收集所有的宝藏。
       courseD_collector_debugging3a_2018: 修复错误来收集所有的宝藏。
+      courseD_collector_debugging3a_2019: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4a: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4a_2018: 修复错误来收集所有的宝藏。
+      courseD_collector_debugging4a_2019: 修复错误来收集所有的宝藏。
       courseD_collector_debugging5: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging5_2018: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging5a: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging5a_2018: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
+      courseD_collector_debugging5a_2019: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging6: '挑战: 使用调试技巧来修复错误并收集所有的宝藏。'
       courseD_collector_debugging6_2018: '挑战: 使用调试技巧来修复错误并收集所有的宝藏。'
       courseD_collector_debugging6a: '挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!'
       courseD_collector_debugging6a_2018: '挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!'
+      courseD_collector_debugging6a_2019: '挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!'
       courseD_collector_debugging7: 挑战：所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging_challenge2: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       courseD_collector_debugging_challenge2_2018: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       courseD_collector_nested_loops_challenge2: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
       courseD_collector_nested_loops_challenge2_2018: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
+      courseD_collector_nested_loops_challenge2_2019: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
       courseD_collector_nested_loops_challenge2a: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
       courseD_collector_ramp10: 帮助罗瑞尔收集所有的宝藏。
       courseD_collector_ramp8: 帮助罗瑞尔收集所有的宝藏。
@@ -2559,29 +2737,41 @@ zh-CN:
       courseD_debugging_6: '挑战: 修复错误来收集所有的花蜜并酿蜂蜜。'
       courseD_farmer_condLoops1: 用条件来确保只有某处有玉米时，才捡起它。
       courseD_farmer_condLoops1_2018: 用条件来确保只有某处有玉米时，才捡起它。
+      courseD_farmer_condLoops1_2019: 用条件来确保只有某处有玉米时，才捡起它。
       courseD_farmer_condLoops2: 帮助收割者从田里收集玉米和莴苣。
       courseD_farmer_condLoops2_2018: 帮助收割者从田里收集玉米和莴苣。
+      courseD_farmer_condLoops2_2019: 帮助收割者从田里收集玉米和莴苣。
       courseD_farmer_condLoops3: '*"玉米、莴苣和南瓜！帮我全收集起来。"*'
       courseD_farmer_condLoops3_2018: '*"玉米、莴苣和南瓜！帮我全收集起来。"*'
+      courseD_farmer_condLoops3_2019: '*"玉米、莴苣和南瓜！帮我全收集起来。"*'
       courseD_farmer_condLoops4: 在移动到下一捆之前，帮收割者先收集所有的莴苣。
       courseD_farmer_condLoops4_2018: 在移动到下一捆之前，帮收割者先收集所有的莴苣。
+      courseD_farmer_condLoops4_2019: 在移动到下一捆之前，帮收割者先收集所有的莴苣。
       courseD_farmer_condLoops4a: 在移动到下一捆之前，帮农夫先收集所有的莴苣。
       courseD_farmer_condLoops5: 收集所有的玉米和莴苣，然后最后去拿南瓜。
       courseD_farmer_condLoops5_2018: 收集所有的玉米和莴苣，然后最后去拿南瓜。
+      courseD_farmer_condLoops5_2019: 收集所有的玉米和莴苣，然后最后去拿南瓜。
       courseD_farmer_condLoops6: 你能找出如何捡起所有的南瓜吗？确保沿着路收集所有的玉米！
       courseD_farmer_condLoops6_2018: 你能找出如何捡起所有的南瓜吗？确保沿着路收集所有的玉米！
+      courseD_farmer_condLoops6_2019: 你能找出如何捡起所有的南瓜吗？确保沿着路收集所有的玉米！
       courseD_farmer_condLoops7: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops7_2018: 收集所有的玉米和莴苣，然后捡起南瓜。
+      courseD_farmer_condLoops7_2019: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops8: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops8_2018: 收集所有的玉米和莴苣，然后捡起南瓜。
+      courseD_farmer_condLoops8_2019: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9_2018: 收集所有的玉米和莴苣，然后捡起南瓜。
+      courseD_farmer_condLoops9_2019: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9_predict1: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9_predict1_2018: 收集所有的玉米和莴苣，然后捡起南瓜。
+      courseD_farmer_condLoops9_predict1_2019: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops_challenge1: 收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。
       courseD_farmer_condLoops_challenge1_2018: 收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。
+      courseD_farmer_condLoops_challenge1_2019: 收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。
       courseD_farmer_condLoops_challenge2: 收集一切作物来通过这关。
       courseD_farmer_condLoops_challenge2_2018: 收集一切作物来通过这关。
+      courseD_farmer_condLoops_challenge2_2019: 收集一切作物来通过这关。
       courseD_farmer_condLoops_challenge2_clone: 收集一切作物来通过这关。
       courseD_farmer_conditionals1: 向土堆移动，并用`移除`模块来移除它。
       courseD_farmer_conditionals10: '用尽可能少的模块来弄平所有土堆。 '
@@ -2598,47 +2788,74 @@ zh-CN:
       courseD_farmer_while1: 向土堆移动，并用`移除`模块来移除它。
       courseD_farmer_while10: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while10_2018: '用尽可能少的模块来弄平所有土堆。 '
+      courseD_farmer_while10_2019: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while10_predict2: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while10_predict2_2018: '用尽可能少的模块来弄平所有土堆。 '
+      courseD_farmer_while10_predict2_2019: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while1_2018: 向土堆移动，并用`移除`模块来移除它。
+      courseD_farmer_while1_2019: 向土堆移动，并用`移除`模块来移除它。
       courseD_farmer_while2: 向土堆移动，并用`填满`模块来用6铲土填平它。
       courseD_farmer_while2_2018: 向土堆移动，并用`填满`模块来用6铲土填平它。
+      courseD_farmer_while2_2019: 向土堆移动，并用`填满`模块来用6铲土填平它。
       courseD_farmer_while3: 用尽可能少的模块来通过这关。
       courseD_farmer_while3_2018: 用尽可能少的模块来通过这关。
+      courseD_farmer_while3_2019: 用尽可能少的模块来通过这关。
       courseD_farmer_while4: 用`当`循环来帮助农夫移除整个土堆。
       courseD_farmer_while4_2018: 用`当`循环来帮助农夫移除整个土堆。
+      courseD_farmer_while4_2019: 用`当`循环来帮助农夫移除整个土堆。
       courseD_farmer_while4_predict1: 用`当`循环来帮助农夫移除整个土堆。
       courseD_farmer_while4_predict1_2018: 用`当`循环来帮助农夫移除整个土堆。
+      courseD_farmer_while4_predict1_2019: 用`当`循环来帮助农夫移除整个土堆。
       courseD_farmer_while5: '帮我移除所有的土。 '
       courseD_farmer_while5_2018: '帮我移除所有的土。 '
+      courseD_farmer_while5_2019: '帮我移除所有的土。 '
       courseD_farmer_while6: 使用`当`循环能够很容易的填满所有的洞。
       courseD_farmer_while6_2018: 使用`当`循环能够很容易的填满所有的洞。
+      courseD_farmer_while6_2019: 使用`当`循环能够很容易的填满所有的洞。
       courseD_farmer_while7: 填满每条路尽头的洞。
       courseD_farmer_while7_2018: 填满每条路尽头的洞。
+      courseD_farmer_while7_2019: 填满每条路尽头的洞。
       courseD_farmer_while8: '挑战：用尽可能少的模块来填满这些洞。 '
       courseD_farmer_while8_2018: '挑战：用尽可能少的模块来填满这些洞。 '
+      courseD_farmer_while8_2019: '挑战：用尽可能少的模块来填满这些洞。 '
       courseD_farmer_while9: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while9_2018: '用尽可能少的模块来弄平所有土堆。 '
+      courseD_farmer_while9_2019: '用尽可能少的模块来弄平所有土堆。 '
       courseD_farmer_while_challenge1: 填补所有的洞, 并移走所有的土堆。
       courseD_farmer_while_challenge1_2018: 填补所有的洞, 并移走所有的土堆。
+      courseD_farmer_while_challenge1_2019: 填补所有的洞, 并移走所有的土堆。
       courseD_farmer_while_challenge2: 填补所有的洞, 并移走所有的土堆。
       courseD_farmer_while_challenge2_2018: 填补所有的洞, 并移走所有的土堆。
       courseD_harvester_nested_loops_challenge1-broken: '"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"'
       courseD_harvester_nested_loops_challenge1: '"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"'
       courseD_harvester_nested_loops_challenge1_2018: '"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"'
+      courseD_harvester_nested_loops_challenge1_2019: '"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"'
       courseD_iceage_loops1: 帮助斯奎特穿过冰去拿到橡子！
       courseD_iceage_loops10: 帮助斯奎特走过去拿到橡子！
+      courseD_iceage_loops10_2019: 帮助斯奎特走过去拿到橡子！
       courseD_iceage_loops11: 帮助斯奎特得到橡子！
+      courseD_iceage_loops11_2019: 帮助斯奎特得到橡子！
       courseD_iceage_loops12: 用各种方法来拿到橡子！
+      courseD_iceage_loops12_2019: 用各种方法来拿到橡子！
+      courseD_iceage_loops1_2019: 帮助斯奎特穿过冰去拿到橡子！
       courseD_iceage_loops2: 使用一个`向左转`模块来到达橡子！
+      courseD_iceage_loops2_2019: 使用一个`向左转`模块来到达橡子！
       courseD_iceage_loops3: 你能只用一个`向前移动`模块来得到橡子吗？
+      courseD_iceage_loops3_2019: 你能只用一个`向前移动`模块来得到橡子吗？
       courseD_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
+      courseD_iceage_loops4_2019: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseD_iceage_loops6: 你能增加一个循环到达橡子吗？
+      courseD_iceage_loops6_2019: 你能增加一个循环到达橡子吗？
       courseD_iceage_loops7: '斯奎特真的想要那个橡子！
 
 '
+      courseD_iceage_loops7_2019: '斯奎特真的想要那个橡子！
+
+'
       courseD_iceage_loops8: '你能修好这段代码吗？ '
+      courseD_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseD_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_maze_loops_challenge1: |-
         让我们寻找宝藏
         - 使用循环！帮助收集器只使用工具箱中的模块来得到至少两堆宝藏。
@@ -2687,24 +2904,33 @@ zh-CN:
       courseD_maze_until1: 帮愤怒的小鸟到达那只猪。
       courseD_maze_until10: 帮助僵尸到达向日葵。
       courseD_maze_until10_2018: 帮助僵尸到达向日葵。
+      courseD_maze_until10_2019: 帮助僵尸到达向日葵。
       courseD_maze_until10_predict2: 帮助僵尸到达向日葵。
       courseD_maze_until10_predict2_2018: 帮助僵尸到达向日葵。
+      courseD_maze_until10_predict2_2019: 帮助僵尸到达向日葵。
       courseD_maze_until1_2018: 帮愤怒的小鸟到达那只猪。
+      courseD_maze_until1_2019: 帮愤怒的小鸟到达那只猪。
       courseD_maze_until2: 现在，用`重复直到`循环来做同样的事情，而不用指定需要多少次向前移动和转向。
       courseD_maze_until3: 帮小鸟到达那只猪。
       courseD_maze_until3_2018: 帮小鸟到达那只猪。
+      courseD_maze_until3_2019: 帮小鸟到达那只猪。
       courseD_maze_until4: 你能只使用已有的模块把僵尸带到向日葵那里吗？
       courseD_maze_until4_2018: 你能只使用已有的模块把僵尸带到向日葵那里吗？
+      courseD_maze_until4_2019: 你能只使用已有的模块把僵尸带到向日葵那里吗？
       courseD_maze_until5: 用`如果`模块来帮助僵尸决定何时转弯，然后让僵尸到达向日葵那里。
       courseD_maze_until5_2018: 用`如果`模块来帮助僵尸决定何时转弯，然后让僵尸到达向日葵那里。
+      courseD_maze_until5_2019: 用`如果`模块来帮助僵尸决定何时转弯，然后让僵尸到达向日葵那里。
       courseD_maze_until6: 帮助僵尸到达向日葵。
       courseD_maze_until6_2018: 帮助僵尸到达向日葵。
+      courseD_maze_until6_2019: 帮助僵尸到达向日葵。
       courseD_maze_until7: 帮助僵尸到达向日葵。
       courseD_maze_until7_2018: 帮助僵尸到达向日葵。
+      courseD_maze_until7_2019: 帮助僵尸到达向日葵。
       courseD_maze_until8: 帮助僵尸到达向日葵。
       courseD_maze_until8_2018: 帮助僵尸到达向日葵。
       courseD_maze_until9: "**挑战：** 躲开食人花，让僵尸到达向日葵那里。"
       courseD_maze_until9_2018: "**挑战：** 躲开食人花，让僵尸到达向日葵那里。"
+      courseD_maze_until9_2019: "**挑战：** 躲开食人花，让僵尸到达向日葵那里。"
       courseD_maze_until_challenge: 没有提示，只有挑战。把僵尸带到向日葵那里。
       courseD_maze_until_challenge1-delete-this-copy: 没有提示，只有挑战。把僵尸带到向日葵那里。
       courseD_maze_until_challenge1: 没有提示，只有挑战。把僵尸带到向日葵那里。
@@ -2713,27 +2939,37 @@ zh-CN:
       courseD_pixelation: 用二进制来编码任何你喜欢的图形。二进制语言只用'0'和'1'来代表。
       courseD_playLab_cond1: 让海盗得到旗帜来通过这关。
       courseD_playLab_cond1_2018: 让海盗得到旗帜来通过这关。
+      courseD_playLab_cond1_2019: 让海盗得到旗帜来通过这关。
       courseD_playLab_cond2: '每次海盗到龙那里的时候得一分。 '
       courseD_playLab_cond2_2018: '每次海盗到龙那里的时候得一分。 '
+      courseD_playLab_cond2_2019: '每次海盗到龙那里的时候得一分。 '
       courseD_playLab_cond3: '让龙的情绪每秒随机改变一次。  '
       courseD_playLab_cond3_2018: '让龙的情绪每秒随机改变一次。  '
+      courseD_playLab_cond3_2019: '让龙的情绪每秒随机改变一次。  '
       courseD_playLab_cond3a: 当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。
       courseD_playLab_cond3a_2018: 当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。
+      courseD_playLab_cond3a_2019: 当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。
       courseD_playLab_cond3b: "1) 让龙在每一秒的随机情绪之间变化。 \r \n2) 当 Pegleg 到达龙那里时, 如果龙是快乐的，得到2分,
         否则1分。"
       courseD_playLab_cond4: 添加一些代码，让忍者 (演员 3) 在游戏一开始就开始追逐海盗。 如果忍者抓住了海盗，游戏就以失败告终。
       courseD_playLab_cond4_2018: 添加一些代码，让忍者 (演员 3) 在游戏一开始就开始追逐海盗。 如果忍者抓住了海盗，游戏就以失败告终。
+      courseD_playLab_cond4_2019: 添加一些代码，让忍者 (演员 3) 在游戏一开始就开始追逐海盗。 如果忍者抓住了海盗，游戏就以失败告终。
       courseD_playLab_cond5: 添加一个`一直重复`循环, 让它不断检查, 如果比分大于 5, 就以胜利结束此游戏。
       courseD_playLab_cond5_2018: 添加一个`一直重复`循环, 让它不断检查, 如果比分大于 5, 就以胜利结束此游戏。
+      courseD_playLab_cond5_2019: 添加一个`一直重复`循环, 让它不断检查, 如果比分大于 5, 就以胜利结束此游戏。
       courseD_playLab_cond6: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2) 如果海盗大于225像素时，设置忍者**逃离**海盗。否则,
         设置忍者 *追逐**海盗。  "
       courseD_playLab_cond6_2018: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2) 如果海盗大于225像素时，设置忍者**逃离**海盗。否则,
         设置忍者 *追逐**海盗。  "
+      courseD_playLab_cond6_2019: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2) 如果海盗大于225像素时，设置忍者**逃离**海盗。否则,
+        设置忍者 *追逐**海盗。  "
       courseD_playLab_cond6a: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
       courseD_playLab_cond6a_2018: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
+      courseD_playLab_cond6a_2019: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
       courseD_playLab_cond6cloneForTest: 正在测试
       courseD_playLab_condFP: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condFP_2018: 现在，创建你自己的游戏，给朋友们看看吧！
+      courseD_playLab_condFP_2019: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condFP_a: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condForVideo: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_embedded: "用箭头键移动海盗Pegleg。到达龙得分, 但要躲开忍者！站在章鱼线下面会使忍者停止追逐你, 但要当心!
@@ -2756,46 +2992,65 @@ zh-CN:
       courseD_scrat_ramp8_2018: 用你学到的东西让斯奎特得到橡子!
       courseE_artist_concept1: '重新创建这幅图。 '
       courseE_artist_concept1_2018: '重新创建这幅图。 '
+      courseE_artist_concept1_2019: '重新创建这幅图。 '
       courseE_artist_concept4: 重新创建这幅图。
       courseE_artist_concept4_2018: 重新创建这幅图。
+      courseE_artist_concept4_2019: 重新创建这幅图。
       courseE_artist_concept_challenge1: '帮助小艺术家画出这副独特的图。 '
       courseE_artist_concept_challenge1_2018: '帮助小艺术家画出这副独特的图。 '
+      courseE_artist_concept_challenge1_2019: '帮助小艺术家画出这副独特的图。 '
       courseE_artist_concept_challenge2: 使用下面的代码创建五个风车的设计。
       courseE_artist_concept_challenge2_2018: 使用下面的代码创建五个风车的设计。
+      courseE_artist_concept_challenge2_2019: 使用下面的代码创建五个风车的设计。
       courseE_artist_embed_functions8: 仔细看这个关卡。要创建这样的设计，你看看需要什么样的函数。你很快就会自己动手做, 所以如果你需要帮助就回到这里吧。
       courseE_artist_functions1: "帮助僵尸艺术家画一个边长为100像素的眼镜。\r\n眼镜之间的桥梁长75像素。"
       courseE_artist_functions10: 这次，用8个（25像素边长的）六边形的线。
       courseE_artist_functions10_2018: 这次，用8个（25像素边长的）六边形的线。
+      courseE_artist_functions10_2019: 这次，用8个（25像素边长的）六边形的线。
       courseE_artist_functions1_2018: "帮助僵尸艺术家画一个边长为100像素的眼镜。\r\n眼镜之间的桥梁长75像素。"
       courseE_artist_functions2: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
       courseE_artist_functions2_2018: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
+      courseE_artist_functions2_2019: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
       courseE_artist_functions3: 可以通过添加重复模块来绘制此画。
       courseE_artist_functions3_2018: 构建一个能创造这个星星的函数。
+      courseE_artist_functions3_2019: 构建一个能创造这个星星的函数。
       courseE_artist_functions4: 现在你能画一个星星了，试试画4个星星！
       courseE_artist_functions4_2018: 现在你能画一个星星了，试试画4个星星！
       courseE_artist_functions5: 只画3个星星来完成这关。
       courseE_artist_functions5_2018: 只画3个星星来完成这关。
+      courseE_artist_functions5_2019: 只画3个星星来完成这关。
       courseE_artist_functions6: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
       courseE_artist_functions6_2018: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
       courseE_artist_functions7: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
       courseE_artist_functions7_2018: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
+      courseE_artist_functions7_2019: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
       courseE_artist_functions8: 挑战：创建你能想到的尽可能多的函数来画出这个50像素的正方形的图案。
       courseE_artist_functions8_2018: 挑战：创建你能想到的尽可能多的函数来画出这个50像素的正方形的图案。
+      courseE_artist_functions8_2019: 挑战：创建你能想到的尽可能多的函数来画出这个50像素的正方形的图案。
       courseE_artist_functions8a_2018: 为单个正方形创建函数
+      courseE_artist_functions8a_2019: 为单个正方形创建函数
       courseE_artist_functions8b_2018: 在`draw a line of squares`（用正方形画一条线）函数里调用`draw
         a square`（画一个正方形）函数，来让它变得更容易！
+      courseE_artist_functions8b_2019: 在`draw a line of squares`（用正方形画一条线）函数里调用`draw
+        a square`（画一个正方形）函数，来让它变得更容易！
       courseE_artist_functions8c_2018: 再添加一个函数来创建交错的正方形堆栈。
+      courseE_artist_functions8c_2019: 再添加一个函数来创建交错的正方形堆栈。
       courseE_artist_functions9: 只用提供的模块来画出这个图。
       courseE_artist_functions9_2018: "**挑战：**只用提供的模块来画出这个图。"
+      courseE_artist_functions9_2019: "**挑战：**只用提供的模块来画出这个图。"
       courseE_artist_functionsProj_2018: "**灵感：**用你学会的做想做的事情！"
+      courseE_artist_functionsProj_2019: "**灵感：**用你学会的做想做的事情！"
       courseE_artist_functions_challenge: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的,
         然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge1: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的,
         然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge1_2018: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码,
         看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
+      courseE_artist_functions_challenge1_2019: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码,
+        看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge2: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_functions_challenge2_2018: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
+      courseE_artist_functions_challenge2_2019: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_ramp10: 现在, 将最后一个三角形的代码拖动到一个新的循环中, 将其旋转并制作一个雪花!
       courseE_artist_ramp11: 现在用艺术家做一个正方形!
       courseE_artist_ramp12: 用你学过的东西在正方形里面画这个三角形。
@@ -2809,18 +3064,25 @@ zh-CN:
       courseE_artist_ramp9_2_2018: 用你学过的画这个三角形。
       courseE_bee_concept1: 收集每朵花的花蜜。
       courseE_bee_concept1_2018: 收集每朵花的花蜜。
+      courseE_bee_concept1_2019: 收集每朵花的花蜜。
       courseE_bee_concept2: '帮助蜜蜂酿制所有的蜂蜜。
 
 '
       courseE_bee_concept2_2018: '帮助蜜蜂酿制所有的蜂蜜。
 
 '
+      courseE_bee_concept2_2019: '帮助蜜蜂酿制所有的蜂蜜。
+
+'
       courseE_bee_concept3: 使用尽可能少的模块来收集所有的花蜜。
       courseE_bee_concept3_2018: 使用尽可能少的模块来收集所有的花蜜。
+      courseE_bee_concept3_2019: 使用尽可能少的模块来收集所有的花蜜。
       courseE_bee_concept4: 啊哦! 蜜蜂不确定它应该收集花蜜或还是酿制蜂蜜。你能帮它吗？
       courseE_bee_concept4_2018: 啊哦! 蜜蜂不确定它应该收集花蜜或还是酿制蜂蜜。你能帮它吗？
+      courseE_bee_concept4_2019: 啊哦! 蜜蜂不确定它应该收集花蜜或还是酿制蜂蜜。你能帮它吗？
       courseE_bee_concept5: 你能帮助蜜蜂从花朵收集花蜜吗？
       courseE_bee_concept5_2018: 你能帮助蜜蜂从花朵收集花蜜吗？
+      courseE_bee_concept5_2019: 你能帮助蜜蜂从花朵收集花蜜吗？
       courseE_bee_functions1: 收集每朵花的花蜜。
       courseE_bee_functions10: 创建一个函数帮助蜜蜂在回到主路前得到所有的蜂蜜来过此关。
       courseE_bee_functions10_2018: 创建一个函数帮助蜜蜂在回到主路前得到所有的蜂蜜来过此关。
@@ -2855,33 +3117,44 @@ zh-CN:
       courseE_collector_ramp9: 帮助罗瑞尔收集所有的宝藏。
       courseE_farmer_concept1: 你能写一个程序来填补这些洞直到地面平了吗？
       courseE_farmer_concept1_2018: 你能写一个程序来填补这些洞直到地面平了吗？
+      courseE_farmer_concept1_2019: 你能写一个程序来填补这些洞直到地面平了吗？
       courseE_farmer_concept2: 收集所有南瓜。
       courseE_farmer_concept2_2018: 收集所有南瓜。
+      courseE_farmer_concept2_2019: 收集所有南瓜。
       courseE_farmer_concept3: 填满每条路尽头的洞。
       courseE_farmer_concept3_2018: 填满每条路尽头的洞。
+      courseE_farmer_concept3_2019: 填满每条路尽头的洞。
       courseE_farmer_concept4: 现在，让我们增加难度！我们已经将所有模块嵌套到另一个循环里了，但是你需要让小艺术家回来画下一行。哪些代码模块能放在最外层循环的下面来画出整个网格？
       courseE_farmer_elseif_test: 填满每条路尽头的洞。
       courseE_farmer_functions1: 帮助收割者到达南瓜那里并采摘它。
       courseE_farmer_functions10: '没人知道这些芽会变成什么样子。 使用`如果`语句编写代码来检查和收割每一个庄稼。   '
       courseE_farmer_functions10a1_2018: 用你学到的知识来解决难题！
+      courseE_farmer_functions10a1_2019: 用你学到的知识来解决难题！
       courseE_farmer_functions10b: 用新函数两次来过关。
       courseE_farmer_functions10b_2018: 用新函数两次来过关。
       courseE_farmer_functions13_2018: 用23个或更少的模块来解决这个难题。
+      courseE_farmer_functions13_2019: 用23个或更少的模块来解决这个难题。
       courseE_farmer_functions1_2018: 帮助收割者到达南瓜那里并采摘它。
+      courseE_farmer_functions1_2019: 帮助收割者到达南瓜那里并采摘它。
       courseE_farmer_functions1a: 现在帮收割者采摘玉米，莴苣，**和** 南瓜。
       courseE_farmer_functions1a_2018: 帮收割者采摘所有玉米，和南瓜。
+      courseE_farmer_functions1a_2019: 帮收割者采摘所有玉米，和南瓜。
       courseE_farmer_functions2: "现在, 每次运行该程序都会有不同数量的南瓜。\r\n\r\n使用 `当`模块只采集你需要的尽可能多的南瓜。"
       courseE_farmer_functions2a: 在接下来的几个关卡中, 我们将检查大量的农作物方格。让我们把所有的东西都移到函数内使它更容易。
       courseE_farmer_functions2aALT: 在接下来的几个关卡中, 我们将检查大量的农作物方格。让我们把所有的东西都移到函数内使它更容易。
       courseE_farmer_functions2b: 帮助收割者采摘玉米和南瓜。
       courseE_farmer_functions2b_2018: 帮助收割者采摘玉米和南瓜。
+      courseE_farmer_functions2b_2019: 帮助收割者采摘玉米和南瓜。
       courseE_farmer_functions2ba: 帮助农民用`玉米和南瓜`函数来采摘玉米和南瓜。
       courseE_farmer_functions2ba_2018: 帮助农民用`玉米和南瓜`函数来采摘玉米和南瓜。
+      courseE_farmer_functions2ba_2019: 帮助农民用`玉米和南瓜`函数来采摘玉米和南瓜。
       courseE_farmer_functions3: "当去南瓜的路径是不同长度时会发生什么？ \r\n\r\n用尽可能少的模块来得到全部南瓜。"
       courseE_farmer_functions3b: 现在帮农民采摘玉米，莴苣，**和** 南瓜。
       courseE_farmer_functions3c: 现在, 从代码中拉出模块并将它们放到 ** 函数定义 ** 中来填充函数。
       courseE_farmer_functions3c1_2018: 这个函数调用了其它函数！
+      courseE_farmer_functions3c1_2019: 这个函数调用了其它函数！
       courseE_farmer_functions3c_2018: 现在, 从代码中拉出模块并将它们放到 ** 函数定义 ** 中来填充函数。
+      courseE_farmer_functions3c_2019: 现在, 从代码中拉出模块并将它们放到 ** 函数定义 ** 中来填充函数。
       courseE_farmer_functions4: "很好！现在你有代码可以从任何大小的路径采摘南瓜。\r\n\r\n把代码拉进函数，这样可以让我们用不同的方法使用它...但首先让我们用它来再次过此关。"
       courseE_farmer_functions4b: 使用你的新函数来通关。
       courseE_farmer_functions4b_2018: 使用你的新函数来通关。
@@ -2896,14 +3169,17 @@ zh-CN:
       courseE_farmer_functions6c_2018: 你需要添加什么样的程序来检查一个新芽是玉米还是莴苣？
       courseE_farmer_functions7: 用你的函数来通过这一关。
       courseE_farmer_functions7a1_2018: 创建函数来让收割者走到正方形路径上，从每行的中间采摘单个莴苣。
+      courseE_farmer_functions7a1_2019: 创建函数来让收割者走到正方形路径上，从每行的中间采摘单个莴苣。
       courseE_farmer_functions7b: 帮助收割者找到她的路，这些混乱的路径中左转右转能到达南瓜、玉米和莴苣。
       courseE_farmer_functions7b_2018: 帮助收割者找到她的路，这些混乱的路径中左转右转能到达南瓜、玉米和莴苣。
       courseE_farmer_functions8: "**挑战：** 用尽可能少的模块通过这关。"
       courseE_farmer_functions8a1_2018: 你的函数还有用吗？
+      courseE_farmer_functions8a1_2019: 你的函数还有用吗？
       courseE_farmer_functions8b: "**挑战：** 用上一关中学到的方法收集所有的南瓜。 "
       courseE_farmer_functions8b_2018: "**挑战：** 用上一关中学到的方法收集所有的南瓜。 "
       courseE_farmer_functions9: 用条件来简化你的程序。
       courseE_farmer_functions9a1_2018: 你的函数还有用吗？
+      courseE_farmer_functions9a1_2019: 你的函数还有用吗？
       courseE_farmer_functions9b: 你能找出解决这个关卡所需的规律吗？
       courseE_farmer_functions9b_2018: 你能找出解决这个关卡所需的规律吗？
       courseE_farmer_functions9b_clone: 你能找出解决这个关卡所需的规律吗？
@@ -2986,6 +3262,7 @@ zh-CN:
       courseE_video_createFunctions: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions2: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions2_2018: 我们还没有创建函数的视频。这是一个占位符。。。
+      courseE_video_createFunctions2_2019: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions_2018: 我们还没有创建函数的视频。这是一个占位符。。。
       courseF_IceAge_1: 通过把 "演员1说"模块拽出来并连接到 "当运行时" 事件的底部帮助 喜得 说 "你好!",
       courseF_IceAge_10: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情, 让她在被击中时高兴。
@@ -3400,6 +3677,7 @@ zh-CN:
       grade2_PuppyLoops_9: "代码里面的这个“C”看起来像是画反了！\r\n\r\n你能把它再改成“C”吗？"
       grade2_collector_10: 快要完成了！收集尽可能多的宝藏来完成这个阶段！
       grade2_collector_10_2018: 快要完成了！收集尽可能多的宝藏来完成这个阶段！
+      grade2_collector_10_2019: 快要完成了！收集尽可能多的宝藏来完成这个阶段！
       grade2_collector_2: 把罗瑞尔移到宝藏上, 然后用`收集`来捡起来。
       grade2_collector_3: 将这些模块正确的排列起来，收集所有的黄金来过关。
       grade2_collector_4: 顺序很重要！你需要的模块已经在工作区了，但还没有连起来。将这些模块按顺序连接起来，来收集所有的金子并通过这关。
@@ -3411,6 +3689,7 @@ zh-CN:
       grade2_collector_9a: "** 挑战: ** 收集所有的硬币。"
       grade2_collector_A: 帮助罗瑞尔收集所有的宝藏。
       grade2_collector_A_2018: 帮助罗瑞尔收集所有的宝藏。
+      grade2_collector_A_2019: 帮助罗瑞尔收集所有的宝藏。
       grade2_collector_pre1: "\"嗨，我是罗瑞尔。今天，我到狗公园里寻宝！\" \r\n\r\n试试这些模块来看看是否你能帮助罗瑞尔收集一些金子。"
       grade2_playlab_project_1: 现在，写一个程序，用上/下/左/右按键使企鹅到达所有目标！
       grade2_playlab_project_2: 利用"一直重复"块，你就可以重复不断地执行代码。您可以再连接一些块来使恐龙迪诺（演员2）反复向上向下移动吗？
@@ -3495,6 +3774,7 @@ zh-CN:
       grade3_playLab_buildGame_final2: 这是你用来选择卡片的代码 - 试试添加一些别的有趣的功能！
       grade3_robotFarmer_ConditionalsIntro4: 用`当`循环来帮助农夫移除整个土堆。
       grade3_robotFarmer_ConditionalsIntro_1: "*\"你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备！\"*\r\n\r\n移动到那堆土上面，并使用`移除`模块来移除它。"
+      grade3_robotFarmer_ConditionalsIntro_10: 我工作的太晚了，外面天都黑了。我没办法知道那些土堆有多大了。所以”当“块上的某些选项消失了。把我挪到田地的另一头，如果遇到一个土堆，就移除它。
       grade3_robotFarmer_ConditionalsIntro_10a: '用尽可能少的模块来弄平所有土堆。 '
       grade3_robotFarmer_ConditionalsIntro_11: 外面还是一片漆黑。让我移动到田地的另一边。如果遇到一个土堆，就移除它。相对的，如果遇到一个洞，就填平他。提示：你可以使用”如果“块的下拉菜单中的选项。
       grade3_robotFarmer_ConditionalsIntro_11a: '用尽可能少的模块来弄平所有土堆。 '
@@ -3505,6 +3785,7 @@ zh-CN:
       grade3_robotFarmer_ConditionalsIntro_8: 填满每条路尽头的洞。
       grade3_robotFarmer_ConditionalsIntro_9: "**挑战：** 用尽可能少的模块填满这些洞。 "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 帮我用五铲子的土来填充这些洞。提示： 你可以把"重复"块放在"当"块里面试试。
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: 我工作的太晚了，外面天都黑了。我没办法知道那些土堆有多大了。所以”当“块上的某些选项消失了。把我挪到田地的另一头，如果遇到一个土堆，就移除它。
       grade4_arist_nested_loop_circles1: 评估：用嵌套循环来完成这幅画。
       grade4_arist_nested_loop_flags1: 循环下面的代码来创建一个风车。
       grade4_arist_nested_loop_polygons1: "循环这个图形10次。\r\n\r\n你的循环里每次需要转多少度呢？"

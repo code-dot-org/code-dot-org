@@ -61,6 +61,7 @@ ur:
     facebook: 'فیس بک'
     windowslive: 'Microsoft اکاؤنٹ'
     microsoft_v2_auth: 'Microsoft اکاؤنٹ'
+    clever: 'ہوشیار'
     forgot_password: 'password یاد نہیں؟'
     need_confirmation: "کنفرمیشن کی ہدایات موصول نہیں ہویں؟"
     need_unlock: " Unlock کی ہدایات موصول نہیں ہویں؟  "
@@ -84,6 +85,7 @@ ur:
     additional_information: "ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے."
     user_type_student: "Talib-e-ilm"
     field_is_required: "مطلوب ہے"
+    email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: "جی"
     email_preference_no: "نہيں"
   school_info:
@@ -104,6 +106,8 @@ ur:
   section:
     type:
       email: 'Email'
+      google_classroom: 'Google کلاس روم'
+      clever: 'ہوشیار'
   follower:
     error:
       cant_join_own_section: "ہم معذرت خواہ ہیں، آپ اپنے سیکشن میں داخل نہیں ہو سکتے."
@@ -114,6 +118,8 @@ ur:
     submit: 'جمع کرائیں'
   nav:
     header:
+      my_dashboard: "ڈیش بورڈ"
+      professional_learning: "پیشہ ورانہ تعلیم"
       educate_hoc: "آور-آف-کوڈ"
     user:
       classroom: 'استاد کی ہوم پیج'

@@ -1264,6 +1264,7 @@ pl:
   return_unit_overview: Przejdź do przeglądu jednostek
   return_course_overview: Przejdź do omówienia jednostki
   view_all_units: Zobacz wszystkie jednostki
+  view_teacher_guide: Zobacz przewodnik nauczyciela
   pd:
     form_labels:
       email: e-mail

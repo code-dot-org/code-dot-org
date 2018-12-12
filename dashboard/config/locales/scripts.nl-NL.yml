@@ -1647,6 +1647,8 @@ nl:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Uur Code
+          description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit!
+            Gebruik code om door Minecraft te reizen.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1905,6 +1907,9 @@ nl:
             Dance Party:
               name: Dansfeest
           title: Dansfeest
+          description_short: Met Katy Perry, Madonna, J. Calvin, Sia, Keith Urban,
+            Ciara en nog 25 anderen!
+          description: Programmeer je eigen dansfeest om te delen met je vrienden!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1924,6 +1929,9 @@ nl:
           stages:
             Dance Party:
               name: Dansfeest
+        dance-extras:
+          title: Blijf dansen
+          description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1934,7 +1942,55 @@ nl:
               name: Envelop variabelen
             For Loop Fun:
               name: For Lus fun
+            The Artist:
+              name: De Artiest
         dance-low:
           stages:
             Dance Party:
               name: Dansfeest
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

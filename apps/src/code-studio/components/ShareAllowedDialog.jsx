@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global dashboard */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -12,6 +12,7 @@ import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 import { SongTitlesToArtistTwitterHandle } from '../dancePartySongArtistTags';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
@@ -163,7 +164,6 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
-    replayLog: PropTypes.array,
   };
 
   state = {
@@ -173,6 +173,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
+    replayVideoUnavailable: false,
   };
 
   componentDidMount() {
@@ -193,23 +194,13 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
-      this.tryCreateReplayVideo();
     }
   }
 
-  shouldCreateReplayVideo = () =>
-    this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl &&
-    this.props.replayLog &&
-    this.props.replayLog.length;
-
-  tryCreateReplayVideo = () => {
-    if (this.shouldCreateReplayVideo()) {
-      fetch(appOptions.signedReplayLogUrl, {
-        method: "PUT",
-        body: JSON.stringify(this.props.replayLog)
-      });
-    }
+  replayVideoNotFound = () => {
+    this.setState({
+      replayVideoUnavailable: true
+    });
   };
 
   sharingDisabled = () =>
@@ -219,6 +210,9 @@ class ShareAllowedDialog extends React.Component {
   close = () => {
     recordShare('close');
     this.props.onClose();
+    this.setState({
+      replayVideoUnavailable: false
+    });
   };
 
   showSendToPhone = (event) => {
@@ -375,7 +369,7 @@ class ShareAllowedDialog extends React.Component {
                   }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                    <span>Send to phone</span>
+                    <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished &&
                   <button
@@ -399,6 +393,10 @@ class ShareAllowedDialog extends React.Component {
                     className="no-mc"
                   />
                   }
+                  <DownloadReplayVideoButton
+                    style={styles.button}
+                    onError={this.replayVideoNotFound}
+                  />
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
@@ -435,6 +433,13 @@ class ShareAllowedDialog extends React.Component {
                       </span>
                   </div>
                 }
+                {this.state.replayVideoUnavailable &&
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.downloadReplayVideoButtonError()}
+                    </span>
+                  </div>
+                }
                 <div style={{clear: 'both', marginTop: 40}}>
                   {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
                   <AdvancedShareOptions
@@ -465,7 +470,6 @@ export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
-  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {

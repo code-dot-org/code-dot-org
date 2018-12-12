@@ -4,18 +4,16 @@ nn:
       2-3 Artist 1 new: Hei, eg er ein kunstnar. Du kan skrive kode for å få meg til å teikna nesten kva som helst. Bruk nokre blokker for å få meg til å teikna over dei grå linjene på bildet. (Kvar linje er 100 pikslar lange)
       2-3 Artist 11: "Gje stoppskiltet ein kant ved å lage ein åttekant med 100 piksel lange sider. \\r\n\\r\n"
       2-3 Artist 12: |-
-        Lag ein sirkel for å fullføre auget.\r
-        \r
         Dersom kvar rørsle blir dreid med éin grad, kor mange gongar må du gjenta for å fullføre sirkelen? 180? 360? 500?
       2-3 Artist 2 new: 'Dette huset har ein halvferdig vegg. Kvar side er 100, men den halvferdige veggen er berre 50. Fullfør veggen. '
       2-3 Artist 2: 'Dette huset har ein halvferdig vegg. Kvar side er 100, men den halvferdige veggen er berre 50. Fullfør veggen. '
-      2-3 Artist 3.4: Hoppeblokka flyttar artisten utan å teikne. Teikn den stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pixlar lang.
+      2-3 Artist 3.4: Hoppeblokka flyttar kunstnaren utan å teikne. Teikn den stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pikslar lang.
       2-3 Artist 3: Denne hatten er 100 pikslar høg. Tegn ein hatt som er 70 pikslar mindre.
-      2-3 Artist 3new: "Den raude hatten er 100 pikslar høg. Teikn ferdig ein svart hatt som er 70 pikslar lågare. \\r Merk at breidda til kvar hatt er 50 pikslar."
+      2-3 Artist 3new: "Den raude hatten er 100 pikslar høg. Teikn ferdig ein svart hatt som er 70 pikslar lågare. \n(Merk at breidda til kvar hatt er 50 pikslar.)"
       2-3 Artist 4: Hjelp meg å gjere huset til denne katten ferdig.
       2-3 Artist 5: Erstatt denne koden med ein "gjenta gonger"-blokk for å teikne det same huset med berre tre blokker.
       2-3 Artist 6: 'Dette huset treng eit tak! Teikn trekanten. Hint: alle dei tre sidene skal være like lange.'
-      2-3 Artist 7: 'Gjer ferdig den høgre helvta av det siste vindauget så alle elevane kan sjå ut. Kvart kvadratiske glas er 25 pikslar breidt. '
+      2-3 Artist 7: 'Gjer ferdig det siste settet av vindauga på skulen slik at alle elevane kan sjå ut. Kvart kvadratiske glas er 25 pikslar breidt. '
       2-3 Artist 8: Gjer ferdig romma for alle dyra ved å dele rektangelet i to like store firkantar. Rektangelet er 200 pikslar breidt og 100 pikslar høgt. Det er fleire måtar å løyse dette på, ha det gøy!
       2-3 Artist 9 NEW: Gjer ferdig denne dragen
       2-3 Artist 9 REPLACEMENT: Gjer ferdig teikninga av desse trappene!
@@ -50,19 +48,21 @@ nn:
         Koden for denne stamma er feil. Korleis kan kunstnaren teikne stamma riktig veg?
       2-3 Artist Debugging Assessment 1: "Kvifor ender denne forma med sider som er 75 pikslar for korte på kvar side?\\r\n\\r\nKvar er koden feil?"
       2-3 Artist Free Play: Frileik! Teikn kva du vil.
-      2-3 Artist Functions 1 a: "Hallo. Meg zombiekunstner. Meg elske tegning!\\r\n\\r\nHjelp zombien med å teikne firkanta briller.\\r\n\\r\nFirkantane er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
-      2-3 Artist Functions 1: "Hallo. Meg zombiekunstner. Meg elske tegning!\\r\n\\r\nHjelp zombien med å teikne firkanta briller.\\r\n\\r\nFirkantane er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
+      2-3 Artist Functions 1 a: "Hallo. Meg zombiekunstner. Meg elske teikning!\"\n\nHjelp zombien med å teikne kvadratiske briller.\n\nKvadrata er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
+      2-3 Artist Functions 1: "Hallo. Meg zombiekunstner. Meg elske teikning!\"\n\nHjelp zombien med å teikne kvadratiske briller.\n\nKvadrata er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
       2-3 Artist Functions 10: 'Her er to funksjonar, ein som teiknar eit stort tannhjul og ein som teiknar eit lite tannhjul. Bruk dei til å teikne innsida av ei maskin!'
-      2-3 Artist Functions 11 a: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\\r\n\\r\nTeikne bildet ferdig med den nye funksjonen!"
+      2-3 Artist Functions 11 a: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\n\nTeikne bildet ferdig med den nye funksjonen!"
       2-3 Artist Functions 11.5 a: "Her er den same \"Teikn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
       2-3 Artist Functions 11.5: "Her er den same \"Teikn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
-      2-3 Artist Functions 11: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\\r\n\\r\nTeikne bildet ferdig med den nye funksjonen!"
+      2-3 Artist Functions 11: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\n\nTeikne bildet ferdig med den nye funksjonen!"
       2-3 Artist Functions 12 Mike: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
       2-3 Artist Functions 12 a: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
       2-3 Artist Functions 12: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
       2-3 Artist Functions 13: Vi har gitt deg fire funksjonar, Bruk dei slik du vil i ein eller fleire løkker for å lage bilete du kan dele med vennane dine. Trykk kjør for å sjå eit døme.
       2-3 Artist Functions 2: "Funksjonar lar deg definere nye blokker!\\r\n\\r\nVi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
+      2-3 Artist Functions 3 a: "Endre funksjonen \"tegne en firkant\" til å tegne briller med rammer som er 115px på hver side. \n\nRutene er nå 45 piksler fra hverandre."
       2-3 Artist Functions 3: "Rediger funksjonen slik at den teiknar sider på 115 pikslar. \\r\n\\r\nKvadrata er no 45 pikslar frå kvarandre."
+      2-3 Artist Functions 4 a: Plasser funksjonen inni en løkke for og legg til en ekstra gang for å tegne disse kvadratene.
       2-3 Artist Functions 4: Sett funksjonen inni ein løkke for å teikne desse tre kvadrata.
       2-3 Artist Functions 7: 'Bruk "teikn eit hus"-funksjonen til å teikne to hus med to ulike parameter. (Hint: det første huset er 100 pikslar).'
       2-3 Artist Functions 9: 'Her er ein snøfnugg-funksjon. Prøv deg fram og lag ei vinterscene. Dette er ei frileik-oppgåve, så det er inga oppgåver å løyse. Ha det gøy!'
@@ -76,7 +76,7 @@ nn:
       2-3 Artist Loops 7: Vi kan bruke løkker til å lage alle slags polygoner. Kan du lage ein rombe inne i denne sekskanten?
       2-3 Artist Loops 8: La oss putte begge elementa inn i ei løkke.
       2-3 Artist Loops 9: |-
-        Vi skal ha ei løkke med dei same elementa, men nå skal vi legge til avstand mellom dei.\r Bruk same koden som før, men legg til eit steg framover i den ytre løkka.
+        Vi skal ha ei løkke med dei same elementa, men nå skal vi legge til avstand mellom dei. Bruk same koden som før, men legg til eit steg framover i den ytre løkka.
       2-3 Artist Loops New 1: La oss tegne hovudet til denne roboten! Kan du lage eit kvadrat der sidene er 100 pikslar lange?
       2-3 Artist Loops New 10: Nå skal me kople saman ein haug med V'ar ved å teikne dei med ei løkke.
       2-3 Artist Loops New 11: Bygg koden frå forrige oppgåve igjen, men legg til ein 30 graders venstresving inne i løkka. Gjenta 24 gonger i staden for 8.
@@ -98,12 +98,12 @@ nn:
       2-3 Artist Nested Loops 11: Gjenta denne koden 4 gongar for å fullføre mønsteret. Snu 90 grader etter kvar sirkel.
       2-3 Artist Nested Loops 12: Gjenta denne koden 12 gongar for å fullføre krøllane.
       2-3 Artist Nested Loops 2: "No skal vi køyre trekantblokka gjennom løkka 6 gongar.\\r\n\\r\nEtter kvar trekant må du snu 60 grader før du teiknar det neste."
-      2-3 Artist Nested Loops 3: "For å teikna dette mønsteret må du gjenta trekanten 12 gongar.\\r\n\\r\nDel talet på grader i ein sirkel (360) med talet på figurar du teiknar (12), for å rekna ut kor mykje du må snu etter kvar figur."
+      2-3 Artist Nested Loops 3: "For å teikna dette mønsteret må du gjenta trekanten 12 gongar.\n\nDel talet på grader i ein sirkel (360) med talet på figurar du teiknar (12), for å rekna ut kor mykje du må snu etter kvar figur."
       2-3 Artist Nested Loops 4: "Gjenta denne diamanten 12 gongar for å teikna ein blom.\\r\n\\r\nTips: 12 diamanter er akkurat likt dei 12 trekantane du laga sist.\\r\nKor mykje må du snu etter kvar figur?"
       2-3 Artist Nested Loops 5: "Teikn inn vindauga i denne bygninga med løkke i løkke.\\r\n\\r\nVindauga er 20 pikslar breie og har 20 pikslar mellom kvart vindauge."
       2-3 Artist Nested Loops 6: |-
-        Dinosauren har 8 taggar langs halen sin.\r
-        Kvar tagg er 30 pikslar lang. Teikn trekanten 8 gongar, men pass på å flytte deg framover etter kvar!
+        Dinosauren har 8 taggar langs halen sin.
+        Kvar tagg er 30 pikslar lang. Teikn trekanten 8 gongar i løkke, men pass på å flytte deg framover etter kvar!
       2-3 Artist Nested Loops 7: "Gjenta denne trekanten 10 gongar for å teikne sola.\\r\n\\r\nDu må flytte deg og snu deg etter kvar trekant.\\r\n\\r\nDu finn ut kor mykje du må snu deg ved å dele talet på grader i ein sirkel med talet på figurar sirkelen skal lagast av."
       2-3 Artist Nested Loops 8: "No skal me legge til gras på biletet.\n\\r\\r \nDet er 50 pikslar mellom kvar grastust."
       2-3 Artist Nested Loops 9: "Me skal avslutte biletet med å legge til ein blome.\\r\n\\r\nTeikn diamanten 12 gongar for å teikne blomen."
@@ -254,7 +254,7 @@ nn:
       20hr_maze_stage2_17: Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!
       20hr_maze_stage2_18: '"dersom-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
       20hr_maze_stage2_19: Ei siste øving med "dersom-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
-      20hr_maze_stage2_2: Denne grisen rufser til fjørene mine. Hjelp meg med å finne han!
+      20hr_maze_stage2_2: Denne grisen rufser til fjæra mine. Hjelp meg med å finne han!
       20hr_maze_stage2_20: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Dersom du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
       20hr_maze_stage2_3: Følg stien og før meg til den tåpelege grisen. Unngå TNT elles vil fjørene mine fyke!
       20hr_maze_stage2_4: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
@@ -312,17 +312,17 @@ nn:
         Klarer du å teikne dette kvadratet ved bruk av ei løkke? \r
         \r
         Kvar side er 20 pikslar lang.
-      4-5 Artist Patterns 10: "Denne koden teiknar to rader med sekskantar – \nrepetér heile kodeblokka 4 gonger for å teikne heile bikubemønsteret. \\r\n\\r\nDu må hoppe tilbake 120 pikslar i den ytste løkka for å passe på at artisten ikkje teiknar utanfor skjermen.\\r\n"
+      4-5 Artist Patterns 10: "Denne koden teiknar to rader med sekskantar – \nrepetér heile kodeblokka 4 gonger for å teikne heile bikubemønsteret. \n\nDu må hoppe tilbake 120 pikslar i den ytste løkka for å passe på at kunstnaren ikkje teiknar utanfor skjermen.\n"
       4-5 Artist Patterns 11: 'Kor mange gonger må du repetere denne koden for å teikne ein halvsirkel? '
       4-5 Artist Patterns 12: "Kva skjer om du kopierer løkka og snur mot venstre i staden for mot høgre? \\r\n\\r\nKan du du bruke ei gjenta-blokk til å teikne denne bølgja?"
       4-5 Artist Patterns 13: "La oss no gjere det heile opp att fire gonger for å lage biletramme. Sjå opp for hjørna – du kan ikkje berre snu deg 90 gradar!\\r\n\\r \nEin halvsirkel kan du lage ved å repetere 3 gradar 60 gonger. Så kva for nokre kodeblokkar må du bruke for å lage ein kvart-sirkel til hjørna?"
-      4-5 Artist Patterns 2: Om du legg firkant-løkka inni ei anna løkke, kallar me det ei løkke i løkke. Kva må du legge til i den ytre løkka for at alle 15 firkantane skal vere på ei linje ved sidan av kvarandre?
-      4-5 Artist Patterns 3: No skal me eitt hakk djupare! Me har nøsta heile kodeblokka inn ei anna løkke, men du må få artisten på rett plass for å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten av den ytste løkka for å teikne heile mønsteret?
+      4-5 Artist Patterns 2: Om du legg kvadrat-løkka inni ei anna løkke, kallar me det ei løkke i løkke. Kva må du legge til i den ytre løkka for at alle 15 kvadrata skal vere på ei linje ved sidan av kvarandre?
+      4-5 Artist Patterns 3: No skal vi eitt hakk djupare! Vi har nøsta heile kodeblokka inn ei anna løkke, men du må få kunstnaren på rett plass for å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten av den ytste løkka for å teikne heile mønsteret?
       4-5 Artist Patterns 4: Denne diamanten har sider som er 50 pikslar lange og vinklar på 120 og 60 gradar. Teikn diamanten ved å skrive ei kode-løkke.
       4-5 Artist Patterns 5.5: Kor mange gonger må du repetere denne blokka for å teikne heile rutenettet av diamantar?
       4-5 Artist Patterns 5: "No skal me repetere det for å teikne ei rekke med 6 diamantar.\n\\r\n\\r\nLegg merkje til at me har endra på diamantkoden så det vert repetert 3 gonger i staden for 2 – kvifor det, trur du?\\r\n"
       4-5 Artist Patterns 6: Kor mange gonger må du repetere denne blokka for å teikne heile rutenettet av diamantar?
-      4-5 Artist Patterns 7: No skal me gjere litt om på koden frå førre oppgåve for å gjere mønsteret litt meir komplisert. Legg merkje til korleis diamantane no overlappar kvarandre. Pråv å forandre den første "hopp tilbake" frå 100 til 50 (halvparten så langt) – kor langt skal artisten då gå i det andre "hopp tilbake"?
+      4-5 Artist Patterns 7: No skal vi gjere litt om på koden frå førre oppgåve for å gjere mønsteret litt meir komplisert. Legg merkje til korleis diamantane no overlappar kvarandre. Prøv å endre den første "hopp tilbake" frå 100 til 50 (halvparten så langt) – kor langt skal kunstnaren då gå i det andre "hopp tilbake"?
       4-5 Artist Patterns 8: Bruk ei løkke til å teikne ein sekskant der kvar side er 40 pikslar og vinklane er på 60 grader.
       4-5 Artist Patterns 9.5: La oss gjenta denne koden for å teikne to rader med sekskantar. Legg merke til korleis den andre rada er forskove mot høgre.
       4-5 Artist Patterns 9: "La oss gjenta koden 3 gongar for å teikne heile rekka. \\r\n\\r\nKvar sekskant er 80 pikslar på det breiaste."
@@ -433,9 +433,9 @@ nn:
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       App Lab test: test
-      Applab AllTheThings ResourcesTab AllResources: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      Applab AllTheThings ResourcesTab MapReference: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      Applab AllTheThings ResourcesTab ReferenceLinks: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Applab AllTheThings ResourcesTab AllResources: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Applab AllTheThings ResourcesTab MapReference: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Applab AllTheThings ResourcesTab ReferenceLinks: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       Artist - Nested Loops 1: 'Fullfør koden for å teikne desse trekantane. Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.'
       Artist - Nested Loops 10: Teikn den siste rada med stjerner på flagget ved å køyre ei løkke over dei gitte blokkane. Stjernene er 50 pikslar frå kvarandre, men hugs at stjernene er 30 pikslar i bredde.
       Artist - Nested Loops 11: Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke? Kvar kvadrat er 30 pikslar.
@@ -482,7 +482,7 @@ nn:
       CSD U5 black white images pixelation 5_2018: Teikn det du vil
       CSD U5 black white images pixelation: Gjer ferdig X-forma ved å skrive nullar og eittal
       CSD U5 black white images pixelation_2018: Gjer ferdig X-forma ved å skrive nullar og eittal
-      CSDU4 - AppLab - 1: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      CSDU4 - AppLab - 1: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       CSDU6 - Arrays - expressionsAsIndexes: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - Arrays - indexPractice: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - for loop - color buttons with for: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
@@ -541,8 +541,8 @@ nn:
       Course 4 Artist 8: Teikn sola ved å gjenta denne kodeblokka fleire gongar.
       Course 4 Artist 8a: Hugsar du denne figuren? Når skal du byggje den utan at vi gjer deg nokre blokkar å starte med!
       Course 4 Artist 9: "Gjenta dette designet 10 gongar og pass på at du roterer mellom kvar figur som blir teikna. \\r\n"
-      Course 4 Artist Binary 1: "Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Artisten vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\\r\\r Køyr denne koden for å sjå korleis kunstnaren bruker binær-strengen til å teikne dette mønsteret."
-      Course 4 Artist Binary 1a: "Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Artisten vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\\r\\r Køyr denne koden for å sjå korleis kunstnaren bruker binær-strengen til å teikne dette mønsteret."
+      Course 4 Artist Binary 1: "Her er ein funksjon som tek ein binær-streng av 1-arar og 0-arar og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Kunstnaren vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\n\nKøyr denne koden for å sjå korleis kunstnaren nyttar binær-strengen til å teikne dette mønsteret."
+      Course 4 Artist Binary 1a: "Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Kunstnaren vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\n\nKøyr denne koden for å sjå korleis kunstnaren nyttar binær-strengen til å teikne dette mønsteret."
       Course 4 Artist Binary 2: Kva av desse binære strengene kan du gjenta 8 gongar for å teikne dette biletet?
       Course 4 Artist Binary 3: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       Course 4 Artist Binary 4: Kvar binærstreng representerer ei rad i dette biletet. Kan du ordne strengene slik at dei teiknar eit smileansikt i staden for eit trist ansikt?
@@ -603,7 +603,7 @@ nn:
         La oss no lage funksjonen "Hopp opp til høgre", som flyttar kunstnaren øverst til høgre i åttekanten du nett teikna, slik at vi kan avslutte dette mønsteret.\r
         \r
         Hint: For å flytte deg sjølv opp til det høgre hjørne, prøv å hopp i eit mønster som utgjer berre 3/8 av åttekanten.
-      Course 4 Artist Functions 13: Sjekk ut vår nye funksjon, "teikn ei linje av firkantar". Ta gjerne ein kikk på funksjonblokka, for å sjå korleis vi laga den. Klikk "Køyr" når du er klar for neste oppgåve.
+      Course 4 Artist Functions 13: Sjekk ut vår nye funksjon, "teikn ei linje av kvadrat". Ta gjerne ein kikk på funksjonblokka, for å sjå korleis vi laga den. Klikk "Køyr" når du er klar for neste oppgåve.
       Course 4 Artist Functions 14.1: La oss lage ein funksjon kalla "hopp til øvre høgre" som flyttar kunstnaren til hjørnet øvst til høgre i åttekanten.
       Course 4 Artist Functions 14: Bra jobba! Bruk den nye "Teikn ei linje av kvadrat" funksjonen til å teikne eit kvadrat. Hugs at kvar kvadrat er 40 pikslar i lengde.
       Course 4 Artist Functions 15: 'La oss fortsetje, kan du teikne ein stjernefigur ved å bruke "teikn ei linje av kvadrat" funksjonen? Lykke til! Tips: du må snu 144 grader'
@@ -614,7 +614,7 @@ nn:
       Course 4 Artist Functions 5: "Kan du teikne dette biletet ved å bruke \"teikn eit kvadrat\" funksjonen? Tips: kvart kvadrat er 120 pikslar frå kvarandre.\\r\n"
       Course 4 Artist Functions 6: Kva blokk må du legge til for å få trekanten til å stå på toppen av kvadratet?
       Course 4 Artist Functions 7: Kan du teikne ei linje av kvadratar ved å bruke kvadratfunksjonen? Kvart kvadrat er 40 pikslar i lengde.
-      Course 4 Artist Functions 8: 'Byrjar du å få dreisen på funksjonsblokkene? La oss endre denne firkanten til å bli 200 pikslar stor. Hint: Klikk på "Rediger" for å endre storleiken til "Teikn ein firkant"-funksjonseditoren. Hugs å klikk på "Lagre og lukk" for å kome ut av funksjonseditoren.'
+      Course 4 Artist Functions 8: 'Byrjar du å få dreisen på funksjonsblokkene? La oss endre dette kvadratet til å bli 200 pikslar stort. Hint: Klikk på "Rediger" for å endre storleiken til "Teikn eit kvadrat"-funksjonseditoren. Hugs å klikk på "Lagre og lukk" for å kome ut av funksjonseditoren. '
       Course 4 Artist Functions 9: Vi har gitt deg mesteparten av koden til å lage ein funksjon. Likevel, det kan sjå ut til at det er noko som manglar. Kan du gjere ferdig denne funksjonsblokken?
       Course 4 Artist Functions Inspiration: Klikk her for å sjå tipsa ein gong til.
       Course 4 Artist Functions challenge: Klikk her for å sjå tipsa ein gong til.
@@ -630,14 +630,14 @@ nn:
       Course 4 Artist Params 3: 'Tøft! Kan du teikne kvar av desse trekantane med den nye funksjonen? Den første er 25 pikslar lang, den andre er 50 og den tredje er 75.'
       Course 4 Artist Params 4: Kan du leggje til ein ny funksjon kalla kvadrat? Den bør og ta inn eit parameter for lengde, akkurat som trekanten. Denne gongen skal du teikne 3 kvadrat, 25, 50 og 75 pikslar lange, og 100 pikslar frå kvarandre.
       Course 4 Artist Params 5: 'Bruk begge dei nye funksjonane til å teikne dette biletet. For å gjere det lettare kan du bruke ei løkke med eit "teljer" parameter.'
-      Course 4 Artist Params 6: "La oss gjere ei endring i \"Teikn ein figur\"-funksjonen. \nDen har allereie eit \"lengde\"-parameter. Gjer no om på funksjonen slik at den også legg til eit \"side\"-parameter. Hugs at vendingsvinkelen til ein figur er 360 delt på talet sider i figuren. Hint: Piksellengda for formene er 100 for trekanten, 25 for sekskanten og 50 for firkanten."
+      Course 4 Artist Params 6: "La oss gjere ei endring i \"Teikn ein figur\"-funksjonen. \nDen har allereie eit \"lengde\"-parameter. Gjer no om på funksjonen slik at den også legg til eit \"side\"-parameter. Hugs at vendingsvinkelen til ein figur er 360 delt på talet sider i figuren. Hint: Piksellengda for formene er 100 for trekanten, 25 for sekskanten og 50 for kvadratet. "
       Course 4 Artist Params 7: 'Kan du teikne desse figurane ved å fylle inn ein verdi der det står"???"? Firkanten og trekanten er 100 pikslar store, medan sekskanten er 75 pikslar stor.'
       Course 4 Artist Params 8: 'Klarer du å finne ut korleis ein teiknar denne figuren? Her er eit hint: Lag ein ny funksjon med seks sider som du kallar "Sekskant".'
-      Course 4 Artist Params 9: Hugsar du då vi nytta teljeløkka, men fjerna ei løkke frå innsida? La oss ha det litt gøy og bruke "Teikn ein figur"-funksjonen med "sider"- og "lengde"-parametra. Kan du gjenskape desse figurane? Firkantteljaren burde vere 5/100/5, triangelteljaren 10/100/10 og sekskanten 2/100/2.
+      Course 4 Artist Params 9: Hugsar du då vi nytta teljeløkka, men fjerna ei løkke frå innsida? La oss ha det litt gøy og bruke "Teikn ein figur"-funksjonen med "sider"- og "lengde"-parametra. Kan du gjenskape desse figurane? Kvadratteljaren burde vere 5/100/5, triangelteljaren 10/100/10 og sekskanten 2/100/2.
       Course 4 Artist Var 9: 'Her er algoritma for å teikne ein trekant. Endre denne slik at ho nyttar "sider"-variabelen istaden. Erstatt tretalet med "sider"-variabelen. Hint: Hugs å bruke "Sett sider"-blokka.'
       Course 4 Artist Vars 1: "Kan du hjelpe meg å teikne ein likesida trekant? \\r\n\\r\nDen må vere nøyaktig 100 pikslar lang på kvar side."
       Course 4 Artist Vars 10: Her er ei algoritme som nyttar små trekantar til å teikne ein stor. Kan du endre henne slik at ho brukar "sider"-variabelen til å teikne kvar trekant? Sjå gjennom koden, og kvar gang du ser talet 3 kan du erstatte det med din "sider"-variabel. Hugs å nytte "Sett sider"-blokka.
-      Course 4 Artist Vars 11: Her er ein litt vanskelegare kode som nyttar same konsepta som førre oppgåve. Kva må du sette "sider"-variabelen til for å teikne dette biletet av firkantar?
+      Course 4 Artist Vars 11: Her er ein litt vanskelegare kode som nyttar same konsepta som førre oppgåve. Kva må du sette "sider"-variabelen til for å teikne dette biletet laga av kvadrat?
       Course 4 Artist Vars 12: La oss sette "sider"-variabelen til 5. Dess fleire sider vi legg til i algoritmen, dess større blir heile mønsteret! Legg merke til at det også er ein "lengde"-variabel her. Denne kan vi bruke alle stader vi har ein "flytt framover". Sett "lengde"-variabelen til 75 for denne figuren.
       Course 4 Artist Vars 13: "Når ein figur har mange sider må alle sidene vere kortare om du vil at mønsteret skal passe inn på skjermen.\n\\r\nLa oss lage algoritmen for dette stilige mønsteret, men bruke ei matte-blokk med \"sider\"-variabelen inni, i staden for å manuelt settje \"lengde\"-variabelen. Omkrinsen av kvar mangekant er 300 pikslar. \\r \nTreng du noko hint? Klikk her."
       Course 4 Artist Vars 14: |-
@@ -828,6 +828,21 @@ nn:
       D_Frozen_nested5: Leik med snøflak!
       D_Frozen_nested6: Teikn eit trappetrinnsmønster som brukar svingar mellom 75 og 105 gradar.
       D_Frozen_nested7: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
+      Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble den til inni oppsettblokka.
+      Dance_Party_01_low: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble den til inni oppsettblokka.
+      Dance_Party_02: Få elgen til å gjere eit nytt dansetrinn etter 4 taktar!
+      Dance_Party_03: Få dansaren til å gjere eit nytt dansetrinn etter 6 taktar!
+      Dance_Party_04: Legg til ein bakgrunnseffekt i programmet.
+      Dance_Party_05: Bruk ei ny blokk for å få dansaren til å bytte dansetrinn kvar 2. takt.
+      Dance_Party_06: Lag ein ny dansar som heiter ‘backup_dancer1’, som kan danse med katten.
+      Dance_Party_08: Kan du gjere begge bakgrunnsdansarane like store?
+      Dance_Party_09: Bruk ei fargevalblokk til å skifte farge på dansaren.
+      Dance_Party_10: Få den andre dansaren til å reagere på musikken ved å bruke ‘startar å følge’-blokka.
+      Dance_Party_11.5_test: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
+      Dance_Party_11: Med ‘når du trykker opp’-blokka kan du køyre kode når du trykker på oppoverpila. Prøv å få dansaren til å gjere ein kjapp dans når du trykker opp.
+      Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
+      Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila, og gjere ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så fort du kan!
+      Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
       Find the Wizard: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Find the Wizard_2018: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Food Fight!: "Vi har lagt til ein siste funksjon til\ndeg. \n\nBruk ei \"dersom\"-setning til å programmere spelet til å kalle funksjonen \"nytt_nivå\" \nnår \"spelar_poeng\" blir høgare enn eit gitt nummer.\n\nTil dømes: \"spelar_poeng\" > 6\n\nPrøv spelet, og kom deg til nivå 3 for å gå vidare til neste oppgåve. "
@@ -839,6 +854,17 @@ nn:
       Guess The Number 2: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Guess The Number: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Guess The Number_2018: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      HOC 2018 Level_1: Hent ein båt i kista.
+      HOC 2018 Level_10: Kom deg til inngangen av havmonumentet.
+      HOC 2018 Level_11: 'Bygg ein kanal med prismarin inne i havmonumentet.  '
+      HOC 2018 Level_12: 'Bygg ditt eige undervassmiljø. Det er du som bestemmer korleis du vil ha det!  '
+      HOC 2018 Level_2: 'Gå til enden av bryggja.  '
+      HOC 2018 Level_3: 'Dra over ope hav til torsken.  '
+      HOC 2018 Level_4: Bruk ei løkke for å komme deg til delfinen.
+      HOC 2018 Level_5: Utforsk skipsvraket for å finne kista.
+      HOC 2018 Level_6: Naviger deg gjennom isen for å komme deg til laksen.
+      HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
+      HOC 2018 Level_9b: 'Bruk korallar som guide for å finne skatten.  '
       Infinity_catch: Kan du få Elsa ("figur 2") til å ta igjen Anna ved å bruke piltastane?
       Infinity_finale: Lag det du har lyst til og del med andre!
       Infinity_move_collide: Hiro er "figur 1". Flytt han direkte til Baymax og spill av ein lyd når dei rører ved kvarandre.
@@ -1006,7 +1032,7 @@ nn:
       MC_HOC_2017_02: Få agenten til trykkplata.
       MC_HOC_2017_02_Cole: 'Flytt agenten til trykkplata slik at {currentPlayerName} kan kome til kartet. '
       MC_HOC_2017_02_Cole_2019: 'Flytt agenten til trykkplata slik at {currentPlayerName} kan kome til kartet. '
-      MC_HOC_2017_02_Kiki: Få agenten til trykkplata og få så spelaren til den oransje firkanten.
+      MC_HOC_2017_02_Kiki: Få agenten til trykkplata og få så spelaren til det oransje kvadratet.
       MC_HOC_2017_02_Will: Få agenten til trykkplata.
       MC_HOC_2017_03_Cole: 'Programmer agenten til å opne porten. '
       MC_HOC_2017_03_Cole_2019: 'Programmer agenten til å opne porten. '
@@ -1019,18 +1045,18 @@ nn:
       MC_HOC_2017_04_Cole_2019: Få agenten til trykkplata.
       MC_HOC_2017_04_Kiki: Få agenten til trykkplata.
       MC_HOC_2017_05: Bruk ein funksjon til å hjelpe agenten fram til trykkplata.
-      MC_HOC_2017_05_Cole: Få spelaren til den oransje firkanten.
-      MC_HOC_2017_05_Cole_2019: Få spelaren til den oransje firkanten.
-      MC_HOC_2017_05_Josh: Få spelaren til den oransje firkanten.
-      MC_HOC_2017_05_Kiki: Få spelaren til den oransje firkanten.
+      MC_HOC_2017_05_Cole: Få spelaren til den oransje kvadratet.
+      MC_HOC_2017_05_Cole_2019: Få spelaren til den oransje kvadratet.
+      MC_HOC_2017_05_Josh: Få spelaren til det oransje kvadratet.
+      MC_HOC_2017_05_Kiki: Få spelaren til det oransje kvadratet.
       MC_HOC_2017_06_Cole: Fiks på denne koden for å hjelpe agenten med å bygge ei bru over elva.
       MC_HOC_2017_06_Cole_2019: Fiks på denne koden for å hjelpe agenten med å bygge ei bru over elva.
       MC_HOC_2017_06_Josh: Fiks på denne koden for å hjelpe agenten med å bygge ei bru over elva.
       MC_HOC_2017_06_Kiki: Fiks på denne koden for å hjelpe agenten med å bygge ei bru over elva.
       MC_HOC_2017_07_Cole: Øydelegg isen og få {currentPlayerName} til Minecarten.
       MC_HOC_2017_07_Cole_2019: Øydelegg isen og få {currentPlayerName} til Minecarten.
-      MC_HOC_2017_07_Kiki: Bruk ein funksjon for å klarere banen til den oransje firkanten.
-      MC_HOC_2017_07a_Kiki: Klarér banen til den oransje firkanten.
+      MC_HOC_2017_07_Kiki: Bruk ein funksjon for å klarere banen til det oransje kvadratet.
+      MC_HOC_2017_07a_Kiki: Klarér banen til det oransje kvadratet.
       MC_HOC_2017_08_Cole: Forandre funksjonen slik at han verkar for denne biomen.
       MC_HOC_2017_08_Kiki: Forandre funksjonen slik han verkar for denne oppgåva.
       MC_HOC_2017_08_RY: Bruk funksjonane til å finne ein veg over lavaen.
@@ -1064,15 +1090,15 @@ nn:
       NEW Course 4 Artist Functions 13: 'Kan du teikne ei stjerne ved å bruke funksjonen "teikn ei linje av kvadrat"?  '
       NEW Course 4 Artist Functions 14: 'Tid for frileik! '
       NEW Course 4 Artist Functions 2: 'Kan du teikne 3 kvadratar med 20 pikslar mellomrom? Tips: kvart kvadrat er 100 pikslar i størrelse.'
-      NEW Course 4 Artist Functions 3: "Her er ei ny type blokk. Den er ein \"funksjon\"-blokk. Trykk på \"endre\" og fyll inn koden for å teikne ein firkant med 100 pixler lange sider.\\r\n\\r\nNår du er ferdig med funksjonen, trykk \"lukk\" for å gå tilbake til programmet ditt."
+      NEW Course 4 Artist Functions 3: "Her er ei ny type blokk. Den er ein \"funksjon\"-blokk. Trykk på \"endre\" og fyll inn koden for å teikne eit kvadrat med 100 pikslar lange sider.\n\nNår du er ferdig med funksjonen, trykk \"lukk\" for å gå tilbake til programmet ditt."
       NEW Course 4 Artist Functions 4: Bruk "tegn eit kvadrat"-funksjonen for å tegne dette mønsteret.
       NEW Course 4 Artist Functions 5: Hvordan visste "tegn en firkant"-brikken hvilke kommandoer som skulle kjøres? Klikk på "endre" i "tegn en firkant"-brikken. Brikkene i vinduet som åpnes er definisjonen på hva som er "tegn en firkant"-funksjonen. Ta en titt. Når du er ferdig, klikk "Lagre og lukk" og så "Kjør"
       NEW Course 4 Artist Functions 6: "Klarer du å tegne dette bildet ved å bruke funksjonsbrikken \"tegn en firkant\"? Hint: Hver firkant er 20 piksler fra hverandre.\\r\n"
-      NEW Course 4 Artist Functions 7: 'Byrjar du å få dreisen på funksjonsblokkene? La oss endre denne firkanten til å bli 200 pikslar stor. Klikk på "Rediger" for å komme til "Teikn ein firkant"-funksjonseditoren. Hugs å klikke på "Lukk" for å kome ut av funksjonseditoren. '
+      NEW Course 4 Artist Functions 7: 'Byrjar du å få dreisen på funksjonsblokkene? La oss endre denne firkanten til å bli 200 pikslar stor. Klikk på "Rediger" for å komme til "Teikn eit kvadrat"-funksjonsredigeraren. Hugs å klikke på "Lukk" for å kome ut av funksjonseditoren. '
       NEW Course 4 Artist Functions 8: Me har laga ein ny funksjon til deg som heiter "Tegn ein trekant". Kan du endre på definisjonen slik at den tegner ein trekant med sider som er 100 pikslar lange?
       NEW Course 4 Artist Functions 9: Kan du løyse dette med å legge til berre ei brikke?
       NEW Course 4 Artist Functions inspire: Klikk her for å se inspirasjonsbildet igjen.
-      NEW Course 4 Artist Params 1: La oss lage ein funksjon som tegnar ein firkant med sider som er 50 pikslar lange. Trykk "rediger" for å starte.
+      NEW Course 4 Artist Params 1: La oss lage ein funksjon som tegnar eit kvadrat med sider som er 50 pikslar lange. Trykk "rediger" for å starte.
       NEW Course 4 Artist Params 10: 'Lag ein "tegn sekskant"-funksjonsblokk med eit lengde-parameter. Denne sekskanten har sider som er 100 pikslar lange. '
       NEW Course 4 Artist Params 11: Kan du finne ut korleis du tegner denne forma? Endre funksjonen til å bruke "side"-parametret.
       NEW Course 4 Artist Params 12: "Kan du gjere ferdig denne teikninga?\nSidene på alle figurane er 100 pikslar lange."
@@ -1083,10 +1109,10 @@ nn:
       NEW Course 4 Artist Params 3: "No kan vi nytte funksjonen til å teikne fem trekantar på rekke. Det er 30 pikslar mellom trekantane.\\r\n"
       NEW Course 4 Artist Params 4: Ser du noko annleis med desse funksjonsblokkene? Trykk på «Kjør» så ser du kva som skjer.
       NEW Course 4 Artist Params 5: 'Fyll ut "???" i lengde-parameteret i input-blokka. Femkanten har sider som er 100 pikslar lange. '
-      NEW Course 4 Artist Params 6: Fyll inn "lengde"-parameteret ved å erstatte "???" med riktig tall slik at figurane blir teikna. Firkanten og trekanten har sider som er 100 pikslar lange, medan sidene i sekskanten er 75 pikslar lange.
+      NEW Course 4 Artist Params 6: Fyll inn "lengde"-parameteret ved å erstatte "???" med riktig tall slik at figurane blir teikna. Kvadrata og trekanten har sider som er 100 pikslar lange, medan sidene i sekskanten er 75 pikslar lange.
       NEW Course 4 Artist Params 7: Kan du gjere denne teikninga ferdig? Sidene i kvar trekant er 25 pikslar lengre enn i den førre. Sidene i den første trekanten er 25 pixler lange.
       NEW Course 4 Artist Params 8: Koden til denne trekantfunksjonen er øydelagt. Kan du gjera om på funksjonen så det blir rett og så lage trekantar som med lengde på 25, 50 og 75 pixlar?
-      NEW Course 4 Artist Params 9: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn ein firkant» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
+      NEW Course 4 Artist Params 9: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn eit kvadrat» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
       NEW Course 4 Artist Params inspire: "Inspirasjon til fri oppgåve: No har du lært alt du treng å vite for å lage slike mønster! Dersom du blir inspirert av dette biletet, kan du prøve å lage noko liknande. Du kan òg lage noko heilt anna.\n\nVil du lære korleis inspirasjonsmønsteret vårt blei laga? "
       NEW Course 4 Artist Vars 1.5: 'Ta en titt på koden. Ser du hvordan "Angi lengde"-blokka og "lengde"-blokkere fungerer sammen? Klikk "Kjør" for å se hva som skjer. '
       NEW Course 4 Artist Vars 12: Tak opp att framgangsmåten frå førre nivå og lag ein mangekant der alle sidene er 150 pikslar lange.
@@ -1130,25 +1156,35 @@ nn:
       New Sports Project: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig, trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på sine telefonar!'
       Overworld Avoid Monsters: Å springe inn i ein kjøttetande plante er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Avoid Monsters_2018: Å springe inn i ein kjøttetande plante er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
+      Overworld Avoid Monsters_2019: Å springe inn i ein kjøttetande plante er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Chop Tree - allthethings: Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for å hogge det ned.
       Overworld Chop Tree: Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for å hogge det ned.
       Overworld Chop Tree_2018: Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for å hogge det ned.
+      Overworld Chop Tree_2019: Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for å hogge det ned.
       Overworld Chop Trees: Vi må bygge eit hus før sola går ned. Hus krev mykje tre. Kutt ned alle 3 trea.
       Overworld Chop Trees_2018: Vi må bygge eit hus før sola går ned. Hus krev mykje tre. Kutt ned alle 3 trea.
+      Overworld Chop Trees_2019: Vi må bygge eit hus før sola går ned. Hus krev mykje tre. Kutt ned alle 3 trea.
       Overworld Free Play 20x20: Gratulera! Du har fullført alle oppgåvene våre! Grav, bygg og lag noko unikt ved å bruke alt du har lært.
       Overworld Free Play 20x20_2018: Gratulera! Du har fullført alle oppgåvene våre! Grav, bygg og lag noko unikt ved å bruke alt du har lært.
+      Overworld Free Play 20x20_2019: Gratulera! Du har fullført alle oppgåvene våre! Grav, bygg og lag noko unikt ved å bruke alt du har lært.
       Overworld House Frame Chosen: Bygg resten av huset med det materialet du vil. Kommandoen "gjenta" vil vera nyttig her.
       Overworld House Frame Chosen_2018: Bygg resten av huset med det materialet du vil. Kommandoen "gjenta" vil vera nyttig her.
-      Overworld Move to Sheep: Legg til endå ein "gå framover"-kommando for å nå fram til sauen.
-      Overworld Move to Sheep_2018: Legg til endå ein "gå framover"-kommando for å nå fram til sauen.
+      Overworld House Frame Chosen_2019: Bygg resten av huset med det materialet du vil. Kommandoen "gjenta" vil vera nyttig her.
+      Overworld Move to Sheep: Legg til endå ei "gå framover"-blokk for å nå fram til sauen.
+      Overworld Move to Sheep_2018: Legg til endå ei "gå framover"-blokk for å nå fram til sauen.
+      Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå fram til sauen.
       Overworld Place Wall: Kvart hus startar med ein vegg. Bygg den første delen av huset ditt med å putte "plassèr" og "gå framover"-kommandoar inni gjenta-løkka.
       Overworld Place Wall_2018: Kvart hus startar med ein vegg. Bygg den første delen av huset ditt med å putte "plassèr" og "gå framover"-kommandoar inni gjenta-løkka.
+      Overworld Place Wall_2019: Kvart hus startar med ein vegg. Bygg den første delen av huset ditt med å putte "plassèr" og "gå framover"-kommandoar inni gjenta-løkka.
       Overworld Plant Crops: Det er lurt å tenke framover. Plant avlingar på begge sider av vatnet så du ikkje blir svolten seinare.
       Overworld Plant Crops_2018: Det er lurt å tenke framover. Plant avlingar på begge sider av vatnet så du ikkje blir svolten seinare.
+      Overworld Plant Crops_2019: Det er lurt å tenke framover. Plant avlingar på begge sider av vatnet så du ikkje blir svolten seinare.
       Overworld Powered Minecart: Bra jobba! Du har samla mange ressursar og bygd eit beskjedent hus. Legg skinner frå kanten av kartet og fram til døra på huset ditt.
       Overworld Powered Minecart_2018: Bra jobba! Du har samla mange ressursar og bygd eit beskjedent hus. Legg skinner frå kanten av kartet og fram til døra på huset ditt.
+      Overworld Powered Minecart_2019: Bra jobba! Du har samla mange ressursar og bygd eit beskjedent hus. Legg skinner frå kanten av kartet og fram til døra på huset ditt.
       Overworld Shear Sheep: Tid for å klippe sau! Bruk "klypp"-kommandoen for å samle ull frå begge sauene.
       Overworld Shear Sheep_2018: Tid for å klippe sau! Bruk "klypp"-kommandoen for å samle ull frå begge sauene.
+      Overworld Shear Sheep_2019: Tid for å klippe sau! Bruk "klypp"-kommandoen for å samle ull frå begge sauene.
       PDK5 Conditionals 1: Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ei "dersom"-blokk.
       PDK5 Functions 2: Funksjonar lar deg definere nye blokker! Vi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter "teikn eit kvadrat". Kan du bruke funksjonen "teikn eit kvadrat" til å lage vindauga? Kvadrata er 75 pikslar frå kvarandre.
       PS - test - pixelation: Gjer ferdig X-forma ved å skrive nullar og eittal
@@ -1162,7 +1198,7 @@ nn:
       Pixelation - Lesson 15 - Complete 3-bit color: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       Pizza on a Plate: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
-      Poorva copy U3L2 Using Simple Commands: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Poorva copy U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       Project - Final Image Scroller: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       Project - Final Image Scroller_2018: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       Project - Finish your canvas app: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
@@ -1171,6 +1207,7 @@ nn:
       Quantum Bee: Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ei "dersom"-blokk.
       Robot Doodle: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Robot Doodle_2018: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
+      Robot Doodle_2019: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Robot Drawing: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Robot: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Ryan - 4-5 Bee Conditionals 2: Bia vil berre ha nektar akkurat nå. Ikkje alle objekta er blomar, så sjekk under KVAR EINASTE SKY for å sjå om det gøymer seg ein blome der. Om det gjer det kan du samle nektar.
@@ -1183,7 +1220,7 @@ nn:
       SG U3L03 draw diamond: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
       SG U3L06 - moveForwardwithParams: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
       SG U3L06 Challenge 1 triangle: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
-      SG U3L06 Challenge 2 purple square: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      SG U3L06 Challenge 2 purple square: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       SG U3L06 Challenge 3 fill pink: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
       SG U3L06 Challenge 5 overlapping circles: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
       SG U3L06 Challenge 6 squiggles: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
@@ -1196,7 +1233,7 @@ nn:
       SG U3L07 - randomSquare: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L07 - sunBeams: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L07 - topDownDesign: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
-      SG U3L07 More Subgoals: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      SG U3L07 More Subgoals: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       SG U3L08 - fish: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - freePlay: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - introUnderTheSea - recovery: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
@@ -1205,11 +1242,11 @@ nn:
       SG U3L08 - squareTwoParams: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 how to add comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
-      SG U3L2 Using Simple Commands part 1: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      SG U3L2 Using Simple Commands: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      SG U3L2 Using Simple Commands part 1: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      SG U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       SG U3L2_Add-subgoals: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L2_Turtle3by3Grid: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
-      SG U3L2_TurtleSquare_right: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      SG U3L2_TurtleSquare_right: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       SpecialFrozenLevel: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
       Standalone_Artist_1: Velkomen til Kunstnar! Først, la oss prøve å lage eit enkelt kvadrat ved å bruke blokkane for å snu til høgre og flytte framover. Kvar side bør vere 100 pikslar lange.
       Standalone_Artist_2: Teikn denne diamanten med vinklar på 120 og 60 grader og 150 pikslar lange sider.
@@ -1250,8 +1287,8 @@ nn:
       U3L06 - moveForwardwithParams_2018: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 1 triangle: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 1 triangle_2018: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
-      U3L06 Challenge 2 purple square: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
-      U3L06 Challenge 2 purple square_2018: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      U3L06 Challenge 2 purple square: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
+      U3L06 Challenge 2 purple square_2018: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       U3L06 Challenge 3 fill pink: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 3 fill pink_2018: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 5 overlapping circles: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
@@ -1292,13 +1329,13 @@ nn:
       U3L08 how to add comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 how to add comments_2018: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L15 full clicker app: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
-      U3L2 Using Simple Commands (no tooltips): Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      U3L2 Using Simple Commands: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      U3L2 Using Simple Commands_2018: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands (no tooltips): Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands_2018: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       U3L2_Turtle3by3Grid: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       U3L2_Turtle3by3Grid_2018: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
-      U3L2_TurtleSquare_right: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
-      U3L2_TurtleSquare_right_2018: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_TurtleSquare_right: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_TurtleSquare_right_2018: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model App: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model App_2018: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model Design 1: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
@@ -1308,12 +1345,16 @@ nn:
       U4L02 - Objects - Template1_2018: Mal
       Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
       Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
+      Underground Avoiding Lava_2019: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
       Underground If Statements: No byrjar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein over all lavaen du grev fram.
       Underground If Statements_2018: No byrjar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein over all lavaen du grev fram.
+      Underground If Statements_2019: No byrjar ting å bli vanskeleg. Grav ut 3 redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein over all lavaen du grev fram.
       Underground Iron: Å gå inn i smelta lava er ein dårleg ide. Plassèr brustein over for å lage ei bru, og grav ut minst to av jern-blokkene.
       Underground Iron_2018: Å gå inn i smelta lava er ein dårleg ide. Plassèr brustein over for å lage ei bru, og grav ut minst to av jern-blokkene.
+      Underground Iron_2019: Å gå inn i smelta lava er ein dårleg ide. Plassèr brustein over for å lage ei bru, og grav ut minst to av jern-blokkene.
       Underground Mining Coal: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Underground Mining Coal_2018: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
+      Underground Mining Coal_2019: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       aE7: "Kva skjer om du kopierer løkka og snur mot venstre i staden for mot høgre? \\r\n\\r\nKan du du bruke ei gjenta-blokk til å teikne denne bølgja?"
       aE8: "La oss no gjere det heile opp att fire gonger for å lage biletramme. Sjå opp for hjørna – du kan ikkje berre snu deg 90 gradar!\\r\n\\r \nEin halvsirkel kan du lage ved å repetere 3 gradar 60 gonger. Så kva for nokre kodeblokkar må du bruke for å lage ein kvart-sirkel til hjørna?"
       allHallows2017: Fang Code.org-ansatte i tegnestiftboksen ved å tegne eit kvadrat med 320 pixel lange sider!
@@ -1365,7 +1406,7 @@ nn:
         Du kan bruke ei løkke for å trekke mange linjer i ei rad.\r 
         \r 
         Kan du teikne eit hus? Få det til å sjå ut akkurat slik du likar det!  Prøv å leite etter mønstre som du kan gjenta!
-      course1_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
+      course1_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarar du tre på rad?
       course1_artist_loops_challenge3: '"Kan du hjelpe meg å lage to fuglehus?"'
       course1_artist_loops_challenge4: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       course1_collector_loops_challenge1: '"Kan du hjelpe meg med å finne nokre bugs? Eg veit kor eg skal gå, men eg veit ikkje kor mange steg eg må ta."'
@@ -1380,15 +1421,15 @@ nn:
       course1_playlab_events_challenge2: '"La oss ha ein fest! Gi venene mine noko å gjere når du klikkar eller trykker på dei."'
       course2_artist_nestedLoops_challenge1: Kan du finne ut korleis du lagar eit slikt bilete?
       course2_artist_nestedLoops_challenge2: Kan du finne ut korleis du lagar eit slikt bilete?
-      course2_artist_prog_challenge1: Teikn eit rom for kvar av dyra. Det er mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege løysinga brukar 6 blokkar, men du kan bruke så mange du vil!
+      course2_artist_prog_challenge1: Teikn eit rom for kvart av dyra. Det er mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege løysinga brukar 6 blokker, men du kan bruke så mange du vil!
       course2_artist_prog_challenge2: "*Hjelp meg å måle dei gule linjene på denne vegen! *"
       course2_bee_conditionals_challenge1: Få tak i all nektaren og lag honning.
       course2_bee_conditionals_challenge2: Få tak i all nektaren og lag honning.
       course2_collector_loops_challenge2: Få tak i heile skatten!
-      course2_collector_prog_challenge1: Sjå nøye etter! Kan du samle saman alle dei *10* bitane av skatten?
-      course2_collector_prog_challenge2: Skatten er del opp i 20 stykke. Samle saman minst halvparten for å fullføre denne oppgåva!
+      course2_collector_prog_challenge1: Sjå nøye etter! Kan du samle saman alle dei *10* delane av skatten?
+      course2_collector_prog_challenge2: Skatten er del opp i 20 bitar. Samle saman minst halvparten for å fullføre denne oppgåva!
       course2_harvester_loops_challenge1: Samle saman alt kornet.
-      course2_harvester_loops_challenge2: "Saml all salaten. \nUnngå tre og åkrar!"
+      course2_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
       course2_maze_loops_challenge1: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       course2_maze_programming_challenge1: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
       course2_maze_programming_challenge2: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
@@ -1415,7 +1456,7 @@ nn:
       course3_farmer_condLoops_challenge2: Samle alt for å fullføre nivået.
       course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       course3_maze_debugging_challenge1: '*"Går eg berre rundt i sirklar?"*'
-      course3_maze_debugging_challenge2: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
+      course3_maze_debugging_challenge2: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp meg å nå eikenøtta med berre fire "snu"-kommandoar."*'
       course3_maze_until_challenge1: Ingen hint, berre utfordringar. Få zombien til solsikka.
       course3_playlab_stage16_1: Kan du få denne hunden til å seie «hallo verda»?
       course3_playlab_stage16_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
@@ -1430,7 +1471,7 @@ nn:
       course3_playlab_stage17_5: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
       course3_playlab_stage17_6: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
       course3_playlab_stage17_7: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
-      course4_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
+      course4_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne teikninga.
       course4_artist_functions_challenge2: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
       course4_artist_fwp_challenge1: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
       course4_collector_nested_loops_challenge2: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
@@ -1449,7 +1490,7 @@ nn:
       courseA_artist_loops9: 'Utfordring: Fiks trappa.'
       courseA_artist_loops9_2018: 'Utfordring: Fiks trappa.'
       courseA_artist_loops_challenge2: '"Kan du hjelpe meg å lage to fuglehus?"'
-      courseA_artist_loops_challenge3: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
+      courseA_artist_loops_challenge3: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarar du tre på rad?
       courseA_collector_loops1: Flytt Laurel rundt og få så mykje gull som mogleg!
       courseA_collector_loops10: Hjelp Laurel til å få tak i alle skattane langs stien.
       courseA_collector_loops10_2018: Hjelp Laurel til å få tak i alle skattane langs stien.
@@ -1537,8 +1578,8 @@ nn:
       courseB_artist_loops8_2018: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge1: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       courseB_artist_loops_challenge1_2018: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
-      courseB_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
-      courseB_artist_loops_challenge2_2018: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
+      courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
+      courseB_artist_loops_challenge2_2018: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
       courseB_collector_loops1: Dette er Laurel, eventyraren!  Kan du flytte henne og få ein skatt?
       courseB_collector_loops10: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseB_collector_loops10_2018: Hjelp Laurel til å få tak i alle skattane i grotta.
@@ -1549,8 +1590,8 @@ nn:
       courseB_collector_loops2_2018: Samle inn alle fire haugane for å klare dette nivået.
       courseB_collector_loops3: Korleis kan Laurel få alle dei fem skattehaugane med berre ei "E-->"-blokk?
       courseB_collector_loops3_2018: Korleis kan Laurel få alle dei fem skattehaugane med berre ei "E-->"-blokk?
-      courseB_collector_loops4: Fiks Laurel si bane for å få tak i alle skattane!
-      courseB_collector_loops4_2018: Fiks Laurel si bane for å få tak i alle skattane!
+      courseB_collector_loops4: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops4_2018: Fiks Laurel si bane for å få tak i all skatten!
       courseB_collector_loops5: 'Legg til meir i koden frå forrige oppgåve for å få all skatten. '
       courseB_collector_loops5_2018: 'Legg til meir i koden frå forrige oppgåve for å få all skatten. '
       courseB_collector_loops6: "Finn koden som hjelper Laurel\ntil å få tak i heile skatten!"
@@ -1567,7 +1608,7 @@ nn:
       courseB_collector_loops_challenge2_2018: "La oss få tak i skatten! Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du finne eit mønster?"
       courseB_collector_loops_challenge`: 'Denne gongen kan du berre bruke ein av kvar pil-blokk. Få tak i heile skatten! '
       courseB_collector_prog1: Dette er Laurel, eventyraren!  Kan du flytte henne og få gull?
-      courseB_maze_seq1: "Spel med desse blokkene å sjp kva dei får \nfuglen til å gjere! \\r \n\\r \nFå fuglen til grisen for å fullføre nivået."
+      courseB_maze_seq1: "Spel med desse blokkene å sjå kva dei får \nfuglen til å gjere! \n\nFå fuglen til grisen for å fullføre nivået."
       courseB_maze_seq12: Få tak i grisen!
       courseB_maze_seq12_2018: Få tak i grisen!
       courseB_maze_seq2: '*"Ein feil! Endre koden for å få meg bort til grisen."*'
@@ -1584,10 +1625,10 @@ nn:
       courseB_maze_seq_challenge2_2018: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
       courseB_playLab_events1: Sjå om du kan finne ut kva kvar blokk gjer.
       courseB_playLab_events1_2018: Sjå om du kan finne ut kva kvar blokk gjer.
-      courseB_playlab_events_challenge1: 'Det er klart for Det store dyeløpet! Få dyra til å flytte seg ned når du trykkar på ▼. Kven spring fortast?'
-      courseB_playlab_events_challenge1_2018: 'Det er klart for Det store dyeløpet! Få dyra til å flytte seg ned når du trykkar på ▼. Kven spring fortast?'
-      courseB_playlab_events_challenge2: "La oss få dyra til å forsvinne når du trykkar på dei! Prøv å spele med hunden no og etterpå la dei andre dyra få være med på moroa!\\r\nDu kan også leggje til lydar og poengsummar for å lage eit sisten-spel!"
-      courseB_playlab_events_challenge2_2018: "La oss få dyra til å forsvinne når du trykkar på dei! Prøv å spele med hunden no og etterpå la dei andre dyra få være med på moroa!\\r\nDu kan også leggje til lydar og poengsummar for å lage eit sisten-spel!"
+      courseB_playlab_events_challenge1: 'Få dyra til å flytte seg ned når du trykkar på ▼. '
+      courseB_playlab_events_challenge1_2018: 'Få dyra til å flytte seg ned når du trykkar på ▼. '
+      courseB_playlab_events_challenge2: La oss få dyra til å forsvinne når du trykkar på dei.
+      courseB_playlab_events_challenge2_2018: La oss få dyra til å forsvinne når du trykkar på dei.
       courseB_playlab_events_challenge2_embed: Her er det ferdige spelet!
       courseB_playlab_events_challenge2_template: La oss få dyra til å forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
       courseB_playlab_events_challenge2_template_2018: La oss få dyra til å forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
@@ -1617,45 +1658,58 @@ nn:
       courseC_PlayLab_events3_2018: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
       courseC_PlayLab_eventsFP: Lag di eiga historie. Når du er ferdig, klikk på Fullfør for å dele med vener. Sjå historieidear i hinta.
       courseC_PlayLab_eventsFP_2018: Lag di eiga historie. Når du er ferdig, klikk på Fullfør for å dele med vener. Sjå historieidear i hinta.
-      courseC_PlayLab_events_challenge1: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \\r\nSpel spelet og flytt Waddles med pilene til du får nok poeng."
-      courseC_PlayLab_events_challenge1_2018: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \\r\nSpel spelet og flytt Waddles med pilene til du får nok poeng."
+      courseC_PlayLab_events_challenge1: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
+      courseC_PlayLab_events_challenge1_2018: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
-        Her er ei ny blokk som er litt komplisert. Bruk den til å flytte Waddles tilbake til start når han spring inni diosauren og når han får eit poeng. Dette vil gjere spelet meir utfordrande og morosamt!\r
-        \r
+        Her er ei ny blokk som er litt komplisert. Bruk den til å flytte Waddles tilbake til start når han spring inni diosauren og når han får eit poeng. Dette vil gjere spelet meir utfordrande og morosamt!
+        
         Spel spelet og flytt Waddles med pilene til du får nok poeng.
       courseC_artist_loop1: La oss legge til nokre pizazz!
       courseC_artist_loop1_2018: La oss legge til nokre pizazz!
-      courseC_artist_loops1: "*\"Zombie.  Teikn!\"*\\r\n\\r\nZombien ønsker å teikne ei linje frå der han er til hagen med solsikker. Kan du hjelpe?  \\r\n*(Hagen er 250 pikslar unna)*  "
+      courseC_artist_loop1_2019: La oss legge til nokre pizazz!
+      courseC_artist_loops1: "*\"Zombie.  Teikn!\"*\n\nZombien ønsker å teikne ei linje frå der han er til hagen med solsikker. Kan du hjelpe? \n*(Hagen er 250 pikslar unna)*  "
       courseC_artist_loops1a: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
       courseC_artist_loops1a_2018: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
+      courseC_artist_loops1a_2019: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
       courseC_artist_loops2: No som zombie kjenner vegen sin, hjelp han med å grave hol langs banen for å plante fleire blomar!
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops3: Nydeleg!  No som blomen spirer, hjelp zombien med å plassere ein ven for kvar 50 piksel for å vakte over dei til dei har vokst ut.
       courseC_artist_loops3a: Legg til ei flaggermus!
       courseC_artist_loops3a_2018: Legg til ei flaggermus!
+      courseC_artist_loops3a_2019: Legg til ei flaggermus!
       courseC_artist_loops4: Zombien har funne ein tom gard! Kan du hjelpe ham å starte opp at ved å plassere klistremerker med dyr kvar 100 piksel?
       courseC_artist_loops4a: Prøv å hoppe framover 75 pikslar.
       courseC_artist_loops4a_2018: Prøv å hoppe framover 75 pikslar.
-      courseC_artist_loops5: "Flott! No er det på tide å lage eit gjerde \nfor å halde dyra ute. \\r\n\\r\n"
+      courseC_artist_loops4a_2019: Prøv å hoppe framover 75 pikslar.
+      courseC_artist_loops5: "Flott! No er det på tide å lage eit gjerde \nfor å halde dyra ute.\n\n"
       courseC_artist_loops5a: Prøv nye klistremerke!
       courseC_artist_loops5a_2018: Prøv nye klistremerke!
+      courseC_artist_loops5a_2019: Prøv nye klistremerke!
       courseC_artist_loops5b: Prøv å legge til linjer!
       courseC_artist_loops5b_2018: Prøv å legge til linjer!
-      courseC_artist_loops6: "Kva skal zombien setje i \nhagen? \\r\n\\r\n\\r\n"
+      courseC_artist_loops5b_2019: Prøv å legge til linjer!
+      courseC_artist_loops6: "Kva skal zombien setje i hagen?\n\n\n"
       courseC_artist_loops6a: Legg til eit anna klistremerke!
       courseC_artist_loops6a_2018: Legg til eit anna klistremerke!
+      courseC_artist_loops6a_2019: Legg til eit anna klistremerke!
       courseC_artist_loops7a: Prøv deg fram med løkker og vinklar.
       courseC_artist_loops7a_2018: Prøv deg fram med løkker og vinklar.
+      courseC_artist_loops7a_2019: Prøv deg fram med løkker og vinklar.
       courseC_artist_loops8a: Prøv noko på eiga hand!
       courseC_artist_loops8a_2018: Prøv noko på eiga hand!
+      courseC_artist_loops8a_2019: Prøv noko på eiga hand!
       courseC_artist_loopsPre1a: Tid for å få den linja til å spinne!
       courseC_artist_loopsPre1a_2018: Tid for å få den linja til å spinne!
+      courseC_artist_loopsPre1a_2019: Tid for å få den linja til å spinne!
       courseC_artist_loopsPrePre1a: 'Få kunstnaren til midten av spelområdet, teikn deretter ei linje. '
       courseC_artist_loopsPrePre1a_2018: 'Få kunstnaren til midten av spelområdet, teikn deretter ei linje. '
+      courseC_artist_loopsPrePre1a_2019: 'Få kunstnaren til midten av spelområdet, teikn deretter ei linje. '
       courseC_artist_loopsTemplate: Nydeleg!  No som blomen spirer, hjelp zombien med å plassere ein ven for kvar 50 piksel for å vakte over dei til dei har vokst ut.
       courseC_artist_loopsTemplateA: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
       courseC_artist_loopsTemplateA_2018: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
+      courseC_artist_loopsTemplateA_2019: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
       courseC_artist_prog5: |-
         Dette huset treng eit tak! Teikn trekanten. Hint: alle dei tre sidene skal være like lange.
       courseC_artist_prog5_2018: |-
@@ -1672,109 +1726,149 @@ nn:
       courseC_artist_prog_challenge2a_2019: '*Hjelp meg å måle dei gule linjene på denne vegen! *'
       courseC_collector_loops_challenge2: Få tak i heile skatten!
       courseC_collector_loops_challenge2_2018: Få tak i heile skatten!
+      courseC_collector_loops_challenge2_2019: Få tak i heile skatten!
       courseC_collector_prog2: Flytt Laurel til skatten, og bruk "samle inn" for å plukke den opp.
       courseC_collector_prog2_2018: Flytt Laurel til skatten, og bruk "samle inn" for å plukke den opp.
+      courseC_collector_prog2_2019: Flytt Laurel til skatten, og bruk "samle inn" for å plukke den opp.
       courseC_collector_prog9: '*"La oss få heile skatten!"*'
       courseC_collector_prog9_2018: '*"La oss få heile skatten!"*'
+      courseC_collector_prog9_2019: '*"La oss få heile skatten!"*'
       courseC_collector_prog_challenge1: Sjå nøye etter! Kan du samle saman alle dei *10* bitane av skatten?
       courseC_collector_prog_challenge1_2018: Sjå nøye etter! Kan du samle saman alle dei *10* bitane av skatten?
-      courseC_collector_prog_challenge2: Skatten er del opp i 20 stykke. Samle saman minst halvparten for å fullføre denne oppgåva!
-      courseC_collector_prog_challenge2_2018: Skatten er del opp i 20 stykke. Samle saman minst halvparten for å fullføre denne oppgåva!
+      courseC_collector_prog_challenge1_2019: Sjå nøye etter! Kan du samle saman alle dei *10* bitane av skatten?
+      courseC_collector_prog_challenge2: Skatten er del opp i 20 delar. Samle saman minst halvparten for å fullføre denne oppgåva!
+      courseC_collector_prog_challenge2_2018: Skatten er del opp i 20 delar. Samle saman minst halvparten for å fullføre denne oppgåva!
+      courseC_collector_prog_challenge2_2019: Skatten er del opp i 20 delar. Samle saman minst halvparten for å fullføre denne oppgåva!
       courseC_flappy_embed_events: Her er eit døme på eit slikt spel du skal lage sjølv! Spel gjennom spelet ein eller to gongar for å få ein ide om kva du skal gjere.
-      courseC_flappy_events10: 'Lag ditt eige Flakse-spel! '
-      courseC_flappy_events10_2018: 'Lag ditt eige Flakse-spel! '
+      courseC_flappy_events10: 'Lag ditt eige Flaksespel! '
+      courseC_flappy_events10_2018: 'Lag ditt eige Flaksespel! '
+      courseC_flappy_events10_2019: 'Lag ditt eige Flaksespel! '
       courseC_flappy_events2: Prøv å legge til ei blokk som setter nivåhastigheit når "Køyr"-knappen blir trykka på. Spel spelet og sikt mot målet for å halde fram.
       courseC_flappy_events2_2018: Prøv å legge til ei blokk som setter nivåhastigheit når "Køyr"-knappen blir trykka på. Spel spelet og sikt mot målet for å halde fram.
+      courseC_flappy_events2_2019: Prøv å legge til ei blokk som setter nivåhastigheit når "Køyr"-knappen blir trykka på. Spel spelet og sikt mot målet for å halde fram.
       courseC_flappy_events3: Knytt 'avslutt spelet'-blokka til 'når treff bakken'-hendinga. Spel spelet og krasj fuglen i bakken for å halde fram.
       courseC_flappy_events3_2018: Knytt 'avslutt spelet'-blokka til 'når treff bakken'-hendinga. Spel spelet og krasj fuglen i bakken for å halde fram.
+      courseC_flappy_events3_2019: Knytt 'avslutt spelet'-blokka til 'når treff bakken'-hendinga. Spel spelet og krasj fuglen i bakken for å halde fram.
       courseC_flappy_events4: Knytt ei blogg til 'når treff ei hindring'-hending slik at spelet sluttar når Flakse krasjer inn i dei første røyra.
       courseC_flappy_events4_2018: Knytt ei blogg til 'når treff ei hindring'-hending slik at spelet sluttar når Flakse krasjer inn i dei første røyra.
+      courseC_flappy_events4_2019: Knytt ei blogg til 'når treff ei hindring'-hending slik at spelet sluttar når Flakse krasjer inn i dei første røyra.
       courseC_flappy_events5: Knytt ei blogg til 'når treff ei hindring'-hending, trykk deretter 'Køyr' for å skåre poeng ved å få Flakse til å fly gjennom dei første røyra.
       courseC_flappy_events5_2018: Knytt ei blogg til 'når treff ei hindring'-hending, trykk deretter 'Køyr' for å skåre poeng ved å få Flakse til å fly gjennom dei første røyra.
+      courseC_flappy_events5_2019: Knytt ei blogg til 'når treff ei hindring'-hending, trykk deretter 'Køyr' for å skåre poeng ved å få Flakse til å fly gjennom dei første røyra.
       courseC_flappy_events6: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre for kvar gong.
       courseC_flappy_events6_2018: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre for kvar gong.
+      courseC_flappy_events6_2019: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre for kvar gong.
       courseC_flappy_events7: Prøv å endre scena ved å leggje ei anna blokk til "når køyrt"-hendinga.
       courseC_flappy_events7_2018: Prøv å endre scena ved å leggje ei anna blokk til "når køyrt"-hendinga.
+      courseC_flappy_events7_2019: Prøv å endre scena ved å leggje ei anna blokk til "når køyrt"-hendinga.
       courseC_flappy_events8: Prøv å sette på ei **tilfeldig** scene når andre hendingar skjer...til dømes når du passerer ei hindring.
       courseC_flappy_events8_2018: Prøv å sette på ei **tilfeldig** scene når andre hendingar skjer...til dømes når du passerer ei hindring.
+      courseC_flappy_events8_2019: Prøv å sette på ei **tilfeldig** scene når andre hendingar skjer...til dømes når du passerer ei hindring.
       courseC_flappy_events9: For å gjere ting anleis, kan du sette skårsummen tilbake til 0 når Flakse treff ei hindring.
       courseC_flappy_events9_2018: For å gjere ting anleis, kan du sette skårsummen tilbake til 0 når Flakse treff ei hindring.
+      courseC_flappy_events9_2019: For å gjere ting anleis, kan du sette skårsummen tilbake til 0 når Flakse treff ei hindring.
       courseC_harvester_loops_challenge1: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a_2018: Samle saman alt kornet.
-      courseC_harvester_loops_challenge2: "Saml all salaten. \nUnngå tre og åkrar!"
-      courseC_harvester_loops_challenge2_2018: "Saml all salaten. \nUnngå tre og åkrar!"
+      courseC_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
+      courseC_harvester_loops_challenge2_2018: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_maze_debugging10: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       courseC_maze_debugging_challenge1: '*"Går eg berre rundt i sirklar?"*'
       courseC_maze_debugging_challenge1_2018: '*"Går eg berre rundt i sirklar?"*'
+      courseC_maze_debugging_challenge1_2019: '*"Går eg berre rundt i sirklar?"*'
       courseC_maze_debugging_challenge2: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
       courseC_maze_debugging_challenge2_2018: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
+      courseC_maze_debugging_challenge2_2019: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
       courseC_maze_loops10: Du er flink! Fortsett med det!
       courseC_maze_loops9: Du er flink! Fortsett med det!
       courseC_maze_loops_challenge1: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       courseC_maze_loops_challenge1a: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       courseC_maze_loops_challenge1a_2018: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
+      courseC_maze_loops_challenge1a_2019: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       courseC_maze_loops_challenge2: La oss jakte på skattar - ved å bruke løkker! Hjelp samlaren ved å feilsøke koden. Få tak i heile skatten!
       courseC_maze_programming_challenge1: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
       courseC_maze_programming_challenge1_2018: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
+      courseC_maze_programming_challenge1_2019: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
       courseC_maze_programming_challenge2: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
       courseC_maze_programming_challenge2_2018: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
+      courseC_maze_programming_challenge2_2019: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
       courseC_playLab_embedded: |-
-        Her er eit spel du kan spele! For å vinne, må du bruke piltastane for å få pingvinen til å springe inn i blekkspruten.\r
-        \r
+        Her er eit spel du kan spele! For å vinne, må du bruke piltastane for å få pingvinen til å springe inn i blekkspruten.
+        
         Når du er ferdig, vil du lære deg korleis du kan lage dette spelet!
       courseC_puppy_loops10: Du er flink! Fortsett med det!
       courseC_puppy_loops9: Du er flink! Fortsett med det!
       courseC_starWars_loops1: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops10: Du er flink! Fortsett med det!
       courseC_starWars_loops10_2018: Du er flink! Fortsett med det!
+      courseC_starWars_loops10_2019: Du er flink! Fortsett med det!
       courseC_starWars_loops10_predict2: Du er flink! Fortsett med det!
       courseC_starWars_loops10_predict2_2018: Du er flink! Fortsett med det!
+      courseC_starWars_loops10_predict2_2019: Du er flink! Fortsett med det!
       courseC_starWars_loops1_2018: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
+      courseC_starWars_loops1_2019: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops1_predict1: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops1_predict1_2018: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
+      courseC_starWars_loops1_predict1_2019: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops2: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops2_2018: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
+      courseC_starWars_loops2_2019: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops4: I denne oppgava treng du to gjenta-løkker inni kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg blokker!
       courseC_starWars_loops4_2018: I denne oppgava treng du to gjenta-løkker inni kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg blokker!
+      courseC_starWars_loops4_2019: I denne oppgava treng du to gjenta-løkker inni kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg blokker!
       courseC_starWars_loops5: Få BB-8 til å plukke opp skrapmetall så fort som mogleg!
       courseC_starWars_loops5_2018: Få BB-8 til å plukke opp skrapmetall så fort som mogleg!
+      courseC_starWars_loops5_2019: Få BB-8 til å plukke opp skrapmetall så fort som mogleg!
       courseC_starWars_loops7: Kan du prøve å få tak i alt skrapmetallet med berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som blir repetert.
       courseC_starWars_loops7_2018: Kan du prøve å få tak i alt skrapmetallet med berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som blir repetert.
+      courseC_starWars_loops7_2019: Kan du prøve å få tak i alt skrapmetallet med berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som blir repetert.
       courseC_starWars_loops9: Bruk kva du har lært til å plukke opp alt skrapmetallet!
       courseC_starWars_loops9_2018: Bruk kva du har lært til å plukke opp alt skrapmetallet!
+      courseC_starWars_loops9_2019: Bruk kva du har lært til å plukke opp alt skrapmetallet!
       courseD_Frozen_nested1: 'Teikn ein liten figur, mellom **20 og 50** pikslar brei. Det kan vere kva som helst figur.  '
       courseD_Frozen_nested2: Ta forma di og teikn to eller tre på rad!
       courseD_Frozen_nested5: Leik med snøflak!
       courseD_Frozen_nested6: Teikn eit trappetrinnsmønster som brukar svingar mellom 75 og 105 gradar.
       courseD_Frozen_nested7: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
       courseD_artist_5_2018: Leik med snøflak!
+      courseD_artist_5_2018_2019: Leik med snøflak!
       courseD_artist_7_2018: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
       courseD_artist_binary1: Bruk blokkene nedanfor til å få kunstnaren til å teikne "01010101" i binær i den første raden.
       courseD_artist_binary1_2018: Bruk blokkene nedanfor til å få kunstnaren til å teikne "01010101" i binær i den første raden.
+      courseD_artist_binary1_2019: Bruk blokkene nedanfor til å få kunstnaren til å teikne "01010101" i binær i den første raden.
       courseD_artist_binary4: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       courseD_artist_binary4_2018: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
+      courseD_artist_binary4_2019: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       courseD_artist_binary6: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
       courseD_artist_binary6_2018: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
+      courseD_artist_binary6_2019: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
       courseD_artist_binary7: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
       courseD_artist_binary7_2018: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
+      courseD_artist_binary7_2019: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
       courseD_artist_binary8: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary8_2018: Gjer ferdig koden for å lage teikninga.
+      courseD_artist_binary8_2019: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary8_predict1: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary8_predict1_2018: Gjer ferdig koden for å lage teikninga.
+      courseD_artist_binary8_predict1_2019: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary_challenge0: Prøv å bruke løkker for å fullføre teikninga.
-      courseD_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
-      courseD_artist_binary_challenge1_2018: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
+      courseD_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne teikninga.
+      courseD_artist_binary_challenge1_2018: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne teikninga.
+      courseD_artist_binary_challenge1_2019: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne teikninga.
       courseD_artist_embed_frozen: Trykk Køyr for å sjå eit snøfnugg!
       courseD_artist_embed_frozen2: Trykk Køyr for å sjå eit snøfnugg.
       courseD_artist_nestedLoops9: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops9_2018: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
+      courseD_artist_nestedLoops9_2019: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops9_predict1: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops9_predict1_2018: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
+      courseD_artist_nestedLoops9_predict1_2019: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops_challenge1: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_nestedLoops_challenge1_2018: Kan du finne ut korleis du lagar eit slikt bilete?
+      courseD_artist_nestedLoops_challenge1_2019: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_nestedLoops_challenge2: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_nestedLoops_challenge2_2018: Kan du finne ut korleis du lagar eit slikt bilete?
+      courseD_artist_nestedLoops_challenge2_2019: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_project1: 'Teikn ein liten figur, mellom **20 og 50** pikslar brei. Det kan vere kva som helst figur.  '
       courseD_artist_project1_2018: 'Teikn ein liten figur, mellom **20 og 50** pikslar brei. Det kan vere kva som helst figur.  '
       courseD_artist_project1_2019: 'Teikn ein liten figur, mellom **20 og 50** pikslar brei. Det kan vere kva som helst figur.  '
@@ -1790,8 +1884,8 @@ nn:
       courseD_artist_project5: Leik med snøflak!
       courseD_artist_project5_2018: Leik med snøflak!
       courseD_artist_project5_2019: Leik med snøflak!
-      courseD_artist_project_embedded: Dette er kva du snart skal gjere!
-      courseD_artist_ramp12: Bruk det du har lært til å teikne denne trekanten inne i firkanten.
+      courseD_artist_project_embedded: Dette er det du snart skal gjere!
+      courseD_artist_ramp12: Bruk det du har lært til å teikne denne trekanten inne i kvadratet.
       courseD_autorun_binary4_2019: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       courseD_autorun_binary6_2019: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
       courseD_autorun_binary7_2019: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
@@ -1800,15 +1894,20 @@ nn:
       courseD_bee_conditionals1: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1_2018: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
+      courseD_bee_conditionals1_predict1_2019: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals2: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals2_2018: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
+      courseD_bee_conditionals2_2019: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals2_test: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals9: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals9_2018: Få tak i all nektaren og lag honning.
+      courseD_bee_conditionals9_2019: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge1: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge1_2018: Få tak i all nektaren og lag honning.
+      courseD_bee_conditionals_challenge1_2019: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge2: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge2_2018: Få tak i all nektaren og lag honning.
+      courseD_bee_conditionals_challenge2_2019: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge3: Få tak i all nektaren og lag honning.
       courseD_bee_debugging3: Reparer feila og samle inn all nektaren for å lage all honningen.
       courseD_bee_debugging5: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
@@ -1840,47 +1939,57 @@ nn:
       courseD_collector_debugging1_2018: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging1a: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging1a_2018: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging1a_2019: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging2: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging2_2018: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging2a: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging2a_2018: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging2a_2019: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging3: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging3_2018: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging3a: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging3a_2018: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging3a_2019: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging4: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging4_2018: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging4a: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging4a_2018: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging4a_2019: Rett feilen(e) for å samle skatte.
       courseD_collector_debugging5: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
       courseD_collector_debugging5_2018: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
       courseD_collector_debugging5a: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
       courseD_collector_debugging5a_2018: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
+      courseD_collector_debugging5a_2019: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
       courseD_collector_debugging6: 'Utfordring: Bruk det du har lært til å fikse feilene og samle saman skatten.'
       courseD_collector_debugging6_2018: 'Utfordring: Bruk det du har lært til å fikse feilene og samle saman skatten.'
-      courseD_collector_debugging6a: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
-      courseD_collector_debugging6a_2018: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
+      courseD_collector_debugging6a: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** delar av skatten!'
+      courseD_collector_debugging6a_2018: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** delar av skatten!'
+      courseD_collector_debugging6a_2019: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** delar av skatten!'
       courseD_collector_debugging7: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
       courseD_collector_debugging_challenge2: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
       courseD_collector_debugging_challenge2_2018: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
       courseD_collector_nested_loops_challenge2: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
       courseD_collector_nested_loops_challenge2_2018: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
+      courseD_collector_nested_loops_challenge2_2019: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
       courseD_collector_nested_loops_challenge2a: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
       courseD_collector_until_challenge1: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
       courseD_debugging_3: Reparer feila og samle inn all nektaren for å lage all honningen.
       courseD_debugging_5: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
       courseD_farmer_condLoops_challenge2: Samle alt for å fullføre nivået.
       courseD_farmer_condLoops_challenge2_2018: Samle alt for å fullføre nivået.
+      courseD_farmer_condLoops_challenge2_2019: Samle alt for å fullføre nivået.
       courseD_farmer_condLoops_challenge2_clone: Samle alt for å fullføre nivået.
       courseD_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_until_challenge2_2018: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_while_challenge1: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge1_2018: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge1_2019: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge2: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge2_2018: Fyll i alle hulla og fjern alle haugane.
       courseD_harvester_nested_loops_challenge1-broken: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_harvester_nested_loops_challenge1: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_harvester_nested_loops_challenge1_2018: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
+      courseD_harvester_nested_loops_challenge1_2019: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_maze_nestedLoops4: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
       courseD_maze_nestedLoops4_2018: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
       courseD_maze_nestedLoops4_2019: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
@@ -1895,25 +2004,29 @@ nn:
       courseD_maze_until_challenge2: Ingen hint, berre utfordringar. Få zombien til solsikka.
       courseD_playLab_cond3a: Gjer det slik at når Trebein kjem til dragen, får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
       courseD_playLab_cond3a_2018: Gjer det slik at når Trebein kjem til dragen, får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
-      courseD_playLab_cond3b: "1) Få dragen til å bytte mellom tilfeldige \nfølelsar kvart sekund. \\r\n2) Gjer det slik at når Trebein kjem til dragen, \nfår han 2 poeng om dragen er glad. Ellers får han 1 poeng."
+      courseD_playLab_cond3a_2019: Gjer det slik at når Trebein kjem til dragen, får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
+      courseD_playLab_cond3b: "1) Få dragen til å bytte mellom tilfeldige \nfølelsar kvart sekund. \n2) Gjer det slik at når Trebein kjem til dragen, \nfår han 2 poeng om dragen er glad. Ellers får han 1 poeng."
       courseD_playLab_cond6a: Om piraten er i sikker sone, vent eit sekund, trekk så eit poeng så lenge han held seg under brekksprutlinja.
       courseD_playLab_cond6a_2018: Om piraten er i sikker sone, vent eit sekund, trekk så eit poeng så lenge han held seg under brekksprutlinja.
+      courseD_playLab_cond6a_2019: Om piraten er i sikker sone, vent eit sekund, trekk så eit poeng så lenge han held seg under brekksprutlinja.
       courseD_scrat_ramp4: Unngå sprekken i isen for å holde Scrat trygg!
       courseD_scrat_ramp4_2018: Unngå sprekken i isen for å holde Scrat trygg!
-      courseD_scrat_ramp5: Unngå sprekker i isen.
-      courseD_scrat_ramp5_2018: Unngå sprekker i isen.
-      courseE_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
-      courseE_artist_functions1_2018: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
+      courseD_scrat_ramp5: Unngå sprekkar i isen.
+      courseD_scrat_ramp5_2018: Unngå sprekkar i isen.
+      courseE_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \nMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på kvadrata."
+      courseE_artist_functions1_2018: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \nMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på kvadrata."
       courseE_artist_functions_challenge2: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
       courseE_artist_functions_challenge2_2018: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
+      courseE_artist_functions_challenge2_2019: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
       courseE_artist_ramp10: Dra koden for den siste trekanten til ei ny løkke slik at det spinn rundt og lagar eit snøfnugg!
-      courseE_artist_ramp12: Bruk det du har lært til å teikne denne trekanten inne i firkanten.
+      courseE_artist_ramp12: Bruk det du har lært til å teikne denne trekanten inne i kvadratet.
       courseE_artist_ramp9: Bruk det du har lært til å teikne denne trekanten.
       courseE_artist_ramp9_2: Bruk det du har lært til å teikne denne trekanten.
       courseE_artist_ramp9_2018: Bruk det du har lært til å teikne denne trekanten.
       courseE_artist_ramp9_2_2018: Bruk det du har lært til å teikne denne trekanten.
       courseE_bee_concept1: Samle inn all nektar frå alle blomane. Bruk ei løkke inni ei løkke. 
       courseE_bee_concept1_2018: Samle inn all nektar frå alle blomane. Bruk ei løkke inni ei løkke. 
+      courseE_bee_concept1_2019: Samle inn all nektar frå alle blomane. Bruk ei løkke inni ei løkke. 
       courseE_bee_functions1: Samla inn all nektar frå kvar blome.
       courseE_bee_functions10: Løys denne oppgåva ved å lage ein funksjon som hjelper bia med å hente all honningen før ho går tilbake til stien.
       courseE_bee_functions10_2018: Løys denne oppgåva ved å lage ein funksjon som hjelper bia med å hente all honningen før ho går tilbake til stien.
@@ -1929,9 +2042,10 @@ nn:
       courseE_bee_ramp14: Hjelp bia med å følge stien for å samle saman honningen og all nektaren.
       courseE_bee_ramp14_2018: Hjelp bia med å følge stien for å samle saman honningen og all nektaren.
       courseE_bee_ramp17: Bruk det du har lært til å for å løyse denne oppgåva.
-      courseE_farmer_concept4: No skal me eitt hakk djupare! Me har nøsta heile kodeblokka inn ei anna løkke, men du må få artisten på rett plass for å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten av den ytste løkka for å teikne heile mønsteret?
+      courseE_farmer_concept4: No skal vi eitt hakk djupare! Vi har nøsta heile kodeblokka inn ei anna løkke, men du må få kunstnaren på rett plass for å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten av den ytste løkka for å teikne heile mønsteret?
       courseE_farmer_functions2ba: Hjelp bonden med å plukke mais og gress ved å bruke funksjonen "mais og gresskar".
       courseE_farmer_functions2ba_2018: Hjelp bonden med å plukke mais og gress ved å bruke funksjonen "mais og gresskar".
+      courseE_farmer_functions2ba_2019: Hjelp bonden med å plukke mais og gress ved å bruke funksjonen "mais og gresskar".
       courseE_farmer_functions9b: Kan du finne mønsteret du treng for å løyse denne oppgåva?
       courseE_farmer_functions9b_2018: Kan du finne mønsteret du treng for å løyse denne oppgåva?
       courseE_farmer_functions9b_clone: Kan du finne mønsteret du treng for å løyse denne oppgåva?
@@ -2011,7 +2125,7 @@ nn:
       frozen cross: Sett ei "Gjenta"-blokk rundt desse kommandoane for å lage eit plussteikn. La du merke til at Elsa kan bevege seg både framover og bakover?
       frozen diamond mini snowflake: Visste du at alle snøfnugg har forskjellige former? La oss lage eit nytt snøfnugg ved å bruke enda ei "Gjenta"-blokk for å gjenta mønsteret 4 gongar. Snu 90 grader mellom kvart mønster.
       frozen diamond snowflake: Nå skal vi lage eit snøfnugg ved å bruke "Gjenta"-blokka til å lage eit parallellogram 10 gongar og snu 36 grader mot høgre mellom kvar.
-      frozen diamond: Bruk ei "Gjenta"-blokk rundt desse blokkene for å lage eit parallellogram. Det er ein firkant der hjørna her ulik vinkel. Denne har vinklar på 60 grader og 120 grader i staden for at alle har 90 graders vinklar.
+      frozen diamond: Bruk ei "Gjenta"-blokk rundt desse blokkene for å lage eit parallellogram. Det er eit rektangel der hjørna har ulik vinkel. Denne har vinklar på 60 grader og 120 grader i staden for at alle har 90 graders vinklar.
       frozen freeplay: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
       frozen line: Hei! Eg heiter Elsa av Arendelle. Hjelp meg med å lage ei enkel linje.
       frozen perpendicular: Nå skal vi prøve å lage to linjer som står 90 grader i forhold til kvarandre. Du må bruke "Snu"-blokka og "Flytt"-blokka.
@@ -2160,7 +2274,7 @@ nn:
         \r
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
       grade4_arist_nested_loop_triangles6: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
-      grade4_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
+      grade4_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \nMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på kvadrata."
       grade4_artist_functions2: "Funksjonar lar deg definere nye blokker!\\r\n\\r\nVi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
       grade4_artist_functions_challenge: "Bruk dei foreslåtte funksjonane til å teikne fire rader\nav sekskantar. Legg du merke til korleis partallsradene våre er flytta til høgre?"
       grade4_artist_functions_challenge2: "Bruk dei foreslåtte funksjonane til å teikne fire rader\nav sekskantar. Legg du merke til korleis partallsradene våre er flytta til høgre?"
@@ -2179,7 +2293,7 @@ nn:
         \r
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
       grade4_artist_nested_loop_triangles6: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
-      grade4_artist_parameters_squares1: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn ein firkant» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
+      grade4_artist_parameters_squares1: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn eit kvadrat» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
       grade4_artist_parameters_triangles2: Ser du noko annleis med desse funksjonsblokkene? Trykk på «Kjør» så ser du kva som skjer.
       grade4_artist_parameters_triangles2b: Kan du gjere denne teikninga ferdig? Sidene i kvar trekant er 25 pikslar lengre enn i den førre. Sidene i den første trekanten er 25 pixler lange.
       grade4_artist_parameters_triangles3: Kan du gjere denne teikninga ferdig? Sidene i kvar trekant er 25 pikslar lengre enn i den førre. Sidene i den første trekanten er 25 pixler lange.
@@ -2221,7 +2335,7 @@ nn:
       grade4_playlab_test2: Her er ein funksjon kalla "hopp" som for hovudpersonen til å hoppe 100 pikslar. Bruk hopp funksjonen til å samle alle flagga ved å flytte hunden med piltastane.
       grade4_review_artist1: Hei, eg er ein kunstnar. Du kan skrive kode for å få meg til å teikna nesten kva som helst. Bruk nokre blokker for å få meg til å teikna over dei grå linjene på bildet. (Kvar linje er 100 pikslar lange)
       grade4_review_artist2: 'Dette huset treng eit tak! Teikn trekanten. Hint: alle dei tre sidene skal være like lange.'
-      grade4_review_artist3: Hoppeblokka flyttar artisten utan å teikne. Teikn den stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pixlar lang.
+      grade4_review_artist3: Hoppeblokka flyttar kunstnaren utan å teikne. Teikn den stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pikslar lang.
       grade4_review_bee1: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
       grade4_review_bee2: Samle inn nektar frå alle blomane og lag honning i kvar av bikubane. Bruk så få blokker som mogleg.
       grade4_review_bee3: |-
@@ -2231,7 +2345,7 @@ nn:
       grade5_artist_binary1: "Binær er ein måte å representere informasjon på ved å berre bruke to alternativ. Vi skal bruke alternativa \"av\" (representert ved talet 0) og \"på\" (representert ved talet 1). \\r\n\\r \nVi har gitt deg eit rutenett av pikslar som du kan gå gjennom og lage mønstre med ved å skru på spesifikke ruter. Kan du få kunstnaren til å teikne \"01010101\" i binært i første rad?"
       grade5_artist_binary10: Klikk her for å se tips.
       grade5_artist_binary11: 'Frileik: Her er eit blankt lerret du kan teikne på. Ha det gøy!'
-      grade5_artist_binary2: "Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Artisten vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\\r\\r Køyr denne koden for å sjå korleis kunstnaren bruker binær-strengen til å teikne dette mønsteret."
+      grade5_artist_binary2: "Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Kunstnaren vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.\n\nKøyr denne koden for å sjå korleis kunstnaren nyttar binær-strengen til å teikne dette mønsteret."
       grade5_artist_binary3: Kva av desse binære strengene kan du gjenta 8 gongar for å teikne dette biletet?
       grade5_artist_binary4: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       grade5_artist_binary5: Kvar binærstreng representerer ei rad i dette biletet. Kan du ordne strengene slik at dei teiknar eit smileansikt i staden for eit trist ansikt?
@@ -2271,7 +2385,7 @@ nn:
         Endre på denne funksjonen slik at den har ein parameter for antall sider i mangekanten din.\r
         \r
         Sidene til alle formene er 100 pikslar lange.
-      grade5_artist_parameters_squares1: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn ein firkant» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
+      grade5_artist_parameters_squares1: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn eit kvadrat» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
       grade5_artist_parameters_triangles2a: Ser du noko annleis med desse funksjonsblokkene? Trykk på «Kjør» så ser du kva som skjer.
       grade5_artist_parameters_triangles4: Koden til denne trekantfunksjonen er øydelagt. Kan du gjera om på funksjonen så det blir rett og så lage trekantar som med lengde på 25, 50 og 75 pixlar?
       grade5_artist_variables_freeplay10: 'Frileik: Eksperimenter med tal på sider denne figuren har. Kan du endre algoritmen slik at storleiken på figuren blir den same uansett kor mange sider den har? Tips: Dersom du deler startlengda på talet på sider, vil lengda på kvar side bli mindre medan talet på sider blir høgare.'
@@ -2285,7 +2399,7 @@ nn:
         Om ikkje, kan du lage ditt eige design!
       grade5_artist_variables_freeplay16: Spelar du framleis? Her eit blankt lerret der du kan designe det du vil!
       grade5_artist_variables_hexagons1: "Lat oss prøve igjen!\\r\n\\r\nKan du setje «lengde»-variabelen til 60 for å lage dette kule designet med sekskantar?"
-      grade5_artist_variables_letterT11: Her er ein litt vanskelegare kode som nyttar same konsepta som førre oppgåve. Kva må du sette "sider"-variabelen til for å teikne dette biletet av firkantar?
+      grade5_artist_variables_letterT11: Her er ein litt vanskelegare kode som nyttar same konsepta som førre oppgåve. Kva må du sette "sider"-variabelen til for å teikne dette biletet laga av kvadrat?
       grade5_artist_variables_octagons13: "Når ein figur har mange sider må alle sidene vere kortare om du vil at mønsteret skal passe inn på skjermen.\n\\r\nLa oss lage algoritmen for dette stilige mønsteret, men bruke ei matte-blokk med \"sider\"-variabelen inni, i staden for å manuelt settje \"lengde\"-variabelen. Omkrinsen av kvar mangekant er 300 pikslar. \\r \nTreng du noko hint? Klikk her."
       grade5_artist_variables_pentagon8: |-
         Bruk det du lærte i den førre oppgåva for å lage denne sekskanten ved å bruke "sider" variabelen.\r
@@ -2327,7 +2441,7 @@ nn:
       gradek_artist_loops6: Bruk "løkka" for å lage bølgjer på vatnet.
       gradek_artist_loopsA: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
       gradek_artist_loopsFP: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
-      harvey_tictactoe: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
+      harvey_tictactoe: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarar du tre på rad?
       k-1 maze 1: Kan du bevege meg til vest for å komme til grisen?
       k1stickerfreeplay: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
       level 'grade3_Loops_10: |-
@@ -2365,9 +2479,9 @@ nn:
       ramp_artist_loops8_2018: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
       ramp_artist_loops8_2019: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
       ramp_artist_loops8_clone: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
-      ramp_artist_loops9: Løys dette puslespelet ved å teikne ein firkant.
-      ramp_artist_loops9_2018: Løys dette puslespelet ved å teikne ein firkant.
-      ramp_artist_loops9_2019: Løys dette puslespelet ved å teikne ein firkant.
+      ramp_artist_loops9: Løys dette puslespelet ved å teikne eit kvadrat.
+      ramp_artist_loops9_2018: Løys dette puslespelet ved å teikne eit kvadrat.
+      ramp_artist_loops9_2019: Løys dette puslespelet ved å teikne eit kvadrat.
       scrat 16 (copy 1): Nøtt! Nøtt! Nøtt! Bruk ei "Dersom"-blokk for å få meg dit med så få blokker som mogleg.
       scrat 16: Nøtt! Nøtt! Nøtt! Bruk ei "Dersom"-blokk for å få meg dit med så få blokker som mogleg.
       scrat 17: Ok, la oss øve på den ein gong til - den er ikkje så ulik, men pass deg for veggen!
@@ -2377,6 +2491,6 @@ nn:
       scrat 19: Ei siste øving med "dersom-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
       scrat 20: Klarar du å hjelpe meg gjennom ein kompleks labyrint ved berre å legge til 3 blokker? Om du gjer det riktig, kan eg gå gjennom kva veg som helst, uansett lengde. Skund deg! Isen smeltar!
       skratDebugVideo1: Hjelp Scrat til eikenøtta.
-      subgoal U3L2 Using Simple Commands: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
-      subgoalU3L2_TurtleSquare_right: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      subgoal U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      subgoalU3L2_TurtleSquare_right: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       valentine_artist_03: Prøv noko på eiga hand!

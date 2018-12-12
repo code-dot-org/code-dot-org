@@ -77,21 +77,23 @@ nn:
           full dreiing, berre legg 60 grader til "snu til venstre"-blokka som allereie
           er der!
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: Sidene på kvar firkant er på 100 pikslar. Det betyr
-          at du må flytte 175 pikslar fram før du kan teikne den andre firkanten.
+        2-3_Artist_Functions_1_a: Sidene på kvart kvadrat er på 100 pikslar. Det betyr
+          at du må flytte 175 pikslar fram før du kan teikne det andre kvadratet.
         2-3_Artist_Functions_1_b: Det er OK å la linjene overlappe kvarandre for å
           teikne brillene.
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: Sidene på kvar firkant er på 100 pikslar. Det betyr
-          at du må flytte 175 pikslar fram før du kan teikne den andre firkanten.
+        2-3_Artist_Functions_1_a: Sidene på kvart kvadrat er på 100 pikslar. Det betyr
+          at du må flytte 175 pikslar fram før du kan teikne det andre kvadratet.
         2-3_Artist_Functions_1_b: Det er OK å la linjene overlappe kvarandre for å
           teikne brillene.
       2-3 Artist Functions 11 a_authored_hint:
         2-3_Artist_Functions_11_a: Du må i tillegg til å endre antal og lengde av
-          sidene i funksjonen, også endre vinkelen artisten snur seg mellom kvar side.
+          sidene i funksjonen, også endre vinkelen kunstnaren snur seg mellom kvar
+          side.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: Du må i tillegg til å endre antal og lengde av
-          sidene i funksjonen, også endre vinkelen artisten snur seg mellom kvar side.
+          sidene i funksjonen, også endre vinkelen kunstnaren snur seg mellom kvar
+          side.
       2-3 Artist Functions 12 a_authored_hint:
         2-3_Artist_Functions_12_a: Prøv å køyre koden først for å sjå kva du treng
           å legge til.
@@ -116,10 +118,10 @@ nn:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: For å gjere ferdig designet må teiknaren rotere
-          120 grader mellom kvar firkant.
+          120 grader mellom kvart kvadrat.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: For å gjere ferdig designet må teiknaren rotere
-          120 grader mellom kvar firkant.
+          120 grader mellom kvart kvadrat.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: "Husk at koden frå den siste oppgåva var: \n\n<xml>\n<block
           type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
@@ -151,8 +153,8 @@ nn:
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Teiknaren må snu seg 45 grader til høgre før han
           starter teikninga.
-        2-3_Artist_Loops_New_9_b: Denne V'en er eigentleg berre halvparten av ein
-          firkant. Kva ville koden vere for å teikne halvparten av eit kvadrat?
+        2-3_Artist_Loops_New_9_b: Denne V'en er eigentleg berre halvparten av eit
+          kvadrat. Kva ville koden vere for å teikne halvparten av eit kvadrat?
       2-3 Artist Nested Loops 1_authored_hint:
         2-3_Artist_Nested_Loops_1_a: Hugs å putte alle dei grå blokkene inne i løkka
           di.
@@ -164,7 +166,7 @@ nn:
         2-3_Artist_Nested_Loops_3_a: "Treng du hjelp med vinklane?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Prøv å bruke \"hopp framover\"-blokka for å
-          komme fra toppen av ein firkant til staden der du vil begynne neste. \n\nDersom
+          komme fra toppen av eit kvadrat til staden der du vil begynne neste. \n\nDersom
           ruta di er 20 pikslar høg og dei er 20 pikslar frå kvarandre, kor langt
           treng du å hoppe?"
       2-3 Artist Nested Loops 7_authored_hint:
@@ -393,7 +395,7 @@ nn:
         4-5_While_Loops_8_a: Kvar ting treng si eida medan-løkke.
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: For å gjere ferdig designet må teiknaren rotere
-          120 grader mellom kvar firkant.
+          120 grader mellom kvart kvadrat.
       Artist Inspiration_authored_hint:
         brush_width: Vi sette penselbreidda til 1 og fargen til blå før vi gjorde
           noko anna.
@@ -538,7 +540,7 @@ nn:
           som løysinga på forrige oppgåve... med eit par endringar.
         Course_4_Artist_For_Loops_inspire_b: Prøv ei "for"-løkke som gjeng fra 3 til
           10 med eit intervall på 1.
-        Course_4_Artist_For_Loops_inspire_c: Det er to gjentaking av den same gjenta-løkka
+        Course_4_Artist_For_Loops_inspire_c: Det er to gjentakingar av den same gjenta-løkka
           i `for`-løkka, men den andre gjentakinga svingar i motsatt retning.
         Course_4_Artist_For_Loops_inspire_d: "**Løysing:**  \n\n<xml>\n  <block type=\"when_run\"
           deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\"
@@ -635,7 +637,7 @@ nn:
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
           <block type="variables_get">
-          <title name="VAR">counter</title>
+          <title name="VAR">teller</title>
           </block>
           </value>
           <statement name="DO">
@@ -643,11 +645,11 @@ nn:
           <mutation name="draw a square 20"></mutation>
           <next>
           <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
+          <title name="DIR">hoppFram</title>
           <title name="VALUE">20</title>
           <next>
           <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">snuHøyre</title>
           <title name="VALUE">3</title>
           </block>
           </next>
@@ -657,7 +659,7 @@ nn:
           </statement>
           <next>
           <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">snuVenstre</title>
           <title name="VALUE">100</title>
           </block>
           </next>
@@ -2338,7 +2340,7 @@ nn:
         Course_4_SCFL_4_a: Fargeendring skjer ved hjelp av "angi farge med rødt, grønt,
           blått"-blokk. Rød er alltid verdien av 'teljar', grøn er alltid '255 - teljar',
           og blå forblir konstant på nøyaktig 255.
-        Course_4_SCFL_4_b: Kvar figur er en firkant med sider som er 'teljar' pikslar
+        Course_4_SCFL_4_b: Kvar figur er eit kvadrat med sider som er 'teljar' pikslar
           lang, startar med 5px og aukar med 5px heilt opp til 200px.
         Course_4_SCFL_4_c: Kunstnaren dreier 15 gradar mellom kvart kvadrat.
         Course_4_SCFL_4_d: |-
@@ -2780,7 +2782,7 @@ nn:
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han
           lager, men svinger til høyre i begge de andre løkkene.
         Course_4_SCV_2_d: For å forhindre at alle dine 10 blomsterkronblader forsvinner
-          inn i det samme stedet, pass på å hoppe fremover 'lengder'/'til side' før
+          inn i det samme stedet, pass på å hoppefremover 'lengder'/'til side' før
           du kan snu 360/'til side'-grader som en del av din ytterste løkke.
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'Bruk matteblokken din for å legge til og trekke fra poeng-variabelen
@@ -2938,6 +2940,8 @@ nn:
         Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde'
           / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100,
           50, 150).
+        Course_4_SCV_6_d: 'For sikke, ta til venstre ved ''360 ''/'' sider''.  For
+          å sakke, snu til høyre ved ''360 ''/'' sider''. '
         Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full
           360 graders rotasjon fra en form, bortsett fra at vi overlapper formene
           med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr
@@ -2945,6 +2949,205 @@ nn:
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe
           større enn `cat_speed`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må ha minst to dansarar.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må endre eigenskapane til to eller flere dansarar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
+
+          *Denne øvinga ender etter 8 taktar.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Hvordan greier jeg denne øvelsen?**
+
+          * Dansen din må ha forskjellige danser i løpet av de første 12 taktene av sangen.
+
+          *Denne øvelsen ender etter 12 takter.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Dette er første hint.
@@ -2975,6 +3178,99 @@ nn:
           vil reise...
         Function_intro_Ryan_a: Du kan kalle en funksjon mange ganger i programmet
           ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Ser du **sjølanternene** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Korleis kan du bruke eit vilkår for å komme deg gjennom havmonumentet?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide
+          for å snu til høgre og venstre gjennom revet.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Hvordan greier jeg denne øvelsen?**
+
+          * Dansen din må ha forskjellige danser i løpet av de første 12 taktene av sangen.
+
+          *Denne øvelsen ender etter 12 takter.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må endre eigenskapane til to eller flere dansarar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
       Harvesting_authored_hint:
         pointer_harvester_test: Hva slags blokk kan jeg bruke til å sjekke noe og
           ta en beslutning?
@@ -2998,7 +3294,7 @@ nn:
           slik at du kan utforske verda!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Bruk piltastane til å leie spelaren inn i huset. End
-          opp på den oransje firkanten for å vinne.
+          opp på det oransje kvadratet for å vinne.
       MC_HOC_2017_01_RETRY_authored_hint:
         MC_HOC_2017_01_RETRY_a: Dra ei "framover"-blokk frå verktøyskassa til arbeidsområdet,
           og legg den på plass under 'når køyrer'-blokka.
@@ -3039,7 +3335,7 @@ nn:
         MC_HOC_2017_02_Cole_b: Du kan køyre koden sjølv om det ikkje er riktig. Køyr
           og tilbakestill koden igjen og igjen, heilt til du finn ut kva som går feil.
         MC_HOC_2017_02_Cole_c: Når agenten har opna døra, bruk piltastane til å flytte
-          spelaren til den oransje firkanten.
+          spelaren til det oransje kvadratet.
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Når agenten kjem fram til trykkplata, kan du bruke
           piltastane til å leie spelaren til kompasset!
@@ -3201,10 +3497,15 @@ nn:
         mc_6_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: "'Gå fremover'-blokken er på toppen av verktøykassen."
         mc_1_b: Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken.
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: "'Gå fremover'-blokken er på toppen av verktøykassen."
+        mc_1_b: Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken.
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: "'Gå fremover'-blokken er på toppen av verktøykassen."
         mc_1_b: Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken.
       Overworld Place Wall_authored_hint:
@@ -3213,23 +3514,34 @@ nn:
       Overworld Place Wall_2018_authored_hint:
         mc_5_b: Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å
           kunne kjøre koden mer enn en gang.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_b: Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å
+          kunne kjøre koden mer enn en gang.
       Overworld Plant Crops_authored_hint:
         mc_7_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld Plant Crops_2018_authored_hint:
+        mc_7_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
+      Overworld Plant Crops_2019_authored_hint:
         mc_7_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld Powered Minecart_authored_hint:
         mc_13_b: Bruk 'gjenta'-løkken for å lage koden din kortere.
       Overworld Powered Minecart_2018_authored_hint:
         mc_13_b: Bruk 'gjenta'-løkken for å lage koden din kortere.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_b: Bruk 'gjenta'-løkken for å lage koden din kortere.
       Overworld Shear Sheep_authored_hint:
         mc_3_b: Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk.
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_b: Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk.
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_b: Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk.
       Quantum Bee - Ryan_authored_hint:
         test_hint: Dette er et test hint.
       Underground If Statements_authored_hint:
         mc_12_a: Du finner redstone i blokkene med røde merker på.
       Underground If Statements_2018_authored_hint:
+        mc_12_a: Du finner redstone i blokkene med røde merker på.
+      Underground If Statements_2019_authored_hint:
         mc_12_a: Du finner redstone i blokkene med røde merker på.
       aE3_authored_hint:
         aE3_b: |-
@@ -3561,20 +3873,23 @@ nn:
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_b: Det er to måtar å løyse denne oppgåva!
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_artist_prog2_2019_authored_hint:
-        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover
-          100 piksler", vil jeg tegne en linje automatisk.
-        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk "Snu 90 grader mot
-          høyre"-blokka.
+        courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title
+          name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken,
+          vil jeg tegne en linje."*'
+        courseC_artist_prog2_b: Vanskelig å runde hjørnet? Bruk <xml><block type="draw_turn_by_constant_dropdown"><title
+          name="DIR">snuHøyre</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>-blokken.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: For å sette inn mange blokker i ei gjenta-løkke, berre
           dra ei løkke ut i arbeidsområdet, deretter dra alle blokkene frå startprogrammet
@@ -3590,7 +3905,14 @@ nn:
         courseC_maze_programming6_a: Det er to måtar å løyse denne oppgåva!
         courseC_maze_programming6_b: Følg fingeren din fra fuglen til grisen. Hvilke
           steg måtte du ta?
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Det er to måtar å løyse denne oppgåva!
+        courseC_maze_programming6_b: Følg fingeren din fra fuglen til grisen. Hvilke
+          steg måtte du ta?
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -3601,12 +3923,17 @@ nn:
           - Bruke Funksjon
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Prøv å bruke \"hopp framover\"-blokka for
-          å komme fra toppen av ein firkant til staden der du vil begynne neste. \n\nDersom
+          å komme fra toppen av eit kvadrat til staden der du vil begynne neste. \n\nDersom
           ruta di er 20 pikslar høg og dei er 20 pikslar frå kvarandre, kor langt
           treng du å hoppe?"
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: "Prøv å bruke \"hopp framover\"-blokka for
-          å komme fra toppen av ein firkant til staden der du vil begynne neste. \n\nDersom
+          å komme fra toppen av eit kvadrat til staden der du vil begynne neste. \n\nDersom
+          ruta di er 20 pikslar høg og dei er 20 pikslar frå kvarandre, kor langt
+          treng du å hoppe?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Prøv å bruke \"hopp framover\"-blokka for
+          å komme fra toppen av eit kvadrat til staden der du vil begynne neste. \n\nDersom
           ruta di er 20 pikslar høg og dei er 20 pikslar frå kvarandre, kor langt
           treng du å hoppe?"
       courseD_artist_nestedLoops9_authored_hint:
@@ -3631,6 +3958,17 @@ nn:
           - Tegn en trekant.
           - Hopp fremover 50 piksler.
           - Snu 45 grader mot høyre.
+      courseD_artist_nestedLoops9_2019_authored_hint:
+        courseD_artist_nestedLoops9_c: |-
+          Bruk to "løkke i løkke":
+          - Gjenta åtte ganger.
+          - Tegn et kvadrat.
+          - Hopp fremover 50 piksler.
+          - Snu 45 grader mot høyre.
+          - Gjenta åtte ganger.
+          - Tegn en trekant.
+          - Hopp fremover 50 piksler.
+          - Snu 45 grader mot høyre.
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: For å tegne en side må du bruke `flytt fremover med
           100 piksler`-blokken og endre 100 til 200.
@@ -3639,6 +3977,10 @@ nn:
           går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst,
           hva skal bien gjøre?
       courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_c: Ved å bruke blokken <xml><block type="maze_untilBlocked"/></xml>
+          går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst,
+          hva skal bien gjøre?
+      courseD_bee_conditionals4_2019_authored_hint:
         courseD_bee_conditionals4_c: Ved å bruke blokken <xml><block type="maze_untilBlocked"/></xml>
           går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst,
           hva skal bien gjøre?
@@ -3668,11 +4010,28 @@ nn:
         courseD_bee_conditionals5_b: Inni "så lenge det finnes vei foran"-blokken
           må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du
           om det finnes en blomst? Hva gjør du om det finnes en blomst?
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_a: Tenk på hver side av den rektangulære veien som
+          en vei i seg selv. Sett opp en løkke i løkke med en "gjenta"-blokk og en
+          "så lenge det finnes vei foran"-blokk på innsiden. Hvor mange veier må bien
+          fly ned hvis bien må innom hver side som har en blomst?
+        courseD_bee_conditionals5_c: Det er 3 av rektangelets sider som har blomster,
+          så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien
+          fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette
+          langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke
+          om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.
+        courseD_bee_conditionals5_b: Inni "så lenge det finnes vei foran"-blokken
+          må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du
+          om det finnes en blomst? Hva gjør du om det finnes en blomst?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
           gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
           til å løyse utfordringa."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
+          gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
+          til å løyse utfordringa."
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "**Hugs:** Denne oppgåva endrar seg for kvar
           gong den blir køyrd. \n\nDu må bruke ei betinga blokke ('dersom' eller 'dersom/elles')
           til å løyse utfordringa."
@@ -3695,14 +4054,19 @@ nn:
           30** og snur seg **60 gradar** til høgre.  '
         courseE_artist_concept_challenge1_b: '2/3-trekanten har ein **lengde på 80**
           og snur seg **120 grader** til høgre. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Halv-sekskanten har ein **lengde på
+          30** og snur seg **60 gradar** til høgre.  '
+        courseE_artist_concept_challenge1_b: '2/3-trekanten har ein **lengde på 80**
+          og snur seg **120 grader** til høgre. '
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: Sidene på kvar firkant er på 100 pikslar. Det
-          betyr at du må flytte 175 pikslar fram før du kan teikne den andre firkanten.
+        courseE_artist_functions1_a: Sidene på kvart kvadrat er på 100 pikslar. Det
+          betyr at du må flytte 175 pikslar fram før du kan teikne det andre kvadratet.
         courseE_artist_functions1_b: Det er OK å la linjene overlappe kvarandre for
           å teikne brillene.
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: Sidene på kvar firkant er på 100 pikslar. Det
-          betyr at du må flytte 175 pikslar fram før du kan teikne den andre firkanten.
+        courseE_artist_functions1_a: Sidene på kvart kvadrat er på 100 pikslar. Det
+          betyr at du må flytte 175 pikslar fram før du kan teikne det andre kvadratet.
         courseE_artist_functions1_b: Det er OK å la linjene overlappe kvarandre for
           å teikne brillene.
       courseE_artist_functions2_authored_hint:
@@ -3712,6 +4076,12 @@ nn:
           - Flytte seg framover 100 + 75 pikslar
           - Bruke Funksjon
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Programmet ditt skal:
+          - Bruke Funksjon
+          - Flytte seg framover 100 + 75 pikslar
+          - Bruke Funksjon
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Programmet ditt skal:
           - Bruke Funksjon
@@ -3795,6 +4165,10 @@ nn:
           gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
           har tilgjengelig.
       courseE_farmer_functions1_2018_authored_hint:
+        courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
+          gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
+          har tilgjengelig.
+      courseE_farmer_functions1_2019_authored_hint:
         courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
           gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
           har tilgjengelig.
@@ -4321,21 +4695,21 @@ nn:
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_2018_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
           som bruker denne koden flere ganger, istedet for å lage en ny kopi for hver
           gang.
       courseF_artist_variables_challenge2_2019_authored_hint:
-        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme, fordi du kan
+        courseF_artist_variables_challenge2_a: Variabler er hjelpsomme fordi du kan
           legge dem til hver gang i en løkke.
         courseF_artist_variables_challenge2_c: Bruker du en variabel for sidene og
           en variabel for lengden, blir koden enklere fordi du kan bruke en løkke
@@ -4526,7 +4900,7 @@ nn:
           </block>
           </xml>
       courseF_bee_for_challenge2_2018_authored_hint:
-        courseF_bee_for_challenge2_a: "Ta ein kikk på dette alternativet for røyrsle:
+        courseF_bee_for_challenge2_a: "Ta ein kikk på dette alternativet for rørsle:
           \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         courseF_bee_for_challenge2_b: 'Prøv å bruke to for-løkker: ein for å klatre
           opp og ta nektar, og ei anna for å klatre ned og lage honning.'
@@ -4954,7 +5328,9 @@ nn:
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "Om oppgåva verkar utfordrande, kan du prøve å bygge
           funksjonen din litt om gangen.  \n\nLegg til nokre blokker og test dei.
-          Legg til fleire, og prøv på nytt. Snart vil du få det til!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+          Legg til fleire, og prøv på nytt. Snart vil du få det til!\n\n<xml>\n<block
+          type=\"procedures_defnoreturn\" editable=\"false\">\n<mutation/>\n<title
+          name=\"NAME\">get nectar make honey</title>\n<statement name=\"STACK\">\n</statement>\n</block>\n</xml>"
       courseF_bee_functions6_2018_authored_hint:
         courseF_bee_functions6_a: "Om oppgåva verkar utfordrande, kan du prøve å bygge
           funksjonen din litt om gangen.  \n\nLegg til nokre blokker og test dei.
@@ -5155,8 +5531,8 @@ nn:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "** 360 / 36 =? **"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: Sidene på kvar firkant er på 100 pikslar. Det betyr
-          at du må flytte 175 pikslar fram før du kan teikne den andre firkanten.
+        2-3_Artist_Functions_1_a: Sidene på kvart kvadrat er på 100 pikslar. Det betyr
+          at du må flytte 175 pikslar fram før du kan teikne det andre kvadratet.
         2-3_Artist_Functions_1_b: Det er OK å la linjene overlappe kvarandre for å
           teikne brillene.
       grade4_artist_functions2_authored_hint:
@@ -5274,7 +5650,7 @@ nn:
           som løysinga på forrige oppgåve... med eit par endringar.
         Course_4_Artist_For_Loops_inspire_b: Prøv ei "for"-løkke som gjeng fra 3 til
           10 med eit intervall på 1.
-        Course_4_Artist_For_Loops_inspire_c: Det er to gjentaking av den same gjenta-løkka
+        Course_4_Artist_For_Loops_inspire_c: Det er to gjentakingar av den same gjenta-løkka
           i `for`-løkka, men den andre gjentakinga svingar i motsatt retning.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Vi sette penselbreidda til 1 og fargen til blå før vi gjorde
@@ -5290,7 +5666,7 @@ nn:
         Course_4_Artist_Vars_8_a: Hvis du deler startlengden på antall sider, vil
           lengden på hver side bli kortere når antallet sider blir høyere.
       grade5_artist_variables_freeplay15_authored_hint:
-        Course_4_Artist_Inspire_a: Når du har fullført én firkant, kan du prøve å
+        Course_4_Artist_Inspire_a: Når du har fullført ét kvadrat, kan du prøve å
           hoppe fremover halvparten av lengden før du snur og lager en annen.
         Course_4_Artist_Inspire_b: Hver firkant og hvert hopp gjentas fire ganger
           (med en venstresving innimellom) for å lage en full hjul-lignende enhet.

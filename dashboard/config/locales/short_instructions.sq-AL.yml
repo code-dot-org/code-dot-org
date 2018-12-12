@@ -2463,6 +2463,8 @@ sq:
         keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.
       Overworld Avoid Monsters_2018: Vrapimi drejt bimëve kacavjerrëse është një ide
         e keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.
+      Overworld Avoid Monsters_2019: Vrapimi drejt bimëve kacavjerrëse është një ide
+        e keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.
       Overworld Chop Tree - allthethings: |-
         Druri është një burim shumë i rëndësishëm. Shumë gjera
         janë bërë prej saj. Ecni në pemë dhe përdorni komandën "shkatërro bllokun" për
@@ -2475,9 +2477,16 @@ sq:
         Druri është një burim shumë i rëndësishëm. Shumë gjera
         janë bërë prej saj. Ecni në pemë dhe përdorni komandën "shkatërro bllokun" për
         ta prerë atë.
+      Overworld Chop Tree_2019: |-
+        Druri është një burim shumë i rëndësishëm. Shumë gjera
+        janë bërë prej saj. Ecni në pemë dhe përdorni komandën "shkatërro bllokun" për
+        ta prerë atë.
       Overworld Chop Trees: Ne kemi nevojë për të ndërtuar një shtëpi përpara se djelli
         të perëndoj. Shtëpitë kërkojnë shumë dru. Shkurtoni të gjitha 3 pemët.
       Overworld Chop Trees_2018: Ne kemi nevojë për të ndërtuar një shtëpi përpara
+        se djelli të perëndoj. Shtëpitë kërkojnë shumë dru. Shkurtoni të gjitha 3
+        pemët.
+      Overworld Chop Trees_2019: Ne kemi nevojë për të ndërtuar një shtëpi përpara
         se djelli të perëndoj. Shtëpitë kërkojnë shumë dru. Shkurtoni të gjitha 3
         pemët.
       Overworld Free Play 20x20: |-
@@ -2486,14 +2495,22 @@ sq:
       Overworld Free Play 20x20_2018: |-
         Urime! Ju keni përfunduar
         të gjitha puzzles tona! Tani minoni, ndërtoni, dhe krijoni diçka unike duke përdorur çdo gjë ju keni mësuar deri tani.
+      Overworld Free Play 20x20_2019: |-
+        Urime! Ju keni përfunduar
+        të gjitha puzzles tona! Tani minoni, ndërtoni, dhe krijoni diçka unike duke përdorur çdo gjë ju keni mësuar deri tani.
       Overworld House Frame Chosen: Ndërtoni pjesën tjetër të shtëpise duke përdorur
         cdo material që ju dëshironi. Komanda "përsërit" do të jetë e nevojshme.
       Overworld House Frame Chosen_2018: Ndërtoni pjesën tjetër të shtëpise duke përdorur
+        cdo material që ju dëshironi. Komanda "përsërit" do të jetë e nevojshme.
+      Overworld House Frame Chosen_2019: Ndërtoni pjesën tjetër të shtëpise duke përdorur
         cdo material që ju dëshironi. Komanda "përsërit" do të jetë e nevojshme.
       Overworld Move to Sheep: |-
         Shto një komandë të dytë "ec përpara" për të
         arritur delet.
       Overworld Move to Sheep_2018: |-
+        Shto një komandë të dytë "ec përpara" për të
+        arritur delet.
+      Overworld Move to Sheep_2019: |-
         Shto një komandë të dytë "ec përpara" për të
         arritur delet.
       Overworld Place Wall: "Çdo shtëpi fillon me një mur. Ndërtoni të\npjesën  e
@@ -2502,9 +2519,14 @@ sq:
       Overworld Place Wall_2018: "Çdo shtëpi fillon me një mur. Ndërtoni të\npjesën
         \ e parë të shtëpisë tuaj duke vendosur komandën \"vendi\" dhe \"ec përpara\"
         \nbrenda ciklit përsëritës ."
+      Overworld Place Wall_2019: "Çdo shtëpi fillon me një mur. Ndërtoni të\npjesën
+        \ e parë të shtëpisë tuaj duke vendosur komandën \"vendi\" dhe \"ec përpara\"
+        \nbrenda ciklit përsëritës ."
       Overworld Plant Crops: Është e mirë ta planifikoni përpara. Korrni bimët në
         të  dy anët e ujit kështu që ju nuk do të keni  uri më vonë.
       Overworld Plant Crops_2018: Është e mirë ta planifikoni përpara. Korrni bimët
+        në të  dy anët e ujit kështu që ju nuk do të keni  uri më vonë.
+      Overworld Plant Crops_2019: Është e mirë ta planifikoni përpara. Korrni bimët
         në të  dy anët e ujit kështu që ju nuk do të keni  uri më vonë.
       Overworld Powered Minecart: Punë e mrekullueshme! Ju keni mbledhur shumë nga
         burimet dhe ndërtuat një shtëpi modeste. Tani vendos gardhin nga kufiri i
@@ -2512,10 +2534,16 @@ sq:
       Overworld Powered Minecart_2018: Punë e mrekullueshme! Ju keni mbledhur shumë
         nga burimet dhe ndërtuat një shtëpi modeste. Tani vendos gardhin nga kufiri
         i hartës te dera e shtëpisë tuaj.
+      Overworld Powered Minecart_2019: Punë e mrekullueshme! Ju keni mbledhur shumë
+        nga burimet dhe ndërtuat një shtëpi modeste. Tani vendos gardhin nga kufiri
+        i hartës te dera e shtëpisë tuaj.
       Overworld Shear Sheep: |-
         Koha e qethjes së deleve! Përdor komandën "qethje"
         për të mbledhur lesh nga të dyja delet.
       Overworld Shear Sheep_2018: |-
+        Koha e qethjes së deleve! Përdor komandën "qethje"
+        për të mbledhur lesh nga të dyja delet.
+      Overworld Shear Sheep_2019: |-
         Koha e qethjes së deleve! Përdor komandën "qethje"
         për të mbledhur lesh nga të dyja delet.
       PDK5 Conditionals 1: Lulet lejla mund të kenë ose 1 ose 0 nektar, por ti nuk
@@ -2644,10 +2672,17 @@ sq:
         të cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand
         \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\"
         në vendin e duhur\npër të minuar këto blloqe"
+      Underground Avoiding Lava_2019: "Llava është fshehur nën disa nga këto\nblloqe,
+        të cilat ju do të duhet t`i mbuloni para se të lëvizin përpara. Një komand
+        \"nëse\" \ndo të jetë e nevojshme këtu. Shto një komandë \"lëviz përpara\"
+        në vendin e duhur\npër të minuar këto blloqe"
       Underground If Statements: "Tani gjërat po ndërlikohen. Mino \n3 gur të kuq,
         por mos bjerë në llavë. Përdorni një komand \"nëse\" për të vendosur kalldrëm
         mbi çdo llavë të zbuluar.\n "
       Underground If Statements_2018: "Tani gjërat po ndërlikohen. Mino \n3 gur të
+        kuq, por mos bjerë në llavë. Përdorni një komand \"nëse\" për të vendosur
+        kalldrëm mbi çdo llavë të zbuluar.\n "
+      Underground If Statements_2019: "Tani gjërat po ndërlikohen. Mino \n3 gur të
         kuq, por mos bjerë në llavë. Përdorni një komand \"nëse\" për të vendosur
         kalldrëm mbi çdo llavë të zbuluar.\n "
       Underground Iron: |-
@@ -2656,10 +2691,16 @@ sq:
       Underground Iron_2018: |-
         Ecja në llavën e derdhur është një ide e keqe. Vendos
         kalldrëm për të krijuar një urë, pastaj mino të paktën dy nga blloqet e hekurit.
+      Underground Iron_2019: |-
+        Ecja në llavën e derdhur është një ide e keqe. Vendos
+        kalldrëm për të krijuar një urë, pastaj mino të paktën dy nga blloqet e hekurit.
       Underground Mining Coal: Ju do të gjeni burimet më të vlefshme nëntokësore,
         por aty mund të bëhet errësirë. Vendosni të paktën 2 pishtarë dhe mino të
         paktën 2 thëngji.
       Underground Mining Coal_2018: Ju do të gjeni burimet më të vlefshme nëntokësore,
+        por aty mund të bëhet errësirë. Vendosni të paktën 2 pishtarë dhe mino të
+        paktën 2 thëngji.
+      Underground Mining Coal_2019: Ju do të gjeni burimet më të vlefshme nëntokësore,
         por aty mund të bëhet errësirë. Vendosni të paktën 2 pishtarë dhe mino të
         paktën 2 thëngji.
       aE7: "Nëse ti e kopjon këtë cikël dhe kthen majtas në vënd \nta kthesh djathtas,
@@ -2873,17 +2914,29 @@ sq:
         një rrjet  \"pikselash\" ku ju mund të ecni  dhe të bëni figura duke i kthyer
         në vetëm disa katrorë. A mund të bëni që artisti të vizatojë \"01010101\"
         \n në binar në rreshtin e parë?"
+      courseD_artist_binary1_2019: "Binar është një mënyrë për të përfaqësuar informacion\nduke
+        përdorur vetëm dy opsione. Këtu, ne do të përdorim mundësitë \"off\" (përfaqësuar\nme
+        numrin 0) dhe \"on\" (përfaqësuar nga numri 1).\r\n\r\nNe ju kemi \nsiguruar
+        një rrjet  \"pikselash\" ku ju mund të ecni  dhe të bëni figura duke i kthyer
+        në vetëm disa katrorë. A mund të bëni që artisti të vizatojë \"01010101\"
+        \n në binar në rreshtin e parë?"
       courseD_artist_binary4: Mund t'a bësh këtë model duke e lidhur një varg 3 shifror
         binar?
       courseD_artist_binary4_2018: Mund t'a bësh këtë model duke e lidhur një varg
+        3 shifror binar?
+      courseD_artist_binary4_2019: Mund t'a bësh këtë model duke e lidhur një varg
         3 shifror binar?
       courseD_artist_binary6: Cili varg 6 shifror binar i përsëritur 11 herë do t'a
         vizatojë këtë figurë?
       courseD_artist_binary6_2018: Cili varg 6 shifror binar i përsëritur 11 herë
         do t'a vizatojë këtë figurë?
+      courseD_artist_binary6_2019: Cili varg 6 shifror binar i përsëritur 11 herë
+        do t'a vizatojë këtë figurë?
       courseD_artist_binary7: Cili është vargu më i shkurtër binar që ti mund të përsërisësh
         për të vizatuar këtë figurë?
       courseD_artist_binary7_2018: Cili është vargu më i shkurtër binar që ti mund
+        të përsërisësh për të vizatuar këtë figurë?
+      courseD_artist_binary7_2019: Cili është vargu më i shkurtër binar që ti mund
         të përsërisësh për të vizatuar këtë figurë?
       courseD_autorun_binary4_2019: Mund t'a bësh këtë model duke e lidhur një varg
         3 shifror binar?
@@ -2954,6 +3007,8 @@ sq:
       courseE_bee_concept1: "Mblidh gjithë nektarin nga secila lule.\nPërdor një cikël
         të mbivendosur. "
       courseE_bee_concept1_2018: "Mblidh gjithë nektarin nga secila lule.\nPërdor
+        një cikël të mbivendosur. "
+      courseE_bee_concept1_2019: "Mblidh gjithë nektarin nga secila lule.\nPërdor
         një cikël të mbivendosur. "
       courseE_bee_functions1: Mblidh gjithë nektarin nga çdo lule.
       courseE_bee_functions1_2018: Mblidh gjithë nektarin nga çdo lule.

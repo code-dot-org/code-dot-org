@@ -149,6 +149,10 @@ is:
         options:
           EFFECT:
             '"none"': Ekkert
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Ekkert
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -177,6 +181,10 @@ is:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ekkert
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Ekkert
@@ -351,6 +359,15 @@ is:
           LOCATION:
             "{x: 100, y: 200}": vinstri
             "{x: 300, y: 200}": hægri
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': allt
       Mikelab_getProp:
         options:
           PROPERTY:

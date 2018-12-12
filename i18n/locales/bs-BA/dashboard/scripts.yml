@@ -1912,3 +1912,56 @@ bs:
               name: Napravite Vaš projekat
             Present Your Project:
               name: Predstavite Vaš projekat
+            The Artist:
+              name: Umjetnik
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada Temelja
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Conditionals:
+              name: Uvjeti
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Binary Bracelets:
+              name: Binarne narukvice
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              name: Umjetnik Binarno
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

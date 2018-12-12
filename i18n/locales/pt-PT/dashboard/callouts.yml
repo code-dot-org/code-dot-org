@@ -144,25 +144,37 @@ pt:
         craft_callout_preplaced: Colocámos alguns blocos aqui para poderes começar
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Colocámos alguns blocos aqui para poderes começar
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Colocámos alguns blocos aqui para poderes começar
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Este código vai começar a construir a tua casa. Consegues terminá-la?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Este código vai começar a construir a tua casa. Consegues terminá-la?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Este código vai começar a construir a tua casa. Consegues terminá-la?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Clica em "Correr" para experimentares o teu programa
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Clica em "Correr" para experimentares o teu programa
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Clica em "Correr" para experimentares o teu programa
       Overworld Place Wall_callout:
         craft_inside_repeat: Repete ações colocando blocos aqui
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repete ações colocando blocos aqui
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repete ações colocando blocos aqui
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Este código vai verificar se há lava, consegues adicionar-lhe um comando para mover para a frente?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Este código vai verificar se há lava, consegues adicionar-lhe um comando para mover para a frente?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Este código vai verificar se há lava, consegues adicionar-lhe um comando para mover para a frente?
       Underground Iron_callout:
         craft_what_is_iron: Escava este ferro!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Escava este ferro!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Escava este ferro!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo" e mude o tamanho.

@@ -315,7 +315,7 @@
   "moveDistanceRandom": "พิกเซลแบบสุ่ม",
   "moveDistanceTooltip": "บังคับนักแสดงไปตามระยะทางและทิศทางที่ระบุ",
   "moveSprite": "เคลื่อนไปทาง",
-  "moveSpriteN": "ให้นักแสดง {spriteIndex}",
+  "moveSpriteN": "ขยับนักแสดงไปทาง {spriteIndex}",
   "moveDroid": "เคลื่อนหุ่นยนต์",
   "moveDroidN": "เคลื่อนหุ่นยนต์{spriteIndex}",
   "to": "ถึง",

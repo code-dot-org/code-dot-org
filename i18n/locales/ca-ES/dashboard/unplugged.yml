@@ -208,3 +208,24 @@ ca:
       Conditionals_2019:
         title: Condicionals
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+      GraphPaperProgramming_2019:
+        title: Programació de paper quadriculat
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix.
+      RelayProgramming_2018_2019:
+        title: Programació en relleus
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Activitat sense connexió
+      BinaryImages_2019:
+        title: Imatges binàries
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també.
+      GettingLoopy_2019:
+        title: Fent bucles
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Activitat sense connexió
+      BigEvent_2019:
+        title: El gran esdeveniment
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem.
+      BinaryBracelets_2019:
+        title: Polseres binàries
+        desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.

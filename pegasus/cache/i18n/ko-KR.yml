@@ -262,6 +262,7 @@ ko-KR:
   studiobar_elementary_title: 초등학생 코스
   studiobar_elementary_body: K&#8209;5 학생들을 위한 새로운 3개의 코스
   studiobar_dance_title: 댄스 파티
+  studiobar_dance_body: 나만의 댄스 파티를 만들고 공유하기
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: 앵그리버드로 코딩 배우기
   studiobar_flappy_title: 플래피 코드
@@ -435,6 +436,8 @@ ko-KR:
   minecraft_adventurer: Minecraft 모험가
   minecraft_tutorials: Minecraft Hour of Code 튜토리얼
   minecraft_specs: 여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상
+  minecraft_agent_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를
+    여행하세요.
   minecraft_agent_button: '시작:'
   minecraft_designer_description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
   minecraft_designer_button: '시작:'
@@ -1591,13 +1594,24 @@ ko-KR:
   user_header_flappy: 플래피
   user_header_view_my_projects: 나의 프로젝트 보기
   applab_tile_start_tutorial: '시작:'
+  applab_tile_teacher_guide: 선생님 가이드 보기
   account_sign_up_email_opt_in: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도
     되겠습니까?
   hoc_overview_dance_title: 댄스 파티
+  hoc_overview_partner_activities_title: 파트너들의 더 많은 활동
+  hoc_overview_partner_activities_body: 코딩의 시간 웹사이트에는 모든 연령 및 모든 경험 수준에 맞도록 Code.org와
+    파트너들이 함께 개발한 100가지 이상의 컴퓨터 과학 활동이 준비되어 있습니다.
+  hoc_overview_partner_activities_link: 활동 보기
   hoc_overview_start_tutorial: '시작:'
+  hoc_overview_view_teacher_guide: 선생님 가이드 보기
   hoc2018_creativity_create: 만들기
+  hoc2018_creativity_what_will_you_create: 무엇을 만들어 보시겠어요?
   hoc2018_mc_page_title: Minecraft Hour of Code 튜토리얼
   hoc2018_mc_details: 여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상
+  hoc2018_mc_aquatic_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를
+    여행하세요.
+  hoc2018_mc_hero_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를
+    여행하세요.
   hoc2018_mc_designer_title: Minecraft 디자이너
   hoc2018_mc_designer_description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
   hoc2018_mc_adventurer_title: Minecraft 모험가
@@ -1621,12 +1635,28 @@ ko-KR:
   hoc2018_mc_video_title_obama: 컴퓨터공학(정보과학)을 지지하는 오바마
   hoc2018_mc_video_title_hoc_is_here: Hour of Code 가 여기 있습니다 - 누구나 배울 수 있습니다
   hoc2018_mc_video_title_anybody_can_learn: 누구나 배울 수 있습니다
+  hoc2018_mc_homepage_hoc_coming: 코딩의 시간이 곧 시작됩니다.
+  hoc2018_mc_homepage_what_create: 무엇을 만들어 보시겠어요?
   hoc2018_mc_homepage_join_us: 함께 참여하기
   hoc2018_mc_homepage_try_it: 해보기
+  hoc2018_mc_back_journey: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요.
+  hoc2018_mc_teacher_guide: 선생님 가이드 보기
   hoc2018_dance_party_main_heading: 댄스 파티
+  hoc2018_dance_create_your_own_dance_title: 나만의 댄스 파티 만들기
   hoc2018_dance_party_box_title: 댄스 파티
+  hoc2018_dance_party_box_description: 댄스 파티의 코드를 만들고 친구와 공유하세요!
   hoc2018_dance_party_button: '시작:'
+  hoc2018_dance_keep_on_dancing_box_title: 계속 춤추기
+  hoc2018_dance_keep_on_dancing_description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
+  hoc2018_dance_keep_on_dancing_button: 파트 2 시작
+  hoc2018_dance_teacher_resources_title: 선생님 자료
+  hoc2018_dance_teacher_resources_tile1_description: 수업 계획, 인증서 및 음악 필터링입니다.
   hoc2018_dance_teacher_resources_tile1_button: 수업 계획
+  hoc2018_dance_teacher_resources_tile2_title: 댄스 파티 언플러그드
+  hoc2018_dance_teacher_resources_tile2_description: 컴퓨터가 필요하지 않아요!  코딩 개념을 배우고 함께
+    댄스 파티를 연출하세요.
   hoc2018_dance_teacher_resources_tile2_button: 언플러그드 활동
   hoc2018_dance_amazon_about_future_engineer_button: 더 알아보기
   hoc2018_dance_amazon_scholarship_programs_button: 지금 신청하기
+  hoc2018_dance_measure: 마디
+  hoc2018_dance_measure_colon: '마디:'

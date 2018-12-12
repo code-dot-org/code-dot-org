@@ -72,15 +72,15 @@ cs:
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Použij šipek k přemístění aktéra
       Dance_Party_01_callout:
-        dance_callout_01: Přidej tento blok do svého programu!
+        dance_callout_01: Přidej do svého programu tento blok!
       Dance_Party_01_low_callout:
-        dance_callout_01: Přidej tento blok do svého programu!
+        dance_callout_01: Přidej do svého programu tento blok!
       Dance_Party_02_callout:
-        dance_callout_02: Přidej tento blok do svého programu!
+        dance_callout_02: Přidej do svého programu tento blok!
       Dance_Party_04_callout:
-        dance_callout_04: Přidej tento blok do svého programu!
+        dance_callout_04: Přidej do svého programu tento blok!
       Dance_Party_06_callout:
-        dance_callout_06: Přidej sem svého nového tanečníka
+        dance_callout_06: Zde přidej svého nového tanečníka
       Dance_Party_11_callout:
         dance_callout_11_a: Nový blok!
         dance_callout_11_b: Nový blok!
@@ -162,19 +162,28 @@ cs:
         craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Place Wall_callout:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Opakuj akce umístěním bloků zde
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: K zobrazení mřížky klikněte zde.
@@ -188,9 +197,14 @@ cs:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
           k posunu dopředu?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
+          k posunu dopředu?
       Underground Iron_callout:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Vytěž toto železo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Vytěž toto železo!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"

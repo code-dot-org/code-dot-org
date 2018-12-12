@@ -385,44 +385,146 @@ de:
         die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
         als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Dance_Party_01: |-
-        *Wir haben eine Tanzparty!*
+        *Los geht‘s mit der Tanzparty!*
 
-        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
 
-        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
       Dance_Party_01_low: |-
-        *Wir haben eine Tanzparty!*
+        *Los geht‘s mit der Tanzparty!*
 
-        Ziehe den 'Neu erstellen'-Block in den Arbeitsbereich und verbinde ihn mit dem 'Setup'-Block, um deinen ersten Tänzer zu erstellen.
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
 
-        * *Du kannst auch die Glühbirne auf der linken Seite klicken, wenn du mehr Informationen oder weitere Herausforderungen möchtest.*
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
       Dance_Party_02: |-
-        Bring den Elch zum Tanzen!
+        Lassen Sie den Elch tanzen!
 
-        Zieh den <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">neuer&#95;T&auml;nzer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> Block in den Arbeitsbereich. Verbinde ihn unterhalb mit dem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takt"</title></block></xml> Block. Dein Tänzer sollte nun eine neue Bewegung nach dem vierten Takt ausführen.
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
 
-        **Takte** werden benutzt um Zeit in Musik zu messen. In dieser Anleitung ist ein Takt vier Beats lang.
-      Dance_Party_03: "*Jetzt grooven wir!* \n\nFüge einen <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml>
-        Block deinem Arbeitsbereich hinzu. Der Tänzer macht eine neue Bewegung nach
-        6 Takten."
+        **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
+      Dance_Party_03: |-
+        *Jetzt grooven wir!*
+
+        Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
       Dance_Party_04: |-
+        *Dieser Tanz braucht etwas Pep!*
+
+        Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
+      Dance_Party_05: |-
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
+
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+      Dance_Party_06: |-
+        *Wir brauchen noch mehr Tänzer!*
+
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      Dance_Party_08: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
+      Dance_Party_09: |-
+        Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
+        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+      Dance_Party_10: |-
+        Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
+      Dance_Party_11.5_test: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+
+        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      Dance_Party_11_5: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      Dance_Party_11b: Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt, wenn
+        Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem
+        Sie die rechte Pfeiltaste drücken.
+      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      Dance_Party_3: "*Jetzt grooven wir!* \n\nFüge einen zweiten <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml>
+        Block deinem Arbeitsbereich hinzu. Lass den Tänzer eine neue Bewegung machen,
+        nach 6 Takten."
+      Dance_Party_4: |-
         *Dieser Tanz braucht mehr Biss*
 
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
-      Dance_Party_05: |-
-        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
-
-        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
-      Dance_Party_06: |-
-        *Wir brauchen mehr Tänzer!*
-
-        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
-      Dance_Party_08: |-
-        Jeder Tänzer hat einen Satz _Eigenschaften_, diese legen fest wie er aussieht.
+      Dance_Party_8: |-
+        Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.
 
         Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
+      Dance_Party_extras_battle: |-
+        # Tanz-Crews
+
+        Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
+
+        * Füge weitere Tasten zum Steuern der Tänzer hinzu
+        * Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
+        * Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
+      Dance_Party_extras_every_beat: |-
+        # Viertelnoten
+
+        Für die meisten unserer Tänze wurden ganze Takte verwendet, aber jeder Takt setzt sich aus 4 Viertelnoten zusammen. Für diesen Tanz werden „alle 0,25 Takte“ verwendet, um den Tänzer bei jeder Viertelnote zum Klatschen zu bringen.
+
+        Für diesen Tanz wird auch ein _vorbehaltlicher_Block verwendet, um zu kontrollieren, wann der „alle 0,25 Takte“-Block den Tanz ändern kann. Versuche, die Zahlen in dem vorbehaltlichen Block zu ändern, um zu sehen, wie es den Tanz verändert.
+
+        * Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
+        * Füge einige Events „nach dem Takt“ hinzu.
+        * Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
+      Dance_Party_extras_layout: |-
+        # Nehmen wir die Formation ein!
+
+        Schaue dir diesen Tanz an, der den „Layout“-Block verwendet, um die Formation der Backup-Tänzer während des Tanzes zu ändern. Probiere eine dieser Ideen aus, um ihn zu verlängern:
+
+        * Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
+        * Ändere das Layout, wenn eine Taste gedrückt wird
+        * Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+      Dance_Party_extras_on_beat: |-
+        # Bass, mittlerer Ton und Sopran
+
+        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
+      Dance_Party_extras_speed: |-
+        # Beschleunigen, verlangsamen
+
+        Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
+      Dance_Party_extras_visible: |-
+        # Wo würden sie hingehen?
+
+        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
+
+        * Füge eine weitere Gruppe von Tänzern hinzu
+        * Blende Tänzer mithilfe der Pfeiltasten ein- und aus
+        * Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion**
         namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
         des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
@@ -463,14 +565,32 @@ de:
       HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
         Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 3_draft: |-
+        *Dieser Tanz braucht mehr Biss*
+
+        Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       HOC Dance 4_draft: |-
-        Verwende einen weiteren Block, um die Bewegung deines Tänzers **alle 2 Takte** ändern zu lassen!
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
 
-        * Wähle `(Nächster)`, `(Vorhergehend)`, oder `(Zufällig)` um dem Tänzer mitzuteilen eine andere Bewegung auszuführen, jedesmal wenn dein Code läuft.
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       HOC Dance 5_draft: |-
-        *Wir brauchen mehr Tänzer!*
+        *Wir brauchen noch mehr Tänzer!*
 
-        Erstelle einen Hintergrundtänzer `backup_dancer1, welcher mit der Katze tanzt.
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      HOC Dance 6_draft: |-
+        Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.
+
+        Ein Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?
+      HOC Dance 9_draft: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+
+        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      HOC Dance Freeplay: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
+      HOC Dance Freeplay_draft: Grooven Sie los! Erstellen Sie einen eigenen Tanz
+        und teilen Sie ihn mit Ihren Freunden.
+      HOC Dance Predraw: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar
         einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und
@@ -702,6 +822,8 @@ de:
       Overworld Move to Sheep: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den
         Schafen zu gelangen.
       Overworld Move to Sheep_2018: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
+        zu den Schafen zu gelangen.
+      Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
       Testing Quantum Farmer: 'Wow, ich habe ein richtig tiefes Loch gefunden! Ich
         weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm

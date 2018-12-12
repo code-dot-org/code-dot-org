@@ -3320,6 +3320,205 @@ zh-CN:
           这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance short test 2_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要在歌曲的第七个小节变换背景效果。
+          
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance short test_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要在歌曲的第七个小节变换背景效果。
+          
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+          
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+          
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          
+          *此关在 12 个小节后结束。*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要在歌曲的第七个小节变换背景效果。
+          
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要至少两个舞者。
+          
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          *添加第三个舞者（或者更多数量！）
+          *让所有舞者在歌曲的不同时间点做不同的动作。
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *两个舞者的大小不能为 100。
+          
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          *通过更改其他属性（宽度、高度、旋转等）来尝试
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *更改至少一个舞者的色彩。
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+          
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *必须更改两个或更多的舞者属性。
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *只需发挥想象力！
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *只需发挥想象力！
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *只需发挥想象力！
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
+          
+          * 此关在 8 个小节后结束。*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+          
+          *此关在 8 个小节后结束。*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          
+          *此关在 12 个小节后结束。*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要在歌曲的第七个小节变换背景效果。
+          
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *舞者必须在歌曲的前 12 个小节做不同的动作。
+          
+          *此关在 12 个小节后结束。*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **可选挑战**
+          
+          *添加第三个舞者（或者更多数量！）
+          *让所有舞者在歌曲的不同时间点做不同的动作。
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *两个舞者的大小不能为 100。
+          
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          *通过更改其他属性（宽度、高度、旋转等）来尝试
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *更改至少一个舞者的色彩。
+          
+          *此关在 8 个小节后结束。*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           这是第一个提示。 
@@ -3347,6 +3546,93 @@ zh-CN:
         voyage_aquatic_10a: "看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了吗？怎样可以用条件来使用它们，穿过海底遗迹？\n\n"
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+          
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+          
+          *此关在 8 个小节后结束。*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          
+          *此关在 12 个小节后结束。*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *需要在歌曲的第七个小节变换背景效果。
+          
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *舞者必须在歌曲的前 12 个小节做不同的动作。
+          
+          *此关在 12 个小节后结束。*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **可选挑战**
+          
+          *添加第三个舞者（或者更多数量！）
+          *让所有舞者在歌曲的不同时间点做不同的动作。
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *两个舞者的大小不能为 100。
+          
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+          
+          *通过更改其他属性（宽度、高度、旋转等）来尝试
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *更改至少一个舞者的色彩。
+          
+          *此关在 8 个小节后结束。*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *必须更改两个或更多的舞者属性。
+          
+          *此关在 8 个小节后结束。*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *只需发挥想象力！
+          
+          *此关在 8 个小节后结束。*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          
+          *只需发挥想象力！
+          
+          *此关在 8 个小节后结束。*
       Harvesting_authored_hint:
         pointer_harvester_test: 我可以用什么样的模块来检查并做出决定？
       Inspirational Artwork_authored_hint:
@@ -3556,16 +3842,26 @@ zh-CN:
         mc_8_a: 你可以走几条路径。哪一条最短？
         mc_8_b: 使用`重复`循环来简化代码。
         mc_8_c: 你的目标是进入屏幕顶部的房子入口。
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: 你可以走几条路径。哪一条最短？
+        mc_8_b: 使用`重复`循环来简化代码。
+        mc_8_c: 你的目标是进入屏幕顶部的房子入口。
       Overworld Chop Tree_authored_hint:
         mc_2_a: '你需要`向前移动`两次才能站在树前。'
         mc_2_b: '`摧毁方块`命令让你砍倒你前面的树。'
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: '你需要`向前移动`两次才能站在树前。'
         mc_2_b: '`摧毁方块`命令让你砍倒你前面的树。'
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: '你需要`向前移动`两次才能站在树前。'
+        mc_2_b: '`摧毁方块`命令让你砍倒你前面的树。'
       Overworld Chop Trees_authored_hint:
         mc_4_a: '你可以按任何顺序砍伐树木。什么路径需要的模块最少？'
         mc_4_b: '`摧毁方块`命令让你砍倒你前面的树。'
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_a: '你可以按任何顺序砍伐树木。什么路径需要的模块最少？'
+        mc_4_b: '`摧毁方块`命令让你砍倒你前面的树。'
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_a: '你可以按任何顺序砍伐树木。什么路径需要的模块最少？'
         mc_4_b: '`摧毁方块`命令让你砍倒你前面的树。'
       Overworld House Frame Chosen_authored_hint:
@@ -3576,10 +3872,17 @@ zh-CN:
         mc_6_a: 单击`放置`模块上的箭头可选择要放置的位置。
         mc_6_b: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         mc_6_c: 您可以在一个`重复`循环中放置多个模块。
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_a: 单击`放置`模块上的箭头可选择要放置的位置。
+        mc_6_b: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+        mc_6_c: 您可以在一个`重复`循环中放置多个模块。
       Overworld Move to Sheep_authored_hint:
         mc_1_a: '`向前移动`模块位于工具箱的顶部。'
         mc_1_b: '确保把两个`向前移动`模块粘到`当运行时`模块下。'
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: '`向前移动`模块位于工具箱的顶部。'
+        mc_1_b: '确保把两个`向前移动`模块粘到`当运行时`模块下。'
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: '`向前移动`模块位于工具箱的顶部。'
         mc_1_b: '确保把两个`向前移动`模块粘到`当运行时`模块下。'
       Overworld Place Wall_authored_hint:
@@ -3587,6 +3890,10 @@ zh-CN:
         mc_5_b: 让代码多次运行，要确保两个模块都在`重复`循环里。
         mc_5_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
       Overworld Place Wall_2018_authored_hint:
+        mc_5_a: 先使用`放置`模块, 然后是`移动`模块。
+        mc_5_b: 让代码多次运行，要确保两个模块都在`重复`循环里。
+        mc_5_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+      Overworld Place Wall_2019_authored_hint:
         mc_5_a: 先使用`放置`模块, 然后是`移动`模块。
         mc_5_b: 让代码多次运行，要确保两个模块都在`重复`循环里。
         mc_5_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
@@ -3598,10 +3905,17 @@ zh-CN:
         mc_7_a: 使用`种植作物`模块在你所站的地方种植庄稼。
         mc_7_b: 两条暗褐色的土地都需要用庄稼来填满。
         mc_7_c: 您可以在一个`重复`循环中放置多个模块。
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_a: 使用`种植作物`模块在你所站的地方种植庄稼。
+        mc_7_b: 两条暗褐色的土地都需要用庄稼来填满。
+        mc_7_c: 您可以在一个`重复`循环中放置多个模块。
       Overworld Powered Minecart_authored_hint:
         mc_13_a: 使用`放置铁轨`在您所站的广场上铺设铁轨。
         mc_13_b: 使用`重复`循环使代码更短。
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: 使用`放置铁轨`在您所站的广场上铺设铁轨。
+        mc_13_b: 使用`重复`循环使代码更短。
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: 使用`放置铁轨`在您所站的广场上铺设铁轨。
         mc_13_b: 使用`重复`循环使代码更短。
       Overworld Shear Sheep_authored_hint:
@@ -3609,6 +3923,10 @@ zh-CN:
         mc_3_b: '如果要更改你的朝向, 请使用`转向`模块。  '
         mc_3_c: '不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。'
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: '`修剪`模块能修剪前面的羊。你面对着羊群吗？  '
+        mc_3_b: '如果要更改你的朝向, 请使用`转向`模块。  '
+        mc_3_c: '不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。'
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_a: '`修剪`模块能修剪前面的羊。你面对着羊群吗？  '
         mc_3_b: '如果要更改你的朝向, 请使用`转向`模块。  '
         mc_3_c: '不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。'
@@ -3632,11 +3950,18 @@ zh-CN:
       Underground Avoiding Lava_2018_authored_hint:
         mc_11_a: 所有的来检查和处理熔岩代码都有了。您需要做的就是添加一个模块来移动。
         mc_11_b: 你的`向前移动`命令要在`如果`语句的里面还是后面？
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: 所有的来检查和处理熔岩代码都有了。您需要做的就是添加一个模块来移动。
+        mc_11_b: 你的`向前移动`命令要在`如果`语句的里面还是后面？
       Underground If Statements_authored_hint:
         mc_12_a: 红色斑点就是你发现红石的地方。
         mc_12_b: 你是否可以使用`重复`循环使代码更短？
         mc_12_c: '使用`如果`语句来检查熔岩空间, 然后放置圆石。 '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: 红色斑点就是你发现红石的地方。
+        mc_12_b: 你是否可以使用`重复`循环使代码更短？
+        mc_12_c: '使用`如果`语句来检查熔岩空间, 然后放置圆石。 '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: 红色斑点就是你发现红石的地方。
         mc_12_b: 你是否可以使用`重复`循环使代码更短？
         mc_12_c: '使用`如果`语句来检查熔岩空间, 然后放置圆石。 '
@@ -3648,11 +3973,19 @@ zh-CN:
         mc_10_a: 铁块是火炬背后有斑点的空间！你怎么去那里？
         mc_10_b: 当你站在熔岩的边缘时, 用`把圆石放在前面`来制造一条安全的道路。然后，你就可以走过去了！
         mc_10_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+      Underground Iron_2019_authored_hint:
+        mc_10_a: 铁块是火炬背后有斑点的空间！你怎么去那里？
+        mc_10_b: 当你站在熔岩的边缘时, 用`把圆石放在前面`来制造一条安全的道路。然后，你就可以走过去了！
+        mc_10_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
       Underground Mining Coal_authored_hint:
         mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
         mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
         mc_9_c: 用`放火把` 把火把放在你所站的地方。
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
+        mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
+        mc_9_c: 用`放火把` 把火把放在你所站的地方。
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
         mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
         mc_9_c: 用`放火把` 把火把放在你所站的地方。
@@ -7092,6 +7425,18 @@ zh-CN:
           </xml>
           
            选择您喜欢的任何图案!
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: 您不需要对循环进行任何更改, 只需在上面放置一个模块。
+        courseC_artist_loop1_b: |-
+          这是您需要设置图案的模块: 
+          
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+          
+           选择您喜欢的任何图案!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           这是您将需要的第一个模块：
@@ -7128,16 +7473,40 @@ zh-CN:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1a_2019_authored_hint:
+        courseC_artist_loops1a_a: |-
+          这是您将需要的第一个模块：
+          
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          使用此模块来绘制贴纸！
+          
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: 在你的循环中, 你需要跳到200以上，再向下200像素, 然后画鸟的贴纸, 然后转30度。
         courseC_artist_loops2a_b: 单击`重复`循环顶部的数字来更改重复次数。
       courseC_artist_loops2a_2018_authored_hint:
         courseC_artist_loops2a_a: 在你的循环中, 你需要跳到200以上，再向下200像素, 然后画鸟的贴纸, 然后转30度。
         courseC_artist_loops2a_b: 单击`重复`循环顶部的数字来更改重复次数。
+      courseC_artist_loops2a_2019_authored_hint:
+        courseC_artist_loops2a_a: 在你的循环中, 你需要跳到200以上，再向下200像素, 然后画鸟的贴纸, 然后转30度。
+        courseC_artist_loops2a_b: 单击`重复`循环顶部的数字来更改重复次数。
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
         courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops3a_2018_authored_hint:
+        courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
+        courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
+      courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
         courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops4a_authored_hint:
@@ -7164,6 +7533,18 @@ zh-CN:
           </xml>
           
           不要忘记更改跳多远！
+      courseC_artist_loops4a_2019_authored_hint:
+        courseC_artist_loops4a_a: |-
+          使用此模块向前跳转：
+          
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+          
+          不要忘记更改跳多远！
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           尝试使用`跳到`模块使您的艺术家回到中心：
@@ -7177,6 +7558,8 @@ zh-CN:
       courseC_artist_loops5a_authored_hint:
         courseC_artist_loops5a_a: 使用`画贴纸`块上的下拉菜单来更改它们的图像。
       courseC_artist_loops5a_2018_authored_hint:
+        courseC_artist_loops5a_a: 使用`画贴纸`块上的下拉菜单来更改它们的图像。
+      courseC_artist_loops5a_2019_authored_hint:
         courseC_artist_loops5a_a: 使用`画贴纸`块上的下拉菜单来更改它们的图像。
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
@@ -7198,6 +7581,16 @@ zh-CN:
           </block>
           </xml>
         courseC_artist_loops5b_b: 要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_a: |-
+          使用此模块设置线条的图案：
+          
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: 要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
           尝试三角形花：
@@ -7208,16 +7601,24 @@ zh-CN:
         courseC_artist_loops6a_a: 要制作和上面类似的设计, 在每个贴纸之间向前跳转少于75像素。
       courseC_artist_loops6a_2018_authored_hint:
         courseC_artist_loops6a_a: 要制作和上面类似的设计, 在每个贴纸之间向前跳转少于75像素。
+      courseC_artist_loops6a_2019_authored_hint:
+        courseC_artist_loops6a_a: 要制作和上面类似的设计, 在每个贴纸之间向前跳转少于75像素。
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: |-
           一个圆有360度。把你的转弯角度乘以你重复次数。它等于360吗？检查建议的转角看这是否可行！
       courseC_artist_loops7a_2018_authored_hint:
         courseC_artist_loops7a_a: |-
           一个圆有360度。把你的转弯角度乘以你重复次数。它等于360吗？检查建议的转角看这是否可行！
+      courseC_artist_loops7a_2019_authored_hint:
+        courseC_artist_loops7a_a: |-
+          一个圆有360度。把你的转弯角度乘以你重复次数。它等于360吗？检查建议的转角看这是否可行！
       courseC_artist_loopsPre1a_authored_hint:
         courseC_artist_loopsPre1a_a: 记住把`转向`模块放到循环内。
         courseC_artist_loopsPre1a_b: '你的`重复`循环应该有3个模块在里面:`跳到200超过200下`，`向前移动50像素`和`向右转60度`。'
       courseC_artist_loopsPre1a_2018_authored_hint:
+        courseC_artist_loopsPre1a_a: 记住把`转向`模块放到循环内。
+        courseC_artist_loopsPre1a_b: '你的`重复`循环应该有3个模块在里面:`跳到200超过200下`，`向前移动50像素`和`向右转60度`。'
+      courseC_artist_loopsPre1a_2019_authored_hint:
         courseC_artist_loopsPre1a_a: 记住把`转向`模块放到循环内。
         courseC_artist_loopsPre1a_b: '你的`重复`循环应该有3个模块在里面:`跳到200超过200下`，`向前移动50像素`和`向右转60度`。'
       courseC_artist_loopsPrePre1a_authored_hint:
@@ -7230,6 +7631,18 @@ zh-CN:
           
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          需要的第一个模块是：
+          
+          <xml> <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          要向前移动50像素, 请使用以下模块：
+          
+          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+      courseC_artist_loopsPrePre1a_2019_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           需要的第一个模块是：
           
@@ -7411,16 +7824,24 @@ zh-CN:
         courseC_maze_loops_challenge2_b: 使用循环，这样就不会用光`收集`模块！
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: 使用循环，这样就不会用光`收集`模块！
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: 使用循环，这样就不会用光`收集`模块！
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: 当您站在具有宝藏的地方时, 请使用 <xml><block type="collector_collect"/></xml>模块来拾取它。
         courseC_collector_prog1_b: 最简单的解决方法是向前移动一次, 然后收集宝藏。
       courseC_collector_prog1_2018_authored_hint:
         courseC_collector_prog1_a: 当您站在具有宝藏的地方时, 请使用 <xml><block type="collector_collect"/></xml>模块来拾取它。
         courseC_collector_prog1_b: 最简单的解决方法是向前移动一次, 然后收集宝藏。
+      courseC_collector_prog1_2019_authored_hint:
+        courseC_collector_prog1_a: 当您站在具有宝藏的地方时, 请使用 <xml><block type="collector_collect"/></xml>模块来拾取它。
+        courseC_collector_prog1_b: 最简单的解决方法是向前移动一次, 然后收集宝藏。
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_a: 你可以使用4 个<xml><block type="maze_move"><title name="DIR">向前移动</title></block></xml> 模块或者使用 <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块来缩短程序。
         courseC_collector_prog2_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseC_collector_prog2_2018_authored_hint:
+        courseC_collector_prog2_a: 你可以使用4 个<xml><block type="maze_move"><title name="DIR">向前移动</title></block></xml> 模块或者使用 <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块来缩短程序。
+        courseC_collector_prog2_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseC_collector_prog2_2019_authored_hint:
         courseC_collector_prog2_a: 你可以使用4 个<xml><block type="maze_move"><title name="DIR">向前移动</title></block></xml> 模块或者使用 <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块来缩短程序。
         courseC_collector_prog2_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseC_collector_prog3_authored_hint:
@@ -7431,11 +7852,19 @@ zh-CN:
         courseC_collector_prog3_a: 该程序将只运行连接到 <xml><block type="when_run"/></xml>的模块。
         courseC_collector_prog3_b: 尝试使用 "步进" 按钮逐行运行您的代码。你知道代码哪里出错了吗？
         courseC_collector_prog3_c: 如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。
+      courseC_collector_prog3_2019_authored_hint:
+        courseC_collector_prog3_a: 该程序将只运行连接到 <xml><block type="when_run"/></xml>的模块。
+        courseC_collector_prog3_b: 尝试使用 "步进" 按钮逐行运行您的代码。你知道代码哪里出错了吗？
+        courseC_collector_prog3_c: 如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_a: 如果你被难住了, 试着在一张纸上写下步骤。
         courseC_collector_prog4_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
         courseC_collector_prog4_c: 请为路径尝试此选项。
       courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_a: 如果你被难住了, 试着在一张纸上写下步骤。
+        courseC_collector_prog4_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+        courseC_collector_prog4_c: 请为路径尝试此选项。
+      courseC_collector_prog4_2019_authored_hint:
         courseC_collector_prog4_a: 如果你被难住了, 试着在一张纸上写下步骤。
         courseC_collector_prog4_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
         courseC_collector_prog4_c: 请为路径尝试此选项。
@@ -7449,10 +7878,18 @@ zh-CN:
         courseC_collector_prog5_b: 如果修复了一个缺陷但程序仍然无法正常工作，请使用上面的步骤查找更多的缺陷。
         courseC_collector_prog5_c: 如果你被难住了, 试着在一张纸上写下步骤。
         courseC_collector_prog5_d: 沿着小路收集宝藏。
+      courseC_collector_prog5_2019_authored_hint:
+        courseC_collector_prog5_a: "\"它在第一步工作吗？\n它在第二步工作吗？ \n哪里出错了？”"
+        courseC_collector_prog5_b: 如果修复了一个缺陷但程序仍然无法正常工作，请使用上面的步骤查找更多的缺陷。
+        courseC_collector_prog5_c: 如果你被难住了, 试着在一张纸上写下步骤。
+        courseC_collector_prog5_d: 沿着小路收集宝藏。
       courseC_collector_prog6_authored_hint:
         courseC_collector_prog6_a: "能找出哪里出错吗？请尝试使用 \"步进\" 按钮逐行运行代码来查找错误。"
         courseC_collector_prog6_b: 被难住了? 尝试这条路径来收集宝藏。
       courseC_collector_prog6_2018_authored_hint:
+        courseC_collector_prog6_a: "能找出哪里出错吗？请尝试使用 \"步进\" 按钮逐行运行代码来查找错误。"
+        courseC_collector_prog6_b: 被难住了? 尝试这条路径来收集宝藏。
+      courseC_collector_prog6_2019_authored_hint:
         courseC_collector_prog6_a: "能找出哪里出错吗？请尝试使用 \"步进\" 按钮逐行运行代码来查找错误。"
         courseC_collector_prog6_b: 被难住了? 尝试这条路径来收集宝藏。
       courseC_collector_prog7_authored_hint:
@@ -7463,11 +7900,17 @@ zh-CN:
         courseC_collector_prog7_a: '工作区中已经有很多很好的代码。你不需要删除任何代码来通过这个关卡。  '
         courseC_collector_prog7_b: 没看出让冒险家朝着正确的方向移动的模块吗？请从工具箱里拉出一个。
         courseC_collector_prog7_c: 没看到收集所有宝藏的路线吗？尝试这条路！
+      courseC_collector_prog7_2019_authored_hint:
+        courseC_collector_prog7_a: '工作区中已经有很多很好的代码。你不需要删除任何代码来通过这个关卡。  '
+        courseC_collector_prog7_b: 没看出让冒险家朝着正确的方向移动的模块吗？请从工具箱里拉出一个。
+        courseC_collector_prog7_c: 没看到收集所有宝藏的路线吗？尝试这条路！
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: 尝试使用 "步进" 按钮仔细查看每行代码。
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以更经常使用`收集`命令来收集额外的宝藏。
       courseC_collector_prog_challenge1_2018_authored_hint:
+        courseC_collector_prog_challenge1_a: 你可以更经常使用`收集`命令来收集额外的宝藏。
+      courseC_collector_prog_challenge1_2019_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以更经常使用`收集`命令来收集额外的宝藏。
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
@@ -7475,9 +7918,14 @@ zh-CN:
       courseC_collector_prog_challenge2_2018_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
         courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
+      courseC_collector_prog_challenge2_2019_authored_hint:
+        courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
+        courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2019_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: '您需要添加的模块称为`设置速度`。 '
@@ -7485,33 +7933,50 @@ zh-CN:
       courseC_flappy_events2_2018_authored_hint:
         courseC_flappy_events2_a: '您需要添加的模块称为`设置速度`。 '
         courseC_flappy_events2_b: 将`设置速度`模块连接到`当运行时`模块来解决此关卡。
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: '您需要添加的模块称为`设置速度`。 '
+        courseC_flappy_events2_b: 将`设置速度`模块连接到`当运行时`模块来解决此关卡。
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: 如果运行出问题, 请确保您的块已连接到工作区中的正确事件上。
       courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: 如果运行出问题, 请确保您的块已连接到工作区中的正确事件上。
+      courseC_flappy_events3_2019_authored_hint:
         courseC_flappy_events3_a: 如果运行出问题, 请确保您的块已连接到工作区中的正确事件上。
       courseC_flappy_events4_authored_hint:
         courseC_flappy_events4_a: 将`结束游戏`模块连接到`当遇到障碍`来解决这个关卡。
       courseC_flappy_events4_2018_authored_hint:
         courseC_flappy_events4_a: 将`结束游戏`模块连接到`当遇到障碍`来解决这个关卡。
+      courseC_flappy_events4_2019_authored_hint:
+        courseC_flappy_events4_a: 将`结束游戏`模块连接到`当遇到障碍`来解决这个关卡。
       courseC_flappy_events5_authored_hint:
         courseC_flappy_events5_a: 您将需要使用`得一分`模块来通过这个关卡。
       courseC_flappy_events5_2018_authored_hint:
+        courseC_flappy_events5_a: 您将需要使用`得一分`模块来通过这个关卡。
+      courseC_flappy_events5_2019_authored_hint:
         courseC_flappy_events5_a: 您将需要使用`得一分`模块来通过这个关卡。
       courseC_flappy_events6_authored_hint:
         courseC_flappy_events6_a: 请尝试将`拍打____次时`模块连接到`当点击时`事件。
       courseC_flappy_events6_2018_authored_hint:
         courseC_flappy_events6_a: 请尝试将`拍打____次时`模块连接到`当点击时`事件。
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: 请尝试将`拍打____次时`模块连接到`当点击时`事件。
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: '您可以使用`设置场景`模块来更改背景。 '
       courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: '您可以使用`设置场景`模块来更改背景。 '
+      courseC_flappy_events7_2019_authored_hint:
         courseC_flappy_events7_a: '您可以使用`设置场景`模块来更改背景。 '
       courseC_flappy_events8_authored_hint:
         courseC_flappy_events8_a: 尝把第二个`设置场景`模块连接到`当通过障碍`事件来通过这个关卡。
       courseC_flappy_events8_2018_authored_hint:
         courseC_flappy_events8_a: 尝把第二个`设置场景`模块连接到`当通过障碍`事件来通过这个关卡。
+      courseC_flappy_events8_2019_authored_hint:
+        courseC_flappy_events8_a: 尝把第二个`设置场景`模块连接到`当通过障碍`事件来通过这个关卡。
       courseC_flappy_events9_authored_hint:
         courseC_flappy_events9_a: 将`设置分数为0`模块连接到`当遇到障碍`事件通过此关卡。
       courseC_flappy_events9_2018_authored_hint:
+        courseC_flappy_events9_a: 将`设置分数为0`模块连接到`当遇到障碍`事件通过此关卡。
+      courseC_flappy_events9_2019_authored_hint:
         courseC_flappy_events9_a: 将`设置分数为0`模块连接到`当遇到障碍`事件通过此关卡。
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: 一旦你移到一个南瓜, 请使用 <xml><block type="harvester_pumpkin"/></xml>来收集它。
@@ -7832,6 +8297,10 @@ zh-CN:
         courseC_maze_debugging_challenge1_a: 向左还是向右？由你决定!
         courseC_maze_debugging_challenge1_b: 斯奎特的路径是一个矩形！他每次都要以同样的方式转动！
         courseC_maze_debugging_challenge1_c: 如果被难住了, 可以随时重新开始, 或删除所有的代码, 找到自己的方法!
+      courseC_maze_debugging_challenge1_2019_authored_hint:
+        courseC_maze_debugging_challenge1_a: 向左还是向右？由你决定!
+        courseC_maze_debugging_challenge1_b: 斯奎特的路径是一个矩形！他每次都要以同样的方式转动！
+        courseC_maze_debugging_challenge1_c: 如果被难住了, 可以随时重新开始, 或删除所有的代码, 找到自己的方法!
       courseC_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_b: 如果被难住了，试着调试代码。看看哪里错了？
         courseC_maze_debugging_challenge2_c: |-
@@ -7839,6 +8308,12 @@ zh-CN:
           
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2018_authored_hint:
+        courseC_maze_debugging_challenge2_b: 如果被难住了，试着调试代码。看看哪里错了？
+        courseC_maze_debugging_challenge2_c: |-
+          有两种不同的路径，有一种方法是只前进，并转向四次。如果你找到一个使用循环的方法, 可能会有更多方法！
+          
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: 如果被难住了，试着调试代码。看看哪里错了？
         courseC_maze_debugging_challenge2_c: |-
           有两种不同的路径，有一种方法是只前进，并转向四次。如果你找到一个使用循环的方法, 可能会有更多方法！
@@ -7881,6 +8356,9 @@ zh-CN:
       courseC_maze_loops_challenge1a_2018_authored_hint:
         courseC_maze_loops_challenge1_a: 把这条路看成是两个不同的部分。每一个都有一个可以重复的模式。
         courseC_maze_loops_challenge1_b: 你还记得如何使用循环来重复楼梯图案吗？
+      courseC_maze_loops_challenge1a_2019_authored_hint:
+        courseC_maze_loops_challenge1_a: 把这条路看成是两个不同的部分。每一个都有一个可以重复的模式。
+        courseC_maze_loops_challenge1_b: 你还记得如何使用循环来重复楼梯图案吗？
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: 如果在每一个土堆上只有一个宝藏，原来的代码将很有效！
         courseC_maze_loops_challenge2_b: 使用循环，这样就不会用光`收集`模块！
@@ -7888,10 +8366,15 @@ zh-CN:
         courseC_maze_programming1_0: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
       courseC_maze_programming1_2018_authored_hint:
         courseC_maze_programming1_0: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
+      courseC_maze_programming1_2019_authored_hint:
+        courseC_maze_programming1_0: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
       courseC_maze_programming2_authored_hint:
         courseC_maze_programming2_a: 若要使用<xml><block type="maze_moveForward"/></xml>模块，将它从工具箱中拖出，并粘贴到<xml><block type="when_run"/></xml>模块下。
         courseC_maze_programming2_b: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
       courseC_maze_programming2_2018_authored_hint:
+        courseC_maze_programming2_a: 若要使用<xml><block type="maze_moveForward"/></xml>模块，将它从工具箱中拖出，并粘贴到<xml><block type="when_run"/></xml>模块下。
+        courseC_maze_programming2_b: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
+      courseC_maze_programming2_2019_authored_hint:
         courseC_maze_programming2_a: 若要使用<xml><block type="maze_moveForward"/></xml>模块，将它从工具箱中拖出，并粘贴到<xml><block type="when_run"/></xml>模块下。
         courseC_maze_programming2_b: 确保所有模块都完全粘到了一起，然后再次点击"运行"。
       courseC_maze_programming3_authored_hint:
@@ -7905,6 +8388,16 @@ zh-CN:
           
           最后, 把其他模块放回属于他们的地方。
       courseC_maze_programming3_2018_authored_hint:
+        courseC_maze_programming3_a: 试着先运行一次代码, 看看哪里出问题了。
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          
+          若要从代码中间删除模块, 请将所有模块拖到工作区的其他部分。
+          
+          将要删除的块拖回工具箱。
+          
+          最后, 把其他模块放回属于他们的地方。
+      courseC_maze_programming3_2019_authored_hint:
         courseC_maze_programming3_a: 试着先运行一次代码, 看看哪里出问题了。
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
@@ -7932,11 +8425,24 @@ zh-CN:
           - 向前移动
           - 向后转向另一条路
           - 向前移动
+      courseC_maze_programming4_2019_authored_hint:
+        courseC_maze_programming4_a: 记住，当你转向时，你是从*小鸟*的视角来进行的转向。如果你向右转，小鸟会朝向下方。
+        courseC_maze_programming4_b: |-
+          遵循如下路径：
+          - 向前移动
+          - 转向一条路
+          - 向前移动
+          - 向后转向另一条路
+          - 向前移动
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 这只鸟将转一个转弯来完成这个关卡。你能想出哪条路吗？
         courseC_maze_programming5_c: 该解决方案将有两个`向前移动`模块，一个转向，并再加两个`向前移动`模块。
       courseC_maze_programming5_2018_authored_hint:
+        courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 这只鸟将转一个转弯来完成这个关卡。你能想出哪条路吗？
+        courseC_maze_programming5_c: 该解决方案将有两个`向前移动`模块，一个转向，并再加两个`向前移动`模块。
+      courseC_maze_programming5_2019_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 这只鸟将转一个转弯来完成这个关卡。你能想出哪条路吗？
         courseC_maze_programming5_c: 该解决方案将有两个`向前移动`模块，一个转向，并再加两个`向前移动`模块。
@@ -7950,10 +8456,18 @@ zh-CN:
         courseC_maze_programming6_b: 跟着你的手指从鸟到猪, 你采取了哪些步骤？
         courseC_maze_programming6_c: 记住, 你必须先转弯, 因为鸟儿开始时面对一堵墙。
         courseC_maze_programming6_d: 感觉被难住了？ 看看这条路!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: 有两种方法来解决这个难题 ！
+        courseC_maze_programming6_b: 跟着你的手指从鸟到猪, 你采取了哪些步骤？
+        courseC_maze_programming6_c: 记住, 你必须先转弯, 因为鸟儿开始时面对一堵墙。
+        courseC_maze_programming6_d: 感觉被难住了？ 看看这条路!
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: 别忘了用"步进"按钮来一个模块一个模块的寻找错误。
         courseC_maze_programming7_b: 如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。
       courseC_maze_programming7_2018_authored_hint:
+        courseC_maze_programming7_a: 别忘了用"步进"按钮来一个模块一个模块的寻找错误。
+        courseC_maze_programming7_b: 如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。
+      courseC_maze_programming7_2019_authored_hint:
         courseC_maze_programming7_a: 别忘了用"步进"按钮来一个模块一个模块的寻找错误。
         courseC_maze_programming7_b: 如果你很难弄清楚这个关卡, 试着在一张纸上写下这些动作。
       courseC_maze_programming8_authored_hint:
@@ -7962,9 +8476,14 @@ zh-CN:
       courseC_maze_programming8_2018_authored_hint:
         courseC_maze_programming8_a: 请记住, 如果你被难住了, 你可以使用 "步进" 按钮来查看你的代码。
         courseC_maze_programming8_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
+      courseC_maze_programming8_2019_authored_hint:
+        courseC_maze_programming8_a: 请记住, 如果你被难住了, 你可以使用 "步进" 按钮来查看你的代码。
+        courseC_maze_programming8_b: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: 有很多方法可以找到猪。用你的手指找到一个路径, 然后写下程序！
       courseC_maze_programming_challenge1_2018_authored_hint:
+        courseC_maze_programming_challenge1_a: 有很多方法可以找到猪。用你的手指找到一个路径, 然后写下程序！
+      courseC_maze_programming_challenge1_2019_authored_hint:
         courseC_maze_programming_challenge1_a: 有很多方法可以找到猪。用你的手指找到一个路径, 然后写下程序！
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: '"如果你让我后退，要格外小心我朝向了正确的路！*'
@@ -7973,6 +8492,12 @@ zh-CN:
           
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_a: '"如果你让我后退，要格外小心我朝向了正确的路！*'
+        courseC_maze_programming_challenge2_b: |-
+          最短的解决方案仅使用5个模块, 但它使用了这个模块：
+          
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_a: '"如果你让我后退，要格外小心我朝向了正确的路！*'
         courseC_maze_programming_challenge2_b: |-
           最短的解决方案仅使用5个模块, 但它使用了这个模块：
@@ -8002,13 +8527,23 @@ zh-CN:
         courseC_starWars_loops10_a: 这个图案看起来像一大套台阶吗？看看你是否可以用你从以前的关卡中学到的东西来到达所有的转弯。
         courseC_starWars_loops10_b: "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 ** 嵌套循环 **。"
         courseC_starWars_loops10_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_a: 这个图案看起来像一大套台阶吗？看看你是否可以用你从以前的关卡中学到的东西来到达所有的转弯。
+        courseC_starWars_loops10_b: "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 ** 嵌套循环 **。"
+        courseC_starWars_loops10_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_a: 当 BB-8 在废金属上翻滚时, 他会自动把它捡起来。
+        courseC_starWars_loops1_b: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+        courseC_starWars_loops1_c: 你要`向前移动`五次来解决这个关卡。
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_a: 当 BB-8 在废金属上翻滚时, 他会自动把它捡起来。
         courseC_starWars_loops1_b: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         courseC_starWars_loops1_c: 你要`向前移动`五次来解决这个关卡。
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: 要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
       courseC_starWars_loops2_2018_authored_hint:
+        courseC_starWars_loops2_a: 要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
+      courseC_starWars_loops2_2019_authored_hint:
         courseC_starWars_loops2_a: 要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_c: 点击 "左" 在转向模块旁边的小箭头可以让你把它改成 "右"。
@@ -8018,10 +8553,17 @@ zh-CN:
         courseC_starWars_loops4_c: 点击 "左" 在转向模块旁边的小箭头可以让你把它改成 "右"。
         courseC_starWars_loops4_a: 使用两个`重复`模块。
         courseC_starWars_loops4_b: '每个`重复`循环将只有一个命令在它里面: `向前移动`。'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_c: 点击 "左" 在转向模块旁边的小箭头可以让你把它改成 "右"。
+        courseC_starWars_loops4_a: 使用两个`重复`模块。
+        courseC_starWars_loops4_b: '每个`重复`循环将只有一个命令在它里面: `向前移动`。'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
       courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
+        courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
+      courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
       courseC_starWars_loops6_authored_hint:
@@ -8030,11 +8572,18 @@ zh-CN:
       courseC_starWars_loops6_2018_authored_hint:
         courseC_starWars_loops6_a: 试着在一张纸上写下移动的情况, 来寻找模式。
         courseC_starWars_loops6_b: "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 ** 嵌套循环 **。"
+      courseC_starWars_loops6_2019_authored_hint:
+        courseC_starWars_loops6_a: 试着在一张纸上写下移动的情况, 来寻找模式。
+        courseC_starWars_loops6_b: "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 ** 嵌套循环 **。"
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: 这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？
         courseC_starWars_loops7_b: 如果在这关遇到困难，请尝试在一张纸上写下所有的动作并寻找规律。
         courseC_starWars_loops7_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
       courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_a: 这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？
+        courseC_starWars_loops7_b: 如果在这关遇到困难，请尝试在一张纸上写下所有的动作并寻找规律。
+        courseC_starWars_loops7_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+      courseC_starWars_loops7_2019_authored_hint:
         courseC_starWars_loops7_a: 这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？
         courseC_starWars_loops7_b: 如果在这关遇到困难，请尝试在一张纸上写下所有的动作并寻找规律。
         courseC_starWars_loops7_c: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
@@ -8052,6 +8601,13 @@ zh-CN:
           看看这条路。
           
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019_authored_hint:
+        course_starWars_loops8_a: 试着将问题分成更小的部分来思考。别着急。你不需要第一次就全做对！
+        course_starWars_loops8_b: 把这个问题的前半部分看成是台阶步进问题。你以前是怎么解决的？
+        course_starWars_loops8_c: |-
+          看看这条路。
+          
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: 您可以在`重复`循环中放置多个模块。
         course_starWars_loops9_c: |-
@@ -8059,6 +8615,12 @@ zh-CN:
           
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
+        course_starWars_loops9_b: 您可以在`重复`循环中放置多个模块。
+        course_starWars_loops9_c: |-
+          你不需要向左转来解决这个关卡。你所有的转向都可以向右。
+          
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: 您可以在`重复`循环中放置多个模块。
         course_starWars_loops9_c: |-
           你不需要向左转来解决这个关卡。你所有的转向都可以向右。
@@ -8110,10 +8672,18 @@ zh-CN:
       courseD_artist_1_2018_authored_hint:
         courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
         courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
+      courseD_artist_1_2018_2019_authored_hint:
+        courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+        courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
       courseD_artist_2_2018_authored_hint:
         courseD_artist_project1_b: 请记住, 向前移动会画一条线，而`向前跳`则不会。
         courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+      courseD_artist_2_2018_2019_authored_hint:
+        courseD_artist_project1_b: 请记住, 向前移动会画一条线，而`向前跳`则不会。
+        courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
       courseD_artist_5_2018_authored_hint:
+        '1': 如果切换了形状，别忘了还需要改变角度！
+      courseD_artist_5_2018_2019_authored_hint:
         '1': 如果切换了形状，别忘了还需要改变角度！
       courseD_artist_7_2018_authored_hint:
         courseD_artist_project2a_a: |
@@ -8141,9 +8711,18 @@ zh-CN:
           这就是您可以这样输入二进制代码的方法：
           
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2019_authored_hint:
+        courseD_artist_binary1_a: 将文本块中的 "？？" 替换为0 和1 所需的二进制图像。
+        courseD_artist_binary1_b: 艺术家将每个1，画成一个白色的空间, 每个0画成一个黑色的空间。
+        courseD_artist_binary1_c: |-
+          这就是您可以这样输入二进制代码的方法：
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: 点击`运行`来看程序如何运行
       courseD_artist_binary2_2018_authored_hint:
+        courseD_artist_binary2_a: 点击`运行`来看程序如何运行
+      courseD_artist_binary2_2019_authored_hint:
         courseD_artist_binary2_a: 点击`运行`来看程序如何运行
       courseD_artist_binary3_authored_hint:
         courseD_artist_binary3_a: 工具箱中的四个二进制模式之一将解决这个关卡!
@@ -8151,10 +8730,16 @@ zh-CN:
       courseD_artist_binary3_2018_authored_hint:
         courseD_artist_binary3_a: 工具箱中的四个二进制模式之一将解决这个关卡!
         courseD_artist_binary3_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_artist_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: 工具箱中的四个二进制模式之一将解决这个关卡!
+        courseD_artist_binary3_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: 看看最上面一行的前三个正方形。你能重复这三个来画出整个图案吗？
         courseD_artist_binary4_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary4_2018_authored_hint:
+        courseD_artist_binary4_a: 看看最上面一行的前三个正方形。你能重复这三个来画出整个图案吗？
+        courseD_artist_binary4_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_artist_binary4_2019_authored_hint:
         courseD_artist_binary4_a: 看看最上面一行的前三个正方形。你能重复这三个来画出整个图案吗？
         courseD_artist_binary4_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary5_authored_hint:
@@ -8165,16 +8750,26 @@ zh-CN:
         courseD_artist_binary5_a: 请先尝试运行代码, 看看您需要处理的内容。
         courseD_artist_binary5_b: 您只需交换两行, 就可以制作一个微笑。
         courseD_artist_binary5_c: 如果您在解决此关卡时遇到困难, 请尝试在一张纸上写下二进制线并查找相同模式。
+      courseD_artist_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: 请先尝试运行代码, 看看您需要处理的内容。
+        courseD_artist_binary5_b: 您只需交换两行, 就可以制作一个微笑。
+        courseD_artist_binary5_c: 如果您在解决此关卡时遇到困难, 请尝试在一张纸上写下二进制线并查找相同模式。
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
         courseD_artist_binary6_b: 您可以一次生成二进制字符串, 并继续测试!
       courseD_artist_binary6_2018_authored_hint:
         courseD_artist_binary6_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
         courseD_artist_binary6_b: 您可以一次生成二进制字符串, 并继续测试!
+      courseD_artist_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
+        courseD_artist_binary6_b: 您可以一次生成二进制字符串, 并继续测试!
       courseD_artist_binary7_authored_hint:
         courseD_artist_binary7_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
         courseD_artist_binary7_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary7_2018_authored_hint:
+        courseD_artist_binary7_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
+        courseD_artist_binary7_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_artist_binary7_2019_authored_hint:
         courseD_artist_binary7_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
         courseD_artist_binary7_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary8_authored_hint:
@@ -8185,9 +8780,15 @@ zh-CN:
         courseD_artist_binary8_a: 螺旋有时会令人困惑。在创建此设计时, 请将您心目中的每条水平线分开。
         courseD_artist_binary8_b: 请先尝试运行代码, 看看您需要处理的内容。
         courseD_artist_binary8_c: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_artist_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: 螺旋有时会令人困惑。在创建此设计时, 请将您心目中的每条水平线分开。
+        courseD_artist_binary8_b: 请先尝试运行代码, 看看您需要处理的内容。
+        courseD_artist_binary8_c: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: 原来的程序中只有几行错误。
       courseD_artist_binary_challenge2_2018_authored_hint:
+        courseD_artist_binary_challenge2_a: 原来的程序中只有几行错误。
+      courseD_artist_binary_challenge2_2019_authored_hint:
         courseD_artist_binary_challenge2_a: 原来的程序中只有几行错误。
       courseD_artist_binary_challenge3_authored_hint:
         courseD_artist_binary_challenge3_a: |-
@@ -8235,6 +8836,10 @@ zh-CN:
         courseD_artist_nestedLoops1_a: 最简单的绘制方法是向前移动并向右转。
         courseD_artist_nestedLoops1_b: 你可以再两个模块里用一个`重复`循环来画这个三角形。你需要哪个模块？
         courseD_artist_nestedLoops1_c: 尝试在纸面上编写步骤, 并查找可以用循环简化的模式。
+      courseD_artist_nestedLoops1_2019_authored_hint:
+        courseD_artist_nestedLoops1_a: 最简单的绘制方法是向前移动并向右转。
+        courseD_artist_nestedLoops1_b: 你可以再两个模块里用一个`重复`循环来画这个三角形。你需要哪个模块？
+        courseD_artist_nestedLoops1_c: 尝试在纸面上编写步骤, 并查找可以用循环简化的模式。
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
           您将需要绘制总共6个三角形。完成每个三角形后, 旋转60度并接着开始下一个三角形。 
@@ -8249,10 +8854,20 @@ zh-CN:
           ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: 如果你用一个循环来创建你的三角形, 艺术家应该朝着同样的方向开始。这将使60度转向容易得多。
         courseD_artist_nestedLoops1a_c: 如果需要颜色, 请使用代码中的`设置颜色`模块。您不必用模板图像中一样的颜色。
+      courseD_artist_nestedLoops1a_2019_authored_hint:
+        courseD_artist_nestedLoops1a_a: |-
+          您将需要绘制总共6个三角形。完成每个三角形后, 旋转60度并接着开始下一个三角形。 
+          
+          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
+        courseD_artist_nestedLoops1a_b: 如果你用一个循环来创建你的三角形, 艺术家应该朝着同样的方向开始。这将使60度转向容易得多。
+        courseD_artist_nestedLoops1a_c: 如果需要颜色, 请使用代码中的`设置颜色`模块。您不必用模板图像中一样的颜色。
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_a: 将三角形代码放到另一个`重复`循环里来进行嵌套循环。
         courseD_artist_nestedLoops2_b: 记住把`转向`模块放在循环内, 让艺术家在每个三角形后转向。
       courseD_artist_nestedLoops2_2018_authored_hint:
+        courseD_artist_nestedLoops2_a: 将三角形代码放到另一个`重复`循环里来进行嵌套循环。
+        courseD_artist_nestedLoops2_b: 记住把`转向`模块放在循环内, 让艺术家在每个三角形后转向。
+      courseD_artist_nestedLoops2_2019_authored_hint:
         courseD_artist_nestedLoops2_a: 将三角形代码放到另一个`重复`循环里来进行嵌套循环。
         courseD_artist_nestedLoops2_b: 记住把`转向`模块放在循环内, 让艺术家在每个三角形后转向。
       courseD_artist_nestedLoops3_authored_hint:
@@ -8260,6 +8875,10 @@ zh-CN:
         courseD_artist_nestedLoops3_b: '请不要忘记使用嵌套循环快速通过这个关卡。 '
         courseD_artist_nestedLoops3_c: '开始使用`重复`循环来制作一个正方形。 接下来, 重复该方块8次, 在两个之间跳跃40像素。 '
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "试着用“向前跳”模块来从一个正方形的顶部到下一个正方形开始的地方。\n\n如果你的正方形有20像素高，且它们相隔20像素，你需要跳多远？"
+        courseD_artist_nestedLoops3_b: '请不要忘记使用嵌套循环快速通过这个关卡。 '
+        courseD_artist_nestedLoops3_c: '开始使用`重复`循环来制作一个正方形。 接下来, 重复该方块8次, 在两个之间跳跃40像素。 '
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "试着用“向前跳”模块来从一个正方形的顶部到下一个正方形开始的地方。\n\n如果你的正方形有20像素高，且它们相隔20像素，你需要跳多远？"
         courseD_artist_nestedLoops3_b: '请不要忘记使用嵌套循环快速通过这个关卡。 '
         courseD_artist_nestedLoops3_c: '开始使用`重复`循环来制作一个正方形。 接下来, 重复该方块8次, 在两个之间跳跃40像素。 '
@@ -8281,6 +8900,15 @@ zh-CN:
           - 向左转1度
         courseD_artist_nestedLoops4_b: 请不要忘了在圆圈间往前跳跃50 像素。
         courseD_artist_nestedLoops4_c: 使用嵌套循环来画4 次圆圈。
+      courseD_artist_nestedLoops4_2019_authored_hint:
+        courseD_artist_nestedLoops4_d: 为了正确地解决这一问题, 你需要在转弯 **之前**移动, 否则你的圆圈将会偏差极小的量！
+        courseD_artist_nestedLoops4_a: |-
+          制作圆圈:
+          - 重复360次
+          - 向前移动1像素
+          - 向左转1度
+        courseD_artist_nestedLoops4_b: 请不要忘了在圆圈间往前跳跃50 像素。
+        courseD_artist_nestedLoops4_c: 使用嵌套循环来画4 次圆圈。
       courseD_artist_nestedLoops5_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           试试这样做很容易：
@@ -8291,6 +8919,15 @@ zh-CN:
           - 右转90 度
         courseD_artist_nestedLoops5_b: 要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。
       courseD_artist_nestedLoops5_2018_authored_hint:
+        courseD_artist_nestedLoops5_a: |-
+          试试这样做很容易：
+          
+          - 重复4 次
+          - 绘制一个圆圈
+          - 往前跳跃50 像素
+          - 右转90 度
+        courseD_artist_nestedLoops5_b: 要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。
+      courseD_artist_nestedLoops5_2019_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           试试这样做很容易：
           
@@ -8320,6 +8957,15 @@ zh-CN:
           - 画正方形
           - 向前跳**50像素**
           - 转**60度**
+      courseD_artist_nestedLoops7_2019_authored_hint:
+        courseD_artist_nestedLoops7_a: 你需要在这里使用嵌套循环。首先，使用循环来画一个正方形。如果内循环画一个正方形那么外循环将做什么？
+        courseD_artist_nestedLoops7_b: |-
+          使用嵌套循环, 让它的内部循环是正方形的代码。
+          
+          - 重复6次
+          - 画正方形
+          - 向前跳**50像素**
+          - 转**60度**
       courseD_artist_nestedLoops8_authored_hint:
         courseD_artist_nestedLoops8_a: 要画出8个六边形，你需要在每个图形之间转 **45 度**。为什么？因为360度（一整圈）除以 8（六边形的数量）是45度。
         courseD_artist_nestedLoops8_b: 如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。
@@ -8331,6 +8977,16 @@ zh-CN:
           - 向前跳跃50像素
           - 向右转45度
       courseD_artist_nestedLoops8_2018_authored_hint:
+        courseD_artist_nestedLoops8_a: 要画出8个六边形，你需要在每个图形之间转 **45 度**。为什么？因为360度（一整圈）除以 8（六边形的数量）是45度。
+        courseD_artist_nestedLoops8_b: 如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。
+        courseD_artist_nestedLoops8_c: |-
+          使用嵌套循环：
+          
+          - 重复8次
+          - 绘制六边形
+          - 向前跳跃50像素
+          - 向右转45度
+      courseD_artist_nestedLoops8_2019_authored_hint:
         courseD_artist_nestedLoops8_a: 要画出8个六边形，你需要在每个图形之间转 **45 度**。为什么？因为360度（一整圈）除以 8（六边形的数量）是45度。
         courseD_artist_nestedLoops8_b: 如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。
         courseD_artist_nestedLoops8_c: |-
@@ -8354,6 +9010,19 @@ zh-CN:
           - 向前跳50像素
           - 向右转45度
       courseD_artist_nestedLoops9_2018_authored_hint:
+        courseD_artist_nestedLoops9_a: 从之前用过嵌套循环来开始，但这次用正方形。
+        courseD_artist_nestedLoops9_b: 将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。
+        courseD_artist_nestedLoops9_c: |-
+          使用两个嵌套循环：
+          - 重复8次
+          - 绘制正方形
+          - 向前跳50像素
+          - 向右转45度
+          - 重复8次
+          - 绘制三角形
+          - 向前跳50像素
+          - 向右转45度
+      courseD_artist_nestedLoops9_2019_authored_hint:
         courseD_artist_nestedLoops9_a: 从之前用过嵌套循环来开始，但这次用正方形。
         courseD_artist_nestedLoops9_b: 将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。
         courseD_artist_nestedLoops9_c: |-
@@ -8392,6 +9061,19 @@ zh-CN:
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
           
           此图片是使用单个嵌套循环制成，它使用48度转向来重复（50像素边长的）六边形15 次。
+      courseD_artist_nestedLoopsFP_2019_authored_hint:
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+          
+          此图片是一个嵌套循环，它重复画了六边形（边长50像素）15次，每次转向48度。
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+          
+          此图片是使用和您之前在其他关卡已经完成的类似的代码，但是是用圆圈（重复360 次：往前移动1， 转1 度）。
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+          
+          此图片是使用单个嵌套循环制成，它使用48度转向来重复（50像素边长的）六边形15 次。
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: 首先，将颜色改为蓝色，然后创建一个50像素边长的八边形，并向左转45度。
         courseD_artist_nestedLoops_challenge1_b: 添加代码来将颜色改为绿色，并创建一个50像素边唱的三角形，向左转120度。
@@ -8402,10 +9084,18 @@ zh-CN:
         courseD_artist_nestedLoops_challenge1_b: 添加代码来将颜色改为绿色，并创建一个50像素边唱的三角形，向左转120度。
         courseD_artist_nestedLoops_challenge1_c: 画完这两个形状后，你需要向前跳50像素，然后向右转90度。
         courseD_artist_nestedLoops_challenge1_d: 将所有代码放在`重复4次`循环中以完成它。
+      courseD_artist_nestedLoops_challenge1_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: 首先，将颜色改为蓝色，然后创建一个50像素边长的八边形，并向左转45度。
+        courseD_artist_nestedLoops_challenge1_b: 添加代码来将颜色改为绿色，并创建一个50像素边唱的三角形，向左转120度。
+        courseD_artist_nestedLoops_challenge1_c: 画完这两个形状后，你需要向前跳50像素，然后向右转90度。
+        courseD_artist_nestedLoops_challenge1_d: 将所有代码放在`重复4次`循环中以完成它。
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: 要画一个正八边形, 艺术家需要转45度8次。
         courseD_artist_nestedLoops_challenge2_b: 要画正方形, 艺术家需要转动90度4次。
       courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: 要画一个正八边形, 艺术家需要转45度8次。
+        courseD_artist_nestedLoops_challenge2_b: 要画正方形, 艺术家需要转动90度4次。
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: 要画一个正八边形, 艺术家需要转45度8次。
         courseD_artist_nestedLoops_challenge2_b: 要画正方形, 艺术家需要转动90度4次。
       courseD_artist_project1_authored_hint:
@@ -8576,6 +9266,8 @@ zh-CN:
         courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
       courseD_bee_conditionals1_predict1_2018_authored_hint:
         courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
+      courseD_bee_conditionals1_predict1_2019_authored_hint:
+        courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals2_a: 有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。
@@ -8583,6 +9275,12 @@ zh-CN:
         courseD_bee_conditionals2_c: 你不必查看蜂窝，在云层下只会有花朵或空白的空间。
         courseD_bee_conditionals2_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals2_2018_authored_hint:
+        courseD_bee_conditionals2_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals2_a: 有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。
+        courseD_bee_conditionals2_b: 您可以使用`重复`循环或`当前面有路时`来通过这个迷宫。
+        courseD_bee_conditionals2_c: 你不必查看蜂窝，在云层下只会有花朵或空白的空间。
+        courseD_bee_conditionals2_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals2_2019_authored_hint:
         courseD_bee_conditionals2_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals2_a: 有时那里有花，有时不会。如果您希望在两种情况下都能运行代码，请确保使用`如果`语句。
         courseD_bee_conditionals2_b: 您可以使用`重复`循环或`当前面有路时`来通过这个迷宫。
@@ -8606,6 +9304,12 @@ zh-CN:
         courseD_bee_conditionals3_b: 您可以使用`重复`循环或`当`循环来保持蜜蜂向前移动。用你喜欢的任何一个!
         courseD_bee_conditionals3_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
         courseD_bee_conditionals3_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals3_a: 一定要使用`如果`语句来检查每个空间，看看是否有花。
+        courseD_bee_conditionals3_b: 您可以使用`重复`循环或`当`循环来保持蜜蜂向前移动。用你喜欢的任何一个!
+        courseD_bee_conditionals3_c: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
+        courseD_bee_conditionals3_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals4_a: 哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。
@@ -8613,6 +9317,12 @@ zh-CN:
         courseD_bee_conditionals4_c: 使用 <xml><block type="maze_untilBlocked"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？
         courseD_bee_conditionals4_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals4_a: 哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。
+        courseD_bee_conditionals4_b: '在循环中使用`如果`语句检查每个空间是否有花蜜。 '
+        courseD_bee_conditionals4_c: 使用 <xml><block type="maze_untilBlocked"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？
+        courseD_bee_conditionals4_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals4_2019_authored_hint:
         courseD_bee_conditionals4_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals4_a: 哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。
         courseD_bee_conditionals4_b: '在循环中使用`如果`语句检查每个空间是否有花蜜。 '
@@ -8630,6 +9340,12 @@ zh-CN:
         courseD_bee_conditionals5_c: 花是长方形的3条边，因此代码需要`重复3次`。在每一个重复时，`当前面有路时`，蜜蜂将需要继续沿着路径。要继续沿着这条路走下去, 蜜蜂将需要`向前移动`。在小路上, 蜜蜂需要寻找朵花。`如果有一朵花`, 蜜蜂应该`采花蜜`。
         courseD_bee_conditionals5_b: 在`当前面有路时`模块的里面, 你需要往前走开寻找朵花。你如何检查哪里是否有一朵花？如果有一朵花, 你会怎么做？
         courseD_bee_conditionals5_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals5_a: 把矩形路径的每一条边都看成是一个路径。在外部设置一个`重复`模块的嵌套循环, 并在`当前面有路时`的内部循环。如果蜜蜂需要在每朵花旁边嗡嗡叫，它要飞过多少条路径？
+        courseD_bee_conditionals5_c: 花是长方形的3条边，因此代码需要`重复3次`。在每一个重复时，`当前面有路时`，蜜蜂将需要继续沿着路径。要继续沿着这条路走下去, 蜜蜂将需要`向前移动`。在小路上, 蜜蜂需要寻找朵花。`如果有一朵花`, 蜜蜂应该`采花蜜`。
+        courseD_bee_conditionals5_b: 在`当前面有路时`模块的里面, 你需要往前走开寻找朵花。你如何检查哪里是否有一朵花？如果有一朵花, 你会怎么做？
+        courseD_bee_conditionals5_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals6_a: 请确保使用`如果`语句检查每个云下是否有蜂窝。
@@ -8637,6 +9353,12 @@ zh-CN:
         courseD_bee_conditionals6_c: 是否有一个循环可以用来使代码更简单？
         courseD_bee_conditionals6_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals6_2018_authored_hint:
+        courseD_bee_conditionals6_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals6_a: 请确保使用`如果`语句检查每个云下是否有蜂窝。
+        courseD_bee_conditionals6_b: 在这种情况下, 你不需要查看云下的花蜜。
+        courseD_bee_conditionals6_c: 是否有一个循环可以用来使代码更简单？
+        courseD_bee_conditionals6_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals6_2019_authored_hint:
         courseD_bee_conditionals6_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals6_a: 请确保使用`如果`语句检查每个云下是否有蜂窝。
         courseD_bee_conditionals6_b: 在这种情况下, 你不需要查看云下的花蜜。
@@ -8652,9 +9374,16 @@ zh-CN:
         courseD_bee_conditionals7_a: "** 请记住: ** 这个关卡每次运行时都会改变。\n\n您需要使用条件模块 (`如果/否则`) 来通过此挑战。"
         courseD_bee_conditionals7_b: 如果云下没有一朵花, 那一定有一个蜂窝, 所以你不需要考虑存在一个空的空间的情况。
         courseD_bee_conditionals7_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals7_2019_authored_hint:
+        courseD_bee_conditionals7_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals7_a: "** 请记住: ** 这个关卡每次运行时都会改变。\n\n您需要使用条件模块 (`如果/否则`) 来通过此挑战。"
+        courseD_bee_conditionals7_b: 如果云下没有一朵花, 那一定有一个蜂窝, 所以你不需要考虑存在一个空的空间的情况。
+        courseD_bee_conditionals7_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "** 请记住: ** 这个关卡每次运行时都会改变。\n\n您需要使用条件模块 (`如果/否则`) 来通过此挑战。"
       courseD_bee_conditionals7_predict2_2018_authored_hint:
+        courseD_bee_conditionals7_a: "** 请记住: ** 这个关卡每次运行时都会改变。\n\n您需要使用条件模块 (`如果/否则`) 来通过此挑战。"
+      courseD_bee_conditionals7_predict2_2019_authored_hint:
         courseD_bee_conditionals7_a: "** 请记住: ** 这个关卡每次运行时都会改变。\n\n您需要使用条件模块 (`如果/否则`) 来通过此挑战。"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_hintVid1: 需要入门帮助吗？ 看视频!
@@ -8682,10 +9411,26 @@ zh-CN:
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_hintVid1: 需要入门帮助吗？ 看视频!
+        courseD_bee_conditionals8_a: "**记住：**这一关在每次运行的时候都会变化。\n\n你需要用一个条件模块（“如果”或“如果/否则”）来完成这个挑战。"
+        courseD_bee_conditionals8_b: |-
+          此关卡很棘手, 因为不能只使用一个条件来检查空白方块, 花蜜, *和* 蜂蜜。
+          
+          仅在路径的最后查找花蜜和蜂蜜。
+        courseD_bee_conditionals8_c: 无论路途有多长, 你怎么能确保每条路都走到尽头？
+        courseD_bee_conditionals8_d: |-
+          即使你面前有一朵云彩, 你也不必先去看它。尝试从正方形右下角的云开始。
+          
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: 你能找到一条通向每一朵花和蜂窝的小路而不撞到任何树木吗？最好的路径是螺旋。
         courseD_bee_conditionals_challenge1_b: 在这个关卡中, 每个空间都可以有一朵花, 一只蜂蜜梳子, 或者什么都没有。 这意味着你在每个正方形可以重复你的`如果/否则`条件。
       courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_a: 你能找到一条通向每一朵花和蜂窝的小路而不撞到任何树木吗？最好的路径是螺旋。
+        courseD_bee_conditionals_challenge1_b: 在这个关卡中, 每个空间都可以有一朵花, 一只蜂蜜梳子, 或者什么都没有。 这意味着你在每个正方形可以重复你的`如果/否则`条件。
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
         courseD_bee_conditionals_challenge1_a: 你能找到一条通向每一朵花和蜂窝的小路而不撞到任何树木吗？最好的路径是螺旋。
         courseD_bee_conditionals_challenge1_b: 在这个关卡中, 每个空间都可以有一朵花, 一只蜂蜜梳子, 或者什么都没有。 这意味着你在每个正方形可以重复你的`如果/否则`条件。
       courseD_bee_conditionals_challenge2_authored_hint:
@@ -8700,6 +9445,17 @@ zh-CN:
           </statement>
           </block></xml>
       courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          就像`如果有花`模块, 里面的代码`当花蜜数量 > 0`，只在蜜蜂在花那里的时候运行。不同的是, 里面的代码会反复运行, 直到没有花蜜。 尝试此模式：
+          
+          <xml> <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title> <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           就像`如果有花`模块, 里面的代码`当花蜜数量 > 0`，只在蜜蜂在花那里的时候运行。不同的是, 里面的代码会反复运行, 直到没有花蜜。 尝试此模式：
           
@@ -8927,9 +9683,16 @@ zh-CN:
           应该在代码中同时使用这些事件：
           
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events10s_2019_authored_hint:
+        courseD_bounce_events10s_a: |-
+          应该在代码中同时使用这些事件：
+          
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: 当游戏开始时, 当你击中篮筐时, 当手错过球时, 你将要掷球。
       courseD_bounce_events11s_2018_authored_hint:
+        courseD_bounce_events11s_a: 当游戏开始时, 当你击中篮筐时, 当手错过球时, 你将要掷球。
+      courseD_bounce_events11s_2019_authored_hint:
         courseD_bounce_events11s_a: 当游戏开始时, 当你击中篮筐时, 当手错过球时, 你将要掷球。
       courseD_bounce_events12s_authored_hint:
         courseD_bounce_events12s_a: 你可以通过将这些方块附加到`当运行时`事件来加快篮球或手的速度。
@@ -8937,10 +9700,16 @@ zh-CN:
       courseD_bounce_events12s_2018_authored_hint:
         courseD_bounce_events12s_a: 你可以通过将这些方块附加到`当运行时`事件来加快篮球或手的速度。
         courseD_bounce_events12s_b: 尝试使每一个投球得2分, 并把球队的标志改为你家乡的。
+      courseD_bounce_events12s_2019_authored_hint:
+        courseD_bounce_events12s_a: 你可以通过将这些方块附加到`当运行时`事件来加快篮球或手的速度。
+        courseD_bounce_events12s_b: 尝试使每一个投球得2分, 并把球队的标志改为你家乡的。
       courseD_bounce_events1s_authored_hint:
         courseD_bounce_events1s_a: "您需要将`向左移动`模块添加到`当按左方向键时`事件使此游戏工作：\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>"
         courseD_bounce_events1s_b: 不要忘记按 "运行", 并让手够到篮筐来解决这个关卡。
       courseD_bounce_events1s_2018_authored_hint:
+        courseD_bounce_events1s_a: "您需要将`向左移动`模块添加到`当按左方向键时`事件使此游戏工作：\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>"
+        courseD_bounce_events1s_b: 不要忘记按 "运行", 并让手够到篮筐来解决这个关卡。
+      courseD_bounce_events1s_2019_authored_hint:
         courseD_bounce_events1s_a: "您需要将`向左移动`模块添加到`当按左方向键时`事件使此游戏工作：\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>"
         courseD_bounce_events1s_b: 不要忘记按 "运行", 并让手够到篮筐来解决这个关卡。
       courseD_bounce_events2s_authored_hint:
@@ -8975,6 +9744,22 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseD_bounce_events2s_2019_authored_hint:
+        courseD_bounce_events2s_a: |-
+          您需要用两组 `向前移动`事件来让它运作：
+          
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
       courseD_bounce_events5s_authored_hint:
         courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
         courseD_bounce_events5s_b: |-
@@ -8982,6 +9767,12 @@ zh-CN:
           
           <xml> <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
+        courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
+        courseD_bounce_events5s_b: |-
+          确保已将此代码添加到工作区：
+          
+          <xml> <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2019_authored_hint:
         courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
         courseD_bounce_events5s_b: |-
           确保已将此代码添加到工作区：
@@ -8999,9 +9790,17 @@ zh-CN:
           
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: 如果你写的代码正确, 你不必移动手来获胜。
+      courseD_bounce_events6s_2019_authored_hint:
+        courseD_bounce_events6s_a: |-
+          用过类似这样的事件吗？
+          
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: 如果你写的代码正确, 你不必移动手来获胜。
       courseD_bounce_events7s_authored_hint:
         courseD_bounce_events7s_a: 如果你喜欢，你可以在更多的地方添加声音!
       courseD_bounce_events7s_2018_authored_hint:
+        courseD_bounce_events7s_a: 如果你喜欢，你可以在更多的地方添加声音!
+      courseD_bounce_events7s_2019_authored_hint:
         courseD_bounce_events7s_a: 如果你喜欢，你可以在更多的地方添加声音!
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
@@ -9036,6 +9835,14 @@ zh-CN:
           哪里出问题了？
         courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
       courseD_collector_debugging1a_2018_authored_hint:
+        courseD_collector_debugging1_a: |-
+          使用"步进"按钮来查看在第一步是否一切都正确。
+          
+          那第二步呢？
+          
+          哪里出问题了？
+        courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
+      courseD_collector_debugging1a_2019_authored_hint:
         courseD_collector_debugging1_a: |-
           使用"步进"按钮来查看在第一步是否一切都正确。
           
@@ -9079,6 +9886,15 @@ zh-CN:
           哪里出问题了？
         courseD_collector_debugging2a_c: |-
           会发生什么？ 应该发生什么？ 那告诉你什么？
+      courseD_collector_debugging2a_2019_authored_hint:
+        courseD_collector_debugging2a_a: |-
+          使用"步进"按钮来查看在第一步是否一切都正确。
+          
+          那第二步呢？
+          
+          哪里出问题了？
+        courseD_collector_debugging2a_c: |-
+          会发生什么？ 应该发生什么？ 那告诉你什么？
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: 劳雷尔有在那个地方做了什么不对的事吗？当您更改这些块时会发生什么情况？
         courseD_collector_debugging3_b: 尝试使用嵌套循环简化代码。
@@ -9088,6 +9904,8 @@ zh-CN:
       courseD_collector_debugging3a_authored_hint:
         courseD_collector_debugging3_a: 劳雷尔有在那个地方做了什么不对的事吗？当您更改这些块时会发生什么情况？
       courseD_collector_debugging3a_2018_authored_hint:
+        courseD_collector_debugging3_a: 劳雷尔有在那个地方做了什么不对的事吗？当您更改这些块时会发生什么情况？
+      courseD_collector_debugging3a_2019_authored_hint:
         courseD_collector_debugging3_a: 劳雷尔有在那个地方做了什么不对的事吗？当您更改这些块时会发生什么情况？
       courseD_collector_debugging4_authored_hint:
         courseD_collector_debugging4_a: "尝试在一行中多次使用调试过程。\n\n是什么导致了第一个问题？\n\n一旦问题解决了，是什么地方错了？"
@@ -9101,6 +9919,9 @@ zh-CN:
         courseD_collector_debugging4_a: "尝试在一行中多次使用调试过程。\n\n是什么导致了第一个问题？\n\n一旦问题解决了，是什么地方错了？"
         courseD_collector_debugging4_b: "如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。\n\n别忘了指出转弯的方向!"
       courseD_collector_debugging4a_2018_authored_hint:
+        courseD_collector_debugging4_a: "尝试在一行中多次使用调试过程。\n\n是什么导致了第一个问题？\n\n一旦问题解决了，是什么地方错了？"
+        courseD_collector_debugging4_b: "如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。\n\n别忘了指出转弯的方向!"
+      courseD_collector_debugging4a_2019_authored_hint:
         courseD_collector_debugging4_a: "尝试在一行中多次使用调试过程。\n\n是什么导致了第一个问题？\n\n一旦问题解决了，是什么地方错了？"
         courseD_collector_debugging4_b: "如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。\n\n别忘了指出转弯的方向!"
       courseD_collector_debugging5_authored_hint:
@@ -9131,6 +9952,10 @@ zh-CN:
         courseD_collector_debugging5a_a: |-
           它是做什么用的？ 它应该怎么做？ 那告诉你什么？
         courseD_collector_debugging5a_b: 一旦你收集了第一行宝藏, 你的代码还剩下什么？
+      courseD_collector_debugging5a_2019_authored_hint:
+        courseD_collector_debugging5a_a: |-
+          它是做什么用的？ 它应该怎么做？ 那告诉你什么？
+        courseD_collector_debugging5a_b: 一旦你收集了第一行宝藏, 你的代码还剩下什么？
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
           尝试使用"步进"按钮运行代码。是否一切在第一步的时候都是好？ 
@@ -9156,6 +9981,14 @@ zh-CN:
           哪里错了？
         courseD_collector_debugging6_b: 看起来您需要的所有模块都在工作区中。如果事情变得太困惑, 试着点击 "重新开始"。
       courseD_collector_debugging6a_2018_authored_hint:
+        courseD_collector_debugging6_a: |-
+          尝试使用"步进"按钮运行代码。是否一切在第一步的时候都是好？ 
+          
+          那么第二步呢？ 
+          
+          哪里错了？
+        courseD_collector_debugging6_b: 看起来您需要的所有模块都在工作区中。如果事情变得太困惑, 试着点击 "重新开始"。
+      courseD_collector_debugging6a_2019_authored_hint:
         courseD_collector_debugging6_a: |-
           尝试使用"步进"按钮运行代码。是否一切在第一步的时候都是好？ 
           
@@ -9402,6 +10235,66 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!
+        courseD_bee_nested_loops_challenge2_b: 要获得所有4个宝石, 首先使用一个循环离开中心。向左或向右转, 然后使用嵌套循环从第一堆宝藏移动到第二个。如果重复嵌套循环足够多次, 收集器将在 * 整个 * 洞周围移动!
+        courseD_bee_nested_loops_challenge2_c: 到达所有宝藏的最短程序只使用一个`收集`块和两个转弯。
+        courseD_bee_nested_loops_challenge2_d: |-
+          ** 解决方案: *
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_collector_nested_loops_challenge2a_authored_hint:
         courseD_collector_nested_loops_challenge2a_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!
         courseD_collector_nested_loops_challenge2a_b: 你能想出如何使用不多于得到两个宝石所需要的模块，来得到所有的四个宝石吗？
@@ -9473,11 +10366,18 @@ zh-CN:
       courseD_farmer_condLoops1_2018_authored_hint:
         courseD_farmer_condLoops1_a: 你需要使用一个重复循环来寻找玉米5次。
         courseD_farmer_condLoops1_b: 请确保使用`如果在玉米上`模块，否则可能是在尝试捡起不存在的东西！
+      courseD_farmer_condLoops1_2019_authored_hint:
+        courseD_farmer_condLoops1_a: 你需要使用一个重复循环来寻找玉米5次。
+        courseD_farmer_condLoops1_b: 请确保使用`如果在玉米上`模块，否则可能是在尝试捡起不存在的东西！
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: '最好的方法是将`如果`语句嵌套在另一个里面。  '
         courseD_farmer_condLoops2_b: 这一关卡里，应该有一个`如果/否则`语句和一个普通的`如果`语句。
         courseD_farmer_condLoops2_c: "`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t- 采摘莴苣。\n\n如果那里什么都没有，那就不会捡起来任何东西！"
       courseD_farmer_condLoops2_2018_authored_hint:
+        courseD_farmer_condLoops2_a: '最好的方法是将`如果`语句嵌套在另一个里面。  '
+        courseD_farmer_condLoops2_b: 这一关卡里，应该有一个`如果/否则`语句和一个普通的`如果`语句。
+        courseD_farmer_condLoops2_c: "`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t- 采摘莴苣。\n\n如果那里什么都没有，那就不会捡起来任何东西！"
+      courseD_farmer_condLoops2_2019_authored_hint:
         courseD_farmer_condLoops2_a: '最好的方法是将`如果`语句嵌套在另一个里面。  '
         courseD_farmer_condLoops2_b: 这一关卡里，应该有一个`如果/否则`语句和一个普通的`如果`语句。
         courseD_farmer_condLoops2_c: "`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t- 采摘莴苣。\n\n如果那里什么都没有，那就不会捡起来任何东西！"
@@ -9488,6 +10388,12 @@ zh-CN:
           这意味着你应该将一个`如果`语句放在另一个里面，然后在第二个里放上第三个`如果`语句。
         courseD_farmer_condLoops3_b: 这一关卡里，应该有两个`如果/否则`语句和一个普通的`如果`语句。
       courseD_farmer_condLoops3_2018_authored_hint:
+        courseD_farmer_condLoops3_a: |-
+          若要获取所有项目，试试将`如果`嵌套三层。
+          
+          这意味着你应该将一个`如果`语句放在另一个里面，然后在第二个里放上第三个`如果`语句。
+        courseD_farmer_condLoops3_b: 这一关卡里，应该有两个`如果/否则`语句和一个普通的`如果`语句。
+      courseD_farmer_condLoops3_2019_authored_hint:
         courseD_farmer_condLoops3_a: |-
           若要获取所有项目，试试将`如果`嵌套三层。
           
@@ -9507,6 +10413,13 @@ zh-CN:
           请使用`当有莴苣时`循环继续采摘, 直到每一片都被收集起来。
         grade3_RunningFarm_4courseD_farmer_condLoops4_b: '`当`循环也将处理空白空间! 由于没有生菜, 它不会做选择, 让代码继续前进。'
         grade3_RunningFarm_4courseD_farmer_condLoops4_c: 您可以使用`当前面有路`循环或`重复`循环来遍历所有的作物。
+      courseD_farmer_condLoops4_2019_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          没有人知道每根芽中有多少莴苣头会长出来。
+          
+          请使用`当有莴苣时`循环继续采摘, 直到每一片都被收集起来。
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: '`当`循环也将处理空白空间! 由于没有生菜, 它不会做选择, 让代码继续前进。'
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: 您可以使用`当前面有路`循环或`重复`循环来遍历所有的作物。
       courseD_farmer_condLoops4a_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           没有人知道每根芽中有多少莴苣头会长出来。
@@ -9518,10 +10431,16 @@ zh-CN:
       courseD_farmer_condLoops5_2018_authored_hint:
         courseD_farmer_condLoops5_a: '有一个新的循环: '' 重复直到在南瓜上 ''。你能看到它如何在这个关卡使用？'
         courseD_farmer_condLoops5_b: 每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!
+      courseD_farmer_condLoops5_2019_authored_hint:
+        courseD_farmer_condLoops5_a: '有一个新的循环: '' 重复直到在南瓜上 ''。你能看到它如何在这个关卡使用？'
+        courseD_farmer_condLoops5_b: 每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!
       courseD_farmer_condLoops6_authored_hint:
         courseD_farmer_condLoops6_a: 使用`当有玉米时`循环让农民能够采摘沿路所有的玉米。如果这个模块没有玉米，则不会做任何事情。
         courseD_farmer_condLoops6_b: 在进行下一步前，确保检查了`如果`前面有路！
       courseD_farmer_condLoops6_2018_authored_hint:
+        courseD_farmer_condLoops6_a: 使用`当前面有路时`循环让农民沿着每片螺旋向下移动。
+        courseD_farmer_condLoops6_b: 您只需要在大多收成时查找玉米。在程序的最后只采摘一个南瓜。
+      courseD_farmer_condLoops6_2019_authored_hint:
         courseD_farmer_condLoops6_a: 使用`当前面有路时`循环让农民沿着每片螺旋向下移动。
         courseD_farmer_condLoops6_b: 您只需要在大多收成时查找玉米。在程序的最后只采摘一个南瓜。
       courseD_farmer_condLoops7_authored_hint:
@@ -9536,15 +10455,26 @@ zh-CN:
           
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: 尝试使用`当前面有路时`使收割者移动正确的步数。
+      courseD_farmer_condLoops7_2019_authored_hint:
+        courseD_farmer_condLoops7_a: |-
+          请注意, 获取所有农作物的最简单途径仍然是螺旋形。
+          
+          ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: 尝试使用`当前面有路时`使收割者移动正确的步数。
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
         courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里, 你还需要做什么？
       courseD_farmer_condLoops_challenge1_2018_authored_hint:
         courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
         courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里, 你还需要做什么？
+      courseD_farmer_condLoops_challenge1_2019_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
+        courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里, 你还需要做什么？
       courseD_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: 每种蔬菜在每个空间的数量各不相同。请使用 `当`循环。
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: 每种蔬菜在每个空间的数量各不相同。请使用 `当`循环。
+      courseD_farmer_condLoops_challenge2_2019_authored_hint:
         courseD_farmer_condLoops_challenge2_a: 每种蔬菜在每个空间的数量各不相同。请使用 `当`循环。
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: 与其使用`重复`循环, 不如使用`当`循环继续挖掘直到土堆消失。
@@ -9565,10 +10495,16 @@ zh-CN:
       courseD_farmer_while1_2018_authored_hint:
         courseD_farmer_while1_a: 你需要向前移动四次才能到达那堆。你能用 "重复" 循环吗？
         courseD_farmer_while1_b: 当你站在一堆土那里时，使用 "移走一堆" 块来移走它。
+      courseD_farmer_while1_2019_authored_hint:
+        courseD_farmer_while1_a: 你需要向前移动四次才能到达那堆。你能用 "重复" 循环吗？
+        courseD_farmer_while1_b: 当你站在一堆土那里时，使用 "移走一堆" 块来移走它。
       courseD_farmer_while2_authored_hint:
         courseD_farmer_while2_a: 你只需要移动一次就能到达这个洞。
         courseD_farmer_while2_b: 您将需要 "填充 1" 个模块六次。你能用一个循环来让这个更简单吗？
       courseD_farmer_while2_2018_authored_hint:
+        courseD_farmer_while2_a: 你只需要移动一次就能到达这个洞。
+        courseD_farmer_while2_b: 您将需要 "填充 1" 个模块六次。你能用一个循环来让这个更简单吗？
+      courseD_farmer_while2_2019_authored_hint:
         courseD_farmer_while2_a: 你只需要移动一次就能到达这个洞。
         courseD_farmer_while2_b: 您将需要 "填充 1" 个模块六次。你能用一个循环来让这个更简单吗？
       courseD_farmer_while3_authored_hint:
@@ -9577,10 +10513,16 @@ zh-CN:
       courseD_farmer_while3_2018_authored_hint:
         courseD_farmer_while3_a: 循环可以帮助您在此处简化代码。
         courseD_farmer_while3_b: 你不需要任何`转向`模块到达土堆。
+      courseD_farmer_while3_2019_authored_hint:
+        courseD_farmer_while3_a: 循环可以帮助您在此处简化代码。
+        courseD_farmer_while3_b: 你不需要任何`转向`模块到达土堆。
       courseD_farmer_while4_authored_hint:
         courseD_farmer_conditionals4_a: 与其使用`重复`循环, 不如使用`当`循环继续挖掘直到土堆消失。
         courseD_farmer_conditionals4_b: 这看起来非常类似于一个之前的关卡, 唯一的区别是你所要使用的循环。
       courseD_farmer_while4_2018_authored_hint:
+        courseD_farmer_conditionals4_a: 与其使用`重复`循环, 不如使用`当`循环继续挖掘直到土堆消失。
+        courseD_farmer_conditionals4_b: 这看起来非常类似于一个之前的关卡, 唯一的区别是你所要使用的循环。
+      courseD_farmer_while4_2019_authored_hint:
         courseD_farmer_conditionals4_a: 与其使用`重复`循环, 不如使用`当`循环继续挖掘直到土堆消失。
         courseD_farmer_conditionals4_b: 这看起来非常类似于一个之前的关卡, 唯一的区别是你所要使用的循环。
       courseD_farmer_while5_authored_hint:
@@ -9588,6 +10530,10 @@ zh-CN:
         courseD_farmer_conditionals5a_b: 农夫需要向前移动五次才能到达终点。农夫还需要做什么？
         courseD_farmer_conditionals5a_c: 向前移动5次。每次你向前移动时, 用`当有土堆时`模块来除去堆积的污垢。
       courseD_farmer_while5_2018_authored_hint:
+        courseD_farmer_conditionals5a_a: 尝试在`重复`循环内嵌套一个`当`循环。
+        courseD_farmer_conditionals5a_b: 农夫需要向前移动五次才能到达终点。农夫还需要做什么？
+        courseD_farmer_conditionals5a_c: 向前移动5次。每次你向前移动时, 用`当有土堆时`模块来除去堆积的污垢。
+      courseD_farmer_while5_2019_authored_hint:
         courseD_farmer_conditionals5a_a: 尝试在`重复`循环内嵌套一个`当`循环。
         courseD_farmer_conditionals5a_b: 农夫需要向前移动五次才能到达终点。农夫还需要做什么？
         courseD_farmer_conditionals5a_c: 向前移动5次。每次你向前移动时, 用`当有土堆时`模块来除去堆积的污垢。
@@ -9623,11 +10569,31 @@ zh-CN:
           你需要使用这个阶梯图案多少次？
           
            确保你使用`当有洞时`来填补这个洞。
+      courseD_farmer_while6_2019_authored_hint:
+        courseD_farmer_conditionals6_a: 请确保您使用的是`当`循环来计算每个孔的填充次数。
+        courseD_farmer_conditionals6_b: 请注意, 农民需要在台阶式的图案下多次向前和向下移动。
+        courseD_farmer_conditionals6_c: |-
+          这个阶梯图案使用以下模块
+          
+          - 向前移动
+          - 填充洞
+          - 向右转
+          - 向前移动
+          - 填充洞
+          - 向左转
+          
+          你需要使用这个阶梯图案多少次？
+          
+           确保你使用`当有洞时`来填补这个洞。
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
         courseD_farmer_conditionals8_b: 在重复循环内放置`当前面有路时`循环可以帮助您通过此关卡。
         courseD_farmer_conditionals8_c: 在每条路径的末尾你需要做什么？
       courseD_farmer_while7_2018_authored_hint:
+        courseD_farmer_conditionals8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
+        courseD_farmer_conditionals8_b: 在重复循环内放置`当前面有路时`循环可以帮助您通过此关卡。
+        courseD_farmer_conditionals8_c: 在每条路径的末尾你需要做什么？
+      courseD_farmer_while7_2019_authored_hint:
         courseD_farmer_conditionals8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
         courseD_farmer_conditionals8_b: 在重复循环内放置`当前面有路时`循环可以帮助您通过此关卡。
         courseD_farmer_conditionals8_c: 在每条路径的末尾你需要做什么？
@@ -9639,11 +10605,19 @@ zh-CN:
         courseD_farmer_conditionals8_a: 需要使用多个`当`循环。
         courseD_farmer_conditionals8_b: 每个洞都在路径的末尾, 所以在使用`当前面有路时`之前要用`当前面有路时`。
         courseD_farmer_conditionals8_c: 请注意，你需要重复`当前面有路时`，`当有洞时`代码六次。
+      courseD_farmer_while8_2019_authored_hint:
+        courseD_farmer_conditionals8_a: 需要使用多个`当`循环。
+        courseD_farmer_conditionals8_b: 每个洞都在路径的末尾, 所以在使用`当前面有路时`之前要用`当前面有路时`。
+        courseD_farmer_conditionals8_c: 请注意，你需要重复`当前面有路时`，`当有洞时`代码六次。
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: 每个孔或桩位于路径末尾的** 向后移动 **一格 。
         courseD_farmer_while_challenge1_b: 如果你使用`当` 循环，你可以让农民即使不存在，也试着移除土堆或填满一个洞, 。这意味着你可以编程让她无论在哪里都清除任何土或填补任何洞。
         courseD_farmer_conditionals8_c: 可以不使用任何`重复`循环来解决此问题。为此, 您需要使用四个`当`循环。
       courseD_farmer_while_challenge1_2018_authored_hint:
+        courseD_farmer_while_challenge1_a: 每个孔或桩位于路径末尾的** 向后移动 **一格 。
+        courseD_farmer_while_challenge1_b: 如果你使用`当` 循环，你可以让农民即使不存在，也试着移除土堆或填满一个洞, 。这意味着你可以编程让她无论在哪里都清除任何土或填补任何洞。
+        courseD_farmer_conditionals8_c: 可以不使用任何`重复`循环来解决此问题。为此, 您需要使用四个`当`循环。
+      courseD_farmer_while_challenge1_2019_authored_hint:
         courseD_farmer_while_challenge1_a: 每个孔或桩位于路径末尾的** 向后移动 **一格 。
         courseD_farmer_while_challenge1_b: 如果你使用`当` 循环，你可以让农民即使不存在，也试着移除土堆或填满一个洞, 。这意味着你可以编程让她无论在哪里都清除任何土或填补任何洞。
         courseD_farmer_conditionals8_c: 可以不使用任何`重复`循环来解决此问题。为此, 您需要使用四个`当`循环。
@@ -9665,6 +10639,10 @@ zh-CN:
         courseD_harvester_nested_loops_challenge1_a: '试着跟随路径来到达所有玉米。 '
         courseD_harvester_nested_loops_challenge1_b: 要收集超过一个玉米, 您需要多次使用`采摘玉米`。
         courseD_harvester_nested_loops_challenge1_c: 你需要添加一个小循环到主循环内来通过这个关卡。
+      courseD_harvester_nested_loops_challenge1_2019_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: '试着跟随路径来到达所有玉米。 '
+        courseD_harvester_nested_loops_challenge1_b: 要收集超过一个玉米, 您需要多次使用`采摘玉米`。
+        courseD_harvester_nested_loops_challenge1_c: 你需要添加一个小循环到主循环内来通过这个关卡。
       courseD_iceage_loops1_authored_hint:
         courseD_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
         courseD_iceage_loops1_b: |-
@@ -9675,7 +10653,21 @@ zh-CN:
         courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
         courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
         courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
+      courseD_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
+        courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
+        courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
+      courseD_iceage_loops1_2019_authored_hint:
+        courseD_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
+        courseD_iceage_loops1_b: |-
+          需要用这个模块：
+          
+          <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
+        courseD_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
+        courseD_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
+      courseD_iceage_loops2_2019_authored_hint:
         courseD_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
         courseD_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
         courseD_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
@@ -9685,7 +10677,17 @@ zh-CN:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="2-10">5</title>
           </block></xml>
         courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复 `循环, 然后把想要重复的模块放到它里面。
+      courseD_iceage_loops3_2019_authored_hint:
+        courseB_iceage_loops3_a: |-
+          用这个新的模块！
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="2-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复 `循环, 然后把想要重复的模块放到它里面。
       courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: 别害怕运行你的代码，看看会发生什么！
+        courseD_iceage_loops4_b: 写下斯奎特要到达橡子的步骤。找到规律了吗？
+        courseD_iceage_loops4_c: 这是斯奎特应该走的路。
+      courseD_iceage_loops4_2019_authored_hint:
         courseD_iceage_loops4_a: 别害怕运行你的代码，看看会发生什么！
         courseD_iceage_loops4_b: 写下斯奎特要到达橡子的步骤。找到规律了吗？
         courseD_iceage_loops4_c: 这是斯奎特应该走的路。
@@ -9693,14 +10695,29 @@ zh-CN:
         courseD_iceage_loops6_a: 最终的代码会有**三个**`向前移动`模块。
         courseD_iceage_loops6_b: 你只需要再添加**一个**循环！
         courseD_iceage_loops6_c: 最终的路应该像这样。
+      courseD_iceage_loops6_2019_authored_hint:
+        courseD_iceage_loops6_a: 最终的代码会有**三个**`向前移动`模块。
+        courseD_iceage_loops6_b: 你只需要再添加**一个**循环！
+        courseD_iceage_loops6_c: 最终的路应该像这样。
       courseD_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
+        courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
+      courseD_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
         courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
       courseD_iceage_loops8_authored_hint:
         courseD_iceage_loops8_a: 这些`转向`模块正确吗？你还能改什么？
         courseD_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
         courseD_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
+      courseD_iceage_loops8_2019_authored_hint:
+        courseD_iceage_loops8_a: 这些`转向`模块正确吗？你还能改什么？
+        courseD_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
+        courseD_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
       courseD_iceage_loops9_authored_hint:
+        courseD_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
+        courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
+        courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
+      courseD_iceage_loops9_2019_authored_hint:
         courseD_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
@@ -9847,6 +10864,9 @@ zh-CN:
       courseD_maze_until1_2018_authored_hint:
         courseD_maze_until1_a: 是否有任何序列可以循环使代码更短？
         courseD_maze_until1_b: 尝试使用嵌套循环来解决此难题。
+      courseD_maze_until1_2019_authored_hint:
+        courseD_maze_until1_a: 是否有任何序列可以循环使代码更短？
+        courseD_maze_until1_b: 尝试使用嵌套循环来解决此难题。
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: 一个`直到到达猪`循环将帮助继续下去直到成功！
       courseD_maze_until3_authored_hint:
@@ -9858,6 +10878,14 @@ zh-CN:
         courseD_maze_until3_c: 是否有一个阶梯步进步进可以来解决这个关卡？
         courseD_maze_until3_d: 不要忘记使用`重复直到`模块来让代码更短。
       courseD_maze_until3_2018_authored_hint:
+        courseD_maze_until3_a: |-
+          - 你的代码是做什么的？
+          - 它应该做什么？
+          - 那告诉你什么？
+        courseD_maze_until3_b: 如果你被难住了, 试着在纸上逐步写下步骤, 并寻找他们重复的地方。
+        courseD_maze_until3_c: 是否有一个阶梯步进步进可以来解决这个关卡？
+        courseD_maze_until3_d: 不要忘记使用`重复直到`模块来让代码更短。
+      courseD_maze_until3_2019_authored_hint:
         courseD_maze_until3_a: |-
           - 你的代码是做什么的？
           - 它应该做什么？
@@ -9883,11 +10911,22 @@ zh-CN:
           - 哪里出错了？
         courseD_maze_until4_b: 是否有一个阶梯步进步进可以来解决这个关卡？
         courseD_maze_until4_c: 不要忘记使用`重复直到`模块来让代码更短。
+      courseD_maze_until4_2019_authored_hint:
+        courseD_maze_until4_a: |-
+          使用"步进"按钮能帮你一行一行运行代码。
+          
+          - 在第一步时一切都正常吗？
+          - 在第二步时一切都正常吗？
+          - 哪里出错了？
+        courseD_maze_until4_b: 是否有一个阶梯步进步进可以来解决这个关卡？
+        courseD_maze_until4_c: 不要忘记使用`重复直到`模块来让代码更短。
       courseD_maze_until5_authored_hint:
         courseD_maze_until5_a: 别忘了使用`如果左边有路`来让僵尸检查是否有转弯的地方。
         courseD_maze_until5_b: 只使用一个`向前移动`, 把它放在`重复直到向日葵`模块里面。
         courseD_maze_until5_c: 每个步骤后, 僵尸应该检查是否有一条路向左。如果他找到一条，该怎么办？
       courseD_maze_until5_2018_authored_hint:
+        courseD_maze_until5_b: 只使用一个`向前移动`, 把它放在`重复直到向日葵`模块里面。
+      courseD_maze_until5_2019_authored_hint:
         courseD_maze_until5_b: 只使用一个`向前移动`, 把它放在`重复直到向日葵`模块里面。
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: 这一次，试试`如果右边有路`来让僵尸保持前进。
@@ -9895,11 +10934,16 @@ zh-CN:
         courseD_maze_until6_c: 虽然这里比上个关卡有更多的转向，因为有`重复直到`模块，你的代码可以是几乎相同的!
       courseD_maze_until6_2018_authored_hint:
         courseD_maze_until6_b: 只使用一个`向前移动`, 把它放在`重复直到向日葵`模块里面。
+      courseD_maze_until6_2019_authored_hint:
+        courseD_maze_until6_b: 只使用一个`向前移动`, 把它放在`重复直到向日葵`模块里面。
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: 不要仅仅因为迷宫让代码比上次更长!
         courseD_maze_until7_b: 虽然这里比上个关卡有更多的转向，因为有`重复直到`模块，你的代码可以是几乎相同的!
         courseD_maze_until7_c: 记住要检查左边是否有路，因为向右转会使你走错路!
       courseD_maze_until7_2018_authored_hint:
+        courseD_maze_until7_a: 不要仅仅因为迷宫让代码比上次更长!
+        courseD_maze_until7_b: 虽然这里比上个关卡有更多的转向，因为有`重复直到`模块，你的代码可以是几乎相同的!
+      courseD_maze_until7_2019_authored_hint:
         courseD_maze_until7_a: 不要仅仅因为迷宫让代码比上次更长!
         courseD_maze_until7_b: 虽然这里比上个关卡有更多的转向，因为有`重复直到`模块，你的代码可以是几乎相同的!
       courseD_maze_until8_authored_hint:
@@ -9916,6 +10960,8 @@ zh-CN:
         courseD_maze_until8_c: 记得使用`重复直到`模块, 让你到达向日葵!
       courseD_maze_until9_2018_authored_hint:
         courseD_maze_until8_c: 记得使用`重复直到`模块, 让你到达向日葵!
+      courseD_maze_until9_2019_authored_hint:
+        courseD_maze_until8_c: 记得使用`重复直到`模块, 让你到达向日葵!
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: 要通过这一挑战, 请将`向上移动演员 1`模块附加到`当上方向键按下时`事件, 然后对其他方向执行相同的操作。
         courseD_playLab_cond1_b: 使用`当按下方向键`和`移动演员`模块的下拉菜单来改变他们前进的方向。
@@ -9924,17 +10970,27 @@ zh-CN:
         courseD_playLab_cond1_a: 要通过这一挑战, 请将`向上移动演员 1`模块附加到`当上方向键按下时`事件, 然后对其他方向执行相同的操作。
         courseD_playLab_cond1_b: 使用`当按下方向键`和`移动演员`模块的下拉菜单来改变他们前进的方向。
         courseD_playLab_cond1_c: 请记住, 一旦您单击 "运行", 将海盗向前移动到两个标志上!
+      courseD_playLab_cond1_2019_authored_hint:
+        courseD_playLab_cond1_a: 要通过这一挑战, 请将`向上移动演员 1`模块附加到`当上方向键按下时`事件, 然后对其他方向执行相同的操作。
+        courseD_playLab_cond1_b: 使用`当按下方向键`和`移动演员`模块的下拉菜单来改变他们前进的方向。
+        courseD_playLab_cond1_c: 请记住, 一旦您单击 "运行", 将海盗向前移动到两个标志上!
       courseD_playLab_cond2_authored_hint:
         courseD_playLab_cond2_a: 要成功使用这个关卡, 使用`得分`模块下面的`当演员1触及演员 2`事件。
       courseD_playLab_cond2_2018_authored_hint:
+        courseD_playLab_cond2_a: 要成功使用这个关卡, 使用`得分`模块下面的`当演员1触及演员 2`事件。
+      courseD_playLab_cond2_2019_authored_hint:
         courseD_playLab_cond2_a: 要成功使用这个关卡, 使用`得分`模块下面的`当演员1触及演员 2`事件。
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: 需要添加两个模块到`一直重复`循环中。一个将为龙（演员2）选择一个随机的情绪，另一个将等待1秒之后再次通过循环。
       courseD_playLab_cond3_2018_authored_hint:
         courseD_playLab_cond3_a: 需要添加两个模块到`一直重复`循环中。一个将为龙（演员2）选择一个随机的情绪，另一个将等待1秒之后再次通过循环。
+      courseD_playLab_cond3_2019_authored_hint:
+        courseD_playLab_cond3_a: 需要添加两个模块到`一直重复`循环中。一个将为龙（演员2）选择一个随机的情绪，另一个将等待1秒之后再次通过循环。
       courseD_playLab_cond3a_authored_hint:
         courseD_playLab_cond3_c: "- `如果`龙是快乐的\n- `得分`\n- `得分`\n\n\n- `否则` `得分`"
       courseD_playLab_cond3a_2018_authored_hint:
+        courseD_playLab_cond3_c: "- `如果`龙是快乐的\n- `得分`\n- `得分`\n\n\n- `否则` `得分`"
+      courseD_playLab_cond3a_2019_authored_hint:
         courseD_playLab_cond3_c: "- `如果`龙是快乐的\n- `得分`\n- `得分`\n\n\n- `否则` `得分`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: 您将需要添加模块到`一直重复`循环, 使龙继续上下移动
@@ -9946,10 +11002,17 @@ zh-CN:
         courseD_playLab_cond4_a: 需要使用`当运行时`事件让忍者追逐海盗。
         courseD_playLab_cond4_b: 有一个特殊的模块叫`设置每个蒙面忍者追逐演员`，它将让忍者持续追踪海盗的踪迹!
         courseD_playLab_cond4_c: 把`以失败结束游戏`模块放在`当演员1触及演员 3`的事件下面。
+      courseD_playLab_cond4_2019_authored_hint:
+        courseD_playLab_cond4_a: 需要使用`当运行时`事件让忍者追逐海盗。
+        courseD_playLab_cond4_b: 有一个特殊的模块叫`设置每个蒙面忍者追逐演员`，它将让忍者持续追踪海盗的踪迹!
+        courseD_playLab_cond4_c: 把`以失败结束游戏`模块放在`当演员1触及演员 3`的事件下面。
       courseD_playLab_cond5_authored_hint:
         courseD_playLab_cond5_a: 使用一个`如果`语句来比较`分数`是否`>` 5来通过这个挑战。
         courseD_playLab_cond5_b: 您可以在工作区中有一个以上的`一直重复`循环。
       courseD_playLab_cond5_2018_authored_hint:
+        courseD_playLab_cond5_a: 使用一个`如果`语句来比较`分数`是否`>` 5来通过这个挑战。
+        courseD_playLab_cond5_b: 您可以在工作区中有一个以上的`一直重复`循环。
+      courseD_playLab_cond5_2019_authored_hint:
         courseD_playLab_cond5_a: 使用一个`如果`语句来比较`分数`是否`>` 5来通过这个挑战。
         courseD_playLab_cond5_b: 您可以在工作区中有一个以上的`一直重复`循环。
       courseD_playLab_cond6_authored_hint:
@@ -9958,9 +11021,14 @@ zh-CN:
       courseD_playLab_cond6_2018_authored_hint:
         courseD_playLab_cond6_a: 将 ’设置蒙面忍者速度‘模块添加到程序的开始来帮助降低忍者的速度。
         courseD_playLab_cond6_b: 您需要在`一直重复`模块内使用一个`如果演员 1的y方向 > 255`模块来总是检查海盗是否在章鱼下。
+      courseD_playLab_cond6_2019_authored_hint:
+        courseD_playLab_cond6_a: 将 ’设置蒙面忍者速度‘模块添加到程序的开始来帮助降低忍者的速度。
+        courseD_playLab_cond6_b: 您需要在`一直重复`模块内使用一个`如果演员 1的y方向 > 255`模块来总是检查海盗是否在章鱼下。
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
       courseD_playLab_cond6a_2018_authored_hint:
+        courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
+      courseD_playLab_cond6a_2019_authored_hint:
         courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: 将 ’设置蒙面忍者速度‘模块添加到程序的开始来帮助降低忍者的速度。
@@ -10028,11 +11096,19 @@ zh-CN:
         courseE_artist_concept1_a: 六边形有50像素长的边，并向右转60度。
         courseE_artist_concept1_b: 试着在这里使用一个函数, 这样就不必一次又一次地写画六边形的代码了。
         courseE_artist_concept1_c: 在每个函数调用前使用`设置宽度`模块来更改钢笔宽度。
+      courseE_artist_concept1_2019_authored_hint:
+        courseE_artist_concept1_a: 六边形有50像素长的边，并向右转60度。
+        courseE_artist_concept1_b: 试着在这里使用一个函数, 这样就不必一次又一次地写画六边形的代码了。
+        courseE_artist_concept1_c: 在每个函数调用前使用`设置宽度`模块来更改钢笔宽度。
       courseE_artist_concept4_authored_hint:
         courseE_artist_concept4_a: 有几种方法可以通过这个关卡。你能制定一个计划吗？
         courseE_artist_concept4_b: 尝试创建一个正方形。然后做一排正方形。下一步是什么？
         courseE_artist_concept4_c: 在绘制了一排正方形之后，你可以转过身去绘制另一条向左的方块, 或者你可以跳回到图的左边, 画出向右的线。你喜欢哪种方法？
       courseE_artist_concept4_2018_authored_hint:
+        courseE_artist_concept4_a: 有几种方法可以通过这个关卡。你能制定一个计划吗？
+        courseE_artist_concept4_b: 尝试创建一个正方形。然后做一排正方形。下一步是什么？
+        courseE_artist_concept4_c: 在绘制了一排正方形之后，你可以转过身去绘制另一条向左的方块, 或者你可以跳回到图的左边, 画出向右的线。你喜欢哪种方法？
+      courseE_artist_concept4_2019_authored_hint:
         courseE_artist_concept4_a: 有几种方法可以通过这个关卡。你能制定一个计划吗？
         courseE_artist_concept4_b: 尝试创建一个正方形。然后做一排正方形。下一步是什么？
         courseE_artist_concept4_c: 在绘制了一排正方形之后，你可以转过身去绘制另一条向左的方块, 或者你可以跳回到图的左边, 画出向右的线。你喜欢哪种方法？
@@ -10044,6 +11120,13 @@ zh-CN:
           
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: '这半个六边形有一条**30像素长**的边，并且需要向右转**60度**。  '
+        courseE_artist_concept_challenge1_b: '这2/3个三角形有一条**80像素长**的边，并且需要向右转**120度**。 '
+        courseE_artist_concept_challenge1_c: |-
+          这是您要让形状完整所要重复的设计：
+          
+          ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: '这半个六边形有一条**30像素长**的边，并且需要向右转**60度**。  '
         courseE_artist_concept_challenge1_b: '这2/3个三角形有一条**80像素长**的边，并且需要向右转**120度**。 '
         courseE_artist_concept_challenge1_c: |-
@@ -10066,6 +11149,14 @@ zh-CN:
           <xml> <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
+      courseE_artist_concept_challenge2_2019_authored_hint:
+        courseE_artist_concept_challenge2_a: 一旦你定义了一个函数, 你可以一次又一次地调用它 - 任何想用的地方或时机！
+        courseE_artist_concept_challenge2_b: |-
+          可以使用以下命令跳转到画布上的不同位置：
+          
+          <xml> <block type="jump_to">
+          <title name="VALUE">???</title>
+          </block></xml>
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: 这些方块的每个边都有100个像素，这意味着你将不得不在绘制你的第二个正方形前向前移动175个像素。
         courseE_artist_functions1_b: 制作你的眼镜时绘制重叠的线条是可以的。
@@ -10078,6 +11169,13 @@ zh-CN:
           
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2018_authored_hint:
+        courseD_artist_functions10_b: 这幅画和上一个很像，但是`画线`函数现在画的是一个不同的形状。
+        courseD_artist_functions10_a: 为了避免使用多个`向前移动`模块，创建一个`画六边形`的函数，并且多次调用它。
+        courseD_artist_functions10_c: |-
+          你看到这幅画可以用一个叫做`画六边形线`的函数吗？
+          
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions10_2019_authored_hint:
         courseD_artist_functions10_b: 这幅画和上一个很像，但是`画线`函数现在画的是一个不同的形状。
         courseD_artist_functions10_a: 为了避免使用多个`向前移动`模块，创建一个`画六边形`的函数，并且多次调用它。
         courseD_artist_functions10_c: |-
@@ -10110,6 +11208,17 @@ zh-CN:
           - 使用函数
           - 向前移动 100+75像素
           - 使用函数
+      courseE_artist_functions2_2019_authored_hint:
+        courseD_artist_functions2_b: 您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。
+        courseD_artist_functions2_c: |-
+          确保使用了绿色`draw a square`（画一个正方形）模块"调用"了函数。否则，函数中的代码将不会运行。
+          
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          你的程序应该：
+          - 使用函数
+          - 向前移动 100+75像素
+          - 使用函数
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           为了通过这关，你只需要添加一个循环来重复初始的代码8次。
@@ -10132,6 +11241,10 @@ zh-CN:
         courseD_artist_functions5_a: 别放弃！记住你已经学会的东西。
         courseD_artist_functions5_b: 函数使它可以很容易地在任何时候调用保存的代码, 而不仅仅是从循环里！
         courseD_artist_functions5_c: 首先, 将星星形状的代码拖动到`画一个星星`函数中, 然后使用此函数绘制三颗星星！
+      courseE_artist_functions5_2019_authored_hint:
+        courseD_artist_functions5_a: 别放弃！记住你已经学会的东西。
+        courseD_artist_functions5_b: 函数使它可以很容易地在任何时候调用保存的代码, 而不仅仅是从循环里！
+        courseD_artist_functions5_c: 首先, 将星星形状的代码拖动到`画一个星星`函数中, 然后使用此函数绘制三颗星星！
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: 现在只专注于制作一个窗口。我们将在下一个关卡中为它创建一个函数。
         grade4_artist_functions_windows0_b: 尝试使用嵌套循环。内循环将制作正方形，外循环将让正方形旋转四次。
@@ -10144,6 +11257,9 @@ zh-CN:
         courseD_artist_functions7_a: 请尝试首先创建函数, 然后一次添加一个窗口。
         courseD_artist_functions7_b: 不需要添加任何额外的重复循环。只需让艺术家在每个窗口顶部向前跳跃100像素，然后向下跳150像素到达底部窗口。
       courseE_artist_functions7_2018_authored_hint:
+        courseD_artist_functions7_a: 请尝试首先创建函数, 然后一次添加一个窗口。
+        courseD_artist_functions7_b: 不需要添加任何额外的重复循环。只需让艺术家在每个窗口顶部向前跳跃100像素，然后向下跳150像素到达底部窗口。
+      courseE_artist_functions7_2019_authored_hint:
         courseD_artist_functions7_a: 请尝试首先创建函数, 然后一次添加一个窗口。
         courseD_artist_functions7_b: 不需要添加任何额外的重复循环。只需让艺术家在每个窗口顶部向前跳跃100像素，然后向下跳150像素到达底部窗口。
       courseE_artist_functions8_authored_hint:
@@ -10180,6 +11296,23 @@ zh-CN:
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
         courseD_artist_functions8_c: 在每行正方形的末尾，在绘制下一行之前艺术家得向下及向后跳跃。
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_f: 你只需要一个 ' 前进 ' 块, 但你将需要相当多的 ' 跳跃前进 ' 和/或 ' 跳转向后 ' 块!
+        courseD_artist_functions8_a: |-
+          从制作一个正方形的函数开始，然后尝试为一行正方形做一个函数。
+          
+          如何使用`draw a line of squares`（用正方形画一条线）函数来制作此图像？
+        courseD_artist_functions8_d: |-
+          用正方形画一条线，
+          - 重复3次
+          - 用边长**50像素**画一个正方形
+          - 向前跳**100像素**
+        courseD_artist_functions8_b: |-
+          把此图片中的每一行视为3个正方形的线。它们有多少条正方形线，您要从哪里开始画它们？
+          
+          ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
+        courseD_artist_functions8_c: 在每行正方形的末尾，在绘制下一行之前艺术家得向下及向后跳跃。
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: 如果做对了，只需要一个`向前移动`模块！
         courseD_artist_functions8_a: 从为正方形创建一个函数，然后试着为一行正方形创建一个函数。
@@ -10188,7 +11321,19 @@ zh-CN:
           - 重复3次
           - 画一个正方形
           - 向前跳 **100 像素**
+      courseE_artist_functions8b_2019_authored_hint:
+        courseD_artist_functions8_f: 如果做对了，只需要一个`向前移动`模块！
+        courseD_artist_functions8_a: 从为正方形创建一个函数，然后试着为一行正方形创建一个函数。
+        courseD_artist_functions8_d: |-
+          要画一行正方形：
+          - 重复3次
+          - 画一个正方形
+          - 向前跳 **100 像素**
       courseE_artist_functions8c_2018_authored_hint:
+        courseD_artist_functions8_f: 这比看起来容易！这里不需要用任何`向前移动`或`跳跃`模块！
+        courseD_artist_functions8_a: 第二行正方形与第一行相比，只有180度转弯不同！
+        courseD_artist_functions8_c: 在每行正方形的最后，艺术家只需要在画下一行正方形前转180度。将所有内容放到一个循环里来开始下一个练习！
+      courseE_artist_functions8c_2019_authored_hint:
         courseD_artist_functions8_f: 这比看起来容易！这里不需要用任何`向前移动`或`跳跃`模块！
         courseD_artist_functions8_a: 第二行正方形与第一行相比，只有180度转弯不同！
         courseD_artist_functions8_c: 在每行正方形的最后，艺术家只需要在画下一行正方形前转180度。将所有内容放到一个循环里来开始下一个练习！
@@ -10240,6 +11385,30 @@ zh-CN:
           -转60度
           -绘制一条三角形
           -转120 度
+      courseE_artist_functions9_2019_authored_hint:
+        courseD_artist_functions9_e: |-
+          你能在这幅画中找到四个可以使用`画一条三角形的线`的地方吗？
+          
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          这个关卡可以分成三部分：
+          
+          -制作`画一个三角形`函数
+          -制作`画一行三角形`函数
+          -使用`画一行三角形`函数四次来完成图画
+        courseD_artist_functions9_b: 这幅画是通过绘制一行三角形4次, 并在绘制下一个三角形线之前旋转60或120度。
+        courseD_artist_functions9_c: |-
+          绘制三角形的线:
+          -重复4次
+          -绘制三角形
+          -向前跳50像素
+        courseD_artist_functions9_d: |-
+          绘制菱形:
+          -重复两次
+          -绘制一条三角形的线
+          -转60度
+          -绘制一条三角形
+          -转120 度
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。你也可以随你所想`跳到`其他位置，或者将整个改成自己想要的样子！
       courseE_artist_functions_challenge1_authored_hint:
@@ -10248,9 +11417,14 @@ zh-CN:
       courseE_artist_functions_challenge1_2018_authored_hint:
         courseE_artist_functions_challenge1_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。
         courseE_artist_functions_challenge1_b: 你也可以随自己所想`跳到`其他位置或改变整个设计!
+      courseE_artist_functions_challenge1_2019_authored_hint:
+        courseE_artist_functions_challenge1_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。
+        courseE_artist_functions_challenge1_b: 你也可以随自己所想`跳到`其他位置或改变整个设计!
       courseE_artist_functions_challenge2_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+      courseE_artist_functions_challenge2_2019_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: 别忘了在每个三角形后转向60度。 您需要将该指令放在哪个循环中？
@@ -10307,12 +11481,20 @@ zh-CN:
       courseE_bee_concept1_2018_authored_hint:
         courseE_bee_concept1_b: 这里有没有*重复*的规律？
         courseE_bee_concept1_a: 如果不了解如何在此处使用嵌套循环, 请尝试在一张纸上逐步写出说明。圈出所看到的规律。
+      courseE_bee_concept1_2019_authored_hint:
+        courseE_bee_concept1_b: 这里有没有*重复*的规律？
+        courseE_bee_concept1_a: 如果不了解如何在此处使用嵌套循环, 请尝试在一张纸上逐步写出说明。圈出所看到的规律。
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: '`当`循环能帮上忙吗？'
         courseE_bee_concept2_d: 你甚至可以检查空白的位置，看看是否蜂蜜大于0个。
         courseE_bee_concept2_b: 您可以使用`当`循环移动到每条路径的末尾, 并收集每个位置中的所有蜂蜜。
         courseE_bee_concept2_c: 蜜蜂在每条小路后应该往哪个方向转？
       courseE_bee_concept2_2018_authored_hint:
+        courseE_bee_concept2_a: '`当`循环能帮上忙吗？'
+        courseE_bee_concept2_d: '你甚至可以检查空白的位置，看看是否蜂蜜大于0个。'
+        courseE_bee_concept2_b: 您可以使用`当`循环移动到每条路径的末尾, 并收集每个位置中的所有蜂蜜。
+        courseE_bee_concept2_c: 蜜蜂在每条小路后应该往哪个方向转？
+      courseE_bee_concept2_2019_authored_hint:
         courseE_bee_concept2_a: '`当`循环能帮上忙吗？'
         courseE_bee_concept2_d: '你甚至可以检查空白的位置，看看是否蜂蜜大于0个。'
         courseE_bee_concept2_b: 您可以使用`当`循环移动到每条路径的末尾, 并收集每个位置中的所有蜂蜜。
@@ -10325,11 +11507,19 @@ zh-CN:
         courseE_bee_concept3a_a: 尝试使用`重复`循环来通过此关卡。
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
         courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
+      courseE_bee_concept3_2019_authored_hint:
+        courseE_bee_concept3a_a: 尝试使用`重复`循环来通过此关卡。
+        courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
+        courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept4_authored_hint:
         courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
         courseE_bee_concept4_b: 台阶模式可以帮助你穿过所有的花和蜂窝。
         courseE_bee_concept4_c: 如果你是在花那里, 你必须获得花蜜多少次？所有的花都是同样的数字吗？
       courseE_bee_concept4_2018_authored_hint:
+        courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
+        courseE_bee_concept4_b: 台阶模式可以帮助你穿过所有的花和蜂窝。
+        courseE_bee_concept4_c: 如果你是在花那里, 你必须获得花蜜多少次？所有的花都是同样的数字吗？
+      courseE_bee_concept4_2019_authored_hint:
         courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
         courseE_bee_concept4_b: 台阶模式可以帮助你穿过所有的花和蜂窝。
         courseE_bee_concept4_c: 如果你是在花那里, 你必须获得花蜜多少次？所有的花都是同样的数字吗？
@@ -10341,6 +11531,13 @@ zh-CN:
           ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
         courseE_bee_concept5_b: 哪怕已经知道那里没有花了，仍然可以使用`如果`模块在每个正方形那里找花。
       courseE_bee_concept5_2018_authored_hint:
+        courseE_bee_concept5_a: 花朵沿着方形的小路。你可以使用`当前面有路时`来跟随这条路，甚至是每条边不一样长的正方形也行。
+        courseE_bee_concept5_c: |-
+          这是一张蜜蜂可以走的长方形小路的图片。
+          
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: 哪怕已经知道那里没有花了，仍然可以使用`如果`模块在每个正方形那里找花。
+      courseE_bee_concept5_2019_authored_hint:
         courseE_bee_concept5_a: 花朵沿着方形的小路。你可以使用`当前面有路时`来跟随这条路，甚至是每条边不一样长的正方形也行。
         courseE_bee_concept5_c: |-
           这是一张蜜蜂可以走的长方形小路的图片。
@@ -10476,6 +11673,9 @@ zh-CN:
       courseE_farmer_concept1_2018_authored_hint:
         courseE_farmer_concept1_a: 一个`当有洞时`模块将帮助填补任何洞，直到填平它。
         courseE_farmer_concept1_b: 你可以用阶梯模式到达洞。
+      courseE_farmer_concept1_2019_authored_hint:
+        courseE_farmer_concept1_a: 一个`当有洞时`模块将帮助填补任何洞，直到填平它。
+        courseE_farmer_concept1_b: 你可以用阶梯模式到达洞。
       courseE_farmer_concept2_authored_hint:
         courseE_farmer_concept2_a: 路径都是相同的长度，但它们是分开的不同的正方形。这里不适合使用循环。试试函数。
         courseE_farmer_concept2_b: 如果有一个函数，能够转弯，沿着路径走下去，收集南瓜，然后返回到水平的主路上，它会很有帮助。
@@ -10484,11 +11684,19 @@ zh-CN:
         courseE_farmer_concept2_a: 路径都是相同的长度，但它们是分开的不同的正方形。这里不适合使用循环。试试函数。
         courseE_farmer_concept2_b: 如果有一个函数，能够转弯，沿着路径走下去，收集南瓜，然后返回到水平的主路上，它会很有帮助。
         courseE_farmer_concept2_c: 您的主程序可以调用这个函数与绿色`做一些事情`模块。
+      courseE_farmer_concept2_2019_authored_hint:
+        courseE_farmer_concept2_a: 路径都是相同的长度，但它们是分开的不同的正方形。这里不适合使用循环。试试函数。
+        courseE_farmer_concept2_b: 如果有一个函数，能够转弯，沿着路径走下去，收集南瓜，然后返回到水平的主路上，它会很有帮助。
+        courseE_farmer_concept2_c: 您的主程序可以调用这个函数与绿色`做一些事情`模块。
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
         grade3_robotFarmer_ConditionalsIntro_8_b: 一旦到达路径的末尾, 你应该做什么？
         grade3_robotFarmer_ConditionalsIntro_8_c: 使用`重复`循环运行多次代码来得到每条直线路径。
       courseE_farmer_concept3_2018_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
+        grade3_robotFarmer_ConditionalsIntro_8_b: 一旦到达路径的末尾, 你应该做什么？
+        grade3_robotFarmer_ConditionalsIntro_8_c: 使用`重复`循环运行多次代码来得到每条直线路径。
+      courseE_farmer_concept3_2019_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
         grade3_robotFarmer_ConditionalsIntro_8_b: 一旦到达路径的末尾, 你应该做什么？
         grade3_robotFarmer_ConditionalsIntro_8_c: 使用`重复`循环运行多次代码来得到每条直线路径。
@@ -10513,10 +11721,16 @@ zh-CN:
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: 这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。
         courseE_farmer_functions1_b: 你只需要捡起一个南瓜, 但你是否可以用一个循环来得到它？
+      courseE_farmer_functions1_2019_authored_hint:
+        courseE_farmer_functions1_a: 这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。
+        courseE_farmer_functions1_b: 你只需要捡起一个南瓜, 但你是否可以用一个循环来得到它？
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: 一步步想清楚`如果/否则`语句。如果正站在玉米株边，应该做什么？
         courseE_farmer_functions1a_b: 使用`重复直到`模块来获得南瓜!
       courseE_farmer_functions1a_2018_authored_hint:
+        courseE_farmer_functions1a_a: 一步步想清楚`如果/否则`语句。如果正站在玉米株边，应该做什么？
+        courseE_farmer_functions1a_b: 使用`重复直到`模块来获得南瓜!
+      courseE_farmer_functions1a_2019_authored_hint:
         courseE_farmer_functions1a_a: 一步步想清楚`如果/否则`语句。如果正站在玉米株边，应该做什么？
         courseE_farmer_functions1a_b: 使用`重复直到`模块来获得南瓜!
       courseE_farmer_functions2b_authored_hint:
@@ -10527,10 +11741,16 @@ zh-CN:
         courseE_farmer_functions2b_a: 您可以使用`重复直到南瓜`来到达两条路径的结束。
         courseE_farmer_functions2b_b: 连接路径上没有玉米, 所以你可以只沿着它走并转向。
         courseE_farmer_functions2b_c: 你将需要两个单独的`重复直到`模块, 来获得所有的作物。
+      courseE_farmer_functions2b_2019_authored_hint:
+        courseE_farmer_functions2b_a: 您可以使用`重复直到南瓜`来到达两条路径的结束。
+        courseE_farmer_functions2b_b: 连接路径上没有玉米, 所以你可以只沿着它走并转向。
+        courseE_farmer_functions2b_c: 你将需要两个单独的`重复直到`模块, 来获得所有的作物。
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: 使用绿色的`玉米和南瓜`模块调用这个函数。
         courseE_farmer_functions2ba_b: 在`当运行时`下, 将工具箱中的所有模块拖到一起看此函数是如何工作的。
       courseE_farmer_functions2ba_2018_authored_hint:
+        courseE_farmer_functions2ba_a: 使用绿色的`玉米和南瓜`模块调用这个函数。
+      courseE_farmer_functions2ba_2019_authored_hint:
         courseE_farmer_functions2ba_a: 使用绿色的`玉米和南瓜`模块调用这个函数。
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: 请试着使用`当前面有路时`循环去到想去的地方。
@@ -10540,6 +11760,9 @@ zh-CN:
         courseE_farmer_functions3c_a: 这个程序经常重复什么顺序？可以将这些模块拖到函数中吗？
         courseE_farmer_functions3c_b: 不要忘记在你删除模块的时候，在主程序中调用您的函数。
       courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: 您需要使用 "沿路采摘" 函数三次来解决这个难题。
+        coursee_farmer_functions3c1_2018_b: 添加什么代码才能走过拐角？
+      courseE_farmer_functions3c1_2019_authored_hint:
         coursee_farmer_functions3c1_2018_a: 您需要使用 "沿路采摘" 函数三次来解决这个难题。
         coursee_farmer_functions3c1_2018_b: 添加什么代码才能走过拐角？
       courseE_farmer_functions4_authored_hint:
@@ -10571,6 +11794,8 @@ zh-CN:
         courseE_farmer_functions6c_c: 别忘了继续查找玉米!
       courseE_farmer_functions7a1_2018_authored_hint:
         courseE_farmer_functions7a1_2018_a: 在工具箱的 `函数` 章节下创建函数。
+      courseE_farmer_functions7a1_2019_authored_hint:
+        courseE_farmer_functions7a1_2018_a: 在工具箱的 `函数` 章节下创建函数。
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: 你不需要一个函数，但如果有帮助，你可以做一个！
         courseE_farmer_functions7b_b: 使用`如果/否则`语句来查找农作物, 然后根据所找到的作物转向。
@@ -10592,6 +11817,9 @@ zh-CN:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: 创建一个把农夫带到玉米，采摘所有的玉米，然后转身回来的函数。
       courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: 使用你在最后几个谜题中所做的同一个函数。
+        courseE_farmer_functions9a1_2018b: 使用与上一个谜题相同的步骤来解决这个谜题的前半部分。
+      courseE_farmer_functions9a1_2019_authored_hint:
         courseE_farmer_functions9a1_2018a: 使用你在最后几个谜题中所做的同一个函数。
         courseE_farmer_functions9a1_2018b: 使用与上一个谜题相同的步骤来解决这个谜题的前半部分。
       courseE_farmer_functions9b_authored_hint:

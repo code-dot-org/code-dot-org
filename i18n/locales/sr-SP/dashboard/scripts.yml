@@ -1213,3 +1213,45 @@ sr:
               name: Изградња темеља
             Conditionals with Cards:
               name: Услови са картама
+            The Artist:
+              name: Уметник
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            Digital Citizenship:
+              name: Дигитално држављанство
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            Conditionals with Cards:
+              name: Услови са картама
+            Conditionals:
+              name: Кондиционали
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            Binary Bracelets:
+              name: Бинарне наруквице
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing

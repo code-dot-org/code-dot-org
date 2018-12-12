@@ -2102,7 +2102,7 @@ fr:
               name: Heure de Code Minecraft
           title: 'Minecraft: Le voyage du héros'
           description_short: Minecraft est de retour pour une toute nouvelle activité de l'Heure de Code!
-          description: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité! Le voyage dans Minecraft avec du code.
+          description: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2490,6 +2490,8 @@ fr:
             Dance Party:
               name: Fête dansante
           title: Fête dansante
+          description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !
+          description: Codez votre propre soirée dansante à partager avec vos amis !
         frozen-2018-test-b:
           stages:
             Artist:
@@ -2502,6 +2504,9 @@ fr:
           stages:
             Dance Party:
               name: Fête dansante
+        dance-extras:
+          title: Continuez à danser
+          description: Allez au-delà de la première heure avec de longues idées de projets.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -2512,7 +2517,55 @@ fr:
               name: Les variables de l'enveloppe
             For Loop Fun:
               name: Jouons avec les boucles « Pour »
+            The Artist:
+              name: L'Artiste
         dance-low:
           stages:
             Dance Party:
               name: Fête dansante
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Digital Citizenship:
+              name: Citoyenneté numérique
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Nested Loops:
+              name: Boucles imbriquées
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Conditionals:
+              name: Instructions conditionnelles
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            Binary Bracelets:
+              name: Bracelets binaires
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif

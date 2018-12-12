@@ -319,6 +319,7 @@ vi:
       playlab: 'Phòng trò chơi'
       minecraft: 'Minecraft'
       flappy: 'Flappy bird'
+      dance: 'Bữa tiệc khiêu vũ'
     popup:
       progress_for_user: "sự tiến bộ của %{name}"
       progress: 'Qua trình của bạn'
@@ -551,6 +552,8 @@ vi:
       body_short: "Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript, và chia sẻ ứng dụng của bạn trong vài giây."
       audience: 'Lứa tuổi 13 +'
       cta: 'Học cách làm'
+    dance:
+      title: 'Bữa tiệc khiêu vũ'
     hoc:
       title: 'Mê cung cổ điển'
       body: 'Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học các khóa này.'
@@ -596,7 +599,7 @@ vi:
       title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
+      body: "Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã."
     sports:
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
     text-compression:

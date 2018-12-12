@@ -137,6 +137,8 @@ bg:
         4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Всичките ви любими блокове са организирани в категории.  Кликнете върху тях, за да видите къде се намира всичко!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
       Infinity_move_directions_callout:
@@ -207,17 +209,25 @@ bg:
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом. Можете ли да го завършите?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
       Overworld Place Wall_callout:
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Повторете действията като поставите блокове тук вътре
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Повторете действията като поставите блокове тук вътре
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Щракни тук, за да се покаже мрежата.
@@ -249,9 +259,13 @@ bg:
         craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите команда да вървим напред?
       Underground Iron_callout:
         craft_what_is_iron: Изкопай това желязо!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Изкопай това желязо!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Изкопай това желязо!
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
@@ -275,9 +289,13 @@ bg:
         courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити.

@@ -989,10 +989,13 @@ bs:
       courseC_maze_debugging10: Ispravi ovaj nivo tako što ćeš preraspodijeliti i dodati blokove da bi me doveo/la do svinje!
       courseD_artist_binary4: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?
       courseD_artist_binary4_2018: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?
+      courseD_artist_binary4_2019: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?
       courseD_artist_binary6: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
       courseD_artist_binary6_2018: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
+      courseD_artist_binary6_2019: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
       courseD_artist_binary7: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
       courseD_artist_binary7_2018: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
+      courseD_artist_binary7_2019: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
       courseD_autorun_binary4_2019: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?
       courseD_autorun_binary6_2019: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
       courseD_autorun_binary7_2019: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
@@ -1025,6 +1028,7 @@ bs:
       courseE_artist_functions1_2018: "Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela kraća od dužine kvadrata."
       courseE_bee_concept1: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu petlju. 
       courseE_bee_concept1_2018: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu petlju. 
+      courseE_bee_concept1_2019: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu petlju. 
       courseE_bee_functions1: Pokupi sav nektar iz svakog cvijeta.
       courseE_bee_functions1_2018: Pokupi sav nektar iz svakog cvijeta.
       courseE_bee_functions3: Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja.

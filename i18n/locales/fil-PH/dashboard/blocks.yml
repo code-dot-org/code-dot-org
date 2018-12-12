@@ -84,7 +84,7 @@ fil:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -274,6 +274,15 @@ fil:
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': lahat
       Mikelab_getProp:
         options:
           PROPERTY:

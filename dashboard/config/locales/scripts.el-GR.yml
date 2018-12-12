@@ -1302,6 +1302,8 @@ el:
           stages:
             Minecraft Hour of Code:
               name: Η Ώρα του Κώδικα με το Minecraft
+          description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια
+            δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1523,10 +1525,37 @@ el:
           stages:
             Artist:
               name: Καλλιτέχνης
+        dance:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+          title: Πάρτι Χορού
+          description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ
+            Ούρμπαν, Κιάρα, και 25 ακόμα!
+          description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
+            με τους φίλους σας.
         frozen-2018-test-b:
           stages:
             Artist:
               name: Καλλιτέχνης
+        aquatic:
+          stages:
+            Aquatic:
+              name: Υδάτινο
+          title: 'Minecraft: Υδάτινο Ταξίδι'
+          description_short: Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα
+            για την Ώρα του Κώδικα!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        dance-extras:
+          title: Συνεχίστε να Χορεύετε
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1537,3 +1566,55 @@ el:
               name: Μεταβλητές
             For Loop Fun:
               name: Διασκέδαση με το Βρόχο Για
+            The Artist:
+              name: Ο Καλλιτέχνης
+        dance-low:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Προγραμματισμός Ρελέ
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Digital Citizenship:
+              name: Ψηφιακή υπηκοότητα
+            'Unplugged: Binary':
+              name: 'Εκτός Σύνδεσης: Δυαδικοί'
+            Artist Binary:
+              name: Δυαδικοί Καλλιτέχνη
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Nested Loops:
+              name: Φωλιασμένες Επαναλήψεις
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Conditionals:
+              name: Συνθήκες
+            Internet:
+              name: Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Προγραμματισμός Ρελέ
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Envelope Variables:
+              name: Μεταβλητές
+            For Loop Fun:
+              name: Διασκέδαση με το Βρόχο Για
+            Binary Bracelets:
+              name: Δυαδικά Βραχιόλια
+            'Unplugged: Binary':
+              name: 'Εκτός Σύνδεσης: Δυαδικοί'
+            Artist Binary:
+              name: Δυαδικοί Καλλιτέχνη
+            Internet:
+              name: Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing

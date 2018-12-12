@@ -47,6 +47,8 @@ sl:
         craft_run_button_callout: Klikni "Zaženi" in preizkusi
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Klikni "Zaženi" in preizkusi
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klikni "Zaženi" in preizkusi
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog" in mu spremeni velikost.
       frozen cross rotate_callout:

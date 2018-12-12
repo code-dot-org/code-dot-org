@@ -4,7 +4,7 @@ pt-BR:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: O Artista não tem um botão de "Próximo", mas você pode arrastar a barra para a esquerda para ver seu programa rodar com mais cuidado.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até rodar o código!
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até executar o código!
       4-5 Artist Patterns Free Play_callout:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       4-5 Bee Conditionals - FC Test_callout:
@@ -12,14 +12,14 @@ pt-BR:
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Clique e arraste a "área de texto" para a tela
+        dragTextAreaIn: Clique e arraste a "Área de Texto" para a tela
         screenSelectorCallout3: Escolha a tela que você fez
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: Este é o seletor da tela
-        changePlace1ID: Mude o Id da sua tela aqui.
+        changePlace1ID: Mude o ID da sua tela aqui.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
-        appLabIntro2_designMenu: Use os menus para mudat o "texto" do seu aplicativo
+        appLabIntro2_designMenu: Use os menus para mudar o "texto" do seu aplicativo
         appLabIntro2_textColor: Role para baixo para alterar a "cor do texto"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Clique no texto da história nesta tela
@@ -105,6 +105,7 @@ pt-BR:
       CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Verifique se o jogador ganhou
       Counting_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       Course 4 Artist 4_callout:
@@ -119,6 +120,8 @@ pt-BR:
         house_hint: Tudo bem se a imagem ainda não se parece com uma casa. Vamos arrumar isso no próximo desafio.
       Course 4 Artist Functions 8_callout:
         edit_function: Clique aqui para editar sua função.
+      Course 4 Artist Functions challenge_callout:
+        Course_4_Artist_Functions_challenge_1: Observe ordenamos todos os blocos e colocamos em categorias para manter as coisas organizadas.  Clique aqui para encontrar todos os blocos que você precisa.
       Course 4 Artist Params 2_callout:
         length_parameter: Você pode atualizar esta função para que ela use o parâmetro "comprimento"?
       Course 4 Artist Params 4_callout:
@@ -135,26 +138,48 @@ pt-BR:
         place_variable: Arraste sua variável para dentro deste bloco
       Course 4 Artist Vars 6_callout:
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de cada ângulo em graus.
+      Course 4 Artist Vars 8_callout:
+        Course_4_Artist_Vars_8_a: Precisa de mais espaço?  Esconda essa barra para tornar a área de codificação mais ampla.
       Course 4 Artist Vars 9_callout:
         set_sides: Use este bloco para definir "lados" com o número necessário para completar o desafio.
+      Course 4 Bee 1_callout:
+        if_bee_nectar: Use o bloco "se" para decidir se a abelha deve obter néctar ou fazer mel
+      Course 4 Bee 3_callout:
+        if_else_bee: Use o bloco "se/então" para que a abelha pegue o néctar de uma flor e faça o mel, se não for uma flor
       Course 4 Bee For Loops 1_callout:
         get_nectar: Use o novo bloco "obtenha néctar".
       Course 4 Bee For Loops 6_callout:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de "Ação" estão aqui agora.
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Use este botão para editar a função e alterar a direção para a qual a abelha vai virar para obter o néctar.
+      Course 4 Bee Params 4 - Two WhenRun_callout:
+        Course_4_Bee_Params_4: Definir essas variáveis para "0" ou "1" é chamado a definir uma "bandeira". Esta bandeira pode sinalizar nossa função com a direção da nossa abelha precisa ir.
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Selecione "Executar" para abrir seu programa
+        Course 4 Maze 1_callout2: Arraste o bloco "mover" encaixe-o abaixo os outros blocos na área de trabalho
       Course 4 Maze 4_callout:
         repeat: Coloque os blocos dentro do laço para repetir os comandos
+      Course 4 Play Lab Params 2_callout:
+        Course_4 _Play_Lab_Params_2_1: Clique em "editar" para atualizar essa função para que ele use o parâmetro de altura.
       Course 4 Play Lab Params 3_callout:
         edit_function: Clique aqui para editar sua função.
       Course 4 Play Lab Params 6_callout:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Use as setas para mover o personagem
+      Course 4 Play Lab Vars 9_callout:
+        Course_4_Play_Lab_Vars_9_1: Agora todos os seus blocos estão organizados em categorias! Clique em um título para ver as peças dentro.
+      Course 4 Play Labs For Loops 5_callout:
+        Course_4_Play_Labs_For_Loops_5: Woah!  Meu código explodiu!  Você pode montar ele de volta para resolver este quebra-cabeça?
+      Course 4 Playlab For Loops 4b_callout:
+        Course_4_Playlab_For_Loops_4b_1: Percebeu que a variável `contador` tem um nome diferente para cada personagem?  É assim que cada laço `para` pode controlar seu próprio contador.
+        Course_4_Playlab_For_Loops_4b_2: Neste quebra-cabeça, você só pode alterar o "incremento" dos laços `para`.
+      Course 4 SCV 6_callout:
+        Course_4_SCV_6: Este bloco permite que você personalize sua cor para quase qualquer coisa que você quiser ver!  Brinque com os números para ver o que acontece!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Use as setas para mover o personagem
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: Agora todos os seus blocos estão organizados em categorias! Clique em um título para ver as peças dentro.
       Dance_Party_01_callout:
         dance_callout_01: Adicione este bloco ao seu programa!
       Dance_Party_01_low_callout:
@@ -184,6 +209,8 @@ pt-BR:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
       Infinity_move_directions_callout:
@@ -193,6 +220,12 @@ pt-BR:
         Infinity_move_right_runbutton: Adicione um bloco Mova aqui
       Infinity_repeat_callout:
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Tente usar o novo bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
+      InspirationalArtwork_2018_callout:
+        InspirationalArtwork_1: Tente usar o bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Tente usar o bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Quando você estiver pronto, clique em "Executar" para testar seu programa.
       MC HOC 2016 New Walk_callout:
@@ -224,6 +257,7 @@ pt-BR:
       MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'O Agent pode passar sobre a lava, mas o jogador não pode!  '
       Mike Playlab Project_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       NEW Course 4 Artist Functions 3_callout:
@@ -242,73 +276,121 @@ pt-BR:
         add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar e, em seguida, arraste-o para sua definição de função
       NEW Course 4 Artist Vars 6_callout:
         place_length_variable: Arraste a variável de comprimento aqui para substituir os pontos de interrogação
+      NEW Course 4 Bee For Loops 4_callout:
+        bee_for_loop: Insira aqui o maior número de néctar que você quer que a abelha colete
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de "Ação" estão aqui agora.
       New Artist Project_callout:
+        New Artist Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste os blocos para a área de adicioná-los ao seu programa
         New Artist Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       New Frozen Project_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
       New Play Lab Project_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       Overworld Chop Trees_callout:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Este código começará a construção da sua casa. Você consegue terminá-la?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Este código começará a construção da sua casa. Você consegue terminá-la?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Este código começará a construção da sua casa. Você consegue terminá-la?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
-        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o embaixo do outro bloco
+        craft_drag_block_callout: Arraste um bloco de "avançar" e encaixe-o embaixo do outro bloco
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
-        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o embaixo do outro bloco
+        craft_drag_block_callout: Arraste um bloco de "avançar" e encaixe-o embaixo do outro bloco
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "avançar" e encaixe-o embaixo do outro bloco
       Overworld Place Wall_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repita as ações colocando blocos aqui
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Clique aqui para visualizar a grade.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Clique aqui para visualizar a grade.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até rodar o código!
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até executar o código!
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: Clique aqui para visualizar a grade.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Play Lab Rocket 2_callout:
+        pass_function: Este bloco de iniciar(função) permite que você passe sua função (não o valor que a função retorna com alguma entrada) para a biblioteca de animação do foguete. A animação que você vê na tela está na verdade usando sua função de mover o foguete!
+        play lab rocket 2: Defina sua função de altura-do-foguete aqui
+      Play Lab Rocket 2B_callout:
+        pass_function: Este bloco preto permite que você passe sua função (não o valor que a função retorna com alguma entrada) para a biblioteca de animação do foguete. A animação que você vê na tela está na verdade usando sua função de mover o foguete!
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: " Se sentindo empacado?<br/>Clique na lâmpada para pegar uma dica!"
+      Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_2: Tente usar o novo bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
+      Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Tente usar o novo bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
+      Robot Doodle_2019_callout:
+        4-5_Artist_Patterns_Free_Play_2: Tente usar o novo bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Robot_callout:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Rock Paper Scissors_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
+      Rocket Height Course A_callout:
+        pass_function: Este bloco de iniciar(função) permite que você passe sua função (não o valor que a função retorna com alguma entrada) para a biblioteca de animação do foguete. A animação que você vê na tela está na verdade usando sua função de mover o foguete!
       Ryan - 4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
+      SG U3L2_Turtle3by3Grid_callout:
+        goals_tab: arraste objetivos a partir daqui
       SGU3L2A Introducing Subgoals_callout:
         goals_palette_show: Aqui está uma lista de submetas
         goals_workspace: Exemplo de código com submetas
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edite essa função para evitar que o Sam vá para a direita
       Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Este código verifica se há lava. Você consegue adicionar um comando para avançar?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Este código verifica se há lava. Você consegue adicionar um comando para avançar?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Este código verifica se há lava. Você consegue adicionar um comando para avançar?
       Underground Iron_callout:
         craft_what_is_iron: Minere este ferro!
       Underground Iron_2018_callout:
         craft_what_is_iron: Minere este ferro!
+      Underground Iron_2019_callout:
+        craft_what_is_iron: Minere este ferro!
       WebLab PS test - 1-12_callout:
         version_history_button: Confira o histórico de versões
+      aE3_callout:
+        aE3_1: Apenas alguns desses estão disponíveis
+      aE3alternate_callout:
+        aE3_1: Apenas alguns desses estão disponíveis
+      aE3alternateB_callout:
+        aE3_1: Apenas alguns desses estão disponíveis
+      aE4_callout:
+        aE3_1: Apenas alguns desses estão disponíveis
+      aE5_callout:
+        aE3_1: Apenas alguns desses estão disponíveis
+      aE6_callout:
+        aE6_1: Apenas 1 bloco de mover pra frente e 1 bloco de virar
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de bloco pode ser usado na resposta final.
       courseA_artist_loops7_2018_callout:
@@ -348,9 +430,9 @@ pt-BR:
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: Use o botão de passo para ir passo a passo através do programa. Isso vai te ajudar a encontrar o bug!
+        courseA_maze_seqA_callout1: Use o botão de passo para ir passo-a-passo através do programa. Isso vai te ajudar a encontrar o bug!
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: Use o botão de passo para ir passo a passo através do programa. Isso vai te ajudar a encontrar o bug!
+        courseA_maze_seqA_callout1: Use o botão de passo para ir passo-a-passo através do programa. Isso vai te ajudar a encontrar o bug!
       courseA_maze_seq4_callout:
         made_of_stone: Esses blocos são feitos de pedra.  Você pode movê-los, mas você não pode excluí-los!
       courseA_maze_seq4_2018_callout:
@@ -368,7 +450,7 @@ pt-BR:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório", que significa que você não sabe o que você vai obter até que você o ouça!
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseB_collector_loops1_2018_callout:
@@ -378,27 +460,33 @@ pt-BR:
       courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: Use o botão de passo para ir passo a passo através do programa. Isso vai te ajudar a encontrar o bug!
+        courseB_maze_seq2_callout1: Use o botão de passo para ir passo-a-passo através do programa. Isso vai te ajudar a encontrar o bug!
       courseB_maze_seq2_2018_callout:
-        courseB_maze_seq2_callout1: Use o botão de passo para ir passo a passo através do programa. Isso vai te ajudar a encontrar o bug!
+        courseB_maze_seq2_callout1: Use o botão de passo para ir passo-a-passo através do programa. Isso vai te ajudar a encontrar o bug!
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o artista ao centro da tela.
       courseC_artist_loopsPrePre1a_2018_callout:
+        courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o artista ao centro da tela.
+      courseC_artist_loopsPrePre1a_2019_callout:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o artista ao centro da tela.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no nível.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no nível.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas se você precisar!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas se você precisar!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Você pode pegar mais blocos da caixa de ferramentas se você precisar!
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há quatro abóboras para serem pegas.
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há quatro abóboras para serem pegas.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
+        courseC_maze_debugging5_1: Estes blocos cinzas não podem ser apagados!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
       courseC_maze_debugging5_2019_callout:
@@ -406,40 +494,54 @@ pt-BR:
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseC_maze_programming4_2018_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseC_maze_programming4_2019_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Você pode mudar esse número.
         courseD_artist_ramp11_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
+        4_5_Bee_Conditionals_2_2: Precisa de ajuda? Clique aqui para uma dica em VIDEO!
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
+        4_5_Bee_Conditionals_2_2: Precisa de uma ajudinha? Clique aqui para ver nosso novo VIDEO de DICAS!
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseD_maze_ramp1_2019_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseD_maze_ramp2_2018_callout:
@@ -459,9 +561,9 @@ pt-BR:
       courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseD_scrat_ramp2_2018_callout:
@@ -490,9 +592,9 @@ pt-BR:
         courseE_artist_ramp8_1: Você pode mudar esse número.
         courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseE_maze_ramp2_2018_callout:
@@ -513,10 +615,16 @@ pt-BR:
       courseF_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Você pode mudar esse número.
         courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
+      courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
+      courseF_bee_for4_2019_callout:
+        courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseF_maze_ramp2_2018_callout:
@@ -526,6 +634,7 @@ pt-BR:
       courseF_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseF_playLab_func2_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       courseF_playlab_brokenText_callout:
@@ -559,7 +668,7 @@ pt-BR:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Assim é como se insere o valor da variável.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para iniciar o programa.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       coursef_maze_ramp3_2018_callout:
@@ -627,7 +736,7 @@ pt-BR:
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Esses blocos cinza são feitos de pedras! Isso significa que eles não podem ser jogados no lixo.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       grade2_CaringForNewPet_2_callout:
@@ -643,7 +752,7 @@ pt-BR:
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até rodar o código!
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber até executar o código!
       grade3_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você não precisa se preocupar com os favos de mel.
       grade4_artist_freeplay_callout:
@@ -674,8 +783,10 @@ pt-BR:
       grade4_frozen_square_loop3_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
       grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       grade5_artist_freeplay_callout:
@@ -686,6 +797,8 @@ pt-BR:
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
         add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar e, em seguida, arraste-o para sua definição de função
+      grade5_artist_variables_freeplay10_callout:
+        Course_4_Artist_Vars_8_a: Precisa de mais espaço?  Esconda essa barra para tornar a área de codificação mais ampla.
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Arraste a variável de comprimento aqui para substituir os pontos de interrogação
       grade5_artist_variables_pentagons12_callout:
@@ -700,10 +813,15 @@ pt-BR:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
       grade5_playlab_variables1ask_callout:
         arrows_move_actor: Use as setas para mover o personagem
+      grade5_playlab_variables_freeplay_callout:
+        Course_4_Play_Lab_Vars_9_1: Agora todos os seus blocos estão organizados em categorias! Clique em um título para ver as peças dentro.
+      grade5_playlab_variables_jump1_callout:
+        Course_4_Play_Lab_Vars_9_1: Agora todos os seus blocos estão organizados em categorias! Clique em um título para ver as peças dentro.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Você sabia que você pode desenhar por cima de uma linha sempre que precisar?
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: Isto permite que você escolha um som "aleatório", que significa que você não sabe o que você vai obter até que você o ouça!
       small_actors_playlab_projects_callout:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em sua caixa de ferramentas! Arraste blocos para a área de trabalho adicione eles ao seu programa
         New Play Lab Project_callout2: Clique em "Executar" para salvar e executar seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!

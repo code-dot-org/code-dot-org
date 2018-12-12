@@ -105,6 +105,9 @@ uk:
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
           в категорії. Нажми на ці слова, щоб побачити куди все ділось!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Всі твої улюблені боки тепер посортовані
+          в категорії. Нажми на ці слова, щоб побачити куди все ділось!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Грати звук, коли відбувається дана подія.
       Infinity_move_directions_callout:
@@ -182,19 +185,28 @@ uk:
         craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
           завершити?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
           завершити?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Цей код розпочне побудову будинку. Можеш його
+          завершити?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Натисни "Запустити", щоб випробувати програму
       Overworld Place Wall_callout:
         craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Повторюй дії, розміщуючи тут блоки
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Фіолетові квіти можуть мати або 1 нектар, або 0... проте ти
@@ -231,9 +243,14 @@ uk:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Цей код перевіряє наявність лави, можеш додати
           команду, щоб рухатися вперед?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Цей код перевіряє наявність лави, можеш додати
+          команду, щоб рухатися вперед?
       Underground Iron_callout:
         craft_what_is_iron: Добувай це залізо!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Добувай це залізо!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Добувай це залізо!
       aE1_callout:
         aE1_1: Там будуть тільки два з них і два повороти
@@ -327,10 +344,18 @@ uk:
           бути важкими та можуть може потребувати кілька спроб.
         courseC_maze_programming7_2: Ці блоки виробленні з каміння та не можуть бути
           викинутими.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Це твоя перша головоломка виклику! Вони повинні
+          бути важкими та можуть може потребувати кілька спроб.
+        courseC_maze_programming7_2: Ці блоки виробленні з каміння та не можуть бути
+          викинутими.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
           Тобі зовсім не потрібно перевіряти соту.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
+          Тобі зовсім не потрібно перевіряти соту.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
           Тобі зовсім не потрібно перевіряти соту.
       courseD_bee_conditionals2_test_callout:

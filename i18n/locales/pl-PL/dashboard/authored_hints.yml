@@ -770,6 +770,205 @@ pl:
         Course_4_SCV_6_b: 'Zyskasz korzyść z tworzenia 8 różnych zmiennych: czerwony1, zielony1, niebieski1, czerwony2, zielony2, niebieski2, długość oraz boki.'
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          
+          * Ten poziom kończy się po 10 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          
+          * Ten poziom kończy się po 10 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+          
+          * Ten poziom kończy się po 4 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwania **
+          * Wybierz inny utwór do odtwarzania.
+          * Zmień imię swojego tancerza.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+          
+          * Ten poziom kończy się po 4 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwania **
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          
+          * Ten poziom kończy się po 11 taktach.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          
+          * Ten poziom kończy się po 9 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz mieć co najmniej dwóch tancerzy.
+          
+          * Ten poziom kończy się po 5 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          
+          * Ten poziom kończy się po 5 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Zmień odcień przynajmniej jednego tancerza.
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+          
+          * Ten poziom kończy się po 4 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwania **
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Wystarczy być kreatywnym!
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Wystarczy być kreatywnym!
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Wystarczy być kreatywnym!
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          
+          * Ten poziom kończy się po 7 taktach.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+          
+          * Ten poziom kończy się po 8 taktach.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          
+          * Ten poziom kończy się po 12 taktach.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          
+          * Ten poziom kończy się po 10 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          Zmieniaj efekt tła w różnych momentach piosenki, dodając nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+          
+          * Ten poziom kończy się po 12 taktach.*
+      Dance_Party_6_authored_hint:
+        validation: "**Jak przejdę ten poziom?**\n\n* Musisz mieć co najmniej dwóch tancerzy.\n\n* Ten poziom kończy się po 6 taktach.*"
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          
+          * Ten poziom kończy się po 6 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Zmień odcień przynajmniej jednego tancerza.
+          
+          * Ten poziom kończy się po 8 taktach.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Pierwsza podpowiedź.
@@ -788,6 +987,100 @@ pl:
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...
         Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Zobacz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest ** właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+          
+          * Ten poziom kończy się po 4 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwania **
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+          
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          
+          * Ten poziom kończy się po 12 taktach.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          
+          * Ten poziom kończy się po 10 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+          
+          * Ten poziom kończy się po 12 taktach.*
+      HOC Dance 5_draft_authored_hint:
+        validation: "**Jak przejdę ten poziom?**\n\n* Musisz mieć co najmniej dwóch tancerzy.\n\n* Ten poziom kończy się po 6 taktach.*"
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          
+          * Ten poziom kończy się po 6 taktach.*
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+          
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Zmień odcień przynajmniej jednego tancerza.
+          
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+          
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Wystarczy być kreatywnym!
+          
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          
+          * Wystarczy być kreatywnym!
+          
+          * Ten poziom kończy się po 8 taktach.*
       Harvesting_authored_hint:
         pointer_harvester_test: Jaki rodzaj bloku mogę użyć, aby coś sprawdzić i podjąć decyzję?
       Inspirational Artwork_authored_hint:
@@ -950,20 +1243,32 @@ pl:
         mc_8_a: Do wyboru jest kilka ścieżek. Która jest najkrótsza?
         mc_8_b: Wykorzystaj pętlę `repeat` aby uprościć swój kod.
         mc_8_c: Twoim celem jest dojście do wejścia domu na samej górze ekranu.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Do wyboru jest kilka ścieżek. Która jest najkrótsza?
+        mc_8_b: Wykorzystaj pętlę `repeat` aby uprościć swój kod.
+        mc_8_c: Twoim celem jest dojście do wejścia domu na samej górze ekranu.
       Overworld Chop Tree_authored_hint:
         mc_2_a: 'Aby stanąć przed drzewem musisz podwójnie `move forward`.'
         mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: 'Aby stanąć przed drzewem musisz podwójnie `move forward`.'
         mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: 'Aby stanąć przed drzewem musisz podwójnie `move forward`.'
+        mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Trees_authored_hint:
         mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld House Frame Chosen_authored_hint:
         mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld House Frame Chosen_2018_authored_hint:
+        mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
+      Overworld House Frame Chosen_2019_authored_hint:
         mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Place Wall_authored_hint:
@@ -974,18 +1279,29 @@ pl:
         mc_5_a: Na początku użyj bloku `place`, następnie `move`.
         mc_5_b: Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.
         mc_5_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_a: Na początku użyj bloku `place`, następnie `move`.
+        mc_5_b: Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.
+        mc_5_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Overworld Plant Crops_authored_hint:
         mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Plant Crops_2018_authored_hint:
+        mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
+      Overworld Plant Crops_2019_authored_hint:
         mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Powered Minecart_authored_hint:
         mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
       Overworld Powered Minecart_2018_authored_hint:
         mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
+      Overworld Powered Minecart_2019_authored_hint:
+        mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
       Overworld Shear Sheep_authored_hint:
         mc_3_b: 'Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.'
         mc_3_c: 'Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.'
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_b: 'Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.'
+        mc_3_c: 'Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.'
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_b: 'Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.'
         mc_3_c: 'Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.'
       Pattern Bee 1_authored_hint:
@@ -998,11 +1314,17 @@ pl:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji `if` czy po niej?
       Underground Avoiding Lava_2018_authored_hint:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji `if` czy po niej?
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji `if` czy po niej?
       Underground If Statements_authored_hint:
         mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
         mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
         mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
+        mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
+        mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
         mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
         mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. '
@@ -1012,11 +1334,18 @@ pl:
       Underground Iron_2018_authored_hint:
         mc_10_b: Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!
         mc_10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      Underground Iron_2019_authored_hint:
+        mc_10_b: Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!
+        mc_10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Underground Mining Coal_authored_hint:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
+        mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
+        mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
@@ -1565,17 +1894,25 @@ pl:
         courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że umieścisz nad nią jeden blok.
       courseC_artist_loop1_2018_authored_hint:
         courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że umieścisz nad nią jeden blok.
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że umieścisz nad nią jeden blok.
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić ilość jej powtórzeń.
       courseC_artist_loops2a_2018_authored_hint:
+        courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić ilość jej powtórzeń.
+      courseC_artist_loops2a_2019_authored_hint:
         courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić ilość jej powtórzeń.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać się do przodu i do tyłu o taką samą odległość.
       courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać się do przodu i do tyłu o taką samą odległość.
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać się do przodu i do tyłu o taką samą odległość.
       courseC_artist_loopsPre1a_authored_hint:
         courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku `turn`.
       courseC_artist_loopsPre1a_2018_authored_hint:
+        courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku `turn`.
+      courseC_artist_loopsPre1a_2019_authored_hint:
         courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku `turn`.
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 'Jeżeli użyjesz bloku "idź do przodu o 100 pikseli", narysuję linię automatycznie.'
@@ -1599,13 +1936,19 @@ pl:
         courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
       courseC_collector_prog1_2018_authored_hint:
         courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
+      courseC_collector_prog1_2019_authored_hint:
+        courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
       courseC_collector_prog_challenge1_2018_authored_hint:
         courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
+      courseC_collector_prog_challenge1_2019_authored_hint:
+        courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby rozwiązać zagadkę!
       courseC_collector_prog_challenge2_2018_authored_hint:
+        courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby rozwiązać zagadkę!
+      courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby rozwiązać zagadkę!
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
@@ -1613,17 +1956,26 @@ pl:
       courseC_flappy_events2_2018_authored_hint:
         courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
         courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby rozwiązać zagadkę.
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
+        courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby rozwiązać zagadkę.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
       courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
+      courseC_flappy_events3_2019_authored_hint:
         courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
       courseC_flappy_events5_authored_hint:
         courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten poziom.
       courseC_flappy_events5_2018_authored_hint:
         courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten poziom.
+      courseC_flappy_events5_2019_authored_hint:
+        courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten poziom.
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
       courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
+      courseC_flappy_events7_2019_authored_hint:
         courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_c: Jedna pętla będzie powtarzać komendę `move forward`, a inna `pick pumpkin`.
@@ -1677,11 +2029,17 @@ pl:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_b: |-
           Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_b: |-
+          Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_b: |-
           Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -1691,19 +2049,29 @@ pl:
         courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
       courseC_starWars_loops2_2018_authored_hint:
         courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
+      courseC_starWars_loops2_2019_authored_hint:
+        courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w środku: `move forward`.'
       courseC_starWars_loops4_2018_authored_hint:
         courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w środku: `move forward`.'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w środku: `move forward`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś prosto.
       courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś prosto.
+      courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś prosto.
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_b: Jeśli masz problem z tą zagadką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.
@@ -1711,15 +2079,24 @@ pl:
       courseC_starWars_loops7_2018_authored_hint:
         courseC_starWars_loops7_b: Jeśli masz problem z tą zagadką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.
         courseC_starWars_loops7_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops7_2019_authored_hint:
+        courseC_starWars_loops7_b: Jeśli masz problem z tą zagadką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.
+        courseC_starWars_loops7_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną spację dla każdego 0.
       courseD_artist_binary1_2018_authored_hint:
         courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną spację dla każdego 0.
+      courseD_artist_binary1_2019_authored_hint:
+        courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną spację dla każdego 0.
       courseD_artist_binary3_authored_hint:
         courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku rozwiąże tą zagadkę!
       courseD_artist_binary3_2018_authored_hint:
+        courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku rozwiąże tą zagadkę!
+      courseD_artist_binary3_2019_authored_hint:
         courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku rozwiąże tą zagadkę!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
@@ -1730,6 +2107,8 @@ pl:
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11_c: Pamiętaj o umieszczeniu bloku `turn` wewnątrz twojej pętli!
@@ -1746,6 +2125,10 @@ pl:
         courseD_bee_conditionals2_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals2_b: Możesz wykorzystać pętlę `repeat` albo `while path ahead`, aby przejść przez ten labirynt.
         courseD_bee_conditionals2_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals2_b: Możesz wykorzystać pętlę `repeat` albo `while path ahead`, aby przejść przez ten labirynt.
+        courseD_bee_conditionals2_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Potrzebujesz pomocy? Masz tutaj film z podpowiedzią.
         courseD_bee_conditionals2_b: Możesz wykorzystać pętlę `repeat` albo `while path ahead`, aby przejść przez ten labirynt.
@@ -1756,16 +2139,25 @@ pl:
       courseD_bee_conditionals3_2018_authored_hint:
         courseD_bee_conditionals3_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals3_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals3_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals4_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals4_2018_authored_hint:
         courseD_bee_conditionals4_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals4_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals4_2019_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals4_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals5_authored_hint:
         courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals5_2018_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals5_2019_authored_hint:
         courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals6_authored_hint:
@@ -1776,10 +2168,17 @@ pl:
         courseD_bee_conditionals6_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals6_c: Czy jest pętla, której możesz użyć, aby uprościć twój kod?
         courseD_bee_conditionals6_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals6_2019_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals6_c: Czy jest pętla, której możesz użyć, aby uprościć twój kod?
+        courseD_bee_conditionals6_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals7_2019_authored_hint:
         courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals8_authored_hint:
@@ -1787,6 +2186,10 @@ pl:
         courseD_bee_conditionals8_a: "** Pamiętaj: **\n\nTa plansza jest inna za każdym uruchomieniem.\n\nBędziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu."
         courseD_bee_conditionals8_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
+        courseD_bee_conditionals8_a: "** Pamiętaj: **\n\nTa plansza jest inna za każdym uruchomieniem.\n\nBędziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu."
+        courseD_bee_conditionals8_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj film!
         courseD_bee_conditionals8_a: "** Pamiętaj: **\n\nTa plansza jest inna za każdym uruchomieniem.\n\nBędziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu."
         courseD_bee_conditionals8_hintVid2: Obejrzyj ten film, aby otrzymać pomoc w rozwiązaniu tej zagadki.
@@ -1802,6 +2205,9 @@ pl:
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30** i wymaga obrotu w prawo o **60 stopni**.  '
         courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30** i wymaga obrotu w prawo o **120 stopni**. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30** i wymaga obrotu w prawo o **60 stopni**.  '
+        courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30** i wymaga obrotu w prawo o **120 stopni**. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Kwadraty mają boki o długości 100 pikseli, czyli musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
         courseE_artist_functions1_b: To dobrze rysować nakładające się linie do okularów.
@@ -1815,6 +2221,12 @@ pl:
           - przesunąć się do przodu o 100 + 75 pikseli
           - ponownie użyć funkcji
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Twój program powinien:
+          - uzyć funkcji, 
+          - przesunąć się do przodu o 100 + 75 pikseli
+          - ponownie użyć funkcji
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Twój program powinien:
           - uzyć funkcji, 

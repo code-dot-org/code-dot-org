@@ -6,7 +6,7 @@ zh-CN:
         text: 在 {TIMESTAMP} {UNIT} 后
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_changeColorBy:
         text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
@@ -32,19 +32,19 @@ zh-CN:
             '"SHARK"': 所有鲨鱼
             '"UNICORN"': 所有独角兽
           MOVE:
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
+            '"rand"': 随机
+            MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
-            MOVES.Clown: 江南
             MOVES.Dab: 轻拍
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
-            MOVES.Fresh: 新鲜
-            MOVES.Roll: 身体转动
-            MOVES.Kick: 星星
-            MOVES.ThisOrThat: 这个或那个
-            '"next"': "(下一步)"
-            '"prev"': "(前一步)"
-            '"rand"': 随机
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
           DIR:
             '1': "→"
@@ -53,20 +53,20 @@ zh-CN:
         text: "{SPRITE} 一直重复 {MOVE} {DIR}"
         options:
           MOVE:
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
+            '"rand"': 随机
+            MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
-            MOVES.Clown: 江南
             MOVES.Dab: 轻拍
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
-            MOVES.Fresh: 新鲜
-            MOVES.Roll: 身体转动
-            MOVES.Kick: 星星
-            MOVES.ThisOrThat: 这个或那个
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
             MOVES.Thriller: 僵尸
-            '"next"': "(下一步)"
-            '"prev"': "(前一步)"
-            '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
             '1': "→"
@@ -98,16 +98,17 @@ zh-CN:
             '"SHARK"': 所有鲨鱼
             '"UNICORN"': 所有独角兽
           MOVE:
+            '"rand"': 随机
+            MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
-            MOVES.Clown: 江南
             MOVES.Dab: 轻拍
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
-            MOVES.Fresh: 新鲜
-            MOVES.Roll: 身体转动
-            MOVES.Kick: 星星
-            MOVES.ThisOrThat: 这个或那个
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
           DIR:
             '1': "→"
@@ -116,16 +117,17 @@ zh-CN:
         text: "{SPRITE} 重复 {MOVE} {DIR} 一次"
         options:
           MOVE:
+            '"rand"': 随机
+            MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
-            MOVES.Clown: 江南
             MOVES.Dab: 轻拍
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
-            MOVES.Fresh: 新鲜
-            MOVES.Roll: 身体转动
-            MOVES.Kick: 星星
-            MOVES.ThisOrThat: 这个或那个
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
           DIR:
             '1': "→"
@@ -136,13 +138,13 @@ zh-CN:
         text: '每次 {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_everySecondsRange:
         text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
         options:
           UNIT:
-            measures: 衡量
+            measures: 节拍
             seconds: 秒
       Dancelab_everyVerseChorus:
         text: '每个 {UNIT} '
@@ -155,8 +157,8 @@ zh-CN:
         options:
           RANGE:
             '"low"': 低音
-            '"mid"': 中
-            '"high"': 高音
+            '"mid"': 中音音量
+            '"high"': 高音音量
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -172,7 +174,7 @@ zh-CN:
         text: "{UNIT} 当前时间"
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_ifDanceIs:
         text: |-
@@ -186,10 +188,10 @@ zh-CN:
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
-            MOVES.Fresh: 新鲜
+            MOVES.Fresh: 双手画圈
             MOVES.Roll: 身体转动
-            MOVES.Kick: 星星
-            MOVES.ThisOrThat: 这个或那个
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
       Dancelab_ifTime:
         text: |-
@@ -197,7 +199,7 @@ zh-CN:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
           OP:
             '">"': ">"
@@ -250,6 +252,7 @@ zh-CN:
             '"ALIEN"': 外星人
             '"BEAR"': 玩具熊
             '"CAT"': 猫
+            '"DOG"': 狗
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
             '"MOOSE"': 驼鹿
@@ -271,7 +274,7 @@ zh-CN:
       Dancelab_makeNewDanceSpriteGroup:
         text: 在 {LAYOUT} 创造 {N} 新的 {COSTUME}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -316,7 +319,7 @@ zh-CN:
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} 度量"
+        text: "{N} 个节拍"
       Dancelab_onPointerDown:
         text: 当指针按下时
       Dancelab_onPointerDrag:
@@ -328,7 +331,7 @@ zh-CN:
       Dancelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
+        text: 设置背景效果 {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
@@ -339,9 +342,37 @@ zh-CN:
             '"splatter"': 气泡
             '"swirl"': 催眠
             '"snowflakes"': 雪
-            '"text"': 歌曲标题
             '"spiral"': 螺旋
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": 随机
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": 随机
+      Dancelab_setBackgroundEffectWithPalette:
+        text: 设置背景效果 {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"circles"': 隧道
+            '"color_cycle"': 颜色
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 油漆飞溅
+            '"rainbow"': 彩虹
+            '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"default"': 光
+            '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
       Dancelab_setDanceSpeed:
         text: 将 {SPRITE} 跳舞速度改为 {SPEED}
         options:
@@ -382,6 +413,22 @@ zh-CN:
             '"raining_tacos"': 玉米卷
             '"spotlight"': 聚光灯
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": 随机
+      Dancelab_setForegroundEffectExtended:
+        text: 设置前景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"bubbles"': 气泡
+            '"confetti"': 彩纸屑
+            '"hearts_red"': 心
+            '"music_notes"': 音符
+            '"pineapples"': 菠萝
+            '"smiling_poop"': 便便
+            '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
+            '"spotlight"': 聚光灯
+            '"raining_tacos"': 玉米卷
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -445,6 +492,8 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+      Dancelab_setTintInline:
+        text: 设置 {SPRITE} 色调为 {VAL}
       Dancelab_setVisible:
         text: 设置 {SPRITE} 可见度为 {VISIBILITY}
         options:
@@ -483,8 +532,8 @@ zh-CN:
             '"tint"': 色调
           RANGE:
             '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
       Dancelab_stopMapping:
         text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
         options:
@@ -499,8 +548,8 @@ zh-CN:
             '"tint"': 色调
           RANGE:
             '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
       Dancelab_whenKey:
         text: 当 {KEY} 按下时
         options:
@@ -528,14 +577,15 @@ zh-CN:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高
         options:
           RANGE:
             '0': 低音
-            '1': 中
-            '2': 高音
+            '1': 中音音量
+            '2': 高音音量
       Dancelab_whenSetup:
         text: 设置
       Dancelab_whenSetupSong:
@@ -946,6 +996,23 @@ zh-CN:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': 所有
       Mikelab_edgesDisplace:
         text: 边缘模块阻止了 {SPRITE} 移动
       Mikelab_eval:
@@ -1075,8 +1142,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-      aalab_createNewSpriteAdvanced:
-        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       aalab_createPropertyGroup:
         text: |-
           创建一个叫做 {VAR} 的精灵组
@@ -1094,8 +1159,6 @@ zh-CN:
             '"direction"': 移动方向
             '"rotation"': 旋转或方向
             '"tint"': 色调
-      aalab_whenTouchingAdvanced:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
       craft_ifPath:
         text: |-
           如果路径 {DIR}

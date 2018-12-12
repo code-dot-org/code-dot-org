@@ -3659,13 +3659,6 @@ nl:
           **Extra uitdaging**
 
           Verander het achtergrondeffect op verschillende momenten door het nieuwe blok te verbinden onder de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> gebeurtenissen.
-      Dance_Party_05_authored_hint:
-        validation: |-
-          **Hoe haal ik dit level?**
-
-          * Je danser moet verschillende moves doen gedurende de eerste 12 maten van het liedje.
-
-          *Dit level eindigt na 12 maten.*
       Dance_Party_06_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
@@ -3714,7 +3707,7 @@ nl:
           * De eigenschappen van twee of meer dansers moeten wijzigen.
 
           *Dit level eindigt na 8 maten.*
-      Dance_Party_11.5_authored_hint:
+      Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
@@ -3722,6 +3715,13 @@ nl:
 
           *Dit level eindigt na 8 maten.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Wees creatief!
+
+          *Dit level eindigt na 8 maten.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
@@ -4219,11 +4219,17 @@ nl:
         mc_6_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
+      Overworld House Frame Chosen_2019_authored_hint:
+        mc_6_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.
         mc_1_b: Wees er zeker van dat beide `beweeg voorwaarts` blokken geplakt zijn
           aan het `als gestart` blok.
       Overworld Move to Sheep_2018_authored_hint:
+        mc_1_a: Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.
+        mc_1_b: Wees er zeker van dat beide `beweeg voorwaarts` blokken geplakt zijn
+          aan het `als gestart` blok.
+      Overworld Move to Sheep_2019_authored_hint:
         mc_1_a: Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.
         mc_1_b: Wees er zeker van dat beide `beweeg voorwaarts` blokken geplakt zijn
           aan het `als gestart` blok.
@@ -4235,13 +4241,21 @@ nl:
         mc_5_a: Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.
         mc_5_b: Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat
           de code meer dan één keer wordt uitgevoerd.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_a: Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.
+        mc_5_b: Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat
+          de code meer dan één keer wordt uitgevoerd.
       Overworld Plant Crops_authored_hint:
         mc_7_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
       Overworld Plant Crops_2018_authored_hint:
         mc_7_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_c: Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.
       Overworld Powered Minecart_authored_hint:
         mc_13_b: Gebruik `herhaal` lussen om je code in te korten.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_b: Gebruik `herhaal` lussen om je code in te korten.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_b: Gebruik `herhaal` lussen om je code in te korten.
       Pattern Bee 1_authored_hint:
         turn_at_honeycomb_pointer: Naast honing maken, is er iets anders dat je moet
@@ -5407,6 +5421,9 @@ nl:
       courseC_collector_prog1_2018_authored_hint:
         courseC_collector_prog1_b: De simpelste oplossing is éénmaal voorwaarts te
           bewegen, en de schat te nemen.
+      courseC_collector_prog1_2019_authored_hint:
+        courseC_collector_prog1_b: De simpelste oplossing is éénmaal voorwaarts te
+          bewegen, en de schat te nemen.
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Een oplossing van deze puzzel lijkt
           op een zig-zag. Een andere manier lijkt op een spiraal! Er zijn vele verschillende
@@ -5430,9 +5447,14 @@ nl:
       courseC_maze_programming5_2018_authored_hint:
         courseC_maze_programming5_c: De oplossing bevat twee `beweeg voorwaarts` blokken,
           één draai en nog eens twee `beweeg voorwaarts` blokken.
+      courseC_maze_programming5_2019_authored_hint:
+        courseC_maze_programming5_c: De oplossing bevat twee `beweeg voorwaarts` blokken,
+          één draai en nog eens twee `beweeg voorwaarts` blokken.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
+      courseC_maze_programming6_2019_authored_hint:
         courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_b: |-
@@ -5442,13 +5464,23 @@ nl:
         courseC_maze_programming_challenge2_b: |-
           De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
+        courseC_maze_programming_challenge2_b: |-
+          De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
           een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
       courseC_starWars_loops5_2018_authored_hint:
         courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
           een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
+      courseC_starWars_loops5_2019_authored_hint:
+        courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
+          een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_binary_challenge3_authored_hint:
@@ -5472,12 +5504,22 @@ nl:
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
 
           Als je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
+
+          Als je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: |-
           **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
 
           Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
           **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
 
@@ -5686,6 +5728,62 @@ nl:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2_2019_authored_hint:
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Oplossing:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseD_scrat_ramp7_authored_hint:
@@ -5698,6 +5796,11 @@ nl:
         courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
           ** en draait naar rechts met ** 120 graden **.
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
+          van 30 ** en draait rechts met ** 60 graden **.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
+          ** en draait naar rechts met ** 120 graden **.
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
           van 30 ** en draait rechts met ** 60 graden **.
         courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
@@ -5721,6 +5824,12 @@ nl:
           - 100 + 75 pixels vooruit bewegen
           - functie gebruiken
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Je programma: moet:
+          - functie gebruiken
+          - 100 + 75 pixels vooruit bewegen
+          - functie gebruiken
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Je programma: moet:
           - functie gebruiken

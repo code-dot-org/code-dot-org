@@ -30,17 +30,18 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           MOVE:
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
-            MOVES.ThisOrThat: Dit of dat.
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
+            MOVES.Roll: Bodyroll
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -49,16 +50,16 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
           MOVE:
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
-            MOVES.ThisOrThat: Dit of dat.
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
+            MOVES.Roll: Bodyroll
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -88,13 +89,15 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           MOVE:
+            '"rand"': "(Willekeurig)"
+            MOVES.Roll: Bodyroll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
@@ -104,12 +107,13 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
+            '"rand"': "(Willekeurig)"
+            MOVES.Roll: Bodyroll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           DIR:
@@ -158,10 +162,10 @@ nl:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double Jam
+            MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
-            MOVES.Roll: Rol
-            MOVES.Kick: Trap
+            MOVES.Roll: Bodyroll
+            MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
       Dancelab_ifTime:
@@ -198,11 +202,15 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           FORMAT:
+            '"border"': grens
+            '"inner"': binnenkant vierkant
             '"circle"': cirkel
             '"grid"': raster
             '"row"': rij
             '"column"': kolom
+            '"x"': kriskras
             '"random"': willekeurig
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -213,6 +221,7 @@ nl:
             '"ALIEN"': Buitenaards wezen
             '"BEAR"': Beer
             '"CAT"': Kat
+            '"DOG"': Hond
             '"DUCK"': Eend
             '"FROG"': Kikker
             '"MOOSE"': Eland
@@ -235,7 +244,7 @@ nl:
           Maak {N} nieuw {COSTUME}
           in een {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -267,10 +276,13 @@ nl:
             '"SHARK"': Haaien
             '"UNICORN"': Eenhoorns
           LAYOUT:
+            '"border"': grens
+            '"inner"': binnenkant vierkant
             '"circle"': cirkel
             '"grid"': raster
             '"row"': rij
             '"column"': kolom
+            '"x"': kriskras
             '"random"': willekeurig
       Dancelab_mixColors:
         text: Meng {COLOR1} en {COLOR2}
@@ -294,7 +306,30 @@ nl:
             '"disco"': Vierkanten
             '"rainbow"': Kleuren
             '"diamonds"': Ruiten
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Willekeurig)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Willekeurig)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
+        options:
+          EFFECT:
+            '"none"': Geen
+            '"rand"': "(Willekeurig)"
+            '"circles"': Tunnel
+            '"diamonds"': Ruiten
+            '"disco_ball"': Discobal
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"splatter"': Verfspetters
+            '"rainbow"': Kleuren
+            '"text"': Titel van het lied
+            '"sparkles"': Twinkelingen
+            '"disco"': Vierkanten
+            '"stars"': Sterren
+          PALETTE:
+            '"rave"': Zwart-wit
+            '"cool"': Blauw
+            '"default"': Licht
+            '"tropical"': Tropisch
+            '"warm"': Rood
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -318,6 +353,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           SPEED:
             '1': normaal
             '2': snel
@@ -332,6 +368,19 @@ nl:
             '"rain"': Regen
             '"raining_tacos"': Taco‘s
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Willekeurig)"
+      Dancelab_setForegroundEffectExtended:
+        text: stel {EFFECT} in als voorgrondeffect
+        options:
+          EFFECT:
+            '"none"': Geen
+            '"rand"': "(Willekeurig)"
+            '"hearts_red"': Hartjes
+            '"music_notes"': Muzieknoten
+            '"pineapples"': Ananassen
+            '"smiling_poop"': Poep
+            '"rain"': Regen
+            '"floating_rainbows"': Regenboog
+            '"raining_tacos"': Taco‘s
       Dancelab_setProp:
         text: 'stel {SPRITE} {PROPERTY} in op {VAL} '
         options:
@@ -357,6 +406,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
@@ -390,7 +440,10 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+      Dancelab_setTintInline:
+        text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setVisible:
+        text: stel {SPRITE} zichtbaarheid in op {VISIBILITY}
         options:
           VISIBILITY:
             'true': zichtbaar
@@ -410,6 +463,7 @@ nl:
             '"PINEAPPLE"': alle ananassen
             '"ROBOT"': alle robots
             '"SHARK"': alle haaien
+            '"UNICORN"': alle eenhoorns
           VISIBILITY:
             'true': zichtbaar
             'false': onzichtbaar
@@ -444,6 +498,7 @@ nl:
             '"right"': rechts
             '"space"': ruimte
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: als {RANGE} piek
       gamelab_changeColor:
@@ -588,6 +643,22 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': alles
       Mikelab_getProp:
         options:
           PROPERTY:

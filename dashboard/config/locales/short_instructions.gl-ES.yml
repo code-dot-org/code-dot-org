@@ -2266,6 +2266,8 @@ gl:
         polos Creepers e chega a túa casa con seguranza.
       Overworld Avoid Monsters_2018: Non é unha boa idea topar cun Creeper. Pasa con
         coidado polos Creepers e chega a túa casa con seguranza.
+      Overworld Avoid Monsters_2019: Non é unha boa idea topar cun Creeper. Pasa con
+        coidado polos Creepers e chega a túa casa con seguranza.
       Overworld Chop Tree - allthethings: A madeira é un recurso moi importante. Moitas
         cousas son feitas con ela. Anda até a árbore e usa o comando "destruír bloque"
         para derrubala.
@@ -2274,13 +2276,20 @@ gl:
       Overworld Chop Tree_2018: A madeira é un recurso moi importante. Moitas cousas
         son feitas con ela. Anda até a árbore e usa o comando "destruír bloque" para
         derrubala.
+      Overworld Chop Tree_2019: A madeira é un recurso moi importante. Moitas cousas
+        son feitas con ela. Anda até a árbore e usa o comando "destruír bloque" para
+        derrubala.
       Overworld Chop Trees: Precisamos construír unha casa antes que o sol se poña.
         As casas utilizan moita madeira. Corta as 3 árbores.
       Overworld Chop Trees_2018: Precisamos construír unha casa antes que o sol se
         poña. As casas utilizan moita madeira. Corta as 3 árbores.
+      Overworld Chop Trees_2019: Precisamos construír unha casa antes que o sol se
+        poña. As casas utilizan moita madeira. Corta as 3 árbores.
       Overworld Free Play 20x20: Parabéns! Concluíches todas as nosas tarefas! Agora
         constrúe e crea algo único, usando todo que xa aprendiches.
       Overworld Free Play 20x20_2018: Parabéns! Concluíches todas as nosas tarefas!
+        Agora constrúe e crea algo único, usando todo que xa aprendiches.
+      Overworld Free Play 20x20_2019: Parabéns! Concluíches todas as nosas tarefas!
         Agora constrúe e crea algo único, usando todo que xa aprendiches.
       Overworld House Frame Chosen: |-
         Constrúe o resto da túa casa co
@@ -2288,9 +2297,14 @@ gl:
       Overworld House Frame Chosen_2018: |-
         Constrúe o resto da túa casa co
         material que queiras. O comando "repita" vai ser ben útil.
+      Overworld House Frame Chosen_2019: |-
+        Constrúe o resto da túa casa co
+        material que queiras. O comando "repita" vai ser ben útil.
       Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar
         á ovella.
       Overworld Move to Sheep_2018: Agrega un segundo comando "andar adiante" para
+        chegar á ovella.
+      Overworld Move to Sheep_2019: Agrega un segundo comando "andar adiante" para
         chegar á ovella.
       Overworld Place Wall: Toda casa comeza cunha parede. Constrúe a primeira parte
         da túa casa colocando os comandos "colocar" e "andar adiante" dentro do bucle
@@ -2298,9 +2312,14 @@ gl:
       Overworld Place Wall_2018: Toda casa comeza cunha parede. Constrúe a primeira
         parte da túa casa colocando os comandos "colocar" e "andar adiante" dentro
         do bucle de repetición.
+      Overworld Place Wall_2019: Toda casa comeza cunha parede. Constrúe a primeira
+        parte da túa casa colocando os comandos "colocar" e "andar adiante" dentro
+        do bucle de repetición.
       Overworld Plant Crops: É sempre bon pensar no futuro. Cultiva nos dous lados
         da auga para non pasar fame despois.
       Overworld Plant Crops_2018: É sempre bon pensar no futuro. Cultiva nos dous
+        lados da auga para non pasar fame despois.
+      Overworld Plant Crops_2019: É sempre bon pensar no futuro. Cultiva nos dous
         lados da auga para non pasar fame despois.
       Overworld Powered Minecart: Óptimo traballo! Colleitaches varios recursos e
         construíches unha casiña modesta. Agora constrúe o paso desde o bordo do mapa
@@ -2308,9 +2327,14 @@ gl:
       Overworld Powered Minecart_2018: Óptimo traballo! Colleitaches varios recursos
         e construíches unha casiña modesta. Agora constrúe o paso desde o bordo do
         mapa até a porta da túa casa.
+      Overworld Powered Minecart_2019: Óptimo traballo! Colleitaches varios recursos
+        e construíches unha casiña modesta. Agora constrúe o paso desde o bordo do
+        mapa até a porta da túa casa.
       Overworld Shear Sheep: Hora de rapar ovellas! Usa o comando "tosquiar" para
         obter lá das dúas ovellas.
       Overworld Shear Sheep_2018: Hora de rapar ovellas! Usa o comando "tosquiar"
+        para obter lá das dúas ovellas.
+      Overworld Shear Sheep_2019: Hora de rapar ovellas! Usa o comando "tosquiar"
         para obter lá das dúas ovellas.
       PDK5 Conditionals 1: |-
         As flores moradas poden ter 1 ou 0
@@ -2407,10 +2431,16 @@ gl:
       Underground Avoiding Lava_2018: Hai lava escondida baixo algúns destes bloques,
         que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega
         un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
+      Underground Avoiding Lava_2019: Hai lava escondida baixo algúns destes bloques,
+        que precisarás cubrir antes de avanzar. Aquí será útil un comando "se". Agrega
+        un comando "andar cara adiante" no sitio correcto para extraer estes bloques.
       Underground If Statements: Agora a situación complicouse un pouco. Extrae 3
         pedras de lava, pero non caias na lava. Usa un comando "se" para colocar paralelepípedos
         sobre calquera lava que descubras.
       Underground If Statements_2018: Agora a situación complicouse un pouco. Extrae
+        3 pedras de lava, pero non caias na lava. Usa un comando "se" para colocar
+        paralelepípedos sobre calquera lava que descubras.
+      Underground If Statements_2019: Agora a situación complicouse un pouco. Extrae
         3 pedras de lava, pero non caias na lava. Usa un comando "se" para colocar
         paralelepípedos sobre calquera lava que descubras.
       Underground Iron: Non é unha boa idea tentar andar sobre lava incandescente.
@@ -2419,10 +2449,16 @@ gl:
       Underground Iron_2018: Non é unha boa idea tentar andar sobre lava incandescente.
         Coloca os paralelepípedos para crear unha ponte, despois extrae polo menos
         dous dos bloques de ferro.
+      Underground Iron_2019: Non é unha boa idea tentar andar sobre lava incandescente.
+        Coloca os paralelepípedos para crear unha ponte, despois extrae polo menos
+        dous dos bloques de ferro.
       Underground Mining Coal: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
       Underground Mining Coal_2018: Atoparás os recursos máis valiosos no subterráneo,
+        pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
+        menos 2 carbóns.
+      Underground Mining Coal_2019: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
       aE7: |-
@@ -2544,10 +2580,18 @@ gl:
         número 0) e \"ligado\" (representada polo número 1).  \r\n\r\nDamos unha grade
         de \"pixels\" pola cal podes andar e crear\ndebuxos virando en certos cadrados.
         Podes facer que o artista debuxe\n\"01010101\" en binario na primeira fileira?"
+      courseD_artist_binary1_2019: "O Binario é unha forma de representar informacións\nusando
+        só dúas opcións. Aquí imos usar as opcións \"desligado\" (representada\npolo
+        número 0) e \"ligado\" (representada polo número 1).  \r\n\r\nDamos unha grade
+        de \"pixels\" pola cal podes andar e crear\ndebuxos virando en certos cadrados.
+        Podes facer que o artista debuxe\n\"01010101\" en binario na primeira fileira?"
       courseD_artist_binary4: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
       courseD_artist_binary4_2018: |-
+        Podes debuxar este padrón usando
+        a repetición dunha tira binaria de 3 díxitos?
+      courseD_artist_binary4_2019: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
       courseD_artist_binary6: |-
@@ -2556,10 +2600,16 @@ gl:
       courseD_artist_binary6_2018: |-
         Que tira binaria de 6 díxitos, repetida
         11 veces, vai debuxar esta imaxe?
+      courseD_artist_binary6_2019: |-
+        Que tira binaria de 6 díxitos, repetida
+        11 veces, vai debuxar esta imaxe?
       courseD_artist_binary7: |-
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_artist_binary7_2018: |-
+        Cal é a menor tira binaria que
+        podes repetir para debuxar esta imaxe?
+      courseD_artist_binary7_2019: |-
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_autorun_binary4_2019: |-
@@ -2635,6 +2685,8 @@ gl:
         25 pixels menor que a lonxitude do cadrado.
       courseE_bee_concept1: "Recolle todo o néctar de cada flor.\nUsa un bucle aniñado. "
       courseE_bee_concept1_2018: "Recolle todo o néctar de cada flor.\nUsa un bucle
+        aniñado. "
+      courseE_bee_concept1_2019: "Recolle todo o néctar de cada flor.\nUsa un bucle
         aniñado. "
       courseE_bee_functions1: Recolle todo o néctar de cada flor.
       courseE_bee_functions1_2018: Recolle todo o néctar de cada flor.

@@ -132,17 +132,25 @@ bs:
         craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
       Overworld Place Wall_callout:
         craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
       Rock Paper Scissors_callout:
         New Play Lab Project_callout2: Klikni na "Pokreni" da snimis i pokreneš svoj program
@@ -152,9 +160,13 @@ bs:
         craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?
       Underground Iron_callout:
         craft_what_is_iron: Iskopaj ovo željezo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Iskopaj ovo željezo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Iskopaj ovo željezo!
       WebLab PS test - 1-12_callout:
         version_history_button: Pogledajte povijest verzija
@@ -197,9 +209,13 @@ bs:
         courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
       courseE_artist_functions_challenge1_2018_callout:
         courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout2: Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Ovaj broj možete promijeniti.

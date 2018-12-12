@@ -486,22 +486,26 @@ es-MX:
         CSF_harvester_loops_K1: Ciclos en Harvester
         CSF_scrat_loops_K1: Ciclos en Ice Age
         CSF_scrat_loops_CF: Ciclos en Ice Age
-        CSF_if_allskins: El Bloque If
-        CSF_ifelse_allskins: Usando Bloques "If/Else"
-        CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
+        CSF_if_allskins: El Bloque si
+        CSF_ifelse_allskins: Usando Bloques "Si/Más"
+        CSF_ifelseifelse_allskins: Usando Bloques Si/El mismo/Más
         CSF_loops_AB: Bucles
         csd_gamelab_booleans: Expresiones Booleanas
         csd_gamelab_conditional_statements: Sentencias Condicionales
-        csd_gamelab_if_else: Sentencias If/Else
-        CSF_SpriteLabIntro_CDEF: Este es el Sprite lab
-        CSF_Spritelab_MakeSprite_CDEF: Como hacer un Sprite en el Sprite lab
-        CDEF_Video_SpritesInAction: Sprites en accion
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en accion
-        CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
-        mc_2018_intro: 'Minecraft: Viaje acuático introducción'
-        MC_2018_loops: 'Minecraft: Viaje acuático introducción'
-        mc_2018_conditionals: 'Minecraft: Viaje acuático introducción'
-        mc_2018_closing: 'Minecraft: Viaje acuático introducción'
+        csd_gamelab_if_else: Sentencias Si/Más
+        CSF_SpriteLabIntro_CDEF: Esto es Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Como hacer un Sprite en Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites en Acción
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en Acción
+        CSF_StarWars_ProjectIntro: Introducción al Proyecto de Star Wars
+        mc_2018_intro: 'Minecraft: Viaje Acuático Introducción'
+        MC_2018_loops: 'Minecraft: Viaje Acuático Repetir Hasta'
+        mc_2018_conditionals: 'Minecraft: Viaje Acuático Condicionales'
+        mc_2018_closing: 'Minecraft: Viaje Acuático Felicitaciones'
+        hoc_dance_warmup: Fiesta de Baile - Calentamiento
+        hoc_dance_events: Fiesta de Baile - Eventos
+        hoc_dance_properties: Fiesta de Baile - Propiedades
+        hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

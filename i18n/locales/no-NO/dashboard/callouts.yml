@@ -13,7 +13,7 @@
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Klikk og dra et "Tekstfelt" inn i skjermen
-        screenSelectorCallout3: Vel skjermen du lagde
+        screenSelectorCallout3: Velg skjermen du lagde
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: Dette er skjermvelgeren
         changePlace1ID: Endre id-en til skjermen din her.
@@ -34,7 +34,7 @@
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Ble skjermen grønn? Hvis den ble det, klikk 'Fullfør'. Hvis ikke, klikk 'Nullstill', endre koden og klikk 'Kjør' igjen.
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: Du er nå i Design modus.
+        AppLabHoCFinal11: Du er nå i Designmodus.
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Endre antall her
       CSD U3 Variables Predict Where XY Embed_callout:
@@ -110,11 +110,11 @@
       Course 4 Artist 4_callout:
         repeat_full_circle: Angi hvor mange ganger zombien må flytte seg for å lage en full sirkel
       Course 4 Artist 7_callout:
-        repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks: Bruk «Gjenta»-blokken og legg den rundt blokkene i arbeidsområdet
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Dra teller-variabelen din inn i denne blokken
       Course 4 Artist Functions 4_callout:
-        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.
+        create_function: Klikk her for å åpne "Funksjoner"-menyen og klikk deretter "Opprette en funksjon"-knappen.
       Course 4 Artist Functions 5 OLD_callout:
         house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse det i den neste oppgaven.
       Course 4 Artist Functions 8_callout:
@@ -124,9 +124,9 @@
       Course 4 Artist Params 2_callout:
         length_parameter: Kan du oppdatere denne funksjonen slik at den bruker parameteret "lengde"?
       Course 4 Artist Params 4_callout:
-        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.
+        create_function: Klikk her for å åpne "Funksjoner"-menyen og klikk deretter "Opprette en funksjon"-knappen.
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks: Bruk «Gjenta»-blokken og legg den rundt blokkene i arbeidsområdet
       Course 4 Artist Vars 10_callout:
         set_sides: Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .
       Course 4 Artist Vars 12_callout:
@@ -146,9 +146,9 @@
       Course 4 Bee 3_callout:
         if_else_bee: Bruk "hvis/ellers"-blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst
       Course 4 Bee For Loops 1_callout:
-        get_nectar: Bruk den nye "få nektar" blokken.
+        get_nectar: Bruk den nye "få nektar"-blokken.
       Course 4 Bee For Loops 6_callout:
-        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.
+        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger"-blokkene er her nå.
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen som bien skal snu for å få nektar.
       Course 4 Bee Params 4 - Two WhenRun_callout:
@@ -194,6 +194,8 @@
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
@@ -248,13 +250,13 @@
         NEW_Course_4_Artist_Functions_3_1: Klikk her for å redigere den nye funksjonen slik at den lager en firkant.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Klikk her for å redigere funksjonen.
-        function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn en firkant"-blokken
+        function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn et kvadrat"-blokken
       NEW Course 4 Artist Functions 7_callout:
         edit_function: Klikk her for å redigere funksjonen.
       NEW Course 4 Artist Functions 8_callout:
         edit_function: Klikk her for å redigere funksjonen.
       NEW Course 4 Artist Params 10_callout:
-        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.
+        create_function: Klikk her for å åpne "Funksjoner"-menyen og klikk deretter "Opprette en funksjon"-knappen.
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen din
         add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på Legg til og dra den deretter til funksjonsdefinisjonen din
@@ -263,7 +265,7 @@
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop: Angi det største antallet nektar som du ønsker at bien skal samle her
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.
+        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger"-blokkene er her nå.
       New Artist Project_callout:
         New Artist Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
         New Artist Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
@@ -278,9 +280,13 @@
         craft_callout_preplaced: Vi har plassert noen blokker her slik at du kommer i gang
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Vi har plassert noen blokker her slik at du kommer i gang
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Vi har plassert noen blokker her slik at du kommer i gang
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Denne koden starter byggingen av huset ditt. Kan du fullføre det?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Denne koden starter byggingen av huset ditt. Kan du fullføre det?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Denne koden starter byggingen av huset ditt. Kan du fullføre det?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Trykk på "Kjør" for å prøve programme
@@ -288,9 +294,14 @@
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Trykk på "Kjør" for å prøve programme
         craft_drag_block_callout: Dra en "flytt fremover"-blokk og plasser den under den andre blokken
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Trykk på "Kjør" for å prøve programme
+        craft_drag_block_callout: Dra en "flytt fremover"-blokk og plasser den under den andre blokken
       Overworld Place Wall_callout:
         craft_inside_repeat: Gjenta handlinger ved å plassere blokker her
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Gjenta handlinger ved å plassere blokker her
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Gjenta handlinger ved å plassere blokker her
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Klikk her for å vise rutenett.
@@ -314,6 +325,8 @@
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
@@ -351,9 +364,13 @@
         craft_callout_moveforward: Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Denne koden vil se etter lava. Kan du legge inn en kommando for å flytte fremover?
       Underground Iron_callout:
         craft_what_is_iron: Utvinn dette jernet!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Utvinn dette jernet!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Utvinn dette jernet!
       WebLab PS test - 1-12_callout:
         version_history_button: Sjekk versjonshistorikk
@@ -487,13 +504,19 @@
         courseC_artist_loopsPrePre1a_1: Start med å bruke denne blokka for å få kunstneren til midten av skjermen.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Start med å bruke denne blokka for å få kunstneren til midten av skjermen.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Start med å bruke denne blokka for å få kunstneren til midten av skjermen.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Tallet fire på gresskaret forteller deg at det er fire gresskar igjen å bruke.
@@ -511,27 +534,39 @@
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke.
       courseC_maze_programming4_2018_callout:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke.
+      courseC_maze_programming4_2019_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_2: Klikk her for å skrive inn antall ganger du vil gjenta koden.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
@@ -593,11 +628,17 @@
         courseE_farmer_functions1_2: Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig.
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
+      courseE_farmer_functions13_2019_callout:
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions1a_2018_callout:
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
+      courseE_farmer_functions1a_2019_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions2a_callout:
         courseE_farmer_functions2a_2: Denne koden ser kanskje ikke helt lik ut som den du skrev, men den får jobben gjort!
@@ -606,6 +647,8 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions2b_2018_callout:
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
+      courseE_farmer_functions2b_2019_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.

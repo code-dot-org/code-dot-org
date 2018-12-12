@@ -1108,6 +1108,9 @@ pt-BR:
         simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
         Clique em "Executar" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que
         você quiser e depois clique em Concluir para seguir em frente.
+      Big Game Animation 2 (copy 1): |-
+        A função "atualize-alvo" recebe o atual valor de x do alvo e retorna um valor atualizado. Complete a função "atualize-alvo" para que ela some ao valor de x toda vez que ela
+        for chamada. Quanto mais você adicionar ao x, mais rápido o alvo será.
       Big Game Animation 2: |-
         A função "atualize-alvo" recebe o
         valor atual de x do alvo e retorna um valor atualizado. Complete a função "atualize-alvo"
@@ -1289,6 +1292,7 @@ pt-BR:
       CSD Hackathon Week 2: "(Clique para ver todas as instruções)"
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
+      CSD U3 Simple Drawing - Personal Animation: FAÇA isso
       CSD U3 Sprites intro sprites: Faça isso
       CSD U3 Sprites intro sprites_2018 - Validation Test: Faça isso
       CSD U3 Sprites intro sprites_2018: Faça isso
@@ -1346,11 +1350,43 @@ pt-BR:
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      CSDU4 - Design Mode - 8: Mova o botão para o meio da tela. (Clique aqui para
+        ver todas as instruções)
       CSDU4 nameAgeTemplate: |-
         Introdução de textInput, getText
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
+      CSDU6 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e mostre
+        uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
+        numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 - for loop - color buttons with for: Mostre o conteúdo da lista na tela
+        em ordem numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 - for loop - color buttons: Mostre o conteúdo da lista na tela em ordem
+        numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 - for loop - why for: Mostre o conteúdo da lista na tela em ordem numérica.
+        (Clique aqui para ver todas as instruções)
+      CSDU6 arrays rainbow: Mostre o conteúdo da lista na tela em ordem numérica.
+        (Clique aqui para ver todas as instruções)
+      CSDU6 arrays random: Escreva um programa que escolha e mostre uma cor aleatória
+        do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select icons: Escreva um programa que escolha e mostre uma cor
+        aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select rainbow: Mostre o conteúdo da lista na tela em ordem numérica.
+        (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select rainbow_2018: Mostre o conteúdo da lista na tela em ordem
+        numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select random: Escreva um programa que escolha e mostre uma cor
+        aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select random_2018: Escreva um programa que escolha e mostre uma
+        cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select variable: Escreva um programa que escolha e mostre uma cor
+        aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays select variable_2018: Escreva um programa que escolha e mostre
+        uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSDU6 arrays variable: Escreva um programa que escolha e mostre uma cor aleatória
+        do vetor. (Clique aqui para ver todas as instruções)
       CSP student contact info: Por favor, insira seu endereço de email.
       CSPU5_AddImageToChaserGame: |-
         Introdução do comando setPosition!
@@ -1386,16 +1422,54 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados
+        em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment2_2018: Calcule a soma dos três valores armazenados
+        em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir
+        de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para
+        ver todas as instruções)
+      CSPU5_U3 - Arrays - createFirstArray_2018: Crie um vetor de números pares a
+        partir de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui
+        para ver todas as instruções)
+      CSPU5_U3 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e
+        mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Escreva um programa que escolha
+        e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings Counting Variable: Crie uma variável global para
+        o índice atual e use-a para mostrar o primeiro item no vetor. (Clique aqui
+        para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings Counting Variable_2018: Crie uma variável global
+        para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique
+        aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo
+        suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings createArray_2018: Crie um array de palavras descrevendo
+        suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
+        numérica. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - indexPractice_2018: Mostre o conteúdo da lista na tela em
+        ordem numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou
         crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay_2018: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor,
+        redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui
+        para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal_2018: Escreva uma função que processa seu
+        vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique
+        aqui para ver todas as instruções)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo
+        for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para
+        baixo for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -1439,6 +1513,8 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3L16 - singleSetPosition: Mova o botão para o meio da tela. (Clique aqui
+        para ver todas as instruções)
       CSPU5_U3L16 - text labels: "Introdução de textLabels.  Primeiro, tente substituir\nseu
         botão por um textLabel.  O texto vai responder a eventos da mesma forma que
         o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial
@@ -2647,14 +2723,18 @@ pt-BR:
         dançarino(a).
       Dance_Party_10: Faça o outro dançarino também responder à música usando o bloco
         'começar a seguir '.
-      Dance_Party_11.5: Use os blocos "todos os patos" para fazer os patos dançarem
+      Dance_Party_11.5_test: Use os blocos "todos os patos" para fazer os patos dançarem
         juntos.
       Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar
         o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a)
         se movimentar rapidamente pressionando a seta para cima.
+      Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem
+        juntos.
       Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta
         para a direita e fazer a dança do fio dental uma vez pressionando a seta para
         cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
+      Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
+        seus amigos.
       Eval Booleans 1: |-
         Operadores booleanos (como >, <, =) nos permitem
         comparar valores diferentes, retornando "verdadeiro" ou "falso". Clique em "Executar"
@@ -3201,17 +3281,24 @@ pt-BR:
         Depure esse nível reorganizando e trocando blocos
         para me levar até o porco!
       K2.0 sequence 1: Altere o código para me levar até o porco!
+      K2.0 sequence 10: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
+      K2.0 sequence 12: 'Vamos pegar aquele porco! '
       K2.0 sequence 2: Altere o código para me levar até o porco!
       K2.0 sequence 3: Descubra o que está faltando e então REMOVA blocos para me
         levar até o porco!
+      K2.0 sequence 4: Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida,
+        mova outro para me levar até o porco.
       K2.0 sequence 5: Mova-me por um caminho, e então por outro para me levar até
         o porco!
       K2.0 sequence 6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
+      K2.0 sequence 7: Resolva este nível e me leve até o porco!
+      K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você
         acha que acontecerá com o avião quando você clicar "Executar"?  '
+      KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas
         dinamites, senão penas vão voar!
       Kiki_StarWars_Test_3: Texto
@@ -3219,10 +3306,15 @@ pt-BR:
       Kiki_StarWars_Test_5: Texto
       Kiki_StarWars_Test_5_Example: Texto
       LaurelDebugging4Video1: Mova Laurel ao redor e pegue quanto ouro puder!
+      Limited Quantity of Blocks Test: Leve-me até o porco usando apenas um bloco
       Luigi's Pizza 1: |-
         Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
         digite o nome de um sabor na função "custo" e vamos retornar o
         preço da pizza. Tente pedir uma pizza de pepperoni para começar.
+      Luigi's Pizza 2 (copy 1): Agora há apenas quatro opções disponíveis na pizzaria
+        do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional
+        na função "custo". Quando adicionar seus sabores, teste a função para ver
+        se ela funciona.
       Luigi's Pizza 2: |-
         Agora há apenas quatro opções disponíveis
         na pizzaria do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional
@@ -3393,11 +3485,17 @@ pt-BR:
       MSM Defining Vars 1: |-
         Escreva um programa que produz um triângulo
         verde sólido de 50 pixels.
+      MSM Defining Vars 2 (copy 1): Se quiséssemos fazer cinquenta triângulos verdes,
+        seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma variável
+        chamada "minha-forma" e colocar o código para um triângulo verde sólido de
+        50 pixels dentro dela.
       MSM Defining Vars 2: |-
         Se quiséssemos fazer 50 triângulos verdes,
         seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma
         variável chamada "minha-forma" e colocar o código para um triângulo verde sólido de 50 pixels
         dentro dela.
+      MSM Defining Vars 3 (copy 1): Pegue sua variável "minha-forma" e use-a com este
+        código fornecido para desenhar dois triângulos verdes idênticos.
       MSM Defining Vars 3: |-
         Pegue sua variável "minha-forma" e use-a
         com esse código fornecido para desenhar dois triângulos verdes idênticos que têm
@@ -3429,9 +3527,11 @@ pt-BR:
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
         uma flor. Cuidado, isso pode mudar!
+      MikeAssessment1: Agora faça isto certo!
       MikeStar: Desenhe isto.
       MikeStarHard: Desenhe isto.
       MikeStarNested: Desenhe isto.
+      MikeTest1: Quem sabe o que você deve fazer?!?!
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -3714,6 +3814,8 @@ pt-BR:
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe
         com cuidado pelos Creepers e chegue na sua casa em segurança.
+      Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe
+        com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Chop Tree - allthethings: Madeira é um recurso muito importante. Muitas
         coisas são feitas com ela. Ande até a árvore e use o comando "destruir bloco"
         para derrubá-la.
@@ -3722,13 +3824,20 @@ pt-BR:
       Overworld Chop Tree_2018: Madeira é um recurso muito importante. Muitas coisas
         são feitas com ela. Ande até a árvore e use o comando "destruir bloco" para
         derrubá-la.
+      Overworld Chop Tree_2019: Madeira é um recurso muito importante. Muitas coisas
+        são feitas com ela. Ande até a árvore e use o comando "destruir bloco" para
+        derrubá-la.
       Overworld Chop Trees: Precisamos construir uma casa antes que o sol se ponha.
         Casas utilizam muita madeira. Corte todas as 3 árvores.
       Overworld Chop Trees_2018: Precisamos construir uma casa antes que o sol se
         ponha. Casas utilizam muita madeira. Corte todas as 3 árvores.
+      Overworld Chop Trees_2019: Precisamos construir uma casa antes que o sol se
+        ponha. Casas utilizam muita madeira. Corte todas as 3 árvores.
       Overworld Free Play 20x20: Parabéns! Você concluiu todas as nossas tarefas!
         Agora, minere, construa e crie algo único, usando tudo que você já aprendeu.
       Overworld Free Play 20x20_2018: Parabéns! Você concluiu todas as nossas tarefas!
+        Agora, minere, construa e crie algo único, usando tudo que você já aprendeu.
+      Overworld Free Play 20x20_2019: Parabéns! Você concluiu todas as nossas tarefas!
         Agora, minere, construa e crie algo único, usando tudo que você já aprendeu.
       Overworld House Frame Chosen: |-
         Construa o resto da sua casa com
@@ -3736,9 +3845,14 @@ pt-BR:
       Overworld House Frame Chosen_2018: |-
         Construa o resto da sua casa com
         qualquer material que quiser. O comando "repita" vai ser bem útil.
+      Overworld House Frame Chosen_2019: |-
+        Construa o resto da sua casa com
+        qualquer material que quiser. O comando "repita" vai ser bem útil.
       Overworld Move to Sheep: Adicione um segundo comando "andar à frente" para chegar
         à ovelha.
       Overworld Move to Sheep_2018: Adicione um segundo comando "andar à frente" para
+        chegar à ovelha.
+      Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para
         chegar à ovelha.
       Overworld Place Wall: Toda casa começa com uma parede. Construa a primeira parte
         da sua casa colocando os comandos "colocar" e "andar à frente" dentro do loop
@@ -3746,9 +3860,14 @@ pt-BR:
       Overworld Place Wall_2018: Toda casa começa com uma parede. Construa a primeira
         parte da sua casa colocando os comandos "colocar" e "andar à frente" dentro
         do loop de repetição.
+      Overworld Place Wall_2019: Toda casa começa com uma parede. Construa a primeira
+        parte da sua casa colocando os comandos "colocar" e "andar à frente" dentro
+        do loop de repetição.
       Overworld Plant Crops: É sempre bom pensar no futuro. Plante colheitas nos dois
         lados da água para você não passar fome depois.
       Overworld Plant Crops_2018: É sempre bom pensar no futuro. Plante colheitas
+        nos dois lados da água para você não passar fome depois.
+      Overworld Plant Crops_2019: É sempre bom pensar no futuro. Plante colheitas
         nos dois lados da água para você não passar fome depois.
       Overworld Powered Minecart: Ótimo trabalho! Você coletou vários recursos e construiu
         uma casinha modesta. Agora, construa o trilho desde a borda do mapa até a
@@ -3756,9 +3875,14 @@ pt-BR:
       Overworld Powered Minecart_2018: Ótimo trabalho! Você coletou vários recursos
         e construiu uma casinha modesta. Agora, construa o trilho desde a borda do
         mapa até a porta da sua casa.
+      Overworld Powered Minecart_2019: Ótimo trabalho! Você coletou vários recursos
+        e construiu uma casinha modesta. Agora, construa o trilho desde a borda do
+        mapa até a porta da sua casa.
       Overworld Shear Sheep: Hora de tosquiar ovelhas! Use o comando "tosquiar" para
         obter lã das duas ovelhas.
       Overworld Shear Sheep_2018: Hora de tosquiar ovelhas! Use o comando "tosquiar"
+        para obter lã das duas ovelhas.
+      Overworld Shear Sheep_2019: Hora de tosquiar ovelhas! Use o comando "tosquiar"
         para obter lã das duas ovelhas.
       PDK5 Conditionals 1: |-
         As flores roxas podem ter 1 ou 0 néctar,
@@ -4091,17 +4215,37 @@ pt-BR:
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       U2L14 frequency random: Teste
+      U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados em um
+        vetor. (Clique para ver as instruções completas)
+      U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir de 0
+        até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver
+        todas as instruções)
+      U3 - Arrays - expressionsAsIndexes: Escreva um programa que escolha e mostre
+        uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
+      U3 - Arrays - favThings Counting Variable: Crie uma variável global para o índice
+        atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver
+        todas as instruções)
+      U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo suas
+        coisas favoritas. (Clique para ver as instruções completas)
+      U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem numérica.
+        (Clique aqui para ver todas as instruções)
       U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou crie
         um novo de sua preferência. (Clique para ver todas as instruções)
+      U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor, redesenhando
+        os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas
+        as instruções)
       U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
         ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
         errados. (Clique para ver todas as instruções)
+      U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for
+        pressionada (Clique aqui para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
       U3 - Simple Drawing - No Fill: Faça isso
       U3 - Simple Drawing - Order of Blocks: Faça isso
       U3 - Simple Drawing - Oval: Faça isso
+      U3 - Simple Drawing - Personal Drawing: FAÇA isso
       U3 - Simple Drawing - Rectangle Width and Height: Faça isso
       U3 - Simple Drawing - Rectangle: Faça isso
       U3 - Simple Drawing - Road Ellipse: Faça isso
@@ -4360,6 +4504,8 @@ pt-BR:
         a tartaruga se mover para uma posição aleatória a cada clique do botão. Fornecemos\na
         você o código inicial para nossa configuração comum: um botão que move a tartaruga\nquando
         é clicado. Você deve modificar esse código.  "
+      U3L16 - singleSetPosition: Mova o botão para o meio da tela. (Clique aqui para
+        ver todas as instruções)
       U3L16 - text labels: "Introdução de textLabels.  Primeiro, tente substituir\nseu
         botão por um textLabel.  O texto vai responder a eventos da mesma forma que
         o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial
@@ -4456,10 +4602,16 @@ pt-BR:
       Underground Avoiding Lava_2018: Há lava escondida sob alguns destes blocos,
         que você precisará cobrir antes de avançar. Um comando "se" será útil aqui.
         Adicione um comando "andar à frente" no local correto para minerar estes blocos.
+      Underground Avoiding Lava_2019: Há lava escondida sob alguns destes blocos,
+        que você precisará cobrir antes de avançar. Um comando "se" será útil aqui.
+        Adicione um comando "andar à frente" no local correto para minerar estes blocos.
       Underground If Statements: Agora, a situação complicou um pouco. Minere 3 redstone,
         mas não caia na lava. Use um comando "se" para colocar paralelepípedos sobre
         qualquer lava que você descobrir.
       Underground If Statements_2018: Agora, a situação complicou um pouco. Minere
+        3 redstone, mas não caia na lava. Use um comando "se" para colocar paralelepípedos
+        sobre qualquer lava que você descobrir.
+      Underground If Statements_2019: Agora, a situação complicou um pouco. Minere
         3 redstone, mas não caia na lava. Use um comando "se" para colocar paralelepípedos
         sobre qualquer lava que você descobrir.
       Underground Iron: Não é uma boa ideia tentar andar sobre lava incandescente.
@@ -4468,10 +4620,16 @@ pt-BR:
       Underground Iron_2018: Não é uma boa ideia tentar andar sobre lava incandescente.
         Coloque os paralelepípedos para criar uma ponte, depois minere pelo menos
         dois dos blocos de ferro.
+      Underground Iron_2019: Não é uma boa ideia tentar andar sobre lava incandescente.
+        Coloque os paralelepípedos para criar uma ponte, depois minere pelo menos
+        dois dos blocos de ferro.
       Underground Mining Coal: Você encontrará os recursos mais valiosos no subterrâneo,
         mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo
         menos 2 carvões.
       Underground Mining Coal_2018: Você encontrará os recursos mais valiosos no subterrâneo,
+        mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo
+        menos 2 carvões.
+      Underground Mining Coal_2019: Você encontrará os recursos mais valiosos no subterrâneo,
         mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo
         menos 2 carvões.
       Valentine_artist_01: Ajuda a artista completa o coração de lhama dele.
@@ -5206,12 +5364,16 @@ pt-BR:
         nas dicas.
       courseC_artist_loops3a: Agora adicione um morcego!
       courseC_artist_loops3a_2018: Agora adicione um morcego!
+      courseC_artist_loops3a_2019: Agora adicione um morcego!
       courseC_artist_loops5a: Experimente novos adesivos!
       courseC_artist_loops5a_2018: Experimente novos adesivos!
+      courseC_artist_loops5a_2019: Experimente novos adesivos!
       courseC_artist_loops5b: Tente adicionar linhas!
       courseC_artist_loops5b_2018: Tente adicionar linhas!
+      courseC_artist_loops5b_2019: Tente adicionar linhas!
       courseC_artist_loops8a: Agora tente algo você mesmo!
       courseC_artist_loops8a_2018: Agora tente algo você mesmo!
+      courseC_artist_loops8a_2019: Agora tente algo você mesmo!
       courseC_artist_prog1: Brinque com os blocos da caixa de ferramentas para saber
         o que eles fazem!
       courseC_artist_prog1_2018: Brinque com os blocos da caixa de ferramentas para
@@ -5238,29 +5400,42 @@ pt-BR:
         nesta estrada!"*'
       courseC_collector_loops_challenge2: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2018: Pegue pelo menos **5** peças do tesouro!
+      courseC_collector_loops_challenge2_2019: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_prog2: Mova Laurel até o tesouro, então use `coletar` para
         pegar.
       courseC_collector_prog2_2018: Mova Laurel até o tesouro, então use `coletar`
+        para pegar.
+      courseC_collector_prog2_2019: Mova Laurel até o tesouro, então use `coletar`
         para pegar.
       courseC_collector_prog3: Ordene estes blocos para coletar o tesouro e resolver
         o desafio.
       courseC_collector_prog3_2018: Ordene estes blocos para coletar o tesouro e resolver
         o desafio.
+      courseC_collector_prog3_2019: Ordene estes blocos para coletar o tesouro e resolver
+        o desafio.
       courseC_collector_prog4: Ponha estes blocos em ordem para coletar todo o tesouro
         e resolver o desafio.
       courseC_collector_prog4_2018: Ponha estes blocos em ordem para coletar todo
         o tesouro e resolver o desafio.
+      courseC_collector_prog4_2019: Ponha estes blocos em ordem para coletar todo
+        o tesouro e resolver o desafio.
       courseC_collector_prog5: Estes blocos estão na ordem errada. Você pode consertá-los?
       courseC_collector_prog5_2018: Estes blocos estão na ordem errada. Você pode
         consertá-los?
+      courseC_collector_prog5_2019: Estes blocos estão na ordem errada. Você pode
+        consertá-los?
       courseC_collector_prog6: Reordene os blocos para coletar todo o tesouro.
       courseC_collector_prog6_2018: Reordene os blocos para coletar todo o tesouro.
+      courseC_collector_prog6_2019: Reordene os blocos para coletar todo o tesouro.
       courseC_collector_prog7: Use blocos da caixa de ferramenta para coletar todo
         o tesouro.
       courseC_collector_prog7_2018: Use blocos da caixa de ferramenta para coletar
         todo o tesouro.
+      courseC_collector_prog7_2019: Use blocos da caixa de ferramenta para coletar
+        todo o tesouro.
       courseC_collector_prog9: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_prog9_2019: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA: Ajude Laurel a coletar todo o tesouro.
       courseC_collector_progB: Colete quantas moedas você conseguir para terminar
         esta fase!
@@ -5268,18 +5443,25 @@ pt-BR:
         as **10** peças do tesouro?
       courseC_collector_prog_challenge1_2018: Preste atenção! Você consegue coletar
         todas as **10** peças do tesouro?
+      courseC_collector_prog_challenge1_2019: Preste atenção! Você consegue coletar
+        todas as **10** peças do tesouro?
       courseC_collector_prog_challenge2: Colete pelo menos **10** peças do tesouro
         para finalizar este desafio!
       courseC_collector_prog_challenge2_2018: Colete pelo menos **10** peças do tesouro
+        para finalizar este desafio!
+      courseC_collector_prog_challenge2_2019: Colete pelo menos **10** peças do tesouro
         para finalizar este desafio!
       courseC_flappy_embed_events: Aquie está um exemplo de um jogo que você está
         prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você
         está prestes a fazer.
       courseC_flappy_events10: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events10_2018: 'Crie seu próprio jogo Flappy Bird! '
+      courseC_flappy_events10_2019: 'Crie seu próprio jogo Flappy Bird! '
       courseC_flappy_events6: Veja se você ainda pode marcar um ponto depois de fazer
         o passarinho bater as asas cada vez que você clica.
       courseC_flappy_events6_2018: Veja se você ainda pode marcar um ponto depois
+        de fazer o passarinho bater as asas cada vez que você clica.
+      courseC_flappy_events6_2019: Veja se você ainda pode marcar um ponto depois
         de fazer o passarinho bater as asas cada vez que você clica.
       courseC_harvester_loops1: Use laços para pegar todas as abóboras.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
@@ -5315,6 +5497,8 @@ pt-BR:
         até a noz.
       courseC_maze_debugging_challenge1_2018: Ajude Scrat a decidir que lado ir para
         chegar até a noz.
+      courseC_maze_debugging_challenge1_2019: Ajude Scrat a decidir que lado ir para
+        chegar até a noz.
       courseC_maze_loops1: Você consegue levar o pássaro até o porco?
       courseC_maze_loops10: Você está indo bem! Continuem assim!
       courseC_maze_loops11: Você está quase lá! Desta vez, escolha o caminho que você
@@ -5329,23 +5513,33 @@ pt-BR:
       courseC_maze_loops9: Você está indo bem! Continuem assim!
       courseC_maze_programming4: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018: Evite a(s) TNT(s) ou penas irão voar!
+      courseC_maze_programming4_2019: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming5: Desvie da TNT.
       courseC_maze_programming5_2018: Desvie da TNT.
+      courseC_maze_programming5_2019: Desvie da TNT.
       courseC_maze_programming7: "**Desafio:** Este código tem um monte de bugs. Você
         precisará remover alguns blocos e acrescentar outros."
       courseC_maze_programming7_2018: "**Desafio:** Este código tem um monte de bugs.
+        Você precisará remover alguns blocos e acrescentar outros."
+      courseC_maze_programming7_2019: "**Desafio:** Este código tem um monte de bugs.
         Você precisará remover alguns blocos e acrescentar outros."
       courseC_maze_programming8: '*" Mantenha a calma e ajude-me a encontrar o porco
         mal."*'
       courseC_maze_programming8_2018: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
+      courseC_maze_programming8_2019: '*" Mantenha a calma e ajude-me a encontrar
+        o porco mal."*'
       courseC_maze_programming8_predict1: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
       courseC_maze_programming8_predict1_2018: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
+      courseC_maze_programming8_predict1_2019: '*" Mantenha a calma e ajude-me a encontrar
+        o porco mal."*'
       courseC_maze_programming_challenge1: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
       courseC_maze_programming_challenge1_2018: 'O porco está se escondendo, e o objetivo
+        é encontrá-lo. '
+      courseC_maze_programming_challenge1_2019: 'O porco está se escondendo, e o objetivo
         é encontrá-lo. '
       courseC_puppy_loops10: Você está indo bem! Continuem assim!
       courseC_puppy_loops11: Você está quase lá! Desta vez, escolha o caminho que
@@ -5357,19 +5551,27 @@ pt-BR:
       courseC_puppy_loops9: Você está indo bem! Continuem assim!
       courseC_starWars_loops10: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_2018: Você está indo bem! Continuem assim!
+      courseC_starWars_loops10_2019: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_predict2: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_predict2_2018: Você está indo bem! Continuem assim!
+      courseC_starWars_loops10_predict2_2019: Você está indo bem! Continuem assim!
       courseC_starWars_loops11: Você está quase lá! Desta vez, escolha o caminho que
         você preferir!
       courseC_starWars_loops11_2018: Você está quase lá! Desta vez, escolha o caminho
+        que você preferir!
+      courseC_starWars_loops11_2019: Você está quase lá! Desta vez, escolha o caminho
         que você preferir!
       courseC_starWars_loops2: Para pegar todo os pedaços de metal, tente criar um
         laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops2_2018: Para pegar todo os pedaços de metal, tente criar
         um laço que usa apenas um bloco dentro de um bloco `repita`.
+      courseC_starWars_loops2_2019: Para pegar todo os pedaços de metal, tente criar
+        um laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops5: Faça o BB-8 pegar todos os pedaços de metal o mais
         rápido possível!
       courseC_starWars_loops5_2018: Faça o BB-8 pegar todos os pedaços de metal o
+        mais rápido possível!
+      courseC_starWars_loops5_2019: Faça o BB-8 pegar todos os pedaços de metal o
         mais rápido possível!
       courseD_artist_binary1: "Binário é uma forma de representar informações\nusando
         apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
@@ -5383,10 +5585,19 @@ pt-BR:
         grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em
         certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em
         binário na primeira fileira?"
+      courseD_artist_binary1_2019: "Binário é uma forma de representar informações\nusando
+        apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
+        número 0) e \"ligado\" (representada pelo número 1).  \r\n\r\nFoi fornecida\numa
+        grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em
+        certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em
+        binário na primeira fileira?"
       courseD_artist_binary4: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
       courseD_artist_binary4_2018: |-
+        Você consegue desenhar este padrão repetindo
+        apenas três dígitos binários? (0 e 1)?
+      courseD_artist_binary4_2019: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
       courseD_artist_binary6: |-
@@ -5395,16 +5606,24 @@ pt-BR:
       courseD_artist_binary6_2018: |-
         Que string binária de 6 dígitos, repetida
         11 vezes, vai desenhar essa imagem?
+      courseD_artist_binary6_2019: |-
+        Que string binária de 6 dígitos, repetida
+        11 vezes, vai desenhar essa imagem?
       courseD_artist_binary7: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
       courseD_artist_binary7_2018: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
+      courseD_artist_binary7_2019: |-
+        Qual é a menor string binária que você
+        pode repetir para desenhar esta imagem?
       courseD_artist_binary8: Termine o código para criar este desenho.
       courseD_artist_binary8_2018: Termine o código para criar este desenho.
+      courseD_artist_binary8_2019: Termine o código para criar este desenho.
       courseD_artist_binary8_predict1: Termine o código para criar este desenho.
       courseD_artist_binary8_predict1_2018: Termine o código para criar este desenho.
+      courseD_artist_binary8_predict1_2019: Termine o código para criar este desenho.
       courseD_artist_binaryFP: |-
         Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
 
@@ -5415,6 +5634,10 @@ pt-BR:
         Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
 
         Veja o que acontece quando começamos ser criativos com os bits!
+      courseD_artist_binaryFP_2019: |-
+        Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
+
+        Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binary_challenge0: Tente usar laços aninhados para completar
         este desenho.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
@@ -5422,8 +5645,12 @@ pt-BR:
         imagem como esta?
       courseD_artist_nestedLoops_challenge1_2018: Você consegue descobrir como fazer
         uma imagem como esta?
+      courseD_artist_nestedLoops_challenge1_2019: Você consegue descobrir como fazer
+        uma imagem como esta?
       courseD_artist_nestedLoops_challenge2: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018: Conserte o código para fazer esta
+        pintura!
+      courseD_artist_nestedLoops_challenge2_2019: Conserte o código para fazer esta
         pintura!
       courseD_artist_ramp12: Use o que você aprendeu para desenhar este triângulo
         dentro de um quadrado.
@@ -5440,13 +5667,19 @@ pt-BR:
       courseD_autorun_binary8_predict1_2019: Termine o código para criar este desenho.
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
+      courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals_challenge1: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals_challenge1_2018: Colete todo o néctar e faça todo o
         mel.
+      courseD_bee_conditionals_challenge1_2019: Colete todo o néctar e faça todo o
+        mel.
       courseD_bee_conditionals_challenge2: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals_challenge2_2018: Colete todo o néctar e faça todo o
+        mel.
+      courseD_bee_conditionals_challenge2_2019: Colete todo o néctar e faça todo o
         mel.
       courseD_bee_conditionals_challenge3: Colete todo o néctar ou faça todo o mel.
       courseD_bee_debugging1: Corrija o(s) erro(s) para coletar todo o néctar.
@@ -5515,11 +5748,15 @@ pt-BR:
       courseD_collector_debugging1a: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging1a_2018: Corrija o(s) erro(s) para coletar todo o
         tesouro.
+      courseD_collector_debugging1a_2019: Corrija o(s) erro(s) para coletar todo o
+        tesouro.
       courseD_collector_debugging2: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging2_2018: Corrija o(s) erro(s) para coletar todo o
         tesouro.
       courseD_collector_debugging2a: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging2a_2018: Corrija o(s) erro(s) para coletar todo o
+        tesouro.
+      courseD_collector_debugging2a_2019: Corrija o(s) erro(s) para coletar todo o
         tesouro.
       courseD_collector_debugging3: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging3_2018: Corrija o(s) erro(s) para coletar todo o
@@ -5527,11 +5764,15 @@ pt-BR:
       courseD_collector_debugging3a: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging3a_2018: Corrija o(s) erro(s) para coletar todo o
         tesouro.
+      courseD_collector_debugging3a_2019: Corrija o(s) erro(s) para coletar todo o
+        tesouro.
       courseD_collector_debugging4: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging4_2018: Corrija o(s) erro(s) para coletar todo o
         tesouro.
       courseD_collector_debugging4a: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging4a_2018: Corrija o(s) erro(s) para coletar todo o
+        tesouro.
+      courseD_collector_debugging4a_2019: Corrija o(s) erro(s) para coletar todo o
         tesouro.
       courseD_collector_debugging_challenge2: Você é um especialista de laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
@@ -5554,18 +5795,31 @@ pt-BR:
         do campo.
       courseD_farmer_condLoops2_2018: Ajude a colheitadeira coletar o milho e o alface
         do campo.
+      courseD_farmer_condLoops2_2019: Ajude a colheitadeira coletar o milho e o alface
+        do campo.
       courseD_farmer_condLoops_challenge2: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_2018: Colete tudo para completar o nível.
+      courseD_farmer_condLoops_challenge2_2019: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_clone: Colete tudo para completar o nível.
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
+      courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
+      courseD_iceage_loops6_2019: Você consegue adicionar um laço para chegar até
+        a noz?
       courseD_iceage_loops7: 'Scrat realmente quer aquela noz! '
+      courseD_iceage_loops7_2019: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8: 'Você consegue corrigir este código? '
+      courseD_iceage_loops8_2019: 'Você consegue corrigir este código? '
       courseD_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar
         o Scrat a chegar lá?
+      courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
+        ajudar o Scrat a chegar lá?
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na
         quantidade de códigos que você precisa."
@@ -5603,22 +5857,30 @@ pt-BR:
       courseD_maze_until1: Leve o Angry Bird até o porco.
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until1_2018: Leve o Angry Bird até o porco.
+      courseD_maze_until1_2019: Leve o Angry Bird até o porco.
       courseD_maze_until3: Leve o pássaro até o porco.
       courseD_maze_until3_2018: Leve o pássaro até o porco.
+      courseD_maze_until3_2019: Leve o pássaro até o porco.
       courseD_maze_until6: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until6_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
+      courseE_artist_concept1_2019: 'Recrie esta imagem. '
       courseE_artist_concept4: Recrie este desenho.
       courseE_artist_concept4_2018: Recrie este desenho.
+      courseE_artist_concept4_2019: Recrie este desenho.
       courseE_artist_functions1: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"
         \ \r\n\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100
         pixels de comprimento.  \r\n\r\nA\nhaste entre as lentes tem 75 pixels de
@@ -5628,13 +5890,17 @@ pt-BR:
         pixels de comprimento.  \r\n\r\nA\nhaste entre as lentes tem 75 pixels de
         comprimento."
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
+      courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
       courseE_artist_ramp12: Use o que você aprendeu para desenhar este triângulo
         dentro de um quadrado.
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018: "Colete todo o néctar de cada flor.\nUse um laço
         aninhado. "
+      courseE_bee_concept1_2019: "Colete todo o néctar de cada flor.\nUse um laço
+        aninhado. "
       courseE_bee_concept5: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2018: Ajude a abelha a coletar todo o nectar das flores.
+      courseE_bee_concept5_2019: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_functions1: Colete todo o néctar de cada flor.
       courseE_bee_functions1_2018: Colete todo o néctar de cada flor.
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
@@ -5652,6 +5918,7 @@ pt-BR:
       courseE_collector_ramp9: Ajude Laurel a coletar todo o tesouro.
       courseE_farmer_concept2: Colete todas as abóboras.
       courseE_farmer_concept2_2018: Colete todas as abóboras.
+      courseE_farmer_concept2_2019: Colete todas as abóboras.
       courseE_farmer_concept4: |-
         Agora, vamos nos aprofundar mais um nível!
         Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o
@@ -5662,8 +5929,11 @@ pt-BR:
       courseE_farmer_functions10b_2018: Use sua nova função duas vezes para resolver
         este desafio.
       courseE_farmer_functions13_2018: Solucione este desafio com 23 blocos ou menos.
+      courseE_farmer_functions13_2019: Solucione este desafio com 23 blocos ou menos.
       courseE_farmer_functions2b: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2018: Ajude a colheitadeira a pegar os milhos e as
+        abóboras.
+      courseE_farmer_functions2b_2019: Ajude a colheitadeira a pegar os milhos e as
         abóboras.
       courseE_farmer_ramp11a: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2018: Enquanto houver uma pilha, remova a areia.
@@ -5931,7 +6201,10 @@ pt-BR:
       grade1_maze_sequence6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
+      grade1_maze_sequence8: Analise este nível adicionando blocos para me levar até
+        o porco!
       grade1_maze_sequence9: 'Desvie do TNT para me levar até o porco! '
+      grade1_maze_sequenceA: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
       grade2_CaringForNewPet_10: Leve-me até o porco!
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!
@@ -5967,6 +6240,8 @@ pt-BR:
         que você conseguir para terminar a fase!
       grade2_collector_10_2018: Você está quase acabando! Colete o máximo de peças
         do tesouro que você conseguir para terminar a fase!
+      grade2_collector_10_2019: Você está quase acabando! Colete o máximo de peças
+        do tesouro que você conseguir para terminar a fase!
       grade2_collector_2: Mova Laurel até o ouro, então use `coletar` para pegar.
       grade2_collector_3: Ponha estes blocos em ordem para coletar todo o ouro e resolver
         o desafio.
@@ -5975,6 +6250,7 @@ pt-BR:
       grade2_collector_9: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
+      grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
       grade2_playlab_project_1: |-
@@ -6674,4 +6950,5 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
+      u3-old-drawing-view: FAÇA isso
       valentine_artist_03: Agora tente algo você mesmo!

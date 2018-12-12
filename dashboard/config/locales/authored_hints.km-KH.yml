@@ -783,7 +783,12 @@ km:
         courseC_maze_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -800,6 +805,10 @@ km:
         courseD_artist_nestedLoops3_a: |-
           ព្យាយាមប្រើប្លុក `លោតទៅមុខ 'ដើម្បីយកពីកំពូលនៃការ៉េមួយទៅកន្លែងដែលអ្នកនឹងចាប់ផ្ដើមបន្ទាប់។
           ប្រសិនបើការ៉េរបស់អ្នកមានកម្ពស់ ២០ ភីកសែលហើយវាដាច់ពីគ្នាចម្ងាយ ២០ ភីកសែល តើអ្នកត្រូវលោតទៅឆ្ងាយប៉ុណ្ណា?
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: |-
+          ព្យាយាមប្រើប្លុក `លោតទៅមុខ 'ដើម្បីយកពីកំពូលនៃការ៉េមួយទៅកន្លែងដែលអ្នកនឹងចាប់ផ្ដើមបន្ទាប់។
+          ប្រសិនបើការ៉េរបស់អ្នកមានកម្ពស់ ២០ ភីកសែលហើយវាដាច់ពីគ្នាចម្ងាយ ២០ ភីកសែល តើអ្នកត្រូវលោតទៅឆ្ងាយប៉ុណ្ណា?
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_c: |-
           Your `if` statement could look a lot like this:
@@ -812,6 +821,17 @@ km:
 
           If there is nothing there, you won't pick anything!
       courseD_farmer_condLoops2_2018_authored_hint:
+        courseD_farmer_condLoops2_c: |-
+          Your `if` statement could look a lot like this:
+
+          - if at corn
+           - pick corn
+          - else
+           - if at lettuce
+            \t- pick lettuce
+
+          If there is nothing there, you won't pick anything!
+      courseD_farmer_condLoops2_2019_authored_hint:
         courseD_farmer_condLoops2_c: |-
           Your `if` statement could look a lot like this:
 
@@ -838,6 +858,11 @@ km:
           ** 60 ដឺក្រេ ** ។  '
         courseE_artist_concept_challenge1_b: 'ត្រីកោណ ២/៣ មានប្រវែង ** ៨០ ** ហើយបត់ស្តាំ
           ** ១២០ ដឺក្រេ ** ។​ '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'ពាក់កណ្តាលឆកោនមាន ** ប្រវែង 30 ** និងងាកទៅស្តាំដោយ
+          ** 60 ដឺក្រេ ** ។  '
+        courseE_artist_concept_challenge1_b: 'ត្រីកោណ ២/៣ មានប្រវែង ** ៨០ ** ហើយបត់ស្តាំ
+          ** ១២០ ដឺក្រេ ** ។​ '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: ការ៉េនីមួយៗមានជ្រុង១០០ ភីកសែល នោះមានន័យថាអ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ
           ១៧៥ ភីកសែលមុនពេលគូរការ៉េទីពីររបស់អ្នក។
@@ -853,6 +878,12 @@ km:
           - ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល
           - ប្រើមុខងារ
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          កម្មវិធីរបស់អ្នកគួរ:
+          - ប្រើមុខងារ
+          - ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល
+          - ប្រើមុខងារ
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           កម្មវិធីរបស់អ្នកគួរ:
           - ប្រើមុខងារ

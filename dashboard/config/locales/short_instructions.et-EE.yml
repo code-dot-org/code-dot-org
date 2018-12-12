@@ -1459,6 +1459,8 @@ et:
       Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab
         järgnema` plokki.
       Dance_Party_11.5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
+      Dance_Party_11.5_test: Kasuta "kõik pardid" plokke, et panna kõik pardid koos
+        tantsima.
       Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse
         ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad
         ülemist nooleklahvi.
@@ -1961,6 +1963,8 @@ et:
         ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Avoid Monsters_2018: Kreeperiga ei tasu kokku põrgata. Liigu kollidest
         ettevaatlikult mööda, et jõuda oma turvalisse koju.
+      Overworld Avoid Monsters_2019: Kreeperiga ei tasu kokku põrgata. Liigu kollidest
+        ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Chop Tree - allthethings: Puit on väga oluline materjal. Paljud asjad
         on sellest tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha
         raiuda.
@@ -1968,36 +1972,54 @@ et:
         tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha raiuda.
       Overworld Chop Tree_2018: Puit on väga oluline materjal. Paljud asjad on sellest
         tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha raiuda.
+      Overworld Chop Tree_2019: Puit on väga oluline materjal. Paljud asjad on sellest
+        tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha raiuda.
       Overworld Chop Trees: Meil on vaja enne päikese loojumist maja ehitada. Maja
         tegemiseks on vaja palju puitu. Raiu maha kõik kolm puud.
       Overworld Chop Trees_2018: Meil on vaja enne päikese loojumist maja ehitada.
+        Maja tegemiseks on vaja palju puitu. Raiu maha kõik kolm puud.
+      Overworld Chop Trees_2019: Meil on vaja enne päikese loojumist maja ehitada.
         Maja tegemiseks on vaja palju puitu. Raiu maha kõik kolm puud.
       Overworld Free Play 20x20: Palju õnne! Oled lahendanud kõik meie mõistatused.
         Nüüd kasuta kõike õpitut, et kaevandada, ehitada ja luua midagi ainulaadset.
       Overworld Free Play 20x20_2018: Palju õnne! Oled lahendanud kõik meie mõistatused.
         Nüüd kasuta kõike õpitut, et kaevandada, ehitada ja luua midagi ainulaadset.
+      Overworld Free Play 20x20_2019: Palju õnne! Oled lahendanud kõik meie mõistatused.
+        Nüüd kasuta kõike õpitut, et kaevandada, ehitada ja luua midagi ainulaadset.
       Overworld House Frame Chosen: Ehita ülejäänud maja ükskõik millisest materjalist.
         Siin on abiks käsk „korda“.
       Overworld House Frame Chosen_2018: Ehita ülejäänud maja ükskõik millisest materjalist.
         Siin on abiks käsk „korda“.
+      Overworld House Frame Chosen_2019: Ehita ülejäänud maja ükskõik millisest materjalist.
+        Siin on abiks käsk „korda“.
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2018: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Place Wall: Iga maja algab seinast. Ehita oma maja esimene osa, pannes
         korduste tsüklisse käsud „aseta“ ja „liigu edasi“.
       Overworld Place Wall_2018: Iga maja algab seinast. Ehita oma maja esimene osa,
         pannes korduste tsüklisse käsud „aseta“ ja „liigu edasi“.
+      Overworld Place Wall_2019: Iga maja algab seinast. Ehita oma maja esimene osa,
+        pannes korduste tsüklisse käsud „aseta“ ja „liigu edasi“.
       Overworld Plant Crops: Alati tasub ette mõelda. Külva taimed mõlemale poole
         vett, et sa hiljem nälga ei jääks.
       Overworld Plant Crops_2018: Alati tasub ette mõelda. Külva taimed mõlemale poole
+        vett, et sa hiljem nälga ei jääks.
+      Overworld Plant Crops_2019: Alati tasub ette mõelda. Külva taimed mõlemale poole
         vett, et sa hiljem nälga ei jääks.
       Overworld Powered Minecart: Tubli töö! Kogusid hulga ehitusmaterjali ja ehitasid
         tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni maha rööpad.
       Overworld Powered Minecart_2018: Tubli töö! Kogusid hulga ehitusmaterjali ja
         ehitasid tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni maha
         rööpad.
+      Overworld Powered Minecart_2019: Tubli töö! Kogusid hulga ehitusmaterjali ja
+        ehitasid tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni maha
+        rööpad.
       Overworld Shear Sheep: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda mõlemalt
         lambalt villa.
       Overworld Shear Sheep_2018: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda
+        mõlemalt lambalt villa.
+      Overworld Shear Sheep_2019: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda
         mõlemalt lambalt villa.
       PDK5 Conditionals 1: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid
         sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda
@@ -2081,20 +2103,31 @@ et:
       Underground Avoiding Lava_2018: Mõne ploki all on peidus laava, mis sul tuleb
         enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta
         käsk „liigu edasi“, et neid plokke koguda.
+      Underground Avoiding Lava_2019: Mõne ploki all on peidus laava, mis sul tuleb
+        enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta
+        käsk „liigu edasi“, et neid plokke koguda.
       Underground If Statements: Nüüd lähevad asjad keeruliseks. Kogu 3 punast kivi,
         kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid kõigi
         laavaaukude peale, mis sa avastad.
       Underground If Statements_2018: Nüüd lähevad asjad keeruliseks. Kogu 3 punast
         kivi, kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid
         kõigi laavaaukude peale, mis sa avastad.
+      Underground If Statements_2019: Nüüd lähevad asjad keeruliseks. Kogu 3 punast
+        kivi, kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid
+        kõigi laavaaukude peale, mis sa avastad.
       Underground Iron: Sulalaavasse astumine on halb mõte. Paigalda silla rajamiseks
         sillutisekivi ja kogu siis vähemalt kaks raudplokki.
       Underground Iron_2018: Sulalaavasse astumine on halb mõte. Paigalda silla rajamiseks
+        sillutisekivi ja kogu siis vähemalt kaks raudplokki.
+      Underground Iron_2019: Sulalaavasse astumine on halb mõte. Paigalda silla rajamiseks
         sillutisekivi ja kogu siis vähemalt kaks raudplokki.
       Underground Mining Coal: Kõige väärtuslikumad maavarad leiad maa alt, kuid seal
         võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt
         kaks sütt.
       Underground Mining Coal_2018: Kõige väärtuslikumad maavarad leiad maa alt, kuid
+        seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt
+        kaks sütt.
+      Underground Mining Coal_2019: Kõige väärtuslikumad maavarad leiad maa alt, kuid
         seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt
         kaks sütt.
       Vigenere: Test
@@ -2287,17 +2320,25 @@ et:
         real kahendkoodis „01010101“.
       courseD_artist_binary1_2018: Kas oskad teha nii, et kunstnik joonistaks esimesel
         real kahendkoodis „01010101“.
+      courseD_artist_binary1_2019: Kas oskad teha nii, et kunstnik joonistaks esimesel
+        real kahendkoodis „01010101“.
       courseD_artist_binary4: Kas oskad selle mustri joonistada, korrates kolme kahekohalist
         arvu?
       courseD_artist_binary4_2018: Kas oskad selle mustri joonistada, korrates kolme
+        kahekohalist arvu?
+      courseD_artist_binary4_2019: Kas oskad selle mustri joonistada, korrates kolme
         kahekohalist arvu?
       courseD_artist_binary6: Milline kuuekohaline kahendstring joonistab 11 korda
         korratuna selle pildi?
       courseD_artist_binary6_2018: Milline kuuekohaline kahendstring joonistab 11
         korda korratuna selle pildi?
+      courseD_artist_binary6_2019: Milline kuuekohaline kahendstring joonistab 11
+        korda korratuna selle pildi?
       courseD_artist_binary7: Milline on lühim kahendstring, mida sa saad selle pildi
         joonistamiseks korrata?
       courseD_artist_binary7_2018: Milline on lühim kahendstring, mida sa saad selle
+        pildi joonistamiseks korrata?
+      courseD_artist_binary7_2019: Milline on lühim kahendstring, mida sa saad selle
         pildi joonistamiseks korrata?
       courseD_autorun_binary4_2019: Kas oskad selle mustri joonistada, korrates kolme
         kahekohalist arvu?
@@ -2368,6 +2409,7 @@ et:
         piksli pikkuste külgedega ruute.\r\nKaar klaaside vahel on 75 piksli pikkune."
       courseE_bee_concept1: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
       courseE_bee_concept1_2018: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
+      courseE_bee_concept1_2019: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
       courseE_bee_functions1: Kogu kogu nektar igalt lillelt.
       courseE_bee_functions1_2018: Kogu kogu nektar igalt lillelt.
       courseE_bee_functions3: Ehita 'võta 5' funktsiooni, mida selles ülesandes kasutada.

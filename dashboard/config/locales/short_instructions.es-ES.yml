@@ -1610,14 +1610,19 @@ es:
         de un bailarín.
       Dance_Party_10: Haz que el otro bailarín también responda a la música usando
         el bloque «comienza siguiente».
-      Dance_Party_11.5: Utiliza los bloques «todos los patos» para que los patos bailen
-        juntos.
+      Dance_Party_11.5_test: Utiliza los bloques «todos los patos» para que los patos
+        bailen juntos.
       Dance_Party_11: El bloque «cuando arriba pulsada» te permite ejecutar código
         cuando la flecha hacia arriba se pulsa. Intenta que el bailarín haga un movimiento
         rápido cuando pulsas arriba.
+      Dance_Party_11_5: Utiliza los bloques «todos los patos» para que los patos bailen
+        juntos.
       Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas la tecla
         de flecha derecha y haga el baile «floss» una vez cuando pulsas la tecla de
         flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como puedas!
+      Dance_Party_12: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Food Fight!: "Añadimos una última función para\nti. \r\n\r\nUtiliza una sentencia
         \"Si\" para que tu programa llame la funcion \"livel_mas\" solo cuando \"puntuacion_jugador\"
@@ -2146,6 +2151,8 @@ es:
         cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2018: Ir contra un Creeper no es buena idea. Evítalos
         con cuidado y llega a casa para estar a salvo.
+      Overworld Avoid Monsters_2019: Ir contra un Creeper no es buena idea. Evítalos
+        con cuidado y llega a casa para estar a salvo.
       Overworld Chop Tree - allthethings: La madera es un recurso muy importante.
         Sirve para hacer muchas cosas. Ve hacia el árbol y usa el comando "destruir
         bloque" para talarlo.
@@ -2154,29 +2161,44 @@ es:
       Overworld Chop Tree_2018: La madera es un recurso muy importante. Sirve para
         hacer muchas cosas. Ve hacia el árbol y usa el comando "destruir bloque" para
         talarlo.
+      Overworld Chop Tree_2019: La madera es un recurso muy importante. Sirve para
+        hacer muchas cosas. Ve hacia el árbol y usa el comando "destruir bloque" para
+        talarlo.
       Overworld Chop Trees: Necesitamos construir una casa antes de que se ponga el
         sol. Las casas necesitan mucha madera. Tala los tres árboles.
       Overworld Chop Trees_2018: Necesitamos construir una casa antes de que se ponga
+        el sol. Las casas necesitan mucha madera. Tala los tres árboles.
+      Overworld Chop Trees_2019: Necesitamos construir una casa antes de que se ponga
         el sol. Las casas necesitan mucha madera. Tala los tres árboles.
       Overworld Free Play 20x20: "¡Enhorabuena! Has completado todos los rompecabezas.
         Ahora extrae recursos, construye y crea algo único con todo lo que has aprendido."
       Overworld Free Play 20x20_2018: "¡Enhorabuena! Has completado todos los rompecabezas.
         Ahora extrae recursos, construye y crea algo único con todo lo que has aprendido."
+      Overworld Free Play 20x20_2019: "¡Enhorabuena! Has completado todos los rompecabezas.
+        Ahora extrae recursos, construye y crea algo único con todo lo que has aprendido."
       Overworld House Frame Chosen: Construye el resto de tu casa con cualquier material
         que te guste. El comando "repetir" va a resultar util.
       Overworld House Frame Chosen_2018: Construye el resto de tu casa con cualquier
+        material que te guste. El comando "repetir" va a resultar util.
+      Overworld House Frame Chosen_2019: Construye el resto de tu casa con cualquier
         material que te guste. El comando "repetir" va a resultar util.
       Overworld Move to Sheep: Añade un segundo comando "avanzar" para llegar a la
         oveja.
       Overworld Move to Sheep_2018: Añade un segundo comando "avanzar" para llegar
         a la oveja.
+      Overworld Move to Sheep_2019: Añade un segundo comando "avanzar" para llegar
+        a la oveja.
       Overworld Place Wall: Cada casa comienza con un muro. Construye la primera parte
         colocando los comandos "colocar" y "avanzar" en el bucle de repetición.
       Overworld Place Wall_2018: Cada casa comienza con un muro. Construye la primera
         parte colocando los comandos "colocar" y "avanzar" en el bucle de repetición.
+      Overworld Place Wall_2019: Cada casa comienza con un muro. Construye la primera
+        parte colocando los comandos "colocar" y "avanzar" en el bucle de repetición.
       Overworld Plant Crops: Es bueno planificar. Planta cultivos a ambos lados del
         agua para no pasar hambre después.
       Overworld Plant Crops_2018: Es bueno planificar. Planta cultivos a ambos lados
+        del agua para no pasar hambre después.
+      Overworld Plant Crops_2019: Es bueno planificar. Planta cultivos a ambos lados
         del agua para no pasar hambre después.
       Overworld Powered Minecart: "¡Buen trabajo! Has reunido muchos recursos y ya
         tienes una casita. Ahora, coloca un raíl desde el extremo del mapa a la puerta
@@ -2184,9 +2206,14 @@ es:
       Overworld Powered Minecart_2018: "¡Buen trabajo! Has reunido muchos recursos
         y ya tienes una casita. Ahora, coloca un raíl desde el extremo del mapa a
         la puerta de tu hogar."
+      Overworld Powered Minecart_2019: "¡Buen trabajo! Has reunido muchos recursos
+        y ya tienes una casita. Ahora, coloca un raíl desde el extremo del mapa a
+        la puerta de tu hogar."
       Overworld Shear Sheep: ¡Hora de esquilar! Usa el comando "esquilar" para obtener
         lana de ambas ovejas.
       Overworld Shear Sheep_2018: ¡Hora de esquilar! Usa el comando "esquilar" para
+        obtener lana de ambas ovejas.
+      Overworld Shear Sheep_2019: ¡Hora de esquilar! Usa el comando "esquilar" para
         obtener lana de ambas ovejas.
       PDK5 Conditionals 1: "¡ Las flores moradas pueden tener un tipo de néctar de
         1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de
@@ -2376,20 +2403,32 @@ es:
         que cubrirlos antes de seguir avanzando. Aquí te será útil un comando "si".
         Añade un comando "avanzar" en el lugar correcto para extraer los recursos
         de estos bloques.
+      Underground Avoiding Lava_2019: Hay lava bajo algunos de estos bloques. Tendrás
+        que cubrirlos antes de seguir avanzando. Aquí te será útil un comando "si".
+        Añade un comando "avanzar" en el lugar correcto para extraer los recursos
+        de estos bloques.
       Underground If Statements: Ahora las cosas se complican. Recoge tres bloques
         de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar
         roca sobre la lava que descubras.
       Underground If Statements_2018: Ahora las cosas se complican. Recoge tres bloques
         de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar
         roca sobre la lava que descubras.
+      Underground If Statements_2019: Ahora las cosas se complican. Recoge tres bloques
+        de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar
+        roca sobre la lava que descubras.
       Underground Iron: Caminar hacia la lava fundida es una mala idea. Coloca rocas
         para crear un puente y extrae el hierro de al menos dos bloques.
       Underground Iron_2018: Caminar hacia la lava fundida es una mala idea. Coloca
+        rocas para crear un puente y extrae el hierro de al menos dos bloques.
+      Underground Iron_2019: Caminar hacia la lava fundida es una mala idea. Coloca
         rocas para crear un puente y extrae el hierro de al menos dos bloques.
       Underground Mining Coal: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
       Underground Mining Coal_2018: Encontrarás los recursos más valiosos bajo tierra,
+        pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
+        de carbón.
+      Underground Mining Coal_2019: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
       aE7: Si copia ese bucle y girar a la izquierda en lugar de la derecha, ¿qué
@@ -2605,17 +2644,29 @@ es:
         hemos provisto con una red de \"píxeles\" que usted podrá revisar y hacer
         diseños encendiendo sólo algunos cuadrados.  ¿Puede hacer que el artista pinte
         \"01010101\" en binario en la primera fila?"
+      courseD_artist_binary1_2019: "Binario es una forma de representar información
+        mediante sólo dos opciones.  Aquí, vamos a usar las opciones \"apagado\" (representado
+        por el número 0) y \"encendido\" (representado por el número 1).  \r \r Le
+        hemos provisto con una red de \"píxeles\" que usted podrá revisar y hacer
+        diseños encendiendo sólo algunos cuadrados.  ¿Puede hacer que el artista pinte
+        \"01010101\" en binario en la primera fila?"
       courseD_artist_binary4: "¿Puede dibujar este molde enlazando una secuencia binaria
         de tres dígitos?"
       courseD_artist_binary4_2018: "¿Puede dibujar este molde enlazando una secuencia
+        binaria de tres dígitos?"
+      courseD_artist_binary4_2019: "¿Puede dibujar este molde enlazando una secuencia
         binaria de tres dígitos?"
       courseD_artist_binary6: "¿Cual de las secuencias binarias de 6 dígitos, repetidas
         11 veces, dibujará esta imagen?"
       courseD_artist_binary6_2018: "¿Cual de las secuencias binarias de 6 dígitos,
         repetidas 11 veces, dibujará esta imagen?"
+      courseD_artist_binary6_2019: "¿Cual de las secuencias binarias de 6 dígitos,
+        repetidas 11 veces, dibujará esta imagen?"
       courseD_artist_binary7: "¿Cuál es la secuencia binaria más corta que puede repetir
         para dibujar esta imagen?"
       courseD_artist_binary7_2018: "¿Cuál es la secuencia binaria más corta que puede
+        repetir para dibujar esta imagen?"
+      courseD_artist_binary7_2019: "¿Cuál es la secuencia binaria más corta que puede
         repetir para dibujar esta imagen?"
       courseD_autorun_binary4_2019: "¿Puede dibujar este molde enlazando una secuencia
         binaria de tres dígitos?"
@@ -2683,6 +2734,8 @@ es:
       courseE_bee_concept1: Recolecta todo el néctar de cada flor. Utiliza un bucle
         anidado.
       courseE_bee_concept1_2018: Recolecta todo el néctar de cada flor. Utiliza un
+        bucle anidado.
+      courseE_bee_concept1_2019: Recolecta todo el néctar de cada flor. Utiliza un
         bucle anidado.
       courseE_bee_functions1: Colecta todo el néctar de cada flor.
       courseE_bee_functions1_2018: Colecta todo el néctar de cada flor.

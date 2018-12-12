@@ -1416,3 +1416,51 @@ kk:
               name: Конверт Айнымалылары
             For Loop Fun:
               name: Көңілді For циклі
+            The Artist:
+              name: Кейіпкер
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Релелік Бағдарламалау
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+            Digital Citizenship:
+              name: Сандық Азаматтық
+            'Unplugged: Binary':
+              name: 'Kомпьютерсіз: Екілік жүйе'
+            Artist Binary:
+              name: Кейіпкер Екілік жүйе
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Ғимарат Салу
+            Nested Loops:
+              name: Кіріккен Циклдер
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+            Conditionals:
+              name: Шарттар
+            Internet:
+              name: Ғаламтор
+            Crowdsourcing:
+              name: Кроудсорсинг
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Релелік Бағдарламалау
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+            Envelope Variables:
+              name: Конверт Айнымалылары
+            For Loop Fun:
+              name: Көңілді For циклі
+            Binary Bracelets:
+              name: Екілік Білезіктер
+            'Unplugged: Binary':
+              name: 'Kомпьютерсіз: Екілік жүйе'
+            Artist Binary:
+              name: Кейіпкер Екілік жүйе
+            Internet:
+              name: Ғаламтор
+            Crowdsourcing:
+              name: Кроудсорсинг

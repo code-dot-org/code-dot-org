@@ -134,22 +134,22 @@ it:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
-        title: 'Attività Tradizionale: I Miei Amici Robotici'
+        title: Attività Tradizionale
         desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
-        title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
+        title: Attività Tradizionale
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseD_unplugged_digitalCitizenship:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
@@ -239,10 +239,10 @@ it:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       Conditionals_2018:
         title: Istruzioni condizionali
@@ -279,3 +279,30 @@ it:
       Conditionals_2019:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
+      GraphPaperProgramming_2019:
+        title: Programmazione su carta a quadretti
+        desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
+      RelayProgramming_2018_2019:
+        title: Programmazione a Staffetta
+        desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Attività Tradizionale
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+      BinaryImages_2019:
+        title: Immagini binarie
+        desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
+      courseE_unplugged_CnC_2019:
+        title: Condivisione Digitale
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
+      GettingLoopy_2019:
+        title: Diventare Ripetitivi
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Attività Tradizionale
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
+      BigEvent_2019:
+        title: Gli Eventi
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+      BinaryBracelets_2019:
+        title: Braccialetti Binari
+        desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.

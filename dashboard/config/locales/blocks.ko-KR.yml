@@ -30,20 +30,21 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           MOVE:
-            MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
-            MOVES.Dab: 댑
-            MOVES.DoubleJam: 더블 잼
-            MOVES.Drop: 드롭
-            MOVES.Floss: 플로스
-            MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
-            MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
             '"next"': "(다음)"
             '"prev"': "(이전)"
             '"rand"': "(임의)"
+            MOVES.Roll: 바디롤
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -52,19 +53,19 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
           MOVE:
-            MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
-            MOVES.Dab: 댑
-            MOVES.DoubleJam: 더블 잼
-            MOVES.Drop: 드롭
-            MOVES.Floss: 플로스
-            MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
-            MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
             '"next"': "(다음)"
             '"prev"': "(이전)"
             '"rand"': "(임의)"
+            MOVES.Roll: 바디롤
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -94,17 +95,19 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           MOVE:
+            '"rand"': "(임의)"
+            MOVES.Roll: 바디롤
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
-            MOVES.DoubleJam: 더블 잼
+            MOVES.DoubleJam: 더블 다운
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
-            MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -113,16 +116,17 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           MOVE:
+            '"rand"': "(임의)"
+            MOVES.Roll: 바디롤
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
             MOVES.Dab: 댑
-            MOVES.DoubleJam: 더블 잼
+            MOVES.DoubleJam: 더블 다운
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
-            MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -175,15 +179,15 @@ ko:
         options:
           DANCE:
             MOVES.ClapHigh: 높이 손뼉치기
-            MOVES.Clown: 어릿광대
+            MOVES.Clown: 강남
             MOVES.Dab: 댑
-            MOVES.DoubleJam: 더블 잼
+            MOVES.DoubleJam: 더블 다운
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 구르기
-            MOVES.Kick: 킥
-            MOVES.ThisOrThat: 이것 또는 저것
+            MOVES.Roll: 바디롤
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
       Dancelab_ifTime:
         options:
@@ -219,11 +223,16 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           FORMAT:
+            '"border"': 테두리
+            '"inner"': 내부 사각형
             '"circle"': 원
             '"grid"': 그리드
             '"row"': 행
             '"column"': 열
+            '"x"': 교차
+            '"plus"': 더하기
             '"random"': random(랜덤)
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -234,6 +243,7 @@ ko:
             '"ALIEN"': 외계인
             '"BEAR"': 곰
             '"CAT"': 고양이
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 사슴
@@ -290,10 +300,14 @@ ko:
             '"SHARK"': 상어
             '"UNICORN"': 유니콘
           LAYOUT:
+            '"border"': 테두리
+            '"inner"': 내부 사각형
             '"circle"': 원
             '"grid"': 그리드
             '"row"': 행
             '"column"': 열
+            '"x"': 교차
+            '"plus"': 더하기
             '"random"': random(랜덤)
       Dancelab_mixColors:
         text: "{COLOR1} 및 {COLOR2} 혼합"
@@ -317,7 +331,32 @@ ko:
             '"disco"': 사각형
             '"rainbow"': 색상
             '"diamonds"': 다이아몬드
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(임의)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(임의)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: 배경 효과 {EFFECT} {PALETTE} 설정
+        options:
+          EFFECT:
+            '"none"': 없음
+            '"rand"': "(임의)"
+            '"circles"': 터널
+            '"diamonds"': 다이아몬드
+            '"disco_ball"': 디스코 볼
+            '"kaleidoscope"': 만화경
+            '"lasers"': 레이저 댄스 플로어
+            '"splatter"': 페인트 튀기기
+            '"rainbow"': 색상
+            '"text"': 음악 제목
+            '"sparkles"': 반짝이
+            '"disco"': 사각형
+            '"stars"': 별
+          PALETTE:
+            '"rave"': 흑백
+            '"cool"': 파란색
+            '"default"': 빛
+            '"neon"': 네온
+            '"tropical"': 열대
+            '"vintage"': 빈티지
+            '"warm"': 빨간색
       Dancelab_setDanceSpeed:
         text: "{SPRITE} 댄스 속도를 {SPEED}(으)로 변경하기"
         options:
@@ -341,6 +380,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           SPEED:
             '1': 보통
             '2': 빠르게
@@ -355,6 +395,20 @@ ko:
             '"rain"': 비
             '"raining_tacos"': 타코
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(임의)"
+      Dancelab_setForegroundEffectExtended:
+        text: 전경 효과 {EFFECT} 설정
+        options:
+          EFFECT:
+            '"none"': 없음
+            '"rand"': "(임의)"
+            '"confetti"': 색종이
+            '"hearts_red"': 하트
+            '"music_notes"': 음표
+            '"pineapples"': 파인애플
+            '"smiling_poop"': 똥
+            '"rain"': 비
+            '"floating_rainbows"': 무지개
+            '"raining_tacos"': 타코
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
@@ -381,6 +435,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
@@ -416,7 +471,10 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+      Dancelab_setTintInline:
+        text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setVisible:
+        text: "{VISIBILITY}에서 보이도록 {SPRITE} 설정"
         options:
           VISIBILITY:
             'true': 보이기
@@ -436,6 +494,7 @@ ko:
             '"PINEAPPLE"': 모든 파인애플
             '"ROBOT"': 모든 로봇
             '"SHARK"': 모든 상어
+            '"UNICORN"': 모든 유니콘
           VISIBILITY:
             'true': 보이기
             'false': 보이지 않기
@@ -640,6 +699,22 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 맨 위로
+            "{x: 200, y: 300}": 맨 아래로
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: 200, y: 200}": 중간
+            "{x: 100, y: 100}": 왼쪽 위
+            "{x: 300, y: 100}": 오른쪽 위
+            "{x: 100, y: 300}": 왼쪽 아래
+            "{x: 300, y: 300}": 오른쪽 아래
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': 모두
       Mikelab_getProp:
         options:
           PROPERTY:

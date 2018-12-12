@@ -50,7 +50,7 @@ ms:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -204,6 +204,11 @@ ms:
           PROPERTY:
             '"scale"': saiz
       Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+      Mikelab_createNewSprite2:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri

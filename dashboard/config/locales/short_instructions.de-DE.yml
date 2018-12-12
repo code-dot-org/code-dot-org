@@ -1621,6 +1621,35 @@ de:
       Crack Random Substitution_2018: Anweisungen
       Crack a Caesar Cipher: Anweisungen
       Crack a Caesar Cipher_2018: Anweisungen
+      Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_Party_01_low: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
+      Dance_Party_03: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
+        beginnen.
+      Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
+      Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle
+        2 Takte den Tanzschritt wechselt.
+      Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der
+        mit der Katze tanzt.
+      Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
+      Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton
+        eines Tänzers zu verändern.
+      Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren,
+        indem Sie den Block "beginnt danach" verwenden.
+      Dance_Party_11.5_test: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam
+        tanzen zu lassen.
+      Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen,
+        wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine
+        schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
+      Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam
+        tanzen zu lassen.
+      Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte
+        Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben
+        drücken. Machen Sie den Drop-Floss, so schnell es geht!
+      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       Food Fight!: |-
         Wir haben für dich eine letzte Funktion ergänzt.
 
@@ -2172,6 +2201,9 @@ de:
       Overworld Avoid Monsters_2018: In einen Creeper hinein zu laufen, ist eine schlechte
         Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
+      Overworld Avoid Monsters_2019: In einen Creeper hinein zu laufen, ist eine schlechte
+        Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
+        Zuhause.
       Overworld Chop Tree - allthethings: Holz ist ein sehr wichtiger Rohstoff. Viele
         Dinge werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm
         und benutze den „Zerstören“-Baustein.
@@ -2181,9 +2213,14 @@ de:
       Overworld Chop Tree_2018: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge
         werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und
         benutze den „Zerstören“-Baustein.
+      Overworld Chop Tree_2019: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge
+        werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und
+        benutze den „Zerstören“-Baustein.
       Overworld Chop Trees: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
         Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
       Overworld Chop Trees_2018: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
+        Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
+      Overworld Chop Trees_2019: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
         Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
       Overworld Free Play 20x20: Herzlichen Glückwunsch! Du hast alle Aufgaben gelöst!
         Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles bisher
@@ -2191,13 +2228,20 @@ de:
       Overworld Free Play 20x20_2018: Herzlichen Glückwunsch! Du hast alle Aufgaben
         gelöst! Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles
         bisher Gelernte anwendest.
+      Overworld Free Play 20x20_2019: Herzlichen Glückwunsch! Du hast alle Aufgaben
+        gelöst! Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles
+        bisher Gelernte anwendest.
       Overworld House Frame Chosen: Baue den Rest deines Hauses aus einem Material
         deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
       Overworld House Frame Chosen_2018: Baue den Rest deines Hauses aus einem Material
         deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
+      Overworld House Frame Chosen_2019: Baue den Rest deines Hauses aus einem Material
+        deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
       Overworld Move to Sheep: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den
         Schafen zu gelangen.
       Overworld Move to Sheep_2018: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
+        zu den Schafen zu gelangen.
+      Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
       Overworld Place Wall: Alle Häuser beginnen mit einer Wand. Baue den ersten Teil
         deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die Wiederholungsschleife
@@ -2205,9 +2249,14 @@ de:
       Overworld Place Wall_2018: Alle Häuser beginnen mit einer Wand. Baue den ersten
         Teil deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die
         Wiederholungsschleife platzierst.
+      Overworld Place Wall_2019: Alle Häuser beginnen mit einer Wand. Baue den ersten
+        Teil deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die
+        Wiederholungsschleife platzierst.
       Overworld Plant Crops: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
         des Wassers Getreide an, damit du später nicht hungrig wirst.
       Overworld Plant Crops_2018: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
+        des Wassers Getreide an, damit du später nicht hungrig wirst.
+      Overworld Plant Crops_2019: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
         des Wassers Getreide an, damit du später nicht hungrig wirst.
       Overworld Powered Minecart: Gute Arbeit! Du hast viele Rohstoffe gesammelt und
         ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis zur
@@ -2215,9 +2264,14 @@ de:
       Overworld Powered Minecart_2018: Gute Arbeit! Du hast viele Rohstoffe gesammelt
         und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis
         zur Tür deines Hauses.
+      Overworld Powered Minecart_2019: Gute Arbeit! Du hast viele Rohstoffe gesammelt
+        und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis
+        zur Tür deines Hauses.
       Overworld Shear Sheep: Zeit zum Schafescheren! Benutze den Befehl "scheren",
         um Wolle von beiden Schafen zu sammeln.
       Overworld Shear Sheep_2018: Zeit zum Schafescheren! Benutze den Befehl "scheren",
+        um Wolle von beiden Schafen zu sammeln.
+      Overworld Shear Sheep_2019: Zeit zum Schafescheren! Benutze den Befehl "scheren",
         um Wolle von beiden Schafen zu sammeln.
       PDK5 Conditionals 1: Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben,
         aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume
@@ -2309,10 +2363,17 @@ de:
         die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist
         hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle
         ein, um diese Bausteine zu meiden.
+      Underground Avoiding Lava_2019: Lava versteckt sich unter manchen dieser Bausteine,
+        die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist
+        hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle
+        ein, um diese Bausteine zu meiden.
       Underground If Statements: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
         ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
         über alle von dir entdeckte Lava zu platzieren.
       Underground If Statements_2018: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
+      Underground If Statements_2019: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
         ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
         über alle von dir entdeckte Lava zu platzieren.
       Underground Iron: In geschmolzene Lava zu laufen, ist keine gute Idee. Platziere
@@ -2321,10 +2382,16 @@ de:
       Underground Iron_2018: In geschmolzene Lava zu laufen, ist keine gute Idee.
         Platziere Kopfsteinpflaster, um eine Brücke zu erstellen, und baue mindestens
         zwei Eisenblöcke ab.
+      Underground Iron_2019: In geschmolzene Lava zu laufen, ist keine gute Idee.
+        Platziere Kopfsteinpflaster, um eine Brücke zu erstellen, und baue mindestens
+        zwei Eisenblöcke ab.
       Underground Mining Coal: Du wirst die wertvollsten Rohstoffe unter der Erde
         finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und
         baue mindestens 2 Kohleblöcke ab.
       Underground Mining Coal_2018: Du wirst die wertvollsten Rohstoffe unter der
+        Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
+        und baue mindestens 2 Kohleblöcke ab.
+      Underground Mining Coal_2019: Du wirst die wertvollsten Rohstoffe unter der
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
       aE7: Wenn du die Schleife kopierst und eine Linksdrehung anstelle einer Rechtsdrehung
@@ -2670,17 +2737,27 @@ de:
         Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
 
         Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
+      courseD_artist_binary1_2019: |-
+        Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
+
+        Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
       courseD_artist_binary4: Kannst du dieses Muster zeichnen, indem du eine dreistellige
         Binärzeichenfolge durchlaufen lässt?
       courseD_artist_binary4_2018: Kannst du dieses Muster zeichnen, indem du eine
+        dreistellige Binärzeichenfolge durchlaufen lässt?
+      courseD_artist_binary4_2019: Kannst du dieses Muster zeichnen, indem du eine
         dreistellige Binärzeichenfolge durchlaufen lässt?
       courseD_artist_binary6: Welche sechsstellige Binärzeichenfolge wird dieses Bild
         zeichnen, wenn sie 11 Mal wiederholt wird?
       courseD_artist_binary6_2018: Welche sechsstellige Binärzeichenfolge wird dieses
         Bild zeichnen, wenn sie 11 Mal wiederholt wird?
+      courseD_artist_binary6_2019: Welche sechsstellige Binärzeichenfolge wird dieses
+        Bild zeichnen, wenn sie 11 Mal wiederholt wird?
       courseD_artist_binary7: Was ist die kürzeste binäre Zeichenfolge, die du wiederholen
         kannst, um dieses Bild zu zeichnen?
       courseD_artist_binary7_2018: Was ist die kürzeste binäre Zeichenfolge, die du
+        wiederholen kannst, um dieses Bild zu zeichnen?
+      courseD_artist_binary7_2019: Was ist die kürzeste binäre Zeichenfolge, die du
         wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_autorun_binary4_2019: Kannst du dieses Muster zeichnen, indem du eine
         dreistellige Binärzeichenfolge durchlaufen lässt?
@@ -2754,6 +2831,8 @@ de:
       courseE_bee_concept1: Sammle den ganzen Nektar von allen Blumen. Benutze eine
         verschachtelte Schleife.
       courseE_bee_concept1_2018: Sammle den ganzen Nektar von allen Blumen. Benutze
+        eine verschachtelte Schleife.
+      courseE_bee_concept1_2019: Sammle den ganzen Nektar von allen Blumen. Benutze
         eine verschachtelte Schleife.
       courseE_bee_functions1: Sammle den ganzen Nektar von allen Blumen.
       courseE_bee_functions1_2018: Sammle den ganzen Nektar von allen Blumen.

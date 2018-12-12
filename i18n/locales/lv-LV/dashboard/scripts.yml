@@ -1219,3 +1219,51 @@ lv:
               name: Aplokšņu mainīgie
             For Loop Fun:
               name: Jautrība ar "For" Cikliem
+            The Artist:
+              name: Mākslinieks
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Binary Bracelets:
+              name: Binārās aproces
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve

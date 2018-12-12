@@ -33,8 +33,8 @@ th:
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   your_professional_learning_plan: แผนการเรียนของคุณ
   see_your_learning_plan: ดูแผนการเรียนของคุณ
-  submit: ส่ง
-  unsubmit: ไม่ส่ง
+  submit: ส่งคำตอบ
+  unsubmit: ไม่ส่งคำตอบ
   previous_page: หน้าที่แล้ว
   next_page: หน้าถัดไป
   next_resource: ทรัพยากรที่มีให้ใช้ถัดไป
@@ -157,7 +157,7 @@ th:
       title: ลืมรหัสผ่าน?
       instructions: ป้อนอีเมลของคุณด้านล่าง และเราจะส่งวิธีการรีเซ็ตรหัสผ่าน
       email: ที่อยู่อีเมล
-      submit: ส่ง
+      submit: ส่งคำตอบ
     change_form:
       title: เปลี่ยนรหัสผ่านของคุณ
       new_password: รหัสผ่านใหม่
@@ -202,7 +202,7 @@ th:
     edit: แก้ไข
     edit_model: แก้ไข %{model}
     update: อัพเดท
-    submit: ส่ง
+    submit: ส่งคำตอบ
     destroy: ทำลาย
     back: กลับ
     confirm: คุณแน่ใจหรือไม่?
@@ -370,7 +370,7 @@ th:
       gamelab_unsupported_tablet: เกมแล็ป (Game Lab) จะทำงานได้ดีเมื่อคุณใช้คอมพิวเตอร์แบบตั้งโต๊ะหรือแล๊ปท๊อปที่มีเมาส์และคีย์บอร์ด
         คุณอาจเจอปัญหาในการใช้เครื่องมือนี้กับอุปกรณ์ปัจจุบันที่คุณใช้อยู่
   slow_loading: นี่ดูจะใช้เวลานานเกินไป...
-  next_stage: เสร็จเรียบร้อยแล้ว! ไปต่อด่านต่อไป
+  next_stage: เสร็จเรียบร้อยแล้ว! ไปต่อด่านต่อไปได้
   download_pdf: ดาวน์โหลด แผนการเรียนการสอน
   lesson_plan: แผนการเรียนการสอน
   view_lesson_plan: มาดูแผนการเรียนการสอน
@@ -424,13 +424,19 @@ th:
     correct_body: เป็นคำตอบที่ถูกต้อง
   multi-submittable:
     wrong_title: ขอบคุณ
+    wrong_body: ขอบคุณที่ส่งคำตอบ
     correct_title: ขอบคุณ
+    correct_body: ขอบคุณที่ส่งคำตอบ
   level_group:
     wrong_title: ขอบคุณ
     correct_title: ขอบคุณ
   level_group-submittable:
     wrong_title: ขอบคุณ
     correct_title: ขอบคุณ
+    unsubmit-title: ถอนการส่งการประเมินผล
+    unsubmit-body: การถอนการประเมินผลของท่านจะกำหนดวันและเวลาการส่งขึ้นมาใหม่ ท่านต้องการเช่นนั้นหรือไม่?
+    submit-incomplete-title: ส่งการประเมินผลของท่าน
+    submit-complete-title: ส่งการประเมินผลของท่าน
   match:
     wrong_title: คำตอบไม่ถูกต้อง
     wrong_body: โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง
@@ -451,9 +457,10 @@ th:
   race_interstitial:
     races:
       other: อาชีพอื่น ๆ
-    submit: ส่ง
+    submit: ส่งคำตอบ
   progress:
     not_started: ยังไม่เริ่ม
+    submitted: ส่งคำตอบแล้ว
   project:
     projects: โปรเจกต์
     new: สร้างใหม่
@@ -479,10 +486,13 @@ th:
       report_abuse_form:
         abuse_type:
           other: อาชีพอื่น ๆ
+  peer_review:
+    review_in_progress: พร้อมพื่อทบทวน
   flex_category:
     required: ภาพรวม
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
+  view_teacher_guide: ดูคำแนะนำสำหรับครู
   pd:
     form_labels:
       email: อีเมล

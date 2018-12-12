@@ -449,6 +449,8 @@ fi:
           </xml>
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Sinun ohjelma olisi: 
@@ -468,6 +470,12 @@ fi:
           - Siirrä eteenpäin 100 + 75 kuvapistettä
           - Käytä funktiota
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Sinun ohjelma olisi: 
+          - Käytä funktiota 
+          - Siirrä eteenpäin 100 + 75 kuvapistettä
+          - Käytä funktiota
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Sinun ohjelma olisi: 
           - Käytä funktiota 

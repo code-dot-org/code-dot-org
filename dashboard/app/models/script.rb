@@ -378,7 +378,7 @@ class Script < ActiveRecord::Base
     # names which are strings that may contain numbers (eg. 2-3)
     is_id = id_or_name.to_i.to_s == id_or_name.to_s
     find_by = is_id ? :id : :name
-    script = Script.find_by(find_by => id_or_name)
+    script = Script.with_associated_models.find_by(find_by => id_or_name)
     return script if script
 
     unless is_id

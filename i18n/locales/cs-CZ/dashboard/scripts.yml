@@ -394,6 +394,9 @@ cs:
               name: Hádanky
         cspunit1:
           description_short: Programování
+          stages:
+            Binary Numbers:
+              name: Binární čísla
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -717,6 +720,8 @@ cs:
               name: Katedra učitele
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Binární čísla
             The Internet:
               name: Internet
         csp3-2017:
@@ -1257,7 +1262,7 @@ cs:
             Minecraft Hour of Code:
               name: Hodina kódu Minecraftu
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!
-          description: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem.
+          description: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou! Cestuj hrou Minecraft s kódem.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1442,6 +1447,8 @@ cs:
               name: Podmínky s kartami
         csp1-2018:
           stages:
+            Binary Numbers:
+              name: Binární čísla
             The Internet:
               name: Internet
         csp3-2018:
@@ -1478,20 +1485,30 @@ cs:
         dance:
           stages:
             Dance Party:
-              name: Taneční párty
-          title: Taneční párty
+              name: Taneční večírek
+          title: Taneční večírek
+          description_short: S Katy Perry, Madonnou, J. Balvinem, Siou, Keithem Urbanem, Ciarou a 25 dalšími!
+          description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Umělec
+        aquatic:
+          stages:
+            Aquatic:
+              name: Vodní
+          description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
         dance--draft:
           stages:
             Dance Party:
-              name: Taneční párty
+              name: Taneční večírek
         dance-draft:
           stages:
             Dance Party:
-              name: Taneční párty
+              name: Taneční večírek
+        dance-extras:
+          title: Nepřestávej tančit
+          description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1502,7 +1519,56 @@ cs:
               name: Obálkové proměnné
             For Loop Fun:
               name: For cyklus zábavy
+            The Artist:
+              name: Umělec
         dance-low:
           stages:
             Dance Party:
-              name: Taneční párty
+              name: Taneční večírek
+          description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli! (Tato verze je pro pomalá připojení)
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relay programování
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Digital Citizenship:
+              name: Digitální občanství
+            'Unplugged: Binary':
+              name: 'Nezapojené: binární'
+            Artist Binary:
+              name: Umělecké binární
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            Nested Loops:
+              name: Vnořené cykly
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Conditionals:
+              name: Podmínky
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relay programování
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
+            Binary Bracelets:
+              name: Binární náramky
+            'Unplugged: Binary':
+              name: 'Nezapojené: binární'
+            Artist Binary:
+              name: Umělecké binární
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

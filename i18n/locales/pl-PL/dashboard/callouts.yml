@@ -209,6 +209,8 @@ pl:
         4-5_Artist_Patterns_Free_Play_1: Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Odtwórz dźwięk, kiedy wystąpi to zdarzenie.
       Infinity_move_directions_callout:
@@ -292,9 +294,13 @@ pl:
         craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ten kod rozpocznie budowę Twojego domu. Czy potrafisz go dokończyć?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Ten kod rozpocznie budowę Twojego domu. Czy potrafisz go dokończyć?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Ten kod rozpocznie budowę Twojego domu. Czy potrafisz go dokończyć?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Kliknij na "Uruchom", aby uruchomić program
@@ -302,9 +308,14 @@ pl:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Kliknij na "Uruchom", aby uruchomić program
         craft_drag_block_callout: Przeciągnij blok "idź do przodu" i podczep go pod inny blok
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Kliknij na "Uruchom", aby uruchomić program
+        craft_drag_block_callout: Przeciągnij blok "idź do przodu" i podczep go pod inny blok
       Overworld Place Wall_callout:
         craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Kliknij tutaj, by wyświetlić siatkę.
@@ -328,6 +339,8 @@ pl:
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!
@@ -365,9 +378,13 @@ pl:
         craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać polecenie, aby przejść dalej?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać polecenie, aby przejść dalej?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać polecenie, aby przejść dalej?
       Underground Iron_callout:
         craft_what_is_iron: Wydobądź to żelazo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Wydobądź to żelazo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Wydobądź to żelazo!
       WebLab PS test - 1-12_callout:
         version_history_button: Sprawdź wersję historii
@@ -497,9 +514,13 @@ pl:
         courseC_artist_loopsPrePre1a_1: Zacznij używając tego bloku do przesunięcia artysty na środek ekranu.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Zacznij używając tego bloku do przesunięcia artysty na środek ekranu.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Zacznij używając tego bloku do przesunięcia artysty na środek ekranu.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
+      courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania.
@@ -515,13 +536,19 @@ pl:
         courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7_2018_callout:
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok "losowy kolor" ułatwia sprawę!
       courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok "losowy kolor" ułatwia sprawę!
+      courseD_artist_nestedLoops1a_2019_callout:
         courseD_artist_nestedLoops1a_1: Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok "losowy kolor" ułatwia sprawę!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Możesz zmienić ten numer.
@@ -531,12 +558,16 @@ pl:
         4_5_Bee_Conditionals_2_2: Potrzebujesz pomocy? Kliknij tutaj, aby obejrzeć WIDEO z podpowiedzią!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
         4_5_Bee_Conditionals_2_2: Potrzebujesz trochę pomocy? Kliknij tutaj, by zobaczyć nasze nowe WIDEO-WSKAZÓWKI!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar (lub miód) z jednego kwiatka (lub plastra).
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar (lub miód) z jednego kwiatka (lub plastra).
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar (lub miód) z jednego kwiatka (lub plastra).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Spróbuj powtarzać blok "przesuń do przodu" przy użyciu tej pętli.
@@ -577,10 +608,16 @@ pl:
       courseE_artist_functions_challenge1_2018_callout:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu dodając więcej kodu na dole.
         courseE_artist_functions_challenge1_callout2: Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu dodając więcej kodu na dole.
+        courseE_artist_functions_challenge1_callout2: Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Przedłuż działanie programu dodając więcej kodu na dole.
         courseE_artist_functions_challenge2_callout2: Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Przedłuż działanie programu dodając więcej kodu na dole.
+        courseE_artist_functions_challenge2_callout2: Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Przedłuż działanie programu dodając więcej kodu na dole.
         courseE_artist_functions_challenge2_callout2: Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!
       courseE_artist_ramp11_callout:

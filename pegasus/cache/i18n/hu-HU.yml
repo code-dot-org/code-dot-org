@@ -210,6 +210,8 @@ hu-HU:
   studiobar_title_nolink: Fedezd fel a Kód stúdiót
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
+  studiobar_dance_title: Táncos buli
+  studiobar_dance_body: Hozd létre és oszd meg saját táncos bulidat
   studiobar_hoc_title: A kódolás órája
   studiobar_hoc_body: Tanulj programozni az Angry Birds-el
   studiobar_flappy_title: Flappy kód
@@ -394,6 +396,8 @@ hu-HU:
   minecraft_adventurer: Minecraft kaland
   minecraft_tutorials: Minecraft Kódolás órája gyakorlatok
   minecraft_specs: Több nyelven | Modern böngészők, táblagépek | 2. osztálytól
+  minecraft_agent_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás
+    Órájára! Utazz végig a Minecraft világán kódok segítségével.
   minecraft_agent_button: Kezdés
   minecraft_designer_description: Programozz állatokat és egyéb Minecraft lényeket
     a saját Minecraft verziódban.
@@ -1583,19 +1587,28 @@ hu-HU:
   user_header_signin: Bejelentkezés
   user_header_create: 'Alkoss '
   user_header_playlab: Játéklabor
+  user_header_dance: Táncos buli
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Kezdés
+  applab_tile_teacher_guide: Oktatói útmutató megtekintése
   aquatic_name: 'Minecraft: Tengeri utazás'
   account_sign_up_email_opt_in: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
     helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
   account_sign_up_child_accept_terms: Megerősítem, hogy a szülőm vagy törvényes gondviselőm
     engedélyt adott, hogy használjam Code.org szolgáltatásait.
+  hoc_overview_dance_title: Táncos buli
+  hoc_overview_partner_activities_title: További tevékenységek a partnerektől
+  hoc_overview_partner_activities_body: A Code.org és partnerei által fejlesztett
+    Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden
+    korosztály és minden képzettségi szint képviselői számára.
+  hoc_overview_partner_activities_link: Tevékenységek megtekintése
   hoc_overview_start_tutorial: Kezdés
+  hoc_overview_view_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_creativity: kreativitás
   hoc2018_creativity_create: Létrehoz
   hoc2018_creativity_hoc_coming: Hamarosan jön a Kódolás Órája…
-  hoc2018_creativity_what_will_you_create: Te mit fogsz létrehozni?
+  hoc2018_creativity_what_will_you_create: Mit fogsz létrehozni?
   hoc2018_creativity_homepage: Engedd szabadjára a képzeletedet, és hozz létre valami
     újat! Kezdd a Kódolás Órájával, és a saját ötleteiddel, bármi is legyen az! Nézd
     meg ezt a videót!
@@ -1609,6 +1622,10 @@ hu-HU:
     tanfolyamjaival</a>
   hoc2018_mc_page_title: Minecraft Kódolás órája gyakorlatok
   hoc2018_mc_details: Több nyelven | Modern böngészők, táblagépek | 2. osztálytól
+  hoc2018_mc_aquatic_description: A Minecraft egy vadonatúj programmal tér vissza
+    a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
+  hoc2018_mc_hero_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás
+    Órájára! Utazz végig a Minecraft világán kódok segítségével.
   hoc2018_mc_designer_title: Minecraft tervező
   hoc2018_mc_designer_description: Programozz állatokat és egyéb Minecraft lényeket
     a saját Minecraft verziódban.
@@ -1629,10 +1646,31 @@ hu-HU:
   hoc2018_mc_video_title_obama: Obama, amerikai elnök, a számítógéptechnológiáról
   hoc2018_mc_video_title_hoc_is_here: A Kódolás Órája elérkezett - Mindenki tanulhat
   hoc2018_mc_video_title_anybody_can_learn: Mindenki tanulhat
-  hoc2018_mc_homepage_what_create: Te mit fogsz létrehozni?
+  hoc2018_mc_homepage_hoc_coming: Hamarosan itt a Kódolás Órája...
+  hoc2018_mc_homepage_what_create: Mit fogsz létrehozni?
   hoc2018_mc_homepage_join_us: Csatlakozz
   hoc2018_mc_homepage_try_it: Próbáld ki
+  hoc2018_mc_back_journey: A Minecraft egy vadonatúj programmal tér vissza a Kódolás
+    Órájára! Utazz végig a Minecraft világán kódok segítségével.
+  hoc2018_mc_teacher_guide: Oktatói útmutató megtekintése
+  hoc2018_dance_party_main_heading: Táncos buli
+  hoc2018_dance_create_your_own_dance_title: Hozd létre saját táncos bulidat
+  hoc2018_dance_party_box_title: Táncos buli
+  hoc2018_dance_party_box_description: Kódolj le egy táncos bulit, és oszd meg az
+    ismerőseiddel!
   hoc2018_dance_party_button: Kezdés
+  hoc2018_dance_keep_on_dancing_box_title: Táncolj tovább
+  hoc2018_dance_keep_on_dancing_description: Egy óra elteltével is folytathatod a
+    bulit további projektötletekkel.
+  hoc2018_dance_keep_on_dancing_button: ". rész indítása"
+  hoc2018_dance_teacher_resources_title: Oktatói segédanyagok
+  hoc2018_dance_teacher_resources_tile1_description: Óravázlatok, bizonyítványok és
+    zeneszűrés.
   hoc2018_dance_teacher_resources_tile1_button: Óravázlat
+  hoc2018_dance_teacher_resources_tile2_title: Offline táncos buli
+  hoc2018_dance_teacher_resources_tile2_description: Nincs szükség számítógépre!  Tanuld
+    meg a kódolás alapelveit, és közben hozz össze egy táncos bulit.
   hoc2018_dance_teacher_resources_tile2_button: Offline tevékenység
   hoc2018_dance_amazon_about_future_engineer_button: Tudj meg többet
+  hoc2018_dance_measure: Ütem
+  hoc2018_dance_measure_colon: 'Ütem:'

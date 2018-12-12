@@ -262,6 +262,10 @@ fil:
         4-5_Artist_Patterns_Free_Play_1: Lahat ng iyong mga paboritong mga bloke ay
           nakaayos na ayon sa mga kategorya. I-click ang mga salitang ito para makita
           kung saan ang lahat napunta!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Lahat ng iyong mga paboritong mga bloke ay
+          nakaayos na ayon sa mga kategorya. I-click ang mga salitang ito para makita
+          kung saan ang lahat napunta!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Magpatutog ng isang tunog kapang nangyari na
           ang kaganapang ito.
@@ -340,20 +344,31 @@ fil:
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Naglagay tayo ng ilang mga bloke dito para makapagsimula
           ka
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Naglagay tayo ng ilang mga bloke dito para makapagsimula
+          ka
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Ang code na ito ay magsisimula sa paggawa ng
           iyong bahay. Matatapos mo ba ito?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Ang code na ito ay magsisimula sa paggawa ng
           iyong bahay. Matatapos mo ba ito?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Ang code na ito ay magsisimula sa paggawa ng
+          iyong bahay. Matatapos mo ba ito?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Pindutin ang "Takbo" upang masubukan ang iyong program
       Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: Pindutin ang "Takbo" upang masubukan ang iyong program
+      Overworld Move to Sheep_2019_callout:
         craft_run_button_callout: Pindutin ang "Takbo" upang masubukan ang iyong program
       Overworld Place Wall_callout:
         craft_inside_repeat: Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga
           bloke dito
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga
+          bloke dito
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga
           bloke dito
       PS clone CSD U3 Variables Predict Where XY_callout:
@@ -374,6 +389,10 @@ fil:
           bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala
           sa loob ng iyong mga programa!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Subukang gamitin ang bagong `comment` na
+          bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala
+          sa loob ng iyong mga programa!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Subukang gamitin ang bagong `comment` na
           bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala
           sa loob ng iyong mga programa!
@@ -413,9 +432,14 @@ fil:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Ang code na ito ay magusuri sa laba, maaari ka
           bang makadagdag ng utos para makasulong?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Ang code na ito ay magusuri sa laba, maaari ka
+          bang makadagdag ng utos para makasulong?
       Underground Iron_callout:
         craft_what_is_iron: Minahin ang bakal na ito!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Minahin ang bakal na ito!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Minahin ang bakal na ito!
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
@@ -540,6 +564,9 @@ fil:
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng
           ito para mapapunta ang artista sa gitna ng screen.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng
+          ito para mapapunta ang artista sa gitna ng screen.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Nakakakita ka ba ng ilang bagong mga bloke sa loob
           ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin
@@ -548,6 +575,9 @@ fil:
         courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa
           toolbox kung kailangan mo ang mga ito!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa
+          toolbox kung kailangan mo ang mga ito!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa
           toolbox kung kailangan mo ang mga ito!
       courseC_harvester_loops1_callout:
@@ -574,10 +604,16 @@ fil:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
           ang "Run" para simulan ang iyong programa.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin
+          ang "Run" para simulan ang iyong programa.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
           mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
+          mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita
           mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseC_maze_programming3_callout:
@@ -590,10 +626,18 @@ fil:
           papunta sa toolbox para maitapon ang mga ito.
         courseC_maze_programming3_3: Ang mga blokeng ito ay bato at hindi maaaring
           itapon.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke
+          papunta sa toolbox para maitapon ang mga ito.
+        courseC_maze_programming3_3: Ang mga blokeng ito ay bato at hindi maaaring
+          itapon.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
+          ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseC_maze_programming4_2019_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseC_maze_programming7_callout:
@@ -606,10 +650,18 @@ fil:
           mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
         courseC_maze_programming7_2: Ang mga blokeng ito ay yari sa bato at hindi
           maaaring itapon.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Ito ang iyong unang hamon na palaisipan! Ang
+          mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
+        courseC_maze_programming7_2: Ang mga blokeng ito ay yari sa bato at hindi
+          maaaring itapon.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit
           sa palaisipang ito.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit
+          sa palaisipang ito.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit
           sa palaisipang ito.
       courseD_artist_functions2_callout:
@@ -627,6 +679,10 @@ fil:
         courseD_artist_nestedLoops1a_1: Hindi ko kinakailangang gumamit ng mga kulay
           para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color`
           na bloke ay nagpapadali nito!
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: Hindi ko kinakailangang gumamit ng mga kulay
+          para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color`
+          na bloke ay nagpapadali nito!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Maaari mong baguhin ang numerong ito.
         courseD_artist_ramp11_2: Mag-click dito para ma-type kung ilang beses uulitin
@@ -639,6 +695,9 @@ fil:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong
           BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong
+          BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong
           BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
@@ -648,6 +707,9 @@ fil:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
           ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
+          ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
           ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
       courseD_bee_conditionals_challenge3_callout:
@@ -726,6 +788,10 @@ fil:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya
           para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
           para makita kung saan napunta ang lahat.
+      courseD_playLab_condFP_2019_callout:
+        courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya
+          para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
+          para makita kung saan napunta ang lahat.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya
           para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
@@ -788,10 +854,17 @@ fil:
         courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat
           ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
           iguhit ang unang parisukat?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat
+          ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
+          iguhit ang unang parisukat?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function
           ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
       courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function
+          ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
+      courseE_artist_functions8a_2019_callout:
         courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function
           ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
       courseE_artist_ramp11_callout:

@@ -14,13 +14,13 @@ sk:
         2-3_Artist_12_a: Celý kruh má 360 stupňov, takže ak sa umelec otoči o 1 stupeň
           v každom cykle, tak to potrebuje spraviť 360 krát.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: Umelec nevyzerá byť otočený správnym smerom. Môžeš ho
-          otočit predtým ako nakreslíš ćiaru?
+        2-3_Artist_2_new_a: Zdá sa, že Umelec nie je otočený správnym smerom. Otoč
+          ho skôr, ako začne kresliť čiaru.
       2-3 Artist 3new_authored_hint:
         2-3_Artist_3new_a: Koľko je 100-70? Podľa problému z príbehu, to je toľko,
           aký vysoký má byť klobúk!
-        2-3_Artist_3new_b: Umelec nevyzerá byť otočený správnym smerom. Môžeš ho otočit
-          predtým ako nakreslíš ćiaru?
+        2-3_Artist_3new_b: Zdá sa, že Umelec nie je otočený správnym smerom. Otoč
+          ho skôr, ako začne kresliť čiaru.
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Pre dokončenie domu stačí, aby ste nakreslili štvorec!
       2-3 Artist 9 NEW_authored_hint:
@@ -51,8 +51,8 @@ sk:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Nezabudnite dať všetok šedý kód a Váš blok s
-          otočkami dovnútra slučky.
+        2-3_Artist_Nested_Loops_3_b: Nezabudni vložiť všetok šedý kód, spolu s blokom
+          na otočenie do vnútra cyklu.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 7_authored_hint:
@@ -68,17 +68,302 @@ sk:
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Každý predmet potrebuje vlastnú slučku "while".
       Artist Inspiration_authored_hint:
-        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
+        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.
+
+          *Táto úroveň končí po 10 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.
+
+          *Táto úroveň končí po 10 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+
+          *Táto úroveň končí po 4 taktoch.*
+        challenges: |-
+          **Dobrovoľné výzvy**
+          * Vyber si inú pesničku.
+          * Premenuj svojho tanečníka.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+
+          *Táto úroveň končí po 4 taktoch.*
+        challenges: |-
+          **Dobrovoľné výzvy**
+          * Vyber si inú pesničku.
+          * Zmeň vzhľad tanečníka na soba.
+          * Premenuj svojho tanečníka.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Tanečník musí zmeniť kroky po 4 taktoch.
+
+          *Úroveň končí po 7 taktoch.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
+
+          *Úroveň končí po 11 taktoch.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.
+
+          *Táto úroveň končí po 9 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ mať aspoň dvoch tanečníkov.
+
+          *Táto úroveň končí po 5 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
+          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Dvaja tanečníci musia mať veľkosť inú ako 100.
+
+          *Táto úroveň končí po 5 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Zmeň sfarbenie aspoň jedného tanečníka.
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+
+          *Táto úroveň končí po 4 taktoch.*
+        challenges: |-
+          **Dobrovoľné výzvy**
+          * Vyber si inú pesničku.
+          * Zmeň vzhľad tanečníka na soba.
+          * Premenuj svojho tanečníka.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Vlastnosti dvoch, alebo viac tanečníkov sa musia meniť.
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Stačí ak daš priestor svojej kreativite!
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Stačí ak daš priestor svojej kreativite!
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Stačí ak daš priestor svojej kreativite!
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Použi blok `keď hore stlačený` na to aby Robot urobil tanečný krok keď stlačíš šípku.
+
+          *Táto úroveň končí po 7 taktoch.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Tanečník musí zmeniť kroky po 4 taktoch.
+
+          *Úroveň končí po 8 taktoch.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
+
+          *Úroveň končí po 12 taktoch.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.
+
+          *Táto úroveň končí po 10 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Tvoj tanec musí obsahovať viacero krokov počas prvých 12 taktov pesničky.
+
+          *Táto úroveň končí po 12 taktoch.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
+          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Dvaja tanečníci musia mať veľkosť inú ako 100.
+
+          *Táto úroveň končí po 6 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Zmeň sfarbenie aspoň jedného tanečníka.
+
+          *Táto úroveň končí po 8 taktoch.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
           volať dvakrát, aby ste vyriešili tento hlavolam.
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
           volať dvakrát, aby ste vyriešili tento hlavolam.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+
+          *Táto úroveň končí po 4 taktoch.*
+        challenges: |-
+          **Dobrovoľné výzvy**
+          * Vyber si inú pesničku.
+          * Zmeň vzhľad tanečníka na soba.
+          * Premenuj svojho tanečníka.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+          * Tanečník musí zmeniť kroky po 4 taktoch.
+
+          *Úroveň končí po 8 taktoch.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
+
+          *Úroveň končí po 12 taktoch.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.
+
+          *Táto úroveň končí po 10 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Tvoj tanec musí obsahovať viacero krokov počas prvých 12 taktov pesničky.
+
+          *Táto úroveň končí po 12 taktoch.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
+          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Dvaja tanečníci musia mať veľkosť inú ako 100.
+
+          *Táto úroveň končí po 6 taktoch.*
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          * Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Zmeň sfarbenie aspoň jedného tanečníka.
+
+          *Táto úroveň končí po 8 taktoch.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Vlastnosti dvoch, alebo viac tanečníkov sa musia meniť.
+
+          *Táto úroveň končí po 8 taktoch.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Stačí ak daš priestor svojej kreativite!
+
+          *Táto úroveň končí po 8 taktoch.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          * Stačí ak daš priestor svojej kreativite!
+
+          *Táto úroveň končí po 8 taktoch.*
       Inspirational Artwork_authored_hint:
-        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
+        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík,
           aby si mohol objavovať svet!
@@ -259,7 +544,7 @@ sk:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík,
           aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire_authored_hint:
-        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
+        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo
           Steve mohli prechádzať za okrajmi mapy.
@@ -268,6 +553,10 @@ sk:
           na ktorom stojíš.
         mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto,
+          na ktorom stojíš.
+        mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto,
           na ktorom stojíš.
         mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
@@ -470,7 +759,12 @@ sk:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_maze_ramp6_authored_hint:
@@ -504,4 +798,4 @@ sk:
       grade5_artist_for_loops10_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       grade5_artist_functionparameters10_authored_hint:
-        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
+        double_loop: Skúste vložiť cyklus "for" dovnútra cyklu "opakovať".

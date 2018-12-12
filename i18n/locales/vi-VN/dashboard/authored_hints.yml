@@ -211,6 +211,205 @@ vi:
           **Lời giải**
           ![Hình ảnh của Lời Giải]
           (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+          
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+          
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần có ít nhất hai vũ công.
+          
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thay đổi sắc thái của ít nhất một vũ công.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+          
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thoải mái sáng tạo!
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thoải mái sáng tạo!
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thoải mái sáng tạo!
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
+          
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thay đổi sắc thái của ít nhất một vũ công.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Đây là gợi ý đầu tiên. Có *một số * ** cơ bản ** 'đánh dấu'
@@ -229,11 +428,98 @@ vi:
         Function_intro_Ryan_b: Nếu bạn sử dụng chính xác các chức năng, sẽ có một con đường bạn có thể di chuyển...
         Function_intro_Ryan_a: Bạn có thể sử dụng một chức năng nhiều lần trong chương trình của bạn!  Hãy thử dùng nó hai lần để giải quyết câu đố này.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **! [] (https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
+        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
       HOC 2018 Level_7a_authored_hint:
         aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+          
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
+          
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+          
+          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thay đổi sắc thái của ít nhất một vũ công.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thoải mái sáng tạo!
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          
+          * Thoải mái sáng tạo!
+          
+          *Cấp độ này kết thúc sau 8 nhịp.*
       Harvesting_authored_hint:
         pointer_harvester_test: Tôi có thể sử dụng loại khối lệnh nào để kiểm tra một cái gì đó và quyết định?
       Inspirational Artwork_authored_hint:
@@ -581,7 +867,11 @@ vi:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
@@ -592,6 +882,8 @@ vi:
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao xa?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao xa?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao xa?"
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!

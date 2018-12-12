@@ -1,6 +1,7 @@
 "no":
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": "Hvis ja, hvilke datakurs har du tatt før dette datakurset du er med på nå?\n"
       2-3 Artist 1 new: "Hei, jeg er en kunstner. Du kan skrive kode for å få meg til å tegne nesten hva som helst. \nBruk noen blokker for å få meg til å tegne over de grå linjene i bildet. (Hver linje er 100 piksler lang)\\r \\r\n"
       2-3 Artist 11: 'Gi stoppskiltet en ramme ved å lage en åttekant med sider på 100 piksler. '
       2-3 Artist 12: "Lag en sirkel ved å fullføre øyeeplet! \\r \\r Hvis kunstneren snur 1 grad hver løkke, hvor mange gnager må du gjenta koden for å tegne en sirkel? "
@@ -46,13 +47,17 @@
       2-3 Artist Functions 1: "\"Meg zombiekunstner. Meg elsker tegning!\"\n\\r\n\\r\nHjelp zombien med å tegne firkantede brilleglass. \\r\n\\r\nHvert brilleglass er 100 piksler bredt. Avstanden mellom brilleglassene er 25 piksler kortere enn det.\\r\n\\r\n"
       2-3 Artist Functions 10: "**Fritt spill:** Her er det to funksjoner, en til å tegne et stort tannhjul og en til å tegne et lite tannhjul. \\r\n\\r\nBruk den til å tegne innsiden av en maskin!"
       2-3 Artist Functions 11 a: "Vi har gitt funksjonen `tegn en firkant`det nye navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \\r\n\\r\nKan du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\\r\n\\r\nTegn bildet ved å bruke den nye funksjonen!"
+      2-3 Artist Functions 11.5 a: "Her er den samme `tegn en sekskant`-funksjonen. \\r\n\\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader hver gang du gjentar?"
       2-3 Artist Functions 11.5: "Her er den samme `tegn en sekskant`-funksjonen. \\r\n\\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader hver gang du gjentar?"
       2-3 Artist Functions 11: "Vi har gitt funksjonen `tegn en firkant`det nye navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \\r\n\\r\nKan du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\\r\n\\r\nTegn bildet ved å bruke den nye funksjonen!"
       2-3 Artist Functions 12 Mike: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 12 a: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 12: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
+      2-3 Artist Functions 2 a: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
       2-3 Artist Functions 2: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
+      2-3 Artist Functions 3 a: "Endre funksjonen \"tegne en firkant\" til å tegne briller med rammer som er 115px på hver side. \n\nRutene er nå 45 piksler fra hverandre."
       2-3 Artist Functions 3: "Endre funksjonen slik at den tegner sider på 115 piksler. \\r\n\\r\nDisse firkantene er nå 45 piksler fra hverandre."
+      2-3 Artist Functions 4 a: Plasser funksjonen inni en løkke for og legg til en ekstra gang for å tegne disse kvadratene.
       2-3 Artist Functions 4: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
       2-3 Artist Functions 9: "**Fritt spill:** Her er en funksjon for å tegne et snøfnugg. Bruk den for å tegne et vinterbilde!\\r\n\\r\nHer kan du tegne hva du vil. Ha det gøy!"
       2-3 Artist Loops 1: Kan du lage en sekskant med sider på 100 piksler? Husk at det betyr at du bare trenger å snu 60 grader!
@@ -246,6 +251,13 @@
       4-5 While Loops 2: Flytt meg til jordhaugen og bruk blokken `fjern 1` til å fjerne den på 5 spadetak.
       4-5 While Loops 3: "Bruk så få blokker som mulig! \\r\n\\r\nFlytt meg til jordhaugen og fjern all jorda. Etterpå flytter du meg til hullet og fyller det helt opp."
       4-5 While Loops 4: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
+      AWS applab: |-
+        # Gjøre dette nå
+        
+        * trinn
+        * trinn to
+      AWS link: "# Bruk dette verktøyet for ulike ting"
+      AlgPD DR Free Play: Bruk et ord problem fra eksisterende læreplanen eller annet sted, fullfør designoppskriften og programmer en funksjon. Bruk et Design-oppskrift-skjema fra arbeidsboken eller last ned en kopi [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
       Alien Defender: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
       Alien Defender_2018: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
       Artist Autorun Test: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
@@ -273,6 +285,48 @@
       Course 4 SCFP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       CourseF_PlayLab_vars2: Løpet i forrige oppgave var ikke veldig rettferdig! Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt. Den første til å samle 10 flagg vinner!
+      Dance_Party_extras_battle: |-
+        # Dansegrupper
+        
+        Her er det en dansekonkurranse mellom to grupper. Piltastene kontrollerer én av danserne, og wasd-tastene kontrollere den andre. Arranger en dansekonkurranse med en venn, og prøv å forbedre denne dansekonkurransen.
+        
+        * Legg til flere taster for å kontrollere dansene
+        * Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
+        * Bytt danser hver fjerde takt ved å justere synligheten
+      Dance_Party_extras_every_beat: |-
+        # Firedelsnoter
+        
+        De fleste av dansene våre har brukt hele takter, men hver takt består av 4 firedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver firedelsnote.
+        
+        Denne dansen bruker også en _betingelsesblokk_ til å kontrollere når ‘hver 0,25. takt’-blokken kan endre dansen. Prøv å endre tallene i betingelsesblokken for å se hvordan dette endrer dansen.
+        
+        * Eksperimenter med andre notevarigheter (som 0,5 for halvnote og 0,125 for åttedelsnote).
+        * Legg til noen ‘etter takten'-hendelser.
+        * Bytt "takter" med "sekunder", og prøv å justere timingen på dansen på denne måten isteden.
+      Dance_Party_extras_layout: |-
+        # Kom i formasjon
+        
+        Sjekk ut denne dansen som bruker ‘oppsett’-blokken til å endre bakgrunnsdansernes formasjon gjennom dansen. Prøv en av disse ideene for å utvide den:
+        
+        * Lag en ny gruppe med dansere i et annet oppsett
+        * Endre oppsett når en tast trykkes ned
+        * Endre en egenskap når danserne endrer formasjon
+      Dance_Party_extras_on_beat: |-
+        # Bass, mellomtone og diskant
+        
+        Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
+      Dance_Party_extras_speed: |-
+        # Fortere, saktere
+        
+        Den siste dansen bruker ‘sett fart’-blokken til å styre hvor raskt hver danser beveger seg. Prøv å eksperimentere med forskjellige hastigheter på forskjellige punkter i sangen. Du kan fortsette å flikke på denne dansen, eller gå tilbake til noen av de tidligere dansene og gjøre dem enda kulere.
+      Dance_Party_extras_visible: |-
+        # Hvor ble det av dem?
+        
+        Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.
+        
+        * Legg til en ny gruppe dansere
+        * Vis og skjul danserne med piltastene
+        * Skjul alle danserne og bytt til en spennende bakgrunnseffekt
       Function intro Ryan: "I arbeidsområdet finner du nå en **funksjon** kalt `build bridge` (bygg bro). All koden du trenger for å krysse elva er bygd rett inn i den! \\r\n \\r\nFest den lille grønne blokken to ganger i arbeidsområdet for å fikse stien og få {currentPlayerName} bort til redstonefakkelen [redstone_torch]."
       Function intro Ryan_2019: "I arbeidsområdet finner du nå en **funksjon** kalt `build bridge` (bygg bro). All koden du trenger for å krysse elva er bygd rett inn i den! \\r\n \\r\nFest den lille grønne blokken to ganger i arbeidsområdet for å fikse stien og få {currentPlayerName} bort til redstonefakkelen [redstone_torch]."
       K-1 Bee Loops 2: Bruk en løkke til å bevege deg og så hente nektaren og lage honning!
@@ -382,10 +436,12 @@
       New Minecraft Hero Project: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode for å hjelpe deg med å utforske denne verdenen."
       Overworld Move to Sheep: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       Overworld Move to Sheep_2018: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
+      Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       PS copy 2-3 Bee Conditionals 5: "Disse magiske lilla blomstene endrer seg!\\r\n\\r\nHver gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du vet ikke antall nektar før du kjører koden!\\r\n\\r\nPass på så du ikke samler nektar fra blomster som ikke har noen. \\r\nDu må først sjekke om nektaren er lik 1 ved å bruke \"hvis nektar\"-blokken."
       Testing Quantum Farmer: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       Underground If Statements: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
       Underground If Statements_2018: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
+      Underground If Statements_2019: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
       course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       course4_artist_fwp_challenge1: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
       courseD_bee_nestedLoops5: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
@@ -397,6 +453,7 @@
       courseD_farmer_until_challenge2_2018: Bruk blokken hvis/ellers for å følge den svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_while_challenge1: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge1_2018: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2019: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge2: Fyll inn alle hullene og fjern alle haugene.
       courseD_farmer_while_challenge2_2018: Fyll inn alle hullene og fjern alle haugene.
       courseD_maze_nestedLoops4: 'Få meg til solsikken!'

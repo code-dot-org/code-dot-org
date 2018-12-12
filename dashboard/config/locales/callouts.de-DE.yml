@@ -79,6 +79,19 @@ de:
         arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      Dance_Party_01_callout:
+        dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_02_callout:
+        dance_callout_02: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_04_callout:
+        dance_callout_04: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_Party_06_callout:
+        dance_callout_06: Fügen Sie Sie hier Ihren neuen Tänzer hinzu
+      Dance_Party_11_callout:
+        dance_callout_11_a: Neuer Block!
+        dance_callout_11_b: Neuer Block!
       Eval Design Recipe .1_callout:
         edit_function: Klicke hier, um die Funktion zu bearbeiten.
       Frozen Project Test Toolbox_callout:
@@ -194,19 +207,28 @@ de:
         craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
           Kannst du es fertigstellen?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
           Kannst du es fertigstellen?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Dieser Code wird anfangen dein Haus zu bauen.
+          Kannst du es fertigstellen?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
       Overworld Place Wall_callout:
         craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Wiederhole Aktionen, indem du hier Bausteine hineinsetzt.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
@@ -233,9 +255,14 @@ de:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl
           zum Vorwärtsbewegen hinzufügen?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl
+          zum Vorwärtsbewegen hinzufügen?
       Underground Iron_callout:
         craft_what_is_iron: Baue dieses Eisen ab!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Baue dieses Eisen ab!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Baue dieses Eisen ab!
       aE3_callout:
         aE3_1: Nur eine Handvoll von diesen zur Verfügung
@@ -269,6 +296,9 @@ de:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
       courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
       courseD_bee_conditionals2_test_callout:

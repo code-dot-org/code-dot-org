@@ -6,20 +6,20 @@ he:
         text: אחרי {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': מידות
+            '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_changeColorBy:
-        text: שנה {COLOR} {METHOD} פי {AMOUNT}
+        text: שנה {COLOR} {METHOD} ב {AMOUNT}
         options:
           METHOD:
             '"hue"': גוון
             '"saturation"': רוויה
             '"brightness"': בהירות
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} תעשה {MOVE} {DIR} לנצח"
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
         options:
           GROUP:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -32,36 +32,46 @@ he:
             '"SHARK"': כל הכרישים
             '"UNICORN"': כל חדי-הקרן
           MOVE:
-            MOVES.ClapHigh: מחיאת כף גבוהה
-            MOVES.Clown: ליצן
-            MOVES.Dab: דֶאבּ
-            MOVES.Drop: דְרוֹפּ
-            MOVES.Floss: חוט דנטלי
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
             '"rand"': "(רנדומלי)"
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} תעשה {MOVE} {DIR} לנצח"
+        text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
           MOVE:
-            MOVES.ClapHigh: מחיאת כף גבוהה
-            MOVES.Clown: ליצן
-            MOVES.Dab: דֶאבּ
-            MOVES.Drop: דְרוֹפּ
-            MOVES.Floss: חוט דנטלי
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
             '"rand"': "(רנדומלי)"
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: שנו {SPRITE} {PROPERTY} על ידי {VAL}
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -71,9 +81,10 @@ he:
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
       Dancelab_doMoveEachLR:
+        text: "{GROUP} עושים {MOVE} {DIR} פעם אחת"
         options:
           GROUP:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -86,48 +97,91 @@ he:
             '"SHARK"': כל הכרישים
             '"UNICORN"': כל חדי-הקרן
           MOVE:
-            MOVES.ClapHigh: מחיאת כף גבוהה
-            MOVES.Clown: ליצן
+            '"rand"': "(רנדומלי)"
+            MOVES.XBend: בנד
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.XClapSide: מחא כף
+            MOVES.ClapHigh: קלאפ היי
             MOVES.Dab: דֶאבּ
+            MOVES.XFever: דיסקו
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
             MOVES.Drop: דְרוֹפּ
-            MOVES.Floss: חוט דנטלי
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.XHeadHips: ראש + ירכיים
+            MOVES.XHop: קפיצה
+            MOVES.XHighKick: בעיטה
+            MOVES.XKnee: ברך
+            MOVES.XKneel: התכופף
+            MOVES.XOle: אולה
+            MOVES.XArmsSide: ריץ'
+            MOVES.XSlide: סלייד
+            MOVES.Kick: כוכב
+            MOVES.XArmsUp: סטרץ'
+            MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
         options:
           MOVE:
-            MOVES.ClapHigh: מחיאת כף גבוהה
-            MOVES.Clown: ליצן
+            '"rand"': "(רנדומלי)"
+            MOVES.XBend: בנד
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.XClapSide: מחא כף
+            MOVES.ClapHigh: קלאפ היי
             MOVES.Dab: דֶאבּ
+            MOVES.XFever: דיסקו
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
             MOVES.Drop: דְרוֹפּ
-            MOVES.Floss: חוט דנטלי
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.XHeadHips: ראש + ירכיים
+            MOVES.XHop: קפיצה
+            MOVES.XHighKick: בעיטה
+            MOVES.XKnee: ברך
+            MOVES.XKneel: התכופף
+            MOVES.XOle: אולה
+            MOVES.XArmsSide: ריץ'
+            MOVES.XSlide: סלייד
+            MOVES.Kick: כוכב
+            MOVES.XArmsUp: סטרץ'
+            MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
+        text: 'כל {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': מידות
+            '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_everySecondsRange:
+        text: 'כל {N} {UNIT} מ-{START} ועד {STOP} '
         options:
           UNIT:
-            measures: מידות
+            measures: תיבות
             seconds: שניות
       Dancelab_everyVerseChorus:
+        text: 'כל {UNIT} '
         options:
           UNIT:
+            '"verse"': בית
             '"chorus"': פזמון
       Dancelab_getEnergy:
+        text: קבל {RANGE}
         options:
           RANGE:
-            '"low"': בס
+            '"low"': באס
             '"mid"': אמצע
             '"high"': טְרֶבֶּל
       Dancelab_getProp:
+        text: "{PROPERTY} של {SPRITE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -138,24 +192,35 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_getTime:
-        text: עבר {UNIT}
+        text: זמן נוכחי ב {UNIT}
         options:
           UNIT:
-            '"measures"': מידות
+            '"measures"': תיבות
             '"seconds"': שניות
       Dancelab_ifDanceIs:
+        text: |-
+          אם {SPRITE} עושה {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: מחיאת כף גבוהה
-            MOVES.Clown: ליצן
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Clown: גאנגם
             MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
             MOVES.Drop: דְרוֹפּ
-            MOVES.Floss: חוט דנטלי
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
       Dancelab_ifTime:
+        text: |-
+          אם {UNIT} הוא {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': מידות
+            '"measures"': תיבות
             '"seconds"': שניות
           OP:
             '">"': ">"
@@ -165,14 +230,21 @@ he:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
-            "{x: 200, y: 200}": אמצע
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_layoutSprites:
+        text: סידור {GROUP} כ {FORMAT}
         options:
           GROUP:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -185,11 +257,19 @@ he:
             '"SHARK"': כל הכרישים
             '"UNICORN"': כל חדי-הקרן
           FORMAT:
+            '"border"': גבול
+            '"inner"': בתוך ריבוע
             '"circle"': עיגול
+            '"grid"': רשת
             '"row"': שורה
             '"column"': עמודה
+            '"x"': קְרִיס-קְרוֹס
+            '"plus"': פלוס
             '"random"': אקראי
       Dancelab_makeNewDanceSprite:
+        text: |-
+          צור {COSTUME} חדש
+          בשם {NAME} ב {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': חייזר
@@ -204,11 +284,20 @@ he:
             '"SHARK"': כריש
             '"UNICORN"': חד-קרן
           LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
-            "{x: 200, y: 200}": אמצע
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          צור {N} {COSTUME} חדשים
+          ב {LAYOUT}
         options:
           N:
             '2': '2'
@@ -243,26 +332,57 @@ he:
             '"SHARK"': כרישים
             '"UNICORN"': חדי-קרן
           LAYOUT:
+            '"border"': גבול
+            '"inner"': בתוך ריבוע
             '"circle"': עיגול
+            '"grid"': רשת
             '"row"': שורה
             '"column"': עמודה
+            '"x"': קְרִיס-קְרוֹס
+            '"plus"': פלוס
             '"random"': אקראי
       Dancelab_mixColors:
         text: ערבב {COLOR1} עם {COLOR2}
+      Dancelab_nMeasures:
+        text: "{N} תיבות"
+      Dancelab_onPointerDown:
+        text: כאשר הלחצן יורד
+      Dancelab_onPointerDrag:
+        text: כאשר הלחצן על לגרור
+      Dancelab_onPointerUp:
+        text: כאשר הלחצן עולה
       Dancelab_randomColor:
         text: צבע אקראי
       Dancelab_setBackground:
-        text: הגדר צבע רקע {COLOR}
+        text: קבע צבע רקע {COLOR}
       Dancelab_setBackgroundEffect:
+        text: קבעו אפקט רקע {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
             '"color_cycle"': צבעים
             '"disco"': ריבועים
-            '"rainbow"': צבעים
+            '"rainbow"': קשת
             '"diamonds"': יהלומים
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(רנדומלי)"
+            '"splatter"': בועות
+            '"swirl"': הִיפְּנוֹ
+            '"snowflakes"': שלג
+            '"spiral"': ספירלה
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(רנדומלי)"
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': כלום
+            '"rand"': "(רנדומלי)"
+            '"color_cycle"': צבעים
+            '"diamonds"': יהלומים
+            '"swirl"': הִיפְּנוֹ
+            '"rainbow"': קשת
+            '"snowflakes"': שלג
+            '"spiral"': ספירלה
+            '"disco"': ריבועים
       Dancelab_setDanceSpeed:
+        text: קבע {SPRITE} מהירות ריקוד ל {SPEED}
         options:
           SPEED:
             '1': רגיל
@@ -271,9 +391,10 @@ he:
             '0.5': איטי
             '0.25': מאוד איטי
       Dancelab_setDanceSpeedEach:
+        text: קבע {GROUP} מהירות ריקוד ל {SPEED}
         options:
           GROUP:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -292,12 +413,27 @@ he:
             '0.5': איטי
             '0.25': מאוד איטי
       Dancelab_setForegroundEffect:
+        text: קבע אפקט חזית {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
             '"rain"': גשם
+            '"raining_tacos"': טָאקוֹ
+            '"spotlight"': זרקור
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(רנדומלי)"
+      Dancelab_setForegroundEffectExtended:
+        text: קבע אפקט חזית {EFFECT}
+        options:
+          EFFECT:
+            '"none"': כלום
+            '"rand"': "(רנדומלי)"
+            '"bubbles"': בועות
+            '"pineapples"': אננסים
+            '"rain"': גשם
+            '"spotlight"': זרקור
+            '"raining_tacos"': טָאקוֹ
       Dancelab_setProp:
+        text: 'קבע {PROPERTY} של {SPRITE} ל {VAL} '
         options:
           PROPERTY:
             '"scale"': גודל
@@ -308,9 +444,10 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setPropEach:
+        text: קבע {PROPERTY} של {GROUP} ל {VAL}
         options:
           GROUP:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -331,6 +468,7 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setPropRandom:
+        text: קבע באקראי את {PROPERTY} של {SPRITE}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -340,10 +478,13 @@ he:
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
             '"tint"': גוון
+      Dancelab_setTint:
+        text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setTintEach:
+        text: קבע גוון של {THIS} ל {VAL}
         options:
           THIS:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -354,16 +495,19 @@ he:
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+      Dancelab_setTintInline:
+        text: קבע גוון של {SPRITE} ל {VAL}
       Dancelab_setVisible:
+        text: קבע את הנראות של {SPRITE} ל {VISIBILITY}
         options:
           VISIBILITY:
             'true': נראה
             'false': בלתי נראה
       Dancelab_setVisibleEach:
-        text: שנה את הנראות של {THIS} ל-{VISIBILITY}
+        text: שנה את הנראות של {THIS} ל {VISIBILITY}
         options:
           THIS:
-            sprites: כל
+            sprites: כולם
             '"ALIEN"': כל החייזרים
             '"BEAR"': כל הדובים
             '"CAT"': כל החתולים
@@ -379,6 +523,7 @@ he:
             'true': נראה
             'false': בלתי נראה
       Dancelab_startMapping:
+        text: "{PROPERTY} של {SPRITE} מתחיל לעקוב אחרי {RANGE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -389,10 +534,11 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
           RANGE:
-            '"bass"': בס
+            '"bass"': באס
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_stopMapping:
+        text: "{PROPERTY} של {SPRITE} מפסיק לעקוב אחרי {RANGE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -404,10 +550,11 @@ he:
             '"direction"': כיוון תנועה
             '"tint"': גוון
           RANGE:
-            '"bass"': בס
+            '"bass"': באס
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_whenKey:
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': למעלה
@@ -415,6 +562,7 @@ he:
             '"down"': למטה
             '"right"': ימינה
             '"space"': חלל
+            '"enter"': אנטר
             '"a"': a
             '"d"': d
             '"e"': e
@@ -423,6 +571,11 @@ he:
             '"h"': h
             '"i"': i
             '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
             '"r"': r
             '"s"': s
             '"t"': t
@@ -430,12 +583,14 @@ he:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
       Dancelab_whenPeak:
+        text: כאשר {RANGE} מגיע לשיא
         options:
           RANGE:
-            '0': בס
+            '0': באס
             '1': אמצע
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
@@ -443,19 +598,19 @@ he:
       gamelab_beginBehavior:
         text: התחל {BEHAVIOR}
       gamelab_changeColor:
-        text: שנה {COLOR} {METHOD} פי {AMOUNT}
+        text: שנה {COLOR} {METHOD} ב {AMOUNT}
         options:
           METHOD:
             '"tint"': גוון
       gamelab_changeColorBy:
-        text: שנה {COLOR} {METHOD} פי {AMOUNT}
+        text: שנה {COLOR} {METHOD} ב {AMOUNT}
         options:
           METHOD:
             '"hue"': גוון
             '"saturation"': רוויה
             '"brightness"': בהירות
       gamelab_changePropBy:
-        text: שנו {SPRITE} {PROPERTY} על ידי {VAL}
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -485,6 +640,7 @@ he:
           COSTUME:
             '"costume"': תחפושת
       gamelab_getProp:
+        text: "{PROPERTY} של {SPRITE}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -554,12 +710,20 @@ he:
       gamelab_randomColor:
         text: צבע אקראי
       gamelab_setBackground:
-        text: הגדר צבע רקע {COLOR}
+        text: קבע צבע רקע {COLOR}
       gamelab_setPosition:
         text: העבר את {THIS} לעמדה {POSITION}
         options:
           POSITION:
-            "{x: 200, y: 200}": אמצע
+            "{x: 50, y: 50}": למעלה משמאל
+            "{x: 200, y: 50}": למעלה באמצע
+            "{x: 350, y: 50}": למעלה מימין
+            "{x: 50, y: 200}": משמאל באמצע
+            "{x: 200, y: 200}": באמצע
+            "{x: 350, y: 200}": מימין באמצע
+            "{x: 50, y: 350}": למטה משמאל
+            "{x: 200, y: 350}": למטה במרכז
+            "{x: 350, y: 350}": למטה מימין
             '"random"': אקראי
       gamelab_setProp:
         options:
@@ -614,6 +778,7 @@ he:
             '"right"': ימינה
             '"left"': שמאלה
       gamelab_whenKey:
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': למעלה
@@ -655,9 +820,31 @@ he:
       Mikelab_createNewSprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
-            "{x: 200, y: 200}": אמצע
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
+            "{x: 100, y: 200}": שמאלה
+            "{x: 300, y: 200}": ימינה
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': כולם
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -690,6 +877,7 @@ he:
       Mikelab_whenClickedOn:
         text: כאשר {SPRITE} נלחץ
       Mikelab_whenKeyPressed:
+        text: כשמקש {KEY} לחוץ
         options:
           KEY:
             '"up"': חץ למעלה
@@ -719,7 +907,7 @@ he:
             '"left"': חץ שמאלה
             '"right"': חץ ימינה
       RyanLab_moveForward:
-        text: לזוז קדימה
+        text: זוז קדימה
       RyanLab_turnLeft:
         text: פנה שמאלה
       RyanLab_turnRight:
@@ -727,7 +915,7 @@ he:
       Vector_log:
         text: הודעת לוג {MESSAGE}
       Vector_positionCenter:
-        text: אמצע
+        text: באמצע
       Vector_vectorNorth:
         text: צפון
       Vector_where:
@@ -754,7 +942,7 @@ he:
             '"tint"': גוון
       craft_ifPath:
         text: |-
-          אם נתיב {DIR}
+          אם יש נתיב {DIR}
           {STATEMENT}
         options:
           DIR:
@@ -785,9 +973,9 @@ he:
       craft_log:
         text: הודעת לוג {MESSAGE}
       craft_moveForward:
-        text: לזוז קדימה
+        text: זוז קדימה
       craft_placeBlock:
-        text: הניחו {blockType}
+        text: הנח {blockType}
         options:
           blockType:
             '"strippedOak"': עץ אלון מקולף
@@ -816,7 +1004,7 @@ he:
             '"kelp"': אצות ים
             '"polishedGranite"': גרניט מלוטשת
       craft_placePrismarine:
-        text: הנח את הפריזמרינה
+        text: הנח פריזמרינה
       craft_placeTorch:
         text: שים לפיד
       craft_repeatUntilConduit:
@@ -825,10 +1013,10 @@ he:
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
-          חזור עד שהמטרה
+          חזור עד המטרה
           {STATEMENT}
       craft_spawnEntity:
-        text: שכפל {ENTITY}
+        text: צור {ENTITY}
         options:
           ENTITY:
             '"cod"': דג
@@ -838,7 +1026,7 @@ he:
             '"squid"': דיונון
             '"tropicalFish"': דג טרופי
       craft_turn:
-        text: פנו {DIR}
+        text: פנה {DIR}
         options:
           DIR:
             right: ימינה

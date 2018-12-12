@@ -22,19 +22,28 @@ sr:
         craft_callout_preplaced: Неки блокови су већ постављени за почетак
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Неки блокови су већ постављени за почетак
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Неки блокови су већ постављени за почетак
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш
           ли га довршити?
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш
           ли га довршити?
+      Overworld House Frame Chosen_2019_callout:
+        craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш
+          ли га довршити?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Притисни "Изврши" дугме да покренеш програм
       Overworld Place Wall_callout:
         craft_inside_repeat: Понови команде постављањем блокова овде
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Понови команде постављањем блокова овде
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Понови команде постављањем блокова овде
       Rock Paper Scissors_callout:
         sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније?
@@ -48,9 +57,14 @@ sr:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли
           додати команду да се помери напред?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли
+          додати команду да се помери напред?
       Underground Iron_callout:
         craft_what_is_iron: Ископај ово гвожђе!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Ископај ово гвожђе!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Ископај ово гвожђе!
       aE3_callout:
         aE3_1: Доступно је само неколико ових

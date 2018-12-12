@@ -164,6 +164,8 @@ ka:
         4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი კატეგორიებად არის დაჯუფებული. დააწკაპუნეთ ამ სიტყვებს, რომ ნახოთ, სად წავიდა ყველაფერი!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი კატეგორიებად არის დაჯუფებული. დააწკაპუნეთ ამ სიტყვებს, რომ ნახოთ, სად წავიდა ყველაფერი!
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი კატეგორიებად არის დაჯუფებული. დააწკაპუნეთ ამ სიტყვებს, რომ ნახოთ, სად წავიდა ყველაფერი!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: ხმის გამოცემა ამ მოვლენისას.
       Infinity_move_directions_callout:
@@ -215,9 +217,13 @@ ka:
         craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
@@ -225,9 +231,14 @@ ka:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
         craft_drag_block_callout: გადმოათრიეთ "წინ გადაადგილების" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
+        craft_drag_block_callout: გადმოათრიეთ "წინ გადაადგილების" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ
       Overworld Place Wall_callout:
         craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: დააწკაპუნეთ აქ ბადის საჩვენებლად.
@@ -272,9 +283,13 @@ ka:
         craft_callout_moveforward: ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ წინ გადაადგილების ბრძანება?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ წინ გადაადგილების ბრძანება?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ წინ გადაადგილების ბრძანება?
       Underground Iron_callout:
         craft_what_is_iron: მოიპოვეთ ეს რკინა!
       Underground Iron_2018_callout:
+        craft_what_is_iron: მოიპოვეთ ეს რკინა!
+      Underground Iron_2019_callout:
         craft_what_is_iron: მოიპოვეთ ეს რკინა!
       WebLab PS test - 1-12_callout:
         version_history_button: გადახედეთ ვერსიების ისტორიას
@@ -396,9 +411,13 @@ ka:
         courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ, დაიწყეთ ამ ბლოკის გამოყენებით.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ, დაიწყეთ ამ ბლოკის გამოყენებით.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ, დაიწყეთ ამ ბლოკის გამოყენებით.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
+      courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
@@ -414,9 +433,13 @@ ka:
         courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია.
       courseC_maze_programming7_2018_callout:
         courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!
       courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!
+      courseD_artist_nestedLoops1a_2019_callout:
         courseD_artist_nestedLoops1a_1: თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
@@ -425,11 +448,15 @@ ka:
         4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: ამ ციკლის გამოყენებით სცადეთ, წინ მოძრაობის ბლოკის გამეორება.
@@ -464,10 +491,16 @@ ka:
       courseE_artist_functions_challenge1_2018_callout:
         courseE_artist_functions_challenge1_callout1: დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.
         courseE_artist_functions_challenge1_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge1_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.
         courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.
         courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_ramp11_callout:
@@ -490,6 +523,8 @@ ka:
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ.
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ, რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.

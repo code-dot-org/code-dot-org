@@ -117,6 +117,10 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': အားလုံး
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
       craft_ifPath:

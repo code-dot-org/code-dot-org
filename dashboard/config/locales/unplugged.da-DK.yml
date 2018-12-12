@@ -452,3 +452,37 @@ da:
         desc: 'For at lære om betingelsessætninger, skal eleverne spiller et kortspil
           og skabe regler som: "Hvis jeg trækker et rødt kort, får jer et point" og
           "Hvis jeg trækker et sort kort, du får et point."'
+      GraphPaperProgramming_2019:
+        title: Programmering på millimeterpapir
+        desc: Eleverne skal skrive en algoritme (et sæt af instruktioner) ved hjælp
+          af et sæt foruddefinerede kommandoer, for at dirigere deres klassekammerater
+          til at gengive en tegning.
+      RelayProgramming_2018_2019:
+        title: Stafet-programmering
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Unplugged aktivitet
+      BinaryImages_2019:
+        title: Binære billeder
+        desc: Selvom mange mennesker kun tænker på binære tal som nuller og ettaller,
+          underviste vores tidligere kurser eleverne i at, information kan være repræsenteret
+          i en række binære optioner.  Denne lektion tager konceptet et skridt længere,
+          da den illustrerer hvordan en computer også kan gemme endnu mere komplekse
+          oplysninger (f.eks. billeder og farver) i binære tal.
+      GettingLoopy_2019:
+        title: Blive Svimmel
+        desc: Denne lektion introducerer begrebet programmering af løkker/loops (gentagne
+          instrukser) gennem en danse aktivitet. Eleverne vil lære enkel koreografi,
+          derefter instrueres i at gentage den.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Unplugged aktivitet
+      BigEvent_2019:
+        title: Den store begivenhed
+        desc: Eleverne introduceres til programmerings begrebet "begivenheder", som
+          er handlinger, som en computer konstant overvåger. Læreren vil tryk knapper
+          på et papir fjernbetjening og eleverne vil reagere, alt efter hvilken knap
+          er trykket.
+      BinaryBracelets_2019:
+        title: Binære armbånd
+        desc: Eleverne opretter et armbånd som en binært repræsentationer af det første
+          bogstav i deres navn. Eleverne lære at data kan være repræsenteret og gemt
+          på mere end én måde.

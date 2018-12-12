@@ -32,18 +32,18 @@ bg:
             '"SHARK"': всички акули
             '"UNICORN"': всички еднорози
           MOVE:
+            '"next"': "(Следващ)"
+            '"prev"': "(Предишен)"
+            '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
-            MOVES.Clown: Клоун
             MOVES.Dab: Бучица
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': "(Следващ)"
-            '"prev"': "(Предишен)"
-            '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
@@ -52,19 +52,19 @@ bg:
         text: "{SPRITE} направи {MOVE} {DIR} завинаги"
         options:
           MOVE:
+            '"next"': "(Следващ)"
+            '"prev"': "(Предишен)"
+            '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
-            MOVES.Clown: Клоун
             MOVES.Dab: Бучица
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
             MOVES.Thriller: Трилър
-            '"next"': "(Следващ)"
-            '"prev"': "(Предишен)"
-            '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
@@ -95,13 +95,14 @@ bg:
             '"SHARK"': всички акули
             '"UNICORN"': всички еднорози
           MOVE:
+            '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
-            MOVES.Clown: Клоун
             MOVES.Dab: Бучица
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
             MOVES.Rest: Без
@@ -112,13 +113,14 @@ bg:
         text: "{SPRITE} направи {MOVE} {DIR} веднъж"
         options:
           MOVE:
+            '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
-            MOVES.Clown: Клоун
             MOVES.Dab: Бучица
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
             MOVES.Rest: Без
@@ -284,7 +286,16 @@ bg:
             '"rainbow"': Цветове
             '"diamonds"': Диаманти
             '"splatter"': Балончета
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": Случаен
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Случаен
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': Случаен
+            '"color_cycle"': Цветове
+            '"diamonds"': Диаманти
+            '"rainbow"': Цветове
+            '"disco"': Квадрати
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -322,6 +333,16 @@ bg:
             '"raining_tacos"': Такос
             '"spotlight"': Прожектор
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Случаен
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': Случаен
+            '"bubbles"': Балончета
+            '"pineapples"': Ананаси
+            '"rain"': Дъжд
+            '"spotlight"': Прожектор
+            '"raining_tacos"': Такос
       Dancelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -439,6 +460,7 @@ bg:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -623,6 +645,18 @@ bg:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': всички
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -708,19 +742,87 @@ bg:
             '"direction"': посока на движение
             '"tint"': оттенък
       craft_ifPath:
+        text: |-
+          ако пътят {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": отпред
+            "'right'": вдясно
+            "'left'": вляво
       craft_ifStandingOn:
+        text: |-
+          ако стоиш на {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": син корал
+            "'redCoralBlock'": червен корал
             "'sand'": пясък
+            "'wool_blue'": дълбоки води
             "'planksOak'": дъбови дъски
+            "'seaLantern'": морски фенер
       craft_ifStandingOnLimit:
+        text: |-
+          ако стоиш на {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": пясък
+            "'darkPrismarine'": тъмен призмарин
+            "'seaLantern'": морски фенер
       craft_moveForward:
         text: върви напред
+      craft_placeBlock:
+        text: място {blockType}
+        options:
+          blockType:
+            '"strippedOak"': отрязан дъб
+            '"strippedDarkOak"': отрязан тъмен дъб
+            '"stoneBricks"': каменни тухли
+            '"mossyStoneBricks"': мъхести каменни тухли
+            '"crackedStoneBricks"': начупени каменни тухли
+            '"decorativeStoneBricks"': декоративни каменни тухли
+            '"blueCoralBlock"': блок от син корал
+            '"pinkCoralBlock"': блок от розов корал
+            '"magentaCoralBlock"': блок от пурпурен корал
+            '"redCoralBlock"': блок от червен корал
+            '"yellowCoralBlock"': блок от жълт корал
+            '"blueDeadCoralBlock"': блок от син мъртъв корал
+            '"pinkDeadCoralBlock"': блок от розов мъртъв корал
+            '"magentaDeadCoralBlock"': блок от мъртъв пурпурен корал
+            '"readDeadCoralBlock"': блок от червен мъртъв корал
+            '"yellowDeadCoralBlock"': блок от жълт мъртъв корал
+            '"prismarine"': призмарин
+            '"darkPrismarine"': тъмен призмарин
+            '"seaLantern"': морски фенер
+            '"packedIce"': опакован лед
+            '"blueIce"': син лед
+            '"blackConcrete"': черен бетон
+            '"seaGrass"': морска трева
+            '"kelp"': кафяви морски водорасли
+            '"polishedGranite"': полиран гранит
+      craft_placePrismarine:
+        text: постави призмарин
       craft_placeTorch:
         text: постави факел
+      craft_repeatUntilConduit:
+        text: повтаряй докато водопроводът е завършен {STATEMENT}
+      craft_repeatUntilGoal:
+        text: повтаряй до достигане на цел {STATEMENT}
+      craft_spawnEntity:
+        text: хайвер {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': треска
+            '"dolphin"': делфин
+            '"salmon"': сьомга
+            '"seaTurtle"': морска костенурка
+            '"squid"': калмар
+            '"tropicalFish"': тропическа риба
+      craft_turn:
+        text: обърни се {DIR}
+        options:
+          DIR:
+            right: дясно ↻
+            left: ляво ↺

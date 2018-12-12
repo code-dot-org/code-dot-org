@@ -649,6 +649,7 @@ uk:
         csp_applab_functions_parameters: Функції з параметрами
         csp_applab_loops: Цикли
         csp_concept_rgb: Трохи про пікселі
+        csp_cs_is_changing_everything: Інформатика змінює все
         csp_pixelation_color_1: Інструмент пикселизации кольору - частина 1
         csp_pixelation_color_2: Інструмент пикселизации кольору - частина 2
         csp_pixelation_color_3: Інструмент пикселизации кольору - частина 3
@@ -749,10 +750,12 @@ uk:
         CDEF_Video_SpritesInAction: Спрайт в Дії
         CSF_SpriteLab_SpritesInAction_CDEF: Спрайт в Дії
         CSF_StarWars_ProjectIntro: Вступ до проекту Зоряні Війни
-        mc_2018_intro: 'Minecraft: Водний Вояж Введення'
+        mc_2018_intro: 'Minecraft: Вступ у Водний Вояж'
         MC_2018_loops: 'Minecraft: Водний Вояж Повторити до'
         mc_2018_conditionals: 'Minecraft: Водний Вояж Умови'
         mc_2018_closing: 'Minecraft: Водний Вояж Вітання'
+        hoc_dance_warmup: Танцювальна вечірка - Розминка
+        hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

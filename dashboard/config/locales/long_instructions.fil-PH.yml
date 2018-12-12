@@ -1360,6 +1360,8 @@ fil:
         maabot ang tupa.
       Overworld Move to Sheep_2018: Magdagdag ng pangalawang `move forward` na bloke
         para maabot ang tupa.
+      Overworld Move to Sheep_2019: Magdagdag ng pangalawang `move forward` na bloke
+        para maabot ang tupa.
       PS copy 2-3 Bee Conditionals 5: "Ang mga mahiwagang lilang mga bulaklak ay nagbabago!\r\n\r\nBawat
         beses na susubukan mo ang palaisipan, ang mga lilang mga bulaklak ay maaaring
         magkaroon ng 1 nektar o wala talaga,..ngunit hindi mo malalaman ang bilang
@@ -1487,6 +1489,8 @@ fil:
         sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_loops2a_2018: Ngayon, gumamit ng loop para paikutin ang iyong
         ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
+      courseC_artist_loops2a_2019: Ngayon, gumamit ng loop para paikutin ang iyong
+        ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_prog_challenge1-doghouse: Tayo ay gagawa ng bahat ng aso para
         kay Jorge!
       courseC_artist_prog_challenge2: "*Tulungan akong magpinta ng dilaw na mga linya
@@ -1495,17 +1499,25 @@ fil:
         kolektahin ang lahat ng mga kayamanan."*'
       courseC_collector_prog8_2018: '*"Panatilihin ang magandang trabaho! Tulungan
         akong kolektahin ang lahat ng mga kayamanan."*'
+      courseC_collector_prog8_2019: '*"Panatilihin ang magandang trabaho! Tulungan
+        akong kolektahin ang lahat ng mga kayamanan."*'
       courseC_collector_prog9: '*"Ating kunin ang lahat ng mga kayamanan!"*'
       courseC_collector_prog9_2018: '*"Ating kunin ang lahat ng mga kayamanan!"*'
+      courseC_collector_prog9_2019: '*"Ating kunin ang lahat ng mga kayamanan!"*'
       courseC_collector_progA: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       courseC_flappy_events7: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
         ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events7_2018: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
         ng paglakip ng bloke sa `when run` na pangyayari.
+      courseC_flappy_events7_2019: Kasunod nito, subukang baguhin ang eksena sa pamamagitan
+        ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events9: Para haluin ang mga bagay, sa halip na tapusin ang laro
         kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score
         pabalik sa 0.
       courseC_flappy_events9_2018: Para haluin ang mga bagay, sa halip na tapusin
+        ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang
+        score pabalik sa 0.
+      courseC_flappy_events9_2019: Para haluin ang mga bagay, sa halip na tapusin
         ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang
         score pabalik sa 0.
       courseC_harvester_loops10: Kolektahin ang lahat ng mga mais at ang lahat ng
@@ -1558,17 +1570,25 @@ fil:
         mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming1_2018: Para sa palaisipang ito, kaladkarin ang lahat
         ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseC_maze_programming1_2019: Para sa palaisipang ito, kaladkarin ang lahat
+        ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming8: '*"Maging kalmado at tulungan akong hanapin ang masamang
         baboy."*'
       courseC_maze_programming8_2018: '*"Maging kalmado at tulungan akong hanapin
+        ang masamang baboy."*'
+      courseC_maze_programming8_2019: '*"Maging kalmado at tulungan akong hanapin
         ang masamang baboy."*'
       courseC_maze_programming8_predict1: '*"Maging kalmado at tulungan akong hanapin
         ang masamang baboy."*'
       courseC_maze_programming8_predict1_2018: '*"Maging kalmado at tulungan akong
         hanapin ang masamang baboy."*'
+      courseC_maze_programming8_predict1_2019: '*"Maging kalmado at tulungan akong
+        hanapin ang masamang baboy."*'
       courseC_maze_programming9: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit
         anong paraan na gusto mo!"*'
       courseC_maze_programming9_2018: '""Ngayon, tulungan akong mag-abang sa baboy
+        sa kahit anong paraan na gusto mo!"*'
+      courseC_maze_programming9_2019: '""Ngayon, tulungan akong mag-abang sa baboy
         sa kahit anong paraan na gusto mo!"*'
       courseC_maze_programming_challenge2: Minsan ay mayroong higit sa isang pamamaraan
         para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik
@@ -1576,10 +1596,16 @@ fil:
       courseC_maze_programming_challenge2_2018: Minsan ay mayroong higit sa isang
         pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad
         pabalik kaysa sa pumunta pasulong!
+      courseC_maze_programming_challenge2_2019: Minsan ay mayroong higit sa isang
+        pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad
+        pabalik kaysa sa pumunta pasulong!
       courseD_artist_binary_challenge1: Maaari ka lang gumamin ng bawat halaga ng
         binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
         na mga loop para makumpleto ang drowing na ito.
       courseD_artist_binary_challenge1_2018: Maaari ka lang gumamin ng bawat halaga
+        ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
+        na mga loop para makumpleto ang drowing na ito.
+      courseD_artist_binary_challenge1_2019: Maaari ka lang gumamin ng bawat halaga
         ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest
         na mga loop para makumpleto ang drowing na ito.
       courseD_artist_project_embedded: Narito ang gagawin mo mamaya!
@@ -1632,9 +1658,13 @@ fil:
         ang kamay ay maaaring makakuha sa parehong buslo.
       courseD_bounce_events2s_2018: Ngayon, ilakip ang bloke sa `when right event`
         para ang kamay ay maaaring makakuha sa parehong buslo.
+      courseD_bounce_events2s_2019: Ngayon, ilakip ang bloke sa `when right event`
+        para ang kamay ay maaaring makakuha sa parehong buslo.
       courseD_collector_debugging6a: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
         lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
       courseD_collector_debugging6a_2018: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
+        lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
+      courseD_collector_debugging6a_2019: 'Hamon: Gamitin ang code sa loob ng pangtrabahong
         lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
       courseD_collector_until_challenge1: Tingnan kung paano ang mga bubuyog kumukuha
         ng nektar. Maaari mo bang gamitin ang parehong tipo ng pattern para matulungan
@@ -1643,23 +1673,32 @@ fil:
         ay kunin ang kalabasa.
       courseD_farmer_condLoops8_2018: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
+      courseD_farmer_condLoops8_2019: Kolektahin ang lahat ng mais at letsugas, pagkatapos
+        ay kunin ang kalabasa.
       courseD_farmer_condLoops9: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
       courseD_farmer_condLoops9_2018: Kolektahin ang lahat ng mais at letsugas, pagkatapos
+        ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_2019: Kolektahin ang lahat ng mais at letsugas, pagkatapos
         ay kunin ang kalabasa.
       courseD_farmer_condLoops9_predict1: Kolektahin ang lahat ng mais at letsugas,
         pagkatapos ay kunin ang kalabasa.
       courseD_farmer_condLoops9_predict1_2018: Kolektahin ang lahat ng mais at letsugas,
         pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_predict1_2019: Kolektahin ang lahat ng mais at letsugas,
+        pagkatapos ay kunin ang kalabasa.
       courseD_farmer_while_challenge1: Punan ang lahat ng mga butas at tanggalin ang
         lahat ng mga tumpok.
       courseD_farmer_while_challenge1_2018: Punan ang lahat ng mga butas at tanggalin
+        ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge1_2019: Punan ang lahat ng mga butas at tanggalin
         ang lahat ng mga tumpok.
       courseD_farmer_while_challenge2: Punan ang lahat ng mga butas at tanggalin ang
         lahat ng mga tumpok.
       courseD_farmer_while_challenge2_2018: Punan ang lahat ng mga butas at tanggalin
         ang lahat ng mga tumpok.
       courseD_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseD_maze_loops_challenge1: Tayo ay manghanap ng mga kayamanan - gamit ang
         mga loop! Tulungan ang kolektor na makaabot nang hindi bababa sa dalawan tumpok
         ng yaman gamit lang ang mga bloke na nasa loob ng iyong toolbox.
@@ -1698,8 +1737,10 @@ fil:
       courseD_maze_ramp5d_2019: Dalhin ang ibon sa baboy.
       courseD_maze_until10: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_2018: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until10_2019: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2_2018: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until10_predict2_2019: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until2: Ngayon, gamitin ang `repeat until` na loop para magawa
         ang parehong bagay nang hindi tinutukoy kong ilang beses gagalaw pasulong
         at bumaling.
@@ -1708,15 +1749,22 @@ fil:
       courseD_maze_until5_2018: Gamitin ang `if` na bloke para matulungan ang zombie
         na makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie sa
         mirasol.
+      courseD_maze_until5_2019: Gamitin ang `if` na bloke para matulungan ang zombie
+        na makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie sa
+        mirasol.
       courseD_maze_until6: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until6_2018: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until6_2019: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7_2018: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until7_2019: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until8: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until8_2018: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until9: "**Hamon:** Iwasan ang mga chomper at tulungan ang zombie
         na makapunta sa mirasol."
       courseD_maze_until9_2018: "**Hamon:** Iwasan ang mga chomper at tulungan ang
+        zombie na makapunta sa mirasol."
+      courseD_maze_until9_2019: "**Hamon:** Iwasan ang mga chomper at tulungan ang
         zombie na makapunta sa mirasol."
       courseD_maze_until_challenge1: Walang pahiwatig, hamon lang. Dalhin ang zombie
         sa mirasol.
@@ -1745,6 +1793,8 @@ fil:
         gamit ang code sa baba.
       courseE_artist_concept_challenge2_2018: Maglikha ng limang pinwheel na mga disenyo
         gamit ang code sa baba.
+      courseE_artist_concept_challenge2_2019: Maglikha ng limang pinwheel na mga disenyo
+        gamit ang code sa baba.
       courseE_artist_functions_challenge: Kapag nagbigay-kahulugan ka na sa isang
         function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang at kahit
         saan na gusto mo! Subukan ang code na ito para makita kung paano ito gumagana,
@@ -1756,6 +1806,11 @@ fil:
         pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang
         mga disenyo!
       courseE_artist_functions_challenge1_2018: Kapag nagbigay-kahulugan ka na sa
+        isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang
+        at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano
+        ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang
+        mga disenyo!
+      courseE_artist_functions_challenge1_2019: Kapag nagbigay-kahulugan ka na sa
         isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang
         at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano
         ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang
@@ -1959,6 +2014,7 @@ fil:
       grade2_collector_9a: "**Hamon:** Kunin ang lahat ng mga barya."
       grade2_collector_A: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       grade2_collector_A_2018: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
+      grade2_collector_A_2019: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       grade2_maze_debuggingFP: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit
         anong paraan na gusto mo!"*'
       grade2_puppy_loops2: "Bigla nalang, may isang mahiwagang bloke ang dumating!

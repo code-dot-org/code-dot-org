@@ -272,12 +272,20 @@ sl:
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: Pol-osemkotnik ima **dolžino 30** in
           se obrne desno za **60 stopinj**.
         courseE_artist_concept_challenge1_b: 2/3 trikotnik ima **dolžino 80** in se
           obrne desno za **120 stopinj**.
       courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: Pol-osemkotnik ima **dolžino 30** in
+          se obrne desno za **60 stopinj**.
+        courseE_artist_concept_challenge1_b: 2/3 trikotnik ima **dolžino 80** in se
+          obrne desno za **120 stopinj**.
+      courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: Pol-osemkotnik ima **dolžino 30** in
           se obrne desno za **60 stopinj**.
         courseE_artist_concept_challenge1_b: 2/3 trikotnik ima **dolžino 80** in se

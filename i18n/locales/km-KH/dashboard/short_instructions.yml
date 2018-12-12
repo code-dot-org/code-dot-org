@@ -622,6 +622,7 @@ km:
         on top of one another?
       courseD_artist_binary5: "Each binary string below represents one\nrow of this picture. \\r\n\\r\nCan you rearrange them so it draws a smiley face\ninstead of a frown?"
       courseD_artist_binary5_2018: "Each binary string below represents one\nrow of this picture. \\r\n\\r\nCan you rearrange them so it draws a smiley face\ninstead of a frown?"
+      courseD_artist_binary5_2019: "Each binary string below represents one\nrow of this picture. \\r\n\\r\nCan you rearrange them so it draws a smiley face\ninstead of a frown?"
       courseD_artist_binaryFP: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\\r
@@ -634,9 +635,16 @@ km:
         \\r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP_2019: |-
+        Here's a higher resolution canvas to
+        draw on - 16 pixels by 16 pixels!\\r
+        \\r
+        See what happens when we start to
+        get creative with the bits!
       courseD_artist_functions2: "This time, use the `draw a square`\nfunction to create the glasses. \\r\n"
       courseD_artist_nestedLoops1: "Draw a triangle to kickstart this\nstage.  \\r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor each exterior angle.)"
       courseD_artist_nestedLoops1_2018: "Draw a triangle to kickstart this\nstage.  \\r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor each exterior angle.)"
+      courseD_artist_nestedLoops1_2019: "Draw a triangle to kickstart this\nstage.  \\r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor each exterior angle.)"
       courseD_artist_nestedLoops3: |-
         Use your new skills to quickly draw
         the last row of windows for this building.\\r
@@ -644,6 +652,12 @@ km:
         The windows are 20 pixel
         squares, each 20 pixels apart.
       courseD_artist_nestedLoops3_2018: |-
+        Use your new skills to quickly draw
+        the last row of windows for this building.\\r
+        \\r
+        The windows are 20 pixel
+        squares, each 20 pixels apart.
+      courseD_artist_nestedLoops3_2019: |-
         Use your new skills to quickly draw
         the last row of windows for this building.\\r
         \\r
@@ -679,6 +693,7 @@ km:
       courseD_autorun_binary5_2019: "Each binary string below represents one\nrow of this picture. \\r\n\\r\nCan you rearrange them so it draws a smiley face\ninstead of a frown?"
       courseD_bee_conditionals3: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
       courseD_bee_conditionals3_2018: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
+      courseD_bee_conditionals3_2019: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
       courseD_bee_conditionals8: |-
         Collect nectar if there is a flower.\\r
         Otherwise,
@@ -687,9 +702,14 @@ km:
         Collect nectar if there is a flower.\\r
         Otherwise,
         make honey (because there is a honeycomb).
+      courseD_bee_conditionals8_2019: |-
+        Collect nectar if there is a flower.\\r
+        Otherwise,
+        make honey (because there is a honeycomb).
       courseD_playLab_cond3b: "1) Make the dragon change between random\nemotions every second.  \\r\n2) Make it so when Pegleg gets to the dragon,\nhe gets 2 points if the dragon is happy and 1 otherwise."
       courseD_playLab_cond6: "1)  Slow the ninja (actor 3) down before\nyou set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto **chase** the pirate.  "
       courseD_playLab_cond6_2018: "1)  Slow the ninja (actor 3) down before\nyou set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto **chase** the pirate.  "
+      courseD_playLab_cond6_2019: "1)  Slow the ninja (actor 3) down before\nyou set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto **chase** the pirate.  "
       courseD_playLab_embedded: "Move Pegleg the Pirate with the arrow\nkeys. Get to the dragon to score points, but avoid the ninja! Standing below\nthe line of octopuses will make the ninja stop chasing you, but beware! The\nlonger you stay there, the more points you lose. \\r\n\\r\nGet 5 points to win!"
       courseE_artist_functions1: "Help the zombie draw glasses using\nsquares with sides of 100 pixels.  \\r\nThe bridge between the glasses is 75\npixels long."
       courseE_artist_functions1_2018: "Help the zombie draw glasses using\nsquares with sides of 100 pixels.  \\r\nThe bridge between the glasses is 75\npixels long."

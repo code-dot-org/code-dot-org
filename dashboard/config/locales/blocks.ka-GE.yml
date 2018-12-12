@@ -42,6 +42,7 @@ ka:
           GROUP:
             sprites: ყველა
           MOVE:
+            '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
             '1': "→"
@@ -49,6 +50,7 @@ ka:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
             '1': "→"
@@ -154,7 +156,16 @@ ka:
             '"disco"': დისკო
             '"rainbow"': ცისარტყელა
             '"diamonds"': ბრილიანტები
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": შემთხვევითი
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": შემთხვევითი
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
+            '"color_cycle"': ცისარტყელა
+            '"diamonds"': ბრილიანტები
+            '"rainbow"': ცისარტყელა
+            '"disco"': დისკო
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -178,6 +189,11 @@ ka:
           EFFECT:
             '"none"': არცერთი
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": შემთხვევითი
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -250,6 +266,7 @@ ka:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -489,6 +506,21 @@ ka:
             "{x: 100, y: 300}": ქვედა მარცხენა
             "{x: 300, y: 300}": ქვედა მარჯვენა
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": მარცხნივ
+            "{x: 300, y: 200}": მარჯვნივ
+            "{x: 200, y: 200}": ცენტრი
+            "{x: 100, y: 100}": ზედა მარცხენა
+            "{x: 300, y: 100}": ზედა მარჯვენა
+            "{x: 100, y: 300}": ქვედა მარცხენა
+            "{x: 300, y: 300}": ქვედა მარჯვენა
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': ყველა
       Mikelab_getProp:
         options:
           PROPERTY:

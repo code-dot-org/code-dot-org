@@ -176,6 +176,7 @@ gl:
       NEW Course 4 Artist Vars 6: "Debuxa este padrón colocando a\nvariábel lonxitude nos lugares correctos e definindo o valor correcto para\nlonxitude. (Pista: é un múltiplo de 10).  \\r\n\\r\nPercibes como defines o valor de\nlonxitude só unha vez e o código usa o valor correcto en todos os lugares?\\r\n\\r\n\\r\n"
       Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar á ovella.
       Overworld Move to Sheep_2018: Agrega un segundo comando "andar adiante" para chegar á ovella.
+      Overworld Move to Sheep_2019: Agrega un segundo comando "andar adiante" para chegar á ovella.
       Testing Quantum Farmer: "Uau, atopei un buraco realmente fondo! Non\nsei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle \"mentres\"."
       course4_artist_fwp_challenge1: Tenta executar este programa e fai as alteracións para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo por algo totalmente distinto)
       courseD_bee_nestedLoops5: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "

@@ -26,6 +26,7 @@
   twentyhours_heading: "ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา"
   twentyhours_text: "เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์ และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้"
   og_title: 'เด็กทุกคนสมควรได้รับโอกาส'
+  og_title_soon: "ชั่วโมงของการเขียนโค้ดกำลังมา"
   og_title_here: "Hour of Code อยู่ที่นี่แล้ว"
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
   og_description_celeb: "มาทดลองกับการสอนแบบใหม่ ถ้าคุณหรือชั้นเรียนของคุณชนะจะได้โอกาสคุยกับคนที่มีชื่อเสียง"
@@ -183,6 +184,7 @@
   studiobar_elementary_title: "หลักสูตรพื้นฐาน"
   studiobar_elementary_body: "สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5"
   studiobar_dance_title: "งานเต้นรำ"
+  studiobar_dance_body: "สร้างและแชร์เกม Dance Party ของคุณเอง"
   studiobar_hoc_title: "The Hour of Code"
   studiobar_hoc_body: "เรียนรู้การเขียนโค้ดกับเกม Angry Birds"
   studiobar_flappy_body: "สร้างและแชร์เกม Flappy Bird ของคุณ"
@@ -194,15 +196,16 @@
   studiobar_donate_body: "เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค"
   studiobar_shop_title: "ร้านค้า"
   studiobar_shop_body: "แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ"
-  homepage_hero_text_malala: "\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code\" มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ"
+  homepage_stats_title: "เรากำลังสร้างให้เกิดความแตกต่าง"
+  homepage_hero_text_malala: "&ldquo;\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียนชั่วโมงของการเขียนโค้ด(Hour of Code)สักครั้ง&rdquo;\" (มาลาลา), ผู้ชนะรางวัลโนเบลสาขาสันติภาพ"
   homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
-    Susan, ประธานกรรมการบริหาร YouTube
+    ซูซาน, ประธานกรรมการบริหารของ YouTube
   homepage_hero_text_fistbump: |-
     &ldquo;อย่าเพียงแค่เล่นเกมบนโทรศัพท์ของคุณ
     ลองสร้างโปรแกรมดูสิ&rdquo;
-    ประธานาธิบดีสหรัฐ บารัก โอบามา
+    ประธานาธิบดี บารัก โอบามา ของสหรัฐ
   homepage_hero_text_sheryl: |-
     &ldquo;เด็กๆ ของพวกเรา &mdash; รวมถึงเด็กผู้หญิง &mdash;
     ต้องการโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์ &rdquo;
@@ -235,6 +238,8 @@
   homepage_hero_text_stat_loc: "มีเด็กหญิง 2.5 ล้านคนที่ได้ลงทะเบียนเรียนกับ Code Studio"
   homepage_hero_text_stat_students: "#student_count บัญชี บน Code Studio"
   homepage_hero_text_stat_served: 'มีผู้ใช้บริการ Hour of Code: #served คนแล้ว'
+  homepage_hero_hoc_is_coming: "ชั่วโมงของการเขียนโค้ดกำลังมา"
+  homepage_hero_hoc_is_here: "ชั่วโมงของการเขียนโค้ดมาถึงแล้ว"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า"
   homepage_slot_text_studio: "บทเรียนของเราทั้งหมด"
@@ -252,6 +257,7 @@
   homepage_action_text_girlvideo: "แรงบันดาลใจให้ผู้หญิง"
   homepage_action_text_learn: "เริ่มต้นการเรียนรู้กันเลย"
   homepage_action_text_signpetition: "ลงนามในคำร้อง"
+  homepage_action_text_wincelebritychat: "ได้รับรางวัลเพื่อพูดคุยกับดารา"
   homepage_signpetition_dropdown: "ลงนามในคำร้อง &#x25BE;"
   homepage_diversity_pledge: "รองรับความหลากหลาย"
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
@@ -489,6 +495,7 @@
   dashboard_progress_not_completed: "ไม่เสร็จสมบูรณ์"
   dashboard_progress_completed_too_many_blocks: "เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป"
   dashboard_progress_completed_perfect: "เสร็จ สมบูรณ์"
+  dashboard_progress_submitted: "ส่งคำตอบแล้ว"
   dashboard_progress_view: 'ดูความคืบหน้า'
   dashboard_sections_new_section: "กลุ่มใหม่"
   dashboard_sections_jumbotron_instruction: "สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น"
@@ -1007,10 +1014,16 @@
   signing_in: "เข้าสู่ระบบ"
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab_tile_start_tutorial: "เริ่มต้น"
+  applab_tile_teacher_guide: "ดูคำแนะนำสำหรับครู"
   aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
   hoc_overview_dance_title: "งานเต้นรำ"
+  hoc_overview_partner_activities_title: "กิจกรรมเพิ่มเติมจากพันธมิตร"
+  hoc_overview_partner_activities_body: "เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า 100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร"
+  hoc_overview_partner_activities_link: "ดูกิจกรรม"
   hoc_overview_start_tutorial: "เริ่มต้น"
+  hoc_overview_view_teacher_guide: "ดูคำแนะนำสำหรับครู"
   hoc2018_creativity_create: "สร้าง"
+  hoc2018_creativity_what_will_you_create: "คุณจะสร้างอะไร"
   hoc2018_mc_page_title: "สอนชั่วโมงแห่งโค้ดด้วย Minecraft"
   hoc2018_mc_details: "หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+"
   hoc2018_mc_aquatic_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
@@ -1028,15 +1041,33 @@
   hoc2018_mc_video_2min: "2 นาที"
   hoc2018_mc_video_5min: "5 นาที"
   hoc2018_mc_video_title_inspire_girl: "แรงบันดาลใจให้ผู้หญิง"
+  hoc2018_mc_homepage_hoc_coming: "ชั่วโมงของการเขียนโค้ดกำลังมา....."
+  hoc2018_mc_homepage_what_create: "คุณจะสร้างอะไร"
+  hoc2018_mc_homepage_watch_video: "ชมวิดีโอของเรา"
   hoc2018_mc_homepage_join_us: "ร่วมกับเรา"
   hoc2018_mc_homepage_try_it: "ลอง"
   hoc2018_mc_back_journey: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+  hoc2018_mc_teacher_guide: "ดูคำแนะนำสำหรับครู"
   hoc2018_mc_short_description_shorter: "ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!"
   hoc2018_mc_journey: "ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
   hoc2018_dance_party_main_heading: "งานเต้นรำ"
+  hoc2018_dance_create_your_own_dance_title: "สร้างเกม Dance Party ของคุณเอง"
   hoc2018_dance_party_box_title: "งานเต้นรำ"
+  hoc2018_dance_party_box_description: "สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณ"
   hoc2018_dance_party_button: "เริ่มต้น"
+  hoc2018_dance_keep_on_dancing_box_title: "สร้างโค้ดเต้นรำกันต่อไป"
+  hoc2018_dance_keep_on_dancing_description: "ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน"
+  hoc2018_dance_keep_on_dancing_button: "เริ่มส่วนที่ 2"
+  hoc2018_dance_teacher_resources_title: "แหล่งข้อมูลสำหรับครู"
+  hoc2018_dance_teacher_resources_tile1_description: "แผนการเรียน ใบรับรอง และการกรองเพลง"
   hoc2018_dance_teacher_resources_tile1_button: "แผนการเรียนการสอน"
+  hoc2018_dance_teacher_resources_tile2_title: "สร้างเกม Dance Party แบบไม่ใช้เครื่อง"
+  hoc2018_dance_teacher_resources_tile2_description: "ไม่จำเป็นต้องมีคอมพิวเตอร์  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นรำไปด้วยกัน"
   hoc2018_dance_teacher_resources_tile2_button: "กิจกรรมถอดปลั๊ก"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "ด้วยความร่วมมือกับ: "
   hoc2018_dance_amazon_about_future_engineer_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
+  hoc2018_dance_measure: "ห้องดนตรี"
+  hoc2018_dance_measure_colon: 'ห้องดนตรี:'
+  page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
+  page_not_found_description: "หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา"
+  page_not_found_button: "กลับไปที่หน้าแรก"

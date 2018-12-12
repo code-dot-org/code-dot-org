@@ -295,6 +295,7 @@ sv:
       playlab: Spel-labb
       minecraft: Minecraft
       flappy: Flappy
+      dance: Dansparty
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
@@ -559,6 +560,8 @@ sv:
         av den till andra.
       audience: Ålder 13+
       cta: Läs mer
+    dance:
+      title: Dansparty
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
@@ -603,6 +606,8 @@ sv:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom
+        Minecraft via koden.
     sports:
       title: Sport
     text-compression:
@@ -909,6 +914,7 @@ sv:
   hidden_stage: Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna
     din lärare vilka lektion som du bör vara på.
   return_course_overview: Gå till avsnittets översikt
+  view_teacher_guide: Visa lärarhandledning
   pd:
     form_labels:
       email: E-post

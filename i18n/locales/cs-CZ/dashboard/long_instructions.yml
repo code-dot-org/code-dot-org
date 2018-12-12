@@ -168,48 +168,141 @@ cs:
       Course 4 SCVP 1: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       CourseF_PlayLab_vars2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
       Dance_Party_01: |-
-        *Pojďme uspořádat taneční párty!*
+        *Pojďme uspořádat taneční večírek!*
         
-        Přetáhni blok `vytvořit nový`do pracovního prostoru, a napoj ho uvnitř bloku `příprava`. Tím vytvoříš nového tanečníka
+        Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `příprava`, abys vytvořil(a) svého prvního tanečníka.
         
-        * *Jestliže chceš víc informací nebo extra výzvy, můžeš kliknout na žárovku vlevo.*
+        * *Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo.*
       Dance_Party_01_low: |-
-        *Pojďme uspořádat taneční párty!*
+        *Pojďme uspořádat taneční večírek!*
         
-        Přetáhni blok `vytvořit nový`do pracovního prostoru, a napoj ho uvnitř bloku `příprava`. Tím vytvoříš nového tanečníka
+        Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `příprava`, abys vytvořil(a) svého prvního tanečníka.
         
-        * *Jestliže chceš víc informací nebo extra výzvy, můžeš kliknout na žárovku vlevo.*
+        * *Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo.*
       Dance_Party_02: |-
-        Pojďme roztančit tohoto losa!
+        Roztančeme tohoto losa!
         
-        Přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">novy&#95;tanecnik</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> do pracovního prostoru. Napoj ho na blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"měření"</title></block></xml>. Tvůj tanečník by běl začít nový pohyb po čtvrtém měření.
-      Dance_Party_03: "*Teď trsáme!* \n\nPřidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"měření\"</title></block></xml> do pracovního prostoru. Nech tanečníka začít nový pohyb po šesti měřeních."
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        
+        
+        **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
+      Dance_Party_03: "*Nyní to rozhýbeme!*\n\nDo pracovního prostoru přidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb."
       Dance_Party_04: |-
-        *Tenhle tanec potřebuje jiskru!*
+        *Tento tanec potřebuje trochu jiskry!*
         
-        Podívej na nový blok v nabídce. Přidává efekt pozadí za tvého tanečníka. Sleduj, jak se efekt mění spolu s hudbou!
+        V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       Dance_Party_05: |-
-        Použij další nový blok k tomu, aby tanečním změnil pohyb **každé 2 měření**!
+        Použij další nový blok, aby tanečník měnil pohyby **každé 2 takty**!
         
-        * Volba`(Další)`, `(Předchozí)`, or `(Náhodný)` říká tanečníkovi, aby předvedl jiný pohyb pokaždé, když je kód spuštěn.
+        * Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
+      Dance_Party_06: |-
+        *Potřebujeme více tanečníků!*
+        
+        Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`, který bude tančit s kočkou.
+      Dance_Party_08: |-
+        Každý tanečník má sadu _vlastností_, které určují, jak vypadá.
+        
+        Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      Dance_Party_09: |-
+        Tanečníci mají vlastnost "odstín", která může přidat vrstvu barvy. Zkus změnit odstín jednoho z tanečníků.
+        * Odstíny smíchají barvu, kterou jsi zvolil(a), s barvou tanečníka.
+      Dance_Party_10: |-
+        Nyní víme, jak změnit vlastnosti tanečníka. Můžeme také nastavit, aby vlastnosti automaticky reagovaly na hudbu, pomocí tohoto bloku:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">pravý_jednorožec</title>
+        <title name="PROPERTY">velikost</title>
+        <title name="RANGE">basy</title>
+        </block></xml>
+        
+        Tento program používá k ovládání výšky jednoho z tanečníků hlasitost "basů" (nízkých zvuků) v hudbě. Dokážeš přimět také dalšího tanečníka, aby reagoval na hudbu?
+      Dance_Party_11.5_test: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
+      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      Dance_Party_11_5: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
+      Dance_Party_11b: |-
+        Je čas na tanec! Když stiskneš šipku vlevo, kočka bude poklepávat. Přiměj Robota "klesnout", když stiskneš šipku vpravo a "zatleskat nahoře" při stisknutí šipky nahoru.
+        
+        **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
+      Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      Dance_Party_3: "*Nyní to rozhýbeme!*\n\nDo pracovního prostoru přidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb."
+      Dance_Party_4: |-
+        *Tento tanec potřebuje jiskru!*
+        
+        V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
+      Dance_Party_8: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      Dance_Party_extras_battle: |-
+        # Taneční skupiny
+        
+        Zde je tanec mezi dvěma tanečními skupinami. Klávesy se šipkami ovládají jednoho z tanečníků a klávesy „w, a, s, d“ ovládají ostatní. Zatanči si s kamarádem a poté zkus tento tanec vylepšit.
+        
+        * Přidej další klávesy k ovládání tanců
+        * Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
+        * Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
+      Dance_Party_extras_every_beat: |-
+        # Čtvrťové noty
+        
+        Většina našich tanečníků používá celé takty, ale každý takt se skládá ze 4 čtvrťových not. Tento tanec používá „každých 0,25 taktu“, aby tanečník každou čtvrťovou notu zatleskal.
+        
+        Tento tanec používá také _podmíněný_ blok k ovládání, kdy může blok „každých 0,25 taktu“ změnit tanec. Zkus změnit čísla v podmíněném bloku, abys viděl(a), jak to změní tanec.
+        
+        * Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
+        * Přidej nějaké události „po taktu“.
+        * Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
+      Dance_Party_extras_layout: |-
+        # Pojďme utvořit sestavu!
+        
+        Zkontroluj tento tanec, který používá blok „rozvržení“, abys změnil(a) v průběhu tance sestavu záložních tanečníků. Zkus jeden z těchto nápadů na rozšíření:
+        
+        * Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
+        * Změň rozvržení, když stiskneš klávesu
+        * Změň vlastnost, když tanečníci změní sestavy
+      Dance_Party_extras_on_beat: |-
+        # Basy, středy a výšky
+        
+        Tento tanec používá události „vrchol“ k aktivaci kódu, když jsou jiné části hudby příliš hlasité. Zkus si pohrát s různými písněmi a podívej se, jak mění tanec
+      Dance_Party_extras_speed: |-
+        # Zrychli to, zpomal to
+        
+        Tento závěrečný tanec používá blok „nastavit rychlost“ k ovládání, jak rychle se každý tanečník pohybuje. Zkus během různých bodů písně experimentovat s různými rychlostmi. Neboj se pohrát si s tímto tancem nebo se vrátit k předchozím tancům, aby byly ještě skvělejší.
+      Dance_Party_extras_visible: |-
+        # Kam by šli?
+        
+        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
+        
+        * Přidej další skupinu tanečníků
+        * Zobraz a skryj tanečníky pomocí šipek s klávesami
+        * Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
       Function intro Ryan_2019: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
-      HOC 2018 Level_1: "Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "Někde v tomto oceánském monumentu se ukrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), dokážeš ji najít?\n\n"
-      HOC 2018 Level_11: Postav zeď z **prismarinu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okolo černého betonu. Tak aktivuješ **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) a dokončíš tuto výzvu!
-      HOC 2018 Level_12: Gratuluji! Otevřený vodní svět tě očekává. Postav korálový útes! Sopku! Lodní vrak! Je to jen na tobě.
-      HOC 2018 Level_2: Lodě jsou pro pohyb po otevřené vodě mnohem lepší, než plavání! Vydej se na konec doku a naskoč na palubu.
-      HOC 2018 Level_3: Popadni vesla a naviguj svou loď přes otevřenou vodu tak, abys chytil **tresku** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
-      HOC 2018 Level_4: Pojďme treskou nakrmit **delfína** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Použij blok opakuj do, aby ses dostal přes oceán rychleji.
-      HOC 2018 Level_5: Někde tady je ukrytá **ulita loděnky** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Prozkoumej vrak lodi a najdi **truhlu** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      HOC 2018 Level_6: Vypadá to, že tam mrzne! Chyť **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) po cestě do podvodních ruin.
-      HOC 2018 Level_7a: "Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.\n\n"
-      HOC 2018 Level_8: "Nejdřív ledovce a teď láva? Dostaň se skrz tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.\n\n"
-      HOC 2018 Level_9b: "Zvládl jsi to k útesu, teď hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Použij modré a červené korály, aby ses dostal k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
-      HOC Dance 4_draft: |-
-        Použij další nový blok k tomu, aby tanečním změnil pohyb **každé 2 měření**!
+      HOC 2018 Level_1: "Potřebuješ zásoby na cestu, která tě čeká. Seber **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
+      HOC 2018 Level_10: "V tomto Mořském monumentu se někde skrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Dokážeš ji najít?"
+      HOC 2018 Level_11: Postav okolo černého betonu zeď z **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png). Toto aktivuje **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) a dokončí tvou výzvu!
+      HOC 2018 Level_12: Blahopřejeme! Čeká na tebe otevřený vodní svět. Vybuduj korálový útes! Sopku! Vrak! Záleží to na tobě
+      HOC 2018 Level_2: Lodě jsou mnohem snazší než plavání na otevřené vodě! Vydej se na konec doku a naskoč na palubu.
+      HOC 2018 Level_3: Popadni vesla a řiď svou loď napříč otevřeným mořem, abys chytil(a) **tresku** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Nakrm **delfína** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) treskou. Pomocí bloku opakování se dostaň rychleji přes moře.
+      HOC 2018 Level_5: Někde se skrývá **nautilus shell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Prozkoumej vrak a dostaň se k **truhle** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Vypadá to, že venku mrzne! Po cestě k podmořským ruinám chyť **lososa* ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: "Našel (Našla) jsi podmořské ruiny. Hledej pískovec pro **truhlu** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad."
+      HOC 2018 Level_8: "Nejprve ledovce, nyní láva? Dostaň se přes tento vulkanický ostrov a najdi v korálovém útesu **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)."
+      HOC 2018 Level_9b: "Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
+      HOC Dance 3_draft: |-
+        *Tento tanec potřebuje jiskru!*
         
-        * Volba`(Další)`, `(Předchozí)`, or `(Náhodný)` říká tanečníkovi, aby předvedl jiný pohyb pokaždé, když je kód spuštěn.
+        V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
+      HOC Dance 4_draft: |-
+        Použij další nový blok, aby tanečník měnil pohyby **každé 2 takty**!
+        
+        * Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
+      HOC Dance 5_draft: |-
+        *Potřebujeme více tanečníků!*
+        
+        Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`, který bude tančit s kočkou.
+      HOC Dance 6_draft: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      HOC Dance Freeplay: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      HOC Dance Freeplay_draft: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      HOC Dance Predraw: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
       K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
@@ -323,6 +416,7 @@ cs:
       New Minecraft Hero Project: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2018: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
+      Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Testing Quantum Farmer: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       course2_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech **10** kousků pokladu?
@@ -334,8 +428,10 @@ cs:
       courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani pole!
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina nebo jedna plástev.
       courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina nebo jedna plástev.
+      courseD_bee_conditionals9_2019: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina nebo jedna plástev.
       courseD_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       courseD_bee_conditionals_challenge1_2018: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
+      courseD_bee_conditionals_challenge1_2019: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       courseD_bee_debugging3: |-
         *"Tahle hádanka dá zabrat."*
         

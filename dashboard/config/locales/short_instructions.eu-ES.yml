@@ -1867,6 +1867,9 @@ eu:
       Overworld Avoid Monsters_2018: Landare igokari baten kontra jotzea ez da batere
         ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi
         zure etxeko segurtasunera.
+      Overworld Avoid Monsters_2019: Landare igokari baten kontra jotzea ez da batere
+        ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi
+        zure etxeko segurtasunera.
       Overworld Chop Tree - allthethings: Egurra baliabide garrantzitsua da. Gauza
         asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea"
         agindua zuhaitza botatzeko.
@@ -1876,21 +1879,32 @@ eu:
       Overworld Chop Tree_2018: Egurra baliabide garrantzitsua da. Gauza asko egiten
         dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza
         botatzeko.
+      Overworld Chop Tree_2019: Egurra baliabide garrantzitsua da. Gauza asko egiten
+        dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza
+        botatzeko.
       Overworld Chop Trees: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik.
         Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
       Overworld Chop Trees_2018: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik.
+        Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
+      Overworld Chop Trees_2019: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik.
         Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
       Overworld Free Play 20x20: Zorionak! puzle guztiak osatu dituzu! Orain erauzi,
         eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
       Overworld Free Play 20x20_2018: Zorionak! puzle guztiak osatu dituzu! Orain
         erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
+      Overworld Free Play 20x20_2019: Zorionak! puzle guztiak osatu dituzu! Orain
+        erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
       Overworld House Frame Chosen: Eraiki etxearen gainerakoa gustoko duzun materialearekin.
         "Errepika" komandoa oso erabilgarri izango duzu.
       Overworld House Frame Chosen_2018: Eraiki etxearen gainerakoa gustoko duzun
         materialearekin. "Errepika" komandoa oso erabilgarri izango duzu.
+      Overworld House Frame Chosen_2019: Eraiki etxearen gainerakoa gustoko duzun
+        materialearekin. "Errepika" komandoa oso erabilgarri izango duzu.
       Overworld Move to Sheep: Gehitu bigarren "mugitu aurrera" agindua ardiarengana
         iristeko.
       Overworld Move to Sheep_2018: Gehitu bigarren "mugitu aurrera" agindua ardiarengana
+        iristeko.
+      Overworld Move to Sheep_2019: Gehitu bigarren "mugitu aurrera" agindua ardiarengana
         iristeko.
       Overworld Place Wall: Etxe guztiak horma batekin hasten dira. Eraiki zure etxearen
         lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu begiztaren
@@ -1898,18 +1912,28 @@ eu:
       Overworld Place Wall_2018: Etxe guztiak horma batekin hasten dira. Eraiki zure
         etxearen lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu
         begiztaren barnean jarriz.
+      Overworld Place Wall_2019: Etxe guztiak horma batekin hasten dira. Eraiki zure
+        etxearen lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu
+        begiztaren barnean jarriz.
       Overworld Plant Crops: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan
         geroago gosez ez egoteko.
       Overworld Plant Crops_2018: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan
+        geroago gosez ez egoteko.
+      Overworld Plant Crops_2019: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan
         geroago gosez ez egoteko.
       Overworld Powered Minecart: Lan aparta! Baliabide ugari bildu duzu eta etxe
         xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko ateraino.
       Overworld Powered Minecart_2018: Lan aparta! Baliabide ugari bildu duzu eta
         etxe xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko
         ateraino.
+      Overworld Powered Minecart_2019: Lan aparta! Baliabide ugari bildu duzu eta
+        etxe xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko
+        ateraino.
       Overworld Shear Sheep: Ardiei ilea mozteko garaia! Erabili "ilea moztu" agindua
         bi ardietatik lana eskuratzeko.
       Overworld Shear Sheep_2018: Ardiei ilea mozteko garaia! Erabili "ilea moztu"
+        agindua bi ardietatik lana eskuratzeko.
+      Overworld Shear Sheep_2019: Ardiei ilea mozteko garaia! Erabili "ilea moztu"
         agindua bi ardietatik lana eskuratzeko.
       PDK5 Conditionals 1: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu
         zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik
@@ -1991,19 +2015,30 @@ eu:
         suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri
         izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke
         horiek suntsitzeko.
+      Underground Avoiding Lava_2019: Laba izkutuan dago bloke batzuen azpian. Blokeak
+        suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri
+        izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke
+        horiek suntsitzeko.
       Underground If Statements: Gauzak konplikatzen ari dira. 3 harri gorri suntsitu
         baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten duzun
         labaren gainean galtzada-harriak jartzeko.
       Underground If Statements_2018: Gauzak konplikatzen ari dira. 3 harri gorri
         suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten
         duzun labaren gainean galtzada-harriak jartzeko.
+      Underground If Statements_2019: Gauzak konplikatzen ari dira. 3 harri gorri
+        suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten
+        duzun labaren gainean galtzada-harriak jartzeko.
       Underground Iron: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri galtzada-harriak
         zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
       Underground Iron_2018: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri
         galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
+      Underground Iron_2019: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri
+        galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
       Underground Mining Coal: Baliabide preziatuenak lurazpian aurkituko dituzu,
         baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       Underground Mining Coal_2018: Baliabide preziatuenak lurazpian aurkituko dituzu,
+        baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
+      Underground Mining Coal_2019: Baliabide preziatuenak lurazpian aurkituko dituzu,
         baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       aE7: Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze
         pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?
@@ -2170,17 +2205,29 @@ eu:
         \ \r \r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin
         ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak
         lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      courseD_artist_binary1_2019: "Adierazpide bitarra informazioa adirezteko modu
+        bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin
+        adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.
+        \ \r \r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin
+        ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak
+        lehenengo lerroan \"01010101\" bitarrez marraztea?"
       courseD_artist_binary4: Patroi hau marraz al dezakezu hiru digituko kate edo
         segida bitarraren gainean begizta burutuz?
       courseD_artist_binary4_2018: Patroi hau marraz al dezakezu hiru digituko kate
+        edo segida bitarraren gainean begizta burutuz?
+      courseD_artist_binary4_2019: Patroi hau marraz al dezakezu hiru digituko kate
         edo segida bitarraren gainean begizta burutuz?
       courseD_artist_binary6: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta,
         marraztuko du honako irudia?
       courseD_artist_binary6_2018: 6 digituko zein kate edo segida bitarrak, 11 aldiz
         errepikatuta, marraztuko du honako irudia?
+      courseD_artist_binary6_2019: 6 digituko zein kate edo segida bitarrak, 11 aldiz
+        errepikatuta, marraztuko du honako irudia?
       courseD_artist_binary7: Zein da errepika dezakezun kate edo segida bitar motzena
         honako irudia marrazteko?
       courseD_artist_binary7_2018: Zein da errepika dezakezun kate edo segida bitar
+        motzena honako irudia marrazteko?
+      courseD_artist_binary7_2019: Zein da errepika dezakezun kate edo segida bitar
         motzena honako irudia marrazteko?
       courseD_autorun_binary4_2019: Patroi hau marraz al dezakezu hiru digituko kate
         edo segida bitarraren gainean begizta burutuz?
@@ -2249,6 +2296,8 @@ eu:
       courseE_bee_concept1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu
         bat.
       courseE_bee_concept1_2018: Bildu lore bakoitzeko nektar guztia. Erabili begizta
+        kabiatu bat.
+      courseE_bee_concept1_2019: Bildu lore bakoitzeko nektar guztia. Erabili begizta
         kabiatu bat.
       courseE_bee_functions1: Bildu lore bakoitzeko nektar guztia.
       courseE_bee_functions1_2018: Bildu lore bakoitzeko nektar guztia.

@@ -30,20 +30,21 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           MOVE:
-            MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
-            MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลแจม
-            MOVES.Drop: ทิ้งตัว
-            MOVES.Floss: ท่าฟลอส
-            MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
-            MOVES.Kick: ท่าเตะ
-            MOVES.ThisOrThat: ท่าเต้น This or That
             '"next"': "(ถัดไป)"
             '"prev"': "(ก่อนหน้า)"
             '"rand"': "(สุ่ม)"
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -52,19 +53,19 @@ th:
         text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
         options:
           MOVE:
-            MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
-            MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลแจม
-            MOVES.Drop: ทิ้งตัว
-            MOVES.Floss: ท่าฟลอส
-            MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
-            MOVES.Kick: ท่าเตะ
-            MOVES.ThisOrThat: ท่าเต้น This or That
             '"next"': "(ถัดไป)"
             '"prev"': "(ก่อนหน้า)"
             '"rand"': "(สุ่ม)"
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -94,16 +95,18 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           MOVE:
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: บอดี้โรล
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลแจม
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
-            MOVES.Kick: ท่าเตะ
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
           DIR:
@@ -113,15 +116,16 @@ th:
         text: "{SPRITE} ทำ {MOVE} {DIR} ครั้งเดียว"
         options:
           MOVE:
+            '"rand"': "(สุ่ม)"
+            MOVES.Roll: บอดี้โรล
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
             MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลแจม
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
-            MOVES.Kick: ท่าเตะ
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
           DIR:
@@ -175,14 +179,14 @@ th:
         options:
           DANCE:
             MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Clown: ตัวตลก
+            MOVES.Clown: กังนัม
             MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลแจม
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: ม้วนตัว
-            MOVES.Kick: ท่าเตะ
+            MOVES.Roll: บอดี้โรล
+            MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
       Dancelab_ifTime:
@@ -219,11 +223,16 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           FORMAT:
+            '"border"': เส้นขอบ
+            '"inner"': แถวจตุรัส
             '"circle"': วงกลม
             '"grid"': ตาข่าย
             '"row"': แถว
             '"column"': คอลัมน์
+            '"x"': กากบาท
+            '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -234,6 +243,7 @@ th:
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมว
+            '"DOG"': สุนัข
             '"DUCK"': เป็ด
             '"FROG"': กบ
             '"MOOSE"': กวางมูส
@@ -257,7 +267,7 @@ th:
           ทำ {N} ใหม่ {COSTUME}
           ใน {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -290,10 +300,14 @@ th:
             '"SHARK"': ฉลาม
             '"UNICORN"': ยูนิคอร์น
           LAYOUT:
+            '"border"': เส้นขอบ
+            '"inner"': แถวจตุรัส
             '"circle"': วงกลม
             '"grid"': ตาข่าย
             '"row"': แถว
             '"column"': คอลัมน์
+            '"x"': กากบาท
+            '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
       Dancelab_mixColors:
         text: ผสม{COLOR1} กับ {COLOR2}
@@ -317,7 +331,32 @@ th:
             '"disco"': สี่เหลี่ยมจัตุรัส
             '"rainbow"': สี
             '"diamonds"': เพชร
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(สุ่ม)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(สุ่ม)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': ไม่มี
+            '"rand"': "(สุ่ม)"
+            '"circles"': อุโมงค์
+            '"diamonds"': เพชร
+            '"disco_ball"': บอลดิสโก้
+            '"kaleidoscope"': ภาพลานตา
+            '"lasers"': ฟลอร์เต้นรำเลเซอร์
+            '"splatter"': สาดสี
+            '"rainbow"': สี
+            '"text"': ชื่อเพลง
+            '"sparkles"': ประกาย
+            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"stars"': ดาว
+          PALETTE:
+            '"rave"': ขาวดำ
+            '"cool"': น้ำเงิน
+            '"default"': อ่อน
+            '"neon"': นีออน
+            '"tropical"': ทรอปิคอล
+            '"vintage"': วินเทจ
+            '"warm"': แดง
       Dancelab_setDanceSpeed:
         text: เปลี่ยน {SPRITE} ความเร็วของการเต้นเป็น {SPEED}
         options:
@@ -341,6 +380,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           SPEED:
             '1': ธรรมดา
             '2': เร็ว
@@ -355,6 +395,20 @@ th:
             '"rain"': ฝน
             '"raining_tacos"': ทาโก้
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(สุ่ม)"
+      Dancelab_setForegroundEffectExtended:
+        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
+        options:
+          EFFECT:
+            '"none"': ไม่มี
+            '"rand"': "(สุ่ม)"
+            '"confetti"': กระดาษสี
+            '"hearts_red"': หัวใจ
+            '"music_notes"': โน๊ตดนตรี
+            '"pineapples"': สับปะรด
+            '"smiling_poop"': อุนจิ
+            '"rain"': ฝน
+            '"floating_rainbows"': สายรุ้ง
+            '"raining_tacos"': ทาโก้
       Dancelab_setProp:
         text: 'กำหนด {SPRITE} {PROPERTY} เป็น {VAL} '
         options:
@@ -381,6 +435,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           PROPERTY:
             '"scale"': ขนาด
             '"width"': ความกว้าง
@@ -416,7 +471,10 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+      Dancelab_setTintInline:
+        text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setVisible:
+        text: ตั้งค่า {SPRITE} การมองเห็นเป็น {VISIBILITY}
         options:
           VISIBILITY:
             'true': มองเห็นได้
@@ -436,6 +494,7 @@ th:
             '"PINEAPPLE"': สับปะรดทั้งหมด
             '"ROBOT"': หุ่นยนต์ทั้งหมด
             '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์นทั้งหมด
           VISIBILITY:
             'true': มองเห็นได้
             'false': มองไม่เห็น
@@ -640,6 +699,22 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 300, y: 200}": ขวา
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 300, y: 300}": ขวาล่าง
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -789,7 +864,7 @@ th:
       craft_repeatUntilGoal:
         text: ทำซ้ำจนสำเร็จ{STATEMENT}
       craft_spawnEntity:
-        text: ขยายพันธ์ุ {ENTITY}
+        text: แพร่พันธ์ุ {ENTITY}
         options:
           ENTITY:
             '"cod"': ปลาคอด

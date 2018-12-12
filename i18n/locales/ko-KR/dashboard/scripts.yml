@@ -1351,6 +1351,7 @@ ko:
           stages:
             Minecraft Hour of Code:
               name: 마인크래프트 Hour of Code
+          description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1585,6 +1586,8 @@ ko:
             Dance Party:
               name: 댄스 파티
           title: 댄스 파티
+          description_short: 케이티 페리, 마돈나, J 발빈, 시아, 키스 어번, 시애라 외 25명 이상의 가수들이 포함되어 있습니다!
+          description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1597,6 +1600,9 @@ ko:
           stages:
             Dance Party:
               name: 댄스 파티
+        dance-extras:
+          title: 계속 춤추기
+          description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1607,7 +1613,55 @@ ko:
               name: 변수들 함께 묶기
             For Loop Fun:
               name: 재미있는 반복
+            The Artist:
+              name: 화가
         dance-low:
           stages:
             Dance Party:
               name: 댄스 파티
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: 릴레이 프로그래밍
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Digital Citizenship:
+              name: 디지털 시민의식
+            'Unplugged: Binary':
+              name: '언플러그드: 2진'
+            Artist Binary:
+              name: 화가 2진
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: 건물 기초 만들기
+            Nested Loops:
+              name: 중첩 반복
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Conditionals:
+              name: 조건
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
+        express-2019:
+          stages:
+            Relay Programming:
+              name: 릴레이 프로그래밍
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Envelope Variables:
+              name: 변수들 함께 묶기
+            For Loop Fun:
+              name: 재미있는 반복
+            Binary Bracelets:
+              name: 2진 팔찌
+            'Unplugged: Binary':
+              name: '언플러그드: 2진'
+            Artist Binary:
+              name: 화가 2진
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱

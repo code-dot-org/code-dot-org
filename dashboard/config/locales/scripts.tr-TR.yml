@@ -7044,6 +7044,8 @@ tr:
             Minecraft Hour of Code:
               name: Minecraft Kod Saati
           description_short: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
+          description: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü.
+            Kodlamayla Minecraft’ta bir gezintiye çıkın
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure 2:
@@ -9742,6 +9744,9 @@ tr:
             Dance Party:
               name: Dans Partisi
           title: Dans Partisi
+          description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
+            ve 25 farklı şarkıcı daha sizlerle!
+          description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -9767,6 +9772,9 @@ tr:
           stages:
             Dance Party:
               name: Dans Partisi
+        dance-extras:
+          title: Dans Etmeye Devam
+          description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         coursef-2019:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
             hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
@@ -9885,7 +9893,403 @@ tr:
                 bulunabilir.
             new stage:
               name: yeni kademe
+            The Artist:
+              name: Sanatçı
         dance-low:
           stages:
             Dance Party:
               name: Dans Partisi
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+            Introduction to Online Puzzles:
+              name: Online Bulmacalara Giriş
+            Relay Programming:
+              name: Röle Programlama
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+            Events in Bounce:
+              name: Sıçrama Olayları
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+            Nested Loops in Artist:
+              name: Sanatçıların İç İçe Döngüleri
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            Conditionals in Bee:
+              name: Koşullar-Arı
+            Digital Citizenship:
+              name: Sayısal Vatandaşlık
+            Build a Play Lab Game:
+              name: Bir Play Lab Oyunu Oluştur
+            'Unplugged: Binary':
+              name: 'Bağımsız: İkili Taban (Binary)'
+            Artist Binary:
+              name: Sanaçtı İkili Taban
+            Build a Star Wars Game:
+              name: Star Wars oyunu oluştur
+        coursee-2019:
+          description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
+            ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
+            ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+          description_audience: 8-12 yaş grubu
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Sequence in Maze:
+              name: Labirentte dizi
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Nested Loops:
+              name: İç İçe Döngüler
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            Conditionals:
+              name: Koşullar
+              description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
+                bilgisayara ne yapacağını söyleyeceksin.
+              description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
+                else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece
+                komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam
+                olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı
+                döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması
+                gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir
+                şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde
+                bu döngüler başka bir şey çalıştırır.
+            Private and Personal Information:
+              name: Özel ve Kişisel Bilgiler
+              description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende
+                kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi
+                ile özel bilgi arasındaki farkı öğretecek.
+              description_teacher: |-
+                Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
+
+                Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
+            Build a Star Wars Game:
+              name: Star Wars oyunu oluştur
+              description_student: Bu derste kendi Star Wars oyununu kurarken gücünü
+                hissedin.
+              description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi
+                olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star
+                Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek
+                ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+              description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
+                Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
+              description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
+                birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz)
+                asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini
+                programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun
+                içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı
+                olacaktır.
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+              description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay
+                yapın!
+              description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı
+                öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler
+                oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler,
+                bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
+            Determine the Concept:
+              name: Kavramı Belirme
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: Burada birkaç oyun ve çizim var. Kendi proje fikrinizi
+                oluşturmak için onların hepsini oynayın!
+              description_teacher: "Bir sonraki dört proje öğrencilerin kodlama becerilerini
+                bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin
+                kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları
+                ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden
+                fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır,
+                öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek,
+                inşa ederek ve bitirme çalışmalarını sunarak vakit geçirecekler. \n\nKeşfetme
+                etabında öğrenciler ilham almak için hem Sanatçı hem de Oyun Laboratuvarında
+                önceden hazırlanmış projelerin örneklerini görebilecekler.\nSonrasında
+                öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını
+                öğrenecekler. Sonrasında kendi projelerini Sanatçı ya da Oyun Laboratuvarında
+                oluşturmak için alana sahip olacaklar ( bu muhtemelen projenin en
+                uzun etabı). En sonunda öğrenciler bitmiş çalışmalarını akranlarına
+                sunabilecekler."
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: Bu büyük projeler zaman alıyor ve çok planlanıyor.
+                Burada, kendi tasarımınızı oluşturmak için kullanacağınız tasarım
+                sürecini öğreneceksiniz.
+              description_teacher: Dört ders süresince, öğrenciler programlama ortamı
+                olarak Play Lab'ı ya da Artist kullanarak kendi tasarımlarının bir
+                projesini programlamak üzere inşa edileceklerdir. Projenin bu bölümünde,
+                öğrenciler tasarım sürecini ve projelerini kendi projelerinde nasıl
+                uygulayacaklarını öğreneceklerdir. Sürecin dört aşamasının tamamı
+                için ders rehberi, bu proje sürecinin ilk aşamasında bulunabilir (https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya
+                başlamanın zamanı geldi.
+              description_teacher: Dört ders süresince, programlama ortamı olarak
+                Oyun Laboratuvarı veya Sanatçı'yı kullanarak öğrenciler kendi tasarımları
+                olan projelerini programlamayı öğrenecekler. Şimdi öğrencilere, Sanatçı
+                veya Oyun Laboratuvarı'nı kullanarak projelerini oluşturmaları için
+                kendi alanları verilecek. Sürecin tüm dört aşaması için ders rehberi
+                bu proje sürecinin ilk aşamasında bulunabilir [here](https://curriculum.code.org/csf/coursee/12/).
+            Present Your Project:
+              name: Projeni sun
+              description_student: Göstermeye hazır ol! Bitirdiğiniz projeyi akranlarınıza
+                sunma zaman.
+              description_teacher: Dört ders boyunca, öğrenciler, programlama ortamı
+                olarak Play Lab ya da Sanatçı' yı kullanarak kendi tasarımlarını kullandıkları
+                bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını
+                kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler.
+                Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk
+                aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: İnternet
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini
+                hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl
+                çalıştığının temellerini öğretecek.
+              description_teacher: Birçok kişi interneti her gün kullanıyor olmasına
+                rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler
+                bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek
+                ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+              description_student: Bu ders size kitle hakkında, bir ekiple bir proje
+                oluşturma sürecini öğretecektir.
+              description_teacher: Bilgisayar bilimlerinde, bazı büyük, korkutucu
+                problemler ile karşı karşıyayız. Büyük asal sayı bulma ya da DNA dizilimi
+                yapma gibi zorlukların birey olarak yapılması neredeyse imkansızdır.
+                Başkalarının gücünü eklemek bu görevleri yönetilebilir yapar. Bu ders
+                öğrencilere, ekip çalışmasının bilgisayar bilimleri endüstrisinde
+                nasıl faydalı olabileceğini gösterecektir.
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+            Nested Loops in Artist:
+              name: Sanatçıların İç İçe Döngüleri
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler
+        express-2019:
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
+            en iyilerini daha eski öğrenciler için birleştirir.'
+          description_audience: 'Yaş: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+            Programming in Maze:
+              name: Labirentte Programlama
+            Relay Programming:
+              name: Röle Programlama
+            Debugging in Maze:
+              name: Labirentte Hata Ayıklama
+            Programming in Collector:
+              name: Koleksiyoncu programlama
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
+            Loops with Rey and BB-8:
+              name: Rey ve BB-8 ile döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            Conditionals in Bee:
+              name: Koşullar-Arı
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+            Screen Out the Mean:
+              name: Ortalamanın Ekranını Kaldır
+            Determine the Concept:
+              name: Kavramı Belirme
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            The Power of Words:
+              name: Kelimelerin gücü
+            Envelope Variables:
+              name: Zarf değişkenleri
+            For Loop Fun:
+              name: Şununla Say Döngüsü Eğlencesi
+            For Loops in Bee:
+              name: Arı - şununla say döngüleri
+            For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+            The Design Process:
+              name: Tasarım işlemi
+            Build Your Project:
+              name: Projenizi oluşturun
+            Revise Your Project:
+              name: Projenizi Gözden Geçirme
+            Present Your Project:
+              name: Projeni sun
+            Binary Bracelets:
+              name: İkilik Bileklikler
+            'Unplugged: Binary':
+              name: 'Bağımsız: İkili Taban (Binary)'
+            Artist Binary:
+              name: Sanaçtı İkili Taban
+            Internet:
+              name: İnternet
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+        csd1-2019:
+          description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
+            nasıl çalıştıklarını öğrenin."
+          stages:
+            CS Discoveries Pre-survey:
+              name: CS Keşifleri Anket öncesi
+            Intro to Problem Solving:
+              name: Problem çözme tanıtımı
+              description_student: Sınıf, olabildiğince çok para kazandıracak alüminyum
+                folyo tekneleri tasarlamak için gruplar halinde çalışır. Derslerin
+                sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtır ve kursun
+                geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurar.
+              description_teacher: Bu derste öğrenciler, mümkün olduğunca çok para
+                sağlayacak alüminyum folyo tekneleri tasarlamak için gruplar halinde
+                çalışır. Gruplar, 1. turda olduğundan daha fazla kuruş yapmaya çalışmak
+                amacıyla teknelerinde çalışmak üzere iki tur oynamaktadırlar. Faaliyetin
+                yapısı, öğrencilerin daha ayrıntılı olarak tanıtılacak olan problem
+                çözme sürecinin farklı adımlarını ön plana çıkarmaktadır. Ders sonunda
+                öğrenciler, etkinlikle ilgili deneyimlerine yansıtmakta ve kursun
+                geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurmaktadırlar.
+            The Problem Solving Process:
+              name: Problem çözme süreci
+              description_student: Bu ders sınıfın kurs boyunca kullanacağı (formal)
+                biçimsel problem çözme sürecini, (Define - Prepare - Try - Reflect),
+                "Tanımla- Hazırlan- Uygula- Değerlendir" tanıtır. Sınıf, bu adımları
+                bir önceki dersteki alüminyum tekneler problemiyle, daha sonra istedikleri
+                bir problemle, sonrasında çözümünü geliştirmek istedikleri bir problemle
+                ilişkilendirir. Dersin sonunda sınıf, kurs boyunca kullanacakları
+                posterleri oluşturmak için sürecin (D-P-T-R) her adımı için  genel,
+                kullanışlı stratejilerin bir listesini biriktirir.
+              description_teacher: Bu ders, öğrencilerin yıl boyunca kullanacakları
+                resmi problem çözme sürecini, Define(tanımla) - Prepare(hazırla) -
+                Try(dene) - Reflect'i(yansıt) tanıtmaktadır. Ders, öğrencilere gündelik
+                yaşamda karşılaştıkları tüm farklı problemleri beyin fırtınasına teşvik
+                ederek başlar. Öğrenciler daha sonra, problem çözme sürecinin dört
+                adımını gösterir ve bu soyut adımları problem çözme gerçek deneyimleriyle
+                ilişkilendirmek için birlikte çalışır. İlk olarak öğrenciler, bu adımları
+                bir önceki dersin alüminyum tekneleri problemiyle, daha sonra çözümünü
+                iyi bildikleri bir problemle, daha sonra da geliştirmek istedikleri
+                bir problemle ilişkilendirir. Sınıf dersin sonunda, bu ünite de ve
+                yıl boyunca sürecin her adımında kullanılacak posterleri koymak için
+                genel olarak kullanışlı stratejilerin bir listesini toplar.
+            Exploring Problem Solving:
+              name: Problem çözmeyi keşfetme
+              description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı
+                soruna uygular: bir kelime araması, bir doğum günü partisi için oturma
+                düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık
+                hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa
+                çıkarken yararlı olduğunun altını çizilir.'
+              description_teacher: |-
+                Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
+
+                Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
+            What is a Computer?:
+              name: Bilgisayar nedir?
+              description_student: Bu derste sınıf, bir bilgisayarın tanımını geliştirir.
+                Sonra, bilgisayarın olası tanımlarıyla ilgili beyin fırtınası yapıyor,
+                sınıf gruplar halinde çalışma ile resimleri  "bu bir bilgisayar" veya
+                "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandırır
+                ve  bazı en zor gruplamaları seçmek için motive olduklarını açıklarlar.
+                Öğretmen daha sonra bilgisayarın tanımını yapar ve öğrencilerin yeni
+                tanıma göre kendi posterlerini gözden geçirmeleri için imkân verir.
+              description_teacher: Bu derste öğrenciler bir bilgisayar tanımı geliştirir.
+                Dersin başında, bir bilgisayarın olası tanımlarıyla ilgili beyin fırtınası
+                yapar ve beyin fırtınası sonuçlarını panoya yerleştirirler. Sonra,
+                öğrenciler gruplar halinde çalışma ile resimleri  "bu bir bilgisayar"
+                veya "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandıracak.
+                Gruplar posterlerini odanın etrafına yerleştirecek ve gruplama yaparken
+                en çok hangilerinde zorlandıklarını kısaca açıklayacaklar. Öğretmen
+                daha sonra bilgisayarın tanımını yapacak ve öğrencilerin yeni tanıma
+                göre kendi posterlerini gözden geçirmeleri için imkân verecek.
+            Input and Output:
+              name: Girdiler ve çıktılar
+              description_student: "Bu sınıfta öğrenciler,  \nIn this the class students
+                consider a number of computing devices to determine what types of
+                inputs and outputs they use. Groups are assigned to a computing device
+                and based on a teacher-provided definition of input and output, list
+                the inputs and outputs of their device.  To conclude the lesson the
+                class examines common activities they do on a computing device and
+                select the inputs and outputs used for that activity from the chart."
+              description_teacher: Bu derste öğrenciler, ne tür girdiler ve çıktılar
+                kullandıklarını saptamak için birtakım bilgi işlem cihazları düşünürler.
+                Gruplar bir bilgisayara atanır ve öğretmenin sağladığı girdi ve çıktı
+                tanımına dayandırılır, cihazlarının girdilerini ve çıktılarını listeler.
+                Aktivitenin başında, öğrenciler daha açık fiziksel girdiler ve çıktılara
+                odaklanmaya teşvik edilir (örneğin, bir girdi olarak bir klavye ya
+                da bir çıktı olarak bir ekran) ancak daha sonraki tartışmalar, öğrencileri
+                daha az belirgin örnekleri düşünmeye yönlendirir (örneğin, dokunmatik
+                ekranın hem bir girdi hem de bir çıktıdır ya da internet hem girdi
+                hem de çıktı olarak hizmet edebilir). Ders boyunca, öğretmen ön odada
+                bir T- Grafik üzerinde tanımlanan girdileri ve çıktıları kaydeder.
+                Dersi sonuçlandırmak için, öğrenciler bir bilgisayarda yaptıkları
+                ortak aktiviteleri incelerler ve aktivite için kullandıkları girdileri
+                ve çıktıları grafikten seçerler.
+            Processing:
+              name: İşleme
+              description_student: Bu ders, bir bilgisayarın tanımında tanıtımı yapılan
+                işleme kavramı kısmına derinlemesine dalıyor.  Çiftler, bilgi işleme
+                şekli olarak, bir kart destesini sıraya koymak için birlikte çalışırlar.  Sonunda
+                sınıf, informasyon sorunlarını çözme bağlamında işlemenin ne demek
+                olduğunu tartışır.
+              description_teacher: Öğrenciler, işlemenin anlamını ve problem çözme
+                ile ilişkisini keşfetmeleri için iki tane bağımsız kart sıralama etkinliği
+                yaparlar. İlk etkinlikte az kısıtlama vardır ve işlemenin üst düzey
+                bir tanımını öğretmek için kullanılır. Sonraki etkinlikte öğrencileri,
+                kartları her zaman başarılı bir şekilde işleyen bir algoritma geliştirmeye
+                zorlayan daha çok kısıtlama vardır. Öğrenciler sürekli olarak algoritmalarını
+                geliştirir, test eder ve sınıf arkadaşlarıyla paylaşır. Kapanış tartışması,
+                öğrencilerin bu etkinliklerde kullandıkları farklı problem çözme türleri
+                ve bir problemi çözmek için bir algoritma üretmenin değeri üzerine
+                derinlemesine düşünmelerini sağlar.
+            Apps and Storage:
+              description_student: 'Bu ders, bilgisayarların girdi ve çıktı özelliklerini
+                öğrencilerle ilgili olan ve öğrencilerin bildiği bir bağlamda işler:
+                uygulamalar ile. Öğrenciler, belirli problemleri çözmek için tasarlanmış
+                olan çeşitli web uygulamalarını, onların çalışması için gereken girdileri
+                ve kullanıcılara verdikleri çıktıları değerlendirir. Ders, uygulamalar
+                üzerine gözlemler ve uygulamaların topluma etkisi hakkında öğretmen
+                tarafından yönlendirilen bir tartışma ile biter. '
+            Project - Propose an App:
+              name: Proje - bir uygulama önermek
+              description_student: Sınıfımız; problem çözme süreci çalışmalarını ve
+                bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek
+                hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması
+                günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan
+                özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje
+                ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
+              description_teacher: Problem çözme süreci ve bir bilgisayarın girdi/çıktı/depolama/işleme
+                modeli üzerine çalışmalarını bitirmek için öğrenciler bir gerçek hayat
+                sorununu çözen bir uygulama sunarlar. Bu proje günlere yayılarak tamamlanacaktır
+                ve öğrenciler uygulamalarının özelliklerini vurgulayan bir poster
+                oluşturup sınıf arkadaşlarına sunarak proje sonuçlanacaktır. Bir proje
+                rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
+                organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
+                tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.

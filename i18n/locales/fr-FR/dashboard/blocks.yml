@@ -30,16 +30,17 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
-            MOVES.ThisOrThat: Ceci ou cela
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roulis de caisse
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Doubler la mise
+            MOVES.Clown: Clown
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -48,15 +49,15 @@ fr:
         text: "{SPRITE} faire {MOVE} {DIR} pour toujours"
         options:
           MOVE:
-            MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
-            MOVES.ThisOrThat: Ceci ou cela
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roulis de caisse
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Doubler la mise
+            MOVES.Clown: Clown
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -85,12 +86,14 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
           MOVE:
+            '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Doubler la mise
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
+            MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -100,11 +103,12 @@ fr:
         text: "{SPRITE} faire {MOVE} {DIR} une fois"
         options:
           MOVE:
+            '"rand"': "(Aléatoire)"
+            MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.DoubleJam: Doubler la mise
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
+            MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -158,9 +162,9 @@ fr:
           DANCE:
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Clown: Clown
-            MOVES.DoubleJam: Double jam
-            MOVES.Roll: Roll
-            MOVES.Kick: Coup
+            MOVES.DoubleJam: Doubler la mise
+            MOVES.Roll: Roulis de caisse
+            MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
       Dancelab_ifTime:
@@ -197,7 +201,10 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
           FORMAT:
+            '"border"': frontière
+            '"inner"': carré intérieur
             '"circle"': cercle
             '"grid"': grille
             '"row"': ligne
@@ -212,6 +219,7 @@ fr:
             '"ALIEN"': Extraterrestre
             '"BEAR"': Ours
             '"CAT"': Chat
+            '"DOG"': Chien
             '"DUCK"': Canard
             '"FROG"': Grenouille
             '"MOOSE"': Orignal
@@ -234,7 +242,7 @@ fr:
           faire {N} nouveau {COSTUME}
           dans un {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -266,6 +274,8 @@ fr:
             '"SHARK"': Requins
             '"UNICORN"': Licornes
           LAYOUT:
+            '"border"': frontière
+            '"inner"': carré intérieur
             '"circle"': cercle
             '"grid"': grille
             '"row"': ligne
@@ -293,7 +303,29 @@ fr:
             '"disco"': Carrés
             '"rainbow"': Couleurs
             '"diamonds"': Diamants
-            "['disco', 'color_cycle', 'rainbow', 'text', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,8)]": "(Aléatoire)"
+            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aléatoire)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: définir l’effet de fond {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Aucun
+            '"rand"': "(Aléatoire)"
+            '"circles"': Tunnel
+            '"diamonds"': Diamants
+            '"disco_ball"': Boule disco
+            '"lasers"': Piste de danse laser
+            '"splatter"': Éclaboussures de peinture
+            '"rainbow"': Couleurs
+            '"text"': Titre de la chanson
+            '"sparkles"': Éclats
+            '"disco"': Carrés
+            '"stars"': Étoiles
+          PALETTE:
+            '"rave"': Noir et blanc
+            '"cool"': Blues
+            '"default"': Lumière
+            '"neon"': Néon
+            '"warm"': Rouges
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
         options:
@@ -317,6 +349,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
           SPEED:
             '1': normal
             '2': rapide
@@ -330,6 +363,18 @@ fr:
             '"none"': Aucun
             '"rain"': Pluie
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aléatoire)"
+      Dancelab_setForegroundEffectExtended:
+        text: définir l’effet de premier plan {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Aucun
+            '"rand"': "(Aléatoire)"
+            '"hearts_red"': Cœurs
+            '"music_notes"': Notes de musique
+            '"pineapples"': Ananas
+            '"smiling_poop"': Crotte
+            '"rain"': Pluie
+            '"floating_rainbows"': Arc-en-ciel
       Dancelab_setProp:
         text: 'définir {SPRITE} {PROPERTY} à {VAL} '
         options:
@@ -355,6 +400,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -388,6 +434,10 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+      Dancelab_setTintInline:
+        text: définir la nuance de {SPRITE} à {VAL}
+      Dancelab_setVisible:
+        text: régler {SPRITE} visible à {VISIBILITY}
       Dancelab_setVisibleEach:
         text: définir {THIS} visibilité à {VISIBILITY}
         options:
@@ -403,6 +453,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"UNICORN"': Toutes les licornes
       Dancelab_startMapping:
         text: "{SPRITE} commence {PROPERTY} suivant {RANGE}"
         options:
@@ -442,6 +493,7 @@ fr:
             '"right"': vers la droite
             '"space"': espace
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: Lorsque {RANGE} pic
         options:
@@ -598,6 +650,22 @@ fr:
             "{x: 300, y: 100}": vers le haut à droite
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": vers le haut
+            "{x: 200, y: 300}": vers le bas
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
+            "{x: 200, y: 200}": vers le centre
+            "{x: 100, y: 100}": vers le haut à gauche
+            "{x: 300, y: 100}": vers le haut à droite
+            "{x: 100, y: 300}": vers le bas à gauche
+            "{x: 300, y: 300}": vers le haut à droite
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': tout
       Mikelab_getProp:
         options:
           PROPERTY:

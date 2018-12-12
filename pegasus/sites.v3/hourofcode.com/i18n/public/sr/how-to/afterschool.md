@@ -27,7 +27,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4. Plan your technology needs - computers are optional
+## Планирајте ваше технолошке потребе - рачунари нису обавезни
 
 The best Hour of Code experience includes Internet-connected computers. **Није** потребан рачунар за свако дете а час кодирања можете одржавати и без рачунара.
 
@@ -43,15 +43,15 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Show an inspirational video:**
 
-- Оригинални Code.org видео запис у ком учествују Бил Гејтс, Марк Цукерберг и НБА звезда Крис Бош - овде су [1 минутна](https://www.youtube.com/watch?v=qYZF6oIZtfc),[5 минутна](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутна](https://www.youtube.com/watch?v=dU1xS07N-FA) верзија.
+- Оригинални Code.org видео запис у ком учествују Бил Гејтс, Марк Закерберг и НБА звезда Крис Бош - овде су [1 минутна](https://www.youtube.com/watch?v=qYZF6oIZtfc),[5 минутна](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутна](https://www.youtube.com/watch?v=dU1xS07N-FA) верзија.
 - [Видео запис светског часа кодирања](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Пронађите више инспиративних видео записа [овде](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**У реду је ако вам је рачунарство потпуна непознаница. Ево неколико идеја како да спроведете активности везане за Час програмирања:**
 
-- Објасните на које начине технологија утиче на наше животе, с примерима који ће бити занимљиви како дечацима, тако и девојчицама (разговарајте о апликацијама и технологији која се користи за спашавање живота, помоћ људима, повезује људе итд).
-- List things that use code in everyday life.
+- Објасните како технологија утиче на наше животе, с примерима који ће бити занимљиви како дечацима, тако и девојчицама (разговарајте о апликацијама и технологији која се користи за спашавање живота, помоћ људима, повезује људе итд).
+- Набројите ствари које користе програм - код у свакодневном животу.
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).

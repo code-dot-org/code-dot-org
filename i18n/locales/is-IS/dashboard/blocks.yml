@@ -121,7 +121,7 @@ is:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -146,6 +146,10 @@ is:
       Dancelab_randomColor:
         text: einhver litur
       Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ekkert
+      Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
             '"none"': Ekkert
@@ -177,6 +181,10 @@ is:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ekkert
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Ekkert
@@ -351,6 +359,15 @@ is:
           LOCATION:
             "{x: 100, y: 200}": vinstri
             "{x: 300, y: 200}": hægri
+      Mikelab_createNewSprite2:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
+      Mikelab_destroyAll:
+        options:
+          SELECT:
+            '"all"': allt
       Mikelab_getProp:
         options:
           PROPERTY:

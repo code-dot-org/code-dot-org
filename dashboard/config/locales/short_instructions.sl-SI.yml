@@ -1103,35 +1103,52 @@ sl:
         premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Avoid Monsters_2018: Tekmovanje v teku v a Creeper je slaba ideja.
         Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
+      Overworld Avoid Monsters_2019: Tekmovanje v teku v a Creeper je slaba ideja.
+        Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Chop Tree - allthethings: Les je zelo pomembna surovina. Veliko se
         da narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Tree: Les je zelo pomembna surovina. Veliko se da narediti iz
         njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Tree_2018: Les je zelo pomembna surovina. Veliko se da narediti
         iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
+      Overworld Chop Tree_2019: Les je zelo pomembna surovina. Veliko se da narediti
+        iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Trees: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
         veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Chop Trees_2018: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
+        veliko lesa. Posekaj vsa 3 drevesa.
+      Overworld Chop Trees_2019: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo
         veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Free Play 20x20: Čestitamo! Zaključili ste vse uganke! Sedaj pa razbijajte,
         gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega do sedaj.
       Overworld Free Play 20x20_2018: Čestitamo! Zaključili ste vse uganke! Sedaj
         pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega
         do sedaj.
+      Overworld Free Play 20x20_2019: Čestitamo! Zaključili ste vse uganke! Sedaj
+        pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega
+        do sedaj.
       Overworld House Frame Chosen: Zgradite preostalo hišo iz poljubnih materialov.
         Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld House Frame Chosen_2018: Zgradite preostalo hišo iz poljubnih materialov.
         Ukaz +ponovi' vam bo tukaj prišel prav.
+      Overworld House Frame Chosen_2019: Zgradite preostalo hišo iz poljubnih materialov.
+        Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld Move to Sheep: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Move to Sheep_2018: Dodajte še en ukaz 'premakni naprej', da dosežete
+        ovco.
+      Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete
         ovco.
       Overworld Place Wall: Vsaka hiša se začne z zidom. Zgradite prvi del hiše z
         uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Place Wall_2018: Vsaka hiša se začne z zidom. Zgradite prvi del hiše
         z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
+      Overworld Place Wall_2019: Vsaka hiša se začne z zidom. Zgradite prvi del hiše
+        z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Plant Crops: Dobro je načrtovati vnaprej. Posadite pridelke na obeh
         straneh vode, da ne boste lačni kasneje.
       Overworld Plant Crops_2018: Dobro je načrtovati vnaprej. Posadite pridelke na
+        obeh straneh vode, da ne boste lačni kasneje.
+      Overworld Plant Crops_2019: Dobro je načrtovati vnaprej. Posadite pridelke na
         obeh straneh vode, da ne boste lačni kasneje.
       Overworld Powered Minecart: Dobro opravljeno! Zbrali ste veliko virov in si
         zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat vaše
@@ -1139,9 +1156,14 @@ sl:
       Overworld Powered Minecart_2018: Dobro opravljeno! Zbrali ste veliko virov in
         si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat
         vaše hiše.
+      Overworld Powered Minecart_2019: Dobro opravljeno! Zbrali ste veliko virov in
+        si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat
+        vaše hiše.
       Overworld Shear Sheep: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in
         zberite volno od obeh ovc.
       Overworld Shear Sheep_2018: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
+        in zberite volno od obeh ovc.
+      Overworld Shear Sheep_2019: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
         in zberite volno od obeh ovc.
       PDK5 Functions 2: Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili
         smo blok za risanje kvadrata v funkcijo, imenovano "nariši kvadrat". Znaš
@@ -1189,6 +1211,8 @@ sl:
       Underground Mining Coal: Najbolj dragocene vire boš našel/a pod zemljo, vendar
         je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2018: Najbolj dragocene vire boš našel/a pod zemljo,
+        vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
+      Underground Mining Coal_2019: Najbolj dragocene vire boš našel/a pod zemljo,
         vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       aE7: Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo
         namesto desno? Lahko to ponavljaš, da narišeš val?
@@ -1352,6 +1376,8 @@ sl:
       courseE_bee_concept1: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno
         zanko.
       courseE_bee_concept1_2018: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno
+        zanko.
+      courseE_bee_concept1_2019: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno
         zanko.
       courseE_bee_functions1: Zberi nektar iz vseh cvetov.
       courseE_bee_functions1_2018: Zberi nektar iz vseh cvetov.

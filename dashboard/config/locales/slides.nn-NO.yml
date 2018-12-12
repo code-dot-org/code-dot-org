@@ -68,7 +68,7 @@ nn:
           små prikkar på skjermen.
       4:
         image: notes/stage5_4.jpg
-        text: Denne blokka seier "snu 90 grader mot høgre". Blokka vil snu artisten
+        text: Denne blokka seier "snu 90 grader mot høgre". Blokka vil snu kunstnaren
           din det gradetalet som står på blokka.
       5:
         image: notes/stage5_5.jpg
@@ -285,7 +285,7 @@ nn:
       3:
         image: notes/stage11_3.jpg
         text: I dette dømet seier "telje"-sløyfa "tel frå 50 til 90 med 10 om gongen",
-          og inni sløyfa har me ei "teikn ein firkant"-blokk. Dra "telje"-blokka frå
+          og inni sløyfa har me ei "teikn eit kvadrat"-blokk. Dra "telje"-blokka frå
           "variablar"-området til "lengde"-plassen.
       4:
         image: notes/stage11_4.jpg
@@ -431,9 +431,9 @@ nn:
           for handlinga selv, slik at det er lett å gjere den på nytt seinare. Når
           du definerer din eigen kommando og gir den namn blir det kalla det ein funksjon.
       4:
-        text: Hei! Er jeg Jess. Når du programmerer med blokker, ville du bruke funksjonar
-          dersom det er eit sett med handlingar du vil bruke mange gonger. For eksempel
-          har du skrive kode for å laga eit kvadrat.
+        text: Hei! Eg heiter Jess. Når du programmerer med blokker, ville du bruke
+          funksjonar dersom det er eit sett med handlingar du vil bruke mange gonger.
+          For eksempel har du skrive kode for å lage eit kvadrat.
       5:
         text: 'Du kan definere dette som ein funksjon kalla "lag kvadrat" '
       6:
@@ -2379,8 +2379,8 @@ nn:
           klikker på Køyr? Alex rører seg ein plass fram på rutenettet.
       10:
         text: Og kva om vi vil at ho skal gjere noko etter at ho har flytta seg framover?
-          Dp kan vi legge enda ei blokk til programmet. Eg vel "snu mot høyre" og
-          drar den under "flytt fremover" til denne oransja linja dukker opp. Deretter
+          Då kan vi legge enda ei blokk til programmet. Eg vel "snu mot høyre" og
+          drar den under "flytt framover" til denne oransja linja dukker opp. Deretter
           slepp eg den, og så blir dei to blokkene festa i kvarandre. Når vi klikker
           på Køyr igjen, utfører Alex kommandoane som er stabla oppå kvarandre i arbeidsvinduet.
       11:
@@ -2389,7 +2389,7 @@ nn:
         text: For å gjere om endringar og tilbakestille nivået, kan du bruke Begynn
           på nytt-knappen øvst i hjørnet i arbeidsvinduet. Ser du forresten den vesle
           trekanten på snu-blokkene? Om du ser ein slik trekant, betyr det at du kan
-          velgje eit anna alternativ. La oss stare programmeringa!
+          velgje eit anna alternativ. La oss starte programmeringa!
     mc_repeat:
       1:
         text: Eg er Lydia Winters, merkevaresjef hos Mojang, og vi har laga eit lite
@@ -2421,14 +2421,14 @@ nn:
           La oss bygge huset før det blir natt! Ha det gøy.
     mc_if_statements:
       1:
-        text: No skal vi lære om Viss-kommandoar. Viss-kommandoar er ein viktig del
-          av det å lære å programmere. Dei hjelper datamaskina med å ta beslutningar.
+        text: No skal vi lære om dersom-kommandoar. dersom-kommandoar er ein viktig
+          del av det å lære å programmere. Dei hjelper datamaskina med å ta beslutningar.
       2:
-        text: Alle datamaskiner bruker hvis-kommandoar, også telefonen min. Når eg
-          skal låse opp telefonen, køyrer den ein kode som seier at den skal låsast
+        text: Alle datamaskiner bruker dersom-kommandoar, også telefonen min. Når
+          eg skal låse opp telefonen, køyrer den ein kode som seier at den skal låsast
           opp dersom eg skriv inn riktig passord. Hvis ikkje viser den ei feilmelding.
       3:
-        text: Med viss-kommandoer kan du få Steve og Alex til å reagere på det dei
+        text: Med dersom-kommandoer kan du få Steve og Alex til å reagere på det dei
           ser i verda. Vis det er ein stein foran dei, kan dei snu seg mot venstre.
           Eller mot høgre dersom dei går inn i eit tre.
       4:
@@ -2439,7 +2439,7 @@ nn:
         text: Når vi har utvunne steinen, må vi sjekke om det er noko lava der før
           vi beveger oss framover. Om det er lava der, må vi plassere ein stein foran
           figurene før vi fortsetter. Slik kan vi fortsette trygt på ferda. Tid for
-          mer utvinning! Og husk å bruke viss-kommandoen for å passe på kor du går.
+          mer utvinning! Og husk å bruke dersom-kommandoen for å passe på kor du går.
     mc_congrats_share:
       1:
         text: Gratulerer! No har du lært deg dei grunnleggjande omgrepa i informatikk.
@@ -2666,9 +2666,9 @@ nn:
           No kan du flytte rundt kor du vil på eit nivå. For å bruke ein skapning,
           berre gå mot den, snu deg for å sjå på den og trykk på mellomromtasten.
       2:
-        text: Om du bruker ein berøringsskjerm, sveip opp, ned, til venstre og til
-          høyre for å flytte rundt. Deretter trykk på spelet for å bruke tingen som
-          står foran deg.
+        text: Om du bruker ein skjerm du kan ta på, sveip opp, ned, til venstre og
+          til høyre for å flytte rundt. Deretter trykk på spelet for å bruke tingen
+          som står foran deg.
       3:
         text: Men kva skjer når du bruker den? I Minecraft slipper sauen ull når du
           klipper dei, kyra spring dersom du kjem borti dei og creeperar eksploderer

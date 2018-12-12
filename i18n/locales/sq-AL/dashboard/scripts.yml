@@ -1564,3 +1564,51 @@ sq:
               name: Variablat Zarf
             For Loop Fun:
               name: Qef me Ciklet For
+            The Artist:
+              name: Artisti
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programimi i Besuar
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            Digital Citizenship:
+              name: Shtetësi Dixhitale
+            'Unplugged: Binary':
+              name: 'Unplugged: Binare'
+            Artist Binary:
+              name: Artist Binar
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Krijimi i një fondacioni
+            Nested Loops:
+              name: Përsëritjet e Mbivendosura
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            Conditionals:
+              name: Kushtet
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programimi i Besuar
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            Envelope Variables:
+              name: Variablat Zarf
+            For Loop Fun:
+              name: Qef me Ciklet For
+            Binary Bracelets:
+              name: Byzylykët Binarë
+            'Unplugged: Binary':
+              name: 'Unplugged: Binare'
+            Artist Binary:
+              name: Artist Binar
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing

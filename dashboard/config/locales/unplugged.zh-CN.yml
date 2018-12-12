@@ -322,3 +322,31 @@ zh-CN:
       ForLoopFun_2019:
         title: '翻译丢失: en-US.data.unplugged.ForLoopFun_2018.title'
         desc: '翻译丢失: en-US.data.unplugged.ForLoopFun_2018.desc'
+      GraphPaperProgramming_2019:
+        title: 方格纸编程
+        desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
+      RelayProgramming_2018_2019:
+        title: 编程接力
+        desc: 这次活动会从对"调试和坚持"的简短课程开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。
+      courseD_unplugged_digitalCitizenship_2019:
+        title: 线下的活动
+        desc: 今天，你将会学到成为一个数字公民意味着什么。
+      BinaryImages_2019:
+        title: 二进制图像
+        desc: 虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
+          (如图像和颜色)。
+      courseE_unplugged_CnC_2019:
+        title: 数字共享
+        desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
+      GettingLoopy_2019:
+        title: 越来越糊涂
+        desc: 本课通过舞蹈活动介绍循环 (用来重复的指令) 的编程概念。学生们将学习简单的编排，然后跟着老师的指示，再重复它。
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: 线下的活动
+        desc: 今天，你会学习到在互联网上意味着什么，能做什么。
+      BigEvent_2019:
+        title: 大事件
+        desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
+      BinaryBracelets_2019:
+        title: 二进制的手镯
+        desc: 学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。

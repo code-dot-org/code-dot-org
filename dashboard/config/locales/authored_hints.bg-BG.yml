@@ -118,6 +118,15 @@ bg:
       Function intro Ryan_2019_authored_hint:
         Function_intro_Ryan_a: Във вашата програма можете многократно да извикате
           дадена функция!  Опитайте да я извикате два пъти, за да разрешите този пъзел.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Виж **морските фенери**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Как ще използваш условие с тях, за да преминеш през океанския монумент?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Можеш да използваш "ако" има път блока, за да направиш завъртанията
+          вдясно.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Виждаш ли сините и червени корали? Използвай ги, за да
+          се завърташ на дясно и ляво през рифа.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Пробвайте да накарате Agent да построи няколко моста,
           така че Алекс и Стийв да могат да се придвижват около и извън краищата на
@@ -525,6 +534,9 @@ bg:
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: 'Вашата програма трябва да изглежда така: - използва
           функция - върви напред 100 + 75 пиксела - използва функция'
@@ -544,6 +556,9 @@ bg:
         courseD_artist_functions2_a: 'Вашата програма трябва да изглежда така: - използва
           функция - върви напред 100 + 75 пиксела - използва функция'
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: 'Вашата програма трябва да изглежда така: - използва
+          функция - върви напред 100 + 75 пиксела - използва функция'
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: 'Вашата програма трябва да изглежда така: - използва
           функция - върви напред 100 + 75 пиксела - използва функция'
       grade2_MakeDogTag_1_authored_hint:
