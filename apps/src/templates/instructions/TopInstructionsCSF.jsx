@@ -38,6 +38,7 @@ import {
 import {
   levenshtein
 } from '../../utils';
+import InlineAudio from "./InlineAudio";
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -77,6 +78,19 @@ const containedLevelStyles = {
   heightResizer: {
     backgroundColor: color.background_gray,
   },
+};
+
+const audioStyle = {
+  wrapper:{
+    position: 'relative',
+  },
+  button: {
+    height: '32px',
+  },
+  buttonImg: {
+    lineHeight: '32px',
+    fontSize: 20,
+  }
 };
 
 const styles = {
@@ -162,6 +176,11 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
+  audioControls: {
+    position: 'absolute',
+    top: 7,
+    right: 12
+  }
 };
 
 class TopInstructions extends React.Component {
@@ -203,6 +222,7 @@ class TopInstructions extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl:  PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
 
     hideOverlay: PropTypes.func.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -578,6 +598,13 @@ class TopInstructions extends React.Component {
       this.props.overlayVisible && styles.withOverlay,
     ];
 
+    const markdown = this.shouldDisplayShortInstructions() ?
+      this.props.shortInstructions : this.props.longInstructions;
+
+    const ttsUrl = this.shouldDisplayShortInstructions() ?
+      this.props.ttsShortInstructionsUrl : this.props.ttsLongInstructionsUrl;
+
+    const showAudioControls = this.props.textToSpeechEnabled &&  ttsUrl;
 
     if (this.props.hasContainedLevels) {
       return (
@@ -591,6 +618,11 @@ class TopInstructions extends React.Component {
             <div style={containedLevelStyles.level} className="contained-level">
               <ContainedLevel ref={(c) => { this.containedLevel = c; }} />
             </div>
+            {showAudioControls &&
+              <div style={styles.audioControls}>
+                <InlineAudio src={ttsUrl} style={audioStyle}/>
+              </div>
+            }
           </div>
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
@@ -601,12 +633,6 @@ class TopInstructions extends React.Component {
         </div>
       );
     }
-
-    const markdown = this.shouldDisplayShortInstructions() ?
-      this.props.shortInstructions : this.props.longInstructions;
-
-    const ttsUrl = this.shouldDisplayShortInstructions() ?
-      this.props.ttsShortInstructionsUrl : this.props.ttsLongInstructionsUrl;
 
     const leftColWidth = (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
@@ -757,7 +783,8 @@ module.exports = connect(function propsFromStore(state) {
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
     failureAvatar: state.pageConstants.failureAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
-    noVisualization: state.pageConstants.noVisualization
+    noVisualization: state.pageConstants.noVisualization,
+    textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
   };
 }, function propsFromDispatch(dispatch) {
   return {
