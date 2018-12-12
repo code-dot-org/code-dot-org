@@ -30,7 +30,6 @@ class Courses extends Component {
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
-    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
@@ -46,7 +45,6 @@ class Courses extends Component {
       userId,
       showInitialTips,
       modernElementaryCoursesAvailable,
-      hocLaunch,
     } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
@@ -86,14 +84,13 @@ class Courses extends Component {
               isSignedOut={isSignedOut}
               showInitialTips={showInitialTips}
               userId={userId}
-              hocLaunch={hocLaunch}
             />
           </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish hocLaunch={hocLaunch}/>
+          <CoursesStudentEnglish/>
         )}
 
         {/* Non-English */}
@@ -101,7 +98,6 @@ class Courses extends Component {
           <CourseBlocksAll
             isEnglish={false}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
-            hocLaunch={hocLaunch}
           />
         )}
       </div>
