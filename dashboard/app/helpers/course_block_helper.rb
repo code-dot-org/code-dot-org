@@ -184,92 +184,14 @@ module CourseBlockHelper
   #   url: "https://my.url",
   #   title: "Wide Course Block",
   #   body: "Click to find out more!",
-  #   body_short: "Click!",
-  #   teacher_guide: "https://my.teacher/guide",
   #   image_url: "https://my.image",
-  #   audience: "Pre-reader",
-  #   cta: "Learn more"
+  #   audience: "Pre-reader"
   # }
   #
   def self.get_wide_course_block(id)
     block_override_data = {
-      'applab' => {
-        url: CDO.code_org_url(id),
-        title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        audience: I18n.t("upsell.#{id}.audience"),
-        image_url: CDO.code_org_url("/shared/images/courses/fit-130x180/logo_#{id}_tall.jpg"),
-        cta: I18n.t("upsell.#{id}.cta")
-      },
-      'gamelab' => {
-        url: CDO.code_org_url(id),
-        title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        audience: I18n.t("upsell.#{id}.audience"),
-        image_url: CDO.code_org_url("/shared/images/courses/fit-130x180/logo_#{id}_tall.jpg"),
-        cta: I18n.t("upsell.#{id}.cta")
-      },
-      Script::ALGEBRA_NAME => {
-        url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description'),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg")
-      },
-      Script::ARTIST_NAME => {
-        url: script_reset_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        image_url: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")
-      },
       Script::EXPRESS_NAME => {
         url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        image_url: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")
-      },
-      Script::COURSE1_NAME => {
-        url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description'),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg")
-      },
-      Script::COURSE2_NAME => {
-        url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description'),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg")
-      },
-      Script::COURSE3_NAME => {
-        url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description'),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg")
-      },
-      Script::COURSE4_NAME => {
-        url: script_url(id),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description'),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg")
-      },
-      Script::FLAPPY_NAME => {
-        url: script_reset_url(id),
-        title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        image_url: CDO.studio_url('/blockly/media/skins/flappy/small_static_avatar.png')
-      },
-      Script::HOC_NAME => {
-        url: script_reset_url(id),
-        title: I18n.t("upsell.hoc.title"),
-        body: I18n.t("upsell.hoc.body"),
-        image_url: CDO.code_org_url('/images/fit-150x100/codehoc3.jpg')
-      },
-      Script::PLAYLAB_NAME => {
-        url: script_reset_url(id),
         title: data_t_suffix('script.name', id, 'title'),
         body: data_t_suffix('script.name', id, 'description_short'),
         image_url: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")
@@ -283,37 +205,19 @@ module CourseBlockHelper
       Script::TWENTY_HOUR_NAME => {
         url: script_url(id),
         title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        body_short: I18n.t("upsell.#{id}.body_short"),
-        audience: data_t_suffix('script.name', id, 'description_audience'),
-        image_url: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')
+        body: I18n.t("upsell.#{id}.body_short"),
+        image_url: CDO.code_org_url('/images/fit-150x100/code20hr.jpg'),
+        audience: data_t_suffix('script.name', id, 'description_audience')
       },
       'unplugged' => {
         url: CDO.code_org_url("/curriculum/unplugged"),
         title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        body_short: I18n.t("upsell.#{id}.body_short"),
-        audience: I18n.t("upsell.#{id}.audience"),
-        image_url: CDO.code_org_url('/images/fit-150x100/unplugged.png')
-      },
-      'weblab' => {
-        url: CDO.code_org_url(id),
-        title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        audience: I18n.t("upsell.#{id}.audience"),
-        image_url: CDO.code_org_url("/shared/images/courses/fit-130x180/logo_#{id}_tall.jpg"),
-        cta: I18n.t("upsell.#{id}.cta")
-      },
-      'widgets' => {
-        url: CDO.code_org_url(id),
-        title: I18n.t("upsell.#{id}.title"),
-        body: I18n.t("upsell.#{id}.body"),
-        audience: I18n.t("upsell.#{id}.audience"),
-        image_url: CDO.code_org_url("/shared/images/courses/fit-130x180/logo_#{id}_tall.jpg"),
-        cta: I18n.t("upsell.#{id}.cta")
+        body: I18n.t("upsell.#{id}.body_short"),
+        image_url: CDO.code_org_url('/images/fit-150x100/unplugged.png'),
+        audience: I18n.t("upsell.#{id}.audience")
       },
     }
 
-    block_override_data[:id]
+    block_override_data[id] || {}
   end
 end

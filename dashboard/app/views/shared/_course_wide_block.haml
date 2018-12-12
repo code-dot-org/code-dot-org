@@ -1,15 +1,11 @@
 - block_data ||= CourseBlockHelper.get_wide_course_block(id)
-- body = view == 'large' ? block_data[:body] : block_data[:body_short]
-- course_block_class = view == 'large' ? '.courseblock-wide-large' : '.courseblock-wide-small'
 
 - if block_data
-  .courseblock-span6{class: course_block_class}
+  .courseblock-span6.courseblock-wide-small
     = link_to block_data[:url] do
-      .courseblock-span2.imgspan= image_tag block_data[:image_url]
-      .courseblock-span4.heading
+      .imgspan= image_tag block_data[:image_url]
+      .course-container
         %h3= block_data[:title]
         - if block_data[:audience]
-          %h4= block_data[:audience]
-        .smalltext= body
-      - if block_data[:cta]
-        .bottombar.smalltext.trynow= block_data[:cta]
+          .text= block_data[:audience]
+        .text.smalltext= block_data[:body]

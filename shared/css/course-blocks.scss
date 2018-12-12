@@ -12,7 +12,7 @@
     margin-bottom: 0px;
     line-height: 30px;
   }
-  
+
   h1 {
     margin-top: 0px;
     line-height: 30px;
@@ -169,8 +169,17 @@
   border-radius: 5px;
   margin-top: 20px;
 
-  .heading {
+  &:hover {
+    border-color: $dark_charcoal;
+
+    h3, .smalltext {
+      color: $dark_charcoal;
+    }
+  }
+
+  .course-container {
     width: 280px;
+    padding: 8px 16px;
   }
 
   a {
@@ -180,52 +189,37 @@
   img {
     box-sizing: content-box;
     float: right;
+    width: 150px;
   }
 
   .imgspan {
     margin-left: 0;
     float: right;
-    text-align: right;
   }
 
   h3 {
-    margin: 10px 0 0 10px;
     color: $charcoal;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 24px;
     font-family: $gotham-bold;
-    float: left;
-    width: 94%;
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
   }
 
-  h4 {
-    margin-left: 10px;
-    color: $charcoal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .text {
     font-size: 14px;
-    font-family: $gotham-bold;
-    float: left;
-
-    html[dir=rtl] & {
-      float: right;
-      margin-left: 0px;
-      margin-right: 10px;
-    }
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight: normal;
+    color: $charcoal;
   }
 
   .smalltext {
-    margin-left: 10px;
     font-size: 13px;
-    line-height: 17px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-    float: left;
-    padding-right: 10px;
+    padding-top: 8px;
   }
 
   html[dir=rtl] & {
