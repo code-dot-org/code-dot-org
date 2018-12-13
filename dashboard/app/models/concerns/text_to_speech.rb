@@ -183,7 +183,11 @@ module TextToSpeech
   end
 
   def tts_long_instructions_text
-    tts_long_instructions_override || TextToSpeech.sanitize(long_instructions || "")
+    tts_long_instructions_override || TextToSpeech.sanitize(long_instructions || tts_for_contained_level || "")
+  end
+
+  def tts_for_contained_level
+    contained_levels.empty? ? "" : contained_levels[0].long_instructions
   end
 
   def tts_should_update_long_instructions?

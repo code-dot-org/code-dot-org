@@ -47,9 +47,14 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts_long_instructions_text' do
+    contained_level = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {markdown_instructions: "This is contained"}
+    level_1 = create :level, name: 'level 1', type: 'Blockly'
+    level_1.contained_level_names = [contained_level.name]
+
     assert_equal '', @level_without_instructions.tts_long_instructions_text
     assert_equal "regular markdown_instructions with some \n", @level_with_markdown_instructions.tts_long_instructions_text
     assert_equal 'markdown override', @level_with_markdown_instructions_override.tts_long_instructions_text
+    assert_equal "This is contained\n", level_1.tts_long_instructions_text
   end
 
   test 'tts_short_instructions_audio_file' do
