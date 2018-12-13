@@ -23,8 +23,9 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/551/enus-es#q=%22HOC+2018%22) and [here](https://crowdin.com/translate/codeorg/318/enus-es#q=%22HOC+2018%22)
 1. [Tutorial blocks](https://crowdin.com/translate/codeorg/639/enus-es#q=craft_)
 1. [Tutorial hints](https://crowdin.com/translate/codeorg/552/enus-es#q=%22HOC+2018%22)
-1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2018)
 1. [Strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/all/enus-es#q=hoc2018_mc)
+1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2018)
+1. [Video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=mc_2018) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
 
 ## Translating the video captions
 
