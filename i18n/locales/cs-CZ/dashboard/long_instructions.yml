@@ -216,9 +216,9 @@ cs:
         </block></xml>
         
         Tento program používá k ovládání výšky jednoho z tanečníků hlasitost "basů" (nízkých zvuků) v hudbě. Dokážeš přimět také dalšího tanečníka, aby reagoval na hudbu?
-      Dance_Party_11.5: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
       Dance_Party_11.5_test: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
       Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      Dance_Party_11_5: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
       Dance_Party_11b: |-
         Je čas na tanec! Když stiskneš šipku vlevo, kočka bude poklepávat. Přiměj Robota "klesnout", když stiskneš šipku vpravo a "zatleskat nahoře" při stisknutí šipky nahoru.
         
@@ -230,14 +230,48 @@ cs:
         
         V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       Dance_Party_8: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
+      Dance_Party_extras_battle: |-
+        # Taneční skupiny
+        
+        Zde je tanec mezi dvěma tanečními skupinami. Klávesy se šipkami ovládají jednoho z tanečníků a klávesy „w, a, s, d“ ovládají ostatní. Zatanči si s kamarádem a poté zkus tento tanec vylepšit.
+        
+        * Přidej další klávesy k ovládání tanců
+        * Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
+        * Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
+      Dance_Party_extras_every_beat: |-
+        # Čtvrťové noty
+        
+        Většina našich tanečníků používá celé takty, ale každý takt se skládá ze 4 čtvrťových not. Tento tanec používá „každých 0,25 taktu“, aby tanečník každou čtvrťovou notu zatleskal.
+        
+        Tento tanec používá také _podmíněný_ blok k ovládání, kdy může blok „každých 0,25 taktu“ změnit tanec. Zkus změnit čísla v podmíněném bloku, abys viděl(a), jak to změní tanec.
+        
+        * Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
+        * Přidej nějaké události „po taktu“.
+        * Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
       Dance_Party_extras_layout: |-
-        # Vytvořme formaci!
+        # Pojďme utvořit sestavu!
         
-        Prohlédni si tento tanec, který používá blok `uspořádání` ke změně formace záložních tanečníků v průběhu rance. Vyzkoušej jeden z těchto nápadů a rozšiř ho::
+        Zkontroluj tento tanec, který používá blok „rozvržení“, abys změnil(a) v průběhu tance sestavu záložních tanečníků. Zkus jeden z těchto nápadů na rozšíření:
         
-        * Vytvoř druhou skupinu tanečníků v jiném uspořádání
-        * Změň uspořádání, při stisknutí klávesy
-        * Změň nějakou vlastnost, když tanečníci změní formaci
+        * Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
+        * Změň rozvržení, když stiskneš klávesu
+        * Změň vlastnost, když tanečníci změní sestavy
+      Dance_Party_extras_on_beat: |-
+        # Basy, středy a výšky
+        
+        Tento tanec používá události „vrchol“ k aktivaci kódu, když jsou jiné části hudby příliš hlasité. Zkus si pohrát s různými písněmi a podívej se, jak mění tanec
+      Dance_Party_extras_speed: |-
+        # Zrychli to, zpomal to
+        
+        Tento závěrečný tanec používá blok „nastavit rychlost“ k ovládání, jak rychle se každý tanečník pohybuje. Zkus během různých bodů písně experimentovat s různými rychlostmi. Neboj se pohrát si s tímto tancem nebo se vrátit k předchozím tancům, aby byly ještě skvělejší.
+      Dance_Party_extras_visible: |-
+        # Kam by šli?
+        
+        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
+        
+        * Přidej další skupinu tanečníků
+        * Zobraz a skryj tanečníky pomocí šipek s klávesami
+        * Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
       Function intro Ryan_2019: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
       HOC 2018 Level_1: "Potřebuješ zásoby na cestu, která tě čeká. Seber **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
@@ -266,6 +300,9 @@ cs:
         Vytvoř záložního tanečníka nazvaného `záložní_tanečník1`, který bude tančit s kočkou.
       HOC Dance 6_draft: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
       HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      HOC Dance Freeplay: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      HOC Dance Freeplay_draft: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      HOC Dance Predraw: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
       K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!

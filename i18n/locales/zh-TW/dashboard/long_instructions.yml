@@ -785,12 +785,54 @@ zh-TW:
         </block></xml>
         
         此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
-      Dance_Party_11.5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11.5_test: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+      Dance_Party_11_5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11b: |-
         是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_extras_battle: |-
+        #舞蹈團隊
+        
+        這是兩個隊員之間的舞蹈。方向鍵控制其中一位舞者，“w、a、s、d”鍵控制另一位舞者。可以和朋友一起跳支舞，然後努力改進你的舞蹈。
+        
+        * 添加更多按鍵來控制舞蹈
+        * 讓後備舞者也在按下按鍵時做出反應
+        * 通過設置舞者的可見度，每 4 個節拍替換舞者一次
+      Dance_Party_extras_every_beat: |-
+        # 四分音符
+        
+        我們的舞蹈大多採用了完整節拍，但每個節拍都由 4 個四分音符組成。這種舞蹈使用“1/4 節拍”使舞者在每個四分音符拍手。
+        
+        這種舞蹈還使用_conditional_塊來控制在什麼時候“每 1/4 個節拍”塊可以改變舞蹈。嘗試更改條件塊中的數字，看看這會如何改變舞蹈。
+        
+        * 嘗試使用其他音符長度（1/2 節拍或 1/8 節拍）。
+        * 添加一些 “節拍后”事件。
+        * 用“秒”替換“節拍”，並嘗試以這種方式為舞蹈計時。
+      Dance_Party_extras_layout: |-
+        # 讓我們進入陣型！
+        
+        查看這種舞蹈的效果，使用“佈局”塊來改變整個舞蹈中後備舞者的陣型。請嘗試以下任一方法進行擴展練習：
+        
+        * 在不同的佈局中創建第二組舞者
+        * 按下按鍵時更改佈局
+        * 當舞者改變陣型時改變屬性
+      Dance_Party_extras_on_beat: |-
+        # 低音、中音和高音
+        
+        這種舞蹈會在音樂的不同部分響起時使用“峰值”事件來觸發代碼。嘗試換用不同的歌曲，看看這會如何改變舞蹈。
+      Dance_Party_extras_speed: |-
+        # 加快速度、減慢速度
+        
+        最後一種舞蹈使用“設定速度”塊來控制每位舞者的移動速度。嘗試在歌曲中的不同節點使用不同的速度。隨意對舞蹈進行修改，或恢復以前的舞蹈，取得更好的效果。
+      Dance_Party_extras_visible: |-
+        # 他們要去哪？
+        
+        這鐘舞蹈可以顯示和隱藏了兩組不同的舞者。看看效果如何，然後嘗試發揮自己的天分。
+        
+        * 添加另一組舞者
+        * 使用方向鍵來顯示和隱藏舞者
+        * 隱藏所有舞者並切換到令人興奮的背景效果
       ECS Unit 3 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \\r\n\\r\n## Enter the lesson you selected for your\nchallenge in the text box below.\\r\n\\r\nHTML Beginners:\\r\n\\r\n- Day 3-4,5:\nBasic HTML - Paragraph, Header, Strong, and EM Tags\\r\n- Day 6--7: HTML -\nImages\\r\n- Day 14: HTML - Links\\r\n\\r\nCSS Beginners:\\r\n\\r\n- Day 8-10:\nBasic CSS \\r\n\\r\nMore Experienced with HTML and CSS:\\r\n\\r\n- Day 11-13:\nHTML and CSS \\r\n- Day 17-19: HTML and CSS: Create Your Own Webpage\\r\n- Day\n22-25: Unit Final Project\\r\n- Day 18-21 Final Unit Project\\r\n\\r\n\\r\nNow\nthat you've selected a lesson, head to the forum and **share which lesson\nyou plan to complete** for your challenge.\\r\n\\r\n#### <a href=\"http://forum.code.org/c/ecs/ecs-unit3\"\ntarget=_blank>Forums <i class=\"fa fa-external-link\" /></a>"
       ECS Unit 4 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \\r\n\\r\n## Enter the lesson you selected for your\nchallenge in the text box below.\\r\n\\r\n是編程新手嗎？\\r\n\\r\n- Day 2-3:\nScratch - Name Project\\r\n- Day 4: Scratch - Knock Knock Joke\\r\n- Day 5-6:\nScratch - Moving Sprites \\r\n\\r\nNew to Scratch:\\r\n\\r\n- Day 7-8: Scratch\n- Event Driven Programming\\r\n- Day 9: Scratch - Broadcast Roleplay\\r\n- Day\n10-13: Scratch - Broadcasting\\r\n\\r\nSome Experience with Scratch and Programming:\\r\n\\r\n-\nDay 18, 19: Rock Paper Scissors and Timer\\r\n- Day 20-23: Scratch - Timing\nGame\\r\n- Day 25-30: Unit Final Project\\r\n\\r\n\\r\n\\r\nNow that you've selected\na lesson, head to the forum and **share which lesson you plan to complete**\nfor your challenge.\\r\n\\r\n#### <a href=\"http://forum.code.org/c/ecs/ecs-unit4\"\ntarget=_blank>Forums <i class=\"fa fa-external-link\" /></a>"
       ECS Unit 5 Challenge Selection: "# 你的挑戰有哪些？\n\\r\n\\r\n## Enter the lesson you selected for your challenge in the text box\nbelow.\\r\n\\r\n- Day 1 - 3: Room data project, set up final project\\r\n- Day\n4 - 5: Developing research questions\\r\n- Day 6 - 7: Building group norms\\r\n-\nDay 8: Check in Day\\r\n- Day 9 - 11: Maps, identifying variables, subsetting\ndata, sorting data, frequency of types.\\r\n- Day 12: Bubble Charts\\r\n- Day\n13: Review: Bubble Charts\\r\n- Day 14 - 15: Bar Plots\\r\n- Day 16: Mosaic\nPlots\\r\n- Day 17: Review: Bar and Mosaic Plots\\r\n- Day 18 - 20: Mean, Median,\nMinimum, Maximum, Histograms, Box Plots\\r\n- Day 21: Review: Mean, Median,\nMinimum, Maximum\\r\n- Days 22 - 24: Filtering Text data (remove punctuation,\nremove case, remove stop words, stemming), Analyzing word counts.\\r\n- Day\n25: Review: Text Data\\r\n- Day 26 - 27: Incorporate  data techniques into\nfinal project\\r\n- Day 28 - 29: Build project presentations\\r\n- Day 30: Present\nfinal project\\r\n\\r\nNow that you've selected a lesson, head to the forum\nand **share which lesson you plan to complete** for your challenge.\\r\n\\r\n####\n<a href=\"http://forum.code.org/c/ecs/ecs-unit5\" target=_blank>Forums <i\nclass=\"fa fa-external-link\" /></a>"
@@ -848,6 +890,9 @@ zh-TW:
         
         建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+      HOC Dance Freeplay: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Freeplay_draft: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      HOC Dance Predraw: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Harvesting: "喔哦，我弄丟了地圖，種了什麼也搞不清楚！每個芽苗可以種出**玉米** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n、**豌豆** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n、**南瓜** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n。你可以寫些程式來收成這些作物嗎？不管它們是什麼。"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       InspirationalArtwork: "你已經學會了所有需要創建這個模式的知識了！\\r\n\\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n"

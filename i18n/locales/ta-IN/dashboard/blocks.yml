@@ -44,7 +44,7 @@ ta:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'

@@ -1395,6 +1395,11 @@ Then /^I navigate to the last shared URL$/ do
   wait_for_jquery
 end
 
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
+  wait_for_jquery
+end
+
 Then /^I enter the last shared URL into input "(.*)"$/ do |selector|
   @browser.execute_script("document.querySelector('#{selector}').value = \"#{last_shared_url}\"")
 end

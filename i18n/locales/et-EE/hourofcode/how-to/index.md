@@ -5,67 +5,67 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+# Kuidas KoodiTund üritust klassis läbi viia
 
-### Liituge liikumisega ja tutvustage õpilaste rühma nende esimeseks tundideks arvutiteadusega järgmiste sammudega. Kooditunde on lihtne joosta - isegi algajatele! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Liituge liikumisega ja viige õpilastega läbi arvutiteaduse esimene tund nende sammudega. KoodiTund ürituse korraldamine on lihtne - isegi algajatele! Kui vajate abilisi, siis siit leiate [kohalikud vabatahtlikud](%= codeorg_url('/volunteer/local') %), kes abistavad KoodiTunni läbiviimisel huviringis või klassis.
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Heitke pilk [osalemise juhendile, kui teil on veel küsimusi](%= localized_file('/files/participation-guide.pdf') %).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Vaata seda "Kuidas KoodiTund üritust läbi viia" videot <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2. Vali juhend, mille järgi soovid KoodiTund üritust läbi viia
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+Oleme koostanud mitmeid lõbusaid [ õpilasi juhendavaid õpetusi](%= resolve_url('/learn') %) kõigile vanuserühmadele ja oskustasemetele. Õpilased võivad tegevusi ise läbi teha, kuid mitmed tegevused on ka õpetajatele (viidet materjalile näed, kui oled juhendil klikkinud), et vestlusi paremini juhtida või lisategevusi läbi viia. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Promote your Hour of Code
+## 3. Reklaami oma KoodiTundi
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Reklaami KoodiTund üritust [ nende vahenditega ](%= resolve_url('/promote/resources') %) ja julgusta ka teisi oma KoodiTund üritust korraldama.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planeeringe vajalik tehnoloogia - arvutite kasutamine on valikuline
 
-The best Hour of Code experience includes Internet-connected computers. Kuid te ei vaja arvutit iga lapse jaoks ja saate isegi koodi tunde ilma arvutita üldse teha.
+KoodiTund parimaks läbiviimiseks on vajalikud internetiühendusega arvutid. Kuid te **ei vaja** arvutit iga lapse jaoks ja saate isegi koodi tunde ilma arvutita üldse teha.
 
-Veenduge, et proovite õpetusi õpilasarvutitelt või seadmetest, et veenduda, et need töötavad heli ja video brauseritega korralikult. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Testi tegevusi arvutitel või teistel seadmetel, mida kasutate. Veenduge, et heli ja video töötavad veebilehitsejatega korralikult. **Aeglane internetiühendus? **Näidake videosid klassi ees ekraanil, nii et iga õpilane ei pea seda alla laadima. Või proovige arvutivabade tegevustega õpetusi.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+Kui juhendi järgi on õppetunnis oluline heli, siis jagage õpilastele kõrvaklapid või paluge need neil endil kaasa võtta.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Ei ole piisavalt seadmeid?** Kasutage [paaris programmeerimist](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kui õpilased töötavad paaris, siis saavad nad teineteist abistada ning ei vajavad vähem õpetaja abi. Lisaks õpetab see, et arvutiteadus on sotsiaalne ning koostööd soodustav eriala.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. Alusta KoodiTund läbiviimist inspireeriva videoga
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Kutsuge[ kohalikke vabatahtlikke](%= codeorg_url('/volunteer/local') %), et inspireerida õpilasi ja näidata arvutiteaduse võimalusi. ** Üle maailma on tuhandeid vabatahtlikke, kes abistavad KoodiTund kampaania ajal - nad kas külastavad klassiruume või kasutavad videovestlusi!
 
-**Show an inspirational video:**
+**Näita inspireerivat videot:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Algne Code.org käivitamise video, milles esinevad Bill Gates, Mark Zuckerberg ja NBA korvpallitäht Chris Bosh. (Saadaval on[ 1-minutiline](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutiline](https://www.youtube.com/watch?v=nKIu9yen5nc), ja[ 9-minutiline](https://www.youtube.com/watch?v=dU1xS07N-FA) versioon)
+- Veel inspireerivaid [materjale ](%= codeorg_url('/inspire') %) ja [ videosid](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Ära muretse, kui sa ei tunne arvutiteaduse valdkonda. Siin on mõned ideed, kuidas KoodiTund sisse juhatada:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
-- As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
+- Selgita, kuidas tehnoloogia mõjutab meie elusid ning too näiteid, mis on nii poistele kui tüdrukutele arusaadavad. Räägi äppidest ja tehnoloogiatest, mida kasutades saab päästa inimelusid, aidata inimesi, suhelda ka kaugel asuvate inimestega jne.
+- Nimeta asju, mis igapäevaelus kasutavad programmeerimist.
+- Nõuandeid, kuidas tüdrukutes arvutiteaduse vastu huvi äratada, leiad[ siit](%= resolve_url('https://code. org/girls') %).
 
-## 6. Code!
+## 6. Programmeeri!
 
-**Direct students to the activity**
+**Juhata osalised tegevuse juurde**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- Kirjuta tegevuse viide tahvlile. Viite leiad [ valitud juhendist](%= resolve_url('/learn') %) osalejate arvu juurest.
 
-**When your students come across difficulties it's okay to respond:**
+**Kui osalejad satuvad raskustesse, siis võid vastata:**
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "Ma ei tea. Mõtleme sellele koos lahenduse."
+- "Tehnoloogia ei tööta alati nii nagu me seda tahaksime."
+- "Programmeerimise õppimine on nagu uue keele õppimine, see võtab aega."
 
-**What if a student finishes early?**
+**Mida teha, kui õpilane saab varem valmis?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
-- Or, ask students who finish early to help classmates who are having trouble with the activity.
+- Õpilased näevad kõiki juhendeid ja [ võivad proovida teist KoodiTund tegevust](%= resolve_url('/learn')%).
+- Või palu õpilastel, kes varem lõpetasid aidata klassikaaslasi, kes vajavad abi.
 
 [col-33]
 
@@ -75,7 +75,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. Tähista
 
 [col-33]
 
@@ -83,10 +83,10 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 [/col-33]
 
-- [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Trüki tunnistused](%= codeorg_url('/certificates') %)oma õpilastele.
+- [Trüki "KoodiTund läbitud!"](%= resolve_url('/promote/resources#stickers') %) kleepsud oma õpilastele.
+- [Telli spetsiaalsed t-särgid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) osalejatele.
+- Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
 [col-33]
 
@@ -96,16 +96,16 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 <p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators:
+## Teised KoodiTund materjalid õpetajatele:
 
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Külasta ka [KoodiTund foorumit](http://forum.code.org/c/plc/hour-of-code), kus saad teistelt korraldajalt küsida nõu ja soovitusi. <% if @country == 'us' %>
+- Vaata ka [KoodiTund KKK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## What comes after the Hour of Code?
+## Mis saab pärast KoodiTund ürituse läbiviimist?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Järgmised sammud:
 
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Julgustade õpilasi jätkama [ internetis õppimist](%= codeorg_url('/learn/beyond') %).
+- [Osale](%= codeorg_url('/professional-development-workshops') %)1-päevasel silmast-silma töötoas. (ainult USA haridustöötajatele)
 
 <%= view :signup_button %>

@@ -421,6 +421,8 @@
   "dontForget": "Ekki gleyma",
   "downloadCSV": "Hlaða niður CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Hreyfimynd",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Leggja saman tvær tölur",
   "dropletBlock_addOperator_signatureOverride": "Virki samlagningar",

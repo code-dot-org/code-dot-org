@@ -5,25 +5,25 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+# Како да организујете скуп или догађај везан за Час програмирања
 
-### Get your entire school or community involved in an Hour of Code!
+### Нека се цела Ваша школа или заједница ангажује око Часа програмирања!
 
 * * *
 
-## 1. Prepare for your event
+## 1. Припреме за Ваш догађај
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+- Одредите место, датум и време.
+- Пошаљите [писмо](https://hourofcode.com/promote/resources#sample-emails) Вашем одборнику, градоначелнику, посланику, или утицајном предузетнику у којем их позивате да буду говорници на Вашем догађају. За више информација погледајте наше [упутство](%=localized_file('/files/elected-official.pdf')%) за случај да имате неког званичника као госта током Часа програмирања.
+- Обавестите медије, новине, локалне ТВ станице, о Вашем догађају. Ако Вам је потребна помоћ, погледајте део који се односи на [медије](%= resolve_url('/promote/press-kit') %).
 
-## 2. During your event
+## 2. Ток Вашег догађаја
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+- Започните догађај уз неки од надахњујућих видео записа које можете пронаћи [овде](%= resolve_url('/promote/resources#videos') %).
+- У уводном делу дајте преглед значаја рачунарства користећи следеће [статистике и графиконе](%= resolve_url('/promote/stats') %).   
       
     
-- **Other event ideas**: 
+- **Остале идеје за догађај**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
     - Invite a local politician and have students teach him or her how to code.
     - Have a group of students demonstrate an unplugged activity.

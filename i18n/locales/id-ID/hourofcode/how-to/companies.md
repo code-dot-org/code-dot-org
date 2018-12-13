@@ -7,15 +7,15 @@ nav: how_to_nav
 
 # Cara membawa Hour of Code ke perusahaan Anda
 
-### Find out how you and your employees can inspire students to try computer science!
+### Temukan cara Anda dan tim Anda dapat menginspirasikan siswa untuk menyukai ilmu komputer!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Terhubung dengan kelas-kelas lokal dan para sukarelawan untuk Hour of Code
 
 Code.org menawarkan kesempatan untuk karyawan anda untuk [terhubung](%= codeorg_url('/volunteer') %) dengan kelas lokal yang menawarkan Hour of Code dimana mereka bisa berbagi pengalaman berkarir di bidang teknologi and menginsipirasi siswa untuk belajar ilmu komputer.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+Mendaftar menjadi sukarelawan <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

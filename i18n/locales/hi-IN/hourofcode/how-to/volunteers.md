@@ -5,13 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# अध्यापको के लिए प्रशिक्षण पत्र
 
-### Make a difference in a classroom today!
+### आज कक्षा में एक अंतर बनाओ!
 
 * * *
 
-## Why volunteer?
+## स्वयंसेवी क्यों?
 
 Check out some testimony from past volunteers:
 

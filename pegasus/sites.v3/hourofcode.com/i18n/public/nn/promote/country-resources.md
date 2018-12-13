@@ -128,7 +128,7 @@ Vis elevane ein inspirerande video for å dra i gang Kodetimen. For eksempel:
 - [Lanseringsvideoen for Kodetimen 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) eller [videoen for Kodetimen 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Gi ein kort introduksjon for å gi elevane tenning**
 
 <% elsif @country == 'pe' %>
 
@@ -136,7 +136,7 @@ Vis elevane ein inspirerande video for å dra i gang Kodetimen. For eksempel:
 
 <
 
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 

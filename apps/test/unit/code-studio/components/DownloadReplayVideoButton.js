@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import { expect } from '../../../util/configuredChai';
 
-import DownloadReplayVideoButton from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
+import { UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton } from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
 
 describe('DownloadReplayVideoButton', () => {
   let wrapper;
@@ -14,8 +14,26 @@ describe('DownloadReplayVideoButton', () => {
   let fetchSpy;
   let tryDownloadVideoSpy;
 
+  let originalAppOptions;
+
+  before(function () {
+    originalAppOptions = window.appOptions;
+    window.appOptions = {
+      signedReplayLogUrl: "some-url.com"
+    };
+  });
+
+  after(function () {
+    window.appOptions = originalAppOptions;
+  });
+
   beforeEach(function () {
-    wrapper = shallow(<DownloadReplayVideoButton channelId="test" />);
+    wrapper = shallow(
+      <DownloadReplayVideoButton
+        channelId="test"
+        appType="dance"
+      />
+    );
 
     checkVideoSpy = sinon.spy(wrapper.instance(), 'checkVideo');
     checkVideoUntilSuccessSpy = sinon.spy(wrapper.instance(), 'checkVideoUntilSuccess');
@@ -32,7 +50,7 @@ describe('DownloadReplayVideoButton', () => {
 
   it('initially renders as enabled', () => {
     expect(wrapper.instance().buttonEnabled()).to.equal(true);
-    expect(wrapper.find('a').props()).to.have.property('disabled', false);
+    expect(wrapper.find('button').props()).to.have.property('disabled', false);
     expect(wrapper.find('i').hasClass('fa-download')).to.equal(true);
   });
 
@@ -43,7 +61,7 @@ describe('DownloadReplayVideoButton', () => {
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(false);
-    expect(wrapper.find('a').props()).to.have.property('disabled', true);
+    expect(wrapper.find('button').props()).to.have.property('disabled', true);
     expect(wrapper.find('i').hasClass('fa-spinner')).to.equal(true);
   });
 
@@ -54,7 +72,7 @@ describe('DownloadReplayVideoButton', () => {
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(true);
-    expect(wrapper.find('a').props()).to.have.property('disabled', false);
+    expect(wrapper.find('button').props()).to.have.property('disabled', false);
     expect(wrapper.find('i').hasClass('fa-download')).to.equal(true);
   });
 
@@ -75,7 +93,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(0);
 
     wrapper.setState({ videoExists: true });
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
 
     expect(tryDownloadVideoSpy.callCount).to.equal(1);
     expect(fetchSpy.callCount).to.equal(1);
@@ -89,7 +107,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(0);
 
     wrapper.setState({ videoExists: false });
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
 
     expect(tryDownloadVideoSpy.callCount).to.equal(1);
     expect(fetchSpy.callCount).to.equal(1);

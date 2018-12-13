@@ -2102,7 +2102,7 @@ fr:
               name: Heure de Code Minecraft
           title: 'Minecraft: Le voyage du héros'
           description_short: Minecraft est de retour pour une toute nouvelle activité de l'Heure de Code!
-          description: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité! Le voyage dans Minecraft avec du code.
+          description: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2490,6 +2490,8 @@ fr:
             Dance Party:
               name: Fête dansante
           title: Fête dansante
+          description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !
+          description: Codez votre propre soirée dansante à partager avec vos amis !
         frozen-2018-test-b:
           stages:
             Artist:
@@ -2502,6 +2504,9 @@ fr:
           stages:
             Dance Party:
               name: Fête dansante
+        dance-extras:
+          title: Continuez à danser
+          description: Allez au-delà de la première heure avec de longues idées de projets.
         coursef-2019:
           stages:
             Building a Foundation:

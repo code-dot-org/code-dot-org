@@ -2,6 +2,8 @@ import React from 'react';
 import { UnconnectedShareAllowedDialog as ShareAllowedDialog } from './ShareAllowedDialog';
 import { action } from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import pageConstants from '@cdo/apps/redux/pageConstants';
+import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
 
 const fakei18n = {
     t(s) {
@@ -22,7 +24,7 @@ const fakei18n = {
 export default storybook => {
   storybook
     .storiesOf('ShareAllowedDialog', module)
-    .withReduxStore({publishDialog})
+    .withReduxStore({publishDialog, pageConstants, shareDialog})
     .addStoryTable([
       {
         name: 'basic example',

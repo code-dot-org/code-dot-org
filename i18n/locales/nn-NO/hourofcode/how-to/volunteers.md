@@ -21,7 +21,7 @@ Sjekk ut nokre utsegn frå tidlegare frivillige:
 
 ## Alle kan bli frivillige
 
-### Volunteers and speakers in tech:
+### Frivillige og talarar i tech-industrien:
 
 Jobber du med CS eller i tech-bransjen? Hvis du arbeider i teknologibransjen, i eit tech-selskap i kva som helst rolle (ikkje-teknolog eller ingeniør), eller du har tatt informatikk-kurs, kan du hjelpe til og inspirere elevane! Mange elevar har aldri møtt nokon som jobbar i teknologi-industrien og lærarar likar å kunne kople klasserommet opp mot fagfolk og studentar.
 

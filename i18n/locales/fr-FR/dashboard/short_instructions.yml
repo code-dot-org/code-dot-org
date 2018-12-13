@@ -773,10 +773,11 @@ fr:
       Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
       Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur d'un danseur.
       Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique à l’aide du bloc « commencer à suivre ».
-      Dance_Party_11.5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
       Dance_Party_11.5_test: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
       Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire danser les canards ensemble.
       Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible !
+      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       Food Fight!: "Nous avons ajouté une dernière fonction pour toi.\n\nUtilise une instruction « Si » pour programmer ton jeu et qu’il appelle la fonction «level_up» uniquement lorsque «player_score» devient supérieur à un certain nombre.\n\nPar exemple : «player_score» > 6\n\nJoue le jeu et franchis le niveau 4 pour passer au puzzle suivant."
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       FoodFight_2018: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.

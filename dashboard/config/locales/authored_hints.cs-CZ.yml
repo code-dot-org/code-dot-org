@@ -341,13 +341,6 @@ cs:
           * Musí se změnit vlastnosti dvou nebo více tanečníků.
 
           *Tato úroveň končí po 8 taktech.*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Jak splním tuto úroveň?**
-
-          * Buď prostě kreativní!
-
-          *Tato úroveň končí po 8 taktech.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -356,6 +349,13 @@ cs:
 
           *Tato úroveň končí po 8 taktech.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 

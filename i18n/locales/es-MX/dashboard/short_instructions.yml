@@ -743,10 +743,11 @@ es-MX:
       Dance_Party_08: '¿Puedes hacer que ambos bailarines sean del mismo tamaño?'
       Dance_Party_09: Utiliza el bloque de 'definir tinte ' para cambiar el color de un bailarín.
       Dance_Party_10: Haz que el otro bailarín también responda a la música usando el bloque 'comienza después'.
-      Dance_Party_11.5: Usa los bloques de "todos los patos" para hacer que todos los patos bailen juntos.
       Dance_Party_11.5_test: Usa los bloques de "todos los patos" para hacer que todos los patos bailen juntos.
       Dance_Party_11: El bloque 'cuando presiona arriba' le permite ejecutar el código cuando se presiona la flecha hacia arriba. Tratar de hacer que el bailarín haga un movimiento rápido cuando pulses la tecla arriba.
+      Dance_Party_11_5: Usa los bloques de "todos los patos" para hacer que todos los patos bailen juntos.
       Dance_Party_11b: Haz que el Robot baile una vez cuando se pulse la tecla de flecha derecha y haga el "hilo", una vez cuando presiones la tecla de flecha hacia arriba. ¡Haz el baile del robot y el hilo tan rápido como puedas!
+      Dance_Party_12: "¡Vamos baila! Crea tu propio baile para compartir con tus\namigos."
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Food Fight!: "Añadimos una última función para ti. Utiliza una sentencia \"Si\" para que tu programa llame la función \"livel_mas\" solo cuando \"puntuacion_jugador\" sea mayor que un cierto número. Por ejemplo: \"puntuacion_jugador\" > 6 Juega el juego, y hazlo pasar de nivel 4 para mover al siguiente problema. "
       Function intro Ryan: Usa la función "Construir puente" dos veces para crear un camino para la antorcha.

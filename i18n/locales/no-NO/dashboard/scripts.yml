@@ -91,7 +91,7 @@
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer fra virkeligheten: Papirfly'
             Relay programming:
-              name: Relé programmering
+              name: Relé-programmering
             'Studio: Create a Story':
               name: 'Spill-Lab: Lage en historie'
             The Big Event:
@@ -771,7 +771,7 @@
         MikeTest:
           stages:
             Artist Functions:
-              name: Kunstner funksjoner
+              name: 'Kunstner: funksjoner'
         artistExemplar:
           description_audience: Alder 8+ (etter kurs 2)
         kinderTest:
@@ -843,7 +843,7 @@
             'Artist: Nested Loops':
               name: 'Kunstner: Løkker i løkker'
             Bee Debugging:
-              name: Bie feilsøking
+              name: 'Bie: feilsøking'
             Bounce:
               name: sprett
             'Farmer: While Loops':
@@ -1541,10 +1541,28 @@
           stages:
             Artist:
               name: Kunstner
+        dance:
+          stages:
+            Dance Party:
+              name: Dansefest
+          title: Dansefest
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
+          description: Programmer din egen dansefest du kan dele med vennene dine!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstner
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansefest
+        dance-extras:
+          title: Fortsett å danse
+          description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1559,6 +1577,10 @@
               name: Morro med for løkker
             The Artist:
               name: Kunstneren
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansefest
         coursed-2019:
           stages:
             Relay Programming:

@@ -421,6 +421,8 @@
   "dontForget": "",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animacija",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Dodati dva broja",
   "dropletBlock_addOperator_signatureOverride": "",

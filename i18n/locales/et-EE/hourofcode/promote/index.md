@@ -9,28 +9,28 @@ nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# Kaasa kogukond KoodiTund kampaaniasse
 
-## 1. Jaga sõnum laiali
+## 1. Reklaami
 
-Tell your friends about the **#HourOfCode**!
+Räägi oma sõpradele KoodiTund kampaaniast ** #HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Kutsu oma kool KoodiTund kampaanias kaasa lööma
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+[Saada see e-kiri](%= resolve_url('/promote/resources#sample-emails') %) oma direktorile ja julgusta kõiki klasse liituma.
 
-## 3. Ask your employer to get involved
+## 3. Kutsu oma tööandja kaasa lööma
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
+[Saada see e-kiri](%= resolve_url('/promote/resources#sample-emails') %) oma ülemusele või ettevõtte juhile.
 
-## 4. Promote Hour of Code in your community
+## 4. Reklaami KoodiTund kampaaniat oma kogukonnas
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[Kaasa kohalikud grupid](%= resolve_url('/promote/resources#sample-emails') %) - skaudid, gaidid, klubid, kirikud, ülikoolid, seenioriteklubid, ametiühingud ning sõpruskonnad. Sa ei pea õppima koolis, et uusi oskusi omandada. Kasuta neid[ plakateid, kleepekaid, videosid ja muud](%= resolve_url('/promote/resources') %) enda ürituse korraldamisel.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Palu kohalikel rahvasaadikutel KoodiTund kampaaniat toetada
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Saada see e-kiri](%= resolve_url('/promote/resources#sample-emails') %) kohalikele rahvasaadikutele, linnavalitsusele, kohalikule omavalitsusele või koolide juhtkondadele ja kutsu neid osalema teie kooli KoodiTund üritusel. See aitab kaasa arvutiteaduse tutvustamisele laiemalt.
 
 <%= view :signup_button %>

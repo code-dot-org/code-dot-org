@@ -192,8 +192,8 @@ sk:
           stanú základov pre ďaľšie vtipné a veselé príbehy.
       ForLoopFun:
         title: Zábavné opakovanie
-        desc: Vieme, že slučky nám umožňujú robiť veci dookola, ale teraz sa naučíme,
-          ako používať slučky so zabudovanou extra štruktúrou.
+        desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme,
+          ako používať cykly so zabudovanou extra štruktúrou.
       SongwritingWithParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie
@@ -243,14 +243,14 @@ sk:
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma
           bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
-        desc: V tejto lekcií sa naučíte niečo o cykloch!
+        desc: V tejto lekcií sa naučíš niečo o cykloch!
       courseB_unplugged_MRF:
         title: Aktivity bez počítača
         desc: V tejto lekcií sa naučíte "programovať" Vašich kamarátov!
       courseB_unplugged_loopyMRF:
         title: Aktivity bez počítača
-        desc: Tak, ako v "Moji robotickí kamaráti" budete aj tu "programovať" Vašich
-          kamarátov, tentokrát však so slučkami!
+        desc: Tak, ako hodine "Moji robotickí kamaráti", aj tu budete "programovať"
+          kamarátov, tentokrát však s cyklami!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivity bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
@@ -366,8 +366,8 @@ sk:
           konceptu.
       courseF_unplugged_forLoopFun:
         title: Zábavné opakovanie
-        desc: Vieme, že slučky nám umožňujú robiť veci dookola, ale teraz sa naučíme,
-          ako používať slučky so zabudovanou extra štruktúrou.
+        desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme,
+          ako používať cykly so zabudovanou extra štruktúrou.
       courseF_unplugged_songwritingParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie
@@ -430,7 +430,7 @@ sk:
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po Internete.
       courseA_unplugged_loops_2018:
-        desc: V tejto lekcií sa naučíte niečo o cykloch!
+        desc: V tejto lekcií sa naučíš niečo o cykloch!
       BigEvent_2018:
         title: Veľká udalosť
         desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí,

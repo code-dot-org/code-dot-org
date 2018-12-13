@@ -317,6 +317,7 @@ ca:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Festa amb ball
     popup:
       progress_for_user: Progrés de %{name}
       progress: El teu progrés
@@ -517,6 +518,8 @@ ca:
   upsell:
     applab:
       title: Laboratori d'aplicacions
+    dance:
+      title: Festa amb ball
     hoc:
       body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una
         oportunitat.
@@ -554,6 +557,8 @@ ca:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca!
+        Viatja a través de Minecraft amb el codi.
     unplugged_conditionals:
       title: Condicionals
   gallery:
@@ -712,6 +717,7 @@ ca:
           other: Altres
   flex_category:
     required: Vista general
+  view_teacher_guide: Veure la guia docent
   pd:
     form_labels:
       email: Correu electrònic

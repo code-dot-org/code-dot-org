@@ -111,6 +111,12 @@ class DanceVisualizationColumn extends React.Component {
       height: 100,
     };
 
+    const filenameToImgUrl = {
+      "click-to-run": require('@cdo/static/dance/click-to-run.png'),
+    };
+
+    const imgSrc = filenameToImgUrl["click-to-run"];
+
     const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
     return (
@@ -138,6 +144,9 @@ class DanceVisualizationColumn extends React.Component {
               <div id="divDanceLoading" style={p5LoadingStyle}>
                 <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
               </div>
+              {this.props.isShareView &&
+                <img src={imgSrc} id="danceClickToRun"/>
+              }
             </div>
           </ProtectedVisualizationDiv>
           <GameButtons showFinishButton={this.props.showFinishButton}>

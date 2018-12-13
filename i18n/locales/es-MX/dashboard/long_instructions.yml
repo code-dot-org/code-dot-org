@@ -1023,9 +1023,9 @@ es-MX:
         </block></xml>
         
         Este programa utiliza el volumen del "bajo" de la música (los sonidos profundos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín también responda a la música?
-      Dance_Party_11.5: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un grupo de bailarines con un solo movimiento!\n\nTrata de usar algunos de los bloques de \"todos los patos\" para escribir el código que hará que todos los patos bailen juntos."
       Dance_Party_11.5_test: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un grupo de bailarines con un solo movimiento!\n\nTrata de usar algunos de los bloques de \"todos los patos\" para escribir el código que hará que todos los patos bailen juntos."
       Dance_Party_11: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!"
+      Dance_Party_11_5: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un grupo de bailarines con un solo movimiento!\n\nTrata de usar algunos de los bloques de \"todos los patos\" para escribir el código que hará que todos los patos bailen juntos."
       Dance_Party_11b: |-
         ¡Es hora de bailar! El gato se mueve cuando presionas la tecla de flecha izquierda. Hace el “paso del robot” cuando presionas la tecla de flecha derecha.
       Dance_Party_12: '¡Vamos baila! Crea tu propio baile para compartir con tus amigos.'
@@ -1035,6 +1035,48 @@ es-MX:
         
         Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       Dance_Party_8: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
+      Dance_Party_extras_battle: |-
+        # Grupos de baile
+        
+        Este es un baile entre dos equipos. Las flechas controlan a uno de los bailarines y las teclas "w, a, s, d" controlan al otro. Baila contra un amigo y luego trata de mejorar este baile.
+        
+        * Agrega más teclas para controlar los bailes
+        * Haz que los bailarines de reparto también respondan cuando presiones las teclas
+        * Alterna al bailarín cada 4 compases al establecer su visibilidad
+      Dance_Party_extras_every_beat: |-
+        # Negras
+        
+        La mayoría de nuestros bailes han usado compases completos, pero cada compás está compuesto por 4 negras. Este baile usa “cada 0.25 compases” para hacer que el bailarín aplauda en cada negra.
+        
+        Este baile también utiliza un bloque _condicional_ para controlar que el bloque de “cada 0.25 compases” pueda cambiar el baile. Intenta cambiar los números en el bloque condicional para ver cómo cambia el baile.
+        
+        * Experimenta con otra duraciones de notas (como 0.5 para una semicorchea o 0.125 para una corchea).
+        *Añade algunos eventos “Después del compás”
+        * Cambia "compases" por "segundos" y prueba sincronizar tus bailes de esa manera.
+      Dance_Party_extras_layout: |-
+        # ¡Ponte en formación!
+        
+        Dale un vistazo a este baile que utiliza el bloque de “diseño” para cambiar la formación de los bailarines de reparto a lo largo del baile. Prueba una de estas ideas para ampliarlo:
+        
+        * Crear un segundo grupo de bailarines en una capa diferente
+        * Cambiar el diseño cuando se presiona una tecla
+        * Cambiar una propiedad cuando los bailarines cambian formación
+      Dance_Party_extras_on_beat: |-
+        # Bajos, medios y agudos
+        
+        Este baile utiliza eventos "pico" para activar un código cuando el nivel de la música se eleva. Prueba juguetear con diferentes canciones para ver cómo cambian el baile.
+      Dance_Party_extras_speed: |-
+        # Acelera, reduce la velocidad
+        
+        El baile final utiliza el bloque "establecer velocidad" para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
+      Dance_Party_extras_visible: |-
+        # ¿A donde fueron?
+        
+        Este baile muestra y esconde dos diferentes grupos de bailarines. Dale un vistazo y luego intenta agregar tu propio estilo.
+        
+        * Añade otro grupo de bailarines
+        * Muestra y oculta a los bailarines con las flechas de dirección
+        * Oculta todos los bailarines y cambiar a un emocionante efecto de fondo
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar el río! \\r\n \\r\nAjusta el pequeño bloque verde en tu área de trabajo dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha de piedra rojiza [redstone_torch]."
       Function intro Ryan_2019: "Una **función** llamada \"Construye puente\" se encuentra en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar el río! \\r\n \\r\nAjusta el pequeño bloque verde en tu área de trabajo dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha de piedra rojiza [redstone_torch]."
@@ -1064,6 +1106,9 @@ es-MX:
         Crea un bailarín llamado 'backup_dancer1' para que baile con el gato.
       HOC Dance 6_draft: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       HOC Dance 9_draft: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> le permite ejecutar el código cuando se presiona la flecha hacia arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer un movimiento rápido solo una vez. ¡Se creativo y busca nuevos bloques!"
+      HOC Dance Freeplay: "¡Vamos baila! Crea tu propio baile para compartir con tus\namigos."
+      HOC Dance Freeplay_draft: "¡Vamos baila! Crea tu propio baile para compartir con tus\namigos."
+      HOC Dance Predraw: "¡Vamos baila! Crea tu propio baile para compartir con tus\namigos."
       K-1 Bee Loops 2: '¡Utiliza un enlace para moverte y obtener el néctar y hacer miel!'
       K-1 Bee Loops 3: '¡Utiliza enlaces para obtener néctar y para hacer miel!'
       K-1 Bee Loops 4: '¡Ulilice enlaces para obtener néctar, hacer miel y moverse!'
