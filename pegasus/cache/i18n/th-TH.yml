@@ -221,6 +221,7 @@ th-TH:
   studiobar_elementary_title: หลักสูตรพื้นฐาน
   studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
   studiobar_dance_title: งานเต้นรำ
+  studiobar_dance_body: สร้างและแชร์เกม Dance Party ของคุณเอง
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: เรียนรู้การเขียนโค้ดกับเกม Angry Birds
   studiobar_flappy_body: สร้างและแชร์เกม Flappy Bird ของคุณ
@@ -1193,10 +1194,17 @@ th-TH:
   signing_in: เข้าสู่ระบบ
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab_tile_start_tutorial: เริ่มต้น
+  applab_tile_teacher_guide: ดูคำแนะนำสำหรับครู
   aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
   hoc_overview_dance_title: งานเต้นรำ
+  hoc_overview_partner_activities_title: กิจกรรมเพิ่มเติมจากพันธมิตร
+  hoc_overview_partner_activities_body: เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า
+    100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร
+  hoc_overview_partner_activities_link: ดูกิจกรรม
   hoc_overview_start_tutorial: เริ่มต้น
+  hoc_overview_view_teacher_guide: ดูคำแนะนำสำหรับครู
   hoc2018_creativity_create: สร้าง
+  hoc2018_creativity_what_will_you_create: คุณจะสร้างอะไร
   hoc2018_mc_page_title: สอนชั่วโมงแห่งโค้ดด้วย Minecraft
   hoc2018_mc_details: หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+
   hoc2018_mc_aquatic_description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด
@@ -1217,18 +1225,30 @@ th-TH:
   hoc2018_mc_video_5min: 5 นาที
   hoc2018_mc_video_title_inspire_girl: แรงบันดาลใจให้ผู้หญิง
   hoc2018_mc_homepage_hoc_coming: ชั่วโมงของการเขียนโค้ดกำลังมา.....
+  hoc2018_mc_homepage_what_create: คุณจะสร้างอะไร
   hoc2018_mc_homepage_watch_video: ชมวิดีโอของเรา
   hoc2018_mc_homepage_join_us: ร่วมกับเรา
   hoc2018_mc_homepage_try_it: ลอง
   hoc2018_mc_back_journey: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
     มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
+  hoc2018_mc_teacher_guide: ดูคำแนะนำสำหรับครู
   hoc2018_mc_short_description_shorter: ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ
     เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
   hoc2018_mc_journey: ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
   hoc2018_dance_party_main_heading: งานเต้นรำ
+  hoc2018_dance_create_your_own_dance_title: สร้างเกม Dance Party ของคุณเอง
   hoc2018_dance_party_box_title: งานเต้นรำ
+  hoc2018_dance_party_box_description: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ
+    ของคุณ
   hoc2018_dance_party_button: เริ่มต้น
+  hoc2018_dance_keep_on_dancing_box_title: สร้างโค้ดเต้นรำกันต่อไป
+  hoc2018_dance_keep_on_dancing_description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
+  hoc2018_dance_keep_on_dancing_button: เริ่มส่วนที่ 2
+  hoc2018_dance_teacher_resources_title: แหล่งข้อมูลสำหรับครู
+  hoc2018_dance_teacher_resources_tile1_description: แผนการเรียน ใบรับรอง และการกรองเพลง
   hoc2018_dance_teacher_resources_tile1_button: แผนการเรียนการสอน
+  hoc2018_dance_teacher_resources_tile2_title: สร้างเกม Dance Party แบบไม่ใช้เครื่อง
+  hoc2018_dance_teacher_resources_tile2_description: ไม่จำเป็นต้องมีคอมพิวเตอร์  เรียนรู้แนวคิดการเขียนโปรแกรมเพื่อออกแบบท่าเต้นรำไปด้วยกัน
   hoc2018_dance_teacher_resources_tile2_button: กิจกรรมถอดปลั๊ก
   hoc2018_dance_amazon_sponsor_section_with_logo_title: 'ด้วยความร่วมมือกับ: '
   hoc2018_dance_amazon_about_future_engineer_button: สิ่งที่น่าเรียนรู้ยังมีอีก

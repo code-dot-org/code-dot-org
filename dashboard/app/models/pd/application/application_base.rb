@@ -43,6 +43,9 @@ module Pd::Application
   class ApplicationBase < ActiveRecord::Base
     include ApplicationConstants
     include Pd::Form
+    include SerializedProperties
+
+    self.table_name = 'pd_applications'
 
     acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -107,6 +110,14 @@ module Pd::Application
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     has_many :emails, class_name: 'Pd::Application::Email'
+    has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
+
+    serialized_attrs %w(
+      notes_2
+      notes_3
+      notes_4
+      notes_5
+    )
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -166,8 +177,6 @@ module Pd::Application
       }
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
     end
-
-    self.table_name = 'pd_applications'
 
     # Override in derived class
     def self.statuses

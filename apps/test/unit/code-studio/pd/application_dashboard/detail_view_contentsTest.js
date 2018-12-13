@@ -195,7 +195,8 @@ describe("DetailViewContents", () => {
           return button.text();
         })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
-        expect(detailView.find('#Notes').prop('disabled')).to.be.true;
+        expect(detailView.find('#notes').prop('disabled')).to.be.true;
+        expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
 
         expectedButtons = applicationType === 'Facilitator' ? ['Lock', 'Save', 'Cancel'] : ['Save', 'Cancel'];
         detailView.find('#DetailViewHeader Button').last().simulate('click');
@@ -203,11 +204,13 @@ describe("DetailViewContents", () => {
           return button.text();
         })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
-        expect(detailView.find('#Notes').prop('disabled')).to.be.false;
+        expect(detailView.find('#notes').prop('disabled')).to.be.false;
+        expect(detailView.find('#notes_2').prop('disabled')).to.be.false;
 
         detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
-        expect(detailView.find('#Notes').prop('disabled')).to.be.true;
+        expect(detailView.find('#notes').prop('disabled')).to.be.true;
+        expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
       });
     });
   }
