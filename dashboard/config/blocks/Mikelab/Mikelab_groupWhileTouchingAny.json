@@ -1,0 +1,27 @@
+{
+  "category": "Group Events",
+  "config": {
+    "color": [
+      322,
+      0.9,
+      0.95
+    ],
+    "func": "groupWhileTouchingAny",
+    "blockText": "while{COSTUME} is touching {COSTUME2}\n{STATEMENT}",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "COSTUME2",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "eventLoopBlock": true
+  }
+}
