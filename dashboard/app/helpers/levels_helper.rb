@@ -357,15 +357,10 @@ module LevelsHelper
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
       level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
-      #If there are contained levels, use the markdown instructions from the contained levels
-      level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? set_tts_on_contained_levels(level_options) : @level.tts_url(@level.tts_long_instructions_text)
+      level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
-  end
-
-  def set_tts_on_contained_levels(level_options)
-    @level.contained_levels.empty? ? "" : @level.tts_url(@level.contained_levels[0].properties["markdown_instructions"])
   end
 
   def set_hint_prompt_options(level_options)
