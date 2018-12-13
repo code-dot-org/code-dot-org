@@ -30,19 +30,19 @@ describe("Enroll Form", () => {
       );
     });
 
-    it("displays role question and not grade question", () => {
+    it("displays role question and grade question", () => {
       expect(enrollForm.find("#role")).to.have.length(1);
-      expect(enrollForm.find("#grades_teaching")).to.have.length(0);
-    });
-
-    it("displays grade question after teaching role answer", () => {
-      enrollForm.setState({role: "Librarian"});
       expect(enrollForm.find("#grades_teaching")).to.have.length(1);
     });
 
-    it("doesn't display grade q after non-teaching role answer", () => {
-      enrollForm.setState({role: "Parent"});
-      expect(enrollForm.find("#grades_teaching")).to.have.length(0);
+    it("displays describe role question after other/admin role answer", () => {
+      enrollForm.setState({role: "Other"});
+      expect(enrollForm.find("#describe_role")).to.have.length(1);
+    });
+
+    it("doesn't display describe role question after normal teaching role answer", () => {
+      enrollForm.setState({role: "Librarian"});
+      expect(enrollForm.find("#describe_role")).to.have.length(0);
     });
   });
 

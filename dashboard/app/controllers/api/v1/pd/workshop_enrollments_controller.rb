@@ -13,12 +13,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     ERROR: "error".freeze
   }
 
-  TEACHING_ROLES = [
-    "Classroom Teacher".freeze,
-    "Librarian".freeze,
-    "Tech Teacher/Media Specialist".freeze
-  ]
-
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
