@@ -23,11 +23,11 @@ export default class Section5YourApproachToLearningAndLeading extends LabeledFor
       <FormGroup>
         <h3>Section 5: {SectionHeaders.section5YourApproachToLearningAndLeading}</h3>
 
-        {this.largeInputFor("whyShouldAllHaveAccess")}
-        {this.largeInputFor("skillsAreasToImprove")}
-        {this.largeInputFor("inquiryBasedLearning")}
-        {this.largeInputFor("whyInterested")}
-        {this.largeInputFor("anythingElse", {required: false})}
+        {this.largeInputFor("whyShouldAllHaveAccess", {maxLength: 750})}
+        {this.largeInputFor("skillsAreasToImprove", {maxLength: 1500})}
+        {this.largeInputFor("inquiryBasedLearning", {maxLength: 1500})}
+        {this.largeInputFor("whyInterested", {maxLength: 750})}
+        {this.largeInputFor("anythingElse", {required: false, maxLength: 750})}
       </FormGroup>
     );
   }

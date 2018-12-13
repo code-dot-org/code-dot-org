@@ -303,7 +303,7 @@ module Pd::Application
         csd_csp_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
 
         csd_csp_no_partner_summer_workshop: [
-          'Yes, I understand that I must commit to a 5-day summer workshop. I will coordinate with Code.org once dates are finalized.'
+          'Yes, I understand that I must commit to a 5-day summer workshop. If I am assigned to a nearby Regional Partner, I will coordinate with Code.org once dates are finalized.'
         ],
 
         csd_csp_partner_but_no_summer_workshop: [
