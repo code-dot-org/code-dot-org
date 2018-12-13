@@ -75,7 +75,7 @@ module Pd::Application
         'Native Hawaiian or other Pacific Islander',
         'American Indian/Alaska Native',
         OTHER,
-        'Prefer not to say'
+        'Prefer not to answer'
       ],
 
       course_hours_per_year: [
