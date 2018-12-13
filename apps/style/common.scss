@@ -530,6 +530,10 @@ html[dir='rtl'] div#visualizationResizeBar {
   cursor: default;
 }
 
+html[dir='rtl'] .karel-counter-text {
+  text-anchor: start;
+}
+
 /* Shrink the visualization area on small displays. */
 
 #visualization.responsive > * {
