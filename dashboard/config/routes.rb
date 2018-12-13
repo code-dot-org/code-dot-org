@@ -1,6 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  get 'teacher_dashboard/sections/:section_id(/:tab)', to: 'teacher_dashboard#index'
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
