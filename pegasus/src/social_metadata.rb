@@ -2,7 +2,6 @@
 #   code.org/
 #   csedweek.org/
 #   hourofcode.com/
-#   code.org/challenge
 #   code.org/dance
 
 def get_social_metadata_for_page(request)
@@ -15,11 +14,9 @@ def get_social_metadata_for_page(request)
 
   images = {
     kids_with_ipads: {path: "/images/default-og-image.png", width: 1220, height: 640},
-    celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.png", width: 1220, height: 640},
     creativity: {path: "/images/social-media/code-2018-creativity.png", width: 1200, height: 630},
     cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
     hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
-    hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630}
@@ -107,23 +104,6 @@ def get_social_metadata_for_page(request)
         video: videos[:hour_of_code_worldwide]
       }
     },
-    "challenge" => {
-      "soon-hoc" => {
-        title: "Celebrity Challenge",
-        description: "Win a celebrity video chat for your class!",
-        image: images[:hoc_student_challenge]
-      },
-      "actual-hoc" => {
-        title: "Celebrity Challenge",
-        description: "Win a celebrity video chat for your class!",
-        image: images[:celeb_challenge]
-      },
-      "default" => {
-        title: "Celebrity Challenge",
-        description: "Win a celebrity video chat for your class!",
-        image: images[:celeb_challenge]
-      }
-    },
     "minecraft" => {
       "soon-hoc" => {
         title: hoc_s(:tutorial_mchoc_name),
@@ -155,9 +135,7 @@ def get_social_metadata_for_page(request)
     }
   }
 
-  if request.path == "/challenge" && request.site == "code.org"
-    page = "challenge"
-  elsif request.path == "/minecraft" && request.site == "code.org"
+  if request.path == "/minecraft" && request.site == "code.org"
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
