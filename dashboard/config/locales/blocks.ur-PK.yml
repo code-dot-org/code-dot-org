@@ -76,10 +76,14 @@ ur:
         options:
           EFFECT:
             '"none"': کوئی بھی نہیں
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': عام
             '2': fast
             '4': very fast
             '0.5': slow
@@ -87,7 +91,7 @@ ur:
       Dancelab_setDanceSpeedEach:
         options:
           SPEED:
-            '1': normal
+            '1': عام
             '2': fast
             '4': very fast
             '0.5': slow
@@ -96,11 +100,16 @@ ur:
         options:
           EFFECT:
             '"none"': کوئی بھی نہیں
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
       Dancelab_whenKey:
         options:
           KEY:
             '"space"': خلاء
             '"x"': x
+            '"y"': وائے
       gamelab_debugSprite:
         options:
           VAL:
@@ -160,6 +169,7 @@ ur:
         options:
           TYPE:
             "'sand'": ریت
+            "'planksOak'": شاہ بلوط planks
       craft_ifStandingOnLimit:
         options:
           TYPE:

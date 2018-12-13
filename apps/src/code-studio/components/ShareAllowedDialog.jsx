@@ -210,6 +210,9 @@ class ShareAllowedDialog extends React.Component {
   close = () => {
     recordShare('close');
     this.props.onClose();
+    this.setState({
+      replayVideoUnavailable: false
+    });
   };
 
   showSendToPhone = (event) => {

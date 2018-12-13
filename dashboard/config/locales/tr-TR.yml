@@ -804,6 +804,8 @@ tr:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla
+        Minecraft’ta bir gezintiye çıkın
     sports:
       title: Spor
       body: Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı
@@ -1224,6 +1226,7 @@ tr:
   return_unit_overview: Ünite genel bakışına git
   return_course_overview: Ünite genel bakışına git
   view_all_units: Tüm üniteleri göster
+  view_teacher_guide: Öğretmen kılavuzunu görüntüle
   pd:
     form_labels:
       email: e-posta

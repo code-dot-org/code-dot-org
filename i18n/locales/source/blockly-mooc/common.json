@@ -421,6 +421,8 @@
   "dontForget": "Don't forget",
   "downloadCSV": "Download CSV",
   "downloadAssessmentCSV": "Download CSV of student responses",
+  "downloadReplayVideoButtonDownload": "Animation",
+  "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
   "dragBlocksToMatch": "Drag the blocks to match",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",

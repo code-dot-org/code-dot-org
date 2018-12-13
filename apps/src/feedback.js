@@ -533,8 +533,7 @@ FeedbackUtils.saveThumbnail = function (image) {
   }
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
-    // Don't pass any arguments to project.save().
-    .then(() => project.save());
+    .then(() => project.saveIfSourcesChanged());
 };
 
 FeedbackUtils.isLastLevel = function () {
@@ -944,6 +943,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var params = $.param({
             level_source: options.response.level_source_id,
             channel_id: options.channelId,
+            type: project.getStandaloneApp(),
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -968,9 +968,12 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   var downloadReplayVideoContainer = sharingDiv.querySelector('#download-replay-video-container');
   if (downloadReplayVideoContainer) {
+    const onDownloadError = () => $('#download-replay-video-error').show();
     ReactDOM.render(
       <Provider store={getStore()}>
-        <DownloadReplayVideoButton />
+        <DownloadReplayVideoButton
+          onError={onDownloadError}
+        />
       </Provider>,
       downloadReplayVideoContainer
     );

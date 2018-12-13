@@ -20,7 +20,6 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
@@ -29,7 +28,7 @@ class CoursesTeacherEnglish extends Component {
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId, hocLaunch } = this.props;
+    const { isSignedOut, showInitialTips, userId } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -70,10 +69,7 @@ class CoursesTeacherEnglish extends Component {
             link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
-            <CourseBlocksHoc
-              rowCount={1}
-              hocLaunch={hocLaunch}
-            />
+            <CourseBlocksHoc/>
           </ContentContainer>
 
           <CourseBlocksTools

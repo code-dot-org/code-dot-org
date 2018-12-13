@@ -27,6 +27,8 @@ import {
   unloadSong,
   fetchSignedCookies,
 } from './songs';
+import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const ButtonState = {
   UP: 0,
@@ -169,7 +171,22 @@ Dance.prototype.initSongs = async function (config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  loadSong(selectedSong, songData);
+  loadSong(selectedSong, songData, status => {
+    if (status === 403) {
+      // Something is wrong, because we just fetched cloudfront credentials.
+      firehoseClient.putRecord(
+        {
+          study: 'restricted-song-auth',
+          event: 'initial-auth-error',
+          data_json: JSON.stringify({
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }),
+        },
+        {includeUserId: true}
+      );
+    }
+  });
   this.updateSongMetadata(selectedSong);
 
   if (config.channel) {
@@ -195,7 +212,22 @@ Dance.prototype.setSongCallback = function (songId) {
   loadSong(songId, songData, status => {
     if (status === 403) {
       // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() => loadSong(songId, songData));
+      fetchSignedCookies().then(() => loadSong(songId, songData, status => {
+        if (status === 403) {
+          // Something is wrong, because we just re-fetched cloudfront credentials.
+          firehoseClient.putRecord(
+            {
+              study: 'restricted-song-auth',
+              event: 'repeated-auth-error',
+              data_json: JSON.stringify({
+                currentUrl: window.location.href,
+                channelId: getStore().getState().pageConstants.channelId,
+              }),
+            },
+            {includeUserId: true}
+          );
+        }
+      }));
     }
   });
 
@@ -317,7 +349,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181120/'),
+    resourceLoader: new ResourceLoader('https://curriculum.code.org/images/sprites/dance_20181127/'),
   });
 
   // Expose an interface for testing
@@ -513,10 +545,24 @@ Dance.prototype.initInterpreter = function () {
     setBackground: color => {
       nativeAPI.setBackground(color.toString());
     },
-    setBackgroundEffect: (effect, palette) => {
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
+    setBackgroundEffect: (effect, palette = 'default') => {
       nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
     },
+    setBackgroundEffectWithPalette: (effect, palette = 'default') => {
+      nativeAPI.setBackgroundEffect(effect.toString(), palette.toString());
+    },
+    // DEPRECATED
+    // An old block may refer to this version of the command,
+    // so we're keeping it around for backwards-compat.
+    // @see https://github.com/code-dot-org/dance-party/issues/469
     setForegroundEffect: effect => {
+      nativeAPI.setForegroundEffect(effect.toString());
+    },
+    setForegroundEffectExtended: effect => {
       nativeAPI.setForegroundEffect(effect.toString());
     },
     makeNewDanceSprite: (costume, name, location) => {
@@ -544,6 +590,9 @@ Dance.prototype.initInterpreter = function () {
       nativeAPI.layoutSprites(group, format);
     },
     setTint: (spriteIndex, val) => {
+      nativeAPI.setTint(sprites[spriteIndex], val);
+    },
+    setTintInline: (spriteIndex, val) => {
       nativeAPI.setTint(sprites[spriteIndex], val);
     },
     setTintEach: (group, val) => {
@@ -639,6 +688,11 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+
+  const artistTwitterHandle = SongTitlesToArtistTwitterHandle[this.level.selectedSong];
+
+  const twitterText = "Check out the dance I made featuring @" + artistTwitterHandle + " on @codeorg!";
+
   let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
@@ -651,6 +705,7 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
     disablePrinting: true,
+    twitter: {text: twitterText}
   };
 
   // Disable social share for users under 13 if we have the cookie set.

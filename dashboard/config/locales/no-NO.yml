@@ -100,7 +100,7 @@
     facebook: Facebook
     windowslive: Microsoft-konto
     microsoft_v2_auth: Microsoft-konto
-    clever: Smartkonto
+    clever: Smart
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
@@ -149,13 +149,10 @@
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
     my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
       eller behandles i USA.
-    student_terms: Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til
-      Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet
-      at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til
-      Code.org.<br/><br/>Epost-adresser lagres ikke i en form som gjør at vi kan kontakte
-      elever. Code.org vil aldri sende epost til elever, unntatt for passordpåminnelser.
-      Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer
-      informasjon.
+    student_terms: Epost-adresser lagres ikke i en form som gjør at vi kan kontakte
+      elever. Elever vil aldr motta epost fra Code.org bortsett fra oppretting av
+      nytt passord. Se våre <a href='http://code.org/privacy'>retningslinjer for personvern</a>
+      for mer informasjon.
     teacher_terms: Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a>
       for mer informasjon om personvern.
     additional_information: Vi trenger noen flere opplysninger for å fortsette registreringen
@@ -369,6 +366,7 @@
       playlab: Spill-lab
       minecraft: Minecraft
       flappy: Flakse
+      dance: Dansefest
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
@@ -423,9 +421,9 @@
     no_password_because_oauth: Ingen passord fordi du logger inn med en tredjepartsleverandør.
     no_password_because_sponsored: Din lærer administrerer ditt passord.
     create_personal_login: Opprett en personlig pålogging
-    create_personal_login_under_13_info: Hvis du vil fortsette å bruke din Code.org
-      konto, selv etter slutten av skoleåret, kan du be dine foreldre/foresatte om
-      å opprette din egen personlige pålogging nedenfor.
+    create_personal_login_under_13_info: Hvis du vil fortsette å bruke din Code.org-konto,
+      selv etter slutten av skoleåret, kan du be dine foreldre/foresatte om å opprette
+      din egen personlige pålogging nedenfor.
     create_personal_login_under_13_username: Brukernavn (ikke bruk ditt virkelige
       navn!)
     create_personal_login_under_13_parent_email: Foreldre/foresatt epost
@@ -436,8 +434,8 @@
       Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for
       bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller
       verges tillatelse til å bruke Code.org tjenestene selv uten en lærer.
-    create_personal_login_email_note: 'Merk: E-postadresser er ikke lagret i et format
-      som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org,
+    create_personal_login_email_note: 'Merk: Epostadresser er ikke lagret i et format
+      som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org,
       unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'',
       target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
     enter_new_login_info: Angi ny påloggingsinformasjon
@@ -535,12 +533,12 @@
       Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
       De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
       spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime.
-    announcement_how_code_studio: Du trenger ingen erfaring for å lære bort datateknikk
+    announcement_how_code_studio: Du trenger ingen erfaring for å lære bort datavitenskap
       i klasserommet ditt. Code.org og LKK tilbyr pensum, timeplaner, høykvalitets
       læreplaner og tonnevis av verktøy for alle klassenivåer&mdash;alt du trenger,
       helt gratis. Lurer du på hvordan du kan komme i gang? Last ned <a href='%{video_download_url}'>denne
       videoen</a>!
-    announcement_go_beyond: Fortsette videre fra Kodetimen og utforsk konsepter fra
+    announcement_go_beyond: Fortsett videre fra Kodetimen og utforsk konsepter fra
       datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
       profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
       alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
@@ -554,7 +552,7 @@
       utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
       innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
-      og videregående skole må søke innen 17 mars.
+      og videregående skole må søke innen 17. mars.
     announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
       våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
       å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
@@ -576,11 +574,11 @@
       on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Applications close on April 14th.
-    announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
+    announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
       nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
-      JavaScript blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
+      JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
       utviklingsverktøy.
-    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>I
+    announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I
       sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
       tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
       du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
@@ -679,18 +677,18 @@
         Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik
         det er ment.
       link: Lær mer
-      applab_unsupported_tablet: App Lab fungerer best på en stasjonær eller bærbar
+      applab_unsupported_tablet: App-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
         på denne enheten.
-      gamelab_unsupported_tablet: Spill Lab fungerer best på en stasjonær eller bærbar
+      gamelab_unsupported_tablet: Spill-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
         på den gjeldende enheten.
       weblab_unsupported_browser: Dessverre opplever vi problemer med lasting av Web
         Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst.
         Beklager ulempen dette medfører.
-      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Web
-        Lab i nettleserens private modus. Vennligst last prosjektet på nytt i normal
-        modus. Beklager ulempen dette medfører.
+      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Nett-lab
+        i nettleserens private modus. Vennligst last prosjektet på nytt i normal modus.
+        Beklager ulempen dette medfører.
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
@@ -734,6 +732,8 @@
         fungere, deretter kan du dele din app i løpet av sekunder.
       audience: Minstealder 13 år
       cta: Lær hvordan
+    dance:
+      title: Dansefest
     hoc:
       title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
@@ -936,14 +936,14 @@
     tos: Vilkår
     privacy: Personvern
     privacy_notice: Personvernerklæring
-    accept_label: Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestebetingelsene</a>
-      og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>
+    accept_label: Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestevilkårene</a>
+      og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
     accept: Godta
     print: Skriv ut
-    reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestebetingelser</a>
+    reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestevilkår</a>
       og <a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
-      Vær snill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å
-      undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte
+      Vær s. nill å les disse nøye før du aksepterer dem. Merk at våre verktøy for
+      å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte
       betingelsene aksepteres.
     review_terms: Les våre oppdaterte betingelser
   school_info_interstitial:
@@ -962,7 +962,7 @@
       black: Afrikansk
       hispanic: Latinamerikansk
       asian: Asiatisk
-      hawaiian: Hawaii eller stillehavsøyene
+      hawaiian: Fra Hawaii eller Stillehavsøyene
       american_indian: Amerikansk urbefolkning
       other: Andre
       opt_out: Ønsker ikke å si
@@ -1038,7 +1038,7 @@
       prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
-    click_to_remix: Klikk "Remix" for å lage din egen versjon!
+    click_to_remix: Klikk på "Remiks" for å lage din egen versjon!
     edit_project: Rediger prosjekt
     sharing_disabled: Beklager, dette prosjektet er ikke tilgjengelig for deling.
       Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg
@@ -1072,7 +1072,7 @@
         detail: Vennligst oppgi så mange detaljer som mulig om innholdet du rapporterer.
         acknowledge: Ved å sende inn denne informasjonen aksepterer vil det bli håndtert
           i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end}
-          og %{link_start_tos}Bruksvillkår%{link_end}
+          og %{link_start_tos}Tjenestevilkår%{link_end}.
   peer_review:
     accepted:
       name: Godkjent
@@ -1096,34 +1096,34 @@
     main_course: Hovedkurs
     extra_course_content: Ekstra kursinnhold
     csf_e_1: Oppgrader til Kurs E (Valgfritt)
-    csf_e_2: Kurs E innhold
+    csf_e_2: 'Kurs E: innhold'
     csf_f_1: Oppgrader til Kurs F (Valgfritt)
-    csf_f_2: Kurs F innhold
+    csf_f_2: 'Kurs F: innhold'
     csd1_1: 'Kapittel 1: Problemløsingsprosessen'
     csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Webinnhold og HTML'
+    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
     csd2_2: 'Kapittel 2: Styling og CSS'
     csd3_1: 'Kapittel 1: Bilder og animasjoner'
     csd3_2: 'Kapittel 2: Bygge spill'
     csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: App Prototyping'
+    csd4_2: 'Kapittel 2: Prototyping av app'
     csd5_1: 'Kapittel 1: Representerer informasjon'
     csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Maskinvare utganger'
-    csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd6_1: 'Kapittel 1: Programmere hardware'
+    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og Visualisere data'
+    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
     csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
     csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Event-drevet programmering'
+    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
     csp5_2: 'Kapittel 2: Programmering med datastrukturer'
     cspSurvey: Undersøkelse
     cspAssessment: Vurdering av kapittel
-    csp_ap_1: 'Kapittel 1: AP Tech oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
+    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
+    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
     csp2_1_2018: 'Enhet 2: Digital informasjon'
     dlp: Spørsmål til refleksjon
   external_links:
@@ -1136,7 +1136,7 @@
       dette nettstedet, men vær så snill å <a href='%{support_url}'>kontakte brukerstøtte</a>
       hvis innholdet virker upassende eller nettstedet ikke lenger er tilgjengelig.
   hoc_download:
-    title: Kodetimen nedlastninger
+    title: Nedlastninger av Kodetimen
     capsule_title: Har du internett?
     capsule_desc: Bruk online, web-basert <a href="%{url}">%{app_name}</a>.
     instructions_headline: Ingen internettforbindelse?
@@ -1205,6 +1205,7 @@
   return_unit_overview: Gå til kursoversikten
   return_course_overview: Gå til kursoversikten
   view_all_units: Vis alle enheter
+  view_teacher_guide: Sjekk lærerveiledning
   pd:
     form_labels:
       email: E-post
@@ -1226,7 +1227,7 @@
       robotics:
         kodable: Kodbart
       workshop_course:
-        csp: "'16-'17 Prinsipper i informatikk"
+        csp: Prinsipper i informatikk
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nei

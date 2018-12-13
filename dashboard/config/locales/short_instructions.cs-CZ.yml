@@ -1541,13 +1541,14 @@ cs:
       Dance_Party_09: Pomocí bloku `nastavit odstín` změň barvu tanečníka.
       Dance_Party_10: Přiměj dalšího tanečníka také reagovat na hudbu pomocí bloku
         `začíná následující`.
-      Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       Dance_Party_11.5_test: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       Dance_Party_11: Blok `když nahoru stisknuta` ti umožní spustit kód stisknutím
         na šipku nahoru. Zkus přimět tanečníka hýbat se rychleji po stisknutí šipky
         nahoru.
+      Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo, a
         "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
+      Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       Eval Define Funcs 2: Pojďme se podívat dovnitř funkce "zelený trojúhelník" abychom
         viděli, jak funguje. Můžete ji upravit tak, aby funkce "zelený trojúhelník"
         vždy nakreslila obrys zeleného trojúhelníku?

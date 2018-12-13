@@ -1392,17 +1392,19 @@ hu:
       Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos színét.
       Dance_Party_10: A „követés megkezdése“ blokkal érd el, hogy a másik táncos is
         reagáljon a zenére.
-      Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt
-        táncoljanak.
       Dance_Party_11.5_test: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt
         táncoljanak.
       Dance_Party_11: A „felfelé nyíl megnyomásakor“ blokkal a felfelé nyíl megnyomására
         tudsz kódot futtatni. Próbáld meg elérni, hogy a táncos egy gyors mozdulatot
         végezzen, amikor megnyomod a felfelé nyilat.
+      Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt
+        táncoljanak.
       Dance_Party_11b: Állítsd be, hogy a Robot egyszer „drop“ mozdulatot tegyen,
         amikor megnyomod a jobbra nyilat, és egyszer „floss“ mozdulatot tegyen, amikor
         megnyomod a felfelé nyilat. Csináld a drop-floss mozdulatokat olyan gyorsan,
         ahogyan csak tudod!
+      Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
+        meg az ismerőseiddel.
       Farmer for Authored Hint testing: 'Hoppá! Egy tényleg mély lyukat találtam!
         Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni,
         ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust

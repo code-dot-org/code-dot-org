@@ -108,6 +108,10 @@ export class DetailViewContents extends React.Component {
       regional_partner_id: PropTypes.number,
       locked: PropTypes.bool,
       notes: PropTypes.string,
+      notes_2: PropTypes.string,
+      notes_3: PropTypes.string,
+      notes_4: PropTypes.string,
+      notes_5: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
       district_name: PropTypes.string,
@@ -165,6 +169,10 @@ export class DetailViewContents extends React.Component {
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
+      notes_2: this.props.applicationData.notes_2,
+      notes_3: this.props.applicationData.notes_3,
+      notes_4: this.props.applicationData.notes_4,
+      notes_5: this.props.applicationData.notes_5,
       response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
@@ -223,7 +231,7 @@ export class DetailViewContents extends React.Component {
 
   handleNotesChange = (event) => {
     this.setState({
-      notes: event.target.value
+      [event.target.id]: event.target.value
     });
   };
 
@@ -271,13 +279,20 @@ export class DetailViewContents extends React.Component {
       'status',
       'locked',
       'notes',
+      'notes_2',
+      'notes_3',
+      'notes_4',
+      'notes_5',
       'regional_partner_value',
-      'pd_workshop_id',
-      'scholarship_status'
+      'pd_workshop_id'
     ];
 
     if (this.props.applicationData.application_type === 'Facilitator') {
       stateValues.push('fit_workshop_id');
+    }
+
+    if (this.props.applicationData.application_type === 'Teacher') {
+      stateValues.push('scholarship_status');
     }
 
     const data = {
@@ -629,26 +644,36 @@ export class DetailViewContents extends React.Component {
   };
 
   renderNotes = () => {
-    return (
-      <div>
-        <h4>
-          Notes
-        </h4>
-        <Row>
-          <Col md={8}>
-            <FormControl
-              id="Notes"
-              disabled={!this.state.editing}
-              componentClass="textarea"
-              value={this.state.notes || ''}
-              onChange={this.handleNotesChange}
-              style={styles.notes}
-            />
-          </Col>
-        </Row>
-        <br />
-      </div>
-    );
+    let notesFields = [];
+    [
+      {label: 'Notes', id: 'notes', value: this.state.notes},
+      {label: 'Notes 2', id: 'notes_2', value: this.state.notes_2},
+      {label: 'Notes 3', id: 'notes_3', value: this.state.notes_3},
+      {label: 'Notes 4', id: 'notes_4', value: this.state.notes_4},
+      {label: 'Notes 5', id: 'notes_5', value: this.state.notes_5}
+    ].forEach((field)=> {
+      notesFields.push (
+        <div key={field.id}>
+          <h4>
+            {field.label}
+          </h4>
+          <Row>
+            <Col md={8}>
+              <FormControl
+                id={field.id}
+                disabled={!this.state.editing}
+                componentClass="textarea"
+                value={field.value || ''}
+                onChange={this.handleNotesChange}
+                style={styles.notes}
+              />
+            </Col>
+          </Row>
+          <br />
+        </div>
+      );
+    });
+    return notesFields;
   };
 
   renderScoringSection = (key) => {

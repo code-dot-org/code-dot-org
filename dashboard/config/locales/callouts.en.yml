@@ -585,13 +585,13 @@ en:
         dance_callout_06: Add your new dancer here
       Dance_Party_07_callout: {}
       Dance_Party_1_callout: {}
-      Dance_Party_11_5_callout:
-        dance_party_11_5_groups: Look here for "all ducks" blocks
       Dance_Party_11.5_test_callout:
         dance_party_11.5_groups: Look here for "all ducks" blocks
       Dance_Party_11_callout:
         dance_callout_11_a: New block!
         dance_callout_11_b: New block!
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Look here for "all ducks" blocks
       Dance_Party_11b_callout: {}
       Dance_Party_2_callout: {}
       Dance_Party_4_callout: {}

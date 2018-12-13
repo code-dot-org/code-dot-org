@@ -3,7 +3,7 @@ th:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_a: หากคุณใช้บล็อกเพื่อให้ฉัน ` ไปข้างหน้า 100 พิกเซล ` ฉันก็จะวาดเส้นหนึ่งเส้นให้โดยอัตโนมัติ
         2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป
           90 องศา`
       2-3 Artist 11_authored_hint:
@@ -13,26 +13,27 @@ th:
         2-3_Artist_12_a: วงกลมมี 360 องศาดังนั้นหากอาร์ตติสต้องการหันทีละ 1 องศา เขาจะต้องหันถึง
           360 ครั้ง
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: อาร์ตติสดูเหมือนจะไม่ได้ชี้ไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหันก่อนที่จะวาดเส้นได้ไหม?
+        2-3_Artist_2_new_a: อาร์ตติสดูเหมือนจะไม่ได้หันไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหันก่อนที่จะวาดเส้นได้ไหม?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: 100-70 ได้เท่าไร ขึ้นอยู่กับเรื่องราวที่เกี่ยวข้อง เพราะนั่นคือความสูงของหมวก
-        2-3_Artist_3new_b: อาร์ตติสดูเหมือนจะไม่ได้ชี้ไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหันก่อนที่จะวาดเส้นได้ไหม?
+        2-3_Artist_3new_a: 100 ลบ 70 ได้เท่าไร ขึ้นอยู่กับเรื่องราวที่เกี่ยวข้อง เพราะนั่นคือความสูงของหมวก
+        2-3_Artist_3new_b: อาร์ตติสดูเหมือนจะไม่ได้หันไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหันก่อนที่จะวาดเส้นได้ไหม?
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: เพื่อที่จะสร้างบ้านให้เสร็จ ที่เราต้องทำก็คือวาดสี่เหลี่ยมจตุรัสขึ้นมารูปหนึ่ง
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้*
           แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
-        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
+        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปถูกทางแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
           แล้วหันซ้ายไปเพื่อสร้างรูปสามเหลี่ยม
         2-3_Artist_6_c: ด้านแต่ละด้านของรูปสามเหลี่ยมมีความยาวเท่ากันกับด้านแต่ละด้านของสี่เหลี่ยมจตุรัส....
           100 พิกเซล!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: วิธีที่ง่ายที่สุดในการแก้ปริศนานี้คือการวาดสี่เหลี่ยมจตุรัสรุปแรกและจบลงด้วยศิลปินชี้ลงด้านล่าง
-          ก่อนที่จะเริ่มต้นวาดสี่เหลี่ยมจตุรัสรูปที่สองของคุณ
+        2-3_Artist_7_a: วิธีที่ง่ายที่สุดในการแก้ปริศนาด่านนี้คือการวาดสี่เหลี่ยมจตุรัสรูปแรกที่จบลงด้วยศิลปินชี้ลงไปด้านล่าง
+          ก่อนที่จะเริ่มต้นวาดสี่เหลี่ยมจตุรัสรูปที่สองของคุณต่อไป
       2-3 Artist 8_authored_hint:
         2-3_Artist_8_a: ถ้าคุณตัด 200 ลงครึ่งหนึ่ง จำนวนพิกเซลที่เป็นความกว้างของสี่เหลี่ยมจตุรัสแต่ละรูปจะเป็นเท่าใด?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: รูปเพชรเม็ดนี้ จริงๆแล้วก็แค่เป็นเพียงสี่เหลี่ยมจตุรัสนั่นเอง
+        2-3_Artist_9_a: รูปเพชรเม็ดนี้ จริงๆแล้วก็แค่เป็นเพียงรูปสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนด้านๆ
+          หนึ่งเท่านั่นเอง
       2-3 Artist 9 REPLACEMENT_authored_hint:
         step_size: ก้าวแต่ละก้าวมีขนาดกว้าง 100 พิ๊กเซิล และสูง 100 พิ๊กเซิล
       2-3 Artist Debugging 10_authored_hint:
@@ -200,12 +201,12 @@ th:
           360/12 = 30.
       2-3 Bee Debugging 1_authored_hint:
         2-3_Bee_Debugging_1_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป
-          `ทำซ้ำ`ไหม?
+          `ทำซ้ำ` ไหม?
       2-3 Bee Debugging 2_authored_hint:
         2-3_Bee_Debugging_2_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป
-          `ทำซ้ำ`ไหม?
+          `ทำซ้ำ` ไหม?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณเปลี่ยนบล็อกนั้น?
+        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณจัดการเปลี่ยนบล็อกนั้นเสียใหม่?
       2-3 Bee Functions 4_authored_hint:
         2-3_Bee_Functions_4_a: คุณไม่จำเป็นต้องใช้ลูปกับฟังก์ชัน ลองเคลื่อนย้ายผึ้งโดยใช้ฟังก์ชันจากนั้นย้ายผึ้งและใช้ฟังก์ชันอีกครั้ง
       2-3 Bee Functions 6_authored_hint:
@@ -248,7 +249,7 @@ th:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
           ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: |-
-          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
+          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ` ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
 
           เชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!
       2-3 Maze 6_authored_hint:
@@ -256,7 +257,8 @@ th:
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
           และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบหรือเปล่า? คลิก`เริ่มเล่นใหม่`ก็จะได้มันกลับคืนมา!
+        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบไปหรือเปล่า? คลิก ` เริ่มเล่นใหม่ `
+          ก็จะได้มันกลับคืนมา!
       2-3 Maze Loops 18_authored_hint:
         2-3_Maze_Loops_18_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
           และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
@@ -716,6 +718,47 @@ th:
         courseB_maze_seq_challenge2_b: จัดวางบล็อกเหล่านี้ใหม่และเลือกใช้เส้นทางที่พาดไปตรงกลาง
       course1_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
+      course1_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน
+          เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น
+          เมื่อคุณคลิกบู เจ้าผีน้อย!
+        courseA_playlab_events_challenge1_d: "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_e: "สุดท้ายให้พ่อมดเว็นเดลย์ ปรากฎตัวขึ้นเมื่อคุณคลิกที่เจ้าหุ่นยนต์สปีฟ\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      course2_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: เริ่มต้นด้วยการสร้างลูปซ้อนกันเพื่อสร้างแปดเหลี่ยมด้านเท่าสี่รูป
+          หมุน 45 องศาเพื่อสร้างแปดเหลี่ยม กระโดด แล้วหัน 90 องศาหลังจากวาดรูปสามเหลี่ยมเสร็จในแต่ละกลุ่ม
+          (รูปทรงในแต่ละกลุ่มประกอบด้วยรูปแปดเหล่ี่ยมตามมาด้วยรูปสามเหลี่ยม)
+        courseD_artist_nestedLoops_challenge1_b: เพิ่มโค้ดเพื่อวาดรูปทรงสามเหลี่ยมไว้ภายในลูปที่ซ้อนกัน
+          (nested loop - ลูปซ้อนลูป) การวาดรูปสามเหลี่ยมจะใช้การหัน 120 องศาในแต่ละมุม
+        courseD_artist_nestedLoops_challenge1_c: |-
+          ใช้ลูปซ้อนลูป (nested loop):
+          - ทำซ้ำ 8 ครั้ง
+          - วาดรูปทรงแปดเหลี่ยม
+          - วาดรูปทรงสามเหลี่ยม
+          - กระโดดไปข้างหน้า 50 พิกเซล
+          - หันไปทางขวา 90 องศา
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง
+        courseD_artist_nestedLoops_challenge2_b: เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'อาคารที่เป็นรูปสี่เหลี่ยมผืนผ้ากว้าง 200
           พิกเซล และสูง 100 พิกเซล '
@@ -730,6 +773,23 @@ th:
           name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
           config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
           \               </next>\n              </block>\n              </statement></block></xml>"
+      course2_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: |-
+          คุณสามารถหาเส้นทางที่เข้าถึงดอกไม้และรังผึ้งทั้งหมดไม่ต้องชนต้นไม้ใดๆ เลย เส้นทางที่ดีที่สุดเป็นทางวังวน
+
+          ** คุณสามารถแก้ปริศนานี้โดยไม่ต้องหันซ้ายเลย**
+        courseD_bee_conditionals_challenge1_b: สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้
+          รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น
+          ` ถ้า/ไม่เช่นนั้น (if/else) ` ในแต่ละช่องที่ผึ้งบินผ่านไป
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: คุณสามารถใช้คำสั่ง ` เก็บ ` ให้บ่อยๆมากขึ้น
+          เพื่อเก็บสมบัติที่มีอยู่มากมาย
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: คุณสามารถใช้คำสั่ง ` เก็บ ` ให้บ่อยๆมากขึ้น
+          เพื่อเก็บสมบัติที่มีอยู่มากมาย
+      course2_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_b: ในระหว่างบล็อก ` ทำซ้ำ `แต่ละบล็อก คุณจะต้อง
+          ` หันซ้าย ` หรือ ` หันขวา ` เพื่อเตรียมสะแครทให้พร้อมสำหรับรูปแบบถัดไป
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
       course3_artist_concept_challenge1_authored_hint:
@@ -1215,6 +1275,65 @@ th:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
       courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
+      courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน
+          เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น
+          เมื่อคุณคลิกบู เจ้าผีน้อย!
+        courseA_playlab_events_challenge1_d: "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน
+          เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น
+          เมื่อคุณคลิกบู เจ้าผีน้อย!
+        courseA_playlab_events_challenge1_d: "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+      courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_a: "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน
+          เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น
+          เมื่อคุณคลิกบู เจ้าผีน้อย!
+        courseA_playlab_events_challenge1_d: "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_e: "สุดท้ายให้พ่อมดเว็นเดลย์ ปรากฎตัวขึ้นเมื่อคุณคลิกที่เจ้าหุ่นยนต์สปีฟ\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
+          \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
+          \ </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
@@ -2399,12 +2518,15 @@ th:
         courseC_maze_loops6_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
           และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         courseC_maze_loops6_b: |-
-          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
+          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ` ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
 
           เชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
           และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
+      courseC_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_b: ในระหว่างบล็อก ` ทำซ้ำ `แต่ละบล็อก คุณจะต้อง
+          ` หันซ้าย ` หรือ ` หันขวา ` เพื่อเตรียมสะแครทให้พร้อมสำหรับรูปแบบถัดไป
       courseC_maze_programming1_authored_hint:
         courseC_maze_programming1_0: ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์
           แล้วให้คลิก "เริ่ม" อีกครั้งหนึ่ง
@@ -2941,6 +3063,21 @@ th:
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
           รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง
+        courseD_artist_nestedLoops_challenge2_b: เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง
+        courseD_artist_nestedLoops_challenge2_b: เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง
+        courseD_artist_nestedLoops_challenge2_b: เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น
+          ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_c: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก
           ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
@@ -3141,6 +3278,18 @@ th:
 
           คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseD_bee_conditionals8_hintVid2: ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา
+      courseD_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_b: สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้
+          รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น
+          ` ถ้า/ไม่เช่นนั้น (if/else) ` ในแต่ละช่องที่ผึ้งบินผ่านไป
+      courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้
+          รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น
+          ` ถ้า/ไม่เช่นนั้น (if/else) ` ในแต่ละช่องที่ผึ้งบินผ่านไป
+      courseD_bee_conditionals_challenge1_2019_authored_hint:
+        courseD_bee_conditionals_challenge1_b: สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้
+          รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น
+          ` ถ้า/ไม่เช่นนั้น (if/else) ` ในแต่ละช่องที่ผึ้งบินผ่านไป
       courseD_bee_debugging2_authored_hint:
         courseD_bee_debugging2_b: |-
           คุณมองเห็นแบบแผนไหม?
@@ -4048,7 +4197,7 @@ th:
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: มีวิธีแก้ปริศนานี้สองวิธี
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_a: หากคุณใช้บล็อกเพื่อให้ฉัน ` ไปข้างหน้า 100 พิกเซล ` ฉันก็จะวาดเส้นหนึ่งเส้นให้โดยอัตโนมัติ
         2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป
           90 องศา`
       grade2_MakeDogTag_3_authored_hint:
@@ -4074,13 +4223,14 @@ th:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
           ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: |-
-          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
+          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ` ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
 
           เชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
           และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบหรือเปล่า? คลิก`เริ่มเล่นใหม่`ก็จะได้มันกลับคืนมา!
+        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบไปหรือเปล่า? คลิก ` เริ่มเล่นใหม่ `
+          ก็จะได้มันกลับคืนมา!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'บอกใบ้: หนวดแมวแต่ละเส้นมีความยาว 75 พิกเซล'
       grade2_PuppyLoops_9_authored_hint:
@@ -4103,7 +4253,7 @@ th:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
           ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: |-
-          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
+          เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ` ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป
 
           เชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!
       grade2_puppy_loops7_authored_hint:
@@ -4126,7 +4276,7 @@ th:
           คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป
-          `ทำซ้ำ`ไหม?
+          `ทำซ้ำ` ไหม?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           เริ่มด้วยการดูแค่ลูปแรก
@@ -4136,7 +4286,7 @@ th:
       grade3_Debugging_3_authored_hint:
         grade3_Debugging_3_b: คุณมองเห็นแบบแผนไหม  ลองใช้ลูปซ้อนลูปเพื่อแก้ปริศนานี้
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณเปลี่ยนบล็อกนั้น?
+        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณจัดการเปลี่ยนบล็อกนั้นเสียใหม่?
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       grade3_Loops_11_authored_hint:
@@ -4237,13 +4387,13 @@ th:
       grade4_bee_nestedLoops2a_authored_hint:
         grade4_bee_nestedLoops2a_a: ลองใช้ลูปซ้อนลูป `ทำซ้ำ`พื่อแก้ปริศนานี้
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_a: หากคุณใช้บล็อกเพื่อให้ฉัน ` ไปข้างหน้า 100 พิกเซล ` ฉันก็จะวาดเส้นหนึ่งเส้นให้โดยอัตโนมัติ
         2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป
           90 องศา`
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้*
           แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
-        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
+        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปถูกทางแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
           แล้วหันซ้ายไปเพื่อสร้างรูปสามเหลี่ยม
         2-3_Artist_6_c: ด้านแต่ละด้านของรูปสามเหลี่ยมมีความยาวเท่ากันกับด้านแต่ละด้านของสี่เหลี่ยมจตุรัส....
           100 พิกเซล!

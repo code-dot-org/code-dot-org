@@ -287,6 +287,15 @@ bg:
             '"diamonds"': Диаманти
             '"splatter"': Балончета
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Случаен
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': Случаен
+            '"color_cycle"': Цветове
+            '"diamonds"': Диаманти
+            '"rainbow"': Цветове
+            '"disco"': Квадрати
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -324,6 +333,16 @@ bg:
             '"raining_tacos"': Такос
             '"spotlight"': Прожектор
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Случаен
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': Случаен
+            '"bubbles"': Балончета
+            '"pineapples"': Ананаси
+            '"rain"': Дъжд
+            '"spotlight"': Прожектор
+            '"raining_tacos"': Такос
       Dancelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -441,6 +460,7 @@ bg:
             '"s"': s
             '"w"': w
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:

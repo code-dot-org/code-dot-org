@@ -421,6 +421,8 @@
   "dontForget": "Mos harro",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animim",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Shto dy numra",
   "dropletBlock_addOperator_signatureOverride": "shto operator",

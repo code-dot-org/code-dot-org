@@ -421,6 +421,8 @@
   "dontForget": "Älä unohda",
   "downloadCSV": "Lataa CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Animaatio",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "Lisää kaksi numeroa",
   "dropletBlock_addOperator_signatureOverride": "",

@@ -421,6 +421,8 @@
   "dontForget": "לא לשכוח",
   "downloadCSV": "",
   "downloadAssessmentCSV": "הורד את תגובות התלמידים כ-CSV",
+  "downloadReplayVideoButtonDownload": "אנימציה",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "גרור את הבלוקים להתאמה",
   "dropletBlock_addOperator_description": "הוסף שני מספרים",
   "dropletBlock_addOperator_signatureOverride": "הוסף פעולה",

@@ -35,6 +35,7 @@
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -52,6 +53,7 @@
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -89,6 +91,7 @@
             '"UNICORN"': alle enhjørninger
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -104,6 +107,7 @@
         options:
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
@@ -162,6 +166,7 @@
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Floss: Floss
+            MOVES.Roll: Kroppsrulling
             MOVES.Kick: Stjerne
             MOVES.Rest: Ingen
       Dancelab_ifTime:
@@ -191,16 +196,22 @@
             '"SHARK"': alle haier
             '"UNICORN"': alle enhjørninger
           FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DOG"': Hund
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -232,6 +243,10 @@
             '"SHARK"': Haier
             '"UNICORN"': Enhjørninger
           LAYOUT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_mixColors:
         text: bland {COLOR1} og {COLOR2}
@@ -248,7 +263,7 @@
       Dancelab_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Dancelab_setBackgroundEffect:
-        text: sett bakgrunn til {EFFECT}
+        text: velg bakgrunnseffekt {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -261,6 +276,34 @@
             '"snowflakes"': Snø
             '"spiral"': Spiral
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Tilfeldig)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: velg bakgrunnseffekt {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"circles"': Tunnel
+            '"color_cycle"': Farger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokule
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnbue
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"default"': Lys
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setDanceSpeed:
         text: sett {SPRITE} dansehastighet til {SPEED}
         options:
@@ -301,6 +344,22 @@
             '"raining_tacos"': Taco
             '"spotlight"': Spotlight
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Tilfeldig)"
+      Dancelab_setForegroundEffectExtended:
+        text: sett forgrunneffekt {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musikknoter
+            '"pineapples"': Ananaser
+            '"smiling_poop"': Bæsj
+            '"rain"': Regn
+            '"floating_rainbows"': Regnbue
+            '"spotlight"': Spotlight
+            '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'sett {SPRITE} {PROPERTY} til {VAL} '
         options:
@@ -361,6 +420,8 @@
             '"PINEAPPLE"': alle ananaser
             '"ROBOT"': alle roboter
             '"SHARK"': alle haier
+      Dancelab_setTintInline:
+        text: sett {SPRITE} fargetone til {VAL}
       Dancelab_setVisible:
         text: sett {SPRITE} synlighet til {VISIBILITY}
         options:

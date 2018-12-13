@@ -134,22 +134,22 @@ it:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
-        title: 'Attività Tradizionale: I Miei Amici Robotici'
+        title: Attività Tradizionale
         desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
-        title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
+        title: Attività Tradizionale
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseD_unplugged_digitalCitizenship:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
@@ -239,10 +239,10 @@ it:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       Conditionals_2018:
         title: Istruzioni condizionali
@@ -286,7 +286,7 @@ it:
         title: Programmazione a Staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
       courseD_unplugged_digitalCitizenship_2019:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       BinaryImages_2019:
         title: Immagini binarie
@@ -298,7 +298,7 @@ it:
         title: Diventare Ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       BigEvent_2019:
         title: Gli Eventi

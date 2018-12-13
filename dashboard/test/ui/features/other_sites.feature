@@ -14,9 +14,3 @@ Examples:
   | http://csedweek.org/                                              | csedweek.org home          |
   | http://csedweek.org/about                                         | csedweek.org about         |
   | http://code.org/curriculum/unplugged                              | code.org curriculum        |
-  | http://code.org/minecraft                                         | minecraft tutorial landing |
-  | http://code.org/playlab                                           | playlab tutorial landing   |
-  | http://code.org/starwars                                          | starwars tutorial landing  |
-  | http://code.org/athletes                                          | athletes tutorial landing  |
-  | http://code.org/educate/applab                                    | app lab tutorial landing   |
-  | http://code.org/dance                                             | dance tutorial landing     |

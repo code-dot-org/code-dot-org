@@ -1041,6 +1041,7 @@ end
 
 And /^I create a new section$/ do
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -1053,6 +1054,7 @@ end
 
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -1392,6 +1394,11 @@ end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
+end
+
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
   wait_for_jquery
 end
 

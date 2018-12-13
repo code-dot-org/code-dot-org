@@ -5613,12 +5613,54 @@ tr:
         </block></xml>
         
         Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
-      Dance_Party_11.5: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
       Dance_Party_11.5_test: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
+      Dance_Party_11_5: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
       Dance_Party_11b: |-
         Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      Dance_Party_extras_battle: |-
+        # Dans Ekipleri
+        
+        İşte iki ekibin kıyasıya dansı Ok tuşları dansçılardan birini, "w,a,s,d" tuşları diğerini kontrol eder. Bir arkadaşınızla kıyasıya dans edin ve sonra bu dansı geliştirmeye çalışın
+        
+        * Dansları kontrol etmek için daha fazla tuş ekleyin
+        * Tuşlara basıldığında arka plan dansçılarının da tepki vermesini sağlayın
+        * Görünürlüklerini ayarlayarak dansçının dört ölçüde bir değişmesini sağlayın
+      Dance_Party_extras_every_beat: |-
+        # Çeyrek Notalar
+        
+        Danslarımızın çoğunda tam ölçüler kullanılır ama her ölçü 4 çeyrek notadan oluşur. Bu dans, dansçının her çeyrek notada el çırpması için `her 0,25 ölçüde bir` kullanır.
+        
+        Bu dans aynı zamanda, 'her 0,25 ölçüde bir' bloğunun dansı ne zaman değiştireceğini belirlemek için bir _koşul_ bloğu da kullanır. Dansı nasıl değiştirdiğini görmek için koşul bloğunun içindeki sayıyı değiştirmeyi deneyin.
+        
+        * Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
+        * Birkaç `ölçüden sonra` etkinliği ekleyin.
+        * "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
+      Dance_Party_extras_layout: |-
+        # Şimdi Giriş Düzeni!
+        
+        Dans boyunca arka plan dansçılarının dizilimini değiştirmek için `düzen` bloğunu kullanan bu dansa göz atın. Geliştirmek için şu fikirlerden birini deneyin:
+        
+        * Farklı bir düzende ikinci bir dansçı grubu oluşturun
+        * Bir tuşa basıldığında düzeni değiştirin
+        * Dansçılar dizilimi değiştirdiğinde bir özelliği değiştirin
+      Dance_Party_extras_on_beat: |-
+        # Bas, Orta ve Tizler
+        
+        Bu dans, müziğin farklı bölümlerinde ses seviyesi yükseldiğinde kodu başlatmak için "zirve" etkinliklerini kullanır. Farklı şarkıların dansı nasıl değiştirdiğini görmek için şarkıyı değiştirin.
+      Dance_Party_extras_speed: |-
+        # Hızlandır, Yavaşlat
+        
+        Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
+      Dance_Party_extras_visible: |-
+        # Nereye gittiler?
+        
+        Bu dans iki farklı dansçı grubunu görünür yapar ve gizler. Deneyin ve sonra kendi yaratıcılığınızı ekleyin.
+        
+        * Başka bir dansçı grubu ekleyin
+        * Ok tuşlarını kullanarak dansçıları görünür yapın ve gizleyin
+        * Tüm dansçıları gizleyin ve heyecan veren bir arka plan efektine geçiş yapın
       Escape Room Example: |-
         # Odadan Kaçış\r
         \r
@@ -5662,6 +5704,9 @@ tr:
         
         Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçısı yaratın.
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
+      HOC Dance Freeplay: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      HOC Dance Freeplay_draft: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      HOC Dance Predraw: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Harvesting: "Ah,haritamı kaybettim ve ne ektiğimi hatırlamıyorum. Her filiz **mısır** olarak büyüyebilir. ![mısır resmi](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **fasulye** ![fasulye resmi](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, veya**kabaklar** ![kabak resmi](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Bütün bitkileri, ne olursa olsun, alacak bir kaç kod yazabilir misin?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/> \\r \\r ** Serbest ilham: ** Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! \\r \\r bu resimden ilham almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın. \\r \\r dikkat: 'set Alfa' bloğu kullandım."
       InspirationalArtwork: "Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan tasarımın kodunu görmek ister misin? "

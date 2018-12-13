@@ -1623,15 +1623,16 @@ nn:
       Dance_Party_09: Bruk ei fargevalblokk til å skifte farge på dansaren.
       Dance_Party_10: Få den andre dansaren til å reagere på musikken ved å bruke
         ‘startar å følge’-blokka.
-      Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
       Dance_Party_11.5_test: Bruk ‘alle endene’-blokker til å få endene til å danse
         saman.
       Dance_Party_11: Med ‘når du trykker opp’-blokka kan du køyre kode når du trykker
         på oppoverpila. Prøv å få dansaren til å gjere ein kjapp dans når du trykker
         opp.
+      Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
       Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila, og gjere
         ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så fort du
         kan!
+      Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
       Find the Wizard: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Find the Wizard_2018: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Food Fight!: "Vi har lagt til ein siste funksjon til\ndeg. \n\nBruk ei \"dersom\"-setning
