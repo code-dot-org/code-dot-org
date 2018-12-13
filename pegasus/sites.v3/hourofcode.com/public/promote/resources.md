@@ -23,7 +23,8 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <%= view :promote_new_posters %>
 
-Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
+* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
+* Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
 
 
 <a id="social"></a>
