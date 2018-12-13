@@ -12,7 +12,7 @@ video_player: false
 ---
 
 -# Put advocacy.css after other CSS files so that it can override them.
-=inline_css 'interactive_map.css'
+=inline_css 'interactive-map.css'
 =inline_css 'advocacy-home.css'
 
 - banner_body = capture_haml do
@@ -75,4 +75,3 @@ video_player: false
 
       = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
       = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
-

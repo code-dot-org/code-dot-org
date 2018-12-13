@@ -14,13 +14,13 @@
   display: none;
 }
 
-.starwars-tutorial.dance-tutorial {
+.dance-tutorial {
   top: 15px;
 }
 
 .dance-try-button {
-  font-size:18px;
-  height:40px;
+  font-size: 18px;
+  height: 40px;
   background-color: white;
   border-color: white;
   color: #4d575f;
@@ -36,6 +36,11 @@
   font-family: 'Gotham 5r', sans-serif;
   line-height: 19px;
   padding: 5px 10px;
+}
+
+.foot-note-heading {
+  margin-bottom: 5px;
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 .img-wrapper img {
@@ -105,6 +110,10 @@ a:hover {
   margin-right: 18%;
 }
 
+.artist-name, .and-more {
+  white-space: nowrap;
+}
+
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .sponsor-logo-with-text {
     flex-direction: column;
@@ -128,6 +137,17 @@ a:hover {
 
 /* Tablet and mobile */
 @media screen and (max-width: 970px) {
+  .dance-party-container .tutorial-box {
+    background-image: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png)
+  }
+
+  .img-container {
+    background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
+    margin: 5px;
+    border-radius: 5px;
+    background-size: cover;
+  }
+
   .foot-note-text {
     position: static;
     color: #00adbc;
@@ -179,12 +199,12 @@ a:hover {
     position: relative;
   }
 
-  .starwars-tutorial.dance-tutorial {
+  .dance-tutorial {
     float: left;
     width: 50%;
   }
 
-  .img-container img {
+  .background-img img {
     margin-bottom: 5px
   }
 }
@@ -195,7 +215,7 @@ a:hover {
     display: block;
   }
 
-  .img-container {
+  .background-img {
     background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;

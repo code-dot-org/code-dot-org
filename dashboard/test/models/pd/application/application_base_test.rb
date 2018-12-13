@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
+    include Pd::Application::ActiveApplicationModels
 
     freeze_time
 
@@ -22,9 +23,9 @@ module Pd::Application
     end
 
     test 'derived classes override type and year' do
-      application = Teacher1819Application.new
+      application = TEACHER_APPLICATION_CLASS.new
       assert_equal TEACHER_APPLICATION, application.application_type
-      assert_equal YEAR_18_19, application.application_year
+      assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do
@@ -35,7 +36,7 @@ module Pd::Application
     end
 
     test 'can update status' do
-      application = create :pd_facilitator1819_application
+      application = create FACILITATOR_APPLICATION_FACTORY
       assert application.unreviewed?
 
       application.update(status: 'pending')
@@ -47,7 +48,7 @@ module Pd::Application
 
     test 'regional partner name' do
       partner = build :regional_partner
-      application = build :pd_facilitator1819_application, regional_partner: partner
+      application = build FACILITATOR_APPLICATION_FACTORY, regional_partner: partner
 
       assert_equal partner.name, application.regional_partner_name
     end
@@ -55,7 +56,7 @@ module Pd::Application
     test 'school name' do
       school_info = build :school_info
       teacher = build :teacher, school_info: school_info
-      application = build :pd_facilitator1819_application, user: teacher
+      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_name.titleize, application.school_name
     end
@@ -63,7 +64,7 @@ module Pd::Application
     test 'district name' do
       school_info = create :school_info
       teacher = build :teacher, school_info: school_info
-      application = build :pd_facilitator1819_application, user: teacher
+      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
     end
@@ -231,7 +232,7 @@ module Pd::Application
     end
 
     test 'queue_email creates an associated unsent Email record' do
-      application = create :pd_teacher1920_application
+      application = create TEACHER_APPLICATION_FACTORY
 
       application.expects(:deliver_email).never
       assert_creates Email do
@@ -245,7 +246,7 @@ module Pd::Application
     end
 
     test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
-      application = create :pd_teacher1920_application
+      application = create TEACHER_APPLICATION_FACTORY
 
       application.expects(:deliver_email)
       assert_creates Email do
@@ -259,7 +260,7 @@ module Pd::Application
     end
 
     test 'record status change with user' do
-      application = create :pd_teacher1920_application
+      application = create TEACHER_APPLICATION_FACTORY
       workshop_admin = create :workshop_admin
 
       application.update(status: 'pending')
@@ -287,7 +288,7 @@ module Pd::Application
     end
 
     test 'record status change without user' do
-      application = create :pd_teacher1920_application
+      application = create TEACHER_APPLICATION_FACTORY
 
       application.update(status: 'accepted')
       application.update_status_timestamp_change_log(nil)
