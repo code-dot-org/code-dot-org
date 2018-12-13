@@ -25,6 +25,18 @@ Follow Hadi &nbsp;&nbsp;
 
 [col-50]
 
+<%= view :display_video_thumbnail, id: "G20", video_code: "ljqysBIvbL0", caption: "Hadi Partovi at the 2018 G20 Buenos Aires summit", play_button: 'center' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :display_video_thumbnail, id: "bloomberg", video_code: "BKKZWJV_OOI", caption: "Ali and Hadi Partovi on Bloomberg Studio 1.0", play_button: 'center' %>
+
+[/col-50]
+
+[col-50]
+
 <%= view :display_video_thumbnail, id: "nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq #BehindtheBell Interview", play_button: 'center' %>
 
 [/col-50]
@@ -47,9 +59,4 @@ Follow Hadi &nbsp;&nbsp;
 
 [/col-50]
 
-[col-50]
 
-<%= view :display_video_thumbnail, id: "bloomber", video_code: "BKKZWJV_OOI", caption: "
-Ali and Hadi Partovi on Bloomberg Studio 1.0", play_button: 'center' %>
-
-[/col-50]

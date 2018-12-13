@@ -3,7 +3,7 @@ title: Find a workshop
 theme: responsive
 ---
 # Sign up for a professional development workshop (for US teachers only, grades K-5)
-Looking to get started with elementary CS education but not sure how? Sign-up for our inspiring, high-quality professional development workshops with experienced facilitators. Through our network of Regional Partners and generous grants from our [donors](/about/donors), this workshop along with our course guide and curriculum are available at **no cost** to you or your school. 
+Looking to get started with elementary CS education but not sure how? Sign-up for our inspiring, high-quality professional development workshops with experienced facilitators. Through our network of Regional Partners and generous grants from our [donors](/about/donors), this workshop along with our course guide and curriculum are available at **no cost** to you or your school.
 
 Workshops last 6-8 hours and conclude with your own implementation plan to begin teaching [CS Fundamentals](/educate/curriculum/elementary-school).
 
@@ -28,7 +28,6 @@ Regional Partners are organizations across the country who advocate for access t
 - An overview of the online curriculum and teacher dashboard.
 - A printed curriculum guide containing course lesson plans.
 - Strategies for teaching "unplugged" classroom activities.
-- Classroom supplies for the unplugged activities.
 - A certificate of completion.
 - A bag of Code.org swag!
 
@@ -41,7 +40,7 @@ Regional Partners are organizations across the country who advocate for access t
 
 ### Teachers love our professional learning!
 
-Join the over 80,000 teachers who have participated in our workshops. The majority of our workshop attendees rank it **the best professional development ever**. In fact, 98% of attendees would recommend our program to another teacher. 
+Join the over 80,000 teachers who have participated in our workshops. The majority of our workshop attendees rank it **the best professional development ever**. In fact, 98% of attendees would recommend our program to another teacher.
 
 <br />
 
