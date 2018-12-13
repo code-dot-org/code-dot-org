@@ -64,6 +64,8 @@ module Pd::WorkshopSurveyResultsHelper
   QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES.values.flatten(1)
   QUESTIONS_FOR_FACILITATOR_AVERAGES_QUESTION_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.map(&:values).flatten.uniq
 
+  QUESTIONS_FOR_FACILITATOR_AVERAGES_QUESTION_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.map(&:values).flatten.uniq
+
   include Pd::JotForm
   include Pd::WorkshopSurveyConstants
 
@@ -202,16 +204,18 @@ module Pd::WorkshopSurveyResultsHelper
 
     summary[:this_workshop] = generate_workshops_survey_summary([workshop], questions)
 
-related_workshops =
+    related_workshops =
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
         [workshop]
       elsif current_user.permission?(UserPermission::PROGRAM_MANAGER)
-        Pd::Workshop.where(regional_partner: current_user.regional_partners)
+        Pd::Workshop.where(regional_partner: current_user.regional_partners, course: workshop.course)
       elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER)
         Pd::Workshop.organized_by(current_user).where(course: workshop.course)
       else
         Pd::Workshop.facilitated_by(current_user).where(course: workshop.course)
       end
+
+    # Need to add start date filter
 
     summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops
 
@@ -540,6 +544,7 @@ related_workshops =
     # resolve conflicts by taking the sum of the two values
     reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}} || {}
     reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}} || {}
+
     reduced_general_questions.merge reduced_facilitator_questions
   end
 end
