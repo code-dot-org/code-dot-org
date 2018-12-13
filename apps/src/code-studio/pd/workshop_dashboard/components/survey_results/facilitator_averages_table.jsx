@@ -42,7 +42,17 @@ export default class FacilitatorAveragesTable extends React.Component {
     facilitatorResponseCounts: PropTypes.object.isRequired
   };
 
+  renderAverage(average, category) {
+    if (average) {
+      return `${average.toFixed(2)} / ${questionDenominator[category]}`
+    } else {
+      return '-'
+    }
+  };
+
   render() {
+    debugger
+
     const possessiveName = `${this.props.facilitatorName}'${_.endsWith(this.props.facilitatorName, 's') ? '' : 's'}`;
 
     return (
@@ -79,10 +89,10 @@ export default class FacilitatorAveragesTable extends React.Component {
                       {_.startCase(category)}
                     </td>
                     <td>
-                      {this.props.facilitatorAverages[category]['this_workshop'].toFixed(2)} / {questionDenominator[category]}
-                    </td>
+                      {this.renderAverage((this.props.facilitatorAverages[category] || {})['this_workshop'], category)}
+		    </td>
                     <td>
-                      {this.props.facilitatorAverages[category]['all_my_workshops'].toFixed(2)} / {questionDenominator[category]}
+                      {this.renderAverage((this.props.facilitatorAverages[category] || {})['all_my_workshops'], category)}
                     </td>
                   </tr>
                 ),
@@ -92,10 +102,10 @@ export default class FacilitatorAveragesTable extends React.Component {
                       {this.props.questions[question]}
                     </td>
                     <td>
-                      {this.props.facilitatorAverages[question]['this_workshop'].toFixed(2)} / {questionDenominator[category]}
+                      {this.renderAverage((this.props.facilitatorAverages[question] || {})['this_workshop'], category)}
                     </td>
                     <td>
-                      {this.props.facilitatorAverages[question]['all_my_workshops'].toFixed(2)} / {questionDenominator[category]}
+                      {this.renderAverage((this.props.facilitatorAverages[question] || {})['all_my_workshops'], category)}
                     </td>
                   </tr>
                 ))

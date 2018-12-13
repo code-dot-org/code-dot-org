@@ -62,6 +62,7 @@ module Pd::WorkshopSurveyResultsHelper
   }
 
   QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES.values.flatten(1)
+  QUESTIONS_FOR_FACILITATOR_AVERAGES_QUESTION_LIST = QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.map(&:values).flatten.uniq
 
   include Pd::JotForm
   include Pd::WorkshopSurveyConstants
@@ -436,7 +437,7 @@ related_workshops =
 
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
-
+        
         total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
         total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
@@ -532,17 +533,13 @@ related_workshops =
     # }
 
     # First divide the questions by facilitator specific and facilitator non-specific.
-    facilitator_specific_questions = summary.select {|x| x.values.first.values.first.is_a? Hash}
-    general_questions = summary.reject {|x| x.values.first.values.first.is_a? Hash}
+    facilitator_specific_questions = summary.select {|x| x.values.first.values.first.is_a? Hash}.map {|x| x.slice(*QUESTIONS_FOR_FACILITATOR_AVERAGES_QUESTION_LIST)}
+    general_questions = summary.reject {|x| x.values.first.values.first.is_a? Hash}.map {|x| x.slice(*QUESTIONS_FOR_FACILITATOR_AVERAGES_QUESTION_LIST)}
 
     # Now reduce them all to one big hash. When we merge one histogram with the other,
     # resolve conflicts by taking the sum of the two values
-    reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}}
-    reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}}
-    puts "######"
-    puts reduced_general_questions
-    puts reduce_facilitator_questions
-    puts "######"
+    reduced_facilitator_questions = facilitator_specific_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1.merge(n1) {|_, o2, n2| o2 + n2}}}} || {}
+    reduced_general_questions = general_questions.reduce {|memo, obj| memo.merge(obj) {|_, o, n| o.merge(n) {|_, o1, n1| o1 + n1}}} || {}
     reduced_general_questions.merge reduced_facilitator_questions
   end
 end
