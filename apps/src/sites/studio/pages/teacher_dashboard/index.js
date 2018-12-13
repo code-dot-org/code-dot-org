@@ -4,8 +4,11 @@ import ReactDOM from 'react-dom';
 import TeacherDashboardNavigation from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
 
 $(document).ready(function () {
+  const script = document.querySelector('script[data-dashboard]');
+  const teacherDashboardData = JSON.parse(script.dataset.dashboard);
+  const selectedTab = teacherDashboardData.selected_tab;
   const defaultTab = "progress";
-  const possibleTabs = [
+  const allTabs = [
     "progress",
     "stats",
     "manage_students",
@@ -13,8 +16,7 @@ $(document).ready(function () {
     "projects",
     "text_responses"
   ];
-  const urlEnding = window.location.pathname.split('/').pop();
-  const currentTab = possibleTabs.includes(urlEnding) ? urlEnding : defaultTab;
+  const currentTab = allTabs.includes(selectedTab) ? selectedTab : defaultTab;
 
   ReactDOM.render(
     <div>
