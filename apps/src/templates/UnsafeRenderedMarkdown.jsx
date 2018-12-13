@@ -10,14 +10,12 @@ import Parser from '@code-dot-org/redactable-markdown';
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import stripStyles from './plugins/stripStyles';
-import fixTightLists from './plugins/fixTightLists';
 
 const remarkParser = Parser.create();
 
 remarkParser.parser.use([
   xmlAsTopLevelBlock,
   expandableImages,
-  fixTightLists
 ]);
 
 remarkParser.compilerPlugins.push(stripStyles);
