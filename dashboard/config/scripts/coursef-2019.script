@@ -88,6 +88,13 @@ level 'courseF_markdown_nestedloops_end_2019'
 stage 'The Power of Words', flex_category: 'csf_f_2'
 level 'courseF_unplugged_powerOfWords_2019'
 
+stage 'Sprite Lab Behaviors', flex_category: 'csf_f_2'
+level 'behaviors 1'
+level 'behaviors 2'
+level 'behaviors 3'
+level 'behaviors 4'
+level 'behaviors 5', challenge: true
+
 stage 'Envelope Variables', flex_category: 'csf_f_2'
 level 'EnvelopeVariables_2019'
 

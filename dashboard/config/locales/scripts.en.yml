@@ -9843,6 +9843,8 @@ en:
               name: Events with Sprite Lab
             Loops with the Artist:
               name: Loops with the Artist
+            Sprite Lab Behaviors:
+              name: Sprite Lab Behaviors
         dance-low:
           stages:
             Dance Party:
@@ -10068,6 +10070,8 @@ en:
               name: Programming and Loops with the Artist
             End of Course Project:
               name: End of Course Project
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10324,7 +10328,25 @@ en:
               name: andrea-s3
             'null':
               name: 'null'
+            andrea-stage1:
+              name: andrea-stage1
+            andrea-test-stage1:
+              name: andrea-test-stage1
+            andrea-test-stage2:
+              name: andrea-test-stage2
+            andrea-test-stage3:
+              name: andrea-test-stage3
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
           title: andrea-test
-          description_audience: ''
+          description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
-          description: ''
+          description: longer description on my attempt to create a course....   stilling wondering where overview, content came from....
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+          title: Keep On Dancing
+          description_audience: ''
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description: Go beyond the first hour with extended project ideas.
