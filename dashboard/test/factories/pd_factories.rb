@@ -891,6 +891,99 @@ FactoryGirl.define do
     end
   end
 
+  # default to csf
+  factory :pd_facilitator1920_application_hash, parent: :pd_facilitator1920_application_hash_common do
+    csf
+  end
+
+  factory :pd_facilitator1920_application_hash_common, parent: :form_data_hash do
+    first_name 'Rubeus'
+    last_name 'Hagrid'
+    phone '555-555-5555'
+    address '101 Hogwarts Ave'
+    city 'Seattle'
+    state 'Washington'
+    add_attribute :zip_code, '98101'
+    gender_identity 'Male'
+    race ['Other']
+    institution_type ['Institute of higher education']
+    current_employer 'Gryffindor House'
+    job_title 'Keeper of Keys and Grounds of Hogwarts'
+    resume_link 'linkedin.com/rubeus_hagrid'
+    worked_in_cs_job 'No'
+    completed_cs_courses_and_activities ['Advanced CS in high school or college']
+    diversity_training 'No'
+    how_heard ['Code.org email']
+    plan_on_teaching ['Yes']
+    ability_to_meet_requirements '4'
+    led_cs_extracurriculars ['Hour of Code']
+    teaching_experience 'No'
+    grades_taught ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_currently_teaching ['Grade 7']
+    subjects_taught ['Computer Science']
+    years_experience 'None'
+    experience_leading ['AP CS A', 'Hour of Code']
+    completed_pd ['CS Fundamentals (1 day workshop)']
+    code_org_facilitator 'No'
+    have_led_pd 'Yes'
+    groups_led_pd ['None']
+    describe_prior_pd 'PD description'
+    who_should_have_opportunity 'all students'
+    how_support_equity 'support equity'
+    expected_teacher_needs 'teacher needs'
+    describe_adapting_lesson_plan 'adapt lesson plan'
+    describe_strategies 'strategies'
+    example_how_used_feedback 'used feedback'
+    example_how_provided_feedback 'provided feedback'
+    hope_to_learn 'many things'
+    available_during_week 'Yes'
+    weekly_availability ['10am ET / 7am PT']
+    travel_distance 'Within my city'
+    additional_info 'none'
+    agree true
+
+    trait :csf do
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
+      csf_availability 'Yes'
+    end
+
+    trait :csd do
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
+      with_csd_csp_specific_fields
+    end
+
+    trait :csp do
+      program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
+      with_csd_csp_specific_fields
+    end
+
+    trait :with_csf_specific_fields do
+      csf_availability Pd::Application::Facilitator1920Application::ONLY_WEEKEND
+      csf_partial_attendance_reason 'reasons'
+    end
+
+    trait :with_csd_csp_specific_fields do
+      csd_csp_fit_availability Pd::Application::Facilitator1920Application.options[:csd_csp_fit_availability].first
+      csd_csp_teachercon_availability Pd::Application::Facilitator1920Application.options[:csd_csp_teachercon_availability].first
+    end
+  end
+
+  factory :pd_facilitator1920_application, class: 'Pd::Application::Facilitator1920Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_facilitator1920_application_hash, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+
+    trait :locked do
+      after(:create) do |application|
+        application.update!(status: 'accepted')
+        application.lock!
+      end
+    end
+  end
+
   # default to csp
   factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
     csp

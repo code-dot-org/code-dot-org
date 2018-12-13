@@ -1,12 +1,11 @@
 :ruby
   latam_language_codes = ["la", "es", "pt", "po"]
-  show_latam_videos = DCDO.get("show_latam_videos", nil)
 
 -# If language Spanish or Portuguese, show alternate
 -# promo video for LATAM Hour of Code.
-- if latam_language_codes.include?(@language) && show_latam_videos
-  .video-responsive
+- if latam_language_codes.include?(@language)
+  #homepage-video.video-responsive
     %iframe{allowFullScreen: 'true', frameborder: '0', src: "https://www.youtube-nocookie.com/embed/EGgdCryC8Uo?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1"}
 - else
-  .video-responsive
+  #homepage-video.video-responsive
     %iframe{allowFullScreen: 'true', frameborder: '0', src: "https://www.youtube-nocookie.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1"}

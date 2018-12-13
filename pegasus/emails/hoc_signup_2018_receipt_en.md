@@ -8,7 +8,11 @@ litmus_tracking_id: "5g5lyi1a"
   <% storedotcodedotorg = CDO.canonical_hostname('store.code.org') %>
 
 ### Thanks for signing up to host an Hour of Code!
-Thank you for helping make it possible for students to start learning computer science! Computer Science Education Week and the Hour of Code run from December 3-9, and we couldn't be more excited. In the meantime, what can you do now?
+Thank you for helping make it possible for students to start learning computer science! Computer Science Education Week and the Hour of Code run from December 3-9, and we couldn't be more excited. 
+
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters](https://hourofcode.com/promote/resources#posters).
+
+In the meantime, what can you do now?
 
 ### 1. Find a local volunteer to help you with your event.
 [Search our volunteer map](https://<%= codedotorg %>/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.

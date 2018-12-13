@@ -9,11 +9,12 @@ theme: responsive
 
 ## December 3, 2018 - Seattle, WA
 
-## **Save the Date**
-
 Every year, Code.org kicks off Computer Science Education Week with a signature event – at the White House, opening the stock market, or in Silicon Valley with leading women in tech, like Sheryl Sandberg, Susan Wojcicki and Peggy Johnson.
 
-You're invited to a special event to launch Computer Science Education Week 2018, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science.
+This year, for the first time, we’re thrilled to be kicking off the global celebration 
+right here in Seattle!
+
+Join us at our kick off event to launch Computer Science Education Week 2018, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science. The event will also feature a short Q&A with Melinda Gates, Co-Chair of the Bill & Melinda Gates Foundation.
 
 ### Featured speaker:
 <br>
@@ -31,13 +32,18 @@ You're invited to a special event to launch Computer Science Education Week 2018
 </div>
 
 
-## **Pledges and Announcements**
+## **Event timeline**
 
-Would you like to help generate positive press for the work your organization is doing to support computer science? We are now [collecting pledges and announcements](https://bit.ly/csedweek2017form) for the CSEdWeek kickoff event. We want to share the spotlight and press attention with you during this event by inviting you to submit a new announcement and/or pledge with a focus on broadening participation in computer science. 
+**10:30 - 11:30 a.m. - Main kickoff event featuring Melinda Gates!**
 
-These announcements represent an opportunity to celebrate a recent achievement or the launch of a new initiative. Pledges represent a clear and measurable goal to expand access and diversity in computer science that includes a specific number of teachers, schools, and/or students who will be engaged. Announcements and pledges should be **new** and newsworthy. We won’t repeat information that has been previously shared publicly. Of course, you're welcome to schedule independent announcements for the morning of December 3rd as well.
+Join us to celebrate the accomplishments of the CS education community with awards for those at the heart of the computer science movement: students, teachers, schools, and districts. We’ll announce new pledges to K-12 computer science and hear from Melinda Gates, co-chair of the Bill & Melinda Gates Foundation. 
 
-[Please complete this form](https://bit.ly/csedweek2017form) by **November 2nd** to submit an announcement and/or pledge to be considered for the 2018 CSEdWeek kickoff event. See examples of [pledges and announcements here](https://docs.google.com/document/d/1YzicRgPnuJzkzxqF06v2NZsXdmZNxSYAKmclRPShf9M).
+And we will be capping off the announcements with Microsoft President and Chief Legal Officer, Brad Smith, who will deliver closing remarks.
+
+**11:30 a.m. - 12:30 p.m. - Curriculum showcase**
+
+Get a hands-on demonstration of great computer science curriculum options.
+
 
 Thank you for your support of computer science education. Have questions? Contact eric.fershtman@code.org.
 
@@ -56,15 +62,13 @@ Thank you for your support of computer science education. Have questions? Contac
   <div class="col-md-2">
     <img src="/images/kickoff2017/facebook_logo.png" width="100%">
   </div>
-  <div class="col-md-1">
-    <img src="/images/avatars/infosys_foundation_usa.png" width="100%">
-  </div>
   <div class="col-md-2">
     <img src="/images/avatars/amazon.jpg" width="100%">
   </div>
-  <div class="col-md-2">
-    <img src="/images/avatars/google.png" width="100%">
+  <div class="col-md-1">
+    <img src="/images/avatars/infosys_foundation_usa.png" width="100%">
   </div>
+  <div class="col-md-2"></div>
   <div class="col-md-2"></div>
 </div>
 

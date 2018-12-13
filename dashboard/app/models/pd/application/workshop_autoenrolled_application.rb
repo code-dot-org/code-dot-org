@@ -41,7 +41,6 @@
 module Pd::Application
   class WorkshopAutoenrolledApplication < ApplicationBase
     include RegionalPartnerTeacherconMapping
-    include SerializedProperties
 
     CACHE_TTL = 30.seconds.freeze
 
