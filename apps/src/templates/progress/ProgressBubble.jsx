@@ -184,9 +184,11 @@ class ProgressBubble extends React.Component {
         <div
           data-tip data-for={tooltipId}
           aria-describedby={tooltipId}
-          className={"uitest-bubble"}
         >
-          <div style={style}>
+          <div
+            style={style}
+            className="uitest-bubble"
+          >
             <div
               style={{
                 fontSize: level.paired ? 14 : 16,
