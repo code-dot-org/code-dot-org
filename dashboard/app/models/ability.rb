@@ -47,6 +47,7 @@ class Ability
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
+      Pd::Application::Facilitator1920Application,
       Pd::Application::Teacher1819Application,
       Pd::Application::Teacher1920Application,
       Pd::InternationalOptIn,
@@ -93,6 +94,7 @@ class Ability
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Facilitator1920Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
@@ -180,7 +182,7 @@ class Ability
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, Pd::Application::Facilitator1819Application
+        can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
       end
 

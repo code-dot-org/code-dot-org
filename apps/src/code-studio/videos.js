@@ -271,7 +271,7 @@ videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
   var key = (videoInfo ? videoInfo.key : undefined);
 
   // Handle URLs with either youtube.com or youtube-nocookie.com.
-  var noCookie = videoInfo.src.indexOf("youtube-nocookie.com") !== -1;
+  var noCookie = videoInfo ? videoInfo.src.indexOf("youtube-nocookie.com") !== -1 : true;
 
   testImageAccess(youTubeAvailabilityEndpointURL(noCookie) + '?' + Math.random(),
       // Called when YouTube availability check succeeds.
