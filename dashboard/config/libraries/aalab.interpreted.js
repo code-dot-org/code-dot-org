@@ -36,9 +36,7 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var spriteGroups = {};
-var inputText = document.createElement("INPUT");
-var belowVisualization = document.getElementById("belowVisualization");
-belowVisualization.appendChild(inputText);
+
 
 function initialize(setupHandler) {
   setupHandler();
