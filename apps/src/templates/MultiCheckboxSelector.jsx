@@ -43,15 +43,13 @@ class MultiCheckboxSelector extends Component {
     disabled: PropTypes.bool,
   };
 
-  getDefaultProps() {
-    return {
-      itemPropName: 'item',
-      selected: [],
-      items: [],
-      onChange: () => {},
-      disabled: false,
-    };
-  }
+  static defaultProps = {
+    itemPropName: 'item',
+    selected: [],
+    items: [],
+    onChange: () => {},
+    disabled: false,
+  };
 
   areAllSelected = () => {
     return Immutable.Set(this.props.selected).isSuperset(this.props.items);
