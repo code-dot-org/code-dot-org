@@ -123,7 +123,7 @@ DATE_RANGES = [
 
 # This script wasn't written to take in arguments; instead it uses these hardcoded paths
 # (together with DATE_RANGES) above for input and output files.
-DATA_DIRECTORY = '/Users/winterdong/CDO/proficiencies_backfill'.freeze
+DATA_DIRECTORY = '/tmp'.freeze
 MONTHLY_FILENAME_PREFIX = (DATA_DIRECTORY + '/user_proficiencies').freeze
 AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20180701_20181214').freeze
 
