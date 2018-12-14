@@ -60,6 +60,8 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'exportApp',
+  'allowExportExpo',
 ]);
 
 const initialState = {
