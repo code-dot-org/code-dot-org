@@ -10,7 +10,7 @@ import { showShareDialog } from './components/shareDialogRedux';
 import { AllPublishableProjectTypes } from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
-  dashboard.project.save().then(() => {
+  dashboard.project.saveIfSourcesChanged().then(() => {
 
     var i18n = window.dashboard.i18n;
 

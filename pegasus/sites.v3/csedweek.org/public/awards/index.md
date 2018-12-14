@@ -11,7 +11,7 @@ theme: responsive
 In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce the second annual Champions of Computer Science Awards. From developing tools and curriculum for students with disabilities, to providing needed tech equipment to underserved schools, these winners represent the students, teachers, schools, districts, and organizations working to make computer science education accessible for everyone.
 <br>
 <br>
-Selected from a pool of more than 200 nominees, the winners will be presented with their awards at a special 2018 CSEdWeek kickoff event on December 3rd featuring Melinda Gates of the Bill & Melinda Gates Foundation.
+Selected from a pool of more than 200 nominees, the winners were presented with their awards at a special 2018 CSEdWeek kickoff event on December 3rd featuring Melinda Gates of the Bill & Melinda Gates Foundation.
 <br>
 <br>
 
