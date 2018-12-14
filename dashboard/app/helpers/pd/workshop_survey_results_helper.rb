@@ -441,7 +441,7 @@ module Pd::WorkshopSurveyResultsHelper
 
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
-        
+
         total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
         total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
         facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
@@ -482,6 +482,21 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     facilitator_response_counts
+  end
+
+  def find_related_workshops(workshop)
+    workshops =
+      if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+        Pd::Workshop.where(id: workshop.id)
+      elsif current_user.permission?(UserPermission::PROGRAM_MANAGER)
+        Pd::Workshop.where(regional_partner: current_user.regional_partners, course: workshop.course)
+      elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER)
+        Pd::Workshop.organized_by(current_user).where(course: workshop.course)
+      else
+        Pd::Workshop.facilitated_by(current_user).where(course: workshop.course)
+      end
+
+    workshops.where.not(started_at: nil).scheduled_start_on_or_after(Date.new(2018, 6, 1))
   end
 
   private

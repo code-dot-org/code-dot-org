@@ -25,7 +25,9 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @workshop = create :pd_workshop, :local_summer_workshop, course: COURSE_CSP, num_facilitators: 2, num_sessions: 5
+    facilitator_1 = create :facilitator, name: 'Facilitator Person 1'
+    facilitator_2 = create :facilitator, name: 'Facilitator Person 2'
+    @workshop = create :pd_workshop, :local_summer_workshop, course: COURSE_CSP, facilitators: [facilitator_1, facilitator_2], num_sessions: 5
     @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5, num_facilitators: 2, num_sessions: 2
 
     @pre_workshop_questions = [
@@ -857,5 +859,87 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
       existing_summary[:facilitator_averages]
     )
+  end
+
+  class FindRelatedWorkshopTests < ActiveSupport::TestCase
+    include Pd::WorkshopSurveyResultsHelper
+
+    setup_all do
+      @facilitator = create :facilitator
+      @organizer = create :workshop_organizer
+      @program_manager = create :program_manager
+      @regional_partner = @program_manager.regional_partners.first
+
+      default_props = {
+        course: Pd::Workshop::COURSE_CSD,
+        subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+        num_sessions: 1,
+        sessions_from: Date.new(2018, 7, 1),
+        started_at: Date.today
+      }
+
+      @first_workshop = create :pd_workshop, default_props.merge(
+        {
+          facilitators: [@facilitator],
+          regional_partner: @regional_partner,
+          organizer: @organizer,
+        }
+      )
+
+      @same_regional_partner = create :pd_workshop, default_props.merge(
+        {
+          regional_partner: @regional_partner
+        }
+      )
+
+      @same_organizer = create :pd_workshop, default_props.merge(
+        {
+          organizer: @organizer
+        }
+      )
+
+      @same_facilitator = create :pd_workshop, default_props.merge(
+        {
+          facilitators: [@facilitator]
+        }
+      )
+
+      # These two should never be included. Creating them to make sure of it
+      create :pd_workshop, default_props.merge(
+        {
+          sessions_from: Date.new(2018, 5, 31)
+        }
+      )
+
+      create :pd_workshop, default_props.merge(
+        {
+          course: Pd::Workshop::COURSE_CSP
+        }
+      )
+    end
+
+    test 'find_related_workshops finds expected workshops for workshop admins' do
+      stubs(:current_user).returns(create(:workshop_admin))
+
+      assert_equal [@first_workshop], find_related_workshops(@first_workshop).to_a
+    end
+
+    test 'find_related_workshops finds expected workshops for program managers' do
+      stubs(:current_user).returns(@program_manager)
+
+      assert_equal [@first_workshop, @same_regional_partner], find_related_workshops(@first_workshop).to_a
+    end
+
+    test 'find_related_workshops finds expected workshops for workshop organizers' do
+      stubs(:current_user).returns(@organizer)
+
+      assert_equal [@first_workshop, @same_organizer], find_related_workshops(@first_workshop).to_a
+    end
+
+    test 'find_related_workshops finds expected workshops for facilitators' do
+      stubs(:current_user).returns(@facilitator)
+
+      assert_equal [@first_workshop, @same_facilitator], find_related_workshops(@first_workshop).to_a
+    end
   end
 end
