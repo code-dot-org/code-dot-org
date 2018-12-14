@@ -141,6 +141,8 @@ class ShareAllowedDialog extends React.Component {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired,
     }).isRequired,
+    allowExportExpo: PropTypes.bool.isRequired,
+    exportApp: PropTypes.func,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -155,8 +157,6 @@ class ShareAllowedDialog extends React.Component {
     channelId: PropTypes.string.isRequired,
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
-    onClickExport: PropTypes.func,
-    onClickExportExpo: PropTypes.func,
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
@@ -443,10 +443,10 @@ class ShareAllowedDialog extends React.Component {
                 <div style={{clear: 'both', marginTop: 40}}>
                   {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
                   <AdvancedShareOptions
+                    allowExportExpo={this.props.allowExportExpo}
                     i18n={this.props.i18n}
                     shareUrl={this.props.shareUrl}
-                    onClickExport={this.props.onClickExport}
-                    onClickExportExpo={this.props.onClickExportExpo}
+                    exportApp={this.props.exportApp}
                     expanded={this.state.showAdvancedOptions}
                     onExpand={this.showAdvancedOptions}
                     channelId={this.props.channelId}
@@ -467,6 +467,8 @@ class ShareAllowedDialog extends React.Component {
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(state => ({
+  allowExportExpo: state.pageConstants.allowExportExpo || false,
+  exportApp: state.pageConstants.exportApp,
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
