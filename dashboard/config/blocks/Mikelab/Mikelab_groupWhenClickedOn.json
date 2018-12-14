@@ -1,0 +1,19 @@
+{
+  "category": "Group Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "groupWhenClickedOn",
+    "blockText": "when {COSTUME} clicked",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "eventBlock": true
+  }
+}

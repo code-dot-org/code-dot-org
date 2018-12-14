@@ -1,0 +1,25 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to Code.org's Facilitator Development Program. Our
+  team appreciated the opportunity to review your application and learn about
+  your commitment to computer science education. We are currently unable to
+  offer you a space in the program, as all seats in your region have been
+  filled. However, we have placed you on our waitlist should a space become
+  available.
+
+%p
+  Please respond to this message to let us know if you would like to join the
+  waitlist, or if you would like to withdraw your application from
+  consideration.
+
+%p
+  Thank you,
+%p
+  = signed_by(@application)
+  %br
+  Education Team Program Manager
+  %br
+  Code.org

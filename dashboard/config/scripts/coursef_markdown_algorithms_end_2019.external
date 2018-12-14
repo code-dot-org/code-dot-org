@@ -17,4 +17,8 @@ markdown <<MARKDOWN
 * ### **Algorithm** - A list of steps to finish a task
 
 * ### **Program** - An algorithm that has been coded into something that can be run by a machine
+
+* ### **Bug** - Part of a program that does not work correctly
+
+* ### **Debugging** - Finding and fixing problems in an algorithm or program
 MARKDOWN
