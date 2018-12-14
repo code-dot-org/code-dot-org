@@ -32,7 +32,7 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
-    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
+    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
   end
 
   # Override in derived classes and set to valid value.
