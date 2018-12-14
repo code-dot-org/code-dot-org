@@ -1,0 +1,6 @@
+name 'behaviors 1 predict'
+question 'Make a prediction. Study the code.'
+wrong 'It will spin', feedback: 'Incorrect.'
+right 'It will grow.', feedback: 'Correct!'
+wrong 'It will move.', feedback: 'Incorrect.'
+wrong 'It will change colors.', feedback: 'Incorrect'

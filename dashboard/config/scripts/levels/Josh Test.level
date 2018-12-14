@@ -1,0 +1,53 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-11-30T16:36:54.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "GameLabJr"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "include_shared_functions": "true",
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"0dbe0ef6-df00-404b-8450-0c2a926473f8\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"0dbe0ef6-df00-404b-8450-0c2a926473f8\": {\r\n      \"name\": \"elephant_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/ToQKmFYKGCw_nsxplVegu2T2_WdZLfIo/category_animals/elephant.png\",\r\n      \"frameSize\": {\r\n        \"x\": 348,\r\n        \"y\": 282\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ToQKmFYKGCw_nsxplVegu2T2_WdZLfIo\"\r\n    }\r\n  }\r\n}",
+    "hide_custom_blocks": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-11-30 16:37:59 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-30 16:39:15 +0000\",\"changed\":[\"use_default_sprites\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-30 16:39:44 +0000\",\"changed\":[\"hide_animation_mode\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-30 16:54:37 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>
