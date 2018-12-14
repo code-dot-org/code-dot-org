@@ -11,7 +11,7 @@
 - if current_user
   - homepage_data[:providers] = current_user.providers
   - if current_user.teacher?
-    - homepage_data[:hocLaunch] = DCDO.get('hoc_mode', CDO.default_hoc_mode) == 'actual-hoc' ? 'actual-hoc' : DCDO.get('hoc_launch', CDO.default_hoc_launch)
+    - homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
     - homepage_data[:isTeacher] = true
     - homepage_data[:joined_sections] = @student_sections
     - homepage_data[:announcement] = DCDO.get('announcement_override', nil)

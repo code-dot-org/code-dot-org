@@ -94,6 +94,23 @@ level 'ramp_artist_loops7_2019'
 level 'ramp_artist_loops8_2019', challenge: true
 level 'ramp_artist_loops9_2019'
 
+stage 'Nested Loops in Bee'
+level 'courseD_bee_nestedLoops1a_2019'
+level 'courseD_bee_nestedLoops1_2019'
+level 'courseD_video_nestedLoops_2019'
+level 'courseD_bee_nestedLoops2_predict1_2019'
+level 'courseD_bee_nestedLoops2_2019'
+level 'courseD_maze_nestedLoops3_2019'
+level 'courseD_maze_nestedLoops4_2019'
+level 'courseD_maze_nestedLoops5_2019'
+level 'courseD_maze_nestedLoops6_2019'
+level 'courseD_bee_nestedLoops7_2019', challenge: true
+level 'courseD_bee_nestedLoops8_2019'
+level 'courseD_bee_nestedLoops9_2019'
+assessment 'courseD_bee_nestedLoops9_predict2_2019'
+bonus 'courseD_harvester_nested_loops_challenge1_2019'
+bonus 'courseD_collector_nested_loops_challenge2_2019'
+
 stage 'Conditionals with Cards'
 level 'Conditionals_2019'
 
