@@ -47,14 +47,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts_long_instructions_text' do
-    contained_level = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {markdown_instructions: "This is contained"}
-    level_1 = create :level, name: 'level 1', type: 'Blockly'
-    level_1.contained_level_names = [contained_level.name]
-
     assert_equal '', @level_without_instructions.tts_long_instructions_text
     assert_equal "regular markdown_instructions with some \n", @level_with_markdown_instructions.tts_long_instructions_text
     assert_equal 'markdown override', @level_with_markdown_instructions_override.tts_long_instructions_text
-    assert_equal "This is contained\n", level_1.tts_long_instructions_text
   end
 
   test 'tts_short_instructions_audio_file' do
@@ -73,5 +68,26 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal "This should have  no excess formatting\n", @level_with_raw_html.tts_long_instructions_text
     assert_equal "This block should get stripped:\n", @level_with_block_html.tts_long_instructions_text
     assert_equal "This block should get stripped:\n", @level_with_xml.tts_long_instructions_text
+  end
+
+  test 'tts_long_instructions_text for contained levels' do
+    contained_level = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {
+      markdown_instructions: "This is contained"
+    }
+    outer_level = create :level, name: 'level 1', type: 'Blockly'
+    outer_level.contained_level_names = [contained_level.name]
+
+    outer_level_with_instructions = create :level, name: 'level 2', type: 'Blockly', markdown_instructions: "These aren't displayed"
+    outer_level_with_instructions.contained_level_names = [contained_level.name]
+
+    contained_level_multi = create :level, name: 'contained level 2', type: 'FreeResponse', properties: {
+      markdown_instructions: "This is also contained"
+    }
+    outer_level_with_multiple_contained_levels = create :level, name: 'level 3', type: 'Blockly'
+    outer_level_with_multiple_contained_levels.contained_level_names = [contained_level.name, contained_level_multi.name]
+
+    assert_equal "This is contained\n", outer_level.tts_long_instructions_text
+    assert_equal "This is contained\n", outer_level_with_instructions.tts_long_instructions_text
+    assert_equal "This is contained\nThis is also contained\n", outer_level_with_multiple_contained_levels.tts_long_instructions_text
   end
 end
