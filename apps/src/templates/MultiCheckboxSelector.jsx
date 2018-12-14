@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from "../util/color";
@@ -31,8 +31,8 @@ export const styles = {
   },
 };
 
-const MultiCheckboxSelector = Radium(React.createClass({
-  propTypes: {
+class MultiCheckboxSelector extends Component {
+  static propTypes = {
     header: PropTypes.node,
     selected: PropTypes.array,
     items: PropTypes.array,
@@ -41,31 +41,31 @@ const MultiCheckboxSelector = Radium(React.createClass({
     itemPropName: PropTypes.string,
     style: PropTypes.any,
     disabled: PropTypes.bool,
-  },
+  };
 
   getDefaultProps() {
     return {
       itemPropName: 'item',
       selected: [],
       items: [],
-      onChange: function () {},
+      onChange: () => {},
       disabled: false,
     };
-  },
+  }
 
-  areAllSelected() {
+  areAllSelected = () => {
     return Immutable.Set(this.props.selected).isSuperset(this.props.items);
-  },
+  };
 
-  toggleSelectAll() {
+  toggleSelectAll = () => {
     if (this.areAllSelected()) {
       this.props.onChange([]);
     } else {
       this.props.onChange(this.props.items.slice());
     }
-  },
+  };
 
-  toggle(item) {
+  toggle = (item) => {
     const index = this.props.selected.indexOf(item);
     if (index >= 0) {
       // remove it
@@ -76,7 +76,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
       // add it
       this.props.onChange(this.props.selected.concat([item]));
     }
-  },
+  };
 
   render() {
     return (
@@ -108,6 +108,6 @@ const MultiCheckboxSelector = Radium(React.createClass({
       </div>
     );
   }
-}));
+}
 
-export default MultiCheckboxSelector;
+export default Radium(MultiCheckboxSelector);
