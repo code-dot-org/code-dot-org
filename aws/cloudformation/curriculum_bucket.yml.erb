@@ -1,0 +1,59 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Configuration for the bucket storing CurriculumBuilder content, served at curriculum.code.org
+Parameters:
+  Bucket:
+    Type: String
+    Default: cdo-curriculum
+  Host:
+    Type: String
+    Default: curriculum.code.org
+Resources:
+  CurriculumRedirectRules:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref Bucket
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: 404.html
+        RoutingRules:
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csp
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csp-current/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csp-current/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csp-18/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csd/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csd-current/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csd-current/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csd-18/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csf/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csf-current/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: csf-current/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: csf-18/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: plcsf/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: plcsf-18/
+          - RoutingRuleCondition:
+              KeyPrefixEquals: docs/
+            RedirectRule:
+              HostName: !Ref Host
+              ReplaceKeyPrefixWith: documentation/
