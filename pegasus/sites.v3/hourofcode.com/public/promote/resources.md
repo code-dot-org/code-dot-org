@@ -19,11 +19,12 @@ nav: promote_nav
 <a id="posters"></a>
 ## Hang these posters in your school
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon.
+A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
 <%= view :promote_new_posters %>
 
-Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
+* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
+* Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
 
 
 <a id="social"></a>

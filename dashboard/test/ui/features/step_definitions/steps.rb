@@ -1041,6 +1041,7 @@ end
 
 And /^I create a new section$/ do
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -1053,6 +1054,7 @@ end
 
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 

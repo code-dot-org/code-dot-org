@@ -11,10 +11,7 @@ theme: responsive
 
 Every year, Code.org kicks off Computer Science Education Week with a signature event – at the White House, opening the stock market, or in Silicon Valley with leading women in tech, like Sheryl Sandberg, Susan Wojcicki and Peggy Johnson.
 
-This year, for the first time, we’re thrilled to be kicking off the global celebration 
-right here in Seattle!
-
-Join us at our kick off event to launch Computer Science Education Week 2018, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science. The event will also feature a short Q&A with Melinda Gates, Co-Chair of the Bill & Melinda Gates Foundation.
+In 2018, for the first time, we were thrilled to kick off the global celebration right here in Seattle. We celebrated the accomplishments of the CS education community, made new pledges to K-12 computer science, and heard from Melinda Gates, Co-Chair of the Bill & Melinda Gates Foundation.
 
 ### Featured speaker:
 <br>
@@ -31,26 +28,10 @@ Join us at our kick off event to launch Computer Science Education Week 2018, to
   </div>
 </div>
 
-
-## **Event timeline**
-
-**10:30 - 11:30 a.m. - Main kickoff event featuring Melinda Gates!**
-
-Join us to celebrate the accomplishments of the CS education community with awards for those at the heart of the computer science movement: students, teachers, schools, and districts. We’ll announce new pledges to K-12 computer science and hear from Melinda Gates, co-chair of the Bill & Melinda Gates Foundation. 
-
-And we will be capping off the announcements with Microsoft President and Chief Legal Officer, Brad Smith, who will deliver closing remarks.
-
-**11:30 a.m. - 12:30 p.m. - Curriculum showcase**
-
-Get a hands-on demonstration of great computer science curriculum options.
-
-
-Thank you for your support of computer science education. Have questions? Contact eric.fershtman@code.org.
-
 <br/>
 <br/>
 
-**The event will be organized by Code.org, thanks to the support of our generous funders:**
+**The event was organized by Code.org, thanks to the support of our generous funders:**
 
 <div class="row" style="display:flex;align-items:flex-end">
   <br/>

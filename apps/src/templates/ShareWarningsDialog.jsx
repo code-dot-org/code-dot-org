@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import color from "../util/color";
 import ShareWarnings from './ShareWarnings';
 
@@ -34,17 +34,20 @@ const styles = {
 /**
  * Modal for our SharingWarnings.
  */
-const ShareWarningsDialog = React.createClass({
-  propTypes: {
+class ShareWarningsDialog extends Component {
+  static propTypes = {
     promptForAge: PropTypes.bool.isRequired,
     showStoreDataAlert: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     handleTooYoung: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return { modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert };
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert
+    };
+  }
 
   componentDidMount() {
     // We didn't need to show our modal. Go through the close process so that
@@ -52,17 +55,17 @@ const ShareWarningsDialog = React.createClass({
     if (!this.state.modalIsOpen) {
       this.handleClose();
     }
-  },
+  }
 
-  handleTooYoung() {
+  handleTooYoung = () => {
     this.setState({modalIsOpen: false});
     this.props.handleTooYoung();
-  },
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({modalIsOpen: false});
     this.props.handleClose();
-  },
+  };
 
   render() {
     if (!this.state.modalIsOpen) {
@@ -88,6 +91,6 @@ const ShareWarningsDialog = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default ShareWarningsDialog;
