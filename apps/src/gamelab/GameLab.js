@@ -71,6 +71,7 @@ import {
   measure
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
+import Exporter from './Exporter';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -349,6 +350,8 @@ GameLab.prototype.init = function (config) {
   }
 
   this.studioApp_.setPageConstants(config, {
+    allowExportExpo: experiments.isEnabled('exportExpo'),
+    exportApp: this.exportApp.bind(this),
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
@@ -398,6 +401,19 @@ GameLab.prototype.init = function (config) {
     return loader.catch(() => {});
   }
   return loader;
+};
+
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} expoOpts
+ */
+GameLab.prototype.exportApp = function (expoOpts) {
+  return Exporter.exportApp(
+    // TODO: find another way to get this info that doesn't rely on globals.
+    window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
+    this.studioApp_.editor.getValue(),
+    expoOpts
+  );
 };
 
 /**
@@ -631,7 +647,6 @@ GameLab.prototype.rerunSetupCode = function () {
       !this.areAnimationsReady_()) {
     return;
   }
-  this.gameLabP5.resetWorld();
   this.gameLabP5.p5.allSprites.removeSprites();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);

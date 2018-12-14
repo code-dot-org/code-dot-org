@@ -1,6 +1,3 @@
-hidden false
-script_announcements [{"notice"=>"Sign-up for the pilot", "details"=>"We will be rolling out one of these lessons per-week, as well as making other updates during the pilot. Please click \"Learn more\" to sign up for the pilot, and to be kept up-to-date on changes and content updates.", "link"=>"https://bit.ly/csfpilot", "type"=>"information"}]
-
 stage 'Fish Tank - Creating Sprites'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
