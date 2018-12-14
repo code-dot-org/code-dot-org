@@ -31,9 +31,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
     1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
     1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+1. Install PhantomJS: `brew cask install phantomjs`
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
     1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -93,7 +94,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
-1. Read the following notes, then go back up to the overview and run the commands there. 
+1. Read the following notes, then go back up to the overview and run the commands there.
    1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
    1. `rake install` must always be called from the local project's root directory, or it won't work.
