@@ -5,7 +5,7 @@ import Joining from './Joining';
 import TravelPlans from './TravelPlans';
 import Releases from './Releases';
 
-export default class FitWeekend1819Registration extends FormController {
+export default class FitWeekendRegistration extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     applicationId: PropTypes.number.isRequired,
@@ -33,7 +33,7 @@ export default class FitWeekend1819Registration extends FormController {
     };
   }
 
-  static sessionStorageKey = "FitWeekend1819Registration";
+  static sessionStorageKey = "FitWeekendRegistration";
 
   /**
    * @override
