@@ -17,20 +17,60 @@
             "\"none\""
           ],
           [
+            "(Random)",
+            "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+          ],
+          [
+            "Bubbles",
+            "\"bubbles\""
+          ],
+          [
+            "Confetti",
+            "\"confetti\""
+          ],
+          [
+            "Hearts",
+            "\"hearts_red\""
+          ],
+          [
+            "Music Notes",
+            "\"music_notes\""
+          ],
+          [
+            "Pineapples",
+            "\"pineapples\""
+          ],
+          [
+            "Pizzas",
+            "\"pizzas\""
+          ],
+          [
+            "Poop",
+            "\"smiling_poop\""
+          ],
+          [
             "Rain",
             "\"rain\""
           ],
           [
-            "Tacos",
-            "\"raining_tacos\""
+            "Rainbows",
+            "\"floating_rainbows\""
+          ],
+          [
+            "Smiles",
+            "\"smile_face\""
           ],
           [
             "Spotlight",
             "\"spotlight\""
           ],
           [
-            "(Random)",
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]"
+            "Stage Lights",
+            "\"color_lights\""
+          ],
+          [
+            "Tacos",
+            "\"raining_tacos\""
           ]
         ]
       }

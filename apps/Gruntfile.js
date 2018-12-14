@@ -476,6 +476,7 @@ describe('entry tests', () => {
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
     'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'teacher_dashboard/index':              './src/sites/studio/pages/teacher_dashboard/index.js'
   };
 
   var internalEntries = {
@@ -531,7 +532,7 @@ describe('entry tests', () => {
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
-    'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
+    'pd/fit_weekend_registration/new': './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
 
@@ -550,6 +551,7 @@ describe('entry tests', () => {
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
+    'gamelab-api': './src/gamelab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
