@@ -533,8 +533,7 @@ FeedbackUtils.saveThumbnail = function (image) {
   }
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
-    // Don't pass any arguments to project.save().
-    .then(() => project.save());
+    .then(() => project.saveIfSourcesChanged());
 };
 
 FeedbackUtils.isLastLevel = function () {

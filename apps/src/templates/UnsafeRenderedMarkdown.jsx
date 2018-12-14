@@ -10,14 +10,12 @@ import Parser from '@code-dot-org/redactable-markdown';
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import stripStyles from './plugins/stripStyles';
-import fixTightLists from './plugins/fixTightLists';
 
 const remarkParser = Parser.create();
 
 remarkParser.parser.use([
   xmlAsTopLevelBlock,
   expandableImages,
-  fixTightLists
 ]);
 
 remarkParser.compilerPlugins.push(stripStyles);
@@ -33,11 +31,12 @@ remarkParser.compilerPlugins.push(stripStyles);
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
+    forceRemark: PropTypes.bool,
   };
 
   render() {
     let processedMarkdown;
-    if (experiments.isEnabled('remark')) {
+    if (this.props.forceRemark || experiments.isEnabled('remark')) {
       processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
     } else {
       processedMarkdown = processMarkdown(this.props.markdown, { renderer });

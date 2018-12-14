@@ -5,7 +5,7 @@
 import React, {PropTypes, Component} from 'react';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {EnrolledWorkshops} from './enrolledWorkshops';
+import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from "@cdo/locale";
 
