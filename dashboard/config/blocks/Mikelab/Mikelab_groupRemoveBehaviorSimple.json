@@ -1,0 +1,36 @@
+{
+  "category": "Group Behaviors",
+  "config": {
+    "func": "groupRemoveBehaviorSimple",
+    "blockText": "{SELECT} {COSTUME} stops {BEHAVIOR}",
+    "inline": false,
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "SELECT",
+        "options": [
+          [
+            "all",
+            "\"all\""
+          ],
+          [
+            "this",
+            "\"this\""
+          ]
+        ]
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

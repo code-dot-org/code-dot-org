@@ -17,7 +17,7 @@ module Api::V1::Pd::Application
       fit_workshop = @application.find_default_fit_workshop
       @application.fit_workshop_id = fit_workshop.id if fit_workshop
 
-      ::Pd::Application::Facilitator1819ApplicationMailer.confirmation(@application).deliver_now
+      FACILITATOR_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
     end
   end
 end

@@ -21,14 +21,10 @@ video_player: true
 style_min: true
 ---
 
-- hoc_launch = DCDO.get('hoc_launch', CDO.default_hoc_launch)
-- if ["mc", "dance"].include? hoc_launch
-  =view :minecraft_2018
-- else
-  =view :minecraft_2017
+= view :minecraft_2018
 
 .clear
 
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
-  =view :inspirational_videos
+  = view :inspirational_videos

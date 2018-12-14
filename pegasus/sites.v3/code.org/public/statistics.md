@@ -20,6 +20,38 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
+<a href="" target="_blank"><img src="/images/statistics/fit-250/2018-apstats.png"></a>
+
+<br>
+
+And, many of these test-takers were female or minority students. 
+
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1073278358870507520" target="_blank"><img src="/images/statistics/fit-250/experienced-teachers.png"></a>
+
+<br>
+
+It's never too late to start teaching CS!
+
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
+
+<br>
+
+Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
+
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
 <a href="https://twitter.com/codeorg/status/1058432567223967745" target="_blank"><img src="/images/statistics/fit-250/high-school-performance.png"></a>
 
 <br>
@@ -40,12 +72,11 @@ Teachers from any background can teach computer science.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1053355643862728706" target="_blank"><img src="/images/statistics/fit-250/csf-over-year.png"></a>
+<a href="" target="_blank"><img src="/images/statistics/fit-250/codeorg-growth.gif"></a>
 
 <br>
 
-Just think of how many students these 70,000 teachers will impact!
-
+Over the last 5 years, Code.org use in schools has expanded across the US. Here's a look at the growth in US schools from 2013-2018.
 </div>
 
 <br>
@@ -133,16 +164,6 @@ And this double enrollment means more girls and underrepresented minorities are 
 <br>
 
 We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
-
-</div>
-
-<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
-
-<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
-
-<br>
-
-Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
 
 </div>
 
