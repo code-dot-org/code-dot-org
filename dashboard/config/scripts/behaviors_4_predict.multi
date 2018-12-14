@@ -1,0 +1,7 @@
+name 'behaviors 4 predict'
+question 'Make a prediction. Which way will the mouse move towards the cheese?'
+wrong '<img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down', feedback: 'Incorrect. Watch this video!'
+right '<img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally', feedback: 'Correct! Watch this video!'
+wrong '<img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag', feedback: 'Incorrect. Watch this video!'
+wrong '<img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left', feedback: 'Incorrect. Watch this video!'
+

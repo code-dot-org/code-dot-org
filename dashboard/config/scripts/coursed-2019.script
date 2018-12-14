@@ -1,9 +1,8 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursed/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}'
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 version_year '2019'
 
 stage 'Algorithms: Graph Paper Programming'
@@ -14,11 +13,11 @@ level 'courseD_video_ramp1_2019'
 level 'courseD_maze_ramp1_2019'
 level 'courseD_maze_ramp2_2019'
 level 'courseD_maze_ramp3_2019'
-level 'courseD_maze_ramp4_2019'
+level 'courseD_maze_intro4_2019'
 level 'courseD_maze_ramp5_2019'
-level 'courseD_maze_ramp5a_2019'
+level 'courseD_maze_intro5a_2019'
 level 'courseD_maze_ramp5b_2019', challenge: true
-level 'courseD_maze_ramp5c_2019'
+level 'courseD_maze_intro5c_2019'
 level 'courseD_maze_ramp5d_2019'
 
 stage 'Relay Programming'
