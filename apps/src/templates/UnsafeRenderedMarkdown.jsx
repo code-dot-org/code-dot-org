@@ -31,11 +31,12 @@ remarkParser.compilerPlugins.push(stripStyles);
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
+    forceRemark: PropTypes.bool,
   };
 
   render() {
     let processedMarkdown;
-    if (experiments.isEnabled('remark')) {
+    if (this.props.forceRemark || experiments.isEnabled('remark')) {
       processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
     } else {
       processedMarkdown = processMarkdown(this.props.markdown, { renderer });
