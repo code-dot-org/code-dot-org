@@ -11,7 +11,7 @@ import { AllPublishableProjectTypes } from '../util/sharedConstants';
 import experiments from '../util/experiments';
 
 export function shareProject(shareUrl) {
-  dashboard.project.save().then(() => {
+  dashboard.project.saveIfSourcesChanged().then(() => {
 
     var i18n = window.dashboard.i18n;
 

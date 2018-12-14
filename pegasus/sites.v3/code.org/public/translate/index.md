@@ -13,7 +13,9 @@ By translating Code.org content to other languages, you are directly impacting s
 # Help Translate
 1. Sign up [here](http://go.pardot.com/l/153401/2018-05-09/kyjslf) to stay up to date on what we need translated.
 1. Translate hourofcode.com [here](https://crowdin.com/project/hour-of-code).
-1. Translate our newest tutorials.
+1. Translate our tutorials.
+  * [Dance Party](/translate/dance)
+  * [Minecraft: Voyage Aquatic](/translate/aquatic)
   * [Minecraft: Hero's Journey](/translate/hero)
   * [Minecraft Designer](/translate/minecraft)
   * [Minecraft Adventurer](/translate/mc)
