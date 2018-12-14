@@ -1,0 +1,13 @@
+{
+  "category": "Group Actions",
+  "config": {
+    "func": "groupEdgesDisplace",
+    "blockText": "edges block {COSTUME} from moving",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}
