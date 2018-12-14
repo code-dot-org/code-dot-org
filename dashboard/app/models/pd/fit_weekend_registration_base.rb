@@ -94,9 +94,8 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
     ].freeze
   end
 
-  # Override in derived class to peform validations
   def validate_required_fields
-    raise 'Abstract method must be overridden by inheriting class'
+    super
   end
 
   def dynamic_required_fields(hash)
