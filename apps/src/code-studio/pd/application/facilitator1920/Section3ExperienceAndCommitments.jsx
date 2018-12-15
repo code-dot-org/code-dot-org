@@ -6,10 +6,9 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {CSF, CSD, CSP} from '../ApplicationConstants';
+import {CSF, CSD, CSP, PARTNERS_WITHOUT_CSF} from '../ApplicationConstants';
 import {ProgramMapping} from './Facilitator1920Application';
 
-const PARTNERS_WITHOUT_CSF = [2, 3, 4, 44, 55, 80];
 const PARTNER_WORKSHOPS_API_ENDPOINT = '/api/v1/pd/regional_partner_workshops/find?';
 
 export default class Section3ExperienceAndCommitments extends LabeledFormComponent {
@@ -191,16 +190,16 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
               this.props.data.regionalPartnerId &&
               <div>
                 <p>
-                  <strong>Your Regional Partner is {this.state.regionalPartnerName}.</strong>
+                  <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
                 </p>
                 {
-                  !this.state.summerWorkshops &&
+                  this.props.data.summerWorkshops && this.props.data.summerWorkshops.length === 0 &&
                   <div>
                     {this.checkBoxesFor('csdCspPartnerButNoSummerWorkshop')}
                   </div>
                 }
                 {
-                  this.state.summerWorkshops &&
+                  this.props.data.summerWorkshops && this.props.data.summerWorkshops.length > 0 &&
                   <div>
                     {this.radioButtonsFor('csdCspPartnerWithSummerWorkshop')}
                     {this.renderCsdCspWhichSummerWorkshop()}
@@ -242,57 +241,6 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         }
 
         {this.radioButtonsFor("developmentAndPreparationRequirement")}
-
-        {
-          program === CSF &&
-          <div>
-            <p>
-              Code.org facilitators work with their assigned Regional Partner to host workshops
-              for teachers in their region. Facilitator applicants are assigned to Regional
-              Partners based on the zip code they provide in their application.
-            </p>
-
-            {
-              !this.props.data.regionalPartnerId &&
-              <div>
-                <p>
-                  <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
-                </p>
-                <p>
-                  Please note that we prioritize applicants in regions where we currently have a
-                  Regional Partner supporting CS Fundamentals, and there is a need for additional
-                  facilitators. Code.org will review your application and contact you if there is
-                  a need for facilitators. We are not able to guarantee a space for you in a
-                  different location.
-                </p>
-              </div>
-            }
-            {
-              this.props.data.regionalPartnerId && PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
-              <div>
-                <p>
-                  <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
-                </p>
-                <p>
-                  Please note that we prioritize applicants in regions where we currently have a
-                  Regional Partner supporting CS Fundamentals, and there is a need for additional
-                  facilitators. Code.org will review your application and contact you if there is
-                  a need for facilitators. We are not able to guarantee a space for you in a
-                  different location.
-                </p>
-              </div>
-            }
-            {
-              this.props.data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
-              <div>
-                <p>
-                  <strong>Your Regional Partner is {this.state.regionalPartnerName}.</strong>
-                </p>
-                {this.radioButtonsFor('csfGoodStandingRequirement')}
-              </div>
-            }
-          </div>
-        }
       </FormGroup>
     );
   }

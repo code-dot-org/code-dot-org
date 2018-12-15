@@ -6,12 +6,75 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES} from '../ApplicationConstants';
+import {YES, CSF, PARTNERS_WITHOUT_CSF} from '../ApplicationConstants';
+import {ProgramMapping} from './Facilitator1920Application';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.section2ChooseYourProgram;
 
   static associatedFields = [...Object.keys(PageLabels.section2ChooseYourProgram)];
+
+  componentWillUnmount() {
+    if (this.loadPartnerRequest) {
+      this.loadPartnerRequest.abort();
+    }
+  }
+
+  onProgramSelect(selected) {
+    this.handleChange(selected);
+
+    if (ProgramMapping[selected.program] === CSF) {
+      this.setState({
+        loadingPartner: true,
+        partner: null,
+        loadError: false
+      });
+      this.loadPartnerRequest = null;
+
+      this.loadPartner();
+    }
+  }
+
+  loadPartner() {
+    const params = {
+      zip_code: this.props.data.zipCode,
+      state: this.props.data.state,
+    };
+
+    function onDone(data) {
+      this.loadPartnerRequest = null;
+
+      this.handleChange({
+        regionalPartnerId: data.id,
+        regionalPartnerName: data.name
+      });
+
+      // Update state with all the partner workshop data to display
+      this.setState({
+        loadingPartner: false
+      });
+    }
+
+    function onError() {
+      this.setState({
+        loadingPartner: false,
+        loadError: true
+      });
+    }
+
+    const boundDone = onDone.bind(this);
+    const boundError = onError.bind(this);
+    const url = `/api/v1/pd/regional_partner_workshops/find?${$.param(params)}`;
+    this.loadPartnerRequest = $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done((data) => {
+      boundDone(data);
+    }).error(() => {
+      boundError();
+    });
+  }
 
   render() {
     return (
@@ -26,8 +89,58 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           .
         </p>
 
-        {this.radioButtonsFor("program")}
+        {this.radioButtonsFor("program", {onChange: this.onProgramSelect.bind(this)})}
 
+        {
+          ProgramMapping[this.props.data.program] === CSF &&
+          <div>
+            <p>
+              Code.org facilitators work with their assigned Regional Partner to host workshops
+              for teachers in their region. Facilitator applicants are assigned to Regional
+              Partners based on the zip code they provide in their application.
+            </p>
+
+            {
+              !this.props.data.regionalPartnerId &&
+              <div>
+                <p>
+                  <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
+                </p>
+                {this.radioButtonsFor('csfGoodStandingRequirement')}
+              </div>
+            }
+          </div>
+        }
         {this.radioButtonsFor("codeOrgFacilitator")}
 
         {this.props.data.codeOrgFacilitator === YES &&
@@ -55,6 +168,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         "codeOrgFacilitatorYears",
         "codeOrgFacilitatorPrograms"
       );
+    }
+
+    if (ProgramMapping[data.program] === CSF && data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(data.regionalPartnerId)) {
+      requiredFields.push("csfGoodStandingRequirement");
     }
 
     return requiredFields;
