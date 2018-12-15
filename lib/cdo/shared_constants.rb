@@ -550,4 +550,8 @@ module SharedConstants
       "comment": null
     }
   JSON
+
+  ALLOWED_WEB_REQUEST_HEADERS = %w(
+    Authorization
+  )
 end
