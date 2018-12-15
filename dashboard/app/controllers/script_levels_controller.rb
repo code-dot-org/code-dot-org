@@ -29,7 +29,8 @@ class ScriptLevelsController < ApplicationController
   def self.cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
-    script && ScriptConfig.allows_public_caching_for_script(script.name)
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   def reset
