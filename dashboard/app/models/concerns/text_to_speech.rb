@@ -189,8 +189,26 @@ module TextToSpeech
 
   def tts_for_contained_level
     all_instructions = []
-    contained_levels.each {|contained| all_instructions.push(contained.long_instructions)}
+
+    contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
     contained_levels.empty? ? nil : all_instructions * "\n"
+  end
+
+  def contained_level_text(contained)
+    # For multi questions, create a string for TTS of the markdown, question, and answers
+    if contained.long_instructions.nil?
+      combined_text = contained.properties["markdown"] + "\n"
+      contained.properties["questions"].each do |question|
+        combined_text += question["text"] + "\n"
+      end
+      contained.properties["answers"].each do |answer|
+        combined_text += answer["text"] + "\n"
+      end
+      combined_text
+    else
+      #For free response, create a string for TTS of the instructions
+      contained.long_instructions
+    end
   end
 
   def tts_should_update_long_instructions?
