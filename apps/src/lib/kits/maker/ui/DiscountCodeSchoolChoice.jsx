@@ -3,6 +3,7 @@ import i18n from "@cdo/locale";
 import Button from "@cdo/apps/templates/Button";
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import { styles as censusFormStyles } from '@cdo/apps/templates/census2017/censusFormStyles';
+import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 
 const styles = {
   confirmed: {
@@ -15,6 +16,16 @@ const styles = {
     color: 'red',
   }
 };
+
+const eligibilitySchoolUnknown = `
+Because your school isn’t listed, we were not able to look up the data on what percent of your
+students are eligible for free/reduced-price lunches. If you participated in the 2018-19 CS
+Discoveries Professional Learning Program and believe you meet the requirements to qualify for a
+subsidy, please contact [teacher@code.org](mailto:teacher@code.org) to continue.
+Otherwise, you are still eligible for a discount!
+Adafruit has made available a 10% off educator discount that this kit is eligible for.
+Just use the code \`ADAEDU\` at checkout.
+`;
 
 export default class DiscountCodeSchoolChoice extends Component {
   static propTypes = {
@@ -104,8 +115,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         )}
         {this.state.schoolId === "-1" && (
           <div>
-            {i18n.eligibilitySchoolUnknown()}
-            <b> {i18n.contactToContinue()}</b>
+            <UnsafeRenderedMarkdown markdown={eligibilitySchoolUnknown} />
           </div>
         )}
         {this.state.errorText &&
