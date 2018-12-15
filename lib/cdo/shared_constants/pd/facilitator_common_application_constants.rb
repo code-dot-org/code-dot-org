@@ -33,6 +33,7 @@ module Pd
 
       section_2_choose_your_program: {
         program: 'Please choose the course for which you would like to become a facilitator.',
+        csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
         code_org_facilitator: 'Are you currently (or have you been) a Code.org facilitator?',
         code_org_facilitator_years: 'In which years did you work as a Code.org facilitator? Mark all that apply.',
         code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past. Mark all that apply.",
@@ -70,7 +71,6 @@ module Pd
           Can you commit to attending one 5-day summer workshop hosted by your assigned Regional Partner?'
         ),
         csd_csp_which_summer_workshop: 'Your Regional Partner is hosting summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend.',
-        csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
       },
 
       section_4_leading_students: {
