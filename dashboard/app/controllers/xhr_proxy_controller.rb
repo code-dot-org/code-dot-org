@@ -87,7 +87,7 @@ class XhrProxyController < ApplicationController
 
     headers = {}
     ALLOWED_WEB_REQUEST_HEADERS.each do |header|
-      headers[header] = request.headers['Authorization']
+      headers[header] = request.headers[header]
     end
     headers.compact!
 
