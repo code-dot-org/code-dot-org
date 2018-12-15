@@ -82,10 +82,14 @@ const containedLevelStyles = {
 
 const audioStyle = {
   wrapper:{
-    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    border: '2px solid ' + color.lighter_gray,
+    borderRadius: '4px'
   },
   button: {
     height: '32px',
+    backgroundColor: '#FFFFFF'
   },
   buttonImg: {
     lineHeight: '32px',
@@ -177,9 +181,7 @@ const styles = {
     float: 'left'
   },
   audioControls: {
-    position: 'absolute',
-    top: 7,
-    right: 12
+    paddingTop: 10,
   }
 };
 
@@ -613,6 +615,8 @@ class TopInstructions extends React.Component {
             style={{
               ...containedLevelStyles.background,
               height: topInstructionsHeight,
+              display: 'flex',
+              justifyContent: 'space-around'
             }}
           >
             <div style={containedLevelStyles.level} className="contained-level">
@@ -624,6 +628,7 @@ class TopInstructions extends React.Component {
               </div>
             }
           </div>
+
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}
