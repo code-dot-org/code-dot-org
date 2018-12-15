@@ -56,8 +56,8 @@ export default class EligibilityChecklist extends Component {
       this.state = {
         ...this.state,
         yearChoice: props.unit6Intention,
-        statusYear: (props.unit6Intention === 'yes1718' ||
-          props.unit6Intention === 'yes1819') ? Status.SUCCEEDED : Status.FAILED,
+        statusYear: ['yes1718', 'yes1819', 'yes1920'].includes(props.unit6Intention) ?
+          Status.SUCCEEDED : Status.FAILED,
       };
     }
 
