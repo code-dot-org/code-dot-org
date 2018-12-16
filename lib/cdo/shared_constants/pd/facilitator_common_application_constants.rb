@@ -125,15 +125,11 @@ module Pd
 
     LABEL_OVERRIDES = {
       program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
-      ability_to_meet_requirements: 'How would you rate your ability to meet the requirements and commitments for this program?',
       grades_taught: 'What grade levels have you taught in the past?',
-      grades_currently_teaching: 'What grade levels do you teach?',
-      experience_leading: 'Which of the following do you have experience leading as a teacher?',
-      completed_pd: 'Which of the following Code.org professional learning programs did you complete as a teacher?',
     }.freeze
 
     NUMBERED_QUESTIONS = %w(
-      program abilityToMeetRequirements csfAvailability
+      program csfAvailability
       csdCspFitAvailability ledCsExtracurriculars teachingExperience gradesTaught
       gradesCurrentlyTeaching subjectsTaught yearsExperience experienceLeading completedPd
       codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms whoShouldHaveOpportunity
