@@ -121,8 +121,8 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
 
       const textFieldMap = {
-        [TextFields.notSurePleaseExplain] : "other",
-        [TextFields.unableToAttendPleaseExplain] : "other"
+        [TextFields.notSurePleaseExplain] : "not_sure",
+        [TextFields.unableToAttendPleaseExplain] : "unable_to_attend"
       };
 
       return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
@@ -138,10 +138,11 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       const options = this.props.data.summerWorkshops.map(workshop =>
         `${workshop.dates} in ${workshop.location}`
       );
-      options.push(TextFields.notSurePleaseExplain, "I'm not able to attend any of the above");
+      options.push(TextFields.notSurePleaseExplain, TextFields.unableToAttendPleaseExplain);
 
       const textFieldMap = {
-        [TextFields.notSurePleaseExplain] : "other"
+        [TextFields.notSurePleaseExplain] : "not_sure",
+        [TextFields.unableToAttendPleaseExplain] : "unable_to_attend"
       };
 
       return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(

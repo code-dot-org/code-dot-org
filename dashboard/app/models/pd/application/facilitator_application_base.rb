@@ -55,9 +55,9 @@ module Pd::Application
     end
 
     PROGRAMS = {
-      csf: 'CS Fundamentals (K - 5th grade)',
-      csd: 'CS Discoveries (6 - 10th grade)',
-      csp: 'CS Principles (9 - 12th grade)'
+      csf: 'CS Fundamentals',
+      csd: 'CS Discoveries',
+      csp: 'CS Principles'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
     VALID_COURSES = PROGRAMS.keys.map(&:to_s)
@@ -75,14 +75,6 @@ module Pd::Application
     def match_partner
       self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
     end
-
-    GRADES = [
-      'Pre-K'.freeze,
-      'Kindergarten'.freeze,
-      *(1..12).map {|n| "Grade #{n}".freeze},
-      'Community college, college, or university',
-      'Participants in a tech bootcamp or professional development program'
-    ].freeze
 
     ONLY_WEEKEND = 'I will only be able to attend Saturday and Sunday of the training'.freeze
 
@@ -138,37 +130,6 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
 
-        ability_to_meet_requirements: [
-          '1 = Unlikely: I have limited capacity to meet program expectations in 2018-19',
-          *(2..4).map(&:to_s),
-          '5 = Very likely: I can successfully meet all the expectations of the program'
-        ],
-
-        csf_availability: [
-          YES,
-          NO,
-          ONLY_WEEKEND
-        ],
-
-        csd_csp_teachercon_availability: [
-          'TeacherCon 1: June 17 - 22, 2018',
-          'TeacherCon 2: July 22 - 27, 2018',
-          TEXT_FIELDS[:not_available_for_teachercon]
-        ],
-
-        csd_csp_fit_availability: [
-          'June 23 - 24, 2018 (immediately following TeacherCon 1)',
-          'July 28 - 29, 2018 (immediately following TeacherCon 2)',
-          TEXT_FIELDS[:not_available_for_fit_weekend]
-        ],
-
-        led_cs_extracurriculars: [
-          'Hour of Code',
-          'After-school or lunchtime computer science clubs',
-          'Computer science-focused summer camps',
-          TEXT_FIELDS[:other_please_list]
-        ],
-
         teaching_experience: [
           'Yes, I am a current classroom teacher',
           'Yes. I am not currently a classroom teacher, but I have taught in a classroom in the past.',
@@ -201,51 +162,6 @@ module Pd::Application
           'I do not have experience teaching any CS curriculum to students',
         ],
 
-        grades_currently_teaching: [
-          *GRADES,
-          TEXT_FIELDS[:other_with_text],
-          "None - I don't currently teach"
-        ],
-
-        subjects_taught: [
-          'Computer Science',
-          'Math',
-          'Science',
-          'Social Studies',
-          'English/Language Arts',
-          'History',
-          'Art',
-          'Foreign Language',
-          TEXT_FIELDS[:other_with_text]
-        ],
-
-        years_experience: [
-          '1-2 years',
-          '3-5 years',
-          '6+ years',
-          'None'
-        ],
-
-        experience_leading: [
-          'Hour of Code',
-          'One or more of the CS Fundamentals (K-5) Courses',
-          'CS in Algebra',
-          'CS in Science',
-          'CS Discoveries',
-          'CS Principles (intro or AP-level)',
-          'AP CS A',
-          'Beauty and Joy of Computing',
-          'Code HS',
-          'Edhesive',
-          'Exploring Computer Science',
-          'Mobile CS Principles',
-          'NMSI',
-          'Project Lead the Way',
-          'ScratchEd',
-          TEXT_FIELDS[:other_with_text],
-          "I don't have experience teaching any of these courses",
-        ],
-
         completed_pd: [
           'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.',
           'I have participated in the Code.org Professional Learning Program, but for a different curriculum.',
@@ -261,6 +177,8 @@ module Pd::Application
           'Sundays during the summer',
           TEXT_FIELDS[:other_with_text]
         ],
+
+        csf_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
 
         code_org_facilitator: [YES, NO],
 
@@ -311,28 +229,6 @@ module Pd::Application
         ],
 
         csd_csp_partner_with_summer_workshop: [YES_COMMIT, NO_COMMIT],
-
-        csf_good_standing_requirement: [YES_COMMIT, NO_COMMIT],
-
-        groups_led_pd: [
-          'K-12 teachers',
-          'Other types of adult professional development',
-          'None'
-        ],
-
-        available_during_week: [YES, NO],
-
-        # Every hour, "8am ET / 5am PT" to "10pm ET / 7pm PT"
-        weekly_availability: (5..19).map do |hour|
-          "#{format_hour(hour + 3)} ET / #{format_hour(hour)} PT"
-        end,
-
-        travel_distance: [
-          'Within my city',
-          'Within my state',
-          'Within my region (example: Pacific Northwest, Northeast, Southwest, etc.)',
-          'Anywhere!'
-        ]
       }
     end
 
@@ -451,17 +347,19 @@ module Pd::Application
     def additional_text_fields
       [
         [:institution_type],
+        [:code_org_facilitator_years],
+        [:code_org_facilitator_programs],
+        [:csd_csp_which_summer_workshop, TEXT_FIELDS[:not_sure_please_explain], :csd_csp_which_summer_workshop_not_sure],
+        [:csd_csp_which_summer_workshop, TEXT_FIELDS[:unable_to_attend_please_explain], :csd_csp_which_summer_workshop_unable_to_attend],
+        [:csd_csp_which_fit_weekend, TEXT_FIELDS[:not_sure_please_explain], :csd_csp_which_fit_weekend_not_sure],
+        [:csd_csp_which_fit_weekend, TEXT_FIELDS[:unable_to_attend_please_explain], :csd_csp_which_fit_weekend_unable_to_attend],
         [:currently_involved_in_cs_education, TEXT_FIELDS[:other_please_describe]],
-        [:completed_cs_courses_and_activities],
+        [:plan_on_teaching],
+        [:facilitator_availability],
         [:how_heard, TEXT_FIELDS[:how_heard_facilitator], :how_heard_facilitator],
         [:how_heard, TEXT_FIELDS[:how_heard_code_org_staff], :how_heard_code_org_staff],
         [:how_heard, TEXT_FIELDS[:how_heard_regional_partner], :how_heard_regional_partner],
-        [:how_heard],
-        [:plan_on_teaching],
-        [:led_cs_extracurriculars, TEXT_FIELDS[:other_please_list]],
-        [:grades_currently_teaching],
-        [:subjects_taught],
-        [:experience_leading]
+        [:how_heard]
       ]
     end
 
@@ -469,12 +367,6 @@ module Pd::Application
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
       super.merge(account_email: user.email)
-    end
-
-    # Formats hour as 0-12(am|pm)
-    # e.g. 7 -> 7am, 15 -> 3pm
-    private_class_method def self.format_hour(hour)
-      (Date.today + hour.hours).strftime("%l%P").strip
     end
 
     before_save :destroy_fit_autoenrollment, if: -> {status_changed? && status != "accepted"}
