@@ -1317,6 +1317,7 @@ en:
         description here: description here
         title: title
       Curriculum Framework Connections in Unit 2: {}
+      Dance_Party_extras_gallery_intro: {}
       Dance_Party_extras_intro: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -7649,6 +7650,31 @@ en:
         Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
         Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
         Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 4 MC data bias_2018:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 4 google trends MC_2018:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 4 trends as predictors_2018:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit2 Ch 1 MC hex rgb:
         " ": " "
         00F: 00F
@@ -10981,6 +11007,39 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      andrea-test2:
+        Barack Obama: Barack Obama
+        Donald Trump: Donald Trump
+        Hillary Clinton: Hillary Clinton
+        Mike Pence: Mike Pence
+        Who is the President of the United States ?: Who is the President of the United States ?
+        current events: current events
+        selected response: selected response
+      andrea-test3:
+        Barack Obama: Barack Obama
+        Donald Trump: Donald Trump
+        Hillary Clinton: Hillary Clinton
+        Mike Pence: Mike Pence
+        Who is the Vice President of the United States ?: Who is the Vice President of the United States ?
+        current events: current events
+        selected response: selected response
+      behaviors 1 predict:
+        Correct!: Correct!
+        Incorrect: Incorrect
+        Incorrect.: Incorrect.
+        It will change colors.: It will change colors.
+        It will grow.: It will grow.
+        It will move.: It will move.
+        It will spin: It will spin
+        Make a prediction. Study the code.: Make a prediction. Study the code.
+      behaviors 4 predict:
+        <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down: <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down
+        <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag: <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag
+        <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left: <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left
+        <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally: <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally
+        Correct! Watch this video!: Correct! Watch this video!
+        Incorrect. Watch this video!: Incorrect. Watch this video!
+        Make a prediction. Which way will the mouse move towards the cheese?: Make a prediction. Which way will the mouse move towards the cheese?
       commute assess - comp 3 - block:
         Displays "Hello" continuously for 60 seconds: Displays "Hello" continuously for 60 seconds
         Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times

@@ -71,8 +71,8 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
-import Exporter from './Exporter';
 import MobileControls from './MobileControls';
+import Exporter from './Exporter';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 

@@ -1,4 +1,5 @@
-class Pd::FitWeekend1819RegistrationController < ApplicationController
+class Pd::FitWeekendRegistrationController < ApplicationController
+  include Pd::Application::ActiveApplicationModels
   load_and_authorize_resource :application,
     class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
     id_param: :application_guid
@@ -11,16 +12,16 @@ class Pd::FitWeekend1819RegistrationController < ApplicationController
   end
 
   def new
-    if Pd::FitWeekend1819Registration.exists?(pd_application_id: @application.id)
-      @registration = Pd::FitWeekend1819Registration.find_by(pd_application_id: @application.id)
+    if FIT_WEEKEND_REGISTRATION_CLASS.exists?(pd_application_id: @application.id)
+      @registration = FIT_WEEKEND_REGISTRATION_CLASS.find_by(pd_application_id: @application.id)
       render :submitted
       return
     end
 
     @script_data = {
       props: {
-        options: Pd::FitWeekend1819Registration.options.camelize_keys,
-        requiredFields: Pd::FitWeekend1819Registration.camelize_required_fields,
+        options: FIT_WEEKEND_REGISTRATION_CLASS.options.camelize_keys,
+        requiredFields: FIT_WEEKEND_REGISTRATION_CLASS.camelize_required_fields,
         apiEndpoint: "/api/v1/pd/fit_weekend_registrations",
         applicationId: @application.id,
         course: @application.fit_workshop.course,
