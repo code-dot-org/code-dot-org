@@ -423,23 +423,8 @@ GameLab.prototype.init = function (config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function (expoOpts) {
-  const store = getStore();
-  if (this.areAnimationsReady_()) {
-    return this.exportAppWithAnimations(store.getState().animationList, expoOpts);
-  }
-  return new Promise(resolve => {
-    // Watch store changes until all the animations are ready.
-    const unsubscribe = store.subscribe(() => {
-      if (this.areAnimationsReady_()) {
-        unsubscribe();
-        const exportResult = this.exportAppWithAnimations(
-            store.getState().animationList,
-            expoOpts
-        );
-        resolve(exportResult);
-      }
-    });
-  });
+  await this.whenAnimationsAreReady();
+  return this.exportAppWithAnimations(getStore().getState().animationList, expoOpts);
 };
 
 /**
@@ -1300,26 +1285,12 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
  *          effect on the P5 preloadCount, so we don't need to track it here.
  * @private
  */
-GameLab.prototype.preloadAnimations_ = function (pauseAnimationsByDefault) {
-  let store = getStore();
-  return new Promise(resolve => {
-    if (this.areAnimationsReady_()) {
-      resolve();
-    } else {
-      // Watch store changes until all the animations are ready.
-      const unsubscribe = store.subscribe(() => {
-        if (this.areAnimationsReady_()) {
-          unsubscribe();
-          resolve();
-        }
-      });
-    }
-  }).then(() => {
-    // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.gameLabP5.preloadAnimations(
-      store.getState().animationList,
-      pauseAnimationsByDefault);
-  });
+GameLab.prototype.preloadAnimations_ = async function (pauseAnimationsByDefault) {
+  await this.whenAnimationsAreReady();
+  // Animations are ready - send them to p5 to be loaded into the engine.
+  return this.gameLabP5.preloadAnimations(
+    getStore().getState().animationList,
+    pauseAnimationsByDefault);
 };
 
 /**
@@ -1331,6 +1302,25 @@ GameLab.prototype.preloadAnimations_ = function (pauseAnimationsByDefault) {
 GameLab.prototype.areAnimationsReady_ = function () {
   const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.every(key => animationList.propsByKey[key].loadedFromSource);
+};
+
+/**
+ * Returns a Promise that resolves once the store says animations are ready.
+ * @returns {Promise}
+ */
+GameLab.prototype.whenAnimationsAreReady = function () {
+  return new Promise(resolve => {
+    if (this.areAnimationsReady_()) {
+      resolve();
+      return;
+    }
+    const unsubscribe = getStore().subscribe(() => {
+      if (this.areAnimationsReady_()) {
+        unsubscribe();
+        resolve();
+      }
+    });
+  });
 };
 
 /**
