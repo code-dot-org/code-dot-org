@@ -87,6 +87,10 @@ function move(dir) {
   queue.push({'command': 'shift', 'arg': dir});
 }
 
+function drawPixelHere(val) {
+  queue.push({'command': 'draw', 'arg': val});
+}
+
 function whenKey(key, event) {
   inputEvents.push({type: keyWentDown, event: event, param: key});
 }
@@ -117,10 +121,16 @@ function draw() {
         } else if (temp.arg == 'down') {
           pos = (pos + SIZE) % (SIZE * SIZE);
         } else if (temp.arg == 'left') {
-          pos = pos - 1;
+          pos = (pos - 1) % (SIZE * SIZE);
         } else if (temp.arg == 'right') {
-          pos = pos + 1;
+          pos = (pos + 1) % (SIZE * SIZE);
         }
+      } else if (temp.command == "draw") {
+        var val = temp.arg;
+        if (val == "toggle") {
+          val = (grid[pos] == 0 ? 1 : 0);
+        }
+        grid[pos] = val;
       }
     } else {
       grid[pos] = temp;
