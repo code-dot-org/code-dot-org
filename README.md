@@ -1,5 +1,7 @@
 Demoing git stuff - Winter's fake change
 
+Change 2
+
 # Code.org
 
 [![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
