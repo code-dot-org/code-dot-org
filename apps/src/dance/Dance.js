@@ -28,6 +28,7 @@ import {
   fetchSignedCookies,
 } from './songs';
 import { SongTitlesToArtistTwitterHandle } from '../code-studio/dancePartySongArtistTags';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const ButtonState = {
   UP: 0,
@@ -92,6 +93,9 @@ Dance.prototype.init = function (config) {
   this.level = config.level;
   this.skin = config.skin;
   this.share = config.share;
+  this.studioAppInitPromise = new Promise(resolve => {
+    this.studioAppInitPromiseResolve = resolve;
+  });
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
@@ -112,6 +116,7 @@ Dance.prototype.init = function (config) {
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
+    this.studioAppInitPromiseResolve();
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -170,7 +175,22 @@ Dance.prototype.initSongs = async function (config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  loadSong(selectedSong, songData);
+  loadSong(selectedSong, songData, status => {
+    if (status === 403) {
+      // Something is wrong, because we just fetched cloudfront credentials.
+      firehoseClient.putRecord(
+        {
+          study: 'restricted-song-auth',
+          event: 'initial-auth-error',
+          data_json: JSON.stringify({
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }),
+        },
+        {includeUserId: true}
+      );
+    }
+  });
   this.updateSongMetadata(selectedSong);
 
   if (config.channel) {
@@ -196,7 +216,22 @@ Dance.prototype.setSongCallback = function (songId) {
   loadSong(songId, songData, status => {
     if (status === 403) {
       // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() => loadSong(songId, songData));
+      fetchSignedCookies().then(() => loadSong(songId, songData, status => {
+        if (status === 403) {
+          // Something is wrong, because we just re-fetched cloudfront credentials.
+          firehoseClient.putRecord(
+            {
+              study: 'restricted-song-auth',
+              event: 'repeated-auth-error',
+              data_json: JSON.stringify({
+                currentUrl: window.location.href,
+                channelId: getStore().getState().pageConstants.channelId,
+              }),
+            },
+            {includeUserId: true}
+          );
+        }
+      }));
     }
   });
 
@@ -305,7 +340,15 @@ Dance.prototype.afterInject_ = function () {
     recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
-    onInit: () => {
+    onInit: async (nativeAPI) => {
+      if (this.share) {
+        // In the share scenario, we call ensureSpritesAreLoaded() early since the
+        // student code can't change. This way, we can start fetching assets while
+        // waiting for the user to press the Run button.
+        await this.studioAppInitPromise;
+        const charactersReferenced = this.computeCharactersReferenced(this.studioApp_.getCode());
+        await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+      }
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -445,6 +488,8 @@ Dance.prototype.runButtonClick = async function () {
   // tasks that need to complete first
   const runButton = document.getElementById('runButton');
   runButton.disabled = true;
+  const divDanceLoading = document.getElementById('divDanceLoading');
+  divDanceLoading.style.display = 'flex';
   getStore().dispatch(setRunIsStarting(true));
   await this.danceReadyPromise;
 
@@ -458,6 +503,7 @@ Dance.prototype.runButtonClick = async function () {
     await this.execute();
   } finally {
     this.studioApp_.toggleRunReset('reset');
+    divDanceLoading.style.display = 'none';
     // Safe to allow normal run/reset behavior now
     getStore().dispatch(setRunIsStarting(false));
   }
@@ -482,7 +528,9 @@ Dance.prototype.execute = async function () {
     return;
   }
 
-  this.initInterpreter();
+  const charactersReferenced = this.initInterpreter();
+
+  await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
@@ -623,8 +671,10 @@ Dance.prototype.initInterpreter = function () {
     },
   };
 
+  const studentCode = this.studioApp_.getCode();
+
   let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
-  code += this.studioApp_.getCode();
+  code += studentCode;
 
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
@@ -633,6 +683,21 @@ Dance.prototype.initInterpreter = function () {
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
+
+  return this.computeCharactersReferenced(studentCode);
+};
+
+Dance.prototype.computeCharactersReferenced = function (studentCode) {
+  // Process studentCode to determine which characters are referenced and create
+  // charactersReferencedSet with the results:
+  const charactersReferencedSet = new Set();
+  const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
+  let match;
+  while ((match = charactersRegExp.exec(studentCode))) {
+    const characterName = match[1];
+    charactersReferencedSet.add(characterName);
+  }
+  return Array.from(charactersReferencedSet);
 };
 
 Dance.prototype.shouldShowSharing = function () {
