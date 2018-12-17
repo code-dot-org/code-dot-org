@@ -266,7 +266,7 @@ def dotd_menu(dotd_name)
 
         EOS
         @logger.info 'manually DTTs from staging'
-        TestServerStatus.mark_started GitHub.sha('test')
+        TestServerStatus.mark_started GitHub.sha('test', true)
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
