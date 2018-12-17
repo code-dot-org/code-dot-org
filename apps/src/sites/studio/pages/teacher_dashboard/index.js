@@ -12,6 +12,6 @@ $(document).ready(function () {
       </Router>
     </div>
     ,
-    document.getElementById('teacher-dashboard-nav')
+    document.getElementById('teacher-dashboard')
   );
 });

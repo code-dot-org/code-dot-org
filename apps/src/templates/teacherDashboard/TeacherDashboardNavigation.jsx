@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import NavigationBar from '../NavigationBar';
 import i18n from "@cdo/locale";
 
@@ -30,14 +30,9 @@ export const teacherDashboardLinks = [
 ];
 
 export default class TeacherDashboardNavigation extends Component {
-  static propTypes = {
-    selectedTab: PropTypes.string,
-  };
-
   render() {
     return (
       <NavigationBar
-        defaultActiveLink = {this.props.selectedTab}
         links = {teacherDashboardLinks}
       />
     );
