@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import NavigationBar from '../NavigationBar';
 import i18n from "@cdo/locale";
 
-export const teacherDashboardLinks = [
+const teacherDashboardLinks = [
   {
     label: i18n.teacherTabManageStudents(),
     url: "manage_students"
