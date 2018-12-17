@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
-import { GAME_HEIGHT, GAME_WIDTH } from './constants';
+import { GAME_HEIGHT, GAME_WIDTH, GAMELAB_DPAD_CONTAINER_ID } from './constants';
 import CompletionButton from '../templates/CompletionButton';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
@@ -22,8 +22,6 @@ import {
   isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
-
-export const GAMELAB_DPAD_CONTAINER_ID = 'studio-dpad-container';
 
 const MODAL_Z_INDEX = 1050;
 
@@ -50,7 +48,6 @@ class GameLabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    mobileControlsConfig: PropTypes.object.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -197,7 +194,6 @@ export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
 }), dispatch => ({

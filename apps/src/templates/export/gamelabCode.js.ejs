@@ -1,15 +1,8 @@
 var p5Inst = new p5(null, 'sketch');
-var _globalInit = function() {
-  initMobileControls(p5Inst);
-};
-
-if (document.readyState === 'complete') {
-  _globalInit();
-} else {
-  window.addEventListener('load', _globalInit , false);
-}
 
 function preload() {
+  initMobileControls(p5Inst);
+
   p5Inst._predefinedSpriteAnimations = {};
   p5Inst._pauseSpriteAnimationsByDefault = <%- animationOpts.pauseAnimationsByDefault -%>;
   var animationListJSON = <%- animationListJSON -%>;

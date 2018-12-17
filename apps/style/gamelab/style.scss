@@ -98,6 +98,8 @@ $dpad-cone-inactive: #9C9C9C;
 $dpad-rim: #FFFFFF;
 
 #studio-dpad {
+  position: absolute;
+  height: 152px;
   width: 390px;
   vertical-align: top;
   margin-left: 10px;
