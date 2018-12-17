@@ -355,7 +355,7 @@ def update_database
           db_proficiency.conditionals_d4_count += proficiency[49]
           db_proficiency.conditionals_d5_count += proficiency[50]
 
-          if db_proficiency.last_progress_at.nil? || db_proficiency.last_progress_at < proficiency[51]
+          if db_proficiency.last_progress_at.nil? || (proficiency[51] && db_proficiency.last_progress_at < proficiency[51])
             db_proficiency.last_progress_at = proficiency[51]
           end
 
