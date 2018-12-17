@@ -9835,6 +9835,16 @@ en:
               name: The Artist
             Nested Loops in the Maze:
               name: Nested Loops in the Maze
+            Sequencing in the Maze:
+              name: Sequencing in the Maze
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+            Events with Sprite Lab:
+              name: Events with Sprite Lab
+            Loops with the Artist:
+              name: Loops with the Artist
+            Sprite Lab Behaviors:
+              name: Sprite Lab Behaviors
         dance-low:
           stages:
             Dance Party:
@@ -10060,6 +10070,8 @@ en:
               name: Programming and Loops with the Artist
             End of Course Project:
               name: End of Course Project
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10296,3 +10308,45 @@ en:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+        andrea-test:
+          stages:
+            new stage:
+              name: new stage
+            module1:
+              name: module1
+            module2:
+              name: module2
+            andrea-g1:
+              name: andrea-g1
+            andrea-g2:
+              name: andrea-g2
+            andrea-g3:
+              name: andrea-g3
+            andrea-s1:
+              name: andrea-s1
+            andrea-s3:
+              name: andrea-s3
+            'null':
+              name: 'null'
+            andrea-stage1:
+              name: andrea-stage1
+            andrea-test-stage1:
+              name: andrea-test-stage1
+            andrea-test-stage2:
+              name: andrea-test-stage2
+            andrea-test-stage3:
+              name: andrea-test-stage3
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+          title: andrea-test
+          description_audience: 6-12 Facilitators-in-Training
+          description_short: this is to test my skills in making a course
+          description: longer description on my attempt to create a course....   stilling wondering where overview, content came from....
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+          title: Keep On Dancing
+          description_audience: ''
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description: Go beyond the first hour with extended project ideas.
