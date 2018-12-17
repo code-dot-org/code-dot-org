@@ -22,7 +22,6 @@ var mobileControls;
 function initMobileControls(p5Inst) {
   mobileControls = new MobileControls();
   mobileControls.init({
-    isDPadFourWay: () => false,
     notifyKeyCodeDown: keyCode => p5Inst._onkeydown({ which: keyCode }),
     notifyKeyCodeUp: keyCode => p5Inst._onkeyup({ which: keyCode }),
     softButtonIds: [],

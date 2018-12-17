@@ -118,10 +118,11 @@ export default {
           () => download('/blockly/js/gamelab-api.js' + cacheBust, 'text')
               .then((data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
                   () => gamelabApiAsset.reject(new Error("failed to fetch gamelab-api.js"))));
-    // Fetch p5.js and p5.play.js:
+    // Fetch gamelab.css, p5.js, and p5.play.js:
+    const cssAsset = download('/blockly/css/gamelab.css' + cacheBust, 'text');
     const p5Asset = download('/blockly/js/p5play/p5.js' + cacheBust, 'text');
     const p5playAsset = download('/blockly/js/p5play/p5.play.js' + cacheBust, 'text');
-    const staticDownloads = [gamelabApiAsset, p5Asset, p5playAsset];
+    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(download(`https://code.jquery.com/${jQueryBaseName}.js`, 'text'));
@@ -135,9 +136,10 @@ export default {
           return download(assetToDownload.url, assetToDownload.dataType || 'text');
         }
       }))).then(
-        ([gamelabApiText], [p5Text], [p5playText], ...rest) => {
+        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/gamelab-api.j" : "gamelab-api.js"),
               gamelabApiText);
+          zip.file(appName + "/gamelab.css", cssText);
           zip.file(appName + "/" + (expoMode ? "assets/p5.j" : "p5.js"), p5Text);
           zip.file(appName + "/" + (expoMode ? "assets/p5.play.j" : "p5.play.js"),
               p5playText);
