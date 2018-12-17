@@ -148,5 +148,7 @@ module Pd
       not_sure_please_explain: 'Not sure (Please explain):'.freeze,
       unable_to_attend_please_explain: "I'm not able to attend any of the above workshop dates. (Please explain):".freeze
     }.freeze
+
+    PARTNERS_WITHOUT_CSF = [2, 3, 4, 44, 55, 80]
   end
 end

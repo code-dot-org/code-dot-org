@@ -6,7 +6,7 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {CSF, CSD, CSP, PARTNERS_WITHOUT_CSF} from '../ApplicationConstants';
+import {CSF, CSD, CSP} from '../ApplicationConstants';
 import {ProgramMapping} from './Facilitator1920Application';
 
 const PARTNER_WORKSHOPS_API_ENDPOINT = '/api/v1/pd/regional_partner_workshops/find?';
@@ -259,17 +259,12 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         "csfWorkshopRequirement",
         "csfCommunityRequirement"
       );
-
-      if (data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(data.regionalPartnerId)) {
-        requiredFields.push("csfGoodStandingRequirement");
-      }
     }
 
     if (program !== CSF) {
       if (!data.regionalPartnerId) {
         requiredFields.push("csdCspNoPartnerSummerWorkshop");
-      }
-      if (data.regionalPartnerId) {
+      } else {
         if (data.summerWorkshops && data.summerWorkshops.length > 0) {
           requiredFields.push(
             "csdCspPartnerWithSummerWorkshop",
@@ -282,13 +277,13 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       if (data.fitWorkshops && data.fitWorkshops.length > 0) {
         requiredFields.push("csdCspWhichFitWeekend");
       }
-      requiredFields.push(
-        "csdCspFitWeekendRequirement",
-        "csdCspWorkshopRequirement",
-        "csdCspSummerWorkshopRequirement",
-        "csdCspDeeperLearningRequirement"
-      );
     }
+    requiredFields.push(
+      "csdCspFitWeekendRequirement",
+      "csdCspWorkshopRequirement",
+      "csdCspLeadSummerWorkshopRequirement",
+      "csdCspDeeperLearningRequirement"
+    );
 
     if (program === CSD) {
       requiredFields.push("csdTrainingRequirement");

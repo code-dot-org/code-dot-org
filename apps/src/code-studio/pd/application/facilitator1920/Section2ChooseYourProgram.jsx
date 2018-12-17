@@ -4,9 +4,10 @@ import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
+  PartnersWithoutCsf
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES, CSF, PARTNERS_WITHOUT_CSF} from '../ApplicationConstants';
+import {YES, CSF} from '../ApplicationConstants';
 import {ProgramMapping} from './Facilitator1920Application';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
@@ -116,7 +117,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
               </div>
             }
             {
-              this.props.data.regionalPartnerId && PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              this.props.data.regionalPartnerId && PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
               <div>
                 <p>
                   <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
@@ -131,7 +132,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
               </div>
             }
             {
-              this.props.data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(this.props.data.regionalPartnerId) &&
+              this.props.data.regionalPartnerId && !PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
               <div>
                 <p>
                   <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
@@ -170,7 +171,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       );
     }
 
-    if (ProgramMapping[data.program] === CSF && data.regionalPartnerId && !PARTNERS_WITHOUT_CSF.includes(data.regionalPartnerId)) {
+    if (ProgramMapping[data.program] === CSF && data.regionalPartnerId && !PartnersWithoutCsf.includes(data.regionalPartnerId)) {
       requiredFields.push("csfGoodStandingRequirement");
     }
 
