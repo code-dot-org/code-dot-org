@@ -272,33 +272,6 @@ module Pd::Application
 
     def dynamic_required_fields(hash)
       [].tap do |required|
-        required << :cs_related_job_requirements if hash[:worked_in_cs_job] == YES
-        required << :diversity_training_description if hash[:diversity_training] == YES
-
-        if hash[:program] == PROGRAMS[:csf]
-          required << :csf_availability
-          required << :csf_partial_attendance_reason if hash[:csf_availability] == ONLY_WEEKEND
-        elsif hash[:program].present?
-          required << :csd_csp_teachercon_availability
-          required << :csd_csp_fit_availability
-        end
-
-        if hash[:teaching_experience] == YES
-          required.concat [
-            :grades_taught,
-            :grades_currently_teaching,
-            :subjects_taught,
-            :years_experience
-          ]
-        end
-
-        if hash[:years_experience].present? && hash[:years_experience] != NONE
-          required.concat [
-            :experience_leading,
-            :completed_pd
-          ]
-        end
-
         if hash[:code_org_facilitator] == YES
           required.concat [
             :code_org_facilitator_years,
@@ -306,15 +279,47 @@ module Pd::Application
           ]
         end
 
-        if hash[:have_led_pd] == YES
+        if hash[:program] == PROGRAMS[:csf]
+          if hash[:regional_partner_id] && !PARTNERS_WITHOUT_CSF.include?(hash[:regional_partner_id])
+            required << :csf_good_standing_requirement
+          end
           required.concat [
-            :groups_led_pd,
-            :describe_prior_pd
+            :csf_summit_requirement,
+            :csf_workshop_requirement,
+            :csf_community_requirement
           ]
         end
 
-        if hash[:available_during_week] == YES
-          required << :weekly_availability
+        if hash[:program] != PROGRAMS[:csf]
+          if !hash[:regional_partner_id]
+            required << :csd_csp_no_partner_summer_workshop
+          else
+            if hash[:summer_workshops] && !hash[:summer_workshops].empty?
+              required.concat [
+                :csd_csp_partner_with_summer_workshop,
+                :csd_csp_which_summer_workshop
+              ]
+            else
+              required << :csd_csp_partner_but_no_summer_workshop
+            end
+            if hash[:fit_workshops] && !hash[:fit_workshops].empty?
+              required << :csd_csp_which_fit_weekend
+            end
+          end
+          required.concat [
+            :csd_csp_fit_weekend_requirement,
+            :csd_csp_workshop_requirement,
+            :csd_csp_lead_summer_workshop_requirement,
+            :csd_csp_deeper_learning_requirement
+          ]
+        end
+
+        if hash[:program] == PROGRAMS[:csd]
+          required << :csd_training_requirement
+        end
+
+        if hash[:program] == PROGRAMS[:csp]
+          required << :csp_training_requirement
         end
       end
     end
