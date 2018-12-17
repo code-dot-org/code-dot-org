@@ -31,13 +31,13 @@ export const teacherDashboardLinks = [
 
 export default class TeacherDashboardNavigation extends Component {
   static propTypes = {
-    defaultActiveLink: PropTypes.string,
+    selectedTab: PropTypes.string,
   };
 
   render() {
     return (
       <NavigationBar
-        defaultActiveLink = {this.props.defaultActiveLink}
+        defaultActiveLink = {this.props.selectedTab}
         links = {teacherDashboardLinks}
       />
     );
