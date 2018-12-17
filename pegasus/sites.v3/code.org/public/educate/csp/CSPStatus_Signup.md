@@ -25,6 +25,7 @@ Sign up below to receive monthly email updates on  Code.org’s Computer Science
 - <a href="http://go.pardot.com/webmail/153401/456438397/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">September 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/473286789/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">October 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/495083220/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">November 2018</a>
+- <a href="http://go.pardot.com/webmail/153401/508584630/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2018</a>
 
 ### 2017
 
@@ -35,6 +36,7 @@ Sign up below to receive monthly email updates on  Code.org’s Computer Science
 - <a href="http://go.pardot.com/webmail/153401/261565769/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back-to-School 2017</a>
 - <a href="http://go.pardot.com/webmail/153401/282686815/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">October 2017</a>
 - <a href="http://go.pardot.com/webmail/153401/302017753/e46ae3ec91ad4014b64fb4078ff8739e65c753bc5464d16656455ab2891a49bd", target=_"blank">November 2017</a>
+- <a href="http://go.pardot.com/webmail/153401/325181280/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2017</a>
 
 ### 2016
 
