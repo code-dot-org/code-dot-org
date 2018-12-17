@@ -22,7 +22,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `bundle install` (Problems with rmagick? See [tips](#tips) below.) (OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
 1. `rake install:hooks`
 1. `rake install`
-1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
+1. [Enable JavaScript builds](#enabling-javascript-builds)
 1. `rake build`
 
 ## OS-specific prerequisites
