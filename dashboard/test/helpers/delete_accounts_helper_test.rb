@@ -1003,6 +1003,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_fit_weekend_registrations
+  # Associated with user via application
+  #
+
+  test "clears form_data from pd_fit_weekend_registrations" do
+    registration = create :pd_fit_weekend1920_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.pd_application.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  #
   # Table: dashboard.pd_pre_workshop_surveys
   # Associated with user via enrollment
   #
