@@ -3,9 +3,9 @@ import {expect} from '../../../util/configuredChai';
 import {
   commands,
   executors,
-  dropletConfig,
   injectExecuteCmd
 } from '@cdo/apps/lib/util/audioApi';
+import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 
 describe('Audio API', function () {
 
