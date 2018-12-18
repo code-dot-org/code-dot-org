@@ -70,7 +70,7 @@ end
 # test run, but leaving the Slack#infra-test topic with the hash of the previous
 # green run. Inserts a 'dtt_red' row into the metrics table.
 def mark_dtt_red
-  TestServerStatus.mark_red GitHub.sha('test')
+  TestServerStatus.mark_red GitHub.sha('test', true)
   puts <<-EOS.unindent
 
     Reset DTT: yes
@@ -82,7 +82,7 @@ end
 # Marks the most recent DTT green, updating Slack#infra-test and Slack#deploy-status topics
 # appropriately. Inserts a 'dtt_green' row into the metrics table.
 def mark_dtt_green
-  TestServerStatus.mark_green GitHub.sha('test')
+  TestServerStatus.mark_green GitHub.sha('test', true)
   puts <<-EOS.unindent
 
     Reset DTT: yes and updated green commit in Slack#infra-test.
@@ -266,7 +266,7 @@ def dotd_menu(dotd_name)
 
         EOS
         @logger.info 'manually DTTs from staging'
-        TestServerStatus.mark_started GitHub.sha('test')
+        TestServerStatus.mark_started GitHub.sha('test', true)
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
