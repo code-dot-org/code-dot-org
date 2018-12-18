@@ -12,7 +12,7 @@ const baseUrl = `/teacher_dashboard/sections/${sectionId}`;
 $(document).ready(function () {
   ReactDOM.render(
     <div>
-      <Router  basename={baseUrl}>
+      <Router basename={baseUrl}>
         <Route
           path="/"
           component={props => <TeacherDashboard {...props} sectionId={sectionId}/>}
