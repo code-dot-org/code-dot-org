@@ -11747,18 +11747,6 @@ en:
       courseD_multi_scrat_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
-        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
-        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
-        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
-        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
-        The bird will make it to the pig.: The bird will make it to the pig.
-        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
-        The bird will not move at all.: The bird will not move at all.
-        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
-      courseD_multi_scrat_predict1:
-        Correct!: Correct!
-        I don't know.: I don't know.
         Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
         Nothing. Scrat will not move at all.: Nothing. Scrat will not move at all.
         ? Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
