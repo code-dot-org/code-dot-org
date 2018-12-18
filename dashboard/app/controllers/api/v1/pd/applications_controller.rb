@@ -188,6 +188,10 @@ module Api::V1::Pd
         application_data[notes_field] = application_data[notes_field].strip_utf8mb4 if application_data[notes_field]
       end
 
+      %w(question_1_support_teachers).each do |interview_field|
+        application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
+      end
+
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
@@ -258,6 +262,13 @@ module Api::V1::Pd
         :notes_3,
         :notes_4,
         :notes_5,
+        :question_1,
+        :question_2,
+        :question_3,
+        :question_4,
+        :question_5,
+        :question_6,
+        :question_7,
         :regional_partner_value,
         :response_scores,
         :pd_workshop_id,
