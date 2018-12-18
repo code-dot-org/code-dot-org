@@ -346,7 +346,7 @@ class Course < ApplicationRecord
   end
 
   # @param user [User]
-  # @return [Boolean] Whether the user can view the current course.
+  # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user)
     return nil unless user
     # Restrictions only apply to students.

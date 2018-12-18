@@ -65,6 +65,7 @@ export default class CourseOverview extends Component {
       version_year: PropTypes.string.isRequired
     })).isRequired,
     showVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
   };
 
   onChangeVersion = event => {
@@ -113,6 +114,7 @@ export default class CourseOverview extends Component {
       hasVerifiedResources,
       versions,
       showVersionWarning,
+      showRedirectWarning,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -128,6 +130,15 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
+        {showRedirectWarning &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            onDismiss={() => {console.log('dismissed');}}
+          />
+        }
         {showVersionWarning &&
           <Notification
             type={NotificationType.warning}
