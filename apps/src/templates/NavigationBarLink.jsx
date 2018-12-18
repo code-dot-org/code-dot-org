@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import { NavLink } from 'react-router-dom';
 
 const styles = {
   link: {
@@ -9,31 +10,32 @@ const styles = {
     color: color.white,
     textDecoration: 'none',
     cursor: 'pointer',
+    opacity: 0.75,
   },
   activeLink: {
     opacity: 1,
     paddingBottom: 5,
     borderBottom: '3px solid orange',
   },
-  inactiveLink: {
-    opacity: 0.75,
-  }
 };
 
 export default class NavigationBarLink extends React.Component {
   static propTypes = {
     label: PropTypes.string,
-    active: PropTypes.bool,
+    url: PropTypes.string,
   };
 
   render() {
-    const {label, active} = this.props;
-    const linkStyle = active ? styles.activeLink : styles.inactiveLink;
+    const {label, url} = this.props;
 
     return (
-      <span style={{...styles.link, ...linkStyle}}>
+      <NavLink
+        to={`/${url}`}
+        style={styles.link}
+        activeStyle={styles.activeLink}
+      >
         <span>{label}</span>
-      </span>
+      </NavLink>
     );
   }
 }
