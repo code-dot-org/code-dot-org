@@ -1,6 +1,7 @@
 name 'CSD U1 Assessment define computer'
+type 'multi2'
 title 'Question 1'
-description 'description here'
+description ''
 question 'Which two of the following are the best ways to define a computer? (Choose TWO)'
 right 'A machine that inputs, outputs, stores, and processes information'
 wrong 'A machine with a screen and a keyboard'
