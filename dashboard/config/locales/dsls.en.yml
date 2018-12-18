@@ -11218,6 +11218,15 @@ en:
         Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
         Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
