@@ -31,6 +31,7 @@ import {
   ScholarshipDropdownOptions
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {
+  InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
   PageLabels as FacilitatorPageLabelsOverrides,
   SectionHeaders as FacilitatorSectionHeaders,
@@ -130,6 +131,13 @@ export class DetailViewContents extends React.Component {
       notes_3: PropTypes.string,
       notes_4: PropTypes.string,
       notes_5: PropTypes.string,
+      question_1: PropTypes.string,
+      question_2: PropTypes.string,
+      question_3: PropTypes.string,
+      question_4: PropTypes.string,
+      question_5: PropTypes.string,
+      question_6: PropTypes.string,
+      question_7: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
       district_name: PropTypes.string,
@@ -209,6 +217,13 @@ export class DetailViewContents extends React.Component {
       notes_3: this.props.applicationData.notes_3,
       notes_4: this.props.applicationData.notes_4,
       notes_5: this.props.applicationData.notes_5,
+      question_1: this.props.applicationData.question_1,
+      question_2: this.props.applicationData.question_2,
+      question_3: this.props.applicationData.question_3,
+      question_4: this.props.applicationData.question_4,
+      question_5: this.props.applicationData.question_5,
+      question_6: this.props.applicationData.question_6,
+      question_7: this.props.applicationData.question_7,
       response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
@@ -262,6 +277,12 @@ export class DetailViewContents extends React.Component {
   handleCantSaveStatusOk = (event) => {
     this.setState({
       showCantSaveStatusDialog: false
+    });
+  };
+
+  handleInterviewNotesChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
     });
   };
 
@@ -319,6 +340,13 @@ export class DetailViewContents extends React.Component {
       'notes_3',
       'notes_4',
       'notes_5',
+      'question_1',
+      'question_2',
+      'question_3',
+      'question_4',
+      'question_5',
+      'question_6',
+      'question_7',
       'regional_partner_value',
       'pd_workshop_id'
     ];
@@ -759,6 +787,51 @@ export class DetailViewContents extends React.Component {
     return registrationLinks;
   };
 
+  renderInterview = () => {
+    let interviewFields = [];
+    [
+      {label: 'question1', id: 'question_1', value: this.state.question_1},
+      {label: 'question2', id: 'question_2', value: this.state.question_2},
+      {label: 'question3', id: 'question_3', value: this.state.question_3},
+      {label: 'question4', id: 'question_4', value: this.state.question_4},
+      {label: 'question5', id: 'question_5', value: this.state.question_5},
+      {label: 'question6', id: 'question_6', value: this.state.question_6},
+      {label: 'question7', id: 'question_7', value: this.state.question_7}
+    ].forEach((field)=> {
+      interviewFields.push (
+        <tr>
+          <td style={styles.questionColumn}>
+            {InterviewQuestions[field.label]}
+          </td>
+          <td>
+            <FormControl
+              id={field.id}
+              disabled={!this.state.editing}
+              componentClass="textarea"
+              value={field.value || ''}
+              onChange={this.handleInterviewNotesChange}
+              style={styles.notes}
+            />
+          </td>
+          {this.renderScoringSection(field.id) ? this.renderScoringSection(field.id) : <td/>}
+        </tr>
+      );
+    });
+
+    return (
+      <div>
+        <h3>
+          Interview Questions
+        </h3>
+        <Table style={styles.detailViewTable} striped bordered>
+          <tbody>
+            {interviewFields}
+          </tbody>
+        </Table>
+      </div>
+    );
+  };
+
   renderNotes = () => {
     let notesFields = [];
     [
@@ -1097,6 +1170,7 @@ export class DetailViewContents extends React.Component {
         {this.props.applicationData.application_type === ApplicationTypes.teacher &&
           !this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()
         }
+        {this.renderInterview()}
         {this.renderNotes()}
         {this.renderEditMenu()}
         {this.props.applicationData.status_change_log && (

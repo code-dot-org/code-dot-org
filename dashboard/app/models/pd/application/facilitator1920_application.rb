@@ -110,6 +110,13 @@ module Pd::Application
           'Notes 3',
           'Notes 4',
           'Notes 5',
+          'Question 1 Support Teachers',
+          'Question 2 Student Acccess',
+          'Question 3 Receive Feedback',
+          'Question 4 Give Feedback',
+          'Question 5 Redirect Conversation',
+          'Question 6 Time Committment',
+          'Question 7 Regional Needs',
           'Regional Partner'
         )
         csv << columns
@@ -138,7 +145,14 @@ module Pd::Application
         'Notes 2',
         'Notes 3',
         'Notes 4',
-        'Notes 5'
+        'Notes 5',
+        'Question 1 Support Teachers',
+        'Question 2 Student Acccess',
+        'Question 3 Receive Feedback',
+        'Question 4 Give Feedback',
+        'Question 5 Redirect Conversation',
+        'Question 6 Time Committment',
+        'Question 7 Regional Needs'
       )
 
       CSV.generate do |csv|
@@ -159,6 +173,13 @@ module Pd::Application
           notes_3,
           notes_4,
           notes_5,
+          question_1,
+          question_2,
+          question_3,
+          question_4,
+          question_5,
+          question_6,
+          question_7,
           regional_partner_name
         )
         csv << row
@@ -195,7 +216,14 @@ module Pd::Application
         notes_2,
         notes_3,
         notes_4,
-        notes_5
+        notes_5,
+        question_1,
+        question_2,
+        question_3,
+        question_4,
+        question_5,
+        question_6,
+        question_7
       )
 
       CSV.generate do |csv|
