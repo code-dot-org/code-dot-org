@@ -7,7 +7,7 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 $(document).ready(function () {
   ReactDOM.render(
     <div>
-      <Router  basename="/teacher_dashboard/sections/:section_id">
+      <Router basename="/teacher_dashboard/sections/:section_id">
         <Route path="/" component={withRouter(TeacherDashboard)}/>
       </Router>
     </div>

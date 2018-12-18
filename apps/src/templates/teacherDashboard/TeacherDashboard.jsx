@@ -3,15 +3,12 @@ import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 
 export default class TeacherDashboard extends Component {
+
   render() {
     return (
       <div>
         <TeacherDashboardNavigation/>
         <Switch>
-          <Route
-            exact path="/"
-            component={props => <div>Progress content goes here - default for now.</div>}
-          />
           <Route
             path="/stats"
             component={props => <div>Stats content goes here!</div>}
