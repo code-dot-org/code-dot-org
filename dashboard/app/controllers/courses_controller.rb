@@ -62,13 +62,12 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect students if we think they ended up on the wrong course overview page.
-    if student_redirect_path = student_redirect_path(course)
-      # TODO: add param to show redirect warning
-      redirect_to student_redirect_path
+    if student_redirect_course = student_redirect_course(course)
+      redirect_to "/courses/#{student_redirect_course.name}/?redirect_warning=true"
       return
     end
 
-    render 'show', locals: {course: course}
+    render 'show', locals: {course: course, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
   def new
@@ -110,10 +109,9 @@ class CoursesController < ApplicationController
 
   private
 
-  def student_redirect_path(course)
-    # Return nil if there isn't a course, the user is a teacher, or we know the student can view the version
-    # requested.
-    return nil if !course || current_user&.teacher? || course.can_view_version?(current_user)
+  def student_redirect_course(course)
+    # Return nil if course is nil or we know the student can view the version requested.
+    return nil if !course || course.can_view_version?(current_user)
 
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
     # are assigned.
@@ -123,6 +121,6 @@ class CoursesController < ApplicationController
     # Do not redirect if we are already on the correct course.
     return nil if redirect_course == course
 
-    course_path(redirect_course)
+    redirect_course
   end
 end
