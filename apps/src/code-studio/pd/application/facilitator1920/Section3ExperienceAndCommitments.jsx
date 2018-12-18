@@ -277,13 +277,13 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       if (data.fitWorkshops && data.fitWorkshops.length > 0) {
         requiredFields.push("csdCspWhichFitWeekend");
       }
+      requiredFields.push(
+        "csdCspFitWeekendRequirement",
+        "csdCspWorkshopRequirement",
+        "csdCspLeadSummerWorkshopRequirement",
+        "csdCspDeeperLearningRequirement"
+      );
     }
-    requiredFields.push(
-      "csdCspFitWeekendRequirement",
-      "csdCspWorkshopRequirement",
-      "csdCspLeadSummerWorkshopRequirement",
-      "csdCspDeeperLearningRequirement"
-    );
 
     if (program === CSD) {
       requiredFields.push("csdTrainingRequirement");
