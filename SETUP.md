@@ -187,14 +187,14 @@ If you continue to have issues with rmagick, after changing your imagemagick ver
 
 #### libv8
 
-If you run it error with libv8 while running bundle install
+If you run into an error with libv8 while running bundle install
 - Uninstall libv8: `gem uninstall libv8`
 - Make sure the gem no longer exists with: `gem list libv8`
 - Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
 
 #### mysql2
 
-If you run into an issue about mysql2 while running `bundle install` try :
+If you run into an issue about mysql2 while running `bundle install` and the error output includes "ld: library not found for -lssl" try :
 - `brew install openssl`
 - `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
