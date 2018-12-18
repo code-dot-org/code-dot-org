@@ -3412,6 +3412,7 @@ en:
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
       csp-post-survey-2017 preamble 1_2018: {}
+      csp-post-survey-2017 preamble 1_2018_2019: {}
       csp-post-survey-2017 preamble 3 this class: {}
       csp-post-survey-2017 preamble 3 this class_2018: {}
       csp-post-survey-2017 preamble 4 future and outlook: {}
@@ -4208,6 +4209,7 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD Unit 1 Post Project Assessment 2018: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
@@ -4475,6 +4477,17 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U1 Assessment match PSP:
+        Asking the teachers what sort of mural they need to make, and how big it needs to be.: Asking the teachers what sort of mural they need to make, and how big it needs to be.
+        Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.: Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.
+        Define: Define
+        Discussing what they like about their mural and how they could improve it.: Discussing what they like about their mural and how they could improve it.
+        ? Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process.
+        : Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process.
+        Painting the mural.: Painting the mural.
+        Prepare: Prepare
+        Reflect: Reflect
+        Try: Try
       CSD U2 RGB match:
         "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
         ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
