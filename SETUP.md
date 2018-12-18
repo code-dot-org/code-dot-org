@@ -22,7 +22,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.) 
 1. `rake install:hooks`
     <details>
-        <summary>If issues running rake commands</summary>
+        <summary>Troubleshoot: `rake aborted!..` </summary>
       
         If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this." 
             * Follow the instructions and add `bundle exec` in front of the command
@@ -42,13 +42,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
     <details>
-        <summary>If it complains about `Formula.sha1` is disabled</summary>
+        <summary>Troubleshoot: `Formula.sha1` is disabled</summary>
       
         If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
     </details>
     
     <details>
-          <summary>If it complains about an old version of `&lt;package&gt;`</summary>
+          <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
           
           If it complains about an old version of `&lt;package&gt;`, run `brew unlink &lt;package&gt;` and run `brew install &lt;package&gt;` again
     </details>
@@ -94,7 +94,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `xcode-select --install`
     
     <details>
-              <summary>If it complains about command line tools already installed</summary>
+              <summary>Troubleshoot: command line tools already installed</summary>
               
               If it complains 
               
