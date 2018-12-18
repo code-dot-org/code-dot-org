@@ -6,7 +6,6 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {ProgramMapping} from './Facilitator1920Application';
 
 export default class Section4LeadingStudents extends LabeledFormComponent {
   static labels = PageLabels.section4LeadingStudents;
@@ -17,7 +16,7 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
   ];
 
   render() {
-    const program = ProgramMapping[this.props.data.program] || 'CS Program';
+    const program = this.props.data.program || 'CS Program';
     return (
       <FormGroup>
         <h3>Section 4: {SectionHeaders.section4LeadingStudents}</h3>
