@@ -16,10 +16,6 @@ export default class TeacherDashboard extends Component {
         <TeacherDashboardNavigation/>
         <Switch>
           <Route
-            exact path="/"
-            component={props => <div>Progress content goes here - default for now.</div>}
-          />
-          <Route
             path="/stats"
             component={props => <StatsTableWithData {...props} sectionId={sectionId}/>}
           />
