@@ -944,27 +944,34 @@ FactoryGirl.define do
 
     trait :csf do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
-      csf_availability 'Yes'
+      with_csf_specific_fields
     end
 
     trait :csd do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
+      csd_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :csp do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
+      csp_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :with_csf_specific_fields do
-      csf_availability Pd::Application::Facilitator1920Application::ONLY_WEEKEND
-      csf_partial_attendance_reason 'reasons'
+      csf_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
     end
 
     trait :with_csd_csp_specific_fields do
-      csd_csp_fit_availability Pd::Application::Facilitator1920Application.options[:csd_csp_fit_availability].first
-      csd_csp_teachercon_availability Pd::Application::Facilitator1920Application.options[:csd_csp_teachercon_availability].first
+      csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
+      csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_lead_summer_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_deeper_learning_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
     end
   end
 
