@@ -363,19 +363,41 @@ en:
       Dancelab_setBackground:
         text: set background color {COLOR}
       Dancelab_setBackgroundEffect:
-        text: set background effect {EFFECT}
+        text: |-
+          set background effect
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': None
+            ? "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            : "(Random)"
+            '"circles"': Circles
             '"color_cycle"': Colors
-            '"disco"': Squares
-            '"rainbow"': Rainbow
             '"diamonds"': Diamonds
-            '"splatter"': Bubbles
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
             '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
             '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
             '"spiral"': Spiral
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Random)"
+            '"disco"': Squares
+            '"stars"': Stars
+          PALETTE:
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           set background effect
@@ -447,10 +469,21 @@ en:
         options:
           EFFECT:
             '"none"': None
+            ? "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            : "(Random)"
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts_red"': Hearts
+            '"music_notes"': Music Notes
+            '"pineapples"': Pineapples
+            '"pizzas"': Pizzas
+            '"smiling_poop"': Poop
             '"rain"': Rain
-            '"raining_tacos"': Tacos
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Smiles
             '"spotlight"': Spotlight
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Random)"
+            '"color_lights"': Stage Lights
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: set foreground effect {EFFECT}
         options:
@@ -917,6 +950,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_spriteSay:
+        text: sprite {SPRITE} say {TEXT}
       gamelab_spritesWhere:
         text: sprites where {PROPERTY} is {VALUE}
         options:
@@ -1061,32 +1096,10 @@ en:
             "{x: 100, y: 300}": bottom left
             "{x: 300, y: 300}": bottom right
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
-      Mikelab_createNewSprite2:
-        text: make a new {COSTUME} at {LOCATION}
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": top
-            "{x: 200, y: 300}": bottom
-            "{x: 100, y: 200}": left
-            "{x: 300, y: 200}": right
-            "{x: 200, y: 200}": center
-            "{x: 100, y: 100}": top left
-            "{x: 300, y: 100}": top right
-            "{x: 100, y: 300}": bottom left
-            "{x: 300, y: 300}": bottom right
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_destroy:
         text: remove {SPRITE}
-      Mikelab_destroyAll:
-        text: remove {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"all"': all
-            '"this"': this
       Mikelab_displace:
         text: "{TARGET} blocks {SPRITE} from moving"
-      Mikelab_edgesDisplace:
-        text: edges block {SPRITE} from moving
       Mikelab_eval:
         text: eval {CODE}
       Mikelab_getAnim:
@@ -1100,8 +1113,128 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      Mikelab_groupChangeAnim:
+        text: change {SELECT} {COSTUME} into {COSTUME2}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupChangePropBy:
+        text: change {PROPERTY} of {SELECT} {COSTUME} by {VAL}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupCreateNewSprite:
+        text: make a new {COSTUME} at {LOCATION}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_groupDestroy:
+        text: remove {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupDisplace:
+        text: all {COSTUME} block {COSTUME2} from moving
+      Mikelab_groupEdgesDisplace:
+        text: edges block {COSTUME} from moving
+      Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
+        options:
+          SELECT:
+            '"average"': average
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupRemoveAllBehaviors:
+        text: stop {SELECT} {COSTUME} behaviors
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveTint:
+        text: remove color from {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupSetProp:
+        text: set {PROPERTY} of {SELECT} {COSTUME} to {VAL}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupSetTint:
+        text: change color of {SELECT} {COSTUME} to {COLOR}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupWhenClickedOn:
+        text: when {COSTUME} clicked
+      Mikelab_groupWhenXTouchesY:
+        text: when{COSTUME} touches {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: 'while clicking on {COSTUME}
+
+'
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          while{COSTUME} is touching {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} is currently {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        text: |-
+          if {SPRITE} is doing {DANCE}
+           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
       Mikelab_isAnim:
         text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
@@ -1162,6 +1295,20 @@ en:
           PREPOSITION:
             '"above"': above
             '"below"': below
+      Mikelab_sprite:
+        text: new {COSTUME} sprite at {LOCATION}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: when {SPRITE} clicked
       Mikelab_whenKeyPressed:
@@ -1196,8 +1343,6 @@ en:
         text: when mouse released
       Mikelab_whenTouchesAny:
         text: when{SPRITE} touches any sprite
-      Mikelab_whenXTouchesY:
-        text: when{COSTUME} touches {COSTUME2}
       Mikelab_whileClicked:
         text: 'while clicking on{SPRITE}
 
@@ -1273,6 +1418,8 @@ en:
            of all {COSTUME} sprites
       aalab_createSpriteGroup:
         text: make a new sprite group called {VAR}
+      aalab_spriteSay:
+        text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
       aalab_spritesWhere:
         text: sprites where {PROPERTY} is {VALUE}
         options:
@@ -1284,6 +1431,57 @@ en:
             '"direction"': movement direction
             '"rotation"': rotation or direction
             '"tint"': tint
+      binary_drawBin:
+        text: draw binary {BIN}
+      binary_drawBinScreen:
+        text: |-
+          draw screen
+           {B1}
+           {B2}
+           {B3}
+           {B4}
+           {B5}
+           {B6}
+           {B7}
+           {B8}
+      binary_drawDec:
+        text: draw decimal {DEC}
+      binary_drawPixelHere:
+        text: set pixel {VAL}
+        options:
+          VAL:
+            '1': 'on'
+            '0': 'off'
+            '"toggle"': toggle
+      binary_drawString:
+        text: draw string {STR}
+      binary_goTo:
+        text: jump to {LOC}
+      binary_goToHome:
+        text: jump to top left
+      binary_gridSize:
+        text: set grid size {SIZE}
+      binary_move:
+        text: move {DIR}
+        options:
+          DIR:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+      binary_whenKey:
+        text: when {KEY} pressed
+        options:
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           if path {DIR}
