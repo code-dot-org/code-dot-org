@@ -346,6 +346,60 @@ class Course < ApplicationRecord
   end
 
   # @param user [User]
+  # @return [Boolean] Whether the user can view the current course.
+  def can_view_version?(user)
+    return nil unless user
+    # Restrictions only apply to students.
+    return true if user.teacher?
+
+    # A student can view the course version if...
+    # it is the latest, they are assigned to it, or they have progress in it.
+    latest_course_version = Course.latest_version(family_name)
+    latest_course_version == self || user.section_courses.include?(self) || has_progress?(user)
+  end
+
+  # @param family_name [String] The family name for a course family.
+  # @return [Course] Returns the latest version in a course family.
+  # TODO: (madelynkasula) Refactor to latest_stable_version once properties[:is_stable] is implemented for courses.
+  def self.latest_version(family_name)
+    return nil unless family_name.present?
+
+    Course.
+        # select only courses in the same course family.
+        where("properties -> '$.family_name' = ?", family_name).
+        # order by version year.
+        order("properties -> '$.version_year' DESC")&.
+        first
+  end
+
+  # @param family_name [String] The family name for a course family.
+  # @param user [User]
+  # @return [Course] Returns the latest version in a course family that the user is assigned to.
+  def self.latest_assigned_version(family_name, user)
+    return nil unless family_name && user
+    assigned_course_ids = user.section_courses.pluck(:id)
+
+    Course.
+        # select only courses assigned to this user.
+        where(id: assigned_course_ids).
+        # select only courses in the same course family.
+        where("properties -> '$.family_name' = ?", family_name).
+        # order by version year.
+        order("properties -> '$.version_year' DESC")&.
+        first
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress in this course.
+  def has_progress?(user)
+    return nil unless user
+    user_script_ids = user.user_scripts.pluck(:script_id)
+    course_scripts_with_progress = default_course_scripts.where('course_scripts.script_id' => user_script_ids)
+
+    course_scripts_with_progress.count > 0
+  end
+
+  # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
