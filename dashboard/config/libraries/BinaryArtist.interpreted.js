@@ -66,6 +66,7 @@ function drawPixels(src) {
 
 function preview() {
   drawPixels(queue);
+  background("rgba(255, 255, 255, 0.5)");
 }
 
 function drawPixel(loc, val) {

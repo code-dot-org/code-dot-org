@@ -44,7 +44,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-15 00:28:35 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:29:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:28 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:35:06 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:28:30 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:28:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:30:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:47:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:52:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:52:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_setup_code\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:55:36 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_setup_code\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:58:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 21:08:14 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 21:09:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:00:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:05:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:20:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:22:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-12-15 00:28:35 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:29:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:28 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:32:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-15 00:35:06 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:28:30 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:28:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:30:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:47:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 16:52:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:52:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_setup_code\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:55:36 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_setup_code\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 17:58:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 21:08:14 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 21:09:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:00:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:05:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:20:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-17 22:22:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-18 16:24:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-18 16:26:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-18 18:01:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,6 +62,137 @@
               <title name="B6">10011001</title>
               <title name="B7">01000010</title>
               <title name="B8">00111100</title>
+            </block>
+          </next>
+        </block>
+        <block type="binary_whenKey">
+          <title name="KEY">"down"</title>
+          <next>
+            <block type="binary_goToHome">
+              <next>
+                <block type="controls_repeat_ext">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">7</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="binary_drawPixelHere">
+                      <title name="VAL">1</title>
+                      <next>
+                        <block type="binary_move">
+                          <title name="DIR">"right"</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">7</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="binary_drawPixelHere">
+                          <title name="VAL">1</title>
+                          <next>
+                            <block type="binary_move">
+                              <title name="DIR">"down"</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">7</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="binary_drawPixelHere">
+                              <title name="VAL">1</title>
+                              <next>
+                                <block type="binary_move">
+                                  <title name="DIR">"left"</title>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat_ext">
+                              <value name="TIMES">
+                                <block type="math_number">
+                                  <title name="NUM">7</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="binary_drawPixelHere">
+                                  <title name="VAL">1</title>
+                                  <next>
+                                    <block type="binary_move">
+                                      <title name="DIR">"up"</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="binary_whenKey">
+          <title name="KEY">"up"</title>
+          <next>
+            <block type="binary_goToHome">
+              <next>
+                <block type="controls_repeat_ext">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">64</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="binary_drawPixelHere">
+                      <title name="VAL">0</title>
+                      <next>
+                        <block type="binary_move">
+                          <title name="DIR">"right"</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="binary_whenKey">
+          <title name="KEY">"space"</title>
+          <next>
+            <block type="controls_repeat_ext">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">64</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="binary_drawPixelHere">
+                  <title name="VAL">"toggle"</title>
+                  <next>
+                    <block type="binary_move">
+                      <title name="DIR">"right"</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </next>
         </block>
@@ -94,28 +225,6 @@
                   </statement>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="binary_whenKey">
-          <title name="KEY">"space"</title>
-          <next>
-            <block type="controls_repeat_ext">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">64</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="binary_drawPixelHere">
-                  <title name="VAL">"toggle"</title>
-                  <next>
-                    <block type="binary_move">
-                      <title name="DIR">"right"</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
             </block>
           </next>
         </block>
