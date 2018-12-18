@@ -94,7 +94,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           this.buildButtons(
             {
               name: "program",
-              label: "Please choose the course for which you would like to become a facilitator.",
+              label: Section2ChooseYourProgram.labels["program"],
               type: "radio",
               required: true,
               answers: [

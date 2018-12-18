@@ -86,7 +86,7 @@ module Pd
         why_should_all_have_access: clean_multiline(
           "Code.org's Professional Learning Programs are open to all teachers, regardless of their
           experience with CS education. Why do you think Code.org believes that all teachers should
-          have access to the opportunity to teach CS? (750 characters max)"
+          have access to the opportunity to teach CS? (1,000 characters max)"
         ),
 
         skills_areas_to_improve: clean_multiline(
@@ -106,12 +106,12 @@ module Pd
 
         why_interested: clean_multiline(
           "Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the
-          impact you hope to make. (750 characters max)"
+          impact you hope to make. (1,000 characters max)"
         ),
 
         anything_else: clean_multiline(
           "Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn
-          profile, website, or summarize your relevant past experience. (750 characters max)"
+          profile, website, or summarize your relevant past experience. (1,000 characters max)"
         ),
       },
 
