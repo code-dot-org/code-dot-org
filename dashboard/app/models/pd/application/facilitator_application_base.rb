@@ -76,8 +76,6 @@ module Pd::Application
       self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
     end
 
-    ONLY_WEEKEND = 'I will only be able to attend Saturday and Sunday of the training'.freeze
-
     def fit_workshop
       return nil unless fit_workshop_id
 
