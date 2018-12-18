@@ -31,7 +31,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `rake install`
 1. [Enable JavaScript builds](#enabling-javascript-builds)
     1. Note: You can skip this step if not editing javascript frequently.
-1. Setup AWS - Ask an engineer how to complete this step
+1. Setup AWS - Ask a Code.org engineer how to complete this step
 1. `rake build`
 
 ## OS-specific prerequisites
@@ -96,7 +96,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
               <summary>If it complains about command line tools already installed</summary>
               
-              If it complains "xcode-select: error: command line tools are already installed, use "Software Update" to install updates" check to make sure XCode is downloaded and up to date manually.
+              If it complains 
+              
+              ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
+              
+              check to make sure XCode is downloaded and up to date manually.
+              
     </details>
     
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
@@ -203,7 +208,7 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 #### therubyracer
 
 If you run into an issue about therubyracer while running `bundle install` try :
--`gem uninstall libv8`
+- `gem uninstall libv8`
 - `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
 - `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` 
 
