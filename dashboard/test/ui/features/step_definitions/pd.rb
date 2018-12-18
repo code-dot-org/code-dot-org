@@ -239,7 +239,7 @@ And(/^I am viewing a workshop with fake survey results$/) do
   create_fake_daily_survey_results workshop
 
   steps %Q{
-    And I am on "http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"
+    And I am on "http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}"
   }
 end
 
