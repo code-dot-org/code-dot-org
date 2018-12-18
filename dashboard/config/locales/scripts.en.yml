@@ -8922,6 +8922,8 @@ en:
               description_teacher: ''
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            Mid-Year Survey:
+              name: Mid-Year Survey
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -10420,3 +10422,11 @@ en:
               name: Binary Bracelets
               description_student: ''
               description_teacher: ''
+        csp-mid-survey:
+          stages:
+            CSP Mid-year survey:
+              name: CSP Mid-year survey
+          title: CSP Student Mid-year Survey
+          description_audience: CSP Students
+          description_short: CSP Student Mid-year Survey
+          description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
