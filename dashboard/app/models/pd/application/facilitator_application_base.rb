@@ -41,6 +41,13 @@ module Pd::Application
     serialized_attrs %w(
       fit_workshop_id
       auto_assigned_fit_enrollment_id
+      question_1
+      question_2
+      question_3
+      question_4
+      question_5
+      question_6
+      question_7
     )
     # Implement in derived class.
     # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)

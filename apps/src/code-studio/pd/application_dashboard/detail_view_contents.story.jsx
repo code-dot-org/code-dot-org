@@ -20,7 +20,7 @@ export default storybook => {
               regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
-              school_name: 'School Name',
+              school_name: 'School Name 1',
               district_name: 'District Name',
               email: 'email',
               application_year: '2019-2020',
