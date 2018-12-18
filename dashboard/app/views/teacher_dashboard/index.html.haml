@@ -1,7 +1,6 @@
 :ruby
   teacher_dashboard_data = {}
-  teacher_dashboard_data[:selected_tab] = @tab
 
 %script{src: minifiable_asset_path('js/teacher_dashboard/index.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
-#teacher-dashboard-nav
+#teacher-dashboard
