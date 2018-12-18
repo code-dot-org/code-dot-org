@@ -68,19 +68,50 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
           1: 'Facilitator 1',
           2: 'Facilitator 2'
         }}
+        facilitatorAverages={{
+          'Facilitator 1': {
+            'q1': {
+              this_workshop: 4.5,
+              all_my_workshops: 4.0,
+            }
+          },
+          'Facilitator 2': {
+            'q1': {
+              this_workshop: 1.5,
+              all_my_workshops: 2.0,
+            }
+          },
+          questions: {
+            'q1': 'Question 1'
+          }
+        }}
+        facilitatorResponseCounts={{
+          all_my_workshops: {
+            1: 40,
+            2: 50
+          },
+          this_workshop: {
+            1: 10,
+            2: 8
+          }
+        }}
+        courseName="Course Name"
       />
     );
-    expect(results.find('Tab')).to.have.length(2);
+    expect(results.find('Tab')).to.have.length(4);
     let firstTab = results.find('Tab').first();
-    let lastTab = results.find('Tab').last();
+    let secondTab = results.find('Tab').at(1);
 
     expect(firstTab.find('SingleChoiceResponses')).to.have.length(3);
     expect(firstTab.find('TextResponses')).to.have.length(2);
 
-    expect(lastTab.find('SingleChoiceResponses')).to.have.length(2);
-    expect(lastTab.find('TextResponses')).to.have.length(3);
+    expect(secondTab.find('SingleChoiceResponses')).to.have.length(2);
+    expect(secondTab.find('TextResponses')).to.have.length(3);
 
     expect(firstTab.find('h3').map((x) => x.text())).to.deep.equal(['General Questions']);
-    expect(lastTab.find('h3').map((x) => x.text())).to.deep.equal(['General Questions', 'Facilitator Specific Questions']);
+    expect(secondTab.find('h3').map((x) => x.text())).to.deep.equal(['General Questions', 'Facilitator Specific Questions']);
+
+    expect(results.find('Tab').at(2).find('FacilitatorAveragesTable')).to.have.length(1);
+    expect(results.find('Tab').at(3).find('FacilitatorAveragesTable')).to.have.length(1);
   });
 });
