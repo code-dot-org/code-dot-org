@@ -7,8 +7,7 @@ import {
   TextFields,
   PartnersWithoutCsf
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-import {YES, CSF} from '../ApplicationConstants';
-import {ProgramMapping} from './Facilitator1920Application';
+import {YES, CSF, CSD, CSP} from '../ApplicationConstants';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.section2ChooseYourProgram;
@@ -22,9 +21,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   }
 
   onProgramSelect(selected) {
-    this.handleChange(selected);
+    const program = selected.program;
+    this.handleChange({program});
 
-    if (ProgramMapping[selected.program] === CSF) {
+    if (program === CSF) {
       this.setState({
         loadingPartner: true,
         partner: null,
@@ -90,10 +90,33 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           .
         </p>
 
-        {this.radioButtonsFor("program", {onChange: this.onProgramSelect.bind(this)})}
+        {
+          this.buildButtons(
+            {
+              name: "program",
+              label: "Please choose the course for which you would like to become a facilitator.",
+              type: "radio",
+              required: true,
+              answers: [
+                {
+                  answerText: 'CS Fundamentals (K - 5th grade)',
+                  answerValue: CSF
+                },{
+                  answerText: 'CS Discoveries (6 - 10th grade)',
+                  answerValue: CSD
+                },{
+                  answerText: 'CS Principles (9 - 12th grade)',
+                  answerValue: CSP
+                }
+              ],
+              controlWidth: {md: 6},
+              onChange: this.onProgramSelect.bind(this),
+            }
+          )
+        }
 
         {
-          ProgramMapping[this.props.data.program] === CSF &&
+          this.props.data.program === CSF &&
           <div>
             <p>
               Code.org facilitators work with their assigned Regional Partner to host workshops
@@ -171,7 +194,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       );
     }
 
-    if (ProgramMapping[data.program] === CSF && data.regionalPartnerId && !PartnersWithoutCsf.includes(data.regionalPartnerId)) {
+    if (data.program === CSF && data.regionalPartnerId && !PartnersWithoutCsf.includes(data.regionalPartnerId)) {
       requiredFields.push("csfGoodStandingRequirement");
     }
 

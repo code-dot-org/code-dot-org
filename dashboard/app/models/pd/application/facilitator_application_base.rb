@@ -59,7 +59,7 @@ module Pd::Application
       csd: 'CS Discoveries',
       csp: 'CS Principles'
     }.freeze
-    PROGRAM_OPTIONS = PROGRAMS.values
+
     VALID_COURSES = PROGRAMS.keys.map(&:to_s)
 
     YES_COMMIT = 'Yes, I can commit to this requirement'
@@ -118,8 +118,6 @@ module Pd::Application
           'My employer',
           TEXT_FIELDS[:other_with_text]
         ],
-
-        program: PROGRAM_OPTIONS,
 
         plan_on_teaching: [
           YES,

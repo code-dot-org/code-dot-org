@@ -7,7 +7,6 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {CSF, CSD, CSP} from '../ApplicationConstants';
-import {ProgramMapping} from './Facilitator1920Application';
 
 const PARTNER_WORKSHOPS_API_ENDPOINT = '/api/v1/pd/regional_partner_workshops/find?';
 
@@ -27,11 +26,9 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   };
 
   componentDidMount() {
-    const program = ProgramMapping[this.props.data.program];
-
     this.loadFitWorkshops();
 
-    if (program === CSD || program === CSP) {
+    if ([CSD, CSP].includes(this.props.data.program)) {
       this.loadSummerWorkshops();
     }
   }
@@ -47,7 +44,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
 
   loadFitWorkshops() {
     const queryParams = {
-      course: ProgramMapping[this.props.data.program],
+      course: this.props.data.program,
       subject: 'Code.org Facilitator Weekend',
       zip_code: this.props.data.zipCode,
       state: this.props.data.state
@@ -82,7 +79,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
     this.setState({loadingSummerWorkshops: true});
 
     const queryParams = {
-      course: ProgramMapping[this.props.data.program],
+      course: this.props.data.program,
       subject: '5-day Summer',
       zip_code: this.props.data.zipCode,
       state: this.props.data.state
@@ -154,7 +151,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
   }
 
   render() {
-    const program = ProgramMapping[this.props.data.program] || 'CS Program';
+    const program = this.props.data.program || 'CS Program';
     return (
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section3ExperienceAndCommitments}</h3>
@@ -251,7 +248,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
    */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
-    const program = ProgramMapping[data.program] || 'CS Program';
+    const program = data.program || 'CS Program';
 
     if (program === CSF) {
       requiredFields.push(
