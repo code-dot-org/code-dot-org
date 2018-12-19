@@ -930,6 +930,61 @@ module Pd::Application
       assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
     end
 
+    test 'principal responses override teacher responses for scoring' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        plan_to_teach: options[:plan_to_teach].third,
+        replace_existing: options[:replace_existing].first
+
+      application = create :pd_teacher1920_application, form_data_hash: application_hash
+
+      application.auto_score!
+
+      assert_equal NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
+      assert_equal NO, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
+      assert_equal 0, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+
+      application.update_form_data_hash(
+        {
+          principal_approval: principal_options[:do_you_approve].first,
+          principal_plan_to_teach: principal_options[:plan_to_teach].first,
+          principal_wont_replace_existing_course: principal_options[:replace_course].second
+        }
+      )
+
+      application.auto_score!
+
+      assert_equal YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
+      assert_equal YES, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
+      assert_equal 5, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+    end
+
+    test 'nil results when applicable' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        plan_to_teach: options[:plan_to_teach].last,
+        replace_existing: options[:replace_existing].first,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_plan_to_teach: principal_options[:plan_to_teach].last,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,
+        principal_wont_replace_existing_course: principal_options[:replace_course].last
+
+      application = create :pd_teacher1920_application, form_data_hash: application_hash
+
+      application.auto_score!
+
+      response_scores_hash = application.response_scores_hash
+
+      assert_equal [nil, nil], response_scores_hash[:meets_minimum_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
+      assert_equal [nil, nil], response_scores_hash[:meets_scholarship_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
+      assert_nil response_scores_hash[:bonus_points_scores][:replace_existing]
+    end
+
     test 'principal_approval_state' do
       application = create :pd_teacher1920_application
       assert_nil application.principal_approval_state
