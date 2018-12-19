@@ -1,19 +1,18 @@
 import React from 'react';
-import NavigationBar from './NavigationBar';
-import {teacherDashboardLinks} from './teacherDashboard/TeacherDashboardNavigation';
+import {BrowserRouter as Router} from 'react-router-dom';
+import TeacherDashboardNavigation from './teacherDashboard/TeacherDashboardNavigation';
 
 export default storybook => {
   return storybook
     .storiesOf('NavigationBar', module)
     .addStoryTable([
       {
-        name: 'NavigationBar',
-        description: 'NavigationBar used on Teacher Dashboard',
+        name: 'Navigation Bar',
+        description: 'Navigation Bar used on Teacher Dashboard',
         story: () => (
-          <NavigationBar
-            defaultActiveLink = "progress"
-            links = {teacherDashboardLinks}
-          />
+          <Router>
+            <TeacherDashboardNavigation/>
+          </Router>
         )
       }
     ]);
