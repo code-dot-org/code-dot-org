@@ -13,7 +13,7 @@ theme: responsive
 Eufaula High School is dedicated to empowering students with skills that ensure excellence beyond graduation. EHS believes that no matter a student’s chosen career path, every student can benefit from taking a computer science course.
 
 <figure style="margin:10px">
-  <img src="/images/awards/ehs_students.jpg" style="display:block;margin:0 auto" width=500 alt="Students at Eufaula High School" />
+  <img src="/images/awards/fit-500/ehs_students.jpg" style="display:block;margin:0 auto" width=500 alt="Students at Eufaula High School" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students at Eufaula High School
   </figcaption>
@@ -24,7 +24,7 @@ In 2016, they added Advanced Placement Computer Science Principles to the curric
 Eufaula High School (EHS) is one of five schools within Eufaula City Schools, the oldest city school district in Alabama, established in 1872. EHS is a comprehensive high school serving 780 students in grades 9-12.  
 
 <figure style="margin:10px">
-  <img src="/images/awards/ehs_rep_lee_calton.jpg" style="display:block;margin:0 auto" width=500 alt="Lee Calton" />
+  <img src="/images/awards/fit-500/ehs_rep_lee_calton.jpg" style="display:block;margin:0 auto" width=500 alt="Lee Calton" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Lee Calton</figcaption>
 </figure>
 

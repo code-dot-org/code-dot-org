@@ -9,6 +9,17 @@ $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
   background: url("#{$root}spinner-big.gif") no-repeat center center;
 }
 
+.modal-image {
+  margin-top: -60px;
+  margin-left: -25px;
+  width: 140px;
+}
+
+#prompt-icon {
+  max-width: 55px !important;
+  margin-left: 5px;
+}
+
 /* Sprited icons. */
 .icon21 {
   height: 21px;

@@ -7,7 +7,7 @@ nav: promote_nav
 
 <% if @country == 'la' %>
 
-# Recursos
+# Materjalid
 
 ## ¿Qué hacemos cuando hacemos la Hora del Código?
 

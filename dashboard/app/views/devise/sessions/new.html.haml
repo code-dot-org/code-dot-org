@@ -42,19 +42,13 @@
 %h3= t('signin.try_heading')
 
 .row
-  - hoc_launch = DCDO.get('hoc_launch', CDO.default_hoc_launch)
-  - if hoc_launch == 'mc'
-    - course_blocks = [Script::MINECRAFT_AQUATIC_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
-  - elsif hoc_launch == 'dance'
-    - if @is_english
-      - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::APPLAB_INTRO, Script::FLAPPY_NAME]
-    - else
-      - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
+  - if @is_english
+    - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::APPLAB_INTRO, Script::FLAPPY_NAME]
   - else
-    - course_blocks = [Script::MINECRAFT_HERO_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
+    - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
 
-  - course_blocks.each do |course|
-    = render partial: 'shared/course_tall_block', locals: { id: course, showState: false }
+  - course_blocks.each do |course_id|
+    = render partial: 'shared/course_tall_block', locals: { id: course_id }
 
 
 %br/

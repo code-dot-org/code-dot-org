@@ -5,9 +5,9 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Past Hour of Code Posters
+# Carteles de la última Hora del Código
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here](<%= resolve_url('/promote/resources#posters') %>).
+### ¡Encuentra nuestros carteles de años anteriores para imprimir y colgar en tu clase! ¿Buscas los pósters más nuevos? [Click aquí](<%= resolve_url('/promote/resources#posters') %>).
 
 ---
 

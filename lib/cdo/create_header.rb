@@ -55,9 +55,7 @@ class CreateHeader
       everyone_entries + minecraft :
       everyone_entries + applab_gamelab
 
-    if DCDO.get("dance_projects", false)
-      entries += dance_party
-    end
+    entries += dance_party
 
     entries
   end

@@ -1,9 +1,10 @@
 module Api::V1::Pd::Application
   class FacilitatorApplicationsController < Api::V1::Pd::FormsController
-    authorize_resource :facilitator_application, class: 'Pd::Application::Facilitator1819Application'
+    include Pd::Application::ActiveApplicationModels
+    authorize_resource :facilitator_application, class: FACILITATOR_APPLICATION_CLASS
 
     def new_form
-      @application = Pd::Application::Facilitator1819Application.new(
+      @application = FACILITATOR_APPLICATION_CLASS.new(
         user: current_user
       )
     end
@@ -16,7 +17,7 @@ module Api::V1::Pd::Application
       fit_workshop = @application.find_default_fit_workshop
       @application.fit_workshop_id = fit_workshop.id if fit_workshop
 
-      ::Pd::Application::Facilitator1819ApplicationMailer.confirmation(@application).deliver_now
+      FACILITATOR_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
     end
   end
 end
