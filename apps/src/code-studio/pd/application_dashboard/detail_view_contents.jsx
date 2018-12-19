@@ -725,10 +725,6 @@ export class DetailViewContents extends React.Component {
   renderScoringDropdown(key, category) {
     const scores = TeacherValidScores[_.camelCase(key)][_.camelCase(category)] || TeacherValidScores[_.camelCase(key)];
 
-    console.log(category);
-    console.log(key);
-    console.log(scores);
-
     return (
       <FormControl
         componentClass="select"
