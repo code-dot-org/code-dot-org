@@ -4,7 +4,7 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 var ReactDOM = require('react-dom');
 var _ = require('lodash');
 import Radium from 'radium';
@@ -35,41 +35,39 @@ const styles = {
 /**
  * Wraps its children to display them in a flexbox layout.
  */
-var ResizablePanes = Radium(React.createClass({
-  propTypes: {
+class ResizablePanes extends Component {
+  static propTypes = {
     style: PropTypes.object,
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     onChange: PropTypes.func.isRequired,
     children: PropTypes.node,
     lockedColumns: PropTypes.arrayOf(PropTypes.number)
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      dragging: false,
-      index: 0
-    };
-  },
+  state = {
+    dragging: false,
+    index: 0
+  };
 
   componentDidMount() {
     document.addEventListener('mousemove', this.onMouseMove);
     document.addEventListener('mouseup', this.onMouseUp);
-  },
+  }
 
   componentWillUnmount() {
     document.removeEventListener('mousemove', this.onMouseMove);
     document.removeEventListener('mouseup', this.onMouseUp);
-  },
+  }
 
-  onResizerMouseDown: function (event) {
+  onResizerMouseDown = event => {
     this.unFocus();
     this.setState({
       dragging: true,
       index: parseInt(event.target.dataset.resizerIndex, 10)
     });
-  },
+  };
 
-  onMouseMove(event) {
+  onMouseMove = event => {
     if (!this.state.dragging) {
       return;
     }
@@ -89,23 +87,23 @@ var ResizablePanes = Radium(React.createClass({
     let newSizes = this.props.columnSizes.slice();
     newSizes[this.state.index] = event.clientX - boundingRect.left;
     this.props.onChange(newSizes);
-  },
+  };
 
-  onMouseUp() {
+  onMouseUp = () => {
     if (this.state.dragging) {
       this.setState({ dragging: false });
     }
-  },
+  };
 
-  unFocus: function () {
+  unFocus = () => {
     if (document.selection) {
       document.selection.empty();
     } else {
       window.getSelection().removeAllRanges();
     }
-  },
+  };
 
-  getClonedChild: function (child, index) {
+  getClonedChild(child, index) {
     var columnSize = this.props.columnSizes[index];
     var style = _.assign(
         {flex: '1'},
@@ -118,9 +116,9 @@ var ResizablePanes = Radium(React.createClass({
       key: "pane-" + index,
       style: style
     });
-  },
+  }
 
-  getResizer: function (index) {
+  getResizer(index) {
     return (
       <div
         key={"resizer-" + index}
@@ -129,17 +127,17 @@ var ResizablePanes = Radium(React.createClass({
         onMouseDown={this.onResizerMouseDown}
       />
     );
-  },
+  }
 
-  isColumnLocked: function (index) {
+  isColumnLocked = index => {
     if (!this.props.lockedColumns) {
       return false;
     }
 
     return this.props.lockedColumns.indexOf(index) >= 0;
-  },
+  };
 
-  getChildren: function () {
+  getChildren() {
     var childCount = React.Children.count(this.props.children);
     var computedChildren = [];
     React.Children.forEach(this.props.children, function (child, index) {
@@ -154,9 +152,9 @@ var ResizablePanes = Radium(React.createClass({
       }
     }, this);
     return computedChildren;
-  },
+  }
 
-  render: function () {
+  render() {
     var styles = {
       root: _.assign({
         display: 'flex',
@@ -171,6 +169,6 @@ var ResizablePanes = Radium(React.createClass({
       </div>
     );
   }
-}));
+}
 
-export default ResizablePanes;
+export default Radium(ResizablePanes);
