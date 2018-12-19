@@ -31,18 +31,18 @@ You're more prepared than you think. In 2017, 73% of students passed the AP CS P
 
 <h2>Save on college tuition</h2>
 
-Many universities now count <b>passing the AP CS Principles exam for course credit.</b>
+Many universities now count <strong>passing the AP CS Principles exam for course credit.</strong>
 
 <h2>Got your major picked out?</h2>
 
-Passing an AP Exam can help you <b>skip introductory courses</b> so you can move to upper-level classes and focus on the work you're most interested in.
+Passing an AP Exam can help you <strong>skip introductory courses</strong> so you can move to upper-level classes and focus on the work you're most interested in.
 
 </div>
 
 [col-40]
 
 <div class="educate-callout-box">
-Steps you can take today:
+<strong>Steps you can take today:</strong>
 <br>
 <br>
 1. Talk to your school's AP Coordinator. 
