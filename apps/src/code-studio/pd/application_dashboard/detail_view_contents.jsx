@@ -33,7 +33,8 @@ import {
 import _ from 'lodash';
 import {
   ApplicationStatuses,
-  ApplicationFinalStatuses
+  ApplicationFinalStatuses,
+  ApplicationTypes
 } from './constants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
@@ -185,7 +186,7 @@ export class DetailViewContents extends React.Component {
 
   componentWillMount() {
     this.statuses = ApplicationStatuses[this.props.viewType];
-    if (this.props.applicationData.application_type === 'Facilitator' && !this.props.applicationData.notes) {
+    if (this.props.applicationData.application_type === ApplicationTypes.facilitator && !this.props.applicationData.notes) {
       this.setState({notes: DEFAULT_NOTES});
     }
   }
@@ -287,11 +288,11 @@ export class DetailViewContents extends React.Component {
       'pd_workshop_id'
     ];
 
-    if (this.props.applicationData.application_type === 'Facilitator') {
+    if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
       stateValues.push('fit_workshop_id');
     }
 
-    if (this.props.applicationData.application_type === 'Teacher') {
+    if (this.props.applicationData.application_type === ApplicationTypes.teacher) {
       stateValues.push('scholarship_status');
     }
 
@@ -538,7 +539,7 @@ export class DetailViewContents extends React.Component {
       </div>
     );
 
-    if (this.props.canLock && this.props.applicationData.application_type === 'Facilitator') {
+    if (this.props.canLock && this.props.applicationData.application_type === ApplicationTypes.facilitator) {
       // Render the select with the lock button in a fancy InputGroup
       return (
         <InputGroup style={styles.statusSelectGroup}>
@@ -559,7 +560,7 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  showLocked = () => (this.props.viewType === 'facilitator');
+  showLocked = () => (this.props.applicationData.application_type === ApplicationTypes.facilitator);
 
   renderEditMenu = (textAlign='left') => {
     return (
@@ -679,7 +680,7 @@ export class DetailViewContents extends React.Component {
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
 
-    if (this.props.viewType === 'facilitator') {
+    if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
       return false;
     }
 
@@ -910,7 +911,7 @@ export class DetailViewContents extends React.Component {
           </td>
           {this.renderScoringSection('regionalPartnerName')}
         </tr>
-        {this.props.applicationData.application_type === 'Teacher' &&
+        {this.props.applicationData.application_type === ApplicationTypes.teacher &&
           <tr>
             <td style={styles.questionColumn}>
               Scholarship Teacher?
