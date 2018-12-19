@@ -12,8 +12,9 @@ import Button from "../Button";
 const styles = {
   buttonContainer: {
     display: 'flex',
-    textDecoration: 'none',
-    float: 'right',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
   }
 };
 
@@ -42,9 +43,9 @@ class SubmissionStatusAssessmentsContainer extends Component {
 
     return (
       <div>
+        <div style={styles.buttonContainer}>
         <h2>{i18n.studentOverviewTableHeader()}</h2>
         <CSVLink
-          style={styles.buttonContainer}
           filename="assessments-submission-status.csv"
           data={studentExportableData}
           headers={CSV_SUBMISSION_STATUS_HEADERS}
@@ -55,6 +56,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
             color={Button.ButtonColor.gray}
           />
         </CSVLink>
+        </div>
         <SubmissionStatusAssessmentsTable
           studentOverviewData={this.props.studentOverviewData}
         />
