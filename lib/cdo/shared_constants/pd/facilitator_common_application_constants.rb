@@ -86,32 +86,32 @@ module Pd
         why_should_all_have_access: clean_multiline(
           "Code.org's Professional Learning Programs are open to all teachers, regardless of their
           experience with CS education. Why do you think Code.org believes that all teachers should
-          have access to the opportunity to teach CS? (1,000 characters max)"
+          have access to the opportunity to teach CS? (1500 characters max)"
         ),
 
         skills_areas_to_improve: clean_multiline(
           "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated
           a workshop). Include a brief description  of the workshop/lesson topic and audience (one or
           two sentences). Then describe __two strengths you demonstrated__, as well as __two facilitation skills
-          you would like to improve__. (1,500 characters max)"
+          you would like to improve__. (1500 characters max)"
         ),
 
         inquiry_based_learning: clean_multiline(
           "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops.
           Please briefly define inquiry-based learning as you understand it (one or two sentences). Then, if
           you have led an inquiry-based activity for students, provide a concrete example of an inquiry-based
-          lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.' (1,500
+          lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.' (1500
           characters max)"
         ),
 
         why_interested: clean_multiline(
           "Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the
-          impact you hope to make. (1,000 characters max)"
+          impact you hope to make. (1500 characters max)"
         ),
 
         anything_else: clean_multiline(
           "Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn
-          profile, website, or summarize your relevant past experience. (1,000 characters max)"
+          profile, website, or summarize your relevant past experience. (1500 characters max)"
         ),
       },
 
