@@ -365,11 +365,11 @@ class Course < ApplicationRecord
     return nil unless family_name.present?
 
     Course.
-        # select only courses in the same course family.
-        where("properties -> '$.family_name' = ?", family_name).
-        # order by version year.
-        order("properties -> '$.version_year' DESC")&.
-        first
+      # select only courses in the same course family.
+      where("properties -> '$.family_name' = ?", family_name).
+      # order by version year.
+      order("properties -> '$.version_year' DESC")&.
+      first
   end
 
   # @param family_name [String] The family name for a course family.
@@ -380,13 +380,13 @@ class Course < ApplicationRecord
     assigned_course_ids = user.section_courses.pluck(:id)
 
     Course.
-        # select only courses assigned to this user.
-        where(id: assigned_course_ids).
-        # select only courses in the same course family.
-        where("properties -> '$.family_name' = ?", family_name).
-        # order by version year.
-        order("properties -> '$.version_year' DESC")&.
-        first
+      # select only courses assigned to this user.
+      where(id: assigned_course_ids).
+      # select only courses in the same course family.
+      where("properties -> '$.family_name' = ?", family_name).
+      # order by version year.
+      order("properties -> '$.version_year' DESC")&.
+      first
   end
 
   # @param user [User]
