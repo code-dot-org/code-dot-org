@@ -421,6 +421,8 @@
   "dontForget": "არ დაგავიწყდეთ",
   "downloadCSV": "გადმოწერეთ CSV",
   "downloadAssessmentCSV": "სტუდენტების პასუხების CSV ფორმატში გადაწერა",
+  "downloadReplayVideoButtonDownload": "ანიმაცია",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",

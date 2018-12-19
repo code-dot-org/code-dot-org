@@ -113,7 +113,7 @@ ro:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -154,6 +154,14 @@ ro:
             '"rainbow"': Curcubeu
             '"diamonds"': Diamante
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Aleatoriu
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': Aleatoriu
+            '"color_cycle"': Curcubeu
+            '"diamonds"': Diamante
+            '"rainbow"': Curcubeu
+            '"disco"': Discotecă
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -176,6 +184,10 @@ ro:
         options:
           EFFECT:
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Aleatoriu
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': Aleatoriu
       Dancelab_setProp:
         options:
           PROPERTY:

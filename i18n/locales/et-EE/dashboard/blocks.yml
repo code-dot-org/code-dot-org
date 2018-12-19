@@ -271,7 +271,7 @@ et:
           tee {N} uus {COSTUME}
           erkraani {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'

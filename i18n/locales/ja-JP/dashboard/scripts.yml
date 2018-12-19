@@ -1181,6 +1181,7 @@ ja:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code プログラミング入門
+          description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -1456,6 +1457,8 @@ ja:
             Dance Party:
               name: ダンスパーティー
           title: ダンスパーティー
+          description_short: ケイティ・ペリー、マドンナ、J. バルヴィン、Sia、キース・アーバン、シアラ、その他25の楽曲を収載!
+          description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1472,8 +1475,8 @@ ja:
             Dance Party:
               name: ダンスパーティー
         dance-extras:
-          title: ダンスし続けよう
-          description: 拡張プロジェクトのアイデアを使って最初の時間を超え先へ進もう。
+          title: ダンスを続ける
+          description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursef-2019:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
           stages:

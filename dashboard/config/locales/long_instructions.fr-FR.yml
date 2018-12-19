@@ -5758,19 +5758,6 @@ fr:
         </block></xml>
 
         Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
-      Dance_Party_11.5: |-
-        Jetez un œil à ce bloc :
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Maintenant, vous pouvez créer un groupe de danseurs à la fois !
-
-        Essayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards.
       Dance_Party_11.5_test: |-
         Jetez un œil à ce bloc :
 
@@ -5788,11 +5775,66 @@ fr:
         Le bloc <xml><block type="Dancelab_whenKey"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.
 
         Vous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !
+      Dance_Party_11_5: |-
+        Jetez un œil à ce bloc :
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Maintenant, vous pouvez créer un groupe de danseurs à la fois !
+
+        Essayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards.
       Dance_Party_11b: Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez
         sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous
         appuyez sur la touche fléchée droite.
       Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
+      Dance_Party_extras_battle: |-
+        # Équipes de danse
+
+        Voici un concours de danse entre deux équipes. Les touches fléchées contrôlent l’un des danseurs et les touches « w,a,s,d » contrôlent l’autre. Avoir une danse avec un ami, puis essayer d'améliorer cette danse.
+
+        * Ajouter plus de touches pour contrôler les danses
+        * Faire que les danseurs de soutien répondent également lorsque les touches sont enfoncées
+        * Alternez le danseur toutes les 4 mesures en définissant sa visibilité
+      Dance_Party_extras_every_beat: |-
+        # Noires
+
+        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise « toutes les 0,25 mesures » pour faire applaudir le danseur sur chaque noire.
+
+        Cette danse utilise également a _conditional_ block pour contrôler quand le bloc « toutes les 0,25 mesures » peut changer la danse. Essayez de changer les nombres dans le bloc conditionnel pour voir comment cela change la danse.
+
+        * Expérimentez avec d'autres durées de notes (tel que 0,5 pour une blanche ou 0,125 pour une croche).
+        * Ajoutez certains événements « après la mesure ».
+        * Changez les « mesures » en « secondes » et essayez de chronométrer vos danses de cette façon.
+      Dance_Party_extras_layout: |-
+        # Soyons informés !
+
+        Découvrez cette danse qui utilise le bloc « mise en page » pour modifier la formation des danseurs de secours pendant de la danse. Essayez l’une de ces idées pour l’étendre :
+
+        * Créez un deuxième groupe de danseurs dans une mise en page différente
+        * Changez la mise en page quand une touche est enfoncée
+        * Modifier une propriété lorsque les danseurs changent de formation
+      Dance_Party_extras_on_beat: |-
+        # grave, médium et aigu
+
+        Cette danse utilise des événements de « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essayez de bricoler différentes chansons pour voir comment elles changent la danse.
+      Dance_Party_extras_speed: |-
+        # Accélérez, ralentissez
+
+        Cette danse finale utilise le bloc « vitesse définie » pour contrôler la rapidité avec laquelle chaque danseur se déplace. Essayez d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésitez pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus cool.
+      Dance_Party_extras_visible: |-
+        # Où iraient-ils ?
+
+        Cette danse montre et cache deux groupes de danseurs différents. Jetez-y un coup d'œil, puis essayez d'ajouter votre propre style.
+
+        * Ajoutez un autre groupe de danseurs
+        * Affichez et masquez les danseurs à l'aide des touches fléchées
+        * Cachez tous les danseurs et passez à un effet d’arrière plan excitant
       Escape Room Example: "# Room Escape\\\r\n\\\r\nIn today's\nworkshop you are
         going to be working on making a room escape app!  This level\nhas an example
         app that you should play around with to get the feel for what\nyou will be
@@ -5861,6 +5903,12 @@ fr:
         Le bloc <xml><block type="Dancelab_whenKey"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.
 
         Vous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !
+      HOC Dance Freeplay: Prends ton rythme ! Créez votre propre danse à partager
+        avec vos amis.
+      HOC Dance Freeplay_draft: Prends ton rythme ! Créez votre propre danse à partager
+        avec vos amis.
+      HOC Dance Predraw: Prends ton rythme ! Créez votre propre danse à partager avec
+        vos amis.
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n**Free-Play
         Inspiration:** You've now learned everything\nyou need to know to make a pattern
         like this! \r\n\r\nIf this picture inspires\nyou, try to make something similar.

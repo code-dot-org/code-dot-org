@@ -40,7 +40,7 @@
   "blockActionRepeatRandom": "repetir aleatoriamente",
   "blockActionSetBlock": "definir bloco para",
   "blockActionSpawn": "invocar",
-  "blockActionSummon": "evocar",
+  "blockActionSummon": "invocar",
   "blockActionTeleport": "teleportar alvo",
   "blockActionTeleportToPlayer": "teleportar para o jogador",
   "blockActionTestForBlock": "testa se um tipo de bloco",
@@ -298,7 +298,7 @@
   "turnRandom": "virar aleatório",
   "useArrowKeys": "Não é necessário adicionar mais blocos! Mova-se com as setas do teclado e pressione a barra de espaço ou toque no tabuleiro do jogo para usar itens.",
   "weather": "clima",
-  "weatherTypeClear": "limpar",
+  "weatherTypeClear": "limpo",
   "weatherTypeRain": "chuva",
   "weatherTypeThunder": "trovão"
 }

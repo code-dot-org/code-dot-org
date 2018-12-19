@@ -29,7 +29,6 @@ export default class StartNewProject extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
-    includeDanceParty: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -46,14 +45,18 @@ export default class StartNewProject extends React.Component {
 
   render() {
     const { canViewAdvancedTools, canViewFullList } = this.props;
-    const { includeDanceParty } = this.props;
     const { showFullList } = this.state;
-    const GAMES_AND_EVENTS =  includeDanceParty ?
-      ['spritelab', 'dance','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'] :
-      ['spritelab','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'];
 
-    const FOURTH_BASIC_DEFAULT_PROJECT_TYPE =
-      includeDanceParty ? 'dance' : 'flappy';
+    const GAMES_AND_EVENTS = [
+      'spritelab',
+      'dance',
+      'flappy',
+      'starwarsblocks',
+      'starwars',
+      'bounce',
+      'sports',
+      'basketball'
+    ];
 
     const DEFAULT_PROJECT_TYPES_ADVANCED = [
       'spritelab',
@@ -66,7 +69,7 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'artist',
       'minecraft_designer',
-      FOURTH_BASIC_DEFAULT_PROJECT_TYPE
+      'dance'
     ];
 
     const defaultProjectTypes = canViewAdvancedTools ?

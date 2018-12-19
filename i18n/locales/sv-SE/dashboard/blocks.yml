@@ -30,19 +30,20 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           MOVE:
             '"next"': "(Nästa)"
             '"prev"': "(Föregående)"
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -55,15 +56,15 @@ sv:
             '"next"': "(Nästa)"
             '"prev"': "(Föregående)"
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -93,17 +94,18 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           MOVE:
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -114,15 +116,15 @@ sv:
         options:
           MOVE:
             '"rand"': "(Slumpad)"
-            MOVES.Roll: Rulla
+            MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
-            MOVES.Kick: Sparka
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -177,12 +179,12 @@ sv:
             MOVES.ClapHigh: Klappa högt
             MOVES.Clown: Clown
             MOVES.Dab: Badda
-            MOVES.DoubleJam: Dubbelstopp
+            MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
-            MOVES.Roll: Rulla
-            MOVES.Kick: Sparka
+            MOVES.Roll: Kroppsrullning
+            MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
       Dancelab_ifTime:
@@ -219,11 +221,15 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           FORMAT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
             '"circle"': cirkel
             '"grid"': rutnät
             '"row"': rad
             '"column"': kolumn
+            '"x"': korsvis
             '"random"': slumpad
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -233,6 +239,7 @@ sv:
           COSTUME:
             '"BEAR"': Björn
             '"CAT"': Katt
+            '"DOG"': Hund
             '"DUCK"': Anka
             '"FROG"': Groda
             '"MOOSE"': Älg
@@ -255,7 +262,7 @@ sv:
           gör {N} ny {COSTUME}
           i en {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -287,10 +294,13 @@ sv:
             '"SHARK"': Hajar
             '"UNICORN"': Enhörningar
           LAYOUT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
             '"circle"': cirkel
             '"grid"': rutnät
             '"row"': rad
             '"column"': kolumn
+            '"x"': korsvis
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -307,7 +317,7 @@ sv:
       Dancelab_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ställ in bakgrundseffekt {EFFECT}
+        text: täll in bakgrundseffekt {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
@@ -315,6 +325,29 @@ sv:
             '"rainbow"': Färger
             '"diamonds"': Diamanter
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Slumpad)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Slumpad)"
+            '"circles"': Tunnel
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokula
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"splatter"': Färgstänk
+            '"rainbow"': Färger
+            '"text"': Låttitel
+            '"sparkles"': Gnistror
+            '"disco"': Fyrkanter
+            '"stars"': Stjärnor
+          PALETTE:
+            '"rave"': Svartvitt
+            '"cool"': Blues
+            '"default"': Ljus
+            '"tropical"': Tropisk
+            '"warm"': Röda
       Dancelab_setDanceSpeed:
         text: ändra danshastigheten av {SPRITE} till {SPEED}
         options:
@@ -338,6 +371,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           SPEED:
             '1': normal
             '2': snabb
@@ -351,6 +385,19 @@ sv:
             '"none"': Ingen
             '"rain"': Regn
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Slumpad)"
+      Dancelab_setForegroundEffectExtended:
+        text: ställ in förgrundseffekt {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Slumpad)"
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjärtan
+            '"music_notes"': Musiknoter
+            '"pineapples"': Ananaser
+            '"smiling_poop"': Bajs
+            '"rain"': Regn
+            '"floating_rainbows"': Regnbåge
       Dancelab_setProp:
         text: 'Ställ in {SPRITE} {PROPERTY} till {VAL} '
         options:
@@ -376,6 +423,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           PROPERTY:
             '"scale"': storlek
             '"width"': bredd
@@ -409,7 +457,10 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+      Dancelab_setTintInline:
+        text: Ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setVisible:
+        text: ställ in synligheten på {SPRITE} till {VISIBILITY}
         options:
           VISIBILITY:
             'true': synlig
@@ -429,6 +480,7 @@ sv:
             '"PINEAPPLE"': alla ananaser
             '"ROBOT"': alla robotar
             '"SHARK"': alla hajar
+            '"UNICORN"': alla enhörningar
           VISIBILITY:
             'true': synlig
             'false': osynlig

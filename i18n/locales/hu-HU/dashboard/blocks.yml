@@ -30,17 +30,18 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           MOVE:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -53,13 +54,13 @@ hu:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -90,15 +91,16 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           MOVE:
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -109,13 +111,13 @@ hu:
         options:
           MOVE:
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Forgás
+            MOVES.Roll: Testforgás
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
             MOVES.Clown: Bohóc
-            MOVES.Kick: Rúgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           DIR:
@@ -171,10 +173,10 @@ hu:
             MOVES.ClapHigh: Taps fent
             MOVES.Clown: Bohóc
             MOVES.Dab: Legyintés
-            MOVES.DoubleJam: Dupla jam
+            MOVES.DoubleJam: Duplázás
             MOVES.Fresh: Friss
-            MOVES.Roll: Forgás
-            MOVES.Kick: Rúgás
+            MOVES.Roll: Testforgás
+            MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
       Dancelab_ifTime:
@@ -211,11 +213,16 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           FORMAT:
+            '"border"': határ
+            '"inner"': belső négyzet
             '"circle"': kör
             '"grid"': rács
             '"row"': sor
             '"column"': oszlop
+            '"x"': keresztezés
+            '"plus"': plusz
             '"random"': véletlen
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -226,6 +233,7 @@ hu:
             '"ALIEN"': Földönkívüli
             '"BEAR"': Medve
             '"CAT"': Macska
+            '"DOG"': Kutya
             '"DUCK"': Kacsa
             '"FROG"': Béka
             '"MOOSE"': Jávorszarvas
@@ -248,7 +256,7 @@ hu:
           készíts {N} új {COSTUME} elemet
           {LAYOUT} elrendezésben
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -281,10 +289,14 @@ hu:
             '"SHARK"': Cápák
             '"UNICORN"': Egyszarvúak
           LAYOUT:
+            '"border"': határ
+            '"inner"': belső négyzet
             '"circle"': kör
             '"grid"': rács
             '"row"': sor
             '"column"': oszlop
+            '"x"': keresztezés
+            '"plus"': plusz
             '"random"': véletlen
       Dancelab_mixColors:
         text: "{COLOR1} és {COLOR2} keverése"
@@ -301,7 +313,7 @@ hu:
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
-        text: 'háttéreffekt beállítása: {EFFECT}'
+        text: háttéreffekt beállítása {EFFECT}
         options:
           EFFECT:
             '"none"': Egyik sem
@@ -309,6 +321,30 @@ hu:
             '"rainbow"': Színek
             '"diamonds"': Gyémántok
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Véletlen)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: háttéreffekt beállítása {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Egyik sem
+            '"rand"': "(Véletlen)"
+            '"circles"': Alagút
+            '"diamonds"': Gyémántok
+            '"disco_ball"': Diszkógömb
+            '"kaleidoscope"': Kaleidoszkóp
+            '"lasers"': Lézer táncparkett
+            '"splatter"': Festékfröccsenés
+            '"rainbow"': Színek
+            '"text"': Dalcím
+            '"sparkles"': Ragyogás
+            '"disco"': Négyzetek
+            '"stars"': Csillagok
+          PALETTE:
+            '"rave"': Fekete-fehér
+            '"cool"': Kékek
+            '"default"': Világos
+            '"tropical"': Trópusi
+            '"vintage"': Régi
+            '"warm"': Vörösek
       Dancelab_setDanceSpeed:
         text: "{SPRITE} táncolási sebességének módosítása: {SPEED}"
         options:
@@ -332,6 +368,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           SPEED:
             '1': normál
             '2': gyors
@@ -346,6 +383,20 @@ hu:
             '"rain"': Eső
             '"raining_tacos"': Taco
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Véletlen)"
+      Dancelab_setForegroundEffectExtended:
+        text: 'előtéreffekt beállítása: {EFFECT}'
+        options:
+          EFFECT:
+            '"none"': Egyik sem
+            '"rand"': "(Véletlen)"
+            '"confetti"': Konfetti
+            '"hearts_red"': Szívek
+            '"music_notes"': Hangjegyek
+            '"pineapples"': Ananászok
+            '"smiling_poop"': Kaki
+            '"rain"': Eső
+            '"floating_rainbows"': Szivárvány
+            '"raining_tacos"': Taco
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL} "
         options:
@@ -372,6 +423,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -407,7 +459,10 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+      Dancelab_setTintInline:
+        text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setVisible:
+        text: "{SPRITE} beállítása láthatónak: {VISIBILITY}"
         options:
           VISIBILITY:
             'true': látható
@@ -427,6 +482,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"UNICORN"': összes egyszarvú
           VISIBILITY:
             'true': látható
             'false': láthatatlan

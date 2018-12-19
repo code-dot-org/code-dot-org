@@ -1,7 +1,7 @@
 pt-BR:
   data:
     display_name:
-      AB_Debug_Artist1: 'Depuração do Artista #1 (AB)'
+      AB_Debug_Artist1: 'Depuração do Artista #1 (DA)'
       Alien Defender: Defensor alienígena
       Alien Defender_2018: Defensor alienígena
       App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo de Design'
@@ -154,8 +154,8 @@ pt-BR:
       CSD U2 Style Sheet Map_2018: CSS e Folhas de Estilo
       CSD U2 Text Properties Map: Propriedades CSS de Texto
       CSD U2 Text Properties Map_2018: Propriedades CSS de Texto
-      CSD U2 a tag map: Links
-      CSD U2 a tag map_2018: Links
+      CSD U2 a tag map: HiperLinks
+      CSD U2 a tag map_2018: HiperLinks
       CSD U2 challenge: Desafio
       CSD U2 challenge_2018: Desafio
       CSD U2 formatting map: Formatando HTML
@@ -555,8 +555,18 @@ pt-BR:
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
       CourseE_hoops: 'Coelho '
       CourseE_hoops_2019: 'Coelho '
+      Dance_Party_extras_battle: Equipes de dança
+      Dance_Party_extras_every_beat: Semínimas
+      Dance_Party_extras_layout: Entrar em formação
+      Dance_Party_extras_on_beat: Grave, médio e agudo
+      Dance_Party_extras_speed: Acelerar, retardar
+      Dance_Party_extras_visible: Onde eles foram?
       InspirationalArtwork_2018: Inspiração!
       InspirationalArtwork_2019: Inspiração!
+      'Internet Simulator: Routers_2018': 'Simulador de Internet: Rotas'
+      'Internet Simulator: Sending Binary Messages_2018': 'Simulador de Internet: Enviando Mensagens Binárias'
+      'Internet Simulator: Sending Numbers_2018': 'Simulador de Internet: Enviando Números'
+      'Internet Simulator: Sending Text_2018': 'Simulador de Internet: Enviando Texto'
       MC_HOC_2017_02_Cole: A Fazenda
       MC_HOC_2017_02_Cole_2019: A Fazenda
       MC_HOC_2017_02_Kiki: A Fazenda
@@ -592,6 +602,7 @@ pt-BR:
       courseB_video_Unspotted: Erros Não Reportados
       courseB_video_Unspotted_2018: Erros Não Reportados
       coursee_explore_4: Defensor alienígena
+      csd U3 conditional statements video: 'Vídeo: Declarações Condicionais'
       csd1dlp-assessment: Avaliação
       csd2dlp-assessment: Avaliação
       csd3dlp-assessment: Avaliação
@@ -604,5 +615,6 @@ pt-BR:
       csp3dlp-assessment: Avaliação
       csp4dlp-assessment: Avaliação
       csp5dlp-assessment: Avaliação
+      expresslink: Curso Expresso
       maker workshop final: 'Desafio: Explorar!'
       okToDelete: Testador

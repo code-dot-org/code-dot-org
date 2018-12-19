@@ -4173,6 +4173,10 @@ pl:
             Dance Party:
               name: Potańcówka
           title: Potańcówka
+          description_short: Z piosenkami Katy Perry, Madonny, J. Balvina, Sia, Keitha
+            Urbana, Ciary i 25 innych gwiazd!
+          description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
+            swoim znajomym.
         frozen-2018-test-b:
           stages:
             Artist:

@@ -7,19 +7,19 @@ nav: how_to_nav
 
 # Πώς να φέρετε την Ώρα του Κώδικα στην εταιρεία σας
 
-### Find out how you and your employees can inspire students to try computer science!
+### Μάθετε πώς εσείς και οι υπάλληλοί σας μπορείτε να εμπνεύσετε τους μαθητές να δοκιμάσουν την επιστήμη των υπολογιστών!
 
 ---
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Συνδεθείτε με τοπικές αίθουσες διδασκαλίας και με εθελοντές για την Ώρα του Κώδικα
 
-Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Το Code.org προσφέρει στους εργαζόμενους των εταιρειών σας την ευκαιρία να [συνδεθούν](<%= resolve_url('https://code.org/volunteer') %>) με σχολεία της περιοχής που κάνουν την Ώρα του Κώδικα για να μοιραστούν την επαγγελματική και τεχνολογική εμπειρία τους και να εμπνεύσουν τους μαθητές να σπουδάσουν την επιστήμη των υπολογιστών.
 
-[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
+[<button>Κάντε εγγραφή ως εθελοντής!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+Για περισσότερες πληροφορίες σχετικά με τη σύνδεση των εργαζομένων σας με τα σχολεία, συμβουλευθείτε τον [οδηγό για εταιρικούς συνεργάτες](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
-## Additional ways companies can support the Hour of Code
+## Πρόσθετοι τρόποι υποστήριξης της Ώρας του Κώδικα από εταιρείες
 
 - Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
@@ -59,10 +59,10 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 **Δείξτε ένα βίντεο που να εμπνέει:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- Το [διεθνές βίντεο για την Ώρα του Κώδικα](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Ο Πρόεδρος Obama καλεί όλους τους μαθητές να ασχοληθούν με την επιστήμη των υπολογιστών](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Βρείτε περισσότερα εμπνευσμένα βίντεο [εδώ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -70,7 +70,7 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Δείτε μερικές συμβουλές για το πώς να βοηθήσετε τα κορίτσια να ενδιαφερθούν για την Επιστήμη των Υπολογιστών [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 

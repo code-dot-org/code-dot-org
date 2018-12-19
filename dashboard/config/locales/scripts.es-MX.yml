@@ -3839,6 +3839,8 @@ es-MX:
           stages:
             Minecraft Hour of Code:
               name: Hora de Código de Minecraft
+          description: "¡Minecraft está de vuelta para la Hora del Código con una
+            actividad nueva! Viaja a través de Minecraft con códigos."
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -5115,8 +5117,12 @@ es-MX:
         dance:
           stages:
             Dance Party:
-              name: Fiesta de Baile
-          title: Fiesta de Baile
+              name: Fiesta de baile
+          title: Fiesta de baile
+          description_short: "¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara y 25 más!"
+          description: "¡Codifica tu propia fiesta de baile para compartir con tus
+            amigos!"
         frozen-2018-test-b:
           stages:
             Artist:
@@ -5126,14 +5132,14 @@ es-MX:
         dance--draft:
           stages:
             Dance Party:
-              name: Fiesta de Baile
+              name: Fiesta de baile
         dance-draft:
           stages:
             Dance Party:
-              name: Fiesta de Baile
+              name: Fiesta de baile
         dance-extras:
-          title: Sigue Bailando
-          description: Ve mas allá de la primera hora con ideas adicionales de proyectos.
+          title: Sigue bailando
+          description: Ve más allá de la primera hora con ideas extendidas del proyecto.
         coursef-2019:
           description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
             y condicionales. Investiga distintas técnicas de solución de problemas
@@ -5260,7 +5266,7 @@ es-MX:
         dance-low:
           stages:
             Dance Party:
-              name: Fiesta de Baile
+              name: Fiesta de baile
         coursed-2019:
           description_audience: Edades de 7 a 11 años
           stages:

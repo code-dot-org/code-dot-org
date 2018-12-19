@@ -1,0 +1,40 @@
+%p
+  Hello! Thank you for applying to Code.org's Facilitator Development Program.
+  - if @application.regional_partner
+    We have received your application, and will review it with our Regional Partners soon.
+  - else
+    Please note that we prioritize applicants in regions where we currently have a Regional Partner and there is
+    a need for additional facilitators. Code.org will review your application and contact you if there is a need
+    for facilitators in a nearby region.
+
+  We will provide a status update to all applicants in February 2019.
+
+%p
+  Due to the volume of applications we will receive, we are not able to respond to individual
+  requests for status updates. Please contact facilitators@code.org with all other questions.
+
+%p
+  As a reminder, your Code.org account email is currently
+  = "#{@application.user.email}."
+  If you would like to update your email, please
+  = link_to('visit your account settings', CDO.studio_url('/users/edit', CDO.default_scheme)) + '.'
+
+%p
+  Do you know someone who would be a great fit for the Facilitator Development Program?
+  Please encourage them to join us! Here is the
+  = link_to('link to apply', CDO.code_org_url('/facilitator', CDO.default_scheme)) + '.'
+
+%p
+  Have a few minutes to spare? Please visit
+  = link_to('https://code.org/yourschool', CDO.code_org_url('/yourschool', CDO.default_scheme))
+  and tell us more about what computer science opportunities are available at your school or schools in your area.
+  Thank you for supporting computer science for all!
+
+%p
+  Thank you,
+  %br
+  = signed_by(@application)
+  %br
+  Education Program Manager
+  %br
+  Code.org

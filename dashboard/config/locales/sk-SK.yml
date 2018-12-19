@@ -393,6 +393,7 @@ sk:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Tanečná Párty
       view_all: Zobraziť všetky projekty...
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
@@ -800,6 +801,8 @@ sk:
         tak aby to fungovala, potom zdieľaj aplikáciu v priebehu niekoľkých sekúnd.
       audience: Vek 13+
       cta: Nauč sa ako
+    dance:
+      title: Tanečná Párty
     hoc:
       title: Klasické bludisko
       body: Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.

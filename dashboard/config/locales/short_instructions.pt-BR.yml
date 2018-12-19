@@ -1422,6 +1422,10 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados
+        em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment2_2018: Calcule a soma dos três valores armazenados
+        em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir
         de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para
         ver todas as instruções)
@@ -1438,6 +1442,10 @@ pt-BR:
       CSPU5_U3 - Arrays - favThings Counting Variable_2018: Crie uma variável global
         para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique
         aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo
+        suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings createArray_2018: Crie um array de palavras descrevendo
+        suas coisas favoritas. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
         numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - indexPractice_2018: Mostre o conteúdo da lista na tela em
@@ -1446,12 +1454,22 @@ pt-BR:
         crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay_2018: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor,
+        redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui
+        para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawOriginal_2018: Escreva uma função que processa seu
+        vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique
+        aqui para ver todas as instruções)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo
+        for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para
+        baixo for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -2705,16 +2723,18 @@ pt-BR:
         dançarino(a).
       Dance_Party_10: Faça o outro dançarino também responder à música usando o bloco
         'começar a seguir '.
-      Dance_Party_11.5: Use os blocos "todos os patos" para fazer os patos dançarem
-        juntos.
       Dance_Party_11.5_test: Use os blocos "todos os patos" para fazer os patos dançarem
         juntos.
       Dance_Party_11: O bloco 'com a seta para cima pressionada' permite executar
         o código quando a seta para cima for pressionada. Tente fazer o(a) dançarino(a)
         se movimentar rapidamente pressionando a seta para cima.
+      Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem
+        juntos.
       Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta
         para a direita e fazer a dança do fio dental uma vez pressionando a seta para
         cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
+      Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
+        seus amigos.
       Eval Booleans 1: |-
         Operadores booleanos (como >, <, =) nos permitem
         comparar valores diferentes, retornando "verdadeiro" ou "falso". Clique em "Executar"
@@ -3261,17 +3281,24 @@ pt-BR:
         Depure esse nível reorganizando e trocando blocos
         para me levar até o porco!
       K2.0 sequence 1: Altere o código para me levar até o porco!
+      K2.0 sequence 10: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
+      K2.0 sequence 12: 'Vamos pegar aquele porco! '
       K2.0 sequence 2: Altere o código para me levar até o porco!
       K2.0 sequence 3: Descubra o que está faltando e então REMOVA blocos para me
         levar até o porco!
+      K2.0 sequence 4: Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida,
+        mova outro para me levar até o porco.
       K2.0 sequence 5: Mova-me por um caminho, e então por outro para me levar até
         o porco!
       K2.0 sequence 6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
+      K2.0 sequence 7: Resolva este nível e me leve até o porco!
+      K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você
         acha que acontecerá com o avião quando você clicar "Executar"?  '
+      KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas
         dinamites, senão penas vão voar!
       Kiki_StarWars_Test_3: Texto
@@ -3279,10 +3306,15 @@ pt-BR:
       Kiki_StarWars_Test_5: Texto
       Kiki_StarWars_Test_5_Example: Texto
       LaurelDebugging4Video1: Mova Laurel ao redor e pegue quanto ouro puder!
+      Limited Quantity of Blocks Test: Leve-me até o porco usando apenas um bloco
       Luigi's Pizza 1: |-
         Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
         digite o nome de um sabor na função "custo" e vamos retornar o
         preço da pizza. Tente pedir uma pizza de pepperoni para começar.
+      Luigi's Pizza 2 (copy 1): Agora há apenas quatro opções disponíveis na pizzaria
+        do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional
+        na função "custo". Quando adicionar seus sabores, teste a função para ver
+        se ela funciona.
       Luigi's Pizza 2: |-
         Agora há apenas quatro opções disponíveis
         na pizzaria do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional
@@ -3453,11 +3485,17 @@ pt-BR:
       MSM Defining Vars 1: |-
         Escreva um programa que produz um triângulo
         verde sólido de 50 pixels.
+      MSM Defining Vars 2 (copy 1): Se quiséssemos fazer cinquenta triângulos verdes,
+        seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma variável
+        chamada "minha-forma" e colocar o código para um triângulo verde sólido de
+        50 pixels dentro dela.
       MSM Defining Vars 2: |-
         Se quiséssemos fazer 50 triângulos verdes,
         seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma
         variável chamada "minha-forma" e colocar o código para um triângulo verde sólido de 50 pixels
         dentro dela.
+      MSM Defining Vars 3 (copy 1): Pegue sua variável "minha-forma" e use-a com este
+        código fornecido para desenhar dois triângulos verdes idênticos.
       MSM Defining Vars 3: |-
         Pegue sua variável "minha-forma" e use-a
         com esse código fornecido para desenhar dois triângulos verdes idênticos que têm
@@ -3489,9 +3527,11 @@ pt-BR:
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
         uma flor. Cuidado, isso pode mudar!
+      MikeAssessment1: Agora faça isto certo!
       MikeStar: Desenhe isto.
       MikeStarHard: Desenhe isto.
       MikeStarNested: Desenhe isto.
+      MikeTest1: Quem sabe o que você deve fazer?!?!
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -4175,6 +4215,8 @@ pt-BR:
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       U2L14 frequency random: Teste
+      U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados em um
+        vetor. (Clique para ver as instruções completas)
       U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir de 0
         até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver
         todas as instruções)
@@ -4183,13 +4225,20 @@ pt-BR:
       U3 - Arrays - favThings Counting Variable: Crie uma variável global para o índice
         atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver
         todas as instruções)
+      U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo suas
+        coisas favoritas. (Clique para ver as instruções completas)
       U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem numérica.
         (Clique aqui para ver todas as instruções)
       U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou crie
         um novo de sua preferência. (Clique para ver todas as instruções)
+      U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor, redesenhando
+        os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas
+        as instruções)
       U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
         ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
         errados. (Clique para ver todas as instruções)
+      U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for
+        pressionada (Clique aqui para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -6152,7 +6201,10 @@ pt-BR:
       grade1_maze_sequence6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
+      grade1_maze_sequence8: Analise este nível adicionando blocos para me levar até
+        o porco!
       grade1_maze_sequence9: 'Desvie do TNT para me levar até o porco! '
+      grade1_maze_sequenceA: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
       grade2_CaringForNewPet_10: Leve-me até o porco!
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!

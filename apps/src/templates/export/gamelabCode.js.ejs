@@ -1,0 +1,11 @@
+function preload() {
+
+<%- code -%>
+
+try { window.setup = setup; } catch (e) {}
+try { window.draw = draw; } catch (e) {}
+if (preload !== window.preload) { preload(); }
+}
+
+function setup() {
+}

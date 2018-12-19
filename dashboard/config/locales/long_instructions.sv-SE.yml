@@ -325,19 +325,6 @@ sv:
         </block></xml>
 
         Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
-      Dance_Party_11.5: |-
-        Kolla in detta block:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
-
-        Nu kan du skapa ett gäng dansare på samma gång!
-
-        Testa att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken.
       Dance_Party_11.5_test: |-
         Kolla in detta block:
 
@@ -355,10 +342,65 @@ sv:
         Detta <xml><block type="Dancelab_whenKey"></block></xml> block låter dig köra kod när uppåtpilen trycks in.
 
         Du kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!
+      Dance_Party_11_5: |-
+        Kolla in detta block:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kan du skapa ett gäng dansare på samma gång!
+
+        Testa att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken.
       Dance_Party_11b: Dags för en dansutmaning! Katten klappar när du trycker på
         vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
+      Dance_Party_extras_battle: |-
+        # Dansgrupper
+
+        Här är en danstävling mellan två grupper. Piltangenterna styr den ena dansaren och ”w,a,s,d”-tangenterna styr den andra. Ha en danstävling med en vän och försök sedan att förbättra tävlingen.
+
+        * Lägg till fler tangenter för att styra danserna
+        * Gör så att backgrundsdansarna också reagerar när en tangent trycks in
+        * Växla dansare vid var 4:e åtgärd genom att ange deras synlighet
+      Dance_Party_extras_every_beat: |-
+        # Kvartsnoter
+
+        De flesta av våra danser har använt sig av hela åtgärder, men varje åtgärd består av 4 kvartsnoter. Denna dans använder ”fjärdedelsåtgärder” (0,25) för att göra så att dansaren klappar på varje kvartsnot.
+
+        Denna dans använder också ett _villkorat_ block för att styra när blocket med ”fjärdedelsåtgärder” kan ändra dansen. Testa att ändra siffrorna i det villkorade blocket för att se hur det påverkar dansen.
+
+        * Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
+        * Lägg till några händelser med ”efteråtgärder”.
+        * Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
+      Dance_Party_extras_layout: |-
+        # Uppställning!
+
+        Kolla in denna dans som använder ”layout”-blocket för att ändra bakgrundsdansarnas formation under dansen. Testa någon av dessa idéer för att utveckla det hela:
+
+        * Skapa en andra grupp av dansare i en annan utformning
+        * Ändra utformning när en tangent trycks in
+        * Ändra en egenskap när dansarna ändrar formation
+      Dance_Party_extras_on_beat: |-
+        # Bas, mellanregister och diskant
+
+        Denna dans använder ”topp”-händelser för att starta kod när olika delar av musiken blir hög. Försöka mixtra med olika låtar för att se hur de förändrar dansen.
+      Dance_Party_extras_speed: |-
+        # Öka takten, sakta ner
+
+        Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
+      Dance_Party_extras_visible: |-
+        # Vart tog de vägen?
+
+        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
+
+        * Lägg till en grupp av dansare
+        * Visa och dölj dansare med hjälp av piltangenterna
+        * Dölj alla dansare och växla till en spännande bakgrundseffekt
       Function intro Ryan: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
         \ All kod du behöver för att korsa floden är inbyggd i den!\r\n \r\nFäst två
         av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
@@ -408,6 +450,12 @@ sv:
         Detta <xml><block type="Dancelab_whenKey"></block></xml> block låter dig köra kod när uppåtpilen trycks in.
 
         Du kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!
+      HOC Dance Freeplay: Dags att svänga på höfterna! Skapa en egen dans att dela
+        med dina vänner.
+      HOC Dance Freeplay_draft: Dags att svänga på höfterna! Skapa en egen dans att
+        dela med dina vänner.
+      HOC Dance Predraw: Dags att svänga på höfterna! Skapa en egen dans att dela
+        med dina vänner.
       K-1 Bee Loops 2: Använd en slinga för att flytta och sedan få nektar och gör
         honung!
       K-1 Bee Loops 3: Använd loopar att få nektar och göra honung!

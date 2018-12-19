@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global dashboard */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -141,6 +141,8 @@ class ShareAllowedDialog extends React.Component {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired,
     }).isRequired,
+    allowExportExpo: PropTypes.bool.isRequired,
+    exportApp: PropTypes.func,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -155,8 +157,6 @@ class ShareAllowedDialog extends React.Component {
     channelId: PropTypes.string.isRequired,
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
-    onClickExport: PropTypes.func,
-    onClickExportExpo: PropTypes.func,
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
@@ -164,7 +164,6 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
-    replayLog: PropTypes.array,
   };
 
   state = {
@@ -195,27 +194,8 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
-      this.tryCreateReplayVideo();
     }
   }
-
-  hasReplayVideo = () =>
-    this.props.appType === 'dance' &&
-    appOptions.signedReplayLogUrl;
-
-  shouldCreateReplayVideo = () =>
-    this.hasReplayVideo() &&
-    this.props.replayLog &&
-    this.props.replayLog.length > 1;
-
-  tryCreateReplayVideo = () => {
-    if (this.shouldCreateReplayVideo()) {
-      fetch(appOptions.signedReplayLogUrl, {
-        method: "PUT",
-        body: JSON.stringify(this.props.replayLog)
-      });
-    }
-  };
 
   replayVideoNotFound = () => {
     this.setState({
@@ -230,6 +210,9 @@ class ShareAllowedDialog extends React.Component {
   close = () => {
     recordShare('close');
     this.props.onClose();
+    this.setState({
+      replayVideoUnavailable: false
+    });
   };
 
   showSendToPhone = (event) => {
@@ -386,7 +369,7 @@ class ShareAllowedDialog extends React.Component {
                   }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                    <span>Send to phone</span>
+                    <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished &&
                   <button
@@ -410,12 +393,10 @@ class ShareAllowedDialog extends React.Component {
                     className="no-mc"
                   />
                   }
-                  {this.hasReplayVideo() &&
-                      <DownloadReplayVideoButton
-                        channelId={this.props.channelId}
-                        onError={this.replayVideoNotFound}
-                      />
-                  }
+                  <DownloadReplayVideoButton
+                    style={styles.button}
+                    onError={this.replayVideoNotFound}
+                  />
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
@@ -462,10 +443,10 @@ class ShareAllowedDialog extends React.Component {
                 <div style={{clear: 'both', marginTop: 40}}>
                   {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
                   <AdvancedShareOptions
+                    allowExportExpo={this.props.allowExportExpo}
                     i18n={this.props.i18n}
                     shareUrl={this.props.shareUrl}
-                    onClickExport={this.props.onClickExport}
-                    onClickExportExpo={this.props.onClickExportExpo}
+                    exportApp={this.props.exportApp}
                     expanded={this.state.showAdvancedOptions}
                     onExpand={this.showAdvancedOptions}
                     channelId={this.props.channelId}
@@ -486,10 +467,11 @@ class ShareAllowedDialog extends React.Component {
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(state => ({
+  allowExportExpo: state.pageConstants.allowExportExpo || false,
+  exportApp: state.pageConstants.exportApp,
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
-  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {

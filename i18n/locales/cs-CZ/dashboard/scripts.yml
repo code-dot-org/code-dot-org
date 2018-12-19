@@ -1262,7 +1262,7 @@ cs:
             Minecraft Hour of Code:
               name: Hodina kódu Minecraftu
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!
-          description: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem.
+          description: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou! Cestuj hrou Minecraft s kódem.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1487,7 +1487,8 @@ cs:
             Dance Party:
               name: Taneční večírek
           title: Taneční večírek
-          description: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli!
+          description_short: S Katy Perry, Madonnou, J. Balvinem, Siou, Keithem Urbanem, Ciarou a 25 dalšími!
+          description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         frozen-2018-test-b:
           stages:
             Artist:

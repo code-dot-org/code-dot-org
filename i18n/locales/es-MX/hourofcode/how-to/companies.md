@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org ofrece la oportunidad para que sus empleados [se conecten](%= codeorg_url('/volunteer') %) con las aulas locales impartiendo la Hora del Código donde puedan compartir su experiencia profesional en tecnología e inspirar estudiantes a estudiar ciencias de la computación.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>¡Regístrate para ser voluntario!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
 
 Para más instrucciones sobre como alentar a sus empleados y cómo conectarlos con las aulas, consulte nuestra [guía para socios corporativos](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

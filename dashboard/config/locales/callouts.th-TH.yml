@@ -93,6 +93,9 @@ th:
         artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน
+          (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_artist_loops4_2018_callout:
@@ -159,6 +162,15 @@ th:
       courseC_maze_programming1_2019_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม
           " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน
+          (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน
+          (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
+      courseD_bee_conditionals_challenge2_2019_callout:
+        courseD_bee_conditionals_challenge2_1: ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน
+          (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม
           " เพื่อให้โปรแรมของคุณเริ่มทำงาน

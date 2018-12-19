@@ -1594,6 +1594,8 @@ sv:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet!
+            Res genom Minecraft via koden.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1825,6 +1827,9 @@ sv:
             Dance Party:
               name: Dansparty
           title: Dansparty
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara och 25 andra!
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1844,6 +1849,10 @@ sv:
           stages:
             Dance Party:
               name: Dansparty
+        dance-extras:
+          title: Fortsätt att dansa
+          description: Med ytterligare projektidéer kan du fortsätta efter den första
+            timmen.
         coursef-2019:
           stages:
             Building a Foundation:

@@ -421,6 +421,8 @@
   "dontForget": "Չմոռանաք",
   "downloadCSV": "Download CSV",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "Շարժապատկերներ",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "",
   "dropletBlock_addOperator_signatureOverride": "",

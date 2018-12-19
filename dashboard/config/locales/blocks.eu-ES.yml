@@ -233,6 +233,10 @@ eu:
         options:
           EFFECT:
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Ausazkoa
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': Ausazkoa
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -264,6 +268,10 @@ eu:
         options:
           EFFECT:
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Ausazkoa
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': Ausazkoa
       Dancelab_setProp:
         options:
           PROPERTY:

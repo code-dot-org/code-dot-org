@@ -8,7 +8,7 @@ import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown, {RegionalPartnerPropType} from '../components/regional_partner_dropdown';
-import { Button, Col } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 
 const styles = {
   button: {
@@ -116,20 +116,22 @@ class CohortView extends React.Component {
           }
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
-          <Col md={6} sm={6}>
-            <Button
-              style={styles.button}
-              onClick={this.handleDownloadCsvClick}
-            >
-              Download CSV
-            </Button>
-            <Button
-              style={styles.button}
-              onClick={this.handleViewAllClick}
-            >
-              View all applications
-            </Button>
-          </Col>
+          <Row>
+            <Col md={6} sm={6}>
+              <Button
+                style={styles.button}
+                onClick={this.handleDownloadCsvClick}
+              >
+                Download CSV
+              </Button>
+              <Button
+                style={styles.button}
+                onClick={this.handleViewAllClick}
+              >
+                View all applications
+              </Button>
+            </Col>
+          </Row>
           <CohortViewTable
             data={this.state.applications}
             viewType={this.props.route.viewType}

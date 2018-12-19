@@ -3728,13 +3728,6 @@ pt-BR:
           * As propriedades de dois ou mais dançarinos devem mudar.
 
           *Esta fase termina após oito compassos.*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Como passar desta fase?**
-
-          * Seja criativo!
-
-          *Esta fase termina após oito compassos.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Como passar desta fase?**
@@ -3743,6 +3736,13 @@ pt-BR:
 
           *Esta fase termina após oito compassos.*
       Dance_Party_11_authored_hint:
+        validation: |-
+          **Como passar desta fase?**
+
+          * Seja criativo!
+
+          *Esta fase termina após oito compassos.*
+      Dance_Party_11_5_authored_hint:
         validation: |-
           **Como passar desta fase?**
 

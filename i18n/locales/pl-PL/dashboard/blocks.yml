@@ -100,15 +100,27 @@ pl:
             '"UNICORN"': wszystkie jednorożce
           MOVE:
             '"rand"': "(Losowy)"
+            MOVES.XBend: Bend
             MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap high
             MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
             MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
@@ -120,15 +132,27 @@ pl:
         options:
           MOVE:
             '"rand"': "(Losowy)"
+            MOVES.XBend: Bend
             MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap high
             MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
             MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
@@ -224,7 +248,7 @@ pl:
             "{x: 300, y: 300}": dolny prawy róg
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
       Dancelab_layoutSprites:
-        text: układ przestrzenny {GROUP} jako {FORMAT}
+        text: formacja {GROUP} jako {FORMAT}
         options:
           GROUP:
             sprites: wszystkie
@@ -282,7 +306,7 @@ pl:
           zrób {N} nowy {COSTUME}
           w {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -352,8 +376,35 @@ pl:
             '"snowflakes"': Śnieg
             '"spiral"': Spirala
             "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Losowy)"
+      Dancelab_setBackgroundEffectWithPalette:
+        text: ustaw efekt tła {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"circles"': Tunel
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco_ball"': Kula dyskotekowa
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"splatter"': Plamy farby
+            '"rainbow"': Tęcza
+            '"snowflakes"': Śnieg
+            '"text"': Tytuł piosenki
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"disco"': Kwadraty
+            '"stars"': Gwiazdy
+          PALETTE:
+            '"rave"': Czarno-białe
+            '"cool"': Niebieskie
+            '"default"': Jasne
+            '"tropical"': Tropikalne
+            '"warm"': Czerwone
       Dancelab_setDanceSpeed:
-        text: zmień prędkość tańca {SPRITE} na {SPEED}
+        text: ustaw prędkość tańca {SPRITE} na {SPEED}
         options:
           SPEED:
             '1': normalny
@@ -392,6 +443,22 @@ pl:
             '"raining_tacos"': Taco
             '"spotlight"': Reflektor
             "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Losowo)"
+      Dancelab_setForegroundEffectExtended:
+        text: ustaw efekt pierwszego planu {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts_red"': Serca
+            '"music_notes"': Nuty
+            '"pineapples"': Ananasy
+            '"smiling_poop"': Kupa
+            '"rain"': Deszcz
+            '"floating_rainbows"': Tęcza
+            '"spotlight"': Reflektor
+            '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'ustaw {SPRITE} {PROPERTY} na {VAL} '
         options:
@@ -455,6 +522,8 @@ pl:
             '"PINEAPPLE"': wszystkie ananasy
             '"ROBOT"': wszystkie roboty
             '"SHARK"': wszystkie rekiny
+      Dancelab_setTintInline:
+        text: ustaw {SPRITE} odcień na {VAL}
       Dancelab_setVisible:
         text: ustaw widoczność {SPRITE} na {VISIBILITY}
         options:
@@ -544,6 +613,7 @@ pl:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -834,7 +904,7 @@ pl:
             '"tint"': odcień
       craft_ifPath:
         text: |-
-          jeśli droga {DIR}
+          jeśli jest ścieżka {DIR}
           {STATEMENT}
         options:
           DIR:
@@ -843,25 +913,27 @@ pl:
             "'left'": w lewo
       craft_ifStandingOn:
         text: |-
-          jeśli stojący na {TYPE}
+          jeśli stojąc na {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": koral niebieski
-            "'redCoralBlock'": koral czerwony
+            "'blueCoralBlock'": niebieski koral
+            "'redCoralBlock'": czerwony koral
             "'sand'": piasek
             "'wool_blue'": głęboka woda
             "'planksOak'": deski dębowe
             "'seaLantern'": latarnia morska
       craft_ifStandingOnLimit:
         text: |-
-          jeśli stojący na {TYPE}
+          jeśli stojąc na {TYPE}
           {STATEMENT}
         options:
           TYPE:
             "'sand'": piasek
             "'darkPrismarine'": ciemny pryzmaryn
             "'seaLantern'": latarnia morska
+      craft_log:
+        text: zaloguj wiadomości {MESSAGE}
       craft_moveForward:
         text: idź do przodu
       craft_placeBlock:
@@ -887,11 +959,11 @@ pl:
             '"prismarine"': pryzmaryn
             '"darkPrismarine"': ciemny pryzmaryn
             '"seaLantern"': latarnia morska
-            '"packedIce"': pak lodowy
+            '"packedIce"': upakowany lód
             '"blueIce"': niebieski lód
             '"blackConcrete"': czarny beton
             '"seaGrass"': trawa morska
-            '"kelp"': brunatnice
+            '"kelp"': wodorosty
             '"polishedGranite"': wypolerowany granit
       craft_placePrismarine:
         text: umieść pryzmaryn
@@ -899,7 +971,7 @@ pl:
         text: umieść pochodnię
       craft_repeatUntilConduit:
         text: |-
-          powtarzaj do zakończenia
+          powtarzaj do ukończenia kanału
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-

@@ -1337,6 +1337,7 @@ hu:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Kódolás Órája
+          description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1567,6 +1568,8 @@ hu:
             Dance Party:
               name: Táncos buli
           title: Táncos buli
+          description_short: Közreműködik Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara és 25 további előadó!
+          description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1585,6 +1588,9 @@ hu:
           stages:
             Dance Party:
               name: Táncos buli
+        dance-extras:
+          title: Táncolj tovább
+          description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
           stages:
             Building a Foundation:

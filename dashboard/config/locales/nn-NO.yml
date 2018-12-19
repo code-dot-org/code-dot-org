@@ -534,7 +534,7 @@ nn:
       i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram
       og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer
       du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!
-    announcement_go_beyond: Fortsette videre fra Kodetimen og utforsk konsepter fra
+    announcement_go_beyond: Fortsett videre fra Kodetimen og utforsk konsepter fra
       datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
       profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
       alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
@@ -548,7 +548,7 @@ nn:
       utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
       innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
-      og videregående skole må søke innen 17 mars.
+      og videregående skole må søke innen 17. mars.
     announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
       våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
       å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
@@ -570,11 +570,11 @@ nn:
       on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Applications close on April 14th.
-    announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
+    announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
       nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
-      JavaScript blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
+      JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
       utviklingsverktøy.
-    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>I
+    announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I
       sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
       tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
       du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
@@ -670,18 +670,18 @@ nn:
         støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje
         vil virke slik det er meint.
       link: Lær meir
-      applab_unsupported_tablet: App Lab fungerer best på en stasjonær eller bærbar
+      applab_unsupported_tablet: App-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
         på denne enheten.
-      gamelab_unsupported_tablet: Spill Lab fungerer best på en stasjonær eller bærbar
+      gamelab_unsupported_tablet: Spill-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
         på den gjeldende enheten.
       weblab_unsupported_browser: Dessverre opplever vi problemer med lasting av Web
         Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst.
         Beklager ulempen dette medfører.
-      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Web
-        Lab i nettleserens private modus. Vennligst last prosjektet på nytt i normal
-        modus. Beklager ulempen dette medfører.
+      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Nett-lab
+        i nettleserens private modus. Vennligst last prosjektet på nytt i normal modus.
+        Beklager ulempen dette medfører.
   slow_loading: Dette tar lengre tid enn vanleg...
   try_reloading: Last sida på nytt
   next_stage: Ferdig! Fortsett til neste nivå
@@ -1094,29 +1094,29 @@ nn:
     csf_f_2: Kursinnhald F
     csd1_1: 'Kapittel 1: Problemløsingsprosessen'
     csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Webinnhold og HTML'
+    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
     csd2_2: 'Kapittel 2: Styling og CSS'
     csd3_1: 'Kapittel 1: Bilder og animasjoner'
     csd3_2: 'Kapittel 2: Bygge spill'
     csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: App Prototyping'
+    csd4_2: 'Kapittel 2: Prototyping av app'
     csd5_1: 'Kapittel 1: Representerer informasjon'
     csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Maskinvare utganger'
-    csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd6_1: 'Kapittel 1: Programmere hardware'
+    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og Visualisere data'
+    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
     csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
     csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Event-drevet programmering'
+    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
     csp5_2: 'Kapittel 2: Programmering med datastrukturer'
     cspSurvey: Undersøking
     cspAssessment: Vurdering av kapittel
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
+    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
     csp2_1_2018: 'Eining 2: Digital informasjon'
     dlp: Spørsmål til refleksjon
   external_links:
@@ -1198,6 +1198,7 @@ nn:
   return_unit_overview: Gå til oversikt over eininga
   return_course_overview: Gå til oversikt over eininga
   view_all_units: Sjå alle einingane
+  view_teacher_guide: Sjekk lærerveiledning
   pd:
     form_labels:
       email: E-post

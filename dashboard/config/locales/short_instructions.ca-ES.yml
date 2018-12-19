@@ -600,16 +600,18 @@ ca:
         ballarí.
       Dance_Party_10: Fés que l'altre dansaire respongui a la música fent servir el
         bloc de `comença a seguir` també.
-      Dance_Party_11.5: Fés servir els blocs de "tots els ànecs" per fer que els ànecs
-        ballin junts.
       Dance_Party_11.5_test: Fés servir els blocs de "tots els ànecs" per fer que
         els ànecs ballin junts.
       Dance_Party_11: El bloc `quan prems cap a dalt` et permet executar un codi quan
         prems la fletxa cap a dalt. Intenta que el dansaire faci un moviment ràpid
         quan prems cap a dalt.
+      Dance_Party_11_5: Fés servir els blocs de "tots els ànecs" per fer que els ànecs
+        ballin junts.
       Dance_Party_11b: Fés que el robot "caigui" un cop quan prems la tecla de la
         fletxa dreta, i que "provoqui" una vegada quan prems la fletxa cap a dalt.
         Fés la caiguda-provocació tan ràpidament com puguis!
+      Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
       Infinity_catch: Pots fer que l'Elsa ("actor 2") atrapi l'Anna utilitzant les
         fletxes del teclat?
       Infinity_finale: Crea qualsevol cosa que t'agradi i comparteix-la!

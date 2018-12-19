@@ -421,6 +421,8 @@
   "dontForget": "فراموش نکنید که",
   "downloadCSV": "",
   "downloadAssessmentCSV": "",
+  "downloadReplayVideoButtonDownload": "کارتون",
+  "downloadReplayVideoButtonError": "",
   "dragBlocksToMatch": "",
   "dropletBlock_addOperator_description": "اضافه کردن دو عدد",
   "dropletBlock_addOperator_signatureOverride": "اضافه کردن اپراتور",

@@ -493,6 +493,40 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Note: acts_as_paranoid
   #
 
+  test "removes the user primary_contact_info" do
+    # Problem noticed on 11/29/2018
+    # Account purged failed on a user account that had no authentication_options
+    # but still had a primary_contact_info
+    # Somehow the primary_contact_info for the user had a different user_id than the
+    # user being purged.
+    # Regardless of how this happened, we should handle it gracefully and clear the
+    # association between the user and the authentication_option, without deleting it
+    # since we another user may be depending on it.
+    other_user = create :user, :with_google_authentication_option
+    user = create :user
+    user.provider = 'migrated'
+    user.primary_contact_info = other_user.primary_contact_info
+    user.save!(validate: false)
+
+    assert_empty user.authentication_options,
+      'Expected user to have no authentication options'
+    refute_nil user.primary_contact_info,
+      'Expected user to have primary_contact_info'
+
+    purge_user user
+
+    # Association with purged user is removed
+    assert_empty user.authentication_options,
+      'Expected user to have no authentication options'
+    assert_nil user.primary_contact_info,
+      'Expected user to have no primary_contact_info'
+
+    # Did not actually hard-delete the AuthenticationOption still in use by other user
+    other_user.reload
+    refute_nil other_user.primary_contact_info,
+      'Expected other_user to still have primary_contact_info'
+  end
+
   test "removes all of user's authentication option rows" do
     user = create :user,
       :with_clever_authentication_option,
@@ -960,6 +994,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "clears form_data from pd_fit_weekend1819_registrations" do
     registration = create :pd_fit_weekend1819_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.pd_application.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  #
+  # Table: dashboard.pd_fit_weekend_registrations
+  # Associated with user via application
+  #
+
+  test "clears form_data from pd_fit_weekend_registrations" do
+    registration = create :pd_fit_weekend1920_registration
     refute_equal '{}', registration.form_data
 
     purge_user registration.pd_application.user

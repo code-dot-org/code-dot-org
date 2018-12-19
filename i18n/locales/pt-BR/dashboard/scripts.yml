@@ -2,8 +2,13 @@ pt-BR:
   data:
     script:
       category:
+        csd_2018_category_name: Descobertas da Ciência da Computação (de 18 a 19 anos)
         csf_category_name: Conceitos básicos da CC
+        csf_2018_category_name: Fundamentos da Ciência da Computação (2018)
+        csf_international_category_name: Fundamentos da Ciencia da Computação International
+        csf2_draft_category_name: 'Em desenvolvimento: Cursos A - F'
         csp_category_name: "Princípios da CC - 15-16"
+        csp_2018_category_name: Princípios de Ciência da Computação (18-19)
         cspexams_category_name: Teste prático dos princípios da CC
         csp17_category_name: Princípios da CC - 16-17
         full_course_category_name: Cursos Completos
@@ -1442,6 +1447,8 @@ pt-BR:
               name: Unidade 4 Capítulo 1 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+            Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2145,6 +2152,7 @@ pt-BR:
           title: Curso A
           assignment_family_title: Curso A
           description_audience: 'Idade: de 4 a 7 anos'
+          description_short: Uma introdução à ciência da computação para pré-leitores.
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         courseb-2017:
           stages:
@@ -2171,6 +2179,7 @@ pt-BR:
           title: Curso B
           assignment_family_title: Curso B
           description_audience: 'Idades: 5-8'
+          description_short: Uma introdução à ciência da computação para pré-leitores. (Similar ao curso A, mas com mais variedade para os alunos mais velhos.)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         coursec-2017:
           stages:
@@ -2186,6 +2195,7 @@ pt-BR:
               name: Laços aninhados
           title: Curso D
           assignment_family_title: Curso D
+          description_short: Rapidamente cobrem conceitos do curso C e em seguida, ir mais longe com algoritmos, loops aninhados, condicionais e muito mais.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -2206,6 +2216,7 @@ pt-BR:
               name: Laços aninhados
           title: Curso E
           assignment_family_title: Curso E
+          description_short: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
         coursef-2017:
           stages:
             'Programming: My Robotic Friends':
@@ -2216,6 +2227,7 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
           title: Curso F
           assignment_family_title: Curso F
+          description_short: Aprenda todos os conceitos fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
         express-2017:
           stages:
             Introduction:
@@ -2238,6 +2250,8 @@ pt-BR:
               name: Criando uma base
             Nested Loops:
               name: Laços aninhados
+          title: Curso Expresso
+          assignment_family_title: Curso Expresso
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         pre-express-2017:
           stages:
@@ -2398,6 +2412,7 @@ pt-BR:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
           title: 'Minecraft: Jornada do Herói'
+          description: O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2492,6 +2507,7 @@ pt-BR:
           title: Curso A (2018)
           assignment_family_title: Curso A
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
           description_audience: 'Idade: de 4 a 7 anos'
           stages:
             'Debugging: Unspotted Bugs':
@@ -2540,6 +2556,7 @@ pt-BR:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e o Grande Projeto
         express-2018:
+          assignment_family_title: Curso Expresso
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2712,6 +2729,7 @@ pt-BR:
         coursef-2018:
           title: Curso F (2018)
           assignment_family_title: Curso F
+          description_short: Aprenda todos os conceitos fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
@@ -2916,6 +2934,8 @@ pt-BR:
             Dance Party:
               name: Festa dançante
           title: Festa dançante
+          description_short: Apresentando Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e mais 25!
+          description: Crie sua própria dança para compartilhar com seus amigos.
         frozen-2018-test-b:
           stages:
             Artist:
@@ -2934,7 +2954,11 @@ pt-BR:
           stages:
             Dance Party:
               name: Festa dançante
+        dance-extras:
+          title: Continue dançando
+          description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
+          description_short: Aprenda todos os conceitos fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
