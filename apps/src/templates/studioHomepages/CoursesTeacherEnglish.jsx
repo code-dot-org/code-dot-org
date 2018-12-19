@@ -69,7 +69,7 @@ class CoursesTeacherEnglish extends Component {
             link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
-            <CourseBlocksHoc rowCount={1}/>
+            <CourseBlocksHoc/>
           </ContentContainer>
 
           <CourseBlocksTools

@@ -13,7 +13,7 @@ The majority of our translations are done through CrowdIn, a localization manage
 Please complete translations for these projects in the above order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
 
 ## What do I translate first?
-1. Please translate our [Star Wars tutorial](/translate/starwars) and our [Minecraft tutorial](/translate/mc) first.
+1. Please translate our [Hour of Code tutorials](/translate/tutorials) first.
 1. Then in the [Hour of Code Project](https://crowdin.com/project/hour-of-code), complete in the following order:
   * hourofcode.com homepage
   * thanks.md

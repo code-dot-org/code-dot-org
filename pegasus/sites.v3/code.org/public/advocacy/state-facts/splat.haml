@@ -99,6 +99,16 @@ theme: pdf
           = succeed "%" do
             %b= state_info[:percent_female_cs_grad_i]
         were female.
+      - unless state_info[:count_schools_teach_cs_i] == 0
+        %li
+          In
+          = succeed "," do
+            = state_info[:state_name_s]
+          only
+          %b
+            = succeed "%" do
+              = state_info[:count_schools_teach_cs_i]
+            of all public high schools teach computer science.
       %li
         - if state_info[:ap_cs_exams_i] == 0
           %b
@@ -106,14 +116,14 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took an AP Computer Science exam in 2017.
+          took an AP Computer Science exam in 2018.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             exams were taken in AP Computer Science by high school students in
           = state_info[:state_name_s]
-          in 2017
+          in 2018
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_exams_i])
           took AP CS A and
@@ -207,7 +217,7 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered an AP Computer Science course in 2016-2017
+          schools with AP programs) offered an AP Computer Science course in 2017-2018
           = surround "(", "%" do
             = state_info[:percent_schools_ap_csa_i]
           offered AP CS A and
@@ -224,8 +234,8 @@ theme: pdf
         - else
           No schools in
           = state_info[:state_code_s]
-          offered an AP Computer Science course in 2016-2017.
-        - if state_param != 'AL' && state_param != 'IL' && state_param != 'MD' && state_param != 'MN' && state_param != 'ND' && state_param != 'NE' && state_param != 'NJ'
+          offered an AP Computer Science course in 2017-2018.
+        - if state_param != 'AK' && state_param != 'AL' && state_param != 'AR' && state_param != 'CA' && state_param != 'FL' && state_param != 'IL' && state_param != 'LA' && state_param != 'MD' && state_param != 'MI' && state_param != 'MN' && state_param != 'MT' && state_param != 'ND' && state_param != 'NE' && state_param != 'NH' && state_param != 'NJ' && state_param != 'NY' && state_param != 'OH' && state_param != 'PA' && state_param != 'RI' && state_param != 'VA'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li
         Universities in
@@ -594,5 +604,5 @@ theme: pdf
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
-      %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+      %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for schools that offer computer science and parent demand, and Code.org for its own courses, professional learning programs, and participation data.

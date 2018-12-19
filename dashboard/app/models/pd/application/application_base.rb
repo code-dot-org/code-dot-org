@@ -45,6 +45,8 @@ module Pd::Application
     include Pd::Form
     include SerializedProperties
 
+    self.table_name = 'pd_applications'
+
     acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
     OTHER = 'Other'.freeze
@@ -175,8 +177,6 @@ module Pd::Application
       }
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
     end
-
-    self.table_name = 'pd_applications'
 
     # Override in derived class
     def self.statuses

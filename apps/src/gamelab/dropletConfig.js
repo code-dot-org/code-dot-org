@@ -4,6 +4,7 @@ var api = require('./apiJavascript.js');
 import color from '../util/color';
 var consoleApi = require('../consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 import {getStore} from '../redux';
@@ -46,8 +47,8 @@ module.exports.blocks = [
   /* disabled since we aren't suggesting these global properties be used - commenting these out prevents droplet from turning 'width' and 'height' into blocks when referenced as locals or parameters */
   //  {func: 'width', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   //  {func: 'height', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
-  {...audioApi.dropletConfig.playSound, category: 'World'},
-  {...audioApi.dropletConfig.stopSound, category: 'World'},
+  {...audioApiDropletConfig.playSound, category: 'World'},
+  {...audioApiDropletConfig.stopSound, category: 'World'},
   {func: 'keyIsPressed', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {func: 'key', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {func: 'keyCode', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
