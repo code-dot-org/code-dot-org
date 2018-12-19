@@ -44,18 +44,18 @@ class SubmissionStatusAssessmentsContainer extends Component {
     return (
       <div>
         <div style={styles.buttonContainer}>
-        <h2>{i18n.studentOverviewTableHeader()}</h2>
-        <CSVLink
-          filename="assessments-submission-status.csv"
-          data={studentExportableData}
-          headers={CSV_SUBMISSION_STATUS_HEADERS}
-        >
-          <Button
-            text={i18n.downloadCSV()}
-            onClick={() => {}}
-            color={Button.ButtonColor.gray}
-          />
-        </CSVLink>
+          <h2>{i18n.studentOverviewTableHeader()}</h2>
+          <CSVLink
+            filename="assessments-submission-status.csv"
+            data={studentExportableData}
+            headers={CSV_SUBMISSION_STATUS_HEADERS}
+          >
+            <Button
+              text={i18n.downloadCSV()}
+              onClick={() => {}}
+              color={Button.ButtonColor.gray}
+            />
+          </CSVLink>
         </div>
         <SubmissionStatusAssessmentsTable
           studentOverviewData={this.props.studentOverviewData}
