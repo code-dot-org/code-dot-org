@@ -7218,7 +7218,6 @@ en:
         A machine with a screen and a keyboard: A machine with a screen and a keyboard
         Question 1: Question 1
         Which two of the following are the best ways to define a computer? (Choose TWO): Which two of the following are the best ways to define a computer? (Choose TWO)
-        description here: description here
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -18529,11 +18528,9 @@ en:
         description here: description here
         incorrect 2!: incorrect 2!
         incorrect!: incorrect!
-        right answer: right answer
         right answer1: right answer1
         right answer2: right answer2
         title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

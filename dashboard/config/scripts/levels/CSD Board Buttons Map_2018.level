@@ -7,11 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Buttons and Switch",
-    "reference": "/docs/csd/maker_buttons/index.html",
+    "reference": "/docs/concepts/maker-toolkit/physical-input/index.html",
     "parent_level_id": 8726,
     "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-19 19:57:24 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>
