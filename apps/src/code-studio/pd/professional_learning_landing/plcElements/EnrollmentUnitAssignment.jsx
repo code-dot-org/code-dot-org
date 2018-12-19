@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import color from '../../../../util/color';
-import ModuleAssignment from './moduleAssignment';
+import ModuleAssignment from './ModuleAssignment';
 
 const styles = {
   courseUnitSection: {
