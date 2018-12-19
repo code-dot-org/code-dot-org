@@ -345,6 +345,7 @@ function draw() {
   if (shouldUpdate()) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
+      updateBehaviors(sprite);
       sprite.behaviors.forEach(function (behavior) {
         behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
       });
@@ -464,3 +465,10 @@ function removeTextBox(sprite) {
   };
 }
 
+function updateBehaviors(sprite){
+  for(var i = 0; i < sprite.behaviors.length; i++) {
+    if(sprite.behaviors[i].terminus) {
+      sprite.behaviors.splice(i, 1);
+    }
+  }
+}
