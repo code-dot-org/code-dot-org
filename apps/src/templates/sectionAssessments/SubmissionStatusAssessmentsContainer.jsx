@@ -40,7 +40,6 @@ class SubmissionStatusAssessmentsContainer extends Component {
 
   render() {
     const {studentExportableData} = this.props;
-
     return (
       <div>
         <div style={styles.buttonContainer}>
