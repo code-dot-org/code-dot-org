@@ -25,18 +25,19 @@ const SCHOOL_TYPES_MAPPING = {
   "Other": "other"
 };
 
-const TEACHING_ROLES = [
-  "Classroom Teacher",
-  "Librarian",
-  "Tech Teacher/Media Specialist"
-];
-
-const ROLES = TEACHING_ROLES.concat([
-  "Parent",
+const DESCRIBE_ROLES = ([
   "School Administrator",
   "District Administrator",
+  "Parent",
   "Other"
 ]);
+
+const ROLES = [
+  "Classroom Teacher",
+  "Media Specialist",
+  "Tech Teacher",
+  "Librarian"
+].concat(DESCRIBE_ROLES);
 
 const GRADES_TEACHING = [
   "Pre-K",
@@ -99,6 +100,19 @@ export default class EnrollForm extends React.Component {
     }
   };
 
+  role() {
+    if (!this.state.role) {
+      return null;
+    }
+    var roleWithDescription = "";
+    if (this.state.describe_role) {
+      roleWithDescription = `${this.state.role}: ${this.state.describe_role}`;
+    } else {
+      roleWithDescription = this.state.role;
+    }
+    return roleWithDescription;
+  }
+
   gradesTeaching() {
     if (!this.state.grades_teaching) {
       return null;
@@ -151,7 +165,8 @@ export default class EnrollForm extends React.Component {
       last_name: this.state.last_name,
       email: this.state.email,
       school_info: schoolInfo,
-      role: this.state.role,
+      role: this.role(),
+      describe_role: this.state.describe_role,
       grades_teaching: this.gradesTeaching(),
       explain_teaching_other: this.state.explain_teaching_other,
       explain_not_teaching: this.state.explain_not_teaching
@@ -185,7 +200,7 @@ export default class EnrollForm extends React.Component {
   }
 
   render() {
-    const roleLabel = (
+    const gradesLabel = (
       <div>
         What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span>
         <p>This workshop is intended for teachers for Grades K-5.</p>
@@ -259,33 +274,39 @@ export default class EnrollForm extends React.Component {
           errors={this.state.errors}
         />
         {this.props.workshop_course === CSF &&
-          <FormGroup
-            validationState={this.state.errors.hasOwnProperty("role") ? VALIDATION_STATE_ERROR : null}
-          >
-            <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
-            <Select
-              id="role"
-              clearable={false}
-              placeholder={null}
-              value={this.state.role}
-              onChange={this.handleRoleChange}
-              options={ROLES.map(r => ({value: r, label: r}))}
-            />
-            <HelpBlock>{this.state.errors.role}</HelpBlock>
-            {this.state && TEACHING_ROLES.includes(this.state.role) &&
-              <ButtonList
-                id="grades_teaching"
-                key="grades_teaching"
-                answers={gradesTeaching}
-                groupName="grades_teaching"
-                label={roleLabel}
-                onChange={this.handleChange}
-                selectedItems={this.state.grades_teaching}
-                validationState={this.state.errors.hasOwnProperty("grades_teaching") ? VALIDATION_STATE_ERROR : null}
-                errorText={this.state.errors.grades_teaching}
-                type="check"
+          <FormGroup>
+            <FormGroup validationState={this.state.errors.hasOwnProperty("role") ? VALIDATION_STATE_ERROR : null}>
+              <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
+              <Select
+                id="role"
+                clearable={false}
+                placeholder={null}
+                value={this.state.role}
+                onChange={this.handleRoleChange}
+                options={ROLES.map(r => ({value: r, label: r}))}
               />
-            }
+              <HelpBlock>{this.state.errors.role}</HelpBlock>
+              {this.state && DESCRIBE_ROLES.includes(this.state.role) &&
+                <FieldGroup
+                  id="describe_role"
+                  label="Please describe your role"
+                  type="text"
+                  onChange={this.handleChange}
+                />
+              }
+            </FormGroup>
+            <ButtonList
+              id="grades_teaching"
+              key="grades_teaching"
+              answers={gradesTeaching}
+              groupName="grades_teaching"
+              label={gradesLabel}
+              onChange={this.handleChange}
+              selectedItems={this.state.grades_teaching}
+              validationState={this.state.errors.hasOwnProperty("grades_teaching") ? VALIDATION_STATE_ERROR : null}
+              errorText={this.state.errors.grades_teaching}
+              type="check"
+            />
           </FormGroup>
         }
         <p>
@@ -325,9 +346,6 @@ export default class EnrollForm extends React.Component {
 
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role');
-    }
-
-    if (TEACHING_ROLES.includes(this.state.role)) {
       requiredFields.push('grades_teaching');
     }
 

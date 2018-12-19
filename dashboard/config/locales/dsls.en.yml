@@ -1317,6 +1317,7 @@ en:
         description here: description here
         title: title
       Curriculum Framework Connections in Unit 2: {}
+      Dance_Party_extras_gallery_intro: {}
       Dance_Party_extras_intro: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -3407,9 +3408,11 @@ en:
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
+      csp-mid-survey-2018-markdown-with-link-to-survey: {}
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
       csp-post-survey-2017 preamble 1_2018: {}
+      csp-post-survey-2017 preamble 1_2018_2019: {}
       csp-post-survey-2017 preamble 3 this class: {}
       csp-post-survey-2017 preamble 3 this class_2018: {}
       csp-post-survey-2017 preamble 4 future and outlook: {}
@@ -3422,6 +3425,7 @@ en:
       csp-post-survey-2017 preamble how often did you_2018: {}
       csp-post-survey-2017-preamble 5 implementation-teacher: {}
       csp-post-survey-2017-preamble 5 implementation-teacher_2018: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher_2018_2019: {}
       csp-post-survey-2017-thanks: {}
       csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2017-wrapup-preamble: {}
@@ -4205,6 +4209,7 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD Unit 1 Post Project Assessment 2018: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
@@ -4472,6 +4477,17 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U1 Assessment match PSP:
+        Asking the teachers what sort of mural they need to make, and how big it needs to be.: Asking the teachers what sort of mural they need to make, and how big it needs to be.
+        Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.: Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.
+        Define: Define
+        Discussing what they like about their mural and how they could improve it.: Discussing what they like about their mural and how they could improve it.
+        ? Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process.
+        : Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process.
+        Painting the mural.: Painting the mural.
+        Prepare: Prepare
+        Reflect: Reflect
+        Try: Try
       CSD U2 RGB match:
         "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
         ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
@@ -6118,11 +6134,6 @@ en:
         metadata: metadata
         plotting: plotting
         recycling: recycling
-      AP_practice_Qs_rqb_22_CSP_4_1_2:
-        0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
-        0, 44, 16, 32: 0, 44, 16, 32
-        27,  44,  13,  16,  29,  32,  55: 27,  44,  13,  16,  29,  32,  55
-        44,  16,  32: 44,  16,  32
       AP_practice_Qs_rqb_23_CSP_2_1_1:
         I and II: I and II
         I and III: I and III
@@ -6221,18 +6232,6 @@ en:
         A Power Supply: A Power Supply
         A trend: A trend
         Voting on a House Bill: Voting on a House Bill
-      AP_practice_Qs_rqb_36_CSP_4_1_2:
-        0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
-        ? |-
-          0, 44, 16, 32
-
-          <br><img src="https://curriculum.code.org/media/uploads/csp/cadf3089f18df918aaa923dbe99838da" width="300"><br>
-        : |-
-          0, 44, 16, 32
-
-          <br><img src="https://curriculum.code.org/media/uploads/csp/cadf3089f18df918aaa923dbe99838da" width="300"><br>
-        27,  44,  13,  16,  29,  32,  55: 27,  44,  13,  16,  29,  32,  55
-        44,  16,  32: 44,  16,  32
       AP_practice_Qs_rqb_37_CSP_4_1_2:
         0,  27,  44,  13,  16,  29,  32,  55: 0,  27,  44,  13,  16,  29,  32,  55
         0, 44, 16, 32: 0, 44, 16, 32
@@ -7211,6 +7210,14 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
+      CSD U1 Assessment define computer:
+        A machine that can connect to the Internet: A machine that can connect to the Internet
+        A machine that inputs, outputs, stores, and processes information: A machine that inputs, outputs, stores, and processes information
+        A machine that uses electricity (from a cable or battery): A machine that uses electricity (from a cable or battery)
+        A machine that works with information to help people with thinking tasks: A machine that works with information to help people with thinking tasks
+        A machine with a screen and a keyboard: A machine with a screen and a keyboard
+        Question 1: Question 1
+        Which two of the following are the best ways to define a computer? (Choose TWO): Which two of the following are the best ways to define a computer? (Choose TWO)
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -7660,6 +7667,31 @@ en:
         Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
         Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit 2 ch 2 MC trends as predictors_exam_prep:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 4 MC data bias_2018:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 4 google trends MC_2018:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 4 trends as predictors_2018:
         " ": " "
         Search Trends: Search Trends
         Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
@@ -10998,6 +11030,39 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      andrea-test2:
+        Barack Obama: Barack Obama
+        Donald Trump: Donald Trump
+        Hillary Clinton: Hillary Clinton
+        Mike Pence: Mike Pence
+        Who is the President of the United States ?: Who is the President of the United States ?
+        current events: current events
+        selected response: selected response
+      andrea-test3:
+        Barack Obama: Barack Obama
+        Donald Trump: Donald Trump
+        Hillary Clinton: Hillary Clinton
+        Mike Pence: Mike Pence
+        Who is the Vice President of the United States ?: Who is the Vice President of the United States ?
+        current events: current events
+        selected response: selected response
+      behaviors 1 predict:
+        Correct!: Correct!
+        Incorrect: Incorrect
+        Incorrect.: Incorrect.
+        It will change colors.: It will change colors.
+        It will grow.: It will grow.
+        It will move.: It will move.
+        It will spin: It will spin
+        Make a prediction. Study the code.: Make a prediction. Study the code.
+      behaviors 4 predict:
+        <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down: <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down
+        <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag: <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag
+        <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left: <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left
+        <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally: <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally
+        Correct! Watch this video!: Correct! Watch this video!
+        Incorrect. Watch this video!: Incorrect. Watch this video!
+        Make a prediction. Which way will the mouse move towards the cheese?: Make a prediction. Which way will the mouse move towards the cheese?
       commute assess - comp 3 - block:
         Displays "Hello" continuously for 60 seconds: Displays "Hello" continuously for 60 seconds
         Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times
@@ -11168,6 +11233,15 @@ en:
         Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
       courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_harvester_loops11_predict1_2018_2019:
         '12': '12'
         '15': '15'
         '4': '4'
@@ -18452,9 +18526,11 @@ en:
       unique level name here:
         Question: Question
         description here: description here
-        right answer: right answer
+        incorrect 2!: incorrect 2!
+        incorrect!: incorrect!
+        right answer1: right answer1
+        right answer2: right answer2
         title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
