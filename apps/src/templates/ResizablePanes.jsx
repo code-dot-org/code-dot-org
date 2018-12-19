@@ -5,8 +5,8 @@
  *  @see https://github.com/tomkp/react-split-pane
  */
 import React, {PropTypes, Component} from 'react';
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
 import Radium from 'radium';
 
 const styles = {
@@ -18,7 +18,7 @@ const styles = {
     backgroundColor: '#000',
     backgroundClip: 'padding-box',
     userSelect: 'text',
-    width: 11,
+    width: 31,
     margin: '0 -5px',
     borderLeft: '5px solid',
     borderRight: '5px solid',
@@ -72,12 +72,12 @@ class ResizablePanes extends Component {
       return;
     }
     this.unFocus();
-    var resizingPane = this.refs['pane-' + this.state.index];
+    const resizingPane = this.refs[`pane-${this.state.index}`];
     if (!resizingPane) {
       return;
     }
 
-    var resizingPaneDOMNode = ReactDOM.findDOMNode(resizingPane);
+    const resizingPaneDOMNode = ReactDOM.findDOMNode(resizingPane);
     if (!resizingPaneDOMNode.getBoundingClientRect) {
       return;
     }
@@ -104,24 +104,24 @@ class ResizablePanes extends Component {
   };
 
   getClonedChild(child, index) {
-    var columnSize = this.props.columnSizes[index];
-    var style = _.assign(
+    const columnSize = this.props.columnSizes[index];
+    const style = _.assign(
         {flex: '1'},
         child.props.style,
-        (typeof columnSize !== 'undefined' ? {flex: '0 0 ' + columnSize + 'px'} : undefined)
+        (typeof columnSize !== 'undefined' ? {flex: `0 0 ${columnSize}px`} : undefined)
     );
 
     return React.cloneElement(child, {
-      ref: "pane-" + index,
-      key: "pane-" + index,
-      style: style
+      ref: `pane-${index}`,
+      key: `pane-${index}`,
+      style,
     });
   }
 
   getResizer(index) {
     return (
       <div
-        key={"resizer-" + index}
+        key={`resizer-${index}`}
         data-resizer-index={index}
         style={styles.resizer}
         onMouseDown={this.onResizerMouseDown}
@@ -138,9 +138,9 @@ class ResizablePanes extends Component {
   };
 
   getChildren() {
-    var childCount = React.Children.count(this.props.children);
-    var computedChildren = [];
-    React.Children.forEach(this.props.children, function (child, index) {
+    const childCount = React.Children.count(this.props.children);
+    const computedChildren = [];
+    React.Children.forEach(this.props.children, (child, index) => {
       if (!child) {
         return;
       }
@@ -155,7 +155,7 @@ class ResizablePanes extends Component {
   }
 
   render() {
-    var styles = {
+    const styles = {
       root: _.assign({
         display: 'flex',
         flexDirection: 'row',
