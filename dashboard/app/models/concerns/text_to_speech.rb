@@ -191,7 +191,7 @@ module TextToSpeech
     all_instructions = []
 
     contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
-    contained_levels.empty? ? nil : all_instructions * "\n"
+    all_instructions.empty? ? nil : all_instructions * "\n"
   end
 
   def contained_level_text(contained)
