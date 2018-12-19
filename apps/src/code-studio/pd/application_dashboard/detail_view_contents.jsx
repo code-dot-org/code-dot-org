@@ -681,7 +681,7 @@ export class DetailViewContents extends React.Component {
     const snakeCaseKey = _.snakeCase(key);
 
     if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
-      return false;
+      return <td style={styles.scoringColumn}/>;
     }
 
     let scoringDropdowns = [];
@@ -875,53 +875,68 @@ export class DetailViewContents extends React.Component {
             </td>
             <td style={styles.scoringColumn}/>
           </tr>
+          {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+            <tr>
+              <td style={styles.questionColumn}>
+                School Name
+              </td>
+              <td style={styles.answerColumn}>
+                {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school'])}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
+          {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+            <tr>
+              <td style={styles.questionColumn}>
+                School District
+              </td>
+              <td style={styles.answerColumn}>
+                {this.renderSchoolTrait(this.props.applicationData.district_name, this.props.applicationData.form_data['principal_school_district'])}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
           <tr>
             <td style={styles.questionColumn}>
-              School Name
+              Summer Workshop
             </td>
             <td style={styles.answerColumn}>
-              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school'])}
+              {this.renderWorkshopAnswer()}
             </td>
             <td style={styles.scoringColumn}/>
           </tr>
-        <tr>
-          <td style={styles.questionColumn}>
-            School District
-          </td>
-          <td style={styles.answerColumn}>
-            {this.renderSchoolTrait(this.props.applicationData.district_name, this.props.applicationData.form_data['principal_school_district'])}
-          </td>
-          <td style={styles.scoringColumn}/>
-        </tr>
-        <tr>
-          <td style={styles.questionColumn}>
-            Summer Workshop
-          </td>
-          <td style={styles.answerColumn}>
-            {this.renderWorkshopAnswer()}
-          </td>
-          <td style={styles.scoringColumn}/>
-        </tr>
-        <tr>
-          <td style={styles.questionColumn}>
-            Regional Partner
-          </td>
-          <td style={styles.answerColumn}>
-            {this.renderRegionalPartnerAnswer()}
-          </td>
-          {this.renderScoringSection('regionalPartnerName')}
-        </tr>
-        {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+          {this.props.applicationData.application_type === ApplicationTypes.facilitator &&
+            <tr>
+              <td style={styles.questionColumn}>
+                FiT Workshop
+              </td>
+              <td style={styles.answerColumn}>
+                {/* FiT weekend answer */}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
           <tr>
             <td style={styles.questionColumn}>
-              Scholarship Teacher?
+              Regional Partner
             </td>
             <td style={styles.answerColumn}>
-              {this.renderScholarshipStatusAnswer()}
+              {this.renderRegionalPartnerAnswer()}
             </td>
-            <td style={styles.scoringColumn}/>
+            {this.renderScoringSection('regionalPartnerName')}
           </tr>
-        }
+          {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+            <tr>
+              <td style={styles.questionColumn}>
+                Scholarship Teacher?
+              </td>
+              <td style={styles.answerColumn}>
+                {this.renderScholarshipStatusAnswer()}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
         </tbody>
       </Table>
     );
