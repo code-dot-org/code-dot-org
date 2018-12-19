@@ -591,23 +591,32 @@ export class DetailViewContents extends React.Component {
           <h4>
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
-          <h4>
-            Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
-          </h4>
+          {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+            <h4>
+              Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
+            </h4>
+          }
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
-          {this.props.applicationData.course === 'csp' &&
+          {this.props.applicationData.application_type === ApplicationTypes.teacher && this.props.applicationData.course === 'csp' &&
             <h4>
               <a target="_blank" href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view">
                 View CS Principles Rubric
               </a>
             </h4>
           }
-          {this.props.applicationData.course === 'csd' &&
+          {this.props.applicationData.application_type === ApplicationTypes.teacher && this.props.applicationData.course === 'csd' &&
             <h4>
               <a target="_blank" href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view">
                 View CS Discoveries Rubric
+              </a>
+            </h4>
+          }
+          {this.props.applicationData.application_type === ApplicationTypes.facilitator &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1r7Cmn9j7BibblU979dDHKg_5yRtbrEJeMLThMsbbSMo">
+                View Rubric
               </a>
             </h4>
           }
