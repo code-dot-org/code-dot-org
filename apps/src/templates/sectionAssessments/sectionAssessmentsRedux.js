@@ -563,7 +563,6 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
  * of CSV to download. Columns are defined as CSV_SUBMISSION_STATUS_HEADERS in SubmissionStatusAssessmentsContainer
  */
 export const getExportableSubmissionStatusData = (state) => {
-
   let summaryStudentStatus = [];
   const studentStatus = getStudentsMCSummaryForCurrentAssessment(state);
 
@@ -753,7 +752,6 @@ export const getExportableAssessmentData = (state) => {
 
   return responses;
 };
-
 
 /**
  *  @returns {boolean} true if current studentId has submitted responses for current script.
