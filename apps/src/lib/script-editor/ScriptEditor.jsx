@@ -28,8 +28,8 @@ const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 /**
  * Component for editing course scripts.
  */
-const ScriptEditor = React.createClass({
-  propTypes: {
+export default class ScriptEditor extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
@@ -51,17 +51,17 @@ const ScriptEditor = React.createClass({
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-  },
+  };
 
-  handleClearProjectWidgetSelectClick() {
+  handleClearProjectWidgetSelectClick = () => {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
-  },
+  };
 
-  handleClearSupportedLocalesSelectClick() {
+  handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect).children('option')['removeAttr']('selected', true);
-  },
+  };
 
-  presubmit(e) {
+  presubmit = (e) => {
     const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
     const videoKeysAfter = (this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
@@ -71,7 +71,7 @@ const ScriptEditor = React.createClass({
         e.preventDefault();
       }
     }
-  },
+  };
 
   render() {
     const textAreaRows = this.props.stageLevelData ?
@@ -367,6 +367,4 @@ const ScriptEditor = React.createClass({
       </div>
     );
   }
-});
-
-export default ScriptEditor;
+}
