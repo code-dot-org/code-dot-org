@@ -552,11 +552,37 @@ module Pd::Application
         meets_scholarship_criteria_scores.merge!(
           {
             principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
-            principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
-            principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
+            plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
             principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
           }
         )
+
+        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
+          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
+            YES
+          elsif responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(1..2))
+            NO
+          else
+            nil
+          end
+
+        meets_minimum_criteria_scores[:principal_schedule_confirmed] =
+          if responses[:principal_schedule_confirmed].in?(principal_options[:principal_schedule_confirmed].slice(0..1))
+            YES
+          elsif responses[:principal_schedule_confirmed] == principal_options[:principal_schedule_confirmed][2]
+            NO
+          else
+            nil
+          end
+
+        bonus_points_scores[:replace_existing] =
+          if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
+            5
+          elsif responses[:principal_wont_replace_existing_course].in? [principal_options[:replace_course][0], principal_options[:replace_course][0]]
+            0
+          else
+            nil
+          end
 
         if course == 'csd'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
