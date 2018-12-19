@@ -22,6 +22,8 @@
                 %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
                 - if @level.is_a? Artist
                   %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+              %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
+                Copy workspace to clipboard
           %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
           %li
             = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
