@@ -526,8 +526,10 @@ module Pd::Application
         bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
       end
 
-      meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
-      meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
+      if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
+        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+        meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
+      end
 
       bonus_points_scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
 
@@ -549,27 +551,43 @@ module Pd::Application
 
       # Principal Approval
       if responses[:principal_approval]
-        meets_scholarship_criteria_scores.merge!(
-          {
-            principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
-            plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
-            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
-          }
-        )
+        meets_scholarship_criteria_scores[:principal_approval] =
+          responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
 
-        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
+        meets_scholarship_criteria_scores[:principal_diversity_recruitment] =
+          responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
+
+        meets_minimum_criteria_scores[:plan_to_teach] =
+          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first(2)
             YES
-          elsif responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(1..2))
+          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(2..3)
+            NO
+          else
+            nil
+          end
+
+        meets_scholarship_criteria_scores[:plan_to_teach] =
+          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first
+            YES
+          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(1..3)
             NO
           else
             nil
           end
 
         meets_minimum_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed].in?(principal_options[:principal_schedule_confirmed].slice(0..1))
+          if responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(0..1))
             YES
-          elsif responses[:principal_schedule_confirmed] == principal_options[:principal_schedule_confirmed][2]
+          elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
+            NO
+          else
+            nil
+          end
+
+        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
+          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
+            YES
+          elsif responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(1..2))
             NO
           else
             nil
@@ -602,7 +620,7 @@ module Pd::Application
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
             bonus_points_scores: bonus_points_scores
           }
-        ) {|_, old_value, _| old_value}.to_json
+        ) {|key, old, new| key.in?([:plan_to_teach, :replace_existing]) ? new : old}.to_json
       )
     end
 
