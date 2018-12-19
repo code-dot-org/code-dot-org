@@ -723,6 +723,8 @@ export class DetailViewContents extends React.Component {
   };
 
   renderScoringDropdown(key, category) {
+    const scores = TeacherValidScores[_.camelCase(key)][_.camelCase(category)] || TeacherValidScores[_.camelCase(key)];
+
     return (
       <FormControl
         componentClass="select"
@@ -733,7 +735,7 @@ export class DetailViewContents extends React.Component {
       >
         <option>--</option>
         {
-          TeacherValidScores[_.camelCase(key)].map((score, i) => (
+          scores.map((score, i) => (
             <option value={score} key={i}>
               {score}
             </option>
