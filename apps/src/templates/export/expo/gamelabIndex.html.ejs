@@ -2,112 +2,19 @@
   <head>
     <title><%- appName %></title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=320, minimal-ui, target-densityDpi=device-dpi, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=<%- appWidth %>, minimal-ui, target-densityDpi=device-dpi, user-scalable=no">
     <script src="<%- jQueryPath %>"></script>
     <script src="<%- gamelabApiPath %>"></script>
+    <link href="<%- gamelabCssPath %>" rel="stylesheet" type="text/css">
     <script src="<%- p5Path %>"></script>
     <script src="<%- p5playPath %>"></script>
-    <script src="code.j"></script>
+    <script src="<%- codePath %>"></script>
     <style>
-        #studio-dpad {
-          width: 390px;
-          vertical-align: top;
-          margin-left: 10px;
-          -webkit-touch-callout: none; }
-
-        #studio-dpad-rim {
-          position: absolute;
-          width: 0px;
-          height: 0px;
-          border: 76px solid #FFFFFF;
-          border-radius: 76px;
-          box-shadow: 1px 1px 1px 0 #7F7F7F; }
-
-        #studio-dpad-cone {
-          position: absolute;
-          margin: 2px;
-          width: 0px;
-          height: 0px;
-          border: 74px solid #9C9C9C;
-          border-radius: 74px; }
-          #studio-dpad-cone.left {
-            border-top-color: #FFD080;
-            transform: rotate(270deg); }
-            #studio-dpad-cone.left.down {
-              transform: rotate(220deg); }
-            #studio-dpad-cone.left.up {
-              transform: rotate(320deg); }
-          #studio-dpad-cone.right {
-            border-top-color: #FFD080;
-            transform: rotate(90deg); }
-            #studio-dpad-cone.right.down {
-              transform: rotate(140deg); }
-            #studio-dpad-cone.right.up {
-              transform: rotate(40deg); }
-          #studio-dpad-cone.up {
-            border-top-color: #FFD080;
-            transform: rotate(0deg); }
-          #studio-dpad-cone.down {
-            border-top-color: #FFD080;
-            transform: rotate(180deg); }
-
-        #studio-dpad-button {
-          display: inline;
-          position: relative;
-          border-radius: 40px;
-          width: 80px;
-          height: 80px;
-          margin: 36px 5px 5px 36px;
-          border: 1px solid #EFEFEF;
-          background-color: #FFFFFF;
-          box-shadow: 1px 1px 1px 0 #7F7F7F; }
-          #studio-dpad-button.active {
-            border: 1px solid #9F9F9F;
-            box-shadow: none; }
-          #studio-dpad-button.left {
-            left: -17px; }
-            #studio-dpad-button.left.up {
-              left: -12px;
-              top: -12px; }
-            #studio-dpad-button.left.down {
-              left: -12px;
-              top: 12px; }
-          #studio-dpad-button.right {
-            left: 17px; }
-            #studio-dpad-button.right.up {
-              left: 12px;
-              top: -12px; }
-            #studio-dpad-button.right.down {
-              left: 12px;
-              top: 12px; }
-          #studio-dpad-button.up {
-            top: -17px; }
-          #studio-dpad-button.down {
-            top: 17px; }
-
-        #studio-space-button {
-          position: absolute;
-          border-radius: 40px;
-          width: 80px;
-          height: 80px;
-          right: 10px;
-          margin: 5px;
-          border-color: #666666;
-          background-color: #FFA000;
-          box-shadow: inset 1px 1px 0px 0 #FFD07F; }
-          #studio-space-button.active {
-            border-radius: 39px;
-            width: 78px;
-            height: 78px;
-            margin-right: 6px;
-            margin-top: 6px; }
-          #studio-space-button:focus {
-            outline: 0; }
-
-        #soft-buttons.soft-buttons-none {
-          display: none; }
-      </style>
-    </head>
+      #soft-buttons.soft-buttons-none {
+        display: none; }
+    </style>
+  </head>
   <body style="margin:0; overflow:hidden; position:absolute; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
     <div id="sketch"></div>
     <div id="soft-buttons" class="soft-buttons-none">
@@ -121,12 +28,6 @@
       </button>
     </div>
     <div id="studio-dpad-container" style="position:absolute; width:400px; bottom:5px; height:157px; overflow-y:hidden;">
-      <div id="studio-dpad" style="position:absolute; height:152px;">
-        <div id="studio-dpad-rim" style="display:inline;"></div>
-        <div id="studio-dpad-cone" style="display:inline;"></div>
-        <button id="studio-dpad-button" style="display:inline;"></button>
-        <button id="studio-space-button" style="display:inline;"></button>
-      </div>
     </div>
   </body>
 </html>
