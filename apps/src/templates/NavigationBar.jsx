@@ -19,17 +19,6 @@ const styles = {
 export default class NavigationBar extends React.Component {
   static propTypes = {
     links: PropTypes.array,
-    defaultActiveLink: PropTypes.string,
-  };
-
-  state = {
-    activeLink: this.props.defaultActiveLink,
-  };
-
-  changeActiveLink = (linkUrl) => {
-    event.preventDefault();
-    this.setState({activeLink: linkUrl});
-    window.history.replaceState(null, null, linkUrl);
   };
 
   render() {
@@ -41,11 +30,10 @@ export default class NavigationBar extends React.Component {
           <div
             key={link.url}
             style={styles.linkBox}
-            onClick={() => this.changeActiveLink(link.url)}
           >
             <NavigationBarLink
               label={link.label}
-              active={link.url === this.state.activeLink}
+              url={link.url}
             />
           </div>
         ))}

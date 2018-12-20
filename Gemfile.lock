@@ -560,7 +560,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mustermann (1.0.1)
-    mysql2 (0.3.21)
+    mysql2 (0.5.2)
     nakayoshi_fork (0.0.4)
     naturally (2.1.0)
     net-http-persistent (2.9.4)
@@ -966,7 +966,7 @@ DEPENDENCIES
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
   mocha
-  mysql2 (~> 0.3.13)
+  mysql2 (>= 0.4.1)
   nakayoshi_fork
   naturally
   net-http-persistent
