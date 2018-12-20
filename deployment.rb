@@ -12,6 +12,7 @@ require 'cdo/slog'
 require 'os'
 require 'cdo/aws/cdo_google_credentials'
 require 'cdo/git_utils'
+require 'uri'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -270,13 +271,15 @@ class CDOImpl < OpenStruct
   # TODO: (elijah) figure out a better way to link to locale-specific CB
   # content, and reenable some languages here.
   #
-  # When enabled, this should look something like Set['/es-mx', '/it-it', '/th-th']
-  CURRICULUM_LANGUAGES = Set[]
+  # When enabled, this should look something like Set['es-mx', 'it-it', 'th-th']
+  CURRICULUM_LANGUAGES = Set['es-mx']
 
   def curriculum_url(locale, path = '')
-    locale = '/' + locale.downcase.to_s
-    locale = nil unless CURRICULUM_LANGUAGES.include? locale
-    "https://curriculum.code.org#{locale}/#{path}"
+    locale = locale.downcase.to_s
+    uri = URI("https://curriculum.code.org")
+    uri += locale if CURRICULUM_LANGUAGES.include? locale
+    uri += path
+    uri.to_string
   end
 
   def default_scheme
