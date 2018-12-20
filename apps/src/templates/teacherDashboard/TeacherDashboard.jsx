@@ -2,14 +2,16 @@ import React, {PropTypes, Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
+import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    sectionId: PropTypes.string
+    sectionId: PropTypes.string,
+    studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {sectionId} = this.props;
+    const {sectionId, studioUrlPrefix} = this.props;
 
     return (
       <div>
@@ -29,7 +31,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/projects"
-            component={props => <div>Projects content goes here!</div>}
+            component={props => <SectionProjectsListWithData {...props} sectionId={sectionId} studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/text_responses"
