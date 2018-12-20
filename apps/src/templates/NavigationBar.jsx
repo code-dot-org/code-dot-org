@@ -41,7 +41,7 @@ const styles = {
 
 export default class NavigationBar extends React.Component {
   static propTypes = {
-    links: PropTypes.array,
+    links: PropTypes.array.isRequired,
   };
 
   state = {
