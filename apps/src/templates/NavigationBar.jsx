@@ -51,14 +51,14 @@ export default class NavigationBar extends React.Component {
   scrollForward = () => {
     const lastLink = _.last(this.props.links);
     const element = document.getElementById(lastLink.url);
-    element.scrollIntoView({block: "end"});
+    element.scrollIntoView({block: "end", behavior: "smooth"});
     this.setState({listPosition: "end"});
   };
 
   scrollBackward = () => {
     const firstLink = _.first(this.props.links);
     const element = document.getElementById(firstLink.url);
-    element.scrollIntoView({block: "start"});
+    element.scrollIntoView({block: "start", behavior: "smooth"});
     this.setState({listPosition: "start"});
   };
 
