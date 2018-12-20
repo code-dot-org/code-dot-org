@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "addBehaviorUntilBoolean",
-    "blockText": "aalab sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}",
+    "func": "addBehaviorForDuration",
+    "blockText": "aalab sprite {SPRITE} begins {BEHAVIOR} for {SECONDS} seconds",
     "inline": false,
     "args": [
       {
@@ -14,9 +14,9 @@
         "type": "Behavior"
       },
       {
-        "name": "CONDITION",
-        "type": "Boolean",
-        "defer": true
+        "name": "SECONDS",
+        "type": "Number",
+        "field": true
       }
     ]
   }

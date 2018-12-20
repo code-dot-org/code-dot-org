@@ -75,6 +75,9 @@ function Behavior(func, extraArgs) {
   }
   this.func = func;
   this.extraArgs = extraArgs;
+  this.checkTerminate = function() {return false;};
+  this.timeStarted = new Date().getTime();
+  this.duration = Number.MAX_VALUE;
 }
 
 function normalizeBehavior(behavior) {
@@ -345,9 +348,13 @@ function draw() {
   if (shouldUpdate()) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
-      updateBehaviors(sprite);
       sprite.behaviors.forEach(function (behavior) {
-        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+        var timeElapsed = new Date().getTime() - behavior.timeStarted;
+        if(behavior.checkTerminate() || timeElapsed >= behavior.duration) {
+          removeBehavior(sprite, behavior);
+        } else {
+          behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+        }
       });
     });
 
@@ -463,12 +470,4 @@ function removeTextBox(sprite) {
   return function() {
     sprite.textBox = {};
   };
-}
-
-function updateBehaviors(sprite){
-  for(var i = 0; i < sprite.behaviors.length; i++) {
-    if(sprite.behaviors[i].terminus) {
-      sprite.behaviors.splice(i, 1);
-    }
-  }
 }
