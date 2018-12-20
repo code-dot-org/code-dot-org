@@ -1747,15 +1747,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "soft-deletes all of a soft-deleted user's projects" do
     student = create :student
-    with_channel_for student do |channel_id, storage_id|
-      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+    with_channel_for student do |storage_app_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_equal 'active', app[:state]
       end
 
       student.destroy
 
-      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_equal 'deleted', app[:state]
       end
@@ -1764,15 +1764,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "soft-deletes all of a purged user's projects" do
     student = create :student
-    with_channel_for student do |channel_id, storage_id|
-      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+    with_channel_for student do |storage_app_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_equal 'active', app[:state]
       end
 
       purge_user student
 
-      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_equal 'deleted', app[:state]
       end
@@ -1784,15 +1784,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "does not soft-delete anyone else's projects" do
     student_a = create :student
     student_b = create :student
-    with_channel_for student_a do |channel_id_a|
-      with_channel_for student_b do |channel_id_b|
-        assert_equal 'active', storage_apps.where(id: channel_id_a).first[:state]
-        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+    with_channel_for student_a do |storage_app_id_a|
+      with_channel_for student_b do |storage_app_id_b|
+        assert_equal 'active', storage_apps.where(id: storage_app_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: storage_app_id_b).first[:state]
 
         purge_user student_a
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: storage_app_id_b).first[:state]
       end
     end
   end
@@ -1800,17 +1800,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "sets updated_at when soft-deleting projects" do
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |channel_id|
-        assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
-        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+      with_channel_for student do |storage_app_id|
+        assert_equal 'active', storage_apps.where(id: storage_app_id).first[:state]
+        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
 
         Timecop.travel 10
 
         student.destroy
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
         refute_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
       end
     end
   end
@@ -1818,19 +1818,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "soft-delete does not set updated_at on already soft-deleted projects" do
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |channel_id|
-        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+      with_channel_for student do |storage_app_id|
+        storage_apps.where(id: storage_app_id).update(state: 'deleted', updated_at: Time.now)
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
-        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
+        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
 
         Timecop.travel 10
 
         student.destroy
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
         assert_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
       end
     end
   end
@@ -1838,34 +1838,34 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "user purge does set updated_at on already soft-deleted projects" do
     student = create :student
     Timecop.freeze do
-      with_channel_for student do |channel_id|
-        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+      with_channel_for student do |storage_app_id|
+        storage_apps.where(id: storage_app_id).update(state: 'deleted', updated_at: Time.now)
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
-        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
+        original_updated_at = storage_apps.where(id: storage_app_id).first[:updated_at]
 
         Timecop.travel 10
 
         purge_user student
 
-        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal 'deleted', storage_apps.where(id: storage_app_id).first[:state]
         refute_equal original_updated_at.utc.to_s,
-          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+          storage_apps.where(id: storage_app_id).first[:updated_at].utc.to_s
       end
     end
   end
 
   test "clears 'value' for all of a purged user's projects" do
     student = create :student
-    with_channel_for student do |channel_id, storage_id|
-      refute_nil storage_apps.where(id: channel_id).first[:value]
+    with_channel_for student do |storage_app_id, storage_id|
+      refute_nil storage_apps.where(id: storage_app_id).first[:value]
       storage_apps.where(storage_id: storage_id).each do |app|
         refute_nil app[:value]
       end
 
       purge_user student
 
-      assert_nil storage_apps.where(id: channel_id).first[:value]
+      assert_nil storage_apps.where(id: storage_app_id).first[:value]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_nil app[:value]
       end
@@ -1874,15 +1874,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "clears 'updated_ip' for all of a purged user's projects" do
     student = create :student
-    with_channel_for student do |channel_id, storage_id|
-      refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
+    with_channel_for student do |storage_app_id, storage_id|
+      refute_empty storage_apps.where(id: storage_app_id).first[:updated_ip]
       storage_apps.where(storage_id: storage_id).each do |app|
         refute_empty app[:updated_ip]
       end
 
       purge_user student
 
-      assert_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      assert_empty storage_apps.where(id: storage_app_id).first[:updated_ip]
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
       end
@@ -1895,9 +1895,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "unfeatures any featured projects owned by soft-deleted user" do
     student = create :student
-    with_channel_for student do |channel_id|
+    with_channel_for student do |storage_app_id|
       featured_project = create :featured_project,
-        storage_app_id: channel_id,
+        storage_app_id: storage_app_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1911,9 +1911,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "unfeatures any featured projects owned by purged user" do
     student = create :student
-    with_channel_for student do |channel_id|
+    with_channel_for student do |storage_app_id|
       featured_project = create :featured_project,
-        storage_app_id: channel_id,
+        storage_app_id: storage_app_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1929,9 +1929,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
-    with_channel_for student do |channel_id|
+    with_channel_for student do |storage_app_id|
       featured_project = create :featured_project,
-        storage_app_id: channel_id,
+        storage_app_id: storage_app_id,
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
@@ -1980,16 +1980,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # in this test, we depend on the unit tests for the particular buckets to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+    with_channel_for student do |storage_app_id_a, _|
+      with_channel_for student do |storage_app_id_b, storage_id|
+        storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
 
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
 
         purge_user student
       end
@@ -2002,16 +2002,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "Firebase: deletes content for all of user's channels" do
     student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+    with_channel_for student do |storage_app_id_a, _|
+      with_channel_for student do |storage_app_id_b, storage_id|
+        storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
 
         FirebaseHelper.
           expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
         FirebaseHelper.
           expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
 
         purge_user student
       end
@@ -2084,8 +2084,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     with_storage_id_for student do |storage_id|
       assert_empty storage_apps.where(storage_id: storage_id)
 
-      with_channel_for student do |channel_id|
-        assert_equal channel_id, storage_apps.where(storage_id: storage_id).first[:id]
+      with_channel_for student do |storage_app_id|
+        assert_equal storage_app_id, storage_apps.where(storage_id: storage_id).first[:id]
       end
 
       assert_empty storage_apps.where(storage_id: storage_id)
