@@ -274,3 +274,6 @@ da:
       BinaryBracelets_2019:
         title: Binære armbånd
         desc: Eleverne opretter et armbånd som en binært repræsentationer af det første bogstav i deres navn. Eleverne lære at data kan være repræsenteret og gemt på mere end én måde.
+      PaperPlanes_2019:
+        title: 'Real-life algoritmer: Papir fly'
+        desc: Denne lektion viser hvordan vi bruger algoritmer i vores daglige liv, specielt til at lave papirfly. Denne lektion fokuserer også på at give et overblik over programmering, og hvordan algoritmer spiller en væsentlig rolle.
