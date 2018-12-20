@@ -1,19 +1,19 @@
 ---
-title: About
+title: 정보
 theme: responsive
 video_player: true
 ---
-# About Us
+# 우리에 대한
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org®는 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 여성과 소수 민족의 소외 계층이 참여하는 비영리 단체입니다. 우리에 목표는 모든 학교에 있는 모든 학생들이 과학, 생물학, 화학처럼 컴퓨터 과학을 배울 기회를 가지는 것 입니다. 우리는 초중등 학교에서 컴퓨터 과학을 가르치기 위해 가장 널리 사용되는 커리큘럼을 제공하고 매년 <a href="hourofcode.com"> 코드 시간 </a> 캠페인을 조직합니다.이 캠페인은 모든 학생들의 10 %를 차지하고 있습니다. 세계. Code.org는 Amazon, Facebook, Google, the Infosys Foundation, Microsoft등과 같은 기업들로부터 기부를 받고 있습니다.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Code.org 과정들은 수천만명에 학생들과 백만 명에 선생님들에게 도움을 주고 있습니다.</b></font>
  
 </div>
 
@@ -21,13 +21,13 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## 역사
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few. <br /> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+Code.org는 2013년에 쌍둥이 형제인 Hadi와Ali가 컴퓨터 과학 홍보 비디오로 시작했습니다. 어느 날, 이 동영상은 유튜브에서 1등이 되었고, 15,000 개의 학교들이 도움을 요청하였습니다. 그 다음에는, 우리는 세계적인 운동을 지원하는 완전한 조직을 구축하기 위해 자원 봉사자의 부트 스트랩 직원으로부터 확장되었습니다 우리는 좋은 컴퓨터 과학이 운이 좋은 학생들만 배우는게 아니라, 모든 학생들이 배워야 한다고 생각합니다. <br /> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## What We Do
+## 우리가 하는 일
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+우리는 교육 스펙트럼 전반에 걸쳐 일합니다: 새로운 과정 만들기,다른 사람들과 계약하기,선생님들 훈련시키기,큰 사립 학교와 계약 하기, 정부가 정책을 바꾸는 것을 도와주기, 파트너십을 통해 국제적으로 확대되고, 고정 관념을 깨기위한 마케팅하기. 우리의 연구는 컴퓨터 과학 교육을 수립하고, 기금을 조성하고, 퍼뜨리는 데 도움을 준 수많은 조직과 개인들에 의해 수십 년간의 노력을 토대로 구축되었습니다. 광범위한 컴퓨터 과학 교육 커뮤니티의 끊임없는 노력에 감사 드리며 지난 수년간 우리의 영향력을 확대 한 모든 파트너와 개인에게 감사드립니다.
 
 ## Code.org's International Reach
 
@@ -35,9 +35,9 @@ Over 40% of our website traffic comes from outside of the United States and that
 
 <img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## 번역
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+당신이 살고 있는 나라의 학생들에게 직접적인 영향을주고 싶습니까? Code.org에 있는 과정들이 그들에 언어로 번역이 될 수 있도록 도와주세요! 만약 당신이 번역을 도와주신다면, 당신은 컴퓨터 과학을 전 세계에 있는 학생들이 할 수 있게 해주는 7,00명이 넘는 사람들이 이용하는 사이트에 회원이 될 것입니다. 번역 가이드를 보기면 정보를 더 얻으실 수 있습니다.
 
 ## Our commitment to free curriculum and open source technology
 
