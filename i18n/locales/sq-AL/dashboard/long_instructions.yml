@@ -127,7 +127,7 @@ sq:
       4-5 Nested Loops 12: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       4-5 Nested Loops 3: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       4-5 Nested Loops 5: Ciklo kodin e dhënë për të krijuar një mulli ere.
       4-5 Nested Loops 6: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       4-5 Nested Loops 7: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
@@ -277,14 +277,14 @@ sq:
       grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
       grade4_arist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_functions2: "Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi\nlëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur \"vizato një katror\".\nA mund ta përdorësh funksionin \"vizato një katror\" për të krijuar xhamat? Katrorët\njanë 75 piksela të veçuar."
       grade4_artist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli ere.
       grade4_artist_nested_loop_polygons1: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
       grade4_artist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_artist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_parameters_triangles2: A vure re diçka ndryshe te keto blloqe funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade4_bee_conditionals_quantum2: "Bleta dëshiron vetëm nektar \ntani. Kujto, jo të gjithë objektet janë lule, kështu që kontrollo për të mblehdur nektar vetëm\ntek lulet."
