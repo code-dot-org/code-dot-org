@@ -1,7 +1,7 @@
 require 'aws-sdk-cloudwatch'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'concurrent/async'
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 module Cdo
   # Singleton interface for asynchronously sending a collection of CloudWatch metrics in batches.
