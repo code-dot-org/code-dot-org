@@ -712,10 +712,6 @@ export class DetailViewContents extends React.Component {
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
 
-    if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
-      return <td style={styles.scoringColumn}/>;
-    }
-
     let scoringDropdowns = [];
     if (this.scoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
       scoringDropdowns.push(
@@ -736,7 +732,7 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
+    if (this.props.applicationData.application_type === 'Teacher' && this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="meets_scholarship_criteria_br"/>);
       }
@@ -756,6 +752,10 @@ export class DetailViewContents extends React.Component {
   };
 
   renderScoringDropdown(key, category) {
+    console.log(key);
+    console.log(category);
+    console.log(this.validScores[_.camelCase(key)]);
+
     const scores = this.validScores[_.camelCase(key)][_.camelCase(category)] || this.validScores[_.camelCase(key)];
 
     return (

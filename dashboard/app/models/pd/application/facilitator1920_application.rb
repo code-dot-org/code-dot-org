@@ -202,5 +202,13 @@ module Pd::Application
         csv << columns
       end
     end
+
+    # @override
+    def default_response_score_hash
+      {
+        meets_minimum_criteria_scores: {},
+        bonus_points_scores: {}
+      }
+    end
   end
 end
