@@ -126,20 +126,20 @@ $dpad-rim: #FFFFFF;
     border-top-color: $dpad-cone-active;
     transform: rotate(270deg);
     &.down {
-      transform: rotate(225deg);
+      transform: rotate(220deg);
     }
     &.up {
-      transform: rotate(315deg);
+      transform: rotate(320deg);
     }
   }
   &.right {
     border-top-color: $dpad-cone-active;
     transform: rotate(90deg);
     &.down {
-      transform: rotate(135deg);
+      transform: rotate(140deg);
     }
     &.up {
-      transform: rotate(45deg);
+      transform: rotate(40deg);
     }
   }
   &.up {
