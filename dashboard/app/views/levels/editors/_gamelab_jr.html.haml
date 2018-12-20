@@ -32,8 +32,6 @@
     ~ f.text_area :custom_blocks, placeholder: 'Custom blocks', rows: 4, value: @level.custom_blocks
     #custom-blocks-validation
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_custom_blocks, description: "Do not automatically add block pool and custom blocks to the toolbox"}
-.field
   =f.label 'Custom helper library code'
   %p
     This code will be injected between the official helper library and the student's code

@@ -35,15 +35,15 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
-    channel_count = channel_ids.count
-    encrypted_channel_ids = channel_ids.map do |id|
-      storage_encrypt_channel_id user.user_storage_id, id
+    storage_app_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    channel_count = storage_app_ids.count
+    encrypted_channel_ids = storage_app_ids.map do |storage_app_id|
+      storage_encrypt_channel_id user.user_storage_id, storage_app_id
     end
 
     # Clear potential PII from user's channels
     @pegasus_db[:storage_apps].
-      where(id: channel_ids).
+      where(id: storage_app_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear S3 contents for user's channels
@@ -125,7 +125,9 @@ class DeleteAccountsHelper
     SQL
 
     unless application_ids.empty?
+      # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
+      Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
     WorkshopAttendance.where(teacher_id: user_id).update_all(teacher_id: nil, notes: nil)
