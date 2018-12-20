@@ -596,7 +596,7 @@ module Pd::Application
         bonus_points_scores[:replace_existing] =
           if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
             5
-          elsif responses[:principal_wont_replace_existing_course].in? [principal_options[:replace_course][0], principal_options[:replace_course][0]]
+          elsif responses[:principal_wont_replace_existing_course].in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
             0
           else
             nil
