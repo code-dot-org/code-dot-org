@@ -41,8 +41,11 @@ import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
-  ApplicationTypes
+  ApplicationTypes,
 } from './constants';
+import {
+  FacilitatorScoringFields
+} from './detail_view/facilitator_scoring_fields';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
@@ -97,6 +100,10 @@ const styles = {
   },
   scoringColumn: {
     width: '20%'
+  },
+  scoringDropdown: {
+    marginTop: '10px',
+    marginBottom: '10px'
   }
 };
 
@@ -745,8 +752,17 @@ export class DetailViewContents extends React.Component {
       }
       scoringDropdowns.push(
         <div key="bonus_points_scores">
-          Bonus Points?
+          {
+            this.props.applicationData.application_type === 'Facilitator' &&
+              FacilitatorScoringFields[key] ?
+              FacilitatorScoringFields[key]['title'] : 'Bonus Points'
+          }
           {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
+          {
+            this.props.applicationData.application_type === 'Facilitator' &&
+              FacilitatorScoringFields[key] &&
+              FacilitatorScoringFields[key]['rubric']
+          }
         </div>
       );
     }
@@ -770,10 +786,6 @@ export class DetailViewContents extends React.Component {
   };
 
   renderScoringDropdown(key, category) {
-    console.log(key);
-    console.log(category);
-    console.log(this.validScores[_.camelCase(key)]);
-
     const scores = this.validScores[_.camelCase(key)][_.camelCase(category)] || this.validScores[_.camelCase(key)];
 
     return (
@@ -783,6 +795,7 @@ export class DetailViewContents extends React.Component {
         id={`${key}-${category}-score`}
         onChange={this.handleScoreChange}
         disabled={!this.state.editing}
+        style={styles.scoringDropdown}
       >
         <option>--</option>
         {
