@@ -11,8 +11,8 @@ class RoutesTest < ActionDispatch::IntegrationTest
   end
 
   def test_dance_session_cookie_and_cache_headers
-    script = create :script, name: 'dance'
-    stage = create :stage, script: script
+    script = Script.find_by_name('dance')
+    stage = create :stage, script: script, relative_position: 1
     create :script_level, script: script, stage: stage
     create :script_level, script: script, stage: stage, position: 12
     create :script_level, script: script, stage: stage, position: 13
