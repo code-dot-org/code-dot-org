@@ -29,6 +29,9 @@ module Pd
         institution_type: 'What type of institution do you work for?',
         current_employer: 'Current employer',
         job_title: 'What is your job title?',
+        gender_identity: 'Gender Identity',
+        race: 'Race',
+        how_heard: 'How did you hear about this opportunity?',
       },
 
       section_2_choose_your_program: {
@@ -116,9 +119,6 @@ module Pd
       },
 
       section_6_submission: {
-        gender_identity: 'Gender Identity',
-        race: 'Race',
-        how_heard: 'How did you hear about this opportunity?',
         agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
       }
     }.freeze
