@@ -44,8 +44,9 @@ export default class LandingPage extends Component {
         <br/>
         {this.props.lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
-            surveyUrl={this.props.lastWorkshopSurveyUrl}
+            subHeading={i18n.plLandingSubheading()}
             description={i18n.plLandingDescription({course: this.props.lastWorkshopSurveyCourse})}
+            surveyUrl={this.props.lastWorkshopSurveyUrl}
           />
        )}
         <EnrolledWorkshops/>
@@ -67,12 +68,12 @@ const HeaderImage = () => (
   </div>
 );
 
-export const LastWorkshopSurveyBanner = ({description, surveyUrl}) => (
+export const LastWorkshopSurveyBanner = ({subHeading, description, surveyUrl}) => (
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
     imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
-    subHeading={i18n.plLandingSubheading()}
+    subHeading={subHeading}
     description={description}
     buttons={[
       {
