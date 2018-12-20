@@ -8,7 +8,11 @@ import {
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
 export default class Section6Submission extends LabeledFormComponent {
-  static labels = PageLabels.section6Submission;
+  static labels = PageLabels.section6Submission.merge(
+    'genderIdentity': PageLabels.section1AboutYou.genderIdentity,
+    'race': PageLabels.section1AboutYou.race,
+    'howHeard': PageLabels.section1AboutYou.howHeard,
+    );
 
   static associatedFields = [
     ...Object.keys(PageLabels.section6Submission)

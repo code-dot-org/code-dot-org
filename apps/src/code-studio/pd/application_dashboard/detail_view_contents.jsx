@@ -22,14 +22,21 @@ import {
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import {
-  LabelOverrides,
-  PageLabels,
-  SectionHeaders,
-  ScoreableQuestions,
-  MultiAnswerQuestionFields,
+  LabelOverrides as TeacherLabelOverrides,
+  PageLabels as TeacherPageLabelsOverrides,
+  SectionHeaders as TeacherSectionHeaders,
+  ScoreableQuestions as TeacherScoreableQuestions,
+  MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores,
   ScholarshipDropdownOptions
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+import {
+  LabelOverrides as FacilitatorLabelOverrides,
+  PageLabels as FacilitatorPageLabelsOverrides,
+  SectionHeaders as FacilitatorSectionHeaders,
+  ScoreableQuestions as FacilitatorScoreableQuestions,
+  ValidScores as FacilitatorValidScores
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
@@ -156,14 +163,30 @@ export class DetailViewContents extends React.Component {
   constructor(props) {
     super(props);
 
+    if (this.props.applicationData.application_type === ApplicationTypes.teacher) {
+      this.labelOverrides = TeacherLabelOverrides;
+      this.pageLabels = TeacherPageLabelsOverrides;
+      this.sectionHeaders = TeacherSectionHeaders;
+      this.scoreableQuestions = TeacherScoreableQuestions;
+      this.multiAnswerQuestionFields = TeacherMultiAnswerQuestionFields;
+      this.validScores = TeacherValidScores;
+    } else {
+      this.labelOverrides = FacilitatorLabelOverrides;
+      this.pageLabels = FacilitatorPageLabelsOverrides;
+      this.sectionHeaders = FacilitatorSectionHeaders;
+      this.scoreableQuestions = FacilitatorScoreableQuestions;
+      this.multiAnswerQuestionFields = {};
+      this.validScores = FacilitatorValidScores;
+    }
+
     this.state = this.getOriginalState();
   }
 
   getOriginalState() {
     // Principal Implementation is only scoreable in csd applications. It was the one
     // exception to the whole thing and not worth reimplimenting the consts file
-    const bonusPoints = this.props.applicationData.course === 'csd' ? ScoreableQuestions['bonusPoints']
-      : _.filter(ScoreableQuestions['bonusPoints'], (x) => x !== 'principal_implementation');
+    const bonusPoints = this.props.applicationData.course === 'csd' ? this.scoreableQuestions['bonusPoints']
+      : _.filter(this.scoreableQuestions['bonusPoints'], (x) => x !== 'principal_implementation');
 
     return {
       editing: false,
@@ -615,7 +638,7 @@ export class DetailViewContents extends React.Component {
           }
           {this.props.applicationData.application_type === ApplicationTypes.facilitator &&
             <h4>
-              <a target="_blank" href="https://docs.google.com/document/d/1r7Cmn9j7BibblU979dDHKg_5yRtbrEJeMLThMsbbSMo">
+              <a target="_blank" href="https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub">
                 View Rubric
               </a>
             </h4>
@@ -694,7 +717,7 @@ export class DetailViewContents extends React.Component {
     }
 
     let scoringDropdowns = [];
-    if (ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
+    if (this.scoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
       scoringDropdowns.push(
         <div key="meets_minimum_criteria_scores">
           Meets minimum requirements?
@@ -713,7 +736,7 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
+    if (this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="meets_scholarship_criteria_br"/>);
       }
@@ -733,7 +756,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderScoringDropdown(key, category) {
-    const scores = TeacherValidScores[_.camelCase(key)][_.camelCase(category)] || TeacherValidScores[_.camelCase(key)];
+    const scores = this.validScores[_.camelCase(key)][_.camelCase(category)] || this.validScores[_.camelCase(key)];
 
     return (
       <FormControl
@@ -770,19 +793,19 @@ export class DetailViewContents extends React.Component {
     return (
       <div>
         {
-          _.pull(Object.keys(SectionHeaders), ...sectionsToRemove).map((header, i) => (
+          _.pull(Object.keys(this.sectionHeaders), ...sectionsToRemove).map((header, i) => (
             <div key={i}>
               <h3>
-                {SectionHeaders[header]}
+                {this.sectionHeaders[header]}
               </h3>
               <Table style={styles.detailViewTable} striped bordered>
                 <tbody>
                 {
-                  Object.keys(PageLabels[header]).map((key, j) => {
+                  Object.keys(this.pageLabels[header]).map((key, j) => {
                     return (this.props.applicationData.form_data[key] || header === 'schoolStatsAndPrincipalApprovalSection') && (
                       <tr key={j}>
                         <td style={styles.questionColumn}>
-                          {LabelOverrides[key] || PageLabels[header][key]}
+                          {this.labelOverrides[key] || this.pageLabels[header][key]}
                         </td>
                         <td style={styles.answerColumn}>
                           {this.renderAnswer(key, this.props.applicationData.form_data[key])}
@@ -802,12 +825,12 @@ export class DetailViewContents extends React.Component {
   };
 
   renderAnswer = (key, answer) => {
-    if (MultiAnswerQuestionFields[key]) {
+    if (this.multiAnswerQuestionFields[key]) {
       return (
         <div>
-          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])])}</p>)}
-          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])])}</p>)}
-          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']] || NA}</p>)}
+          {this.multiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(this.multiAnswerQuestionFields[key]['teacher'])])}</p>)}
+          {this.multiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.formatAnswer(key, this.props.applicationData.form_data[_.camelCase(this.multiAnswerQuestionFields[key]['principal'])])}</p>)}
+          {this.multiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[this.multiAnswerQuestionFields[key]['stats']] || NA}</p>)}
         </div>
       );
     } else {
