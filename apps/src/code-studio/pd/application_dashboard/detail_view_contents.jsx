@@ -104,6 +104,9 @@ const styles = {
   scoringDropdown: {
     marginTop: '10px',
     marginBottom: '10px'
+  },
+  scoreBreakdown: {
+    marginLeft: '30px'
   }
 };
 
@@ -138,6 +141,8 @@ export class DetailViewContents extends React.Component {
       meets_criteria: PropTypes.string,
       meets_scholarship_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
+      all_scores: PropTypes.object,
+      total_scores: PropTypes.number,
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
       pd_workshop_url: PropTypes.string,
@@ -644,9 +649,7 @@ export class DetailViewContents extends React.Component {
               Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
             </h4>
           }
-          <h4>
-            Bonus Points: {this.props.applicationData.bonus_points}
-          </h4>
+          {this.renderPointsSection()}
           {this.props.applicationData.application_type === ApplicationTypes.teacher && this.props.applicationData.course === 'csp' &&
             <h4>
               <a target="_blank" href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view">
@@ -675,6 +678,61 @@ export class DetailViewContents extends React.Component {
         </div>
       </div>
     );
+  };
+
+  renderPointsSection = () => {
+    if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
+      return (
+        <div>
+          <h4>
+            Total Score: {this.props.applicationData.all_scores['total_score']}
+          </h4>
+          <div style={styles.scoreBreakdown}>
+            <p>
+              Application
+              Score: {this.props.applicationData.all_scores['application_score']}
+            </p>
+            <p>
+              Interview Score: {this.props.applicationData.all_scores['interview_score']}
+            </p>
+            <br/>
+            <p>
+              Teacher Experience
+              Score: {this.props.applicationData.all_scores['teaching_experience_score']}
+            </p>
+            <p>
+              Leadership
+              Score: {this.props.applicationData.all_scores['leadership_score']}
+            </p>
+            <p>
+              Champion for CS
+              Score: {this.props.applicationData.all_scores['champion_for_cs_score']}
+            </p>
+            <p>
+              Equity Score: {this.props.applicationData.all_scores['equity_score']}
+            </p>
+            <p>
+              Growth Mindset
+              Score: {this.props.applicationData.all_scores['growth_minded_score']}
+            </p>
+            <p>
+              Content Knowledge
+              Score: {this.props.applicationData.all_scores['content_knowledge_score']}
+            </p>
+            <p>
+              Program Commitment
+              Score: {this.props.applicationData.all_scores['program_commitment_score']}
+            </p>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <h4>
+          Bonus Points: {this.props.applicationData.bonus_points}
+        </h4>
+      );
+    }
   };
 
   renderRegistrationLinks = () => {

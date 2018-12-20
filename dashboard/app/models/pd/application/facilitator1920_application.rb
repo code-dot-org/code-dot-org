@@ -210,5 +210,38 @@ module Pd::Application
         bonus_points_scores: {}
       }
     end
+
+    def meets_criteria
+      response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
+
+      scored_questions = SCOREABLE_QUESTIONS[:bonus_points]
+
+      scores = scored_questions.map {|q| response_scores[q]}
+
+      if scores.uniq == [YES]
+        YES
+      elsif NO.in? scores
+        NO
+      else
+        REVIEWING_INCOMPLETE
+      end
+    end
+
+    def total_score
+      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+    end
+
+    def all_scores
+      bonus_points_scores = response_scores_hash[:bonus_points_scores]
+      all_score_hash = {
+        total_score: "#{bonus_points_scores.values.reduce(:+)} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
+      }
+
+      BONUS_POINT_CATEGORIES.each_pair do |category, keys|
+        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.reduce(:+) || 0} / #{keys.length * 5}"
+      end
+
+      all_score_hash
+    end
   end
 end
