@@ -414,6 +414,24 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderFitWeekendAnswer = () => {
+    return (
+      <DetailViewWorkshopAssignmentResponse
+        question="FIT Workshop"
+        courseName={this.props.applicationData.course_name}
+        subjectType="fit"
+        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
+        assignedWorkshop={{
+          id: this.state.fit_workshop_id,
+          name: this.props.applicationData.fit_workshop_name,
+          url: this.props.applicationData.fit_workshop_url
+        }}
+        editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
+        onChange={this.handleFitWorkshopChange}
+      />
+    );
+  };
+
   renderRegionalPartnerAnswer = () => {
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
@@ -945,7 +963,7 @@ export class DetailViewContents extends React.Component {
                 FiT Workshop
               </td>
               <td style={styles.answerColumn}>
-                {/* FiT weekend answer */}
+                {this.renderFitWeekendAnswer()}
               </td>
               <td style={styles.scoringColumn}/>
             </tr>
