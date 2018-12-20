@@ -10428,6 +10428,8 @@ en:
               name: Binary Bracelets
               description_student: ''
               description_teacher: ''
+            'End of Course Project: Play Lab':
+              name: 'End of Course Project: Play Lab'
         csp-mid-survey:
           stages:
             CSP Mid-year survey:

@@ -5,6 +5,7 @@ import _ from 'lodash';
 import codemirror from 'codemirror';
 import marked from 'marked';
 import renderer from '@cdo/apps/util/StylelessRenderer';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
@@ -21,6 +22,11 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 
   commonBlocks.install(blockly, options);
   appBlocks.install(blockly, options);
+};
+
+window.levelbuilder.copyWorkspaceToClipboard = function () {
+  const str = Blockly.Xml.domToPrettyText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  copyToClipboard(str);
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.
