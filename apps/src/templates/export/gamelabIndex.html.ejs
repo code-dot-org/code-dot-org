@@ -2,8 +2,11 @@
   <head>
     <title><%- appName %></title>
     <meta charset="utf-8" />
+    <% if (webExport) { -%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% } else { -%>
     <meta name="viewport" content="width=<%- appWidth %>, minimal-ui, target-densityDpi=device-dpi, user-scalable=no">
+    <% } -%>
     <script src="<%- jQueryPath %>"></script>
     <script src="<%- gamelabApiPath %>"></script>
     <link href="<%- gamelabCssPath %>" rel="stylesheet" type="text/css">

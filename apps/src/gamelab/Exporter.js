@@ -8,7 +8,7 @@ import {SnackSession} from '@code-dot-org/snack-sdk';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import exportGamelabCodeEjs from '../templates/export/gamelabCode.js.ejs';
-import exportGamelabExpoIndexEjs from '../templates/export/expo/gamelabIndex.html.ejs';
+import exportGamelabIndexEjs from '../templates/export/gamelabIndex.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
@@ -31,7 +31,7 @@ export default {
     const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
     const appWidth = GAME_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
-    const html = exportGamelabExpoIndexEjs({
+    const html = exportGamelabIndexEjs({
       appName,
       appHeight,
       appWidth,
@@ -41,6 +41,7 @@ export default {
       p5Path: expoMode ? 'p5.j' : 'p5.js',
       p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
       codePath: expoMode ? 'code.j' : 'code.js',
+      webExport: !expoMode,
     });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
@@ -253,7 +254,7 @@ export default {
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
     const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
     const appWidth = GAME_WIDTH;
-    const html = exportGamelabExpoIndexEjs({
+    const html = exportGamelabIndexEjs({
       appName,
       appHeight,
       appWidth,
@@ -263,6 +264,7 @@ export default {
       p5Path,
       p5playPath,
       codePath: 'code.j',
+      webExport: false,
     });
     const appJs = exportExpoAppEjs({
       appHeight,
