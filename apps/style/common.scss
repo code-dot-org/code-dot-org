@@ -528,6 +528,10 @@ html[dir='rtl'] div#visualizationResizeBar {
   stroke: black;
   stroke-width: 1;
   cursor: default;
+
+  html[dir='RTL'] & {
+    text-anchor: start;
+  }
 }
 
 /* Shrink the visualization area on small displays. */
