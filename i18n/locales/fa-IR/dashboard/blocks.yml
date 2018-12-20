@@ -224,12 +224,24 @@ fa:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -248,6 +260,11 @@ fa:
           CORNER:
             '"right"': سمت راست
             '"left"': سمت چپ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -291,6 +308,21 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      binary_move:
+        options:
+          DIR:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
       craft_ifPath:
         options:
           DIR:

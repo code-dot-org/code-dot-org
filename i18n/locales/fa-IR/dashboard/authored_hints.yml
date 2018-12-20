@@ -19,12 +19,12 @@ fa:
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           آیا در پیدا کردن زاویه صحیح به کمک نیاز دارید؟
-          
+
           ** ۳۰ = ۳۶۰/۱۲ **
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -42,7 +42,7 @@ fa:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -61,7 +61,7 @@ fa:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -80,7 +80,7 @@ fa:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -99,7 +99,7 @@ fa:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -116,7 +116,7 @@ fa:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -126,7 +126,7 @@ fa:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -142,7 +142,7 @@ fa:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -161,7 +161,7 @@ fa:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -180,7 +180,7 @@ fa:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -199,7 +199,7 @@ fa:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
