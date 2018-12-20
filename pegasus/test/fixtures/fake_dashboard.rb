@@ -305,6 +305,8 @@ module FakeDashboard
     # Reuse the same connection in Sequel to share access to the temporary tables.
     connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)
     connection.query_options[:as] = :hash
+    # Don't auto-close the connection, because the created temporary table is session-local.
+    connection.automatic_close = false
     @@fake_db = Sequel.mysql2(test: false)
     @@fake_db.pool.available_connections.replace([connection])
 

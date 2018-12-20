@@ -2,7 +2,7 @@ require 'addressable'
 require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
-require 'honeybadger'
+require 'honeybadger/ruby'
 require 'cdo/firehose'
 
 #

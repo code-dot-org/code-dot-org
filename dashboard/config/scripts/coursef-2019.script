@@ -93,7 +93,8 @@ level 'behaviors 1'
 level 'behaviors 2'
 level 'behaviors 3'
 level 'behaviors 4'
-level 'behaviors 5', challenge: true
+level 'behaviors 5'
+level 'behaviors 6', challenge: true
 
 stage 'Envelope Variables', flex_category: 'csf_f_2'
 level 'EnvelopeVariables_2019'
