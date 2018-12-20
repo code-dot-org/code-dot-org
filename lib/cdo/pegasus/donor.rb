@@ -1,3 +1,5 @@
+require 'honeybadger/ruby'
+
 # Returns a random donor's twitter handle.
 def get_random_donor_twitter
   weight = SecureRandom.random_number
