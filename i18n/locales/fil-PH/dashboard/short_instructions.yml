@@ -732,6 +732,7 @@ fil:
       Course 4 SCV 4: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang ng mga bloke hangga't maaari.
       Course 4 SCV 5: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang ng mga bloke hangga't maaari.
       Course 4 SCV 6: Mag-click dito para matingnan ulit ang mga instruksyon.
+      Course E MC Conditionals1: Mahahanap mo ang dalawang napakahalagang mga kayamanan sa ilalim ng lupa, ngunit maaaring maging madilim ito. Maglagay ng hindi bababa sa 2 sulo at magmina ng hindi bababa sa 2 uling.
       Course1BeePuzzle12: Kumuha ng tatlong mga nektar at pagkatapos ay gumawa ng dalawang pulot
       CourseF_PlayLab_vars1: 'Para makalaro sa larong ito, hindi mo kailangang magsulat ng kahit anumang code, pindutin lang ang "Run"! '
       CourseF_PlayLab_vars10: "Oras para sa Libreng Laro! Narito ang lahat ng mga variable na napaglaruan natin sa yugtong ito pati na rin ang karagdagang mga kaso na gusto mo ang mga ito.\\r\n\\r\nPansinin na mayroon na ngayong napakaraming mga bloke sa ating toolbox na kailangan nilang ayusin! Dito, naglagay kami sa bawat piraso sa isang angkop na kategorya. Maglaan ng ilang oras para tuklasin ang lahat na maaaring magamit. Kapag tapos ka nang mag-browse, gumawa ng isang laro o kuwento gamit ang mga repeat, mga variable, at mga pangyayari. \\r\n\\r\nHiging: mag-scroll sa baba para makita ang lahat ng mga utos sa loob ng workspace."
@@ -1657,22 +1658,31 @@ fil:
       courseC19_playLab_EOC6: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
       courseC_PlayLab_events1: Pasabihin si Jorge ang Aso (aktor 1) nang "Hi there."
       courseC_PlayLab_events1_2018: Pasabihin si Jorge ang Aso (aktor 1) nang "Hi there."
+      courseC_PlayLab_events1_2019: Pasabihin si Jorge ang Aso (aktor 1) nang "Hi there."
       courseC_PlayLab_events2: Maaari mo bang mapagawa si Jorge ang Aso (aktor 1) na magsabi ng isang bagay, pagkatapos pasalitain din si Olive ang Pusa (aktor 2) pagkatapos?
       courseC_PlayLab_events2_2018: Maaari mo bang mapagawa si Jorge ang Aso (aktor 1) na magsabi ng isang bagay, pagkatapos pasalitain din si Olive ang Pusa (aktor 2) pagkatapos?
+      courseC_PlayLab_events2_2019: Maaari mo bang mapagawa si Jorge ang Aso (aktor 1) na magsabi ng isang bagay, pagkatapos pasalitain din si Olive ang Pusa (aktor 2) pagkatapos?
       courseC_PlayLab_events3: Maaari ka bang magsulat ng programa para mapagawa si Jorge (aktor 1) na lumapit papunta kay Olive ang Pusa?
       courseC_PlayLab_events3_2018: Maaari ka bang magsulat ng programa para mapagawa si Jorge (aktor 1) na lumapit papunta kay Olive ang Pusa?
+      courseC_PlayLab_events3_2019: Maaari ka bang magsulat ng programa para mapagawa si Jorge (aktor 1) na lumapit papunta kay Olive ang Pusa?
       courseC_PlayLab_events4: Maaari ka bang magsulat ng programa na nagpapagawa kay Jorge (aktor 1) na lumakad papunta kay Olive ang Pusa, at pasabihin si Olive nang "Hi there." kapag si Jorge ay nakaabot sa kanya?
       courseC_PlayLab_events4_2018: Maaari ka bang magsulat ng programa na nagpapagawa kay Jorge (aktor 1) na lumakad papunta kay Olive ang Pusa, at pasabihin si Olive nang "Hi there." kapag si Jorge ay nakaabot sa kanya?
+      courseC_PlayLab_events4_2019: Maaari ka bang magsulat ng programa na nagpapagawa kay Jorge (aktor 1) na lumakad papunta kay Olive ang Pusa, at pasabihin si Olive nang "Hi there." kapag si Jorge ay nakaabot sa kanya?
       courseC_PlayLab_events5: Maaari ka bang magsulat ng programa para mapagawa si Octavia ang Pugita na magsabi nang "Ano ang bago?" kapag siya ay na-click?
       courseC_PlayLab_events5_2018: Maaari ka bang magsulat ng programa para mapagawa si Octavia ang Pugita na magsabi nang "Ano ang bago?" kapag siya ay na-click?
+      courseC_PlayLab_events5_2019: Maaari ka bang magsulat ng programa para mapagawa si Octavia ang Pugita na magsabi nang "Ano ang bago?" kapag siya ay na-click?
       courseC_PlayLab_events6: Ngayon, magsulat ng programa para mapagalaw si Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na mga key para matamaan ang lahat ng mga target!
       courseC_PlayLab_events6_2018: Ngayon, magsulat ng programa para mapagalaw si Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na mga key para matamaan ang lahat ng mga target!
+      courseC_PlayLab_events6_2019: Ngayon, magsulat ng programa para mapagalaw si Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan na mga key para matamaan ang lahat ng mga target!
       courseC_PlayLab_events7: Ang `repeat forever` na bloke ay nagbibigay-daan na mapapatakbo mo ang code nang paulit-ulit magpakailanman. Gamitin ang blokeng ito para galawin si Chomp ang Dino (aktor 2) pataas at pababa ng 400 pixels magpakailanman.
       courseC_PlayLab_events7_2018: Ang `repeat forever` na bloke ay nagbibigay-daan na mapapatakbo mo ang code nang paulit-ulit magpakailanman. Gamitin ang blokeng ito para galawin si Chomp ang Dino (aktor 2) pataas at pababa ng 400 pixels magpakailanman.
+      courseC_PlayLab_events7_2019: Ang `repeat forever` na bloke ay nagbibigay-daan na mapapatakbo mo ang code nang paulit-ulit magpakailanman. Gamitin ang blokeng ito para galawin si Chomp ang Dino (aktor 2) pataas at pababa ng 400 pixels magpakailanman.
       courseC_PlayLab_events8: "Maaari mo bang mapapatugtog si Waddles (aktor 1) ng \"hit\" na tunog at pasabihin ng \"Ouch!\" kapag nakatagpo niya si Chomp? \\r\nKapag tapos ka na, laruin ang laro para mangyari ito."
       courseC_PlayLab_events8_2018: "Maaari mo bang mapapatugtog si Waddles (aktor 1) ng \"hit\" na tunog at pasabihin ng \"Ouch!\" kapag nakatagpo niya si Chomp? \\r\nKapag tapos ka na, laruin ang laro para mangyari ito."
+      courseC_PlayLab_events8_2019: "Maaari mo bang mapapatugtog si Waddles (aktor 1) ng \"hit\" na tunog at pasabihin ng \"Ouch!\" kapag nakatagpo niya si Chomp? \\r\nKapag tapos ka na, laruin ang laro para mangyari ito."
       courseC_PlayLab_events9: "Maaari ka bang magdagdag ng bloke para makaiskor ng puntos kapag si Waddles ang Pingguwino (aktor 1) ay nakatagpo kay Octavia ang Pugita (aktor 3)?\n\\r\nLaruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makapuntos ka!"
       courseC_PlayLab_events9_2018: "Maaari ka bang magdagdag ng bloke para makaiskor ng puntos kapag si Waddles ang Pingguwino (aktor 1) ay nakatagpo kay Octavia ang Pugita (aktor 3)?\n\\r\nLaruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makapuntos ka!"
+      courseC_PlayLab_events9_2019: "Maaari ka bang magdagdag ng bloke para makaiskor ng puntos kapag si Waddles ang Pingguwino (aktor 1) ay nakatagpo kay Octavia ang Pugita (aktor 3)?\n\\r\nLaruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makapuntos ka!"
       courseC_PlayLab_eventsA: |-
         Magdagdag ng mga bloke sa `when run` na pangyayari para palitan ang background na eksena at ang bilis ni Waddles ang Pingguwino.\r
         \r
@@ -1681,10 +1691,16 @@ fil:
         Magdagdag ng mga bloke sa `when run` na pangyayari para palitan ang background na eksena at ang bilis ni Waddles ang Pingguwino.\r
         \r
         Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang makapuntos ka.
+      courseC_PlayLab_eventsA_2019: |-
+        Magdagdag ng mga bloke sa `when run` na pangyayari para palitan ang background na eksena at ang bilis ni Waddles ang Pingguwino.\r
+        \r
+        Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang makapuntos ka.
       courseC_PlayLab_eventsFP: Maglikha ng iyong sariling kuwento. Kapag tapos ka na, i-click ang "Finish" para ibahagi sa iyong mga kaibigan. Tingnan ang mga ideyang kuwento sa mga hint.
       courseC_PlayLab_eventsFP_2018: Maglikha ng iyong sariling kuwento. Kapag tapos ka na, i-click ang "Finish" para ibahagi sa iyong mga kaibigan. Tingnan ang mga ideyang kuwento sa mga hint.
+      courseC_PlayLab_eventsFP_2019: Maglikha ng iyong sariling kuwento. Kapag tapos ka na, i-click ang "Finish" para ibahagi sa iyong mga kaibigan. Tingnan ang mga ideyang kuwento sa mga hint.
       courseC_PlayLab_events_challenge1: "Gumamit ng bagong bloke para awtomatikong mapabalik si Waddles sa simula kung saan natagpuan niya ang Dinosaur at kapag siya ay nakakapuntos.\\r\nLaruin ang laro at pagalawin si Waddles gamit ang mga arrow hanggang sa makakuha siya ng sapat na puntos."
       courseC_PlayLab_events_challenge1_2018: "Gumamit ng bagong bloke para awtomatikong mapabalik si Waddles sa simula kung saan natagpuan niya ang Dinosaur at kapag siya ay nakakapuntos.\\r\nLaruin ang laro at pagalawin si Waddles gamit ang mga arrow hanggang sa makakuha siya ng sapat na puntos."
+      courseC_PlayLab_events_challenge1_2019: "Gumamit ng bagong bloke para awtomatikong mapabalik si Waddles sa simula kung saan natagpuan niya ang Dinosaur at kapag siya ay nakakapuntos.\\r\nLaruin ang laro at pagalawin si Waddles gamit ang mga arrow hanggang sa makakuha siya ng sapat na puntos."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Narito ang bagong bloke na medyo komplikado. Gamitin ito para mapagalaw si Waddles pabalik sa simula kapag nakatagpo niya ang Dinosaur at kapag siya ay nakakapuntos. Ito ay nagpamanghamon at nagpasaya sa iyong laro!\r
         \r
@@ -1851,30 +1867,43 @@ fil:
       courseC_harvester_loops1: Gamitin ang mga loop para pulutin ang lahat ng mga kalabasa.
       courseC_harvester_loops10: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops10_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops10_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops11: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops11_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops11_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops1_2018: Gamitin ang mga loop para pulutin ang lahat ng mga kalabasa.
+      courseC_harvester_loops1_2019: Gamitin ang mga loop para pulutin ang lahat ng mga kalabasa.
       courseC_harvester_loops2: Maaari mo bang haluin ang dalawang iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng mga ito?
       courseC_harvester_loops2_2018: Maaari mo bang haluin ang dalawang iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng mga ito?
+      courseC_harvester_loops2_2019: Maaari mo bang haluin ang dalawang iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng mga ito?
       courseC_harvester_loops3: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops3_2018: Kolektahin ang lahat ng mga kalabasa.
+      courseC_harvester_loops3_2019: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops4: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops4_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops4_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops5: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops5_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops5_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops6: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops6_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops6_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops7: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops7_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops7_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops8: "**Hamon:** Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa."
       courseC_harvester_loops8_2018: "**Hamon:** Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa."
+      courseC_harvester_loops8_2019: "**Hamon:** Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa."
       courseC_harvester_loops9: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops9_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops9_2019: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops_challenge1: Kolektahin ang lahat ng mga mais.
       courseC_harvester_loops_challenge1a: Kolektahin ang lahat ng mga mais.
       courseC_harvester_loops_challenge1a_2018: Kolektahin ang lahat ng mga mais.
+      courseC_harvester_loops_challenge1a_2019: Kolektahin ang lahat ng mga mais.
       courseC_harvester_loops_challenge2: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_challenge2_2018: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
+      courseC_harvester_loops_challenge2_2019: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_forVid: Kolektahin ang lahat ng mga mais, lahat ng mga letsugas, at lahat ng mga kalabasa.
       courseC_maze_debugging1: Ayusin ang code para matulunga si Scrat na kumuha sa bunga ng oak.
       courseC_maze_debugging10: I-debug ang antas na ito sa pamamagitan ng pag-iba sa ayos at pagbago sa mga bloke para makapunta ako sa baboy!
@@ -2457,6 +2486,7 @@ fil:
       courseD_harvester_nested_loops_challenge1_2019: '"Kailangan ko ng iilang tulong sa bukirin! Tulungan akong anihin ang mga mais gamit lang ang mga bloke na nasa iyong toolbox."'
       courseD_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseD_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_maze_intro5a_2019: Bigyang-pansin ang pagkasunod-sunod at tingnan kung matukoy mo kung paano makapunta sa baboy na iyan!
       courseD_maze_loops_challenge1: Tayo ay manghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor na makaabot nang hindi bababa sa dalawan tumpok ng yaman gamit lang ang mga bloke na nasa loob ng iyong toolbox.
       courseD_maze_nestedLoops3: Dalhin ang zombie sa mirasol gamit ang pinakakaunting bilang ng mga posibleng bloke.
       courseD_maze_nestedLoops3_2018: Dalhin ang zombie sa mirasol gamit ang pinakakaunting bilang ng mga posibleng bloke.
@@ -2493,7 +2523,6 @@ fil:
       courseD_maze_ramp5b_2019: Mag-navigate sa maze na ito para matulungan ang ibon na mahanap ang baboy!
       courseD_maze_ramp5c: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5c_2018: Tulungan ang ibon na makapunta sa baboy.
-      courseD_maze_ramp5c_2019: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5d: Dalhin ang ibon sa baboy.
       courseD_maze_ramp5d_2018: Dalhin ang ibon sa baboy.
       courseD_maze_ramp5d_2019: Dalhin ang ibon sa baboy.
@@ -3623,7 +3652,6 @@ fil:
       ramp_artist_loops3_2019: Gumamit ng `repeat` na loop para iguhit ang limang may kulay na mga gitling.
       ramp_artist_loops4: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
       ramp_artist_loops4_2018: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
-      ramp_artist_loops4_2019: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
       ramp_artist_loops5: Gamitin ang mga loop para iguhit ang hagdanang ito.
       ramp_artist_loops5_2018: Gamitin ang mga loop para iguhit ang hagdanang ito.
       ramp_artist_loops5_2019: Gamitin ang mga loop para iguhit ang hagdanang ito.
