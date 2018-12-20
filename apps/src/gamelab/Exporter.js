@@ -7,7 +7,6 @@ import {SnackSession} from '@code-dot-org/snack-sdk';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
-import exportGamelabWebExport from '../templates/export/gamelabWebExport.html.ejs';
 import exportGamelabCodeEjs from '../templates/export/gamelabCode.js.ejs';
 import exportGamelabExpoIndexEjs from '../templates/export/expo/gamelabIndex.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
@@ -32,24 +31,17 @@ export default {
     const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
     const appWidth = GAME_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
-    var html;
-    if (expoMode) {
-      html = exportGamelabExpoIndexEjs({
-        appName,
-        appHeight,
-        appWidth,
-        jQueryPath: jQueryBaseName + ".j",
-        gamelabApiPath: 'gamelab-api.j',
-        p5Path: 'p5.j',
-        p5playPath: 'p5.play.j',
-      });
-    } else {
-      html = exportGamelabWebExport({
-        appName,
-        appHeight,
-        appWidth,
-      });
-    }
+    const html = exportGamelabExpoIndexEjs({
+      appName,
+      appHeight,
+      appWidth,
+      jQueryPath: expoMode ? jQueryBaseName + '.j' : 'https://code.jquery.com/jquery-1.12.1.min.js',
+      gamelabApiPath: expoMode ? 'gamelab-api.j' : 'gamelab-api.js',
+      gamelabCssPath: 'gamelab.css',
+      p5Path: expoMode ? 'p5.j' : 'p5.js',
+      p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
+      codePath: expoMode ? 'code.j' : 'code.js',
+    });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
@@ -256,6 +248,7 @@ export default {
     const gamelabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
       `${origin}/blockly/js/gamelab-api.js` :
       `${origin}/blockly/js/gamelab-api.min.js`;
+    const gamelabCssPath = `${origin}/blockly/css/gamelab.css`;
     const p5Path = `${origin}/blockly/js/p5play/p5.js`;
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
     const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
@@ -266,8 +259,10 @@ export default {
       appWidth,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       gamelabApiPath,
+      gamelabCssPath,
       p5Path,
       p5playPath,
+      codePath: 'code.j',
     });
     const appJs = exportExpoAppEjs({
       appHeight,
