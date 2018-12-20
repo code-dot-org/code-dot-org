@@ -3,14 +3,7 @@ title: Donation Policy
 nav: about_nav
 theme: responsive
 ---
-
-# Code.org Donation Acceptance Policy
-1. Types of donation
-1. All gifts to Code.org are unrestricted
-1. We welcome expressions of interests from any prospective donor
-1. We reserve the right to choose whether to accept offers of support
-1. Thank you
-
+# Donation Policy
 ## Types of donation
 Code.org accepts monetary donations of any size so long as they consist of:
  

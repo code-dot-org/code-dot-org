@@ -1,14 +1,12 @@
 @no_mobile
 Feature: Sign In Button and User Menu in Header
 
-@skip
 Scenario: Signed Out - sign in button shows
   Given I am on "http://code.org/"
   And I set the language cookie
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
-@skip
 Scenario: Teacher Signed In - shows display name with correct links
   Given I create a teacher named "Ms_Frizzle"
   And I wait until element ".display_name" is visible
@@ -28,7 +26,6 @@ Scenario: Teacher Signed In - shows display name with correct links
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
-@skip
 Scenario: Student Signed In - shows display name with correct links
   Given I create a student named "Arnold"
   And I wait until element ".display_name" is visible
@@ -38,13 +35,14 @@ Scenario: Student Signed In - shows display name with correct links
   And I wait until element "#user-signout" is visible
   # Confirm dropdown is as expected on Pegasus
   Given I am on "http://code.org/help"
+  And I dismiss the language selector
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Arnold"
   And I click selector ".display_name"
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
   # Check that the dropdown links work
-  And I press "user-edit"
+  And I press "user-edit" to load a new page
   And check that I am on "http://studio.code.org/users/edit"
   And I wait until element ".display_name" is visible
   And I click selector ".display_name"

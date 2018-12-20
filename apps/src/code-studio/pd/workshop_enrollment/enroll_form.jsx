@@ -28,16 +28,16 @@ const SCHOOL_TYPES_MAPPING = {
 const DESCRIBE_ROLES = ([
   "School Administrator",
   "District Administrator",
+  "Parent",
   "Other"
 ]);
 
-const ROLES = DESCRIBE_ROLES.concat([
+const ROLES = [
   "Classroom Teacher",
-  "Librarian",
-  "Tech Teacher",
   "Media Specialist",
-  "Parent"
-]);
+  "Tech Teacher",
+  "Librarian"
+].concat(DESCRIBE_ROLES);
 
 const GRADES_TEACHING = [
   "Pre-K",
