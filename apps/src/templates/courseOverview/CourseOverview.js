@@ -109,7 +109,7 @@ export default class CourseOverview extends Component {
   onDismissRedirectWarning = () => {
     let dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
     if (dismissedRedirectWarnings) {
-        dismissedRedirectWarnings += `,${this.props.name}`;
+      dismissedRedirectWarnings += `,${this.props.name}`;
     } else {
       dismissedRedirectWarnings = this.props.name;
     }
