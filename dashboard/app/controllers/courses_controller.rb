@@ -61,9 +61,9 @@ class CoursesController < ApplicationController
       return
     end
 
-    # Attempt to redirect students if we think they ended up on the wrong course overview page.
-    if student_redirect_course = student_redirect_course(course)
-      redirect_to "/courses/#{student_redirect_course.name}/?redirect_warning=true"
+    # Attempt to redirect user if we think they ended up on the wrong course overview page.
+    if redirect_course = redirect_course(course)
+      redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
 
@@ -109,8 +109,8 @@ class CoursesController < ApplicationController
 
   private
 
-  def student_redirect_course(course)
-    # Return nil if course is nil or we know the student can view the version requested.
+  def redirect_course(course)
+    # Return nil if course is nil or we know the user can view the version requested.
     return nil if !course || course.can_view_version?(current_user)
 
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
