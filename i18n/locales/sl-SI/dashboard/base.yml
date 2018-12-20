@@ -155,11 +155,11 @@ sl:
     subject: 'Pridruži se mojemu razredu (na Code.org)'
     body: |
       Klikni spodnji link za prijavo na začetni tečaj računalništva na Code.org (z menoj kot tvojim 'učiteljem'):
-      
+
       %{link}
-      
+
       Začetni tečaji so zabavni, vizualno zanimivi in učijo osnovne koncepte računalništva z usporabo preprostih, vodenih izkušenj kot v računalniški igri. Nauči se programirati od Billa Gatesa, Marka Zuckenberga, Angry Birds in Plants Vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:
