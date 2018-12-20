@@ -941,6 +941,18 @@ FactoryGirl.define do
     travel_distance 'Within my city'
     additional_info 'none'
     agree true
+    have_led_adults 'Yes'
+    developmentAndPreparationRequirement 'Yes, I can commit to this requirement'
+    currentlyInvolvedInCsEducation 'I teach CS courses for credit to K-12, community college, or university students'
+    experienceTeachingThisCourse 'Yes, to elementary school students'
+    whyShouldAllHaveAccess 'Why should all'
+    skillsAreasToImprove 'Skills areas'
+    inquiryBasedLearning 'Inquiry'
+    whyInterested 'Why interested'
+    teachingExperience 'Yes, I am a current classroom teacher'
+    gradesTaught ['Elementary school']
+    completedPd 'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.'
+    facilitatorAvailability 'Weekdays during the school year'
 
     trait :csf do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
