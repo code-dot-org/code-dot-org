@@ -1,17 +1,23 @@
-import React, {Component} from 'react';
+import React, {PropTypes, Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import StatsTableWithData from './StatsTableWithData';
 
 export default class TeacherDashboard extends Component {
+  static propTypes = {
+    sectionId: PropTypes.string
+  };
 
   render() {
+    const {sectionId} = this.props;
+
     return (
       <div>
         <TeacherDashboardNavigation/>
         <Switch>
           <Route
             path="/stats"
-            component={props => <div>Stats content goes here!</div>}
+            component={props => <StatsTableWithData {...props} sectionId={sectionId}/>}
           />
           <Route
             path="/progress"
