@@ -193,6 +193,7 @@ zh-CN:
         \ "
       AWS applab: "# 现在这样做\r\n\r\n* 第一步\r\n*\n第二步"
       AWS link: "# 使用这个工具"
+      AlgPD DR Free Play: 用现有课程中或者别的什么地方的单词问题，来完成设计，并编写一个函数。可以使用工作簿中的设计表格，或者从[这里]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf')下载副本。
       Alien Defender: "**项目想法**: 在游戏实验室创建一个防守游戏！"
       Alien Defender_2018: "**项目想法**: 在游戏实验室创建一个防守游戏！"
       AllTheThings Applab DesignModeDefault: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\"
@@ -6219,30 +6220,30 @@ zh-CN:
       Dance_Party_01: |-
         *让我们开个舞会吧！*
 
-        将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
+        将“新建”模块拖到工作区，并关联到“设置”模块，创建第一个舞者。
 
-        * *如果您需要了解更多信息或其他挑战，还可以点击左侧的灯泡。*
+        * *如果需要了解更多信息或其他挑战，可以点击左侧的灯泡。*
       Dance_Party_01_low: |-
         *让我们开个舞会吧！*
 
-        将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
+        将“新建”模块拖到工作区，并关联到“设置”模块，创建第一个舞者。
 
-        * *如果您需要了解更多信息或其他挑战，还可以点击左侧的灯泡。*
+        * *如果需要了解更多信息或其他挑战，可以点击左侧的灯泡。*
       Dance_Party_02: |-
         让这只驼鹿舞动起来吧！
 
-        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">牙线舞</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。您的舞者应在第四个小节后开始新的动作。
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">新舞者</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">线条</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。舞者应在第四个小节后开始新的动作。
 
 
         **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
       Dance_Party_03: |-
         *现在跟着节奏动起来！*
 
-        在您的工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
+        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
       Dance_Party_04: |-
         *给舞蹈加点炫酷效果！*
 
-        请在工具箱中找到一个能添加背景效果的模块。然后跟随音乐节拍，来看看新的效果吧！
+        在工具箱中找到一个能添加背景效果的模块。然后跟随音乐节拍，来看看新的效果吧！
       Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
@@ -6252,22 +6253,23 @@ zh-CN:
 
         创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
       Dance_Party_08: |-
-        每个舞者都有一系列控制其外形的 _属性设置_。
+        每个舞者都有一系列控制其外观的 _属性设置_。
 
-        您可以通过缩小舞者的 _大小_ 使它看上去像是在后排。你能让两个伴舞大小一样吗？
+        可以通过缩小舞者的 _大小_ 使它看上去像是在后排。你能让两个伴舞大小一样吗？
       Dance_Party_09: |-
-        舞者拥有可以添加颜色层的“色彩”属性。尝试更改其中一个舞者的色彩。
-        *色彩将会将您选择的颜色与舞者的颜色混合。
+        舞者有可以添加颜色层的"tint"（色调）属性。尝试更改其中一个舞者的色调。
+        * 色调将会将选择的颜色与舞者的颜色混合。
       Dance_Party_10: |-
-        现在我们知道如何更改舞者的属性了。我们还可以使用此模块让相同的属性自动对音乐做出响应：
+        现在知道了如何更改舞者的属性，还可以使用此模块让相同的属性自动对音乐做出响应：
+
         <xml>
         <block type="Dancelab_startMapping">
-        <title name="SPRITE">right_pineapple</title>
+        <title name="SPRITE">右边的独角兽</title>
         <title name="PROPERTY">"比例"</title>
-        <title name="RANGE">"低音"</title>
+        <title name="RANGE">"base"（低音）</title>
         </block></xml>
 
-        此程序使用音乐的“低音”音量来控制舞者的高度。您可以让其他舞者也对音乐做出响应吗？
+        此程序使用音乐的"bass"（最低频率的声音）音量来控制舞者的高度。可以让其他舞者也对音乐有响应吗？
       Dance_Party_11.5_test: |-
         查看此模块：
 
@@ -6278,13 +6280,13 @@ zh-CN:
         <title name="LAYOUT">"圆圈"</title>
         </block></xml>
 
-        现在您可以一次创建多个舞者了！
+        现在可以一次创建多个舞者了！
 
         尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
       Dance_Party_11: |-
-        <xml><block type="Dancelab_whenKey"></block></xml> 模块让您可以在按下上方向键时运行代码。
+        <xml><block type="Dancelab_whenKey"></block></xml> 模块可以在上方向键按下时运行代码。
 
-        您可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
+        可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
       Dance_Party_11_5: |-
         查看此模块：
 
@@ -6295,10 +6297,13 @@ zh-CN:
         <title name="LAYOUT">"圆圈"</title>
         </block></xml>
 
-        现在您可以一次创建多个舞者了！
+        现在可以一次创建多个舞者了！
 
         尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。
-      Dance_Party_11b: 跳舞时间到了！按下左方向键时，猫会轻拍。让机器人在按下右方向键时“掉落”。
+      Dance_Party_11b: |-
+        跳舞时间到了！按下左方向键时，猫会轻拍。让机器人在按下右方向键时"蹲下"，并在按下上方向键时"拍手"。
+
+        ** 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ **
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Dance_Party_3: |-
         *现在跟着节奏动起来！*
@@ -6311,25 +6316,25 @@ zh-CN:
       Dance_Party_extras_battle: |-
         # 舞蹈团队
 
-        下面是两个团队之间的舞蹈。箭头键控制其中一个舞者， “w, a, s, d”键控制另一个舞者。和朋友跳支舞，然后试着改进这支舞。
+        下面是两个团队之间的舞蹈。箭头键控制其中一个舞者， “w, a, s, d” 键控制另一个舞者。和朋友跳支舞，然后试着改进这支舞。
 
         * 添加更多的键来控制舞蹈
         * 按下键时，可以让备选舞者也跟着响应
         * 通过设置舞者的可见性，可以每4个小节替换舞者
       Dance_Party_extras_every_beat: |-
-        # 四分注释
+        # 四分音符
 
-        我们的舞蹈大多采用了全部小节，但每个小节都由4个1/4小节组成。这个舞蹈使用“0.25小节”，使舞者每1/4小节拍手一次。
+        舞蹈大多采用了全音节，但每个小节都由4个1/4小节组成。这个舞蹈使用`0.25小节`，使舞者每1/4小节拍手一次。
 
-        这个舞蹈还使用_ 条件 _ 模块来控制在什么时候用“0.25小节”模块来改变舞蹈。试着更改条件模块中的数字，看看它是如何改变舞蹈的。
+        这个舞蹈还使用_ 条件 _ 模块来控制在什么时候用10.25小节1模块来改变舞蹈。试着更改条件模块中的数字，看看它是如何改变舞蹈的。
 
         * 试着使用其他持续时间（如0.5为半个小节，或0.125为1/8小节)。
-        * 添加一些“小节后”事件。
-        * 将“小节”切换为“秒”，并试着以这种方式给舞蹈安排节奏。
+        * 添加一些`小节后`的事件。
+        * 将"小节"切换为"秒"，并试着以这种方式给舞蹈安排节奏。
       Dance_Party_extras_layout: |-
-        # 让我们进入阵型！
+        # 开始编队！
 
-        看看这个舞蹈，使用“布局”模块来改变整个舞蹈中备选舞者的阵型。请尝试以下方法之一来扩展它：
+        看看这个舞蹈，使用`layout`（布局）模块来改变整个舞蹈中备选舞者的阵型。请尝试以下方法之一来扩展它：
 
         * 在另一个布局中创建第二组舞者
         * 按下键时更改布局
@@ -6458,9 +6463,9 @@ zh-CN:
 
         创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
       HOC Dance 9_draft: |-
-        <xml><block type="Dancelab_whenKey"></block></xml> 模块让您可以在按下上方向键时运行代码。
+        <xml><block type="Dancelab_whenKey"></block></xml> 模块可以在上方向键按下时运行代码。
 
-        您可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
+        可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！
       HOC Dance Freeplay: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       HOC Dance Freeplay_draft: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       HOC Dance Predraw: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
@@ -8394,12 +8399,19 @@ zh-CN:
       courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseC_PlayLab_events7: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
       courseC_PlayLab_events7_2018: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
+      courseC_PlayLab_events7_2019: "`一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
       courseC_PlayLab_events8: "如果企鹅跑到了恐龙（演员1）那里，你能让它说\"噢！\"，并且播放\"命中\"的声音吗？\r\n\r\nWhen\nyou're
         done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events8_2018: "如果企鹅跑到了恐龙（演员1）那里，你能让它说\"噢！\"，并且播放\"命中\"的声音吗？\r\n\r\nWhen\nyou're
         done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "如果企鹅跑到了恐龙（演员1）那里，你能让它说\"噢！\"，并且播放\"命中\"的声音吗？\r\n\r\nWhen\nyou're
+        done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events_challenge1: "用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！\r\n\r\n玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。"
       courseC_PlayLab_events_challenge1_2018: |-
+        用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！
+
+        玩游戏，并用方向控制企鹅，直到得到了5分或更多分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
+      courseC_PlayLab_events_challenge1_2019: |-
         用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！
 
         玩游戏，并用方向控制企鹅，直到得到了5分或更多分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
@@ -8599,28 +8611,40 @@ zh-CN:
       courseC_harvester_loops1: "循环不仅能重复移动。\r\n\r\n用循环来收集所有4个南瓜。"
       courseC_harvester_loops10: 收集所有玉米和南瓜。
       courseC_harvester_loops10_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops10_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops11: 收集所有玉米和南瓜。
       courseC_harvester_loops11_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops11_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops1_2018: "循环不仅能重复移动。\r\n\r\n用循环来收集所有4个南瓜。"
+      courseC_harvester_loops1_2019: "循环不仅能重复移动。\r\n\r\n用循环来收集所有4个南瓜。"
       courseC_harvester_loops2: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
       courseC_harvester_loops2_2018: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
+      courseC_harvester_loops2_2019: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
       courseC_harvester_loops3: 收集所有南瓜。
       courseC_harvester_loops3_2018: 收集所有南瓜。
+      courseC_harvester_loops3_2019: 收集所有南瓜。
       courseC_harvester_loops4: "现在，也有玉米在生长了！\r\n\r\n收集所有的玉米和南瓜。"
       courseC_harvester_loops4_2018: "现在，也有玉米在生长了！\r\n\r\n收集所有的玉米和南瓜。"
+      courseC_harvester_loops4_2019: "现在，也有玉米在生长了！\r\n\r\n收集所有的玉米和南瓜。"
       courseC_harvester_loops5: 收集所有玉米和南瓜。
       courseC_harvester_loops5_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops5_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops6: 收集所有玉米和南瓜。
       courseC_harvester_loops6_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops6_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops7: 收集所有玉米和南瓜。
       courseC_harvester_loops7_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops7_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops8: "**挑战：**收集所有的玉米和南瓜。\r\n\r\n你可以用任何方法完成这个挑战，但要么会做很多工作，要么多思考一下！"
       courseC_harvester_loops8_2018: "**挑战：**收集所有的玉米和南瓜。\r\n\r\n你可以用任何方法完成这个挑战，但要么会做很多工作，要么多思考一下！"
+      courseC_harvester_loops8_2019: "**挑战：**收集所有的玉米和南瓜。\r\n\r\n你可以用任何方法完成这个挑战，但要么会做很多工作，要么多思考一下！"
       courseC_harvester_loops9: 收集所有玉米和南瓜。
       courseC_harvester_loops9_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops9_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge2: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_challenge2_2018: 收集所有的莴苣。避开树木和田野!
+      courseC_harvester_loops_challenge2_2019: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_forVid: 收集所有玉米和南瓜。
       courseC_maze_debugging1: "这个代码不太正确！\r\n\r\n修复代码来帮助斯奎特获得橡子。"
       courseC_maze_debugging1_2018: "这个代码不太正确！\r\n\r\n修复代码来帮助斯奎特获得橡子。"
@@ -9241,6 +9265,7 @@ zh-CN:
       courseD_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseD_maze_intro5a_2019: 注意顺序，看看你能否找出如何到达那头猪！
       courseD_maze_loops_challenge1: |-
         让我们寻找宝藏
         - 使用循环！帮助收集器只使用工具箱中的模块来得到至少两堆宝藏。
