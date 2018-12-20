@@ -764,7 +764,8 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove = ['section5AdditionalDemographicInformation', 'section6Submission'];
+    const sectionsToRemove = this.props.applicationData.application_type === ApplicationTypes.teacher ?
+                               ['section5AdditionalDemographicInformation', 'section6Submission'] : ['section6Submission'];
 
     return (
       <div>
@@ -981,7 +982,9 @@ export class DetailViewContents extends React.Component {
         <br/>
         {this.renderTopTableLayout()}
         {this.renderDetailViewTableLayout()}
-        {!this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()}
+        {this.props.applicationData.application_type === ApplicationTypes.teacher &&
+          !this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()
+        }
         {this.renderNotes()}
         {this.renderEditMenu()}
         {this.props.applicationData.status_change_log && (
