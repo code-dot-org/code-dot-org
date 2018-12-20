@@ -48,6 +48,10 @@ if CDO.image_optim
   use Rack::Optimize
 end
 
+# Disable Sinatra auto-initialization.
+# Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
+use Honeybadger::Rack::ErrorNotifier
+
 require 'files_api'
 use FilesApi
 
