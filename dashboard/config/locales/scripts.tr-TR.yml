@@ -10080,6 +10080,8 @@ tr:
               name: Sanatçıların İç İçe Döngüleri
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
+            Conditionals in Minecraft:
+              name: Minecraft' da Koşullar
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10293,3 +10295,55 @@ tr:
                 rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
                 organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+        andrea-test:
+          stages:
+            new stage:
+              name: yeni kademe
+            'null':
+              name: boş
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dance-extras-gallery:
+          title: Dans Etmeye Devam
+          description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
+        coursec-2019:
+          description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
+            baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
+            araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
+            kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 6-10'
+          stages:
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Maze:
+              name: Labirentte Programlama
+            Debugging in Maze:
+              name: Labirentte Hata Ayıklama
+            'Real-life Algorithms: Paper Planes':
+              name: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+            Programming in Collector:
+              name: Koleksiyoncu programlama
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
+            Loops with Rey and BB-8:
+              name: Rey ve BB-8 ile döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            Screen Out the Mean:
+              name: Ortalamanın Ekranını Kaldır
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+            Looking Ahead:
+              name: Geleceğe bakış
+            Binary Bracelets:
+              name: İkilik Bileklikler
+        csp-mid-survey:
+          description_audience: CSP Öğrencileri
