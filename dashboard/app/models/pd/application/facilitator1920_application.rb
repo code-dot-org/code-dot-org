@@ -44,6 +44,12 @@ module Pd::Application
       class_name: 'Pd::FitWeekend1920Registration',
       foreign_key: 'pd_application_id'
 
+    serialized_attrs %w(
+      status_log
+    )
+
+    before_save :log_status, if: -> {status_changed?}
+
     #override
     def year
       YEAR_19_20
@@ -77,6 +83,23 @@ module Pd::Application
 
     def fit_weekend_registration
       Pd::FitWeekend1920Registration.find_by_pd_application_id(id)
+    end
+
+    # @override
+    # @param [Pd::Application::Email] email
+    # Note - this should only be called from within Pd::Application::Email.send!
+    def deliver_email(email)
+      unless email.pd_application_id == id
+        raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
+      end
+
+      # email_type maps to the mailer action
+      Facilitator1920ApplicationMailer.send(email.email_type, self).deliver_now
+    end
+
+    def log_status
+      self.status_log ||= []
+      status_log.push({status: status, at: Time.zone.now})
     end
 
     # memoize in a hash, per course
