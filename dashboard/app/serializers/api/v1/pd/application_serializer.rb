@@ -44,7 +44,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_scholarship_criteria,
     :school_stats,
     :status_change_log,
-    :scholarship_status
+    :scholarship_status,
+    :all_scores,
+    :total_score
   )
 
   def email
@@ -70,6 +72,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def bonus_points
     object.try(:total_score) || nil
+  end
+
+  def all_scores
+    object.try(:all_scores)
+  end
+
+  def total_score
+    object.try(:total_score)
   end
 
   def pd_workshop_id

@@ -941,30 +941,49 @@ FactoryGirl.define do
     travel_distance 'Within my city'
     additional_info 'none'
     agree true
+    have_led_adults 'Yes'
+    developmentAndPreparationRequirement 'Yes, I can commit to this requirement'
+    currentlyInvolvedInCsEducation 'I teach CS courses for credit to K-12, community college, or university students'
+    experienceTeachingThisCourse 'Yes, to elementary school students'
+    whyShouldAllHaveAccess 'Why should all'
+    skillsAreasToImprove 'Skills areas'
+    inquiryBasedLearning 'Inquiry'
+    whyInterested 'Why interested'
+    teachingExperience 'Yes, I am a current classroom teacher'
+    gradesTaught ['Elementary school']
+    completedPd 'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.'
+    facilitatorAvailability 'Weekdays during the school year'
 
     trait :csf do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
-      csf_availability 'Yes'
+      with_csf_specific_fields
     end
 
     trait :csd do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
+      csd_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :csp do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
+      csp_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :with_csf_specific_fields do
-      csf_availability Pd::Application::Facilitator1920Application::ONLY_WEEKEND
-      csf_partial_attendance_reason 'reasons'
+      csf_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
     end
 
     trait :with_csd_csp_specific_fields do
-      csd_csp_fit_availability Pd::Application::Facilitator1920Application.options[:csd_csp_fit_availability].first
-      csd_csp_teachercon_availability Pd::Application::Facilitator1920Application.options[:csd_csp_teachercon_availability].first
+      csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
+      csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_lead_summer_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_deeper_learning_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
     end
   end
 

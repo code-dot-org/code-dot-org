@@ -1,23 +1,38 @@
 import React from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 
-export default class Section7Submission extends LabeledFormComponent {
-  static labels = PageLabels.section7Submission;
+export default class Section6Submission extends LabeledFormComponent {
+  static labels = PageLabels.section6Submission.merge(
+    'genderIdentity': PageLabels.section1AboutYou.genderIdentity,
+    'race': PageLabels.section1AboutYou.race,
+    'howHeard': PageLabels.section1AboutYou.howHeard,
+    );
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section7Submission)
+    ...Object.keys(PageLabels.section6Submission)
   ];
 
   render() {
     return (
       <FormGroup>
-        <h3>Section 7: {SectionHeaders.section7Submission}</h3>
+        <h3>Section 6: {SectionHeaders.section6Submission}</h3>
 
-        {this.largeInputFor("additionalInfo", {required: false})}
-
-        <hr />
+        {this.radioButtonsFor("genderIdentity")}
+        {this.checkBoxesFor("race")}
+        {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
+          [TextFields.howHeardFacilitator] : "facilitator",
+          [TextFields.howHeardCodeOrgStaff] : "codeOrgStaff",
+          [TextFields.howHeardRegionalPartner] : "regionalPartner",
+          [TextFields.otherWithText] : "other"
+        }, {
+          required: false
+        })}
 
         Code.org works closely with local Regional Partners to organize and deliver the Facilitator Development Program.
         If accepted to the program, you agree to allow Code.org to share your workshop performance and program
