@@ -105,6 +105,7 @@ export default class App extends React.Component {
             source={{uri: indexUri}}
             style={styles.webView}
             javaScriptEnabled={true}
+            mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
             scalesPageToFit={Platform.OS === 'ios'}
