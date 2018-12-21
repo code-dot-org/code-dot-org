@@ -3,20 +3,20 @@ tr:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} {UNIT} sonra"
+        text: "[TIMESTAMP][0] [UNIT][1] sonra"
         options:
           UNIT:
             '"measures"': ölçü
             '"seconds"': saniye
       Dancelab_changeColorBy:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
+        text: "[COLOR][0] [METHOD][1]’u [AMOUNT][2] kadar değiştir"
         options:
           METHOD:
             '"hue"': renk tonu
             '"saturation"': doygunluk
             '"brightness"': parlaklık
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} sürekli {MOVE} {DIR} yap"
+        text: "[GROUP][0] sürekli [MOVE][1] [DIR][2] yap"
         options:
           GROUP:
             sprites: tüm
@@ -46,7 +46,7 @@ tr:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} sürekli {MOVE} {DIR} yap"
+        text: "[SPRITE][0] sürekli [MOVE][1] [DIR][2] yap"
         options:
           MOVE:
             '"next"': "(Sonraki)"
@@ -63,7 +63,7 @@ tr:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
+        text: "[SPRITE][0] [PROPERTY][1]’i [VAL][2] kadar değiştir"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -73,7 +73,7 @@ tr:
             '"x"': yatay konum
             '"y"': dikey konum
       Dancelab_doMoveEachLR:
-        text: "{GROUP} bir kere {MOVE} {DIR} yap"
+        text: "[GROUP][0] bir kere [MOVE][1] [DIR][2] yap"
         options:
           GROUP:
             sprites: tüm
@@ -101,7 +101,7 @@ tr:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} bir kere {MOVE} {DIR} yap"
+        text: "[SPRITE][0] bir kere [MOVE][1] [DIR][2] yap"
         options:
           MOVE:
             '"rand"': "(Rastgele)"
@@ -116,25 +116,25 @@ tr:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'her {N} {UNIT}’de bir '
+        text: 'her [N][0] [UNIT][1]’de bir '
         options:
           UNIT:
             '"measures"': ölçü
             '"seconds"': saniye
       Dancelab_everySecondsRange:
-        text: "{START}’den {STOP}’e her {N} {UNIT}’de bir "
+        text: "[START][2]’den [STOP][3]’e her [N][0] [UNIT][1]’de bir "
         options:
           UNIT:
             measures: Ölçü
             seconds: Saniye
       Dancelab_everyVerseChorus:
-        text: 'her {UNIT}’de bir '
+        text: 'her [UNIT][0]’de bir '
         options:
           UNIT:
             '"verse"': dize
             '"chorus"': koro
       Dancelab_getEnergy:
-        text: "{RANGE}’i al"
+        text: "[RANGE][0]’i al"
         options:
           RANGE:
             '"low"': bas
@@ -151,15 +151,15 @@ tr:
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_getTime:
-        text: "{UNIT} geçti"
+        text: "[UNIT][0] geçti"
         options:
           UNIT:
             '"measures"': ölçü
             '"seconds"': saniye
       Dancelab_ifDanceIs:
         text: |-
-          eğer {SPRITE} {DANCE} yapıyorsa
-          {DO1} {DO2}
+          eğer [SPRITE][0] [DANCE][1] yapıyorsa
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Yüksek Alkış
@@ -175,7 +175,7 @@ tr:
             '"measures"': ölçü
             '"seconds"': saniye
       Dancelab_jumpTo:
-        text: "{SPRITE} {LOCATION}’a atla"
+        text: "[SPRITE][0] [LOCATION][1]’a atla"
         options:
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -189,7 +189,7 @@ tr:
             "{x: 300, y: 300}": sağ alt
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
       Dancelab_layoutSprites:
-        text: "{GROUP}’i bir {FORMAT} olarak düzenle"
+        text: "[GROUP][0]’i bir [FORMAT][1] olarak düzenle"
         options:
           GROUP:
             sprites: tüm
@@ -216,8 +216,8 @@ tr:
             '"random"': gelişigüzel
       Dancelab_makeNewDanceSprite:
         text: |-
-          yeni bir {COSTUME} yap
-          {LOCATION}’de {NAME} çağrıldı
+          yeni bir [COSTUME][0] yap
+          [LOCATION][2]’de [NAME][1] çağrıldı
         options:
           COSTUME:
             '"ALIEN"': Uzaylı
@@ -243,8 +243,8 @@ tr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Bir {LAYOUT}’de
-          {N}’e yeni {COSTUME} yap
+          Bir [LAYOUT][2]’de
+          [N][0]’e yeni [COSTUME][1] yap
         options:
           'N':
             '2': '2'
@@ -289,9 +289,9 @@ tr:
             '"plus"': artı
             '"random"': gelişigüzel
       Dancelab_mixColors:
-        text: "{COLOR1} ve {COLOR2}’yi karıştır"
+        text: "[COLOR1][0] ve [COLOR2][1]’yi karıştır"
       Dancelab_nMeasures:
-        text: "{N} ölçü"
+        text: "[N][0] ölçü"
       Dancelab_onPointerDown:
         text: işaretçi aşağıya çekildiğinde
       Dancelab_onPointerDrag:
@@ -301,18 +301,30 @@ tr:
       Dancelab_randomColor:
         text: rastgele renk
       Dancelab_setBackground:
-        text: arka plan rengini {COLOR} olarak ayarla
+        text: arka plan rengini [COLOR][0] olarak ayarla
       Dancelab_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} olarak ayarla
+        text: arka plan efektini [EFFECT][0] olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
-            '"disco"': Kareler
-            '"rainbow"': Renkler
+            '"circles"': Tünel
             '"diamonds"': Karolar
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Rastgele)"
+            '"disco_ball"': Disko Topu
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"rainbow"': Renkler
+            '"text"': Şarkı Adı
+            '"sparkles"': Kıvılcımlar
+            '"disco"': Kareler
+            '"stars"': Yıldızlar
+          PALETTE:
+            '"rave"': Siyah Beyaz
+            '"cool"': Maviler
+            '"default"': Aydınlık
+            '"tropical"': Tropikal
+            '"warm"': Kırmızılar
       Dancelab_setBackgroundEffectWithPalette:
-        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
+        text: arka plan efektini [EFFECT][0] [PALETTE][1] olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
@@ -335,7 +347,7 @@ tr:
             '"tropical"': Tropikal
             '"warm"': Kırmızılar
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
+        text: "[SPRITE][0] dans hızını [SPEED][1] olarak değiştir"
         options:
           SPEED:
             '1': normal
@@ -365,15 +377,20 @@ tr:
             '0.5': yavaş
             '0.25': çok yavaş
       Dancelab_setForegroundEffect:
-        text: ön plan efektini {EFFECT} olarak ayarla
+        text: ön plan efektini [EFFECT][0] olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
+            '"confetti"': Konfeti
+            '"hearts_red"': Kalpler
+            '"music_notes"': Müzik Notaları
+            '"pineapples"': Ananaslar
+            '"smiling_poop"': Kaka
             '"rain"': Yağmur
+            '"floating_rainbows"': Gökkuşağı
             '"raining_tacos"': Tacolar
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Rastgele)"
       Dancelab_setForegroundEffectExtended:
-        text: ön plan efektini {EFFECT} olarak ayarla
+        text: ön plan efektini [EFFECT][0] olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
@@ -387,7 +404,7 @@ tr:
             '"floating_rainbows"': Gökkuşağı
             '"raining_tacos"': Tacolar
       Dancelab_setProp:
-        text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
+        text: "[SPRITE][0] [PROPERTY][1]’i [VAL][2] olarak ayarla "
         options:
           PROPERTY:
             '"scale"': boyut
@@ -398,7 +415,7 @@ tr:
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_setPropEach:
-        text: "{GROUP} {PROPERTY}’i {VAL} olarak ayarla"
+        text: "[GROUP][0] [PROPERTY][1]’i [VAL][2] olarak ayarla"
         options:
           GROUP:
             sprites: tüm
@@ -422,7 +439,7 @@ tr:
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_setPropRandom:
-        text: "{SPRITE} {PROPERTY}’i rastgele yap"
+        text: "[SPRITE][0] [PROPERTY][1]’i rastgele yap"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -433,7 +450,7 @@ tr:
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_setTint:
-        text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
+        text: "[SPRITE][0] renk tonunu [VAL][1] olarak ayarla"
       Dancelab_setTintEach:
         options:
           THIS:
@@ -449,15 +466,15 @@ tr:
             '"ROBOT"': tüm robotlar
             '"SHARK"': tüm köpekbalıkları
       Dancelab_setTintInline:
-        text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
+        text: "[SPRITE][0] renk tonunu [VAL][1] olarak ayarla"
       Dancelab_setVisible:
-        text: "{SPRITE} görünürlüğünü {VISIBILITY} olarak ayarla"
+        text: "[SPRITE][0] görünürlüğünü [VISIBILITY][1] olarak ayarla"
         options:
           VISIBILITY:
             'true': görünür
             'false': görünmez
       Dancelab_setVisibleEach:
-        text: "{THIS} görünürlüğünü {VISIBILITY} olarak ayarla"
+        text: "[THIS][0] görünürlüğünü [VISIBILITY][1] olarak ayarla"
         options:
           THIS:
             sprites: tüm
@@ -476,7 +493,7 @@ tr:
             'true': görünür
             'false': görünmez
       Dancelab_startMapping:
-        text: "{SPRITE} {RANGE}’i takiben {PROPERTY}’e başlar"
+        text: "[SPRITE][0] [RANGE][2]’i takiben [PROPERTY][1]’e başlar"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -491,7 +508,7 @@ tr:
             '"mid"': orta
             '"treble"': tiz
       Dancelab_stopMapping:
-        text: "{SPRITE} {RANGE}’i takiben {PROPERTY}’i durdurur"
+        text: "[SPRITE][0] [RANGE][2]’i takiben [PROPERTY][1]’i durdurur"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -507,7 +524,7 @@ tr:
             '"mid"': orta
             '"treble"': tiz
       Dancelab_whenKey:
-        text: "{KEY} basıldığında"
+        text: "[KEY][0] basıldığında"
         options:
           KEY:
             '"up"': yukarı
@@ -518,7 +535,7 @@ tr:
             '"x"': x
             '"y"': 'y'
       Dancelab_whenPeak:
-        text: "{RANGE} en üst seviyedeyken"
+        text: "[RANGE][0] en üst seviyedeyken"
         options:
           RANGE:
             '0': bas
@@ -527,19 +544,19 @@ tr:
       Dancelab_whenSetup:
         text: kurulum
       gamelab_changeColor:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
+        text: "[COLOR][0] [METHOD][1]’u [AMOUNT][2] kadar değiştir"
         options:
           METHOD:
             '"tint"': renk tonu
       gamelab_changeColorBy:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
+        text: "[COLOR][0] [METHOD][1]’u [AMOUNT][2] kadar değiştir"
         options:
           METHOD:
             '"hue"': renk tonu
             '"saturation"': doygunluk
             '"brightness"': parlaklık
       gamelab_changePropBy:
-        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
+        text: "[SPRITE][0] [PROPERTY][1]’i [VAL][2] kadar değiştir"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -562,7 +579,7 @@ tr:
             '"direction"': hareket yönü
             '"tint"': renk tonu
       gamelab_jumpTo:
-        text: "{SPRITE} {LOCATION}’a atla"
+        text: "[SPRITE][0] [LOCATION][1]’a atla"
       gamelab_locationDelta:
         options:
           DIR:
@@ -573,15 +590,15 @@ tr:
             '"right"': sağ
             '"left"': sol
       gamelab_mixColors:
-        text: "{COLOR1} ve {COLOR2}’yi karıştır"
+        text: "[COLOR1][0] ve [COLOR2][1]’yi karıştır"
       gamelab_randColor:
         text: rastgele renk
       gamelab_randomColor:
         text: rastgele renk
       gamelab_setBackground:
-        text: arka plan rengini {COLOR} olarak ayarla
+        text: arka plan rengini [COLOR][0] olarak ayarla
       gamelab_setPosition:
-        text: "{THIS}’i {POSITION} konuma getir"
+        text: "[THIS][0]’i [POSITION][1] konuma getir"
         options:
           POSITION:
             "{x: 50, y: 50}": sol üst
@@ -634,7 +651,7 @@ tr:
             '"right"': sağ
             '"left"': sol
       gamelab_whenKey:
-        text: "{KEY} basıldığında"
+        text: "[KEY][0] basıldığında"
         options:
           KEY:
             '"up"': yukarı
@@ -677,7 +694,29 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tüm
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -689,11 +728,11 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': tüm
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': boyut
@@ -701,6 +740,45 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tüm
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_ifDanceIs:
+        text: |-
+          eğer [SPRITE][0] [DANCE][1] yapıyorsa
+          [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.Clown: Palyaço
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Roll: Yuvarlanma
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
+            MOVES.Rest: Hiçbiri
       Mikelab_randomColor:
         text: rastgele renk
       Mikelab_setBG:
@@ -720,8 +798,20 @@ tr:
           CORNER:
             '"right"': sağ
             '"left"': sol
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
       Mikelab_whenKeyPressed:
-        text: "{KEY} basıldığında"
+        text: "[KEY][0] basıldığında"
         options:
           KEY:
             '"up"': yukarı ok
@@ -774,10 +864,26 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
             '"tint"': renk tonu
+      binary_move:
+        options:
+          DIR:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+      binary_whenKey:
+        text: "[KEY][0] basıldığında"
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
       craft_ifPath:
         text: |-
-          eğer yol {DIR}
-          {STATEMENT}
+          eğer yol [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": ileri
@@ -785,8 +891,8 @@ tr:
             "'left'": sola giderse
       craft_ifStandingOn:
         text: |-
-          eğer altındaki blok {TYPE}
-          {STATEMENT}
+          eğer altındaki blok [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": mavi mercan ise
@@ -797,8 +903,8 @@ tr:
             "'seaLantern'": deniz ışığı ise
       craft_ifStandingOnLimit:
         text: |-
-          eğer altındaki blok {TYPE}
-          {STATEMENT}
+          eğer altındaki blok [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": kum
@@ -807,7 +913,7 @@ tr:
       craft_moveForward:
         text: ilerle
       craft_placeBlock:
-        text: yerleştir {blockType}
+        text: yerleştir [blockType][0]
         options:
           blockType:
             '"strippedOak"': soyulmuş meşe
@@ -841,13 +947,13 @@ tr:
       craft_repeatUntilConduit:
         text: |-
           su yolu tamamlanana kadar tekrarla
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           hedefe kadar tekrarla
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: 'oluştur: {ENTITY}'
+        text: 'oluştur: [ENTITY][0]'
         options:
           ENTITY:
             '"cod"': morina
@@ -857,7 +963,7 @@ tr:
             '"squid"': kalamar
             '"tropicalFish"': tropikal balık
       craft_turn:
-        text: dön {DIR}
+        text: dön [DIR][0]
         options:
           DIR:
             right: sağa ↻

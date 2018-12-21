@@ -104,7 +104,7 @@ def redact_level_content
     puts "\t#{content_type}"
     source = "i18n/locales/source/dashboard/#{content_type}.json"
     dest = "i18n/locales/redacted/dashboard/#{content_type}.json"
-    redact(source, dest, 'nonPedanticEmphasis')
+    redact(source, dest)
   end
 end
 

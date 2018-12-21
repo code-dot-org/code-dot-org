@@ -16,7 +16,10 @@ Please complete translations for these projects in the above order of priority. 
 ## What do I translate first?
 
 1. Please translate our Hour of Code tutorials.
-  * [Minecraft Designer](/translate/minecraft)
+  * [Dance Party](/translate/dance)
+  * [Minecraft: Voyage Aquatic](/translate/aquatic)
+	* [Minecraft: Hero's Journey](/translate/hero)
+	* [Minecraft Designer](/translate/minecraft)
   * [Minecraft Adventurer](/translate/mc)
   * [Star Wars](/translate/starwars)
   * [Sports and Basketball](/translate/sports)
@@ -62,8 +65,6 @@ If you have more time, complete the project in the following prioritized order.
 1. blockly-mooc/turtle.json - for artist levels 
 1. blockly-mooc/studio.json - for play lab levels 
 1. blockly-mooc/flappy.json
-
-And, Star Wars will be coming soon for translation.
 
 <br/>
 **Computer Science Fundamentals courses**

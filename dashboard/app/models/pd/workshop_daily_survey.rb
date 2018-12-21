@@ -77,6 +77,14 @@ module Pd
 
     validate :day_for_subject
 
+    def self.get_form_id_for_subjects_and_day(subjects, day)
+      subjects.map do |subject|
+        get_form_id_for_subject_and_day subject, day
+      rescue
+        nil
+      end.compact
+    end
+
     def self.get_form_id_for_subject_and_day(subject, day)
       # Day could be an int, or an integer as a string, or a string saying "pre/post workshop"
       get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ /\d+/) ? "day_#{day}" : day

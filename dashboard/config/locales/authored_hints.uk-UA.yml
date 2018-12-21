@@ -1261,6 +1261,9 @@ uk:
       courseC_PlayLab_events5_2018_authored_hint:
         courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму,
           щоб перевірити, чи вона працює!
+      courseC_PlayLab_events5_2019_authored_hint:
+        courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму,
+          щоб перевірити, чи вона працює!
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: Коло має 360 градусів. Помножте ступені у свою чергу
           на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані
@@ -1387,10 +1390,19 @@ uk:
           головоломку.
         courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити
           один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
+        courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити
           один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити
+          один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити
           один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops_challenge1_authored_hint:
@@ -1399,11 +1411,17 @@ uk:
         courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
       courseC_harvester_loops_challenge1a_2018_authored_hint:
         courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
           як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
           для загадки, як це. Бути наполегливим!
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
+          як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
+          для загадки, як це. Бути наполегливим!
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
           як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
           для загадки, як це. Бути наполегливим!
@@ -1765,9 +1783,6 @@ uk:
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
-      courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути
-          відео!
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
           мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
@@ -1876,6 +1891,10 @@ uk:
         courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
       courseD_iceage_loops4_2019_authored_hint:
         courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що
+          ви вирішили головоломку ще.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Не забувайте, що ви можете `repeat`
           одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок`

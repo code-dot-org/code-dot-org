@@ -648,6 +648,9 @@ pt-BR:
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há
           quatro abóboras para serem pegas.
+      courseC_harvester_loops1_2019_callout:
+        courseC_harvester_loops1_callout1: O número quatro na abóbora indica que há
+          quatro abóboras para serem pegas.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Estes blocos cinzas não podem ser apagados!
       courseC_maze_debugging5_2018_callout:
@@ -717,6 +720,9 @@ pt-BR:
           não precisa se preocupar com os favos de mel.
         4_5_Bee_Conditionals_2_2: Precisa de uma ajudinha? Clique aqui para ver nosso
           novo VIDEO de DICAS!
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
+          você ainda pode usar.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.

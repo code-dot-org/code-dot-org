@@ -1410,3 +1410,18 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+        andrea-test:
+          stages:
+            'null':
+              name: 'خالي'
+        dance-extras-gallery:
+          title: استمر في الرقص
+          description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            Binary Bracelets:
+              name: أساور الثنائية

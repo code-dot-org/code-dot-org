@@ -7,11 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Circuit Playground: Buzzer",
-    "reference": "/docs/csd/maker_buzzer/index.html",
+    "reference": "/docs/concepts/maker-toolkit/producing-output/index.html",
     "parent_level_id": 8732,
     "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-19 19:56:24 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

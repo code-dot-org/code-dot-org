@@ -193,11 +193,11 @@ nn:
     subject: 'Bli med i klassa mi (på Code.org)'
     body: |
       Klikk på linken under for å melde deg på datakurs på Code.org (med meg som lærar):
-      
+
       %{link}
-      
+
       Kursa er morosame, visuelt stimulerande og lærer deg dei grunnleggjande konsepta innan informatikk ved å nytte ein enkel, spill-liknande oppleving som du blir losa igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Påloggingsinformasjon for Code.org'

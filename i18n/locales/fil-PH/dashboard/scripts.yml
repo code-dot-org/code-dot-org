@@ -2830,9 +2830,9 @@ fil:
               description_student: Ang araling ito ay nagpapakilala sa mga boolean na mga halaga at lohika, pati na rin ang kondisyonal na mga pahayag. Ang klase ay magsisimula sa pamamagitan ng paglaro ng isang simpleng laro ng Pagtayo, Pag-upo kung saan ang boolean (true/false) na mga pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok o mate, tipo ng pananamit, edad, atbp). Pagkatapos ang klase ay gagawa ng grupo ng mga object ayon mas lalong naging kumplikado na mga boolean na pahayag, at titingin kung paano ang mga kondisyonal nakakaepekto sa daloy ng programa.
               description_teacher: |-
                 Sa araling ito, ang estudyante ay ipapakilala sa mga boolean na halaga at lohika, pati na rin ang mga kondisyonal na mga pahayag. Ang klase ay magsisimula sa paglalaro ng isang simpleng Pagtayo, Pag-upo kung saan ang mga boolean (true/false) na mga pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok o mata, tipo ng pananamit, edad, atbp). Ito ay nagpapaisip sa mga estudyante kung paano nila ikuwadro ang isang katangian na may maraming mga halaga na pwedeng gamitin (gaya ng edad) gamit ang mga binary na katanungan.
-                
+
                 Mula doon, ang mga estudyante ay bibigyan ng isang grupo ng mga bagay na may kapareho, ngunit may iba't ibang, mga pisikal na mga katangian. Kasama ang isang kasamahan, sila ay maggrugrupo sa mga object na iyon ayon sa mas lalong naging kumplikado na mga boolean na pahayag, kasama na ang compound na mga boolean gamit ang AND at OR.
-                
+
                 Sa huli, ating ipapakita ang mga Kondisyonal bilang isang kagamitan para makagawa ng mga desisyon o epekto sa daloy ng programa gamit ang mga boolean na pahayang bilang input.
             Project - Interactive Card:
               name: Proyekto - Inter-aktib na Baraha
@@ -2962,7 +2962,7 @@ fil:
               description_student: 'Sa araling ito ang klase ay gagamit sa proseso ng paglutas ng problema sa tatlong iba''t ibang mga problema: paghahanap ng salita, pag-aayos ng upuan para sa isang birthday party, at ang pagpaplano ng paglalakbay. Ang mga problema ay naging mas kumplikado at hindi masyadong inilarawan para ipakita kung paano ang proseso ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo ng mga problema.'
               description_teacher: |-
                 Sa araling ito ang mga estudyante ay gagamit ng proseso sa paglutas ng problema sa tatlong magkaibang mga problema para mas maintindihan pa nila ang kahalagahan ng bawat hakbang. Sila ay lulutas sa isang paghahanap ng salita, pag-aayos ng mga upuan para sa isang birthday party, at pagplano ng isang paglalakbay. Ang mga problema ay mas kumplikado at hindi masyadong inilarawan para ipakita kung paano ang proseso ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo ng mga problema. Ang aralin ay magtatapos sa pag-iisip ng mga estudyante tungkol sa kanilang karanasan sa proseso ng paglutas ng problema. Bibigyan nila ng katwiran ang pagdagdag sa bawat hakbang at mag-iisip ng mga katanungan at mga istratehiya na maaaring makakatulong sa kanilang paglalarawan sa mga walang-katapusan na mga problema, dahil ito kadalasan ang pinaka-kritikal na hakbang.
-                
+
                 Ang araling ito ay parang tatagal ng dalawang oras ng klase o higit pa para makumpleto. Ang unang dalawang problema ay maaaring gawin sa isang klase ngunit ang pangatlo ay kailangang gawin sa pangalawang araw.
             What is a Computer?:
               name: Ano ang isang Kompyuter?
@@ -4698,7 +4698,7 @@ fil:
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
               description_teacher: |-
                 Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
-                
+
                 Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
@@ -6154,9 +6154,9 @@ fil:
               description_student: Ang araling ito ay nagpapakilala sa mga boolean na mga halaga at lohika, pati na rin ang kondisyonal na mga pahayag. Ang klase ay magsisimula sa pamamagitan ng paglaro ng isang simpleng laro ng Pagtayo, Pag-upo kung saan ang boolean (true/false) na mga pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok o mate, tipo ng pananamit, edad, atbp). Pagkatapos ang klase ay gagawa ng grupo ng mga object ayon mas lalong naging kumplikado na mga boolean na pahayag, at titingin kung paano ang mga kondisyonal nakakaepekto sa daloy ng programa.
               description_teacher: |-
                 Sa araling ito, ang estudyante ay ipapakilala sa mga boolean na halaga at lohika, pati na rin ang mga kondisyonal na mga pahayag. Ang klase ay magsisimula sa paglalaro ng isang simpleng Pagtayo, Pag-upo kung saan ang mga boolean (true/false) na mga pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok o mata, tipo ng pananamit, edad, atbp). Ito ay nagpapaisip sa mga estudyante kung paano nila ikuwadro ang isang katangian na may maraming mga halaga na pwedeng gamitin (gaya ng edad) gamit ang mga binary na katanungan.
-                
+
                 Mula doon, ang mga estudyante ay bibigyan ng isang grupo ng mga bagay na may kapareho, ngunit may iba't ibang, mga pisikal na mga katangian. Kasama ang isang kasamahan, sila ay maggrugrupo sa mga object na iyon ayon sa mas lalong naging kumplikado na mga boolean na pahayag, kasama na ang compound na mga boolean gamit ang AND at OR.
-                
+
                 Sa huli, ating ipapakita ang mga Kondisyonal bilang isang kagamitan para makagawa ng mga desisyon o epekto sa daloy ng programa gamit ang mga boolean na pahayang bilang input.
             Conditionals:
               name: Mga conditional
@@ -6614,7 +6614,7 @@ fil:
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
               description_teacher: |-
                 Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
-                
+
                 Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
@@ -7510,7 +7510,7 @@ fil:
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
               description_teacher: |-
                 Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
-                
+
                 Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
@@ -7558,6 +7558,8 @@ fil:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+            Conditionals in Minecraft:
+              name: Mga Kondisyonal sa Minecraft
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -7666,3 +7668,44 @@ fil:
               name: Proyekto - Pagmungkahi ng App
               description_student: Para tapusin ang pag-aaral sa proseso ng paglutas ng problema at ang input/output/store/proceso na modelo ng isang kompyuter, ang klase ay mag-mungkahi ng mga app na dinisenyo para maglutas ng mga problema sa totoong buhay. Ang proyektong ito makokumpleto sa loob ng ilang mga araw at magtatapos sa isang poster na presentasyon na nagpapakita sa mga katangian ng bawat app. Ang proyekto ay dinisenyo nang may kapares pero maaari pa rin itong makumpleto nang mag-isa.
               description_teacher: Para tapusin ang kanilang pag-aaral sa proseso ng paglutas ng problema at ang input/output/store/proseso na modelo ng isang kompyuter, ang mga estudyante ay magmumungkahi ng isang app na dinisenyo para lumutas ng problema sa totoong buhay. Ang proyektong ito ay gagawin sa loob ng iilang mga araw at magresulta sa paglikha ng mga estudyante ng isang poster na nagpapakita sa mga katangian ng kanilang app na ipapakita nila sa kanilang mga kamag-aral. Ang gabay ng proyekto ay nagbibigay ng sunod-sunod na mga instruksyon para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama pero maaari rin itong gawin na mag-isa lang.
+        andrea-test:
+          stages:
+            new stage:
+              name: bagong yugto
+            'null':
+              name: 'blangko'
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        coursec-2019:
+          description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
+          description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+          description_audience: 'Mga Edad: 6-10'
+          stages:
+            Building a Foundation:
+              name: Gumawa ng Foundation
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Debugging in Maze:
+              name: Pagde-debug sa Maze
+            'Real-life Algorithms: Paper Planes':
+              name: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+            Programming in Collector:
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
+            Loops in Harvester:
+              name: Mga Loops sa Harvester
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            Screen Out the Mean:
+              name: I-Screen Palabas ang Mean
+            Looking Ahead:
+              name: Masdan ang Hinaharap
+            Binary Bracelets:
+              name: Binary na mga Pulseras
+        csp-mid-survey:
+          description_audience: CSP na mga Estudyante

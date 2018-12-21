@@ -302,3 +302,6 @@ et:
       BinaryBracelets_2019:
         title: Binaarsed käevõrud
         desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul. Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
+      PaperPlanes_2019:
+        title: 'Päris elu algoritmid: paberlennukid'
+        desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.

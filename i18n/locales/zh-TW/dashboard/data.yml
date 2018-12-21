@@ -454,6 +454,7 @@ zh-TW:
         CDEF_Video_SpritesInAction: 運行中的角色
         CSF_SpriteLab_SpritesInAction_CDEF: 運行中的角色
         CSF_StarWars_ProjectIntro: 星際大戰專案介紹
+        mc_2018_intro: 'Minecraft: 水上巡航導覽'
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

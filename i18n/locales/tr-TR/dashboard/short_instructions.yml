@@ -825,6 +825,7 @@ tr:
       Course 4 SCV 6: Yönergeleri yeniden görüntülemek için burayı tıklatın.
       Course 4 SCVP 1: Sanatçının x piksel ileri geri ve y piksel yukarı ve aşağı zıplamasını sağlayan bir fonksiyon yazın.(pozitif ve negatif sayıları kullanın).
       Course 4 Variables Assessment: Be şekli kenarlar için değişken kullanarak yapabilir misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
+      Course E MC Conditionals1: En değerli kaynakları yer altında bulabilirsiniz ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Course1BeePuzzle12: Üç nektar topla ve iki bal yap
       CourseF_PlayLab_vars1: 'Bu oyunu oynamak için, hiç kod yazmana gerek yok, sadece ''çalıştır''a bas! '
       CourseF_PlayLab_vars10: "Serbest Oyun Zamanı! İşte burada bu bölümde oynadığımız bütün değişkenlerle birlikte birkaç fazlalık var ihtiyacın olursa diye.\\r\n\\r\nŞu anda alet çantamızda düzenlenmesi gereken çok kare var olduğunun farkına varın! İşte, biz her parçayı uygun kategoriye koyduk. Mevcut olan her şeyi keşfetmeye biraz zaman ayırın. Göz atmayı bitirdiğinde, tekrarları, değişkenleri, ve olayları kullanarak bir oyun veya hikaye yapın.\\r\n\\r\nÇalışma alanındaki bütün komutları görmek için aşağı kaydırın."
@@ -1728,10 +1729,13 @@ tr:
       courseC19_playLab_EOC6: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       courseC_PlayLab_events3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
       courseC_PlayLab_events3_2018: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
+      courseC_PlayLab_events3_2019: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
       courseC_PlayLab_eventsFP: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine bas ve aarkadaşların ile paylaş. İpuçlarında hikaye fikirleri alabilirsin.
       courseC_PlayLab_eventsFP_2018: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine bas ve aarkadaşların ile paylaş. İpuçlarında hikaye fikirleri alabilirsin.
+      courseC_PlayLab_eventsFP_2019: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine bas ve aarkadaşların ile paylaş. İpuçlarında hikaye fikirleri alabilirsin.
       courseC_PlayLab_events_challenge1: "Dinazora doğtu koştuğunda ve puan aldığında Waddles'ı otomatikman geri döndüren yeni bir blok kullanın.\\r\nYeterli puan alana kadar oyunu oyna ve oklarla Waddles'ı hareket ettir."
       courseC_PlayLab_events_challenge1_2018: "Dinazora doğtu koştuğunda ve puan aldığında Waddles'ı otomatikman geri döndüren yeni bir blok kullanın.\\r\nYeterli puan alana kadar oyunu oyna ve oklarla Waddles'ı hareket ettir."
+      courseC_PlayLab_events_challenge1_2019: "Dinazora doğtu koştuğunda ve puan aldığında Waddles'ı otomatikman geri döndüren yeni bir blok kullanın.\\r\nYeterli puan alana kadar oyunu oyna ve oklarla Waddles'ı hareket ettir."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Burada biraz daha karmaşık yeni bir blok var. Waddles'ı, dinazorla karşılaştığında ve bir puan aldığında başlangıç konumuna geri getirmek için bu kodu kullan. Bu oyununu daha zor ve eğlenceli yapacak!\r
         \r
@@ -1844,25 +1848,35 @@ tr:
       courseC_flappy_events9_2019: Flappy bir engele çarptığında oyunu sonlandırmak yerine, işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalışın.
       courseC_harvester_loops10: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops10_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops10_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops11: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops11_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops11_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops3: Bütün balkabaklarını topla.
       courseC_harvester_loops3_2018: Bütün balkabaklarını topla.
+      courseC_harvester_loops3_2019: Bütün balkabaklarını topla.
       courseC_harvester_loops4: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops4_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops4_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops5: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops5_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops5_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops6: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops6_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops6_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops7: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops7_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops7_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops9: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops9_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops9_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops_challenge1: Bütün mısırları topla.
       courseC_harvester_loops_challenge1a: Bütün mısırları topla.
       courseC_harvester_loops_challenge1a_2018: Bütün mısırları topla.
+      courseC_harvester_loops_challenge1a_2019: Bütün mısırları topla.
       courseC_harvester_loops_challenge2: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
       courseC_harvester_loops_challenge2_2018: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
+      courseC_harvester_loops_challenge2_2019: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
       courseC_harvester_loops_forVid: Tüm mısırları, marulları ve balkabaklarını topla.
       courseC_maze_debugging1: Scrat'in meşe palamuduna ulaşması için kodu düzelt.
       courseC_maze_debugging10: Seviyeyi geçmek ve domuza ulaşmam için bloklarını ekleyerek hataları ayıkla!
@@ -2222,6 +2236,7 @@ tr:
       courseD_harvester_nested_loops_challenge1_2019: '"Çiftlikte yardıma ihtiyacım var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat etmeme yardım et."'
       courseD_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseD_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseD_maze_intro5a_2019: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
       courseD_maze_loops_challenge1: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
       courseD_maze_nestedLoops4: 'Beni ayçiçeğine götür!'
       courseD_maze_nestedLoops4_2018: 'Beni ayçiçeğine götür!'
@@ -2246,7 +2261,6 @@ tr:
       courseD_maze_ramp5b_2019: Kuşun domuzu bulmasına yardım etmek için bu labirentte gezinin!
       courseD_maze_ramp5c: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5c_2018: Domuza ulaşması için kuşa yardım et.
-      courseD_maze_ramp5c_2019: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d: Kuşu domuza götür.
       courseD_maze_ramp5d_2018: Kuşu domuza götür.
       courseD_maze_ramp5d_2019: Kuşu domuza götür.
@@ -2975,7 +2989,6 @@ tr:
       ramp_artist_loops3_2019: Renkli çizgiler çizmek için 'tekrarla' döngüsü kullanın.
       ramp_artist_loops4: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
       ramp_artist_loops4_2018: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
-      ramp_artist_loops4_2019: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
       ramp_artist_loops5: Döngüleri bu merdiven çizmek için kullanın.
       ramp_artist_loops5_2018: Döngüleri bu merdiven çizmek için kullanın.
       ramp_artist_loops5_2019: Döngüleri bu merdiven çizmek için kullanın.

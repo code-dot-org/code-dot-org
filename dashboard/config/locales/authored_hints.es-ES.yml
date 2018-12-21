@@ -3677,6 +3677,13 @@ es:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: "¿Está frente al camino correcto? El 'bloque destruir' explota el
+          bloque en frente de usted."
+        mc_9_b: "¡Las machas negras en el muro son carbón! Utilice 'destruir bloque'
+          en estas para minar el carbón."
+        mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde
+          está parado.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.

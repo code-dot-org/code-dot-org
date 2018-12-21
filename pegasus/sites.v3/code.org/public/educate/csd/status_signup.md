@@ -1,6 +1,5 @@
 ---
 title: Computer Science Discoveries
-nav: educate_nav
 ---
 
 # CS Discoveries Status Updates
@@ -24,6 +23,7 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - <a href="http://go.pardot.com/webmail/153401/456073535/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">September 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/473305951/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">October 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/495059452/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">November 2018</a>
+- <a href="http://go.pardot.com/webmail/153401/508603352/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2018</a>
 
 ### 2017
 

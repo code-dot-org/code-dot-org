@@ -28,30 +28,30 @@ sv:
       Dance short test 2_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
-          
+
           *Denna nivå slutar efter 10 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
       Dance short test_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
-          
+
           *Denna nivå slutar efter 10 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
       Dance_Party_01_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Kontrollera att en dansare visas på skärmen.
-          
+
           *Denna nivå slutar efter 4 åtgärder.*
         challenges: |-
           **Valfria utmaningar**
@@ -62,7 +62,7 @@ sv:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Kontrollera att en dansare visas på skärmen.
-          
+
           *Denna nivå slutar efter 4 åtgärder.*
         challenges: |-
           **Valfria utmaningar**
@@ -73,61 +73,61 @@ sv:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_03_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 12 åtgärder.*
       Dance_Party_04_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
-          
+
           *Denna nivå slutar efter 10 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
       Dance_Party_06_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste ha minst två dansare.
-          
+
           *Denna nivå slutar efter 6 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           * Lägg till en tredje dansare (eller så många du vill!)
           * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
       Dance_Party_08_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Två dansare måste ha en annan storlek än 100.
-          
+
           *Denna nivå slutar efter 6 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Ändra färgtonen på minst en dansare.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_1_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Kontrollera att en dansare visas på skärmen.
-          
+
           *Denna nivå slutar efter 4 åtgärder.*
         challenges: |-
           **Valfria utmaningar**
@@ -137,92 +137,92 @@ sv:
       Dance_Party_10_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Egenskaper för två eller flera dansare måste ändras.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Var bara kreativ!
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Var bara kreativ!
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Var bara kreativ!
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_11b_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_2_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Dance_Party_3_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 12 åtgärder.*
       Dance_Party_4_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
-          
+
           *Denna nivå slutar efter 10 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
       Dance_Party_5_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Din dans måste innehålla olika rörelser under de 12 första åtgärderna av låten.
-          
+
           *Denna nivå slutar efter 12 åtgärder.*
       Dance_Party_6_authored_hint:
         challenges: |-
           **Valfri utmaning**
-          
+
           * Lägg till en tredje dansare (eller så många du vill!)
           * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
       Dance_Party_8_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Två dansare måste ha en annan storlek än 100.
-          
+
           *Denna nivå slutar efter 6 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Ändra färgtonen på minst en dansare.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.
@@ -236,7 +236,7 @@ sv:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Kontrollera att en dansare visas på skärmen.
-          
+
           *Denna nivå slutar efter 4 åtgärder.*
         challenges: |-
           **Valfria utmaningar**
@@ -247,77 +247,77 @@ sv:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
           * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
-          
+
           *Denna nivå slutar efter 12 åtgärder.*
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
-          
+
           *Denna nivå slutar efter 10 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Din dans måste innehålla olika rörelser under de 12 första åtgärderna av låten.
-          
+
           *Denna nivå slutar efter 12 åtgärder.*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Valfri utmaning**
-          
+
           * Lägg till en tredje dansare (eller så många du vill!)
           * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Två dansare måste ha en annan storlek än 100.
-          
+
           *Denna nivå slutar efter 6 åtgärder.*
         challenges: |-
           **Valfri utmaning**
-          
+
           * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Ändra färgtonen på minst en dansare.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Egenskaper för två eller flera dansare måste ändras.
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Var bara kreativ!
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       HOC Dance make group_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
-          
+
           * Var bara kreativ!
-          
+
           *Denna nivå slutar efter 8 åtgärder.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter.
@@ -436,7 +436,7 @@ sv:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -454,7 +454,7 @@ sv:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -473,7 +473,7 @@ sv:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -492,7 +492,7 @@ sv:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -511,7 +511,7 @@ sv:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -528,7 +528,7 @@ sv:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -538,7 +538,7 @@ sv:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -554,7 +554,7 @@ sv:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -573,7 +573,7 @@ sv:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -592,7 +592,7 @@ sv:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -611,7 +611,7 @@ sv:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
