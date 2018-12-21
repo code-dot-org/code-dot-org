@@ -106,6 +106,13 @@ export default class MobileControls {
         });
       }
     }
+
+    // For export mode only:
+    if (dpadVisible || spaceButtonVisible) {
+      $('#sketch').removeClass('no-controls');
+    } else {
+      $('#sketch').addClass('no-controls');
+    }
   }
 
   onArrowButtonDown(buttonId, e) {
@@ -209,6 +216,8 @@ export default class MobileControls {
     if (softButtonIds.length) {
       $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonIds.length);
     }
+    // For export mode only:
+    $('#sketch').removeClass('no-controls');
 
     this.resetDPad();
   }

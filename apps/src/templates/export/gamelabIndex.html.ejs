@@ -16,10 +16,16 @@
     <style>
       #soft-buttons.soft-buttons-none {
         display: none; }
+      body.expo {
+        background-color: black;
+      }
+      #sketch.expo.no-controls {
+        top: 82px;
+      }
     </style>
   </head>
-  <body style="margin:0; overflow:hidden; position:absolute; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
-    <div id="sketch"></div>
+  <body class="<%- exportClass %>" style="margin:0; overflow:hidden; position:absolute; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
+    <div id="sketch" class="<%- exportClass %>" style="position: absolute;"></div>
     <div id="soft-buttons" class="soft-buttons-none">
       <button id="leftButton" disabled className="arrow">
       </button>
