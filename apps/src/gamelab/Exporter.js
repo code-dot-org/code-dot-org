@@ -42,6 +42,7 @@ export default {
       p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
       codePath: expoMode ? 'code.j' : 'code.js',
       webExport: !expoMode,
+      exportClass: expoMode ? 'expo' : 'web',
     });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
@@ -265,6 +266,7 @@ export default {
       p5playPath,
       codePath: 'code.j',
       webExport: false,
+      exportClass: 'expo',
     });
     const appJs = exportExpoAppEjs({
       appHeight,
