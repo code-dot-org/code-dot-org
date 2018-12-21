@@ -2,6 +2,9 @@ require 'test_helper'
 
 module Pd::Application
   class Facilitator1920ApplicationTest < ActiveSupport::TestCase
+    include Pd::Application::ApplicationConstants
+    include Pd::Facilitator1920ApplicationConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
@@ -326,6 +329,34 @@ module Pd::Application
       refute filtered_labels_csf.key? :csd_csp_fit_availability
       assert filtered_labels_csf.key? :csf_availability
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
+      %w(csf csd csp).each do |course|
+        application = create :pd_facilitator1920_application, course: course
+        score_hash = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym].map {|key| [key, YES]}.to_h
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash}.to_json
+        )
+
+        assert_equal YES, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: NO})}.to_json
+        )
+
+        assert_equal NO, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: nil})}.to_json
+        )
+
+        assert_equal REVIEWING_INCOMPLETE, application.meets_criteria
+      end
+    end
+
+    test 'scoring works as expected' do
     end
   end
 end
