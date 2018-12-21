@@ -208,12 +208,24 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': size
@@ -232,6 +244,11 @@ ne:
           CORNER:
             '"right"': दाँया
             '"left"': बाँया
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -271,6 +288,21 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      binary_move:
+        options:
+          DIR:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
       craft_ifPath:
         options:
           DIR:

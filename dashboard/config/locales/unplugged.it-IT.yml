@@ -563,3 +563,9 @@ it:
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
+      PaperPlanes_2019:
+        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
+          specifico costruire un aeroplano di carta. Viene discussa anche una visione
+          più generale dell'informatica  e il fatto che gli algoritmi ne sono una
+          parte essenziale.

@@ -86,7 +86,7 @@ ar:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           تذكر أن الكود من المتاهة السابقة هو:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -155,7 +155,7 @@ ar:
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           هل تحتاج مساعدة للحصول على الزاوية الصحيحة؟
-          
+
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية الحصول على اللبنات في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
@@ -163,12 +163,212 @@ ar:
         2-3_Bee_Conditionals_14_c: "حاول تقسيم الأوامر إلى مجموعتين:\n\n1) جمع النكتار 3 مرات\nالتقدم للأمام 5 مرات\nالتحقق إذا كان نكتار , الحصول عليه\nالالتفاف لليسار\n\n2) اصنع عسل\nالتقدم للامام مرة واحدة\nاصنع اثنان عسل"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'تذكر : الزهر البنفسجي يحتوي على 0 او 1 نكتار ويمكنه ان يتغير كل مره يتم فيها تشغيل البرنامج.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: إسْتَخْدِم حَلْقَة تِكرار ليكون الكود أقصر للتقدم للأمام و لجمع الرحيق و لانتاج العسل.
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'تذكر: عند تشغيل البرنامج تتغير الزهور البنفسجية 0 والرحيق 1!'
       2-3 Bee Debugging 1_authored_hint:
         2-3_Bee_Debugging_1_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
       2-3 Bee Debugging 2_authored_hint:
         2-3_Bee_Debugging_2_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: هل هناك أي مكان تفعل فيه النحلة شيئًا لا معنى له؟ ماذا يحدث عند تغيير هذه الكتلة؟
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a: لا تستخدم حلقة التكرار اذا كان هناك دالة كل ما عليك هو نسخ الدال و لصقها.
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a: لا تستخدم حلقة التكرار اذا كان هناك دالة كل ما عليك هو نسخ الدال و لصقها.
+      2-3 Bee Functions 8_authored_hint:
+        2-3_Bee_Functions_8_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+        2-3_Bee_Functions_8_b: |-
+          تذكر ان تبرمج شفرتك داخل الدالة الخضراء()
+      2-3 Bee Loops 2_authored_hint:
+        2-3_Bee_Loops_2_a: ينبغي أن تنتهي بأربع كتل داخل حلقة التكرار.
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: تحتاج إلى حلقتين تكرار مختلفتين الواحدة تلو الأخرى.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: ينبغي أن تنتهي بخمسة كتل داخل حلقة التكرار.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_4A_b: تستطيع انهاء آخر البرنامج بكتابة الشفرة خارج حلقة التكرار.
+        2-3_Bee_Loops_4A_c: إذا لم تتمكن من تحديد الحلقات بعد ، فحاول ترميزها بعيدًا أولاً ، ثم شاهد ما يمكنك دمجه في حلقة "تكرار" في النهاية.
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a: إذا لم تستطع تحديد الكتل لوضعها داخل حلقة "تكرار" على الفور ، ابدأ بتشفير كل خطوة والبحث عن نمط مناسب.
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a: إذا لم تستطع معرفة ما يجب أن يحدث في حلقة "التكرار" ، فجرّب سحب الكتلات واحدة تلو الأخرى وتعرف على ما إذا كان يمكنك العثور على نمط مناسب.
+        2-3_Bee_Loops_6_b: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_7_b: 'إذا كنت لا تستطيع تصور حلقة التكرار من البداية ، فحاول ترميزها بعيدًا ، ثم ابحث عن نمط مناسب.  '
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a: لاستخدام كتلة ` تقدم الى الأمام` ، اسحبها من منطقة شريط الأدوات إلى مساحة العمل وقم بتوصيلها بعلامة` عند التشغيل`.
+      2-3 Maze 16_authored_hint:
+        2-3_Maze_16_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+        2-3_Maze_16_b: "لوضع الكثير من الكتل داخل حلقة `التكرار` ، قم فقط بسحب الحلقة إلى مساحة العمل ، ثم اسحب كل الكتل من مربعات برمجية داخلها!"
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: هناك طريقتين لحل الأحجية!
+      2-3 Maze Loops 17_authored_hint:
+        2-3_Maze_Loops_17_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+        2-3_Maze_Loops_17_b: هل تم حذف رمز البداية؟ انقر فوق "البدء من جديد" للحصول عليه مرة أخرى!
+      2-3 Maze Loops 18_authored_hint:
+        2-3_Maze_Loops_18_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+      2-3 Maze Loops 19_authored_hint:
+        2-3_Maze_Loops_19_a: إذا واجهتك مشكلة ، فحاول كتابة الشفرة بدون حلقات التكرار أولاً والبحث عن النمط المناسب.
+        2-3_Maze_Loops_19_b: وضع حلقة تكرار واحدة داخل أخرى يساعد على تقليل عدد الكتل المستخدمة.
+      2-3 Maze Loops 20_authored_hint:
+        2-3_Maze_Loops_20_a: ابحث عن نمط الدرج في هذه المتاهة للعثور على مكان يمكن استخدام حلقة التكرار فيه.
+      2-3 Maze Loops 21_authored_hint:
+        2-3_Maze_Loops_21_a: إذا كنت تواجه مشكلة في العثور على نمط خطوة الدرج ، فحاول تغطية المسارات المحظورة بإصبعك.
+      4-5 Artist 11_authored_hint:
+        4-5_Artist_11_a: ضمن الحلقة ، تأكد من أن الفنان يقفز للخلف وصعودًا بعد رسم كل سطر.
+      4-5 Artist 3_authored_hint:
+        4-5_Artist_3_a: |-
+          إذا كان حجم زهرة السرير 600 بكسل و الأطوال من الجانبين يبلغ 200 بكسل ، فإليك كيفية معرفة ما تضيفه الأطراف القصيرة إلى:
+          **600 - 200 - 200 = 200**
+          وهذا يعني أن كلا الجانبين القصيرين يضيفان إلى 200 بكسل.
+          **ما ناتج 200 / 2?**
+        4-5_Artist_3_b: إذا لم تتمكن من رؤية أين تذهب حلقة "التكرار" على الفور ، فحاول ترميز الحل بالكامل وابحث عن نمط مناسب.
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: "هذا هو عدد المرات التي تحتاجه إلى تكرار هذا الرمز (تحويل درجة واحدة في كل مرة) قبل الانتهاء من الدائرة!"
+      4-5 Artist 5_authored_hint:
+        4-5_Artist_5_a: |-
+          تعتبر التجربة والخطأ طريقة رائعة ، ولكن يمكنك أيضًا حل المشكلة عن طريق قسمة زاوية 90 درجة إلى الثلث.
+          **90 / 3 = _____**
+      4-5 Artist 7_authored_hint:
+        4-5_Artist_7_a: 'أي زاوية هي الأصغر؟ في أي زاوية يقف الفنان؟ '
+      4-5 Artist 8_authored_hint:
+        4-5_Artist_8_a: "الجوانب الطويلة هي 240 بكسل لكل منهما. وهذا يعني أن الجانبين القصيرين يجب أن يكونا كليًا:\n**800 - 240 - 240 = 320**\nما هو  **320/2** ؟ "
+        4-5_Artist_8_b: "يمكن القيام بهذه الصورة  بطريقتين!\n- ارسم مستطيلين طوله 120 ** وطوله 160 ** وطوله متداخل\n\n- ارسم مستطيلاً طوله ** 240 ** طوله و 160 ** طويلًا ، ثم أضف خطًا في الوسط."
+      4-5 Artist 9_authored_hint:
+        4-5_Artist_9_a: "عندما يكون المثلث متساوي الأضلاع ، تكون كل الجوانب وكل الزوايا متشابهة.\n"
+        4-5_Artist_9_b: ستحتاج إلى رسم ثلاثة مثلثات بنفس الحجم. لا تنس أن تقفز إلى موقع جديد بعد كل واحد.
+      4-5 Artist Assessment 1_authored_hint:
+        4-5_Artist_Assessment_1_a: ما عليك سوى رسم المثلث الخارجي لإكمال هذا اللغز.
+      4-5 Artist Patterns 11_authored_hint:
+        4-5_Artist_Patterns_11_a: إذا كان هناك 360 درجة في دائرة ، وتحول كل حلقة إلى 3 درجات ، فكم مرة تحتاج إلى تكرار سحب نصف دائرة كاملة؟
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a: لاحظ أنه بما أن طول المربعات 20 بكسل ، فستحتاج إلى القفز بمقدار 20 بكسل قبل أن تبدأ في المربع التالي.
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a: كن حذراً لسحب كتلة كاملة من "رمز من شريط الأدوات في كل مرة تحاول فيها كتلة جديدة.
+        4-5_Artist_Patterns_3_b: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      4-5 Artist Patterns 5_authored_hint:
+        4-5_Artist_Patterns_5_a: "الآن ، عندما انتهى الفنان من جمع كل الألماس ، فإنه يحتاج تغيير الاتجاه من اين يبدأ في المرحلة التالية.\n\nكم درجة يحتاج لكي يستدير ليصبح بشكل مستقيم؟"
+      4-5 Bee Conditionals 4_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      4-5 Bee Conditionals 5_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      4-5 Bee Conditionals 6_authored_hint:
+        4-5 Bee Conditionals 6_a: يمكنك حل هذا اللغز باستخدام الكتل الموجودة في مساحة العمل فقط. ما هو الترتيب المناسب  ؟
+        4-5 Bee Conditionals 6_b: تأكد من أنك تتحقق لمعرفة ما إذا كانت الزهرة تحتوي على أكثر من ** 0 ** رحيق على الأقل ** 3 ** مرات لحل هذا اللغز.
+      4-5 Bee Debugging 1_authored_hint:
+        4-5_Bee_Debugging_1_a: إذا كنت تواجه مشكلة في معرفة اين الخطأ، حاول تشغيله مرة أخرى لتجد الخطأ.
+      4-5 Bee Nested Loops Rows_authored_hint:
+        4-5_Bee_Nested_Loops_Rows_a: حاول معالجة هذا اللغز مثل المستطيل الطويل حيث يحتاج النحل التحرك إلى الأمام ، ثم الاستدرارة لليسار عدة مرات لإكمال المسار.
+      4-5 Maze 10_authored_hint:
+        4-5_Maze_10_a: |-
+          إذا كنت لا تستطيع رؤية كيفية استخدام حلقات التكرار لحل اللغز على الفور ، فحاول حلها على الطريق الشفرة الطويلة أولاً ، ثم ابحث عن نمط مناسب.
+
+          ما الذي يجب عليك وضعه في حلقة "تكرارًا" لجعل الشفرة أقصر؟
+      4-5 Maze 4_authored_hint:
+        4-5_Maze_4_a: إذا كنت تواجه صعوبة في معرفة مكان حلقة التكرار ، فحاول ترميز كل شيء حتى تصل الى النمط المناسب.
+      4-5 Maze 5_authored_hint:
+        4-5_Maze_5_a: حاول استخدام حلقة التكرار اذا كنت تريد التقدم للأمام اكثر من خطوة.
+        4-5_Maze_5_b: تستطيع استخدام أكثر من حلقة تكرار في الحل.
+      4-5 Maze 6_authored_hint:
+        4-5_Maze_6_a: "حاول تتبع المسار باصبعك.\nهل هو أقصر مسار؟"
+      4-5 Maze 7_authored_hint:
+        4-5_Maze_7_a: "**هل تريد أن تكون الشفرة قصيرة؟**\nانظر الى الكتل اذا كان هناك حاجة للتكرار فاستخدم حلقة التكرار!"
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      4-5 Nested Loops 6_authored_hint:
+        4-5_Nested_Loops_6_a: |-
+          لا تنسى أن تنعطف بعد حلقة التكرار الداخلية
+      4-5 Nested Loops 7_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          هذا التصميم سيتكرر عشر مرات و بزاوية 360 درجة
+      4-5 Nested Loops 8_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          هذا التصميم سيتكرر ست مرات و بزاوية 360 درجة
+      4-5 While Loops 8_authored_hint:
+        4-5_While_Loops_8_a: سيحتاج كل عنصر دالته أثناء التكرار.
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: الفنان يحتاج إلى الدوران 120 درجة بين كل مربع لإكمال التصميم.
+      Artist Inspiration_authored_hint:
+        brush_width: حددنا عرض الفرشاة الى 1 و لونها الى أزرق قبل أن نبدأ.
+        double_loop: حاول وضع حلقة تكرار داخل الأخرى.
+        specifics: "تمتد حلقة `التكرار` من ثلاثة إلى سبعة عشر لكل واحدة من\" الألواح\"الست قبل الانتقال إلى إنشاء الأشكال التالية والرسوم مع عدد فردي من الجوانب فقط.\n        \nتستخدم كتلة `مجموعة الفا} القسمة لتتلاشى مع ارتفاع العداد."
+        after: عند الانتهاء من الألواح تأكد من التقدم 20 بيكسل قبل الاستدارة 60 درجة.
+        solution: |-
+          **الحل**
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a: لاستخدام كتلة ` تقدم الى الأمام` ، اسحبها من منطقة شريط الأدوات إلى مساحة العمل وقم بتوصيلها بعلامة` عند التشغيل`.
+      Course 4 Artist 11_authored_hint:
+        Course_4_Artist_11_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        Course_4_Artist_11_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
+      Course 4 Artist 12_authored_hint:
+        Course_4_Artist_12_a: 'كل شكل متكرر هو مزيج من ** نصف السداسي ** ، يليه ** 2/3 من المثلث **. '
+        Course_4_Artist_12_b: 'شكل الوحدة هو نفسه تقريبا كما هو الحال في اللغز الأخير ، باستثناء أن نصف السداسي أكبر قليلا. '
+        Course_4_Artist_12_c: "1) يبلغ طول الخطوط الثلاثة الأولى 60 بكسل وتحتاج الانعطاف 60 درجة.\n  2) يبلغ طول الخطين التاليين 80 بكسل وتحتاج إلى الانعطاف 120 درجة "
+      Course 4 Artist 6_authored_hint:
+        Course_4_Artist_6_a: هناك 3 مثلثات داخل استدارة 360 درجة... كم استدارة تحتاج المثلثات لتستدير بزاروية 360 درجة؟
+      Course 4 Artist 8a_authored_hint:
+        Course_4_Artist_8a: |-
+          هل تحتاج إلى المساعدة في معرفة مدى الدوران؟
+
+          هناك 3 مثلثات داخل دوران 360 درجة.
+
+          كم استدارة تحتاج المثلثات لتستدير 360 درجة؟
+      Course 4 Artist 9_authored_hint:
+        Course_4_Artist_9_a: "تحتاج إلى معرفة كم استدارة؟\n\nاقسم 360 على 10؟"
+      Course 4 Artist Binary Free Play 2b_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_a: يستخدم هذا الرمز تكرارين`للحلقات. حلقة التكرار الأولى من 1 إلى 8 ، أما الآخرى فيعد من 8 إلى 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: لكل "حلقة تكرار " ثلاثة. أول مجموعة ترسم  أقصى اليسار من 1s ، والثاني يرسم 0s في الوسط والثالث يرسم 1s على اليمين.
+        Course_4_Artist_Binary_Free_Play_2b_c: في كل تكرار تحتاج إلى `منصة` لـ 1s و` 16- (2 x منصة) `ل 0 s.
+        Course_4_Artist_Binary_Free_Play_2b_d: |-
+          **الحل:**
+      Course 4 Artist For Loops 11_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "سوف تتغير زاوية الدوران مع كل شكل!\n\nاستخدم كتلة الرياضيات للدخول 360 مقسومًا على عدد الجوانب التي يجب أن يحصل الشكل على الزاوية المناسبة لها. "
+      Course 4 Artist For Loops 11a_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: 'لتحصل على الاستدارة اقسم عدد الجوانب على 360. '
+        Course_4_Artist_For_Loops_11a_b: 'في كل مرة ، ستحتاج إلى المضي قدمًا بمقدار 10 أضعاف طول العدد الحالي للجوانب. '
+      Course 4 Artist For Loops 3_authored_hint:
+        Course_4_Artist_For_Loops_3_a: لجعل حملة `ال` التكرار حركتك ، تأكد من أنك تستخدم` عداد` كمسافة.
+      Course 4 Artist For Loops 4_authored_hint:
+        Course_4_Artist_For_Loops_4_a: "** ما هو الرقم الأصغر الذي ستحتاجه؟\nما هو أكبر عدد؟\nما هو حجم الزيادة في كل مرة؟ **\n\nتلك هي الأسئلة التي تحتاج إلى طرحها لملء الفراغات الموجودة في حلقة `ل`."
+      Course 4 Artist For Loops Challenge_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: وقد شكل أكبر الجانبين 19. أصغر باثنين فقط.
+        Course_4_Artist_For_Loops_Challenge_b: يتم حساب دالة `for` من خلال قسمين في كل مرة.
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: المضلع الكبير لديه 19 جانب.
+        Course_4_Artist_For_Loops_Challenge_b: كل مضلع غير مكتملة، مع جانب واحد ينبغي أن يكون أقل من ذلك.
+      Course 4 Artist For Loops inspire_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: الأساس لهذا الرمز هو نفسه كحل للغز التحدي السابق.. مع تغييرين.
+        Course_4_Artist_For_Loops_inspire_b: حاول تكرار الدالة ’ل’ من 3 الى 10 مع زيادة 1.
+        Course_4_Artist_For_Loops_inspire_c: هناك تكرتاران من نفس حلقة التكرار داخل الدالة `for` ، لكن التكرار الثاني يتحول الى الاتجاه المعاكس.
+        Course_4_Artist_For_Loops_inspire_d: "**الحل.**"
+      Course 4 Artist Functions Inspiration_authored_hint:
+        Course_4_Artist_Functions_Inspiration_a: ابدأ بالشفرة من اللغز الأخير وأضف "انعطف يمينًا" من ثلاث درجات داخل حلقة التكرار.
+        Course_4_Artist_Functions_Inspiration_b: حاول الانعطاف بأكثر من 90 درجة خارج حلقة التكرار و داخل تكرار الدالى ’for’.
+        Course_4_Artist_Functions_Inspiration_c: |-
+          **الحل.**
+      Course 4 Artist Functions challenge_authored_hint:
+        Course_4_Artist_Functions_challenge_a: جزء من فهم كيفية استخدام الوظائف هو معرفة ما تحتاج إليه ، وما لا تحتاج إليه.
+        Course_4_Artist_Functions_challenge_b: استخدم `حلقة التكرار للدالة ل ` ، ثم استخدم متغير العداد الخاص بها داخل حلقة` تكرار `متداخلة.
+        Course_4_Artist_Functions_challenge_c: في كل تكرار ، يجب عليك رسم مربع ثم القفز إلى الأمام.
+        Course_4_Artist_Functions_challenge_d: ستحتاج إلى الانعطاف يسارًا بمقدار 90 درجة خارج "التكرار" ، ولكن لا تزال داخل "حلقة for ".
+      Course 4 Artist Inspire_authored_hint:
+        Course_4_Artist_Inspire_a: بعد إتمام مربع واحد ، حاول القفز إلى الأمام بمقدار نصف طول قبل الدوران وصنع مربع آخر.
+        Course_4_Artist_Inspire_b: يتم تكرار كل مربع والقفزة أربع مرات (باستخدام المنعطف الأيسر بينهما) لإنشاء وحدة تشبه عجلة المروحة بالكامل.
+      Inspirational Artwork_authored_hint:
+        brush_width: حددنا عرض الفرشاة الى 1 و لونها الى أزرق قبل أن نبدأ.
+        double_loop: حاول وضع حلقة تكرار داخل الأخرى.
+        specifics: "تمتد حلقة `التكرار` من ثلاثة إلى سبعة عشر لكل واحدة من\" الألواح\"الست قبل الانتقال إلى إنشاء الأشكال التالية والرسوم مع عدد فردي من الجوانب فقط.\n        \nتستخدم كتلة `مجموعة الفا} القسمة لتتلاشى مع ارتفاع العداد."
+        after: عند الانتهاء من الألواح تأكد من التقدم 20 بيكسل قبل الاستدارة 60 درجة.
+        solution: |-
+          **الحل**
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: حاول جعل الكائن يبني بعض مسارات السكك لكي تتمكن من استكشاف العالم!
       MC_HOC_2017_01_Cole_authored_hint:
@@ -185,7 +385,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لنقل اللاعب إلى الخريطة!
         MC_HOC_2017_02_Cole_d: تأكد من ان الكائن يتبع المسار المحدد على الخريطة!
@@ -193,7 +393,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لنقل اللاعب إلى الخريطة!
         MC_HOC_2017_02_Cole_d: تأكد من ان الكائن يتبع المسار المحدد على الخريطة!
@@ -201,7 +401,7 @@ ar:
         MC_HOC_2017_02_Cole_a: حرك الكائن الى الأمام مرتين لكي يقف على الزر. هذا سيفتح الباب للاعبك.
         MC_HOC_2017_02_Cole_b: |-
           اضغط على زر"تشغيل الكائن"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_02_Cole_c: بمجرد ان يفتح الكائن الباب، استخدم ازرار الأسهم لتحريك اللاعب الى المربع البرتقالي.
       MC_HOC_2017_03_Cole_authored_hint:
@@ -213,7 +413,7 @@ ar:
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           لفتح الطريق للاعب يجب الضغط على كلا الزرين.
-          
+
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'استخدم قطعة `انعطف يمينا` لتغيير اتجاه الكائن '
@@ -225,14 +425,14 @@ ar:
         MC_HOC_2017_04_Cole_a: الكائن يحتاج الى `تحرك الى الامام` 7 مرات. كيف يمكنك استخدام حلقة 'كرر' لتحقيق هذا؟
         MC_HOC_2017_04_Cole_c: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_04_Cole_b: بمجرد وصول الكائن الى الزر, الكائن سيفتح الباب للاعب.
       MC_HOC_2017_04_Cole_2019_authored_hint:
         MC_HOC_2017_04_Cole_a: الكائن يحتاج الى `تحرك الى الامام` 7 مرات. كيف يمكنك استخدام حلقة 'كرر' لتحقيق هذا؟
         MC_HOC_2017_04_Cole_c: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_04_Cole_b: بمجرد وصول الكائن الى الزر, الكائن سيفتح الباب للاعب.
       MC_HOC_2017_05_Cole_authored_hint:
@@ -262,13 +462,13 @@ ar:
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل الكائن"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل الكائن"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
       MC_HOC_2017_10_Cole_authored_hint:
@@ -284,19 +484,19 @@ ar:
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           لفتح الطريق للاعب يجب الضغط على كلا الزرين.
-          
+
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
         MC_HOC_2017_08_RY_c: حاول اتباع الخط المنقط لطريق بسيط خلال البركان.
       MC_HOC_2017_Ali_2019_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           اضغط على زر"تشغيل"!
-          
+
           تستطيع ان تنفيذ اوامرك حتى اذا كانت غير صحيحة. اعد المحاولة مرة تلو الأخرى الى أن تعرف اين كان الخطأ.
         MC_HOC_2017_08_RY_b: هناك الكثير من الطرق لحل هذا اللغز. جرب بعضا منها!
         MC_HOC_2017_08_RY_c: حاول اتباع الخط المنقط لطريق بسيط خلال البركان.
@@ -304,12 +504,32 @@ ar:
         MC_HOC_2017_13_Cole_a: حاول جعل الكائن يبني بعض مسارات السكك لكي تتمكن من استكشاف العالم!
       MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: حاول جعل الكائن يبني بعض مسارات السكك لكي تتمكن من استكشاف العالم!
+      NEW Course 4 Artist Params inspire_authored_hint:
+        brush_width: حددنا عرض الفرشاة الى 1 و لونها الى أزرق قبل أن نبدأ.
+        double_loop: حاول وضع حلقة تكرار داخل الأخرى.
+        specifics: "تمتد حلقة `التكرار` من ثلاثة إلى سبعة عشر لكل واحدة من\" الألواح\"الست قبل الانتقال إلى إنشاء الأشكال التالية والرسوم مع عدد فردي من الجوانب فقط.\n        \nتستخدم كتلة `مجموعة الفا} القسمة لتتلاشى مع ارتفاع العداد."
+        after: عند الانتهاء من الألواح تأكد من التقدم 20 بيكسل قبل الاستدارة 60 درجة.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: جرب ان تجعل الكائن يبني بعض الأبراج بحيث يستطيع اليكس او ستيف المشي فارج حافة الخريطة.
+      aE3_authored_hint:
+        aE3_d: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      aE3alternate_authored_hint:
+        aE3alternate_d: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      aE3alternateB_authored_hint:
+        aE4alternateB_d: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      aE4_authored_hint:
+        aE4_d: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        courseE_artist_concept_challenge1_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -327,7 +547,7 @@ ar:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -346,7 +566,7 @@ ar:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -365,7 +585,7 @@ ar:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -384,7 +604,7 @@ ar:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -401,7 +621,7 @@ ar:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -411,7 +631,7 @@ ar:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -427,7 +647,7 @@ ar:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -446,7 +666,7 @@ ar:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -465,7 +685,7 @@ ar:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -484,7 +704,7 @@ ar:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -497,6 +717,8 @@ ar:
           </next>
           </block>
           </xml>
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: هناك طريقتين لحل الأحجية!
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 'إذا استخدمت الكتلة لجعلي " اتحرك للأمام 100 نقطة" سوف أقوم برسم خط مستقيم تلقائياً.'
         courseC_artist_prog2_b: هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم " اتجه لليمين 90 درجة".
@@ -506,6 +728,16 @@ ar:
       courseC_artist_prog2_2019_authored_hint:
         courseC_artist_prog2_a: 'إذا استخدمت الكتلة لجعلي " اتحرك للأمام 100 نقطة" سوف أقوم برسم خط مستقيم تلقائياً.'
         courseC_artist_prog2_b: هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم " اتجه لليمين 90 درجة".
+      courseC_maze_loops6_authored_hint:
+        courseC_maze_loops6_b: "لوضع الكثير من الكتل داخل حلقة `التكرار` ، قم فقط بسحب الحلقة إلى مساحة العمل ، ثم اسحب كل الكتل من مربعات برمجية داخلها!"
+      courseC_maze_loops7_authored_hint:
+        courseC_maze_loops7_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_5_2018_2019_authored_hint:
@@ -522,6 +754,27 @@ ar:
         courseD_artist_nestedLoops3_a: "حاول ان تستخدم القفز إلى الأمام مسافة من الأعلى المكعب الى مكان الذي سوف تبدا منه بعد.\n\n\nاذا المكعبات 20 بيكسل طول و20 بيكسل بين الاثنان, كم تحتاج للقفز ؟"
       courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "حاول ان تستخدم القفز إلى الأمام مسافة من الأعلى المكعب الى مكان الذي سوف تبدا منه بعد.\n\n\nاذا المكعبات 20 بيكسل طول و20 بيكسل بين الاثنان, كم تحتاج للقفز ؟"
+      courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_a: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_a: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: هناك طريقتين لحل الأحجية!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: هناك طريقتين لحل الأحجية!
+      courseE_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        courseE_artist_concept_challenge1_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
+      courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        courseE_artist_concept_challenge1_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        courseE_artist_concept_challenge1_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: لكل من المربعات جوانب بطول 100 بكسل، هذا يعني أن عليك التحرك نحو الأمام بمقدار 175 بكسل قبل رسم مربعك الثاني.
         courseE_artist_functions1_b: يمكنك رسم خطوط متقاطعة لصنع نظاراتك.
@@ -546,6 +799,63 @@ ar:
           استخدام الدالة
           التحرك إلى الامام 100 + 75 بيكسل
           استخدام الدالة
+      courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      courseE_bee_functions6_2018_authored_hint:
+        courseE_bee_functions6_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      courseE_bee_functions6test_authored_hint:
+        courseE_bee_functions6_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+        courseE_bee_functions7_b: |-
+          تذكر ان تبرمج شفرتك داخل الدالة الخضراء()
+      courseE_bee_functions7_2018_authored_hint:
+        courseE_bee_functions7_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+        courseE_bee_functions7_b: |-
+          تذكر ان تبرمج شفرتك داخل الدالة الخضراء()
+      courseE_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseE_bee_functions_challenge1_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseE_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseE_bee_functions_challenge2_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a: كن حذراً لسحب كتلة كاملة من "رمز من شريط الأدوات في كل مرة تحاول فيها كتلة جديدة.
+        4-5_Artist_Patterns_3_b: إذا أصبحت الكود الخاص بك مربكًا جدًا ، يمكنك دائمًا النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: هناك طريقتين لحل الأحجية!
+      courseF_artist_for4_authored_hint:
+        courseF_artist_for4_a: "** ما هو الرقم الأصغر الذي ستحتاجه؟\nما هو أكبر عدد؟\nما هو حجم الزيادة في كل مرة؟ **\n\nتلك هي الأسئلة التي تحتاج إلى طرحها لملء الفراغات الموجودة في حلقة `ل`."
+      courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_a: "** ما هو الرقم الأصغر الذي ستحتاجه؟\nما هو أكبر عدد؟\nما هو حجم الزيادة في كل مرة؟ **\n\nتلك هي الأسئلة التي تحتاج إلى طرحها لملء الفراغات الموجودة في حلقة `ل`."
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: "** ما هو الرقم الأصغر الذي ستحتاجه؟\nما هو أكبر عدد؟\nما هو حجم الزيادة في كل مرة؟ **\n\nتلك هي الأسئلة التي تحتاج إلى طرحها لملء الفراغات الموجودة في حلقة `ل`."
+      courseF_bee_conditionals8_authored_hint:
+        courseF_bee_conditionals8_a: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      courseF_bee_conditionals8_2018_authored_hint:
+        courseF_bee_conditionals8_a: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      courseF_bee_functions6_2018_authored_hint:
+        courseF_bee_functions6_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      courseF_bee_functions8a_authored_hint:
+        courseF_bee_functions8a_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseF_bee_functions8a_2018_authored_hint:
+        courseF_bee_functions8a_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseF_bee_functionsPre7_authored_hint:
+        courseF_bee_functions7_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseF_bee_functionsPre7_2018_authored_hint:
+        courseF_bee_functions7_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseF_bee_functions_challenge2_recursion_authored_hint:
+        courseF_bee_functions8a_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: هناك طريقتين لحل الأحجية!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: هناك طريقتين لحل الأحجية!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: هناك طريقتين لحل الأحجية!
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: إذا استخدمت الكتلة لجعلي " اتحرك للأمام 100 نقطة" سوف أقوم برسم خط مستقيم تلقائياً.
         2-3_Artist_1_new_b: هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم " اتجه لليمين 90 درجة".
@@ -556,17 +866,81 @@ ar:
           كم مرة تكرر شكلي؟
           كم مرة *ينبغي* على الشكل أن يتكرر؟
           أين يمكنك تغيير ذلك في البرنامج؟
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+        2-3_Maze_16_b: "لوضع الكثير من الكتل داخل حلقة `التكرار` ، قم فقط بسحب الحلقة إلى مساحة العمل ، ثم اسحب كل الكتل من مربعات برمجية داخلها!"
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+        2-3_Maze_Loops_17_b: هل تم حذف رمز البداية؟ انقر فوق "البدء من جديد" للحصول عليه مرة أخرى!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'كل مسافة قدرها 75 بكسل.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: ماذا يحدث إذا كان عليك جعل الفنان يتحرك أو يقفز للخلف بعد أن يرسم الخط الأول؟
+      grade2_puppy_loops6_authored_hint:
+        2-3_Maze_16_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+        2-3_Maze_16_b: "لوضع الكثير من الكتل داخل حلقة `التكرار` ، قم فقط بسحب الحلقة إلى مساحة العمل ، ثم اسحب كل الكتل من مربعات برمجية داخلها!"
+      grade2_puppy_loops7_authored_hint:
+        2-3_Maze_Loops_17_a: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+      grade3_ConditionalsElse_4_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade3_ConditionalsElse_5_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade3_ConditionalsElse_TeacherIDo_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade3_Conditionals_10 BAD_authored_hint:
+        4-5_Bee_Nested_Loops_Rows_a: حاول معالجة هذا اللغز مثل المستطيل الطويل حيث يحتاج النحل التحرك إلى الأمام ، ثم الاستدرارة لليسار عدة مرات لإكمال المسار.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية الحصول على اللبنات في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
         2-3_Bee_Conditionals_14_b: لو كانت الوردة الحمراء وردة بنفسجية, هل يمكنك معرفة كيف تستخدم " إعادة repeat"  لوب إضافي لتقتطع البرنامج؟
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'تذكر : الزهر البنفسجي يحتوي على 0 او 1 نكتار ويمكنه ان يتغير كل مره يتم فيها تشغيل البرنامج.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: إسْتَخْدِم حَلْقَة تِكرار ليكون الكود أقصر للتقدم للأمام و لجمع الرحيق و لانتاج العسل.
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'تذكر: عند تشغيل البرنامج تتغير الزهور البنفسجية 0 والرحيق 1!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'تذكر: عند تشغيل البرنامج تتغير الزهور البنفسجية 0 والرحيق 1!'
       grade3_Debugging_1_authored_hint:
         2-3_Bee_Debugging_1_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: هل هناك أي مكان تفعل فيه النحلة شيئًا لا معنى له؟ ماذا يحدث عند تغيير هذه الكتلة؟
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: ينبغي أن تنتهي بخمسة كتل داخل حلقة التكرار.
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: إذا لم تستطع تحديد الكتل لوضعها داخل حلقة "تكرار" على الفور ، ابدأ بتشفير كل خطوة والبحث عن نمط مناسب.
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: إذا لم تستطع معرفة ما يجب أن يحدث في حلقة "التكرار" ، فجرّب سحب الكتلات واحدة تلو الأخرى وتعرف على ما إذا كان يمكنك العثور على نمط مناسب.
+        2-3_Bee_Loops_6_b: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: تحتاج إلى حلقتين تكرار مختلفتين الواحدة تلو الأخرى.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_7_b: 'إذا كنت لا تستطيع تصور حلقة التكرار من البداية ، فحاول ترميزها بعيدًا ، ثم ابحث عن نمط مناسب.  '
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_4A_b: تستطيع انهاء آخر البرنامج بكتابة الشفرة خارج حلقة التكرار.
+        2-3_Bee_Loops_4A_c: إذا لم تتمكن من تحديد الحلقات بعد ، فحاول ترميزها بعيدًا أولاً ، ثم شاهد ما يمكنك دمجه في حلقة "تكرار" في النهاية.
+      grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: ينبغي أن تنتهي بأربع كتل داخل حلقة التكرار.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      grade3_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_b: إذا كان من الصعب رؤية هذا النمط ، فحاول ترميزه أولاً وشاهد الأشياء التي تكررها مرارًا وتكرارًا قبل وضع حلقات التكرار.
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a: إذا كنت تواجه مشكلة في العثور على نمط خطوة الدرج ، فحاول تغطية المسارات المحظورة بإصبعك.
+      grade4_arist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          هذا التصميم سيتكرر عشر مرات و بزاوية 360 درجة
+      grade4_arist_nested_loop_polygons2_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          هذا التصميم سيتكرر ست مرات و بزاوية 360 درجة
+      grade4_arist_nested_loop_triangles3_authored_hint:
+        4-5_Nested_Loops_6_a: |-
+          لا تنسى أن تنعطف بعد حلقة التكرار الداخلية
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: لكل من المربعات جوانب بطول 100 بكسل، هذا يعني أن عليك التحرك نحو الأمام بمقدار 175 بكسل قبل رسم مربعك الثاني.
         2-3_Artist_Functions_1_b: يمكنك رسم خطوط متقاطعة لصنع نظاراتك.
@@ -576,6 +950,27 @@ ar:
           استخدام الدالة
           التحرك إلى الامام 100 + 75 بيكسل
           استخدام الدالة
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_a: 'يمتلك نصف السداسي ** ** طول 30 ** ويتحول يمينا ** ** 60 درجة **.  '
+        Course_4_Artist_11_b: 'يحتوي المثلث 2/3 على ** طول 80 ** ويتحول إلى اليمين بمقدار 120 درجة **. '
+      grade4_artist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          هذا التصميم سيتكرر عشر مرات و بزاوية 360 درجة
+      grade4_artist_nested_loop_polygons2_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          هذا التصميم سيتكرر ست مرات و بزاوية 360 درجة
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      grade4_bee_conditionals_quantum4_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade4_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "** تذكر: ** يتغير هذا اللغز في كل مرة يتم تشغيله.\n\nستحتاج إلى استخدام كتلة شرطية (`اذا` أو` اذا/ وإلا`) لحل هذا التحدي."
+      grade4_bee_functions7_authored_hint:
+        2-3_Bee_Functions_8_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح ()"
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_a: "اذا كانت الأحجية تبدو صعبة جرب بناء دالة \nأضف بعض الكتل و جربها و حاول مرة اخرى في النهاية ستنجح!"
+        2-3_Bee_Functions_8_b: |-
+          تذكر ان تبرمج شفرتك داخل الدالة الخضراء()
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: إذا استخدمت الكتلة لجعلي " اتحرك للأمام 100 نقطة" سوف أقوم برسم خط مستقيم تلقائياً.
         2-3_Artist_1_new_b: هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم " اتجه لليمين 90 درجة".
@@ -583,3 +978,54 @@ ar:
         2-3_Artist_6_a: 'لإنشاء هذه الزوايا الصغيرة, عليك الالتفاف *أكثر* كل مرة عند رسم المربع.   '
         2-3_Artist_6_b: بما إني مواجه لجهة اليمين, من الأسهل البدء بالانتقال إلى الامام ثم الاتجاه لليسار لإنشاء مثلث.
         2-3_Artist_6_c: كل ضلع للمثل له نفس طول ضلع المربع.... 100 نقطة!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: تحتاج إلى حلقتين تكرار مختلفتين الواحدة تلو الأخرى.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: ينبغي أن تنتهي بخمسة كتل داخل حلقة التكرار.
+      grade5_artist_binary10_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_a: يستخدم هذا الرمز تكرارين`للحلقات. حلقة التكرار الأولى من 1 إلى 8 ، أما الآخرى فيعد من 8 إلى 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: لكل "حلقة تكرار " ثلاثة. أول مجموعة ترسم  أقصى اليسار من 1s ، والثاني يرسم 0s في الوسط والثالث يرسم 1s على اليمين.
+        Course_4_Artist_Binary_Free_Play_2b_c: في كل تكرار تحتاج إلى `منصة` لـ 1s و` 16- (2 x منصة) `ل 0 s.
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: المضلع الكبير لديه 19 جانب.
+        Course_4_Artist_For_Loops_Challenge_b: كل مضلع غير مكتملة، مع جانب واحد ينبغي أن يكون أقل من ذلك.
+      grade5_artist_for_loops4_authored_hint:
+        Course_4_Artist_For_Loops_4_a: "** ما هو الرقم الأصغر الذي ستحتاجه؟\nما هو أكبر عدد؟\nما هو حجم الزيادة في كل مرة؟ **\n\nتلك هي الأسئلة التي تحتاج إلى طرحها لملء الفراغات الموجودة في حلقة `ل`."
+      grade5_artist_for_loops8_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "سوف تتغير زاوية الدوران مع كل شكل!\n\nاستخدم كتلة الرياضيات للدخول 360 مقسومًا على عدد الجوانب التي يجب أن يحصل الشكل على الزاوية المناسبة لها. "
+      grade5_artist_for_loops9_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: 'لتحصل على الاستدارة اقسم عدد الجوانب على 360. '
+        Course_4_Artist_For_Loops_11a_b: 'في كل مرة ، ستحتاج إلى المضي قدمًا بمقدار 10 أضعاف طول العدد الحالي للجوانب. '
+      grade5_artist_for_loopsfreeplay11_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: الأساس لهذا الرمز هو نفسه كحل للغز التحدي السابق.. مع تغييرين.
+        Course_4_Artist_For_Loops_inspire_b: حاول تكرار الدالة ’ل’ من 3 الى 10 مع زيادة 1.
+        Course_4_Artist_For_Loops_inspire_c: هناك تكرتاران من نفس حلقة التكرار داخل الدالة `for` ، لكن التكرار الثاني يتحول الى الاتجاه المعاكس.
+      grade5_artist_functionparameters10_authored_hint:
+        brush_width: حددنا عرض الفرشاة الى 1 و لونها الى أزرق قبل أن نبدأ.
+        double_loop: حاول وضع حلقة تكرار داخل الأخرى.
+        specifics: "تمتد حلقة `التكرار` من ثلاثة إلى سبعة عشر لكل واحدة من\" الألواح\"الست قبل الانتقال إلى إنشاء الأشكال التالية والرسوم مع عدد فردي من الجوانب فقط.\n        \nتستخدم كتلة `مجموعة الفا} القسمة لتتلاشى مع ارتفاع العداد."
+        after: عند الانتهاء من الألواح تأكد من التقدم 20 بيكسل قبل الاستدارة 60 درجة.
+      grade5_artist_variables_freeplay15_authored_hint:
+        Course_4_Artist_Inspire_b: يتم تكرار كل مربع والقفزة أربع مرات (باستخدام المنعطف الأيسر بينهما) لإنشاء وحدة تشبه عجلة المروحة بالكامل.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: ينبغي أن تنتهي بخمسة كتل داخل حلقة التكرار.
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: إذا لم تستطع تحديد الكتل لوضعها داخل حلقة "تكرار" على الفور ، ابدأ بتشفير كل خطوة والبحث عن نمط مناسب.
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: إذا لم تستطع معرفة ما يجب أن يحدث في حلقة "التكرار" ، فجرّب سحب الكتلات واحدة تلو الأخرى وتعرف على ما إذا كان يمكنك العثور على نمط مناسب.
+        2-3_Bee_Loops_6_b: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: تحتاج إلى حلقتين تكرار مختلفتين الواحدة تلو الأخرى.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_7_b: 'إذا كنت لا تستطيع تصور حلقة التكرار من البداية ، فحاول ترميزها بعيدًا ، ثم ابحث عن نمط مناسب.  '
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: سيكون الإجراء الأول هو الدور بدلاً من التحرك.
+        2-3_Bee_Loops_4A_b: تستطيع انهاء آخر البرنامج بكتابة الشفرة خارج حلقة التكرار.
+        2-3_Bee_Loops_4A_c: إذا لم تتمكن من تحديد الحلقات بعد ، فحاول ترميزها بعيدًا أولاً ، ثم شاهد ما يمكنك دمجه في حلقة "تكرار" في النهاية.
+      level 'grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: ينبغي أن تنتهي بأربع كتل داخل حلقة التكرار.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: ينبغي أن تنتهي بستة كتل داخل حلقة التكرار.

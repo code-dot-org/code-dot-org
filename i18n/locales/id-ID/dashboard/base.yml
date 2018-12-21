@@ -186,10 +186,10 @@ id:
     subject: 'Gabung dengan kelas saya (di Code.org)'
     body: |
       Klik link dibawah untuk masuk bergabung dengan ilmu komputer tutorial di Code.org (saya akan menjadi "guru"mu): %{link}
-      
+
       Kursus ini menyenangkan, menarik untuk dilihat, dan mengajar konsep dasar ilmu informatika menggunakan latihan  yang sederhana, teratur, dan dalam bentuk permainan. Belajarlah cara memprogram dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs. Zombies! :-)
       %{name}
-      
+
   parent_mailer:
     student_associated_subject: 'Masukkan code informasi Code.org'
   teacher_mailer:

@@ -5,7 +5,7 @@ ro:
       2-3 Artist 11: "Dă semnului stop o bordură făcând un octogon cu 8 laturi, fiecare de 100 de pixeli lungime. Cu câte grade ar trebui să rotești? (Sugestie: cât este 360 împărţit la 8?) "
       2-3 Artist 12: |-
         Setează blocul "repetă ori" astfel încât acesta să creeze un "cerc" pentru a termina ochiul.\r
-        
+
         Dacă fiecare mişcare se roteşte la dreapta cu un grad, de câte ori trebuie să repeți pentru a finaliza cercul? 180? 360? 500?
       2-3 Artist 2 new: 'Această casă are un perete pe jumătate terminat. Fiecare latură este de 100, dar peretele pe jumătate terminat este de numai 50. Completează peretele. '
       2-3 Artist 2: 'Această casă are un perete pe jumătate terminat. Fiecare latură este de 100, dar peretele pe jumătate terminat este de numai 50. Completează peretele. '
@@ -389,7 +389,7 @@ ro:
       4-5 Nested Loops 2: 'Acum pune acestă buclă în interiorul unei alte bucle pentru  a desena 10 triunghiuri. Aceasta se numește o buclă imbricată. Sugestie: Toate cele 10 triungiuri completează o rotatie de 360 de grade.  '
       4-5 Nested Loops 3: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       4-5 Nested Loops 5: Buclează codul dat pentru a crea o moară de vânt.
       4-5 Nested Loops 6: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
       4-5 Nested Loops 7: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
@@ -702,6 +702,7 @@ ro:
       Course 4 SCV 6: Click aici pentru a vedea instrucţiunile din nou.
       Course 4 SCVP 1: Creează o funcție cu parametri care permite artistului să facă salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli (folosind numere pozitive și negative).
       Course 4 Variables Assessment: Poţi crea această imagine folosind o variabilă pentru laturi? Fiecare linie trebuie să aibe 50 de pixeli lungime.
+      Course E MC Conditionals1: Vei gasi cele mai valoroase resurse in subteran, dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin 2 carbuni.
       CourseF_PlayLab_vars10: "Joc liber! Aici avem toate variabilele cu care ne-am jucat în acest nivel şi chiar câteva în plus în caz că aveţi nevoie. Faceţi un joc sau o poveste utilizând oricare dintre aceste variabile. Indicaţie: derulaţi în jos pentru a vedea toate comenzile din spaţiul de lucru."
       CourseF_PlayLab_vars2: Cursa în acest ultim puzzle nu a fost foarte corectă! Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri decât pisica. Primul care adună 10 steaguri câştigă!
       CourseF_PlayLab_vars3: Aici avem un nou tip de joc! Foloseşte pentru mutare tastele săgeţi stânga şi dreapta şi pentru a sării tasta săgeată sus. Vezi dacă poţi să aduni toate steagurile.
@@ -1090,6 +1091,7 @@ ro:
       courseA_maze_seq2_2018: Modifică secvenţa de cod pentru a mă duce la porc!
       courseC_PlayLab_events3: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
       courseC_PlayLab_events3_2018: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
+      courseC_PlayLab_events3_2019: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
       courseC_artist_prog5: |-
         Această casă are nevoie de un acoperiş! Desenează triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.
       courseC_artist_prog5_2018: |-
@@ -1321,7 +1323,7 @@ ro:
       grade4_arist_nested_loop_triangles4: Desenează dinţii în gura aligatorului!
       grade4_arist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_arist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_functions1: "Ajuta zombieul sa deseneze ochelarii folosind patrate cu laturi de 100 de pixeli. \\r Spatiul dintre ochelari este de 75 de pixeli."
       grade4_artist_functions2: "Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită \"desenează un pătrat\". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele."
@@ -1337,7 +1339,7 @@ ro:
       grade4_artist_nested_loop_triangles1: 'Completează codul astfel încât acesta să deseneze aceste triunghiuri. Primul este deja făcut. Tip: 3 triunghiuri în rotatie de 360 de grade.'
       grade4_artist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_artist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_parameters_squares1: 'Fă clic pe "editare" pentru a completa definiția funcţiei "desenează un pătrat" şi pentru a adăuga un parametru. Ar trebui să ia un parametru de lungime, la fel ca și triunghiul. De această dată, desenează 3 pătrate: cu 25, 50 și 75 de pixeli lungime, fiecare la distanță de 100 de pixeli unul față de celălalt.'
       grade4_artist_parameters_triangles2: "Observi ceva diferit \nla aceste blocuri de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."

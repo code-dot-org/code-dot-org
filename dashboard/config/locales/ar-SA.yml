@@ -190,6 +190,7 @@ ar:
     charter: الميثاق
     private: خاص
     public: عام
+    homeschool: تعليم منزلي
     after_school: بعد الدراسة
     other: الأخرى
     state: الولاية
@@ -233,6 +234,9 @@ ar:
       submit: تسجيل
     reset_errors:
       captcha_required: المرجو ملأ CAPTCHA لتغيير كلمة مرورك.
+      invalid_email: يبدو الأمر كما لو كنت قد سجلت مع عنوان بريد إلكتروني غير صالح.
+        يرجى مراسلة البريد الإلكتروني support@code.org للحصول على رابط استرداد كلمة
+        مرور.
     change_form:
       title: تغيير كلمة مرور حسابك
       new_password: كلمة مرور جديدة
@@ -245,8 +249,18 @@ ar:
       وتقدم لكم مجموعة من المفاهيم الأساسية لعلوم الكمبيوتر الآلي باستخدام التبسيط
       \ والارشادات. تعلم البرمجة من بيل جيتس ومارك زوكربيرج، الطيور الغاضبة والنباتات
       ضد الزومبيز! :-)\n\n%{name}\n"
+  parent_mailer:
+    student_associated_subject: معلومات الدخول على Code.org
+  teacher_mailer:
+    new_teacher_subject: مرحبا بكم في Code.org!
+    delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
   section:
+    confirm:
+      remove: هل أنت متأكد من أنك تريد مغادرة هذا القسم؟
+    default_name: مقطع بدون عنوان
+    remove: "(إزالة القسم)"
     type:
+      picture: صورة لكلمة السر
       word: الكلمة السرية
       email: البريد الإلكتروني
   follower:
@@ -290,9 +304,30 @@ ar:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
         applab: اصنع تطبيقا
+      course_catalog: كتالوج الدورات التدريبية
       project_gallery: المشاريع
+      sections: الأقسام
+      educate_middle: المرحلة المتوسطة
+      educate_high: المرحلة الثانوية
       educate_hoc: ساعة البرمجة
+      educate_partner: كن شريكا لنا
+      educate_beyond: بعد Code.org
+      educate_inspire: ألهم طالب
+      educate_community: مجتمع الإنترنت
+      about_us: نبذة عنا
+      about_leadership: القيادة
+      about_donors: المتبرعون
+      about_partners: الشركاء
+      about_news: مركز الأنباء
+      about_evaluation: التقييم
+      about_jobs: وظائف
+      about_contact: إتصل بنا
+      about_faqs: الأسئلة الشائعة
+      learn: تعلّم
       stats: الإحصائيات
+      help_us: ساعدنا
+      teach: التعليم
+      about: حول
     user:
       classroom: الصفحة الرئيسية المعلم
       district_dashboard: جزء لوحة المعلومات
@@ -346,6 +381,7 @@ ar:
       example: مثال الحل
       example_with_number: مثال الحل %{solution_number}
       submitted_on: 'تم تقديمه في:'
+      last_updated: 'آخر تحديث:'
       unsubmit: عدم تقديم
       worked_with: عملت مع
       update_lock_settings: حدث قفل الاعدادات هنا.
@@ -355,6 +391,8 @@ ar:
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
     email_confirm_wrong_email: "(عنوان بريد إلكتروني خاطئ؟)"
     email_resend_confirm: إعادة إرسال رسالة تعليمات عملية التأكيد
+    new_email_hint: "(تأكد من إمكانية تلقي رسائل البريد الإلكتروني إلى عنوان البريد
+      الإلكتروني هذا)"
     new_password_hint: "(اتركه فارغاً إذا كنت لا ترغب في تغييره)"
     current_password_hint: "(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)"
     delete: إحذف الحساب الخاص بك

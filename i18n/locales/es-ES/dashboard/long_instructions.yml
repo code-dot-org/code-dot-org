@@ -52,7 +52,7 @@ es:
       2-3 Artist Loops 2: Ahora utilice un bloque de repetición para hacer la célula una cáscara.
       2-3 Artist Loops New 1: |
         Vamos a dibujar la cabeza de la robusteza! ¿Se puede hacer un cuadrado con lados que son 100 píxeles? \r \r <br/> \r
-        
+
       2-3 Artist Loops New 10: Ahora conectemos un montón de V juntos, dibujándolos en un bucle.
       2-3 Artist Loops New 11: "¡Tiempo para hacer algo elegante! \\r \\r reconstruir el código del último puzzle, pero esta vez, añadir un giro a la izquierda 30 grados dentro del bucle. Ahora, repita 24 veces en lugar de 8."
       2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles. '
@@ -60,13 +60,13 @@ es:
       2-3 Artist Loops New 14: "Jugar con el código para el diamante y ver qué otros patrones que usted puede hacer. \\r \\r prueba cambiando cuántos grados gira y cuántas veces te lazo."
       2-3 Artist Loops New 15: |+
         Ahora, dibujar cualquier cosa que te gusta! \r <br/> <br/> \r \r
-        
+
       2-3 Artist Loops New 2: |-
         Aquí es el mismo rompecabezas que sólo solucionamos, pero esta vez, sólo podemos utilizar un bloque de 'avanzar' y 'girar' cuadra que este tiempo. \r \r puede utiliza una 'repetición' para resolver este rompecabezas?
       2-3 Artist Loops New 9: Dibuja una simple V donde ambos lados sean de 50 píxeles para completar la flecha.
       2-3 Artist Nested Loops 1: |+
         Has usado loops para dibujar formas antes, pero ahora vamos a poner bucles dentro de otros bucles! \r \r poner un bloque 'repetición' alrededor de esta pila de entero de código para dibujar el patrón de. \r \r <br/> \r \r
-        
+
       2-3 Artist Nested Loops 10: Itera este código 12 veces para completar el patrón.
       2-3 Artist Nested Loops 11: Itera este código 4 veces para completar el patrón, gira 90 grados después de cada circulo.
       2-3 Artist Nested Loops 12: Itera este código 12 veces para completar los rizos.
@@ -228,7 +228,7 @@ es:
       4-5 Nested Loops 12: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       4-5 Nested Loops 3: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado. \r
-        
+
       4-5 Nested Loops 5: has un bucle con el código dado para crear un molino de viento.
       4-5 Nested Loops 6: "¿Puedes dibujar un hexágono haciendo un enlace\ncon el código triangular?"
       4-5 Nested Loops 7: "con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuanto es 360 dividido por 10?)"
@@ -428,28 +428,28 @@ es:
         Combinando
         imágenes, texto y alguna animación sutil pueden hacer cómics realmente interesantes
         o historias gráficas. Haga clic en "Ejecutar" para ver un ejemplo.\r
-        
+
       CSD U3 Entertainment Sample 3_2018: |
         # Caricaturas animadas\r
         \r
         Combinando
         imágenes, texto y alguna animación sutil pueden hacer cómics realmente interesantes
         o historias gráficas. Haga clic en "Ejecutar" para ver un ejemplo.\r
-        
+
       CSD U3 Entertainment Sample 4: |
         # Timbre de sello\r
         \r
         Hacer clic
         En "Ejecutar" para iniciar el programa, luego use la almohadilla de sello para dibujar con
         colores simples y sellos de animales.\r
-        
+
       CSD U3 Entertainment Sample 4_2018: |
         # Timbre de sello\r
         \r
         Hacer clic
         En "Ejecutar" para iniciar el programa, luego use la almohadilla de sello para dibujar con
         colores simples y sellos de animales.\r
-        
+
       CSD U3 Input Fish: |-
         # Pez con flechas\r
         \r
@@ -680,7 +680,7 @@ es:
         ## esbozado \r
         \r
         Antes de continuar, tomate un segundo para esbozar un escenario que te gustaría hacer al final de esta lección. Considera las formas simples que has usado en el pasado, los sprites para tus personajes y cualquier texto que quieras en la pantalla. Una vez que haya esbozado una idea, aprenderas sobre 'texto' y cómo componer una escena.\r
-        
+
       CSD U3 Sprites scene challenge: |-
         # Desafío: Extiende tu
         escena\r
@@ -808,17 +808,7 @@ es:
         _ Sugerencia: el tamaño del texto predeterminado es bastante pequeño, pero
         puedes usar el bloque `textSize` para cambiar eso. También puede usar `fill` para
         cambia el color de tu texto._
-      CSD U3 Sprites text_2018: |-
-        # Agregar texto\r
-        \r
-        Puedes poner
-        texto en cualquier lugar que desee en la pantalla usando `text`. Cambiar el texto 
-        visualizado en el código provisto, luego agregue un segundo `texto` para escribir en un
-        parte diferente de la pantalla.\r
-        \r
-        _ Sugerencia: el tamaño del texto predeterminado es bastante pequeño, pero
-        puedes usar el bloque `textSize` para cambiar eso. También puede usar `fill` para
-        cambia el color de tu texto._
+      CSD U3 Sprites text_2018: "# Agregar texto\\r\n\\r\nPuedes poner\ntexto en cualquier lugar que desee en la pantalla usando `text`. Cambiar el texto \nvisualizado en el código provisto, luego agregue un segundo `texto` para escribir en un\nparte diferente de la pantalla.\\r\n\\r\n_ Sugerencia: el tamaño del texto predeterminado es bastante pequeño, pero\npuedes usar el bloque `textSize` para cambiar eso. También puede usar `fill` para\ncambia el color de tu texto._"
       CSD U3 Variables Draw Challenge: |
         # Desafío: dibujar una
         Imagen\r
@@ -831,7 +821,7 @@ es:
         el tamaño y o la ubicación de ambos ojos, oídos y fosas nasales. Una vez que hayas
         completado tu dibujo, intenta cambiar los valores de las variables para estar
         seguro de que toda la imagen cambia junto.\r
-        
+
       CSD U3 Variables Draw Challenge_2018: |
         # Desafío: dibujar una
         Imagen\r
@@ -844,7 +834,7 @@ es:
         el tamaño y o la ubicación de ambos ojos, oídos y fosas nasales. Una vez que hayas
         completado tu dibujo, intenta cambiar los valores de las variables para estar
         seguro de que toda la imagen cambia junto.\r
-        
+
       CSD U5 binary 5-new: |-
         # Decodificación de múltiples números\r\r
         \r
@@ -942,39 +932,39 @@ es:
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
       Dance_Party_01: |-
         *¡Hagamos una fiesta para bailar!*
-        
+
         Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
-        
+
         * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
       Dance_Party_01_low: |-
         *¡Hagamos una fiesta para bailar!*
-        
+
         Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
-        
+
         * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
       Dance_Party_02: |-
         ¡Pongamos a este alce a bailar!
-        
+
         Arrastra el bloque de «floss» <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo bajo el bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Tu bailarín debería iniciar un nuevo movimiento después del cuarto compás.
-        
-        
+
+
         Los **compases** se utilizan para contar el tiempo en música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: "*¡Ahora movemos el esqueleto!*\n\nAñade un bloque de «compases» <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases."
       Dance_Party_04: |-
         *¡A este baile le hace falta brillo!*
-        
+
         Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       Dance_Party_05: |-
         ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
-        
+
         * Elegir «(Siguiente)», «(Anterior)» o «(Aleatorio)» indica al bailarín que debe hacer un movimiento diferente cada vez que se ejecuta el código.
       Dance_Party_06: |-
         *¡Necesitamos más bailarines!*
-        
+
         Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
       Dance_Party_08: |-
         Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto.
-        
+
         Puedes hacer que parezca que un bailarín está en el fondo si reduces su _tamaño_. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       Dance_Party_09: |-
         Los bailarines tienen una propiedad de «tonalidad» que puede añadir una capa de color. Intenta cambiar la tonalidad de uno de tus bailarines.
@@ -987,7 +977,7 @@ es:
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-        
+
         Este programa utiliza el volumen «bajo» de la música (los sonidos bajos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín responda también a la música?
       Dance_Party_11.5_test: "Echa un vistazo a este bloque:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n¡Ahora puedes crear un montón de bailarines a la vez!\n\nTrata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos."
       Dance_Party_11: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!"
@@ -998,48 +988,48 @@ es:
       Dance_Party_3: "*¡Ahora movemos el esqueleto!*\n\nAñade un bloque de «compases» <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases."
       Dance_Party_4: |-
         *¡A este baile le hace falta brillo!*
-        
+
         Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       Dance_Party_8: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       Dance_Party_extras_battle: |-
         # Compañías de baile
-        
+
         Esto es una competición de baile entre dos compañías. Las flechas del teclado controlan a uno de los bailarines y las teclas «w,a,s,d» al otro. Reta a un amigo a una batalla de baile y después intenta mejorar esta.
-        
+
         * Añade más teclas para controlar los bailes
         * Consigue que los bailarines del fondo respondan también al presionar las teclas
         * Cambia de bailarín cada 4 compases configurando la visibilidad
       Dance_Party_extras_every_beat: |-
         # Negras
-        
+
         La mayoría de nuestros bailes utilizan compases completos, pero cada compás se compone de 4 negras. Este baile utiliza particiones que abarcan `un 0,25 del compás` para que el bailarín dé una palmada cada nota negra.
-        
+
         Este baile también utiliza un bloque_condicional_ para controlar cuándo el bloque de particiones de `un 0,25 del compás` cambia el baile. Cambia los números del bloque condicional para ver cómo cambia el baile.
-        
+
         * Experimenta con notas que tengan otras duraciones (como 0,5 para una blanca o 0,125 para una corchea).
         * Añade eventos `después del compás`.
         * Cambia los "compases" por "segundos" e intenta coreografiar a los bailarines así.
       Dance_Party_extras_layout: |-
         # ¡Todos en formación!
-        
+
         Fíjate en este baile que utiliza el bloque `formación` para cambiar la distribución de los bailarines del fondo a lo largo del baile. Prueba una de estas ideas para ampliarlo:
-        
+
         * Crear un segundo grupo de bailarines con una formación diferente
         * Cambiar la formación cuando se presiona una tecla
         * Cambiar una propiedad cuando los bailarines cambian de formación
       Dance_Party_extras_on_beat: |-
         # Graves, medios y agudos
-        
+
         Este baile utiliza eventos "especiales" para desencadenar código cuando partes diferentes de la música aumentan de volumen. Juguetea con diferentes canciones para ver cómo cambia el baile.
       Dance_Party_extras_speed: |-
         # Acelera, frena
-        
+
         Este último baile utiliza el bloque `establecer velocidad` para controlar el ritmo al que se mueven los bailarines. Experimenta con diferentes velocidades en diferentes momentos de la canción. Puedes seguir jugueteando con este baile o volver a uno de los anteriores para hacerlos aún más chulos.
       Dance_Party_extras_visible: |-
         # ¿Dónde están?
-        
+
         Este baile muestra u oculta dos grupos de bailarines diferentes. Échale un vistazo y después sigue tu propio instinto.
-        
+
         * Añade otro grupo de bailarines
         * Muestra y oculta bailarines utilizando las flechas del teclado
         * Oculta a todos los bailarines y utiliza un efecto chulo de fondo
@@ -1060,15 +1050,15 @@ es:
       HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       HOC Dance 3_draft: |-
         *¡A este baile le hace falta brillo!*
-        
+
         Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
       HOC Dance 4_draft: |-
         ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
-        
+
         * Elegir «(Siguiente)», «(Anterior)» o «(Aleatorio)» indica al bailarín que debe hacer un movimiento diferente cada vez que se ejecuta el código.
       HOC Dance 5_draft: |-
         *¡Necesitamos más bailarines!*
-        
+
         Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
       HOC Dance 6_draft: Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
       HOC Dance 9_draft: "El bloque <xml><block type=\"Dancelab_whenKey\"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.\n\nPuedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!"
@@ -1110,8 +1100,8 @@ es:
       MC_HOC_2017_04: Cambia el bucle del último rompecabezas para ayudar al Agent a crear un camino sobre la parte más ancha de este río.
       MC_HOC_2017_04POINT5_Cole: |-
         ¡Has salido del pantano! Ahora haz que el jugador llegue sano y salvo al recuadro naranja. 
-        
-        
+
+
         Ayuda al Agent a despejar el camino encontrando un patrón simple y utilizando bucles para cruzar los dos primeros platos de presión.
       MC_HOC_2017_04POINT5_RYAN: "¡Lo has conseguido! \\r\n\\r\nAhora, haz que {currentPlayerName} atraviese sin problemas el laberinto para hacerse con el **hacha** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "¡Lo has conseguido! \\r\n\\r\nAhora, haz que {currentPlayerName} atraviese sin problemas el laberinto para hacerse con el **hacha** [diamond_axe]\\r\n"
@@ -1120,15 +1110,15 @@ es:
       MC_HOC_2017_04_Kiki: "¡La entrada a la arboleda secreta llevaba a este bello oasis! Para completar este nivel, el jugador necesita llegar al recuadro naranja que hay en la cabaña. \\r\n\\r\nUtiliza un bucle de \"repetición\" para ayudar al Agent a llegar al plato de presión, que abre la puerta de la cabaña."
       MC_HOC_2017_05: |-
         Los bucles no siempre resultan de ayuda. 
-        
-        
+
+
         Estos cactus, por ejemplo, no están creciendo siguiendo un patrón evidente, por lo que un bucle no los despejaría de manera correcta. En su lugar, lo que te hemos dado es una función llamada "destruir y desplazar", que hará todo el trabajo duro por ti cada vez que el Agent llegue a un obstáculo.
       MC_HOC_2017_05_Cole: "¡Oh, no! ¡El puente ha desaparecido! \\r\n\\r\nPrograma al Agent para reconstruir el puente utilizando el bloque \"colocar\", para que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "¡Oh, no! ¡El puente ha desaparecido! \\r\n\\r\nPrograma al Agent para reconstruir el puente utilizando el bloque \"colocar\", para que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         ¡Oh, no! ¡El puente ha desaparecido! 
-        
-        
+
+
         Ayuda al Agent a reconstruir el puente para que el jugador pueda llegar a la **pala**.
       MC_HOC_2017_05_Kiki: "Ha llegado el momento de que el jugador abandone la arboleda secreta y prosiga su aventura, ¡pero el puente ha desaparecido! \\r\n\\r\nAyuda al Agent a reconstruir el puente, y después desplázate al tablón de madera para que el jugador pueda llegar al recuadro naranja."
       MC_HOC_2017_06_Cole: "Otro río, ¡pero este es mucho más amplio! \\r\n \\r\nArregla este código para ayudar al Agent a construir un puente y así {currentPlayerName} pueda llegar al **pico** [diamond_pickaxe]. "
@@ -1143,13 +1133,13 @@ es:
       MC_HOC_2017_08_Kiki: "Ahora, en vez de destruir cactus, tendrás que colocar piedras sobre la lava, y después destruir la arenisca. \\r\n\\r\nModifica la función para que opere de manera correcta en este nivel. "
       MC_HOC_2017_08_RY: |-
         ¡Ahora hay **DOS** funciones entre las que elegir! 
-        
-        
+
+
         Utiliza estas funciones para construir rápidamente un puente sobre la lava para {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         ¡Ahora hay **DOS** funciones entre las que elegir! 
-        
-        
+
+
         Utiliza estas funciones para construir rápidamente un puente sobre la lava para el jugador.
       MC_HOC_2017_09_Cole: Utiliza funciones para ayudar al Agent a destruir los bloques gigantes de tierra que bloquean el camino al plato de presión.
       MC_HOC_2017_09_Kiki: "Este código inicial no puede ser eliminado. \n\n\nAñade comandos a la función \"crear rastro\" para que el programa en el espacio de trabajo lleve al Agent al plato de presión."
@@ -1165,8 +1155,8 @@ es:
       MC_HOC_2017_13_Cole: "**Juego libre:** ¡Te toca! Utiliza el código del Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_4.5v2: |-
         ¡Has salido del pantano! Ahora haz que el jugador llegue sano y salvo al recuadro naranja. 
-        
-        
+
+
         Ayuda al Agent a despejar el camino encontrando un patrón simple y utilizando bucles para cruzar los dos primeros platos de presión.
       MC_HOC_2017_Ali: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas al **Libro Encantado** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas al **Libro Encantado** [book_enchanted]?  '
@@ -1321,7 +1311,7 @@ es:
       grade4_arist_nested_loop_triangles4: Dibujar los dientes en la boca del cocodrilo!
       grade4_arist_nested_loop_triangles5: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado. \r
-        
+
       grade4_arist_nested_loop_triangles6: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       grade4_artist_functions2: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
       grade4_artist_nested_loop_flags1: has un bucle con el código dado para crear un molino de viento.
@@ -1330,7 +1320,7 @@ es:
       grade4_artist_nested_loop_triangles1: "Completa el código para dibujar estos triángulos. El\nprimero está hecho para ti. Sugerencia: 3 triángulos en una rotación de 360 grados.\\r\n\\r\n"
       grade4_artist_nested_loop_triangles5: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado. \r
-        
+
       grade4_artist_nested_loop_triangles6: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       grade4_artist_parameters_triangles2: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
       grade4_bee_conditionals_nested_loops: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."

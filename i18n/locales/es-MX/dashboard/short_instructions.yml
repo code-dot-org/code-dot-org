@@ -705,6 +705,7 @@ es-MX:
       Course 4 SCV 6: Haga clic aquí para ver las instrucciones de nuevo.
       Course 4 SCVP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de píxeles, y además arriba y abajo una cantidad y de píxeles (utilizando números positivos y negativos).
       Course 4 Variables Assessment: '¿Puedes crear esta imagen utilizando una variable para los lados? Cada línea debe tener 50 píxeles de largo.'
+      Course E MC Conditionals1: Encontrarás los recursos más valiosos bajo tierra, pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos de carbón.
       CourseF_PlayLab_vars1: 'Para jugar este juego, no necesitas escribir ningún código, ¡sólo presiona "Ejecutar"! '
       CourseF_PlayLab_vars10: "¡Tiempo Libre para jugar! Aquí están todas las variables con las que hemos jugado hasta ahora, también unas pocas más en caso de necesitarlas. Haz un juego o historia que utilice estas variables. Sugerencia: desplázate hacia abajo para ver todos los comandos en el área de trabajo."
       CourseF_PlayLab_vars2: '¡Esa carrera en ese último problema no fue justa! Cambie la variable de "velocidad_perro" para asegurarse de que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!'
@@ -1594,37 +1595,52 @@ es-MX:
       courseC19_playLab_EOC6: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseC_PlayLab_events1: Hacer que Jorge el perro (actor 1) diga "Hola."
       courseC_PlayLab_events1_2018: Hacer que Jorge el perro (actor 1) diga "Hola."
+      courseC_PlayLab_events1_2019: Hacer que Jorge el perro (actor 1) diga "Hola."
       courseC_PlayLab_events2: '¿Puedes hacer que Jorge el Perro (actor 1) diga algo y que Olive el Gato (actor 2) diga algo después?'
       courseC_PlayLab_events2_2018: '¿Puedes hacer que Jorge el Perro (actor 1) diga algo y que Olive el Gato (actor 2) diga algo después?'
+      courseC_PlayLab_events2_2019: '¿Puedes hacer que Jorge el Perro (actor 1) diga algo y que Olive el Gato (actor 2) diga algo después?'
       courseC_PlayLab_events3: '¿Puedes escribir un programa para que Jorge (actor 1) se mueva hacia Olive el Gato?'
       courseC_PlayLab_events3_2018: '¿Puedes escribir un programa para que Jorge (actor 1) se mueva hacia Olive el Gato?'
+      courseC_PlayLab_events3_2019: '¿Puedes escribir un programa para que Jorge (actor 1) se mueva hacia Olive el Gato?'
       courseC_PlayLab_events4: '¿Puedes escribir un programa que haga que Jorge (actor 1) se mueva hasta Olive el Gato, y que Olive diga "Hola" cuando Jorge lo alcance?'
       courseC_PlayLab_events4_2018: '¿Puedes escribir un programa que haga que Jorge (actor 1) se mueva hasta Olive el Gato, y que Olive diga "Hola" cuando Jorge lo alcance?'
+      courseC_PlayLab_events4_2019: '¿Puedes escribir un programa que haga que Jorge (actor 1) se mueva hasta Olive el Gato, y que Olive diga "Hola" cuando Jorge lo alcance?'
       courseC_PlayLab_events5: '¿Puedes escribir un programa para hacer que Octavia el Pulpo diga "¿Qué hay de nuevo?" cuando se haga clic sobre ella?'
       courseC_PlayLab_events5_2018: '¿Puedes escribir un programa para hacer que Octavia el Pulpo diga "¿Qué hay de nuevo?" cuando se haga clic sobre ella?'
+      courseC_PlayLab_events5_2019: '¿Puedes escribir un programa para hacer que Octavia el Pulpo diga "¿Qué hay de nuevo?" cuando se haga clic sobre ella?'
       courseC_PlayLab_events6: Ahora, ¡escribe un programa que haga que Waddles el Pingüino se mueva usando las teclas arriba / abajo / izquierda / derecha para tocar a todos los blancos!
       courseC_PlayLab_events6_2018: Ahora, ¡escribe un programa que haga que Waddles el Pingüino se mueva usando las teclas arriba / abajo / izquierda / derecha para tocar a todos los blancos!
+      courseC_PlayLab_events6_2019: Ahora, ¡escribe un programa que haga que Waddles el Pingüino se mueva usando las teclas arriba / abajo / izquierda / derecha para tocar a todos los blancos!
       courseC_PlayLab_events7: El bloque "repetir para siempre" te permite ejecutar código una y otra vez para siempre. Usa este bloque para mover a Chomp el Dinosaurio (actor 2) arriba y abajo por 400 píxeles para siempre.
       courseC_PlayLab_events7_2018: El bloque "repetir para siempre" te permite ejecutar código una y otra vez para siempre. Usa este bloque para mover a Chomp el Dinosaurio (actor 2) arriba y abajo por 400 píxeles para siempre.
+      courseC_PlayLab_events7_2019: El bloque "repetir para siempre" te permite ejecutar código una y otra vez para siempre. Usa este bloque para mover a Chomp el Dinosaurio (actor 2) arriba y abajo por 400 píxeles para siempre.
       courseC_PlayLab_events8: "¿Puedes hacer que Waddles (actor 1) diga \"Ouch!\" y reproduzca un sonido de \"golpe\" si choca con Chomp? Cuando termines, juega para que esto suceda."
       courseC_PlayLab_events8_2018: "¿Puedes hacer que Waddles (actor 1) diga \"Ouch!\" y reproduzca un sonido de \"golpe\" si choca con Chomp? Cuando termines, juega para que esto suceda."
+      courseC_PlayLab_events8_2019: "¿Puedes hacer que Waddles (actor 1) diga \"Ouch!\" y reproduzca un sonido de \"golpe\" si choca con Chomp? Cuando termines, juega para que esto suceda."
       courseC_PlayLab_events9: "¿Puedes agregar un bloque para ganar un punto cuando Waddles el Pingüino choque con Octavia el Pulpo (actor 3)? ¡Juega y mueve a Waddles con las flechas hasta que anotes!"
       courseC_PlayLab_events9_2018: "¿Puedes agregar un bloque para ganar un punto cuando Waddles el Pingüino choque con Octavia el Pulpo (actor 3)? ¡Juega y mueve a Waddles con las flechas hasta que anotes!"
+      courseC_PlayLab_events9_2019: "¿Puedes agregar un bloque para ganar un punto cuando Waddles el Pingüino choque con Octavia el Pulpo (actor 3)? ¡Juega y mueve a Waddles con las flechas hasta que anotes!"
       courseC_PlayLab_eventsA: |-
         Agrega bloques al evento "cuando se ejecuta" para cambiar el fondo y la velocidad de Waddles el Pingüino.
-        
+
         Juega y mueve a Waddles con las flechas hasta que anotes.
       courseC_PlayLab_eventsA_2018: |-
         Agrega bloques al evento "cuando se ejecuta" para cambiar el fondo y la velocidad de Waddles el Pingüino.
-        
+
+        Juega y mueve a Waddles con las flechas hasta que anotes.
+      courseC_PlayLab_eventsA_2019: |-
+        Agrega bloques al evento "cuando se ejecuta" para cambiar el fondo y la velocidad de Waddles el Pingüino.
+
         Juega y mueve a Waddles con las flechas hasta que anotes.
       courseC_PlayLab_eventsFP: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
       courseC_PlayLab_eventsFP_2018: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
+      courseC_PlayLab_eventsFP_2019: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
       courseC_PlayLab_events_challenge1: "Usa un nuevo bloque para hacer que Waddles regrese automáticamente a la salida cuando se encuentre con el Dinosaurio y cuando consiga un punto. \nJuega y mueve a Waddles con las flechas hasta que consigas suficientes puntos."
       courseC_PlayLab_events_challenge1_2018: "Usa un nuevo bloque para hacer que Waddles regrese automáticamente a la salida cuando se encuentre con el Dinosaurio y cuando consiga un punto. \nJuega y mueve a Waddles con las flechas hasta que consigas suficientes puntos."
+      courseC_PlayLab_events_challenge1_2019: "Usa un nuevo bloque para hacer que Waddles regrese automáticamente a la salida cuando se encuentre con el Dinosaurio y cuando consiga un punto. \nJuega y mueve a Waddles con las flechas hasta que consigas suficientes puntos."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Aquí hay un nuevo bloque que es algo complicado. Se usa para mover a Waddles de vuelta al inicio cuando se encuentra con el Dinosaurio y cuando anota un punto. Esto hará que su juego sea más desafiante y divertido!
-        
+
         Juega y mueve a Waddles con las flechas hasta que consigas suficientes puntos.
       courseC_artist_loop1: '¡Agregemos un poco de dinamismo!'
       courseC_artist_loop1_2018: '¡Agregemos un poco de dinamismo!'
@@ -1785,30 +1801,43 @@ es-MX:
       courseC_harvester_loops1: Utiliza bucles para recoger todas las calabazas.
       courseC_harvester_loops10: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops10_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops10_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops11_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops1_2018: Utiliza bucles para recoger todas las calabazas.
+      courseC_harvester_loops1_2019: Utiliza bucles para recoger todas las calabazas.
       courseC_harvester_loops2: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
       courseC_harvester_loops2_2018: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
+      courseC_harvester_loops2_2019: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
       courseC_harvester_loops3: Recoge todas las calabazas.
       courseC_harvester_loops3_2018: Recoge todas las calabazas.
+      courseC_harvester_loops3_2019: Recoge todas las calabazas.
       courseC_harvester_loops4: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops4_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops4_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops5: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops5_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops5_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops6: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops6_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops6_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops7: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops7_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops7_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops8: "**Desafío**: recoge todo el maíz y todas las calabazas."
       courseC_harvester_loops8_2018: "**Desafío**: recoge todo el maíz y todas las calabazas."
+      courseC_harvester_loops8_2019: "**Desafío**: recoge todo el maíz y todas las calabazas."
       courseC_harvester_loops9: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops9_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops_challenge1: Recoge todo el maíz.
       courseC_harvester_loops_challenge1a: Recoge todo el maíz.
       courseC_harvester_loops_challenge1a_2018: Recoge todo el maíz.
+      courseC_harvester_loops_challenge1a_2019: Recoge todo el maíz.
       courseC_harvester_loops_challenge2: Recoge toda la lechuga. ¡Evita los áboles y los campos!
       courseC_harvester_loops_challenge2_2018: Recoge toda la lechuga. ¡Evita los áboles y los campos!
+      courseC_harvester_loops_challenge2_2019: Recoge toda la lechuga. ¡Evita los áboles y los campos!
       courseC_harvester_loops_forVid: Recoge todo el maíz, toda la lechuga y toda las calabazas.
       courseC_maze_debugging1: Arregla el código para ayudar a Scrat a alcanzar la bellota.
       courseC_maze_debugging10: '¡Depura este nivel reorganizando y agregando bloques para llevarme al cerdo!'
@@ -2030,15 +2059,15 @@ es-MX:
       courseD_artist_nestedLoops2_2019: Esta vez, completa el rompecabezas con la menor cantidad de bloques posible.
       courseD_artist_nestedLoops3: |-
         Usa tus nuevas habilidades para dibujar rápidamente la última fila de ventanas para este edificio.
-        
+
         Las ventanas son de 20 pixeles cuadrados, con 20 pixeles de separación.
       courseD_artist_nestedLoops3_2018: |-
         Usa tus nuevas habilidades para dibujar rápidamente la última fila de ventanas para este edificio.
-        
+
         Las ventanas son de 20 pixeles cuadrados, con 20 pixeles de separación.
       courseD_artist_nestedLoops3_2019: |-
         Usa tus nuevas habilidades para dibujar rápidamente la última fila de ventanas para este edificio.
-        
+
         Las ventanas son de 20 pixeles cuadrados, con 20 pixeles de separación.
       courseD_artist_nestedLoops4: '¡Excelente! Haz lo mismo con estos círculos.'
       courseD_artist_nestedLoops4_2018: '¡Excelente! Haz lo mismo con estos círculos.'
@@ -2410,6 +2439,7 @@ es-MX:
       courseD_iceage_loops8_2019: "\n¿Puedes arreglar este código? "
       courseD_iceage_loops9: La bellota está muy lejos! ¿Puedes utilizar los bucles para ayudar a Scrat a alcanzarla?
       courseD_iceage_loops9_2019: La bellota está muy lejos! ¿Puedes utilizar los bucles para ayudar a Scrat a alcanzarla?
+      courseD_maze_intro5a_2019: Pon atención a la secuencia y ve si puedes descifrar ¡cómo llegar a ese cerdo!
       courseD_maze_loops_challenge1: Vamos a cazar un tesoro - ¡usando bucles! Ayuda al coleccionista a alcanzar al menos dos pilas del tesoro usando sólo los bloques en tu caja de herramientas.
       courseD_maze_nestedLoops3: Lleva al zmobie hasta el girasol usando la menor cantidad de bloques posible.
       courseD_maze_nestedLoops3_2018: Lleva al zmobie hasta el girasol usando la menor cantidad de bloques posible.
@@ -2446,7 +2476,6 @@ es-MX:
       courseD_maze_ramp5b_2019: '¡Navega el laberinto para ayudar al pájaro a encontrar al cerdo!'
       courseD_maze_ramp5c: Ayuda al pájaro a llegar al cerdo.
       courseD_maze_ramp5c_2018: Ayuda al pájaro a llegar al cerdo.
-      courseD_maze_ramp5c_2019: Ayuda al pájaro a llegar al cerdo.
       courseD_maze_ramp5d: Lleva al pájaro hasta el cerdo.
       courseD_maze_ramp5d_2018: Lleva al pájaro hasta el cerdo.
       courseD_maze_ramp5d_2019: Lleva al pájaro hasta el cerdo.
@@ -2692,7 +2721,7 @@ es-MX:
       courseE_farmer_functions3c_2019: Inenta por un camino más largo.
       courseE_farmer_functions4: |-
         ¡Grandioso! Ahora tienes un código que funcionará para obtener calabazas de un camino de cualquier tamaño.
-        
+
         Arrastraemos ese código dentro de una función para que podamos usarlo de muchas maneras...pero primero usémoslo para resolver este rompecabezas.
       courseE_farmer_functions4b: Usa tu nueva función para resolver este rompecabezas.
       courseE_farmer_functions4b_2018: Usa tu nueva función para resolver este rompecabezas.
@@ -2703,7 +2732,7 @@ es-MX:
       courseE_farmer_functions5c_2018: Tu función será útil aquí.
       courseE_farmer_functions6: |-
         *"¡Lechuga intenta algo nuevo aquí!"*
-        
+
         Aquí hay algún código para recoger todas las lechugas. Muévelo dentro de una función para que podamos usarlo más tarde.
       courseE_farmer_functions6b: Recoge toda la producción.
       courseE_farmer_functions6c: '¿Qué necesitas agregar a este programa para que revise si el brote es maíz o lechuga?'
@@ -2919,7 +2948,7 @@ es-MX:
       courseF_artist_variables_6a: Construye este diseño donde los cuadrados tienen lados de 8 pixeles y el artista salte 80 pixeles por sobre y hacia abajo entre cada uno.
       courseF_artist_variables_9: |-
         ¡Ve lo que sucede cuando repites el código de último rompecabezas 30 veces en lugar de solo 3!
-        
+
         Sientete libre de hacer tus líneas de cualquier color o patrón para algo de diversión extra.
       courseF_artist_variables_FP: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con cuadrados, pentágonos o hexágonos?"
       courseF_artist_variables_challenge1: '¿Puedes crear una variable de ''longitud'' y usarla para crear este patrón?'
@@ -3544,7 +3573,6 @@ es-MX:
       ramp_artist_loops3_2019: Usa un bucle 'repetir' para dibujar cinco guiones de colores.
       ramp_artist_loops4: "¿Qué sucede cuando agregas un giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas un giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
-      ramp_artist_loops4_2019: "¿Qué sucede cuando agregas un giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops6: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2018: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2019: Edita tu bucle para dibujar esta escalera.

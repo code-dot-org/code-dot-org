@@ -3689,3 +3689,20 @@ is:
               name: Vinnsla
             Project - Propose an App:
               name: Verkefni - Tillaga að Appi
+        andrea-test:
+          stages:
+            new stage:
+              name: nýr áfangi
+            'null':
+              name: 'tómagildi'
+        coursec-2019:
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          stages:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algrím úr raunheimi: Pappírsskutlur'
+            Looking Ahead:
+              name: Horft fram á við
+            Binary Bracelets:
+              name: Stafræn armbönd

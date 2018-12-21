@@ -274,3 +274,6 @@ ne:
       BinaryBracelets_2019:
         title: Binary Bracelets
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+      PaperPlanes_2019:
+        title: 'Real-life Algorithms: Paper Planes'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.

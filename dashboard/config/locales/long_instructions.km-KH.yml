@@ -418,7 +418,7 @@ km:
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"*
         \r\n\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"*
-        \r\n\r\nAvoid TNT or feathers will fly!"
+        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_maze_ramp5_2018: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid

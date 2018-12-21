@@ -1085,3 +1085,13 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'prazno'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Graditi temelje
+            'Real-life Algorithms: Paper Planes':
+              name: 'Življenjski algoritmi: Papirnata letala'

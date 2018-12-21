@@ -3,19 +3,19 @@ id:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: setelah {TIMESTAMP}{UNIT}
+        text: setelah [TIMESTAMP][0][UNIT][1]
         options:
           UNIT:
             '"seconds"': detik
       Dancelab_changeColorBy:
-        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
+        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
         options:
           METHOD:
             '"hue"': Corak warna warni
             '"saturation"': Saturasi
             '"brightness"': Kecerahan
       Dancelab_changeMoveEachLR:
-        text: lakukan {GROUP} {MOVE} {DIR} selamanya
+        text: lakukan [GROUP][0] [MOVE][1] [DIR][2] selamanya
         options:
           GROUP:
             sprites: semua
@@ -187,7 +187,6 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Acak
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -225,7 +224,6 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Acak
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -332,14 +330,14 @@ id:
             '1': Sedang
             '2': Besar
       gamelab_changeColor:
-        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
+        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
         options:
           METHOD:
             '"tint"': Mewarnai
             '"tone"': Nada
             '"shade"': Corak
       gamelab_changeColorBy:
-        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
+        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
         options:
           METHOD:
             '"hue"': Corak warna warni
@@ -495,17 +493,6 @@ id:
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": kiri
-            "{x: 300, y: 200}": kanan
-            "{x: 200, y: 200}": Tengah
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': semua
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -514,6 +501,72 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': semua
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': semua
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.Rest: Tidak ada
       Mikelab_randomColor:
         text: warna acak
       Mikelab_setBG:
@@ -533,6 +586,13 @@ id:
           CORNER:
             '"right"': kanan
             '"left"': kiri
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -584,6 +644,21 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+      binary_move:
+        options:
+          DIR:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
       craft_ifPath:
         options:
           DIR:

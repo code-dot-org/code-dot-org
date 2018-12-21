@@ -687,6 +687,7 @@ ne:
       Course 4 SCV 4: "Solve this puzzle with the fewest number of blocks\npossible."
       Course 4 SCV 5: "Solve this puzzle with the fewest number of blocks\npossible."
       Course 4 SCV 6: Click here to view the instructions again.
+      Course E MC Conditionals1: "You’ll find the most valuable resources\nunderground, but it can get dark. Place at least 2 torches and mine at least\n2 coal."
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the\nvariables we've played with so far in this stage, as well as a few more in\ncase you want them. \\r\n\\r\nNotice that there are now so many blocks in our\ntoolbox that they need to be organized!  Here, we've put each piece into\nan appropriate category.  Take some time to explore everything that is available.\nWhen you're done browsing, make a game or story using repeats, variables,\nand events.  \\r\n\\r\nHint: scroll down to see all the commands in the workspace."
       CourseF_PlayLab_vars2: "The race in that last puzzle wasn't\nvery fair! Change the `dog_speed` variable to make sure you can collect more\nflags than Cat. The first to collect 10 flags wins!"
       CourseF_PlayLab_vars3: "Use the left and right arrows to move,\nand the up arrow to jump. See if you can collect all of the flags."
@@ -1083,6 +1084,7 @@ ne:
       courseA_maze_seq2_2018: A bug! Fix the code to get me to the pig.
       courseC_PlayLab_events3: "Can you write a program to make Jorge\n(actor 1) move toward Olive the Cat?"
       courseC_PlayLab_events3_2018: "Can you write a program to make Jorge\n(actor 1) move toward Olive the Cat?"
+      courseC_PlayLab_events3_2019: "Can you write a program to make Jorge\n(actor 1) move toward Olive the Cat?"
       courseC_maze_debugging10: "Debug this level by rearranging and changing\nblocks to get me to the pig!"
       courseD_artist_binary1: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       courseD_artist_binary1_2018: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"

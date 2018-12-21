@@ -683,6 +683,9 @@ es:
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
+          a diferentes partes del espacio del juego.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
           artista al centro de la pantalla.
@@ -705,6 +708,9 @@ es:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
           que hay cuatro calabazas disponibles para elegir.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
+          que hay cuatro calabazas disponibles para elegir.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te dice
           que hay cuatro calabazas disponibles para elegir.
       courseC_maze_debugging5_callout:

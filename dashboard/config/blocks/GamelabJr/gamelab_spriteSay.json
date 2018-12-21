@@ -1,0 +1,18 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "spriteSay",
+    "blockText": "sprite {SPRITE} say {TEXT}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "TEXT",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}
