@@ -136,5 +136,94 @@ export const FacilitatorScoringFields = {
         </p>
       </div>
     )
-  }
+  },
+  question_1: {
+    title: 'Equity',
+    rubric: (
+      <div>
+        <p>
+          0: No, or unclear, strategies for engaging and supporting all teachers.
+        </p>
+        <p>
+          3: One clear strategy for engaging and supporting all teachers.
+        </p>
+        <p>
+          5: Two clear strategies for engaging and supporting all teachers.
+        </p>
+      </div>
+    )
+  },
+  question_2: {
+    title: 'Equity',
+    rubric: (
+      <div>
+        <p>
+          0: No, or unclear, strategies for supporting teachers.
+        </p>
+        <p>
+          3: One clear strategy for engaging and supporting teachers.
+        </p>
+        <p>
+          5: Two clear strategies for engaging and supporting teachers.
+        </p>
+      </div>
+    )
+  },
+  question_3: {
+    title: 'Growth Minded',
+    rubric: (
+      <div>
+        <p>
+          0: Not able to clearly describe how they would respond, take next steps or how
+          they like to receive feedback
+        </p>
+        <p>
+          3: Able to describe two parts to this prompt with clarity. Unable to address all
+          three aspects of the prompt, or in one area demonstrates minimal growth mindset.
+        </p>
+        <p>
+          5: Describes appropriate response and next steps in a way that clearly
+          demonstrates a growth mindset that is also open to receiving feedback.
+        </p>
+      </div>
+    )
+  },
+  question_4: {
+    title: 'Growth Minded',
+    rubric: (
+      <div>
+        <p>
+          0: Not able to clearly describe how they would respond, take next steps or offer
+          their own feedback
+        </p>
+        <p>
+          3: Able to describe two parts to this prompt with clarity. Unable to address all
+          three aspects of the prompt, or in one area demonstrates minimal growth mindset.
+        </p>
+        <p>
+          5: Describes appropriate response and next steps in a way that clearly
+          demonstrates a growth mindset that is also open to giving constructive feedback.
+        </p>
+      </div>
+    )
+  },
+  question_5: {
+    title: 'Leadership',
+    rubric: (
+      <div>
+        <p>
+          0: Not able to clearly describe strategies to implement or how they would
+          determine success.
+        </p>
+        <p>
+          3: Able to describe one strategy and has a way to determine success. Or, can
+          answer only one part of the question.
+        </p>
+        <p>
+          5: Describes appropriate strategies to implement and has a way to determine
+          success.
+        </p>
+      </div>
+    )
+  },
 };

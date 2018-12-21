@@ -108,14 +108,21 @@ module Pd
         :inquiry_based_learning,
         :why_interested
       ],
-      interview_score: [],
+      interview_score: [
+        :question_1,
+        :question_2,
+        :question_3,
+        :question_4,
+        :question_5
+      ],
       teaching_experience_score: [
         :grades_taught,
         :inquiry_based_learning
       ],
-      leadership_score: [],
+      leadership_score: [
+        :question_5
+      ],
       champion_for_cs_score: [
-        :question_5,
         :currently_involved_in_cs_education
       ],
       equity_score: [
