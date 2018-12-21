@@ -208,12 +208,24 @@ ms:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -232,6 +244,11 @@ ms:
           CORNER:
             '"right"': kanan
             '"left"': kiri
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -256,6 +273,21 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      binary_move:
+        options:
+          DIR:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
       craft_ifPath:
         options:
           DIR:

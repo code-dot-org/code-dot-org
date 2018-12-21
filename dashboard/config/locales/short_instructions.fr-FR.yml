@@ -1623,6 +1623,9 @@ fr:
         le bas de «y» pixels (en utilisant des chiffres positifs et négatifs).
       Course 4 Variables Assessment: Peux-tu créer cette image en utilisant une variable
         pour les côtés ? Chaque ligne doit mesurer 50 pixels.
+      Course E MC Conditionals1: Les ressources les plus précieuses sont en sous-sol,
+        mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
+        2 blocs de charbon.
       Course1BeePuzzle12: Recueille trois nectars et fabrique ensuite deux miels
       CourseF_PlayLab_vars1: 'Pour jouer à ce jeu, tu n''as besoin d''écrire aucun
         code, juste d''appuyer sur "Run"! '
@@ -2718,6 +2721,9 @@ fr:
         Peux-tu écrire un programme pour que ce c
         hien se déplace jusqu'au chat ?
       courseC_PlayLab_events3_2018: |-
+        Peux-tu écrire un programme pour que ce c
+        hien se déplace jusqu'au chat ?
+      courseC_PlayLab_events3_2019: |-
         Peux-tu écrire un programme pour que ce c
         hien se déplace jusqu'au chat ?
       courseC_artist_prog5: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice

@@ -1665,3 +1665,18 @@ hu:
               description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+        andrea-test:
+          stages:
+            'null':
+              name: 'semmi'
+        dance-extras-gallery:
+          title: Táncolj tovább
+          description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Alapozás
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Binary Bracelets:
+              name: Bináris karkötők

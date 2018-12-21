@@ -679,6 +679,7 @@ et:
       Course 4 SCV 6: Klõpsa siia, et uuesti juhiseid vaadata.
       Course 4 SCVP 1: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades positiivseid ja negatiivseid arve).
       Course 4 Variables Assessment: Kas oskad luua selle pildi, kasutades külgede jaoks muutujat? Iga joon peab olema 50 piksli pikkune.
+      Course E MC Conditionals1: Kõige väärtuslikumad maavarad leiad maa alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt kaks sütt.
       CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
       CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       CourseF_PlayLab_vars3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
@@ -705,10 +706,11 @@ et:
       Dance_Party_08: Kas saad muuta mõlemad taustatantsijad sama suureks?
       Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
       Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades `hakkab järgnema` plokki.
-      Dance_Party_11.5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11.5_test: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis, kui vajutatakse ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi tegema kui vajutad ülemist nooleklahvi.
+      Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta nii kiiresti kui võimalik!
+      Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       Food Fight!: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
       Frequency Analysis: Test
       Function intro Ryan: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
@@ -1161,6 +1163,7 @@ et:
       courseB_collector_loops8_2018: "** Väljakutse: ** Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseC_PlayLab_events3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
       courseC_PlayLab_events3_2018: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
+      courseC_PlayLab_events3_2019: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
       courseC_artist_prog5: |-
         Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.
       courseC_artist_prog5_2018: |-

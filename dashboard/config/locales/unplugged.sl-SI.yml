@@ -282,3 +282,8 @@ sl:
         desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
           računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
           učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
+      PaperPlanes_2019:
+        title: 'Življenjski algoritmi: Papirnata letala'
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.

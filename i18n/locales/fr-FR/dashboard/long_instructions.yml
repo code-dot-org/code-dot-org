@@ -51,7 +51,7 @@ fr:
         Can you make a square with sides that are 100 pixels?\\r
         \\r
         <br/>\\r
-        
+
       2-3 Artist Loops New 10: Maintenant connectons ensemble plusieurs « V » en les dessinant dans une boucle.
       2-3 Artist Loops New 11: "Time to make something snazzy!\n\\r\n\\r\nRebuild the code from the last puzzle, but this time, add a left turn\nof 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
       2-3 Artist Loops New 12: 'Dessine un losange avec des côtés de 100 pixels.'
@@ -61,7 +61,7 @@ fr:
         Maintenant, dessinez ce que vous voulez ! \\r
         <br/> <br/> \\r
         \\r
-        
+
       2-3 Artist Loops New 2: |-
         Voici une partie du code que tu as utilisé pour dessiner ce carré. Que se passe-t-il si tu utilises le bloc Répéter pour exécuter ce code 4 fois ?
       2-3 Artist Loops New 9: Dessine un simple « V » dont les deux parties font 50 pixels de long pour terminer la flèche.
@@ -74,7 +74,7 @@ fr:
         \\r
         <br/>\\r
         \\r
-        
+
       2-3 Artist Nested Loops 10: Boucle ce code 12 fois pour terminer le motif.
       2-3 Artist Nested Loops 11: Boucle ce code 4 fois pour terminer le motif, en tournant de 90 degrés après chaque cercle.
       2-3 Artist Nested Loops 12: Boucle ce code 12 fois pour terminer les bouclettes.
@@ -589,7 +589,7 @@ fr:
         \\r
         **Show Me:** ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)</details>\\r
         \\r
-        
+
       AppLab Intro 4 - onEvent before: |-
         <img src="https://images.code.org/d1d4126613db6bc3db331d47eecf0748-image-1506619589642.gif"
         style="float:right;height:150px">\\r
@@ -1242,7 +1242,7 @@ fr:
         see the changes in the Preview area\\r
         * Compare your work with a neighbor.
         Make sure you're placing code in the same place.\\r
-        
+
       CSD U2 HTML Adding Paragraphs Template_2018: |
         # Add Text to
         the Body\\r
@@ -1261,7 +1261,7 @@ fr:
         see the changes in the Preview area\\r
         * Compare your work with a neighbor.
         Make sure you're placing code in the same place.\\r
-        
+
       CSD U2 HTML Adding Paragraphs pt 2: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1368,7 +1368,7 @@ fr:
         in the preview area.\\r
         * Compare your work with a neighbor. Make sure you're
         placing code in the same place.\\r
-        
+
       CSD U2 HTML Adding Paragraphs_2018: |
         # Add Text to the Body\\r
         \\r
@@ -1387,7 +1387,7 @@ fr:
         in the preview area.\\r
         * Compare your work with a neighbor. Make sure you're
         placing code in the same place.\\r
-        
+
       CSD U2 HTML Debug Paragraphs: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1529,7 +1529,7 @@ fr:
         found information\\r
         * Don't worry about styling right now you are just getting
         the content\\r
-        
+
       CSD U2 Info Page Create: |-
         # Informational Page\\r
         \\r
@@ -1579,7 +1579,7 @@ fr:
         found through a Commons Search, add some images to the pages you've already
         created. Get creative! Use the checklist to the right to keep track of the
         steps you need to follow when adding images.\\r
-        
+
       CSD U2 Info Page Final Touches_2018: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\\r
@@ -1617,7 +1617,7 @@ fr:
         found through a Commons Search, add some images to the pages you've already
         created. Get creative! Use the checklist to the right to keep track of the
         steps you need to follow when adding images.\\r
-        
+
       CSD U2 Info Page Images: "# Adding Your Images\\r\n\\r\nWith\nimages and attribution information in hand, it's time to spruce up your new\npage.\\r\n\\r\n# Do This\\r\n\\r\nUpload your images to Web Lab and, using `<img>`\ntags, add them where you'd like them to go. For each image:\\r\n\\r\n* Add\na descriptive `alt` attribute\\r\n* Add attribution underneath the image, including\\r\n\\t*\nName or screenname of author (if available)\\r\n    * Title of image (if available)\\r\n    *\nUrl to original site\\r\n    * License image was published under either in\ntext (eg CC-BY) or using a badge from the [Creative Commons website](https://creativecommons.org/about/downloads/).\\r\n\\r\nFor\nexample\\r\n\\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\\r\n\\r\nLonghaired\nDachshund portrait by Flickr user Soggydan (ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)\n- CC-BY"
       CSD U2 Inspector Warm Up: |-
         <div style="float: right;
@@ -1726,7 +1726,7 @@ fr:
         that you've created, add HTML to make the page you sketched in your project
         guide.\\r
         * You may also add more HTML to the pages you've already created.\\r
-        
+
       CSD U2 add content_2018: |
         # Add HTML\\r
         \\r
@@ -1738,7 +1738,7 @@ fr:
         that you've created, add HTML to make the page you sketched in your project
         guide.\\r
         * You may also add more HTML to the pages you've already created.\\r
-        
+
       CSD U2 add file - OLD: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1836,7 +1836,7 @@ fr:
         Work together to finish the page, paying attention to formatting.\\r
         * Compare
         with another pair to see whether your pages are the same.\\r
-        
+
       CSD U2 challenge_2018: |
         # Challenge\\r
         \\r
@@ -1855,7 +1855,7 @@ fr:
         Work together to finish the page, paying attention to formatting.\\r
         * Compare
         with another pair to see whether your pages are the same.\\r
-        
+
       CSD U2 commenting: |-
         # Comments\\r
         <div style="float:
@@ -1992,7 +1992,7 @@ fr:
         * Repeat this process for any other
         pages you want to add.\\r
         \\r
-        
+
       CSD U2 create page_2018: |+
         # Create and Name Your New Page\\r
         \\r
@@ -2007,7 +2007,7 @@ fr:
         * Repeat this process for any other
         pages you want to add.\\r
         \\r
-        
+
       CSD U2 debug comments: |-
         # Debugging\\r
         \\r
@@ -2088,7 +2088,7 @@ fr:
          * `border-radius`\\r
          * `border-width`\\r
          * `float`\\r
-        
+
         * `margin`\\r
         \\r
         \\r
@@ -2239,7 +2239,7 @@ fr:
          * a list\\r
          * a header\\r
         \\r
-        
+
       CSD U2 lists intro: |-
         # Lists\\r
         <div style="float: right;
@@ -2247,7 +2247,7 @@ fr:
         markdown="1">\\r
         <details>\\r
         <summary>**What are the two types of lists?**</summary>\\r
-        
+
         There are two types of lists in HTML, ordered and unordered lists.\\r
         </details>\\r
         \\r
@@ -2328,7 +2328,7 @@ fr:
         markdown="1">\\r
         <details>\\r
         <summary>**What are the two types of lists?**</summary>\\r
-        
+
         There are two types of lists in HTML, ordered and unordered lists.\\r
         </details>\\r
         \\r
@@ -2424,7 +2424,7 @@ fr:
         * Test your links in the preview area by clicking
         on them.\\r
         \\r
-        
+
       CSD U2 navigation_2018: |
         # Create a Navigation Bar\\r
         \\r
@@ -2447,7 +2447,7 @@ fr:
         * Test your links in the preview area by clicking
         on them.\\r
         \\r
-        
+
       CSD U2 new page: |+
         # Create a New Page for Your Website.\\r
         \\r
@@ -2468,7 +2468,7 @@ fr:
          * a list\\r
          * a heading\\r
         \\r
-        
+
       CSD U2 new page_2018: |+
         # Create a New Page for Your Website.\\r
         \\r
@@ -2489,7 +2489,7 @@ fr:
          * a list\\r
          * a heading\\r
         \\r
-        
+
       CSD U2 ordered list: "# Ordered Lists\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What are the two types of lists?**</summary>\\r\n\nThere are two types of lists in HTML, ordered and unordered lists.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an ordered list?**</summary>\\r\nAn ordered list is a set of bulleted items\nwhich are numbered.\\r\n<br /><br />\\r\nAn ordered list element has the tag\n`<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.\nEach item in the list is marked by a list item element `<li>`;. This is an\nabbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item\nelement is a child element, which means that it goes inside of its parent\nelement, the ordered list (`<ol>`).\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**How\ndo I make an ordered list?**</summary>\\r\nMaking an ordered list has two steps:\nmaking the list and adding the list items.  To make the ordered list, write\nthe ordered list tags `<ol></ol>`.  Next, add your list items **inside** the\nordered list tags.  To make each list item, use the list item tags `<li></li>`\nand write the list item inside the tags.\\r\n<br /><br />\\r\nIt can be helpful\nto indent your `<li>` tags so it's clear they are contained in the `<ol>`\ntag.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Show me working code.**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>Example</td>\\r\n<td>Result</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br>   &lt;li&gt;Step 1 &lt;/li&gt; <br>   &lt;li&gt;Step 2 &lt;/li&gt;\n<br>   &lt;li&gt;Step 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nThis\npage should include an ordered list, but it's missing the list tags.\\r\n\\r\n#\nDo This\\r\n\\r\n* Use the `<ol>` and `<li>` tags to structure this content\ninto an ordered list that looks like the one below.\\r\n\\r\n*Hint: There will\nbe NO NUMBERS in your code.* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 ordered list_2018: "# Ordered Lists\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**What are the two types of lists?**</summary>\\r\n\nThere are two types of lists in HTML, ordered and unordered lists.\\r\n</details>\\r\n<details>\\r\n<summary>**What\nis an ordered list?**</summary>\\r\nAn ordered list is a set of bulleted items\nwhich are numbered.\\r\n<br /><br />\\r\nAn ordered list element has the tag\n`<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.\nEach item in the list is marked by a list item element `<li>`;. This is an\nabbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item\nelement is a child element, which means that it goes inside of its parent\nelement, the ordered list (`<ol>`).\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**How\ndo I make an ordered list?**</summary>\\r\nMaking an ordered list has two steps:\nmaking the list and adding the list items.  To make the ordered list, write\nthe ordered list tags `<ol></ol>`.  Next, add your list items **inside** the\nordered list tags.  To make each list item, use the list item tags `<li></li>`\nand write the list item inside the tags.\\r\n<br /><br />\\r\nIt can be helpful\nto indent your `<li>` tags so it's clear they are contained in the `<ol>`\ntag.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Show me working code.**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>Example</td>\\r\n<td>Result</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br>   &lt;li&gt;Step 1 &lt;/li&gt; <br>   &lt;li&gt;Step 2 &lt;/li&gt;\n<br>   &lt;li&gt;Step 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nThis\npage should include an ordered list, but it's missing the list tags.\\r\n\\r\n#\nDo This\\r\n\\r\n* Use the `<ol>` and `<li>` tags to structure this content\ninto an ordered list that looks like the one below.\\r\n\\r\n*Hint: There will\nbe NO NUMBERS in your code.* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 project review: |
@@ -2511,7 +2511,7 @@ fr:
         whitespace to make your website readable.\\r
         * Ask your partner to help you
         find any potential problems with your site.\\r
-        
+
       CSD U2 project review_2018: |
         # Review Your Project\\r
         \\r
@@ -2531,7 +2531,7 @@ fr:
         whitespace to make your website readable.\\r
         * Ask your partner to help you
         find any potential problems with your site.\\r
-        
+
       CSD U2 project share: |+
         # Share Your Project\\r
         \\r
@@ -2545,7 +2545,7 @@ fr:
         * Copy the URL it gives you, and
         email it to the people you want to see your page.\\r
         \\r
-        
+
       CSD U2 project share_2018: |+
         # Share Your Project\\r
         \\r
@@ -2559,7 +2559,7 @@ fr:
         * Copy the URL it gives you, and
         email it to the people you want to see your page.\\r
         \\r
-        
+
       CSD U2 text style freeplay - OLD: |-
         # Adding Styles\\r
         \\r
@@ -2576,7 +2576,7 @@ fr:
         following CSS Properties are used:\\r
          * `font-size`\\r
          * `font-family`\\r
-        
+
         * `color`\\r
          * `text-decoration`\\r
          * `text-align`\\r
@@ -2591,7 +2591,7 @@ fr:
         markdown="1">\\r
         <details>\\r
         <summary>**What are the two types of lists?**</summary>\\r
-        
+
         There are two types of lists in HTML, ordered and unordered lists.\\r
         </details>\\r
         <details>\\r
@@ -2661,7 +2661,7 @@ fr:
         markdown="1">\\r
         <details>\\r
         <summary>**What are the two types of lists?**</summary>\\r
-        
+
         There are two types of lists in HTML, ordered and unordered lists.\\r
         </details>\\r
         <details>\\r
@@ -2743,7 +2743,7 @@ fr:
         <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 8 Level 6</a>
         if you've forgotten how.\\r
         \\r
-        
+
       CSD U2 upload images_2018: |
         # Upload Images\\r
         \\r
@@ -2762,7 +2762,7 @@ fr:
         <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 8 Level 6</a>
         if you've forgotten how.\\r
         \\r
-        
+
       CSD U3 - conditionals - arrows and gears: |-
         # Gears with Conditionals\\r
         \\r
@@ -2941,7 +2941,7 @@ fr:
         to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation`
         properties so that they move. You'll need to update them with `randomNumber()`.\\r
         \\r
-        
+
       CSD U3 Draw Loop Plugged update your scene_2018: |
         # Extend
         Your Scene\\r
@@ -2964,7 +2964,7 @@ fr:
         to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation`
         properties so that they move. You'll need to update them with `randomNumber()`.\\r
         \\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
@@ -3032,7 +3032,7 @@ fr:
         * Move on when your program
         looks like the picture to the right.\\r
         \\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite x_2018: |+
         <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif",
         style="float:right;height:150px">\\r
@@ -3056,7 +3056,7 @@ fr:
         * Move on when your program
         looks like the picture to the right.\\r
         \\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite y: |
         <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
         style="float:right;height:150px">\\r
@@ -3072,7 +3072,7 @@ fr:
         any blocks that need to be inside the draw loop.\\r
         * Move on when your program
         looks like the picture to the right.\\r
-        
+
       CSD U3 Draw Loop Plugged wiggle sprite y_2018: |
         <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
         style="float:right;height:150px">\\r
@@ -3088,7 +3088,7 @@ fr:
         any blocks that need to be inside the draw loop.\\r
         * Move on when your program
         looks like the picture to the right.\\r
-        
+
       CSD U3 Drawing Squares to Corners: |-
         <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
         AM.png" style="float:right;width:150px">\\r
@@ -3175,28 +3175,28 @@ fr:
         Combining
         images, text, and some subtle animation can make for really interesting comics
         or graphic stories.  Click "Run" to see an example.\\r
-        
+
       CSD U3 Entertainment Sample 3_2018: |
         # Animated Comics\\r
         \\r
         Combining
         images, text, and some subtle animation can make for really interesting comics
         or graphic stories.  Click "Run" to see an example.\\r
-        
+
       CSD U3 Entertainment Sample 4: |
         # Stamp Pad\\r
         \\r
         Click
         "Run" to start the program, then use the stamp pad to draw pictures with
         simple colors and animal stamps.\\r
-        
+
       CSD U3 Entertainment Sample 4_2018: |
         # Stamp Pad\\r
         \\r
         Click
         "Run" to start the program, then use the stamp pad to draw pictures with
         simple colors and animal stamps.\\r
-        
+
       CSD U3 Input Fish: |-
         # Fish With Arrows\\r
         \\r
@@ -3810,7 +3810,7 @@ fr:
         * Change
         the numbers in the second `rect` to make red rectangle longer than the blue
         one.\\r
-        
+
       CSD U3 Random Taller Rectangle_2018: |
         <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
         PM.png" style="float:right;height:150px; border: 1px solid #CCC">\\r
@@ -3828,7 +3828,7 @@ fr:
         * Change
         the numbers in the second `rect` to make red rectangle longer than the blue
         one.\\r
-        
+
       CSD U3 Random background: |-
         # Background\\r
         \\r
@@ -3990,7 +3990,7 @@ fr:
         Consider the simple shapes that you've used in the past, sprites for your
         characters, and any text that you'd like on the screen. Once you've sketched
         out an idea, you'll learn about `text` and how to compose a scene.\\r
-        
+
       CSD U3 Sprite Movement Left: |-
         <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif"
         style="float: right; margin-left: 20px">\\r
@@ -4047,7 +4047,7 @@ fr:
         Make
         your program animate like the image to the right. We've already added a line
         to update `plane.x` in the draw loop, but it needs to be finished.\\r
-        
+
       CSD U3 Sprite Movement Right_2018: |
         <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif"
         style="float: right; margin-left: 20px">\\r
@@ -4064,7 +4064,7 @@ fr:
         Make
         your program animate like the image to the right. We've already added a line
         to update `plane.x` in the draw loop, but it needs to be finished.\\r
-        
+
       CSD U3 Sprites anitab 1: |-
         # Images\\r
         \\r
@@ -4409,17 +4409,7 @@ fr:
         _Tip: The default text size is pretty small, but
         you can use the `textSize` block to change that. You can also use `fill` to
         change the color of your text._
-      CSD U3 Sprites text_2018: |-
-        # Adding Text\\r
-        \\r
-        You can put
-        text anywhere you'd like on the screen using `text`. Change the displayed
-        text in the provided code, then add a second `text` to write in a different
-        part of the screen.\\r
-        \\r
-        _Tip: The default text size is pretty small, but
-        you can use the `textSize` block to change that. You can also use `fill` to
-        change the color of your text._
+      CSD U3 Sprites text_2018: "# Adding Text\\r\n\\r\nYou can put\ntext anywhere you'd like on the screen using `text`. Change the displayed\ntext in the provided code, then add a second `text` to write in a different\npart of the screen.\\r\n\\r\n_Tip: The default text size is pretty small, but\nyou can use the `textSize` block to change that. You can also use `fill` to\nchange the color of your text._"
       CSD U3 Variables Challenge: |
         # Challenge: Updating Variables\\r
         \\r
@@ -4439,7 +4429,7 @@ fr:
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
-        
+
       CSD U3 Variables Challenge_2018: |
         # Challenge: Updating Variables\\r
         \\r
@@ -4459,7 +4449,7 @@ fr:
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\\r
-        
+
       CSD U3 Variables Draw Challenge: |
         # Challenge: Draw an
         Image\\r
@@ -4472,7 +4462,7 @@ fr:
         the size and/or placement of both eyes, ears, and nostrils. Once you have
         your drawing completed, try changing the values of your variables to make
         sure that the whole image changes together.\\r
-        
+
       CSD U3 Variables Draw Challenge_2018: |
         # Challenge: Draw an
         Image\\r
@@ -4485,7 +4475,7 @@ fr:
         the size and/or placement of both eyes, ears, and nostrils. Once you have
         your drawing completed, try changing the values of your variables to make
         sure that the whole image changes together.\\r
-        
+
       CSD U3 Variables Draw Poppy: |-
         # Using a Variable Many
         Times\\r
@@ -4755,7 +4745,7 @@ fr:
         * **Look
         at the watchers** and explain to a neighbor what you are seeing.\\r
         \\r
-        
+
       CSD U3 Watcher Predict response_2018: |+
         # Watching the Counter
         Pattern\\r
@@ -4769,7 +4759,7 @@ fr:
         * **Look
         at the watchers** and explain to a neighbor what you are seeing.\\r
         \\r
-        
+
       CSD U3 abstraction velocityX if-statements predict: |-
         #
         Changing Velocity with Position\\r
@@ -4823,7 +4813,7 @@ fr:
         you've finished, add your own personal touches to the image.\\r
         \\r
         \\r
-        
+
       CSD U3 challenge face_2018: |
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\\r
@@ -4839,7 +4829,7 @@ fr:
         you've finished, add your own personal touches to the image.\\r
         \\r
         \\r
-        
+
       CSD U3 challenge new shape: |-
         <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\\r
@@ -4931,7 +4921,7 @@ fr:
         * Look at the code
         that makes the ellipse.\\r
         * Add a new ellipse of a different color.\\r
-        
+
       CSD U3 ellipse_2018: |
         <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44
         PM.png" style="float:right;width:150px;">\\r
@@ -4946,7 +4936,7 @@ fr:
         * Look at the code
         that makes the ellipse.\\r
         * Add a new ellipse of a different color.\\r
-        
+
       CSD U3 fill: |
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
         PM.png" style="float:right;width:200px;">\\r
@@ -4965,7 +4955,7 @@ fr:
         * Add a new square by dragging
         a `rect` block into the code area below the fill command ( [Show me where](#triggercallout=rect_block)
         ).  The new square can go any location on the screen you like.\\r
-        
+
       CSD U3 fill_2018: |
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
         PM.png" style="float:right;width:200px;">\\r
@@ -4984,7 +4974,7 @@ fr:
         * Add a new square by dragging
         a `rect` block into the code area below the fill command ( [Show me where](#triggercallout=rect_block)
         ).  The new square can go any location on the screen you like.\\r
-        
+
       CSD U3 keydown conditional: |-
         # Changing Sprites\\r
         \\r
@@ -6495,7 +6485,7 @@ fr:
           * (Hint: the event is already in
         the code.)\\r
         \\r
-        
+
       CSD U6 getProperty buzzer_2018: |-
         # Using the Circuit Playground\\r
         \\r
@@ -6513,7 +6503,7 @@ fr:
           * (Hint: the event is already in
         the code.)\\r
         \\r
-        
+
       CSD U6 getProperty debug: |-
         # Debug\\r
         \\r
@@ -6991,7 +6981,7 @@ fr:
         _Tip:
         The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random
         numbers will ensure that the smiley is always visible on screen?_\\r
-        
+
       CSD U6 setProperty xy random_2018: |-
         <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif"
         style="float:right; max-width: 150px; margin: 10px;">\\r
@@ -7012,7 +7002,7 @@ fr:
         _Tip:
         The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random
         numbers will ensure that the smiley is always visible on screen?_\\r
-        
+
       CSD U6 setProperty xy: |-
         # Changing Position\\r
         \\r
@@ -7306,7 +7296,7 @@ fr:
         or decrease `score`. The amount that you change `score` will change how difficult
         the game is to win. Start with changing by 10 - you can always experiment
         with different values when the program is more complete.\\r
-        
+
       CSD U6 tugowar setProperty: |-
         # Display the Winner\\r
         \\r
@@ -7581,7 +7571,7 @@ fr:
         \\r
         \\r
         \\r
-        
+
       CSDU4 Project Events: |-
         # Linking Screens\\r
         \\r
@@ -8381,7 +8371,7 @@ fr:
         \\r
         \\r
         \\r
-        
+
       Color Contrast Checker: "# Color Contrast\\r\n\\r\nPeople\nneed to be able to see and read the content on your web page for it to be\nuseful. Some people might have bad eye sight, others are color blind. How\ndo you design with these differences in mind? \\r\n\\r\nOne of the easiest ways\nto insure that many people will be able to read the content on your website\nis to make sure their is enough contrast between the different colors you\nare using together on your site.\\r\n\\r\nhttp://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/\\r\n\\r\n\\r\n#\nDo This\\r\n\\r\n* Use the color contrast checker to see the difference in contrast\nof the different colors you are using together on your site."
       Considerations for the 1-to-1 Classroom: |-
         ## 1-1 Classroom\\r
@@ -8500,7 +8490,7 @@ fr:
         collect all of this nectar.\\r
         \\r
         <br/>\\r
-        
+
       Course 4 Bee Params 8: "**Challenge:** Now there's honey\nto deal with too! \\r\n\\r\nRewrite your function to use both the number of\nhoney units and the number of nectar units.  How would you use those numbers\nto decide what you should do?"
       Course 4 EC 3: "**Functions Super Challenge:** Use what\nyou learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe code becomes more simple if you incorporate parameters.*\\r\n\\r\n<br/>\\r\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  \\r\n\\r\n\\r\n"
       Course 4 EC 3a: "**Extreme Challenge:** No rules. No clues.\nJust the challenge!\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  \\r\n\\r\n\\r\n"
@@ -8701,42 +8691,42 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       Dance_Party_01: |-
         *Faisons une fête dansante !*
-        
+
         Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
-        
+
         * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
       Dance_Party_01_low: |-
         *Faisons une fête dansante !*
-        
+
         Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
-        
+
         * *Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires.*
       Dance_Party_02: |-
         Faisons danser cet orignal !
-        
+
         Faites glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectez-le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Votre danseur devrait commencer un nouveau mouvement après la quatrième mesure.
-        
-        
+
+
         **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
       Dance_Party_03: "*Voilà qu'on danse !*\n\nAjoutez un bloc <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures."
       Dance_Party_04: |-
         *Cette danse a besoin d'être un peu plus éclatante !*
-        
+
         Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
       Dance_Party_05: |-
         Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
-        
+
         *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
       Dance_Party_06: |-
         *Nous avons besoin de plus de danseurs !*
-        
+
         Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
       Dance_Party_08: |-
         Chaque danseur possède un ensemble de _propriétés_ qui contrôlent son apparence.
-        
+
         Vous pouvez donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
       Dance_Party_09: |-
         Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essayez de modifier la nuance de l’un de vos danseurs.
@@ -8749,7 +8739,7 @@ fr:
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-        
+
         Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
       Dance_Party_11.5_test: "Jetez un œil à ce bloc :\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nMaintenant, vous pouvez créer un groupe de danseurs à la fois !\n\nEssayez d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards."
       Dance_Party_11: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
@@ -8759,43 +8749,43 @@ fr:
       Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
       Dance_Party_extras_battle: |-
         # Équipes de danse
-        
+
         Voici un concours de danse entre deux équipes. Les touches fléchées contrôlent l’un des danseurs et les touches « w,a,s,d » contrôlent l’autre. Avoir une danse avec un ami, puis essayer d'améliorer cette danse.
-        
+
         * Ajouter plus de touches pour contrôler les danses
         * Faire que les danseurs de soutien répondent également lorsque les touches sont enfoncées
         * Alternez le danseur toutes les 4 mesures en définissant sa visibilité
       Dance_Party_extras_every_beat: |-
         # Noires
-        
+
         La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise « toutes les 0,25 mesures » pour faire applaudir le danseur sur chaque noire.
-        
+
         Cette danse utilise également a _conditional_ block pour contrôler quand le bloc « toutes les 0,25 mesures » peut changer la danse. Essayez de changer les nombres dans le bloc conditionnel pour voir comment cela change la danse.
-        
+
         * Expérimentez avec d'autres durées de notes (tel que 0,5 pour une blanche ou 0,125 pour une croche).
         * Ajoutez certains événements « après la mesure ».
         * Changez les « mesures » en « secondes » et essayez de chronométrer vos danses de cette façon.
       Dance_Party_extras_layout: |-
         # Soyons informés !
-        
+
         Découvrez cette danse qui utilise le bloc « mise en page » pour modifier la formation des danseurs de secours pendant de la danse. Essayez l’une de ces idées pour l’étendre :
-        
+
         * Créez un deuxième groupe de danseurs dans une mise en page différente
         * Changez la mise en page quand une touche est enfoncée
         * Modifier une propriété lorsque les danseurs changent de formation
       Dance_Party_extras_on_beat: |-
         # grave, médium et aigu
-        
+
         Cette danse utilise des événements de « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essayez de bricoler différentes chansons pour voir comment elles changent la danse.
       Dance_Party_extras_speed: |-
         # Accélérez, ralentissez
-        
+
         Cette danse finale utilise le bloc « vitesse définie » pour contrôler la rapidité avec laquelle chaque danseur se déplace. Essayez d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésitez pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus cool.
       Dance_Party_extras_visible: |-
         # Où iraient-ils ?
-        
+
         Cette danse montre et cache deux groupes de danseurs différents. Jetez-y un coup d'œil, puis essayez d'ajouter votre propre style.
-        
+
         * Ajoutez un autre groupe de danseurs
         * Affichez et masquez les danseurs à l'aide des touches fléchées
         * Cachez tous les danseurs et passez à un effet d’arrière plan excitant
@@ -8846,11 +8836,11 @@ fr:
       HOC 2018 Level_9b: "Vous voici enfin au récif, partez à la recherche du **Cœur de l'océan** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Utilisez les coraux bleus et rouges pour atteindre le **coffre** au trésor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       HOC Dance 4_draft: |-
         Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
-        
+
         *Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
       HOC Dance 5_draft: |-
         *Nous avons besoin de plus de danseurs !*
-        
+
         Créez un danseur de sauvegarde appelé « backup_dancer1 » pour danser avec le chat.
       HOC Dance 9_draft: "Le bloc <xml><block type=\"Dancelab_whenKey\"></block></xml> vous permet d'exécuter le programme lorsque vous appuyez sur la flèche dirigée vers le haut.\n\nVous pouvez changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Soyez créatif et cherchez de nouveaux blocs !"
       HOC Dance Freeplay: Prends ton rythme ! Créez votre propre danse à partager avec vos amis.
@@ -8907,8 +8897,8 @@ fr:
       MC_HOC_2017_04: Modifiez la boucle du dernier casse-tête afin d'aider l'Agent à créer un passage par-dessus la partie la plus large de cette rivière.
       MC_HOC_2017_04POINT5_Cole: |-
         Vous êtes sorti du marais !  Maintenant, dirigez le joueur en toute sécurité sur le carré orange. 
-        
-        
+
+
         Aidez l'Agent à dégager le chemin en trouvant un modèle simple et en utilisant des boucles pour traverser les deux premières plaques de détection.
       MC_HOC_2017_04POINT5_RYAN: "Vous avez réussi ! \\r\n\\r\nMaintenant, dirigez {currentPlayerName} en toute sécurité à travers le labyrinthe pour récupérer la **hache** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Vous avez réussi ! \\r\n\\r\nMaintenant, dirigez {currentPlayerName} en toute sécurité à travers le labyrinthe pour récupérer la **hache** [diamond_axe]\\r\n"
@@ -8917,15 +8907,15 @@ fr:
       MC_HOC_2017_04_Kiki: "L'entrée du bosquet secret mène vers cette magnifique oasis !  Pour terminer ce niveau, le joueur doit atteindre le carré orange dans la cabane.  \\r\n\\r\nUtilisez une boucle « répéter » pour aider l'Agent à atteindre la plaque de détection qui ouvrira la porte de la cabane."
       MC_HOC_2017_05: |-
         Les boucles ne sont pas toujours utiles. 
-        
-        
+
+
         Ces cactus ne poussent pas selon un modèle clair, donc une boucle ne pourra pas les contourner correctement.  À la place, nous vous avons donné une fonction appelée « détruire et avancer » qui fera tout le travail à votre place chaque fois que l'Agent rencontrera un obstacle.
       MC_HOC_2017_05_Cole: "Oh non, le pont est détruit ! \\r\n\\r\nProgrammez l'Agent pour reconstruire le pont en utilisant le bloc « placer » afin que {currentPlayerName} puisse atteindre la **pelle** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Oh non, le pont est détruit ! \\r\n\\r\nProgrammez l'Agent pour reconstruire le pont en utilisant le bloc « placer » afin que {currentPlayerName} puisse atteindre la **pelle** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Oh non, le pont est détruit ! 
-        
-        
+
+
         Aidez l'Agent a reconstruire le pont afin que le joueur puisse atteindre la **pelle**.
       MC_HOC_2017_05_Kiki: "Il est temps pour le joueur de quitter le bosquet secret et de continuer l'aventure, mais le pont est détruit ! \\r\n\\r\nAidez l'Agent à reconstruire le pont, puis avancez jusqu'à la planche de bois afin que le joueur atteigne le carré orange."
       MC_HOC_2017_06_Cole: "Encore une rivière, mais celle-ci est beaucoup plus large ! \\r\n \\r\nCorrigez ce code pour aider l'Agent à reconstruire un pont à fin que {currentPlayerName} récupère la **pioche** [diamond_pickaxe]. "
@@ -8940,13 +8930,13 @@ fr:
       MC_HOC_2017_08_Kiki: "Maintenant, au lieu de détruire les cactus, vous devez placer de la pierre sur la lave, puis détruire le grès.  \\r\n\\r\nModifiez la fonction pour que cela marche pour ce niveau."
       MC_HOC_2017_08_RY: |-
         Maintenant, vous devez choisir entre **DEUX** fonctions ! 
-        
-        
+
+
         Utilisez ces fonctions afin de rapidement construire un pont au-dessus de la lave pour {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         Maintenant, vous devez choisir entre **DEUX** fonctions ! 
-        
-        
+
+
         Utilisez ces fonctions afin de rapidement construire un pont au-dessus de la lave pour le joueur.
       MC_HOC_2017_09_Cole: Utilisez les fonctions afin d'aider l'Agent à détruire les blocs de terre géants qui empêchent le joueur d'accéder à la plaque de détection.
       MC_HOC_2017_09_Kiki: "Ce code de départ ne peut pas être supprimé.\\r\n\\r\nAjoutez des commandes à la fonction « créer chemin » afin que le programme dans l'espace de travail dirige l'Agent jusqu'à la plaque de détection. "
@@ -8962,8 +8952,8 @@ fr:
       MC_HOC_2017_13_Cole: "**Jeu libre :** à votre tour ! Utilisez le code de l'Agent pour explorer ce monde."
       MC_HOC_2017_4.5v2: |-
         Vous êtes sorti du marais !  Maintenant, dirigez le joueur en toute sécurité sur le carré orange. 
-        
-        
+
+
         Aidez l'Agent à dégager le chemin en trouvant un modèle simple et en utilisant des boucles pour traverser les deux premières plaques de détection.
       MC_HOC_2017_Ali: 'Observez les fonctions ci-dessous.  Comment pouvez-vous les utiliser pour éviter les Ghasts et aider {currentPlayerName} à atteindre le **livre enchanté** en toute sécurité [book_enchanted] ?  '
       MC_HOC_2017_Ali_2019: 'Observez les fonctions ci-dessous.  Comment pouvez-vous les utiliser pour éviter les Ghasts et aider {currentPlayerName} à atteindre le **livre enchanté** en toute sécurité [book_enchanted] ?  '
@@ -9326,7 +9316,7 @@ fr:
         6 turtle moves long).\\r
         \\r
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\\r
-        
+
       SG U3L06 - moveForwardwithParams: |-
         # A New Way to Move
         the Turtle\\r
@@ -9483,7 +9473,7 @@ fr:
         filling it in with blocks. For this puzzle, we've done the first two steps
         for you, but you'll be doing it all in the coming puzzles.\\r
         \\r
-        
+
       SG U3L07 - fish: |-
         # Add Fish\\r
         \\r
@@ -9828,7 +9818,7 @@ fr:
         color outlines\\r
         * Contains at least 3 different logical blocks of code with
         comments\\r
-        
+
       U3-AP-Practice-Choose-The-Abstraction: "# AP Practice\n- Identify the Abstraction\\r\n\\r\nOne component of the **AP Create Performance\nTask** is selecting an abstraction that you developed.\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>3. Program Code</b>\\r\n<ul>\\r\n<li>Mark\nwith a <b>rectangle</b> the segment of program code that represents an abstraction\nyou developed.</li>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\nHere's the scoring\nguide for this question\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img src=\"https://images.code.org/341764b27f16965cf27680e20c893a23-image-1508190677805.50.59\nPM.png\">\\r\n</div>\\r\n\\r\n# Choose the Student-Created Abstraction\\r\n\\r\nThe\nprogram code below is from a program a student developed. \\r\n\\r\n![](https://images.code.org/86d48cfc2c9c81551aa059281e9c62f3-image-1508189804595.34.48\nPM.png)\\r\n\\r\n**Write which of the rectangles (A, B, C, or D) is placed around\na student-developed abstraction.**\\r\n\\r\n**Then explain your answer using\nthe criteria in the scoring guide.**"
       U3-AP-Practice-Choose-The-Abstraction_2018: "# AP Practice\n- Identify the Abstraction\\r\n\\r\nOne component of the **AP Create Performance\nTask** is selecting an abstraction that you developed.\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>3. Program Code</b>\\r\n<ul>\\r\n<li>Mark\nwith a <b>rectangle</b> the segment of program code that represents an abstraction\nyou developed.</li>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\nHere's the scoring\nguide for this question\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img src=\"https://images.code.org/341764b27f16965cf27680e20c893a23-image-1508190677805.50.59\nPM.png\">\\r\n</div>\\r\n\\r\n# Choose the Student-Created Abstraction\\r\n\\r\nThe\nprogram code below is from a program a student developed. \\r\n\\r\n![](https://images.code.org/86d48cfc2c9c81551aa059281e9c62f3-image-1508189804595.34.48\nPM.png)\\r\n\\r\n**Write which of the rectangles (A, B, C, or D) is placed around\na student-developed abstraction.**\\r\n\\r\n**Then explain your answer using\nthe criteria in the scoring guide.**"
       U3-AP-Practice-FR-design-process: "# AP Practice - Performance\nTask Response\\r\n\\r\nTop-down design is design process and strategy for breaking\ndown complex things.  The AP Create Peformance task asks you to write about\nyour development process when writing code.  \\r\n\\r\nLet's take a minute\nto understand this writing prompt and how it is scored. Here is the actual\nwriting prompt **2b** from the AP Create Task guidelines:\\r\n\\r\n<div style=\"width:\n70%; margin: auto; font-family: serif; font-size: 12pt; line-height: 1.3;\nbackground-color: #EEEEEE; padding: 10px\">\\r\n\\r\n<b>2b.</b> Describe the\nincremental and iterative development process of your program, focusing on\ntwo distinct points in that process. Describe the difficulties and/or opportunities\nyou encountered and how they were resolved or incorporated. In your description\nclearly indicate whether the development described was collaborative or independent.\nAt least one of these points must refer to independent program development.\n<i>(Must not exceed 200 words)</i>\\r\n</div>\\r\n<br>\\r\nYour response to this\nprompt can get up to 2 points, and is scored looking at two major things:\\r\n\\r\n1.\n(1 point) Do you describe a real *iterative* process for writing the *whole*\nprogram - \"Incremental and iterative\" means that you continuously improved\nyour program based on testing, reflection, or feedback from a partner.\\r\n\\r\n2.\n(1 point) Do you actually describe *two* points in time while writing your\ncode, what the specific issue was, and how you got past it by *reflecting*\nor *incorporating feedback* from a collaborative partner.\\r\n\\r\nHere are\nthe actual scoring guidelines:\\r\n\\r\n![](https://images.code.org/1cb4a1840d281a9c5c5096becc8c9054-image-1507827422107.png)\\r\n\\r\n##\nNow you try it\\r\n\\r\nTry to write a response to this AP Prompt thinking about\neither how you developed the idea for the snowflake drawing program, or how\nyou resolved to make the 3x3 grid program.  You might have to use a little\nbit of imagination to assume that it's part of a larger program you created\nyourself.  The point is to *practice writing* about your development process.\\r\n\\r\nNOTE:\nWriting a response like this will take some time to think about and compose."
@@ -9923,7 +9913,7 @@ fr:
         6 turtle moves long).\\r
         \\r
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\\r
-        
+
       U3L04 Assessment1_2018: |+
         Consider the figure below.  Use
         top-down thinking to design a solution to the problem.  In the space provided
@@ -9932,7 +9922,7 @@ fr:
         6 turtle moves long).\\r
         \\r
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\\r
-        
+
       U3L07 - allSeaGrass: |-
         # Add Seagrass\\r
         <img src="https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42
@@ -10039,7 +10029,7 @@ fr:
         of times to repeat.\\r
         \\r
          ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\\r
-        
+
         \\r
         * Finally, **modify `drawAllSeagrass`** to call this new two-param version
         of `drawSeagrass` supplying a reasonable random value for the second parameter
@@ -10912,14 +10902,14 @@ fr:
         \\r
         Choose your favorite shape:\\r
          - Square (Easy)\\r
-        
+
         - Triangle (Medium)\\r
          - Pentagon (Hard)\\r
         \\r
         </div>\\r
         <br/>\\r
         \\r
-        
+
       aE2: "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\"\nstyle=\"width:400px; margin: 0 20px 20px 10px;\"/>\\r\n\\r\n<div style=\"color:\n#7665a0; font-size: 1.6em; line-height: 1.4em;\" >Now we need enough for everyone!\\r\n<br/><br/>\\r\n\\r\nLet's\ntake the shape we just made and line up a row of 14 napkins.  \\r\n<br/>\\r\nIf\nyou place one loop inside another loop, we call that a nested loop. \\r\n\\r\nHow\ncan you loop all of the code from your last stage to make sure all 14 napkins\nline up next to each other?</div>\\r\n"
       aE3: |+
         <img src="https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif"
@@ -10935,7 +10925,7 @@ fr:
         table.\\r
         </div>\\r
         \\r
-        
+
       aE3alternate: |2+
         \\r
         <div style="color: #7665a0; font-size:
@@ -10944,7 +10934,7 @@ fr:
         look like if the user chose pentagon napkins and modified line weight/color.\\r
         </div>\\r
         \\r
-        
+
       aE3alternateB: |2+
         \\r
         <div style="color: #7665a0; font-size:
@@ -10953,7 +10943,7 @@ fr:
         look like if the user chose triangle napkins and got bold with the code.\\r
         </div>\\r
         \\r
-        
+
       aE4: "\\r\n<div style=\"color: #7665a0; font-size: 1.6em;\nline-height: 1.4em;\" >\\r\nOh No! Our napkins are too small! \\r\n<br/><br/>\\r\nWe\nneed to have the napkins twice as big and still keep the tablecloth the same\nsize. What numbers can you change to make that happen?\\r\n<br/><br/>\\r\n(as\nshown in triangles)\\r\n</div>\\r\n\\r\n"
       aE5: |2+
         \\r
@@ -10967,7 +10957,7 @@ fr:
         window frame.\\r
         </div>\\r
         \\r
-        
+
       aE6: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\\r
@@ -11000,7 +10990,7 @@ fr:
         \\r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\\r
-        
+
       artistLoopsK2gradek_artist_loops3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11010,7 +11000,7 @@ fr:
         \\r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\\r
-        
+
       artistLoopsK3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11020,7 +11010,7 @@ fr:
         \\r
         <img src="https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif"
         width="300"/>\\r
-        
+
       artistLoopsK4: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11031,7 +11021,7 @@ fr:
         <img
         src="https://images.code.org/84b93e1b9dad3ee52a46c767524d3558-image-1467935697224.gif"
         width="300"/>\\r
-        
+
       artistLoopsK5: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11041,7 +11031,7 @@ fr:
         \\r
         <img src="https://images.code.org/f418ccba20b7230baba1328143bd0092-image-1467935762464.gif"
         width="300"/>\\r
-        
+
       artistLoopsK6: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11051,7 +11041,7 @@ fr:
         \\r
         <img src="https://images.code.org/1efb95ca15f66b46145725769d3d279c-image-1467935856461.gif"
         width="300"/>\\r
-        
+
       artistLoopsK7: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11061,7 +11051,7 @@ fr:
         \\r
         <img src="https://images.code.org/af040c27be11c3a639e18c440c8a047c-image-1467936046481.gif"
         width="300"/>\\r
-        
+
       artistLoopsK8: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11071,7 +11061,7 @@ fr:
         \\r
         <img src="https://images.code.org/bf368872da36217b0d19261fc6b84bf6-image-1467936147116.gif"
         width="300"/>\\r
-        
+
       artistLoopsK9: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11081,7 +11071,7 @@ fr:
         \\r
         <img src="https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif"
         width="300"/>\\r
-        
+
       artistLoopsKA: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11091,7 +11081,7 @@ fr:
         \\r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\\r
-        
+
       artistLoopsKB: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11101,7 +11091,7 @@ fr:
         \\r
         <img src="https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif"
         width="300"/>\\r
-        
+
       artistLoopsKFP: |
         Picture time!  Use what you have learned
         to draw a picture of what you think the Artist saw on stage.\\r
@@ -11140,7 +11130,7 @@ fr:
         \\r
         </tr>\\r
         </table>\\r
-        
+
       collector example: |-
         Collect all the gold using the `collect`
         block:\\r
@@ -11768,6 +11758,15 @@ fr:
         Play the game and move Waddles with the arrows until you score
         enough points. Waddles must be moved to the `middle left` position of the
         screen to complete this challenge.
+      courseC_PlayLab_events_challenge1_2019: |-
+        Use a new block to
+        make Waddles automatically move back to the start when he runs into the Dinosaur
+        and when he scores a point. This will make your game more challenging and
+        fun!\\r
+        \\r
+        Play the game and move Waddles with the arrows until you score
+        enough points. Waddles must be moved to the `middle left` position of the
+        screen to complete this challenge.
       courseC_artist_loop1: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loop1_2018: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loop1_2019: "Fantastic!  \\r\n\\r\nLet's add\nsome style by changing the brush using the `set pattern` block before our\nloop starts."
@@ -11989,19 +11988,19 @@ fr:
       courseC_starWars_loops1: "[](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Go get the scrap metal, BB-8\"_ \\r\n\\r\nUse five of the same blocks to\nget the scrap metal. Scrap metal glows like this: [](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops10: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\r
-        
+
         _"Go BB-8!"_\\r
         \\r
         You are doing great! Keep it up!
       courseC_starWars_loops10_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\r
-        
+
         _"Go BB-8!"_\\r
         \\r
         You are doing great! Keep it up!
       courseC_starWars_loops10_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\r
-        
+
         _"Go BB-8!"_\\r
         \\r
         You are doing great! Keep it up!
@@ -12170,7 +12169,7 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s try something new. This time, skate in a zig-zag.\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\nDraw a\nstair-step pattern that uses turns between 75 and 105 degrees -- but make\nsure that your left and right turns use the same angle.  \\r\n(You will see\nwhy later.)"
       courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s try something new. This time, skate in a zig-zag.\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\nDraw a\nstair-step pattern that uses turns between 75 and 105 degrees -- but make\nsure that your left and right turns use the same angle.  \\r\n(You will see\nwhy later.)"
       courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Now let’s turn and go back the way we came.\"_\\r\n\\r\nTurn around 180 degrees\nand draw the exact same stair pattern again!  \\r\n\\r\n- The rest of this stage\nwill be easier if you put all of your code inside of a loop to make Elsa  draw,\nturn around 180 degrees, draw, then turn around 180 degrees again.\\r\n\\r\n<hr/>\\r\n\\r\nHere\nis an example of stairs that use a 76 degree turn:\\r\n\\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
@@ -12201,7 +12200,7 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       courseD_artist_binary_challenge2: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -12373,7 +12372,7 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       courseD_artist_project4a_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\\r
@@ -12386,7 +12385,7 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       courseD_artist_project4a_2019: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\\r
@@ -12399,7 +12398,7 @@ fr:
         happens if you make your diamond pattern longer or shorter?\\r
         - What does
         it look like to draw two snowflakes on top of one another?\\r
-        
+
       courseD_artist_project5: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get creative with shapes and angles to see what kind of new snowflakes\nwe can draw!\"_\\\\r\n"
       courseD_artist_project5_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get creative with shapes and angles to see what kind of new snowflakes\nwe can draw!\"_\\\\r\n"
       courseD_artist_project5_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Get creative with shapes and angles to see what kind of new snowflakes\nwe can draw!\"_\\\\r\n"
@@ -12690,7 +12689,7 @@ fr:
         Take the same
         path as before, but this time, use a repeat loop to collect treasure when
         you get to it.\\r
-        
+
       courseD_farmer_condLoops3: |-
         *"Corn, lettuce, AND pumpkins!
         Help me harvest them all."*\\r
@@ -12763,10 +12762,16 @@ fr:
       courseD_maze_nestedLoops4_2019: "Amène-moi jusqu'au tournesol !\n(Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)"
       courseD_maze_ramp3: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by removing it from the other blocks and dragging it back to the toolbox."
       courseD_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by removing it from the other blocks and dragging it back to the toolbox."
+      courseD_maze_ramp3_2019: |-
+        *"This pig is ruffling my feathers."*\\r
+        \\r
+        There
+        is one extra block that is going to cause the bird to crash.  \\r
+        Throw it
+        away by removing it from the other blocks and dragging it back to the toolbox.
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
-      courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"* \\\\r\n\\\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: |-
         *"Follow this path to get me to
         the pig!"*\\r
@@ -13009,7 +13014,7 @@ fr:
         Take the
         same path as before, but this time, use a repeat loop to collect treasure
         when you get to it.\\r
-        
+
       courseE_collector_ramp9: "Take the same path as before,\nbut this time collect all of the treasure as you find it.\\\\r\n"
       courseE_farmer_concept4: Maintenant, passons à un niveau plus approfondi ! Nous avons imbriqué tout ce bloc de code dans une autre boucle, mais tu dois remettre l'artiste en place pour dessiner la ligne suivante. Lequel de ces blocs de code peux-tu placer à la fin de la boucle ultrapériphérique pour dessiner la grille entière ?
       courseE_farmer_functions2ba: "*\"I feel so functional!\"*\\r\n\\r\nDid\nyou notice that there was repeated code in the last puzzle?  It doesn't work\nto put it all inside of a loop, but we **can** use functions.  \\r\n\\r\nFor\nthis puzzle, we have moved the repeated code into a function called `corn\nand pumpkin`. Now, all you need to do is put the small `corn and pumpkin`\n**function call block** into the code where you need it.\\r\n\\r\n___\\r\n#####\nEach sprout will either grow *one* corn or nothing."
@@ -13664,7 +13669,7 @@ fr:
         year?\\r
         * What recruiting goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csd-thursday-unit: "# Thursday Unit Reflection Part 1\n\\r\n\\r\n## Game Lab\\r\n\\r\nHow would you explain programming in Game Lab to\na new teacher who is interested in using it? \\r\n\\r\n* In what ways is Game\nLab an educational rather than professional tool? \\r\n* What kind of supports\nexist for students using Game Lab?\\r\n"
       csd-thursday-unit2: |-
         # Thursday Unit Reflection Part 2\\r
@@ -13707,7 +13712,7 @@ fr:
         What are teachers doing?\\r
         * What strategies did you see facilitators use
         to keep teachers engaged?\\r
-        
+
       csd-wednesday-pedagogy: "# Wednesday Pedagogy Reflection\\r\n\\r\n##\nBuilding Community & Dealing with Barriers\\r\n\\r\nIn the community session\nthis morning you talked about building community and dealing with barriers\nto growing your CS education community locally. (If you were not with your\nregion think about what you experienced in this sessions that might apply\nto your region.)\\r\n\\r\n* What were common barriers teachers in your region\nshared?\\r\n* What barriers do you personally experience that were shared by\nteachers? \\r\n* What can you do to help in your local community?\\r\n* What\nthings did you see today that you want to check in on throughout the year?\\r\n*\nWhat community development goals do you hope to help accomplish in your region\nby the end of the year?\\r\n"
       csd-wednesday-unit: |-
         # Wednesday Unit Reflection Part
@@ -13779,7 +13784,7 @@ fr:
         year?\\r
         * What recruiting goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csp-thursday-unit: |
         # Thursday Unit Reflection\\r
         \\r
@@ -13788,7 +13793,7 @@ fr:
         \\r
         What connections or hooks into unit 1
         that can be used to motivate early lessons in unit 2?\\r
-        
+
       csp-thursday-unit2: |
         # Thursday Unit Reflection Part 2\\r
         \\r
@@ -13797,7 +13802,7 @@ fr:
         \\r
         What’s the role of the teacher in this unit, where much
         of the computer science content is embedded in the levels?\\r
-        
+
       csp-tuesday-facilitation: "# Tuesday Facilitation Practice\\r\n\\r\n##\nTLO\\r\n\\r\nYou have seen 2 Model TLOs (taught by facilitators) and 2 Participant\nTLOs (taught by teachers). What patterns do you notice about what facilitators\ndo during these sessions (consider the delivery of the lessons and the debriefs\nseparately)?\\r\n\\r\n* What are facilitators doing during lessons?\\r\n* What\nare facilitators doing during debriefs? What are teachers doing?\\r\n* In model\nlessons, how much time is split between time when facilitators are talking\nand time when teachers are doing during the lesson? "
       csp-tuesday-pedagogy: "# Tuesday Pedagogy Reflection\\r\n\\r\n##\nClassroom Practices\\r\n\\r\nName two <a href=\"https://docs.google.com/document/d/1trq3FeCBaq2G-CFugZP4ElkJapAqAtoBfl4zf7DbW48/edit#heading=h.f8m5xr9s44e2\">\npedagogical approaches</a> you saw modeled in the 5 TLOs you’ve seen in the\npast couple of days? \\r\n\\r\n* When were they successful?\\r\n* What were characteristics\nof situations where was their room for improvement?"
       csp-tuesday-unit: |
@@ -13808,7 +13813,7 @@ fr:
         \\r
         How would you respond to a teacher who says ‘what’s the point’
         of lesson 4?\\r
-        
+
       csp-tuesday-unit2: |
         # Tuesday Unit Reflection\\r
         \\r
@@ -13819,7 +13824,7 @@ fr:
         of the year (computers are not ready yet, etc). How would you recommend a
         teacher approaches the first unit if they are having issues with technology
         access?\\r
-        
+
       csp-wednesday-facilitation: |
         # Wednesday Facilitation
         Reflection\\r
@@ -13835,7 +13840,7 @@ fr:
         What are teachers doing?\\r
         * What strategies did you see facilitators use
         to keep teachers engaged?\\r
-        
+
       csp-wednesday-pedagogy: |
         # Wednesday Pedagogy Reflection\\r
         \\r
@@ -13858,7 +13863,7 @@ fr:
         *
         What community development goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csp-wednesday-unit: |+
         # Wednesday Unit Reflection\\r
         \\r
@@ -13869,7 +13874,7 @@ fr:
         unit. What are strategies for dealing with students who are getting fatigued
         by the end of the unit?\\r
         \\r
-        
+
       csp-wednesday-unit2: "# Wednesday Unit Reflection Part\n2\\r\n\\r\n## Explaining Internet Simulator\\r\n\\r\nHow would you explain the\nInternet Simulator to a new teacher who is interested in using it?\\r\n\\r\n*\nIn what ways is Internet Simulator an educational rather than professional\ntool? \\r\n* What teaching philosophy seems most effective with the Internet\nSimulator? \\r\n"
       csp1dlp-assessment: "\\r\n\\r\n<br><br>\\r\n\\r\n> **NOTE:\nbefore you start this reflection, make sure you’ve reviewed the lesson in\nUnit 1, and have a good sense of the the role of assessment across the unit.\nIf you haven’t already reviewed the materials, do that now and come back to\nthis reflection later.**\\r\n\\r\n\\r\n# Assessment in Unit 1\\r\n\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n1. Your response should clearly address each of the items below: \\r\n\\r\n1.\nWhat’s the role of the practice Performance Task(s), or PTs, in the unit?\n\\r\n - Which PTs are being practiced?\\r\n - How does the practice PT build\non what content and skills were developed during the unit? \\r\n2. What summative\nand formative assessment opportunities are built into the unit? \\r\n\\r\n\\r\n>##\nGetting Credit for Completing this Reflection \\r\n\\r\n>- Once you submit your\nreflection, your response to the prompt above will be shared anonymously and\nreviewed by your peers, and you will review the work done by other facilitators.\nReviewers will be looking for thoughtful and thorough answers that demonstrate\nthat you have spent time considering the reflection questions listed above.\nReviewers will have an opportunity to give feedback on your submission, and\nyou can respond to that feedback and resubmit.\\r\n- In order to get credit\nfor completing this prompt, two reviewers need to agree that you have responded\nto the prompts fully. If reviewers don’t feel comfortable making a decision\nabout your task submission, they can elevate to an instructor for review.\nYou will always have a chance to address feedback from your reviewers and\nresubmit your reflections! Reviewer feedback will show up at the bottom of\nthis page, once it’s available. \\r\n \\r\n\\r\n\\r\n"
       csp1dlp-lessons: "<br><br>\\r\n\\r\n> **NOTE: before you\nstart this reflection, make sure you’ve reviewed the lesson in Unit 1, and\nhave a good sense of the connections between lessons. If you haven’t already\nreviewed the materials, do that now and come back to this reflection later.**\\r\n\\r\n\\r\n#\nUnit 1 Lesson Connections and Philosophy\\r\n\\r\nFor this reflection, you’re\ngoing to consider each of the prompts below and craft a written response that\ndemonstrates your understanding of the lessons in Unit 1. Your response should\nclearly address each of the items below: \\r\n\\r\n1. What skills and knowledge\nshould students leave the unit with?\\r\n - Which Big Idea(s) are students\nlearning the most about? Where and how are those BI(s) addressed? \\r\n - Which\nskills or Computational Practices are honed through the activities and projects?\n\\r\n\\r\n2. What is the connection between early lessons and later lessons?\\r\n\n- How is the content spiraled or scaffolded within the unit? \\r\n - What foundation\nis being laid early on and how is it leveraged throughout the unit? Why? \\r\n\n- How would you respond to a teacher who says ‘what’s the point’ of lesson\n4? \\r\n\\r\n3. Which lessons are particularly tricky to teach in this unit\nand why? \\r\n\\r\n>## Getting Credit for Completing this Reflection \\r\n\\r\n>-\nOnce you submit your reflection, your response to the prompt above will be\nshared anonymously and reviewed by your peers, and you will review the work\ndone by other facilitators. Reviewers will be looking for thoughtful and thorough\nanswers that demonstrate that you have spent time considering the reflection\nquestions listed above. Reviewers will have an opportunity to give feedback\non your submission, and you can respond to that feedback and resubmit.\\r\n-\nIn order to get credit for completing this prompt, two reviewers need to agree\nthat you have responded to the prompts fully. If reviewers don’t feel comfortable\nmaking a decision about your task submission, they can elevate to an instructor\nfor review. You will always have a chance to address feedback from your reviewers\nand resubmit your reflections! Reviewer feedback will show up at the bottom\nof this page, once it’s available. \\r\n \\r\n\\r\n\\r\n"
@@ -14363,7 +14368,7 @@ fr:
       grade5_artist_for_loops10: "**Défi:** Utilise toutes les choses que tu as apprises pour créer cette image constituée de polygones, tous de côtés 40 pixels ?\n\nBesoin d'un indice ? Clique ici."
       grade5_artist_for_loops5: |-
         Un seul petit changement au code de la dernière image pourrait créer ce dessin. Peux-tu trouver quel est ce changement ?
-        
+
         Indice :  tu dois enlever quelque chose !
       grade5_artist_for_loops6: |-
         If you turn a little bit
@@ -14674,4 +14679,4 @@ fr:
         color outlines\\r
         * Contains at least 3 different logical blocks of code with
         comments\\r
-        
+

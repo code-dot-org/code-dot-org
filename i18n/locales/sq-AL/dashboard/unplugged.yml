@@ -307,3 +307,6 @@ sq:
       BinaryBracelets_2019:
         title: Byzylykët Binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
+      PaperPlanes_2019:
+        title: 'Algoritmet e Jetës-Reale: Planet në Letër'
+        desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme, në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë një rol të rëndësishëm.

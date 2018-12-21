@@ -419,3 +419,7 @@ ms:
               name: Pengaturcaraan penyampai
             Internet:
               name: Internet
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'

@@ -960,6 +960,12 @@ id:
           tindih bentuk setengah, jadi kita harus belok ke kanan dengan`180`/`sisi`,
           yang berarti bahwa kita perlu dua kali lebih banyak seperti biasanya dari
           mereka (`sisi`*`2` pengulangan). '
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Apakah Anda menghadapi jalan yang benar? Blok ` menghancurkan blok`
+          blok di depan Anda.
+        mc_9_b: Bintik hitam di dinding adalah batubara! Gunakan `hancurkan blok`
+          untuk menambang batubara.
+        mc_9_c: Gunakan `letakkan obor` untuk menempatkan obor di tempat anda berdiri.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Pastikan untuk mengatur nomer untuk `dog_speed`untuk
           sesuatu yang besar dari `cat_speed`.
@@ -2852,12 +2858,20 @@ id:
       courseC_PlayLab_events2_2018_authored_hint:
         courseC_PlayLab_events2_b: Gunakan menu dropdown pada blok `actor __ say 'kedua
           untuk mengubah aktor mana yang berbicara.
+      courseC_PlayLab_events2_2019_authored_hint:
+        courseC_PlayLab_events2_b: Gunakan menu dropdown pada blok `actor __ say 'kedua
+          untuk mengubah aktor mana yang berbicara.
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: Anda hanya perlu memindahkan Jorge ke kanan sekitar
           25 piksel untuk memecahkan teka-teki ini.
         courseC_PlayLab_events3_b: Apakah ada sebuah blok di toolbox yang terlihat
           seperti itu akan memindahkan sebuah aktor?
       courseC_PlayLab_events3_2018_authored_hint:
+        courseC_PlayLab_events3_a: Anda hanya perlu memindahkan Jorge ke kanan sekitar
+          25 piksel untuk memecahkan teka-teki ini.
+        courseC_PlayLab_events3_b: Apakah ada sebuah blok di toolbox yang terlihat
+          seperti itu akan memindahkan sebuah aktor?
+      courseC_PlayLab_events3_2019_authored_hint:
         courseC_PlayLab_events3_a: Anda hanya perlu memindahkan Jorge ke kanan sekitar
           25 piksel untuk memecahkan teka-teki ini.
         courseC_PlayLab_events3_b: Apakah ada sebuah blok di toolbox yang terlihat
@@ -2872,12 +2886,22 @@ id:
           ke kanan ** 100 ** piksel untuk mencapai Olive the Cat.
         courseC_PlayLab_events4_a: Anda perlu melampirkan blok `actor __ say` ke acara`
           when actor touches` untuk memecahkan teka-teki ini.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: Saat tombol "Run" diklik, Jorge perlu bergerak
+          ke kanan ** 100 ** piksel untuk mencapai Olive the Cat.
+        courseC_PlayLab_events4_a: Anda perlu melampirkan blok `actor __ say` ke acara`
+          when actor touches` untuk memecahkan teka-teki ini.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: Anda perlu mengeklik menu dropdown di blok `aktor
           say` untuk menemukan teks" What's new? "
         courseC_PlayLab_events5_b: Klik pada Octavia saat anda menjalankan program
           anda untuk memeriksa apakah ia bekerja!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: Anda perlu mengeklik menu dropdown di blok `aktor
+          say` untuk menemukan teks" What's new? "
+        courseC_PlayLab_events5_b: Klik pada Octavia saat anda menjalankan program
+          anda untuk memeriksa apakah ia bekerja!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_a: Anda perlu mengeklik menu dropdown di blok `aktor
           say` untuk menemukan teks" What's new? "
         courseC_PlayLab_events5_b: Klik pada Octavia saat anda menjalankan program
@@ -2896,6 +2920,13 @@ id:
           1` untuk mengubah arah Waddles bergerak.
         courseC_PlayLab_events6_c: Setelah selesai, Anda harus bisa memindahkan Waddles
           dengan menggunakan tombol panah di komputer Anda!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Setiap blok hijau `when arrow` harus memiliki satu
+          tindakan di bawahnya.
+        courseC_PlayLab_events6_b: Gunakan menu drop down pada blok ` pindah aktor
+          1` untuk mengubah arah Waddles bergerak.
+        courseC_PlayLab_events6_c: Setelah selesai, Anda harus bisa memindahkan Waddles
+          dengan menggunakan tombol panah di komputer Anda!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Gunakan blok `move actor 2 up 400 pixels` dan
           blok` move actor 2 down 400 pixels` di dalam loop `repeat forever` untuk
@@ -2908,12 +2939,23 @@ id:
           memecahkan teka-teki ini. '
         courseC_PlayLab_events7_b: Loop `repeat forever` tidak perlu dihubungkan ke
           blok acara lainnya; itu akan berjalan sendiri.
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: 'Gunakan blok `move actor 2 up 400 pixels` dan
+          blok` move actor 2 down 400 pixels` di dalam loop `repeat forever` untuk
+          memecahkan teka-teki ini. '
+        courseC_PlayLab_events7_b: Loop `repeat forever` tidak perlu dihubungkan ke
+          blok acara lainnya; itu akan berjalan sendiri.
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: Anda perlu menghubungkan blok ke blok `when actor
           touches` untuk mewujudkannya dengan benar.
         courseC_PlayLab_events8_b: Blok `actor say` dan` play sound` di toolbox akan
           membantu anda keluar!
       courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: Anda perlu menghubungkan blok ke blok `when actor
+          touches` untuk mewujudkannya dengan benar.
+        courseC_PlayLab_events8_b: Blok `actor say` dan` play sound` di toolbox akan
+          membantu anda keluar!
+      courseC_PlayLab_events8_2019_authored_hint:
         courseC_PlayLab_events8_a: Anda perlu menghubungkan blok ke blok `when actor
           touches` untuk mewujudkannya dengan benar.
         courseC_PlayLab_events8_b: Blok `actor say` dan` play sound` di toolbox akan
@@ -2934,10 +2976,21 @@ id:
         courseC_PlayLab_events9_c: Anda dapat memiliki lebih dari satu `ketika aktor
           sentuh` acara di ruang kerja Anda pada saat yang sama, sehingga Anda tidak
           perlu menghapus yang pertama!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: Blok `score point` akan membantu anda memecahkan
+          teka-teki ini.
+        courseC_PlayLab_events9_b: Pastikan bahwa blok `when actor touches` anda yang
+          baru mengatakan aktor ** 1 ** dan actor ** 3 **.
+        courseC_PlayLab_events9_c: Anda dapat memiliki lebih dari satu `ketika aktor
+          sentuh` acara di ruang kerja Anda pada saat yang sama, sehingga Anda tidak
+          perlu menghapus yang pertama!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah
           `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah
+          `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah
           `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
       courseC_PlayLab_events_challenge1_authored_hint:
@@ -2945,6 +2998,10 @@ id:
           tengah` saat menyentuh salah satu aktor lainnya. Ini akan mengatur ulang
           permainan sehingga pemain bisa terus mencoba!
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_b: Coba gunakan ` set aktor 1 ke posisi kiri
+          tengah` saat menyentuh salah satu aktor lainnya. Ini akan mengatur ulang
+          permainan sehingga pemain bisa terus mencoba!
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_b: Coba gunakan ` set aktor 1 ke posisi kiri
           tengah` saat menyentuh salah satu aktor lainnya. Ini akan mengatur ulang
           permainan sehingga pemain bisa terus mencoba!
@@ -3457,6 +3514,13 @@ id:
           demi satu.
         courseC_harvester_loops2_c: Satu loop akan mengulangi perintah ` move forward`,
           dan yang lainnya akan mengulangi perintah` pick pumpkin`.
+      courseC_harvester_loops2_2019_authored_hint:
+        courseC_harvester_loops2_a: Jika Anda terjebak, cobalah menulis langkah di
+          atas kertas dan mencari pola berulang.
+        courseC_harvester_loops2_b: Anda akan membutuhkan satu ` ulangi ` lingkaran
+          demi satu.
+        courseC_harvester_loops2_c: Satu loop akan mengulangi perintah ` move forward`,
+          dan yang lainnya akan mengulangi perintah` pick pumpkin`.
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_a: Jangan takut untuk membuat kesalahan! Cobalah
           menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
@@ -3468,6 +3532,16 @@ id:
           sebenarnya bisa memasukkan satu lingkaran ke dalam lingkaran yang lain!
           Ini disebut sebuah bersarang ** lingkaran **.
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Jangan takut untuk membuat kesalahan! Cobalah
+          menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
+          jika anda belum memecahkan teka-teki itu.
+        courseC_harvester_loops3_b: Untuk labu pertama, anda bisa menggunakan kode
+          yang sangat mirip dengan teka-teki terakhir. Cara mana yang harus anda lakukan
+          setelah itu?
+        courseC_harvester_loops3_c: Jika Anda ingin menyederhanakan kode Anda, Anda
+          sebenarnya bisa memasukkan satu lingkaran ke dalam lingkaran yang lain!
+          Ini disebut sebuah bersarang ** lingkaran **.
+      courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_a: Jangan takut untuk membuat kesalahan! Cobalah
           menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
           jika anda belum memecahkan teka-teki itu.
@@ -3495,6 +3569,15 @@ id:
         courseC_harvester_loops4_c: Jika Anda ingin menyederhanakan kode Anda, Anda
           sebenarnya bisa memasukkan satu lingkaran ke dalam lingkaran yang lain!
           Ini disebut sebuah bersarang ** lingkaran **.
+      courseC_harvester_loops4_2019_authored_hint:
+        courseC_harvester_loops4_a: Gunakan blok `ambil jagung` baru untuk mengumpulkan
+          jagung.
+        courseC_harvester_loops4_b: Anda dapat menggunakan beberapa loop berulang
+          dalam kode Anda, beberapa untuk memilih jagung dan beberapa untuk memilih
+          labu.
+        courseC_harvester_loops4_c: Jika Anda ingin menyederhanakan kode Anda, Anda
+          sebenarnya bisa memasukkan satu lingkaran ke dalam lingkaran yang lain!
+          Ini disebut sebuah bersarang ** lingkaran **.
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: Jika Anda terjebak, cobalah menggambar keseluruhan
           program dan kemudian mencari pola pengulangan.
@@ -3502,6 +3585,12 @@ id:
           teka-teki lain? Gerakannya harus serupa, ingatlah untuk mengumpulkan hasil
           panen di sepanjang jalan.
       courseC_harvester_loops5_2018_authored_hint:
+        courseC_harvester_loops5_a: Jika Anda terjebak, cobalah menggambar keseluruhan
+          program dan kemudian mencari pola pengulangan.
+        courseC_harvester_loops5_b: Apakah langkah tangga ini terlihat familier dari
+          teka-teki lain? Gerakannya harus serupa, ingatlah untuk mengumpulkan hasil
+          panen di sepanjang jalan.
+      courseC_harvester_loops5_2019_authored_hint:
         courseC_harvester_loops5_a: Jika Anda terjebak, cobalah menggambar keseluruhan
           program dan kemudian mencari pola pengulangan.
         courseC_harvester_loops5_b: Apakah langkah tangga ini terlihat familier dari
@@ -3515,12 +3604,21 @@ id:
         courseC_harvester_loops6_a: Ingat Anda dapat menempatkan beberapa blok dalam
           satu lingkaran berulang.
         courseC_harvester_loops6_b: Jangan lupa berbelok di ujung deret jagung.
+      courseC_harvester_loops6_2019_authored_hint:
+        courseC_harvester_loops6_a: Ingat Anda dapat menempatkan beberapa blok dalam
+          satu lingkaran berulang.
+        courseC_harvester_loops6_b: Jangan lupa berbelok di ujung deret jagung.
       courseC_harvester_loops7_authored_hint:
         courseC_harvester_loops7_a: Anda dapat memecahkan teka-teki ini dengan dua
           cara, antara mendapatkan jagung atau labu terlebih dahulu.
         courseC_harvester_loops7_b: Anda akan perlu beberapa ' ulangi ' loop untuk
           memecahkan ini teka-teki.
       courseC_harvester_loops7_2018_authored_hint:
+        courseC_harvester_loops7_a: Anda dapat memecahkan teka-teki ini dengan dua
+          cara, antara mendapatkan jagung atau labu terlebih dahulu.
+        courseC_harvester_loops7_b: Anda akan perlu beberapa ' ulangi ' loop untuk
+          memecahkan ini teka-teki.
+      courseC_harvester_loops7_2019_authored_hint:
         courseC_harvester_loops7_a: Anda dapat memecahkan teka-teki ini dengan dua
           cara, antara mendapatkan jagung atau labu terlebih dahulu.
         courseC_harvester_loops7_b: Anda akan perlu beberapa ' ulangi ' loop untuk
@@ -3533,6 +3631,13 @@ id:
           banyak, Anda benar-benar bisa memasukkan satu lingkaran `ulangi` di dalam
           yang lain! Ini disebut sebuah bersarang ** lingkaran **.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Apakah langkah tangga ini terlihat familiar dari
+          teka-teki sebelumnya? Gerakannya harus serupa, ingatlah untuk mengumpulkan
+          hasil panen di sepanjang jalan.
+        courseC_harvester_loops8_b: Jika Anda ingin menyederhanakan kode Anda lebih
+          banyak, Anda benar-benar bisa memasukkan satu lingkaran `ulangi` di dalam
+          yang lain! Ini disebut sebuah bersarang ** lingkaran **.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: Apakah langkah tangga ini terlihat familiar dari
           teka-teki sebelumnya? Gerakannya harus serupa, ingatlah untuk mengumpulkan
           hasil panen di sepanjang jalan.
@@ -3554,6 +3659,11 @@ id:
         courseC_harvester_loops_challenge1_b: Anda bisa mengulang ` bergerak maju`
           dan`memilih sudut ` sebanyak yang Anda butuhkan, lalu belok kanan di setiap
           sudut.
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ini terlalu keras tanpa loop!
+        courseC_harvester_loops_challenge1_b: Anda bisa mengulang ` bergerak maju`
+          dan`memilih sudut ` sebanyak yang Anda butuhkan, lalu belok kanan di setiap
+          sudut.
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Satu cara untuk memecahkan ini terlihat
           seperti sebuah zig-zag. Cara lain terlihat seperti sebuah spiral! Terdapat
@@ -3562,6 +3672,13 @@ id:
           dan` memilih lettuce` sebanyak yang Anda butuhkan, lalu belok di setiap
           sudut.
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Satu cara untuk memecahkan ini terlihat
+          seperti sebuah zig-zag. Cara lain terlihat seperti sebuah spiral! Terdapat
+          banyak solusi berbeda untuk teka-teki seperti ini. Gigih lah!
+        courseC_harvester_loops_challenge2_b: Anda bisa mengulang ` bergerak maju`
+          dan` memilih lettuce` sebanyak yang Anda butuhkan, lalu belok di setiap
+          sudut.
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Satu cara untuk memecahkan ini terlihat
           seperti sebuah zig-zag. Cara lain terlihat seperti sebuah spiral! Terdapat
           banyak solusi berbeda untuk teka-teki seperti ini. Gigih lah!
@@ -4952,18 +5069,12 @@ id:
         courseD_bee_conditionals8_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Butuh bantuan untuk memulai? Tonton video
-          itu!
         courseD_bee_conditionals8_a: "**Ingat.**Teka-teki ini berubah setiap kali
           di jalankan.  Anda akan ingin menggunakan blok bersyarat ('jika' atau 'jika/lain')
           untuk memecahkan tantangan."
         courseD_bee_conditionals8_b: |-
           Teka-teki ini rumit, karena Anda tidak bisa mengecek kotak kosong, nektar, * dan * madu hanya dengan satu syarat tunggal.
           Hanya periksa nektar dan madu di ujung jalanmu.
-        courseD_bee_conditionals8_c: Bagaimana Anda bisa memastikan untuk melakukan
-          perjalanan ke akhir setiap jalan, tidak peduli berapa lama jalannya?
-        courseD_bee_conditionals8_hintVid2: Tonton video ini untuk membantu memecahkan
-          teka-teki ini.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Dapatkah Anda menemukan sebuah jalan
           yang mencapai setiap bunga dan sarang lebah tanpa memukul setiap pohon?
@@ -5868,6 +5979,17 @@ id:
           satu potong jagung, anda perlu menggunakan `pick corn` lebih dari satu kali.
         courseD_harvester_nested_loops_challenge1_c: Anda akan perlu meletakkan loop
           kecil di dalam loop utama anda untuk menyelesaikan teka-teki ini!
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok
+          ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus
+          satu kali lagi untuk menjangkau acorn.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan
+          kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan
+          selanjutnya?
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan
+          blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
+          anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Jangan lupa bahwa anda bisa `repeat`
           satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah
@@ -6002,12 +6124,12 @@ id:
           ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus
           satu kali lagi untuk menjangkau babi.
       courseD_maze_ramp4_2019_authored_hint:
-        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang
-          burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
+        courseC_maze_programming4_a: Anda dapat belok kanan atau kiri dari sudut pandang
+          Scrat. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
           ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok
           ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus
-          satu kali lagi untuk menjangkau babi.
+          satu kali lagi untuk menjangkau acorn.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan
           kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan

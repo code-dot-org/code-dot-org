@@ -686,10 +686,16 @@ nn:
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp
           er borti hverandre!
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp
+          er borti hverandre!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til
           ulike delar av speleområdet.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til
+          ulike delar av speleområdet.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til
           ulike delar av speleområdet.
       courseC_artist_loopsPrePre1a_callout:
@@ -723,6 +729,9 @@ nn:
         courseC_harvester_loops1_callout1: Talet fire på gresskaret fortel deg at
           du kan plukke fire tilgjengelege gresskar.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Talet fire på gresskaret fortel deg at
+          du kan plukke fire tilgjengelege gresskar.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Talet fire på gresskaret fortel deg at
           du kan plukke fire tilgjengelege gresskar.
       courseC_maze_debugging5_callout:
@@ -841,6 +850,9 @@ nn:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bruk denne blokka for å hente ein enkel del av
           skatten.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
           på "Kjør" for å starte programmet.

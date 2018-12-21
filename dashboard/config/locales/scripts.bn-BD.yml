@@ -902,3 +902,7 @@ bn:
               name: শিল্পী দ্বিমিক
             Internet:
               name: ইন্টারনেট
+        andrea-test:
+          stages:
+            'null':
+              name: শূন্য

@@ -338,6 +338,8 @@ pt-BR:
       courseE_unplugged_CnC_2019:
         title: Compartilhamento Digital
         desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
+      Crowdsourcing_2019:
+        title: 'tradução pendente: en-US.data.unplugged.Crowdsourcing_2018.title'
       GettingLoopy_2019:
         title: Repetindo
         desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la.
@@ -350,3 +352,6 @@ pt-BR:
       BinaryBracelets_2019:
         title: Pulseiras binárias
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
+      PaperPlanes_2019:
+        title: 'Algoritmos da vida real: aviões de papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial.

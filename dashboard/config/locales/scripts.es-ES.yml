@@ -3706,3 +3706,23 @@ es:
                 que proporcionan a los usuarios. La clase concluye con observaciones
                 de estas aplicaciones, así como una discusión dirigida por el docente
                 sobre el impacto de las aplicaciones en la sociedad. '
+        andrea-test:
+          stages:
+            'null':
+              name: nulo
+        dance-extras-gallery:
+          title: Sigue bailando
+          description: Ve más allá de la primera hora con más ideas para proyectos.
+        coursec-2019:
+          description_short: Aprende los conceptos básicos de las ciencias de la computación
+            y crea tu propio arte, historias y juegos.
+          description_audience: Edades de 6 a 10 años
+          stages:
+            Building a Foundation:
+              name: Construyendo una Base
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos de la vida real : Aviones de papel'
+            Looking Ahead:
+              name: Observando hacia el futuro
+            Binary Bracelets:
+              name: Pulseras Binarias

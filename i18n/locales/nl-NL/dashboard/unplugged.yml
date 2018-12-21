@@ -293,3 +293,6 @@ nl:
       BinaryBracelets_2019:
         title: Binaire armbanden
         desc: Leerlingen maken armbanden als een binaire weergave van de eerste letter van hun naam. Leerlingen leren dat gegevens op meer dan een manier weergegeven en opgeslagen kunnen worden.
+      PaperPlanes_2019:
+        title: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+        desc: Deze les Laat zien hoe we dagelijks algoritmes gebruiken, met name bij het maken van papieren vliegtuigjes. Deze les richt zich op het grotere geheel van computerkunde en hoe algoritmen een hoofdrol spelen.

@@ -224,12 +224,24 @@ si:
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
@@ -248,6 +260,11 @@ si:
           CORNER:
             '"right"': දකුණ
             '"left"': වම
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -287,6 +304,21 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      binary_move:
+        options:
+          DIR:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
       craft_ifPath:
         options:
           DIR:

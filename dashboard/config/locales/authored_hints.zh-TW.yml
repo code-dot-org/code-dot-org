@@ -675,6 +675,10 @@ zh-TW:
           **解決方案：**
 
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
+        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:
@@ -2663,6 +2667,10 @@ zh-TW:
         courseC_PlayLab_events_challenge_a: '試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
 
 '
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
+        courseC_PlayLab_events_challenge_a: '試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
+
+'
       courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
         courseC_PlayLab_events_challenge_a: 在積木上的這二個值可以讓你將角色在舞台間移動，你可以輸入 0 到 400 間的數字。
       courseC_artist_loops5_authored_hint:
@@ -2789,9 +2797,41 @@ zh-TW:
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: 不用迴圈是不可能達成目標的！
+        courseC_harvester_loops_challenge1_b: 你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。
+        courseC_harvester_loops_challenge1_c: |-
+          要收集一開始的四個玉米，最好的方式是在一個`重複`積木裡頭使用另一個`重複`積木。你可以用這個模式來解決後面的關卡！
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！

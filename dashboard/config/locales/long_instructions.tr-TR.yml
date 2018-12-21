@@ -6927,6 +6927,11 @@ tr:
         bir blok kullan. Bu, oyunu daha zorlu ve eğlenceli hale getirecek!\r\n\r\nOyunu
         oyna ve yeterli puan alıncaya kadar oklarla Waddles'ı hareket ettir. Bu meydan
         okumayı tamamlamak için Waddles, ekranın 'sol orta' pozisyonuna getirilmeli."
+      courseC_PlayLab_events_challenge1_2019: "Waddles' ın, dinazorla karşılaştığında
+        ve puan aldığında başlangıç konumuna otomatik olarak geri dönmesi için yeni
+        bir blok kullan. Bu, oyunu daha zorlu ve eğlenceli hale getirecek!\r\n\r\nOyunu
+        oyna ve yeterli puan alıncaya kadar oklarla Waddles'ı hareket ettir. Bu meydan
+        okumayı tamamlamak için Waddles, ekranın 'sol orta' pozisyonuna getirilmeli."
       courseC_artist_loop1: "Muhteşem!  \r\n\r\nBizim döngüler başlamadan önce 'set
         pattern' blokunu kullanıp fırçayı değiştirerek bir kaç pizza ekleyelim."
       courseC_artist_loop1_2018: "Muhteşem!  \r\n\r\nBizim döngüler başlamadan önce
@@ -7163,22 +7168,31 @@ tr:
         yerine, işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalışın.
       courseC_harvester_loops10: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops10_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops10_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops11: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops11_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops11_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops3: Bütün balkabaklarını topla.
       courseC_harvester_loops3_2018: Bütün balkabaklarını topla.
+      courseC_harvester_loops3_2019: Bütün balkabaklarını topla.
       courseC_harvester_loops5: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops5_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops5_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops6: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops6_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops6_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops7: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops7_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops7_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops9: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops9_2018: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops9_2019: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops_challenge1: Bütün mısırları topla.
       courseC_harvester_loops_challenge2: Tüm marulları topla. Ağaçlardan ve tarlalardan
         sakın!
       courseC_harvester_loops_challenge2_2018: Tüm marulları topla. Ağaçlardan ve
+        tarlalardan sakın!
+      courseC_harvester_loops_challenge2_2019: Tüm marulları topla. Ağaçlardan ve
         tarlalardan sakın!
       courseC_harvester_loops_forVid: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_maze_debugging_challenge2: '* "Çok sık dönersem, başım dönebilir! Sadece
@@ -7880,6 +7894,8 @@ tr:
         et."*'
       courseD_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseD_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseD_maze_intro5a_2019: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı
+        bulmaya çalışın!
       courseD_maze_loops_challenge1: Haydi döngüler kullanarak hazine avı yapalım!
         Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine
         yığınına ulaşmasına yardım et.

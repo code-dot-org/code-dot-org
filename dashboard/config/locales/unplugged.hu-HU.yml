@@ -472,3 +472,9 @@ hu:
         title: Bináris karkötők
         desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
           diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+      PaperPlanes_2019:
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
+        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
+          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
+          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
+          szerepet a számítástechnikában az algoritmusok.

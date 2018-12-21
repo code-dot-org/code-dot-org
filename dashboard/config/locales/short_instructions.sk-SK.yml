@@ -8,9 +8,11 @@ sk:
       2-3 Artist 11: |
         Daj značke "Stop" okraj tým,
         že vytvoríš pravidelný osemuholník so 100 pixelovými stranami.
-      2-3 Artist 12: "Na dokončenie oka vytvorte kruh\r\n\r\nKreslič sa jedným behom
-        posunie o 1 stupeň. Koľko krát sa musí opakovať beh kresliaceho kódu aby sa
-        nakreslil kruh? 180? 360? 500?"
+      2-3 Artist 12: |-
+        Nakresli kruh, aby si dokončil oko!
+
+        Ak sa umelec otočí o 1 stupeň v každom cykle, tak koľko krát musíš opakovať ten cyklus, aby si nakreslil kruh?
+        180? 360? 500?
       2-3 Artist 2 new: Tento dom ma polovične-dostavanú stenu. Každá strana je 100,
         ale polovične-dostavaná je iba 50. Dostavaj stenu.
       2-3 Artist 2: Tento dom ma polovične-dostavanú stenu. Každá strana je 100, ale
@@ -27,8 +29,8 @@ sk:
         dom s použitím len 3 blokov.
       2-3 Artist 6: 'Tento dom potrebuje strechu! Nakresli trojuholník. Pomôcka: všetky
         tri strany majú rovnakú dĺžku.'
-      2-3 Artist 7: 'Dokonči kreslenie poslednej sady okien na škole, aby všetci v
-        triede videli von. Strany okien majú dĺžku 25 pixelov. '
+      2-3 Artist 7: 'Dokresli poslednú sadu okien na škole, aby všetci v triede videli
+        von. Strany štvorcových okien majú dĺžku 25 pixelov. '
       2-3 Artist 8: Dokončite miestosti pre každé zo zvierat rozdelením obdĺžnika
         na 2 rovnako veľké štvorce. Obdĺžnik je 200 pixelov široký a 100 pixelov vysoký.
         Existujú rôzne riešenia tohto hlavolamu, takže sa kľudne zabavte!
@@ -56,6 +58,8 @@ sk:
 
         Opravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke.
       2-3 Artist Debugging 3: "Moja loď je deravá! \n\nČo potrebujete pre jej opravu?"
+      2-3 Artist Debugging 4: Aký obrázok sa snažíme nakresliť? Dokonči spájanie bodiek
+        použitím správnych čiar a uhlov.
       2-3 Artist Debugging 5: |-
         Kód, ktorý máme na nohu a chodidlo je zlý.
 
@@ -127,14 +131,27 @@ sk:
       2-3 Artist Functions 4 a: Teraz vložme funckiu dovnútra cyklu a pridajme ďalšiu
         otočku, aby sme nakreslili tieto tri štvorce.
       2-3 Artist Functions 4: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
+      2-3 Artist Functions 7: 'Použi funkciu "nakresli dom", aby si nakreslil dva
+        domy, s dvomi rôznymi parametrami. (Nápoveda: prvý dom má 100 pixelov).'
       2-3 Artist Functions 9: 'Voľná hra: Používame tu funkciu snehová vločka. Experimentuj
         s ňou a vytvor zimné scény! To to je voľná disciplína, takže žiadne hádanky
         tu neriešiš. Zabav sa!'
+      2-3 Artist Loops 10: Čo sa stane s kresbou, keď spravíme posledný krok dopredu
+        o polovicu kratší?
       2-3 Artist Loops 11: Teraz pridajme *ďalší* cyklus okolo celého nášho výtvoru!
         Nezabudni na konci každého vonkajšieho cyklu pridať uhol.
       2-3 Artist Loops 4: Chcete vedieť, čo sa stane keď keď budeme opakovať ten tvar
         dookola použitím cyklu?
+      2-3 Artist Loops 5: Teraz spravme malú zmenu v cykle a pozrime sa ako sa zmení
+        náš obrázok.
+      2-3 Artist Loops 6: Pridaj jeden pohyb a ďalšiu otočku do vnútra cyklu a pozri
+        sa ako sa zmení tvoja kresba.
+      2-3 Artist Loops 7: Môžeme používať cykly na kreslenie všetkých typov mnohouholníkov.
+        Dokážeš vytvoriť kosoštvorec vo vnútri tohto šesťuholníka?
       2-3 Artist Loops 8: Vložme obidva prvky do vnútra cyklu.
+      2-3 Artist Loops 9: |-
+        Použijeme v cykle rovnaké elementy, ale teraz medzi ne pridáme nejaké vzdialenosti.
+        Použi rovnaký kód ako predtým, ale pridaj krok dopredu na koniec vonkajšieho cyklu.
       2-3 Artist Loops New 1: Poďme nakresliť hlavu tohto robota! Viete spraviť štvorec
         so stranou dlhou 100 pixelov?
       2-3 Artist Loops New 10: A teraz spojme niekoľko Véčiek spolu do cyklu.
@@ -307,6 +324,9 @@ sk:
         iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie
         všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená
         podmienka, v tomto prípade \"nektár > 0\"."
+      2-3 Bee Loops 9: Cyklus s podmienkou "pokiaľ" dokáže spraviť to isté ako podmienka
+        "ak" v cykle. Pridaj cyklus s podmienkou "pokiaľ" do tohto programu, aby si
+        spravil tú istú úlohu.
       2-3 Bee Loops Assessment 1: 'Hodnotenie: Použi cyklus "pokiaľ", aby si pozbieral
         všetok nektár z týchto kvetín.'
       2-3 Maze 1: 'Viete mi pomôcť chytiť nezbedné prasiatko? Navrstvite niekoľko
@@ -314,6 +334,10 @@ sk:
       2-3 Maze 10: Naviguj ma k zelenému zlu! (Pozor na TNT)
       2-3 Maze 11: Dostaňte ma ku kvetinke, som hladný. Koľkokrát musíte zopakovať
         blok?
+      2-3 Maze 12 (copy 1): 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda:
+        Vytvor cyklus s použitím bloku "opakuj x krát")'
+      2-3 Maze 12 (copy 2): 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda:
+        Vytvor cyklus s použitím bloku "opakuj x krát")'
       2-3 Maze 12 (old): Dostaňte ma k prasiatku, tentokrát s blokom Zopakovať toľkotokrát!
       2-3 Maze 12 - One Move Block: Dostaňte sa k prasiatku! Tentokrát však môžete
         použiť iba jeden blok "posunúť dopredu". Vidíte nejaké iné bloky, ktoré by
@@ -334,8 +358,11 @@ sk:
       2-3 Maze 16: Cykly fungujú dokonca aj s viac ako jedným vsunutým blokom. Vieš
         zopakovať tento postup tak, aby sa zombie dostal k slnečnici?
       2-3 Maze 2: Toto prasiatko mi nedá spať. Pomôž mi dostať sa k nemu!
+      2-3 Maze 3: Nájdi cestu a priveď ma k tomu hlúpemu prasiatku. Vyhni sa TNT,
+        inak bude lietať perie!
       2-3 Maze 4: Naviguj ma k zelenému zlu! (Pozor na TNT)
       2-3 Maze 5: Naviguj ma k zelenému zlu! (Pozor na TNT)
+      2-3 Maze 6: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!
       2-3 Maze 7: Naviguj ma k zelenému zlu! (Pozor na TNT)
       2-3 Maze 8: Dostaň ma k prasiatku!
       2-3 Maze 9: Naviguj ma k zelenému zlu! (Pozor na TNT)
@@ -352,10 +379,23 @@ sk:
         blokov!
       2-3 Maze Loops Assessment 1: 'Hodnotenie: Dostaňte ma k slnečnici použitím len
         5 blokov! '
+      2-3 Maze sq1: Toto prasiatko mi nedá spať. Pomôž mi ho nájsť!
+      2-3 Maze sq10: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
+      2-3 Maze sq10v2: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
+      2-3 Maze sq2: Nájdi cestu a priveď ma k tomu hlúpemu prasiatku. Vyhni sa TNT,
+        inak bude lietať perie!
       2-3 Maze sq3: Naviguj ma k zelenému zlu! (Pozor na TNT)
+      2-3 Maze sq4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!
+      2-3 Maze sq5: Dostaň ma k tomu prasiatku! Koľko krát musíš opakovať blok?
+      2-3 Maze sq6: 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda:
+        Vytvor cyklus s použitím bloku "opakuj x krát")'
       2-3 Maze sq7: Dostaňte ma k zelenému votrelcovi použitím len troch blokov.
       2-3 Maze sq8: Dostaňte ma k prasiatku! (Kde je ten blok "zopakovať -krát" keď
         ho potrebujem?)
+      2-3 Maze sq9: Vytvor cykly, aby si sa dostal k prasiatku s použitím menej blokov.
+      2-3 maze sq11: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
+      2-3 maze sq12: Dokážeš nahradiť predošlé riešenie s cyklom použitím bloku "opakuj
+        x krát"?
       2-3 maze sq13: Dráhá osoba. Ja zombík. Musieť... dostať... k slnečnica. Vytvorte
         slučku s blokom "opakovať pokiaľ".
       2-3 maze sq14: Viete sa dostať k slnečnici použitím len štyroch blokov?
@@ -689,6 +729,14 @@ sk:
       CSP student contact info: Zadajte svoju e-mailovú adresu.
       Course 2 Bee Loops 1: 'Ahoj, ja som včielka. Pomôžeš mi pozbierať nektár z týchto
         kvetov? '
+      Course 2 Bee Loops 13: 'Hodnotenie: Použi blok opakuj, aby si pozbieral všetok
+        nektár.'
+      Course 2 Bee Loops 2: Dokážeš spraviť tú istú úlohu ľahšie s použitím cyklu?
+      Course 2 Bee Loops 3: Teraz použi nový blok opakuj, aby si pozbieral všetok
+        nektár a vyrobil všetok med.
+      Course 2 Bee Loops 3_: Dokážeš použiť cyklus, aby si pozbieral všetok nektár?
+      Course 2 Bee Loops 4: Čo sa stane, ak zopakuješ túto postupnosť príkazov 3 krát?
+        Na konci nezabudni vyrobiť med!
       Course 2 Maze Loops 1: Viete ma dostať k prasiatku použitím 5 blokov?
       Course 4 Artist 1: 'Pomôžte mi nakresliť krabicu (každá čiara je 200 pixelov
         dlhá) '
@@ -756,6 +804,8 @@ sk:
       Course 4 SCV 4: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       Course 4 SCV 5: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       Course 4 SCV 6: Kliknite sem pre opakované zobrazenie pokynov.
+      Course E MC Conditionals1: Najcennejšie zdroje nájdeš v podzemí, ale môže sa
+        tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Course1BeePuzzle12: Zoberte tri nektáre a potom spravte dva medy
       CourseF_PlayLab_vars1: 'Pre hranie tejto hry nemusíte napísať žiaden kód, stači
         kliknúť na "Spustiť"! '
@@ -768,20 +818,20 @@ sk:
       Dance Party 1-validated_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 1-validated_simple: 'Čo si myslíte, že sa stane, keď kliknete na
         mimozemšťana?  '
-      Dance Party 2: Zmeň správanie v bloku `___ začne ___` aby sa mimiozemšťan začal
-        točiť dokola.
-      Dance Party 2_2019: Zmeň správanie v bloku `___ začne ___` aby sa mimiozemšťan
+      Dance Party 2: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan
         začal točiť dokola.
-      Dance Party 2_simple: Zmeň správanie v bloku `___ začne ___` aby sa mimiozemšťan
+      Dance Party 2_2019: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan
         začal točiť dokola.
-      Dance Party 3 - Validated: 'Vytvor novú postavičku s menom `alien2`, potom ho
-        donúť zmeniť tanečný krok, keď na neho klikneš.  '
+      Dance Party 2_simple: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan
+        začal točiť dokola.
+      Dance Party 3 - Validated: 'Vytvor novú postavičku s menom `alien2` a potom
+        mu prikáž zmeniť tanečný krok, keď na neho klikneš.  '
       Dance Party 3 Ram: Prikáž postavičke robiť niečo iné, keď stlačíš šípku hore.
-      Dance Party 3: 'Vytvor novú postavičku s menom `alien2`, potom ho donúť zmeniť
+      Dance Party 3: 'Vytvor novú postavičku s menom `alien2` a potom mu prikáž zmeniť
         tanečný krok, keď na neho klikneš.  '
-      Dance Party 3_2019: 'Vytvor novú postavičku s menom `alien2`, potom ho donúť
+      Dance Party 3_2019: 'Vytvor novú postavičku s menom `alien2` a potom mu prikáž
         zmeniť tanečný krok, keď na neho klikneš.  '
-      Dance Party 3_simple: 'Vytvor novú postavičku s menom `alien2`, potom ho donúť
+      Dance Party 3_simple: 'Vytvor novú postavičku s menom `alien2` a potom mu prikáž
         zmeniť tanečný krok, keď na neho klikneš.  '
       Dance Party 4 Validated: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni
         všetkých svojich mimozemšťanov do jednej línie. '
@@ -832,7 +882,7 @@ sk:
       Dance_Party_06: Vytvor záložného tanečníka s menom 'backup_dancer1', ktorý bude
         tancovať s mačkou.
       Dance_Party_08: Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
-      Dance_Party_09: Použi blok Use the `nastav sfarbeni` na zmenu farby tanečníka.
+      Dance_Party_09: Použi blok `nastav sfarbenie` na zmenu farby tanečníka.
       Dance_Party_10: Prikáž aj ďalšiemu tanečníkovi reagovať na hudbu použitím bloku
         `začne nasledovať`.
       Dance_Party_11.5_test: Použi blok "všetky kačice" na to, aby začali kačice tancovať
@@ -846,7 +896,7 @@ sk:
         a "tlesk" na stlačenie šípky hore. Striedaj špagát-tlesk ako najrýchlejšie
         vieš!
       Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
-        zdielať s kamarátmi.
+        zdieľať s kamarátmi.
       Dance_Party_extras_battle: Tanečné skupiny (klikni na "Viac" pre detail)
       Dance_Party_extras_every_beat: Štvrťové noty (klikni na "Viac" pre detail)
       Dance_Party_extras_layout: Všetci do formácie! (klikni "Viac" pre detail)
@@ -1193,6 +1243,8 @@ sk:
         3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov spraví dodatočný
         štvrťkruh pre rohy?"
       beeDebugVideo1: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
+      birdsDebugVideo1: Nájdi cestu a priveď ma k tomu hlúpemu prasiatku. Vyhni sa
+        TNT, inak bude lietať perie!
       bounce_12_basketball: Vytvor si svoju vlastnú basketbalovú hru. Môžeš zmeniť
         pravidlá. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať
         kamaráti na svojich telefónoch.

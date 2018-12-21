@@ -1898,10 +1898,26 @@ bs:
           stages:
             Artist:
               name: Umjetnik
+        dance:
+          stages:
+            Dance Party:
+              name: Plesna zabava
+          title: Plesna zabava
         frozen-2018-test-b:
           stages:
             Artist:
               name: Umjetnik
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Plesna zabava
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Plesna zabava
+        dance-extras:
+          title: Nastavite plesati
+          description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1914,6 +1930,10 @@ bs:
               name: Predstavite Vaš projekat
             The Artist:
               name: Umjetnik
+        dance-low:
+          stages:
+            Dance Party:
+              name: Plesna zabava
         coursed-2019:
           stages:
             Relay Programming:
@@ -1965,3 +1985,18 @@ bs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'ništa'
+        dance-extras-gallery:
+          title: Nastavite plesati
+          description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada Temelja
+            'Real-life Algorithms: Paper Planes':
+              name: 'Stvarni algoritmi: Papirni Planovi'
+            Binary Bracelets:
+              name: Binarne narukvice
