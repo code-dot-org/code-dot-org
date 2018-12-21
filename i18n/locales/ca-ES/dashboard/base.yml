@@ -182,11 +182,11 @@ ca:
     subject: 'Uneix-te a la meva classe (a Code.org)'
     body: |
       Clica el següent enllaç per inscriure't als tutorials d'informàtica de Code.org (amb mi com el teu "professor"):
-      
+
       %{link}
-      
+
       Els tutorials són divertits, visualment atractius, i ensenyen els conceptes bàsics de la informàtica utilitzant una senzilla i guiada experiència a l'estil videojoc. Aprèn a programar de Bill Gates, Mark Zuckerberg, Angry Birds, i Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:

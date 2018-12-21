@@ -1741,3 +1741,18 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nichts'
+        dance-extras-gallery:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Alltagsalgorithmen: Papierflieger'
+            Binary Bracelets:
+              name: Binäre Armbänder

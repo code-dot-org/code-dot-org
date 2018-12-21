@@ -41,7 +41,11 @@ is:
       get 7 nectar make 7 honey: sækja 7 safa búa til 7 hunang
       get 7 make 7: sækja 7 búa til 7
       get 7: sækja 7
+      move and get 3: færa og sækja 3
       draw a tree: teikna tré
+      draw triangle: teikna þríhyrning
+      draw circle: teikna hring
+      graph: graf
       draw a triangle: teikna þríhyrning
       draw a house: teikna hús
       draw a star: teikna stjörnu

@@ -2484,10 +2484,18 @@ ro:
           pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
           cealaltă va repeta comanda`culege dovleac`.
+      courseC_harvester_loops2_2019_authored_hint:
+        courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
+          pe hârtie și să căutați modele repetate.
+        courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
+          cealaltă va repeta comanda`culege dovleac`.
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
+          asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
+      courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
       courseC_harvester_loops5_authored_hint:
@@ -2496,10 +2504,16 @@ ro:
       courseC_harvester_loops5_2018_authored_hint:
         courseC_harvester_loops5_a: Dacă vă împotmoliți, încercați să desenați întregul
           program și apoi să căutați modele repetate.
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: Dacă vă împotmoliți, încercați să desenați întregul
+          program și apoi să căutați modele repetate.
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
           de porumb.
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
+          de porumb.
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_b: Nu uitați să întoarceți la sfârșitul rândului
           de porumb.
       courseC_harvester_loops_challenge1_authored_hint:
@@ -2589,10 +2603,41 @@ ro:
           </block>
           </statement>
           </block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_b: Puteți repeta comenzile "mută înainte"
+          și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
+          la fiecare colț.
+        courseC_harvester_loops_challenge1_c: |-
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">mutăÎnainte</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">întoarceLaDreapta</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
+          porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi întoarceți la fiecare colț.
       courseC_maze_loops2_authored_hint:

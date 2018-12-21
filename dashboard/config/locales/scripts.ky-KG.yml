@@ -1210,3 +1210,13 @@ ky:
               name: Сүрөтчүдөгү for циклдары
             Artist Binary:
               name: Сүрөтчү бинардык система
+        andrea-test:
+          stages:
+            'null':
+              name: нөл
+        coursec-2019:
+          stages:
+            Programming in Artist:
+              name: Сүрөтчүдөгү програмдоо
+            Loops in Artist:
+              name: Сүрөтчүдөгү циклдар

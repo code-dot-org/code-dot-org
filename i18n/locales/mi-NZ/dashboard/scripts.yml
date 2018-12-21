@@ -1289,3 +1289,15 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+        andrea-test:
+          stages:
+            'null':
+              name: 'korenga'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Te Hanga Tūāpapa
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hātepe Motuhenga: Waka Rererangi Pepa'
+            Binary Bracelets:
+              name: Kōmore Ā-Rua

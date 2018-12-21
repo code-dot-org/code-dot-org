@@ -407,7 +407,7 @@ pt:
       4-5 Nested Loops 3: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       4-5 Nested Loops 7: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
@@ -457,7 +457,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -542,7 +542,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -664,6 +664,7 @@ pt:
       Course 4 Play Labs For Loops 7: "Você poderia usar um laço \"para\" para me\najudar a falar a sequência 1, 4, 7, 10, 13, 16, 19, 22, 25?"
       Course 4 Play Labs For Loops 8: "Qual laço me faria falar\n19, 27, 35, 43, 51?"
       Course 4 Variables Assessment: "Você consegue criar essa imagem usando\numa variável para os lados? Cada linha deve ter 50 pixels de comprimento."
+      Course E MC Conditionals1: Vais encontrar os recursos mais valiosos no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo menos 2 carvões.
       CourseF_PlayLab_vars10: "Hora da atividade livre! Aqui estão todas as\nvariáveis que usamos até agora e também algumas a mais, caso você as\nqueira. Crie um jogo ou uma história que usa essas variáveis. Dica: role para baixo para\nver todos os comandos da área de trabalho."
       CourseF_PlayLab_vars2: "Essa corrida não foi muito justa! Altere\na variável \"velocidade_cão\" para garantir que você possa coletar mais bandeiras do que o\ngato. O primeiro a coletar 10 bandeiras vence!"
       CourseF_PlayLab_vars3: "Temos aqui um novo tipo de jogo! Use as\nsetas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se você\nconsegue coletar todas as bandeiras."
@@ -1318,7 +1319,7 @@ pt:
       grade4_arist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
@@ -1334,7 +1335,7 @@ pt:
       grade4_artist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_artist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_squares1: "Clique em \"editar\" para preencher a definição\nda função \"desenhe um quadrado\" e adicionar um parâmetro. Ela deve receber um parâmetro\ncomprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75\npixels de comprimento e separados por 100 pixels cada."
       grade4_artist_parameters_triangles2: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
@@ -1436,7 +1437,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.

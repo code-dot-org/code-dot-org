@@ -2073,10 +2073,16 @@ es-MX:
       courseC_PlayLab_events7_2018: "El botón `repetir siempre` te permite ejecutar
         el código una y otra vez por siempre.  Usa este bloque para mover a Chomp
         el Dino (actor 2) hacia arriba y hacia abajo por 400 pixeles por siempre.\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
+      courseC_PlayLab_events7_2019: "El botón `repetir siempre` te permite ejecutar
+        el código una y otra vez por siempre.  Usa este bloque para mover a Chomp
+        el Dino (actor 2) hacia arriba y hacia abajo por 400 pixeles por siempre.\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
       courseC_PlayLab_events8: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
         estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events8_2018: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
+        y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
+        estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
         estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events_challenge1: "Usa un nuevo bloque para hacer que Waddles
@@ -2086,6 +2092,12 @@ es-MX:
         Waddles se debe mover al la posición 'centro a la izquierda` de la pantalla
         para completar este desafío."
       courseC_PlayLab_events_challenge1_2018: "Usa un nuevo bloque para hacer que
+        Waddles se mueva automáticamente hacia atrás al comienzo cuando corra hacia
+        el Dinosaurio y cuando anote un punto. ¡Esto hará tu juego más desafiante
+        y divertido!\r\n\r\nJuega el juego y mueve a Waddles con las flechas hasta
+        que anotes suficientes puntos. Waddles se debe mover al la posición 'centro
+        a la izquierda` de la pantalla para completar este desafío."
+      courseC_PlayLab_events_challenge1_2019: "Usa un nuevo bloque para hacer que
         Waddles se mueva automáticamente hacia atrás al comienzo cuando corra hacia
         el Dinosaurio y cuando anote un punto. ¡Esto hará tu juego más desafiante
         y divertido!\r\n\r\nJuega el juego y mueve a Waddles con las flechas hasta
@@ -2526,38 +2538,56 @@ es-MX:
         \ \r\n\r\nUsa los bucles para recolectar las cuatro calabazas."
       courseC_harvester_loops10: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops10_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops10_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops11_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops1_2018: "Los bucles se puede usar para repetir más que
+        movimientos.  \r\n\r\nUsa los bucles para recolectar las cuatro calabazas."
+      courseC_harvester_loops1_2019: "Los bucles se puede usar para repetir más que
         movimientos.  \r\n\r\nUsa los bucles para recolectar las cuatro calabazas."
       courseC_harvester_loops2: "¿Puedes combinar dos bucles diferentes para moverte
         hacia las calabazas, luego recogerlas todas?"
       courseC_harvester_loops2_2018: "¿Puedes combinar dos bucles diferentes para
         moverte hacia las calabazas, luego recogerlas todas?"
+      courseC_harvester_loops2_2019: "¿Puedes combinar dos bucles diferentes para
+        moverte hacia las calabazas, luego recogerlas todas?"
       courseC_harvester_loops3: Recoge todas las calabazas.
       courseC_harvester_loops3_2018: Recoge todas las calabazas.
+      courseC_harvester_loops3_2019: Recoge todas las calabazas.
       courseC_harvester_loops4: "¡Ahora también hay maiz creciendo!\r\n\r\nRecoge
         todo el maíz y las calabazas."
       courseC_harvester_loops4_2018: "¡Ahora también hay maiz creciendo!\r\n\r\nRecoge
         todo el maíz y las calabazas."
+      courseC_harvester_loops4_2019: "¡Ahora también hay maiz creciendo!\r\n\r\nRecoge
+        todo el maíz y las calabazas."
       courseC_harvester_loops5: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops5_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops5_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops6: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops6_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops6_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops7: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops7_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops7_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops8: "**Desafío:** Recoge todo el maíz y todas las calabazas.\r\n\r\nPuedes
         completar este desafío de la forma que quieras, ¡pero te tomará ya sea o mucho
         trabajo o te dará mucho que pensar!"
       courseC_harvester_loops8_2018: "**Desafío:** Recoge todo el maíz y todas las
         calabazas.\r\n\r\nPuedes completar este desafío de la forma que quieras, ¡pero
         te tomará ya sea o mucho trabajo o te dará mucho que pensar!"
+      courseC_harvester_loops8_2019: "**Desafío:** Recoge todo el maíz y todas las
+        calabazas.\r\n\r\nPuedes completar este desafío de la forma que quieras, ¡pero
+        te tomará ya sea o mucho trabajo o te dará mucho que pensar!"
       courseC_harvester_loops9: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2018: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops9_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops_challenge1: Recoge todo el maíz.
       courseC_harvester_loops_challenge2: Recoge toda la lechuga. ¡Evita los áboles
         y los campos!
       courseC_harvester_loops_challenge2_2018: Recoge toda la lechuga. ¡Evita los
+        áboles y los campos!
+      courseC_harvester_loops_challenge2_2019: Recoge toda la lechuga. ¡Evita los
         áboles y los campos!
       courseC_harvester_loops_forVid: Recoge todo el maíz y todas las calabazas.
       courseC_maze_debugging1: "¡Este código no está del todo correcto!  \r\n\r\nArregla
@@ -3952,6 +3982,8 @@ es-MX:
         para ayudar a Scrat a alcanzarla?
       courseD_iceage_loops9_2019: La bellota está muy lejos! ¿Puedes utilizar los
         bucles para ayudar a Scrat a alcanzarla?
+      courseD_maze_intro5a_2019: Pon atención a la secuencia y ve si puedes descifrar
+        ¡cómo llegar a ese cerdo!
       courseD_maze_loops_challenge1: Vamos a cazar un tesoro - ¡usando bucles! Ayuda
         al coleccionista a alcanzar al menos dos pilas del tesoro usando sólo los
         bloques en tu caja de herramientas.

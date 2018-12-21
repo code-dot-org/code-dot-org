@@ -76,7 +76,7 @@ sq:
         Ne do të ciklojmë elementet e njëjtë, por
          tani ne do të shtojmë distancë midis tyre.\r
         Përdor të njëjtin kod si më përpara, por shto një hap përpara në fund të ciklit të jashtëm.
-        
+
       2-3 Artist Loops New 1: Le të vizatojmë kokën e robotit! A mund të bësh një katror me brinjë që janë 100 piksela?
       2-3 Artist Loops New 10: "Tani le të bashkojmë një grup me V së bashku,\nduke i vizatuar ato në një cikël."
       2-3 Artist Loops New 11: "Këtë herë le të vizatojmë atë 24 herë. Shto\nnjë kthehu majtas me 30 gradë tek ky kod dhe vendose atë të gjithin në një bllok përsëritës."
@@ -416,7 +416,7 @@ sq:
       4-5 Nested Loops 2: 'Lidhe këtë cikël me një tjetër për të vizatuar 10 trekëndësha. Ky quhet cikël i mbivendosur. Kujdes: Të gjithë 10 trekëndëshat plotësojnë një rrotullim prej 360 gradësh.  '
       4-5 Nested Loops 3: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       4-5 Nested Loops 5: Ciklo kodin e dhënë për të krijuar një mulli ere.
       4-5 Nested Loops 6: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       4-5 Nested Loops 7: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
@@ -784,7 +784,7 @@ sq:
         "rritja" të shtohet me 2 për secilën herë klikoni Magjistarin?\r
         \r
         Hapni sytë! Magjistari lëviz shpejt!
-        
+
       Course 4 Play Labs For Loops 7: Mund të përdorësh një cikël for për të më ndihmuar për të thënë sekuencën 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 7a: "Tani diçka po bëhet! Po\nsikur të fillojmë të numërojmë sa herë mund të klikojmë\nMagjistarin përpara se qeni të arrijë në 30?\\r\n\\r\nMbaro së shtuari blloqe tek Magjistari në mënyrë që\nsa herë të klikojë variablën \" e klikuar\" ajo rritet me një. Mund të\nanashkalosh \"rritjen\" për momentin.\\r\n\\r\nQeni do të fillojë të numërojë kur të shtypësh \"Nisu\".\n"
       Course 4 Play Labs For Loops 8: "Cili cikël for-i do më bëj të them 19, 27, 35, 43, 51?"
@@ -829,6 +829,7 @@ sq:
       Course 4 SCV 5: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       Course 4 SCV 6: Kliko këtu për të parë përsëri udhëzimet.
       Course 4 Variables Assessment: Mund të krijosh këtë imazh duke përdorur një variabël për brinjët? Çdo vizë duhet të jetë 50 piksela i gjatë.
+      Course E MC Conditionals1: Ju do të gjeni burimet më të vlefshme nëntokësore, por aty mund të bëhet errësirë. Vendosni të paktën 2 pishtarë dhe mino të paktën 2 thëngji.
       CourseF_PlayLab_vars10: "Koha për lojën e lirë! Këtu kemi të gjitha variablat që kemi luajtur deri në këtë fazë, si dhe disa të tjera\nnëse ju nevojiten. \\r\n\\r\nShiko që tani ka shumë blloqe në kutin e veglave që duhen të organizohen! Këtu, ne kemi vendosur secilën pjesë në \nnjë kategori të caktuar. Kushtoj pak kohë eksplorimit të çdo gjëje që është në dispozicion.\nKur të kesh mbaruar duke shfletuar, bëj një lojë ose histori duke përdorur përsëritsit, variablat,\ndhe eventet. \\r\n\\r\nUdhëzim: shko posht për të parë të gjitha komandat në hapësirën e punës."
       CourseF_PlayLab_vars2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë! Ndrysho variablin \"shpejtesia_e_qenit\" që të sigurohesh që mund të mbledhesh\nmë shumë flamuj se sa Macja. I pari qe mbledh 10 flamuj fiton!"
       CourseF_PlayLab_vars3: "Këtu kemi një lojë të re. Përdor \nshigjetat majtas dhe djathtas për të levizur, dhe shigjetën lart për të kërcyer. Shiko nëse mund ti mbledhësh\ntë gjithë flamujt."
@@ -1057,7 +1058,7 @@ sq:
       NEW Course 4 Bee For Loops 6: Numri i fundit në ciklin tënd for quhet "rritësi". Sa herë cikli fillon, një variabël numërues ndryshon nga vlera e rritësit. Mundohu të mbledhësh këto lule duke përdorur një rritës 2.
       NEW Course 4 Bee For Loops 7: |-
         A po ia merr dorën "ciklit for"? Kjo është e ngjashme me formuesen e fundit, por duhet të marrësh 2,4,6,8,10 nektar.
-        
+
       NEW Course 4 Bee For Loops 8: "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\r\n"
       NEW Course 4 Bee For Loops 9: Nëse cikli yt po dobësohet, rritja bie nga variabla jote e kundërt për secilin cikël. Sa duhet te jetë rritja jote për të mbledhur 9, pastaj 6 dhe me pas 3 nektar?
       NEW Course 4 Bee For Loops 95: Hidhi një sy çdo pjese të "ciklit for"  që ti sapo ke krijuar. Mund ta gjesh se cilin numër duhet të dyfishosh për të zgjidhur këtë puzzle? Pse punon?
@@ -1233,6 +1234,7 @@ sq:
       courseA_maze_seq2_2018: Ndrysho kodin për të më çuar te derrkuci!
       courseC_PlayLab_events3: Mund të shkruani një program të bëj Jorge (aktorin 1) të lëvizi drejt Maces Olive?
       courseC_PlayLab_events3_2018: Mund të shkruani një program të bëj Jorge (aktorin 1) të lëvizi drejt Maces Olive?
+      courseC_PlayLab_events3_2019: Mund të shkruani një program të bëj Jorge (aktorin 1) të lëvizi drejt Maces Olive?
       courseC_artist_prog5: |-
         Kjo shtëpi ka nevojë për një çati! Vizato trekëndëshin. Ndihmë:
         të treja brinjët janë të së njëjtës gjatësi.
@@ -1480,7 +1482,7 @@ sq:
       grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
       grade4_arist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_functions1: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela më e shkurtër sesa gjatësia e katrorit."
       grade4_artist_functions2: "Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi\nlëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur \"vizato një katror\".\nA mund ta përdorësh funksionin \"vizato një katror\" për të krijuar xhamat? Katrorët\njanë 75 piksela të veçuar."
@@ -1502,7 +1504,7 @@ sq:
       grade4_artist_nested_loop_triangles1: "Plotëso kodin për të vizatuar këta\ntrekëndësh. I pari është bërë për ty. Ndihmë: 3 trekëndëshi në një rrotullim\n360 gradë."
       grade4_artist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_artist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_parameters_squares1: 'Kliko "modifiko" për të plotësuar në përkufizimin e funksionit "vizato një katror" dhe shto një parametër. Duhet të marri një parametër për gjatësinë, ashtu si trekëndëshi. Këtë rradhë, vizato 3 katrorë: me gjatësi 25, 50 dhe 70 piksela, secili 100 piksela larg tjetrit.'
       grade4_artist_parameters_triangles2: A vure re diçka ndryshe te keto blloqe funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.

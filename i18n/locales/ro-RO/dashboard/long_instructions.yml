@@ -126,7 +126,7 @@ ro:
       4-5 Nested Loops 12: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       4-5 Nested Loops 3: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       4-5 Nested Loops 5: Buclează codul dat pentru a crea o moară de vânt.
       4-5 Nested Loops 6: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
       4-5 Nested Loops 7: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
@@ -262,14 +262,14 @@ ro:
       grade4_arist_nested_loop_triangles4: Desenează dinţii în gura aligatorului!
       grade4_arist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_arist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_functions2: "Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită \"desenează un pătrat\". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele."
       grade4_artist_nested_loop_flags1: Buclează codul dat pentru a crea o moară de vânt.
       grade4_artist_nested_loop_polygons1: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
       grade4_artist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_artist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_parameters_triangles2: "Observi ceva diferit \nla aceste blocuri de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
       grade4_bee_conditionals_quantum2: "Albina vrea acum doar nectar. Ia aminte, nu toate obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul doar din flori."

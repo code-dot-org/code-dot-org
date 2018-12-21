@@ -161,11 +161,11 @@ sv:
     subject: 'Gå med i min klass (på Code.org)'
     body: |
       Klicka på länken nedan för att registrera dig för datavetenskapskurser på Code.org (med mig som din "lärare"):
-      
+
       %{link}
-      
+
       Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
-      
+
       %{name}
   section:
     your_section:

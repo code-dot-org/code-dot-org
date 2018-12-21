@@ -3041,3 +3041,20 @@ pt-BR:
           stages:
             Processing:
               name: Processando
+        andrea-test:
+          stages:
+            'null':
+              name: 'nulo'
+        dance-extras-gallery:
+          title: Continue dançando
+          description: Vá além da primeira hora com ideias de projeto estendido.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Criando uma base
+            Programming in Maze:
+              name: Programação no labirinto
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da vida real: aviões de papel'
+            Binary Bracelets:
+              name: Pulseiras binárias

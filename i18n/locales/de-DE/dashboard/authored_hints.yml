@@ -30,7 +30,7 @@ de:
         2-3_Artist_9_a: Diese Raute ist eigentlich nur ein um 45 Grad gedrehtes Quadrat.
         2-3_Artist_9_b: |-
           Vergiss nicht den Künstler um 45 Grad nach links zu drehen ehe du anfängst zu zeichnen!
-          
+
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_b: "**Die Versuch-und-Irrtum-Methode ist hier völlig Ok!**\nFang an, eine einzelne Zahl zu ändern.\nWelche Nummern machen was?\nWenn du dich zu sehr verirrst, drück einfach \"Neu starten\" und dein Code wird zurückgesetzt."
@@ -90,30 +90,30 @@ de:
       Dance short test 2_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
-          
+
           *Dieser Level endet nach 10 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance short test_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
-          
+
           *Dieser Level endet nach 10 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance_Party_01_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
-          
+
           *Dieser Level endet nach 4 Takten.*
         challenges: |-
           **Optionale Herausforderungen**
@@ -124,7 +124,7 @@ de:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
-          
+
           *Dieser Level endet nach 4 Takten.*
         challenges: |-
           **Optionale Herausforderungen**
@@ -135,61 +135,61 @@ de:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_03_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
-          
+
           *Dieser Level endet nach 12 Takten.*
       Dance_Party_04_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
-          
+
           *Dieser Level endet nach 10 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance_Party_06_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen mindestens zwei Tänzer haben.
-          
+
           *Dieser Level endet nach 6 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
           * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
       Dance_Party_08_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Zwei Tänzer benötigen eine andere Größe als 100.
-          
+
           *Dieser Level endet nach 6 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
       Dance_Party_09_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Ändern Sie den Farbton mindestens eines Tänzers.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_1_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
-          
+
           *Dieser Level endet nach 4 Takten.*
         challenges: |-
           **Optionale Herausforderungen**
@@ -199,92 +199,92 @@ de:
       Dance_Party_10_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Seien Sie einfach kreativ!
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_11_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Seien Sie einfach kreativ!
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Seien Sie einfach kreativ!
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_11b_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Verwenden Sie den Block "Wenn Pfeiltaste nach links gedrückt", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_2_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Dance_Party_3_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
-          
+
           *Dieser Level endet nach 12 Takten.*
       Dance_Party_4_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
-          
+
           *Dieser Level endet nach 10 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance_Party_5_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Bei Ihrem Tanz müssen Sie während der ersten 12 Takte des Songs verschiedene Bewegungen ausführen.
-          
+
           *Dieser Level endet nach 12 Takten.*
       Dance_Party_6_authored_hint:
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
           * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
       Dance_Party_8_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Zwei Tänzer benötigen eine andere Größe als 100.
-          
+
           *Dieser Level endet nach 6 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
       Dance_Party_9_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Ändern Sie den Farbton mindestens eines Tänzers.
-          
+
           *Dieser Level endet nach 8 Takten.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
@@ -298,7 +298,7 @@ de:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
-          
+
           *Dieser Level endet nach 4 Takten.*
         challenges: |-
           **Optionale Herausforderungen**
@@ -309,77 +309,77 @@ de:
         validation: |-
           **Wie schaffe ich diesen Level?**
           * Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
-          
+
           *Dieser Level endet nach 8 Takten.*
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
-          
+
           *Dieser Level endet nach 12 Takten.*
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Sie müssen irgendwann im siebten Takt des Songs den Hintergrundeffekt ändern.
-          
+
           *Dieser Level endet nach 10 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Bei Ihrem Tanz müssen Sie während der ersten 12 Takte des Songs verschiedene Bewegungen ausführen.
-          
+
           *Dieser Level endet nach 12 Takten.*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Fügen Sie einen dritten Tänzer hinzu (oder so viele Sie möchten!)
           * Lassen Sie alle Ihre Tänzer an verschiedenen Stellen in dem Song verschiedene Bewegungen ausführen.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Zwei Tänzer benötigen eine andere Größe als 100.
-          
+
           *Dieser Level endet nach 6 Takten.*
         challenges: |-
           **Optionale Herausforderung**
-          
+
           * Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Ändern Sie den Farbton mindestens eines Tänzers.
-          
+
           *Dieser Level endet nach 8 Takten.*
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Eigenschaften für zwei oder mehr Tänzer müssen geändert werden.
-          
+
           *Dieser Level endet nach 8 Takten.*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Seien Sie einfach kreativ!
-          
+
           *Dieser Level endet nach 8 Takten.*
       HOC Dance make group_authored_hint:
         validation: |-
           **Wie schaffe ich diesen Level?**
-          
+
           * Seien Sie einfach kreativ!
-          
+
           *Dieser Level endet nach 8 Takten.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können.
@@ -504,7 +504,7 @@ de:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -522,7 +522,7 @@ de:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -541,7 +541,7 @@ de:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -560,7 +560,7 @@ de:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -579,7 +579,7 @@ de:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -596,7 +596,7 @@ de:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -606,7 +606,7 @@ de:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -622,7 +622,7 @@ de:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -641,7 +641,7 @@ de:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -660,7 +660,7 @@ de:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -679,7 +679,7 @@ de:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>

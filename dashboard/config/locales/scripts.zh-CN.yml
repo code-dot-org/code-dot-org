@@ -9018,6 +9018,8 @@ zh-CN:
               name: 艺术家中的嵌套循环
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
+            Conditionals in Minecraft:
+              name: "《我的世界》中的条件"
         express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
@@ -9175,3 +9177,56 @@ zh-CN:
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成,
                 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成,
                 虽然也可以单独完成。
+        andrea-test:
+          stages:
+            new stage:
+              name: 新的阶段
+            'null':
+              name: 空
+            Deeper Learning Overview:
+              name: 更深的学习概览
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: 舞会 - 继续
+          title: 继续跳舞
+          description: 通过扩展项目创意，超越第一个小时。
+        coursec-2019:
+          description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+          description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+          description_audience: 年龄：6-10
+          stages:
+            Building a Foundation:
+              name: 打基础
+            Programming in Maze:
+              name: 迷宫编程
+            Debugging in Maze:
+              name: 迷宫里的调试
+            'Real-life Algorithms: Paper Planes':
+              name: '生活中的算法: 纸飞机'
+            Programming in Collector:
+              name: 在收集器中编程
+            Programming in Artist:
+              name: 艺术家里的编程
+            'Loops: Getting Loopy':
+              name: '循环: 变得糊涂'
+            Loops with Rey and BB-8:
+              name: 与雷伊和BB-8一起循环
+            Loops in Artist:
+              name: 艺术家里的循环
+            Loops in Harvester:
+              name: 收割者中的循环
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            Build a Flappy Game:
+              name: 创作像素鸟游戏
+            Screen Out the Mean:
+              name: 筛选出平均值
+            Events in Play Lab:
+              name: 游戏实验室中的事件
+            Looking Ahead:
+              name: 展望未来
+            Binary Bracelets:
+              name: 二进制的手镯
+        csp-mid-survey:
+          description_audience: 计算机科学原理学生

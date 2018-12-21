@@ -375,7 +375,7 @@ hu:
       4-5 Nested Loops 2: 'Most ágyazd be ezt a ciklust egy másik ciklus belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
       4-5 Nested Loops 3: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot készíts.
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba ágyazásával?
       4-5 Nested Loops 7: "Rajzold meg ezt az alakzatot tízszer. Hány fokot kell fordulnod minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)"
@@ -660,6 +660,7 @@ hu:
       Course 4 SCV 4: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 5: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 6: Kattints ide az utasítások újbóli megtekintéséhez.
+      Course E MC Conditionals1: A legértékesebb nyersanyagok a föld alatt vannak, de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két szenet.
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni őket.\\r\n\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket is. \\r\n\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
       CourseF_PlayLab_vars3: Használd a bal és jobb nyílbillentyűket a mozgáshoz, és a felfele nyilat az ugráshoz. Vajon össze tudod gyűjteni az összes zászlót?
@@ -1325,7 +1326,7 @@ hu:
       grade4_arist_nested_loop_triangles4: Rajzold meg az alligátor alsó fogsorát!
       grade4_arist_nested_loop_triangles5: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       grade4_arist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_functions1: "Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel rövidebb, mint a négyzet oldala."
       grade4_artist_functions2: "A függvények segítségével új blokkokat határozhatsz meg! A \"rajzoljon egy négyzetet\" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a \"rajzoljon egy négyzetet\" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól."
@@ -1341,7 +1342,7 @@ hu:
       grade4_artist_nested_loop_triangles1: 'Egészítsd ki a kódot úgy, hogy ezeket a háromszögeket rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög 360°-os körben van elforgatva.'
       grade4_artist_nested_loop_triangles5: |-
         Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r
-        
+
       grade4_artist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_parameters_squares1: 'Kattints a "szerkeszt" gombra, majd adj hozzá a "rajzolj egy négyzetet" függvényhez egy paramétert. Legyen egy hossz paramétere, mint a háromszögnek. Ezúttal három négyzetet rajzolj: 25, 50 és 75 képpont oldalhosszal, és egymástól 100 képpont távolságra.'
       grade4_artist_parameters_triangles2: Észreveszel valamilyen különbséget ezekben a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.

@@ -4124,3 +4124,56 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza Collettiva
+        andrea-test:
+          stages:
+            'null':
+              name: nullo
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Ballando col codice - Spingiti oltre
+          title: Continua a ballare
+          description: Vai oltre alla prima ora di programmazione creando progetti
+            più complessi.
+        coursec-2019:
+          description: Crea programmi con sequenze di istruzioni, cicli ed eventi.
+            Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
+            dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine
+            del corso, puoi creare e condividere un gioco interattivo o una storia
+            animata!
+          description_short: Impara le basi dell'informatica e dai vita a creazioni
+            artistiche, storie animate o giochi interattivi.
+          description_audience: Da 6 a 10 anni
+          stages:
+            Building a Foundation:
+              name: Costruire le Fondamenta
+            Programming in Maze:
+              name: Programmazione nel Labirinto
+            Debugging in Maze:
+              name: 'Labirinto: Correzione di Errori'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+            Programming in Collector:
+              name: Programmare la Collezionista
+            Programming in Artist:
+              name: Programmare l'Artista
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
+            Loops with Rey and BB-8:
+              name: Cicli con Rey e BB-8
+            Loops in Artist:
+              name: Cicli con l'Artista
+            Loops in Harvester:
+              name: Cicli con la Contadina
+            'Events: The Big Event':
+              name: Eventi
+            Build a Flappy Game:
+              name: Realizzare un gioco Flappy
+            Screen Out the Mean:
+              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+            Events in Play Lab:
+              name: 'Laboratorio: Eventi'
+            Looking Ahead:
+              name: Uno Sguardo Avanti
+            Binary Bracelets:
+              name: Braccialetti Binari

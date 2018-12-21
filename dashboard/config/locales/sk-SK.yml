@@ -25,7 +25,7 @@ sk:
         name: Zobrazované meno
         name_example: Zobraziť Meno<br/>(e.g. SuperKóder alebo Jana S.)
         email: E-mail
-        parent_email: Email rodiča/zákonného zástupcu
+        parent_email: Email rodiča alebo zákonného zástupcu
         personal_email: Súkromná emailová addresa <a href="%{url}">(kliknite sem,
           ak nemáte emailovú adresu)</a>
         username: Používateľské meno
@@ -62,7 +62,7 @@ sk:
       placeholder: Kód sekcie (ABCDEF)
       instructions: Zadaj prosím kód, ktorý si obdržal od tvojho učiteľa. Je to 6
         písmenový reťazec, niečo ako "ABCDEF".
-      instructions_short: Zadajte 6-miestny kód Vašej sekcie
+      instructions_short: Zadajte 6-miestný kód Vašej sekcie
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadaj sem svoj tip
@@ -90,7 +90,7 @@ sk:
   prize: trofej
   more_info: Viac info
   auth:
-    continue_with: Pokračuj s %{provider}
+    continue_with: Pokračujte s %{provider}
     sign_in_with: Prihlásiť sa cez %{provider}
     signed_in: Prihlásený!
     signed_out: Úspešne si sa odhlásil z <a href="%{url}">Code.org</a>.
@@ -110,16 +110,16 @@ sk:
     demigration_success: Nové skúsenosti s účtom sú teraz na tvojom účte zablokované.
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?
-    not_linked: Ľutujeme, Vaše Code.org konto nie je prepojené s Vašim %{provider}.
+    not_linked: Ľutujeme, Váš účet Code.org nie je prepojený s účtom %{provider}.
       Musíte sa prihlásiť zadaním hesla nižšie.
-    use_clever: Ľutujeme, Vaše Code.org konto nie je prepojené s Vašim %{provider}.
+    use_clever: Ľutujeme, Váš účet Code.org nie je prepojený s účtom %{provider}.
       Musíte sa prihlásiť cez Smart portál nižšie.
     unable_to_connect_provider: Nedokázali sme prepojiť Váš účet na Code.org s %{provider}.
       Skúste prosím znova.
-    already_in_use: Tvoj %{provider} účet je už prepojený s iným Code.org účtom.
-    already_linked: Tvoj %{provider} účet je už prelinkovný s tvojim Code.org účtom.
+    already_in_use: Váš účet %{provider} účet je už prepojený s iným Code.org účtom.
+    already_linked: Váš účet %{provider} je už prelinkovný s Vaším Code.org účtom.
   signup_form:
-    email_signup: Prihlás sa s tvojou mailovou adresou
+    email_signup: Prihlás sa so svojou emailovou adresou
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
     overview: Prihlás sa na účet, aby si mohol sledovať svoj pokroky alebo spravovať
@@ -156,8 +156,8 @@ sk:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    agree_tos_privacy: Súhlasím so <a href='http://code.org/tos'>Servisnými podmienkami</a>
-      a so <a href='http://code.org/privacy'>Zásadami ochrany osobných údajov</a>.
+    agree_tos_privacy: Súhlasím s <a href='http://code.org/tos'>podmienkami</a> a
+      so <a href='http://code.org/privacy'>Zásadami ochrany osobných údajov</a>.
     under_13_consent: Ak mám menej ako 13 rokov, potvrdzujem že mám súhlas rodiča
       alebo zákonného zástupcu pre použitie a návštevu stránky Code.org a služieb
       na nej obsiahnutých.
@@ -176,15 +176,15 @@ sk:
       údajov</a>.
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
       vášho prihlásenia/registrácie.
-    user_type_button: Aktualizovať typ účtu
+    user_type_button: Zmeniť typ účtu
     user_type_label: Typ účtu
     user_type_teacher: Učiteľ
     user_type_student: Študent
     field_is_required: sa vyžaduje
     accept_terms: Musíte súhlasiť s vytvorením účtu.
     error: Vyskytla sa chyba.
-    email_preference_question: Môžeme Vám zasielať emailom aktualizácie o našich školeniach,
-      možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (pravidelne
+    email_preference_question: Môžeme Vám zasielať emailom aktualizácie o lekciách,
+      možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne
       raz za mesiac)
     email_preference_privacy: "(Prezrite si naše zásady ochrany súkromia)"
     email_preference_yes: Áno
@@ -203,34 +203,34 @@ sk:
     state: Kraj
     district: Okres
     other_district_not_listed: Okres neuvedený vyššie
-    district_name: Názov školského okresu
+    district_name: Názov okresu
     school: Škola
     other_school_not_listed: Škola neuvedená vyššie
     school_name: Názov školy
     school_zip: PSČ
     school_address: Adresa
-    school_organization_name: Názov školy/organizácie
-    school_organization_zip: PSČ školy/organizácie
+    school_organization_name: Názov školy alebo organizácie
+    school_organization_zip: PSČ
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
     login: E-mail
-    login_username: Emailová adresa alebo užívateľské meno
+    login_username: E-mail alebo užívateľské meno
     password: Heslo
     remember: Zapamätať prihlásenie
     submit: Prihlásiť sa
   signin:
-    try_heading: Chcete skúsiť kódovanie bez prihlásenia?
+    try_heading: Chcete vyskúšať programovanie bez prihlásenia?
     try_hoc: Skúste najprv jednu Hodinu kódovania
     try_20hours: Skúste náš 20 hodinový Úvod do počítačových vied
   signinsection:
     welcome: Vitajte v %{section_name}
-    name: Vyberte vaše meno
-    picture: Teraz nájdite Váš tajný obrázok
+    name: Vyber tvoje meno
+    picture: Vyber tvoj tajný obrázok
     words: Teraz zadajte vaše tajné slová
     login: Prihlásiť sa
     invalid_login: Neplatné prihlasovacie meno, prosím, skús to ešte raz
     pair_programming: Mám partnera pri počítači
-    student_privacy: Zistite viac, prečo nevidíte Vaše plné meno <a href='%{student_privacy_blog}'
+    student_privacy: Zisti, prečo nevidíš tvoje plné meno <a href='%{student_privacy_blog}'
       target='_blank'>na tomto odkaze</a>.
   password:
     reset_form:
@@ -241,7 +241,7 @@ sk:
       submit: Odoslať
     reset_errors:
       captcha_required: Vyplňťe prosím CAPTCHA pre reset Vášho hesla.
-      invalid_email: Vyzerá to, že ste sa prihlásili s neplatnou emailovou adresou.
+      invalid_email: Vyzerá, že ste sa prihlásili s nesprávnou emailovou adresou.
         Napíšte prosím email na support@code.org pre zaslanie odkazu na vygenerovanie
         nového hesla.
     change_form:
@@ -263,7 +263,7 @@ sk:
     student_associated_subject: Prihlasovacie informácie na Code.org
   teacher_mailer:
     new_teacher_subject: Vitajte na Code.org!
-    delete_teacher_subject: 'Code.rog oznámenie: Tvoj účet bol vymazaný'
+    delete_teacher_subject: 'Správa z Code.org: Tvoj účet bol vymazaný'
   section:
     your_section:
       one: 'Vaša sekcia:'
@@ -294,7 +294,7 @@ sk:
       blank_code: Zadaj kód sekcie
       cant_join_own_section: Prepáč, nemôžeš sa pridať do vlastnej sekcie.
       provider_managed_section: Túto sekciu spravuje iný poskytovateľ a nie je možné
-        sa k nej pripojiť. Požiadaj prosím svojho učiteľa o pridanie pomocou %{provider}
+        sa k nej pripojiť. Požiadajte prosím Vášho školiteľa o pridanie pomocou %{provider}
         a opätovné synchronizovanie ich sekcie.
     mail:
       student_disassociated:
@@ -343,7 +343,7 @@ sk:
       sections: Sekcie
       help_support: Pomoc a podpora
       report_bug: Nahlásiť chybu
-      teacher_community: Komunita učiteľov
+      teacher_community: Komunita školiteľov
       professional_learning: Vzdelávanie pre profesionálov
       documentation: Dokumentácia
       tutorials: Návody
@@ -618,14 +618,14 @@ sk:
       Code.org!'
     announcement_apcsp_recruitment2: Tento rok očakávame, že AP skúška Základov informatiky
       prelomí rekordy. Účasť študentov na skúške môže dramaticky zlepšiť diverzitu
-      v AP Informatike, ale potrebujeme na to aj Vašu pomoc. Podporte každého študenta
+      v AP Informatike, ale potrebujeme na o aj Vašu pomoc. Podporte každého študenta
       informatiky pri absolvovaní AP skúšky Základov informatiky a my Vám <a href='%{gift_url}'
       target='_blank'>zašleme darček</a> (platí len pre vybrané krajiny). Študenti
       môžu takisto podporiť rovesníkov v celej krajine v našej <a href='%{challenge_url}'
       target='_blank'>#APCSP video výzve</a>.
     announcement_apcsp_recruitment3: Tento rok očakávame, že AP skúška Základov informatiky
       prelomí rekordy. Účasť študentov na skúške môže dramaticky zlepšiť diverzitu
-      v AP Informatike, ale potrebujeme na to aj Vašu pomoc. Podporte každého študenta
+      v AP Informatike, ale potrebujeme na o aj Vašu pomoc. Podporte každého študenta
       informatiky pri absolvovaní AP skúšky Základov informatiky a môžete vyhrať <a
       href='%{gift_url}' target='_blank'>darčekové karty, notebooky alebo iné super
       ceny</a> (platí len pre vybrané krajiny)! Zdieľajte <a href='%{video_url}' target='_blank'>toto
@@ -633,18 +633,18 @@ sk:
     announcement_csp_deadline: Posledná výzva pre stredoškolských učiteľov. Staňte
       sa lídrom v informatike na Vašej škole a zúčastnite sa našich vysoko kvalitných
       výučbových programov pre profesionálov <strong>zadarmo a bez nákladov pre Vás
-      či Vašu školu</strong>. Prihlásiť sa môžete do 14. apríla.
+      i Vašu školu</strong>. Prihlásiť sa môžete do 14. apríla.
     announcement_applab_export: App Lab, naše webové programovacie prostredie odteraz
       podporuje export tvojho kódu! Môžeš začať tvoriť aplikácie presúvanim JavaScriptových
       blokov, potom si vyexportovať tvoj kód a pokračovať v ktoromkoľvek profesionálnom
       vývojovom prostredí.
     announcement_csp_survey: "<b>Gratulujeme všetkým učiteľom Základov informatiky!</b><br
       />Vaši žiaci Základov informatiky zúčastňujúci sa AP skúšky v informatike sa
-      pridajú k ďaľším viac než 50 000 študentom v najväčšej AP skúške v histórii.
+      pridajú k ďaľším viac než 50 000 študentom v najväčšej AP skúške v histórií.
       Nechajme teraz znieť hlas Vašich študentov - pripomeňte im, aby na konci vyplnili
-      anketu! Buete si môcť prezrieť odpovede Vašich študentov a takisto Vám poskytneme
+      anketu! Nudete si môcť prezrieť odpovede Vašich študentov a takisto Vám poskytneme
       súhrnný report z Vašej krajiny."
-    announcement_navigation_redesign: "<b>Nadchdzajúce zmeny v navigácii na stránke</b><br
+    announcement_navigation_redesign: "<b>Nadchdzajúce zmeny v navigácií na stránke</b><br
       />Už toto leto vylepšíme navigáciu na Code.org, aby ste vždy mali prístup k
       Vašim najpoužívanejším položkám z akéhokoľvek miesta na tejto stránke. Hneď
       po prihlásení sa do Vášho konta školiteľa bude na každej stránke nová navigačná
@@ -663,7 +663,7 @@ sk:
       zapísaní v sekcii.
     already_enrolled_in_new_section: Nemôžete premiestniť týchto študentov, pretože
       už sú v novej sekcii.
-    third_party_login: Nemôžete presunúť študentov do sekcie, ktora je spojená s nástrojom
+    third_party_login: Nemôžete presunúť študentov do sekcie, ktorá je spojená s nástrojom
       tretej strany.
   share:
     title: Informácie o Code štúdiu
@@ -674,7 +674,7 @@ sk:
     male: Muž
     female: Žena
     non_binary: Nebinárne
-    not_listed: Uprednosťňovaný termín nie je v zozname
+    not_listed: Preferovaný termín nie je v zozname
     none: Preferujem neodpovedať
   user_type:
     student: Študent
@@ -686,8 +686,8 @@ sk:
       poradcovi vo vzdelávaní </a> za ich podporu pri vytváraní Code štúdia.
     help_from_html: Špeciálne by sme chceli poďakovať inžinierom z Amazonu, Googlu
       a Microsoftu, ktorí pomohli vytvoriť tieto materiály.
-    help_from_html_old: Inžinieri z firiem Amazon, Google a Microsoft pomohli vytvoriť
-      tieto materiály.
+    help_from_html_old: Tieto materiály pomohli vytvoriť inžinieri z firiem Amazon,
+      Google a Microsoft.
     art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené.
       < br / > Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva
       vyhradené. < br / > Frozen &#8482; © %{current_year} Disney. Všetky práva vyhradené.
@@ -727,7 +727,7 @@ sk:
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy
     teacher: Pozrite si riešenie
-    teacher_no_solution: Zrušiť zobrazovanie riešenia
+    teacher_no_solution: Skryť zobrazenie riešenia
     auth_error: Nemáte oprávnenie vidieť riešenie.
     submit: Aktualizovať umiestnenie Umelca
     direction: Štart smeru (v stupňoch)
@@ -737,8 +737,8 @@ sk:
     notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
-    show_notes: Zobraziť Poznámky
-    show_video: Zobraziť Video
+    show_notes: Zobraziť poznámky
+    show_video: Zobraziť video
   compatibility:
     upgrade:
       unsupported_message: Váš prehliadač internetu nepodporujeme. Prosím aktualizujte
@@ -859,7 +859,7 @@ sk:
     sports:
       body: Vytvor basketbalovú hru alebo pospájaj a pomiešaj viaceré športy.
     text-compression:
-      body: V tejto lekcii budú študenti používať nástroj Kompresia textu na kompresiu
+      body: V tejto lekcií budú študenti používať nástroj Kompresia textu na kompresiu
         textu pomocou nahradenia opakujúcich sa vzorov symbolmi.
     unplugged:
       title: Lekcie bez počítača
@@ -1134,7 +1134,7 @@ sk:
         abusive_url: URL adresa obsahu bude nahlásená
         abuse_type:
           question: Ako tento obsah porušuje %{link_start}Podmienky používania%{link_end}?
-          harassment: Hrozby, internetové týranie, obťažovanie
+          harassment: Hrozby, internetové šikanovanie, obťažovanie
           offensive: Nevhodný obsah
           infringement: Porušenie autorských práv
           other: Ostatné
@@ -1316,7 +1316,7 @@ sk:
         male: Muž
         female: Žena
         non_binary: Nebinárne
-        not_listed: Uprednosťňovaný termín nie je v zozname
+        not_listed: Preferovaný termín nie je v zozname
         none: Preferujem neodpovedať
       school_country:
         canada: Kanada
@@ -1414,7 +1414,7 @@ sk:
       amerických (USA)?
     message: Údaje z Vášho používania tejto stránky môžu byť zaslané a uložené alebo
       spracované v Spojených štátoch amerických (USA).
-    link_intro: Pre detaily si pozrite naše
+    link_intro: Pre ďalšie informácie si pozrite naše
     privacy_policy: zásady ochrany osobných údajov
     logout: Odhlásiť sa
     true: Áno

@@ -235,12 +235,30 @@ gl:
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -263,6 +281,11 @@ gl:
           CORNER:
             '"right"': dereita
             '"left"': esquerda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -271,7 +294,9 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -280,7 +305,9 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -306,6 +333,21 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      binary_move:
+        options:
+          DIR:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
       craft_ifPath:
         options:
           DIR:

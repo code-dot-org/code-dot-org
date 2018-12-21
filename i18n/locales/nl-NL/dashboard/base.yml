@@ -188,11 +188,11 @@ nl:
     subject: 'Doe mee met mijn klas (op Code.org)'
     body: |
       Klik op de link hieronder om je aan te melden voor informatica-opdrachten op Code.org (met mij als je "leraar"):
-      
+
       %{link}
-      
+
       De opdrachten zijn leuk, visueel boeiend, en leggen de basisbeginselen van de informatie uit in een eenvoudige, begeleide, speelse ervaring. Leer programmeren van Bill Gates, Mark Zuckerberg, Angry Bird en Planten tegen de Zombies :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Login informatie voor Code.org'

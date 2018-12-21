@@ -15,7 +15,7 @@ $(document).ready(function () {
       <Router basename={baseUrl}>
         <Route
           path="/"
-          component={props => <TeacherDashboard {...props} sectionId={sectionId}/>}
+          component={props => <TeacherDashboard {...props} sectionId={sectionId} studioUrlPrefix=""/>}
         />
       </Router>
     </div>

@@ -9,11 +9,16 @@ pt:
     errors:
       messages:
         blank: "é obrigatório"
+        blank_plural: "são obrigatórios"
+        invalid: "é inválido"
+        invalid_plural: "são obrigatórios"
     attributes:
       user:
         name: 'Nome a apresentar'
         name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: 'E-mail'
+        parent_email: 'Email dos Responsáveis'
+        personal_email: "Adereço de email pessoal <a href=\"%{url}\">(clique aqui, se não tiver um adereço de email)</a>"
         username: 'Nome de utilizador'
         password: 'Palavra-passe'
         password_confirmation: 'Confirmação da palavra-passe'
@@ -22,6 +27,9 @@ pt:
         age: 'Idade  '
         gender: 'Género'
         edit_header: 'Edita os detalhes da tua conta'
+        finish_sign_up_header: 'Terminar de criar a sua conta'
+        finish_sign_up_subheader: 'Preencher as seguintes informações para terminar de criar um contar no Code.org para <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Preencher as seguintes informações para terminar de criar um contar no Code.org com <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         error:
           future: não pode estar no futuro
   hello: "Olá mundo"
@@ -42,6 +50,7 @@ pt:
       label: 'Adiciona um professor:'
       placeholder: "Código (ABCDEF)"
       instructions: "Por favor, digita o código partilhado entre ti e o teu professor. O código tem 6 letras como, por exemplo, \"ABCDEF\"."
+      instructions_short: "Digite a sua secção de código de 6 letras"
     submit: 'Adicionar professor'
   add_hint_form:
     placeholder: 'Por favor, digite a sua pista aqui'
@@ -54,6 +63,7 @@ pt:
   courses: 'Cursos'
   courses_page:
     title_student: "Aprende no Code Studio"
+    title_teacher: "Ensinar Ciência de Computação"
   unplugged_activity: 'Atividade offline'
   of: "de"
   more: "MAIS"
@@ -68,6 +78,7 @@ pt:
   prize: 'prémio'
   more_info: 'Mais informações'
   auth:
+    continue_with: 'Continuar com %{provider}'
     sign_in_with: 'Iniciar sessão com o %{provider}'
     signed_in: 'Sessão iniciada!'
     signed_out: 'Acabaste de terminar sessão no <a href="%{url}">Code.org</a>.'
@@ -79,7 +90,9 @@ pt:
     facebook: 'Facebook'
     windowslive: 'Conta da Microsoft'
     microsoft_v2_auth: 'Conta da Microsoft'
+    powerschool: 'Powerschool'
     forgot_password: 'Esqueceste-te da palavra-passe?'
+    migration_success: 'Sucesso! Atualizou para a nossa nova experiência de conta.'
     need_confirmation: "Não recebeste as instruções de confirmação?"
     need_unlock: "Não recebeste as instruções de desbloqueio?"
   signup_form:
@@ -113,6 +126,7 @@ pt:
     user_type_student: "Aluno"
     field_is_required: "é obrigatório"
     accept_terms: "Você deve concordar em criar uma conta"
+    email_preference_privacy: "(Ver a nossa política de privacidade)"
     email_preference_yes: "Sim"
     email_preference_no: "Não"
   school_info:
@@ -165,11 +179,11 @@ pt:
     subject: 'Junte-se à minha turma (na Code.org)'
     body: |
       Clica na seguinte ligação para te inscreveres nos tutoriais de informática no Code.org (comigo como teu "professor"):
-      
+
       %{link}
-      
+
       Os tutoriais são divertidos, intuitivos e ensinam os conceitos básicos da informática de forma muito simples. É como se fossem jogos. Aprende a programar com Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     your_section:

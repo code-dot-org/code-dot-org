@@ -537,3 +537,9 @@ fr:
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
+      PaperPlanes_2019:
+        title: 'Algorithmes du monde réel: Avions en papier'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
+          Cette leçon se concentre également sur l'informatique en général et la façon
+          dont les algorithmes jouent un rôle essentiel.

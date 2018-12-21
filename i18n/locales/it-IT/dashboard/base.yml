@@ -207,11 +207,11 @@ it:
     subject: 'Unisciti alla mia classe (su Code.org)'
     body: |
       Clicca sul link qua sotto per iscriverti ai corsi di Informatica su Code.org (con me come il tuo "insegnante"): 
-      
+
       %{link}
-      
+
       I corsi sono divertenti e piacevoli, e insegnano i concetti base dell'informatica utilizzando un approccio semplice e basato sui giochi. Impara a programmare da Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-) 
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informazioni di login per Code.org'

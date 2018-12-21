@@ -112,6 +112,10 @@ ky:
         options:
           EFFECT:
             '"none"': Жок
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Жок
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ ky:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Жок
@@ -178,6 +186,7 @@ ky:
             '"right"': оңго
             '"space"': космос
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -274,21 +283,67 @@ ky:
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": солго
-            "{x: 300, y: 200}": оңго
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': баары
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Жок
       Mikelab_randomColor:
         text: кокус түс
       Mikelab_setBG:
@@ -306,6 +361,11 @@ ky:
           CORNER:
             '"right"': оңго
             '"left"': солго
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -353,6 +413,21 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      binary_move:
+        options:
+          DIR:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
       craft_ifPath:
         options:
           DIR:

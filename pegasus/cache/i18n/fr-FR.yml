@@ -302,6 +302,8 @@ fr-FR:
   just_did_accelerated: Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg
   just_did_hoc_donor: Je viens de finir l'#HourOfCode - venez-voir ! Merci %{donor_twitter}
     de soutenir @codeorg
+  just_did_course_donor: Regardez, je viens de finir %{course} ! Merci %{donor_twitter}
+    de soutenir @codeorg
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
@@ -543,6 +545,7 @@ fr-FR:
   minecraft_tutorials: Minecraft heure de Code tutoriels
   minecraft_specs: Beaucoup de langues | Les navigateurs modernes et comprimés | Grades
     2 +
+  minecraft_start_tutorial: Démarrer le tutoriel
   minecraft_agent_description: Minecraft est de retour pour l’Heure de code avec une
     toute nouvelle activité ! Exploration de Minecraft avec le code.
   minecraft_agent_button: Commencer
@@ -566,7 +569,20 @@ fr-FR:
     tutoriel, Le Voyage du Héros, fourni par l'équipe Minecraft. Démarrez par réfléchir
     sur ce que vous aurez besoin d'apporter à l'Heure du Code pour les jeunes durant
     la semaine de l'éducation de l'informatique (4 au 10 Décembre) et après.
+  minecraft_continue_learning_description: Aucune expérience en informatique préalable
+    requise ! Aidez chaque enfant à développer de précieuses compétences grâce à l'enseignement
+    informatique. Rejoignez-nous au Microsoft Store pour suivre un cursus de trois
+    ateliers d'une heure, durant lesquels vous apprendrez à coder dans un environement
+    plaisant et sans pression, vous familiariserez avec des concepts basiques d'informatique,
+    et vous préparerez à mener une Heure de Code avec vos eleves ou votre communauté.
+    Vous pouvez le faire ! <a href='%{minecraft_continue_learning_url}', target='_blank'>Inscrivez-vous
+    aujourd'hui</a>.
   minecraft_future: Aidez tous les jeunes à se préparer pour le futur
+  minecraft_future_description: Découvrez comment d'autres écoles et organismes à
+    but non-lucratif partagent leurs connaissances avec leurs communautés, de l’alphabétisation
+    informatique aux cours de sciences informatiques. Examinez les différentes options,
+    obtenez des trucs et astuces et <a href='%{minecraft_future_url}', target='_blank'>accédez
+    aux ressources</a> qu'ils ont trouvé les plus précieuses.
   minecraft_og_designer: Minecraft est de retour pour une nouvelle activité pour l'Heure
     de Code. Programmez des animaux et d'autres créatures dans votre version personnelle
     de Minecraft.
