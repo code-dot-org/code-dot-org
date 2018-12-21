@@ -188,7 +188,7 @@ module Api::V1::Pd
         application_data[notes_field] = application_data[notes_field].strip_utf8mb4 if application_data[notes_field]
       end
 
-      %w(question_1_support_teachers).each do |interview_field|
+      %w(question_1 question_2 question_3 question_4 question_5 question_6 question_7).each do |interview_field|
         application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
       end
 
@@ -205,6 +205,8 @@ module Api::V1::Pd
       end
 
       unless @application.update(application_data)
+        p "Hit 'unless' condition"
+        p @application.errors.full_messages
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
 

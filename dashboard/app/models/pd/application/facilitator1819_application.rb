@@ -50,10 +50,30 @@ module Pd::Application
       YEAR_18_19
     end
 
+    ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training"
+
     # Are we still accepting applications?
     APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
+    # @override
+    def self.options
+      super.merge(
+        {
+          csd_csp_teachercon_availability: [
+            'TeacherCon 1: June 17 - 22, 2018',
+            'TeacherCon 2: July 22 - 27, 2018',
+            TEXT_FIELDS[:not_available_for_teachercon]
+          ],
+          csd_csp_fit_availability: [
+            'June 23 - 24, 2018 (immediately following TeacherCon 1)',
+            'July 28 - 29, 2018 (immediately following TeacherCon 2)',
+            TEXT_FIELDS[:not_available_for_fit_weekend]
+          ],
+        }
+      )
     end
 
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
