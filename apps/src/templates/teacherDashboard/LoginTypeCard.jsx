@@ -12,10 +12,7 @@ const styles = {
     width: 312,
     // Uniform height, even in different rows
     height: 150,
-    paddingTop: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingBottom: 16,
+    padding: 16,
     marginBottom: 5,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -29,7 +26,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily:'"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal,
+    color: color.charcoal,
   },
   subtitle: {
     paddingBottom: 12,
@@ -37,7 +34,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily:'"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal,
+    color: color.charcoal,
   },
   description: {
     paddingTop: 10,
@@ -46,7 +43,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal
+    color: color.charcoal,
   },
 };
 
@@ -77,12 +74,24 @@ class LoginTypeCard extends Component {
 
     if (this.state.hover) {
       styles.card.borderColor = color.dark_charcoal;
+      styles.title.color = color.dark_charcoal;
+      styles.subtitle.color = color.dark_charcoal;
+      styles.description.color = color.dark_charcoal;
     } else {
       styles.card.borderColor = color.border_gray;
+      styles.title.color = color.charcoal;
+      styles.subtitle.color = color.charcoal;
+      styles.description.color = color.charcoal;
     }
 
     return (
-      <div style={styles.card} onClick={onClick} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} className={this.props.className}>
+      <div
+        style={styles.card}
+        onClick={onClick}
+        onMouseEnter={this.toggleHover}
+        onMouseLeave={this.toggleHover}
+        className={this.props.className}
+      >
         <div>
           <div style={styles.title}>
             {title}
