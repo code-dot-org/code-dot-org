@@ -557,6 +557,8 @@ pt-PT:
   volunteer_engineer_submission_field_email_desc: O seu endereço de e-mail nunca será
     partilhado, mas vamos enviar-lhe as solicitações dos professores.
   volunteer_engineer_submission_field_email_placeholder: Endereço de e-mail
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nossa política
+    de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: Sim
   volunteer_engineer_submission_field_email_preference_no: Não
   volunteer_engineer_submission_final_paragraph: Você será listado no mapa para professores

@@ -127,7 +127,7 @@ sk:
         repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil
           celý kruh
       Course 4 Artist 7_callout:
-        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej
+        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej
           ploche
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Presuňte do tohto bloku Vašu premennú počítadla
@@ -150,7 +150,7 @@ sk:
         create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite
           na tlačidlo "Vytvoriť funkciu".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej
+        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej
           ploche
       Course 4 Artist Vars 10_callout:
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre
@@ -702,10 +702,16 @@ sk:
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Použite tento blok, keď sa Waddles a Tamp
           dotknú!
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Použite tento blok, keď sa Waddles a Tamp
+          dotknú!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Tento blok Vám umožní presunúť hercov
           do rôznych častí hracieho poľa.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Tento blok Vám umožní presunúť hercov
+          do rôznych častí hracieho poľa.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Tento blok Vám umožní presunúť hercov
           do rôznych častí hracieho poľa.
       courseC_artist_loopsPrePre1a_callout:
@@ -739,6 +745,9 @@ sk:
         courseC_harvester_loops1_callout1: Čislo štyri na tekvici Vám hovorí, že na
           zozbieranie sú k dispozícií štyri tekvice.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Čislo štyri na tekvici Vám hovorí, že na
+          zozbieranie sú k dispozícií štyri tekvice.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Čislo štyri na tekvici Vám hovorí, že na
           zozbieranie sú k dispozícií štyri tekvice.
       courseC_maze_debugging5_callout:
@@ -871,6 +880,9 @@ sk:
       courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu"
           pre vyriešenie tejto úlohy.
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Toto je Váš počet blokov. Podľa toho viete, koľko
+          takýchto blokov ešte môžete použiť.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
           pre spustenie vášho programu.

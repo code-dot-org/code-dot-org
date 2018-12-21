@@ -1580,3 +1580,15 @@ fi:
               name: Internet
             Crowdsourcing:
               name: Joukkoistaminen
+        andrea-test:
+          stages:
+            'null':
+              name: 'ei mitään'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Rakennetaan perustus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Tosielämän algoritmit: paperilentokoneet'
+            Binary Bracelets:
+              name: Binäärikorut

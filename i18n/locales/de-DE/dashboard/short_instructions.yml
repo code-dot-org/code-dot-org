@@ -440,12 +440,12 @@ de:
       Course 4 Artist 1: 'Hilf mir, eine Box zu zeichnen. (Jede Linie ist 200 Pixel lang) '
       Course 4 Artist 10: |-
         Klicke hier, um die Hinweise noch mal zu sehen!
-        
+
         Hier ist der Code für eine interessante Form.  Was passiert, wenn du sie mehrmals wiederholst und zwischen jeder Wiederholung drehst?   Beachte, dass die Drehungen in dieser Form bis zu 420 Grad betragen, was bedeutet, dass sie zu dem Zeitpunkt, zu dem dein Künstler mit Zeichnen fertig ist, eine andere Richtung hat als zu dem Zeitpunkt, als du angefangen hast.  Diese neue Richtung ist genau 60 Grad rechts von dem Punkt, wo du angefangen hast.
       Course 4 Artist 11: Jetzt kommt eine Herausforderung!  Hier ist ein Design, das nur Blöcke benutzt, die dir bereits gezeigt wurden!  Schaffst du es, es ohne weitere Informationen wieder zu erstellen?  Habe keine Angst zu versuchen und dabei Fehler zu machen. Es wird nicht erwartet, dass es beim ersten Mal perfekt wird.  Möchtest du mehr Hinweise sehen?  Klicke hier!
       Course 4 Artist 12: |-
         Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
-        
+
         Ansonsten leg mit Deinem eigenen Design los!
       Course 4 Artist 13: Soll es noch weiter gehen?  Hier ist eine leere Fläche, die Du frei gestalten kannst!
       Course 4 Artist 2: Kannst du diesen Code in einer Schleife erstellen, um das grau ausgeblendete Quadrat zu zeichnen?
@@ -469,7 +469,7 @@ de:
       Course 4 Artist Binary Free Play 2: 'Freies Spiel: Hier ist eine leere Leinwand für dich zum Zeichnen.  Viel Spaß!'
       Course 4 Artist Binary Free Play 2a: |-
         Hier ist eine Leinwand mit einer höheren Auflösung um darauf zu zeichnen - 16 Pixel mal 16 Pixel!
-        
+
         Siehst du, was passiert, wenn wir anfangen mit den Bits kreativ zu werden?
       Course 4 Artist Binary Free Play 2b: Klicke hier um die Hinweise zu sehen.
       Course 4 Artist Binary Free Play: 'Freies Spiel: Zeichne mit binären Zeichenfolgen, was auch immer du möchtest!'
@@ -482,7 +482,7 @@ de:
       Course 4 Artist For Loops 11: 'Erinnerst du dich an eine frühere Phase, als wir eine Variable genutzt haben, um die Zahl von Seiten in einer Form zu kontrollieren? Wir machen nun dasselbe mit der „Zähler“-Variablen. Dieses Muster beginnt mit einem Dreieck und ergänzt jeweils eine Seite, bis es ein Zehneck zeichnet (10 Seiten). Jede Seite sollte 100 Pixel lang sein. Hinweis: 360 geteilt durch die Zahl von Seiten, die eine Form hat, ist die Gradzahl, um die du drehen musst.'
       Course 4 Artist For Loops 11a: |-
         Zähle alles zusammen!  Nutze dein Wissen über „Zähle mit“-Schleifen und den „Zähler“, schaffe diese Zeichnung, bei der jede Form zwei Seiten mehr als die vorige hat.  Stelle sicher, dass jede Seite zehnmal so lang ist wie die Anzahl der Seiten im Vieleck.
-        
+
         Dir wurde nur sehr wenig Code bereitgestellt.
       Course 4 Artist For Loops 12: 'Das sah ziemlich cool aus, aber jetzt möchte ich jede Form neben der letzten zeichnen. Jede Seite hat eine Länge von 20 Pixeln. Benutze einen Sprungblock, um nach jeder Figur 40 Pixel weiter zu springen. '
       Course 4 Artist For Loops 13: Hmm, die Figuren werden jedes Mal größer! Haben wir dieses Problem nicht schon mal mit Variablen gelöst? Wie können wir die Zähler-Variable dazu einsetzen, die Seiten kürzer zu machen, je mehr Seiten es gibt? Versuche (100 / Zähler) Pixel weiter zu springen, anstatt einen festen Abstand einzuhalten.
@@ -497,7 +497,7 @@ de:
       Course 4 Artist For Loops 7: Was geschieht wenn du „Wiederholen 3" aus diesem Algorithmus entfernst, aber die „Bewegen"- und „Drehen"- Blöcke in der Zähle-mit-Schleife beibehältst? In diesem spiralförmigen Dreieck ist jede Seite 20 Pixel länger als die vorhergehende.
       Course 4 Artist For Loops 8: |-
         Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
-        
+
         Hinweis:  Du musst etwas entfernen!
       Course 4 Artist For Loops 8a: Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
       Course 4 Artist For Loops 9: Kannst du eine Spirale erstellen? Bewege dich vorwärts von 1 bis 75 Pixeln und erhöhe dabei jedes mal um 1 Pixel.
@@ -508,7 +508,7 @@ de:
         Brauchst du einen Tipp? Klick hier.
       Course 4 Artist For Loops inspire: |-
         Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.
-        
+
         Brauchst du ein Hinweis? Klicke hier!
       Course 4 Artist Functions 1: Kannst du ein Quadrat mit der Seitenlänge 100 zeichnen, indem du eine Schleife verwendest?
       Course 4 Artist Functions 10: Welchen Block musst du hinzufügen, um das Dreieck auf das Quadrat zu setzen?
@@ -517,7 +517,7 @@ de:
       Course 4 Artist Functions 12: Wiederhole die Quadratfunktion, um eine Linie zu zeichnen.
       Course 4 Artist Functions 13.1: |-
         Nun lass uns eine Funktion namens „Sprung nach oben rechts" machen, die die Figur nach oben rechts auf das Achteck verschiebt, sodass du das Muster, das du eben gezeichnet hast, beenden kannst.
-        
+
         Hinweis:  Um dich in die obere rechte Ecke zu bekommen, versuche in einem Muster zu springen, das nur 3/8 des Achtecks ausmacht.
       Course 4 Artist Functions 13: Probiere unsere neue Funktion „Zeichne eine Linie der Quadrate“ aus. Schau dir den Funktionsblock an und sieh wie er aufgebaut ist. Klicke auf „Ausführen“, wenn du bereit für das nächste Puzzle bist.
       Course 4 Artist Functions 14.1: Nun lass uns eine Funktion namens „Sprung nach oben rechts" machen, die die Figur nach oben rechts auf das Achteck verschiebt, sodass du das Muster, das du eben gezeichnet hast, beenden kannst.
@@ -537,7 +537,7 @@ de:
       Course 4 Artist Functions inspire: Klicke hier, und lasse dich noch einmal von dem Bild inspirieren.
       Course 4 Artist Inspire: |-
         Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
-        
+
         Ansonsten leg mit Deinem eigenen Design los!
       Course 4 Artist Params 1: Lass uns eine Funktion hinzufügen, die ein Quadrat mit 50 Pixel langen Seiten zeichnet.
       Course 4 Artist Params 10: 'Du kannst Funktionen innerhalb anderer Funktionen aufrufen! Ausgehend von der „Form" -Funktion, erstelle 3 Haus-Formen, von denen jede 20 Pixel größer als die vorherige sein soll. Beginne mit einer Länge von 50 Pixeln. Eine Zähl-Schleife könnte hier hilfreich sein. '
@@ -558,7 +558,7 @@ de:
       Course 4 Artist Vars 13: "Wenn eine Form viele Seiten hat, muss jede Seite kürzer sein, wenn du willst, dass das Muster vollständig auf den Bildschirm passt.\nLass uns nun den Algorithmus für dieses tolle Muster erneuern, aber statt einer manuellen Einstellung die „Länge“-Variable nutzen. Lass uns einen Mathematik-Baustein mit der „Seiten“-Variablen darin verwenden, um sicherzustellen, dass jede Form richtig passt. Der Umfang jedes Vielecks beträgt 300 Pixel.\nBrauchst du ein paar Hinweise?  Klicke hier!"
       Course 4 Artist Vars 14: |-
         Freies Spiel: Probiere es aus! Nun ist dein Algorithmus in eine weitere Schleife eingebettet. Experimentiere, indem du die zwei Variablen auf unterschiedliche Werte einstellst, um coole Muster zu zeichnen.
-        
+
         Mehr Effekte kannst Du natürlich auch mit Farbe erzielen!  Benutze zufällige Farben in Schleifen und schau dir an, wie sich dadurch dein Design ändert.
       Course 4 Artist Vars 2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen, um dieses neue Dreieck zu zeichnen?
       Course 4 Artist Vars 3: 'Diese Schleife hier zeichnet ein Quadrat. Es fehlt allerdings noch etwas. Kannst du die Variable „Länge“ verwenden, um die richtige Länge der Seiten herauszubekommen? '
@@ -566,11 +566,11 @@ de:
       Course 4 Artist Vars 5: Lege mit der Variablen "Seiten" die Anzahl der Schleifendurchläufe fest.
       Course 4 Artist Vars 6: |-
         Hier ist Code, der jedes gleichseitige Polygon (Vieleck) zeichnen kann. Er benutzt eine neue Variable namens „Seiten“, die auf 4 eingestellt wurde. Kannst Du diese „Seiten“-Variable (zusammen mit dem Mathematik-Baustein) verwenden, um jeweils um den korrekten Winkel zu drehen - egal aus wie vielen Seiten das Polygon bestehen soll?
-        
+
         Du kannst hier klicken, um den Hinweis nochmals zu sehen!
       Course 4 Artist Vars 7: |-
         Jetzt wende dein Wissen vom letzten Rätsel an, um mithilfe der Seiten-Variable dieses Sechseck zu erschaffen.
-        
+
         Merkst du, dass du nur durch Ändern eines einzigen Wertes mit demselben Code ein Dreieck, Quadrat, Fünfeck oder Achteck zeichnen kannst?
       Course 4 Artist Vars 8: 'Freies Spiel: Experimentiere mit der Anzahl Seiten, die diese Form hat. Schaffst du es, den Algorithmus so anzupassen, dass die Größe der Form unabhängig von der Zahl der Seiten immer dieselbe ist? Hinweis: Wenn du die Ausgangslänge durch die Zahl der Seiten teilst, nimmt die Länge der Seiten mit zunehmender Seitenzahl ab.'
       Course 4 Artist Vars 9: Verwende bei diesem Algorithmus die „Seiten“-Variable statt einer festen Zahl, um ein Dreieck zu zeichnen. Denke daran, den „Stelle Seiten auf“-Baustein zu benutzen.
@@ -655,7 +655,7 @@ de:
       Course 4 Play Lab Vars 6 (copy 1): Cool, jetzt haben wir eine Variable für den Punktestand, aber wie setzen wir sie ein? Du könntest jedes Mal, wenn du den Gegner mit einem Feuerball triffst, deine Variable für den Punktestand erhöhen. Mit dem Ereignisbaustein „Wenn die Figur 2 irgendetwas berührt“ kannst du deinen Punktestand erhöhen, wenn du die Katze mit einem Feuerball triffst. Die Punktezahl wird erhöht, indem du „Punktezahl = Punktezahl +1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       Course 4 Play Lab Vars 6: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       Course 4 Play Lab Vars 7: Sehr schön, und jetzt sorgen wir dafür, dass das Spiel nicht zu einfach wird. Jedes Mal wenn der Hund (Figur 1) von der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht, wenn deine Punktzahl von 10 auf 0 gesunken ist.
       Course 4 Play Lab Vars 8 (copy 1): 'Okay, eine letzte Sache für dieses Spiel - richte es so ein, dass der Spieler gewinnen (oder verlieren) kann: Benutze immer eine Endlosschleife, um den Punktestand zu überprüfen – wenn der Punktestand über 20 ist, soll der Feind verschwinden. Ist der Punktestand weniger als 0, soll der Spieler verschwinden. Klicke auf „Abschließen“, wenn das Spiel so funktioniert, wie du möchtest.'
@@ -671,14 +671,14 @@ de:
       Course 4 Play Labs For Loops 6: Denke daran, dass eine Primzahl eine ganze Zahl ist, die nur durch sich selbst und durch 1 teilbar ist. Nutze die „ist_Prim“-Funktion, um nur die Primzahlen von 1 bis 100 auszusprechen.
       Course 4 Play Labs For Loops 6a: |-
         Der Hund wird noch immer die Zeit angeben, indem er mit unserer „Zähl mit“-Schleife mit „Schrittweite“ zählt, aber dieses Mal werden wir den Zauberer hinzufügen.  Kannst du den Code so ändern, dass die „Schrittweite“ um jeweils 2 erhöht wird, wenn auf den Zauberer geklickt wird?
-        
+
         Pass auf!  Der Zauberer bewegt sich schnell!
       Course 4 Play Labs For Loops 7: 'Kannst du mich mit einer „Zähle mit“-Schleife die Folge: 1, 4, 7, 10, 13, 16, 19, 22, 25 sprechen lassen?'
       Course 4 Play Labs For Loops 7a: "Jetzt kommen wir schon weiter!  Wir könnten jetzt zählen, wie oft man den Zauberer anklicken kann, bevor der Hund bis 30 gezählt hat.\n\nFüge Bausteine hinzu, damit die Variable „geklickt“ jedes Mal um 1 erhöht wird, wenn der Zauberer angeklickt wird. „Schrittweite“ wird im Moment nicht benötigt.\n\nDer Hund beginnt mit dem Zählen, wenn du auf „Ausführen“ klickst."
       Course 4 Play Labs For Loops 8: "Bringe die Figuren jetzt in Bewegung, während sie zählen.\n\nDer Hund soll bei jeder Bewegung 2 hinzuzählen (Zähler + 2).  Die Katze wird bei jeder Bewegung den Zähler mit 2 multiplizieren (Zähler * 2). Der Pinguin soll die Zählvariable mit 2 potenzieren (Zähler ^ 2).  Wer ist als erster bei der Fahne?"
       Course 4 Play Labs For Loops 8a: |-
         Um das Spiel fertigzustellen benötigen wir wieder die Variable „Schrittweite“!    Verbinde sie mit der Spielstufe.
-        
+
         1) Beobachte wie oft der Zauberer angeklickt wird.
         2) Sobald der Zauberer 10 Mal geklickt wurde, bevor der Hund bis 30 gezählt hat, erhöhe „Schrittweite“ um 1 und fang von vorne an.
         3) Schaffst du es nicht, den Zauberer mindestens 10 Mal anzuklicken, ist das Spiel zu Ende.
@@ -708,13 +708,14 @@ de:
       Course 4 SCV 3: |-
         Jetzt ein Fangspiel!  Berühre die Katze, um 2 Punkte zu erhalten. Berühre den Pinguin, um 3 Punkte zu bekommen.  Du brauchst 10 Punkte, um zu gewinnen.
         Vorsicht: wenn sich Katze und Pinguin einander berühren, werden Punkte abgezogen.
-        
+
         Mit den richtigen Bausteinen kannst du das Spiel wie erklärt zum Laufen bringen.  Wie bewegst du den Hund mit den Pfeiltasten in alle Richtungen?  Wie werden die Punkte erhöht, wenn der Hund auf die Katze oder den Pinguin trifft?  Wie werden Punkte abgezogen, wenn Katze und Pinguin sich berühren?
       Course 4 SCV 4: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       Course 4 SCV 5: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       Course 4 SCV 6: Klicke hier, um die Anleitung noch einmal anzuschauen.
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       Course 4 Variables Assessment: Kannst du dieses Bild mit einer Variablen für die Seiten erstellen? Jede Seite sollte 50 Pixel lang sein.
+      Course E MC Conditionals1: Du wirst die wertvollsten Rohstoffe unter der Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und baue mindestens 2 Kohleblöcke ab.
       CourseF_PlayLab_vars10: "Zeit für freies Spiel! Hier sind alle Variablen, mit denen wir bis jetzt in dieser Phase gespielt haben, sowie ein paar mehr, falls du sie möchtest.\n\nBeachte, dass deine Toolbox jetzt über eine große Zahl von Bausteinen verfügt, die wir daher erneut nach Kategorien geordnet haben.  Hier haben wir jedes Teil in eine passende Kategorie eingeordnet.  Nimm dir Zeit und schau dir alles genau an. Wenn du mit Browsen fertig bist, gestalte ein Spiel oder eine Geschichte mit Wiederholungen, Variablen und Ereignissen.\n\nHinweis: Du musst vielleicht runterscrollen, um alle Befehle im Arbeitsraum zu finden."
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       CourseF_PlayLab_vars3: Jetzt was anderes! Verwende die Pfeiltasten nach links und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen einsammeln kannst.
@@ -722,15 +723,15 @@ de:
       CourseF_PlayLab_vars5: 'Lass uns ein Spiel bauen! Zuerst brauchen wir einen Punktestand. Baue den Code um, den du im letzten Level gesehen hast, um den Punktestand auf 10 einzustellen. '
       CourseF_PlayLab_vars6: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       CourseF_PlayLab_vars7: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       CourseF_PlayLab_vars8: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       CourseF_PlayLab_vars9: Sehr schön, und jetzt sorgen wir dafür, dass das Spiel nicht zu einfach wird. Jedes Mal wenn der Hund (Figur 1) von der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht, wenn deine Punktzahl von 10 auf 0 gesunken ist.
       Crack Random Substitution: Anweisungen
@@ -1032,7 +1033,7 @@ de:
       NEW Course 4 Bee For Loops 6: Die letzte Zahl in deiner „Zähle mit“-Schleife ist die Schrittweite. Bei jedem Schleifendurchlauf wird der Zähler um die Schrittweite herauf- oder herabgesetzt. Sammle die Blumen ein, indem du eine Schrittweite von 2 benutzt.
       NEW Course 4 Bee For Loops 7: |-
         Kombinieren wir jetzt die „Zähler“-Variable mit dem Mathe-Baustein! Wie kann man sich mit möglichst wenigen Bausteinen mithilfe der Zählvariable durch den Garten bewegen? Wie kannst du 3, 6, 9, 12, 15 Portionen Nektar einsammeln? Die Lösung steckt in der Zählvariablen.
-        
+
         Denke daran: Wenn deine Schleife heraufzählt, wird die Schrittweite bei jedem Durchlauf zu deinem „Zähler“ ergänzt.
       NEW Course 4 Bee For Loops 8: "Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?\nHinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?"
       NEW Course 4 Bee For Loops 9: Wenn Deine Schleife herunterzählt, wird ein Wert bei jedem Schleifendurchlauf von der Zählervariable abgezogen. Wie hoch sollte deine Schrittweite sein, um 15, dann 12 und später 9, 6, 3 mal Nektar zu sammeln?
@@ -1294,6 +1295,7 @@ de:
       courseB_playLab_events1_2018: Mal sehen, ob du herausfindest, was jeder Block kann.
       courseC_PlayLab_events3: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2018: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
+      courseC_PlayLab_events3_2019: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_artist_prog5: |-
         Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis: alle drei Seiten sind gleich lang.
       courseC_artist_prog5_2018: |-
@@ -1573,7 +1575,7 @@ de:
       grade4_artist_functions_challenge2: Zeichne mit dem vorgegebenen Funktionen vier Zeilen mit Sechsecken. Beachte, dass die geradzahligen Zeilen nach rechts verschoben sind.
       grade4_artist_nestedLoops_challenge: |-
         Klicke hier, um die Hinweise noch mal zu sehen!
-        
+
         Hier ist der Code für eine interessante Form.  Was passiert, wenn du sie mehrmals wiederholst und zwischen jeder Wiederholung drehst?   Beachte, dass die Drehungen in dieser Form bis zu 420 Grad betragen, was bedeutet, dass sie zu dem Zeitpunkt, zu dem dein Künstler mit Zeichnen fertig ist, eine andere Richtung hat als zu dem Zeitpunkt, als du angefangen hast.  Diese neue Richtung ist genau 60 Grad rechts von dem Punkt, wo du angefangen hast.
       grade4_artist_nestedLoops_challenge2: Jetzt kommt eine Herausforderung!  Hier ist ein Design, das nur Blöcke benutzt, die dir bereits gezeigt wurden!  Schaffst du es, es ohne weitere Informationen wieder zu erstellen?  Habe keine Angst zu versuchen und dabei Fehler zu machen. Es wird nicht erwartet, dass es beim ersten Mal perfekt wird.  Möchtest du mehr Hinweise sehen?  Klicke hier!
       grade4_artist_nested_loop_circles1: 'Verwende eine verschachtelte Schleife um das Design fertigzustellen.'
@@ -1618,7 +1620,7 @@ de:
       grade4_playlab_freeplay: 'Zeit für freies Spiel! Viel Spaß mit all den Bausteinen in deinem Werkzeugkasten. '
       grade4_playlab_test: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       grade4_playlab_test2: Die Funktion „Springen" lässt deine Hauptfigur 100 Pixel hoch springen. Benutze die „Springen“-Funktion, um alle Flaggen einzusammeln.
       grade4_review_artist1: Hallo, ich bin ein Künstler. Wenn du den richtigen Code programmierst, kann ich fast alles zeichnen. Verwende ein paar Bausteine, und lasse mich über die grauen Linien im Bild zeichnen. (Jede Linie ist 100 Pixel lang.)
@@ -1640,7 +1642,7 @@ de:
       grade5_artist_binary8: Stelle diese Zeichnung fertig.
       grade5_artist_binary9: |-
         Hier ist eine Leinwand mit einer höheren Auflösung um darauf zu zeichnen - 16 Pixel mal 16 Pixel!
-        
+
         Siehst du, was passiert, wenn wir anfangen mit den Bits kreativ zu werden?
       grade5_artist_for_loops1: 'Zeichne dieses Dreieck, das 50 Pixel groß ist. Hinweis: Benutze einen Wiederholen-Baustein.'
       grade5_artist_for_loops10: |-
@@ -1649,18 +1651,18 @@ de:
         Brauchst du einen Tipp? Klick hier.
       grade5_artist_for_loops5: |-
         Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
-        
+
         Hinweis:  Du musst etwas entfernen!
       grade5_artist_for_loops6: Es gibt einen hübschen Effekt, wenn du vom notwendigen Winkel ein wenig abweichst. Versuche mal, einen Teil des Codes vom letzten Level zu verwenden, aber drehe um 89 Grad, um diese verdrehte Quadratspirale zu erzeugen.
       grade5_artist_for_loops7: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
       grade5_artist_for_loops8: 'Erinnerst du dich an eine frühere Phase, als wir eine Variable genutzt haben, um die Zahl von Seiten in einer Form zu kontrollieren? Wir machen nun dasselbe mit der „Zähler“-Variablen. Dieses Muster beginnt mit einem Dreieck und ergänzt jeweils eine Seite, bis es ein Zehneck zeichnet (10 Seiten). Jede Seite sollte 100 Pixel lang sein. Hinweis: 360 geteilt durch die Zahl von Seiten, die eine Form hat, ist die Gradzahl, um die du drehen musst.'
       grade5_artist_for_loops9: |-
         Zähle alles zusammen!  Nutze dein Wissen über „Zähle mit“-Schleifen und den „Zähler“, schaffe diese Zeichnung, bei der jede Form zwei Seiten mehr als die vorige hat.  Stelle sicher, dass jede Seite zehnmal so lang ist wie die Anzahl der Seiten im Vieleck.
-        
+
         Dir wurde nur sehr wenig Code bereitgestellt.
       grade5_artist_for_loopsfreeplay11: |-
         Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.
-        
+
         Brauchst du ein Hinweis? Klicke hier!
       grade5_artist_functionparameters10: "Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.\n\nMöchtest du wissen, wie unser Inspirationsmuster gemacht wurde?"
       grade5_artist_functionparameters11: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
@@ -1678,11 +1680,11 @@ de:
       grade5_artist_variables_freeplay10: 'Freies Spiel: Experimentiere mit der Anzahl Seiten, die diese Form hat. Schaffst du es, den Algorithmus so anzupassen, dass die Größe der Form unabhängig von der Zahl der Seiten immer dieselbe ist? Hinweis: Wenn du die Ausgangslänge durch die Zahl der Seiten teilst, nimmt die Länge der Seiten mit zunehmender Seitenzahl ab.'
       grade5_artist_variables_freeplay14: |-
         Freies Spiel: Probiere es aus! Nun ist dein Algorithmus in eine weitere Schleife eingebettet. Experimentiere, indem du die zwei Variablen auf unterschiedliche Werte einstellst, um coole Muster zu zeichnen.
-        
+
         Mehr Effekte kannst Du natürlich auch mit Farbe erzielen!  Benutze zufällige Farben in Schleifen und schau dir an, wie sich dadurch dein Design ändert.
       grade5_artist_variables_freeplay15: |-
         Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
-        
+
         Ansonsten leg mit Deinem eigenen Design los!
       grade5_artist_variables_freeplay16: Soll es noch weiter gehen?  Hier ist eine leere Fläche, die du frei gestalten kannst!
       grade5_artist_variables_hexagons1: "Probieren wir es noch einmal. Kannst du die Variable „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis: Es ist ein Vielfaches von 10."
@@ -1690,7 +1692,7 @@ de:
       grade5_artist_variables_octagons13: "Wenn eine Form viele Seiten hat, muss jede Seite kürzer sein, wenn du willst, dass das Muster vollständig auf den Bildschirm passt.\nLass uns nun den Algorithmus für dieses tolle Muster erneuern, aber statt einer manuellen Einstellung die „Länge“-Variable nutzen. Lass uns einen Mathematik-Baustein mit der „Seiten“-Variablen darin verwenden, um sicherzustellen, dass jede Form richtig passt. Der Umfang jedes Vielecks beträgt 300 Pixel.\nBrauchst du ein paar Hinweise?  Klicke hier!"
       grade5_artist_variables_pentagon8: |-
         Jetzt wende dein Wissen vom letzten Rätsel an, um mithilfe der Seiten-Variable dieses Sechseck zu erschaffen.
-        
+
         Merkst du, dass du nur durch Ändern eines einzigen Wertes mit demselben Code ein Dreieck, Quadrat, Fünfeck oder Achteck zeichnen kannst?
       grade5_artist_variables_pentagon9: Schreib den Algorithmus vom letzten Level noch mal hin und erstelle ein Fünfeck mit einer Seitenlänge von 150.
       grade5_artist_variables_pentagons1: "Zeichne dieses Muster, indem du die Längenvariable an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst. (Hinweis: Es ist ein Vielfaches von 10).\n\nSo braucht man die Länge nur an einer Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!"
@@ -1698,7 +1700,7 @@ de:
       grade5_artist_variables_rectangle6: Nun möchte ich ein Rechteck zeichnen, das doppelt so lang wie breit ist. Dazu haben wir eine Variable namens „Breite“, die auf 100 eingestellt werden muss. Kannst Du die Mathematik-Bausteine verwenden, um den Code zu vervollständigen?
       grade5_artist_variables_square7: |-
         Hier ist Code, der jedes gleichseitige Polygon (Vieleck) zeichnen kann. Er benutzt eine neue Variable namens „Seiten“, die auf 4 eingestellt wurde. Kannst Du diese „Seiten“-Variable (zusammen mit dem Mathematik-Baustein) verwenden, um jeweils um den korrekten Winkel zu drehen - egal aus wie vielen Seiten das Polygon bestehen soll?
-        
+
         Du kannst hier klicken, um den Hinweis nochmals zu sehen!
       grade5_artist_variables_triangles2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen, um dieses neue Dreieck zu zeichnen?
       grade5_artist_variables_triangles3: 'Ziehe einen Nummernbaustein zum Baustein „Länge einstellen“, um ein Set von Dreiecken von 50 Pixeln zu zeichnen. '
@@ -1718,7 +1720,7 @@ de:
       grade5_playlab_variables4: Hier wird eine Variable namens „Höhe” verwendet, um einzustellen, wie hoch der Hund springen kann. Ändere die Variable „Höhe“ so, dass der Hund hoch genug springen kann, um alle Fahnen zu erreichen.
       grade5_playlab_variables6: |-
         Mit dem Pfeil nach rechts können wir Herze abschießen.
-        
+
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       grade5_playlab_variables7: Sehr schön, und jetzt sorgen wir dafür, dass das Spiel nicht zu einfach wird. Jedes Mal wenn der Hund (Figur 1) von der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht, wenn deine Punktzahl von 10 auf 0 gesunken ist.
       grade5_playlab_variables71: "Hier ist unser Spiel aus einer früheren Phase, doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele_Punkte“.\n\nBearbeite die Funktion so, dass der Variablen „Spieler_Punkte“ ein Parameter „Punkte“ hinzugefügt wird.\n\nDie Variable „Spieler_Punkte“ soll immer dann erhöht werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.\n\nHinweis: Wenn du fertig bist, klicke zum Spielen auf „Ausführen“.  Wenn der Hund 6 Punkte erreicht hat geht es zur nächsten Aufgabe weiter."

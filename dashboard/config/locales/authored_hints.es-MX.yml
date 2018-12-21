@@ -3516,6 +3516,13 @@ es-MX:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: "¿Está frente al camino correcto? El 'bloque destruir' explota el
+          bloque en frente de usted."
+        mc_9_b: ¡Las manchas negras en la muralla son carbón! Utilice "destruir bloque"
+          en ellas para minar el carbón.
+        mc_9_c: Utilizar 'poner antorcha' para poner una antorcha en el espacio donde
+          está parado.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
@@ -8281,6 +8288,15 @@ es-MX:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Fije este bloque a bloque 'cuando corre':
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Adjunte dos de estos bloques al bloque `cuando corre`:
@@ -8293,6 +8309,17 @@ es-MX:
         courseC_PlayLab_events2_b: Usa el menú desplegable en el segundo bloque `actor
           __ say` para cambiar qué actor habla.
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Adjunte dos de estos bloques al bloque `cuando corre`:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Usa el menú desplegable en el segundo bloque `actor
+          __ say` para cambiar qué actor habla.
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           Adjunte dos de estos bloques al bloque `cuando corre`:
           <xml>
@@ -8331,6 +8358,20 @@ es-MX:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: Solo necesitas mover a Jorge hacia la derecha unos
+          25 píxeles para resolver este rompecabezas.
+        courseC_PlayLab_events3_b: "¿Hay un bloque en la caja de herramientas que
+          parece mover a un actor?"
+        courseC_PlayLab_events3_c: |-
+          Fije este bloque al bloque`cuando corre`:
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Cuando se haga clic en el botón "Ejecutar", Jorge
           se moverá a la derecha ** 100 píxeles para llegar al gato.
@@ -8341,12 +8382,22 @@ es-MX:
           se moverá a la derecha ** 100 píxeles para llegar al gato.
         courseC_PlayLab_events4_a: Deberá adjuntar un bloque de "actor __ decir "
           al evento "cuando el actor toque" para resolver este rompecabezas.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: Cuando se haga clic en el botón "Ejecutar", Jorge
+          se moverá a la derecha ** 100 píxeles para llegar al gato.
+        courseC_PlayLab_events4_a: Deberá adjuntar un bloque de "actor __ decir "
+          al evento "cuando el actor toque" para resolver este rompecabezas.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: Deberá hacer clic en el menú desplegable en el
           bloque `actor decir` para encontrar el texto" ¿Qué hay de nuevo
         courseC_PlayLab_events5_b: Haga clic en Octavia cuando ejecute su programa
           para verificar que funcione!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: Deberá hacer clic en el menú desplegable en el
+          bloque `actor decir` para encontrar el texto" ¿Qué hay de nuevo
+        courseC_PlayLab_events5_b: Haga clic en Octavia cuando ejecute su programa
+          para verificar que funcione!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_a: Deberá hacer clic en el menú desplegable en el
           bloque `actor decir` para encontrar el texto" ¿Qué hay de nuevo
         courseC_PlayLab_events5_b: Haga clic en Octavia cuando ejecute su programa
@@ -8365,6 +8416,13 @@ es-MX:
           1` para cambiar la dirección en la que se mueve Waddles.
         courseC_PlayLab_events6_c: "¡Cuando hayas terminado, deberías poder mover
           Waddles usando las teclas de flecha en tu computadora!"
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Cada bloque verde `cuando flecha` debe tener una
+          acción debajo de él.
+        courseC_PlayLab_events6_b: Usa el menú desplegable en el bloque `move actor
+          1` para cambiar la dirección en la que se mueve Waddles.
+        courseC_PlayLab_events6_c: "¡Cuando hayas terminado, deberías poder mover
+          Waddles usando las teclas de flecha en tu computadora!"
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Utilizar tanto el bloque `movimiento actor de
           2 hasta 400 píxeles ` y el actor de `movimiento 2 por 400 píxeles ` dentro
@@ -8377,12 +8435,23 @@ es-MX:
           del ciclo ` repita siempre ` para resolver este rompecabezas. '
         courseC_PlayLab_events7_b: El loop "repetir siempre" no necesita estar conectado
           a otro bloque de evento; se ejecutará por si mismo.
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: 'Utilizar tanto el bloque `movimiento actor de
+          2 hasta 400 píxeles ` y el actor de `movimiento 2 por 400 píxeles ` dentro
+          del ciclo ` repita siempre ` para resolver este rompecabezas. '
+        courseC_PlayLab_events7_b: El loop "repetir siempre" no necesita estar conectado
+          a otro bloque de evento; se ejecutará por si mismo.
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: Necesitará conectar bloques en el bloque 'cuando
           el actor toca' para que esto suceda correctamente.
         courseC_PlayLab_events8_b: El bloque 'actor dice' y 'sonido, en la caja de
           herramientas debe ayudarte!
       courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: Necesitará conectar bloques en el bloque 'cuando
+          el actor toca' para que esto suceda correctamente.
+        courseC_PlayLab_events8_b: El bloque 'actor dice' y 'sonido, en la caja de
+          herramientas debe ayudarte!
+      courseC_PlayLab_events8_2019_authored_hint:
         courseC_PlayLab_events8_a: Necesitará conectar bloques en el bloque 'cuando
           el actor toca' para que esto suceda correctamente.
         courseC_PlayLab_events8_b: El bloque 'actor dice' y 'sonido, en la caja de
@@ -8403,6 +8472,14 @@ es-MX:
         courseC_PlayLab_events9_c: "¡Puede tener más de un evento `cuando el actor
           toque ' en su espacio de trabajo al mismo tiempo, por lo que no tiene que
           borrar el primero!"
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: El bloque `puntuación punto` te ayudará a resolver
+          este rompecabezas.
+        courseC_PlayLab_events9_b: Asegúrate de que tu nuevo bloque `cuando toque
+          el actor` dice actor ** 1 ** y actor ** 3 **.
+        courseC_PlayLab_events9_c: "¡Puede tener más de un evento `cuando el actor
+          toque ' en su espacio de trabajo al mismo tiempo, por lo que no tiene que
+          borrar el primero!"
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: Usa el bloque ` establecer fondo ' y el bloque
           ' establecer agente a una velocidad de_____ ' para resolver este rompecabezas.
@@ -8410,6 +8487,12 @@ es-MX:
           de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
           rompecabezas.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_a: Usa el bloque ` establecer fondo ' y el bloque
+          ' establecer agente a una velocidad de_____ ' para resolver este rompecabezas.
+        courseC_PlayLab_eventsA_b: Tendrá que arrastrar específicamente un bloque
+          de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
+          rompecabezas.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Usa el bloque ` establecer fondo ' y el bloque
           ' establecer agente a una velocidad de_____ ' para resolver este rompecabezas.
         courseC_PlayLab_eventsA_b: Tendrá que arrastrar específicamente un bloque
@@ -8426,6 +8509,16 @@ es-MX:
           con las flechas (cuando está arriba, bloques de flecha abajo), luego reproducir
           sonidos al azar cuando choca con otros caracteres en la pantalla."
       courseC_PlayLab_eventsFP_2018_authored_hint:
+        idea1: "* ¿Necesitas una idea? * ** ¿Quién está ahí? ** Haz que los personajes
+          aparezcan con imágenes aleatorias , para que nadie sepa quién aparece a
+          continuación. ! [] (https: // images .code.org / a56e03479801995d93ad5a4e4384a79e-
+          image -1475340154498.gif)"
+        idea2: "* ¿Necesitas una idea? * ** Ir a una aventura ** - Cambia el fondo,
+          luego haz que los personajes hablen de dónde están ahora. ! [] (https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
+        idea3: "* Necesitas una idea? * ** Pinball ** - hacer movimiento de un personaje
+          con las flechas (cuando está arriba, bloques de flecha abajo), luego reproducir
+          sonidos al azar cuando choca con otros caracteres en la pantalla."
+      courseC_PlayLab_eventsFP_2019_authored_hint:
         idea1: "* ¿Necesitas una idea? * ** ¿Quién está ahí? ** Haz que los personajes
           aparezcan con imágenes aleatorias , para que nadie sepa quién aparece a
           continuación. ! [] (https: // images .code.org / a56e03479801995d93ad5a4e4384a79e-
@@ -8453,6 +8546,23 @@ es-MX:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          Puedes usar este bloque para mover actores a diferentes lugares en el espacio del juego.
+          <xml> <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Intenta usar ` establecer actor 1 en la
+          posición izquierda media 'cuando toca a cualquiera de los otros actores.
+          ¡Esto restablecerá el juego para que el jugador pueda seguir intentándolo!
+        courseC_PlayLab_events_challenge_c: |-
+          ¡También puede intentar cambiar la velocidad de los diferentes actores para hacer que el juego sea más fácil o más desafiante!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Puedes usar este bloque para mover actores a diferentes lugares en el espacio del juego.
           <xml> <block type="studio_setSpritePosition">
@@ -9220,6 +9330,12 @@ es-MX:
         courseC_harvester_loops1_b: Puede usar un bucle con el bloque <xml> <block
           type = "harvester_pumpkin" /> </ xml> para seleccionar más de una calabaza
           de un cuadrado.
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: Una vez que se haya mudado a una calabaza, use
+          <xml> <block type = "harvester_pumpkin" /> </ xml> para recopilarla.
+        courseC_harvester_loops1_b: Puede usar un bucle con el bloque <xml> <block
+          type = "harvester_pumpkin" /> </ xml> para seleccionar más de una calabaza
+          de un cuadrado.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
           en un papel y busca los patrones que se repiten.
@@ -9227,6 +9343,12 @@ es-MX:
         courseC_harvester_loops2_c: Un loop repetirá el comando "avanzar", y el otro
           repetirá el comando "recoger calabaza".
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
+          en un papel y busca los patrones que se repiten.
+        courseC_harvester_loops2_b: Necesitará un ciclo de repetición después de otro.
+        courseC_harvester_loops2_c: Un loop repetirá el comando "avanzar", y el otro
+          repetirá el comando "recoger calabaza".
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
           en un papel y busca los patrones que se repiten.
         courseC_harvester_loops2_b: Necesitará un ciclo de repetición después de otro.
@@ -9248,6 +9370,14 @@ es-MX:
           similar al del último puzzle. ¿Por cual camino necesitas girar después?
         courseC_harvester_loops3_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: "¡No tengas miedo de cometer un error! Intenta
+          agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
+          no has resuelto el rompecabezas."
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          similar al del último puzzle. ¿Por cual camino necesitas girar después?
+        courseC_harvester_loops3_c: Si quieres simplificar tu código, ¡puedes poner
+          un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_a: Usa el nuevo bloque "recoger maiz" para recolectar
           el maiz.
@@ -9256,6 +9386,13 @@ es-MX:
         courseC_harvester_loops4_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_a: Usa el nuevo bloque "recoger maiz" para recolectar
+          el maiz.
+        courseC_harvester_loops4_b: Puedes usar múltiples loops de repetición en tu
+          código, algunos para recoger maiz y otros para recoger calabazas.
+        courseC_harvester_loops4_c: Si quieres simplificar tu código, ¡puedes poner
+          un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_a: Usa el nuevo bloque "recoger maiz" para recolectar
           el maiz.
         courseC_harvester_loops4_b: Puedes usar múltiples loops de repetición en tu
@@ -9274,12 +9411,23 @@ es-MX:
         courseC_harvester_loops5_b: "¿Te parece familiar este peldaño de escalera
           al de otros puzzles? Los movimientos deberían ser similares, solamente recuerda
           recoger la cosecha a lo largo del camino."
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: Si quedas atascado, intenta dibujar el programa
+          completo y después busca los patrones que se repiten.
+        courseC_harvester_loops5_b: "¿Te parece familiar este peldaño de escalera
+          al de otros puzzles? Los movimientos deberían ser similares, solamente recuerda
+          recoger la cosecha a lo largo del camino."
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: Recuerda que puedes poner más de un bloque dentro
           de un ciclo de repetición.
         courseC_harvester_loops6_b: No te olvides de girar al final de la fila de
           maiz.
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: Recuerda que puedes poner más de un bloque dentro
+          de un ciclo de repetición.
+        courseC_harvester_loops6_b: No te olvides de girar al final de la fila de
+          maiz.
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_a: Recuerda que puedes poner más de un bloque dentro
           de un ciclo de repetición.
         courseC_harvester_loops6_b: No te olvides de girar al final de la fila de
@@ -9294,6 +9442,11 @@ es-MX:
           obteniendo el maíz o las calabazas primero.
         courseC_harvester_loops7_b: Necesitarás multiples ciclos de 'repetir' para
           resolver este acertijo.
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: Puedes resolver este acertijo de dos maneras,
+          obteniendo el maíz o las calabazas primero.
+        courseC_harvester_loops7_b: Necesitarás multiples ciclos de 'repetir' para
+          resolver este acertijo.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: "¿Te parece familiar este peldaño al del puzzle
           anterior? Los movimientos deberían ser similares, solamente recuerda recoger
@@ -9301,6 +9454,12 @@ es-MX:
         courseC_harvester_loops8_b: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: "¿Te parece familiar este peldaño al del puzzle
+          anterior? Los movimientos deberían ser similares, solamente recuerda recoger
+          la cosecha a lo largo del camino."
+        courseC_harvester_loops8_b: Si quieres simplificar tu código, ¡puedes poner
+          un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: "¿Te parece familiar este peldaño al del puzzle
           anterior? Los movimientos deberían ser similares, solamente recuerda recoger
           la cosecha a lo largo del camino."
@@ -9396,6 +9555,35 @@ es-MX:
           </block>
           </statement>
           </block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: "¡Esto es demasiado dificil sin ciclos!"
+        courseC_harvester_loops_challenge1_b: Puedes repetir 'mover hacia adelante'
+          y 'recoger maíz' todas las veces que necesites hacerlo, luego gira a la
+          derecha en cada esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          La mejor manera de recoger el maiz en medio usa un ciclo dentro de otro.
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Una forma de resolver esto parece un
           zig-zag. Otra parece un espiral. Hay muchas soluciones distintas para un
@@ -9411,6 +9599,20 @@ es-MX:
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Una forma de resolver esto parece un
+          zig-zag. Otra parece un espiral. Hay muchas soluciones distintas para un
+          acertijo como este. ¡Se persistente!
+        courseC_harvester_loops_challenge2_b: Puedes repetir "avanzar" y "recoge lechuga"
+          cuantas veces necesites, luego gira en cada esquina.
+        courseC_harvester_loops_challenge2_c: |
+          El patrón de zig zag puede repetirse dos veces para acabar el acertijo con solo 20 bloques.
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          El patrón de espiral puede programarse con solo 18 bloques.
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Una forma de resolver esto parece un
           zig-zag. Otra parece un espiral. Hay muchas soluciones distintas para un
           acertijo como este. ¡Se persistente!
@@ -11184,19 +11386,12 @@ es-MX:
         courseD_bee_conditionals8_hintVid2: Mire este video para ayudar a resolver
           este rompecabezas.
       courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
-          vídeo!"
         courseD_bee_conditionals8_a: "** Recuerde: ** Este rompecabezas  cambia cada
           vez que se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque
           ( ` si 'o' si / else`) para resolver el desafío."
         courseD_bee_conditionals8_b: Este enigma es complicado, porque no puedes verificar
           cuadrados en blanco, néctar, * y * miel con solo un único condicional. Sólo
           echa de néctar y la miel al final de su camino.
-        courseD_bee_conditionals8_d: Aunque hay una nube justo frente a ti, no tienes
-          que visitarla primero. Intenta comenzar con la nube en la parte inferior
-          derecha del cuadrado. ! [] (https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
-        courseD_bee_conditionals8_hintVid2: Mire este video para ayudar a resolver
-          este rompecabezas.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: "¿Puedes encontrar un camino que llegue
           a cada flor y panal sin golpear ningún árbol? El mejor camino es una espiral."
@@ -12657,6 +12852,16 @@ es-MX:
           partes más pequeñas. No tema ejecutar su puzzle mientras codifica!"
         courseD_iceage_loops9_b: Su código final debería tner **4** loops.
         courseD_iceage_loops9_c: Scrat deberia seguir esta ruta para llegar a la bellota.
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
+          para alcanzar la bellota.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
+          código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Intenta
+          agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
+          que aún no has resuelto el rompecabezas."
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: No olvide que puede `repetir` un solo
           comando o un patrón más largo. Incluso se puede `` repetir` un repetir`
@@ -12818,12 +13023,12 @@ es-MX:
           luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
           para alcanzar al cerdo.
       courseD_maze_ramp4_2019_authored_hint:
-        courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
-          el punto de vista del pájaro. Si estás mirando hacia la derecha, girar a
-          la derecha te hará apuntar hacia abajo.
+        courseC_maze_programming4_a: Puede girar a la derecha o a la izquierda desde
+          el punto de vista de Scrat. Si estás mirando hacia la derecha, girar a la
+          derecha te hará apuntar hacia abajo.
         courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
           luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
-          para alcanzar al cerdo.
+          para alcanzar la bellota.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?

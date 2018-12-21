@@ -313,3 +313,6 @@ ro:
       BinaryBracelets_2019:
         title: Brăţări Binare
         desc: Elevii creează brățări ca o reprezentare binară a primei litere din numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai multe feluri.
+      PaperPlanes_2019:
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.

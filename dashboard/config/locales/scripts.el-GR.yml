@@ -1618,3 +1618,18 @@ el:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: τίποτε
+        dance-extras-gallery:
+          title: Συνεχίστε να Χορεύετε
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+            Binary Bracelets:
+              name: Δυαδικά Βραχιόλια

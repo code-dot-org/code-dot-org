@@ -1841,6 +1841,8 @@ is:
         neikvæðar tölur).
       Course 4 Variables Assessment: Getur þú búið til þessa mynd með því að nota
         breytu fyrir hliðar? Hver lína á að vera 50 díla löng.
+      Course E MC Conditionals1: Þú finnur dýrmætasta hráefnið neðanjarðar, en það
+        getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af kolum.
       Course1BeePuzzle12: Sæktu þrjá blómasafa og búðu svo til tvo hunang
       Course1MazeAssessment1: "Þetta er próf!\r\nFærðu mig í eina átt, svo í aðra,
         til að ég nái svíninu"
@@ -4168,15 +4170,23 @@ is:
         1) að kettinum Ólafíu?
       courseC_PlayLab_events3_2018: Getur þú skrifað forrit sem færir hundinn Jörund
         (leikmann 1) að kettinum Ólafíu?
+      courseC_PlayLab_events3_2019: Getur þú skrifað forrit sem færir hundinn Jörund
+        (leikmann 1) að kettinum Ólafíu?
       courseC_PlayLab_eventsFP: Búðu til eigin sögu. Smelltu svo á "Ljúka" til að
         deila með vinum þínum. Það eru hugmyndir að sögum í vísbendingunum.
       courseC_PlayLab_eventsFP_2018: Búðu til eigin sögu. Smelltu svo á "Ljúka" til
+        að deila með vinum þínum. Það eru hugmyndir að sögum í vísbendingunum.
+      courseC_PlayLab_eventsFP_2019: Búðu til eigin sögu. Smelltu svo á "Ljúka" til
         að deila með vinum þínum. Það eru hugmyndir að sögum í vísbendingunum.
       courseC_PlayLab_events_challenge1: "Hér er nýr kubbur sem er svolitið flókinn.
         Notaðu hann til að færa Waddles aftur á upphafsreit eftir árekstur við Risaeðluna
         og þegar stig er skorað. Þetta gerir leikinn erfiðari og skemmtilegri!\r\n\r\nSpilaðu
         leikinn og færðu Waddles með örvunum þar til þú nærð nógu mörgum stigum."
       courseC_PlayLab_events_challenge1_2018: "Hér er nýr kubbur sem er svolitið flókinn.
+        Notaðu hann til að færa Waddles aftur á upphafsreit eftir árekstur við Risaeðluna
+        og þegar stig er skorað. Þetta gerir leikinn erfiðari og skemmtilegri!\r\n\r\nSpilaðu
+        leikinn og færðu Waddles með örvunum þar til þú nærð nógu mörgum stigum."
+      courseC_PlayLab_events_challenge1_2019: "Hér er nýr kubbur sem er svolitið flókinn.
         Notaðu hann til að færa Waddles aftur á upphafsreit eftir árekstur við Risaeðluna
         og þegar stig er skorað. Þetta gerir leikinn erfiðari og skemmtilegri!\r\n\r\nSpilaðu
         leikinn og færðu Waddles með örvunum þar til þú nærð nógu mörgum stigum."
@@ -4376,10 +4386,14 @@ is:
       courseC_harvester_loops_challenge1: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge1a: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge1a_2018: Safnaðu öllu korninu.
+      courseC_harvester_loops_challenge1a_2019: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
       courseC_harvester_loops_challenge2_2018: |-
+        Safnaðu öllu kálinu.
+        Forðastu tré og tún!
+      courseC_harvester_loops_challenge2_2019: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
       courseC_maze_debugging10: Leiðréttu þetta borð með því að raða og bæta við kubbum
@@ -4980,6 +4994,8 @@ is:
         til að hjálpa Scrat að komast þangað?
       courseD_iceage_loops9_2019: Akarnið er svo langt í burtu! Getur þú notað lykkjur
         til að hjálpa Scrat að komast þangað?
+      courseD_maze_intro5a_2019: Taktu eftir röð kubbanna og reyndu að finna út hvernig
+        á að komast til svínsins!
       courseD_maze_loops_challenge1: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu
         safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops4: "Komdu mér til sólsblómsins með sem allra fæstum
@@ -6466,8 +6482,6 @@ is:
       ramp_artist_loops4: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi sem
         síðasta kubbi í lykkjunni?
       ramp_artist_loops4_2018: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi
-        sem síðasta kubbi í lykkjunni?
-      ramp_artist_loops4_2019: Hvað gerist þegar þú bætir við 72 gráðu hægri snúningi
         sem síðasta kubbi í lykkjunni?
       ramp_artist_loops5: Notaðu lykkjur til að teikna þessar tröppur.
       ramp_artist_loops5_2018: Notaðu lykkjur til að teikna þessar tröppur.

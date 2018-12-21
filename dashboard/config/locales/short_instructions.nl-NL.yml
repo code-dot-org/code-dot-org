@@ -1578,6 +1578,9 @@ nl:
         met y pixels. X en y kunnen positief of negatief zijn.
       Course 4 Variables Assessment: Kan je deze afbeelding maken met een variabele
         voor de kanten? Elke lijn moet 50 pixels lang zijn.
+      Course E MC Conditionals1: De kostbaarste grondstoffen vind je onder de grond,
+        maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken
+        steenkool.
       Course1BeePuzzle12: Neem drie eenheden nectar en maar vervolgens twee eenheden
         honing
       Course1MazeAssessment1: "Dit is een test!\r Beweeg me eerst één kant op, daarna
@@ -3195,10 +3198,15 @@ nl:
         voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_events3_2018: Kan je een programma schrijven om Jorge (speler
         1) voorwaarts naar Olive de kat te laten bewegen?
+      courseC_PlayLab_events3_2019: Kan je een programma schrijven om Jorge (speler
+        1) voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_eventsFP: |-
         Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op "Voltooien" om het te delen met vrienden.
         Zie Verhaal Ideeën voor hints.
       courseC_PlayLab_eventsFP_2018: |-
+        Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op "Voltooien" om het te delen met vrienden.
+        Zie Verhaal Ideeën voor hints.
+      courseC_PlayLab_eventsFP_2019: |-
         Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op "Voltooien" om het te delen met vrienden.
         Zie Verhaal Ideeën voor hints.
       courseC_PlayLab_events_challenge1: "Gebruik een nieuwe blok om Waddles automatisch
@@ -3206,6 +3214,10 @@ nl:
         hij een punt scoort.\r\nSpeel het spel en beweeg Waddles met de pijltjes totdat
         je genoeg punten scoort."
       courseC_PlayLab_events_challenge1_2018: "Gebruik een nieuwe blok om Waddles
+        automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of
+        wanneer hij een punt scoort.\r\nSpeel het spel en beweeg Waddles met de pijltjes
+        totdat je genoeg punten scoort."
+      courseC_PlayLab_events_challenge1_2019: "Gebruik een nieuwe blok om Waddles
         automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of
         wanneer hij een punt scoort.\r\nSpeel het spel en beweeg Waddles met de pijltjes
         totdat je genoeg punten scoort."
@@ -3412,10 +3424,14 @@ nl:
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a_2018: Verzamel alle maïs.
+      courseC_harvester_loops_challenge1a_2019: Verzamel alle maïs.
       courseC_harvester_loops_challenge2: |-
         Verzamel alle sla.
         Vermijd de bomen en de velden!
       courseC_harvester_loops_challenge2_2018: |-
+        Verzamel alle sla.
+        Vermijd de bomen en de velden!
+      courseC_harvester_loops_challenge2_2019: |-
         Verzamel alle sla.
         Vermijd de bomen en de velden!
       courseC_maze_debugging10: Los de fouten in dit level op door de blokken op de

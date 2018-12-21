@@ -337,6 +337,7 @@
   volunteer_engineer_submission_field_email: "Enderezo de email"
   volunteer_engineer_submission_field_email_desc: "O teu enderezo de e-mail nunca será compartido, pero enviarémosche solicitudes dos profesores."
   volunteer_engineer_submission_field_email_placeholder: "Enderezo de email"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nosa política de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: 'Si'
   volunteer_engineer_submission_field_email_preference_no: 'Non'
   volunteer_engineer_submission_final_paragraph: "Estarás nunha lista nun mapa para que os profesores da zona entren en contacto con tigo para a Hora do Código ou para outras oportunidades de voluntariado. O teu e-mail e enderezo exactos NUNCA serán compartidos. Pero as outras informacións (incluíndo a localización aproximada) será vista publicamente polos profesores da zona."
@@ -1034,6 +1035,7 @@
   header_teacher_community: "Comunidade de profesorado"
   header_report_bug: "Comunicar un erro"
   user_header_label: "Ola, %{username}"
+  user_header_team: "Equipo"
   user_header_settings: "A miña conta"
   user_header_logout: "Pechar sesión"
   user_header_signin: "Iniciar Sesión"

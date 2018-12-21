@@ -507,9 +507,38 @@ pt-BR:
 
         * passo um
         * passo dois
+      AppLab Intro 4 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
+      AppLab Intro 4 - Full Text: |
+        <div style="float:right"><img src="https://images.code.org/9109abf972acc093fd591eb56619aee5-image-1506617570302.52.18 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Mude as palavras na tela
+
+        **Como:** Defina o `"texto"` do rótulo para o que você quiser, como `"Minha aplicação é in-crível!`
+
+        **Me mostre** ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)</details>
       AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
       AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
       AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 5 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
       Artist Autorun Test: |-
         Agora coloque a função dentro de um laço
         para desenhar esses três quadrados.
@@ -1175,6 +1204,7 @@ pt-BR:
         cheias de terra esse buraco precisa.  \r\nVocê pode escrever um programa que\nfique
         usando o bloco \"preencha\" até que o solo fique nivelado?  "
       Trent Test Level: 'Mais questões!  '
+      U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
       U4L02 - Objects - Template1: "# Modelo"
@@ -1627,18 +1657,25 @@ pt-BR:
       courseC_collector_progA: Ajude Laurel a coletar todo o tesouro.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
+      courseC_harvester_loops3_2019: Colete todas as abóboras.
       courseC_harvester_loops5: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops_forVid: Colete todo os milhos e as abóboras.
       courseC_maze_programming8: '*" Mantenha a calma e ajude-me a encontrar o porco
         mal."*'
@@ -2137,6 +2174,10 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade4_review_artist1: |
+        Olá, eu sou um artista. Você pode escrever códigos para me fazer desenhar praticamente qualquer coisa. Use alguns blocos para me fazer desenhar sobre as retas cinzas na imagem. (Cada reta tem 100 pixels de comprimento)
+
+        <br>
       grade4_review_artist2: "Esta casa precisa de um telhado! Desenhe um triângulo.
         \r\n\r\nDica:\ntodos os três lados tem o mesmo tamanho.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: |-
@@ -2150,6 +2191,17 @@ pt-BR:
         Que abelha trabalhadora!
 
         Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      grade5_artist_binary1: "Binário é uma forma de representar informações usando
+        apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
+        número 0) e \"ligado\" (representada pelo número 1).  \n\nFoi fornecida uma
+        grade de \"pixels\" pela qual você pode andar e criar designs virando em certos
+        quadrados. \n\n**Você consegue fazer o artista desenhar \"01010101\" em binário
+        na primeira fileira?**"
+      grade5_artist_binary10: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n<br/>\n"
       grade5_artist_for_loops1: |-
         Use um bloco "repita" para desenhar este triângulo
         que tem 50 pixels de largura.
@@ -2172,7 +2224,19 @@ pt-BR:
         variável\n\"comprimento\" em todos os lugares corretos. \r\n\r\nVocê percebeu
         que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa
         o valor correto em todos os lugares?"
+      grade5_artist_variables_triangles1: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2018: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_bee_for_loops2: "Adicione o código necessário para garantir que a abelha
+        colete todo o néctar. \n\nOlhe quanto código você precisa para esse desafio!
+        (Vamos aprender uma maneira mais simples no próximo desafio.)"
       grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
+      grade5_bee_for_loops7: "O último número em seu laço para é chamado de **\"incremento\"**.
+        A cada execução do laço, a variável contador é alterada de acordo com o incremento.
+        \n\nTente coletar essas flores usando um incremento de 2."
       grade5_playlab_variables13: |-
         Use o bloco "quando o personagem tocar"
         para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.

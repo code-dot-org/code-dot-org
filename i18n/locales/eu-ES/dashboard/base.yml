@@ -131,11 +131,11 @@ eu:
     subject: 'Nire klasean parte hartu (Code.org-n)'
     body: |
       Klikatu beheko estekan Code.org-ko informatikako tutorialetan izena emateko (ni zure "irakaslea" izanda):
-      
+
       %{link}
-      
+
       Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
-      
+
       %{name}
   section:
     type:

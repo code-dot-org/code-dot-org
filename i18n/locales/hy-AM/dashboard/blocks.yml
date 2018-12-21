@@ -224,12 +224,24 @@ hy:
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -248,6 +260,11 @@ hy:
           CORNER:
             '"right"': ճիշտ
             '"left"': ձախ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -287,6 +304,21 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      binary_move:
+        options:
+          DIR:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
       craft_ifPath:
         options:
           DIR:

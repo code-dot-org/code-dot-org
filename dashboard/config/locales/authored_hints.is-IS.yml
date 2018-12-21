@@ -1396,6 +1396,12 @@ is:
           **Lausn:**
 
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Snýrðu í rétta átt? Kubburinn `eyða blokk` grefur út blokkina fyrir
+          framan þig.
+        mc_9_b: Svörtu blettirnir á veggnum eru kol! Notaðu `eyða blokk` til að grafa
+          út kolin.
+        mc_9_c: Notaðu `setja kyndil` til að setja kyndil á reitinn þar sem þú stendur.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Gættu þess að talan fyrir `dog_speed` (hraða hunds)
           sé hærri en fyrir `cat_speed` (hraða kattar).
@@ -1447,6 +1453,24 @@ is:
           Hér eru tvö mismunandi löng snjókorn, teiknuð hvort á eftir öðru (með 30 gráðu snúningi á milli.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Þetta er fyrsta vísbendingin.
@@ -1477,6 +1501,12 @@ is:
           munt ferðast eftir...
         Function_intro_Ryan_a: Þú getur kallað á sama fall oftar en einu sinni í forriti!
           Prófaðu að kalla á það tvisvar til að leysa þessa þraut.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+          * Láttu dansara birtast á skjánum.
+
+          *Þetta borð endar eftir 4 takta.*
       Harvesting_authored_hint:
         pointer_harvester_test: Hvers konar kubb get ég notað til að athuga eitthvað
           og taka ákvörðun?
@@ -3828,6 +3858,8 @@ is:
           í það sem gerist á undan horninu og það sem gerist eftir hornið.
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: Smelltu á `Keyra` og sjáðu hvað gerist!
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: Ef þú festist, er ráð að skrifa þrepin á pappír
           og leita að endurteknum mynstrum.
@@ -5224,6 +5256,16 @@ is:
           <title name="VALUE">Hæ þú</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Tengdu þennan kubb við `þegar keyrt` kubbinn:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hæ þú</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Tengdu tvo svona kubba við `þegar keyrt`kubbinn:
@@ -5237,6 +5279,18 @@ is:
         courseC_PlayLab_events2_b: Notaðu fellilistann á öðrum `leikmaður ___ segir`
           kubbnum til að breyta því hver talar.
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Tengdu tvo svona kubba við `þegar keyrt`kubbinn:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hæ!</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Notaðu fellilistann á öðrum `leikmaður ___ segir`
+          kubbnum til að breyta því hver talar.
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           Tengdu tvo svona kubba við `þegar keyrt`kubbinn:
 
@@ -5274,10 +5328,26 @@ is:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_b: Er til kubbur í verkfærakassanum sem lítur út fyrir
+          að geta fært leikmann?
+        courseC_PlayLab_events3_c: |-
+          Festu þennan kubb við `þegar keyrt` kubbinn:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_b: Smelltu á Oktavíu þegar þú keyrir forritið til
           að sjá hvort það virkar!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_b: Smelltu á Oktavíu þegar þú keyrir forritið til
+          að sjá hvort það virkar!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_b: Smelltu á Oktavíu þegar þú keyrir forritið til
           að sjá hvort það virkar!
       courseC_PlayLab_events6_authored_hint:
@@ -5294,10 +5364,20 @@ is:
           til að breyta því í hvaða átt Waddles hreyfist.
         courseC_PlayLab_events6_c: Þegar forritið er tilbúið ættir þú að geta fært
           Waddles í allar áttir með örvarlyklunum!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Allir grænu `þegar ___ ör` kubbarnir ættu að hafa
+          aðgerð fyrir neðan sig.
+        courseC_PlayLab_events6_b: Notaðu fellilistann á `færa leikmann 1` kubbnum
+          til að breyta því í hvaða átt Waddles hreyfist.
+        courseC_PlayLab_events6_c: Þegar forritið er tilbúið ættir þú að geta fært
+          Waddles í allar áttir með örvarlyklunum!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_b: Það þarf ekki að tengja `Endurtaka endalaust` lykkjuna
           við neinn atburðarkubb. Hún keyrir alveg sjálfkrafa.
       courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_b: Það þarf ekki að tengja `Endurtaka endalaust` lykkjuna
+          við neinn atburðarkubb. Hún keyrir alveg sjálfkrafa.
+      courseC_PlayLab_events7_2019_authored_hint:
         courseC_PlayLab_events7_b: Það þarf ekki að tengja `Endurtaka endalaust` lykkjuna
           við neinn atburðarkubb. Hún keyrir alveg sjálfkrafa.
       courseC_PlayLab_events9_authored_hint:
@@ -5310,10 +5390,18 @@ is:
           sýni leikmann **1** og leikmann **3**.
         courseC_PlayLab_events9_c: Þú getur haft fleiri en einn `þegar leikmaður snertir`
           atburð á vinnusvæðinu á sama tíma, svo þú þarft ekki að eyða þeim fyrsta!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_b: Gættu þess að nýji `þegar leikmaður snertir` kubburinn
+          sýni leikmann **1** og leikmann **3**.
+        courseC_PlayLab_events9_c: Þú getur haft fleiri en einn `þegar leikmaður snertir`
+          atburð á vinnusvæðinu á sama tíma, svo þú þarft ekki að eyða þeim fyrsta!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_b: Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið
           til að leysa þessa þraut.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_b: Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið
+          til að leysa þessa þraut.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið
           til að leysa þessa þraut.
       courseC_PlayLab_events_challenge1_authored_hint:
@@ -5333,6 +5421,22 @@ is:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.
+          <xml> <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Prófaðu að nota `setja leikmann 1 í miðju
+          til vinstri` þegar hann snertir hina leikmennina. Þetta mun endurstilla
+          leikinn svo að spilarinn getur haldið áfram að reyna!
+        courseC_PlayLab_events_challenge_c: |-
+          Þú vilt kannske líka breyta hraða leikmannanna til að gera leikinn auðveldari eða erfiðari!
+          <xml>  <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.
           <xml> <block type="studio_setSpritePosition">
@@ -5984,6 +6088,12 @@ is:
         courseC_harvester_loops1_b: Þú getur notað lykkju með kubbnum <xml><block
           type="harvester_pumpkin"/></xml> til að tína fleiri en eitt grasker af sama
           reit.
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: Eftir að þú hefur fært þig á grasker notar þú
+          <xml><block type="harvester_pumpkin"/></xml> til að taka það.
+        courseC_harvester_loops1_b: Þú getur notað lykkju með kubbnum <xml><block
+          type="harvester_pumpkin"/></xml> til að tína fleiri en eitt grasker af sama
+          reit.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Ef þú festist, er ráð að skrifa þrepin á pappír
           og leita að endurteknum mynstrum.
@@ -5991,6 +6101,12 @@ is:
         courseC_harvester_loops2_c: Önnur lykkjan mun endurtaka skipunina `færa áfram`,
           hin mun endurtaka skipunina `tína grasker`.
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: Ef þú festist, er ráð að skrifa þrepin á pappír
+          og leita að endurteknum mynstrum.
+        courseC_harvester_loops2_b: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
+        courseC_harvester_loops2_c: Önnur lykkjan mun endurtaka skipunina `færa áfram`,
+          hin mun endurtaka skipunina `tína grasker`.
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: Ef þú festist, er ráð að skrifa þrepin á pappír
           og leita að endurteknum mynstrum.
         courseC_harvester_loops2_b: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
@@ -6012,6 +6128,14 @@ is:
           er mjög líkur þeim í síðustu þraut. Í hvaða átt þarftu svo að snúa?
         courseC_harvester_loops3_c: Ef þú vilt einfalda kóðann getur þú reyndar sett
           eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: Ekki hræðast að gera mistök! Prófaðu að bæta við
+          kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
+          þú ekki hafa klárað lausnina.
+        courseC_harvester_loops3_b: Til að ná fyrstu graskerunum notar þú kóða sem
+          er mjög líkur þeim í síðustu þraut. Í hvaða átt þarftu svo að snúa?
+        courseC_harvester_loops3_c: Ef þú vilt einfalda kóðann getur þú reyndar sett
+          eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_a: Notaðu nýja kubbinn `tína maís` til að safna maísnum.
         courseC_harvester_loops4_b: Þú getur notað margar lykkjur í kóðanum, sumar
@@ -6019,6 +6143,12 @@ is:
         courseC_harvester_loops4_c: Ef þú vilt einfalda kóðann getur þú reyndar sett
           eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_a: Notaðu nýja kubbinn `tína maís` til að safna maísnum.
+        courseC_harvester_loops4_b: Þú getur notað margar lykkjur í kóðanum, sumar
+          til að tína maís og aðrar til að tína grasker.
+        courseC_harvester_loops4_c: Ef þú vilt einfalda kóðann getur þú reyndar sett
+          eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_a: Notaðu nýja kubbinn `tína maís` til að safna maísnum.
         courseC_harvester_loops4_b: Þú getur notað margar lykkjur í kóðanum, sumar
           til að tína maís og aðrar til að tína grasker.
@@ -6034,11 +6164,20 @@ is:
           forritið og leita svo að endurteknum mynstrum.
         courseC_harvester_loops5_b: Hefurðu séð svona tröppumynstur í öðrum þrautum?
           Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: Ein leið til að finna lausn er að teikna upp allt
+          forritið og leita svo að endurteknum mynstrum.
+        courseC_harvester_loops5_b: Hefurðu séð svona tröppumynstur í öðrum þrautum?
+          Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: Mundu að þú getur sett fleiri en einn kubb í sömu
           `endurtaka` lykkju.
         courseC_harvester_loops6_b: Ekki gleyma að snúa við endann á maísbeðinu.
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: Mundu að þú getur sett fleiri en einn kubb í sömu
+          `endurtaka` lykkju.
+        courseC_harvester_loops6_b: Ekki gleyma að snúa við endann á maísbeðinu.
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_a: Mundu að þú getur sett fleiri en einn kubb í sömu
           `endurtaka` lykkju.
         courseC_harvester_loops6_b: Ekki gleyma að snúa við endann á maísbeðinu.
@@ -6052,12 +6191,22 @@ is:
           tínt graskerin fyrst.
         courseC_harvester_loops7_b: Þú verður að nota fleiri en eina `endurtaka` lykkju
           til að leysa þessa þraut.
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: Í þessari þraut getur þú tínt maísinn fyrst eða
+          tínt graskerin fyrst.
+        courseC_harvester_loops7_b: Þú verður að nota fleiri en eina `endurtaka` lykkju
+          til að leysa þessa þraut.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: Kannastu við svona tröppumynstur frá fyrri þraut?
           Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
         courseC_harvester_loops8_b: Ef þú vilt einfalda kóðann enn meira, getur þú
           reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Kannastu við svona tröppumynstur frá fyrri þraut?
+          Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
+        courseC_harvester_loops8_b: Ef þú vilt einfalda kóðann enn meira, getur þú
+          reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: Kannastu við svona tröppumynstur frá fyrri þraut?
           Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
         courseC_harvester_loops8_b: Ef þú vilt einfalda kóðann enn meira, getur þú
@@ -6161,6 +6310,39 @@ is:
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
+          án þess að nota lykkjur!
+        courseC_harvester_loops_challenge1_b: Þú getur endurtekið `færa áfram` og
+          `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju
+          horni.
+        courseC_harvester_loops_challenge1_c: |-
+          Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Ein lausn á þessu lítur út eins og sikksakk
           mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona
@@ -6176,6 +6358,20 @@ is:
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Ein lausn á þessu lítur út eins og sikksakk
+          mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona
+          þraut. Ekki gefast upp!
+        courseC_harvester_loops_challenge2_b: Þú getur endurtekið `færa áfram` og
+          `tína kál` eins oft og þú þarft, síðan snúið á hverju horni.
+        courseC_harvester_loops_challenge2_c: |
+          Þetta sikksakk mynstur má endurtaka tvisvar til að leysa þrautina með bara 20 kubbum!
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          Þetta spíral-mynstur er hægt að kóða með aðeins 18 kubbum!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Ein lausn á þessu lítur út eins og sikksakk
           mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona
           þraut. Ekki gefast upp!
@@ -7419,12 +7615,6 @@ is:
         courseD_bee_conditionals8_a: "**Mundu:** Þessi þraut breytist í hvert sinn
           sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`)
           til að leysa þessa áskorun."
-        courseD_bee_conditionals8_c: Hvernig getur þú tryggt að þú farir út á enda
-          hverrar slóðar alveg sama hve löng hún er?
-        courseD_bee_conditionals8_d: |-
-          Þó að það sé ský beint fyrir framan þig þarftu ekki að fara þangað fyrst. Prófaðu að byrja með skýið sem er neðst til hægri í ferningnum.
-
-          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Getur þú fundið leið sem nær til allra
           blóma og býkúpa án þess að lenda á tré? Besta slóðin er spírall.
@@ -8491,6 +8681,14 @@ is:
         courseD_harvester_nested_loops_challenge1_a: Þú hefur líklega nú þegar notað
           lykkju til að búa til sikksakk mynstur. Ef þú manst það algrím, getur þú
           bætt nokkrum atriðum við það hér.
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: Fylgdu slóðinni með því að fara áfram og snúa
+          í eina átt, síðan fara áfram aftur áður en þú snýrð í öfuga átt. Farðu áfram
+          einu sinni enn til að ná akarninu.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: Ekki hræðast að gera mistök! Prófaðu að bæta
+          við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
+          þú ekki hafa klárað lausnina.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Ekki gleyma að þú getur `endurtekið`
           eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!
@@ -8546,6 +8744,12 @@ is:
       courseD_maze_ramp2_2019_authored_hint:
         courseC_maze_programming2_b: Gættu þess að allir 3 kubbarnir séu tengdir innbyrðis
           og tengdir við `þegar keyrt` kubbinn.
+      courseD_maze_ramp4_2019_authored_hint:
+        courseC_maze_programming4_a: Þú getur snúið til hægri eða vinstri frá sjónarhorni
+          Skrat. Ef hann horfir til hægri þá mun hægri snúningur láta hann horfa niður.
+        courseC_maze_programming4_b: Fylgdu slóðinni með því að fara áfram og snúa
+          í eina átt, síðan fara áfram aftur áður en þú snýrð í öfuga átt. Farðu áfram
+          einu sinni enn til að ná akarninu.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_b: Mundu að snúningar eru frá sjónarhorni fuglsins.
         courseC_maze_programming5_c: Ekki hræðast að gera mistök! Prófaðu að bæta

@@ -1506,3 +1506,15 @@ kk:
               name: Ғаламтор
             Crowdsourcing:
               name: Кроудсорсинг
+        andrea-test:
+          stages:
+            'null':
+              name: бос жиын
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Ғимарат Салу
+            'Real-life Algorithms: Paper Planes':
+              name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+            Binary Bracelets:
+              name: Екілік Білезіктер
