@@ -99,33 +99,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
   end
 
-  # Asserts that each expected directive is contained in the cache-control header,
-  # delimited by commas and optional whitespace
-  def assert_cache_control_match(expected_directives, cache_control_header)
-    expected_directives.each do |directive|
-      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
-    end
-  end
-
-  def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
-  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
-    expected_directives = [
-      'public',
-      "max-age=#{max_age}",
-      "s-maxage=#{proxy_max_age}"
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
     netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
