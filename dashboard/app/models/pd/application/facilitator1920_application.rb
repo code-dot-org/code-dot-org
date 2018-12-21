@@ -242,9 +242,7 @@ module Pd::Application
     def meets_criteria
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
-      scored_questions = SCOREABLE_QUESTIONS[:bonus_points]
-
-      scores = scored_questions.map {|q| response_scores[q]}
+      scores = response_scores.values
 
       if scores.uniq == [YES]
         YES

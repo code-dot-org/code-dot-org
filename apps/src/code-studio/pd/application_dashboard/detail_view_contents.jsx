@@ -881,6 +881,7 @@ export class DetailViewContents extends React.Component {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="bonus_points_br"/>);
       }
+
       scoringDropdowns.push(
         <div key="bonus_points_scores">
           {
@@ -1170,7 +1171,7 @@ export class DetailViewContents extends React.Component {
         {this.props.applicationData.application_type === ApplicationTypes.teacher &&
           !this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()
         }
-        {this.renderInterview()}
+        {this.props.applicationData.application_type === ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}
         {this.renderEditMenu()}
         {this.props.applicationData.status_change_log && (
