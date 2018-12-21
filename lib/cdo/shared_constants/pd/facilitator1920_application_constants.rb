@@ -82,5 +82,40 @@ module Pd
         :csd_csp_good_standing_requirement
       ]
     }
+
+    BONUS_POINT_CATEGORIES = {
+      application_score: [
+        :currently_involved_in_cs_education,
+        :grades_taught,
+        :experience_teaching_this_course,
+        :completed_pd,
+        :why_should_all_have_access,
+        :skills_areas_to_improve,
+        :inquiry_based_learning,
+        :why_interested
+      ],
+      interview_score: [],
+      teaching_experience_score: [
+        :grades_taught,
+        :inquiry_based_learning
+      ],
+      leadership_score: [],
+      champion_for_cs_score: [
+        :currently_involved_in_cs_education
+      ],
+      equity_score: [
+        :why_should_all_have_access
+      ],
+      growth_minded_score: [
+        :skills_areas_to_improve
+      ],
+      content_knowledge_score: [
+        :experience_teaching_this_course,
+        :completed_pd
+      ],
+      program_commitment_score: [
+        :why_interested
+      ]
+    }
   end
 end
