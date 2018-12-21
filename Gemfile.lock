@@ -56,14 +56,6 @@ GIT
       activemodel (>= 4.0)
 
 GIT
-  remote: https://github.com/svenfuchs/i18n.git
-  revision: 40bca10382b555afcd378cbe7cb02d7f5f977864
-  ref: 40bca10
-  specs:
-    i18n (1.1.1)
-      concurrent-ruby (~> 1.0)
-
-GIT
   remote: https://github.com/wjordan/gctools.git
   revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
   ref: ruby-2.5
@@ -489,6 +481,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
+    i18n (1.3.0)
+      concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
     io-like (0.3.0)
@@ -943,7 +937,7 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
-  i18n!
+  i18n (= 1.3.0)
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
