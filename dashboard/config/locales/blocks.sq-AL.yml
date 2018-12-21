@@ -224,12 +224,24 @@ sq:
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': madhësia
@@ -248,6 +260,11 @@ sq:
           CORNER:
             '"right"': djathtas
             '"left"': majtas
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -287,10 +304,25 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      binary_move:
+        options:
+          DIR:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
       craft_ifPath:
         text: |-
-          nëse shtegu {DIR}
-          {STATEMENT}
+          nëse shtegu [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": përpara
@@ -298,8 +330,8 @@ sq:
             "'left'": në të majtë
       craft_ifStandingOn:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": korali blu
@@ -310,8 +342,8 @@ sq:
             "'seaLantern'": fari i detit
       craft_ifStandingOnLimit:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": rërë
@@ -320,7 +352,7 @@ sq:
       craft_moveForward:
         text: lëviz përpara
       craft_placeBlock:
-        text: vendos {blockType}
+        text: vendos [blockType][0]
         options:
           blockType:
             '"strippedOak"': lis i zhveshur
@@ -355,13 +387,13 @@ sq:
       craft_repeatUntilConduit:
         text: |-
           përsërite deri sa tubi të mbarojë
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           përsërit deri te pikësynimi
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: vezë peshku {ENTITY}
+        text: vezë peshku [ENTITY][0]
         options:
           ENTITY:
             '"cod"': merluc
@@ -371,7 +403,7 @@ sq:
             '"squid"': kallamar
             '"tropicalFish"': peshk tropikal
       craft_turn:
-        text: kthehu {DIR}
+        text: kthehu [DIR][0]
         options:
           DIR:
             right: djathtas ↻

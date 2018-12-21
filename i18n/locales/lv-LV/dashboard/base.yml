@@ -142,11 +142,11 @@ lv:
     subject: 'Pievienoties manai klasei (code.org)'
     body: |
       Uzklikšķini uz zemāk esošās hipersaites, lai pieteiktos uz datorzinātnes pamācību mājaslapā Code.org (Mani norādot kā savu "skolotāju"):
-      
+
       %{link}
-      
+
       Šīs pamācības ir jautras, vizuāli piesaistošas un, tās māca datorzinātnes pamatprincipus, izmantojot vienkāršu, vadītu, spēlei līdzīgu pieredzi. Mācies programmēt no Bill Gates, Mark Zuckerberg, Angry Birds un Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:

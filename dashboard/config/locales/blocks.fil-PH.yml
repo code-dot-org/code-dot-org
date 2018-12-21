@@ -112,6 +112,10 @@ fil:
         options:
           EFFECT:
             '"none"': Wala
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Wala
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -131,6 +135,10 @@ fil:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Wala
@@ -274,21 +282,67 @@ fil:
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": kaliwa
-            "{x: 300, y: 200}": kanan
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': lahat
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Wala
       Mikelab_randomColor:
         text: iba-ibang kulay
       Mikelab_setBG:
@@ -306,6 +360,11 @@ fil:
           CORNER:
             '"right"': kanan
             '"left"': kaliwa
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -349,6 +408,21 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      binary_move:
+        options:
+          DIR:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
       craft_ifPath:
         options:
           DIR:

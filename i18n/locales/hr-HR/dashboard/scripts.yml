@@ -1380,3 +1380,15 @@ hr:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'ništa'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Izrada temelja
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi iz stvarnog života: Papirnati avioni'
+            Binary Bracelets:
+              name: Binarne narukvice

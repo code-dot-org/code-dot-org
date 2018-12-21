@@ -130,9 +130,24 @@ da:
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setBackgroundEffect:
-        text: indstil baggrundseffekt {EFFECT}
+        text: indstil baggrundseffekt [EFFECT][0]
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"disco_ball"': Diskokugle
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
+            '"text"': Sangtitel
+            '"sparkles"': Glitter
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Sort og hvid
+            '"cool"': Blå
+            '"default"': Lys
+            '"tropical"': Tropisk
+            '"warm"': Rød
       Dancelab_setBackgroundEffectWithPalette:
-        text: indstil baggrundseffekt {EFFECT} {PALETTE}
+        text: indstil baggrundseffekt [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -168,6 +183,14 @@ da:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musiknoder
+            '"smiling_poop"': Lort
+            '"floating_rainbows"': Regnbue
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -199,7 +222,7 @@ da:
           THIS:
             sprites: alle
       Dancelab_setVisible:
-        text: indstil {SPRITE} synlighed til {VISIBILITY}
+        text: indstil [SPRITE][0] synlighed til [VISIBILITY][1]
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -320,21 +343,69 @@ da:
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": venstre
-            "{x: 300, y: 200}": højre
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': alle
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Roll: Rul med kroppen
+            MOVES.Kick: Stjerne
       Mikelab_randomColor:
         text: tilfældig farve
       Mikelab_setBG:
@@ -352,6 +423,11 @@ da:
           CORNER:
             '"right"': højre
             '"left"': venstre
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -399,6 +475,21 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      binary_move:
+        options:
+          DIR:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
       craft_ifPath:
         options:
           DIR:

@@ -1711,3 +1711,18 @@ he:
               name: אמן בינארי
             Internet:
               name: אינטרנט
+        andrea-test:
+          stages:
+            'null':
+              name: ריק
+        dance-extras-gallery:
+          title: המשיכו לרקוד
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+        coursec-2019:
+          stages:
+            Programming in Maze:
+              name: תכנות במבוך
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            Binary Bracelets:
+              name: צמידים בינארים

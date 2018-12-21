@@ -1,5 +1,4 @@
 require File.join(File.expand_path(__FILE__), '../../../deployment')
-require 'cdo/aws/metrics'
 
 if CDO.pegasus_sock
   bind "unix://#{CDO.pegasus_sock}"
@@ -31,6 +30,8 @@ before_fork do
   # NOTE: before_fork runs on the parent puma process, so complete restart of the web application services on all
   # front end instances is required for a change of this Gatekeeper flag to take effect:
   #   sudo service dashboard upgrade && sudo service pegasus upgrade
+  require 'dynamic_config/gatekeeper'
+  require 'dynamic_config/dcdo'
   if Gatekeeper.allows('enableWebServiceProcessRollingRestart')
     require 'puma_worker_killer'
 
@@ -40,6 +41,7 @@ before_fork do
 end
 
 on_worker_boot do |_index|
+  require 'cdo/aws/metrics'
   Cdo::Metrics.push(
     'App Server',
     [

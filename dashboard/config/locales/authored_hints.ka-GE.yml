@@ -3785,6 +3785,13 @@ ka:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ
+          წინ.
+        mc_9_b: კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ
+          გამოსათხრელად.
+        mc_9_c: იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ
+          ბლოკი `ჩირაღდნის განთავსება`.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: დარწმუნდით, რომ `dog_speed`-ზე მინიჭებული რიცხვი
           აღემატება `cat_speed`-ზე მინიჭებულს.
@@ -7732,6 +7739,15 @@ ka:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           მიამაგრეთ ამ ბლოკებიდან ორი ბლოკს `გაშვებისას`:
@@ -7744,6 +7760,17 @@ ka:
         courseC_PlayLab_events2_b: გამოიყენეთ ბლოკზე განთავსებული ჩამოსასშლელი მენიუ,
           იმისათვის რომ შეცვალოთ მოსაუბრე მსახიობები.
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          მიამაგრეთ ამ ბლოკებიდან ორი ბლოკს `გაშვებისას`:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: გამოიყენეთ ბლოკზე განთავსებული ჩამოსასშლელი მენიუ,
+          იმისათვის რომ შეცვალოთ მოსაუბრე მსახიობები.
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           მიამაგრეთ ამ ბლოკებიდან ორი ბლოკს `გაშვებისას`:
           <xml>
@@ -7782,6 +7809,20 @@ ka:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: ამ თასატეხის ამოსახსნელად ჯორჯი უნდა შეატრიალოთ
+          მარჯვნივ დაახლოებით 25 პიქსელით.
+        courseC_PlayLab_events3_b: არის ინსტრუმენტების პანელში ბლოკი, რომელმაც შეიძლება,
+          აამოძრავოს მსახიობი?
+        courseC_PlayLab_events3_c: |-
+          მიამაგრეთ ეს ბლოკი ბლოკს `გაშვებისას`:
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: '"გაშვება" ღილაკზე დაწკაპუნებისას ჯორჯი უნდა გადაადგილდეს
           მარჯვნივ **100** პიქსელით, რათა მიაღწიოს კატა ზეთისხილამდე.'
@@ -7792,12 +7833,22 @@ ka:
           მარჯვნივ **100** პიქსელით, რათა მიაღწიოს კატა ზეთისხილამდე.'
         courseC_PlayLab_events4_a: თავსატეხის ამოსახსნელად მიაბით 'მსახიობი __ამბობს'
           ბლოკი 'როცა პერსონაჟი ეხება' მოვლენას.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: '"გაშვება" ღილაკზე დაწკაპუნებისას ჯორჯი უნდა გადაადგილდეს
+          მარჯვნივ **100** პიქსელით, რათა მიაღწიოს კატა ზეთისხილამდე.'
+        courseC_PlayLab_events4_a: თავსატეხის ამოსახსნელად მიაბით 'მსახიობი __ამბობს'
+          ბლოკი 'როცა პერსონაჟი ეხება' მოვლენას.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: '"რა არის ახალი?" ტექსტის საპოვნელად უნდა ჩამოშალოთ
           მენიუ `პერსონაჟი ამბობს` ბლოკში'
         courseC_PlayLab_events5_b: პროგრამის გაშვებისას დააწექით ოქტავიას, იმისათვის
           რომ შეამოწმოთ, როგორ მუშაობს ის!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: '"რა არის ახალი?" ტექსტის საპოვნელად უნდა ჩამოშალოთ
+          მენიუ `პერსონაჟი ამბობს` ბლოკში'
+        courseC_PlayLab_events5_b: პროგრამის გაშვებისას დააწექით ოქტავიას, იმისათვის
+          რომ შეამოწმოთ, როგორ მუშაობს ის!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_a: '"რა არის ახალი?" ტექსტის საპოვნელად უნდა ჩამოშალოთ
           მენიუ `პერსონაჟი ამბობს` ბლოკში'
         courseC_PlayLab_events5_b: პროგრამის გაშვებისას დააწექით ოქტავიას, იმისათვის
@@ -7816,6 +7867,13 @@ ka:
           ჩამოსაშლელი მენიუ, იმისათვის რომ შეცვალოთ ვადლეს მოძრაობის მიმართულება.
         courseC_PlayLab_events6_c: როცა მორჩებით, უნდა შეგეძლოთ, თქვენს კომპიუტერზე
           განთავსებული ისრის ღილაკების გამოყენებით ამოძრაოთ ბაჯბაჯა პერსონაჟები!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: თითოეულ მწვანე `როცა ისარი` ბლოკს ქვემოთ უნდა ჰქონდეს
+          ერთი მოქმედება.
+        courseC_PlayLab_events6_b: გამოიყენეთ ბლოკზე `გადაადგილე მსახიობი 1` განთავსებული
+          ჩამოსაშლელი მენიუ, იმისათვის რომ შეცვალოთ ვადლეს მოძრაობის მიმართულება.
+        courseC_PlayLab_events6_c: როცა მორჩებით, უნდა შეგეძლოთ, თქვენს კომპიუტერზე
+          განთავსებული ისრის ღილაკების გამოყენებით ამოძრაოთ ბაჯბაჯა პერსონაჟები!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'თავსატეხის ამოსახსნელად გამოიყენეთ `პერსონაჟი
           2-ის გადაადგილება 400 პიქსელით ზემოთ` და `პერსონაჟი 2-ის გადაადგილება 400
@@ -7828,12 +7886,23 @@ ka:
           პიქსელით ქვემოთ` ციკლში `გამოყენება უსასრულოდ`. '
         courseC_PlayLab_events7_b: ციკლს `გამეორება უსასრულოდ` არ სჭირდება რომელიმე
           სხვა მოვლენის ბლოკთან დაკავშირება. ის თავისით გააქტიურდება.
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: 'თავსატეხის ამოსახსნელად გამოიყენეთ `პერსონაჟი
+          2-ის გადაადგილება 400 პიქსელით ზემოთ` და `პერსონაჟი 2-ის გადაადგილება 400
+          პიქსელით ქვემოთ` ციკლში `გამოყენება უსასრულოდ`. '
+        courseC_PlayLab_events7_b: ციკლს `გამეორება უსასრულოდ` არ სჭირდება რომელიმე
+          სხვა მოვლენის ბლოკთან დაკავშირება. ის თავისით გააქტიურდება.
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: სწორი მოქმედების განსახორციელებლად ბლოკები უნდა
           მიაბათ 'როცა პერსონაჟი ეხება' ბლოკს.
         courseC_PlayLab_events8_b: გამოიყენეთ `პერსონაჟი ამბობს` და `ხმის ჩართვა`
           ბლოკები ინსტრუმენტების პანელში!
       courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: სწორი მოქმედების განსახორციელებლად ბლოკები უნდა
+          მიაბათ 'როცა პერსონაჟი ეხება' ბლოკს.
+        courseC_PlayLab_events8_b: გამოიყენეთ `პერსონაჟი ამბობს` და `ხმის ჩართვა`
+          ბლოკები ინსტრუმენტების პანელში!
+      courseC_PlayLab_events8_2019_authored_hint:
         courseC_PlayLab_events8_a: სწორი მოქმედების განსახორციელებლად ბლოკები უნდა
           მიაბათ 'როცა პერსონაჟი ეხება' ბლოკს.
         courseC_PlayLab_events8_b: გამოიყენეთ `პერსონაჟი ამბობს` და `ხმის ჩართვა`
@@ -7854,12 +7923,25 @@ ka:
         courseC_PlayLab_events9_c: თქვენს სამუშაო სივრცეში ერთსა და იმავე დროს შეგიძლიათ,
           გქონდეთ ერთზე მეტი `როცა პერსონაჟი ეხება`მოვლენა, ასე რომ საჭირო არაა პირველი
           წაშალოთ!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: თავსატეხის ამოხსნაში დაგეხმარებათ ბლოკი `ქულის
+          დაწერა`.
+        courseC_PlayLab_events9_b: 'დარწმუნდით, რომ თქვენი ახალი `როცა პერსონაჟი ეხება`
+          ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.'
+        courseC_PlayLab_events9_c: თქვენს სამუშაო სივრცეში ერთსა და იმავე დროს შეგიძლიათ,
+          გქონდეთ ერთზე მეტი `როცა პერსონაჟი ეხება`მოვლენა, ასე რომ საჭირო არაა პირველი
+          წაშალოთ!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის
           დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
         courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად
           გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის
+          დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
+        courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად
+          გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის
           დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.
         courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად
@@ -7890,6 +7972,19 @@ ka:
           **თავგადასავლის ძიება** - შეცვალეთ ფონი და შემდეგ ათქმევინეთ პერსონაჟებს, ვინ სად არის.
 
           ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+      courseC_PlayLab_eventsFP_2019_authored_hint:
+        idea1: |-
+          *გჭირდებათ იდეა??*
+
+          **მანდ ვინ არის?** განუსაზღვრეთ პერსონაჟებს შემთხვევით სურათები, რომ ვერავინ მიხვდეს, ვინ გამოჩნდება შემდეგ.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          *გჭირდებათ იდეა?*
+
+          **თავგადასავლის ძიება** - შეცვალეთ ფონი და შემდეგ ათქმევინეთ პერსონაჟებს, ვინ სად არის.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: "სათამაშო სივრცეში პერსონაჟების სხვადასხვა
           ადგილას გადასაადგილებლად, შეგიძლიათ გამოიყენოთ ეს ბლოკი: \n<xml> <block
@@ -7904,6 +7999,19 @@ ka:
           მოძრაობის სიჩქარე. \n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title
           name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: "სათამაშო სივრცეში პერსონაჟების სხვადასხვა
+          ადგილას გადასაადგილებლად, შეგიძლიათ გამოიყენოთ ეს ბლოკი: \n<xml> <block
+          type=\"studio_setSpritePosition\">\n<title name=\"SPRITE\">0</title>\n<title
+          name=\"VALUE\">12</title>\n</block></xml>\n"
+        courseC_PlayLab_events_challenge_b: სხვა მსახიობებიდან ერთ-ერთთან შეხებისას
+          სცადეთ, გამოიყენოთ ბლოკი `მოათავსეთ მსახიობი 1 მარცხენა შუა პოზიციაზე`.
+          ეს თავიდან დაიწყებს თქვენს თამშს და ამგვარად, მოთამაშე შეძლებს გააგრძელოს
+          ცდა!
+        courseC_PlayLab_events_challenge_c: "იმისათვის, რომ თამაში გააადვილოთ ან მეტად
+          გამომწვევი გახადოთ, თქვენ ასევე შეგიძლიათ სხვადასხვა პერსონაჟს შეუცვალოთ
+          მოძრაობის სიჩქარე. \n<xml>  <block type=\"studio_setSpriteSpeed\">\n<title
+          name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: "სათამაშო სივრცეში პერსონაჟების სხვადასხვა
           ადგილას გადასაადგილებლად, შეგიძლიათ გამოიყენოთ ეს ბლოკი: \n<xml> <block
           type=\"studio_setSpritePosition\">\n<title name=\"SPRITE\">0</title>\n<title
@@ -8525,6 +8633,12 @@ ka:
         courseC_harvester_loops1_b: თქვენ შეგიძლიათ ციკლის გამოყენება <xml><block
           type="harvester_pumpkin"/></xml> ბლოკთან ერთად, რათა შეაგროვოთ კვადრატიდან
           ერთზე მეტი გოგრა.
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: როდესაც მიაღწევთ გოგრას, გამოიყენეთ <xml><block
+          type="harvester_pumpkin"/></xml> ბლოკი მის შესაგროვებლად.
+        courseC_harvester_loops1_b: თქვენ შეგიძლიათ ციკლის გამოყენება <xml><block
+          type="harvester_pumpkin"/></xml> ბლოკთან ერთად, რათა შეაგროვოთ კვადრატიდან
+          ერთზე მეტი გოგრა.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა
           და განმეორებადი ნაწილების პოვნა.
@@ -8533,6 +8647,13 @@ ka:
         courseC_harvester_loops2_c: ერთი ციკლი გაიმეორებს `წინ მოძრაობის` ბრძანებას,
           ხოლო მეორე გაიმეორებს `გოგრის შეგროვების` ბრძანებას.
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა
+          და განმეორებადი ნაწილების პოვნა.
+        courseC_harvester_loops2_b: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ
+          ერთი `გამეორების` ციკლის გამოყენება.
+        courseC_harvester_loops2_c: ერთი ციკლი გაიმეორებს `წინ მოძრაობის` ბრძანებას,
+          ხოლო მეორე გაიმეორებს `გოგრის შეგროვების` ბრძანებას.
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა
           და განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops2_b: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ
@@ -8555,6 +8676,14 @@ ka:
           გამოყენება შეგიძლიათ. სად უნდა შეუხვიოთ ამის შემდეგ?
         courseC_harvester_loops3_c: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
+          უკეთ მიხვდებით, რა ხდება.
+        courseC_harvester_loops3_b: პირველი გოგრებისთვის წინა თავსატეხის მსგავსი კოდის
+          გამოყენება შეგიძლიათ. სად უნდა შეუხვიოთ ამის შემდეგ?
+        courseC_harvester_loops3_c: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
+          ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_a: გამოიყენეთ ახალი - `შეაგროვე სიმინდი` ბლოკი, რათა
           შეაგროვოთ სიმინდი.
@@ -8563,6 +8692,13 @@ ka:
         courseC_harvester_loops4_c: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_a: გამოიყენეთ ახალი - `შეაგროვე სიმინდი` ბლოკი, რათა
+          შეაგროვოთ სიმინდი.
+        courseC_harvester_loops4_b: თქვენ შეგიძლიათ გაამრავლოთ გამეორების ციკლები
+          კოდში, ზოგი გამოიყენოთ სიმინდის შესაგროვებლად, ხოლო ზოგი გოგრების შესაგროვებლად.
+        courseC_harvester_loops4_c: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
+          ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_a: გამოიყენეთ ახალი - `შეაგროვე სიმინდი` ბლოკი, რათა
           შეაგროვოთ სიმინდი.
         courseC_harvester_loops4_b: თქვენ შეგიძლიათ გაამრავლოთ გამეორების ციკლები
@@ -8579,11 +8715,20 @@ ka:
           შემდეგ კი განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops5_b: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან?
           მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ მთლიანი პროგრამის დახატვა,
+          შემდეგ კი განმეორებადი ნაწილების პოვნა.
+        courseC_harvester_loops5_b: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან?
+          მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: გახსოვდეთ, რომ ერთ გამეორების ციკლში რამდენიმე
           ბლოკის განლაგება შეგიძლიათ.
         courseC_harvester_loops6_b: არ დაგავიწყდეთ მობრუნება სიმინდის მწკრივის ბოლოს.
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: გახსოვდეთ, რომ ერთ გამეორების ციკლში რამდენიმე
+          ბლოკის განლაგება შეგიძლიათ.
+        courseC_harvester_loops6_b: არ დაგავიწყდეთ მობრუნება სიმინდის მწკრივის ბოლოს.
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_a: გახსოვდეთ, რომ ერთ გამეორების ციკლში რამდენიმე
           ბლოკის განლაგება შეგიძლიათ.
         courseC_harvester_loops6_b: არ დაგავიწყდეთ მობრუნება სიმინდის მწკრივის ბოლოს.
@@ -8597,12 +8742,22 @@ ka:
           შეაგროვოთ ან სიმინდი ან გოგრები.'
         courseC_harvester_loops7_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ რამდენიმე
           `გამეორების` ციკლი.
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: 'ამ თავსატეხის ამოხსნა ორი გზით შეგიძლიათ: ჯერ
+          შეაგროვოთ ან სიმინდი ან გოგრები.'
+        courseC_harvester_loops7_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ რამდენიმე
+          `გამეორების` ციკლი.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან?
           მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
         courseC_harvester_loops8_b: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან?
+          მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
+        courseC_harvester_loops8_b: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
+          ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან?
           მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
         courseC_harvester_loops8_b: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
@@ -8706,6 +8861,39 @@ ka:
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: ციკლების გარეშე ამის შესრულება ძალიან
+          რთული იქნება!
+        courseC_harvester_loops_challenge1_b: თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა`
+          და `სიმინდის შეგროვება` იმდენჯერ, რამდენჯერაც დაგჭირდებათ, შემდეგ კი შეტრიალდეთ
+          მარჯვნივ ყოველ კუთხესთან.
+        courseC_harvester_loops_challenge1_c: |-
+          სიმინდის შესაგროვებლად საუკეთესო ამონახსნი იყენებს `გამეორების` ბლოკს სხვა `გამეორების` ბლოკის შიგნით. თქვენ შეგიძლიათ ამ ნიმუშის გამოყენება დანარჩენი თავსატეხისთვისაც!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">მოძრაობაწინ</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">მობრუნებამარჯვნივ</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: ამის ამოხსნის ერთი გზა ტეხილივით გამოიყენება.
           მეორე გზა - სპირალივით! ამგვარ თავსატეხს ბევრი ამონახსნი აქვს. მთავარია,
@@ -8720,6 +8908,19 @@ ka:
           ამ სპირალის ფორმის ფიგურის კოდის დასაწერად 18 ბლოკია საკმარისი!
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: ამის ამოხსნის ერთი გზა ტეხილივით გამოიყენება.
+          მეორე გზა - სპირალივით! ამგვარ თავსატეხს ბევრი ამონახსნი აქვს. მთავარია,
+          არ დანებდე!
+        courseC_harvester_loops_challenge2_b: თქვენ შეგიძლიათ გაიმეოროთ "წინ გადაადგილება"
+          და "სალათის ფურცლის შეგროვება", იმდენჯერ, რამდენჯერაც დაჭირდებათ, შემდეგ,
+          თითოეულ კუთხესთან შეუხვიეთ.
+        courseC_harvester_loops_challenge2_c: |
+          თავსატეხის მხოლოდ 20 ბლოკით დასასრულებლად, ზიგზაგის ფორმის ფიგურა შეიძლება ორჯერ გამეორდეს!
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          ამ სპირალის ფორმის ფიგურის კოდის დასაწერად 18 ბლოკია საკმარისი!
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: ამის ამოხსნის ერთი გზა ტეხილივით გამოიყენება.
           მეორე გზა - სპირალივით! ამგვარ თავსატეხს ბევრი ამონახსნი აქვს. მთავარია,
           არ დანებდე!
@@ -9962,12 +10163,6 @@ ka:
           **გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.
 
           თქვენ დაგჭირდებათ პირობითი ბლოკის (`თუ` ან `თუ/სხვაგვარად`) გამოყენება ამ გამოწვევის დასაძლევად.
-        courseD_bee_conditionals8_c: როგორ უნდა დარწმუნდეთ იმაში, რომ ყოველი გზის
-          ბოლომდე გააღწევთ, გზის სიგრძის მიუხედავად?
-        courseD_bee_conditionals8_d: |-
-          იმის მიუხედავად, რომ თქვენს წინ ღრუბელია, შეგიძლიათ თავიდანვე არ ეწვიოთ მას. სცადეთ კვადრატის მარჯვენა ქვედა მხარეს განლაგებული ღრუბლით დაწყება.
-
-          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: შეგიძლიათ მოძებნოთ გზა, რომელიც მივა
           ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.
@@ -11121,6 +11316,14 @@ ka:
           არ მოერიდოთ ფაზლის გაშვება კიდირების პროცესში!
         courseD_iceage_loops9_b: თქვენი საბოლოო კოდი უნდა შეიცავდეს **4** ციკლს.
         courseD_iceage_loops9_c: სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად.
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: იმისათვის რომ ამ ბილიკს გაყვეთ, იმოძრავეთ წინ
+          და შეუხვიეთ ერთ ადგილას, შემდეგ გააგრძელეთ მოძრაობა და შეუხვიეთ საპირისპირო
+          მიმართულებით. რკოსთან მისაღწევად კიდევ ერთხელ გადაადგილდით წინ.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
+          დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი
+          არ გქონდეთ.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: არ დაგავიწყდეთ, რომ შეგიძლიათ `გაიმეოროთ`
           როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ `გაიმეოროთ`
@@ -11177,6 +11380,13 @@ ka:
       courseD_maze_ramp2_2019_authored_hint:
         courseC_maze_programming2_b: დარწმუნდით, რომ დაკლიკვა ხდება სამივე ბლოკზე
           და ის დაკავშირებულია `როცა გაიშვება` ბლოკთან.
+      courseD_maze_ramp4_2019_authored_hint:
+        courseC_maze_programming4_a: ციყვის ხედვის არედან შეგიძლიათ შეუხვიოთ მარჯვნივ
+          ან მარცხნივ. თუ მარჯვენა მიმართულების პირისპირ დგახართ, მარჯვნივ შეხვევა
+          ქვემოთ მიგათითებინებთ.
+        courseC_maze_programming4_b: იმისათვის რომ ამ ბილიკს გაყვეთ, იმოძრავეთ წინ
+          და შეუხვიეთ ერთ ადგილას, შემდეგ გააგრძელეთ მოძრაობა და შეუხვიეთ საპირისპირო
+          მიმართულებით. რკოსთან მისაღწევად კიდევ ერთხელ გადაადგილდით წინ.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_b: გახსოვდეთ, რომ მობრუნებები ჩიტის პერსპერქტივიდან
           იგულისხმება.

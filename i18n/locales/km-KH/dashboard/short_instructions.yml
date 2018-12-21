@@ -542,8 +542,10 @@ km:
         and right.
       courseC_PlayLab_events8: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."
       courseC_PlayLab_events8_2018: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."
+      courseC_PlayLab_events8_2019: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."
       courseC_PlayLab_events9: "Can you add a block to score a point\nwhen Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\\r\nPlay the game and move Waddles with the arrows until you score!"
       courseC_PlayLab_events9_2018: "Can you add a block to score a point\nwhen Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\\r\nPlay the game and move Waddles with the arrows until you score!"
+      courseC_PlayLab_events9_2019: "Can you add a block to score a point\nwhen Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\\r\nPlay the game and move Waddles with the arrows until you score!"
       courseC_PlayLab_eventsA: |-
         Add blocks to the `when run` event to
         change the background scene and the speed of Waddles the Penguin.\\r
@@ -556,8 +558,15 @@ km:
         \\r
         Play
         the game and move Waddles with the arrows until you score.
+      courseC_PlayLab_eventsA_2019: |-
+        Add blocks to the `when run` event to
+        change the background scene and the speed of Waddles the Penguin.\\r
+        \\r
+        Play
+        the game and move Waddles with the arrows until you score.
       courseC_PlayLab_events_challenge1: "Use a new block to make Waddles\nautomatically move back to the start when he runs into the Dinosaur and when\nhe scores a point. \\r\nPlay the game and move Waddles with the arrows until\nyou score enough points."
       courseC_PlayLab_events_challenge1_2018: "Use a new block to make Waddles\nautomatically move back to the start when he runs into the Dinosaur and when\nhe scores a point. \\r\nPlay the game and move Waddles with the arrows until\nyou score enough points."
+      courseC_PlayLab_events_challenge1_2019: "Use a new block to make Waddles\nautomatically move back to the start when he runs into the Dinosaur and when\nhe scores a point. \\r\nPlay the game and move Waddles with the arrows until\nyou score enough points."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Here is a new block
         that is somewhat complicated. Use it to move Waddles back to the start when

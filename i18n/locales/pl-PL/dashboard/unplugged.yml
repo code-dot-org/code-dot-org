@@ -332,3 +332,6 @@ pl:
       BinaryBracelets_2019:
         title: Binarne bransoletki
         desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane i przechowywane na wiele sposobów.
+      PaperPlanes_2019:
+        title: 'Rzeczywiste algorytmy: Papierowe samoloty'
+        desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym codziennym życiu, w szczególności przy tworzeniu papierowych samolotów. Uwaga jest skupiona na znaczeniu algorytmów w informatyce.

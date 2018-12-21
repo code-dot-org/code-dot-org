@@ -67,7 +67,7 @@
         Kan du lage en firkant med sider på 100 piksler?\r
         \r
         <br/>\r
-        
+
       2-3 Artist Loops New 10: La oss koble sammen en haug av V-er ved å bruke en løkke.
       2-3 Artist Loops New 11: "Nå skal vi lage noe gøy!\n\\r\n\\r\nGjør det samme som i forrige oppgave, men legg til en blokk for å snu til venstre med 30 grader inni løkka. Gjenta 24 ganger i stedet for 8."
       2-3 Artist Loops New 12: 'Tegn en diamant med sider på 100 piksler. '
@@ -77,7 +77,7 @@
         Tegn hva du vil!\r
         <br/><br/>\r
         \r
-        
+
       2-3 Artist Loops New 2: |-
         Her er den samme oppgaven som du nettopp løste, men denne gangen kan du bare bruke en `flytt fremover`-blokk og bare en `snu`-blokk.\r
         \r
@@ -88,7 +88,7 @@
         \r
         Putt en "gjenta"-blokk rundt denne koden for å tegne mønsteret.\r
         \r<br/>\r\r
-        
+
       2-3 Artist Nested Loops 10: Gjenta denne koden 12 ganger for å fullføre mønsteret.
       2-3 Artist Nested Loops 11: Gjenta denne koden 4 ganger for å fullføre mønsteret. Snu 90 grader etter hver sirkel.
       2-3 Artist Nested Loops 12: Gjenta denne koden 12 ganger for å fullføre sirklene.
@@ -253,7 +253,7 @@
       4-5 While Loops 4: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       AWS applab: |-
         # Gjøre dette nå
-        
+
         * trinn
         * trinn to
       AWS link: "# Bruk dette verktøyet for ulike ting"
@@ -287,43 +287,43 @@
       CourseF_PlayLab_vars2: Løpet i forrige oppgave var ikke veldig rettferdig! Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt. Den første til å samle 10 flagg vinner!
       Dance_Party_extras_battle: |-
         # Dansegrupper
-        
+
         Her er det en dansekonkurranse mellom to grupper. Piltastene kontrollerer én av danserne, og wasd-tastene kontrollere den andre. Arranger en dansekonkurranse med en venn, og prøv å forbedre denne dansekonkurransen.
-        
+
         * Legg til flere taster for å kontrollere dansene
         * Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
         * Bytt danser hver fjerde takt ved å justere synligheten
       Dance_Party_extras_every_beat: |-
         # Firedelsnoter
-        
+
         De fleste av dansene våre har brukt hele takter, men hver takt består av 4 firedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver firedelsnote.
-        
+
         Denne dansen bruker også en _betingelsesblokk_ til å kontrollere når ‘hver 0,25. takt’-blokken kan endre dansen. Prøv å endre tallene i betingelsesblokken for å se hvordan dette endrer dansen.
-        
+
         * Eksperimenter med andre notevarigheter (som 0,5 for halvnote og 0,125 for åttedelsnote).
         * Legg til noen ‘etter takten'-hendelser.
         * Bytt "takter" med "sekunder", og prøv å justere timingen på dansen på denne måten isteden.
       Dance_Party_extras_layout: |-
         # Kom i formasjon
-        
+
         Sjekk ut denne dansen som bruker ‘oppsett’-blokken til å endre bakgrunnsdansernes formasjon gjennom dansen. Prøv en av disse ideene for å utvide den:
-        
+
         * Lag en ny gruppe med dansere i et annet oppsett
         * Endre oppsett når en tast trykkes ned
         * Endre en egenskap når danserne endrer formasjon
       Dance_Party_extras_on_beat: |-
         # Bass, mellomtone og diskant
-        
+
         Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
       Dance_Party_extras_speed: |-
         # Fortere, saktere
-        
+
         Den siste dansen bruker ‘sett fart’-blokken til å styre hvor raskt hver danser beveger seg. Prøv å eksperimentere med forskjellige hastigheter på forskjellige punkter i sangen. Du kan fortsette å flikke på denne dansen, eller gå tilbake til noen av de tidligere dansene og gjøre dem enda kulere.
       Dance_Party_extras_visible: |-
         # Hvor ble det av dem?
-        
+
         Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.
-        
+
         * Legg til en ny gruppe dansere
         * Vis og skjul danserne med piltastene
         * Skjul alle danserne og bytt til en spennende bakgrunnseffekt

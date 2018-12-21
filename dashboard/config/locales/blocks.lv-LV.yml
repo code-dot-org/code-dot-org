@@ -109,8 +109,14 @@ lv:
         options:
           EFFECT:
             '"color_cycle"': Krāsas
-            '"disco"': Kvadrāti
             '"rainbow"': Krāsas
+            '"disco"': Kvadrāti
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"rainbow"': Krāsas
+            '"disco"': Kvadrāti
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -276,12 +282,24 @@ lv:
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': izmērs
@@ -300,6 +318,11 @@ lv:
           CORNER:
             '"right"': pa labi
             '"left"': pa kreisi
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -345,6 +368,21 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      binary_move:
+        options:
+          DIR:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
       craft_ifPath:
         options:
           DIR:

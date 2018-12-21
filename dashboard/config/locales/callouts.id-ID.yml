@@ -716,6 +716,9 @@ id:
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
           aktor kebagian yang berbeda di dalam ruang permainan.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
+          aktor kebagian yang berbeda di dalam ruang permainan.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Mulailah dengan menggunakan blok ini untuk
           menempatkan artis ke tengah layar.
@@ -750,6 +753,9 @@ id:
         courseC_harvester_loops1_callout1: Angka empat pada labu menandakan bahwa
           ada empat labu yang bisa dipilih.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Angka empat pada labu menandakan bahwa
+          ada empat labu yang bisa dipilih.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Angka empat pada labu menandakan bahwa
           ada empat labu yang bisa dipilih.
       courseC_maze_debugging5_callout:
@@ -892,6 +898,9 @@ id:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Gunakan blok ini untuk mengumpulkan satu buah
           harta karun.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
+          kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.

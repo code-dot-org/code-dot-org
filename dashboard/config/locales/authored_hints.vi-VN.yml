@@ -274,6 +274,7 @@ vi:
           bạn kết thúc.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_7_b: vòng lặp
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: Có hai cách để giải câu đố này!
       Artist Autorun Test_authored_hint:
@@ -1219,6 +1220,7 @@ vi:
           lại.
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_7_b: vòng lặp
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách
@@ -1289,6 +1291,7 @@ vi:
           lại.
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_7_b: vòng lặp
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách

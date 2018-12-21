@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string/indent'
-require 'honeybadger'
 require 'cdo/pegasus/donor'
 
 def page_title_with_tagline

@@ -282,21 +282,67 @@ ga:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": ar chlé
-            "{x: 300, y: 200}": ar dheis
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': uile
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': uile
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': uile
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Dada
       Mikelab_randomColor:
         text: dath randamach
       Mikelab_setBG:
@@ -314,6 +360,11 @@ ga:
           CORNER:
             '"right"': ar dheis
             '"left"': ar chlé
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -361,6 +412,21 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      binary_move:
+        options:
+          DIR:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
       craft_ifPath:
         options:
           DIR:

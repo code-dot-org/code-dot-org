@@ -865,6 +865,12 @@ tr:
           yarı yarıya kesişiyor. Bu sebeple 180/kenar kadar dönmelisin. (Bu durumda
           sides*2 kadar tekrarlaman gerekecek). '
         Course_4_SCV_6_f: "** Çözüm: **![Solution] (https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)"
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Doğru yöne mi bakıyorsun? 'Bloğu yok et' bloğu önündeki bloğu yok
+          eder.
+        mc_9_b: Duvardaki kara lekeler kömür madeni! 'Bloğu yok et' bloğu ile bu madenleri
+          toplayın.
+        mc_9_c: Durduğunuz alana meşale yerleştirmek için 'meşale yerleştir'i kullanın.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Köpeğin hızını 'Dog_speed' değerini kedinin hızından
           'cat_speed' değerinden büyük yaptığınızdan emin olun.
@@ -4599,6 +4605,15 @@ tr:
           <title name="VALUE">Selam.</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Bu blokları 'Çalıştığı zaman'(when run) bloğuna ekleyin:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Selam.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Blokların ikisini 'Çalıştığı zaman'(when run) bloğuna ekle:
@@ -4611,6 +4626,17 @@ tr:
         courseC_PlayLab_events2_b: Konuşan karakteri değiştirmek için bloğun üzerindeki
           açılır menüyü kullan.
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Blokların ikisini 'Çalıştığı zaman'(when run) bloğuna ekle:
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Selam.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Konuşan karakteri değiştirmek için bloğun üzerindeki
+          açılır menüyü kullan.
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           Blokların ikisini 'Çalıştığı zaman'(when run) bloğuna ekle:
           <xml>
@@ -4645,10 +4671,25 @@ tr:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_b: Araç kutusunda, karakteri hareket ettirebilecek
+          bir blok var mı?
+        courseC_PlayLab_events3_c: |-
+          Bu bloğu, 'Çalıştığı Zaman' bloğuna ekle:
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_b: İşe yaradığını kontrol etmek için programı çalıştırdığınızda
           Octavia' ya tıklayın!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_b: İşe yaradığını kontrol etmek için programı çalıştırdığınızda
+          Octavia' ya tıklayın!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_b: İşe yaradığını kontrol etmek için programı çalıştırdığınızda
           Octavia' ya tıklayın!
       courseC_PlayLab_events6_authored_hint:
@@ -4665,11 +4706,22 @@ tr:
           Waddles aktörünün hangi yöne gideceğini belirlemek için kullan."
         courseC_PlayLab_events6_c: İşiniz bittiğinde, Waddles' ı hareket ettirmek
           için bilgisayarınızdaki yön tuşlarını kullanabileceksiniz!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Her bir yeşil "ne zaman ok" bloğunun altında bir
+          eylem olmalıdır.
+        courseC_PlayLab_events6_b: "' taşı aktör 1' bloğunun üzerindeki açılır menüyü
+          Waddles aktörünün hangi yöne gideceğini belirlemek için kullan."
+        courseC_PlayLab_events6_c: İşiniz bittiğinde, Waddles' ı hareket ettirmek
+          için bilgisayarınızdaki yön tuşlarını kullanabileceksiniz!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_b: "'sürekli tekrarla' bloğunun başka herhangi bir
           olay bloğuna bağlanması gerekmez: 'sürekli tekrarla' bloğu kendi başına
           çalışır."
       courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_b: "'sürekli tekrarla' bloğunun başka herhangi bir
+          olay bloğuna bağlanması gerekmez: 'sürekli tekrarla' bloğu kendi başına
+          çalışır."
+      courseC_PlayLab_events7_2019_authored_hint:
         courseC_PlayLab_events7_b: "'sürekli tekrarla' bloğunun başka herhangi bir
           olay bloğuna bağlanması gerekmez: 'sürekli tekrarla' bloğu kendi başına
           çalışır."
@@ -4685,10 +4737,19 @@ tr:
         courseC_PlayLab_events9_c: Çalışma alanında aynı anda birden fazla `aktör
           dokunduğunda' olay bloğu kullanabilirsin, bu sebeple ilkini silmene gerek
           yok!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_b: Yeni 'aktör dokunduğunda' bloğunuzun aktör  **1**
+          ve aktör **3** dediğinden emin olun.
+        courseC_PlayLab_events9_c: Çalışma alanında aynı anda birden fazla `aktör
+          dokunduğunda' olay bloğu kullanabilirsin, bu sebeple ilkini silmene gerek
+          yok!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
+          çalışma alanına sürüklemeye ihtiyacın olacak.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_events_challenge1_authored_hint:
@@ -4708,6 +4769,22 @@ tr:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          Oyuncuları oyun alanında farklı yerlere taşımak için bu bloğu kullanabilirsiniz.
+          <xml> <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Diğer aktörlerden biri dokunursa 'Aktör
+          1 sol orta konuma ayarla' blokunu kullanmayı deneyin. Bu oyunu yeniden başlatacaktır
+          böylece kullanıcı denemeye devam edebilir!
+        courseC_PlayLab_events_challenge_c: |-
+          Oyunu daha kolay ya da daha mücadele dolu yapmak için farklı karakterlerin hızlarını değiştirebilirsin!
+          <xml>  <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Oyuncuları oyun alanında farklı yerlere taşımak için bu bloğu kullanabilirsiniz.
           <xml> <block type="studio_setSpritePosition">
@@ -5368,6 +5445,12 @@ tr:
         courseC_harvester_loops1_b: Alandan birden fazla balkabağı toplamak için 'Balkabağı
           topla' <xml><block type="harvester_pumpkin"/></xml>bloğunun etrafına bir
           'tekrarla' bloğu ekleyebilirsin.
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: Bir balkabağına geldikten sonra, onu toplamak
+          için <xml><block type="harvester_pumpkin"/></xml> bloğunu kullanın.
+        courseC_harvester_loops1_b: Alandan birden fazla balkabağı toplamak için 'Balkabağı
+          topla' <xml><block type="harvester_pumpkin"/></xml>bloğunun etrafına bir
+          'tekrarla' bloğu ekleyebilirsin.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
           yazmayı deneyin ve tekrar eden adımları bulun.
@@ -5376,6 +5459,13 @@ tr:
         courseC_harvester_loops2_c: Bir döngü 'ilerle' komutunu tekrar edecek, ve
           diğeri de 'balkabağı topla' komutunu tekrarlayacak.
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
+          yazmayı deneyin ve tekrar eden adımları bulun.
+        courseC_harvester_loops2_b: Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız
+          olacak.
+        courseC_harvester_loops2_c: Bir döngü 'ilerle' komutunu tekrar edecek, ve
+          diğeri de 'balkabağı topla' komutunu tekrarlayacak.
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
           yazmayı deneyin ve tekrar eden adımları bulun.
         courseC_harvester_loops2_b: Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız
@@ -5391,6 +5481,14 @@ tr:
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseC_harvester_loops3_b: İlk balkabakları için son bulmacadakine çok benzer
+          kodlar kullanabilirsin. Devamında hangi yola dönmeli?
+        courseC_harvester_loops3_c: Eğer kodlarını daha fazla basitleştirmek istersen,
+          bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
+          içe döngü** denir.
+      courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_a: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
         courseC_harvester_loops3_b: İlk balkabakları için son bulmacadakine çok benzer
@@ -5414,6 +5512,14 @@ tr:
         courseC_harvester_loops4_c: Eğer kodlarını daha fazla basitleştirmek istersen,
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
+      courseC_harvester_loops4_2019_authored_hint:
+        courseC_harvester_loops4_a: Mısır toplamak için yeni 'mısır topla' bloğunu
+          kullan.
+        courseC_harvester_loops4_b: Kodlarında birden fazla tekrarla döngüsü kullanabilirsin,
+          bazıları mısır toplamak için, bazıları da balkabaklarını toplamak için.
+        courseC_harvester_loops4_c: Eğer kodlarını daha fazla basitleştirmek istersen,
+          bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
+          içe döngü** denir.
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
           yazmayı ve tekrar eden desenleri bulmayı deneyin.
@@ -5421,6 +5527,12 @@ tr:
           gösteriyor mu? Hareketler benzer olmalı, sadece yol boyunca bitkileri toplamayı
           unutmayın.
       courseC_harvester_loops5_2018_authored_hint:
+        courseC_harvester_loops5_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
+          yazmayı ve tekrar eden desenleri bulmayı deneyin.
+        courseC_harvester_loops5_b: Bu merdiven basamağı diğer bulmacalarla benzerlik
+          gösteriyor mu? Hareketler benzer olmalı, sadece yol boyunca bitkileri toplamayı
+          unutmayın.
+      courseC_harvester_loops5_2019_authored_hint:
         courseC_harvester_loops5_a: Zorlandığınız durumlarda, adımları kağıt üzerinde
           yazmayı ve tekrar eden desenleri bulmayı deneyin.
         courseC_harvester_loops5_b: Bu merdiven basamağı diğer bulmacalarla benzerlik
@@ -5434,12 +5546,21 @@ tr:
         courseC_harvester_loops6_a: Bir tekrarla döngüsü içine birden fazla blok ekleyebileceğini
           unutma.
         courseC_harvester_loops6_b: Mısır sırasının sonunda dönmeyi unutma.
+      courseC_harvester_loops6_2019_authored_hint:
+        courseC_harvester_loops6_a: Bir tekrarla döngüsü içine birden fazla blok ekleyebileceğini
+          unutma.
+        courseC_harvester_loops6_b: Mısır sırasının sonunda dönmeyi unutma.
       courseC_harvester_loops7_authored_hint:
         courseC_harvester_loops7_a: Bu bulmacayı iki yolla çözebilirsin, ilk olarak
           balkabaklarını ya da mısırları alabilirsin.
         courseC_harvester_loops7_b: Bu bulmacayı çözmek için birden fazla 'tekrarla'
           döngüsüne ihtiyacın olacak.
       courseC_harvester_loops7_2018_authored_hint:
+        courseC_harvester_loops7_a: Bu bulmacayı iki yolla çözebilirsin, ilk olarak
+          balkabaklarını ya da mısırları alabilirsin.
+        courseC_harvester_loops7_b: Bu bulmacayı çözmek için birden fazla 'tekrarla'
+          döngüsüne ihtiyacın olacak.
+      courseC_harvester_loops7_2019_authored_hint:
         courseC_harvester_loops7_a: Bu bulmacayı iki yolla çözebilirsin, ilk olarak
           balkabaklarını ya da mısırları alabilirsin.
         courseC_harvester_loops7_b: Bu bulmacayı çözmek için birden fazla 'tekrarla'
@@ -5452,6 +5573,13 @@ tr:
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Bu merdiven basamağı önceki bulmacayla benzerlik
+          gösteriyor mu? Hareketler benzer olmalı, sadece yol boyunca ekinleri toplamayı
+          unutmayın.
+        courseC_harvester_loops8_b: Eğer kodlarını daha fazla basitleştirmek istersen,
+          bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
+          içe döngü** denir.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: Bu merdiven basamağı önceki bulmacayla benzerlik
           gösteriyor mu? Hareketler benzer olmalı, sadece yol boyunca ekinleri toplamayı
           unutmayın.
@@ -5497,6 +5625,19 @@ tr:
           type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block
           type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block
           type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: Döngü kullanmadan bunu yapmak çook zor!
+        courseC_harvester_loops_challenge1_b: "`ilerle` ve `mısır al`ı ihtiyacın olduğu
+          kadar tekrar edip, her köşede `sağa dön` yapabilirsin."
+        courseC_harvester_loops_challenge1_c: "İlk dört mısırı toplamanın en iyi yolu,
+          'tekrarla' bloğunun içinde başka bir 'tekrarla' bloğunu kullanmaktır. Bu
+          deseni bulmacanın geri kalanı için de kullanabilirsin. \n\n<xml>\n<block
+          type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
+          type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block
+          type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block
+          type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block
+          type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block
+          type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Bunu çözmenin bir yolu zikzak gibi görünüyor.
           Bir diğer yol sarmal gibi görünüyor. Bunun gibi bir bulmacayı çözmenin birçok
@@ -5511,6 +5652,19 @@ tr:
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Bunu çözmenin bir yolu zikzak gibi görünüyor.
+          Bir diğer yol sarmal gibi görünüyor. Bunun gibi bir bulmacayı çözmenin birçok
+          farklı yolu var. Israrcı ol!
+        courseC_harvester_loops_challenge2_b: İhtiyaç duyduğun kadar 'ilerle' ve 'marul
+          al' komutlarını tekrar edip, sonra her köşede dönebilirsin.
+        courseC_harvester_loops_challenge2_c: "Sadece 20 blok ile bulmacayı bitirmek
+          için bu zik-zak deseni iki kez tekrarlanabilir. \n\n![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52
+          PM copy.png)\n"
+        courseC_harvester_loops_challenge2_d: |-
+          Bu sarmal desen sadece 18 blok ile kodlanabilir!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Bunu çözmenin bir yolu zikzak gibi görünüyor.
           Bir diğer yol sarmal gibi görünüyor. Bunun gibi bir bulmacayı çözmenin birçok
           farklı yolu var. Israrcı ol!
@@ -6770,18 +6924,9 @@ tr:
         courseD_bee_conditionals8_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
-          Videoyu izleyin!
         courseD_bee_conditionals8_a: "** Dikkat: ** Bu bulmaca her çalıştırdığınızda
           değişir.   \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer'
           veya ' Eğer/Değilse') gerekiyor."
-        courseD_bee_conditionals8_c: Yolculuğun her yolun sonunda bittiğinden nasıl
-          emin olabilirsin, ne kadar uzun olursa olsun?
-        courseD_bee_conditionals8_d: "Her ne kadar tam önünde bir bulut olsa da, ilk
-          olarak onu ziyaret etmek zorunda değilsin. Karenin sağ alt köşesindeki ile
-          başlamayı dene. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
-        courseD_bee_conditionals8_hintVid2: Bu bulmacayı çözerken yardım almak için
-          bu videoyu izleyin.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: 'Herhangi bir ağaca vurmadan her çiçeğe
           ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.
@@ -7844,6 +7989,13 @@ tr:
           'mısır topla'yı birden fazla kere kullanmanız gerekir.
         courseD_harvester_nested_loops_challenge1_c: Bu bulmacayı çözmek için ana
           döngünüzün içine küçük bir döngü koymanız gerekir!
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
+          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
+          bir kez daha ileri gidin.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Tek bir komutu ya da daha uzun bir
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
@@ -7896,6 +8048,12 @@ tr:
       courseD_maze_ramp2_2019_authored_hint:
         courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
           zaman' bloğuna bağlı olduğundan emin olun.
+      courseD_maze_ramp4_2019_authored_hint:
+        courseC_maze_programming4_a: Sağa veya sola Scrat'in bakış açısından dönebilirsiniz.
+          Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.
+        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
+          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
+          bir kez daha ileri gidin.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_b: Bu dönüşlerin kuş bakışı olduğunu unutmayın.
         courseC_maze_programming5_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü

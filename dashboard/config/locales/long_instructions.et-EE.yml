@@ -340,11 +340,6 @@ et:
         </block></xml>
 
         See program kasutab muusika "bassi" -heli (madalad noodid), et kontrollida tantsija pikkust. Kas saad panna ka teise tantsija muusikale vastavalt muutuma?
-      Dance_Party_11.5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
-        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n
-        \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
-        korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik
-        pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11.5_test: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n
         \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
@@ -354,6 +349,11 @@ et:
         laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid
         muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse.
         Ole loominguline ja otsi uusi plokke!"
+      Dance_Party_11_5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n
+        \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
+        korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik
+        pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
       Dance_Party_11b: |-
         On aeg tantsuvõistluseks! Kass teeb dabi kui vajutad vasakut nooleklahvi. Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema üks "kõrge plaks", kui vajutatakse ülemist nooleklahvi.
 
@@ -443,6 +443,10 @@ et:
         laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid
         muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse.
         Ole loominguline ja otsi uusi plokke!"
+      HOC Dance Freeplay: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
+      HOC Dance Freeplay_draft: Hakka gruuvima! Loo omaenda tants, mida sõpradega
+        jagada.
+      HOC Dance Predraw: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       K-1 Bee Loops 2: Kasuta 'korduse' tsüklit, et liikuda ja nektarit koguda ning
         mett valmistada!
       K-1 Bee Loops 3: Kasuta nektari kogumiseks kolme 'korduse' tsüklit ja valmista

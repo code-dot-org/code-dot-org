@@ -773,10 +773,16 @@ ga:
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a
           bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a
+          bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
           aisteoirí a aistriú timpeall an spáis oibre.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
           aisteoirí a aistriú timpeall an spáis oibre.
       courseC_artist_loopsPrePre1a_callout:
@@ -813,6 +819,9 @@ ga:
         courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín
           go bhfuil ceithre phuimcín ann le baint.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín
+          go bhfuil ceithre phuimcín ann le baint.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín
           go bhfuil ceithre phuimcín ann le baint.
       courseC_maze_debugging5_callout:
@@ -954,6 +963,9 @@ ga:
           a aistriú ar gcúl.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.

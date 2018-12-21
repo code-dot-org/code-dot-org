@@ -3,20 +3,20 @@ ar:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: وبعد {TIMESTAMP} {UNIT}
+        text: وبعد [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_changeColorBy:
-        text: تغيير {COLOR} {METHOD} {AMOUNT}
+        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
         options:
           METHOD:
             '"hue"': صبغة
             '"saturation"': تشبع
             '"brightness"': السطوع
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} نفذ هذا {MOVE} {DIR} إلى الأبد"
+        text: "[GROUP][0] نفذ هذا [MOVE][1] [DIR][2] إلى الأبد"
         options:
           GROUP:
             sprites: الكل
@@ -50,7 +50,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} نفذ هذا {MOVE}{DIR} الى الابد"
+        text: "[SPRITE][0] نفذ هذا [MOVE][1][DIR][2] الى الابد"
         options:
           MOVE:
             '"next"': "(التالي)"
@@ -71,7 +71,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: تغيير {SPRITE} {PROPERTY} {VAL}
+        text: تغيير [SPRITE][0] [PROPERTY][1] [VAL][2]
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -80,7 +80,7 @@ ar:
             '"x"': بشكل أفقي
             '"y"': بشكل عمودي
       Dancelab_doMoveEachLR:
-        text: "{GROUP} نفذ هذا {MOVE} {DIR} مرة واحدة"
+        text: "[GROUP][0] نفذ هذا [MOVE][1] [DIR][2] مرة واحدة"
         options:
           GROUP:
             sprites: الكل
@@ -112,7 +112,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} نفذ هذا {MOVE} {DIR} مرة واحدة"
+        text: "[SPRITE][0] نفذ هذا [MOVE][1] [DIR][2] مرة واحدة"
         options:
           MOVE:
             '"rand"': "(عشوائي)"
@@ -131,34 +131,34 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_eval:
-        text: تقييم{CODE}
+        text: تقييم[CODE][0]
       Dancelab_everySeconds:
-        text: 'كلما {N} {UNIT} '
+        text: 'كلما [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_everySecondsRange:
-        text: 'كلما {N} {UNIT} من {START} الى {STOP} '
+        text: 'كلما [N][0] [UNIT][1] من [START][2] الى [STOP][3] '
         options:
           UNIT:
             measures: اجرائات
             seconds: ثانية
       Dancelab_everyVerseChorus:
-        text: 'كلما {UNIT} '
+        text: 'كلما [UNIT][0] '
         options:
           UNIT:
             '"verse"': مقطع
             '"chorus"': دورة
       Dancelab_getEnergy:
-        text: الحصول على {RANGE}
+        text: الحصول على [RANGE][0]
         options:
           RANGE:
             '"low"': صوت عميق
             '"mid"': نصف
             '"high"': ثلاث
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -168,13 +168,13 @@ ar:
             '"y"': بشكل عمودي
             '"tint"': لون
       Dancelab_getTime:
-        text: "{UNIT} منقضي"
+        text: "[UNIT][0] منقضي"
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_ifDanceIs:
-        text: إذا كان {SPRITE} يقوم بِ{DANCE}{DO1} {DO2}
+        text: إذا كان [SPRITE][0] يقوم بِ[DANCE][1][DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: تصفيق عالي
@@ -194,7 +194,7 @@ ar:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_jumpTo:
-        text: "{SPRITE} اقفز الى {LOCATION}"
+        text: "[SPRITE][0] اقفز الى [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -264,12 +264,26 @@ ar:
       Dancelab_randomColor:
         text: لون عشوائي
       Dancelab_setBackgroundEffect:
-        text: عيّن تأثيرات الخلفية {EFFECT}
+        text: عيّن تأثيرات الخلفية [EFFECT][0]
         options:
           EFFECT:
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(عشوائي)"
+            '"circles"': نفق
+            '"disco_ball"': كرة ديسكو
+            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"lasers"': أرضية رقص بالليزر
+            '"text"': عنوان الأغنية
+            '"sparkles"': بريق
+            '"stars"': نجوم
+          PALETTE:
+            '"rave"': أسود وأبيض
+            '"cool"': الأزرق بدرجاته
+            '"default"': ضوء
+            '"neon"': نيون
+            '"tropical"': استوائي
+            '"vintage"': عتيق
+            '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
-        text: عيّن تأثيرات الخلفية {EFFECT} {PALETTE}
+        text: عيّن تأثيرات الخلفية [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"rand"': "(عشوائي)"
@@ -321,7 +335,11 @@ ar:
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(عشوائي)"
+            '"confetti"': قصاصات من الورق
+            '"hearts_red"': قلوب
+            '"music_notes"': نوتات موسيقية
+            '"smiling_poop"': مؤخرة السفينة
+            '"floating_rainbows"': قوس قزح
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -386,7 +404,7 @@ ar:
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل القروش
       Dancelab_setVisible:
-        text: اضبط {SPRITE} على مرئي لـ {VISIBILITY}
+        text: اضبط [SPRITE][0] على مرئي لـ [VISIBILITY][1]
         options:
           VISIBILITY:
             'false': غير مرئي
@@ -408,7 +426,7 @@ ar:
           VISIBILITY:
             'false': غير مرئي
       Dancelab_startMapping:
-        text: "{SPRITE} بدأ {PROPERTY} بالتالي {RANGE}"
+        text: "[SPRITE][0] بدأ [PROPERTY][1] بالتالي [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -422,7 +440,7 @@ ar:
             '"mid"': نصف
             '"treble"': ثلاث
       Dancelab_stopMapping:
-        text: "{SPRITE} توقع {PROPERTY} بالتالي {RANGE}"
+        text: "[SPRITE][0] توقع [PROPERTY][1] بالتالي [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -452,19 +470,19 @@ ar:
             '1': نصف
             '2': ثلاث
       gamelab_changeColor:
-        text: تغيير {COLOR} {METHOD} {AMOUNT}
+        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
         options:
           METHOD:
             '"tint"': لون
       gamelab_changeColorBy:
-        text: تغيير {COLOR} {METHOD} {AMOUNT}
+        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
         options:
           METHOD:
             '"hue"': صبغة
             '"saturation"': تشبع
             '"brightness"': السطوع
       gamelab_changePropBy:
-        text: تغيير {SPRITE} {PROPERTY} {VAL}
+        text: تغيير [SPRITE][0] [PROPERTY][1] [VAL][2]
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -478,9 +496,9 @@ ar:
             'true': صحيح
             'false': خطأ
       gamelab_eval:
-        text: تقييم{CODE}
+        text: تقييم[CODE][0]
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -490,7 +508,7 @@ ar:
             '"direction"': اتجاه الحركة
             '"tint"': لون
       gamelab_jumpTo:
-        text: "{SPRITE} اقفز الى {LOCATION}"
+        text: "[SPRITE][0] اقفز الى [LOCATION][1]"
       gamelab_locationDelta:
         options:
           DIR:
@@ -581,19 +599,8 @@ ar:
             "{x: 200, y: 300}": أسفل
             "{x: 100, y: 200}": اليسار
             "{x: 300, y: 200}": اليمين
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": أعلى
-            "{x: 200, y: 300}": أسفل
-            "{x: 100, y: 200}": اليسار
-            "{x: 300, y: 200}": اليمين
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': الكل
       Mikelab_eval:
-        text: تقييم{CODE}
+        text: تقييم[CODE][0]
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -602,6 +609,80 @@ ar:
             '"x"': موضع س
             '"y"': موضع ص
             '"direction"': اتجاه الحركة
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': الكل
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': الكل
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_ifDanceIs:
+        text: إذا كان [SPRITE][0] يقوم بِ[DANCE][1][DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: تصفيق عالي
+            MOVES.Clown: أغنية Gangnam
+            MOVES.Dab: داب
+            MOVES.DoubleJam: أغنية Double Down
+            MOVES.Drop: اسقاط
+            MOVES.Floss: خيط
+            MOVES.Fresh: طازج
+            MOVES.Roll: تحريك الجسم
+            MOVES.Kick: نجمة
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
       Mikelab_randomColor:
         text: لون عشوائي
       Mikelab_setBG:
@@ -621,6 +702,13 @@ ar:
           CORNER:
             '"right"': اليمين
             '"left"': اليسار
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -672,6 +760,21 @@ ar:
             '"y"': موضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون
+      binary_move:
+        options:
+          DIR:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
       craft_ifPath:
         options:
           DIR:
