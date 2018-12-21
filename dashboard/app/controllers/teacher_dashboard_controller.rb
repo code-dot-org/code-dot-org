@@ -1,5 +1,5 @@
 class TeacherDashboardController < ApplicationController
   def index
-    @tab = params[:tab]
+    @section_id = params[:section_id]
   end
 end

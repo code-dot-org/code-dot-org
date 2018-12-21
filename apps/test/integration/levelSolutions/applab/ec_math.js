@@ -2,7 +2,7 @@ import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
-import {globalFunctions} from '@cdo/apps/dropletUtils';
+import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 import sinon from 'sinon';
 
 module.exports = {
