@@ -933,6 +933,12 @@ en:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+      behaviors 1_callout:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 4_callout:
+        behaviors_edit: Click here to see how this behavior works.
+      behaviors 5_callout:
+        behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}
       comment_intro_maze_2018_2019_callout: {}
       course2_artist_nestedLoops_challenge2_callout: {}
@@ -1087,9 +1093,13 @@ en:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
@@ -1136,12 +1146,16 @@ en:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+      courseC_harvester_loops1_2019_callout:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+      courseC_maze_debugging9_2019_callout:
+        courseC_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: {}
@@ -1281,6 +1295,10 @@ en:
       courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseD_maze_intro5a_2019_callout: {}
+      courseD_maze_intro5c_2019_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -1302,7 +1320,7 @@ en:
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseD_maze_ramp3_2019_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+        stone_block_2: Grey blocks cannot be thrown away.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp4_2018_callout:
@@ -1831,6 +1849,8 @@ en:
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: {}
+      express_maze_debugging9_2019_callout:
+        express_maze_debugging9_2019_1: Drag blocks from the toolbox into your workspace.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Use the "create a circle" block and change the size.
       frozen circle function with parameter_b_callout:
