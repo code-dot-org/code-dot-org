@@ -56,6 +56,16 @@ export default class App extends React.Component {
     });
   };
 
+  onLoadEnd = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.setState({
+          loaded: true,
+        });
+      });
+    });
+  };
+
   webViewScale() {
     const { height, width } = this.state;
 
@@ -74,7 +84,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { age, height, indexUri } = this.state;
+    const { age, height, indexUri, loaded } = this.state;
 
     if (!age || age < DataWarning.AGE_MINIMUM) {
       return (
@@ -98,7 +108,9 @@ export default class App extends React.Component {
             scrollEnabled={false}
             bounces={false}
             scalesPageToFit={Platform.OS === 'ios'}
+            onLoadEnd={this.onLoadEnd}
           />
+          {!loaded && <View style={styles.cover} />}
         </View>}
       </View>
     );
@@ -110,6 +122,10 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'black',
     justifyContent: 'center',
+  },
+  cover: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'black',
   },
   webView: {
     backgroundColor: 'black',
