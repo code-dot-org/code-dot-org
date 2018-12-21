@@ -262,11 +262,11 @@ module Pd::Application
     def all_scores
       bonus_points_scores = response_scores_hash[:bonus_points_scores]
       all_score_hash = {
-        total_score: "#{bonus_points_scores.values.reduce(:+)} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
+        total_score: "#{bonus_points_scores.values.map(&:to_i).reduce(:+)} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
       }
 
       BONUS_POINT_CATEGORIES.each_pair do |category, keys|
-        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.reduce(:+) || 0} / #{keys.length * 5}"
+        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.map(&:to_i).reduce(:+) || 0} / #{keys.length * 5}"
       end
 
       all_score_hash
