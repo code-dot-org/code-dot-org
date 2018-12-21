@@ -6853,6 +6853,70 @@ en:
       AP_practice_Qs_rqb_99_CSP_4_1_1:
         ? |-
           <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+              yPos &lt;- yPos + 6
+          }
+          </pre>
+        : |-
+          <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+              yPos &lt;- yPos + 6
+          }
+          </pre>
+        ? |-
+          <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+          }
+          </pre>
+        : |-
+          <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              xPos &lt;- xPos + 6
+          }
+          </pre>
+        ? |-
+          <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              yPos &lt;- yPos + 6
+          }
+          </pre>
+        : |-
+          <pre>
+          xPos &lt;- 3
+          yPos &lt;- 3
+          REPEAT 3 TIMES
+          {
+              drawCircle(xPos, yPos, 3)
+              yPos &lt;- yPos + 6
+          }
+          </pre>
+        ? "<pre>\nxPos &lt;- 3\nyPos &lt;- 3\nREPEAT 3 TIMES\n{\n    drawCircle(xPos, yPos, 3)\n}  \nxPos &lt;- xPos - 6\nyPos &lt;- yPos - 6\n</pre>"
+        : "<pre>\nxPos &lt;- 3\nyPos &lt;- 3\nREPEAT 3 TIMES\n{\n    drawCircle(xPos, yPos, 3)\n}  \nxPos &lt;- xPos - 6\nyPos &lt;- yPos - 6\n</pre>"
+        ? |-
+          <pre>
           xPos <- 3
           yPos <- 3
           REPEAT 3 TIMES
@@ -6915,6 +6979,66 @@ en:
           </pre>
         ? "<pre>\nxPos <- 3\nyPos <- 3\nREPEAT 3 TIMES\n    {\n        drawCircle(xPos, yPos, 3)\n     }  \n xPos <- xPos - 6\n yPos <- yPos - 6\n</pre>"
         : "<pre>\nxPos <- 3\nyPos <- 3\nREPEAT 3 TIMES\n    {\n        drawCircle(xPos, yPos, 3)\n     }  \n xPos <- xPos - 6\n yPos <- yPos - 6\n</pre>"
+        ? |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+              {
+                  drawCircle(xPos, yPos, 3)
+                  xPos <- xPos + 6
+              }
+          </pre>
+        : |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+              {
+                  drawCircle(xPos, yPos, 3)
+                  xPos <- xPos + 6
+              }
+          </pre>
+        ? |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+              {<br>
+                  drawCircle(xPos, yPos, 3)<br>
+                  xPos <- xPos + 6<br>
+              }<br>
+          </pre>
+        : |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+              {<br>
+                  drawCircle(xPos, yPos, 3)<br>
+                  xPos <- xPos + 6<br>
+              }<br>
+          </pre>
+        ? |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+          {<br>
+                  drawCircle(xPos, yPos, 3)<br>
+                  xPos <- xPos + 6<br>
+          }<br>
+          </pre>
+        : |-
+          <pre>
+          xPos <- 3<br>
+          yPos <- 3<br>
+          REPEAT 3 TIMES<br>
+          {<br>
+                  drawCircle(xPos, yPos, 3)<br>
+                  xPos <- xPos + 6<br>
+          }<br>
+          </pre>
       AP_practice_Qs_rqb_9_CSP_3_1_1:
         Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
