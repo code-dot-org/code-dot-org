@@ -91,7 +91,6 @@ Feature: App Lab Scenarios
   # typing into a contenteditable div (which is what our Applab textareas are)
   # See https://code.google.com/p/selenium/issues/detail?id=4467
   # Also doesnt seem to be working for ie
-  @no_safari_yosemite
   @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page
@@ -100,5 +99,5 @@ Feature: App Lab Scenarios
     When I navigate to the shared version of my project
     And I wait until element ".screen > #text_area1" is visible
     And I press the first ".screen > #text_area1" element
-    And I press keys "XYZZY" for element ".screen > #text_area1"
+    And I use jquery to set the text of "#screen1 > #text_area1" to "XYZZY"
     Then element ".screen > #text_area1" contains text "XYZZY"
