@@ -357,6 +357,42 @@ module Pd::Application
     end
 
     test 'scoring works as expected' do
+      @application.update(
+        response_scores: @application.default_response_score_hash.deep_merge(
+          {
+            bonus_points_scores: {
+              currently_involved_in_cs_education: 5,
+              grades_taught: 5,
+              experience_teaching_this_course: 5,
+              completed_pd: 5,
+              why_should_all_have_access: 5,
+              skills_areas_to_improve: 5,
+              inquiry_based_learning: 5,
+              why_interested: 5,
+              question_1: 5,
+              question_2: 5,
+              question_3: 5,
+              question_4: 5,
+              question_5: 5
+            }
+          }
+        ).to_json
+      )
+
+      assert_equal(
+        {
+          total_score: "65 / 65",
+          application_score: "40 / 40",
+          interview_score: "25 / 25",
+          teaching_experience_score: "10 / 10",
+          leadership_score: "5 / 5",
+          champion_for_cs_score: "5 / 5",
+          equity_score: "15 / 15",
+          growth_minded_score: "15 / 15",
+          content_knowledge_score: "10 / 10",
+          program_commitment_score: "5 / 5"
+        }, @application.all_scores
+      )
     end
   end
 end
