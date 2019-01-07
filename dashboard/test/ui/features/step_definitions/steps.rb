@@ -1543,7 +1543,7 @@ Then /^I should see the new section dialog$/ do
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
-  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
+  steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
 When /^I press the save button to create a new section$/ do

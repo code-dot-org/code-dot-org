@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import LegendSelector from './LegendSelector';
@@ -29,9 +28,8 @@ const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 /**
  * Component for editing course scripts.
  */
-const ScriptEditor = React.createClass({
-  propTypes: {
-    beta: PropTypes.bool,
+export default class ScriptEditor extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
@@ -53,17 +51,17 @@ const ScriptEditor = React.createClass({
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-  },
+  };
 
-  handleClearProjectWidgetSelectClick() {
+  handleClearProjectWidgetSelectClick = () => {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
-  },
+  };
 
-  handleClearSupportedLocalesSelectClick() {
+  handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect).children('option')['removeAttr']('selected', true);
-  },
+  };
 
-  presubmit(e) {
+  presubmit = (e) => {
     const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
     const videoKeysAfter = (this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
@@ -73,7 +71,7 @@ const ScriptEditor = React.createClass({
         e.preventDefault();
       }
     }
-  },
+  };
 
   render() {
     const textAreaRows = this.props.stageLevelData ?
@@ -348,20 +346,16 @@ const ScriptEditor = React.createClass({
           />
         </div>
         <h2>Stages and Levels</h2>
-        {this.props.beta ?
-          <FlexGroup /> :
-          <div>
-            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
-            <textarea
-              id="script_text"
-              name="script_text"
-              rows={textAreaRows}
-              style={{width: 700}}
-              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
-              ref={textArea => this.scriptTextArea = textArea}
-            />
-          </div>
-        }
+        <div>
+          <textarea
+            id="script_text"
+            name="script_text"
+            rows={textAreaRows}
+            style={styles.input}
+            defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+            ref={textArea => this.scriptTextArea = textArea}
+          />
+        </div>
         <button
           className="btn btn-primary"
           type="submit"
@@ -373,6 +367,4 @@ const ScriptEditor = React.createClass({
       </div>
     );
   }
-});
-
-export default ScriptEditor;
+}
