@@ -559,7 +559,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mustermann (1.0.1)
+    mustermann (1.0.3)
     mysql2 (0.5.2)
     nakayoshi_fork (0.0.4)
     naturally (2.1.0)
@@ -659,7 +659,7 @@ GEM
       ruby-openid (>= 2.1.8)
     rack-parser (0.7.0)
       rack
-    rack-protection (2.0.1.rc1)
+    rack-protection (2.0.5)
       rack
     rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
@@ -784,10 +784,10 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    sinatra (2.0.1.rc1)
+    sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.1.rc1)
+      rack-protection (= 2.0.5)
       tilt (~> 2.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -1027,7 +1027,7 @@ DEPENDENCIES
   sequel
   shotgun
   simplecov (~> 0.9)
-  sinatra (~> 2.0.0.beta2)
+  sinatra (~> 2.0.2)
   sort_alphabetical!
   spring
   spring-commands-testunit
