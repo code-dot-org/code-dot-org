@@ -296,6 +296,7 @@ module Pd::Application
           if !hash[:regional_partner_id]
             required << :csd_csp_no_partner_summer_workshop
           else
+            required << :csd_csp_good_standing_requirement
             if hash[:summer_workshops] && !hash[:summer_workshops].empty?
               required.concat [
                 :csd_csp_partner_with_summer_workshop,

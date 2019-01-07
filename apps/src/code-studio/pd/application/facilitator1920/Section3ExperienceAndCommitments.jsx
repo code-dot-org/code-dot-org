@@ -239,6 +239,11 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         }
 
         {this.radioButtonsFor("developmentAndPreparationRequirement")}
+
+        {
+          program !== CSF &&
+          this.radioButtonsFor("csdCspGoodStandingRequirement")
+        }
       </FormGroup>
     );
   }
@@ -262,6 +267,7 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       if (!data.regionalPartnerId) {
         requiredFields.push("csdCspNoPartnerSummerWorkshop");
       } else {
+        requiredFields.push("csdCspGoodStandingRequirement");
         if (data.summerWorkshops && data.summerWorkshops.length > 0) {
           requiredFields.push(
             "csdCspPartnerWithSummerWorkshop",
