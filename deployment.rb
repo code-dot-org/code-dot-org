@@ -274,7 +274,7 @@ class CDOImpl < OpenStruct
     uri = URI("https://curriculum.code.org")
     uri += locale if CURRICULUM_LANGUAGES.include? locale
     uri += path
-    uri.to_string
+    uri.to_s
   end
 
   def default_scheme
