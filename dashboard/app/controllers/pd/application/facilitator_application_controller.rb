@@ -1,6 +1,7 @@
 module Pd::Application
   class FacilitatorApplicationController < ApplicationController
     include Pd::Application::ActiveApplicationModels
+    include Pd::FacilitatorCommonApplicationConstants
     before_action do
       @facilitator_program_url = 'https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U'
     end
@@ -16,7 +17,11 @@ module Pd::Application
       return render :not_teacher unless current_user.teacher?
 
       @application = FACILITATOR_APPLICATION_CLASS.find_by(user: current_user)
-      return render :submitted if @application
+      if @application
+        @display_regional_partner_reminder = regional_partner_support?
+        return render :submitted
+      end
+
       return render :closed unless FACILITATOR_APPLICATION_CLASS.open? || params[:extend_deadline]
 
       @script_data = {
@@ -27,6 +32,18 @@ module Pd::Application
           apiEndpoint: '/api/v1/pd/application/facilitator'
         }.to_json
       }
+    end
+
+    private
+
+    def regional_partner_support?
+      unless @application.regional_partner
+        return false
+      end
+      if @application.course == 'csf' && PARTNERS_WITHOUT_CSF.include?(@application.regional_partner.id)
+        return false
+      end
+      true
     end
   end
 end
