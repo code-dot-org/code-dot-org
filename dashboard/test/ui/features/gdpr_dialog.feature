@@ -3,7 +3,6 @@
 
 Feature: GDPR Dialog - data transfer agreement
 
-  @skip
   Scenario: EU user sees the GDPR Dialog on dashboard, opt out
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"

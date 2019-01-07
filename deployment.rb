@@ -262,16 +262,11 @@ class CDOImpl < OpenStruct
     site_url('hourofcode.com', path, scheme)
   end
 
-  # No curriculum languages are currently enabled; as of November 2018,
-  # enabling a language here will redirect _all_ links to CB for that language
-  # to the language-specific version of that content, even though we only
-  # generate language-specific versions of CB content for the subset of content
-  # we are actively translating.
-  #
-  # TODO: (elijah) figure out a better way to link to locale-specific CB
-  # content, and reenable some languages here.
-  #
-  # When enabled, this should look something like Set['es-mx', 'it-it', 'th-th']
+  # NOTE: When a new language is added to this set, make sure to also update
+  # the redirection rules for the cdo-curriculum S3 bucket. Otherwise, all
+  # links to CB for that language will attempt to point to the
+  # language-specific version of that content, even if we haven't translated
+  # that content yet.
   CURRICULUM_LANGUAGES = Set['es-mx']
 
   def curriculum_url(locale, path = '')

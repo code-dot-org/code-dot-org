@@ -207,11 +207,11 @@ fr:
     subject: 'Rejoindre ma classe (sur Code.org)'
     body: |
       Clique sur le lien ci-dessous pour t’inscrire aux tutoriels de science informatique sur Code.org (avec moi comme « enseignant ») :
-      
+
       %{link}
-      
+
       Les tutoriels sont amusants, visuellement attirants et enseignent les concepts de base de l'informatique à l'aide d'une expérience guidée qui reste ludique et simple. Apprends à coder avec Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies ! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informations de connexion pour Code.org'

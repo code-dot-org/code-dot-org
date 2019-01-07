@@ -518,9 +518,13 @@ is:
         courseC_PlayLab_events8_callout1: Notaðu þennan kubb þegar Waddles og Chomp snertast!
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Notaðu þennan kubb þegar Waddles og Chomp snertast!
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Notaðu þennan kubb þegar Waddles og Chomp snertast!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Byrjaðu á að nota þennan kubb til að koma listamanninum á miðjan skjáinn.
@@ -543,6 +547,8 @@ is:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
@@ -635,6 +641,8 @@ is:
         courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa býfluguna aftur á bak.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Notaðu þennan kubb til að safna einum fjársjóði.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_maze_ramp1_2018_callout:

@@ -1490,3 +1490,15 @@ eu:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: baliogabea
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Oinarri bat Eraikitzen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+            Binary Bracelets:
+              name: Eskumuturreko bitarrak

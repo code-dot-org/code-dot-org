@@ -1612,3 +1612,15 @@ sq:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'pa vlerë'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Krijimi i një fondacioni
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmet e Jetës-Reale: Planet në Letër'
+            Binary Bracelets:
+              name: Byzylykët Binarë

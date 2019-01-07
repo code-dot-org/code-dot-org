@@ -5,7 +5,6 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 version_year '2019'
 
 stage 'Sequencing in the Maze', flex_category: 'csf_e_1'
@@ -56,6 +55,18 @@ level 'courseE_video_BeeifElse_2019'
 level 'courseE_farmer_ramp12f_2019', challenge: true
 level 'courseE_farmer_ramp12g_2019'
 level 'courseF_markdown_conditionals_end_2019'
+
+stage 'Conditionals in Minecraft', flex_category: 'csf_e_1'
+level 'Overworld Move to Sheep_2019'
+level 'Underground Mining Coal_2019'
+level 'Underground Iron_2019'
+level 'Underground Avoiding Lava_2019'
+level 'Underground If Statements_2019'
+level 'HOC 2018 Level_7a'
+level 'HOC 2018 Level_8'
+level 'HOC 2018 Level_9b'
+level 'HOC 2018 Level_10'
+level 'HOC 2018 Level_11'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_e_2'
 level 'CourseEF_video_IntroSpriteLab_2019'

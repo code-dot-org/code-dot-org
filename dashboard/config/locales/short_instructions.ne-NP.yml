@@ -1448,6 +1448,10 @@ ne:
         Solve this puzzle with the fewest number of blocks
         possible.
       Course 4 SCV 6: Click here to view the instructions again.
+      Course E MC Conditionals1: |-
+        You’ll find the most valuable resources
+        underground, but it can get dark. Place at least 2 torches and mine at least
+        2 coal.
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the\nvariables we've
         played with so far in this stage, as well as a few more in\ncase you want
         them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox that
@@ -2361,6 +2365,9 @@ ne:
         Can you write a program to make Jorge
         (actor 1) move toward Olive the Cat?
       courseC_PlayLab_events3_2018: |-
+        Can you write a program to make Jorge
+        (actor 1) move toward Olive the Cat?
+      courseC_PlayLab_events3_2019: |-
         Can you write a program to make Jorge
         (actor 1) move toward Olive the Cat?
       courseC_maze_debugging10: |-

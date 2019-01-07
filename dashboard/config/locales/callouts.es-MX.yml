@@ -718,10 +718,16 @@ es-MX:
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: "¡Usa este bloque cuando toquen Waddles
           y Chomp!"
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: "¡Usa este bloque cuando toquen Waddles
+          y Chomp!"
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
+          a diferentes partes del espacio del juego.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
       courseC_artist_loopsPrePre1a_callout:
@@ -755,6 +761,9 @@ es-MX:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
           que hay cuatro calabazas disponibles para escoger.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
+          que hay cuatro calabazas disponibles para escoger.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
           que hay cuatro calabazas disponibles para escoger.
       courseC_maze_debugging5_callout:
@@ -897,6 +906,9 @@ es-MX:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Usa este bloque para recolectar una sola pieza
           del tesoro.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
+          de estos bloques te quedan por usar.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presione
           "Ejecutar" para inciar su progama.

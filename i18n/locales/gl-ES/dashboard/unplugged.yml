@@ -274,3 +274,6 @@ gl:
       BinaryBracelets_2019:
         title: Pulseiras Binarias
         desc: Os alumnos crean pulseiras como representacións binárias da primeira letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados e almacenados de máis dunha forma.
+      PaperPlanes_2019:
+        title: 'Algoritmos da vida real: avión de papel'
+        desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente ao facer avións de papel. Esta lección tamén presenta a informática de forma xeral, e como os algoritmos teñen un papel esencial.

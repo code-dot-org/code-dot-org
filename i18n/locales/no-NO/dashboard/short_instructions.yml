@@ -117,7 +117,7 @@
         Samle inn nektar og lag honning. Tips: hva skjer dersom du bruker "hvis nektar" på en rød blomst? Kan du fullføre dette med en løkke?
       2-3 Bee Conditionals 14: |-
         La oss sette alt sammen!
-        
+
         Bruk det du har lært for å samle nektar kun fra blomster som har det. Bruk så få blokker som mulig. Ikke glem å lage honning til slutt.
       2-3 Bee Conditionals 15: "Dette trappe-mønsteret ser kjent ut. \\r\n\\r\nSamle nektar fra kun de blomstene som har det. Bruk så få blokker som mulig."
       2-3 Bee Conditionals 2: "Hei, jeg er en sulten bie!\\r\nHjelp meg å samle nektar fra alle blomstene ved å bruke så få blokker som mulig."
@@ -147,13 +147,13 @@
       2-3 Bee Debugging 7: Fiks feilene og samle inn nektaren for å lage all honningen.
       2-3 Bee Debugging 8: |-
         Så mange vakre blomster!
-        
+
         Fiks feilene og samle inn all nektaren.
       2-3 Bee Debugging 9: |-
         Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. 
       2-3 Bee Debugging Assessment 1: |-
         Lekse: Nå er det på tide å vise hva du kan!
-        
+
         Fiks feilen(e) for å samle all nektaren og lage all honningen.
       2-3 Bee Functions 1: Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 2 nektar" til å samle inn nektar fra hver blomst.
       2-3 Bee Functions 10: "De lilla blomstene endrer seg. De har enten 1 eller 0 nektar hver gang du trykker kjør. \\r\n\\r\nLag en funksjon som bare samler nektar fra de blomstene som har det."
@@ -181,7 +181,7 @@
       2-3 Bee Loops 3B: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       2-3 Bee Loops 4: |-
         For en travel bie!
-        
+
         Hjelp bien med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       2-3 Bee Loops 4A: "Hvor mange ganger burde du gjenta for å få til denne oppgaven? \\r\n\\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne oppgaven med så få blokker som mulig."
       2-3 Bee Loops 5: "Mønsteret på denne stien er litt annerledes enn de andre.\n\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
@@ -480,12 +480,12 @@
       Course 4 Artist 1: 'Hjelp meg å tegne ferdig boksen. (Hver linje er 200 pixler lang)'
       Course 4 Artist 10: |-
         Klikk her for å se hele instruksjonen på nytt!
-        
+
         Her er en kode for en interessant form. Hva skjer nå du gjentar det mange ganger, mens du snur for hver kjøring? Legg merke til at snuingen i denne formen kan legges sammen til 420 grader, noe som betyr at når kunstneren din er ferdig med å tegne, vil den se i en annen retning enn når du startet. Denne nye retningen er akkurat 60 grader til høyre fra der du begynte.
       Course 4 Artist 11: Nå til en utfordring! Her kan du prøve og feile. Vi forventer ikke at du får det perfekt første gangen. Vil du ha flere hint? Klikk her!
       Course 4 Artist 12: |-
         Fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke, lag noe helt annet.\r
-        
+
         \r
         Vil du vite hvordan vårt mønster ble laget? Besøk https://studio.code.org/c/105765376/edit for å se løsningen.
       Course 4 Artist 13: Spiller du fortsatt? Her er et blankt lerret hvor du kan designe alt du vil!
@@ -523,7 +523,7 @@
       Course 4 Artist For Loops 11: 'Husker da vi brukte en variabel til å styre antallet sider i en figur? Vi skal gjøre det samme med ''teller''-variabelen nå. Dette mønsteret starter med en trekant og legger til en side av gangen inntil det tegner et dekagon (10 sider). Hver side skal være 100 piksler lang. '
       Course 4 Artist For Loops 11a: |-
         La oss sette alt sammen! Bruk din kunnskap om "for-løkker" og "teller"-variabler og opprett tegningen hvor hver side har to sider mer enn den forrige. Kontroller at hver side er 10 ganger så lang som antallet sider i polygonet.
-        
+
         Svært lite av koden har blitt gitt til deg her.
       Course 4 Artist For Loops 12: 'Det så kult ut, men nå vil jeg tegne hver figur ved siden av den forrige. Denne gangen er hver side 20 piksler. Bruk en hopp-blokk til å hoppe 40 piksler fram etter hver figur. '
       Course 4 Artist For Loops 13: Hmmm, disse figurene blir større hver gang! Løste vi ikke allerede dette problemet med variabler? Hvordan kan vi bruke teller-variabelen til å gjøre sidene mindre når det er flere av dem? I stedet for å flytte framover med et gitt antall, prøv å flytte framover med (100 / teller) piksler.
@@ -543,7 +543,7 @@
       Course 4 Artist For Loops Challenge: "Kan du finne ut hvordan du bruker alle tingene du har lært til å lage dette bildet?\\r\n\\r\nTrenger du et hint? Klikk her."
       Course 4 Artist For Loops Challenge_a: |-
         Klarer du å finne ut hvordan du kan bruke alt du har lært til å lage dette bildet?
-        
+
         Trenger du hint? Klikk her.
       Course 4 Artist For Loops inspire: |-
         Fritt spill-inspirasjon: Du har nå lært alt du trenger å vite for å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke kan du lage noe helt annet.\r
@@ -576,7 +576,7 @@
       Course 4 Artist Functions inspire: Klikk her for å se inspirasjonsbildet igjen.
       Course 4 Artist Inspire: |-
         Fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke, lag noe helt annet.\r
-        
+
         \r
         Vil du vite hvordan vårt mønster ble laget? Besøk https://studio.code.org/c/105765376/edit for å se løsningen.
       Course 4 Artist Params 1: La oss redigere en funksjon som tegner et kvadrat med sider på 50 piksler
@@ -689,7 +689,7 @@
       Course 4 Play Lab Vars 6 (copy 1): Kult, nå har vi vår score-variabel, men hvordan skal vi ha nytte av den? Hva med å legge til score-variabelen hver gang du treffer fienden med en ildkule? Bruk "når figur 2 berører noe"-hendelsen til å utløse en oppdatering av poengsummen din når dine ildkuler treffer katten. Du kan øke score ved å sette score = score + 1. Øk din score til 10 (ett poeng om gangen!) for å bestå brettet.
       Course 4 Play Lab Vars 6: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       Course 4 Play Lab Vars 7: Flott! La oss gjøre spillet litt vanskeligere å spille. Hver gang Hund (figur 1) blir truffet av en sandwich fra Katt (spiller 2) skal du miste ett poeng. Start med 10 poeng slik at det ikke er for vanskelig. For å fullføre nivået må poeng-scoren falle fra 10 til 0.
       Course 4 Play Lab Vars 8 (copy 1): En siste ting til dette spillet - la oss gjøre så spilleren kan vinne (eller tape). Bruk en for alltid-løkke for å sjekke verdien av poeng - hvis poeng er større enn 20 skal fienden forsvinne. Hvis poeng er mindre enn 0 skal spilleren forsvinne. Trykk "Fullfør" når spillet fungerer sånn som du vil det skal gjøre.
@@ -743,13 +743,14 @@
       Course 4 SCV 3: |-
         Nå skal vi spille spillet "har'n" (også kjent som Sisten)! Tar du på Katt får du 2 poeng. Tar du på Pingvin får du 3 poeng. For å vinne må du få 10 poeng tilsammen!
         Men vær forsiktig, når Katt og Pingvin er nær hverandre tar de poeng fra deg.
-        
+
         Legg til blokkene som er nødvendig for å få dette spillet til å fungere slik som forklart. Hvordan kan du få Hund til å kunne flytte seg i alle retninger ved bruk av piltastene? Hvordan skal du legge til poeng når Hund er nær Katt eller Pingvin? Hvordan skal du trekke fra poeng når Katt og Pingvin er nær hverandre?
       Course 4 SCV 4: Løs denne oppgaven med færrest mulig brikker.
       Course 4 SCV 5: Løs denne oppgaven med færrest mulig brikker.
       Course 4 SCV 6: Klikk her for å se instruksjonene en gang til.
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel for sidene? Hver linje skal være 50 piksler lange.
+      Course E MC Conditionals1: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
       CourseF_PlayLab_vars10: "Tid for fritt spill! Her er alle variablene vi har brukt så langt, i tillegg til noen ekstra hvis du vil bruke dem.\\r\n\\r\nLegg merke til at det er så mange brikker i vår verktøykasse at de trenger å bli organisert! Her har vi lagt hver brikke inn i en kategori. Bruk litt tid på å utforske alt som er tilgjengelig. Lag et spill eller en historie og bruk gjenta-, variabler- og hendelser-brikker. \\r\n\\r\nHint: Bla ned for å se alle kommandoene i arbeidsområdet."
       CourseF_PlayLab_vars2: Løpet i forrige oppgave var ikke veldig rettferdig! Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg enn Katt. Den første til å samle 10 flagg vinner!
@@ -758,15 +759,15 @@
       CourseF_PlayLab_vars5: 'La oss bygge et spill! Først trenger vi en poengsum. Bruk "sett poeng til"-blokk for å sette scoren til 10. '
       CourseF_PlayLab_vars6: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       CourseF_PlayLab_vars7: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       CourseF_PlayLab_vars8: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       CourseF_PlayLab_vars9: Flott! La oss gjøre spillet litt vanskeligere å spille. Hver gang Hund (figur 1) blir truffet av en sandwich fra Katt (spiller 2) skal du miste ett poeng. Start med 10 poeng slik at det ikke er for vanskelig. For å fullføre nivået må poeng-scoren falle fra 10 til 0.
       Crack Random Substitution: Instruksjoner
@@ -1222,6 +1223,7 @@
       courseB_playlab_events_challenge2_2018: "La oss gjøre slik at dyr forsvinner når du trykker på dem! Prøv å spille med hunden nå og etterpå la de andre dyrene få være med på moroa!\\r\nDu kan også legge til lyder og poengsummer for å lage et sisten-spill!"
       courseC_PlayLab_events3: Kan du skrive et program som får Jorge (skuespiller 1) til å flytte mot katten Olive?
       courseC_PlayLab_events3_2018: Kan du skrive et program som får Jorge (skuespiller 1) til å flytte mot katten Olive?
+      courseC_PlayLab_events3_2019: Kan du skrive et program som får Jorge (skuespiller 1) til å flytte mot katten Olive?
       courseC_artist_prog5: |-
         Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
       courseC_artist_prog5_2018: |-
@@ -1410,7 +1412,7 @@
       grade3_Conditionals_11 BAD: 'Lekse: Bruk en mens-løkke til å samle inn all nektaren fra denne blomsten.'
       grade3_Conditionals_11: |-
         La oss sette alt sammen!
-        
+
         Bruk det du har lært for å samle nektar kun fra blomster som har det. Bruk så få blokker som mulig. Ikke glem å lage honning til slutt.
       grade3_Conditionals_12: "Dette trappe-mønsteret ser kjent ut. \\r\n\\r\nSamle nektar fra kun de blomstene som har det. Bruk så få blokker som mulig."
       grade3_Conditionals_13: 'Oppgave: Samle alle nektarene. Vær forsiktig så du ikke samler nektar fra en lilla blomst hvis den ikke har noen.'
@@ -1435,7 +1437,7 @@
       grade3_Debugging_TeacherIDo: Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. 
       grade3_Loops_10: |-
         For en travel bie!
-        
+
         Hjelp bien med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       grade3_Loops_11: "Mønsteret på denne stien er litt annerledes enn de andre.\n\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
       grade3_Loops_12: Kan du finne den raskeste måten som får bien til å samle all nektaren og lage all honning?
@@ -1482,7 +1484,7 @@
       grade4_artist_functions_challenge2: Bruk de foreslåtte funksjonene til å tegne fire rader av sekskanter. Legger du merke til hvordan våre partallsrader er flyttet til høyre?
       grade4_artist_nestedLoops_challenge: |-
         Klikk her for å se hele instruksjonen på nytt!
-        
+
         Her er en kode for en interessant form. Hva skjer nå du gjentar det mange ganger, mens du snur for hver kjøring? Legg merke til at snuingen i denne formen kan legges sammen til 420 grader, noe som betyr at når kunstneren din er ferdig med å tegne, vil den se i en annen retning enn når du startet. Denne nye retningen er akkurat 60 grader til høyre fra der du begynte.
       grade4_artist_nestedLoops_challenge2: Nå til en utfordring! Her kan du prøve og feile. Vi forventer ikke at du får det perfekt første gangen. Vil du ha flere hint? Klikk her!
       grade4_artist_nested_loop_circles1: 'Lekse: Bruk en løkke i løkke for å fullføre designet.'
@@ -1529,7 +1531,7 @@
       grade4_playlab_freeplay: 'Det er fri spilletid! Ha det gøy med alle blokkene i verktøykassen din. '
       grade4_playlab_test: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       grade4_playlab_test2: Her er en funksjon kalt "hopp" som får hovedpersonen din til å hoppe 100 piksler. Kjør programmet og bruk hopp-funksjonen til å samle alle flaggene ved å flytte hunden med piltastene.
       grade4_review_artist1: Hei, jeg er en kunstner. Du kan skrive kode for å få meg til å tegne nesten hva som helst. Bruk noen blokker for å få meg til å tegne over de grå linjene på bildet. (Hver linje er 100 piksler lange)
@@ -1539,7 +1541,7 @@
       grade4_review_bee2: Samle inn nektar fra alle blomstene og lag honning i hver av bikubene ved å bruke så få blokker som mulig.
       grade4_review_bee3: |-
         For en travel bie!
-        
+
         Hjelp bien med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       grade5_artist_binary1: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       grade5_artist_binary10: Klikk her for å se hint.
@@ -1558,7 +1560,7 @@
       grade5_artist_for_loops1: 'Tegn denne trekanten som er 50 piksler i størrelse. Hing: Bruk en gjenta-blokk.'
       grade5_artist_for_loops10: |-
         Klarer du å finne ut hvordan du kan bruke alt du har lært til å lage dette bildet?
-        
+
         Trenger du hint? Klikk her.
       grade5_artist_for_loops5: |-
         Den korteste linja i denne kvadrat-spiralen er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige. Kan du fylle inn de manglende blokkene i dette stilige bildet?
@@ -1567,7 +1569,7 @@
       grade5_artist_for_loops8: 'Husker da vi brukte en variabel til å styre antallet sider i en figur? Vi skal gjøre det samme med ''teller''-variabelen nå. Dette mønsteret starter med en trekant og legger til en side av gangen inntil det tegner et dekagon (10 sider). Hver side skal være 100 piksler lang. '
       grade5_artist_for_loops9: |-
         La oss sette alt sammen! Bruk din kunnskap om "for-løkker" og "teller"-variabler og opprett tegningen hvor hver side har to sider mer enn den forrige. Kontroller at hver side er 10 ganger så lang som antallet sider i polygonet.
-        
+
         Svært lite av koden har blitt gitt til deg her.
       grade5_artist_for_loopsfreeplay11: |-
         Fritt spill-inspirasjon: Du har nå lært alt du trenger å vite for å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke kan du lage noe helt annet.\r
@@ -1587,7 +1589,7 @@
         Frilek: Sjekk det ut, nå algoritmen er nestet inne i en mer løkke. Eksperimentere med å endre verdiene i de to variablene for å tegne kule mønstre.
       grade5_artist_variables_freeplay15: |-
         Fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke, lag noe helt annet.\r
-        
+
         \r
         Vil du vite hvordan vårt mønster ble laget? Besøk https://studio.code.org/c/105765376/edit for å se løsningen.
       grade5_artist_variables_freeplay16: Spiller du fortsatt? Her er et blankt lerret hvor du kan designe alt du vil!
@@ -1620,7 +1622,7 @@
       grade5_playlab_variables4: Nå bruker vi en variabel kalt "høyde" for å kontrollere hvor høyt hunden kan hoppe. Oppdater "høyde"-variabelen slik at hunden kan hoppe høyt nok til å nå alle flaggene.
       grade5_playlab_variables6: |-
         Bruk høyre piltast til å kaste pai.
-        
+
         I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med en pai. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
       grade5_playlab_variables7: Flott! La oss gjøre spillet litt vanskeligere å spille. Hver gang Hund (figur 1) blir truffet av en sandwich fra Katt (spiller 2) skal du miste ett poeng. Start med 10 poeng slik at det ikke er for vanskelig. For å fullføre nivået må poeng-scoren falle fra 10 til 0.
       grade5_playlab_variables71: "Her er spillet vårt fra tidligere, men nå er mesteparten av koden gjemt. Det finnes en ny funksjon, \"score_poeng\".\n\nEndre funksjonen slik at \"poeng\"-parameteret blir lagt til \"spiller_score\"-variabelen. \n\nVariabelen \"spiller_score\" skal øke hver gang Hund kommer borti Katt med hjerter og minske hver gang Katt tar borti Hund med hjerter.\n\nMerk: Når du er ferdig, trykk på \"Kjør\" for å spille. Når Hund scorer 6 poeng kan du gå videre til neste oppgave. "
@@ -1630,7 +1632,7 @@
       k-1 maze 1: Kan du bevege meg til vest for å komme til grisen?
       level 'grade3_Loops_10: |-
         For en travel bie!
-        
+
         Hjelp bien med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       level 'grade3_Loops_11: "Mønsteret på denne stien er litt annerledes enn de andre.\n\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
       level 'grade3_Loops_12: Kan du finne den raskeste måten som får bien til å samle all nektaren og lage all honning?

@@ -62,7 +62,7 @@ nl:
         Laat ons het hoofd van een robot tekenen! 
         Kan je een vierkant maken met zijden van 100 pixels? \r 
         \r
-        
+
       2-3 Artist Loops New 10: Laat ons nu enkele V's aan elkaar vastmaken in een herhaling.
       2-3 Artist Loops New 11: "Tijd om iets hip te maken!\n\\r \n\\r\nHerprogrammeer de code van de laatste puzzel, maar voeg deze keer een linkse draai van 30 graden toe aan de herhaling."
       2-3 Artist Loops New 12: 'Teken een diamant met zijden van 100 pixels. '
@@ -70,7 +70,7 @@ nl:
       2-3 Artist Loops New 14: "Speel met de code voor de diamant en zoek uit welke andere patronen je kan maken. \\r \\r\nHet aantal graden dat je draait en het aantal keren dat je de herhaling volgt, kan je aanpassen."
       2-3 Artist Loops New 15: |+
         Nu kan je tekenen wat je wilt! \r \r
-        
+
       2-3 Artist Loops New 2: |-
         Dit is dezelfde puzzel die we net hebben opgelost, maar deze keer mag je enkel één blok 'beweeg vooruit' en één blok 'draai' gebruiken. \r 
         \r
@@ -81,7 +81,7 @@ nl:
         \r
         Plaats een 'herhaal' blok rond de hele stapel codes om een patroon te tekenen. \r 
         \r
-        
+
       2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het patroon af te maken.
       2-3 Artist Nested Loops 11: Laat deze code in een lus 4 keer uitvoeren om het patroon af te maken en draai 90 graden na iedere cirkel.
       2-3 Artist Nested Loops 12: Herhaal deze code 12 keer om de krullen af te werken.
@@ -175,7 +175,7 @@ nl:
       4-5 Nested Loops 12: Kan je deze 36 driehoeken tekenen met een geneste lus?
       4-5 Nested Loops 3: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       4-5 Nested Loops 5: Maak een windmolen met een lus rond de voorbeeldcode.
       4-5 Nested Loops 6: Kan je een zeskant tekenen met een lus rond de driehoek-code?
       4-5 Nested Loops 7: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
@@ -211,39 +211,39 @@ nl:
       CourseF_PlayLab_vars2: Die wedstrijd was niet eerlijk! Verander de "hond_snelheid" variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat. Wie als eerst 10 vlaggen heeft wint.
       Dance_Party_01: |-
         *Laten we een dansfeestje houden!*
-        
+
         Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok om je eerste danser te maken.
-        
+
         * *Je kunt ook op het lampje links in beeld klikken voor meer informatie of extra uitdagingen.*
       Dance_Party_01_low: |-
         *Laten we een dansfeestje houden!*
-        
+
         Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok om je eerste danser te maken.
-        
+
         * *Je kunt ook op het lampje links in beeld klikken voor meer informatie of extra uitdagingen.*
       Dance_Party_02: |-
         Laten we deze eland aan het dansen krijgen!
-        
+
         Sleep het blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> naar de werkruimte. Verbind hem onder het blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Je danser zou na de vierde maat een nieuwe move moeten beginnen.
-        
-        
+
+
         **Maten** worden in de muziek gebruikt om de tijd te tellen. In deze tutorial is de maat vier beats lang.
       Dance_Party_03: "*Nu gaan we lekker!*\n\nVoeg een blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> toe aan je werkruimte. Zorg ervoor dat de danser een nieuwe move start na 6 maten."
       Dance_Party_04: |-
         *Deze dans heeft wat extra‘s nodig!*
-        
+
         Ga op zoek naar een nieuw blok in je gereedschapskist, die je danser een achtergrondeffect geeft. Bekijk hoe de effecten met de muziek mee veranderen!
       Dance_Party_05: |-
         Gebruik nog een nieuw blok om de danser **elke 2 maten** een nieuwe move te laten doen!
-        
+
         * Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
       Dance_Party_06: |-
         * We hebben meer dansers nodig!*
-        
+
         Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
       Dance_Party_08: |-
         Elke danser heeft zijn eigen _eigenschappen_ die bepalen hoe hij eruitziet.
-        
+
         Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
       Dance_Party_09: |-
         Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
@@ -256,7 +256,7 @@ nl:
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-        
+
         Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
       Dance_Party_11.5_test: "Bekijk dit blok eens:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kun je een heleboel dansers tegelijk maken!\n\nProbeer met een deel van de \"alle eenden\" blokken code te schrijven waarmee alle eenden samen gaan dansen."
       Dance_Party_11: "Met het <xml><block type=\"Dancelab_whenKey\"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.\n\nJe kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!"
@@ -266,43 +266,43 @@ nl:
       Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       Dance_Party_extras_battle: |-
         # Dancecrews
-        
+
         Hier is een danswedstrijd tussen twee crews: De pijltoetsen besturen één van de dansers en de "w, a, s, d"-toetsen besturen de andere. Ga een danswedstrijd aan met een vriend, en probeer de wedstrijd vervolgens te verbeteren.
-        
+
         * Voeg meer toetsen toe om de dans te besturen
         * Zorg ervoor dat de achtergronddansers ook meedoen als je de toetsen ingedrukt
         * Wissel elke 4 maten van danser door hun zichtbaarheid in te stellen
       Dance_Party_extras_every_beat: |-
         # kwartnoten
-        
+
         De meeste dansen die we kennen bestaan uit hele maten, maar elke maat bestaat uit 4 kwartnoten. Deze dans gebruikt 'elke 0,25 maat' om de danser op elke kwartnoot te laten klappen.
-        
+
         Deze dans gebruikt ook een _voorwaardelijk_ blok om te bepalen wanneer het blok "elke 0,25 maat" de dans kan wijzigen. Probeer de nummers in het voorwaardelijke blok te veranderen om te zien hoe deze de dans verandert.
-        
+
         * Experimenteer met andere nootlengtes (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
         * Voeg gebeurtenissen 'na de maat' toe.
         * Wissel "maten" om met "seconden" en probeer de dans op die manier te timen.
       Dance_Party_extras_layout: |-
         # Ga in positie staan!
-        
+
         Bekijk deze dans die het 'lay-out'-blok gebruikt om de positie van de achtergronddansers tijdens de dans te veranderen. Probeer het uit te breiden met één van deze ideeën:
-        
+
         * Maak een tweede groep dansers met een andere lay-out
         * Verander de lay-out door een toets in te drukken
         * Verander een eigenschap wanneer de dansers van positie wisselen
       Dance_Party_extras_on_beat: |-
         # Bass, mid en treble
-        
+
         Deze dans gebruikt "piek"-gebeurtenissen om code te activeren wanneer verschillende delen van de muziek extra luid worden. Probeer het met verschillende liedjes uit om te zien hoe het de dans verandert.
       Dance_Party_extras_speed: |-
         # Versnellen, vertragen
-        
+
         Deze laatste dans gebruikt het blok 'snelheid instellen' om te bepalen hoe snel elke danser beweegt. Probeer tijdens het lied te experimenteren met verschillende snelheden. Blijf aan deze dans knutselen, of ga terug naar de eerdere dansen om ze nog cooler te maken.
       Dance_Party_extras_visible: |-
         # Waar zijn ze heen?
-        
+
         Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
-        
+
         * Voeg nog een groep dansers toe
         * Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
         * Verberg alle dansers en schakel over naar een spannend achtergrondeffect
@@ -322,11 +322,11 @@ nl:
       HOC 2018 Level_9b: "Je hebt het rif gehaald, ga nu op zoek naar **het hart van de zee** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Gebruik het blauwe en rode koraal om de schat **kist** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) te vinden."
       HOC Dance 4_draft: |-
         Gebruik nog een nieuw blok om de danser **elke 2 maten** een nieuwe move te laten doen!
-        
+
         * Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
       HOC Dance 5_draft: |-
         * We hebben meer dansers nodig!*
-        
+
         Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
       HOC Dance 9_draft: "Met het <xml><block type=\"Dancelab_whenKey\"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.\n\nJe kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!"
       HOC Dance Freeplay: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
@@ -367,8 +367,8 @@ nl:
       MC_HOC_2017_04: Verander de lus van de vorige puzzel om de Agent te helpen een brug over dit bredere deel van de rivier te bouwen.
       MC_HOC_2017_04POINT5_Cole: |-
         Je bent uit het moeras ontsnapt!  Leid de speler nu veilig naar het oranje vakje. 
-        
-        
+
+
         Help de agent het pad vrij te maken door een simpel patroon te vinden en lussen te gebruiken om de eerste twee drukplaten te passeren.
       MC_HOC_2017_04POINT5_RYAN: "Je hebt de oversteek gemaakt! \\r\n\\r\nLeid {currentPlayerName} nu veilig door het doolhof om het **bijl** [diamond_axe] te bereiken\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Je hebt de oversteek gemaakt! \\r\n\\r\nLeid {currentPlayerName} nu veilig door het doolhof om het **bijl** [diamond_axe] te bereiken\\r\n"
@@ -377,15 +377,15 @@ nl:
       MC_HOC_2017_04_Kiki: "De geheime gaard leidt tot deze prachtige oase!  Om dit level te halen, moet de speler het oranje vakje in de hut bereiken.  \\r\n\\r\nGebruik een 'herhalen'-lus om de agent naar de drukplaat te leiden waarmee de deur van de hut wordt geopend."
       MC_HOC_2017_05: |-
         Lussen zijn niet altijd handig. 
-        
-        
+
+
         Deze cactussen groeien niet volgens een vast patroon, dus met een lus kun je de weg niet goed vrijmaken.  In plaats daarvan heb je nu een functie genaamd 'vernietigen en bewegen' die het zware werk uit handen neemt elke keer dat de agent een obstakel tegenkomt.
       MC_HOC_2017_05_Cole: "O nee, de brug is stuk! \\r\n\\r\nProgrammeer de agent om de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName} de **spade** [diamond_shovel] kan bereiken."
       MC_HOC_2017_05_Cole_2019: "O nee, de brug is stuk! \\r\n\\r\nProgrammeer de agent om de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName} de **spade** [diamond_shovel] kan bereiken."
       MC_HOC_2017_05_Josh: |-
         O nee, de brug is stuk! 
-        
-        
+
+
         Help de agent de brug te herbouwen zodat de speler de **spade** kan bereiken.
       MC_HOC_2017_05_Kiki: "Het is tijd voor de speler om de geheime gaard te verlaten en verder te gaan op avontuur, maar de brug is stuk! \\r\n\\r\nHelp de agent de brug te herbouwen en beweeg vervolgens naar de houten plank zodat de speler het oranje vakje kan bereiken."
       MC_HOC_2017_06_Cole: "Nog een rivier, en deze is nog breder! \\r\n \\r\nCorrigeer deze code om de agent te helpen een brug te bouwen, zodat {currentPlayerName} het **pikhouweel** [diamond_pickaxe] kan bereiken. "
@@ -400,13 +400,13 @@ nl:
       MC_HOC_2017_08_Kiki: "In plaats van cactussen te vernietigen, moet je nu steen op lava plaatsen en vervolgens zandsteen vernietigen.  \\r\n\\r\nVerander de functie zodat deze werkt voor dit level."
       MC_HOC_2017_08_RY: |-
         Er zijn nu **TWEE** functies om uit te kiezen! 
-        
-        
+
+
         Gebruik deze functies om snel een brug over de lava voor {currentPlayerName} te maken.
       MC_HOC_2017_08_Will: |-
         Er zijn nu **TWEE** functies om uit te kiezen! 
-        
-        
+
+
         Gebruik deze functies om snel een brug over de lava voor de speler te maken.
       MC_HOC_2017_09_Cole: Gebruik functies om de agent te helpen de grote blokken aarde te vernietigen die het pad van de speler naar de drukplaat blokkeren.
       MC_HOC_2017_09_Kiki: "Deze begincode kan niet worden verwijderd.\\r\n\\r\nVoeg opdrachten aan de 'spoor maken'-functie toe zodat met het programma in de werktruimte de agent naar de drukplaat wordt geleid. "
@@ -422,8 +422,8 @@ nl:
       MC_HOC_2017_13_Cole: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
       MC_HOC_2017_4.5v2: |-
         Je bent uit het moeras ontsnapt!  Leid de speler nu veilig naar het oranje vakje. 
-        
-        
+
+
         Help de agent het pad vrij te maken door een simpel patroon te vinden en lussen te gebruiken om de eerste twee drukplaten te passeren.
       MC_HOC_2017_Ali: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde boek** [book_enchanted] te bereiken?  '
       MC_HOC_2017_Ali_2019: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde boek** [book_enchanted] te bereiken?  '
@@ -485,6 +485,7 @@ nl:
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
       courseC_harvester_loops_challenge2: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_harvester_loops_challenge2_2018: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      courseC_harvester_loops_challenge2_2019: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_maze_loops_challenge2: "Laten we naar schatten zoeken, gebruik makende van loops!\nHelp de verzamelaar door deze code te debuggen.\nVerzamel alle schatten!"
       courseC_maze_programming1: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseC_maze_programming1_2018: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
@@ -595,14 +596,14 @@ nl:
       grade4_arist_nested_loop_triangles4: Teken de tanden in de mond van de krokodil!
       grade4_arist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_arist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_functions2: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
       grade4_artist_nested_loop_flags1: Maak een windmolen met een lus rond de voorbeeldcode.
       grade4_artist_nested_loop_polygons1: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
       grade4_artist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_artist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_parameters_triangles2: Zie je een verschil tussen deze functie blokken? Druk op "Start" om te zien wat er gebeurt.
       grade4_bee_conditionals_quantum2: "De bij wil nu alleen nectar. Vergeet niet dat niet alle objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen."

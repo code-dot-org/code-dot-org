@@ -1,6 +1,5 @@
 ---
 title: Computer Science Discoveries
-nav: educate_nav
 ---
 
 # CS Discoveries Status Updates

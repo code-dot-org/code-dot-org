@@ -531,9 +531,13 @@ zh-CN:
         courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
@@ -556,6 +560,8 @@ zh-CN:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: 灰色模块不能被删除！
@@ -652,6 +658,8 @@ zh-CN:
         courseD_farmer_while7_2018_PathAhead: 要解决这个迷题，会用到`当前面有路时`模块。
       courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: 要解决这个迷题，会用到`当前面有路时`模块。
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_maze_ramp1_2018_callout:

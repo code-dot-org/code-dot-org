@@ -558,6 +558,25 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   return studentsSummaryArray;
 };
 
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are defined as CSV_SUBMISSION_STATUS_HEADERS in SubmissionStatusAssessmentsContainer
+ */
+export const getExportableSubmissionStatusData = (state) => {
+  let summaryStudentStatus = [];
+  const studentStatus = getStudentsMCSummaryForCurrentAssessment(state);
+
+  studentStatus.forEach(student => {
+    summaryStudentStatus.push({
+      studentName: student.name,
+      numMultipleChoiceCorrect: student.numMultipleChoiceCorrect,
+      numMultipleChoice: student.numMultipleChoice,
+      submissionTimestamp: student.submissionTimeStamp,
+    });
+  });
+  return summaryStudentStatus;
+};
+
 // Returns an array of objects corresponding to each question and the
 // number of students who answered each answer.
 export const getMultipleChoiceSectionSummary = (state) => {

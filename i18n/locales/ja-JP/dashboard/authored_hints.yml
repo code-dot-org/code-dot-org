@@ -31,7 +31,7 @@ ja:
         2-3_Artist_9_a: このダイヤモンドは45度回転するとただの四角形に見えます。
         2-3_Artist_9_b: |-
           次の四角形を描く前にアーティストを左に45度回転させることを忘れないで！
-          
+
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: コントロールパネルの幅を、10ピクセル"広く"したい時は、あなたが変更した値に、10"加える"ことを忘れないでください。
@@ -46,9 +46,9 @@ ja:
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           私の形は何回繰り返していましたか？
-          
+
           その形は何回繰り返す"べき"でしょうか？
-          
+
           プログラムのどこを変えればいいでしょうか？
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: アーティストは描き始める前に、左方向にもう60度回転しておく必要があります！
@@ -90,7 +90,7 @@ ja:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           前のパズルで作ったコードはこうでした。
-          
+
           ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
         2-3_Artist_Loops_New_11_b: 新たな回転は、ループの中のコードの**最後**におかなければなりません。
       2-3 Artist Loops New 12_authored_hint:
@@ -117,7 +117,7 @@ ja:
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           正しい角度を知る手助けが必要ですか？
-          
+
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
@@ -145,7 +145,7 @@ ja:
         2-3_Bee_Functions_8_a: "パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。\n\nブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！"
         2-3_Bee_Functions_8_b: |-
           緑の関数ブロックの中にコードを書くことを覚えておいてください。
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
         2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
@@ -258,30 +258,30 @@ ja:
       Dance short test 2_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *7小節目のどこかで、背景エフェクトを変更する必要があります。
-          
+
           *このレベルは10小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
       Dance short test_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *7小節目のどこかで、背景エフェクトを変更する必要があります。
-          
+
           *このレベルは10小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
       Dance_Party_01_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           * 画面にダンサーが表示されていることをたしかめてください。
-          
+
           *このレベルは4小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
@@ -292,7 +292,7 @@ ja:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           * 画面にダンサーが表示されていることをたしかめてください。
-          
+
           *このレベルは4小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
@@ -303,61 +303,61 @@ ja:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           *4小節後にダンサーを新しい動きに切り替える必要があります*
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_03_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
-          
+
           *このレベルは12小節で終わります。*
       Dance_Party_04_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *7小節目のどこかで、背景エフェクトを変更する必要があります。
-          
+
           *このレベルは10小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
       Dance_Party_06_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 少なくとも 2 人のダンサーがいなければなりません。
-          
+
           *このレベルは6小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *3人めのダンサー（または好きなだけの人数！）を追加してください
           *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
       Dance_Party_08_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *2人のダンサーのおおきさは100以外にしてください。
-          
+
           *このレベルは6小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
       Dance_Party_09_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 少なくとも1人のダンサーの色合いを変更してください。
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_1_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           * 画面にダンサーが表示されていることをたしかめてください。
-          
+
           *このレベルは4小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
@@ -367,92 +367,92 @@ ja:
       Dance_Party_10_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 2人以上のダンサーのプロパティを変更しなければなりません。
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *クリエイティブにやってみて！
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_11_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *クリエイティブにやってみて！
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *クリエイティブにやってみて！
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_11b_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *`左矢印キーが押されたとき’のブロックを使って、左矢印キーを押したらロボットが踊るようにしましょう。
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_2_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           *4小節後にダンサーを新しい動きに切り替える必要があります*
-          
+
           *このレベルは8小節で終わります。*
       Dance_Party_3_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
-          
+
           *このレベルは12小節で終わります。*
       Dance_Party_4_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *7小節目のどこかで、背景エフェクトを変更する必要があります。
-          
+
           *このレベルは10小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
       Dance_Party_5_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *あなたのダンスでは、曲の最初の12小節の間、さまざまな動きをしなければなりません。
-          
+
           *このレベルは12小節で終わります。*
       Dance_Party_6_authored_hint:
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *3人めのダンサー（または好きなだけの人数！）を追加してください
           *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
       Dance_Party_8_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *2人のダンサーのおおきさは100以外にしてください。
-          
+
           *このレベルは6小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
       Dance_Party_9_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 少なくとも1人のダンサーの色合いを変更してください。
-          
+
           *このレベルは8小節で終わります。*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: 関数を正しく呼び出すと、あなたはこの道を行くことになります...
@@ -468,7 +468,7 @@ ja:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           * 画面にダンサーが表示されていることをたしかめてください。
-          
+
           *このレベルは4小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
@@ -479,77 +479,77 @@ ja:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
           *4小節後にダンサーを新しい動きに切り替える必要があります*
-          
+
           *このレベルは8小節で終わります。*
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
-          
+
           *このレベルは12小節で終わります。*
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *7小節目のどこかで、背景エフェクトを変更する必要があります。
-          
+
           *このレベルは10小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *あなたのダンスでは、曲の最初の12小節の間、さまざまな動きをしなければなりません。
-          
+
           *このレベルは12小節で終わります。*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *3人めのダンサー（または好きなだけの人数！）を追加してください
           *すべてのダンサーが、曲の中のそれぞれ違うポイントで、違う動きをするようにしてください。
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *2人のダンサーのおおきさは100以外にしてください。
-          
+
           *このレベルは6小節で終わります。*
         challenges: |-
           ** 自由選択のチャレンジ **
-          
+
           *その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 少なくとも1人のダンサーの色合いを変更してください。
-          
+
           *このレベルは8小節で終わります。*
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           * 2人以上のダンサーのプロパティを変更しなければなりません。
-          
+
           *このレベルは8小節で終わります。*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *クリエイティブにやってみて！
-          
+
           *このレベルは8小節で終わります。*
       HOC Dance make group_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
-          
+
           *クリエイティブにやってみて！
-          
+
           *このレベルは8小節で終わります。*
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: '「実行したとき」のしたに、ブロックを くっつけてね。'
@@ -712,7 +712,7 @@ ja:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -730,7 +730,7 @@ ja:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -749,7 +749,7 @@ ja:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -768,7 +768,7 @@ ja:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -787,7 +787,7 @@ ja:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -804,7 +804,7 @@ ja:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -814,7 +814,7 @@ ja:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -830,7 +830,7 @@ ja:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -849,7 +849,7 @@ ja:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -868,7 +868,7 @@ ja:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -887,7 +887,7 @@ ja:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -982,13 +982,13 @@ ja:
         courseE_bee_functions7_a: "パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。\n\nブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！"
         courseE_bee_functions7_b: |-
           緑の関数ブロックの中にコードを書くことを覚えておいてください。
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions7_2018_authored_hint:
         courseE_bee_functions7_a: "パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。\n\nブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！"
         courseE_bee_functions7_b: |-
           緑の関数ブロックの中にコードを書くことを覚えておいてください。
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。\n\nブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！"
@@ -1107,9 +1107,9 @@ ja:
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           私の形は何回繰り返していましたか？
-          
+
           その形は何回繰り返す"べき"でしょうか？
-          
+
           プログラムのどこを変えればいいでしょうか？
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'ヒント: それぞれのヒゲの長さは、75ピクセルです。'
@@ -1165,7 +1165,7 @@ ja:
         2-3_Bee_Functions_8_a: "パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。\n\nブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！"
         2-3_Bee_Functions_8_b: |-
           緑の関数ブロックの中にコードを書くことを覚えておいてください。
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。

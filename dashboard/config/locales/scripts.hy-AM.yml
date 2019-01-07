@@ -1510,3 +1510,15 @@ hy:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: անվավեր
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life Algorithms: Paper Planes'
+            Binary Bracelets:
+              name: Binary Bracelets
