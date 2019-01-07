@@ -1,7 +1,7 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
 require 'cdo/firehose'
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 module UsersHelper
   include ApplicationHelper

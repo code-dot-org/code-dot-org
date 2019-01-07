@@ -7,14 +7,14 @@ module StorageAppsTestUtils
   def with_channel_for(owner)
     with_storage_id_for owner do |storage_id|
       encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, id = storage_decrypt_channel_id encrypted_channel_id
-      yield id, storage_id
+      _, storage_app_id = storage_decrypt_channel_id encrypted_channel_id
+      yield storage_app_id, storage_id
     ensure
-      storage_apps.where(id: id).delete if id
+      storage_apps.where(id: storage_app_id).delete if storage_app_id
     end
   end
 
-  # @param [User] user - may be nil for anonymouse storage id
+  # @param [User] user - may be nil for anonymous storage id
   def with_storage_id_for(user)
     owns_storage_id = false
     user_id = user&.id

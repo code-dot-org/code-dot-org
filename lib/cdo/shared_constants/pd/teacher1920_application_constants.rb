@@ -278,6 +278,7 @@ module Pd
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
+      principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
       # Bonus Points
@@ -286,8 +287,7 @@ module Pd
       taught_in_past: [2, 0],
       free_lunch_percent: [5, 0],
       underrepresented_minority_percent: [5, 0],
-      race: [2, 0],
-      principal_implementation: [2, 0]
+      race: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.

@@ -1,0 +1,22 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "addBehaviorUntil",
+    "blockText": "sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}",
+    "inline": false,
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      },
+      {
+        "name": "CONDITION",
+        "type": "Boolean"
+      }
+    ]
+  }
+}

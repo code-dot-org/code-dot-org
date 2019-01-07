@@ -1,0 +1,52 @@
+function preload() {
+  p5.instance._predefinedSpriteAnimations = {};
+  p5.instance._pauseSpriteAnimationsByDefault = <%- animationOpts.pauseAnimationsByDefault -%>;
+  var animationListJSON = <%- animationListJSON -%>;
+  var orderedKeys = animationListJSON.orderedKeys;
+  var allAnimationsSingleFrame = <%- animationOpts.allAnimationsSingleFrame -%>;
+  orderedKeys.forEach(function (key) {
+    var props = animationListJSON.propsByKey[key];
+    var frameCount = allAnimationsSingleFrame ? 1 : props.frameCount;
+    var image = loadImage(props.rootRelativePath, function () {
+      var spriteSheet = loadSpriteSheet(
+          image,
+          props.frameSize.x,
+          props.frameSize.y,
+          frameCount
+      );
+      p5.instance._predefinedSpriteAnimations[props.name] = loadAnimation(spriteSheet);
+      p5.instance._predefinedSpriteAnimations[props.name].looping = props.looping;
+      p5.instance._predefinedSpriteAnimations[props.name].frameDelay = props.frameDelay;
+    });
+  });
+
+  function wrappedExportedCode(stage) {
+    if (stage === 'preload') {
+      if (setup !== window.setup) {
+        window.setup = setup;
+      } else {
+        return;
+      }
+    }
+// -----
+
+<%- code -%>
+
+// -----
+    try { window.draw = draw; } catch (e) {}
+    switch (stage) {
+      case 'preload':
+        if (preload !== window.preload) { preload(); }
+        break;
+      case 'setup':
+        if (setup !== window.setup) { setup(); }
+        break;
+    }
+  }
+  window.wrappedExportedCode = wrappedExportedCode;
+  wrappedExportedCode('preload');
+}
+
+function setup() {
+  window.wrappedExportedCode('setup');
+}

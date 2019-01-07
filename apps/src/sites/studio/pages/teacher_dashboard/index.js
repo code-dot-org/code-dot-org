@@ -1,29 +1,25 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TeacherDashboardNavigation from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+
+const script = document.querySelector('script[data-dashboard]');
+const scriptData = JSON.parse(script.dataset.dashboard);
+const sectionId = scriptData.section_id;
+const baseUrl = `/teacher_dashboard/sections/${sectionId}`;
 
 $(document).ready(function () {
-  const script = document.querySelector('script[data-dashboard]');
-  const teacherDashboardData = JSON.parse(script.dataset.dashboard);
-  const selectedTab = teacherDashboardData.selected_tab;
-  const defaultTab = "progress";
-  const allTabs = [
-    "progress",
-    "stats",
-    "manage_students",
-    "assessments",
-    "projects",
-    "text_responses"
-  ];
-  const currentTab = allTabs.includes(selectedTab) ? selectedTab : defaultTab;
-
   ReactDOM.render(
     <div>
-      <TeacherDashboardNavigation
-        defaultActiveLink={currentTab}
-      />
-    </div>,
-    document.getElementById('teacher-dashboard-nav')
+      <Router basename={baseUrl}>
+        <Route
+          path="/"
+          component={props => <TeacherDashboard {...props} sectionId={sectionId} studioUrlPrefix=""/>}
+        />
+      </Router>
+    </div>
+    ,
+    document.getElementById('teacher-dashboard')
   );
 });

@@ -125,7 +125,8 @@ module Pd::Application
         TEACHERCONS.each do |teachercon|
           city = teachercon[:city]
           teachercon_workshops[[course, city]] = create :pd_workshop,
-            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: city
+            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+            location_address: city, sessions_from: Date.new(2019, 7, 1)
         end
       end
 
@@ -655,7 +656,8 @@ module Pd::Application
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csd_implementation].second
+        principal_implementation: principal_options[:csd_implementation].second,
+        principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -669,13 +671,13 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             willing_to_travel: YES,
+            principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_plan_to_teach: YES,
             principal_schedule_confirmed: YES,
             principal_diversity_recruitment: YES,
           },
@@ -717,7 +719,8 @@ module Pd::Application
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
-        principal_implementation: principal_options[:csp_implementation].first
+        principal_implementation: principal_options[:csp_implementation].first,
+        principal_wont_replace_existing_course: principal_options[:replace_course].second
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -731,13 +734,13 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             willing_to_travel: YES,
+            principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_plan_to_teach: YES,
             principal_schedule_confirmed: YES,
             principal_diversity_recruitment: YES
           },
@@ -784,7 +787,6 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             willing_to_travel: YES,
-
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -819,11 +821,12 @@ module Pd::Application
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_plan_to_teach: principal_options[:plan_to_teach].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
+        principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49
+        principal_underrepresented_minority_percent: 49,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first
 
       application = create :pd_teacher1920_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
@@ -837,13 +840,13 @@ module Pd::Application
             plan_to_teach: NO,
             committed: NO,
             willing_to_travel: NO,
+            principal_schedule_confirmed: NO,
             principal_implementation: NO
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_plan_to_teach: NO,
             principal_schedule_confirmed: NO,
             principal_diversity_recruitment: NO,
           },
@@ -880,11 +883,12 @@ module Pd::Application
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_plan_to_teach: principal_options[:plan_to_teach].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
+        principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49
+        principal_underrepresented_minority_percent: 49,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first
 
       application = create :pd_teacher1920_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
@@ -898,13 +902,13 @@ module Pd::Application
             plan_to_teach: NO,
             committed: NO,
             willing_to_travel: NO,
-            principal_implementation: NO
+            principal_implementation: NO,
+            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_plan_to_teach: NO,
             principal_schedule_confirmed: NO,
             principal_diversity_recruitment: NO
           },
@@ -928,6 +932,61 @@ module Pd::Application
       application.auto_score!
 
       assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
+    end
+
+    test 'principal responses override teacher responses for scoring' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        plan_to_teach: options[:plan_to_teach].third,
+        replace_existing: options[:replace_existing].first
+
+      application = create :pd_teacher1920_application, form_data_hash: application_hash
+
+      application.auto_score!
+
+      assert_equal NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
+      assert_equal NO, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
+      assert_equal 0, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+
+      application.update_form_data_hash(
+        {
+          principal_approval: principal_options[:do_you_approve].first,
+          principal_plan_to_teach: principal_options[:plan_to_teach].first,
+          principal_wont_replace_existing_course: principal_options[:replace_course].second
+        }
+      )
+
+      application.auto_score!
+
+      assert_equal YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:plan_to_teach]
+      assert_equal YES, application.response_scores_hash[:meets_minimum_criteria_scores][:plan_to_teach]
+      assert_equal 5, application.response_scores_hash[:bonus_points_scores][:replace_existing]
+    end
+
+    test 'nil results when applicable' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        plan_to_teach: options[:plan_to_teach].last,
+        replace_existing: options[:replace_existing].first,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_plan_to_teach: principal_options[:plan_to_teach].last,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,
+        principal_wont_replace_existing_course: principal_options[:replace_course].last
+
+      application = create :pd_teacher1920_application, form_data_hash: application_hash
+
+      application.auto_score!
+
+      response_scores_hash = application.response_scores_hash
+
+      assert_equal [nil, nil], response_scores_hash[:meets_minimum_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
+      assert_equal [nil, nil], response_scores_hash[:meets_scholarship_criteria_scores].slice(:plan_to_teach, :principal_schedule_confirmed).values
+      assert_nil response_scores_hash[:bonus_points_scores][:replace_existing]
     end
 
     test 'principal_approval_state' do
