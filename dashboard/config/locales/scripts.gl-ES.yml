@@ -1462,3 +1462,15 @@ gl:
               name: Internet
             Crowdsourcing:
               name: Colaboración Aberta
+        andrea-test:
+          stages:
+            'null':
+              name: nulo
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Construíndo unha base
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da vida real: avión de papel'
+            Binary Bracelets:
+              name: Pulseiras Binarias

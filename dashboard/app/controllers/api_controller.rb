@@ -1,6 +1,5 @@
 require 'cdo/aws/cloudfront'
 require 'google/apis/classroom_v1'
-require 'honeybadger'
 
 class ApiController < ApplicationController
   layout false

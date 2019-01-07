@@ -3216,9 +3216,9 @@ fr:
         code, then add a second `text` to write in a different\npart of the screen.\\\r\n\\\r\n_Tip:
         The default text size is pretty small, but\nyou can use the `textSize` block
         to change that. You can also use `fill` to\nchange the color of your text._"
-      CSD U3 Sprites text_2018: "# Adding Text\\\r\n\\\r\nYou can put\ntext anywhere
-        you'd like on the screen using `text`. Change the displayed\ntext in the provided
-        code, then add a second `text` to write in a different\npart of the screen.\\\r\n\\\r\n_Tip:
+      CSD U3 Sprites text_2018: "# Adding Text\r\n\r\nYou can put\ntext anywhere you'd
+        like on the screen using `text`. Change the displayed\ntext in the provided
+        code, then add a second `text` to write in a different\npart of the screen.\r\n\r\n_Tip:
         The default text size is pretty small, but\nyou can use the `textSize` block
         to change that. You can also use `fill` to\nchange the color of your text._"
       CSD U3 Variables Challenge: "# Challenge: Updating Variables\\\r\n\\\r\n_Check\nwith
@@ -8503,6 +8503,12 @@ fr:
         the game and move Waddles with the arrows until you score\nenough points.
         Waddles must be moved to the `middle left` position of the\nscreen to complete
         this challenge."
+      courseC_PlayLab_events_challenge1_2019: "Use a new block to\nmake Waddles automatically
+        move back to the start when he runs into the Dinosaur\nand when he scores
+        a point. This will make your game more challenging and\nfun!\\\r\n\\\r\nPlay
+        the game and move Waddles with the arrows until you score\nenough points.
+        Waddles must be moved to the `middle left` position of the\nscreen to complete
+        this challenge."
       courseC_artist_loop1: "Fantastic!  \r\n\r\nLet's add\nsome style by changing
         the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loop1_2018: "Fantastic!  \r\n\r\nLet's add\nsome style by changing
@@ -9300,15 +9306,15 @@ fr:
       courseD_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
-        one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
+      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\\\r\n\\\r\nThere\nis
+        one extra block that is going to cause the bird to crash.  \\\r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \r\n\r\nAvoid
         TNT or feathers will fly!"
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"*
         \r\n\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"*
-        \r\n\r\nAvoid TNT or feathers will fly!"
+        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_maze_ramp5_2018: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid

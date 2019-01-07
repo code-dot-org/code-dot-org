@@ -764,6 +764,7 @@ zh-TW:
       Course 4 SCV 5: 盡可能使用最少的程式積木來完成這個關卡。
       Course 4 SCV 6: 點擊此處再次觀看說明。
       Course 4 SCVP 1: 建立一個帶參數的函式，讓小藝術家能往前、往後跳躍 x 像素，還有往上、往下 y 像素（使用正數和負數）。
+      Course E MC Conditionals1: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Course1BeePuzzle12: 讓我採3次花蜜來製作2次蜂蜜
       CourseF_PlayLab_vars10: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\r\n\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\r\n\r\n提示：可以捲動頁面以查看工作區裡的所有指令。"
       CourseF_PlayLab_vars2: 上一關的比賽一點都不公平！修改 `dog_speed`（小狗的速度）變數，確保你可以收集到比貓還要多的旗子，誰先拿到
@@ -1542,6 +1543,7 @@ zh-TW:
       courseC19_playLab_EOC5: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseC_PlayLab_events3: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_PlayLab_events3_2018: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
+      courseC_PlayLab_events3_2019: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_artist_prog5: |-
         這棟房子需要屋頂！請畫出三角形。
         提示：三邊都是同樣的長度。
@@ -1569,13 +1571,18 @@ zh-TW:
       courseC_collector_progA: 幫 Laurel 收集到所有寶石。
       courseC_harvester_loops8: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops8_2018: "**挑戰：**收集所有的玉米和所有的南瓜。"
+      courseC_harvester_loops8_2019: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge1a: 收集所有的玉米。
       courseC_harvester_loops_challenge1a_2018: 收集所有的玉米。
+      courseC_harvester_loops_challenge1a_2019: 收集所有的玉米。
       courseC_harvester_loops_challenge2: |-
         收集所有的生菜。
         注意避開樹木和田地！
       courseC_harvester_loops_challenge2_2018: |-
+        收集所有的生菜。
+        注意避開樹木和田地！
+      courseC_harvester_loops_challenge2_2019: |-
         收集所有的生菜。
         注意避開樹木和田地！
       courseC_maze_debugging10: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！

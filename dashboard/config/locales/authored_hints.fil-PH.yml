@@ -3703,6 +3703,13 @@ fil:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Ikaw ba ay nakaharap sa tamang landas? Ang `destroy block` ay magmina
+          sa bloke sa harap mo.
+        mc_9_b: Ang itim na mga pekas na nasa pader ay uling! Gamitin ang `destroy
+          block` sa mga ito para makapagmina ng uling.
+        mc_9_c: Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan
+          ka nakatayo.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Siguraduhing itakda ang halaga para sa `dog_speed`
           sa isang bagay na mas malaki kaysa sa `cat_speed`.

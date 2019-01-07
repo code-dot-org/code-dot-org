@@ -145,7 +145,7 @@ sk:
             'Maze: Conditionals':
               name: 'Bludisko: Podmienky'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             'Studio: Create a Game':
               name: 'Play Lab: Vytvor hru'
             'Studio: Create a Story':
@@ -467,7 +467,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             The Big Event:
               name: Veľká udalosť
         ScienceP3OLPT2:
@@ -581,7 +581,7 @@ sk:
             'New Artist: Functions':
               name: 'Nový Umelec: Funkcie'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
         grade1:
           stages:
             Debugging:
@@ -1324,7 +1324,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelcom
             Envelope Variables:
@@ -1357,7 +1357,7 @@ sk:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
         coursed-2018:
@@ -1425,7 +1425,7 @@ sk:
               name: Úvod
               description_teacher: V tomto postupe študenti začínaju úvodom do online pracovného prostredia Code.org alebo (revidovaním v závislosti na skúsenostiach tvojej triedy). Študenti sa naučia základné funkčnosti rozhrania ako sú tlačidlá "Spustiť", "Obnoviť" a "Vykročiť". Ťahanie, vymazanie a spájanie blokov Blockly predstavuje úvodné video. V tejto úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti v sekvenovaní a odstraňovaní chýb.
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelecom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
@@ -1532,7 +1532,7 @@ sk:
             Spelling Bee:
               name: Hláskovanie
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             Copyright and Creativity:
@@ -1566,7 +1566,8 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty
-          description: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi!
+          description_short: Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!
+          description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
           stages:
@@ -1627,7 +1628,7 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty (slabé pripojenie)
-          description_short: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi! (Táto verzia je pre pomalé pripojenie)
+          description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi! (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
           stages:
             Relay Programming:
@@ -1710,3 +1711,24 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nič'
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Tanečná párty - Pokračuj ďalej
+          title: Pokračuj v tancovaní
+          description_short: Choď za hranice Hodiny Kódu s touto nadväzujúcou aktivitou na Code.org Tanečná Párty tutoriály.
+          description: Pokračuj za hranice prvej hodiny s rozšírenými nápadmi na projekt.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Stavanie základov
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmus z reálneho života: Papierové lietadielka'
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Binary Bracelets:
+              name: Binárne náramky

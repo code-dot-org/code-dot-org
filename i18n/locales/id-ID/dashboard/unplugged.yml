@@ -296,3 +296,6 @@ id:
       BinaryBracelets_2019:
         title: Gelang biner
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
+      PaperPlanes_2019:
+        title: 'Algoritma kehidupan nyata: Pesawat Kertas'
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.

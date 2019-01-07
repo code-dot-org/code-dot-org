@@ -191,11 +191,11 @@ pl:
     subject: 'Dołącz do mojej klasy (na Code.org)'
     body: |
       Kliknij w poniższy link, by zarejestrować się na kursy z informatyki na Code.org (ze mną w roli Twojego nauczyciela):
-      
+
       %{link}
-      
+
       Kursy są zabawne, mają ładną oprawę graficzną i uczą podstawowych pojęć z dziedziny informatyki przy użyciu prostych gier z instrukcjami. Naucz się kodowania od Billa Gatesa, Marka Zuckerberga, Angry Birds i Plants vs. Zombies! :)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informacje logowania Code.org'

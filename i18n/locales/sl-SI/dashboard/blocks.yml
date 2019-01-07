@@ -236,12 +236,30 @@ sl:
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': velikost
@@ -264,6 +282,11 @@ sl:
           CORNER:
             '"right"': desno
             '"left"': levo
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -311,14 +334,29 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      binary_move:
+        options:
+          DIR:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
       craft_ifPath:
         options:
           DIR:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -329,8 +367,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": pesek

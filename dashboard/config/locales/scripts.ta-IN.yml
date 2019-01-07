@@ -240,3 +240,7 @@ ta:
           stages:
             The Artist:
               name: கலைஞர்
+        andrea-test:
+          stages:
+            'null':
+              name: வெறுமை

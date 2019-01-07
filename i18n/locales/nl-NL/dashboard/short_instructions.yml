@@ -392,7 +392,7 @@ nl:
       4-5 Nested Loops 2: 'Nest deze lus in een andere lus om 10 driehoeken tekenen. Dit noemen we een geneste lus. Hint: Alle 10 driehoeken tezamen vormen een draai van 360 graden.  '
       4-5 Nested Loops 3: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       4-5 Nested Loops 5: Maak een windmolen met een lus rond de voorbeeldcode.
       4-5 Nested Loops 6: Kan je een zeskant tekenen met een lus rond de driehoek-code?
       4-5 Nested Loops 7: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
@@ -490,7 +490,7 @@ nl:
       Course 4 Artist 11: 'Klaar voor een uitdaging? Hier is een programma die alleen blokken gebruikt die je al hebt gehad. Kun je het programma zonder extra informatie opnieuw opnieuw maken? Tip: voel je vrij om het te doen met testen en problemen oplossen. Het gaat vast niet in een keer goed.'
       Course 4 Artist 12: |-
         Vrij spel inspiratie: Je hebt nu alles geleerd wat je nodig hebt om een patroon als deze te maken! Als deze afbeelding je inspireert, probeer om net zo iets te maken. Maak anders iets helemaal alleen.\r
-        
+
         \r
         Wil je weten hoe ons patroon is gemaakt? Klik dan rechts op de blauwe tab en klik dan op de "Bekijk de oplossing"-knop.
       Course 4 Artist 13: Nog aan het spelen? Hier is een leeg canvas on te ontwerpen wat je maar wilt!
@@ -528,7 +528,7 @@ nl:
       Course 4 Artist For Loops 11: 'Weet je nog dat we een variabele gebruikte om de aantal zijden in een figuur te bepalen? Dit patroon begint met een driehoek en voegt daarbij één zijde per keer totdat het een tienhoek (10 zijden) vormt. Elke zijde moet 100 pixels lang zijn. Tip:  360 gedeeld door het aantal zijden dat een figuur heeft, is het aantal graden dat je zal willen draaien.'
       Course 4 Artist For Loops 11a: |-
         Laten we het samen voegen! Met behulp van je kennis over "for loops" en de "counter" maken we deze tekening waar elke vorm twee zijden meer heeft dan de laatste. Zorg ervoor dat elke zijde 10 keer zo lang is als het aantal zijdes in de veelhoek.  /r/r 
-        
+
         Een klein beetje van de code is voorbereid voor jou.
       Course 4 Artist For Loops 12: 'Dat zag er vet uit, maar nu wil ik een figuur tekenen naast de laatste. Deze keer is elke zijde 20 pixels. Gebruik een spring blok om 40 pixels vooruit te springen na elke figuur. '
       Course 4 Artist For Loops 13: Hmmm, de figuren worden iedere keer groter! Hebben we dit probleem niet eerder al opgelost met variabelen? Hoe kunnen we de teller gebruiken van de variabelen om de zijden kleiner te maken omdat daar meer van zijn? In plaats van vooruit te gaan met een vaste hoeveelheid, gaan we (100/teller) pixels vooruit.
@@ -579,7 +579,7 @@ nl:
       Course 4 Artist Functions inspire: Klik hier om de inspiratie afbeelding weer te zien.
       Course 4 Artist Inspire: |-
         Vrij spel inspiratie: Je hebt nu alles geleerd wat je nodig hebt om een patroon als deze te maken! Als deze afbeelding je inspireert, probeer om net zo iets te maken. Maak anders iets helemaal alleen.\r
-        
+
         \r
         Wil je weten hoe ons patroon is gemaakt? Klik dan rechts op de blauwe tab en klik dan op de "Bekijk de oplossing"-knop.
       Course 4 Artist Params 1: "Laten we een vierkant tekenen\ndie 50 pixels breed is"
@@ -753,6 +753,7 @@ nl:
       Course 4 SCV 6: Klik hier om de instructies opnieuw weer te geven.
       Course 4 SCVP 1: Maak een functie met parameters die de kunstenaar naar voren en naar achteren laat springen met x pixels en naar boven en naar beneden met y pixels. X en y kunnen positief of negatief zijn.
       Course 4 Variables Assessment: Kan je deze afbeelding maken met een variabele voor de kanten? Elke lijn moet 50 pixels lang zijn.
+      Course E MC Conditionals1: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
       Course1BeePuzzle12: Neem drie eenheden nectar en maar vervolgens twee eenheden honing
       Course1MazeAssessment1: |-
         Dit is een test!\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen
@@ -1569,10 +1570,13 @@ nl:
       courseB_starWars_prog9_2018: Help BB-8 het gloeiende schoot verzamelen
       courseC_PlayLab_events3: Kan je een programma schrijven om Jorge (speler 1) voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_events3_2018: Kan je een programma schrijven om Jorge (speler 1) voorwaarts naar Olive de kat te laten bewegen?
+      courseC_PlayLab_events3_2019: Kan je een programma schrijven om Jorge (speler 1) voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_eventsFP: "Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op \"Voltooien\" om het te delen met vrienden.\nZie Verhaal Ideeën voor hints."
       courseC_PlayLab_eventsFP_2018: "Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op \"Voltooien\" om het te delen met vrienden.\nZie Verhaal Ideeën voor hints."
+      courseC_PlayLab_eventsFP_2019: "Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op \"Voltooien\" om het te delen met vrienden.\nZie Verhaal Ideeën voor hints."
       courseC_PlayLab_events_challenge1: "Gebruik een nieuwe blok om Waddles automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of wanneer hij een punt scoort.\\r\nSpeel het spel en beweeg Waddles met de pijltjes totdat je genoeg punten scoort."
       courseC_PlayLab_events_challenge1_2018: "Gebruik een nieuwe blok om Waddles automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of wanneer hij een punt scoort.\\r\nSpeel het spel en beweeg Waddles met de pijltjes totdat je genoeg punten scoort."
+      courseC_PlayLab_events_challenge1_2019: "Gebruik een nieuwe blok om Waddles automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of wanneer hij een punt scoort.\\r\nSpeel het spel en beweeg Waddles met de pijltjes totdat je genoeg punten scoort."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Hier is een nieuwe blok dat ietwat ingewikkeld is. Gebruik het om Waddles terug naar de start te verplaatsen wanneer hij de Dinosaurus raakt of wanneer hij een punt scoort. Dit zal je spel uitdagender en leuker maken!\r
         \r
@@ -1686,8 +1690,10 @@ nl:
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a: Verzamel alle maïs.
       courseC_harvester_loops_challenge1a_2018: Verzamel alle maïs.
+      courseC_harvester_loops_challenge1a_2019: Verzamel alle maïs.
       courseC_harvester_loops_challenge2: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_harvester_loops_challenge2_2018: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      courseC_harvester_loops_challenge2_2019: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_maze_debugging10: Los de fouten in dit level op door de blokken op de juiste volgorde te zetten en blokken toe te voegen!
       courseC_maze_debugging_challenge1: '*"Ga ik enkel rond in cirkels?"*'
       courseC_maze_debugging_challenge1_2018: '*"Ga ik enkel rond in cirkels?"*'
@@ -2089,7 +2095,7 @@ nl:
       grade4_arist_nested_loop_triangles4: Teken de tanden in de mond van de krokodil!
       grade4_arist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_arist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_functions1: "Hallo. Ik zombie kunstenaar. Mij houd van tekenen!\nHelp me de bril met vierkante glazen tekenen. Tip: De brug tussen de glazen is 25 pixels korter dan de lengte van een glas."
       grade4_artist_functions2: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
@@ -2105,7 +2111,7 @@ nl:
       grade4_artist_nested_loop_triangles1: 'Maak de code af om deze driehoeken te tekenen. De eerst is al gedaan. Hint: de drie driehoeken draaien in totaal 360 graden.'
       grade4_artist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_artist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_parameters_squares1: 'Klik "edit" om de functie definitie van "draw a square" te bewerken en voeg een parameter toe. De functie heeft een "length" parameter nodig, net als de driehoek. Teken nu 3 vierkanten: 25, 50 en 75 pixels groot, telkens 100 pixels uit elkaar.'
       grade4_artist_parameters_triangles2: Zie je een verschil tussen deze functie blokken? Druk op "Start" om te zien wat er gebeurt.
@@ -2178,7 +2184,7 @@ nl:
       grade5_artist_for_loops8: 'Weet je nog dat we een variabele gebruikte om de aantal zijden in een figuur te bepalen? Dit patroon begint met een driehoek en voegt daarbij één zijde per keer totdat het een tienhoek (10 zijden) vormt. Elke zijde moet 100 pixels lang zijn. Tip:  360 gedeeld door het aantal zijden dat een figuur heeft, is het aantal graden dat je zal willen draaien.'
       grade5_artist_for_loops9: |-
         Laten we het samen voegen! Met behulp van je kennis over "for loops" en de "counter" maken we deze tekening waar elke vorm twee zijden meer heeft dan de laatste. Zorg ervoor dat elke zijde 10 keer zo lang is als het aantal zijdes in de veelhoek.  /r/r 
-        
+
         Een klein beetje van de code is voorbereid voor jou.
       grade5_artist_for_loopsfreeplay11: |-
         Vrije opdracht inspiratie: Je hebt nu alles geleerd wat je nodig hebt om zo'n patroon te maken! Als deze afbeelding je inspireert, probeer dan iets soortgelijks te maken. Of maak iets helemaal zelf. \r \r Wil je weten hoe ons inspiratie patroon werd gemaakt? Bezoek https://studio.code.org/c/106387604 voor de oplossing.
@@ -2197,7 +2203,7 @@ nl:
         Vrij Spel: Probeer het eens nu je algoritme met nog een lus genest is. Experimenteer met het veranderen van de waarden van je twee variabelen om coole patronen te tekenen.
       grade5_artist_variables_freeplay15: |-
         Vrij spel inspiratie: Je hebt nu alles geleerd wat je nodig hebt om een patroon als deze te maken! Als deze afbeelding je inspireert, probeer om net zo iets te maken. Maak anders iets helemaal alleen.\r
-        
+
         \r
         Wil je weten hoe ons patroon is gemaakt? Klik dan rechts op de blauwe tab en klik dan op de "Bekijk de oplossing"-knop.
       grade5_artist_variables_freeplay16: Nog aan het spelen? Hier is een leeg canvas waar je kan maken wat je wilt!

@@ -260,7 +260,7 @@ km:
         color outlines\\r
         * Contains at least 3 different logical blocks of code with
         comments\\r
-        
+
       course3_playlab_challenge2: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -401,7 +401,7 @@ km:
         all of the nectar using as few blocks as possible.
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
-      courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"* \\\\r\n\\\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: |-
         *"Follow this path to get me to
         the pig!"*\\r
@@ -1138,7 +1138,7 @@ km:
         year?\\r
         * What recruiting goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csd-thursday-unit: "# Thursday Unit Reflection Part 1\n\\r\n\\r\n## Game Lab\\r\n\\r\nHow would you explain programming in Game Lab to\na new teacher who is interested in using it? \\r\n\\r\n* In what ways is Game\nLab an educational rather than professional tool? \\r\n* What kind of supports\nexist for students using Game Lab?\\r\n"
       csd-thursday-unit2: |-
         # Thursday Unit Reflection Part 2\\r
@@ -1181,7 +1181,7 @@ km:
         What are teachers doing?\\r
         * What strategies did you see facilitators use
         to keep teachers engaged?\\r
-        
+
       csd-wednesday-pedagogy: "# Wednesday Pedagogy Reflection\\r\n\\r\n##\nBuilding Community & Dealing with Barriers\\r\n\\r\nIn the community session\nthis morning you talked about building community and dealing with barriers\nto growing your CS education community locally. (If you were not with your\nregion think about what you experienced in this sessions that might apply\nto your region.)\\r\n\\r\n* What were common barriers teachers in your region\nshared?\\r\n* What barriers do you personally experience that were shared by\nteachers? \\r\n* What can you do to help in your local community?\\r\n* What\nthings did you see today that you want to check in on throughout the year?\\r\n*\nWhat community development goals do you hope to help accomplish in your region\nby the end of the year?\\r\n"
       csd-wednesday-unit: |-
         # Wednesday Unit Reflection Part
@@ -1253,7 +1253,7 @@ km:
         year?\\r
         * What recruiting goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csp-thursday-unit: |
         # Thursday Unit Reflection\\r
         \\r
@@ -1262,7 +1262,7 @@ km:
         \\r
         What connections or hooks into unit 1
         that can be used to motivate early lessons in unit 2?\\r
-        
+
       csp-thursday-unit2: |
         # Thursday Unit Reflection Part 2\\r
         \\r
@@ -1271,7 +1271,7 @@ km:
         \\r
         What’s the role of the teacher in this unit, where much
         of the computer science content is embedded in the levels?\\r
-        
+
       csp-tuesday-facilitation: "# Tuesday Facilitation Practice\\r\n\\r\n##\nTLO\\r\n\\r\nYou have seen 2 Model TLOs (taught by facilitators) and 2 Participant\nTLOs (taught by teachers). What patterns do you notice about what facilitators\ndo during these sessions (consider the delivery of the lessons and the debriefs\nseparately)?\\r\n\\r\n* What are facilitators doing during lessons?\\r\n* What\nare facilitators doing during debriefs? What are teachers doing?\\r\n* In model\nlessons, how much time is split between time when facilitators are talking\nand time when teachers are doing during the lesson? "
       csp-tuesday-pedagogy: "# Tuesday Pedagogy Reflection\\r\n\\r\n##\nClassroom Practices\\r\n\\r\nName two <a href=\"https://docs.google.com/document/d/1trq3FeCBaq2G-CFugZP4ElkJapAqAtoBfl4zf7DbW48/edit#heading=h.f8m5xr9s44e2\">\npedagogical approaches</a> you saw modeled in the 5 TLOs you’ve seen in the\npast couple of days? \\r\n\\r\n* When were they successful?\\r\n* What were characteristics\nof situations where was their room for improvement?"
       csp-tuesday-unit: |
@@ -1282,7 +1282,7 @@ km:
         \\r
         How would you respond to a teacher who says ‘what’s the point’
         of lesson 4?\\r
-        
+
       csp-tuesday-unit2: |
         # Tuesday Unit Reflection\\r
         \\r
@@ -1293,7 +1293,7 @@ km:
         of the year (computers are not ready yet, etc). How would you recommend a
         teacher approaches the first unit if they are having issues with technology
         access?\\r
-        
+
       csp-wednesday-facilitation: |
         # Wednesday Facilitation
         Reflection\\r
@@ -1309,7 +1309,7 @@ km:
         What are teachers doing?\\r
         * What strategies did you see facilitators use
         to keep teachers engaged?\\r
-        
+
       csp-wednesday-pedagogy: |
         # Wednesday Pedagogy Reflection\\r
         \\r
@@ -1332,7 +1332,7 @@ km:
         *
         What community development goals do you hope to help accomplish in your region
         by the end of the year?\\r
-        
+
       csp-wednesday-unit: |+
         # Wednesday Unit Reflection\\r
         \\r
@@ -1343,7 +1343,7 @@ km:
         unit. What are strategies for dealing with students who are getting fatigued
         by the end of the unit?\\r
         \\r
-        
+
       csp-wednesday-unit2: "# Wednesday Unit Reflection Part\n2\\r\n\\r\n## Explaining Internet Simulator\\r\n\\r\nHow would you explain the\nInternet Simulator to a new teacher who is interested in using it?\\r\n\\r\n*\nIn what ways is Internet Simulator an educational rather than professional\ntool? \\r\n* What teaching philosophy seems most effective with the Internet\nSimulator? \\r\n"
       csp1dlp-assessment: "\\r\n\\r\n<br><br>\\r\n\\r\n> **NOTE:\nbefore you start this reflection, make sure you’ve reviewed the lesson in\nUnit 1, and have a good sense of the the role of assessment across the unit.\nIf you haven’t already reviewed the materials, do that now and come back to\nthis reflection later.**\\r\n\\r\n\\r\n# Assessment in Unit 1\\r\n\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n1. Your response should clearly address each of the items below: \\r\n\\r\n1.\nWhat’s the role of the practice Performance Task(s), or PTs, in the unit?\n\\r\n - Which PTs are being practiced?\\r\n - How does the practice PT build\non what content and skills were developed during the unit? \\r\n2. What summative\nand formative assessment opportunities are built into the unit? \\r\n\\r\n\\r\n>##\nGetting Credit for Completing this Reflection \\r\n\\r\n>- Once you submit your\nreflection, your response to the prompt above will be shared anonymously and\nreviewed by your peers, and you will review the work done by other facilitators.\nReviewers will be looking for thoughtful and thorough answers that demonstrate\nthat you have spent time considering the reflection questions listed above.\nReviewers will have an opportunity to give feedback on your submission, and\nyou can respond to that feedback and resubmit.\\r\n- In order to get credit\nfor completing this prompt, two reviewers need to agree that you have responded\nto the prompts fully. If reviewers don’t feel comfortable making a decision\nabout your task submission, they can elevate to an instructor for review.\nYou will always have a chance to address feedback from your reviewers and\nresubmit your reflections! Reviewer feedback will show up at the bottom of\nthis page, once it’s available. \\r\n \\r\n\\r\n\\r\n"
       csp1dlp-lessons: "<br><br>\\r\n\\r\n> **NOTE: before you\nstart this reflection, make sure you’ve reviewed the lesson in Unit 1, and\nhave a good sense of the connections between lessons. If you haven’t already\nreviewed the materials, do that now and come back to this reflection later.**\\r\n\\r\n\\r\n#\nUnit 1 Lesson Connections and Philosophy\\r\n\\r\nFor this reflection, you’re\ngoing to consider each of the prompts below and craft a written response that\ndemonstrates your understanding of the lessons in Unit 1. Your response should\nclearly address each of the items below: \\r\n\\r\n1. What skills and knowledge\nshould students leave the unit with?\\r\n - Which Big Idea(s) are students\nlearning the most about? Where and how are those BI(s) addressed? \\r\n - Which\nskills or Computational Practices are honed through the activities and projects?\n\\r\n\\r\n2. What is the connection between early lessons and later lessons?\\r\n\n- How is the content spiraled or scaffolded within the unit? \\r\n - What foundation\nis being laid early on and how is it leveraged throughout the unit? Why? \\r\n\n- How would you respond to a teacher who says ‘what’s the point’ of lesson\n4? \\r\n\\r\n3. Which lessons are particularly tricky to teach in this unit\nand why? \\r\n\\r\n>## Getting Credit for Completing this Reflection \\r\n\\r\n>-\nOnce you submit your reflection, your response to the prompt above will be\nshared anonymously and reviewed by your peers, and you will review the work\ndone by other facilitators. Reviewers will be looking for thoughtful and thorough\nanswers that demonstrate that you have spent time considering the reflection\nquestions listed above. Reviewers will have an opportunity to give feedback\non your submission, and you can respond to that feedback and resubmit.\\r\n-\nIn order to get credit for completing this prompt, two reviewers need to agree\nthat you have responded to the prompts fully. If reviewers don’t feel comfortable\nmaking a decision about your task submission, they can elevate to an instructor\nfor review. You will always have a chance to address feedback from your reviewers\nand resubmit your reflections! Reviewer feedback will show up at the bottom\nof this page, once it’s available. \\r\n \\r\n\\r\n\\r\n"
@@ -2005,4 +2005,4 @@ km:
         color outlines\\r
         * Contains at least 3 different logical blocks of code with
         comments\\r
-        
+

@@ -3675,6 +3675,8 @@ zh-TW:
           stages:
             Artist:
               name: 藝術家
+        aquatic:
+          title: 'Minecraft: 水上巡航'
         sconyers:
           stages:
             Digital Design:
@@ -3795,3 +3797,24 @@ zh-TW:
               name: 問題解決能力的介紹
             What is a Computer?:
               name: 電腦是什麼？
+        andrea-test:
+          stages:
+            new stage:
+              name: 新的階段
+            'null':
+              name: 'null'
+        dance-extras-gallery:
+          title: 繼續跳舞
+          description: 在一小時之後嘗試更多奇思妙想。
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: 打好基礎
+            Programming in Maze:
+              name: 迷宮中的程式設計
+            'Real-life Algorithms: Paper Planes':
+              name: '生活中的演算法 - 紙飛機'
+            'Loops: Getting Loopy':
+              name: '迴圈：學習迴圈'
+            Binary Bracelets:
+              name: 二進制手環

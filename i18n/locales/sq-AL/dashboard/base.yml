@@ -202,11 +202,11 @@ sq:
     subject: 'Bëhu pjesë e klasës time (në Code.org)'
     body: |
       Kliko linkun e mëposhtëm për tu rregjistruar tek tutorialet e shkencave kompjuterike në Code.org (me mua si "mësuesin" tënd):
-      
+
       %{link} 
-      
+
       Tutorialet janë zbavitës, tërheqës, dhe të mësojnë konceptet bazë të shkencave kompjuterike duke përdorur një përvojë loje të thjeshtë. Mëso të kodosh nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:
