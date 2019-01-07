@@ -130,7 +130,7 @@ da:
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setBackgroundEffect:
-        text: indstil baggrundseffekt [EFFECT][0]
+        text: indstil baggrundseffekt {EFFECT}
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -147,7 +147,7 @@ da:
             '"tropical"': Tropisk
             '"warm"': Rød
       Dancelab_setBackgroundEffectWithPalette:
-        text: indstil baggrundseffekt [EFFECT][0] [PALETTE][1]
+        text: indstil baggrundseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"circles"': Tunnel
@@ -222,7 +222,7 @@ da:
           THIS:
             sprites: alle
       Dancelab_setVisible:
-        text: indstil [SPRITE][0] synlighed til [VISIBILITY][1]
+        text: indstil {SPRITE} synlighed til {VISIBILITY}
       Dancelab_setVisibleEach:
         options:
           THIS:
