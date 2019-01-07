@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/enrollmentUnitAssignment';
+import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/EnrollmentUnitAssignment';
 import {expect} from 'chai';
 
 describe("Enrollment unit assignment", () => {
