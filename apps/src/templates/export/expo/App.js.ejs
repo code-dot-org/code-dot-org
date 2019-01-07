@@ -57,6 +57,10 @@ export default class App extends React.Component {
   };
 
   onLoadEnd = () => {
+    //
+    // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
+    // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
+    //
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         this.setState({
