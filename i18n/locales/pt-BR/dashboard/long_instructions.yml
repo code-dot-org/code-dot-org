@@ -617,6 +617,8 @@ pt-BR:
       Play Lab Rocket 3: "Excelente! Agora, você consegue atualizar essa função para\nque nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,\nos exemplos e a definição da função para lançar um foguete a 40 metros por segundo."
       Testing Quantum Farmer: "Uau, que demais! \\r\n\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
       Trent Test Level: 'Mais questões!  '
+      U2L16 Free response assessment 1: O que significa "computacionalmente difícil"?
+      U2L17 Assessment 1: Descreva o que significa para um problema ser "computacionalmente difícil."
       U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
@@ -983,20 +985,33 @@ pt-BR:
 
         ! [a] (https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseB_Scrat_ramp3a_2018: Pegue um <xml><block type="maze_moveNorth"/></xml> da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar o código, e então clique em "▶ Executar".
+      courseB_Scrat_ramp3b_2018: |-
+        Há um bloco extra no final desse código!
+
+        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseB_Scrat_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
       courseB_Scrat_ramp5a_2018: Tente este sozinho!
       courseB_collector_loops1: |-
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseB_iceage_loops3: "Você consegue chegar na noz usando apenas um bloco <xml><block type=\"maze_moveWest\"/></xml>?\nTente usar um laço!"
       courseB_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseB_iceage_loops5: Você consegue adicionar mais um laço para chegar até a noz?
       courseB_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
       courseB_iceage_loops7: 'Scrat realmente quer aquela noz! '
       courseB_iceage_loops8: 'Você consegue corrigir este código? '
       courseB_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
+      courseB_maze_seq3: '*"Conserte o código para me levar até o porco!"*'
+      courseB_maze_seq3_2018: '*"Conserte o código para me levar até a noz!"*'
+      courseB_maze_seq9: "**Desafio**: Dê a volta na TNT para levar o pássaro até o porco."
+      courseB_maze_seq9_2018: "**Desafio**: Mova-se ao redor do gelo quebrado para levar Scrat até a noz."
+      courseB_maze_seqCold: "**Desafio**: Analise este nível adicionando blocos para levar o pássaro até o porco!"
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -1048,10 +1063,14 @@ pt-BR:
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bounce_events1: Vá até a bandeira! Anexe um bloco ao bloco "quando seta para esquerda" e clique em "Executar" para mover o jogador até a bandeira.
+      courseD_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar na noz!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
@@ -1084,6 +1103,8 @@ pt-BR:
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_ramp5: Evite o gelo com rachadura!
       courseD_scrat_ramp5_2018: Evite o gelo com rachadura!
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions2_2018: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."

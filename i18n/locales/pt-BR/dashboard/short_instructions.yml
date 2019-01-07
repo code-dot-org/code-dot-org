@@ -696,6 +696,7 @@ pt-BR:
       CSDU4 - Design Mode - 11: Experimente tipos de eventos diferentes e selecione qual deles você acha melhor. (Clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 12: "Introdução de textLabels.  Primeiro, tente substituir\nseu botão por um textLabel.  O texto vai responder a eventos da mesma forma que o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial similar ao resultado do último nível, então você pode copiar o código do\núltimo nível aqui se você preferir. "
       CSDU4 - Design Mode - 16: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
+      CSDU4 - Design Mode - 2: Execute um programa com dois botões que possuem o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer o programa funcionar sem receber uma mensagem de aviso.
       CSDU4 - Design Mode - 24: "Introdução de textInput, getText\ne write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que\né escrito na tela quando o botão for clicado. Então, use getText para escrever\nna tela o que o usuário digitou na caixa de texto."
       CSDU4 - Design Mode - 33: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 4: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
@@ -752,6 +753,7 @@ pt-BR:
       CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
       CSPU5_U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
       CSPU5_U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
+      CSPU5_U313 drag Two Buttons: Execute um programa com dois botões que possuem o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer o programa funcionar sem receber uma mensagem de aviso.
       CSPU5_U3L13 - Debug Id Problem: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       CSPU5_U3L13 - Turtle Driver Project: "Desafio: crie uma \"tartaruga motorista\"\ncom pelo menos três botões na tela para mover a tartaruga para a frente e\nvirá-la para a direita e para a esquerda. Se quiser, você pode copiar/colar de um nível anterior,\nmas você vai exercitar seus músculos de programação se criar\nesse pequeno programa desde o início. Se tiver tempo, adicione botões extras! Você\ntambém pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,\netc."
       CSPU5_U3L13 - Turtle move with button: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
@@ -1909,6 +1911,8 @@ pt-BR:
       U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
       U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
       U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
+      U313 drag Two Buttons: Execute um programa com dois botões que possuem o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer o programa funcionar sem receber uma mensagem de aviso.
+      U313 eventsDetails: Execute um programa com dois botões que possuem o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer o programa funcionar sem receber uma mensagem de aviso.
       U3L03 Creating Procedures 1: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif"
       U3L03 Define and use turnAround: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
       U3L03 Define and use turnAround_2018: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
@@ -2021,6 +2025,7 @@ pt-BR:
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       aE8: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
+      aEfreeplay: Atividade Livre!
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
       artistFunctionsVideo1: Siga as instruções para fazer sua própria função.
       artistLoopsK1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
@@ -2313,6 +2318,8 @@ pt-BR:
       courseB_collector_loops_challenge`: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
       courseB_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops2: Uso dois blocos de movimento diferentes para chegar até a noz!
       courseB_iceage_loops3: Você consegue pegar a noz com apenas um bloco `W`?
@@ -2626,6 +2633,12 @@ pt-BR:
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals7: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2019: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2019: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
@@ -2723,6 +2736,8 @@ pt-BR:
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
@@ -2776,6 +2791,8 @@ pt-BR:
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
       courseE_artist_concept1_2019: 'Recrie esta imagem. '
@@ -2848,6 +2865,8 @@ pt-BR:
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
+      courseF_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos possíveis.
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de blocos possíveis.
       courseF_bee_for1_2019: Colete o nectar de cada flor usando o menor número de blocos possíveis.
@@ -3085,6 +3104,7 @@ pt-BR:
         de cada uma das flores usando o menor número possível de blocos.
       grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_bee_conditionals_quantum4: Use o bloco `se/senão` para coletar o nectar das flores e fazer mel na colmeia.
       grade3_maze_Loop1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       grade3_maze_loops3: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
