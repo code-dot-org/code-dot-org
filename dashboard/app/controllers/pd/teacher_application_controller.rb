@@ -10,6 +10,11 @@ class Pd::TeacherApplicationController < ApplicationController
     id_param: 'teacher_application_id'
   )
 
+  # GET /pd/teacher_application
+  def new
+    redirect_to pd_application_teacher_path
+  end
+
   # GET /pd/teacher_application/manage
   # Admin only
   def manage
