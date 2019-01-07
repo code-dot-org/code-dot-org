@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -29,39 +29,6 @@ export const getChannelIdFromUrl = function (abuseUrl) {
   }
   return match && match[1];
 };
-
-/**
- * A dropdown with the set of ages we use across our site (4-20, 21+)
- */
-class AgeDropdown extends React.Component {
-  static propTypes = {
-    age: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    style: PropTypes.object
-  };
-
-  render() {
-    const style = _.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
-
-    const age = this.props.age && this.props.age.toString();
-    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
-      '15', '16', '17', '18', '19', '20', '21+'];
-
-    if (this.props.age !== null && ages.indexOf(age) === -1) {
-      throw new Error('Invalid age: ' + age);
-    }
-
-    return (
-      <select name="age" style={style} defaultValue={age}>{
-        ages.map(function (age) {
-          return <option key={age} value={age}>{age}</option>;
-        })
-      }</select>
-    );
-  }
-}
 
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
@@ -130,7 +97,11 @@ export default class ReportAbuseForm extends React.Component {
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
             <div>{i18n.t('activerecord.attributes.user.age')}</div>
-            <AgeDropdown age={this.props.age} ref="age"/>
+            <AgeDropdown
+              style={{width: DROPDOWN_WIDTH}}
+              age={this.props.age}
+              ref="age"
+            />
           </div>
 
           <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
