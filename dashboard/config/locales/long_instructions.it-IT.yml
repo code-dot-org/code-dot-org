@@ -313,6 +313,9 @@ it:
       2-3 Maze 1: |-
         Puoi aiutarmi a catturare il maialino cattivo? Metti due blocchi `vai avanti`, uno sotto l'altro, sotto il blocco `quando si clicca su "Esegui"`. Poi clicca a sinistra sul pulsante "Esegui", sotto al labirinto. <br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
+      2-3 Maze 12 - One Move Block: Raggiungi il maiale! Ma questa volta, è possibile
+        utilizzare solo un blocco 'muovi avanti'. Riesci a vedere quali altri blocchi
+        potrebbero aiutarti?
       2-3 Maze 12: |-
         Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
         <br>
@@ -2108,13 +2111,13 @@ it:
       Virtual Pet 2_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento**
         in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore
         diventi marrone."
-      Virtual Pet 3: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1)
-        \ Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)  Puoi crearlo in
+      Virtual Pet 3: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1.
+        \ Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in
         modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo
         colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block
-        type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n
-        \       <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n
-        \       </block>\n      </value>\n    </block></xml>\n"
+        type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n
+        \        <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n
+        \        </block>\n       </value>\n     </block></xml>\n"
       Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!
         \ \n\n1)  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)  Puoi crearlo
         in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al
