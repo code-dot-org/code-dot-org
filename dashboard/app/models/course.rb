@@ -261,12 +261,16 @@ class Course < ApplicationRecord
     }
   end
 
+  def link
+    Rails.application.routes.url_helpers.course_path(self)
+  end
+
   def summarize_short
     {
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: ''),
       description: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      link: Rails.application.routes.url_helpers.course_path(self),
+      link: link,
     }
   end
 
