@@ -61,6 +61,19 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    #override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        interview
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
+    end
+
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
     # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
     #   (optional) defaults to all
