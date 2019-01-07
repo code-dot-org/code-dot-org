@@ -160,6 +160,10 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': space
       craft_ifPath:
         options:
           DIR:

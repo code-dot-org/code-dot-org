@@ -3,20 +3,20 @@ vi:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: sau {TIMESTAMP} {UNIT}
+        text: sau [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
       Dancelab_changeColorBy:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
+        text: thay đổi [COLOR][0] [METHOD][1] thành [AMOUNT][2]
         options:
           METHOD:
             '"hue"': sắc màu
             '"saturation"': độ bão hòa
             '"brightness"': độ sáng
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} {MOVE} {DIR} mãi mãi"
+        text: "[GROUP][0] [MOVE][1] [DIR][2] mãi mãi"
         options:
           GROUP:
             sprites: tất cả
@@ -47,7 +47,7 @@ vi:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} {MOVE} {DIR} mãi mãi"
+        text: "[SPRITE][0] [MOVE][1] [DIR][2] mãi mãi"
         options:
           MOVE:
             '"next"': "(Tiếp theo)"
@@ -65,7 +65,7 @@ vi:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
+        text: thay đổi [PROPERTY][1] [SPRITE][0] theo [VAL][2]
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -75,7 +75,7 @@ vi:
             '"x"': vị trí ngang
             '"y"': vị trí dọc
       Dancelab_doMoveEachLR:
-        text: "{GROUP} {MOVE} {DIR} một lần"
+        text: "[GROUP][0] [MOVE][1] [DIR][2] một lần"
         options:
           GROUP:
             sprites: tất cả
@@ -104,7 +104,7 @@ vi:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} {MOVE} {DIR} một lần"
+        text: "[SPRITE][0] [MOVE][1] [DIR][2] một lần"
         options:
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
@@ -120,32 +120,32 @@ vi:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'mỗi {N} {UNIT} '
+        text: 'mỗi [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
       Dancelab_everySecondsRange:
-        text: 'mỗi {N} {UNIT} từ {START} đến {STOP} '
+        text: 'mỗi [N][0] [UNIT][1] từ [START][2] đến [STOP][3] '
         options:
           UNIT:
             measures: Nhịp
             seconds: Giây
       Dancelab_everyVerseChorus:
-        text: 'mỗi {UNIT} '
+        text: 'mỗi [UNIT][0] '
         options:
           UNIT:
             '"verse"': khổ
             '"chorus"': điệp khúc
       Dancelab_getEnergy:
-        text: có {RANGE}
+        text: có [RANGE][0]
         options:
           RANGE:
             '"low"': âm trầm
             '"mid"': âm trung
             '"high"': âm cao
       Dancelab_getProp:
-        text: "{PROPERTY} {SPRITE}"
+        text: "[PROPERTY][1] [SPRITE][0]"
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -156,15 +156,15 @@ vi:
             '"y"': vị trí dọc
             '"tint"': sắc thái
       Dancelab_getTime:
-        text: Hết {UNIT}
+        text: Hết [UNIT][0]
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
       Dancelab_ifDanceIs:
         text: |-
-          nếu {SPRITE} đang {DANCE}
-          {DO1} {DO2}
+          nếu [SPRITE][0] đang [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
@@ -181,7 +181,7 @@ vi:
             '"measures"': nhịp
             '"seconds"': giây
       Dancelab_jumpTo:
-        text: "{SPRITE} nhảy đến {LOCATION}"
+        text: "[SPRITE][0] nhảy đến [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -195,7 +195,7 @@ vi:
             "{x: 300, y: 300}": dưới phải
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_layoutSprites:
-        text: bố trí {GROUP} như là {FORMAT}
+        text: bố trí [GROUP][0] như là [FORMAT][1]
         options:
           GROUP:
             sprites: tất cả
@@ -221,8 +221,8 @@ vi:
             '"random"': ngẫu nhiên
       Dancelab_makeNewDanceSprite:
         text: |-
-          tạo một {COSTUME} mới
-          gọi {NAME} ở {LOCATION}
+          tạo một [COSTUME][0] mới
+          gọi [NAME][1] ở [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': Người ngoài hành tinh
@@ -248,8 +248,8 @@ vi:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          làm {N} {COSTUME} mới
-          trong {LAYOUT}
+          làm [N][0] [COSTUME][1] mới
+          trong [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -293,9 +293,9 @@ vi:
             '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
-        text: trộn {COLOR1} và {COLOR2}
+        text: trộn [COLOR1][0] và [COLOR2][1]
       Dancelab_nMeasures:
-        text: Nhịp {N}
+        text: Nhịp [N][0]
       Dancelab_onPointerDown:
         text: con trỏ nhấn
       Dancelab_onPointerDrag:
@@ -305,18 +305,31 @@ vi:
       Dancelab_randomColor:
         text: màu ngẫu nhiên
       Dancelab_setBackground:
-        text: thiết lập màu nền {COLOR}
+        text: thiết lập màu nền [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: thiết lập hiệu ứng nền {EFFECT}
+        text: thiết lập hiệu ứng nền [EFFECT][0]
         options:
           EFFECT:
             '"none"': Không có
-            '"disco"': Hình vuông
-            '"rainbow"': Màu sắc
+            '"circles"': Đường hầm
             '"diamonds"': Kim cương
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Ngẫu nhiên)"
+            '"disco_ball"': Bóng Disco
+            '"kaleidoscope"': Kính vạn hoa
+            '"lasers"': Sàn nhảy laze
+            '"rainbow"': Màu sắc
+            '"text"': Tiêu đề bài hát
+            '"sparkles"': Lấp lánh
+            '"disco"': Hình vuông
+            '"stars"': Sao
+          PALETTE:
+            '"rave"': Đen và trắng
+            '"cool"': Xanh
+            '"default"': Sáng
+            '"tropical"': Nhiệt đới
+            '"vintage"': Cổ điển
+            '"warm"': Đỏ
       Dancelab_setBackgroundEffectWithPalette:
-        text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
+        text: thiết lập hiệu ứng nền [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Không có
@@ -340,7 +353,7 @@ vi:
             '"vintage"': Cổ điển
             '"warm"': Đỏ
       Dancelab_setDanceSpeed:
-        text: thay đổi tốc độ nhảy của {SPRITE} thành {SPEED}
+        text: thay đổi tốc độ nhảy của [SPRITE][0] thành [SPEED][1]
         options:
           SPEED:
             '1': bình thường
@@ -370,15 +383,20 @@ vi:
             '0.5': chậm
             '0.25': rất chậm
       Dancelab_setForegroundEffect:
-        text: thiết lập hiệu ứng tiền cảnh {EFFECT}
+        text: thiết lập hiệu ứng tiền cảnh [EFFECT][0]
         options:
           EFFECT:
             '"none"': Không có
+            '"confetti"': Hoa giấy
+            '"hearts_red"': Trái tim
+            '"music_notes"': Nốt nhạc
+            '"pineapples"': Trái dứa
+            '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
+            '"floating_rainbows"': Cầu vồng
             '"raining_tacos"': Taco
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Ngẫu nhiên)"
       Dancelab_setForegroundEffectExtended:
-        text: thiết lập hiệu ứng tiền cảnh {EFFECT}
+        text: thiết lập hiệu ứng tiền cảnh [EFFECT][0]
         options:
           EFFECT:
             '"none"': Không có
@@ -392,7 +410,7 @@ vi:
             '"floating_rainbows"': Cầu vồng
             '"raining_tacos"': Taco
       Dancelab_setProp:
-        text: 'thiết lập {PROPERTY} {SPRITE} thành {VAL} '
+        text: 'thiết lập [PROPERTY][1] [SPRITE][0] thành [VAL][2] '
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -403,7 +421,7 @@ vi:
             '"y"': vị trí dọc
             '"tint"': sắc thái
       Dancelab_setPropEach:
-        text: thiết lập {PROPERTY} {GROUP} thành {VAL}
+        text: thiết lập [PROPERTY][1] [GROUP][0] thành [VAL][2]
         options:
           GROUP:
             sprites: tất cả
@@ -427,7 +445,7 @@ vi:
             '"y"': vị trí dọc
             '"tint"': sắc thái
       Dancelab_setPropRandom:
-        text: ngẫu nhiên hóa {PROPERTY} {SPRITE}
+        text: ngẫu nhiên hóa [PROPERTY][1] [SPRITE][0]
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -438,7 +456,7 @@ vi:
             '"y"': vị trí dọc
             '"tint"': sắc thái
       Dancelab_setTint:
-        text: thiết lập sắc thái {SPRITE} thành {VAL}
+        text: thiết lập sắc thái [SPRITE][0] thành [VAL][1]
       Dancelab_setTintEach:
         options:
           THIS:
@@ -454,15 +472,15 @@ vi:
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
       Dancelab_setTintInline:
-        text: thiết lập sắc thái {SPRITE} thành {VAL}
+        text: thiết lập sắc thái [SPRITE][0] thành [VAL][1]
       Dancelab_setVisible:
-        text: thiết lập {SPRITE} có thể nhìn thấy với {VISIBILITY}
+        text: thiết lập [SPRITE][0] có thể nhìn thấy với [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': có thể nhìn thấy
             'false': không thể nhìn thấy
       Dancelab_setVisibleEach:
-        text: thiết lập khả năng hiển thị {THIS} thành {VISIBILITY}
+        text: thiết lập khả năng hiển thị [THIS][0] thành [VISIBILITY][1]
         options:
           THIS:
             sprites: tất cả
@@ -481,7 +499,7 @@ vi:
             'true': có thể nhìn thấy
             'false': không thể nhìn thấy
       Dancelab_startMapping:
-        text: "{SPRITE} bắt đầu {PROPERTY} theo {RANGE}"
+        text: "[SPRITE][0] bắt đầu [PROPERTY][1] theo [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -496,7 +514,7 @@ vi:
             '"mid"': âm trung
             '"treble"': âm cao
       Dancelab_stopMapping:
-        text: "{SPRITE} dừng {PROPERTY} theo {RANGE}"
+        text: "[SPRITE][0] dừng [PROPERTY][1] theo [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -512,7 +530,7 @@ vi:
             '"mid"': âm trung
             '"treble"': âm cao
       Dancelab_whenKey:
-        text: khi nhấn {KEY}
+        text: khi nhấn [KEY][0]
         options:
           KEY:
             '"up"': trên
@@ -522,7 +540,7 @@ vi:
             '"space"': vũ trụ
             '"x"': x
       Dancelab_whenPeak:
-        text: khi đỉnh {RANGE}
+        text: khi đỉnh [RANGE][0]
         options:
           RANGE:
             '0': âm trầm
@@ -531,19 +549,19 @@ vi:
       Dancelab_whenSetup:
         text: thiết lập
       gamelab_changeColor:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
+        text: thay đổi [COLOR][0] [METHOD][1] thành [AMOUNT][2]
         options:
           METHOD:
             '"tint"': sắc thái
       gamelab_changeColorBy:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
+        text: thay đổi [COLOR][0] [METHOD][1] thành [AMOUNT][2]
         options:
           METHOD:
             '"hue"': sắc màu
             '"saturation"': độ bão hòa
             '"brightness"': độ sáng
       gamelab_changePropBy:
-        text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
+        text: thay đổi [PROPERTY][1] [SPRITE][0] theo [VAL][2]
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -557,7 +575,7 @@ vi:
             'true': đúng
             'false': sai
       gamelab_getProp:
-        text: "{PROPERTY} {SPRITE}"
+        text: "[PROPERTY][1] [SPRITE][0]"
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -567,7 +585,7 @@ vi:
             '"direction"': phương hướng chuyển động
             '"tint"': sắc thái
       gamelab_jumpTo:
-        text: "{SPRITE} nhảy đến {LOCATION}"
+        text: "[SPRITE][0] nhảy đến [LOCATION][1]"
       gamelab_locationDelta:
         options:
           DIR:
@@ -578,15 +596,15 @@ vi:
             '"right"': phải
             '"left"': trái
       gamelab_mixColors:
-        text: trộn {COLOR1} và {COLOR2}
+        text: trộn [COLOR1][0] và [COLOR2][1]
       gamelab_randColor:
         text: màu ngẫu nhiên
       gamelab_randomColor:
         text: màu ngẫu nhiên
       gamelab_setBackground:
-        text: thiết lập màu nền {COLOR}
+        text: thiết lập màu nền [COLOR][0]
       gamelab_setPosition:
-        text: di chuyển {THIS} đến vị trí {POSITION}
+        text: di chuyển [THIS][0] đến vị trí [POSITION][1]
         options:
           POSITION:
             "{x: 50, y: 50}": trên trái
@@ -639,7 +657,7 @@ vi:
             '"right"': phải
             '"left"': trái
       gamelab_whenKey:
-        text: khi nhấn {KEY}
+        text: khi nhấn [KEY][0]
         options:
           KEY:
             '"up"': trên
@@ -682,7 +700,29 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tất cả
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -694,11 +734,11 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': tất cả
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -706,6 +746,46 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tất cả
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_ifDanceIs:
+        text: |-
+          nếu [SPRITE][0] đang [DANCE][1]
+          [DO1][2] [DO2][3]
+        options:
+          DANCE:
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Clown: Chú hề
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Fresh: Tươi
+            MOVES.Roll: Cuộn cơ thể
+            MOVES.Kick: Ngôi sao
+            MOVES.ThisOrThat: Đây hoặc đó
+            MOVES.Rest: Không có
       Mikelab_randomColor:
         text: màu ngẫu nhiên
       Mikelab_setBG:
@@ -725,8 +805,20 @@ vi:
           CORNER:
             '"right"': phải
             '"left"': trái
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": trên
+            "{x: 200, y: 300}": dưới
+            "{x: 100, y: 200}": trái
+            "{x: 300, y: 200}": phải
+            "{x: 200, y: 200}": giữa
+            "{x: 100, y: 100}": trên trái
+            "{x: 300, y: 100}": trên phải
+            "{x: 100, y: 300}": dưới trái
+            "{x: 300, y: 300}": dưới phải
       Mikelab_whenKeyPressed:
-        text: khi nhấn {KEY}
+        text: khi nhấn [KEY][0]
         options:
           KEY:
             '"up"': mũi tên lên trên
@@ -779,10 +871,26 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
             '"tint"': sắc thái
+      binary_move:
+        options:
+          DIR:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+      binary_whenKey:
+        text: khi nhấn [KEY][0]
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
       craft_ifPath:
         text: |-
-          nếu có đường dẫn {DIR}
-          {STATEMENT}
+          nếu có đường dẫn [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": phía trước
@@ -790,8 +898,8 @@ vi:
             "'left'": sang bên trái
       craft_ifStandingOn:
         text: |-
-          nếu đứng trên {TYPE}
-          {STATEMENT}
+          nếu đứng trên [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": san hô màu xanh
@@ -802,19 +910,19 @@ vi:
             "'seaLantern'": ngọn đèn biển
       craft_ifStandingOnLimit:
         text: |-
-          nếu đứng trên {TYPE}
-          {STATEMENT}
+          nếu đứng trên [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": cát
             "'darkPrismarine'": prismarine màu tối
             "'seaLantern'": ngọn đèn biển
       craft_log:
-        text: đăng nhập thư {MESSAGE}
+        text: đăng nhập thư [MESSAGE][0]
       craft_moveForward:
         text: đi thẳng
       craft_placeBlock:
-        text: đặt {blockType}
+        text: đặt [blockType][0]
         options:
           blockType:
             '"strippedOak"': gỗ sồi được tước
@@ -849,13 +957,13 @@ vi:
       craft_repeatUntilConduit:
         text: |-
           lặp lại cho đến khi hoàn thành ống dẫn
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           lặp lại đến khi đạt mục tiêu
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: đẻ trứng {ENTITY}
+        text: đẻ trứng [ENTITY][0]
         options:
           ENTITY:
             '"cod"': cá tuyết
@@ -865,7 +973,7 @@ vi:
             '"squid"': mực ống
             '"tropicalFish"': cá nhiệt đới
       craft_turn:
-        text: rẽ {DIR}
+        text: rẽ [DIR][0]
         options:
           DIR:
             right: phải ↻

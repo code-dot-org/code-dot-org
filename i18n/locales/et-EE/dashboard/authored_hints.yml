@@ -8,30 +8,30 @@ et:
       Dance short test 2_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
-          
+
           *See ühik lõppeb peale 10 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
       Dance short test_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
-          
+
           *See ühik lõppeb peale 10 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
       Dance_Party_01_authored_hint:
         validation: |-
           ** Kuidas ma siit tasemelt läbi saan? **
           * Veenduge, et tantsija kuvatakse ekraanil.
-          
+
           * See tase lõppeb peale 4 ühikut.*
         challenges: |-
           **Lisaväljakutsed**
@@ -42,7 +42,7 @@ et:
         validation: |-
           ** Kuidas ma siit tasemelt läbi saan? **
           * Veenduge, et tantsija kuvatakse ekraanil.
-          
+
           * See tase lõppeb peale 4 ühikut.*
         challenges: |-
           **Lisaväljakutsed**
@@ -53,61 +53,61 @@ et:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
           * Tantsija peab liigutust vahetame peale 4 ühikut.
-          
+
           *Tase lõppeb peale 8 ühikut*
       Dance_Party_03_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.
-          
+
           *Tase lõppeb peale 12 ühikut*
       Dance_Party_04_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
-          
+
           *See ühik lõppeb peale 10 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
       Dance_Party_06_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Pead kasutama vähemalt kahte tantsijat
-          
+
           *See tase lõppeb peale 6 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)
           * Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.
       Dance_Party_08_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kahe tantsijat suurus peab olema 100st erinev. 
-          
+
           *See tase lõppeb peale 6 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Muuda vähemalt ühe tantsija tooni.
-          
+
           *See ühik lõppeb peale 8 ühikut.*
       Dance_Party_1_authored_hint:
         validation: |-
           ** Kuidas ma siit tasemelt läbi saan? **
           * Veenduge, et tantsija kuvatakse ekraanil.
-          
+
           * See tase lõppeb peale 4 ühikut.*
         challenges: |-
           **Lisaväljakutsed**
@@ -117,92 +117,92 @@ et:
       Dance_Party_10_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kahe või rohkema tantsija omadused peavad muutuma.
-          
-          *See tase lõppeb peale 8 ühikut*
-      Dance_Party_11.5_authored_hint:
-        validation: |-
-          **Kuidas ma siit tasemelt läbi saan?**
-          
-          * Ole lihtsalt loov!
-          
+
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Ole lihtsalt loov!
-          
+
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_11_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Ole lihtsalt loov!
-          
+
+          *See tase lõppeb peale 8 ühikut*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          * Ole lihtsalt loov!
+
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_11b_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kasuta plokki `kui vajutatakse vasakut nooleklahvi`, et Robot sooritaks tantsuliigutuse kui seda klahvi vajutatakse.
-          
+
           *See tase lõppeb peale 8 ühikut*
       Dance_Party_2_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
           * Tantsija peab liigutust vahetame peale 4 ühikut.
-          
+
           *Tase lõppeb peale 8 ühikut*
       Dance_Party_3_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.
-          
+
           *Tase lõppeb peale 12 ühikut*
       Dance_Party_4_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
-          
+
           *See ühik lõppeb peale 10 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
       Dance_Party_5_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sinu tants peab sisaldama erinevaid liigutusi laulu esimese 12 ühiku jooksul.
-          
+
           *See tase lõppeb peale 12 ühikut.*
       Dance_Party_6_authored_hint:
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)
           * Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.
       Dance_Party_8_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kahe tantsijat suurus peab olema 100st erinev. 
-          
+
           *See tase lõppeb peale 6 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Muuda vähemalt ühe tantsija tooni.
-          
+
           *See ühik lõppeb peale 8 ühikut.*
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?\n\n"
@@ -214,7 +214,7 @@ et:
         validation: |-
           ** Kuidas ma siit tasemelt läbi saan? **
           * Veenduge, et tantsija kuvatakse ekraanil.
-          
+
           * See tase lõppeb peale 4 ühikut.*
         challenges: |-
           **Lisaväljakutsed**
@@ -225,77 +225,77 @@ et:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
           * Tantsija peab liigutust vahetame peale 4 ühikut.
-          
+
           *Tase lõppeb peale 8 ühikut*
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.
-          
+
           *Tase lõppeb peale 12 ühikut*
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.
-          
+
           *See ühik lõppeb peale 10 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           Muuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"ühikud"</title></block></xml> sündmuse alla.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Sinu tants peab sisaldama erinevaid liigutusi laulu esimese 12 ühiku jooksul.
-          
+
           *See tase lõppeb peale 12 ühikut.*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)
           * Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kahe tantsijat suurus peab olema 100st erinev. 
-          
+
           *See tase lõppeb peale 6 ühikut.*
         challenges: |-
           **Lisaväljakutse**
-          
+
           * Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Muuda vähemalt ühe tantsija tooni.
-          
+
           *See ühik lõppeb peale 8 ühikut.*
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Kahe või rohkema tantsija omadused peavad muutuma.
-          
+
           *See tase lõppeb peale 8 ühikut*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Ole lihtsalt loov!
-          
+
           *See tase lõppeb peale 8 ühikut*
       HOC Dance make group_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**
-          
+
           * Ole lihtsalt loov!
-          
+
           *See tase lõppeb peale 8 ühikut*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!
@@ -325,7 +325,7 @@ et:
         MC_HOC_2017_02_Cole_a: Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.
         MC_HOC_2017_02_Cole_b: |-
           Klikka "Käivita Agent"!
-          
+
           Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
         MC_HOC_2017_02_Cole_c: Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks oranži ruuduni.
       MC_HOC_2017_03_Cole_authored_hint:
@@ -381,13 +381,13 @@ et:
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Klikka "Käivita Agent"!
-          
+
           Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
         MC_HOC_2017_08_RY_b: On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Klikka "Käivita Agent"!
-          
+
           Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
         MC_HOC_2017_08_RY_b: On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!
       MC_HOC_2017_10_Cole_authored_hint:
@@ -423,7 +423,7 @@ et:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -441,7 +441,7 @@ et:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -460,7 +460,7 @@ et:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -479,7 +479,7 @@ et:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -498,7 +498,7 @@ et:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -515,7 +515,7 @@ et:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -525,7 +525,7 @@ et:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -541,7 +541,7 @@ et:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -560,7 +560,7 @@ et:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -579,7 +579,7 @@ et:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -598,7 +598,7 @@ et:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>

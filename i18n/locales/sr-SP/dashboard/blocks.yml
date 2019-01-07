@@ -224,12 +224,24 @@ sr:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': величина
@@ -248,6 +260,11 @@ sr:
           CORNER:
             '"right"': десно
             '"left"': лево
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -287,6 +304,21 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      binary_move:
+        options:
+          DIR:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
       craft_ifPath:
         options:
           DIR:

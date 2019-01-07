@@ -1585,3 +1585,15 @@ lt:
               name: Internetas
             Crowdsourcing:
               name: Komandinis programavimas
+        andrea-test:
+          stages:
+            'null':
+              name: nieko
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Laiptuota piramidė
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+            Binary Bracelets:
+              name: Dvejetainės apyrankės

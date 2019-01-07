@@ -821,6 +821,7 @@ zh-CN:
       Course 4 SCV 6: 点击这里再看一遍介绍。
       Course 4 SCVP 1: 创建一个函数，能够让小艺术家往前或者往后跳x像素，而且也能让他往上或者往下跳y个像素。（使用正数和负数）
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
+      Course E MC Conditionals1: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Course1BeePuzzle12: 获得3个花蜜，然后酿两个蜂蜜。
       CourseF_PlayLab_vars1: '玩这个游戏不需要写任何代码, 只要点击 "运行"! '
       CourseF_PlayLab_vars10: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\r\n\r\n注意到我们的工具箱中现在有这么多的模块,
@@ -896,7 +897,7 @@ zh-CN:
       Dance_Party_11.5_test: 使用“所有鸭子”模块，让鸭子一起跳舞。
       Dance_Party_11: "`当按下上方向键时`模块可以在按下上方向键时运行代码。尝试让舞者在按下上方向键时快速移动。"
       Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
-      Dance_Party_11b: 让机器人在您按下右方向键时做一次“掉落”动作，在按下上方向键时跳一次“牙线舞”。做掉落-牙线舞动作要尽可能快！
+      Dance_Party_11b: 让机器人在按下右方向键时“掉落”，在按下上方向键时"鼓掌"。做掉落-鼓掌舞动作要尽可能快！
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Eval Free Play: 自由发挥： 用代码来创造艺术吧！
       Eval Strings Images .1: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、 数字或其他用引号引起来的字符的任意组合。运行字符串"你好,
@@ -2071,28 +2072,40 @@ zh-CN:
       courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseC_PlayLab_events1: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events1_2018: 让乔治狗 (演员 1) 说 "大家好。“
+      courseC_PlayLab_events1_2019: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events2: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
       courseC_PlayLab_events2_2018: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
+      courseC_PlayLab_events2_2019: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
       courseC_PlayLab_events3: 你可以写一个程序来将乔治（演员1）移动到奥丽芙猫那里吗？
       courseC_PlayLab_events3_2018: 你可以写一个程序来将乔治（演员1）移动到奥丽芙猫那里吗？
+      courseC_PlayLab_events3_2019: 你可以写一个程序来将乔治（演员1）移动到奥丽芙猫那里吗？
       courseC_PlayLab_events4: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说 "你好"？
       courseC_PlayLab_events4_2018: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说 "你好"？
+      courseC_PlayLab_events4_2019: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说 "你好"？
       courseC_PlayLab_events5: 你能写一个程序让章鱼奥克塔维亚在被点击的时候说 "有什么新鲜事吗？"？
       courseC_PlayLab_events5_2018: 你能写一个程序让章鱼奥克塔维亚在被点击的时候说 "有什么新鲜事吗？"？
+      courseC_PlayLab_events5_2019: 你能写一个程序让章鱼奥克塔维亚在被点击的时候说 "有什么新鲜事吗？"？
       courseC_PlayLab_events6: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
       courseC_PlayLab_events6_2018: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
+      courseC_PlayLab_events6_2019: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
       courseC_PlayLab_events7: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员 2) 一直上下移动400像素。"
       courseC_PlayLab_events7_2018: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员 2) 一直上下移动400像素。"
+      courseC_PlayLab_events7_2019: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员 2) 一直上下移动400像素。"
       courseC_PlayLab_events8: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说 \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
       courseC_PlayLab_events8_2018: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说 \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
+      courseC_PlayLab_events8_2019: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说 \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
       courseC_PlayLab_events9: "你可以添加一个模块让企鹅（演员1）在碰到章鱼奥克塔维亚（演员3）的时候得一分吗？\r\n玩此游戏，用箭头移动企鹅直到得分！"
       courseC_PlayLab_events9_2018: "你可以添加一个模块让企鹅（演员1）在碰到章鱼奥克塔维亚（演员3）的时候得一分吗？\r\n玩此游戏，用箭头移动企鹅直到得分！"
+      courseC_PlayLab_events9_2019: "你可以添加一个模块让企鹅（演员1）在碰到章鱼奥克塔维亚（演员3）的时候得一分吗？\r\n玩此游戏，用箭头移动企鹅直到得分！"
       courseC_PlayLab_eventsA: "添加模块到`当运行时`事件来更改背景场面以及企鹅的速度。\r\n\r\n玩此游戏，用箭头移动企鹅直到得分。"
       courseC_PlayLab_eventsA_2018: "添加模块到`当运行时`事件来更改背景场面以及企鹅的速度。\r\n\r\n玩此游戏，用箭头移动企鹅直到得分。"
+      courseC_PlayLab_eventsA_2019: "添加模块到`当运行时`事件来更改背景场面以及企鹅的速度。\r\n\r\n玩此游戏，用箭头移动企鹅直到得分。"
       courseC_PlayLab_eventsFP: 创造你自己的故事。完成后, 单击 "完成" 以与朋友共享。在提示中有故事的想法。
       courseC_PlayLab_eventsFP_2018: 创造你自己的故事。完成后, 单击 "完成" 以与朋友共享。在提示中有故事的想法。
+      courseC_PlayLab_eventsFP_2019: 创造你自己的故事。完成后, 单击 "完成" 以与朋友共享。在提示中有故事的想法。
       courseC_PlayLab_events_challenge1: "用一块新模块，让企鹅在碰到恐龙和得分的时候能自动回到原点。\r\n玩这个游戏，并用箭头移动企鹅，直到你得到足够的分数。"
       courseC_PlayLab_events_challenge1_2018: "用一块新模块，让企鹅在碰到恐龙和得分的时候能自动回到原点。\r\n玩这个游戏，并用箭头移动企鹅，直到你得到足够的分数。"
+      courseC_PlayLab_events_challenge1_2019: "用一块新模块，让企鹅在碰到恐龙和得分的时候能自动回到原点。\r\n玩这个游戏，并用箭头移动企鹅，直到你得到足够的分数。"
       courseC_PlayLab_events_challenge1_xy_blocks: "这里是一个有点复杂的新模块。用来让企鹅在遇到恐龙和得分的时候回到原点。这将使你的游戏更具挑战性和有趣!
         \r\n\r\n玩游戏和用箭头移动企鹅, 直到你得分足够的分数。"
       courseC_artist_loop1: 让我们添加一些活泼的东西!
@@ -2246,30 +2259,43 @@ zh-CN:
       courseC_harvester_loops1: 使用循环来捡起所有的南瓜。
       courseC_harvester_loops10: 收集所有玉米和南瓜。
       courseC_harvester_loops10_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops10_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops11: 收集所有玉米和南瓜。
       courseC_harvester_loops11_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops11_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops1_2018: 使用循环来捡起所有的南瓜。
+      courseC_harvester_loops1_2019: 使用循环来捡起所有的南瓜。
       courseC_harvester_loops2: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
       courseC_harvester_loops2_2018: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
+      courseC_harvester_loops2_2019: 你能混合两个不同的循环来朝着南瓜移动，并收集它们吗？
       courseC_harvester_loops3: 收集所有南瓜。
       courseC_harvester_loops3_2018: 收集所有南瓜。
+      courseC_harvester_loops3_2019: 收集所有南瓜。
       courseC_harvester_loops4: 收集所有玉米和南瓜。
       courseC_harvester_loops4_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops4_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops5: 收集所有玉米和南瓜。
       courseC_harvester_loops5_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops5_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops6: 收集所有玉米和南瓜。
       courseC_harvester_loops6_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops6_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops7: 收集所有玉米和南瓜。
       courseC_harvester_loops7_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops7_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops8: "**挑战：**收集所有玉米和南瓜。"
       courseC_harvester_loops8_2018: "**挑战：**收集所有玉米和南瓜。"
+      courseC_harvester_loops8_2019: "**挑战：**收集所有玉米和南瓜。"
       courseC_harvester_loops9: 收集所有玉米和南瓜。
       courseC_harvester_loops9_2018: 收集所有玉米和南瓜。
+      courseC_harvester_loops9_2019: 收集所有玉米和南瓜。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge1a: 收集所有的玉米。
       courseC_harvester_loops_challenge1a_2018: 收集所有的玉米。
+      courseC_harvester_loops_challenge1a_2019: 收集所有的玉米。
       courseC_harvester_loops_challenge2: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_challenge2_2018: 收集所有的莴苣。避开树木和田野!
+      courseC_harvester_loops_challenge2_2019: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_forVid: 收集所有玉米，莴苣和南瓜。
       courseC_maze_debugging1: 修好代码，来帮助斯奎特到达橡子。
       courseC_maze_debugging10: 通过重新排列并改变模块来调试这一关，让我到达那只猪！
@@ -2856,6 +2882,7 @@ zh-CN:
       courseD_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseD_maze_intro5a_2019: 注意顺序，看看你能否找出如何到达那头猪！
       courseD_maze_loops_challenge1: |-
         让我们寻找宝藏
         - 使用循环！帮助收集器只使用工具箱中的模块来得到至少两堆宝藏。
@@ -2894,7 +2921,6 @@ zh-CN:
       courseD_maze_ramp5b_2019: 在这个迷宫中领航，帮助小鸟找到猪！
       courseD_maze_ramp5c: 帮小鸟到达猪那里。
       courseD_maze_ramp5c_2018: 帮小鸟到达猪那里。
-      courseD_maze_ramp5c_2019: 帮小鸟到达猪那里。
       courseD_maze_ramp5d: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2018: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2019: 帮小鸟到达那只猪。
@@ -4052,7 +4078,6 @@ zh-CN:
       ramp_artist_loops3_2019: 使用 "重复" 循环绘制五色虚线。
       ramp_artist_loops4: 当您在循环的最后添加了右转72度后, 会发生什么？
       ramp_artist_loops4_2018: 当您在循环的最后添加了右转72度后, 会发生什么？
-      ramp_artist_loops4_2019: 当您在循环的最后添加了右转72度后, 会发生什么？
       ramp_artist_loops5: 使用循环来绘制这个楼梯。
       ramp_artist_loops5_2018: 使用循环来绘制这个楼梯。
       ramp_artist_loops5_2019: 使用循环来绘制这个楼梯。

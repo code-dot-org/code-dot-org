@@ -81,7 +81,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
       Dance short test_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -92,11 +92,11 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
       Dance_Party_01_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+          * Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -106,7 +106,7 @@ sk:
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+          * Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -117,7 +117,7 @@ sk:
       Dance_Party_02_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Tanečník musí zmeniť kroky po 4 taktoch.
+          * Tanečník musí po 4 taktoch zmeniť kroky.
 
           *Úroveň končí po 7 taktoch.*
       Dance_Party_03_authored_hint:
@@ -137,7 +137,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
       Dance_Party_06_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -145,11 +145,9 @@ sk:
           * Potrebuješ mať aspoň dvoch tanečníkov.
 
           *Táto úroveň končí po 5 taktoch.*
-        challenges: |-
-          **Dobrovoľná výzva**
-
-          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
-          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+        challenges: "**Dobrovoľná výzva**\n\n* Pridaj tretieho tanečníka (ak chceš,
+          tak aj viacerých!) \n* Nastav tanečníkov tak, aby robili rôzne kroky v rôznych
+          častiach pesničky."
       Dance_Party_08_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -171,7 +169,7 @@ sk:
       Dance_Party_1_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+          * Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -211,13 +209,13 @@ sk:
         validation: |-
           **Ako prejdem túto úroveň?**
 
-          * Použi blok `keď hore stlačený` na to aby Robot urobil tanečný krok keď stlačíš šípku.
+          * Použi blok `keď hore stlačený` na to, aby Robot urobil tanečný krok, keď stlačíš šípku hore.
 
           *Táto úroveň končí po 7 taktoch.*
       Dance_Party_2_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Tanečník musí zmeniť kroky po 4 taktoch.
+          * Tanečník musí po 4 taktoch zmeniť kroky.
 
           *Úroveň končí po 8 taktoch.*
       Dance_Party_3_authored_hint:
@@ -237,7 +235,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -246,11 +244,9 @@ sk:
 
           *Táto úroveň končí po 12 taktoch.*
       Dance_Party_6_authored_hint:
-        challenges: |-
-          **Dobrovoľná výzva**
-
-          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
-          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+        challenges: "**Dobrovoľná výzva**\n\n* Pridaj tretieho tanečníka (ak chceš,
+          tak aj viacerých!) \n* Nastav tanečníkov tak, aby robili rôzne kroky v rôznych
+          častiach pesničky."
       Dance_Party_8_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -278,7 +274,7 @@ sk:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Zabezpeč, aby sa na obrazovke objavil tanečník..
+          * Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           *Táto úroveň končí po 4 taktoch.*
         challenges: |-
@@ -289,7 +285,7 @@ sk:
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
-          * Tanečník musí zmeniť kroky po 4 taktoch.
+          * Tanečník musí po 4 taktoch zmeniť kroky.
 
           *Úroveň končí po 8 taktoch.*
       HOC Dance 2_draft_authored_hint:
@@ -309,7 +305,7 @@ sk:
         challenges: |-
           **Dobrovoľná výzva**
 
-          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod udalosti <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktoch"</title></block></xml>.
+          Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -318,11 +314,9 @@ sk:
 
           *Táto úroveň končí po 12 taktoch.*
       HOC Dance 5_draft_authored_hint:
-        challenges: |-
-          **Dobrovoľná výzva**
-
-          * Pridaj tretieho (alebo koľko veľa chceš!) tanečníka
-          * Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky.
+        challenges: "**Dobrovoľná výzva**\n\n* Pridaj tretieho tanečníka (ak chceš,
+          tak aj viacerých!) \n* Nastav tanečníkov tak, aby robili rôzne kroky v rôznych
+          častiach pesničky."
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Ako prejdem túto úroveň?**

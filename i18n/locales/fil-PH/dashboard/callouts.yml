@@ -383,6 +383,8 @@ fil:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng ito para mapapunta ang artista sa gitna ng screen.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -400,6 +402,8 @@ fil:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!
@@ -492,6 +496,8 @@ fil:
         courseD_bee_debugging_challenge1_callout1: Gamitin ang utos na ito para mapagalaw ang bubuyog patalikod.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Gamitin ang blokeng ito para magkolekta ng isang piraso ng kayamanan.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseD_maze_ramp1_2018_callout:

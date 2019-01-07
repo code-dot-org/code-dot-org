@@ -4020,3 +4020,62 @@ ro:
             CS Discoveries Pre-survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+        andrea-test:
+          stages:
+            'null':
+              name: nul
+        dance-extras-gallery:
+          description_audience: "[șir gol]"
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Debugging in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Collector:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Loops: Getting Loopy':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops with Rey and BB-8:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Events: The Big Event':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Build a Flappy Game:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Screen Out the Mean:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Events in Play Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Looking Ahead:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Binary Bracelets:
+              name: Brăţări Binare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"

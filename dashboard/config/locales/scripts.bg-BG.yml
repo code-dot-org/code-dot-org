@@ -2283,6 +2283,8 @@ bg:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing кампания
+            Conditionals in Minecraft:
+              name: Условия в Minecraft
         express-2019:
           stages:
             Relay Programming:
@@ -2303,3 +2305,15 @@ bg:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing кампания
+        andrea-test:
+          stages:
+            'null':
+              name: нула
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            'Real-life Algorithms: Paper Planes':
+              name: 'Реални алгоритми: Хартиени самолети'
+            Binary Bracelets:
+              name: Двоични гривни

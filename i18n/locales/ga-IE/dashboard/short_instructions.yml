@@ -586,6 +586,7 @@ ga:
       Course 4 SCV 4: Réitigh an dúshlán seo leis an líon is lú blocanna agus is féidir.
       Course 4 SCV 5: Réitigh an dúshlán seo leis an líon is lú blocanna agus is féidir.
       Course 4 SCV 6: Cliceáil anseo chun na treoracha a fheiceáil arís.
+      Course E MC Conditionals1: Tiocfaidh tú ar na hacmhainní is luachmhaire faoi thalamh, agus tá sé dorcha thíos ansin. Cuir ar a laghad dhá thóirse agus tochail ar a laghad dhá bhloc guail.
       Course1BeePuzzle12: Bailigh trí neachtar ansin déan dhá mhil
       CourseF_PlayLab_vars1: 'Chun an cluiche seo a imirt, ní gá duit aon chód a scríobh - cliceáil "Rith" agus sin an méid! '
       CourseF_PlayLab_vars10: "Saorimirt! Seo iad na hathróga go léir a d'úsáideamar sa cheacht seo, chomh maith le roinnt athróg eile ar eagla na heagla. Tabhair faoi deara go bhfuil go leor leor blocanna inár mbosca uirlisí anois agus is mithid dúinn iad a eagrú! Chuireamar gach bloc i gcatagóir oiriúnach. Tóg nóiméad agus féach ar a bhfuil ar fáil. Nuair a bheidh tú réidh, déan cluiche nó scéal, ag baint úsáide as lúba, athróga, agus teagmhais. Leid: scrollaigh síos chun na horduithe sa spás oibre a fheiceáil."
@@ -1310,16 +1311,22 @@ ga:
       courseB_starWars_prog9_2018: Cabhraigh le BB-8 an dramh-mhiotal lonrach a bhailiú
       courseC_PlayLab_events2: An féidir leat tabhairt ar Jorge an Madra (aisteoir 1) rud éigin a rá, ansin Olive an Cat (aisteoir 2) rud éigin eile a rá ina dhiaidh?
       courseC_PlayLab_events2_2018: An féidir leat tabhairt ar Jorge an Madra (aisteoir 1) rud éigin a rá, ansin Olive an Cat (aisteoir 2) rud éigin eile a rá ina dhiaidh?
+      courseC_PlayLab_events2_2019: An féidir leat tabhairt ar Jorge an Madra (aisteoir 1) rud éigin a rá, ansin Olive an Cat (aisteoir 2) rud éigin eile a rá ina dhiaidh?
       courseC_PlayLab_events3: An féidir leat clár a scríobh chun an madra (aisteoir 1) a aistriú go dtí an cat?
       courseC_PlayLab_events3_2018: An féidir leat clár a scríobh chun an madra (aisteoir 1) a aistriú go dtí an cat?
+      courseC_PlayLab_events3_2019: An féidir leat clár a scríobh chun an madra (aisteoir 1) a aistriú go dtí an cat?
       courseC_PlayLab_events4: An féidir leat ríomhchlár a scríobh a aistríonn Jorge (aisteoir 1) go dtí Olive, agus a thugann uirthi "dia dhuit" a rá nuair a shroicheann Jorge í?
       courseC_PlayLab_events4_2018: An féidir leat ríomhchlár a scríobh a aistríonn Jorge (aisteoir 1) go dtí Olive, agus a thugann uirthi "dia dhuit" a rá nuair a shroicheann Jorge í?
+      courseC_PlayLab_events4_2019: An féidir leat ríomhchlár a scríobh a aistríonn Jorge (aisteoir 1) go dtí Olive, agus a thugann uirthi "dia dhuit" a rá nuair a shroicheann Jorge í?
       courseC_PlayLab_events5: An féidir leat ríomhchlár a scríobh a thugann ar Octavia an ochtapas "Aon scéal?" a rá nuair a chliceáiltear í?
       courseC_PlayLab_events5_2018: An féidir leat ríomhchlár a scríobh a thugann ar Octavia an ochtapas "Aon scéal?" a rá nuair a chliceáiltear í?
+      courseC_PlayLab_events5_2019: An féidir leat ríomhchlár a scríobh a thugann ar Octavia an ochtapas "Aon scéal?" a rá nuair a chliceáiltear í?
       courseC_PlayLab_events6: Anois scríobh ríomhchlár a aistríonn Waddles an Phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach!
       courseC_PlayLab_events6_2018: Anois scríobh ríomhchlár a aistríonn Waddles an Phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach!
+      courseC_PlayLab_events6_2019: Anois scríobh ríomhchlár a aistríonn Waddles an Phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis, chun na spriocanna go léir a bhaint amach!
       courseC_PlayLab_eventsFP: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil. Gheobhaidh tú cúpla smaoineamh sna leideanna.
       courseC_PlayLab_eventsFP_2018: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil. Gheobhaidh tú cúpla smaoineamh sna leideanna.
+      courseC_PlayLab_eventsFP_2019: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil. Gheobhaidh tú cúpla smaoineamh sna leideanna.
       courseC_artist_loop1: Cuirimis spleodar ann!
       courseC_artist_loop1_2018: Cuirimis spleodar ann!
       courseC_artist_loop1_2019: Cuirimis spleodar ann!
@@ -1415,30 +1422,43 @@ ga:
       courseC_harvester_loops1: Úsáid lúba chun na puimcíní go léir a bhailiú.
       courseC_harvester_loops10: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops10_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops10_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops11: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops11_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops11_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops1_2018: Úsáid lúba chun na puimcíní go léir a bhailiú.
+      courseC_harvester_loops1_2019: Úsáid lúba chun na puimcíní go léir a bhailiú.
       courseC_harvester_loops2: An féidir leat dhá lúb éagsúla a chur le chéile chun dul i dtreo na bpuimcíní, ansin iad go léir a bhailiú?
       courseC_harvester_loops2_2018: An féidir leat dhá lúb éagsúla a chur le chéile chun dul i dtreo na bpuimcíní, ansin iad go léir a bhailiú?
+      courseC_harvester_loops2_2019: An féidir leat dhá lúb éagsúla a chur le chéile chun dul i dtreo na bpuimcíní, ansin iad go léir a bhailiú?
       courseC_harvester_loops3: Bailigh na puimcíní go léir.
       courseC_harvester_loops3_2018: Bailigh na puimcíní go léir.
+      courseC_harvester_loops3_2019: Bailigh na puimcíní go léir.
       courseC_harvester_loops4: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops4_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops4_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops5: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops5_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops5_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops6: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops6_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops6_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops7: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops7_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops7_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops8: "**Dúshlán:** Bailigh an t-arbhar agus na puimcíní go léir."
       courseC_harvester_loops8_2018: "**Dúshlán:** Bailigh an t-arbhar agus na puimcíní go léir."
+      courseC_harvester_loops8_2019: "**Dúshlán:** Bailigh an t-arbhar agus na puimcíní go léir."
       courseC_harvester_loops9: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops9_2018: Bailigh an t-arbhar agus na puimcíní go léir.
+      courseC_harvester_loops9_2019: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops_challenge1: Bailigh an t-arbhar go léir.
       courseC_harvester_loops_challenge1a: Bailigh an t-arbhar go léir.
       courseC_harvester_loops_challenge1a_2018: Bailigh an t-arbhar go léir.
+      courseC_harvester_loops_challenge1a_2019: Bailigh an t-arbhar go léir.
       courseC_harvester_loops_challenge2: Bailigh an leitís go léir. Seachain na crainn agus na páirceanna!
       courseC_harvester_loops_challenge2_2018: Bailigh an leitís go léir. Seachain na crainn agus na páirceanna!
+      courseC_harvester_loops_challenge2_2019: Bailigh an leitís go léir. Seachain na crainn agus na páirceanna!
       courseC_harvester_loops_forVid: Bailigh an t-arbhar, an leitís, agus na puimcíní go léir.
       courseC_maze_debugging1: Deisigh an cód chun cabhrú le Scrat an dearcán a fháil.
       courseC_maze_debugging10: Dífhabhtaigh an leibhéal seo trí bhlocanna a athordú agus a athrú. Treoraigh go dtí an mhuc sin mé!
@@ -1565,16 +1585,16 @@ ga:
       courseD_artist_binary8_predict1_2019: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
       courseD_artist_binaryFP: |-
         Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
-        
+
         Féach cad a tharlaíonn nuair a dhéanaimid rud éigin cruthaitheach leis na giotáin!
       courseD_artist_binaryFP8: "**Saorimirt:** Tarraing cibé rud is mian leat le cód dénártha! "
       courseD_artist_binaryFP_2018: |-
         Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
-        
+
         Féach cad a tharlaíonn nuair a dhéanaimid rud éigin cruthaitheach leis na giotáin!
       courseD_artist_binaryFP_2019: |-
         Seo dhuit canbhás le taifeach níos airde - 16 picteilín faoi 16 picteilín!
-        
+
         Féach cad a tharlaíonn nuair a dhéanaimid rud éigin cruthaitheach leis na giotáin!
       courseD_artist_binary_challenge0: Bain triail as lúba neadaithe chun an pictiúr seo a chur i gcrích.
       courseD_artist_binary_challenge2: An bhfuil tú sách dícheallach chun an lógó seo a chur ar ais mar a bhí sé?
@@ -1870,7 +1890,6 @@ ga:
       courseD_maze_ramp5_2019: Seachain an TNT.
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
-      courseD_maze_ramp5c_2019: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d_2019: Cabhraigh leis an éan an mhuc a bhaint amach.

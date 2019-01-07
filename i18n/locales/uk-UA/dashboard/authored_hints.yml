@@ -31,7 +31,7 @@ uk:
         2-3_Artist_9_a: Цей ромб - насправді просто квадрат, повернутий на 45 градусів.
         2-3_Artist_9_b: |-
           Не забудьте повернути художника на 45 градусів, перш ніж починати малювати свою площу!
-          
+
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Підказка: кожен вусик завдовжки 75 пікселів.'
@@ -204,12 +204,12 @@ uk:
       4-5 Nested Loops 7_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Цей дизайн буде петлі 10 разів більше 360 градусів.
-          
+
           ** 360/10 =? **
       4-5 Nested Loops 8_authored_hint:
         4-5_Nested_Loops_8_a: |-
           Ви будете циклу цієї форми 6 разів більше 360 градусів.
-          
+
           ** 360/6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Кожен елемент потребує власного циклу `while`.
@@ -265,7 +265,7 @@ uk:
         Course_4_Artist_Functions_Inspiration_b: Спробуйте повернути на більш ніж 90 градусів за межами `повторного циклу` але всередині `для циклу`.
         Course_4_Artist_Functions_Inspiration_c: |-
           ** Рішення: **
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -601,7 +601,7 @@ uk:
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_c: |-
           Після того, як бджола перетворить його у нижній рядок, повторіть ці команди: 
-          
+
           * Повторіть 2 рази: 
           * Перемістіть вперед 
           * Зробіть 3 порції меду 
@@ -617,7 +617,7 @@ uk:
       course4_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_d: |-
           ** Рішення: **
-          
+
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       course4_collector_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Не забувайте, що ви можете `repeat` одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок` repeat`!
@@ -661,7 +661,7 @@ uk:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -679,7 +679,7 @@ uk:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -698,7 +698,7 @@ uk:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -717,7 +717,7 @@ uk:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -738,7 +738,7 @@ uk:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -763,7 +763,7 @@ uk:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -779,7 +779,7 @@ uk:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -795,7 +795,7 @@ uk:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -814,7 +814,7 @@ uk:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -833,7 +833,7 @@ uk:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -852,7 +852,7 @@ uk:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -916,6 +916,8 @@ uk:
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: |-
@@ -992,9 +994,14 @@ uk:
       courseC_harvester_loops3_2018_authored_hint:
         courseC_harvester_loops3_a: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
         courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+        courseC_harvester_loops3_c: Якщо ви хочете спростити свій код, ви можете поставити один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити один цикл в інший! Це називається ** вкладена петля **.
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_c: Якщо ви хочете спростити свій код, ви можете поставити один цикл в інший! Це називається ** вкладена петля **.
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
@@ -1002,9 +1009,13 @@ uk:
         courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
       courseC_harvester_loops_challenge1a_2018_authored_hint:
         courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: Це дуже важко без циклів!
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
@@ -1236,8 +1247,6 @@ uk:
         courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути відео!
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути відео!
-      courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Потрібна допомога з початку роботи? Переглянути відео!
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити ваш `if / else` умовно на кожному квадраті.
       courseD_bee_conditionals_challenge1_2018_authored_hint:
@@ -1251,7 +1260,7 @@ uk:
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_c: |-
           Після того, як бджола перетворить його у нижній рядок, повторіть ці команди: 
-          
+
           * Повторіть 2 рази: 
           * Перемістіть вперед 
           * Зробіть 3 порції меду 
@@ -1259,7 +1268,7 @@ uk:
       courseD_bee_debugging_challenge1_2018_authored_hint:
         courseD_bee_debugging_challenge1_c: |-
           Після того, як бджола перетворить його у нижній рядок, повторіть ці команди: 
-          
+
           * Повторіть 2 рази: 
           * Перемістіть вперед 
           * Зробіть 3 порції меду 
@@ -1267,7 +1276,7 @@ uk:
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_c: |-
           Після того, як бджола перетворить його у нижній рядок, повторіть ці команди: 
-          
+
           * Повторіть 2 рази: 
           * Перемістіть вперед 
           * Зробіть 3 порції меду 
@@ -1312,6 +1321,8 @@ uk:
         courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
       courseD_iceage_loops4_2019_authored_hint:
         courseD_iceage_loops4_a: Не бійся запускати свій код і подивитися, що станеться!
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_c: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Не забувайте, що ви можете `repeat` одній команді або більш довгий шаблон. Ви навіть можете `повторити` блок` repeat`!
         courseD_bee_nested_loops_challenge1_b: Щоб отримати всі 4 дорогоцінних каменів, спершу скористайтеся циклом, щоб відійти від центру. Поверніть ліворуч або праворуч, а потім використовуйте вкладену петлю, щоб перейти від першої купи скарбів до другої. Якщо ви повторюєте вкладену петлю достатньо разів, колектор буде переміщатися по * печері * * повністю *!
@@ -1548,7 +1559,7 @@ uk:
         courseF_artist_fwp_challenge1_e: Як колір кожного восьмикутника, так і ширина пера контролюються змінні `counter`.
         courseF_artist_fwp_challenge1_f: |-
           ** Рішення: **
-          
+
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
         courseF_artist_fwp_challenge1_b: 'Це серія восьмикутників з боками, які є довжиною `контр-пікселів`. '
@@ -1557,7 +1568,7 @@ uk:
         courseF_artist_fwp_challenge1_e: Як колір кожного восьмикутника, так і ширина пера контролюються змінні `counter`.
         courseF_artist_fwp_challenge1_f: |-
           ** Рішення: **
-          
+
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables8_authored_hint:
         courseF_artist_variables8_c: Обов'язково використовуйте цикл `repeat` для нанесення трикутника.
@@ -1568,22 +1579,22 @@ uk:
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_d: |-
           ** Рішення: **
-          
+
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_d: |-
           ** Рішення: **
-          
+
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2018_authored_hint:
         courseF_artist_variables_challenge2_d: |-
           ** Рішення: **
-          
+
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2019_authored_hint:
         courseF_artist_variables_challenge2_d: |-
           ** Рішення: **
-          
+
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
@@ -1754,12 +1765,12 @@ uk:
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Цей дизайн буде петлі 10 разів більше 360 градусів.
-          
+
           ** 360/10 =? **
       grade4_arist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: |-
           Ви будете циклу цієї форми 6 разів більше 360 градусів.
-          
+
           ** 360/6 =? **
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -1789,12 +1800,12 @@ uk:
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Цей дизайн буде петлі 10 разів більше 360 градусів.
-          
+
           ** 360/10 =? **
       grade4_artist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: |-
           Ви будете циклу цієї форми 6 разів більше 360 градусів.
-          
+
           ** 360/6 =? **
       grade4_artist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"

@@ -813,6 +813,7 @@ hy:
       Course 4 SCV 6: Click here to view the instructions again.
       Course 4 SCVP 1: "Create a function with parameters that allows\nthe artist to jump backward and forward by x pixels, and also up and down\nby y pixels (using positive and negative numbers)."
       Course 4 Variables Assessment: "Can you create this image using\na variable for sides? Each line should be 50 pixels long."
+      Course E MC Conditionals1: "You’ll find the most valuable resources\nunderground, but it can get dark. Place at least 2 torches and mine at least\n2 coal."
       CourseF_PlayLab_vars10: "Free Play time! Here are all of the\nvariables we've played with so far in this stage, as well as a few more in\ncase you want them. \\r\n\\r\nNotice that there are now so many blocks in our\ntoolbox that they need to be organized!  Here, we've put each piece into\nan appropriate category.  Take some time to explore everything that is available.\nWhen you're done browsing, make a game or story using repeats, variables,\nand events.  \\r\n\\r\nHint: scroll down to see all the commands in the workspace."
       CourseF_PlayLab_vars2: "The race in that last puzzle wasn't\nvery fair! Change the `dog_speed` variable to make sure you can collect more\nflags than Cat. The first to collect 10 flags wins!"
       CourseF_PlayLab_vars3: "Use the left and right arrows to move,\nand the up arrow to jump. See if you can collect all of the flags."
@@ -1185,6 +1186,7 @@ hy:
       courseA_maze_seq2_2018: Change the code to get me to the pig!
       courseC_PlayLab_events3: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող 1) մետենա դեպի կատվին:'
       courseC_PlayLab_events3_2018: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող 1) մետենա դեպի կատվին:'
+      courseC_PlayLab_events3_2019: 'Կարո՞ղ ես գրել ծրագիր, որպեսզի շունը (կատարող 1) մետենա դեպի կատվին:'
       courseC_artist_prog5: |-
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.

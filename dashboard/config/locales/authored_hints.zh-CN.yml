@@ -3290,6 +3290,10 @@ zh-CN:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
+        mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
+        mc_9_c: 用`放火把` 把火把放在你所站的地方。
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 请确保将“小狗的速度”的数值设置为大于“小猫的速度”的数值。
       D_Frozen_nested3_authored_hint:
@@ -3548,6 +3552,8 @@ zh-CN:
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           了吗？怎样可以用条件来使用它们，穿过海底遗迹？\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
       HOC Dance 0_draft_authored_hint:
@@ -7483,6 +7489,16 @@ zh-CN:
           <title name="VALUE">你好。</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          将此块附加到 "当运行时" 模块：
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">你好。</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           将其中的两个块附加到`当运行时`块：
@@ -7495,6 +7511,17 @@ zh-CN:
           </xml>
         courseC_PlayLab_events2_b: 使用下拉菜单上的第二个`演员 __ 说`模块改变由哪个演员说话。
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          将其中的两个块附加到`当运行时`块：
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">你好。</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: 使用下拉菜单上的第二个`演员 __ 说`模块改变由哪个演员说话。
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           将其中的两个块附加到`当运行时`块：
 
@@ -7531,16 +7558,35 @@ zh-CN:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: 您只需将乔治向右移动大约25像素即可通过这个关卡。
+        courseC_PlayLab_events3_b: 工具箱中是否有一个模块看起来像是可以移动一个演员？
+        courseC_PlayLab_events3_c: |-
+          将此模块附加到`当运行时`模块:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: 当点击"运行"按钮时，乔治需要向右移动** 100 **像素来够到奥丽芙猫。
         courseC_PlayLab_events4_a: 你需要附加一个`演员 __ 说`模块到`当演员接触 `事件来通过这个关卡。
       courseC_PlayLab_events4_2018_authored_hint:
         courseC_PlayLab_events4_b: 当点击"运行"按钮时，乔治需要向右移动** 100 **像素来够到奥丽芙猫。
         courseC_PlayLab_events4_a: 你需要附加一个`演员 __ 说`模块到`当演员接触 `事件来通过这个关卡。
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: 当点击"运行"按钮时，乔治需要向右移动** 100 **像素来够到奥丽芙猫。
+        courseC_PlayLab_events4_a: 你需要附加一个`演员 __ 说`模块到`当演员接触 `事件来通过这个关卡。
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: 你需要点击 `演员说` 模块中的下拉菜单来查找文本 "什么是新的？"
         courseC_PlayLab_events5_b: 当您运行程序时, 点击 "奥克塔维亚" 检查它是否有效!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: 你需要点击 `演员说` 模块中的下拉菜单来查找文本 "什么是新的？"
+        courseC_PlayLab_events5_b: 当您运行程序时, 点击 "奥克塔维亚" 检查它是否有效!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_a: 你需要点击 `演员说` 模块中的下拉菜单来查找文本 "什么是新的？"
         courseC_PlayLab_events5_b: 当您运行程序时, 点击 "奥克塔维亚" 检查它是否有效!
       courseC_PlayLab_events6_authored_hint:
@@ -7551,16 +7597,26 @@ zh-CN:
         courseC_PlayLab_events6_a: 每个绿色`当方向键按下`模块应该在它下面赋予一个行动。
         courseC_PlayLab_events6_b: 使用`移动演员1`模块中的下拉菜单来更改企鹅移动的方向。
         courseC_PlayLab_events6_c: 完成后, 您应该可以使用计算机上的方向键来移动企鹅!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: 每个绿色`当方向键按下`模块应该在它下面赋予一个行动。
+        courseC_PlayLab_events6_b: 使用`移动演员1`模块中的下拉菜单来更改企鹅移动的方向。
+        courseC_PlayLab_events6_c: 完成后, 您应该可以使用计算机上的方向键来移动企鹅!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: '在`一直重复`循环内使用`将演员2向上移动400像素`模块和`将演员2向下移动400像素`模块来通过这个关卡。 '
         courseC_PlayLab_events7_b: "`一直重复`循环不需要连接到任何其他事件（情景）模块; 它会自己运行。"
       courseC_PlayLab_events7_2018_authored_hint:
         courseC_PlayLab_events7_a: '在`一直重复`循环内使用`将演员2向上移动400像素`模块和`将演员2向下移动400像素`模块来通过这个关卡。 '
         courseC_PlayLab_events7_b: "`一直重复`循环不需要连接到任何其他事件（情景）模块; 它会自己运行。"
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: '在`一直重复`循环内使用`将演员2向上移动400像素`模块和`将演员2向下移动400像素`模块来通过这个关卡。 '
+        courseC_PlayLab_events7_b: "`一直重复`循环不需要连接到任何其他事件（情景）模块; 它会自己运行。"
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: 您需要将模块连接到`当演员碰到时`模块来使其发生。
         courseC_PlayLab_events8_b: 工具箱中的`演员说`和`播放声音`模块应该可以帮上忙！
       courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: 您需要将模块连接到`当演员碰到时`模块来使其发生。
+        courseC_PlayLab_events8_b: 工具箱中的`演员说`和`播放声音`模块应该可以帮上忙！
+      courseC_PlayLab_events8_2019_authored_hint:
         courseC_PlayLab_events8_a: 您需要将模块连接到`当演员碰到时`模块来使其发生。
         courseC_PlayLab_events8_b: 工具箱中的`演员说`和`播放声音`模块应该可以帮上忙！
       courseC_PlayLab_events9_authored_hint:
@@ -7571,10 +7627,17 @@ zh-CN:
         courseC_PlayLab_events9_a: "`得分`模块将帮助你通过这个关卡。"
         courseC_PlayLab_events9_b: 确保你的新`当演员触摸`写着 演员 *** 1 ** 和演员 ** 3 **。
         courseC_PlayLab_events9_c: 您可以在工作区中同时拥有多个`当演员碰到`事件, 所以您不必删除第一个!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: "`得分`模块将帮助你通过这个关卡。"
+        courseC_PlayLab_events9_b: 确保你的新`当演员触摸`写着 演员 *** 1 ** 和演员 ** 3 **。
+        courseC_PlayLab_events9_c: 您可以在工作区中同时拥有多个`当演员碰到`事件, 所以您不必删除第一个!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
+        courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
       courseC_PlayLab_eventsFP_authored_hint:
@@ -7590,6 +7653,18 @@ zh-CN:
 
           **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
       courseC_PlayLab_eventsFP_2018_authored_hint:
+        idea1: |-
+          * 需要一个主意？*
+
+          ** 谁在哪里？ ** 使演员的随机图像出现, 因此没有人知道下一个显示的是谁。
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: "* 需要一个主意？* \n\n** 去冒险 **- 改变背景, 然后让人物谈论他们现在在哪里。 \n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
+        idea3: |-
+          *需要一个想法？*
+
+          **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
+      courseC_PlayLab_eventsFP_2019_authored_hint:
         idea1: |-
           * 需要一个主意？*
 
@@ -7618,6 +7693,22 @@ zh-CN:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          可以使用此模块将演员移动到游戏空间中的不同位置。
+
+          <xml> <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: 当触及其他演员时，尝试使用`将演员1设置为左中间位置`。这将重置游戏, 让玩家可以继续尝试!
+        courseC_PlayLab_events_challenge_c: |-
+          还可以尝试改变不同的演员的速度，使游戏更容易或更具挑战性!
+
+          <xml> <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           可以使用此模块将演员移动到游戏空间中的不同位置。
 
@@ -8235,11 +8326,18 @@ zh-CN:
       courseC_harvester_loops1_2018_authored_hint:
         courseC_harvester_loops1_a: 一旦你移到一个南瓜, 请使用 <xml><block type="harvester_pumpkin"/></xml>来收集它。
         courseC_harvester_loops1_b: 您可以使用 <xml><block type="harvester_pumpkin"/></xml>模块循环从广场中选取多个南瓜。
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: 一旦你移到一个南瓜, 请使用 <xml><block type="harvester_pumpkin"/></xml>来收集它。
+        courseC_harvester_loops1_b: 您可以使用 <xml><block type="harvester_pumpkin"/></xml>模块循环从广场中选取多个南瓜。
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
         courseC_harvester_loops2_b: 你需要一个`重复`循环连着另一个。
         courseC_harvester_loops2_c: 一个循环将重复`向前移动`命令, 另一个将重复`捡起南瓜`命令。
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
+        courseC_harvester_loops2_b: 你需要一个`重复`循环连着另一个。
+        courseC_harvester_loops2_c: 一个循环将重复`向前移动`命令, 另一个将重复`捡起南瓜`命令。
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
         courseC_harvester_loops2_b: 你需要一个`重复`循环连着另一个。
         courseC_harvester_loops2_c: 一个循环将重复`向前移动`命令, 另一个将重复`捡起南瓜`命令。
@@ -8251,11 +8349,19 @@ zh-CN:
         courseC_harvester_loops3_a: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
         courseC_harvester_loops3_b: 对于第一个南瓜, 你可以使用和上个关卡非常类似的代码。在这之后，你需要转到哪条路上？
         courseC_harvester_loops3_c: 如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: 不要害怕犯错误！即使你还没有解决这个关卡，尝试添加模块并运行代码, 看看会发生什么。
+        courseC_harvester_loops3_b: 对于第一个南瓜, 你可以使用和上个关卡非常类似的代码。在这之后，你需要转到哪条路上？
+        courseC_harvester_loops3_c: 如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_a: 使用这个新的`采摘玉米`模块来收集玉米。
         courseC_harvester_loops4_b: 你可以在代码中使用多个重复循环, 一些捡玉米和一些采摘南瓜。
         courseC_harvester_loops4_c: 如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。
       courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_a: 使用这个新的`采摘玉米`模块来收集玉米。
+        courseC_harvester_loops4_b: 你可以在代码中使用多个重复循环, 一些捡玉米和一些采摘南瓜。
+        courseC_harvester_loops4_c: 如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。
+      courseC_harvester_loops4_2019_authored_hint:
         courseC_harvester_loops4_a: 使用这个新的`采摘玉米`模块来收集玉米。
         courseC_harvester_loops4_b: 你可以在代码中使用多个重复循环, 一些捡玉米和一些采摘南瓜。
         courseC_harvester_loops4_c: 如果你想简化代码，实际上可以把一个循环放到另一个里面! 这称为 **嵌套循环**。
@@ -8265,10 +8371,16 @@ zh-CN:
       courseC_harvester_loops5_2018_authored_hint:
         courseC_harvester_loops5_a: 如果被难住了，请尝试画出整个程序，然后查找重复规律。
         courseC_harvester_loops5_b: 这个台阶是不是看起来和其他的关卡类似？移动是相似的，只是记得一路上要收集庄稼。
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: 如果被难住了，请尝试画出整个程序，然后查找重复规律。
+        courseC_harvester_loops5_b: 这个台阶是不是看起来和其他的关卡类似？移动是相似的，只是记得一路上要收集庄稼。
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: 请记住，您可以在一个重复循环中放置多个模块。
         courseC_harvester_loops6_b: 别忘了在玉米排的尽头转弯。
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: 请记住，您可以在一个重复循环中放置多个模块。
+        courseC_harvester_loops6_b: 别忘了在玉米排的尽头转弯。
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_a: 请记住，您可以在一个重复循环中放置多个模块。
         courseC_harvester_loops6_b: 别忘了在玉米排的尽头转弯。
       courseC_harvester_loops7_authored_hint:
@@ -8277,10 +8389,16 @@ zh-CN:
       courseC_harvester_loops7_2018_authored_hint:
         courseC_harvester_loops7_a: 你可以用两种方法解决这个关卡, 要么先取玉米要么南瓜。
         courseC_harvester_loops7_b: 您将需要多个`重复`循环来解决这个关卡。
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: 你可以用两种方法解决这个关卡, 要么先取玉米要么南瓜。
+        courseC_harvester_loops7_b: 您将需要多个`重复`循环来解决这个关卡。
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: 这个台阶是不是看起来和以前的关卡类似？移动是相似的，只是记得一路上要收集庄稼。
         courseC_harvester_loops8_b: 如果你想简化你的代码，你实际上可以把一个重复循环放到另一个里！这称为 **嵌套循环**。
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: 这个台阶是不是看起来和以前的关卡类似？移动是相似的，只是记得一路上要收集庄稼。
+        courseC_harvester_loops8_b: 如果你想简化你的代码，你实际上可以把一个重复循环放到另一个里！这称为 **嵌套循环**。
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: 这个台阶是不是看起来和以前的关卡类似？移动是相似的，只是记得一路上要收集庄稼。
         courseC_harvester_loops8_b: 如果你想简化你的代码，你实际上可以把一个重复循环放到另一个里！这称为 **嵌套循环**。
       courseC_harvester_loops_challenge1_authored_hint:
@@ -8373,6 +8491,36 @@ zh-CN:
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
+        courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
+        courseC_harvester_loops_challenge1_c: |-
+          收集前四个玉米的最佳方法是在一个`重复`模块内再使用一个`重复`模块。你也可以在其余的关卡使用这个模式！
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: 解决这个问题的一种方法看起来像是一个锯齿形。另一种方式看起来像一个螺旋！有很多不同的解决这个关卡的方案。请坚持下去!
         courseC_harvester_loops_challenge2_b: 你可以多次重复`前进`和`采摘莴苣`，然后在每个角落右转。
@@ -8385,6 +8533,17 @@ zh-CN:
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: 解决这个问题的一种方法看起来像是一个锯齿形。另一种方式看起来像一个螺旋！有很多不同的解决这个关卡的方案。请坚持下去!
+        courseC_harvester_loops_challenge2_b: 你可以多次重复`前进`和`采摘莴苣`，然后在每个角落右转。
+        courseC_harvester_loops_challenge2_c: |
+          重复运用这个曲折的模式两次就可以只用20个模块来完成这个关卡！
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          这种螺旋模式只要18个模块的编码!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: 解决这个问题的一种方法看起来像是一个锯齿形。另一种方式看起来像一个螺旋！有很多不同的解决这个关卡的方案。请坚持下去!
         courseC_harvester_loops_challenge2_b: 你可以多次重复`前进`和`采摘莴苣`，然后在每个角落右转。
         courseC_harvester_loops_challenge2_c: |
@@ -9723,7 +9882,6 @@ zh-CN:
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals8_a: |-
           **记住：**这一关在每次运行的时候都会变化。
 
@@ -9732,12 +9890,6 @@ zh-CN:
           此关卡很棘手, 因为不能只使用一个条件来检查空白方块, 花蜜, *和* 蜂蜜。
 
           仅在路径的最后查找花蜜和蜂蜜。
-        courseD_bee_conditionals8_c: 无论路途有多长, 你怎么能确保每条路都走到尽头？
-        courseD_bee_conditionals8_d: |-
-          即使你面前有一朵云彩, 你也不必先去看它。尝试从正方形右下角的云开始。
-
-          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
-        courseD_bee_conditionals8_hintVid2: 观看此视频帮助解决这个难题。
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: 你能找到一条通向每一朵花和蜂窝的小路而不撞到任何树木吗？最好的路径是螺旋。
         courseD_bee_conditionals_challenge1_b: 在这个关卡中, 每个空间都可以有一朵花, 一只蜂蜜梳子, 或者什么都没有。
@@ -11199,6 +11351,11 @@ zh-CN:
         courseD_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!
         courseD_bee_nested_loops_challenge1_b: 要获得所有4个宝石, 首先使用一个循环离开中心。向左或向右转, 然后使用嵌套循环从第一堆宝藏移动到第二个。如果重复嵌套循环足够多次,
@@ -11301,8 +11458,8 @@ zh-CN:
         courseC_maze_programming4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
         courseC_maze_programming4_b: 要沿着这条路，向前移动并转弯，然后再移动并转向对面的路。再往前走一步到达猪。
       courseD_maze_ramp4_2019_authored_hint:
-        courseC_maze_programming4_a: 你可以从鸟的视角向右或向左转。如果你面向右，向右转将让你朝下。
-        courseC_maze_programming4_b: 要沿着这条路，向前移动并转弯，然后再移动并转向对面的路。再往前走一步到达猪。
+        courseC_maze_programming4_a: 您可以从斯奎特的角度向右或向左转。如果你面向右，向右拐会使你朝下。
+        courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
@@ -12360,8 +12517,10 @@ zh-CN:
         courseE_farmer_functions6c_c: 别忘了继续查找玉米!
       courseE_farmer_functions7a1_2018_authored_hint:
         courseE_farmer_functions7a1_2018_a: 在工具箱的 `函数` 章节下创建函数。
+        courseE_farmer_functions7a1_2018_b: 当你完成你的函数的时候，不要忘记使用它!
       courseE_farmer_functions7a1_2019_authored_hint:
         courseE_farmer_functions7a1_2018_a: 在工具箱的 `函数` 章节下创建函数。
+        courseE_farmer_functions7a1_2018_b: 当你完成你的函数的时候，不要忘记使用它!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: 你不需要一个函数，但如果有帮助，你可以做一个！
         courseE_farmer_functions7b_b: 使用`如果/否则`语句来查找农作物, 然后根据所找到的作物转向。
@@ -12372,6 +12531,12 @@ zh-CN:
         courseE_farmer_functions7b_c: 一个`重复直到南瓜`循环可以帮助你通过迷宫。
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: 创建一个把农夫带到玉米，采摘所有的玉米，然后转身回来的函数。
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: 通过编写与上一个难题相同的函数来开始这个难题。
+        courseE_farmer_functions8a1_2018b: 函数第一次运行后，您需要再转一下才能再次运行它。
+      courseE_farmer_functions8a1_2019_authored_hint:
+        courseE_farmer_functions8a1_2018a: 通过编写与上一个难题相同的函数来开始这个难题。
+        courseE_farmer_functions8a1_2018b: 函数第一次运行后，您需要再转一下才能再次运行它。
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: 尝试运行给定的代码以查看它的功能。这之后你需要什么？
         courseE_farmer_functions8b_b: 将所有起始块拖到一个函数中, 以便您可以多次使用它们。
@@ -12385,9 +12550,11 @@ zh-CN:
       courseE_farmer_functions9a1_2018_authored_hint:
         courseE_farmer_functions9a1_2018a: 使用你在最后几个谜题中所做的同一个函数。
         courseE_farmer_functions9a1_2018b: 使用与上一个谜题相同的步骤来解决这个谜题的前半部分。
+        courseE_farmer_functions9a1_2018c: 在再次调用函数之前，您需要“转向”几次，然后“前进”到最后一茬莴苣。
       courseE_farmer_functions9a1_2019_authored_hint:
         courseE_farmer_functions9a1_2018a: 使用你在最后几个谜题中所做的同一个函数。
         courseE_farmer_functions9a1_2018b: 使用与上一个谜题相同的步骤来解决这个谜题的前半部分。
+        courseE_farmer_functions9a1_2018c: 在再次调用函数之前，您需要“转向”几次，然后“前进”到最后一茬莴苣。
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: 是否可以使用嵌套的`如果`和`如果/否则`语句来沿路径移动？
         courseE_farmer_functions9b_b: 使用`重复直到南瓜`来沿着所有的路径移动。

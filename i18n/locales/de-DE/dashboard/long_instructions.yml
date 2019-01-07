@@ -50,7 +50,7 @@ de:
       2-3 Artist Loops 2: Jetzt verwende einen Wiederholen-Block, um die Zelle zur Muschel zu machen.
       2-3 Artist Loops New 1: |
         Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
-        
+
         <br/>
       2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden, sie in einer Schleife zeichnen.
       2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von 100 Pixel.'
@@ -171,39 +171,39 @@ de:
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Dance_Party_01: |-
         *Los geht‘s mit der Tanzparty!*
-        
+
         Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
-        
+
         * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
       Dance_Party_01_low: |-
         *Los geht‘s mit der Tanzparty!*
-        
+
         Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
-        
+
         * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
       Dance_Party_02: |-
         Lassen Sie den Elch tanzen!
-        
+
         Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
-        
-        
+
+
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: "*Jetzt grooven wir!*\n\nFügen Sie einen Block <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takte\"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen."
       Dance_Party_04: |-
         *Dieser Tanz braucht etwas Pep!*
-        
+
         Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
       Dance_Party_05: |-
         Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
-        
+
         * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       Dance_Party_06: |-
         *Wir brauchen noch mehr Tänzer!*
-        
+
         Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
       Dance_Party_08: |-
         Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
-        
+
         Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
       Dance_Party_09: |-
         Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
@@ -216,7 +216,7 @@ de:
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-        
+
         Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
       Dance_Party_11.5_test: "Schauen Sie sich diesen Block an:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"ENTE\"</title>\n<title name=\"LAYOUT\">\"Kreis\"</title>\n</block></xml>\n\nJetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!\n\nVerwenden Sie einige der \"alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt."
       Dance_Party_11: "Mit dem Block <xml><block type=\"Dancelab_whenKey\"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.\n\nSie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!"
@@ -227,48 +227,48 @@ de:
       Dance_Party_3: "*Jetzt grooven wir!* \n\nFüge einen zweiten <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml> Block deinem Arbeitsbereich hinzu. Lass den Tänzer eine neue Bewegung machen, nach 6 Takten."
       Dance_Party_4: |-
         *Dieser Tanz braucht mehr Biss*
-        
+
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       Dance_Party_8: "Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.\n\nEin Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?"
       Dance_Party_extras_battle: |-
         # Tanz-Crews
-        
+
         Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
-        
+
         * Füge weitere Tasten zum Steuern der Tänzer hinzu
         * Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
         * Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
       Dance_Party_extras_every_beat: |-
         # Viertelnoten
-        
+
         Für die meisten unserer Tänze wurden ganze Takte verwendet, aber jeder Takt setzt sich aus 4 Viertelnoten zusammen. Für diesen Tanz werden „alle 0,25 Takte“ verwendet, um den Tänzer bei jeder Viertelnote zum Klatschen zu bringen.
-        
+
         Für diesen Tanz wird auch ein _vorbehaltlicher_Block verwendet, um zu kontrollieren, wann der „alle 0,25 Takte“-Block den Tanz ändern kann. Versuche, die Zahlen in dem vorbehaltlichen Block zu ändern, um zu sehen, wie es den Tanz verändert.
-        
+
         * Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
         * Füge einige Events „nach dem Takt“ hinzu.
         * Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
       Dance_Party_extras_layout: |-
         # Nehmen wir die Formation ein!
-        
+
         Schaue dir diesen Tanz an, der den „Layout“-Block verwendet, um die Formation der Backup-Tänzer während des Tanzes zu ändern. Probiere eine dieser Ideen aus, um ihn zu verlängern:
-        
+
         * Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
         * Ändere das Layout, wenn eine Taste gedrückt wird
         * Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
       Dance_Party_extras_on_beat: |-
         # Bass, mittlerer Ton und Sopran
-        
+
         Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_speed: |-
         # Beschleunigen, verlangsamen
-        
+
         Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_visible: |-
         # Wo würden sie hingehen?
-        
+
         Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
-        
+
         * Füge eine weitere Gruppe von Tänzern hinzu
         * Blende Tänzer mithilfe der Pfeiltasten ein- und aus
         * Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
@@ -288,15 +288,15 @@ de:
       HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       HOC Dance 3_draft: |-
         *Dieser Tanz braucht mehr Biss*
-        
+
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       HOC Dance 4_draft: |-
         Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
-        
+
         * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       HOC Dance 5_draft: |-
         *Wir brauchen noch mehr Tänzer!*
-        
+
         Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
       HOC Dance 6_draft: "Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.\n\nEin Tänzer wirkt weiter weg wenn du seine _Größe_ verringerst. Kannst du beiden Hintergrundtänzern die gleiche Größe geben?"
       HOC Dance 9_draft: "Mit dem Block <xml><block type=\"Dancelab_whenKey\"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.\n\nSie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!"
@@ -338,8 +338,8 @@ de:
       MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent einen Weg über den breiteren Teil des Flusses baut.
       MC_HOC_2017_04POINT5_Cole: |-
         Du hast es aus dem Sumpf geschafft!  Bringe jetzt den Spieler sicher zum orangefarbenen Quadrat. 
-        
-        
+
+
         Hilf dem Agenten beim Räumen des Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen zum Überqueren der ersten beiden Druckplatten verwendest.
       MC_HOC_2017_04POINT5_RYAN: "Du bist drüben! \\r\n\\r\nBringe {currentPlayerName} jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Du bist drüben! \\r\n\\r\nBringe {currentPlayerName} jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\\r\n"
@@ -348,15 +348,15 @@ de:
       MC_HOC_2017_04_Kiki: "Der Eintritt in den verborgenen Hain hat zu dieser wunderschönen Oase geführt!  Um dieses Level zu bestehen, muss der Spieler das orangefarbene Quadrat in der Hütte erreichen.  \\r\n\\r\nVerwende eine \"wiederholen\"-Schleife, damit der Agent den Weg zur Druckplatte findet. Diese öffnet die Tür der Hütte."
       MC_HOC_2017_05: |-
         Schleifen sind nicht immer hilfreich. 
-        
-        
+
+
         Diese Kakteen wachsen kreuz und quer. Eine Schleife bringt hier also nichts.  Wir haben dir stattdessen eine Funktion namens "Zerstören und bewegen" bereitgestellt. Diese erledigt den schwierigen Teil für dich, sobald der Agent ein Hindernis erreicht.
       MC_HOC_2017_05_Cole: "Oh nein! Die Brücke ist kaputt! \\r\n\\r\nProgrammiere den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
       MC_HOC_2017_05_Cole_2019: "Oh nein! Die Brücke ist kaputt! \\r\n\\r\nProgrammiere den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
       MC_HOC_2017_05_Josh: |-
         Oh nein! Die Brücke ist kaputt! 
-        
-        
+
+
         Programmiere den Agenten, um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel** erreichen.
       MC_HOC_2017_05_Kiki: "Jetzt muss der Spieler den verborgenen Hain verlassen und sein Abenteuer fortsetzen. Die Brücke ist jedoch kaputt! \\r\n\\r\nHilf dem Agenten beim Aufbauen der Brücke. Bewege dann das Holzbrett, damit der Spieler das orangefarbene Quadrat erreichen kann."
       MC_HOC_2017_06_Cole: "Noch ein Fluss. Aber dieser ist viel breiter! \\r\n \\r\nÄndere den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName} die **Spitzhacke** [diamond_pickaxe] erreichen. "
@@ -371,13 +371,13 @@ de:
       MC_HOC_2017_08_Kiki: "Statt die Kakteen vor dem Bewegen zu zerstören, platzierst du jetzt Stein auf Lava. Dann zerstörst du den Sandstein.  \\r\n\\r\nÄndere die Funktion so, dass sie in diesem Level funktioniert."
       MC_HOC_2017_08_RY: |-
         Jetzt gibt es **ZWEI** Funktionen zur Auswahl! 
-        
-        
+
+
         Verwende die Funktionen, um schnell für {currentPlayerName} eine Brücke über die Lava zu bauen.
       MC_HOC_2017_08_Will: |-
         Jetzt gibt es **ZWEI** Funktionen zur Auswahl! 
-        
-        
+
+
         Verwende die Funktionen, um dem Spieler schnell eine Brücke über die Lava zu bauen.
       MC_HOC_2017_09_Cole: Verwende die Funktionen, damit der Agent die riesigen Erdblöcke zerstört, die den Weg des Spielers zur Druckplatte blockieren.
       MC_HOC_2017_09_Kiki: "Der Anfangscode kann nicht entfernt werden.\\r\n\\r\nFüge Befehle zur \"Pfad erstellen\"-Funktion hinzu, damit das Programm im Arbeitsbereich den Agenten zur Druckplatte lenkt. "
@@ -393,8 +393,8 @@ de:
       MC_HOC_2017_13_Cole: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code des Agenten, um die Welt zu erkunden."
       MC_HOC_2017_4.5v2: |-
         Du hast es aus dem Sumpf geschafft!  Bringe jetzt den Spieler sicher zum orangefarbenen Quadrat. 
-        
-        
+
+
         Hilf dem Agenten beim Räumen des Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen zum Überqueren der ersten beiden Druckplatten verwendest.
       MC_HOC_2017_Ali: 'Sieh dir die Funktionen unten an. Wie kannst du diese verwenden, um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren Erreichen des **Zauberbuchs** [book_enchanted] zu helfen?  '
       MC_HOC_2017_Ali_2019: 'Sieh dir die Funktionen unten an. Wie kannst du diese verwenden, um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren Erreichen des **Zauberbuchs** [book_enchanted] zu helfen?  '
@@ -536,7 +536,7 @@ de:
       grade5_artist_for_loops10: "Weißt du noch wie du alles verwenden musst, was du über das Erstellen von diesem Bild gelernt hast?\n\nBrauchst du ein Hinweis? Klicke hier!"
       grade5_artist_for_loops5: |-
         Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
-        
+
         Hinweis:  Du musst etwas entfernen!
       grade5_artist_parameters_triangles2a: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen auf? Klicke „Ausführen“, um zu sehen, was passiert.
       grade5_artist_variables_hexagons1: "Probieren wir es noch einmal. Kannst du die Variable „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis: Es ist ein Vielfaches von 10."

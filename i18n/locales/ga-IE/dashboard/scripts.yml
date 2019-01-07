@@ -1621,3 +1621,16 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+        andrea-test:
+          stages:
+            'null':
+              name: 'nialas'
+        coursec-2019:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
+          stages:
+            Building a Foundation:
+              name: Dúshraith a Leagan
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
+            Binary Bracelets:
+              name: Bráisléid Dhénártha
