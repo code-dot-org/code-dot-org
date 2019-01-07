@@ -125,7 +125,8 @@ module Pd::Application
         TEACHERCONS.each do |teachercon|
           city = teachercon[:city]
           teachercon_workshops[[course, city]] = create :pd_workshop,
-            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: city
+            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+            location_address: city, sessions_from: Date.new(2019, 7, 1)
         end
       end
 

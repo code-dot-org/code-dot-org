@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import color from '../../../../util/color';
-import ModuleAssignment from './moduleAssignment';
+import ModuleAssignment from './ModuleAssignment';
 
 const styles = {
   courseUnitSection: {
@@ -23,10 +23,10 @@ const styles = {
   }
 };
 
-const EnrollmentUnitAssignment = React.createClass({
-  propTypes: {
+export default class EnrollmentUnitAssignment extends React.Component {
+  static propTypes = {
     courseUnitData: PropTypes.object
-  },
+  };
 
   renderModuleAssignments() {
     if (this.props.courseUnitData.status === 'start_blocked') {
@@ -51,7 +51,7 @@ const EnrollmentUnitAssignment = React.createClass({
         </div>
       );
     }
-  },
+  }
 
   render() {
     return (
@@ -65,6 +65,4 @@ const EnrollmentUnitAssignment = React.createClass({
       </div>
     );
   }
-});
-
-export default EnrollmentUnitAssignment;
+}

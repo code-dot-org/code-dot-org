@@ -13,7 +13,6 @@ export default storybook => storybook
             title="Picture logins"
             subtitle="Recommended for ages 5 - 8"
             description="You will create accounts for your students. Students will log in with a secret picture."
-            buttonText="Use picture logins"
             onClick={action('onClick')}
           />
         )
@@ -25,7 +24,6 @@ export default storybook => storybook
           <LoginTypeCard
             title="Google Classroom"
             description="Sync your Code.org section with an existing Google Classroom."
-            buttonText="Use Google Classroom"
             onClick={action('onClick')}
           />
         )

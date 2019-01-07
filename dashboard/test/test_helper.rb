@@ -282,6 +282,33 @@ class ActiveSupport::TestCase
     end
   end
 
+  # Asserts that each expected directive is contained in the cache-control header,
+  # delimited by commas and optional whitespace
+  def assert_cache_control_match(expected_directives, cache_control_header)
+    expected_directives.each do |directive|
+      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
+    end
+  end
+
+  def assert_caching_disabled(cache_control_header)
+    expected_directives = [
+      'no-cache',
+      'no-store',
+      'must-revalidate',
+      'max-age=0'
+    ]
+    assert_cache_control_match expected_directives, cache_control_header
+  end
+
+  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
+    expected_directives = [
+      'public',
+      "max-age=#{max_age}",
+      "s-maxage=#{proxy_max_age}"
+    ]
+    assert_cache_control_match expected_directives, cache_control_header
+  end
+
   # Freeze time for the each test case to 9am, or the specified time
   # To use, declare anywhere in the test class:
   #   class MyTest < ActiveSupport::TestCase

@@ -35,10 +35,10 @@ const styles = {
   }
 };
 
-const ModuleAssignment = React.createClass({
-  propTypes: {
+export default class ModuleAssignment extends React.Component {
+  static propTypes = {
     moduleAssignmentData: PropTypes.object
-  },
+  };
 
   render() {
     return (
@@ -59,6 +59,4 @@ const ModuleAssignment = React.createClass({
       </a>
     );
   }
-});
-
-export default ModuleAssignment;
+}
