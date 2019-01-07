@@ -13,6 +13,10 @@ import i18n from '@cdo/locale';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
 
+// A session variable storing a comma-delimited list of course names for which
+// the user has already dismissed the course version redirect warning.
+const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
+
 const styles = {
   main: {
     width: styleConstants['content-width'],
@@ -65,6 +69,7 @@ export default class CourseOverview extends Component {
       version_year: PropTypes.string.isRequired
     })).isRequired,
     showVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
   };
 
   onChangeVersion = event => {
@@ -96,6 +101,21 @@ export default class CourseOverview extends Component {
     });
   };
 
+  dismissedRedirectWarning = () => {
+    const dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+    return (dismissedRedirectWarnings || '').includes(this.props.name);
+  };
+
+  onDismissRedirectWarning = () => {
+    let dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+    if (dismissedRedirectWarnings) {
+      dismissedRedirectWarnings += `,${this.props.name}`;
+    } else {
+      dismissedRedirectWarnings = this.props.name;
+    }
+    sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
+  };
+
   render() {
     const {
       name,
@@ -113,6 +133,7 @@ export default class CourseOverview extends Component {
       hasVerifiedResources,
       versions,
       showVersionWarning,
+      showRedirectWarning,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -128,6 +149,15 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
+        {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            onDismiss={this.onDismissRedirectWarning}
+          />
+        }
         {showVersionWarning &&
           <Notification
             type={NotificationType.warning}
