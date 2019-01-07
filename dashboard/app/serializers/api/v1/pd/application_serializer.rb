@@ -62,6 +62,34 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     @scope[:raw_form_data] ? object.form_data_hash : object.full_answers_camelized
   end
 
+  def question_1
+    object.try(:question_1) || nil
+  end
+
+  def question_2
+    object.try(:question_2) || nil
+  end
+
+  def question_3
+    object.try(:question_3) || nil
+  end
+
+  def question_4
+    object.try(:question_4) || nil
+  end
+
+  def question_5
+    object.try(:question_5) || nil
+  end
+
+  def question_6
+    object.try(:question_6) || nil
+  end
+
+  def question_7
+    object.try(:question_7) || nil
+  end
+
   def response_scores
     object.try(:response_scores_hash) || {}
   end

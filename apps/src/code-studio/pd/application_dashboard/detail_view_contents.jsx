@@ -646,8 +646,8 @@ export class DetailViewContents extends React.Component {
 
   renderEditMenu = (textAlign='left') => {
     return (
-      <div style={styles.editMenuContainer}>
-        <div style={styles.editMenu}>
+      <div>
+        <div>
           {this.renderStatusSelect()}
           {this.renderEditButtons()}
         </div>
@@ -710,7 +710,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderPointsSection = () => {
-    if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
+    if (this.props.applicationData.application_type === ApplicationTypes.facilitator && this.props.applicationData.all_scores) {
       return (
         <div>
           <h4>
