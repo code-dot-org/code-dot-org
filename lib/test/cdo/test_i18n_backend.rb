@@ -2,7 +2,7 @@ require_relative '../test_helper'
 require 'cdo/i18n_backend'
 
 class TestI18nBackend < ::I18n::Backend::Simple
-  include Cdo::I18nSmartTranslate
+  include Cdo::I18n::SmartTranslate
 end
 
 class I18nSmartTranslateTest < Minitest::Test
