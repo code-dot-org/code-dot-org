@@ -3,19 +3,19 @@ id:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: setelah [TIMESTAMP][0][UNIT][1]
+        text: setelah {TIMESTAMP}{UNIT}
         options:
           UNIT:
             '"seconds"': detik
       Dancelab_changeColorBy:
-        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"hue"': Corak warna warni
             '"saturation"': Saturasi
             '"brightness"': Kecerahan
       Dancelab_changeMoveEachLR:
-        text: lakukan [GROUP][0] [MOVE][1] [DIR][2] selamanya
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
         options:
           GROUP:
             sprites: semua
@@ -330,14 +330,14 @@ id:
             '1': Sedang
             '2': Besar
       gamelab_changeColor:
-        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"tint"': Mewarnai
             '"tone"': Nada
             '"shade"': Corak
       gamelab_changeColorBy:
-        text: ubah [COLOR][0][METHOD][1] dengan [AMOUNT][2]
+        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
           METHOD:
             '"hue"': Corak warna warni
@@ -601,7 +601,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -610,7 +612,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whileKeyPressed:
         options:
           KEY:
