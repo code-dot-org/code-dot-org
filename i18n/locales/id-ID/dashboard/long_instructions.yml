@@ -66,7 +66,7 @@ id:
         bisakah kamu membuat sebuah kotak dengan sisinya berukuran 100 piksel?\r
         \r
         <br/>\r
-        
+
       2-3 Artist Loops New 10: "Sekarang mari kita hubungkan beberapa V secara bersamaan,\ndengan menggambar mereka di dalam perulangan."
       2-3 Artist Loops New 11: "Waktunya untuk membuat sesuatu yang hebat!\n\\r\n\\r\nbuat kembali kode dari teka-teki terakhir, tapi kali ini, tambahkan belok ke kiri\n30 derajat didalam lingkaran. sekarang, ulangi 24 kali bukan 8 kali."
       2-3 Artist Loops New 12: 'Gambar sebuah belah ketupat dengan setiap sisinya berukuran 100 piksel. '
@@ -76,7 +76,7 @@ id:
         Sekarang, gambar apapun yang kamu suka!\r
         <br/><br/>\r
         \r
-        
+
       2-3 Artist Loops New 2: |-
         Ini ada beberapa kode yang kamu pakai untuk membuat
         kotak itu. Apa yang akan terjadi jika kamu menggunakan blok perulangan untuk menjalankan kode berikut 4 kali?
@@ -90,7 +90,7 @@ id:
         \r
         <br/>\r
         \r
-        
+
       2-3 Artist Nested Loops 10: Ulangi kode ini sebanyak 12 kali untuk menyelesaikan pola ini.
       2-3 Artist Nested Loops 11: Ulangi kode ini sebanyak 4 kali untuk menyelesaikan pola. Pada setiap perulangan, putar sebanyak 90 derajat ke arah kanan.
       2-3 Artist Nested Loops 12: "Loop kode ini sebanyak 12 kali untu\nMelengkapi ikal."
@@ -141,7 +141,7 @@ id:
         \ r 
         Perbaiki kesalahan (s) untuk mengumpulkan semua nektar dan membuat semua madu.
          
-        
+
       2-3 Bee Functions 1: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan nektar dari bunga masing-masing."
       2-3 Bee Functions 10: "Bunga ungu berubah antara 1 atau 0 nektar setiap kali Anda menjalankan teka - teki .   \\ r \n\\ r \nBuat  sebuah  fungsi yang mengumpulkan nektar hanya dari bunga ungu yang memiliki nektar.\n \n"
       2-3 Bee Functions 2: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 5` fungsi untuk mendapatkan 5 saripati pada suatu waktu."
@@ -158,7 +158,7 @@ id:
         \ r 
         Bantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.
          
-        
+
       2-3 Bee Loops 4A: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
       2-3 Bee Loops 5: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
       2-3 Bee Loops 7: "Apa yang indah bidang bunga!   \\ r \n\\ r \nBantuan kunjungan lebah masing-masing. \\ r \n\\ r \nDapatkah Anda menemukan  sebuah cara untuk melakukan itu dengan kurang dari 7 blok ?\n \n"
@@ -300,15 +300,15 @@ id:
       AppLab Intro 2 - Try Cat Commander: "Inilah kode seperti untuk Kucing Komandan. Luangkan waktu satu menit untuk membaca kode\ndan melihat jika anda dapat memahami cara kerjanya. Berbicara tentang hal itu dengan pasangan programer.\nPola kerjakan apa yang anda ihat? \\r\n\\r\nSetelah anda selesai, lanjutkan dengan mengklik \"Run\"\nlalu \"Finish\", untuk belajar membangun petualangan anda sendiri."
       AppLab Intro 2 - finish and share: |-
         Selamat kamu telah menyelesaikan Hour of Code! Kamu dapat membagikan pekerjaanmu kepada teman-teman! Klik "Bagikan" untuk mendapatkan tautan atau bahkan Sms ke mereka.
-        
+
         Kamu dapat terus mengerjakan proyekmu di sini. Setiap kali teman kamu membuka tautan yang kamu bagikan, mereka akan mendapatkan versi terbaru yang kamu buat. Seberapa jauh kamu akan membangun petualanganmu?
       AppLab Intro 3 - share and keep going: |-
         Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
-        
+
         Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
       AppLab Intro 3 - thisOrThat: |-
         Buat aplikasi ini atau itu. Tentukan apa yang terjadi pada layar dan teks ketika pengguna mengklik setiap tombol.
-        
+
         Setelah kamu selesai dengan aplikasimu, klik "Bagikan" di bagian atas untuk mengirim kepada teman untuk bermain! Klik gambar untuk melihat cara berbagi
       AppLab Intro 4 - Video share your work: "# buat dan bagikan aplikasi anda!"
       AppLab Intro 4 - Video share: "# buat dan bagikan aplikasi anda!"
@@ -520,8 +520,8 @@ id:
       MC_HOC_2017_04: Ubah loop dari teka-teki terakhir untuk membantu Agent membuat jalur di bagian yang lebih luas di sungai ini.
       MC_HOC_2017_04POINT5_Cole: |-
         Kamu berhasil keluar dari rawa!  Sekarang, bawa pemain dengan aman ke kotak oranye. 
-        
-        
+
+
         Bantu Agent membersihkan jalur dengan menemukan pola sederhana dan menggunakan loop untuk melintasi dua pelat tekanan pertama.
       MC_HOC_2017_04POINT5_RYAN: "Kamu berhasil menyeberang! \\r\n\\r\nSekarang, bawa {currentPlayerName} dengan aman melalui labirin untuk mengambil **kapak** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Kamu berhasil menyeberang! \\r\n\\r\nSekarang, bawa {currentPlayerName} dengan aman melalui labirin untuk mengambil **kapak** [diamond_axe]\\r\n"
@@ -530,8 +530,8 @@ id:
       MC_HOC_2017_04_Kiki: "Jalan masuk ke Hutan Kecil Rahasia mengarah ke Oasis yang indah ini!  Untuk melewati level ini, pemain perlu mencapai kotak oranye di pondok.  \\r\n\\r\nGunakan loop `ulangi` untuk membantu Agent mencapai pelat tekanan yang membuka pintu pondok."
       MC_HOC_2017_05: |-
         Loop tidak selalu berguna. 
-        
-        
+
+
         Kaktus ini tidak tumbuh dalam pola yang jelas, jadi loop tidak akan membersihkannya dengan benar.  Sebagai gantinya, kami telah memberi kamu fungsi yang disebut `hancurkan dan pindah` yang akan membantumu setiap kali Agent menemui rintangan.
       MC_HOC_2017_05_Cole: "Oh tidak, jembatannya hilang! \\r\n\\r\nBuat kode agar Agent membangun kembali jembatan menggunakan blok `tempatkan` sehingga {currentPlayerName} bisa mencapai **sekop** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Oh tidak, jembatannya hilang! \\r\n\\r\nBuat kode agar Agent membangun kembali jembatan menggunakan blok `tempatkan` sehingga {currentPlayerName} bisa mencapai **sekop** [diamond_shovel]."
@@ -552,13 +552,13 @@ id:
       MC_HOC_2017_08_Kiki: "Sekarang, bukannya menghancurkan kaktus, kamu perlu menempatkan batu di atas lahar, lalu menghancurkan batu pasir.  \\r\n\\r\nUbah fungsi agar berhasil untuk level ini."
       MC_HOC_2017_08_RY: |-
         Sekarang ada **DUA** fungsi yang bisa dipilih! 
-        
-        
+
+
         Gunakan fungsi ini untuk membangun jembatan yang melintasi lahar dengan cepat bagi {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
         Sekarang ada **DUA** fungsi yang bisa dipilih! 
-        
-        
+
+
         Gunakan fungsi ini untuk membangun jembatan yang melintasi lahar dengan cepat bagi pemain.
       MC_HOC_2017_09_Cole: Gunakan fungsi untuk membantu Agent menghancurkan blok tanah sangat besar yang menghalangi jalur pemain ke pelat tekanan.
       MC_HOC_2017_09_Kiki: "Kode awal ini tidak bisa dihapus. \n\n\nTambahkan perintah ke fungsi `buat jejak` sehingga program di ruang kerja akan membawa Agent ke pelat tekanan."
@@ -574,8 +574,8 @@ id:
       MC_HOC_2017_13_Cole: "**Main bebas:** Sekarang terserah kamu! Gunakan kode Agent untuk membantu kamu menjelajahi dunia ini."
       MC_HOC_2017_4.5v2: |-
         Kamu berhasil keluar dari rawa!  Sekarang, bawa pemain dengan aman ke kotak oranye. 
-        
-        
+
+
         Bantu Agent membersihkan jalur dengan menemukan pola sederhana dan menggunakan loop untuk melintasi dua pelat tekanan pertama.
       MC_HOC_2017_Ali: 'Lihatlah fungsi di bawah ini.  Bagaimana kamu bisa menggunakannya untuk menghindari Ghast dan membantu {currentPlayerName} mencapai **Buku Sihir** [book_enchanted] dengan aman?  '
       MC_HOC_2017_Ali_2019: 'Lihatlah fungsi di bawah ini.  Bagaimana kamu bisa menggunakannya untuk menghindari Ghast dan membantu {currentPlayerName} mencapai **Buku Sihir** [book_enchanted] dengan aman?  '
@@ -704,7 +704,7 @@ id:
         \ r 
         Bantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.
          
-        
+
       grade3_Loops_11: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
       grade3_Loops_3: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
       grade3_Loops_4: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
@@ -771,7 +771,7 @@ id:
         \ r 
         Bantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.
          
-        
+
       grade5_artist_for_loops10: "**Tantangan:** Dapatkan Anda mencari\ntahu cara menggunakan semua yang telah Anda pelajari untuk membuat gambar poligon ini,\nsemua sisi berukuran 40 piksel?"
       grade5_artist_for_loops5: |-
         Hanya satu perubahan kecil pada kode
@@ -788,7 +788,7 @@ id:
         \ r 
         Bantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling sedikit blok mungkin.
          
-        
+
       level 'grade3_Loops_11: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
       level 'grade3_Loops_3: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
       level 'grade3_Loops_4: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.

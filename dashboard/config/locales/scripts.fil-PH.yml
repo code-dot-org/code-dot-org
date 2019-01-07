@@ -11445,6 +11445,8 @@ fil:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+            Conditionals in Minecraft:
+              name: Mga Kondisyonal sa Minecraft
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -11688,3 +11690,49 @@ fil:
                 para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
                 mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
                 pero maaari rin itong gawin na mag-isa lang.
+        andrea-test:
+          stages:
+            new stage:
+              name: bagong yugto
+            'null':
+              name: blangko
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        coursec-2019:
+          description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
+            at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
+            iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano
+            tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro
+            o istorya na maaari mong ibahagi!
+          description_short: Alamin ang mga pangunahing alituntunin ng computer science
+            at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+          description_audience: 'Mga Edad: 6-10'
+          stages:
+            Building a Foundation:
+              name: Gumawa ng Foundation
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Debugging in Maze:
+              name: Pagde-debug sa Maze
+            'Real-life Algorithms: Paper Planes':
+              name: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+            Programming in Collector:
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
+            Loops in Harvester:
+              name: Mga Loops sa Harvester
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            Screen Out the Mean:
+              name: I-Screen Palabas ang Mean
+            Looking Ahead:
+              name: Masdan ang Hinaharap
+            Binary Bracelets:
+              name: Binary na mga Pulseras
+        csp-mid-survey:
+          description_audience: CSP na mga Estudyante

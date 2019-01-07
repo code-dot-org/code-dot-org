@@ -1205,6 +1205,9 @@ zh-TW:
       courseC_harvester_loops_challenge2_2018: |-
         收集所有的生菜。
         注意避開樹木和田地！
+      courseC_harvester_loops_challenge2_2019: |-
+        收集所有的生菜。
+        注意避開樹木和田地！
       courseC_maze_loops2_predict1: "哇嗚，神奇的積木出現啦！\r\n利用`重複`積木，你可以讓一段程式不斷的循環執行。\r\n\r\n你能在`重複`積木裡只用上一個`移動-向前`積木，透過迴圈的方式來抓到這隻豬嗎？"
       courseC_maze_loops5: "*「愈快抓到豬愈好！」*"
       courseC_maze_programming1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！

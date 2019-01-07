@@ -4554,3 +4554,19 @@ id:
               name: Sedang memproses
             Apps and Storage:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Membangun dasar
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritma kehidupan nyata: Pesawat Kertas'
+            Screen Out the Mean:
+              name: Berarti keluar layar
+            Looking Ahead:
+              name: Melihat ke depan
+            Binary Bracelets:
+              name: Gelang biner

@@ -1285,3 +1285,15 @@ lv:
               name: Internets
             Crowdsourcing:
               name: Pūļa ieguve
+        andrea-test:
+          stages:
+            'null':
+              name: bez vērtības
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            Binary Bracelets:
+              name: Binārās aproces

@@ -1,5 +1,5 @@
 require 'cdo/shared_cache'
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper

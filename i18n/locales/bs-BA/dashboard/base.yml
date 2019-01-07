@@ -233,6 +233,7 @@ bs:
       artist: 'Umjetnik'
       playlab: 'Play Lab'
       flappy: 'Flappy'
+      dance: 'Plesna zabava'
     popup:
       progress_for_user: "Napredak za %{name}"
       progress: 'Tvoj napredak'
@@ -417,6 +418,8 @@ bs:
     applab:
       title: 'Laboratorij za Aplikacije'
       cta: 'Nauči kako'
+    dance:
+      title: 'Plesna zabava'
     hoc:
       body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
     flappy:

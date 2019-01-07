@@ -98,7 +98,7 @@ bs:
       2-3 Bee Conditionals 12: Koristi petlju za provjeru nektra u cvijetu i skupljanju nektra iz svih ovih cvjetova.
       2-3 Bee Conditionals 13: |-
         Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?
-        
+
       2-3 Bee Conditionals 14: |-
         Pokupi nektar i napravi med. Pazi da ne pokupiš nektar iz ljubičastog cvijeta koji ga uopšte nema.
       2-3 Bee Conditionals 15: "Pokupi nektar iz svih naših cvjetova."
@@ -374,7 +374,7 @@ bs:
       4-5 Nested Loops 2: 'Sada ugnijezdi ovu petlju unutar druge petlje da bi nacrtao/la 10 trokutova. Ovo se zove ugniježdena petlja. Savjet: Svih 10 trokutova zatvaraju ugao od 360 stepeni.  '
       4-5 Nested Loops 3: |-
         Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-        
+
       4-5 Nested Loops 5: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
       4-5 Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod za trokut u petlji?
       4-5 Nested Loops 7: "Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)"
@@ -662,6 +662,26 @@ bs:
       Crack Random Substitution_2018: Upute
       Crack a Caesar Cipher: Upute
       Crack a Caesar Cipher_2018: Upute
+      Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar bloka `postavke`.
+      Dance_Party_01_low: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar bloka `postavke`.
+      Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
+      Dance_Party_03: Sada napravi da plesač započne novi pokret svako 6 taktova!
+      Dance_Party_04: Dodaj efekat pozadine u svoj program.
+      Dance_Party_05: Iskoristi drugi novi blok kako bi plesač promjenio pokrete svako 2 takta.
+      Dance_Party_06: Kreiraj dodatnog plesača koji se naziva `dodatni_plesac1` kako bi plesao sa mačkom.
+      Dance_Party_08: Da li možeš podesiti istu visinu za oba plesača?
+      Dance_Party_09: Upotrijebi blok `podesi nijanse` da bi promjenio boju plesača.
+      Dance_Party_10: Napravi da drugi plesač reaguje na muziku korištenjem bloka `započni pratiti`.
+      Dance_Party_11.5_test: Iskoristi blok "sve patke" kako bi sve patke plesale skupa.
+      Dance_Party_11: Blok `kada pritisneš gore` omogučava ti da pokreneš kod kada pritisneš strelicu gore. Pokušaj da napraviš da plesač uradi brzi pokret kada pritisneš strelicu gore.
+      Dance_Party_11_5: Iskoristi blok "sve patke" kako bi sve patke plesale skupa.
+      Dance_Party_11b: Napravi da se robot "spusti" jednom kada pritisneš strelicu desno i da "klapne" jednom kada pritisneš stralicu gore. Uradi kombinaciju spusti-klapni što brže može!
+      Dance_Party_extras_battle: Plesne skupine (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_every_beat: Četvrtina nota (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_layout: Uspostavimo formaciju! (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_on_beat: Basovi, Mid i Trebl (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_speed: Ubrzaj, uspori (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_visible: Gdje su otišli? (Klikni "Opširnije" za više detalja)
       Eval Booleans 2: Možeš li postaviti vrijednosti tako da ovaj izraz vraća vrijednost "istinito"?
       Eval Booleans 3: Funkcija "dužina-niza-karaktera" vraća broj karaktera u nizu karaktera (uključujući i razmake!). Napravi da ovaj kod vraća vrijednost "istinito".
       Eval Booleans 4: Evo Blok Izvršenja naziva I. Ovaj blok vraća istinito ako su obja parametra istinita, inače vraća neistinito. Uredi x varijablu tako da izraz vraća istinito.
@@ -1125,7 +1145,7 @@ bs:
       grade3_Conditionals_10 BAD: Sakupi nektar iz redaka cvjetova! Koristi ugniježdenu petlju.
       grade3_Conditionals_10: |-
         Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?
-        
+
       grade3_Conditionals_11 BAD: 'Procjena: Upotrijebi "dok" petlju i sakupi nektar iz ovog cvijeta.'
       grade3_Conditionals_11: |-
         Pokupi nektar i napravi med. Pazi da ne pokupiš nektar iz ljubičastog cvijeta koji ga uopšte nema.
@@ -1186,7 +1206,7 @@ bs:
       grade4_arist_nested_loop_triangles4: Nacrtaj zube u ustima aligatora!
       grade4_arist_nested_loop_triangles5: |-
         Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-        
+
       grade4_arist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu petlju?
       grade4_artist_functions1: "Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela kraća od dužine kvadrata."
       grade4_artist_functions2: "Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom \"nacrtaj kvadrat\". Možeš li iskoristiti funkciju \"nacrtaj kvadrat\" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela."
@@ -1199,7 +1219,7 @@ bs:
       grade4_artist_nested_loop_triangles1: 'Dovrši kod za crtanje ovih trokutova. Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       grade4_artist_nested_loop_triangles5: |-
         Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-        
+
       grade4_artist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu petlju?
       grade4_artist_parameters_squares1: 'Klikni na "uredi" da upišeš definiciju "nacrtaj kvadrat" funkcije i dodaš parametar. Funkcija bi trebala imati dužinu kao parametar, baš kao i trokut. Ovaj put, nacrtaj 3 kvadrata: dužine od 25, 50 i 75 piksela, razmaknuti za 100 piksela.'
       grade4_artist_parameters_triangles2: Primjetiš li nešto drugačije u vezi ovih funkcijskih blokova? Klikni na "Pokreni" da vidiš šta će se desiti.

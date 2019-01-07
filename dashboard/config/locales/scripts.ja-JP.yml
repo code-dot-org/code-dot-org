@@ -1544,3 +1544,26 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+        andrea-test:
+          stages:
+            'null':
+              name: ヌル
+        dance-extras-gallery:
+          title: ダンスを続ける
+          description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: ピラミッドをたてよう
+            Programming in Maze:
+              name: めいろ のプログラミング
+            'Real-life Algorithms: Paper Planes':
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+            Binary Bracelets:
+              name: バイナリブレスレット

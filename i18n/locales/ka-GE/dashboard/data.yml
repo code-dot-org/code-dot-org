@@ -473,6 +473,7 @@ ka:
         CDEF_Video_SpritesInAction: სპრაიტები მოქმედებაში
         CSF_SpriteLab_SpritesInAction_CDEF: სპრაიტები მოქმედებაში
         CSF_StarWars_ProjectIntro: შესავალი ვარსკვლავური ომების პროექტში
+        c_and_c_digital_sharing: ციფრული გაზიარება
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

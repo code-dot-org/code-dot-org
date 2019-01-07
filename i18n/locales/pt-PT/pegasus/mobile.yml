@@ -416,6 +416,7 @@
   volunteer_engineer_submission_field_email: "Endereço de e-mail"
   volunteer_engineer_submission_field_email_desc: "O seu endereço de e-mail nunca será partilhado, mas vamos enviar-lhe as solicitações dos professores."
   volunteer_engineer_submission_field_email_placeholder: "Endereço de e-mail"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nossa política de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sim'
   volunteer_engineer_submission_field_email_preference_no: 'Não'
   volunteer_engineer_submission_final_paragraph: "Você será listado no mapa para professores locais para que o contactem para a Hora do Código ou para outras oportunidades de voluntariado. O seu e-mail e endereço exato nunca serão partilhados por nós. Mas as outras informações (incluindo a localização aproximada) será visível publicamente por professores na sua zona."

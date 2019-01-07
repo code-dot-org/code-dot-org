@@ -476,3 +476,9 @@ eu:
         desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
           era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
           ikasten dute honela.
+      PaperPlanes_2019:
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
+          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
+          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
+          diren bere zati esentzialetako bat.

@@ -274,3 +274,6 @@ cs:
       BinaryBracelets_2019:
         title: Binární náramky
         desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než jedním způsobem.
+      PaperPlanes_2019:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.

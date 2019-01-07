@@ -98,43 +98,43 @@ da:
       Artist Autorun Test: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
       Dance_Party_extras_battle: |-
         # Dansegrupper
-        
+
         Her er en dansekonkurrence mellem to grupper. Piletasterne styrer en af danserne, og tasterne "w, a, s, d" kontrollere den anden. Dans mod en ven, og gør det endnu bedre i en revanche.
-        
+
         *Tilføj flere taster for at kontrollere dansene
         *Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
         *Forandr danseren hver 4. takt ved at indstille deres synlighed
       Dance_Party_extras_every_beat: |-
         # Fjerdedelsnoder
-        
+
         De fleste af vores danse bruger hele takter, men hver takt består af 4 fjerdedelsnoder. Denne dans bruger 'den enkelte 0,25-takt' til at få danseren til at klappe ved hver fjerdedelsnode.
-        
+
         Denne dans bruger også blokken _betingelse_ til at styre, hvornår blokken 'den enkelte 0,25-takt' skal ændre dansen. Prøv at ændre tallene i 'betinget'-blokken for at se, hvordan det ændrer dansen.
-        
+
         *Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
         *Tilføj nogle 'eftertakt'-hændelser.
         *Skift takter ud med sekunder, og prøv at time dine danse på den måde.
       Dance_Party_extras_layout: |-
         # Lad os tage stilling!
-        
+
         Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
-        
+
         *Opret en anden gruppe dansere i et andet layout
         *Skift layout, når der trykkes på en tast
         *Skift en egenskab, når danserne ændrer stilling
       Dance_Party_extras_on_beat: |-
         # Lav, medio og høj
-        
+
         Denne dans bruger "peak"-hændelser til at udløse kode, når forskellige dele af musikken bliver høj. Prøv dig frem med forskellige sange for at se, hvordan de ændrer dansen.
       Dance_Party_extras_speed: |-
         # Sæt fart på, sænk farten
-        
+
         Denne sidste dans bruger blokken 'sæt hastighed' til at styre, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige steder i sangen. Det er helt i orden at prøve sig lidt frem i denne dans, eller vend tilbage til en af de tidligere danse for at gøre dem endnu sejere.
       Dance_Party_extras_visible: |-
         # Hvor forsvandt de hen?
-        
+
         Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
-        
+
         *Tilføj en anden gruppe dansere
         *Vis og skjul dansere ved hjælp af piletasterne
         *Skjul alle danserne, og skift til en spændende baggrundseffekt
@@ -170,8 +170,8 @@ da:
       MC_HOC_2017_04: Rediger loopet fra den seneste opgave, så agenten nu bygger en vej hen over den bredere del af floden.
       MC_HOC_2017_04POINT5_Cole: |-
         Du slap ud af sumpen!  Nu gælder det om at få spilleren sikkert frem til det orange felt. 
-        
-        
+
+
         Hjælp agenten med at rydde vejen ved at finde et simpelt mønster og bruge loop til at krydse de første to trykplader.
       MC_HOC_2017_04POINT5_RYAN: "Du slap over! \\r\n\\r\nNu gælder det om at få {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\\r\n"
       MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \\r\n\\r\nNu gælder det om at få {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\\r\n"
@@ -180,15 +180,15 @@ da:
       MC_HOC_2017_04_Kiki: "Indgangen til den hemmelige lund førte til denne vidunderlige oase!  Du løser opgaven ved at få spilleren hen til det orange felt i hytten.  \\r\n\\r\nBrug et gentagelsesloop til at hjælpe agenten hele vejen op til trykpladen, der åbner døren til hytten."
       MC_HOC_2017_05: |-
         Loop er ikke altid det rigtige. 
-        
-        
+
+
         Kaktusserne her gror f.eks. ikke i noget indlysende mønster, så det vil være temmelig svært at fjerne dem med et loop.  I stedet får du funktionen "ødelæg og gå" til at klare det hårde arbejde for dig, når agenten støder ind i en forhindring.
       MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \\r\n\\r\nKod agenten til at genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen** [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \\r\n\\r\nKod agenten til at genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Åh nej, broen er væk! 
-        
-        
+
+
         Hjælp agenten med at genopbygge broen, så spilleren kan nå frem til **skovlen**.
       MC_HOC_2017_05_Kiki: "Spilleren er klar til at forlade den hemmelige lund og fortsætte eventyret, men broen er væk! \\r\n\\r\nHjælp agenten med at genopbygge broen og gå hen til træplanken, så spilleren kan nå frem til det orange felt."
       MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \\r\n \\r\nRet koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til **hakken** [diamond_pickaxe]. "
@@ -203,13 +203,13 @@ da:
       MC_HOC_2017_08_Kiki: "I stedet for at ødelægge kaktusser skal du nu placere sten over lava og derefter ødelægge sandsten.  \\r\n\\r\nRet funktionen, så den virker i den aktuelle opgave."
       MC_HOC_2017_08_RY: |-
         Nu har du **TO** funktioner at vælge imellem! 
-        
-        
+
+
         Brug funktionerne til at bygge en bro hen over lavaen for {currentPlayerName} i en fart.
       MC_HOC_2017_08_Will: |-
         Nu har du **TO** funktioner at vælge imellem! 
-        
-        
+
+
         Brug funktionerne til at bygge en bro hen over lavaen for spilleren i en fart.
       MC_HOC_2017_09_Cole: Brug funktionerne til at hjælpe agenten med at ødelægge de enorme jordblokke, der blokerer spillerens vej til trykpladen.
       MC_HOC_2017_09_Kiki: "Startkoden kan ikke fjernes.\\r\n\\r\nTilføj kommandoer til \"anlæg spor\" funktionen, så programmet i arbejdsområdet får agenten frem til trykpladen. "
@@ -225,8 +225,8 @@ da:
       MC_HOC_2017_13_Cole: "**Fri leg:** Nu er det op til dig! Brug agentens kode til at hjælpe dig med at udforske verden."
       MC_HOC_2017_4.5v2: |-
         Du slap ud af sumpen!  Nu gælder det om at få spilleren sikkert frem til det orange felt. 
-        
-        
+
+
         Hjælp agenten med at rydde vejen ved at finde et simpelt mønster og bruge loop til at krydse de første to trykplader.
       MC_HOC_2017_Ali: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede bog** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede bog** [book_enchanted]?  '

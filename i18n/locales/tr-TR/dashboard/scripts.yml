@@ -2883,9 +2883,9 @@ tr:
               description_student: "Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.\n\nNot: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk."
               description_teacher: |-
                 Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
-                
+
                 Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
-                
+
                 Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
             Project - Interactive Card:
               name: Proje - interaktif kart
@@ -3011,7 +3011,7 @@ tr:
               description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı soruna uygular: bir kelime araması, bir doğum günü partisi için oturma düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa çıkarken yararlı olduğunun altını çizilir.'
               description_teacher: |-
                 Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
-                
+
                 Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
             What is a Computer?:
               name: Bilgisayar nedir?
@@ -4752,7 +4752,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
@@ -5963,9 +5963,9 @@ tr:
               description_student: "Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.\n\nNot: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk."
               description_teacher: |-
                 Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
-                
+
                 Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
-                
+
                 Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
             Conditionals:
               name: Koşullar
@@ -6406,7 +6406,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
@@ -7268,7 +7268,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-                
+
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
@@ -7314,6 +7314,8 @@ tr:
               name: Sanatçıların İç İçe Döngüleri
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
+            Conditionals in Minecraft:
+              name: Minecraft' da Koşullar
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -7424,3 +7426,51 @@ tr:
               name: Proje - bir uygulama önermek
               description_student: Sınıfımız; problem çözme süreci çalışmalarını ve bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
               description_teacher: Problem çözme süreci ve bir bilgisayarın girdi/çıktı/depolama/işleme modeli üzerine çalışmalarını bitirmek için öğrenciler bir gerçek hayat sorununu çözen bir uygulama sunarlar. Bu proje günlere yayılarak tamamlanacaktır ve öğrenciler uygulamalarının özelliklerini vurgulayan bir poster oluşturup sınıf arkadaşlarına sunarak proje sonuçlanacaktır. Bir proje rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini organize etmesine yardım eder. Proje, çiftler halinde yapılmak için tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+        andrea-test:
+          stages:
+            new stage:
+              name: yeni kademe
+            'null':
+              name: 'boş'
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dance-extras-gallery:
+          title: Dans Etmeye Devam
+          description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
+        coursec-2019:
+          description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 6-10'
+          stages:
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Maze:
+              name: Labirentte Programlama
+            Debugging in Maze:
+              name: Labirentte Hata Ayıklama
+            'Real-life Algorithms: Paper Planes':
+              name: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+            Programming in Collector:
+              name: Koleksiyoncu programlama
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
+            Loops with Rey and BB-8:
+              name: Rey ve BB-8 ile döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            Screen Out the Mean:
+              name: Ortalamanın Ekranını Kaldır
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+            Looking Ahead:
+              name: Geleceğe bakış
+            Binary Bracelets:
+              name: İkilik Bileklikler
+        csp-mid-survey:
+          description_audience: CSP Öğrencileri
