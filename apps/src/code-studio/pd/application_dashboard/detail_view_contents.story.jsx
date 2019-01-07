@@ -39,7 +39,11 @@ export default storybook => {
                 planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
               },
-              school_stats: {}
+              school_stats: {},
+              response_scores: {
+                meets_minimum_criteria_scores: {},
+                bonus_points_scores: {}
+              }
             }}
             viewType="facilitator"
           />

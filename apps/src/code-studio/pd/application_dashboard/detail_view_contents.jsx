@@ -798,9 +798,9 @@ export class DetailViewContents extends React.Component {
       {label: 'question5', id: 'question_5', value: this.state.question_5},
       {label: 'question6', id: 'question_6', value: this.state.question_6},
       {label: 'question7', id: 'question_7', value: this.state.question_7}
-    ].forEach((field)=> {
+    ].forEach((field, i)=> {
       interviewFields.push (
-        <tr>
+        <tr key={i}>
           <td style={styles.questionColumn}>
             {InterviewQuestions[field.label]}
           </td>
