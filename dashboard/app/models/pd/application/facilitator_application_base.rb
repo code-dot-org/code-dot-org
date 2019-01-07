@@ -158,7 +158,13 @@ module Pd::Application
           'I do not have experience teaching any CS curriculum to students',
         ],
 
-        completed_pd: [
+        csf_previous_workshop: [
+          'Yes, I have attended a Code.org CS Fundamentals workshop.',
+          'I have attended a Code.org workshop, but for a different curriculum.',
+          'No, I have not attended a Code.org workshop.'
+        ],
+
+        csd_csp_completed_pd: [
           'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.',
           'I have participated in the Code.org Professional Learning Program, but for a different curriculum.',
           'No, I have not participated in a Code.org Professional Learning Program for any curriculum.',
@@ -252,7 +258,6 @@ module Pd::Application
         grades_taught
         experience_teaching_this_course
         plan_on_teaching
-        completed_pd
         facilitator_availability
 
         why_should_all_have_access
@@ -282,7 +287,8 @@ module Pd::Application
           required.concat [
             :csf_summit_requirement,
             :csf_workshop_requirement,
-            :csf_community_requirement
+            :csf_community_requirement,
+            :csf_previous_workshop
           ]
         end
 
@@ -306,7 +312,8 @@ module Pd::Application
             :csd_csp_fit_weekend_requirement,
             :csd_csp_workshop_requirement,
             :csd_csp_lead_summer_workshop_requirement,
-            :csd_csp_deeper_learning_requirement
+            :csd_csp_deeper_learning_requirement,
+            :csd_csp_completed_pd
           ]
         end
 
