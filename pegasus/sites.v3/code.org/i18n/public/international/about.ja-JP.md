@@ -25,7 +25,7 @@ video_player: true
 
 2013年、Code.orgはHadiとAli Partoviの2人の双子の兄弟による[コンピュータサイエンスの普及動画](https://www.youtube.com/watch?v=nKIu9yen5nc)として始まりました。 この動画は1日でYouTubeの#1となり、15,000の学校が私たちに協力を求めてきました。 それ以来、私たちはこの世界的な動きをサポートする完全な組織を作るため、立ち上げ時のボランティアスタッフから拡大を続けてきています。 私たちは質の高いコンピュータサイエンス教育が、少数の恵まれた児童だけでなく、全ての児童に届けられるべきだと信じています。 <br /> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## What We Do
+## 私たちの目標
 
 We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
 
@@ -35,7 +35,7 @@ Over 40% of our website traffic comes from outside of the United States and that
 
 <img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## 翻訳
 
 Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
 
