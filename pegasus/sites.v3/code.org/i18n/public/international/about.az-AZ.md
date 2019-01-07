@@ -1,19 +1,19 @@
 ---
-title: About
+title: Haqqında
 theme: responsive
 video_player: true
 ---
-# About Us
+# Bizim Haqqımızda
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org® məktəblərdə informatikaya müraciətin genişləndirilməsinə və qadın və azlıqların qoşulmasını artırmağa həsr edilmiş qeyri-kommersiya təşkilatıdır. İstəyimiz, hər bir məktəbdəki hər bir şagirdin biologiya, kimya və ya cəbr öyrəndiyi kimi informatikanı öyrənmə imkanına da sahib olmasıdır. Orta məktəbdə informatikanın tədrisi üçün ən geniş istifadə olunan tədris proqramını təqdim edirik və həmçinin hər il dünyadakı bütün şagirdlərin 10%-ni əhatə edən <a href="hourofcode.com">Kod Saatı</a> kampaniyasını təşkil edirik. Code.org Amazon, Facebook, Google, Infosys Foundation, Microsoft və <a href="/about/donors">digərləri</a> daxil olmaqla bir çox səxavətli ianəçilər tərəfindən dəstəklənir.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Code.org kursları dünyanın hər yerində on milyonlarla şagird və bir milyon müəllim tərəfindən istifadə olunur.</b></font>
  
 </div>
 
@@ -21,13 +21,13 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Tarixçə
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few. <br /> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+Code.org 2013-cü ildə Hadi və Ali Partovi əkiz qardaşları tərəfindən [kompüter elmlərini tanıdan bir video](https://www.youtube.com/watch?v=nKIu9yen5nc) ilə başladıldı. Bu video bir günlük YouTube-da 1. yerdə oldu və 15,000 məktəb kömək üçün bizə müraciət etdi. O vaxtdan bəri, dünya miqyaslı bir hərəkəti dəstəkləyən tam bir təşkilat qurmaq üçün könüllülər heyətindən genişləndik. Keyfiyyətli kompüter elmləri təhilinin uşaqların sadəcə bir qismi üçün deyil hamısı üçün mümkün olduğuna inanırıq. <br /> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## What We Do
+## Biz Nə Edirik
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+Təhsil spektorunda işləyirik: [öz kurslarımızı](https://studio.code.org/courses) dizayn etmək və ya başqaları ilə əməkdaşlıq etmək, müəllimlərə təlim keçmək, böyük rayon məktəbləri ilə əməkdaşlıq etmək, hökümət siyasətlərinin dəyişdirilməsinə kömək etmək, tərəfdaşlıq yolu ilə beynəlxalq səviyyədə genişləndirir və stereotipləri qırmaq üçün marketinqlik edir. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
 
 ## Code.org's International Reach
 
@@ -45,7 +45,7 @@ All curriculum resources and tutorials we create will forever be free to use and
 
 <img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## Bizi izləyin
 
 [Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 
