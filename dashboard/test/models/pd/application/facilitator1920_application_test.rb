@@ -108,10 +108,18 @@ module Pd::Application
       application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: :csf
 
       answers = application.full_answers
-      assert answers.key? :csf_availability
-      assert answers.key? :csf_partial_attendance_reason
-      refute answers.key? :csd_csp_fit_availability
-      refute answers.key? :csd_csp_teachercon_availability
+      [
+        :csf_good_standing_requirement,
+        :csf_summit_requirement,
+        :csf_workshop_requirement,
+        :csf_community_requirement
+      ].each {|x| assert answers.key? x}
+      [
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_workshop_requirement,
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_deeper_learning_requirement
+      ].each {|x| refute answers.key? x}
     end
 
     test 'csd and csp applications have csf answers filtered out' do
@@ -122,10 +130,19 @@ module Pd::Application
         application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: course
 
         answers = application.full_answers
-        refute answers.key? :csf_availability
-        refute answers.key? :csf_partial_attendance_reason
-        assert answers.key? :csd_csp_fit_availability
-        assert answers.key? :csd_csp_teachercon_availability
+
+        [
+          :csf_good_standing_requirement,
+          :csf_summit_requirement,
+          :csf_workshop_requirement,
+          :csf_community_requirement
+        ].each {|x| refute answers.key? x}
+        [
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_workshop_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_deeper_learning_requirement
+        ].each {|x| assert(answers.key?(x), "Expected #{x} to be in the hash")}
       end
     end
 
@@ -135,9 +152,9 @@ module Pd::Application
       csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-6]
-      assert_equal 'false', csv_answers[-7]
-      assert_equal 'accepted', csv_answers[-8]
+      assert_equal 'notes', csv_answers[-13]
+      assert_equal 'false', csv_answers[-14]
+      assert_equal 'accepted', csv_answers[-15]
     end
 
     test 'csv_header and row return same number of columns' do
@@ -321,13 +338,13 @@ module Pd::Application
       Facilitator1920Application::FILTERED_LABELS.clear
 
       filtered_labels_csd = Facilitator1920Application.filtered_labels('csd')
-      assert filtered_labels_csd.key? :csd_csp_fit_availability
-      refute filtered_labels_csd.key? :csf_availability
+      assert filtered_labels_csd.key? :csd_csp_lead_summer_workshop_requirement
+      refute filtered_labels_csd.key? :csf_good_standing_requirement
       assert_equal ['csd'], Facilitator1920Application::FILTERED_LABELS.keys
 
       filtered_labels_csf = Facilitator1920Application.filtered_labels('csf')
-      refute filtered_labels_csf.key? :csd_csp_fit_availability
-      assert filtered_labels_csf.key? :csf_availability
+      refute filtered_labels_csf.key? :csd_csp_lead_summer_workshop_requirement
+      assert filtered_labels_csf.key? :csf_good_standing_requirement
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
     end
 
