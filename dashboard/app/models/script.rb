@@ -420,15 +420,14 @@ class Script < ActiveRecord::Base
   # @param version_year [String] Version year to return. Optional.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil, locale: nil)
-    script_name = Script.latest_stable_version(
-      family_name,
-      version_year: version_year,
-      locale: locale
-    ).try(:name)
+  def self.get_script_family_redirect(family_name, version_year: nil)
+    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
+  # @param user [User]
+  # @param locale [String] User or request locale. Optional.
+  # @return [String|nil] URL to the script overview page the user should be redirected to.
   def redirect_to_script_url(user, locale: nil)
     # No redirect unless user is allowed to view this course version and they are not assigned to the course.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
@@ -442,6 +441,9 @@ class Script < ActiveRecord::Base
     Rails.application.routes.url_helpers.script_path(self)
   end
 
+  # @param user [User]
+  # @param locale [String] User or request locale. Optional.
+  # @return [Boolean] Whether the user can view the script.
   def can_view_version?(user, locale: nil)
     return nil unless user
     # Restrictions only apply to students.
@@ -456,7 +458,9 @@ class Script < ActiveRecord::Base
   end
 
   # @param family_name [String] The family name for a script family.
-  # @return [Script] Returns the latest version in a script family.
+  # @param version_year [String] Version year to return. Optional.
+  # @param locale [String] User or request locale. Optional.
+  # @return [Script|nil] Returns the latest version in a script family.
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-US')
     return nil unless family_name.present?
 
@@ -480,7 +484,7 @@ class Script < ActiveRecord::Base
 
   # @param family_name [String] The family name for a script family.
   # @param user [User]
-  # @return [Script] Returns the latest version in a family that the user is assigned to.
+  # @return [Script|nil] Returns the latest version in a family that the user is assigned to.
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
     assigned_script_ids = user.section_scripts.pluck(:id)
