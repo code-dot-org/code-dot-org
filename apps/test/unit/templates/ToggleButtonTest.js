@@ -1,7 +1,8 @@
 import {assert} from '../../util/configuredChai';
 var testUtils = require('./../../util/testUtils');
 var React = require('react');
-var ReactTestUtils = require('react-addons-test-utils');
+//var ReactTestUtils = require('react-addons-test-utils');
+import ReactTestUtils from 'react-dom/test-utils';
 
 describe('ToggleButton', function () {
 
