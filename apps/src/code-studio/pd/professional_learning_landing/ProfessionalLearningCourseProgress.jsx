@@ -3,7 +3,7 @@
  */
 
 import React, {PropTypes, Component} from 'react';
-import PlcEnrollment from './plcElements/plcEnrollment';
+import PlcEnrollment from './plcElements/PlcEnrollment';
 
 
 export default class ProfessionalLearningCourseProgress extends Component {
