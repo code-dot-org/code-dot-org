@@ -1,5 +1,4 @@
 @no_firefox
-@no_ie
 
 Feature: Swapped levels
   Scenario: Signed-out user sees active version
