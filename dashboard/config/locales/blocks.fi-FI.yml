@@ -434,16 +434,16 @@ fi:
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
       gamelab_clickedOn:
-        text: kun [SPRITE][0] klikataan
+        text: kun {SPRITE} klikataan
       gamelab_comment:
-        text: 'kommentti: [COMMENT][0]'
+        text: 'kommentti: {COMMENT}'
       gamelab_debugSprite:
         options:
           VAL:
             'true': tosi
             'false': epätosi
       gamelab_destroy:
-        text: poista [THIS][0]
+        text: poista {THIS}
       gamelab_getAnim:
         options:
           COSTUME:
@@ -719,7 +719,7 @@ fi:
             "{x: 100, y: 300}": alhaalla vasemmalla
             "{x: 300, y: 300}": alhaalla oikealla
       Mikelab_whenClickedOn:
-        text: kun [SPRITE][0] klikataan
+        text: kun {SPRITE} klikataan
       Mikelab_whenKeyPressed:
         options:
           KEY:
