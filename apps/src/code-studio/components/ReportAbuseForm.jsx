@@ -92,7 +92,7 @@ export default class ReportAbuseForm extends React.Component {
           <input type="hidden" name="name" value={this.props.name}/>
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>{i18n.t('activerecord.attributes.user.email')}</div>
-            <input type="text" style={{width: INPUT_WIDTH}} defaultValue={this.props.email} name="email" ref="email"/>
+            <input type="text" style={{width: INPUT_WIDTH}} defaultValue={this.props.email} name="email" ref="email" id="uitest-email"/>
           </div>
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
@@ -100,6 +100,7 @@ export default class ReportAbuseForm extends React.Component {
             <AgeDropdown
               style={{width: DROPDOWN_WIDTH}}
               ref="age"
+              age={this.props.age}
             />
           </div>
 
@@ -115,7 +116,7 @@ export default class ReportAbuseForm extends React.Component {
               })
             }}
           />
-          <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type">
+        <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type" id="uitest-abuse-type">
             <option value=""></option>
             <option value="harassment">{i18n.t('project.abuse.report_abuse_form.abuse_type.harassment')}</option>
             <option value="offensive">{i18n.t('project.abuse.report_abuse_form.abuse_type.offensive')}</option>
@@ -124,7 +125,7 @@ export default class ReportAbuseForm extends React.Component {
           </select>
 
           <div>{i18n.t('project.abuse.report_abuse_form.detail')}</div>
-          <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail"/>
+          <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail" id="uitest-abuse-detail"/>
 
           {/* we dangerouslySetInnerHTML because our string has html in it*/}
           <div
@@ -136,7 +137,10 @@ export default class ReportAbuseForm extends React.Component {
               })
             }}
           />
-          <button onClick={this.handleSubmit}>
+          <button
+            onClick={this.handleSubmit}
+            id="uitest-submit-report-abuse"
+          >
             {i18n.t('submit')}
           </button>
         </form>
