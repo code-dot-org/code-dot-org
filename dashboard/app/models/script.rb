@@ -420,16 +420,26 @@ class Script < ActiveRecord::Base
   # @param version_year [String] Version year to return. Optional.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    scripts =
-      Script.
-        where(family_name: family_name).
-        all.
-        select(&:is_stable).
-        sort_by(&:version_year)
-    scripts.select! {|s| s.version_year == version_year} if version_year
-    script_name = scripts.last.try(:name)
+  def self.get_script_family_redirect(family_name, version_year: nil, locale: nil)
+    script_name = Script.latest_stable_version(
+      family_name,
+      version_year: version_year,
+      locale: locale
+    ).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
+  end
+
+  def get_latest_script_family_link(version_year: nil, locale: nil)
+    script = Script.latest_stable_version(
+      family_name,
+      version_year: version_year,
+      locale: locale
+    )
+    script&.link
+  end
+
+  def link
+    Rails.application.routes.url_helpers.script_path(self)
   end
 
   def can_view_version?(user, locale)
@@ -448,17 +458,22 @@ class Script < ActiveRecord::Base
 
   # @param family_name [String] The family name for a script family.
   # @return [Script] Returns the latest version in a script family.
-  def self.latest_stable_version(family_name, locale)
-    return nil unless family_name.present? && locale.present?
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-US')
+    return nil unless family_name.present?
 
     script_versions = Script.
       where(family_name: family_name).
       order("properties -> '$.version_year' DESC")
 
-    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale)
+    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
+    # Match on version year if one is supplied.
     supported_stable_scripts = script_versions.select do |script|
       is_supported = script.supported_locales&.include?(locale) || locale.start_with?('en')
-      script.is_stable && is_supported
+      if version_year
+        script.is_stable && is_supported && script.version_year == version_year
+      else
+        script.is_stable && is_supported
+      end
     end
 
     supported_stable_scripts&.first
