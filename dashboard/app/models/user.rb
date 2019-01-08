@@ -1487,7 +1487,7 @@ class User < ActiveRecord::Base
     section_courses.map(&:summarize_short)
   end
 
-  def assigned?(course)
+  def assigned_course?(course)
     section_courses.include?(course)
   end
 
