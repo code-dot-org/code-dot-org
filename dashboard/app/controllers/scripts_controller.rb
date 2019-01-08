@@ -33,7 +33,8 @@ class ScriptsController < ApplicationController
       return
     end
 
-    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true'}
+    redirect_script_url = @script.get_latest_script_family_link(locale: request.locale)
+    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true', redirect_script_url: redirect_script_url}
   end
 
   def index
