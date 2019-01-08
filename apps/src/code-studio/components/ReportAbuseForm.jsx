@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -29,39 +29,6 @@ export const getChannelIdFromUrl = function (abuseUrl) {
   }
   return match && match[1];
 };
-
-/**
- * A dropdown with the set of ages we use across our site (4-20, 21+)
- */
-class AgeDropdown extends React.Component {
-  static propTypes = {
-    age: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    style: PropTypes.object
-  };
-
-  render() {
-    const style = _.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
-
-    const age = this.props.age && this.props.age.toString();
-    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
-      '15', '16', '17', '18', '19', '20', '21+'];
-
-    if (this.props.age !== null && ages.indexOf(age) === -1) {
-      throw new Error('Invalid age: ' + age);
-    }
-
-    return (
-      <select name="age" style={style} defaultValue={age}>{
-        ages.map(function (age) {
-          return <option key={age} value={age}>{age}</option>;
-        })
-      }</select>
-    );
-  }
-}
 
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
@@ -125,12 +92,16 @@ export default class ReportAbuseForm extends React.Component {
           <input type="hidden" name="name" value={this.props.name}/>
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>{i18n.t('activerecord.attributes.user.email')}</div>
-            <input type="text" style={{width: INPUT_WIDTH}} defaultValue={this.props.email} name="email" ref="email"/>
+            <input type="text" style={{width: INPUT_WIDTH}} defaultValue={this.props.email} name="email" ref="email" id="uitest-email"/>
           </div>
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
             <div>{i18n.t('activerecord.attributes.user.age')}</div>
-            <AgeDropdown age={this.props.age} ref="age"/>
+            <AgeDropdown
+              style={{width: DROPDOWN_WIDTH}}
+              ref="age"
+              age={this.props.age}
+            />
           </div>
 
           <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
@@ -145,7 +116,7 @@ export default class ReportAbuseForm extends React.Component {
               })
             }}
           />
-          <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type">
+        <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type" id="uitest-abuse-type">
             <option value=""></option>
             <option value="harassment">{i18n.t('project.abuse.report_abuse_form.abuse_type.harassment')}</option>
             <option value="offensive">{i18n.t('project.abuse.report_abuse_form.abuse_type.offensive')}</option>
@@ -154,7 +125,7 @@ export default class ReportAbuseForm extends React.Component {
           </select>
 
           <div>{i18n.t('project.abuse.report_abuse_form.detail')}</div>
-          <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail"/>
+          <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuse_detail" id="uitest-abuse-detail"/>
 
           {/* we dangerouslySetInnerHTML because our string has html in it*/}
           <div
@@ -166,7 +137,10 @@ export default class ReportAbuseForm extends React.Component {
               })
             }}
           />
-          <button onClick={this.handleSubmit}>
+          <button
+            onClick={this.handleSubmit}
+            id="uitest-submit-report-abuse"
+          >
             {i18n.t('submit')}
           </button>
         </form>
