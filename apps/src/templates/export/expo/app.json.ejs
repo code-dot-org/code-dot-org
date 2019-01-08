@@ -1,10 +1,10 @@
 {
   "expo": {
     "name": "<%- appName %>",
-    "description": "<%- appName %> from Code.org App Lab.",
+    "description": "<%- appName %> from Code.org Code Studio.",
     "slug": "<%- appName.replace(/([^a-zA-Z0-9_\-]+)/gi, '-') %>",
     "privacy": "public",
-    "sdkVersion": "26.0.0",
+    "sdkVersion": "28.0.0",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,6 +13,9 @@
       "image": "./appassets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "packagerOpts": {
       "assetExts": [
@@ -29,11 +32,11 @@
       ]
     },
     "ios": {
-      "bundleIdentifier": "org.code.studio.applab.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
+      "bundleIdentifier": "org.code.studio.app.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
       "buildNumber": "1"
     },
     "android": {
-      "package": "org.code.studio.applab.app_<%- projectId.replace(/([^a-zA-Z0-9\_]+)/gi, '_') %>",
+      "package": "org.code.studio.app_<%- projectId.replace(/([^a-zA-Z0-9\_]+)/gi, '_') %>",
       "permissions": [],
       "versionCode": 1
     }
