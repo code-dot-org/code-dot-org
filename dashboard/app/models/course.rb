@@ -261,12 +261,16 @@ class Course < ApplicationRecord
     }
   end
 
+  def link
+    Rails.application.routes.url_helpers.course_path(self)
+  end
+
   def summarize_short
     {
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: ''),
       description: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      link: Rails.application.routes.url_helpers.course_path(self),
+      link: link,
     }
   end
 
@@ -343,6 +347,17 @@ class Course < ApplicationRecord
     end
 
     default_course_script
+  end
+
+  # @param user [User]
+  # @return [String] URL to the course the user should be redirected to.
+  def redirect_to_course_url(user)
+    # No redirect unless user is allowed to view this course version and they are not assigned to the course.
+    return nil unless can_view_version?(user) && !user.assigned_course?(self)
+
+    # Redirect user to the latest assigned course in this course family, if one exists.
+    latest_assigned_version = Course.latest_assigned_version(family_name, user)
+    latest_assigned_version&.link
   end
 
   # @param user [User]
