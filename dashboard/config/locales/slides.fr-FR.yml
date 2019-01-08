@@ -3005,86 +3005,229 @@ fr:
           le lien à vos amis ou utilisez-le pour jouer sur votre téléphone. Amusez-vous
           bien ! Je suis impatient de tester votre version de Minecraft.
     applab_intro_welcome:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
+      1:
+        text: Je m'appelle Mei'lani. Je suis stagiaire chez code.org et je suis aussi
+          étudiante en informatique. J'aime l'informatique parce que c'est vraiment
+          créatif. Je parviens à résoudre les problèmes. Je peux tout faire fonctionner
+          comme je le veux. Mais je peux aussi être la conceptrice. Je peux être l'artiste
+          et tout choisir du côté créatif.
+      2:
+        text: Créer tes propres applications est facile avec le labo des applis !
+          Que tu sois novice en programmation ou que tu aies une certaine expérience,
+          le labo des applis est un excellent outil pour créer de nouvelles applications
+          et les partager avec tes amis.
+      3:
+        text: Ceci est le labo des applis. Sur le côté gauche, il y a ton application.
+          Sur le côté droit, le code qui la fera fonctionner. Tu construis ton programme
+          en faisant glisser des blocs depuis la boîte à outils. Pour commencer, tu
+          auras juste un bloc appelé « setProperty ».
+      4:
+        text: Le bloc « setProperty » modifie l'apparence des éléments sur votre écran.
+          Comme les boutons, les labels ou même l'écran lui-même. Tu dois d’abord
+          décider de l’élément que tu souhaites modifier. Si tu survoles un élément
+          de ton application, tu peux voir le nom ou identifiant ici. Ensuite, sélectionne
+          cet identifiant dans le premier menu déroulant.
+      5:
+        text: Les éléments ont de nombreuses propriétés que tu peux modifier, telles
+          que la couleur du texte, la couleur de fond ou la taille de la police. Tu
+          peux voir la liste complète et choisir la propriété que tu souhaites modifier
+          dans la deuxième liste déroulante.
+      6:
+        text: Le dernier menu déroulant est celui dans lequel tu écris la valeur que
+          tu souhaites utiliser. Le bloc te fera une suggestion. Mais tu peux toujours
+          saisir toi-même des couleurs ou des chiffres différents.
+      7:
+        text: 'Une fois que tu as terminé, le bloc se lit un peu comme une phrase
+          : « Mettre la couleur d''arrière-plan du bouton 1 en vert ». Clique sur
+          « Exécuter » pour voir les modifications que tu construis dans le code.
+          Si tu réinitialises, tu peux faire glisser davantage de blocs pour modifier
+          d''autres éléments de ton application. Comme le texte!'
+      8:
+        text: Pour ce tutoriel, nous allons travailler en mode bloc, mais le labo
+          des applis supporte aussi le texte.
       9:
-        text: Dans tous les cas vous allez programmer en Javascript, le langage le
-          plus utilisé sur internet. Chaque niveau a un objectif, instructions et
-          une image afin de vous aider dans votre création.
+        text: Dans tous les cas, tu vas programmer en Javascript, le langage le plus
+          utilisé sur internet. Chaque niveau a un objectif, des instructions et une
+          image afin de t’aider dans ta création.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: Si vous êtes bloqué, cliquez sur cette image pour voir une explication
-          complète du niveau. Essayez d'abord de le faire tout seul.
+        text: Si tu es bloqué, clique sur cette image pour voir une explication complète
+          du niveau. Essaie d'abord de le faire tout seul.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Quand vous avez finit votre objectif pour ce niveau cliquez sur "Finir"
-          pour avancer. C'est tout ! Appuyez sur le bouton orange "continuer" pour
-          allez au niveau suivant et commencez votre aventure avec App Lab !
+        text: Quand tu as fini ton objectif pour ce niveau, clique sur « Terminer
+          » pour avancer. C'est tout ! Appuie sur le bouton orange « Continuer » pour
+          aller au niveau suivant et commencer ton aventure avec le labo des applis
+          !
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
+        text: Les applications sont vraiment chouettes parce que c'est un peu comme
+          créer sa propre entreprise, c'est-à-dire que tu dois tout concevoir à partir
+          de rien, tu dois tout gérer, et tu es le propriétaire de cet élément que
+          tu viens de créer avec du code.
       2:
         image: notes/applab_intro_events_2.png
+        text: Maintenant que tu peux changer l'apparence de ton application, rendons-la
+          interactive en répondant aux événements ! Les événements sont des actions
+          de l'utilisateur telles que cliquer sur un bouton, faire défiler un menu
+          ou survoler une image. Les applications interactives ont besoin de moyens
+          pour réagir aux événements, comme de jouer un son lorsque je clique sur
+          ce bouton. Pour ce faire, dans le labo des applis, tu dois utiliser un nouveau
+          bloc appelé « onEvent ».
       3:
         image: notes/applab_intro_events_3.png
+        text: Ce programme met l'écran en bleu. Je veux que l’écran devienne vert
+          lorsque je clique sur ce bouton. Je vais d'abord devoir faire glisser un
+          bloc « onEvent ». En survolant, je sais que l'ID du bouton est « bigButton
+          ». Je le sélectionnerai donc dans le premier menu déroulant.
       4:
         image: notes/applab_intro_events_4.png
+        text: Ensuite, je choisis le type d'événement. Tu peux choisir parmi de nombreuses
+          options, mais pour le moment, je le laisse en bon vieux clic.
       5:
         image: notes/applab_intro_events_5.png
+        text: 'Enfin, je vais ajouter du code dans le « onEvent » qui modifiera la
+          couleur d''arrière-plan de l''écran. Tu peux lire ce bloc comme une phrase
+          : « Si tu cliques sur le bouton, exécute tout ce code. »'
       6:
         image: notes/applab_intro_events_6.png
+        text: Essayons maintenant. Les blocs en-dehors d’un « onEvent » s’exécutent
+          tout d’abord donc l’écran commence en bleu.
       7:
         image: notes/applab_intro_events_7.png
+        text: Et quand j’appuie sur le gros bouton, le code dans mon « onEvent » s’exécute
+          et mon écran devient vert.
       8:
         image: notes/applab_intro_events_8.png
+        text: Si tu veux modifier plus de choses après cet événement, comme le texte
+          sur l’écran, ajoute simplement plus de code dans « onEvent »
       9:
         image: notes/applab_intro_events_9.png
+        text: Pour que ton programme réponde à plus d’événements, ajoute plus de blocs
+          « onEvent ». Assure-toi simplement de ne pas les mettre les uns dans les
+          autres. Il est maintenant temps d'essayer toi-même. Amuse-toi bien !
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
+        text: Tu vas maintenant découvrir comment ajouter des images et des sons à
+          ton application. Commençons par vérifier les options de son.
       2:
         image: notes/applab_intro_sounds_2.png
+        text: Dans la boîte à outils, tu vas trouver un nouveau bloc appelé « playSound
+          ». Fais-le glisser dans l’espace de travail. Tu peux choisir un son à jouer
+          en cliquant sur le menu déroulant puis sur « Choisir ».
       3:
         image: notes/applab_intro_sounds_3.png
+        text: À partir de là, tu peux soit télécharger un fichier son depuis ton ordinateur,
+          soit rechercher un son dans la bibliothèque de sons. La bibliothèque de
+          sons a beaucoup de catégories différentes comme les instruments, la musique
+          de fond ou les bruits d’animaux.
       4:
         image: notes/applab_intro_sounds_4.png
+        text: Une fois que tu as le son que tu veux, clique sur « Choisir ». Lorsque
+          ce bloc s’exécute, le son que tu as choisi est joué.
       5:
         image: notes/applab_intro_sounds_5.png
+        text: Pour ajouter des images à tes éléments, tu peux simplement utiliser
+          le bloc « setProperty ». Sélectionne la propriété de l'image dans le deuxième
+          menu déroulant
       6:
         image: notes/applab_intro_sounds_6.png
+        text: Puis sélectionnez « Choisir » dans le troisième menu déroulant.
       7:
         image: notes/applab_intro_sounds_7.png
+        text: À partir de là, tu peux télécharger une image depuis ton ordinateur
+          ou parcourir une immense bibliothèque d’icônes.
       8:
         image: notes/applab_intro_sounds_8.png
+        text: De retour en mode code, tu peux utiliser le bloc « setProperty » pour
+          changer la couleur de ton icône. Une fois que tu as sélectionné quelle image
+          utiliser, clique sur « Exécuter » pour voir à quoi elle ressemble.
       9:
         image: notes/applab_intro_sounds_9.png
+        text: C'est tout ! Tu peux maintenant commencer à ajouter des images et des
+          sons pour rendre tes applications encore plus amusantes et dynamiques.
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
+        text: Pour créer tes propres applications, tu devras commencer à concevoir
+          des écrans et des éléments à partir de rien. Avec le labo des applis, cela
+          est facile à faire avec le mode création.
       2:
         image: notes/applab_intro_designmode_2.png
+        text: Utilise l’interrupteur en haut de ton appli pour passer en mode création.
       3:
         image: notes/applab_intro_designmode_3.png
+        text: Tu peux ajouter de nouveaux éléments en les faisant glisser sur l'écran.
+          Tu peux les déplacer à différents endroits et modifier leur taille en faisant
+          glisser le coin inférieur droit.
       4:
         image: notes/applab_intro_designmode_4.png
+        text: Pour modifier les propriétés d'un élément, utilisez les contrôles à
+          droite. Par exemple, il est très facile de changer le texte, la couleur
+          et la taille de la police de ce bouton.
       5:
         image: notes/applab_intro_designmode_5.png
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
+        text: Lorsque tu ajoutes un nouvel élément à ton écran, il reçoit un identifiant
+          générique tel que « button1 ». C'est une bonne idée de changer l'ID de ce
+          bouton en quelque chose de plus significatif, comme « boutonDroite » pour
+          que tu saches lequel c'est quand tu vas dans le programme.
+      6:
+        text: Si tu ajoutes un élément à ton application par erreur, fais-le simplement
+          glisser en-dehors ou appuie sur le bouton de suppression.
+      7:
+        text: Tu peux ajouter de nouveaux écrans à ton application en y faisant glisser
+          un élément écran
+      8:
+        text: Dans le menu déroulant en haut, tu peux rapidement basculer entre les
+          écrans que tu crées.
+      9:
+        text: Dans ton application, tu auras besoin d'un moyen de basculer entre tous
+          ces écrans. Le bloc « setScreen » a donc été ajouté à la boîte à outils.
+          Utilisez « setScreen » dans le bloc « onEvent » pour changer d’écran en
+          un clic.
+      10:
+        text: Dans les prochains niveaux, tu travailleras sur un seul projet. Tout
+          d'abord, tu vas ajouter un bouton, tu vas ajouter un nouvel écran et, enfin,
+          tu vas écrire du code pour que le bouton bascule vers le nouvel écran.
+    applab_intro_share:
+      1:
+        text: Maintenant que tu as appris quelques notions de base sur le labo des
+          applis, telles que l'ajout de boutons, de sons, d'images, de texte et de
+          nouveaux écrans, tu peux créer toutes sortes d'applications.
+      2:
+        text: Au niveau suivant, tu trouveras l'application que tu viens de construire.
+          Avec un peu de créativité, tu peux transformer cela en un test de personnalité
+          pour tes amis, une carte de vœux que tu pourras partager avec ta famille
+          ou un jeu dont tu es le héros. Toutes ces applications ne sont qu'une combinaison
+          des compétences que tu as déjà acquises, et je parie que tu peux en imaginer
+          encore plus.
+      3:
+        text: Une fois que tu as terminé avec ton application, tu peux facilement
+          l'envoyer sur ton téléphone pour voir à quoi elle ressemble. Clique simplement
+          sur « Partager » et entre ton numéro de téléphone ici.
+      4:
+        text: Tu recevras un message qui te permettra d'ouvrir ton application instantanément.
+      5:
+        text: Tu peux également partager un lien vers ton application sur les médias
+          sociaux ou la publier sur la galerie publique de code.org afin que d'autres
+          personnes puissent y jouer et la partager.
+      6:
+        text: Tu viens de gratter la surface de ce que le labo des applis peut faire.
+          La version complète du labo des applis offre des interactions utilisateur
+          plus avancées, de nouveaux éléments d'écran et même une base de données
+          intégrée te permettant de créer rapidement des applications complètes. Tu
+          trouveras l'outil complet sur « code.org/applab » et de nombreuses idées
+          si tu veux continuer.
+      7:
+        text: Merci d'être venu. Maintenant, construis et partage ta première application,
+          et continue à créer des applications avec le labo des applis !
     mc_2017_agent_intro:
       1:
-        text: 'Stacy: Stampy, Lizzy, Preston - merci de venir avec moi. Ce que je
-          veux vous montrer est juste au dessus de ce plateau. Je pense que vous allez
-          adorer!'
+        text: 'Stacy : Stampy, Lizzy, Preston - merci d’être avec moi. Ce que je veux
+          vous montrer est juste au dessus de ce plateau. Je pense que vous allez
+          adorer !'
       2:
         text: Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)
       3:
@@ -3277,26 +3420,141 @@ fr:
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
+        text: 'Partout où vous regardez, les ordinateurs changent le monde. Que ce
+          soit sur nos bureaux, dans nos maisons, nos poches ou n’importe où ailleurs.
+          Mais alors que la plupart d’entre nous utilisons quotidiennement cette technologie
+          révolutionnaire, nous ne demandons pas souvent : « Comment fonctionnent
+          les ordinateurs ? » Dans cette série, vous allez apprendre comment les ordinateurs
+          fonctionnent réellement, à commencer par ce qui fait de l''ordinateur un
+          ordinateur. Ensuite, vous verrez comment l''information est représentée
+          à l''intérieur de l''ordinateur à l''aide de minuscules signaux électriques
+          qui s''allument et s''éteignent à une vitesse ahurissante.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
+        text: Ensuite, vous apprendrez comment les ordinateurs utilisent des circuits
+          pour tout faire, des simples mathématiques à la simulation de mondes virtuels
+          entiers. Vous allez ensuite effectuer un zoom arrière et examiner les différentes
+          parties d’un ordinateur qui saisissent, produisent et stockent toutes ces
+          informations. Enfin, vous examinerez ce qu'est le code et comment le logiciel
+          contrôle le matériel. Ainsi, que vous soyez simplement curieux de connaître
+          les appareils que vous utilisez tous les jours ou que vous vouliez concevoir
+          les innovations du futur, la première étape consiste à apprendre le fonctionnement
+          des ordinateurs.
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
+        text: Je m’appelle May-Li Khoe et je suis une designer et une inventrice.
+          Certaines des choses que j'ai conçues ont été utilisées par Apple, et maintenant
+          je conçois des produits que les enfants peuvent utiliser pour qu'ils puissent
+          travailler plus facilement à l'école. Mes autres emplois incluent le DJ
+          et la danse.
       2:
         image: notes/csd_concept_computer_2.png
+        text: Les ordinateurs sont partout ! Ils sont dans les poches, dans les voitures,
+          autour des poignets. Ils pourraient être dans ton sac à dos. Mais qu’est-ce
+          qui fait de l’ordinateur un ordinateur, au juste ? Et comment ça marche
+          ?
       3:
         image: notes/csd_concept_computer_3.png
+        text: Salut, je suis Nat ! J’étais un des designers originaux de la Xbox.
+          Je travaille avec des ordinateurs depuis que j’ai environ sept ans et maintenant
+          je travaille sur la réalité virtuelle. En tant qu’humains, nous avons toujours
+          créé des outils pour résoudre des problèmes. Des outils comme une brouette,
+          un marteau, une presse à imprimer ou une semi-remorque.
       4:
         image: notes/csd_concept_computer_4.png
+        text: Toutes ces inventions nous ont aidés avec le travail manuel. Au fil
+          du temps, les gens ont commencé à se demander si une machine pourrait être
+          conçue et construite pour nous aider dans notre travail de réflexion, comme
+          résoudre des équations ou suivre les étoiles dans le ciel. Plutôt que de
+          déplacer ou de manipuler des objets physiques tels que la terre et la pierre,
+          ces machines devraient être conçues pour manipuler des informations. En
+          explorant comment concevoir une machine à penser, les pionniers de l'informatique
+          ont réalisé qu'elle devait effectuer quatre tâches différentes.
       5:
         image: notes/csd_concept_computer_5.png
+        text: Il faudrait qu’on puisse y entrer des informations, qu’elle les stocke,
+          les traite, puis qu’elle donne les résultats. Ça peut sembler simple, mais
+          ces quatre choses sont communes à tous les ordinateurs. C'est ce qui fait
+          d'un ordinateur un ordinateur.
       6:
         image: notes/csd_concept_computer_6.png
+        text: Les ordinateurs étaient à l'origine des calculatrices basiques, ce qui
+          était déjà vraiment génial à l'époque, et ne faisaient que manipuler des
+          chiffres. Mais maintenant, nous pouvons les utiliser pour parler les uns
+          aux autres, pour jouer à des jeux, contrôler des robots et faire les choses
+          les plus folles qu’on pourrait imaginer. Les ordinateurs modernes ne ressemblent
+          en rien à ces vieilles machines maladroites, mais ils font toujours les
+          mêmes choses.
       7:
         image: notes/csd_concept_computer_7.png
+        text: Premièrement, nous allons parler d’entrée. On peut dire aux ordinateurs
+          quoi faire avec le clavier, quoi faire avec la souris, le microphone, la
+          caméra. Toutes ces différentes entrées fournissent une information informatique,
+          qui est ensuite stockée en mémoire.
+      8:
+        text: Le processeur d'un ordinateur prend des informations depuis la mémoire.
+          Il les manipule ou les modifie à l'aide d'un algorithme, qui n'est qu'une
+          série de commandes. Et puis il renvoie les informations traitées pour être
+          à nouveau stockées dans la mémoire. Cela continue jusqu'à ce que les informations
+          traitées soient prêtes à sortir.
+      9:
+        text: La manière dont un ordinateur transmet les informations dépend de ce
+          que l'ordinateur est conçu pour faire. Un écran d'ordinateur peut afficher
+          du texte, des photos, des vidéos ou des jeux interactifs, même de la réalité
+          virtuelle ! La sortie d'un ordinateur peut même inclure des signaux pour
+          contrôler un robot.
+      10:
+        text: Et qui sait à quoi vont ressembler les ordinateurs de demain ? J'espère
+          que tu pourras aider à décider de ce à quoi tu veux que les ordinateurs
+          de demain ressemblent. Mais sur tous les ordinateurs, quels que soient les
+          types de technologies qu’ils utilisent, ils font toujours les mêmes choses.
+          Ils prennent des informations, ils les stockent sous forme de données, ils
+          les traitent, puis ils affichent les résultats.
+    csd_concept_binary_data:
+      1:
+        text: Salut ! Je m'appelle Limor Fried et je suis ingénieur chez Adafruit
+          Industries. C’est ici que je fais de l’ingénierie et du design et que je
+          crée des circuits pour la mode, la musique et la technologie.
+      2:
+        text: Je m’appelle Federico Gomez Suarez et je suis un développeur de logiciels
+          avec Microsoft Hack for Good. Et je me penche sur l’utilisation de la technologie
+          pour nous aider à résoudre certains des grands problèmes sociaux de notre
+          époque.
+      3:
+        text: Tu as peut-être entendu dire que les ordinateurs fonctionnent avec des
+          uns et des zéros. Mais à l'heure actuelle, presque personne ne traite directement
+          ces uns et ces zéros. Pourtant, les uns et les zéros jouent un rôle important
+          dans le fonctionnement interne des ordinateurs.
+      4:
+        text: À l'intérieur d'un ordinateur se trouvent des fils électriques et des
+          circuits contenant toutes les informations contenues dans un ordinateur.
+          Comment stocker ou représenter les informations en utilisant l'électricité
+          ?
+      5:
+        text: Eh bien, si tu as un seul fil traversé par de l’électricité, le signal
+          peut être activé ou désactivé. Ce n'est pas beaucoup de choix, mais c'est
+          un début très important. Avec un fil, nous pouvons représenter un oui ou
+          un non, un vrai ou un faux, un un ou zéro ou n'importe quoi d'autre avec
+          seulement deux options. Cet état d'activation / désactivation d'un seul
+          fil s'appelle un bit, et il s'agit de la plus petite information qu'un ordinateur
+          puisse stocker.
+      6:
+        text: 'Si tu utilises plus de fils, tu obtiens plus de bits : plus de uns
+          et de zéros. Avec plus de bits, tu peux représenter des informations plus
+          complexes. Mais pour comprendre cela, nous devons en savoir plus sur ce
+          qu’on appelle le système binaire.'
+      7:
+        text: 'Dans le système décimal, nous avons dix chiffres de zéro à neuf, et
+          c''est ainsi que nous avons tous appris à compter. Dans le système binaire,
+          nous n''avons que deux chiffres : zéro et un. Avec ces deux chiffres, on
+          peut compter jusqu''à n''importe quel nombre.'
       8: 
       9: 
       10: 
+      11: 
+      12: 
+      13: 
     csd_concept_circuits_logic:
       1: 
       2: 
@@ -3449,3 +3707,63 @@ fr:
           Mais ce qui rend l'ordinateur intelligent ou utile, c'est vous. Quand vous
           apprenez à coder, vous allez devoir définir le problème que vous voulez
           résoudre, et écrire le logiciel pour que cette idée devienne une réalité.
+    hoc_dance_warmup:
+      1:
+        text: 'Heure de Code | Fête dansante : Échauffement'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11: 
+      12: 
+      13: 
+    hoc_dance_events:
+      1:
+        text: 'Heure de Code | Fête dansante : Événements'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+    hoc_dance_congrats:
+      1:
+        text: 'Heure de Code | Fête dansante : C’est la fête !'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+    MC_2018_loops:
+      1: 
+      2:
+        text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
+          utilisiez le même ensemble de commandes à plusieurs reprises dans certains
+          des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais
+          souhaité pouvoir faire encore et encore quelque chose comme, vous savez,
+          laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous
+          ennuyer ? Ce serait bien.
+      3: 
+      4: 
+      5: 
+      6: 
+    mc_2018_closing:
+      1: 
+      2:
+        text: 'Poulpe : Félicitations !'
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 

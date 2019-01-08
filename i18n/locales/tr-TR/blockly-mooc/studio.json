@@ -165,7 +165,7 @@
   "dropletBlock_whenTouchTauntaun_description": "Bu fonksiyon droid Tauntaun karakterine dokunduğunda çalıştırılır.",
   "dropletBlock_whenTouchProbot_description": "Bu fonksiyon droid Probot karakterine dokunduğunda çalıştırılır.",
   "dropletBlock_whenUp_description": "Bu fonksiyon yukarı düğmesi basıldığında çalıştırılır.",
-  "elseCode": "ya da",
+  "elseCode": "değilse",
   "emotion": "ruh hali",
   "endGameWin": "oyunu kazanarak bitir",
   "endGameLose": "oyunu kaybederek bitir",
