@@ -13,8 +13,8 @@ import i18n from '@cdo/locale';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
 
-// A session variable storing a comma-delimited list of course names for which
-// the user has already dismissed the course version redirect warning.
+// A session variable storing a comma-delimited list of course/script names for which
+// the user has already dismissed the version redirect warning.
 const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
 
 const styles = {

@@ -26,6 +26,7 @@ class ScriptOverview extends React.Component {
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired,
@@ -71,6 +72,7 @@ class ScriptOverview extends React.Component {
       scriptAllowsHiddenStages,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
+      showRedirectWarning,
       versions,
       hiddenStageState,
       selectedSectionId,
@@ -93,6 +95,7 @@ class ScriptOverview extends React.Component {
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
+              showRedirectWarning={showRedirectWarning}
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
             />

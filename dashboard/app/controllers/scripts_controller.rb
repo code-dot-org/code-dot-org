@@ -30,7 +30,10 @@ class ScriptsController < ApplicationController
     # Attempt to redirect user if we think they ended up on the wrong script overview page.
     if redirect_script = redirect_script(@script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
     end
+
+    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true'}
   end
 
   def index
