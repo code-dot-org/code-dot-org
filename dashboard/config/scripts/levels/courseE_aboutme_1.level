@@ -6,22 +6,83 @@
   "user_id": 833,
   "properties": {
     "skin": "gamelab",
-    "show_debug_watch": true,
+    "show_debug_watch": "true",
     "block_pools": [
-      "gamelab"
+      "GamelabJr"
     ],
     "helper_libraries": [
       "GameLabJr"
     ],
-    "use_default_sprites": true,
-    "hide_animation_mode": true,
-    "show_type_hints": true,
-    "include_shared_functions": true,
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
     "hide_custom_blocks": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Sprites">
+          <block type="gamelab_createNewSprite">
+            <title name="NAME">me</title>
+            <title name="COSTUME">"bear"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">undefined</title>
+              </block>
+            </value>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">me</title>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_clickedOn"/>
+        </category>
+        <category name="World">
+          <block type="gamelab_showTitleScreen"/>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Text">
+          <block type="text">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </GamelabJr>
