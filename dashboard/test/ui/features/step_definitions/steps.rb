@@ -649,6 +649,10 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   expect(value).to eq(negation.nil?)
 end
 
+Then /^I use jquery to set the text of "([^"]*)" to "([^"]*)"$/ do |selector, value|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{value}\");")
+end
+
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
@@ -1543,7 +1547,7 @@ Then /^I should see the new section dialog$/ do
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
-  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
+  steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
 When /^I press the save button to create a new section$/ do
