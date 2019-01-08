@@ -1592,6 +1592,14 @@ class User < ActiveRecord::Base
     all_sections.map(&:course).compact.uniq
   end
 
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+    all_sections.map(&:script).compact.uniq
+  end
+
   # return the id of the section the user most recently created.
   def last_section_id
     teacher? ? sections.where(hidden: false).last&.id : nil

@@ -432,6 +432,36 @@ class Script < ActiveRecord::Base
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
+  def can_view_version?(user, locale)
+    return nil unless user
+    # Restrictions only apply to students.
+    return true if user.teacher?
+
+    # A student can view the script version if...
+    # it is the latest stable version, they are assigned to it, or they have progress in it.
+    latest_script_version = Script.latest_stable_version(family_name, locale)
+    is_assigned = user.section_scripts.include?(self) || user.section_courses.include?(course)
+    has_progress = user.scripts.include?(self)
+
+    latest_script_version == self || is_assigned || has_progress
+  end
+
+  def self.latest_stable_version(family_name, locale)
+    return nil unless family_name.present? && locale.present?
+
+    script_versions = Script.
+      where(family_name: family_name).
+      order("properties -> '$.version_year' DESC")
+
+    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale)
+    supported_stable_scripts = script_versions.select do |script|
+      is_supported = script.supported_locales.include?(locale) || locale.start_with?('en')
+      script.is_stable && is_supported
+    end
+
+    supported_stable_scripts&.first
+  end
+
   def text_response_levels
     return @text_response_levels if Script.should_cache? && @text_response_levels
     @text_response_levels = text_response_levels_without_cache
