@@ -1,4 +1,5 @@
 require_relative 'src/env'
+require 'react-sinatra'
 require 'rack'
 require 'cdo/rack/locale'
 require 'sinatra/base'
@@ -47,6 +48,8 @@ def http_vary_add_type(vary, type)
 end
 
 class Documents < Sinatra::Base
+  register React::Sinatra
+
   def self.get_head_or_post(url, &block)
     get(url, &block)
     head(url, &block)
@@ -122,6 +125,26 @@ class Documents < Sinatra::Base
     # Haml/Temple engine doesn't recognize the `path` option
     # which is used by Sinatra/Tilt for correct template backtraces.
     Haml::TempleEngine.disable_option_validator!
+
+    React::Sinatra.configure do |config|
+      # configures for bundled React.js
+      config.use_bundled_react = true
+      config.env = ENV['RACK_ENV'] || :development
+      #config.addon = true
+
+      # The asset should be able to be compiled by your server side runtime.
+      # react-sinatra does not transform jsx into js, also ES2015 may not be worked through.
+      #config.asset_path = File.join('client', 'dist', 'server.js')
+      #config.asset_path = pegasus_dir('client', 'dist', 'server.js')
+      #config.asset_path = pegasus_dir('..', 'apps', 'build', 'package', 'js', 'code-studio-common.js')
+      config.asset_path = pegasus_dir('..', 'shared', 'jsx', 'dist', 'server.js')
+      puts File.absolute_path(config.asset_path)
+      config.runtime = :execjs
+      config.pool_size    = 5
+      config.pool_timeout = 10
+    end
+
+    React::Sinatra::Pool.pool.reset
   end
 
   before do

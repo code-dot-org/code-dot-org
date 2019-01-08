@@ -7,6 +7,7 @@ theme: responsive
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
 <div id="regional-partner-playbook">
+  <%= react_component('Hello', { name: 'namusyaka' }, prerender: true) %>
 
   <%= view :educate_box, item: {title_s: 'Administrator and Counselor PD', description_t: "* How-To Guide
   <br> * Set Your Agenda<br> * Logistics (Venue, Catering)<br> * Supplies & Resources", url_s: CDO.code_org_url("/educate/regional-partner/playbook/administrator"), button_s: "Learn more"} %>

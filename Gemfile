@@ -30,6 +30,9 @@ gem 'responders', '~> 2.0'
 
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
+# React in Pegasus
+gem 'react-sinatra', '0.1.0'
+
 gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
 # Ref: https://github.com/bdurand/seamless_database_pool/pull/39

@@ -1,0 +1,28 @@
+{
+  "name": "react-sinatra-sample",
+  "main": "src/index.js",
+  "author": "namusyaka <namusyaka@gmail.com>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "",
+  "homepage": "",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "build-server": "webpack --config ./webpack.server.config.js"
+  },
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  },
+  "devDependencies": {
+    "react-sinatra-ujs": "^1.0.1",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "webpack": "^1.13.3",
+    "expose-loader": "^0.7.1"
+  }
+}
