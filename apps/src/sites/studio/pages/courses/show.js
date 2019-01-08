@@ -69,6 +69,7 @@ function showCourseOverview() {
         versions={versions}
         showVersionWarning={!!scriptData.show_version_warning && versions.length > 1}
         showRedirectWarning={scriptData.show_redirect_warning}
+        redirectToCourseUrl={scriptData.redirect_to_course_url}
       />
     </Provider>,
   document.getElementById('course_overview'));
