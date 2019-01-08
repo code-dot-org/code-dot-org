@@ -836,7 +836,7 @@ export class DetailViewContents extends React.Component {
   renderNotes = () => {
     let notesFields = [];
     [
-      {label: 'Notes', id: 'notes', value: this.state.notes},
+      {label: 'General Notes', id: 'notes', value: this.state.notes},
       {label: 'Notes 2', id: 'notes_2', value: this.state.notes_2},
       {label: 'Notes 3', id: 'notes_3', value: this.state.notes_3},
       {label: 'Notes 4', id: 'notes_4', value: this.state.notes_4},

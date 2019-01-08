@@ -181,7 +181,7 @@ export default class AdminCohortViewTable extends React.Component {
     ];
 
     [
-      {property: 'notes', label: 'Notes'},
+      {property: 'notes', label: 'General Notes'},
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},

@@ -80,7 +80,7 @@ export default class AdminCohortView extends React.Component {
       accepted_seat: 'Accepted Seat?',
       course_name: 'Course',
       regional_partner_name: 'Regional Partner',
-      notes: 'Notes',
+      notes: 'General Notes',
       notes_2: 'Notes 2',
       notes_3: 'Notes 3',
       notes_4: 'Notes 4',
