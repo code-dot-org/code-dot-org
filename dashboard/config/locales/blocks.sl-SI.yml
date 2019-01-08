@@ -8,6 +8,8 @@ sl:
             '"seconds"': sekund(e)
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            sprites: vse
           DIR:
             '1': "→"
             "-1": "←"
@@ -23,6 +25,8 @@ sl:
             '"height"': višina
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            sprites: vse
           DIR:
             '1': "→"
             "-1": "←"
@@ -56,6 +60,8 @@ sl:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            sprites: vse
           FORMAT:
             '"random"': naključno
       Dancelab_makeNewDanceSprite:
@@ -100,6 +106,8 @@ sl:
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            sprites: vse
           SPEED:
             '1': normal
             '2': fast
@@ -113,6 +121,8 @@ sl:
             '"height"': višina
       Dancelab_setPropEach:
         options:
+          GROUP:
+            sprites: vse
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
@@ -121,6 +131,14 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: vse
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: vse
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -242,8 +260,14 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': vse
       Mikelab_groupChangePropBy:
         options:
+          SELECT:
+            '"all"': vse
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
@@ -253,18 +277,40 @@ sl:
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': vse
       Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': vse
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': vse
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': vse
       Mikelab_groupSetProp:
         options:
+          SELECT:
+            '"all"': vse
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': vse
       Mikelab_randomColor:
         text: naključna barva
       Mikelab_setBG:
@@ -355,8 +401,8 @@ sl:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -367,8 +413,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": pesek

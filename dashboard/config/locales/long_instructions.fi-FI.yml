@@ -236,6 +236,106 @@ fi:
       Course 4 Artist For Loops Challenge_a: "Keksitkö, kuinka voit käyttää kaikkia
         oppimiasi asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin, napsauta
         tästä."
+      Dance_Party_01: |-
+        *Pidetään tanssibileet!*
+
+        Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin sisällä luodaksesi ensimmäisen tanssijasi.
+
+        * * Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta.*
+      Dance_Party_01_low: |-
+        *Pidetään tanssibileet!*
+
+        Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin sisällä luodaksesi ensimmäisen tanssijasi.
+
+        * * Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta.*
+      Dance_Party_02: |-
+        Pistetään hirvi tanssimaan!
+
+        Raahaa <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokki työtilaan. Yhdistä ne <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokin alla. Tanssijasi pitäisi aloittaa uusi liike neljännen tahdin jälkeen
+
+
+        ** Tahdeilla ** voidaan laskea aika musiikissa. Tässä opetusohjelmassa tahti on neljä lyöntiä.
+      Dance_Party_03: |-
+        *Nyt groovaillaan!*
+
+        Lisää <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokki työtilaasi. Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen
+      Dance_Party_04: |-
+        *Tämä tanssi tarvitsee välkettä!*
+
+        Etsi työkalupakistasi uusi blokki, jolla lisäät taustaefektin tanssijasi taakse. Katso, kuinka efektit muuttuvat musiikin tahtiin!
+      Dance_Party_05: |-
+        Käytä uutta blokkia saadaksesi tanssijasi muuttamaan liikkeitään **joka toisella tahdilla**!
+
+        * Valitsemalla `(Seuraava)`, `(Edellinen)` tai `(Satunnainen)` pyydät tanssijaasi tekemään eri liikkeen joka kerta, kun koodia käytetään.
+      Dance_Party_06: |-
+        * Tarvitsemme enemmän tanssijoita! *
+
+        Luo taustatanssija nimellä `backup_dancer1` tanssimaan kissan kanssa.
+      Dance_Party_08: |-
+        Jokaisella tanssijalla on joukko _ominaisuuksia_, jotka määrittävät, miltä se näyttää.
+
+        Voit saada tanssijan näyttämään siltä, kuin se olisi taustalla, tekemällä sen _koosta_ pienemmän. Voitko tehdä molemmista taustatanssijoista samankokoisia?
+      Dance_Party_09: |-
+        Tanssijoilla on “sävy”-ominaisuus, jolla voi lisätä kerroksen väriä. Koeta vaihtaa yhden tanssijasi sävyä.
+        *Sävyt sekoittavat valitsemasi värin tanssijan värien kanssa.
+      Dance_Party_10: |-
+        Nyt osaamme muuttaa tanssijan ominaisuuksia. Voimme myös laittaa samat ominaisuudet vastaamaan automaattisesti musiikkiin tässä blokissa:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block >< xml >
+
+        Tämä ohjelma käyttää musiikin “basson” volyymiä (matalia ääniä) kontrolloimaan yhden tanssijan pituutta. Saatko muutkin tanssijat vastaamaan musiikkiin?
+      Dance_Party_11: |-
+        Tämä <xml><block type="Dancelab_whenKey"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.
+
+        Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
+      Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä.
+        Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
+      Dance_Party_extras_battle: |-
+        # Tanssiryhmät
+
+        Tässä on tanssikisa kahden ryhmän kesken. Nuolinäppäimet ohjaavat yhtä tanssijaa, ja “w,a,s,d”-näppäimet ohjaavat toista. Pidä tanssikisa kaverin kanssa, ja koita parantaa tuloksiasi.
+
+        * Lisää painikkeita hallitsemaan tansseja
+        * Saa taustatanssijat reagoimaan, kun näppäimiä painetaan.
+        * Vaihda tanssijaa joka 4 tahdin välein määrittämällä niiden näkyvyyttä.
+      Dance_Party_extras_every_beat: |-
+        # Neljäsosanuotit
+
+        Suurin osa tansseistamme käyttää kokotahteja, mutta kukin tahti koostuu neljästä neljäsosanuotista. Tämä tanssi käyttää blokkia `joka toinen 0,25 tahti` saadakseen tanssijan taputtamaan jokaisella neljäsosanuotilla.
+
+        Tämä tanssi käyttää myös _ehdollista_ blokkia hallinnoimaan, milloin `joka 0,25 tahti`-blokki voi muuttaa tanssia. Vaihda numerot ehdolliseen blokkiin nähdäksesi, kuinka se muuttaa tanssia.
+
+        * Kokeile muita nuotinkestoja (kuten 0,5 puolinuotille tai 0,125 kahdeksasosanuotille)
+        * Lisää joitain `tahdin jälkeen`-tapahtumia.
+        * Vaihda “tahdit” “sekuntien” kanssa ja yritä ajoittaa tanssejasi siten.
+      Dance_Party_extras_layout: |-
+        # Mennään muodostelmaan!
+
+        Tutustu tähän tanssiin, joka käyttää `asetelma`-blokkia muuttamaan taustatanssijoiden muodostelmaa tanssin aikana. Kokeile näitä ideoita pidentääksesi sitä:
+
+        * Luo toinen ryhmä tanssijoita eri asettelussa.
+        * Muuta asettelua, kun näppäintä painetaan
+        * Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa.
+      Dance_Party_extras_on_beat: |-
+        Basso, midi ja diskantti
+
+        Tämä tanssi käyttää “piikki”-tapahtumia laukaistakseen koodin, kun musiikin eri osuudet kovenevat. Puuhaile eri kappaleilla ja näe, kuinka he muuttavat tanssia.
+      Dance_Party_extras_speed: |-
+        # Pistä vauhtia, himmaa ja hidasta
+
+        Viimeinen tanssi käyttää `asetettu nopeus`-blokkia hallitsemaan kunkin tanssijan nopeutta. Kokeile eri nopeuksia kappaleen eri kohdissa. Voit vapaasti puuhastella tämän tanssin parissa, tai palata mihin tahansa aiempaan tanssiisi tehdäksesi niistä entistä coolempia.
+      Dance_Party_extras_visible: |-
+        # Mihin he menivät?
+
+        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
+
+        * Lisää uusi ryhmä tanssijoita
+        * Näyttää ja piilottaa tanssijat nuolinäppäimillä
+        * Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
         kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
         pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
@@ -244,6 +344,47 @@ fi:
         kaiken koodin, jota tarvitset joen ylittämiseen! \r\n \r\nKorjaa polku napsauttamalla
         pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName} punakivisoihdun
         [redstone_torch] luo."
+      HOC 2018 Level_1: Tarvitset tarvikkeita matkataksesi eteenpäin. Kerää **vene**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        ** arkusta** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Siellä on **kalmari** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        jossain piilosilla tässä Ocean Monumentissa. Löydätkö sen?
+      HOC 2018 Level_11: Rakenna muuri **prismariinista** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        mustan betonin ympärille. Tämä aktivoi **väylän** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        ja täydentää haasteesi!
+      HOC 2018 Level_12: Onneksi olkoon! Avara merellinen maailma odottaa sinua. Rakenna
+        koralliriutta! Tulivuori! Hylky! Se on sinusta kiinni.
+      HOC 2018 Level_2: Veneily on helpompaa, kuin avovedessä uiminen! Suuntaa kannen
+        päähän hypätäksesi kyytiin.
+      HOC 2018 Level_3: Tartu airoihin ja ohjaa veneesi avomerelle nappaamaan **turska**
+        ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Syötetään turska **delfiinille** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Käytä toistoblokkia päästäksesi meren halki nopeammin.
+      HOC 2018 Level_5: Jossain on **nilviäisen kuori** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        piilotettuna! Tutki hylkyä päästäksesi käsiksi **arkkuun** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Ulkona näyttää hyytävältä! Nappaa **lohi** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        matkallasi vedenalaisille raunioille.
+      HOC 2018 Level_7a: Löysit vedenalaiset rauniot. Tutki hiekkakiveä löytääksesi
+        **arkun** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        joka sisältää **prismariinisen** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        aarteen.
+      HOC 2018 Level_8: Ensin jäävuoria, nyt laavaa? Käy läpi tämän tulivuorisaaren,
+        ja löydä** trooppisia kaloja ** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        koralliriutoilla.
+      HOC 2018 Level_9b: Saavutit riutan, nyt etsi ** Valtameren sydän** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Käytä sinistä ja punaista korallia päästäksesi **aarrearkulle** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      HOC Dance 4_draft: |-
+        Käytä uutta blokkia saadaksesi tanssijasi muuttamaan liikkeitään **joka toisella tahdilla**!
+
+        * Valitsemalla `(Seuraava)`, `(Edellinen)` tai `(Satunnainen)` pyydät tanssijaasi tekemään eri liikkeen joka kerta, kun koodia käytetään.
+      HOC Dance 5_draft: |-
+        * Tarvitsemme enemmän tanssijoita! *
+
+        Luo taustatanssija nimellä `backup_dancer1` tanssimaan kissan kanssa.
+      HOC Dance 9_draft: |-
+        Tämä <xml><block type="Dancelab_whenKey"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.
+
+        Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
       MC Agent Freeplay: "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia apuna
         maailman tutkimisessa."
       MC_HOC_2017 Agent Test: "Napsauttamalla Suorita voit liikuttaa pelaajaa **nuolinäppäimillä**.

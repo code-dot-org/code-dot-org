@@ -1393,38 +1393,38 @@ es-MX:
         text: "Para construir tus propias aplicaciones necesitarás a empezar diseñando pantallas y elementos desde cero. App Lab hace esto fácil de hacer con el Modo de Diseño."
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Utilice el interruptor en la parte superior de su aplicación para entrar en modo de diseño."
+        text: "Utilice el interruptor en la parte superior de su aplicación para entrar en Modo de Diseño."
       3:
         image: 'notes/applab_intro_designmode_3.png'
         text: "Puedes agregar nuevos elementos arrastrándolos a la pantalla. Puedes moverlos a diferentes lugares y cambiar su tamaño arrastrando la esquina inferior derecha."
       4:
         image: 'notes/applab_intro_designmode_4.png'
-        text: "Para cambiar las propiedades de un elemento utilice los controles a la derecha. Por ejemplo, es muy fácil cambiar el texto, color y tamaño de la fuente de este botón."
+        text: "Para cambiar las propiedades de un elemento utiliza los controles a la derecha. Por ejemplo, es muy fácil cambiar el texto, color y tamaño de la fuente de este botón."
       5:
         image: 'notes/applab_intro_designmode_5.png'
-        text: "Cuando agregue un nuevo elemento a su pantalla obtendrá una indentiicación genérica como button1. Es una buena idea cambiar el identificador de este botón a algo más significativo como \"botonDerecho\". Así sabrá cuál es cuando vaya al programa."
+        text: "Cuando agregas un nuevo elemento a su pantalla obtendrá una identificación genérica como button1. Es una buena idea cambiar el identificador de este botón a algo más significativo como \"botónDerecho\". Así sabrás cuál es cuando vaya al programa."
       6:
         image: 'notes/applab_intro_designmode_6.png'
-        text: "Si añades un elemento a tu app por error, arrástralo fuera o presiona la tecla Borrar."
+        text: "Si agregas un elemento a tu app por error, arrástralo fuera o presiona la tecla borrar."
       7:
         image: 'notes/applab_intro_designmode_7.png'
         text: "Puedes añadir pantallas totalmente nuevas a tu app arrastrándolas en un elemento de pantalla"
       8:
         image: 'notes/applab_intro_designmode_8.png'
-        text: "Desde la lista de selección arriba puedes rápidamente cambiar entre las pantallas que creas."
+        text: "Desde la lista de selección de arriba puedes rápidamente cambiar entre las pantallas que creas."
       9:
         image: 'notes/applab_intro_designmode_9.png'
-        text: "Dentro de tu app, necesitarás una forma de alternar entre todas estas pantallas, entonces el bloque setScreen ha sido añadido a tu caja de herramientas. Usa \"setScreen\" dentro del bloque \"onEvent\" para cambiar pantallas con un click."
+        text: "Dentro de tu app, necesitarás una forma de alternar entre todas estas pantallas, así que el bloque setScreen ha sido añadido a tu caja de herramientas. Usa \"setScreen\" dentro del bloque \"onEvent\" para cambiar pantallas con un click."
       10:
         image: 'notes/applab_intro_designmode_10.png'
-        text: "En los próximos niveles trabajaras en un solo proyecto. Primero añadirás un botón y luego añadirás una nueva pantalla. Finalmente escribirás código para que el botón cambie a la nueva pantalla."
+        text: "En los próximos niveles estarás trabajando en un solo proyecto. Primero añadirás un botón y luego añadirás una nueva pantalla. Finalmente escribirás código para que el botón cambie a la nueva pantalla."
     applab_intro_share:
       1:
         image: 'notes/applab_intro_share_1.png'
         text: "Ahora que has aprendido los fundamentos de App Lab como añadir botones, sonido, imágenes, texto y nuevas pantallas puedes crear todo tipo de apps."
       2:
         image: 'notes/applab_intro_share_2.png'
-        text: "En el siguiente nivel encontrarás la app que acabas de construir. Con un poco de creatividad puedes convertirla en un test de personalidad para tus amigos."
+        text: "En el siguiente nivel encontrarás la app que acabas de construir. Con un poco de creatividad puedes convertirla en un test de personalidad para tus amigos, una carta de agradecimiento que puedes compartir con tu familia o un juego de aventura que-puedas-elegir. Todas estas apps son solo una combinación de las habilidades que ya has aprendido, y apuesto que puedes venir con mucho más."
       3:
         image: 'notes/applab_intro_share_3.png'
         text: "Una vez que hayas terminado con tu app puedes enviarla fácilmente a tu teléfono y ver cómo ha quedado. Simplemente haz clic en \"Compartir\" e introduce tu número de teléfono aquí."
