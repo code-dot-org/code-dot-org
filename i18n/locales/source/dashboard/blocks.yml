@@ -690,6 +690,8 @@ en:
         text: add {SPRITE} to group {THIS}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_addBehaviorUntil:
+        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       gamelab_beginBehavior:
         text: begin {BEHAVIOR}
       gamelab_bounceOff:
@@ -1401,6 +1403,10 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} begins {BEHAVIOR} for {SECONDS} seconds
+      aalab_addBehaviorUntilBoolean:
+        text: aalab sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       aalab_addToSpriteGroup:
         text: add sprite {SPRITE} to group {GROUP}
       aalab_changeGroupPropBy:

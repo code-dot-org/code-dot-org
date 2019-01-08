@@ -12,6 +12,7 @@ tr:
       Variables: Değişkenler
       Number: Sayı
       String: Dize
+      Image: Resim
       Boolean: Boolean
       Conditionals: Koşullar
       Events: Olaylar
@@ -30,7 +31,9 @@ tr:
       World: Dünya
       Sprites: Hareketli Nesneler
       Behaviors: Davranışlar
+      Advanced: İleri seviye
       Start: Başlayın
+      Locations: Konumlar
       Dancers: Dansçılar
       Groups: Gruplar
       Sprite: Hareketli nesne

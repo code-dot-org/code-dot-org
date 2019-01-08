@@ -72,8 +72,8 @@ sk:
       2-3 Artist Loops New 12: 'Nakresli kosoštvorec so stranami dlhými 100 pixelov.
 
 '
-      2-3 Artist Loops New 13: "Začneme s nejakým kódom (v šedom) pre vytvorenie jedného
-        diamantu. \n\nZopakujte šedý kód slučkou pre vytvorenie veselého vzoru!"
+      2-3 Artist Loops New 13: "Začneme s časťou kódu (v šedom), s ktorým vytvoríme
+        jeden kosoštvorec. \n\nZopakuj šedý kód viackrát a vytvor zábavný vzor!"
       2-3 Artist Loops New 2: |-
         Tu je rovnaká úloha ako sme práve vyriešili. Tento krát však môžeš použiť len jeden blok "posuň sa dopredu" a jeden blok "otoč sa".
 
@@ -125,8 +125,8 @@ sk:
         Tieto kvetinky vyzerajú lákavo!
 
         Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
-      2-3 Bee Loops 3A: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
-      2-3 Bee Loops 3B: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru
+      2-3 Bee Loops 3A: Použi cyklus "opakuj" a pozbieraj všetok nektár.
+      2-3 Bee Loops 3B: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
       2-3 Bee Loops 4A: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly sú
         tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s čo
@@ -135,11 +135,11 @@ sk:
         iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie
         všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená
         podmienka, v tomto prípade \"nektár > 0\"."
-      2-3 Maze 15: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať prasa
-        s čo najmenším počtom blokov!
-      2-3 Maze Loops 18: "Dostaňte ma k slnečnici použitím čo najmenšieho možného
-        počtu blokov!  \n\nSkúste použiť jednu slučku \"opakovať\" vo vnútri druhej
-        pre zníženie množstva kódu, ktoré potrebujete."
+      2-3 Maze 15: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším
+        možným počtom blokov!
+      2-3 Maze Loops 18: "Dostaň ma k slnečnici použitím čo najmenšieho možného počtu
+        blokov!  \n\nSkús jeden cyklus \"opakuj\" vložiť do druhého cyklu \"opakuj\",
+        čím znížiš počet použitých blokov."
       4-5 Artist 10: Vyskúšaj kód stlačením "Spustiť". Potom to opakuj viackrát pre
         dokončenie kreslenia. Farby sa budú vždy odlišovať.
       4-5 Artist 5: Čím môžeme nahradiť "???" ak chceme, aby zombík dokončil túto
@@ -151,9 +151,9 @@ sk:
         Nakresli tento štvorec použitím cyklu.
 
         Každá strana je dlhá 20 pixelov.
-      4-5 Artist Patterns 12: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava
-        namiesto doprava, čo sa stane? \n\nViete to celé zopakovať pre nakreslenie
-        tejto vlny?"
+      4-5 Artist Patterns 12: "Ak spravíš ďaľší podobný cyklus, ale namiesto doľava
+        zabočíš doprava čo sa stane? \n\nVieš to celé zopakovať tak, aby si nakreslil
+        túto vlnu?"
       4-5 Artist Patterns 13: "A teraz zopakujme celú vec štyrikrát pre vytvorenie
         tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť o 90 stupňov!
         \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov
@@ -200,23 +200,22 @@ sk:
         med v plástoch. \n\nPoužite vnorenú slučku. "
       4-5 Bee Nested Loops Assessment 1: "**Hodnotenie:** Pozbierajte všetok nektár
         a spravte všetok med pomocou slučiek."
-      4-5 Maze 9: "A teraz máme nový blok \"opakovať dokiaľ\".  \nToto nám umožní
-        opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPoužite nový
-        blok \"opakovať dokiaľ\" pre vyriešenie tejto úlohy s čo najmenším možným
-        počtom príkazov."
-      4-5 Maze Conditionals 1: Použite blok "opakovať dokiaľ", aby sa zombík dostal
-        k slnečnici.
+      4-5 Maze 9: "Teraz tu máme nový blok \"opakuj dokiaľ\".  \nToto nám umožní opakovať
+        príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok \"opakuj
+        dokiaľ\" pre vyriešenie tejto úlohy s čo najmenším možným počtom príkazov."
+      4-5 Maze Conditionals 1: Použi blok "opakuj dokiaľ", aby sa zombík dostal k
+        slnečnici.
       4-5 Maze Conditionals 10: "Viete pridať len 3 bloky a pomôcť zombíkovi dostať
         sa cez zložitejšie bludisko? \n\nAk to urobíte správne, môže prejsť všetkými
         krivolakými cestami bez ohľadu na ich dĺžku!"
-      4-5 Maze Conditionals 2: Použite blok "opakovať dokiaľ", aby sa zombík dostal
-        k slnečnici.
+      4-5 Maze Conditionals 2: Použi blok "opakuj dokiaľ", aby sa zombík dostal k
+        slnečnici.
       4-5 Maze Conditionals 3: 'Použite blok "if" pre pomoc s rozhodnutím sa, kedy
         mám zabočiť.
 
 '
-      4-5 Maze Conditionals 4: Ok, toto vyriešte tak ako poslednú úlohu, ale musíte
-        si spomenúť, ako ste spolu používali bloky "if" a "opakovať dokiaľ".
+      4-5 Maze Conditionals 4: Ok, toto vyriešiš podobne ako predchádzajúcu úlohu,
+        len si musíš spomenúť, ako si spolu použil bloky "ak" a "opakuj dokiaľ".
       4-5 Maze Conditionals 5: |-
         "Ja chcieť slnečnica!"
 
@@ -395,7 +394,7 @@ sk:
       Dance_Party_05: |-
         Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
 
-        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodne)` prikáže tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
+        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodné)` prikážeš tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
       Dance_Party_06: |-
         *Potrebujeme viac tanečníkov!*
 
@@ -490,14 +489,14 @@ sk:
         * Pridaj ďalšiu skupinu tanečníkov
         * Ukáž a skry tanečníkov so stlačením šípky
         * Skry všetkých tanečníkov a nastav nejaký zaujímavý efekt pozadia
-      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom \"postav
-        most\". Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
+      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom 'postav
+        most'. Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
         \r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\"
         id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
-      Function intro Ryan_2019: "V pracovnom priestore je **funkcia** s názvom \"postav
-        most\". Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
+      Function intro Ryan_2019: "V pracovnom priestore je **funkcia** s názvom 'postav
+        most'. Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
         \r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\"
         id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
@@ -509,7 +508,7 @@ sk:
       HOC Dance 4_draft: |-
         Použi ďalší nový blok, aby tanečník zmenil kroky **každé 2 takty**!
 
-        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodne)` prikáže tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
+        * Zvolením `(Ďalší)`, `(Predchádzajúci)`, alebo `(Náhodné)` prikážeš tanečníkovi urobiť iný krok pri každom zbehnutí kódu.
       HOC Dance 5_draft: |-
         *Potrebujeme viac tanečníkov!*
 
@@ -528,8 +527,8 @@ sk:
         môžeš zdieľať s kamarátmi.
       HOC Dance Predraw: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
-      MC Agent Freeplay: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte
-        tento svet."
+      MC Agent Freeplay: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta a preskúmaj
+        s ním tento svet."
       MC_HOC_2017 Agent Test: |-
         Klikni na oranžové tlačidlo "Spustiť", aby si mohol presúvať hráča pomocou **klávesov so šípkami**.
 
@@ -544,15 +543,15 @@ sk:
       MC_HOC_2017_01_Kiki: 'Ak chceš hrať túto úroveň, klikni na oranžové tlačidlo
         "Spustiť" pod herným priestorom. Hráča posúvaj pomocou **klávesov so šípkami**.  '
       MC_HOC_2017_01_RETRY: "Dvere sú zamknuté, ale na pomoc prichádza agent. \n \nV
-        pracovnom priestore prichyť blok \"posuň sa dopredu\" k bloku \"pri spustení\",
+        pracovnom priestore prichyť blok 'posuň sa dopredu' k bloku 'pri spustení',
         aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo
-        \"Spustiť\" a pomocou klávesov so šípkami presuň agenta mimo domu, kde získa
+        'Spustiť' a pomocou klávesov so šípkami presuň agenta mimo domu, kde získa
         **truhlicu** [chest]."
       MC_HOC_2017_01_RETRY_2019: "Dvere sú zamknuté, ale na pomoc prichádza agent.
-        \n \nV pracovnom priestore prichyť blok \"posuň sa dopredu\" k bloku \"pri
-        spustení\", aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom
-        stlač tlačidlo \"Spustiť\" a pomocou klávesov so šípkami presuň agenta mimo
-        domu, kde získa **truhlicu** [chest]."
+        \n \nV pracovnom priestore prichyť blok 'posuň sa dopredu' k bloku 'pri spustení',
+        aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo
+        'Spustiť' a pomocou klávesov so šípkami presuň agenta mimo domu, kde získa
+        **truhlicu** [chest]."
       MC_HOC_2017_02: Hráč sa musí dostať do tajného hája. Pomôž agentovi otvoriť
         bránu napísaním takého kódu, aby sa dostal na prítlačnú dosku.
       MC_HOC_2017_02_Cole: "{currentPlayerName} vyrazil za dobrodružstvom. Pomôž mu
@@ -589,20 +588,20 @@ sk:
         preveď hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "Dostal si sa na druhú stranu! \n\nTeraz bezpečne
         preveď hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe]"
-      MC_HOC_2017_04_Cole: "Agent sa môže presúvať cez vodu. \n \nPomocou cyklu \"opakuj\"
+      MC_HOC_2017_04_Cole: "Agent sa môže presúvať cez vodu. \n \nPomocou cyklu 'opakuj'
         vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať sa k **vedru**
         [bucket_empty] za dverami. "
       MC_HOC_2017_04_Cole_2019: "Agent sa môže presúvať cez vodu. \n \nPomocou cyklu
-        \"opakuj\" vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať
+        'opakuj' vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať
         sa k **vedru** [bucket_empty] za dverami. "
       MC_HOC_2017_04_Kiki: "Vstup do tajného hája viedol k tejto krásnej oáze. Ak
         chce hráč zdolať túto úroveň, musí sa dostať na oranžové políčko v chate.
-        \n\nPomocou cyklu\"opakuj\" pomôž agentovi prejsť celú cestu až na prítlačnú
+        \n\nPomocou cyklu'opakuj' pomôž agentovi prejsť celú cestu až na prítlačnú
         dosku, ktorá otvorí dvere chaty."
       MC_HOC_2017_05: "Cykly nie sú vždy užitočné. \n\n\nTieto kaktusy nerastú podľa
         jasného vzoru, takže cyklus by ich neodstránil správne. Namiesto toho sme
-        ti poskytli funkciu nazvanú \"znič a posuň sa\", ktorá za teba urobí ťažkú
-        prácu, kedykoľvek sa agent dostane k prekážke."
+        ti poskytli funkciu nazvanú 'znič a posuň sa', ktorá za teba urobí ťažkú prácu,
+        kedykoľvek sa agent dostane k prekážke."
       MC_HOC_2017_05_Cole: "Ach nie, most je preč! \n\nNaprogramuj agenta tak, aby
         znova postavil most pomocou bloku  <xml>  <block type=\"craft_placeBlock\">\n<title
         name=\"TYPE\">       </title>\n</block></xml>. Vďaka tomu sa  {currentPlayerName}
@@ -626,16 +625,15 @@ sk:
         kód a pomôž agentovi postaviť cez rieku most."
       MC_HOC_2017_06_Kiki: "Ďalšia rieka, ale táto je oveľa širšia. \n\nOprav tento
         kód a pomôž agentovi postaviť cez vodu most."
-      MC_HOC_2017_07_Cole: "Na ceste je ľad! \r\n \r\nFunkcia \"uvoľni cestu\" ti
-        môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka
-        [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "Na ceste je ľad! \r\n \r\nFunkcia \"uvoľni cestu\"
-        ti môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka
+      MC_HOC_2017_07_Cole: "Na ceste je ľad! \r\n \r\nFunkcia 'uvoľni cestu' ti môže
+        pomôcť zničiť ľad a dostať hráča {currentPlayerName} ku banskému vozíku [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Na ceste je ľad! \r\n \r\nFunkcia 'uvoľni cestu'
+        ti môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} ku banskému vozíku
         [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Cykly nie sú jediným spôsobom, ako opakovať kód. \r\n\r\nTu
-        sme ti poskytli funkciu nazvanú \"odstráň kaktusy\", ktorá za teba urobí ťažkú
+        sme ti poskytli funkciu nazvanú 'odstráň kaktusy', ktorá za teba urobí ťažkú
         prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch blokov
-        \"odstráň kaktusy\" uvoľni cestu k oranžovému políčku. "
+        'odstráň kaktusy' uvoľni cestu k oranžovému políčku. "
       MC_HOC_2017_07a_Kiki: Teraz uprav tento cyklus, aby si pomohol agentovi uvoľniť
         cestu k oranžovému políčku.
       MC_HOC_2017_08_Cole: "Teraz namiesto zničenia a následného pohybu budeš musieť
@@ -650,7 +648,7 @@ sk:
       MC_HOC_2017_09_Cole: Pomocou funkcií pomôž agentovi zničiť obrovské bloky hliny,
         ktoré blokujú hráčovu cestu k prítlačnej doske.
       MC_HOC_2017_09_Kiki: "Tento úvodný kód nemožno odstrániť.\n\nPridaj príkazy
-        pre funkciu \"vytvor cestičku\", aby program dostal agenta na prítlačnú dosku. "
+        pre funkciu 'vytvor cestičku', aby program dostal agenta na prítlačnú dosku. "
       MC_HOC_2017_09_RS_CLONE: Oprav túto funkciu tak, aby sa vyplnili diery. Potom
         sa postav na prítlačnú dosku a uvoľni cestu k fakli.
       MC_HOC_2017_10_Cole: Pomocou funkcií uvoľni cestu pre banský vozík a vstúp do
@@ -673,8 +671,8 @@ sk:
         agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
       MC_HOC_2017_11_Kiki: Teraz je to na tebe! Skús, čo dokážeš vytvoriť okolo tohto
         zamrznutého jazera.
-      MC_HOC_2017_13_Cole: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta
-        preskúmajte tento svet."
+      MC_HOC_2017_13_Cole: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta a preskúmaj
+        s ním tento svet."
       MC_HOC_2017_4.5v2: "Dostal si sa z močiara! Teraz bezpečne presuň hráča na oranžové
         políčko. \n\n\nPomôž agentovi uvoľniť cestu nájdením jednoduchého vzoru a
         pomocou cyklov prejsť po prvých dvoch prítlačných doskách."
@@ -688,20 +686,19 @@ sk:
         všetky diamanty v tejto úrovni? "
       MC_HOC_2017_FP10x10_RE: "**Voľná hra:** Teraz je to na tebe! Trúfneš si pozbierať
         všetky diamanty v tejto úrovni? "
-      MC_HOC_2017_FP20x20: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta
-        preskúmajte tento svet."
-      MC_HOC_2017_FP20x20_2019: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta
-        preskúmajte tento svet."
+      MC_HOC_2017_FP20x20: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta a preskúmaj
+        s ním tento svet."
+      MC_HOC_2017_FP20x20_2019: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
+        a preskúmaj s ním tento svet."
       MC_HOC_2017_Ryan_03: "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok
-        kódu? \n\nPomocou cyklu \"opakuj\" umiestni bloky do vody a pomôž tak agentovi
+        kódu? \n\nPomocou cyklu 'opakuj' umiestni bloky do vody a pomôž tak agentovi
         vybudovať most cez rieku."
       MC_HOC_2017_Ryan_05: "Niekedy musíš odstrániť veci, ktoré stoja hráčovi v ceste.
-        \nPomocou bloku \"znič\" odstráň všetky kaktusy medzi agentom a prítlačnou
-        doskou."
+        \nPomocou bloku 'znič' odstráň všetky kaktusy medzi agentom a prítlačnou doskou."
       MC_HOC_Kiki_02: Niekto musí byť na prítlačnej doske, aby sa otvorili bočné dvere.
         Pomôžte agentovi dostať sa na dosku, aby hráč mohol opustiť dom.
-      New Minecraft Hero Project: "**Voľná hra:** Teraz je to na vás. Pomocou kódu
-        agenta preskúmajte tento svet."
+      New Minecraft Hero Project: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
+        a preskúmaj s ním tento svet."
       Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal
         ku ovci.
       Overworld Move to Sheep_2018: Pohni sa ešte o jeden krok dopredu, aby si sa
@@ -714,6 +711,29 @@ sk:
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
+      courseC_collector_prog7: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky
+        usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky
+        z panela nástrojov na to, aby si pozbieral všetky poklady."
+      courseC_collector_prog7_2018: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto
+        bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži
+        bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
+      courseC_collector_prog7_2019: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto
+        bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži
+        bloky z panela nástrojov na to, aby si pozbieral všetky poklady."
+      courseC_flappy_events10: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš
+        zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
+        škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
+        aj tvoji kamaráti."
+      courseC_flappy_events10_2018: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš
+        zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
+        škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
+        aj tvoji kamaráti."
+      courseC_flappy_events10_2019: "A teraz si vytvor tvoju vlastnú hru Flappy! \n\nMôžeš
+        zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
+        škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
+        aj tvoji kamaráti."
+      courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka
+        vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.
@@ -730,15 +750,15 @@ sk:
         možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyriešte túto úlohu použitím čo najmenšieho
         možného počtu blokov.
-      frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kruhov,
-        medzi každým z nich sa otočíme o 18 stupňov.
+      frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kružníc
+        a po každej z nich sa otočíme o 18 stupňov.
       frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc,
         skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa
         kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function with parameter: Tu je blok "Vytvor kružnicu", ktorý dokáže
-        kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého
-        kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+        kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malej kružnice
+        s veľkosťou 5 a väčšej kružnice s veľkosťou 10?
       frozen circle function with parameter_b: "Blok \"Vytvor kružnicu\", dokáže kresliť
         kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou
         **5** a väčšej kružnice s veľkosťou **10**."
@@ -788,8 +808,8 @@ sk:
         dlhú čiaru, vráť sa do stredu a otoč sa o  **90 stupňov**.  \nZopakuj to **4**
         krát.\n"
       frozen diamond mini snowflake: Vedel si, že každá snehová vločka má iný tvar?
-        Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme
-        4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
+        Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým kosoštvorec zopakujeme
+        4-krát. Po každom kosoštvorci sa otočíme o 90 stupňov.
       frozen diamond mini snowflake_b: |-
         *"Snehové vločky makú mnoho podôb!"*
 
@@ -799,7 +819,7 @@ sk:
 
         Vytvor vločku z diamantov tak, že zopakuješ tento kód **4** krát a medzi opakovaniami sa otočíš o **90 stupňov**.
       frozen diamond snowflake: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak,
-        že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36
+        že kosoštvorec zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36
         stupňov.
       frozen diamond snowflake_b: |-
         *"Chceš si spraviť snehovú vločku?"*
@@ -811,8 +831,8 @@ sk:
 
         Tvoja kresba bude úžasná, ak vytvoríš diamant **10 krát**.
         Medzi každým sa otoč o **36 stupňov**.
-      frozen diamond: Použi opakovanie okolo týchto blokov pre vytvorenie lichobežníka.
-        Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto
+      frozen diamond: Použi opakovanie okolo týchto blokov pre vytvorenie kosoštvorca.
+        Vyzerá ako štvorec, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto
         90 stupňov v každom rohu.
       frozen diamond_b: "Tomuto kódu pridaj jeden blok a vytvoríš rovnobežník.  \n\nTen
         by mal mať ** 60 ** a ** 120 stupňové ** uhly namiesto 90 stupňových."
@@ -907,10 +927,10 @@ sk:
         \n\n&nbsp;\n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš.
         Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      frozen square loop 3x_b: "Vedel si, že môžeš vložit cyklus \"Opakovať\" do iného
+      frozen square loop 3x_b: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného
         opakovacieho cyklu?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom
         o ** 120 stupňov **. "
-      frozen square loop 3x_test: "Vedel si, že môžeš vložit cyklus \"Opakovať\" do
+      frozen square loop 3x_test: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do
         iného opakovacieho cyklu?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa
         po každom o ** 120 stupňov **. "
       frozen square loop: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku
@@ -938,8 +958,8 @@ sk:
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
         Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
-      grade2_PuppyLoops_4: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať
-        prasa s čo najmenším počtom blokov!
+      grade2_PuppyLoops_4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa
+        s najmenším možným počtom blokov!
       grade2_PuppyLoops_8: |-
         Tento kód pre mačacie fúzy je zlý.
 
@@ -948,8 +968,14 @@ sk:
         Vyzerá, že C v kóde je nakreslené naopak!
 
         Viete to opraviť, aby to znova vyzeralo ako C?
-      grade2_puppy_loops4: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať
-        prasa s čo najmenším počtom blokov!
+      grade2_collector_10: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj
+        toľko pokladov, koľko sa len vieš!"
+      grade2_collector_10_2018: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj
+        toľko pokladov, koľko sa len vieš!"
+      grade2_collector_10_2019: "Už si takmer hotový! \n\nNa dokončenie lekcie pozbieraj
+        toľko pokladov, koľko sa len vieš!"
+      grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa
+        s najmenším možným počtom blokov!
       grade3_ConditionalsElse_2: "Viac oblakov!\n\nSkontrolujte pod každým oblakom,
         či sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte
         si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
@@ -985,9 +1011,9 @@ sk:
         nektár.
       grade3_Debugging_9: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
         nektár a urobil celý med.
-      grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
-      grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru
-        a vyrobenie všetkého medu.
+      grade3_Loops_3: Použi cyklus "opakuj" a pozbieraj všetok nektár.
+      grade3_Loops_4: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru a
+        vyrobenie všetkého medu.
       grade3_Loops_6: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly sú
         tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s čo
         najmenším počtom blokov."
@@ -1002,8 +1028,8 @@ sk:
       grade3_bee_conditionals_quantum2: "Viac oblakov!\n\nSkontrolujte pod každým
         oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte
         si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      grade3_maze_nestedLoops4: V tejto úlohe ti dva krát príkaz "opakovať" pomôže
-        dostať prasa s čo najmenším počtom blokov!
+      grade3_maze_nestedLoops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať
+        prasa s najmenším možným počtom blokov!
       grade4_arist_nested_loop_polygons1: "Zopakujte tento dizajn 10 krát. \n\nO koľko
         sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2: "Zopakujte tento tvar 6 krát. \n\nO koľko
@@ -1033,11 +1059,11 @@ sk:
         10 prekrývajúcich sa kružníc. Nezabudni medzi kružničami "Skočiť" dopredu.
       grade4_frozen_functions1a: Použi nový blok "Vytvor kružnicu" pre nakreslenie
         10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
-      grade4_frozen_functions2: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi
-        každým z nich sa otočíme o 18 stupňov.
+      grade4_frozen_functions2: Teraz si vytvorme 20 prekrývajúcich sa kružníc a po
+        každej z nich sa otočíme o 18 stupňov.
       grade4_frozen_functions3: Tu je blok "Vytvor kružnicu", ktorý dokáže kresliť
-        kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého kruhu s
-        veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+        kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malej kružnice
+        s veľkosťou 5 a väčšej kružnice s veľkosťou 10?
       grade4_frozen_functions4: Zložité snehové vzory je možné vytvoriť pomocou veľmi
         jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou
         5 a 5 kružníc s veľkosťou 10?
@@ -1045,10 +1071,10 @@ sk:
         kosoštvorec. Podobne ako štvorec, kosoštvorec má všetky strany rovnakej dĺžky,
         ale má odlišné uhly. Tento má uhly 60 a 120 stupňov (namiesto pravých uhlov).
       grade4_frozen_nested_loop_diamonds2: Vedel si, že každá snehová vločka má iný
-        tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník
-        zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
+        tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým kosoštvorec
+        zopakujeme 4-krát. Po každom kosoštvorci sa otočíme o 90 stupňov.
       grade4_frozen_nested_loop_diamonds3: Teraz vytvor novú vločku pomocou bloku
-        "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš
+        "Opakuj" tak, že kosoštvorec zopakuješ 10-krát a po každom z nich sa otočíš
         vpravo o 36 stupňov.
       grade4_frozen_nested_loop_rectangle1: Ahoj, som Anna z Arendelle. Použime blok
         "Opakuj" aby sme vytvorili obdĺžnik. Tento má dĺžku 200 pixelov a výšku 100
@@ -1068,11 +1094,11 @@ sk:
       grade4_review_artist3: Blok so skokom posunie umelca bez toho, aby bolo treba
         nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov "poskočiť dopredu"
         a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.
-      grade4_review_bee1: A teraz použite blok "opakovať" pre pozbieranie všetkého
-        nektáru a vyrobenie všetkého medu.
-      level 'grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
-      level 'grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého
-        nektáru a vyrobenie všetkého medu.
+      grade4_review_bee1: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
+        a vyrobenie všetkého medu.
+      level 'grade3_Loops_3: Použi cyklus "opakuj" a pozbieraj všetok nektár.
+      level 'grade3_Loops_4: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
+        a vyrobenie všetkého medu.
       level 'grade3_Loops_6: "Koľkokrát ti môžu cykly pomôcť v tejto úlohe? \n\nCykly
         sú tvojimi kamarátmi! Použi ich niekoľko tak, aby si túto úlohu dokončil s
         čo najmenším počtom blokov."

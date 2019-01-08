@@ -4509,6 +4509,9 @@ es:
           que hacer en cada panal?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Esto es una pista.
+      Tortoise and Hare_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Todo el código está en su lugar para asegurarse de la lava y enfrentarla.
           Todo lo que necesitas hacer es agregar un bloque para moverte.
@@ -4735,6 +4738,15 @@ es:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este
           rompecabezas.
+      behaviors 3_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
+      behaviors 5a_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
+      behaviors 6_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer tu código.

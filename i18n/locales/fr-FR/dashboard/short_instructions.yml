@@ -49,6 +49,7 @@ fr:
       2-3 Artist Functions 12 a: "Les fonctions sont vraiment très biens pour dessiner des choses complexes plusieurs fois. Peux-tu utiliser la fonction «Dessiner une fleur» pour remplir le reste de la jardinière ? (Indice : les plantes sont séparées les unes des autres d’une longueur de 100 pixels)  "
       2-3 Artist Functions 12: "Les fonctions sont vraiment très biens pour dessiner des choses complexes plusieurs fois. Peux-tu utiliser la fonction «Dessiner une fleur» pour remplir le reste de la jardinière ? (Indice : les plantes sont séparées les unes des autres d’une longueur de 100 pixels)  "
       2-3 Artist Functions 13: Nous t’avons fourni quatre fonctions. Utilise les comme bon te semble à l'intérieur d'une ou de plusieurs boucles pour faire des images que tu pourras partager avec tes amis. Appuie sur « Exécuter » pour voir un exemple.
+      2-3 Artist Functions 2 a: 'Sers-toi du petit bloc vert « dessiner un carré » pour appeler cette fonction et dessiner les lunettes. '
       2-3 Artist Functions 2: "Les fonctions te permettent de définir de nouveaux blocs ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner un carré» pour créer les lunettes ? Les carrés sont à 75 pixels les uns des autres."
       2-3 Artist Functions 3: "Modifie la fonction pour dessiner un carré de 115 pixels de côté et dessine de plus grands verres. Les carrés sont maintenant à 45 pixels les uns des autres."
       2-3 Artist Functions 4: Utilise le bloc « Répéter » pour dessiner ces 3 carrés.
@@ -400,6 +401,11 @@ fr:
       4-5 While Loops 7: Wow, maintenant il y a trois tas de terre ! Peux-tu écrire un programme qui enlèvera chacun d’entre eux jusqu’à ce que le sol soit nivelé ?
       4-5 While Loops 8: " Il y a un trou vraiment profond et un tas de terre vraiment important.  Combien de pelletées de terre faut-il déplacer pour niveler le sol ?  Indice : Utilise la boucle «Tant que» pour les deux."
       4-5 While Loops Assessment 1: Il y a beaucoup de trous et de tas.  Aide-moi à les remplir et à les enlever pour niveler le sol.
+      AB_Debug_PlayLab2: |-
+        Pourquoi ce jeu ne fait rien ?
+
+        Peux-tu trouver les bugs « cachés » ? Certains sont plus faciles que d’autres.
+      AB_Debug_PlayLab3: Déplace le chevalier vers chacun des drapeaux. Si quelque chose ne va pas, cherche les bugs !
       AlgPD DR Free Play: Crée une fonction basée sur ton propre puzzle verbal.
       Alien Defender: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
       Alien Defender_2018: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
