@@ -1,12 +1,14 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import i18n from '@cdo/locale';
 import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED,
 } from './ScriptOverviewTopRow';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
@@ -26,6 +28,7 @@ class ScriptOverview extends React.Component {
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
+    redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -53,6 +56,29 @@ class ScriptOverview extends React.Component {
     selectedSectionId: PropTypes.string,
   };
 
+  state = {
+    showRedirectDialog: false,
+  };
+
+  componentDidMount() {
+    const {redirectScriptUrl} = this.props;
+    if (redirectScriptUrl && redirectScriptUrl.length > 0) {
+      this.onOpenRedirectDialog();
+    }
+  }
+
+  onOpenRedirectDialog = () => {
+    this.setState({
+      showRedirectDialog: true,
+    });
+  };
+
+  onCloseRedirectDialog = () => {
+    this.setState({
+      showRedirectDialog: false,
+    });
+  };
+
   render() {
     const {
       onOverviewPage,
@@ -73,6 +99,7 @@ class ScriptOverview extends React.Component {
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       showRedirectWarning,
+      redirectScriptUrl,
       versions,
       hiddenStageState,
       selectedSectionId,
@@ -92,6 +119,15 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
+            {redirectScriptUrl &&
+              <RedirectDialog
+                isOpen={this.state.showRedirectDialog}
+                details={i18n.assignedToNewerVersion()}
+                handleClose={this.onCloseRedirectDialog}
+                redirectUrl={redirectScriptUrl}
+                redirectButtonText={i18n.goToAssignedVersion()}
+              />
+            }
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
