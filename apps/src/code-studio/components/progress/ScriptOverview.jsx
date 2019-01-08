@@ -119,15 +119,13 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
-            {redirectScriptUrl &&
-              <RedirectDialog
-                isOpen={this.state.showRedirectDialog}
-                details={i18n.assignedToNewerVersion()}
-                handleClose={this.onCloseRedirectDialog}
-                redirectUrl={redirectScriptUrl}
-                redirectButtonText={i18n.goToAssignedVersion()}
-              />
-            }
+            <RedirectDialog
+              isOpen={this.state.showRedirectDialog}
+              details={i18n.assignedToNewerVersion()}
+              handleClose={this.onCloseRedirectDialog}
+              redirectUrl={redirectScriptUrl}
+              redirectButtonText={i18n.goToAssignedVersion()}
+            />
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
