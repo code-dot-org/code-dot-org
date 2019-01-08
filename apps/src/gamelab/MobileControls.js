@@ -1,4 +1,6 @@
 import dom from '../dom';
+import gameLabDPadHtmlEjs from '../templates/gameLabDPad.html.ejs';
+import { GAMELAB_DPAD_CONTAINER_ID } from './constants';
 
 const DPAD_DEAD_ZONE = 3;
 // Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
@@ -47,9 +49,13 @@ function domIdFromArrow(idBtn) {
 export default class MobileControls {
   btnState = {};
   dPadState = {};
+  dpadFourWay = true;
 
   init(opts) {
     this.opts = opts || {};
+
+    document.getElementById(GAMELAB_DPAD_CONTAINER_ID).innerHTML = gameLabDPadHtmlEjs();
+
     // Connect up arrow button event handlers
     for (const btn in ArrowIds) {
       dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
@@ -64,6 +70,48 @@ export default class MobileControls {
     document.addEventListener('mouseup', this.onMouseUp, false);
     if (mouseUpTouchEventName) {
       document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp);
+    }
+  }
+
+  update(config, isShareView = true) {
+    const { dpadVisible, dpadFourWay, spaceButtonVisible, mobileOnly } = config;
+    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
+
+    const dpadDisplayStyle = (dpadVisible && mobileControlsOk) ? 'inline' : 'none';
+    document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-cone').style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-button').style.display = dpadDisplayStyle;
+
+    const spaceButtonDisplayStyle = (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none';
+    document.getElementById('studio-space-button').style.display = spaceButtonDisplayStyle;
+
+    if (this.dpadFourWay !== dpadFourWay) {
+      if (this.dPadState.trackingMouseMove) {
+        // Fake a mousemove back at the original starting position, which
+        // will reset buttons back to "up":
+        this.onMouseMove({
+          clientX: this.dPadState.startingX,
+          clientY: this.dPadState.startingY,
+        });
+      }
+
+      this.dpadFourWay = dpadFourWay;
+
+      if (this.dPadState.trackingMouseMove) {
+        // Fake another mousemove at the last mousemove position, which
+        // will set up buttons correctly for the new dpad mode:
+        this.onMouseMove({
+          clientX: this.dPadState.previousX,
+          clientY: this.dPadState.previousY,
+        });
+      }
+    }
+
+    // For export mode only:
+    if (dpadVisible || spaceButtonVisible) {
+      $('#sketch').removeClass('no-controls');
+    } else {
+      $('#sketch').addClass('no-controls');
     }
   }
 
@@ -93,7 +141,6 @@ export default class MobileControls {
   }
 
   onMouseMove = (e) => {
-    const { isDPadFourWay } = this.opts;
     var clientX = e.clientX;
     var clientY = e.clientY;
     if (e.touches) {
@@ -101,7 +148,7 @@ export default class MobileControls {
       clientY = e.touches[0].clientY;
     }
 
-    if (typeof isDPadFourWay === 'function' && isDPadFourWay()) {
+    if (this.dpadFourWay) {
       this.notifyKeysFourWayDPad(clientX, clientY);
     } else {
       this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
@@ -169,6 +216,8 @@ export default class MobileControls {
     if (softButtonIds.length) {
       $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonIds.length);
     }
+    // For export mode only:
+    $('#sketch').removeClass('no-controls');
 
     this.resetDPad();
   }
@@ -299,13 +348,14 @@ export default class MobileControls {
 
       document.body.removeEventListener('mousemove', this.onMouseMove);
       if (mouseMoveTouchEventName) {
-        document.body.removeEventListener(this.dPadState.touchEventName,
+        document.body.removeEventListener(mouseMoveTouchEventName,
             this.onMouseMove);
       }
 
       $('#studio-dpad-button').removeClass('active');
 
       this.dPadState = {};
+      this.dPadFourWay = true;
     }
   }
 }
