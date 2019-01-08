@@ -446,6 +446,8 @@ class Script < ActiveRecord::Base
     latest_script_version == self || is_assigned || has_progress
   end
 
+  # @param family_name [String] The family name for a script family.
+  # @return [Script] Returns the latest version in a script family.
   def self.latest_stable_version(family_name, locale)
     return nil unless family_name.present? && locale.present?
 
@@ -455,11 +457,28 @@ class Script < ActiveRecord::Base
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale)
     supported_stable_scripts = script_versions.select do |script|
-      is_supported = script.supported_locales.include?(locale) || locale.start_with?('en')
+      is_supported = script.supported_locales&.include?(locale) || locale.start_with?('en')
       script.is_stable && is_supported
     end
 
     supported_stable_scripts&.first
+  end
+
+  # @param family_name [String] The family name for a script family.
+  # @param user [User]
+  # @return [Script] Returns the latest version in a family that the user is assigned to.
+  def self.latest_assigned_version(family_name, user)
+    return nil unless family_name && user
+    assigned_script_ids = user.section_scripts.pluck(:id)
+
+    Script.
+      # select only scripts assigned to this user.
+      where(id: assigned_script_ids).
+      # select only scripts in the same family.
+      where(family_name: family_name).
+      # order by version year.
+      order("properties -> '$.version_year' DESC")&.
+      first
   end
 
   def text_response_levels
