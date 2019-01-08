@@ -1584,6 +1584,8 @@ ar-SA:
   header_course_catalog: كتالوج الدورات التدريبية
   header_project_gallery: المشاريع
   header_sections: الأقسام
+  header_educate_overview: لمحة عن المدرس
+  header_educate_elementary: المدرسة الابتدائية
   header_educate_middle: المرحلة المتوسطة
   header_educate_high: المرحلة الثانوية
   header_educate_hoc: ساعة البرمجة
@@ -1591,10 +1593,12 @@ ar-SA:
   header_educate_beyond: بعد Code.org
   header_educate_inspire: ألهم طالب
   header_educate_community: مجتمع الإنترنت
+  header_educate_tools: الأدوات والفيديوهات
   header_about_us: نبذة عنا
   header_about_leadership: القيادة
   header_about_donors: المتبرعون
   header_about_partners: الشركاء
+  header_about_team: الفريق الكامل
   header_about_news: مركز الأنباء
   header_about_evaluation: التقييم
   header_about_jobs: وظائف
@@ -1605,6 +1609,8 @@ ar-SA:
   header_stats: الإحصائيات
   header_help_us: ساعدنا
   header_about: حول
+  header_teacher_community: مجموعة المدرس
+  header_report_bug: أبلغ عن وجود مشكلة
   user_header_label: مرحباً %{username}
   user_header_team: فريق
   user_header_settings: حسابي

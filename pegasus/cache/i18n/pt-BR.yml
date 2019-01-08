@@ -36,7 +36,7 @@ pt-BR:
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
-  og_title: A Hora do Código está chegando
+  og_title: 'Code.org: Qualquer um pode aprender'
   og_title_soon: A Hora do Código está chegando
   og_title_here: A Hora do Código chegou!
   og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
@@ -323,8 +323,8 @@ pt-BR:
     aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Frank Martinez, Professor'
-  studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore o Code Studio
+  studiobar_title: Explore os <a href='http://studio.code.org'>Cursos Code.org</a>
+  studiobar_title_nolink: Explore os cursos do Code.org
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_dance_title: Festa dançante
@@ -625,7 +625,7 @@ pt-BR:
     do Real Madrid
   sports_athlete_Sue: Sue Bird, medalhista de ouro olímpico e campeã da Liga Feminina
     Americana de Basquete (WNBA), Seattle Storm
-  sports_athlete_Alana: Barba de Alana, medalhista de ouro e WNBA All-Star, Los Angeles
+  sports_athlete_Alana: Alana Beard, medalhista de ouro e WNBA All-Star, Los Angeles
     Sparks
   sports_athlete_Angelo: Angelo Matthews, capitão do time de críquete do Sri Lanka
   sports_athlete_Nneka: Nneka Oliveira, medalhista de ouro, campeã da WNBA e MVP em
@@ -1164,17 +1164,17 @@ pt-BR:
   carousel_heading_beginners: Tutoriais para alunos do Ensino Fundamental
   carousel_heading_beyond_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
-  carousel_heading_beyond_javascript: Tutoriais que ensinam JavaScript
+  carousel_heading_beyond_javascript: Aprenda JavaScript
   carousel_heading_unplugged: Não tem dispositivos eletrônicos nem Internet? Conheça
     as atividades de ciência da computação "offline"
   carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
-  carousel_heading_beyond_devices: Aplicativos de tutoriais para telefones e tablets
+  carousel_heading_beyond_devices: Aplicativos para telefones e tablets
   carousel_heading_languages: Tutoriais sobre outras linguagens de programação
   carousel_heading_beyond_languages: Tutoriais sobre outras linguagens de programação
   carousel_heading_apps_games: Crie seus próprios aplicativos e jogos
   carousel_heading_university: Cursos universitários on-line
   carousel_heading_webpages: Aprenda a fazer páginas da Web
-  carousel_heading_robots: Aprenda a programar com robôs
+  carousel_heading_robots: Aprenda a programar com robôs e dispositivos
   carousel_heading_ide: Plataformas populares entre professores
   carousel_heading_desktop: Aprender a programar em um computador
   carousel_heading_mobtabelem: Para telefones e tablets
