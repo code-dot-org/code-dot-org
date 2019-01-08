@@ -37,7 +37,7 @@ fr:
         NetSim: Simulateur d'Internet
         Custom: Artiste
         CustomStudio: Labo de jeux
-        Gamelab: Game Lab
+        Gamelab: Labo des jeux
     trophy:
       name:
         Bronze: Bronze
@@ -418,11 +418,11 @@ fr:
         mc_2016_events: Minecraft Hour of Code - Événements
         mc_2016_spawn: Minecraft Heure du Code - Spawn
         mc_2016_congrats: Minecraft Hour of Code - Félicitations
-        applab_hoc_welcome: Heure de Code dans App Lab - Bienvenue
-        applab_hoc_setproperty: Heure de Code dans App Lab - setProperty
-        applab_hoc_onevent: Heure de Code dans App Lab - onEvent
-        applab_hoc_designmode: Heure de Code dans App Lab - Mode Création
-        applab_hoc_share: Heure de Code dans App Lab - Partager
+        applab_hoc_welcome: Heure de Code dans le labo des applis - Bienvenue
+        applab_hoc_setproperty: Heure de Code dans le labo des applis - setProperty
+        applab_hoc_onevent: Heure de Code dans le labo des applis - onEvent
+        applab_hoc_designmode: Heure de Code dans le labo des applis - Mode Création
+        applab_hoc_share: Heure de Code dans le labo des applis - Partager
         mc_2017_agent_intro: Minecraft Hour of Code - L'Agent
         mc_2017_repeat: Minecraft Heure du code - Les boucles
         mc_2017_functions: Minecraft Hour of Code - Les fonctions
@@ -445,21 +445,40 @@ fr:
         hint_videos_d_11_9_last: 'Astuces en vidéo: D.11.9 en dernier'
         hint_videos_d_11_11_first: 'Astuces en vidéo: D.11.11 en premier'
         hint_videos_d_11_11_last: 'Astuces en vidéo: D.11.11 en dernier'
-        applab_intro_welcome: App Lab - Démarrage
-        applab_intro_events: App Lab - Rendez-le interactif
-        applab_intro_sounds: App Lab - Images et sons
-        applab_intro_designmode: App Lab - Mode création
-        applab_intro_share: App Lab - Partagez votre application
+        applab_intro_welcome: Labo des applis - Démarrer
+        applab_intro_events: Labo des applis - Rendez-le interactif
+        applab_intro_sounds: Labo des applis - Images et sons
+        applab_intro_designmode: Labo des applis - Mode création
+        applab_intro_share: Labo des applis - Partagez votre application
         csd_applab_arrays: Introduction sur les Arrays
         CSF_skinOverview_Harvester: La moissonneuse
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_harvester_skinOverview_K-1: La moissonneuse
+        CSF_scrat_loops_K1: Boucles dans l'Âge de Glace
+        CSF_scrat_loops_CF: Boucles dans l'Âge de Glace
         CSF_if_allskins: Le bloc conditionnel if
         CSF_ifelse_allskins: Utiliser les blocs If/Else
         CSF_ifelseifelse_allskins: Utiliser les blocs If/ElseIf/Else
         CSF_loops_AB: boucles
         csd_gamelab_booleans: Expressions booléennes
+        csd_gamelab_conditional_statements: Instructions conditionnelles
+        csd_gamelab_if_else: Instructions si/alors
+        CSF_SpriteLabIntro_CDEF: Voici Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Comment créer un sprite dans Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites en action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en action
+        CSF_StarWars_ProjectIntro: Introduction au projet Star Wars
+        mc_2018_intro: 'Minecraft : Voyage Aquatique - Introduction'
+        MC_2018_loops: 'Minecraft : Voyage Aquatique - Répéter jusqu''à'
+        mc_2018_conditionals: 'Minecraft : Voyage Aquatique - Instructions conditionnelles'
+        mc_2018_closing: 'Minecraft : Voyage Aquatique - Félicitations'
+        hoc_dance_warmup: Fête dansante - Échauffement
+        hoc_dance_events: Soirée Dansante - Évènements
+        hoc_dance_properties: Soirée Dansante - Propriétés
+        hoc_dance_congrats: Fête dansante - C'est la fête !
+        c_and_c_great_to_create: C'est bien de créer et de jouer équitablement
+        c_and_c_digital_sharing: Partage numérique
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

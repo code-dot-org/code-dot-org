@@ -591,10 +591,26 @@ tr:
             '"left"': sol
       gamelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
       gamelab_randColor:
         text: rastgele renk
       gamelab_randomColor:
         text: rastgele renk
+      gamelab_randomLocation:
+        text: rastgele konum
       gamelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       gamelab_setPosition:
@@ -629,6 +645,13 @@ tr:
             '"height"': Yükseklik
       gamelab_setup:
         text: kurulum
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -650,6 +673,8 @@ tr:
           DIRECTION:
             '"right"': sağ
             '"left"': sol
+      gamelab_whenDownArrow:
+        text: aşağı ok basıldığında
       gamelab_whenKey:
         text: "{KEY} basıldığında"
         options:
@@ -659,6 +684,10 @@ tr:
             '"left"': sol
             '"right"': sağ
             '"space"': uzay
+      gamelab_whenLeftArrow:
+        text: sol ok basıldığında
+      gamelab_whenMouseClicked:
+        text: fare tıklandığında
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -833,6 +862,8 @@ tr:
             '"a"': A
             '"s"': G
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: fare tıklandığında
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -848,6 +879,8 @@ tr:
         text: sağa dön
       Vector_positionCenter:
         text: merkez
+      Vector_randomLocation:
+        text: rastgele konum
       aalab_changeGroupPropBy:
         options:
           PROPERTY:

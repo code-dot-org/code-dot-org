@@ -79,6 +79,19 @@ fi:
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+      Dance_Party_01_callout:
+        dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      Dance_Party_02_callout:
+        dance_callout_02: Lisää tämä blokki ohjelmaasi!
+      Dance_Party_04_callout:
+        dance_callout_04: Lisää tämä blokki ohjelmaasi!
+      Dance_Party_06_callout:
+        dance_callout_06: Lisää uusi tanssija täällä
+      Dance_Party_11_callout:
+        dance_callout_11_a: Uusi blokki!
+        dance_callout_11_b: Uusi blokki!
       Eval Design Recipe .1_callout:
         edit_function: Muokkaa funktiotasi napsauttamalla tästä.
       Frozen Project Test Toolbox_callout:

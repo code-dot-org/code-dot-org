@@ -283,6 +283,7 @@ uk:
             '"spiral"': Спіраль
             '"disco"': Квадрати
       Dancelab_setBackgroundEffectWithPalette:
+        text: встановити ефект тла {EFFECT}
         options:
           EFFECT:
             '"rand"': "(Випадковий)"

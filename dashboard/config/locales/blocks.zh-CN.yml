@@ -100,14 +100,24 @@ zh-CN:
           MOVE:
             '"rand"': 随机
             MOVES.Roll: 身体转动
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Dab: 轻拍
+            MOVES.XFever: 迪斯科
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
             MOVES.Fresh: 双手画圈
             MOVES.Clown: 江南
+            MOVES.XHeadHips: 头部 + 臀部
+            MOVES.XHop: 跳
+            MOVES.XHighKick: 踢
+            MOVES.XKnee: 膝盖
+            MOVES.XKneel: 跪
+            MOVES.XOle: Ole
+            MOVES.XSlide: 滑动
             MOVES.Kick: 踢腿
+            MOVES.XArmsUp: 拉伸
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
           DIR:
@@ -119,14 +129,24 @@ zh-CN:
           MOVE:
             '"rand"': 随机
             MOVES.Roll: 身体转动
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Dab: 轻拍
+            MOVES.XFever: 迪斯科
             MOVES.DoubleJam: 两倍下降
             MOVES.Drop: 丢掉
             MOVES.Floss: 丝线
             MOVES.Fresh: 双手画圈
             MOVES.Clown: 江南
+            MOVES.XHeadHips: 头部 + 臀部
+            MOVES.XHop: 跳
+            MOVES.XHighKick: 踢
+            MOVES.XKnee: 膝盖
+            MOVES.XKneel: 跪
+            MOVES.XOle: Ole
+            MOVES.XSlide: 滑动
             MOVES.Kick: 踢腿
+            MOVES.XArmsUp: 拉伸
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
           DIR:
@@ -339,6 +359,7 @@ zh-CN:
             '"color_cycle"': 颜色
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
             '"swirl"': 催眠
             '"kaleidoscope"': 万花筒
             '"lasers"': 激光舞池
@@ -353,6 +374,8 @@ zh-CN:
           PALETTE:
             '"rave"': 黑白
             '"cool"': 蓝色
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
             '"default"': 光
             '"neon"': 霓虹
             '"tropical"': 热带
@@ -368,6 +391,7 @@ zh-CN:
             '"color_cycle"': 颜色
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
             '"swirl"': 催眠
             '"kaleidoscope"': 万花筒
             '"lasers"': 激光舞池
@@ -382,6 +406,8 @@ zh-CN:
           PALETTE:
             '"rave"': 黑白
             '"cool"': 蓝色
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
             '"default"': 光
             '"neon"': 霓虹
             '"tropical"': 热带
@@ -428,10 +454,13 @@ zh-CN:
             '"hearts_red"': 心
             '"music_notes"': 音符
             '"pineapples"': 菠萝
+            '"pizzas"': 比萨
             '"smiling_poop"': 便便
             '"rain"': 下雨
             '"floating_rainbows"': 彩虹
+            '"smile_face"': 微笑
             '"spotlight"': 聚光灯
+            '"color_lights"': 舞台灯光
             '"raining_tacos"': 玉米卷
       Dancelab_setForegroundEffectExtended:
         text: 设置前景效果为 {EFFECT}
@@ -444,10 +473,13 @@ zh-CN:
             '"hearts_red"': 心
             '"music_notes"': 音符
             '"pineapples"': 菠萝
+            '"pizzas"': 比萨
             '"smiling_poop"': 便便
             '"rain"': 下雨
             '"floating_rainbows"': 彩虹
+            '"smile_face"': 微笑
             '"spotlight"': 聚光灯
+            '"color_lights"': 舞台灯光
             '"raining_tacos"': 玉米卷
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
@@ -588,6 +620,7 @@ zh-CN:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': n
             '"o"': o
             '"p"': p
             '"r"': r
@@ -1255,6 +1288,12 @@ zh-CN:
             '"direction"': 移动方向
             '"rotation"': 旋转或方向
             '"tint"': 色调
+      binary_drawPixelHere:
+        options:
+          VAL:
+            '0': 'off'
+            '1': 开启
+            '"toggle"': 切换
       binary_move:
         options:
           DIR:

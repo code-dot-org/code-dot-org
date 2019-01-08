@@ -255,6 +255,10 @@ ar:
     new_teacher_subject: مرحبا بكم في Code.org!
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
   section:
+    your_section:
+      one: 'القسم الخاص بك:'
+      other: 'الأقسام الخاصة بك:'
+    code_with_teacher: "%{section_code} مع %{teacher_name}"
     confirm:
       remove: هل أنت متأكد من أنك تريد مغادرة هذا القسم؟
     default_name: مقطع بدون عنوان
@@ -276,6 +280,8 @@ ar:
       section_not_found: تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'.
       blank_code: الرجاء إدخال رمز الفرع
       cant_join_own_section: عذراً، لا يمكنك الانضمام إلى القسم الخاص بك.
+      provider_managed_section: يتم إدارة هذا القسم من مدير آخر ولا يمكن الولوج إليه.
+        المرجو طلب مدرسك لإضافتك عبر %{provider} وتحديثه.
     mail:
       student_disassociated:
         subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
@@ -296,6 +302,15 @@ ar:
     updated: تم بنجاح تحديث %{model}.
     destroyed: تم حذف %{model} بنجاح.
     access_denied: ليس لديك حق الوصول إلى هذا %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: البريد الالكتروني الذي قدمته لا يطابق البريد
+          المستعمل لهذا الحساب
+        personal_login_created_email: تم إشاء حساب خاص بك بنجاح. يمكنك الآن الولوج
+          إليه باستعمال البريد الالكتروني وكلمة المرور
+        personal_login_created_username: تم إنشاء حساب خاص بك بنجاح. يمكن الآن الولوج
+          إليه باستعمال اسم المستعمل الخاص بك %{username} وكلمة المرور
   nav:
     header:
       finished_hoc: 'لقد انهيت ساعة من البرمجة '
@@ -304,9 +319,15 @@ ar:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
         applab: اصنع تطبيقا
+        gamelab: أنشئ مشروع مختبر لعبة
+        weblab: أنشئ مشروع مختبر ويب (تجريبي)
       course_catalog: كتالوج الدورات التدريبية
       project_gallery: المشاريع
       sections: الأقسام
+      report_bug: أبلغ عن وجود مشكلة
+      teacher_community: مجموعة المدرس
+      educate_overview: لمحة عن المدرس
+      educate_elementary: المدرسة الابتدائية
       educate_middle: المرحلة المتوسطة
       educate_high: المرحلة الثانوية
       educate_hoc: ساعة البرمجة
@@ -314,10 +335,12 @@ ar:
       educate_beyond: بعد Code.org
       educate_inspire: ألهم طالب
       educate_community: مجتمع الإنترنت
+      educate_tools: الأدوات والفيديوهات
       about_us: نبذة عنا
       about_leadership: القيادة
       about_donors: المتبرعون
       about_partners: الشركاء
+      about_team: الفريق الكامل
       about_news: مركز الأنباء
       about_evaluation: التقييم
       about_jobs: وظائف
@@ -338,6 +361,7 @@ ar:
       signin: تسجيل الدخول
       signup: إنشاء حساب
       already_registered: هل قمت بالتسجيل من قبل؟
+      pair_programming: البرمجة الثنائية
       team: فريق
       driver: سائق
       navigator: مستكشف
@@ -397,6 +421,8 @@ ar:
     current_password_hint: "(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)"
     delete: إحذف الحساب الخاص بك
     delete_text: النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك.
+    delete_text_teacher_managed_note: ليس لديكم الإذن في حذف هذا الحساب لأنه تتم إدارته
+      من قبل مدرسك. مدرسوك سيحتاجون نقلك من قسمهم قبل حذف حسابك.
     delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات
       طلابك.
     delete_confirm: هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟
@@ -603,6 +629,7 @@ ar:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
     teacher: انظر الى الحل
+    teacher_no_solution: توقف عن الإطلالات على الأجوبة
     auth_error: انت غير مسموح لك برؤية الحل.
     submit: تحديث موقع الفنان
     direction: اتجاه البدء (بالدرجات)
@@ -612,12 +639,25 @@ ar:
     notes_coming_soon: ملاحظات على هذا الفيديو. قريبا.
     autoplay_option: تشغيل تلقائي لاشرطة الفيديو
     download: تحميل الفيديو
+    show_notes: إظهار الملاحظات
+    show_video: إظهار الفيديو
   compatibility:
     upgrade:
       unsupported_message: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}',
         target='_blank'> أحد متصفحاتنا المدعومة.</a> يمكنك تجربة رؤية الصفحة, ولكن
         توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
       link: اعرف المزيد
+      applab_unsupported_tablet: مختبر التذبيق يعمل جيدا على الحاسوب المكتبي و الحاسوب
+        المحمول بالفأرة ولوحة المفاتيح. يمكن تجربة تمارين باستعمال هذه الأداة على
+        جهازك.
+      gamelab_unsupported_tablet: مختبر اللعبة يعمل جيدا على الحاسوبين المكتبي والمحمول
+        بالفأرة ولوحة المفاتيح. يمكن تجريب مسائل باستعمال هذه الأداة على جهازك الحالي.
+      weblab_unsupported_browser: للأسف، نحن الآن في تجريب لمسائل بتحميل مختبر الويب
+        على محرك البحث هذا. يمكن أن تستعمل محرك بحث آخر إلى أن يتم حل المشكل. نأسف
+        عن هذا العطب.
+      weblab_unsupported_locale_storage: يمكن تجريب مسائل باستعمال مختبر ويب في الوضع
+        الخاص لمحرك البحث. المرجو إعادة تحميل مشروعك إلى الوضع العادي. نحن متأسفون
+        على هذا الإزعاج.
   slow_loading: هذا يأخذ وقتاً اطول من المعتاد...
   try_reloading: حاول اعادة تحميل الصفحة
   next_stage: انتهى! استمر في المرحلة القادمة

@@ -354,7 +354,7 @@ pt-BR:
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
             '"lasers"': Laser de pista de dança
-            '"splatter"': Bolhas
+            '"splatter"': Respingos de tinta
             '"rainbow"': Arco-íris
             '"snowflakes"': Neve
             '"text"': Título da música
@@ -1066,10 +1066,12 @@ pt-BR:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_groupChangePropBy:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
           PROPERTY:
             '"scale"': tamanho
             '"rotation"': rotação
@@ -1093,8 +1095,12 @@ pt-BR:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_groupGetProp:
         options:
+          SELECT:
+            '"average"': média
+            '"this"': este
           PROPERTY:
             '"scale"': tamanho
             '"rotation"': rotação
@@ -1105,18 +1111,22 @@ pt-BR:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_groupRemoveTint:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_groupSetProp:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
           PROPERTY:
             '"scale"': tamanho
             '"rotation"': rotação
@@ -1127,6 +1137,7 @@ pt-BR:
         options:
           SELECT:
             '"all"': todos
+            '"this"': este
       Mikelab_hasBehavior:
         text: "{SPRITE} está {BEHAVIOR}"
       Mikelab_ifDanceIs:
@@ -1281,6 +1292,11 @@ pt-BR:
             '"direction"': direção do movimento
             '"rotation"': rotação ou direção
             '"tint"': tonalidade
+      binary_drawPixelHere:
+        options:
+          VAL:
+            '0': desligado
+            '1': ligado
       binary_move:
         options:
           DIR:

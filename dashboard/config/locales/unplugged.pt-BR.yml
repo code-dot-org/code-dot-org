@@ -566,11 +566,26 @@ pt-BR:
       courseB_unplugged_MRF_2019:
         title: Meus amigos robóticos
         desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2019:
+        title: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Condições
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      courseF_unplugged_powerOfWords_2019:
+        title: 'tradução pendente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'tradução pendente: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'tradução pendente: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um
@@ -593,6 +608,12 @@ pt-BR:
           esse conceito um passo adiante, uma vez que demonstra como um computador
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
+      courseE_unplugged_privateInformation_2019:
+        title: 'tradução pendente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+      SongwritingParameters_2019:
+        title: 'tradução pendente: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Compartilhamento Digital
         desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
@@ -601,8 +622,12 @@ pt-BR:
           particularmente em ambientes digitais. Estudantes deveriam ser encorajados
           a respeitar os direitos dos artistas como uma parte importante de ser um
           cidadão digital ético.
+      Internet_2019:
+        title: 'tradução pendente: en-US.data.unplugged.Internet_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.Internet_2018.desc'
       Crowdsourcing_2019:
         title: 'tradução pendente: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Repetindo
         desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções

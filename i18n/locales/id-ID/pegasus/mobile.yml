@@ -1311,6 +1311,8 @@
   sign_in_instruct_button: "Tekan tombol \"masuk\"."
   reset_student_password: "Mengatur ulang pelajar kata sandi"
   applab_tile_start_tutorial: "Mulai"
+  account_sign_up_email_opt_in: "Dapat kami email Anda tentang pembaruan kursus kami, peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)"
+  account_sign_up_child_accept_terms: "Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
   hoc_overview_start_tutorial: "Mulai"
   hoc2018_creativity_create: "Buat"
   hoc2018_mc_page_title: "Tutorial Minecraft Jam Kode"

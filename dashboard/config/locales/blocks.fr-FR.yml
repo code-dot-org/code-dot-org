@@ -9,7 +9,7 @@ fr:
             '"measures"': mesures
             '"seconds"': des secondes
       Dancelab_changeColorBy:
-        text: changer {COLOR} {METHOD} par {AMOUNT}
+        text: changer {COLOR} {METHOD} de {AMOUNT}
         options:
           METHOD:
             '"hue"': teinte
@@ -37,8 +37,12 @@ fr:
             '"rand"': "(Aléatoire)"
             MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
-            MOVES.Clown: Clown
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -54,8 +58,12 @@ fr:
             '"rand"': "(Aléatoire)"
             MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
-            MOVES.Clown: Clown
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -69,6 +77,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
       Dancelab_doMoveEachLR:
@@ -91,8 +100,14 @@ fr:
             '"rand"': "(Aléatoire)"
             MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Doubler la mise
-            MOVES.Clown: Clown
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Tête + hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -106,8 +121,14 @@ fr:
             '"rand"': "(Aléatoire)"
             MOVES.Roll: Roulis de caisse
             MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Doubler la mise
-            MOVES.Clown: Clown
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Tête + hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -140,11 +161,13 @@ fr:
             '"mid"': médium
             '"high"': aigu
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -161,17 +184,28 @@ fr:
         options:
           DANCE:
             MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
             MOVES.Roll: Roulis de caisse
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
       Dancelab_ifTime:
+        text: |-
+          si {UNIT} est {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': des secondes
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} passer à {LOCATION}"
         options:
@@ -209,6 +243,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"plus"': plus
             '"random"': aléatoire
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -224,6 +259,7 @@ fr:
             '"FROG"': Grenouille
             '"MOOSE"': Orignal
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robot
             '"SHARK"': Requin
             '"UNICORN"': Licorne
           LOCATION:
@@ -271,6 +307,7 @@ fr:
             '"FROG"': Grenouilles
             '"MOOSE"': Orignal
             '"PINEAPPLE"': Ananas
+            '"ROBOT"': Robots
             '"SHARK"': Requins
             '"UNICORN"': Licornes
           LAYOUT:
@@ -280,6 +317,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"plus"': plus
             '"random"': aléatoire
       Dancelab_mixColors:
         text: mélanger {COLOR1} et {COLOR2}
@@ -301,19 +339,28 @@ fr:
           EFFECT:
             '"none"': Aucun
             '"circles"': Tunnel
+            '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
+            '"fireworks"': Feux d'artifice
+            '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
+            '"splatter"': Éclaboussures de peinture
             '"rainbow"': Couleurs
+            '"snowflakes"': Neige
             '"text"': Titre de la chanson
             '"sparkles"': Éclats
+            '"spiral"': Spirale
             '"disco"': Carrés
             '"stars"': Étoiles
           PALETTE:
             '"rave"': Noir et blanc
             '"cool"': Blues
+            '"iceCream"': Crème glacée
             '"default"': Lumière
             '"neon"': Néon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setBackgroundEffectWithPalette:
         text: définir l’effet de fond {EFFECT} {PALETTE}
@@ -322,20 +369,28 @@ fr:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
             '"circles"': Tunnel
+            '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
+            '"fireworks"': Feux d'artifice
+            '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Couleurs
+            '"snowflakes"': Neige
             '"text"': Titre de la chanson
             '"sparkles"': Éclats
+            '"spiral"': Spirale
             '"disco"': Carrés
             '"stars"': Étoiles
           PALETTE:
             '"rave"': Noir et blanc
             '"cool"': Blues
+            '"iceCream"': Crème glacée
             '"default"': Lumière
             '"neon"': Néon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
@@ -347,6 +402,7 @@ fr:
             '0.5': lent
             '0.25': très lent
       Dancelab_setDanceSpeedEach:
+        text: mettre la vitesse de danse de {GROUP} à {SPEED}
         options:
           GROUP:
             sprites: tout
@@ -372,24 +428,38 @@ fr:
         options:
           EFFECT:
             '"none"': Aucun
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
             '"hearts_red"': Cœurs
             '"music_notes"': Notes de musique
             '"pineapples"': Ananas
+            '"pizzas"': Pizzas
             '"smiling_poop"': Crotte
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
+            '"smile_face"': Smileys
+            '"spotlight"': Projecteur
+            '"color_lights"': Éclairage de scène
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: définir l’effet de premier plan {EFFECT}
         options:
           EFFECT:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
             '"hearts_red"': Cœurs
             '"music_notes"': Notes de musique
             '"pineapples"': Ananas
+            '"pizzas"': Pizzas
             '"smiling_poop"': Crotte
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
+            '"smile_face"': Smileys
+            '"spotlight"': Projecteur
+            '"color_lights"': Éclairage de scène
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'définir {SPRITE} {PROPERTY} à {VAL} '
         options:
@@ -397,6 +467,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -420,6 +491,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -430,12 +502,14 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
       Dancelab_setTint:
-        text: définir la nuance de {SPRITE} à {VAL}
+        text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setTintEach:
+        text: définir la teinte de {THIS} à {VAL}
         options:
           THIS:
             sprites: tout
@@ -450,9 +524,13 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
       Dancelab_setTintInline:
-        text: définir la nuance de {SPRITE} à {VAL}
+        text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setVisible:
         text: régler {SPRITE} visible à {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_setVisibleEach:
         text: définir {THIS} visibilité à {VISIBILITY}
         options:
@@ -469,6 +547,9 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"UNICORN"': Toutes les licornes
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_startMapping:
         text: "{SPRITE} commence {PROPERTY} suivant {RANGE}"
         options:
@@ -476,6 +557,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -490,6 +572,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+            '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
             '"direction"': direction du mouvement
@@ -507,8 +590,27 @@ fr:
             '"down"': vers le bas
             '"right"': vers la droite
             '"space"': espace
+            '"enter"': entrée
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       Dancelab_whenPeak:
         text: Lorsque {RANGE} pic
         options:
@@ -518,13 +620,23 @@ fr:
             '2': aigu
       Dancelab_whenSetup:
         text: configuration
+      gamelab_add:
+        text: ajouter {SPRITE} au groupe {THIS}
+      gamelab_addBehaviorSimple:
+        text: le sprite {SPRITE} commence {BEHAVIOR}
+      gamelab_beginBehavior:
+        text: commencer {BEHAVIOR}
+      gamelab_bounceOff:
+        text: "{SPRITE} rebondit sur {TARGET}"
       gamelab_changeColor:
-        text: changer {COLOR} {METHOD} par {AMOUNT}
+        text: changer {COLOR} {METHOD} de {AMOUNT}
         options:
           METHOD:
             '"tint"': nuance
+            '"tone"': ton
+            '"shade"': nuance
       gamelab_changeColorBy:
-        text: changer {COLOR} {METHOD} par {AMOUNT}
+        text: changer {COLOR} {METHOD} de {AMOUNT}
         options:
           METHOD:
             '"hue"': teinte
@@ -535,28 +647,106 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      gamelab_clickedOn:
+        text: lorsque {SPRITE} est cliqué
+      gamelab_comment:
+        text: 'commentaire : {COMMENT}'
       gamelab_debugSprite:
+        text: débogage {SPRITE} {VAL}
         options:
           VAL:
             'true': vrai
             'false': faux
+      gamelab_destroy:
+        text: enlever {THIS}
+      gamelab_displace:
+        text: "{THIS} empêche {SPRITE} de bouger"
+      gamelab_distance:
+        text: distance de {LOCATION1} à {LOCATION2}
+      gamelab_edgesDisplace:
+        text: les bords empêchent {SPRITE} de bouger
+      gamelab_enableDebug:
+        text: activer le débogage
+      gamelab_getAnim:
+        text: "{SPRITE} {COSTUME}"
+        options:
+          COSTUME:
+            '"costume"': costume
+      gamelab_getDirection:
+        text: "{SPRITE} direction du mouvement"
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
             '"tint"': nuance
+      gamelab_groupLength:
+        text: nombre de sprites dans {THIS}
+      gamelab_hasBehavior:
+        text: "{SPRITE} fait actuellement {BEHAVIOR}"
+      gamelab_hideTitleScreen:
+        text: cacher l'écran-titre
+      gamelab_hsbColor:
+        text: |-
+          Couleur TSV
+          T{HUE}S{SATURATION}V{BRIGHTNESS}
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} touche les bords"
+      gamelab_joystickDirection:
+        text: direction du joystick
       gamelab_jumpTo:
         text: "{SPRITE} passer à {LOCATION}"
-      gamelab_locationDelta:
+      gamelab_keyDown:
+        text: touche pressée {KEY}
+      gamelab_locationAdd:
+        text: "{LOC1} {OPERATOR} {LOC2}"
+        options:
+          OPERATOR:
+            "'plus'": "\\+"
+            "'minus'": "\\-"
+      gamelab_locationAt:
+        text: 'emplacement x: {X} y: {Y}'
+      gamelab_locationConstant:
+        text: "{DIR}"
         options:
           DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": ouest
+      gamelab_locationDelta:
+        text: "{DISTANCE} pixels {DIR} de {LOCATION}"
+        options:
+          DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": ouest
             "'random'": aléatoire
+      gamelab_locationEast:
+        text: est
+      gamelab_locationMouse:
+        text: emplacement de la souris
+      gamelab_locationNorth:
+        text: nord
+      gamelab_locationOf:
+        text: emplacement de {SPRITE}
+      gamelab_locationSouth:
+        text: sud
+      gamelab_locationWest:
+        text: ouest
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_location_variable_get:
+        text: emplacement de {VAR}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -564,10 +754,44 @@ fr:
             '"left"': vers la gauche
       gamelab_mixColors:
         text: mélanger {COLOR1} et {COLOR2}
+      gamelab_mouseLocation:
+        text: emplacement de la souris
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ouest
+      gamelab_moveLeft:
+        text: "{THIS} déplacer à gauche"
+      gamelab_moveRight:
+        text: "{THIS} déplacer à droite"
+      gamelab_moveToward:
+        text: bouger {SPRITE} distance {DISTANCE} vers {TARGET}
+      gamelab_moveUp:
+        text: "{THIS} déplacer en haut"
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ouest
+      gamelab_pointToward:
+        text: tourner {SPRITE} vers {LOCATION}
       gamelab_randColor:
         text: couleur aléatoire
       gamelab_randomColor:
         text: couleur aléatoire
+      gamelab_randomLocation:
+        text: lieu aléatoire
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} arrête tout"
+      gamelab_removeBehaviorSimple:
+        text: le sprite {SPRITE} arrête de {BEHAVIOR}
+      gamelab_removeTint:
+        text: enlever la couleur de {THIS}
       gamelab_setBackground:
         text: définir la couleur de fond {COLOR}
       gamelab_setPosition:
@@ -588,6 +812,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -599,29 +824,68 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
+      gamelab_setTint:
+        text: changer la couleur de {THIS} en {COLOR}
       gamelab_setup:
         text: configuration
+      gamelab_spriteCostume:
+        text: "{COSTUME}"
+      gamelab_spriteDirection:
+        text: "{DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ouest
+      gamelab_spriteSay:
+        text: sprite {SPRITE} dire {TEXT}
       gamelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
+            '"costume"': costume
             '"direction"': direction du mouvement
+            '"rotation"': rotation ou direction
             '"tint"': nuance
+      gamelab_spritesWhereFirst:
+        text: premier {VALUE}
       gamelab_spritesWhereGenerator:
+        text: sprites où {PROPERTY} {OP} {VALUE}
         options:
           PROPERTY:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
+            '"costume"': costume
             '"direction"': direction du mouvement
+            '"rotation"': rotation ou direction
             '"tint"': nuance
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      gamelab_spritesWhereLast:
+        text: dernier {VALUE}
+      gamelab_spritesWhereRandom:
+        text: au hasard dans le groupe {VALUE}
+      gamelab_thisBeginsBehaviorSimple:
+        text: le sprite {SPRITE} commence {BEHAVIOR}
+        options:
+          SPRITE:
+            abc: ce sprite
       gamelab_turn:
+        text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:
           DIRECTION:
             '"right"': vers la droite
             '"left"': vers la gauche
+      gamelab_whenDownArrow:
+        text: quand on appuie sur la flèche du bas
+      gamelab_whenJoystick:
+        text: quand joystick
       gamelab_whenKey:
         text: En appuyant sur {KEY}
         options:
@@ -631,13 +895,29 @@ fr:
             '"left"': vers la gauche
             '"right"': vers la droite
             '"space"': espace
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: quand on appuie sur la flèche de gauche
+      gamelab_whenMouseClicked:
+        text: quand on clique
       gamelab_whenPressedAndReleased:
+        text: |-
+          quand on appuie sur {DIR}
+          {STATEMENT1}quand lâché
+          {STATEMENT2}
         options:
           DIR:
             "'up'": vers le haut
             "'down'": vers le bas
             "'left'": vers la gauche
             "'right'": vers la droite
+      gamelab_whenRightArrow:
+        text: quand on appuie sur la flèche de droite
+      gamelab_whenTrue:
+        text: quand {CONDITION} vrai
       gamelab_whileKey:
         options:
           KEY:
@@ -646,10 +926,17 @@ fr:
             '"left"': vers la gauche
             '"right"': vers la droite
             '"space"': espace
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_addBehaviorSimple:
+        text: le sprite {SPRITE} commence {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -669,6 +956,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -676,12 +964,15 @@ fr:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
       Mikelab_groupChangePropBy:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -701,10 +992,15 @@ fr:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
       Mikelab_groupGetProp:
         options:
+          SELECT:
+            '"average"': moyenne
+            '"this"': ceci
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -712,27 +1008,36 @@ fr:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
       Mikelab_groupRemoveTint:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
       Mikelab_groupSetProp:
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
       Mikelab_groupSetTint:
+        text: changer la couleur de {SELECT} {COSTUME} en {COLOR}
         options:
           SELECT:
             '"all"': tout
+            '"this"': ceci
+      Mikelab_hasBehavior:
+        text: "{SPRITE} fait actuellement {BEHAVIOR}"
       Mikelab_ifDanceIs:
         text: |-
           Si {SPRITE} exécute {DANCE}
@@ -740,14 +1045,24 @@ fr:
         options:
           DANCE:
             MOVES.ClapHigh: Tapez des mains en haut
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
             MOVES.Roll: Roulis de caisse
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
+      Mikelab_locationAt:
+        text: 'emplacement x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: couleur aléatoire
+      Mikelab_removeBehaviorSimple:
+        text: le sprite {SPRITE} arrête de {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
@@ -756,6 +1071,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -776,6 +1092,8 @@ fr:
             "{x: 300, y: 100}": vers le haut à droite
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
+      Mikelab_whenClickedOn:
+        text: lorsque {SPRITE} est cliqué
       Mikelab_whenKeyPressed:
         text: En appuyant sur {KEY}
         options:
@@ -799,6 +1117,8 @@ fr:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: quand on clique
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -814,10 +1134,15 @@ fr:
         text: tourner à droite
       Vector_positionCenter:
         text: vers le centre
+      Vector_randomLocation:
+        text: lieu aléatoire
+      Vector_vectorNorth:
+        text: nord
       aalab_changeGroupPropBy:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -827,9 +1152,20 @@ fr:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
+            '"costume"': costume
             '"direction"': direction du mouvement
+            '"rotation"': rotation ou direction
             '"tint"': nuance
+      binary_drawPixelHere:
+        options:
+          VAL:
+            '0': désactivé
+            '1': activé
+            '"toggle"': inverser
+      binary_gridSize:
+        text: définir taille de la grille {SIZE}
       binary_move:
+        text: déplacer {DIR}
         options:
           DIR:
             '"up"': vers le haut
@@ -845,6 +1181,10 @@ fr:
             '"left"': vers la gauche
             '"right"': vers la droite
             '"space"': espace
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           si chemin {DIR}
@@ -897,6 +1237,7 @@ fr:
             '"magentaDeadCoralBlock"': bloc de corail magenta mort
             '"readDeadCoralBlock"': bloc de corail rouge mort
             '"yellowDeadCoralBlock"': bloc de corail jaune mort
+            '"prismarine"': prismarine
             '"darkPrismarine"': prismarine sombre
             '"seaLantern"': lanterne aquatique
             '"packedIce"': glace compactée
@@ -905,6 +1246,8 @@ fr:
             '"seaGrass"': herbe marine
             '"kelp"': varech
             '"polishedGranite"': granite poli
+      craft_placePrismarine:
+        text: placer prismarine
       craft_placeTorch:
         text: placer la torche
       craft_repeatUntilConduit:
@@ -917,6 +1260,14 @@ fr:
           {STATEMENT}
       craft_spawnEntity:
         text: œuf {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': morue
+            '"dolphin"': dauphin
+            '"salmon"': saumon
+            '"seaTurtle"': tortue de mer
+            '"squid"': poulpe
+            '"tropicalFish"': poisson tropical
       craft_turn:
         text: tourner {DIR}
         options:

@@ -341,6 +341,7 @@ et:
             '"spiral"': Spiraal
             '"disco"': Ruudud
       Dancelab_setBackgroundEffectWithPalette:
+        text: määra taustaefekt {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
