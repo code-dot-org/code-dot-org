@@ -33,7 +33,7 @@ class ScriptsController < ApplicationController
       return
     end
 
-    redirect_script_url = @script.get_latest_script_family_link(locale: request.locale)
+    redirect_script_url = @script.redirect_to_script_url(@current_user, locale: request.locale)
     render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true', redirect_script_url: redirect_script_url}
   end
 
@@ -158,7 +158,7 @@ class ScriptsController < ApplicationController
 
   def redirect_script(script, locale)
     # Return nil if course is nil or we know the user can view the version requested.
-    return nil if !script || script.can_view_version?(current_user, locale)
+    return nil if !script || script.can_view_version?(current_user, locale: locale)
 
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
     # none are assigned.
