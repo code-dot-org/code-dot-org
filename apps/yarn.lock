@@ -123,22 +123,6 @@
     remark-stringify "^6.0.0"
     unified "^7.0.0"
 
-"@code-dot-org/snack-sdk@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/snack-sdk/-/snack-sdk-1.0.11.tgz#a7f7174b88ffb11d1c940c9327a9d8bc46aa9294"
-  dependencies:
-    babel-runtime "^6.23.0"
-    babylon "^6.17.2"
-    diff "^3.2.0"
-    lodash "^4.16.1"
-    platform "^1.3.4"
-    pubnub "^4.3.3"
-    recast "^0.12.4"
-    semver "^5.3.0"
-    shortid "^2.2.8"
-    source-map-support "^0.4.2"
-    validate-npm-package-name "^3.0.0"
-
 "@sinonjs/formatio@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@sinonjs/formatio/-/formatio-2.0.0.tgz#84db7e9eb5531df18a8c5e0bfb6e449e55e654b2"
@@ -2277,7 +2261,7 @@ babel-types@^6.16.0, babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
-babylon@^6.11.0, babylon@^6.13.0, babylon@^6.17.2, babylon@^6.18.0, babylon@^6.7.0:
+babylon@^6.11.0, babylon@^6.13.0, babylon@^6.18.0, babylon@^6.7.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
@@ -10846,6 +10830,20 @@ slice-ansi@0.0.4:
 smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
+
+snack-sdk@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/snack-sdk/-/snack-sdk-2.0.0.tgz#a4635e37319972ac7ab7d69b057a1771755fb451"
+  dependencies:
+    babel-runtime "^6.23.0"
+    diff "^3.2.0"
+    lodash "^4.16.1"
+    platform "^1.3.4"
+    pubnub "^4.3.3"
+    recast "^0.12.4"
+    semver "^5.3.0"
+    shortid "^2.2.8"
+    validate-npm-package-name "^3.0.0"
 
 snake-case@^1.1.0:
   version "1.1.2"
