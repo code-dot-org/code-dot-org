@@ -155,7 +155,7 @@ module Pd::Application
         columns.push(
           'Status',
           'Locked',
-          'Notes',
+          'General Notes',
           'Notes 2',
           'Notes 3',
           'Notes 4',
@@ -191,7 +191,7 @@ module Pd::Application
       end
 
       columns.push(
-        'Notes',
+        'General Notes',
         'Notes 2',
         'Notes 3',
         'Notes 4',
