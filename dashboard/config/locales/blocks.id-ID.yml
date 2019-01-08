@@ -601,7 +601,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -610,7 +612,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whileKeyPressed:
         options:
           KEY:

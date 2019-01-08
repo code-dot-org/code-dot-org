@@ -43,8 +43,8 @@ sk:
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
-            MOVES.Kick: Hviezda
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -64,8 +64,8 @@ sk:
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
-            MOVES.Kick: Hviezda
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -98,7 +98,7 @@ sk:
             '"UNICORN"': všetky jednorožce
           MOVE:
             '"rand"': "(Náhodné)"
-            MOVES.XBend: Ohyb
+            MOVES.XBend: Bend
             MOVES.Roll: Body Roll
             MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Vysoký Tlesk
@@ -111,15 +111,15 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hlava + Boky
             MOVES.XHop: Hop
-            MOVES.XHighKick: Kop
-            MOVES.XKnee: Koleno
-            MOVES.XKneel: Kľaknúť
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Načiahnuť
-            MOVES.XSlide: Šmyk
-            MOVES.Kick: Hviezda
-            MOVES.XArmsUp: Roztiahnutie
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
+            MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -129,7 +129,7 @@ sk:
         options:
           MOVE:
             '"rand"': "(Náhodné)"
-            MOVES.XBend: Ohyb
+            MOVES.XBend: Bend
             MOVES.Roll: Body Roll
             MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Vysoký Tlesk
@@ -142,15 +142,15 @@ sk:
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hlava + Boky
             MOVES.XHop: Hop
-            MOVES.XHighKick: Kop
-            MOVES.XKnee: Koleno
-            MOVES.XKneel: Kľaknúť
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Načiahnuť
-            MOVES.XSlide: Šmyk
-            MOVES.Kick: Hviezda
-            MOVES.XArmsUp: Roztiahnutie
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
+            MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -211,8 +211,8 @@ sk:
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Body Roll
-            MOVES.Kick: Hviezda
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_ifTime:
         text: |-
@@ -336,7 +336,7 @@ sk:
       Dancelab_mixColors:
         text: zmiešaj {COLOR1} a {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} taktoch"
+        text: "{N} takty"
       Dancelab_onPointerDown:
         text: na stlačenie myši
       Dancelab_onPointerDrag:
@@ -360,7 +360,7 @@ sk:
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový tanečný parket
-            '"splatter"': Bubliny
+            '"splatter"': Farebný sprej
             '"rainbow"': Dúha
             '"snowflakes"': Sneženie
             '"text"': Názvy pesničiek
@@ -602,7 +602,7 @@ sk:
             '"mid"': stredy
             '"treble"': výšky
       Dancelab_whenKey:
-        text: keď {KEY} stlačený
+        text: pri stlačení {KEY}
         options:
           KEY:
             '"up"': hore
@@ -742,7 +742,7 @@ sk:
             '"right"': vpravo
             '"left"': vľavo
       gamelab_whenKey:
-        text: keď {KEY} stlačený
+        text: pri stlačení {KEY}
         options:
           KEY:
             '"up"': hore
@@ -754,6 +754,8 @@ sk:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: pri stlačení šípky vľavo
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -761,6 +763,8 @@ sk:
             "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
+      gamelab_whenUpArrow:
+        text: pri stlačení šípky hore
       gamelab_whileKey:
         options:
           KEY:
@@ -879,8 +883,8 @@ sk:
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
             MOVES.Roll: Body Roll
-            MOVES.Kick: Hviezda
-            MOVES.ThisOrThat: Toto alebo tamto
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Mikelab_randomColor:
         text: náhodná farba
@@ -914,7 +918,7 @@ sk:
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_whenKeyPressed:
-        text: keď {KEY} stlačený
+        text: pri stlačení {KEY}
         options:
           KEY:
             '"up"': šípka hore
@@ -975,7 +979,7 @@ sk:
             '"left"': vľavo
             '"right"': vpravo
       binary_whenKey:
-        text: keď {KEY} stlačený
+        text: pri stlačení {KEY}
         options:
           KEY:
             '"up"': hore

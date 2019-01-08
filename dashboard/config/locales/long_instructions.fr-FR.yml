@@ -2,6 +2,10 @@
 fr:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": 'Si oui, quel(s) cours d’informatique as-tu
+        suivi avant ton cours d’informatique actuel ?
+
+'
       2-3 Artist 1 new: "Bonjour, je suis un artiste. Vous pouvez écrire du code \npour
         me faire dessiner presque tout. Utilisez des blocs pour me faire dessiner
         sur les \nlignes grises de la figure. (chaque ligne a une longueur de 100
@@ -31,6 +35,8 @@ fr:
       2-3 Artist 9 NEW: Terminer ce cerf-volant
       2-3 Artist 9 REPLACEMENT: Terminez de dessiner ces escaliers !
       2-3 Artist 9: Terminer ce cerf-volant
+      2-3 Artist Assessment 1: "**Évaluation :** Termine de dessiner la dernière dent.
+        Elle fait 25 pixels de large et 25 pixels de haut."
       2-3 Artist Debugging 1: "This hat should only be 50 pixels\nwide. \r\nCan you
         fix it?\r\n\r\n<br/>\r\n"
       2-3 Artist Debugging 10: "The direction pad on my game\ncontroller is too narrow.
@@ -4349,6 +4355,8 @@ fr:
         get the interval value from the slider and use it to make the LED blink\nat
         that new rate.\\\r\n* Run your program, moving the slider to see whether\nthe
         LED speed changes automatically."
+      CSD U6 params starchaser template: Niveau modèle.
+      CSD U6 params starchaser template_2018: Niveau modèle.
       CSD U6 setProperty Text: "# Changing the Text\\\r\n\\\r\nThe\n`setProperty`
         block can be used to changed lots of things about your design\nelements, including
         the text they contain.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Drag\nout a `setProperty`
@@ -10075,6 +10083,48 @@ fr:
       coursef_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by dragging it back to the toolbox."
+      csd-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience
+        du cours ?
+      csd-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre
+        à l'avenir ?
+      csd-pulse-check-survey-1-free-response U1Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U1Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
       csd-thursday-facilitation: "# Thursday Facilitation Reflection\\\r\n\\\r\n##\nDiscussion-Based
         Sessions\\\r\n\\\r\nYou have now seen a couple discussion heavy\nsessions.
         Some specific examples include the Community (Wednesday), and Recruitment/Student\nNeeds
@@ -10614,6 +10664,56 @@ fr:
         to address feedback from your reviewers and resubmit your reflections!\nReviewer
         feedback will show up at the bottom of this page, once it’s available.\n\r\n
         \r\n\r\n"
+      csp-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience
+        du cours ?
+      csp-post-survey-2017-FR_2018: Réflexions finales sur le cours ou ton expérience.
+      csp-post-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre
+        à l'avenir ?
+      csp-pre-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2019: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q38: Si oui, quel(s) cours d’informatique as-tu suivi avant
+        ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2018: Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2019: Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
       csp-thursday-facilitation: "# Thursday Facilitation Reflection\\\r\n\\\r\n##\nDiscussion-Based
         Sessions\\\r\n\\\r\nYou have now seen a couple discussion heavy\nsessions.
         Some specific examples include the Community (Wednesday), and Recruitment/Student\nNeeds
@@ -12369,6 +12469,14 @@ fr:
         Make one sprite play a noise when the other runs into it.</li>\r\n            <li><strong>Arrows</strong>\n-
         Write a program so when each arrow key is pressed, the sprite moves in that\ndirection!</li>\r\n
         \       </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>"
+      post-assessment survey q32: "(Facultatif) : Explique pourquoi tu recommanderais
+        ou non ce cours d’informatique à quelqu’un d’autre."
+      post-assessment survey q37: "(Facultatif) Si tu n’as pas passé l'examen avancé,
+        y aurait-il quelque chose qui t’aurais fait changer d’avis ?"
+      pre-assessment survey q24A: 'Quelles connaissances en informatique utilises-tu
+        dans la vie de tous les jours ? '
+      pre-assessment survey q25A: 'Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ? '
       ramp_artist_loops1: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover his
         flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2018: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover
@@ -12423,6 +12531,9 @@ fr:
         or blocks that you would use, but you should describe what\nfunctions you
         would need to create, where you would or would not use loops,\nand where you
         would or would not use random numbers."
+      test_anonymous_student_survey_next_class: Que feras-tu après ce cours ?
+      test_anonymous_student_survey_why_class: Pourquoi suis-tu ce cours ? Donne au
+        moins deux raisons.
       u3-old-drawing-view: "# Your Own Drawing\\\r\n\\\r\nIt is\nyour turn to create
         your own drawing. You should have drawn out your plan\non paper first.\\\r\n\\\r\n#
         Do This\\\r\nAs a reminder make sure you hit the objectives:\\\r\n\\\r\n*\nCreates

@@ -76,6 +76,7 @@ fr:
       drawBranch: dessinerBranche
       drawSky: dessinerCiel
       fillScreen: remplirEcran
+      drawHouseLayer: dessinerCalqueMaison
       swap: échanger
       dropR: laissertomberR
       grabL: saisirL
@@ -90,6 +91,7 @@ fr:
       starting path: chemin de départ
       jump: sauter
       patrol: patrouiller
+      fill in bg: remplir le fond
       draw grid1: dessiner grille1
       draw lines: dessiner des lignes
       Draw a Square Line: Dessiner une ligne de carrés
@@ -121,12 +123,17 @@ fr:
       get nectar make honey: obtenir du nectar fabriquer du miel
       draw an octagon: dessinez un octogone
       draw octagons: dessinez des octogones
+      shift down: décaler vers le bas
       level_up: niveau_suivant
       score_points: score_points
       set score: mettre le score à
       draw a line of hexagons: dessiner une ligne d'hexagones
+      shift down/forward: décaler vers le bas/en avant
+      shift down/backward: décaler vers le bas/en arrière
       get nectar: obtenir du nectar
       make honey up and over: solution "simple"
+      setActors: définirActeurs
+      popCharacter: séparerPersonnage
       patrol left right: patrouiller de gauche à droite
       empty function: fonction vide
       check guess: vérifier l'hypothèse
@@ -153,28 +160,45 @@ fr:
       function 1: fonction 1
       function 2: fonction 2
       destroy and move: détruire et déplacer
+      clear path: dégager le chemin
+      clear cacti: enlever les cactus
       place and move: placer et se déplacer
+      cover lava: couvrir la lave
       build short bridge: construire un petit pont
       build long bridge: construire un grand pont
       create trail: créer une piste
       move and fill: déplacer et remplir
+      fix right corner: réparer le coin droit
+      fix left corner: réparer le coin gauche
       make segment: faire un segment
       turn corner: tourner au coin
+      fix long path: réparer le chemin long
+      fix short path: réparer le chemin court
+      place 3 tracks: placer 3 voies
       clear right corner: effacer le coin droit
       clear left corner: effacer le coin gauche
+      draw a spiral edge: dessiner un bord de spirale
       draw a pentagon: dessiner un pentagone
+      artist jump around: faire sautiller l’artiste
+      Draw lenses: Dessiner les lentilles
       25 pixel square: carré de 25 pixels
       draw eye: dessiner un oeil
+      Make a Dot: Faire un point
+      bubble sort: bubble sort
       move right: déplacer vers la droite
+      say number: dire le nombre
       move up: déplacer vers le haut
       move down: déplacer vers le bas
       move left: déplacer vers la gauche
       kill alien: tuer l'extra-terrestre
       click: cliquer
+      Send Actor 1 to opposite: Envoyer l’acteur 1 à l’opposé
+      blink actor 1: clignoter l’acteur 1
       my function: ma fonction
       Squares row: Ligne de carrés
       draw first part of heart: dessiner la première partie du cœur
       check win: vérifier la victoire
+      curvy corner: coin incurvé
       make triangle: faire un triangle
       my behavior: mon comportement
       '"simple" solution': 'solution "simple"'
@@ -196,6 +220,33 @@ fr:
       pick row: choisir la ligne
       draw flame: dessiner des flammes
       draw fire: dessiner du feu
+      booster: propulseur
+      draw line of triangles: dessiner une ligne de triangles
+      draw a window: dessiner une fenêtre
+      stop_everything: arrêter_tout
+      lose: perdre
+      draw a plane of squares: dessiner un plan de carrés
+      draw hexagon: dessiner un hexagone
+      draw line of hexagons: dessiner une ligne d'hexagones
+      staggered squares: carrés décalés
+      draw line of polygons: dessiner une ligne de polygones
+      draw polygon: dessiner un polygone
+      honey nectar: nectar de miel
+      move and make honey: bouger et fabriquer du miel
+      collect all nectar: recueillir tout le nectar
+      get all nectar: obtenir tout le nectar
+      get pumpkin: obtenir la citrouille
+      harvest: récolter
+      get corn and come back: obtenir le maïs et revenir
+      pick along path: collecter le long du chemin
+      check square for corn: vérifier s’il y a du maïs
+      get all pumpkins: obtenir toutes les citrouilles
+      pumpkin square: carré de citrouille
+      navigate: naviguer
+      check and pick: vérifier et prendre
+      find pumpkin: trouver la citrouille
+      wander path: marcher sur le chemin
+      get produce: obtenir les fruits
       check for corn: vérifier pour le maïs
       corn rectangle: rectangle de maïs
       lettuce stairs: escaliers de laitue
@@ -206,6 +257,8 @@ fr:
       garden square: jardin carré
       get corn come back: obtenir le maïs revenir
       checker: vérificateur
+      Make gingham: Faire du vichy
+      black outline: contour noir
       draw a square2: dessiner un carré2
       filled square: carré rempli
       get only nectar: obtenir uniquement le nectar
@@ -223,6 +276,7 @@ fr:
       Knight Surge: Ruée du chevalier
       Stop Dragon: Arrêter le dragon
       Knight Jump: Saut du chevalier
+      robotThinking: robotPenser
       fill area with color: remplir l'espace avec de la couleur
       draw a line of triangles: dessiner une ligne de triangles
       check flower: vérifier la fleur
@@ -237,6 +291,7 @@ fr:
       turn left: tourner à gauche
       move forward: avancer plus
       turn right: tourner à droite
+      drawDot: dessinerPoint
       draw a rectangle: dessiner un rectangle
       Which Course for My Students?: Quel cours pour mes étudiants ?
       draw a heart: dessiner un cœur

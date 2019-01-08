@@ -229,6 +229,9 @@ eu:
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -260,6 +263,9 @@ eu:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:

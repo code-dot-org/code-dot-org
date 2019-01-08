@@ -99,6 +99,7 @@ ru:
           MOVE:
             '"rand"': "(Случайный)"
             MOVES.Roll: Движение «волна»
+            MOVES.XClapSide: Хлопок
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
@@ -118,6 +119,7 @@ ru:
           MOVE:
             '"rand"': "(Случайный)"
             MOVES.Roll: Движение «волна»
+            MOVES.XClapSide: Хлопок
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
@@ -331,9 +333,11 @@ ru:
             '"circles"': Туннель
             '"diamonds"': Ромбы
             '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
             '"rainbow"': Цвета
+            '"snowflakes"': Снег
             '"text"': Название песни
             '"sparkles"': Блестки
             '"disco"': Квадраты
@@ -355,10 +359,12 @@ ru:
             '"circles"': Туннель
             '"diamonds"': Ромбы
             '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
             '"splatter"': Брызги краски
             '"rainbow"': Цвета
+            '"snowflakes"': Снег
             '"text"': Название песни
             '"sparkles"': Блестки
             '"disco"': Квадраты
@@ -589,11 +595,21 @@ ru:
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
             '"direction"': направление движения
+      gamelab_comment:
+        text: 'комментарий: {COMMENT}'
       gamelab_debugSprite:
         options:
           VAL:
             'true': истина
             'false': ложь
+      gamelab_destroy:
+        text: удалить {THIS}
+      gamelab_distance:
+        text: расстояние от {LOCATION1} до {LOCATION2}
+      gamelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': костюм
       gamelab_getProp:
         options:
           PROPERTY:
@@ -605,10 +621,39 @@ ru:
             '"tint"': оттенок
       gamelab_jumpTo:
         text: "{SPRITE} перейти к {LOCATION}"
+      gamelab_keyDown:
+        text: клавиша {KEY} нажата
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": север
+            "'south'": юг
+            "'east'": восток
+            "'west'": запад
       gamelab_locationDelta:
         options:
           DIR:
+            "'north'": север
+            "'south'": юг
+            "'east'": восток
+            "'west'": запад
             "'random'": случайный
+      gamelab_locationEast:
+        text: восток
+      gamelab_locationNorth:
+        text: север
+      gamelab_locationOf:
+        text: местоположение {SPRITE}
+      gamelab_locationSouth:
+        text: юг
+      gamelab_locationWest:
+        text: запад
+      gamelab_location_variable_get:
+        text: местоположение {VAR}
+      gamelab_location_variable_set:
+        text: установить местоположение {VAR} в {VAL}
+      gamelab_makeNewGroup:
+        text: создать новую группу
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -616,10 +661,35 @@ ru:
             '"left"': влево
       gamelab_mixColors:
         text: смешайте {COLOR1} и {COLOR2}
+      gamelab_moveDown:
+        text: "{THIS} передвинуть вниз"
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
+      gamelab_moveLeft:
+        text: "{THIS} передвинуть влево"
+      gamelab_moveRight:
+        text: "{THIS} передвинуть вправо"
+      gamelab_moveUp:
+        text: "{THIS} передвинуть вверх"
+      gamelab_pointInDirection:
+        text: точка {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
       gamelab_randColor:
         text: случайный цвет
       gamelab_randomColor:
         text: случайный цвет
+      gamelab_randomLocation:
+        text: случайное местоположение
       gamelab_setBackground:
         text: задать цвет фона {COLOR}
       gamelab_setPosition:
@@ -637,6 +707,7 @@ ru:
             "{x: 350, y: 350}": внизу справа
             '"random"': случайный
       gamelab_setProp:
+        text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -652,14 +723,24 @@ ru:
             '"scale"': размер
             '"width"': ширина
             '"height"': высота
+      gamelab_setTint:
+        text: изменить цвет {THIS} на {COLOR}
       gamelab_setup:
         text: установка
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
       gamelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': размер
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
+            '"costume"': костюм
             '"direction"': направление движения
             '"tint"': оттенок
       gamelab_spritesWhereGenerator:
@@ -668,6 +749,7 @@ ru:
             '"scale"': размер
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
+            '"costume"': костюм
             '"direction"': направление движения
             '"tint"': оттенок
       gamelab_turn:
@@ -675,6 +757,8 @@ ru:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
+      gamelab_whenDownArrow:
+        text: когда стрелка вниз нажата
       gamelab_whenKey:
         text: при нажатии {KEY}
         options:
@@ -684,6 +768,10 @@ ru:
             '"left"': влево
             '"right"': вправо
             '"space"': космос
+      gamelab_whenLeftArrow:
+        text: когда стрелка влево нажата
+      gamelab_whenMouseClicked:
+        text: когда щёлкнули мышкой
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -691,6 +779,12 @@ ru:
             "'down'": вниз
             "'left'": влево
             "'right'": вправо
+      gamelab_whenRightArrow:
+        text: когда стрелка вправо нажата
+      gamelab_whenUpArrow:
+        text: когда стрелка вверх нажата
+      gamelab_whileDownArrow:
+        text: пока стрелка вниз нажата
       gamelab_whileKey:
         options:
           KEY:
@@ -699,6 +793,16 @@ ru:
             '"left"': влево
             '"right"': вправо
             '"space"': космос
+      gamelab_whileLeftArrow:
+        text: пока стрелка влево нажата
+      gamelab_whileRightArrow:
+        text: пока стрелка вправо нажата
+      gamelab_whileUpArrow:
+        text: пока стрелка вверх нажата
+      gamelab_xLocationOf:
+        text: x координата {SPRITE}
+      gamelab_yLocationOf:
+        text: y координата {SPRITE}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -788,6 +892,7 @@ ru:
             '"y"': позиция ординат (y)
             '"direction"': направление движения
       Mikelab_groupSetTint:
+        text: изменить цвет {SELECT} {COSTUME} на {COLOR}
         options:
           SELECT:
             '"all"': все
@@ -862,6 +967,8 @@ ru:
             '"a"': А
             '"s"': Ю
             '"d"': Г
+      Mikelab_whenMouseClicked:
+        text: когда щёлкнули мышкой
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -869,6 +976,10 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+      Mikelab_xLocationOf:
+        text: x координата {SPRITE}
+      Mikelab_yLocationOf:
+        text: y координата {SPRITE}
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:
@@ -877,6 +988,22 @@ ru:
         text: повернуть направо
       Vector_positionCenter:
         text: центр
+      Vector_push:
+        text: установить скорость в {VECTOR}
+      Vector_randomLocation:
+        text: случайное местоположение
+      Vector_setColor:
+        text: установить цвет в {COLOR}
+      Vector_setSize:
+        text: установить ширину в {WIDTH} высоту в {HEIGHT}
+      Vector_teleportTo:
+        text: установить положение в {POSITION}
+      Vector_vectorNorth:
+        text: север
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": цвет
       aalab_changeGroupPropBy:
         options:
           PROPERTY:
@@ -891,9 +1018,19 @@ ru:
             '"scale"': размер
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
+            '"costume"': костюм
             '"direction"': направление движения
             '"tint"': оттенок
+      binary_drawPixelHere:
+        options:
+          VAL:
+            '0': выкл
+            '1': вкл
+            '"toggle"': переключить
+      binary_gridSize:
+        text: установить размер сетки {SIZE}
       binary_move:
+        text: переместить {DIR}
         options:
           DIR:
             '"up"': вверх
@@ -982,6 +1119,14 @@ ru:
           {STATEMENT}
       craft_spawnEntity:
         text: создать {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': треска
+            '"dolphin"': дельфин
+            '"salmon"': лосось
+            '"seaTurtle"': морская черепаха
+            '"squid"': кальмар
+            '"tropicalFish"': тропическая рыба
       craft_turn:
         text: повернуть {DIR}
         options:

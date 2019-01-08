@@ -369,6 +369,7 @@ he:
             '"spiral"': ספירלה
             '"disco"': ריבועים
       Dancelab_setBackgroundEffectWithPalette:
+        text: קבעו אפקט רקע {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
