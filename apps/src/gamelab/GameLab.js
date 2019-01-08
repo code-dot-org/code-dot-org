@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import {
   changeInterfaceMode,
   viewAnimationJson,
-  setMobileControlsConfig
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -74,6 +73,13 @@ import {
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
 
+const defaultMobileControlsConfig = {
+  spaceButtonVisible: true,
+  dpadVisible: true,
+  dpadFourWay: true,
+  mobileOnly: true,
+};
+
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
 // Number of ticks after which to capture a thumbnail image of the play space.
@@ -137,12 +143,16 @@ var GameLab = function () {
   this.showMobileControls =
       (spaceButtonVisible, dpadVisible, dpadFourWay, mobileOnly) => {
 
-    this.mobileControlsConfig = {
+    const mobileControlsConfig = {
       spaceButtonVisible,
       dpadVisible,
       dpadFourWay,
       mobileOnly,
     };
+
+    this.mobileControls.update(
+      mobileControlsConfig,
+      getStore().getState().pageConstants.isShareView);
   };
 };
 
@@ -524,11 +534,14 @@ GameLab.prototype.afterInject_ = function (config) {
 
   this.mobileControls = new MobileControls();
   this.mobileControls.init({
-    isDPadFourWay: () => this.mobileControlsConfig.dpadFourWay,
     notifyKeyCodeDown: code => this.gameLabP5.notifyKeyCodeDown(code),
     notifyKeyCodeUp: code => this.gameLabP5.notifyKeyCodeUp(code),
     softButtonIds: this.level.softButtons,
   });
+  this.mobileControls.update(
+    defaultMobileControlsConfig,
+    getStore().getState().pageConstants.isShareView
+  );
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
@@ -653,10 +666,10 @@ GameLab.prototype.reset = function () {
   }
   this.executionError = null;
 
-  // Soft buttons
-  this.mobileControlsConfig = reducers.defaultMobileControlsConfigState;
-
   this.mobileControls.reset();
+  this.mobileControls.update(
+    defaultMobileControlsConfig,
+    getStore().getState().pageConstants.isShareView);
 };
 
 GameLab.prototype.rerunSetupCode = function () {
@@ -790,16 +803,6 @@ GameLab.prototype.runButtonClick = function () {
 
   postContainedLevelAttempt(this.studioApp_);
 };
-
-Object.defineProperty(GameLab.prototype, 'mobileControlsConfig', {
-  enumerable: true,
-  get: function () {
-    return getStore().getState().mobileControlsConfig;
-  },
-  set: function (val) {
-    getStore().dispatch(setMobileControlsConfig(val));
-  },
-});
 
 /**
  * Execute the user's code.  Heaven help us...

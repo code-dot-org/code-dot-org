@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg [RANGE][0]
+        text: krijg {RANGE}
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -856,7 +856,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -868,7 +868,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -928,7 +928,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻

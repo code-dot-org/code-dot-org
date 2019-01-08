@@ -346,7 +346,7 @@ nn:
             '"vintage"': Retro
             '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
-        text: vel bakgrunnseffekt {EFFECT}
+        text: velg bakgrunnseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ingen
