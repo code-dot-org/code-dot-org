@@ -168,7 +168,7 @@ class GameLabVisualizationColumn extends React.Component {
 
           <CompletionButton />
 
-          {!spriteLab && isShareView && this.renderGridCheckbox()}
+          {!spriteLab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
         {!spriteLab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
