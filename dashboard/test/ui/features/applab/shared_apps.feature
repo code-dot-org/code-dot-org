@@ -87,10 +87,6 @@ Feature: App Lab Scenarios
     And I press keys "GLULX" for element ".screen > input"
     Then element ".screen > input" has value "GLULX"
 
-  # Known limitation of Selenium's Safari driver: Cannot use sendKeys to simulate
-  # typing into a contenteditable div (which is what our Applab textareas are)
-  # See https://code.google.com/p/selenium/issues/detail?id=4467
-  # Also doesnt seem to be working for ie
   @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page
