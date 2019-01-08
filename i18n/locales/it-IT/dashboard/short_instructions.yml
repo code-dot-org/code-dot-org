@@ -390,7 +390,7 @@ it:
       4-5 Maze Conditionals 5: "Me ... volere ... girasole!<br>\n<br>\nUsa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi."
       4-5 Maze Conditionals 6: |-
         Me ... volere ... girasole!
-        
+
         Usa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi.
       4-5 Maze Conditionals 7: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
       4-5 Maze Conditionals 8: "Il blocco `se-altrimenti` controlla una condizione: SE è vera fa una cosa ALTRIMENTI ne fa un'altra.<br>\n<br>\nProva ad usare questo nuovo blocco per farmi arrivare al girasole.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
@@ -726,6 +726,7 @@ it:
       Course 4 SCV 6: "<img src=\"https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png\"\nwidth=\"250px\"/><br>\n<b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?"
       Course 4 SCVP 1: Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi).
       Course 4 Variables Assessment: È possibile creare questa immagine utilizzando una variabile per i lati? Ogni latio dovrebbe essere lungo 50 pixel.
+      Course E MC Conditionals1: Nel sottosuolo trovi le risorse più preziose, ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Course1BeePuzzle12: Prendi tre dosi di nettare e poi fai due dosi di miele
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<b>Attenzione</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br>\nOra ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br>\n<i>Scorri verso il basso per vedere tutti i comandi presenti nell'area di lavoro.</i><br>\nQuando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi. "
       CourseF_PlayLab_vars2: "Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine, vince!\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
@@ -1619,11 +1620,11 @@ it:
       courseB_playlab_events5_2018: Ora aggiungi un evento per fare in modo che il cavaliere si allontani dal drago quando premi la freccia destra.
       courseB_playlab_events6: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
-        
+
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events6_2018: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
-        
+
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events7: Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine! Riproduci anche un suono quando lo colpisce, così sembra più reale.
       courseB_playlab_events7_2018: "1) Fai svanire il cavaliere quando si scontra con il drago.\n2) Riproduci anche un suono quando si colpiscono, così sembra più reale."
@@ -1664,34 +1665,49 @@ it:
       courseC19_playLab_EOC6: Hai finito! Ora puoi giocare con il tuo videogioco o condividerlo con i tuoi amici e compagni di classe!
       courseC_PlayLab_events1: Fai in modo che il cane (personaggio 1) dica "Ciao!".
       courseC_PlayLab_events1_2018: Fai in modo che il cane (personaggio 1) dica "Ciao!".
+      courseC_PlayLab_events1_2019: Fai in modo che il cane (personaggio 1) dica "Ciao!".
       courseC_PlayLab_events2: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
       courseC_PlayLab_events2_2018: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
+      courseC_PlayLab_events2_2019: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
       courseC_PlayLab_events3: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
       courseC_PlayLab_events3_2018: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
+      courseC_PlayLab_events3_2019: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
       courseC_PlayLab_events4: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
       courseC_PlayLab_events4_2018: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
+      courseC_PlayLab_events4_2019: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
       courseC_PlayLab_events5: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
       courseC_PlayLab_events5_2018: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
+      courseC_PlayLab_events5_2019: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
       courseC_PlayLab_events6: Ora scrivi un programma per poter spostare il pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
       courseC_PlayLab_events6_2018: Ora scrivi un programma per poter spostare il pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
+      courseC_PlayLab_events6_2019: Ora scrivi un programma per poter spostare il pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
       courseC_PlayLab_events7: Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
       courseC_PlayLab_events7_2018: Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
+      courseC_PlayLab_events7_2019: Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
       courseC_PlayLab_events8: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\nQuando hai finito, esegui il gioco e falli scontrare."
       courseC_PlayLab_events8_2018: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\nQuando hai finito, esegui il gioco e falli scontrare."
+      courseC_PlayLab_events8_2019: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\nQuando hai finito, esegui il gioco e falli scontrare."
       courseC_PlayLab_events9: "Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?\nEsegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!"
       courseC_PlayLab_events9_2018: "Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?\nEsegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!"
+      courseC_PlayLab_events9_2019: "Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?\nEsegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!"
       courseC_PlayLab_eventsA: |-
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
-        
+
         Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
       courseC_PlayLab_eventsA_2018: |-
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
-        
+
+        Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
+      courseC_PlayLab_eventsA_2019: |-
+        Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
+
         Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
       courseC_PlayLab_eventsFP: Crea il tuo gioco. Quando hai finito, clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
       courseC_PlayLab_eventsFP_2018: Crea il tuo gioco. Quando hai finito, clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
+      courseC_PlayLab_eventsFP_2019: Crea il tuo gioco. Quando hai finito, clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
       courseC_PlayLab_events_challenge1: "Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. \nGioca e muovi il pinguino con le frecce fino a che non segni abbastanza punti."
       courseC_PlayLab_events_challenge1_2018: "Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. \nGioca e muovi il pinguino con le frecce fino a che non segni abbastanza punti."
+      courseC_PlayLab_events_challenge1_2019: "Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. \nGioca e muovi il pinguino con le frecce fino a che non segni abbastanza punti."
       courseC_artist_loop1: Aggiungiamo un po' di brio!
       courseC_artist_loop1_2018: Aggiungiamo un po' di brio!
       courseC_artist_loop1_2019: Aggiungiamo un po' di brio!
@@ -1850,30 +1866,43 @@ it:
       courseC_harvester_loops1: Usa i cicli per tutte le zucche.
       courseC_harvester_loops10: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops10_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops10_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops11: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops11_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops11_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops1_2018: Usa i cicli per tutte le zucche.
+      courseC_harvester_loops1_2019: Usa i cicli per tutte le zucche.
       courseC_harvester_loops2: Riesci a combinare due diversi cicli per muoverti verso le zucche e poi raccoglierle tutte?
       courseC_harvester_loops2_2018: Riesci a combinare due diversi cicli per muoverti verso le zucche e poi raccoglierle tutte?
+      courseC_harvester_loops2_2019: Riesci a combinare due diversi cicli per muoverti verso le zucche e poi raccoglierle tutte?
       courseC_harvester_loops3: Raccogli tutte le zucche.
       courseC_harvester_loops3_2018: Raccogli tutte le zucche.
+      courseC_harvester_loops3_2019: Raccogli tutte le zucche.
       courseC_harvester_loops4: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops4_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops4_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops5: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops5_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops5_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops6: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops6_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops6_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops7: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops7_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops7_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops8: "**Sfida:** Raccogli tutte le pannocchie e tutte le zucche."
       courseC_harvester_loops8_2018: "**Sfida:** Raccogli tutte le pannocchie e tutte le zucche."
+      courseC_harvester_loops8_2019: "**Sfida:** Raccogli tutte le pannocchie e tutte le zucche."
       courseC_harvester_loops9: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops9_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops9_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops_challenge1: Raccogli tutte le pannocchie.
       courseC_harvester_loops_challenge1a: Raccogli tutte le pannocchie.
       courseC_harvester_loops_challenge1a_2018: Raccogli tutte le pannocchie.
+      courseC_harvester_loops_challenge1a_2019: Raccogli tutte le pannocchie.
       courseC_harvester_loops_challenge2: Raccogli tutte le lattughe evitando gli alberi e i campi!
       courseC_harvester_loops_challenge2_2018: Raccogli tutte le lattughe evitando gli alberi e i campi!
+      courseC_harvester_loops_challenge2_2019: Raccogli tutte le lattughe evitando gli alberi e i campi!
       courseC_maze_debugging1: Correggi il codice per aiutare Scrat a raggiungere la ghianda.
       courseC_maze_debugging10: Correggi questo programma riordinando, aggiungendo o cancellando blocchi, per farmi arrivare al maialino!
       courseC_maze_debugging1_2018: Correggi il codice per aiutare Scrat a raggiungere la ghianda.
@@ -2050,15 +2079,15 @@ it:
       courseD_artist_binary8_predict1_2019: Completa il programma per creare questo disegno.
       courseD_artist_binaryFP: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binaryFP_2018: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binaryFP_2019: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
-        
+
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
       courseD_artist_binary_challenge1: In questo esercizio, puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei cicli annidati per completare questo disegno.
       courseD_artist_binary_challenge1_2018: In questo esercizio, puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei cicli annidati per completare questo disegno.
@@ -2090,15 +2119,15 @@ it:
       courseD_artist_nestedLoops2_2019: Questa volta, completa l'esercizio con il minor numero possibile di blocchi.
       courseD_artist_nestedLoops3: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops3_2018: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops3_2019: |-
         Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
-        
+
         Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
       courseD_artist_nestedLoops4: Grande! Fai la stessa cosa con questi cerchi.
       courseD_artist_nestedLoops4_2018: Grande! Fai la stessa cosa con questi cerchi.
@@ -2433,6 +2462,7 @@ it:
       courseD_iceage_loops8_2019: 'Potresti correggere questo programma?'
       courseD_iceage_loops9: La ghianda è così lontana! Riesci ad aiutare Scrat ad arrivarci usando i cicli?
       courseD_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat ad arrivarci usando i cicli?
+      courseD_maze_intro5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_loops_challenge1: A caccia di diamanti - usando i cicli! Aiuta la collezionista a raggiungere almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli tutti e 4.
       courseD_maze_nestedLoops3: Fai arrivare lo zombie fino al girasole usando il minor numero possibile di blocchi.
       courseD_maze_nestedLoops3_2018: Fai arrivare lo zombie fino al girasole usando il minor numero possibile di blocchi.
@@ -2469,7 +2499,6 @@ it:
       courseD_maze_ramp5b_2019: Aiuta l'uccellino a trovare il maialino in questo labirinto!
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
-      courseD_maze_ramp5c_2019: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5d: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2018: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2019: Fai arrivare l'uccellino fino al maialino.
@@ -2854,7 +2883,7 @@ it:
       courseF_artist_variables_6a: Realizza questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
       courseF_artist_variables_9: |-
         Guarda cosa succede quando ripeti il codice dell'esercizio precedente 30 volte invece di 3!
-        
+
         Per aggiungere un tocco di fantasia, sentiti libero di creare linee di qualsiasi colore o schema.
       courseF_artist_variables_FP: "**Tempo di giocare:** Usa ciò che hai imparato e crea il tuo disegno. \n\nCome puoi usare le variabili con quadrati, pentagoni o esagoni?"
       courseF_artist_variables_challenge1: Puoi creare una variabile `length` (*lunghezza*)  e usarla per creare questo schema?
@@ -3142,7 +3171,7 @@ it:
       grade3_robotFarmer_ConditionalsIntro_11a: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       grade3_robotFarmer_ConditionalsIntro_4: |-
         *"Non so quanta terra c'è in questo mucchio!"*
-        
+
         Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       grade3_robotFarmer_ConditionalsIntro_5: 'Aiutami a rimuovere tutta questa terra.'
       grade3_robotFarmer_ConditionalsIntro_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
@@ -3439,7 +3468,6 @@ it:
       ramp_artist_loops3_2019: Usa un ciclo `ripeti ... volte` per disegnare questi trattini colorati.
       ramp_artist_loops4: Cosa succede se aggiungi una svolta di 72 gradi a destra come ultima istruzione all'interno del ciclo?
       ramp_artist_loops4_2018: Cosa succede se aggiungi una svolta di 72 gradi a destra come ultima istruzione all'interno del ciclo?
-      ramp_artist_loops4_2019: Cosa succede se aggiungi una svolta di 72 gradi a destra come ultima istruzione all'interno del ciclo?
       ramp_artist_loops5: Usa i cicli per disegnare questa scalinata.
       ramp_artist_loops5_2018: Usa i cicli per disegnare questa scalinata.
       ramp_artist_loops5_2019: Usa i cicli per disegnare questa scalinata.

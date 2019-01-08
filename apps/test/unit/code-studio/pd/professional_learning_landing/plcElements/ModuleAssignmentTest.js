@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import {shallow} from 'enzyme';
-import ModuleAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/moduleAssignment';
+import ModuleAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/ModuleAssignment';
 import {expect} from 'chai';
 
 describe ("Module assignment element", () => {

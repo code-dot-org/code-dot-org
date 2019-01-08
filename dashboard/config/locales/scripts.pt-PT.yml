@@ -1533,3 +1533,15 @@ pt:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+        andrea-test:
+          stages:
+            'null':
+              name: nulo
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Criar uma base
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos da Vida Real: Aviões de Papel'
+            Binary Bracelets:
+              name: Pulseiras binárias

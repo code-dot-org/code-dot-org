@@ -70,6 +70,10 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -89,6 +93,10 @@ my:
             '0.5': slow
             '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
@@ -117,10 +125,42 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
-      Mikelab_destroyAll:
+      Mikelab_groupChangeAnim:
         options:
           SELECT:
             '"all"': အားလုံး
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
       craft_ifPath:

@@ -5450,6 +5450,8 @@ es-MX:
               name: Ciclos anidados en Artist
             Nested Loops in Frozen:
               name: Ciclos anidados con Frozen
+            Conditionals in Minecraft:
+              name: Condicionales en Minecraft
         express-2019:
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
@@ -5581,3 +5583,45 @@ es-MX:
                 que proporcionan a los usuarios. La clase concluye con observaciones
                 de estas aplicaciones, así como una discusión dirigida por el docente
                 sobre el impacto de las aplicaciones en la sociedad. '
+        andrea-test:
+          stages:
+            'null':
+              name: nulo
+        dance-extras-gallery:
+          title: Sigue bailando
+          description: Ve más allá de la primera hora con ideas extendidas del proyecto.
+        coursec-2019:
+          description: Crea programas con secuencias, ciclos y eventos. Traduce tus
+            iniciales a binario, investiga distintas tecnicas de resolución de problemas
+            y aprende como responder a las amenazas en linea. ¡Al final del curso,
+            crea tu propio juego o historia que puedes compartir!
+          description_short: Aprende los conceptos básicos de las ciencias de la computación
+            y crea tu propio arte, historias y juegos.
+          description_audience: Edades de 6 a 10 años
+          stages:
+            Building a Foundation:
+              name: Construir una base
+            Programming in Maze:
+              name: Programación en Laberinto
+            Debugging in Maze:
+              name: Depuración en Maze
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos de la vida real : Aviones de papel'
+            Programming in Collector:
+              name: Programación en Collector
+            Programming in Artist:
+              name: Programación en Artist
+            'Loops: Getting Loopy':
+              name: 'Ciclos: Haciendo ciclos'
+            Loops with Rey and BB-8:
+              name: Ciclos con Rey y BB-8
+            Loops in Harvester:
+              name: Ciclos en Harvester
+            Build a Flappy Game:
+              name: Construye un juego Flappy
+            Screen Out the Mean:
+              name: Encuentra la media
+            Looking Ahead:
+              name: Observando hacia el futuro
+            Binary Bracelets:
+              name: Pulseras binarias

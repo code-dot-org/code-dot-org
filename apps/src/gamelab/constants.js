@@ -18,6 +18,9 @@ module.exports.GAME_WIDTH = 400;
 /** @const {number} */
 module.exports.GAME_HEIGHT = 400;
 
+/** @const {string} */
+module.exports.GAMELAB_DPAD_CONTAINER_ID = 'studio-dpad-container';
+
 /**
  * DataURL for a 1x1 transparent gif image.
  * @const {string}

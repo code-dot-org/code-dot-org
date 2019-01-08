@@ -275,3 +275,6 @@ de:
       BinaryBracelets_2019:
         title: Binäre Armbänder
         desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
+      PaperPlanes_2019:
+        title: 'Alltagsalgorithmen: Papierflieger'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.

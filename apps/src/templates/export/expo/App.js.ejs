@@ -56,6 +56,20 @@ export default class App extends React.Component {
     });
   };
 
+  onLoadEnd = () => {
+    //
+    // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
+    // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
+    //
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.setState({
+          loaded: true,
+        });
+      });
+    });
+  };
+
   webViewScale() {
     const { height, width } = this.state;
 
@@ -74,7 +88,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { age, height, indexUri } = this.state;
+    const { age, height, indexUri, loaded } = this.state;
 
     if (!age || age < DataWarning.AGE_MINIMUM) {
       return (
@@ -95,10 +109,13 @@ export default class App extends React.Component {
             source={{uri: indexUri}}
             style={styles.webView}
             javaScriptEnabled={true}
+            mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
             scalesPageToFit={Platform.OS === 'ios'}
+            onLoadEnd={this.onLoadEnd}
           />
+          {!loaded && <View style={styles.cover} />}
         </View>}
       </View>
     );
@@ -110,6 +127,10 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'black',
     justifyContent: 'center',
+  },
+  cover: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'black',
   },
   webView: {
     backgroundColor: 'black',

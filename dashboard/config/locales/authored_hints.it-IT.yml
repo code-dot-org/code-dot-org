@@ -3334,6 +3334,13 @@ it:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco
+          davanti a te.
+        mc_9_b: I granelli neri nel muro sono carbone! Usa il blocco `distruggi` su
+          di essi per estrarre il carbone.
+        mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
+          in cui ti trovi.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed`
           (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità
@@ -7394,6 +7401,16 @@ it:
           <title name="VALUE">Ciao!</title>
           </block>
           </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Ciao!</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
@@ -7407,6 +7424,18 @@ it:
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
           personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
+          personaggio ... dice` per specificare quale personaggio deve parlare.
+      courseC_PlayLab_events2_2019_authored_hint:
         courseC_PlayLab_events2_a: |-
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
 
@@ -7448,6 +7477,21 @@ it:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25
+          pixel per risolvere questo esercizio.
+        courseC_PlayLab_events3_b: Nella cassetta degli attrezzi c'è un blocco che
+          possa servire per muoverebbe un personaggio?
+        courseC_PlayLab_events3_c: |-
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane
           deve spostarsi a destra di **100** pixel per raggiungere il gatto.
@@ -7460,12 +7504,23 @@ it:
         courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario
           collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio
           ... tocca ...`.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane
+          deve spostarsi a destra di **100** pixel per raggiungere il gatto.
+        courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario
+          collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio
+          ... tocca ...`.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa
           (▼) del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca
           sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa
+          (▼) del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca
+          sul polpo dopo aver avviato il tuo programma!
+      courseC_PlayLab_events5_2019_authored_hint:
         courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa
           (▼) del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca
@@ -7488,6 +7543,15 @@ it:
         courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere
           il pinguino in tutte le direzioni usando i tasti freccia della tastiera
           o cliccando i tasti arancioni sullo schermo!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia
+          verso ...` può essere associato a delle specifiche azioni: i blocchi agganciati
+          sotto di esso.'
+        courseC_PlayLab_events6_b: Usa il menù a discesa (▼) del blocco `sposta il
+          personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere
+          il pinguino in tutte le direzioni usando i tasti freccia della tastiera
+          o cliccando i tasti arancioni sullo schermo!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: Per risolvere questo esercizio, devi usare entrambi
           il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio
@@ -7500,12 +7564,23 @@ it:
           2 in basso 400 pixel` all'interno del ciclo `ripeti per sempre`.
         courseC_PlayLab_events7_b: 'Il blocco `ripeti per sempre` non deve essere
           attaccato a nessun blocco evento: verrà eseguito in autonomia.'
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: Per risolvere questo esercizio, devi usare entrambi
+          il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio
+          2 in basso 400 pixel` all'interno del ciclo `ripeti per sempre`.
+        courseC_PlayLab_events7_b: 'Il blocco `ripeti per sempre` non deve essere
+          attaccato a nessun blocco evento: verrà eseguito in autonomia.'
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: Per risolvere l'esercizio, devi collegare dei blocchi
           all'evento `quando il personaggio 1 tocca il personaggio 2`.
         courseC_PlayLab_events8_b: I blocchi nella cassetta degli attrezzi `il personaggio
           1 dice ...` e `riproduci il suono di ...` dovrebbero darti una mano!
       courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: Per risolvere l'esercizio, devi collegare dei blocchi
+          all'evento `quando il personaggio 1 tocca il personaggio 2`.
+        courseC_PlayLab_events8_b: I blocchi nella cassetta degli attrezzi `il personaggio
+          1 dice ...` e `riproduci il suono di ...` dovrebbero darti una mano!
+      courseC_PlayLab_events8_2019_authored_hint:
         courseC_PlayLab_events8_a: Per risolvere l'esercizio, devi collegare dei blocchi
           all'evento `quando il personaggio 1 tocca il personaggio 2`.
         courseC_PlayLab_events8_b: I blocchi nella cassetta degli attrezzi `il personaggio
@@ -7526,12 +7601,25 @@ it:
         courseC_PlayLab_events9_c: Puoi avere più di un evento `quando il personaggio
           ... tocca ...` contemporaneamente nella tua area di lavoro, quindi non devi
           eliminare il precedente!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: Il blocco `aggiungi un punto` ti aiuterà a risolvere
+          questo esercizio.
+        courseC_PlayLab_events9_b: Controlla che il blocco evento `quando il personaggio
+          ... tocca ...` sia impostato sui personaggi **1** e **3**.
+        courseC_PlayLab_events9_c: Puoi avere più di un evento `quando il personaggio
+          ... tocca ...` contemporaneamente nella tua area di lavoro, quindi non devi
+          eliminare il precedente!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
           tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
+          uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
+        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
+          tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
+      courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
@@ -7570,6 +7658,23 @@ it:
           *Serve un idea?*
 
           **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
+      courseC_PlayLab_eventsFP_2019_authored_hint:
+        idea1: |-
+          *Serve un idea?*
+
+          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          *Serve un idea?*
+
+          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          *Serve un idea?*
+
+          **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
@@ -7589,6 +7694,24 @@ it:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
+
+          <xml> <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Prova ad usare il blocco `imposta il personaggio
+          ... alla posizione ...` quando il pinguino tocca qualsiasi altro personaggio.
+          In questo modo il giocatore viene penalizzato, ma potrà continuare a provare!
+        courseC_PlayLab_events_challenge_c: |-
+          Potresti anche voler modificare la velocità dei vari personaggi per rendere il gioco più facile o più difficile!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Puoi usare questo blocco per posizionare dove vuoi i personaggi nell'area di gioco.
 
@@ -8390,6 +8513,11 @@ it:
           <xml><block type="harvester_pumpkin"/></xml> per raccoglierla.
         courseC_harvester_loops1_b: Puoi usare un ciclo con il blocco <xml><block
           type="harvester_pumpkin"/></xml> per prendere più di una zucca da una casella.
+      courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: Quando arrivi ad una zucca, puoi usare il blocco
+          <xml><block type="harvester_pumpkin"/></xml> per raccoglierla.
+        courseC_harvester_loops1_b: Puoi usare un ciclo con il blocco <xml><block
+          type="harvester_pumpkin"/></xml> per prendere più di una zucca da una casella.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Se ti blocchi, prova a scrivere i passaggi su
           carta e cerca gli schemi che si ripetono.
@@ -8398,6 +8526,13 @@ it:
         courseC_harvester_loops2_c: Un ciclo ripeterà l'istruzione `vai avanti` e
           l'altro ripeterà l'istruzione `prendi zucca`.
       courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: Se ti blocchi, prova a scrivere i passaggi su
+          carta e cerca gli schemi che si ripetono.
+        courseC_harvester_loops2_b: Avrai bisogno di due cicli `ripeti ... volte`,
+          uno dopo l'altro.
+        courseC_harvester_loops2_c: Un ciclo ripeterà l'istruzione `vai avanti` e
+          l'altro ripeterà l'istruzione `prendi zucca`.
+      courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: Se ti blocchi, prova a scrivere i passaggi su
           carta e cerca gli schemi che si ripetono.
         courseC_harvester_loops2_b: Avrai bisogno di due cicli `ripeti ... volte`,
@@ -8413,6 +8548,14 @@ it:
         courseC_harvester_loops3_c: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
+        courseC_harvester_loops3_b: Per la prima zucca, puoi usare un programma molto
+          simile all'esercizio precedente. Da che parte devi girare dopo?
+        courseC_harvester_loops3_c: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+      courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_a: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
@@ -8436,6 +8579,14 @@ it:
           zucche.
         courseC_harvester_loops4_c: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+      courseC_harvester_loops4_2019_authored_hint:
+        courseC_harvester_loops4_a: Usa il nuovo blocco `prendi pannocchia` per raccogliere
+          le pannocchie.
+        courseC_harvester_loops4_b: Puoi usare diversi blocchi `ripeti ... volte`
+          nel tuo programma, alcuni per raccogliere le pannocchie ed altri per le
+          zucche.
+        courseC_harvester_loops4_c: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: Se ti blocchi, prova a disegnare l'intero programma
           e poi cerca gli schemi che si ripetono.
@@ -8448,12 +8599,23 @@ it:
         courseC_harvester_loops5_b: Non ti sembra che questa gradinata assomigli a
           quella di altri esercizi? I movimenti dovrebbero essere simili, ricordati
           solo di raccogliere gli ortaggi lungo la strada.
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: Se ti blocchi, prova a disegnare l'intero programma
+          e poi cerca gli schemi che si ripetono.
+        courseC_harvester_loops5_b: Non ti sembra che questa gradinata assomigli a
+          quella di altri esercizi? I movimenti dovrebbero essere simili, ricordati
+          solo di raccogliere gli ortaggi lungo la strada.
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: Ricorda che puoi mettere più di un blocco all'interno
           di un ciclo `ripeti ... volte`.
         courseC_harvester_loops6_b: Non dimenticarti di girare alla fine della fila
           di pannocchie.
       courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: Ricorda che puoi mettere più di un blocco all'interno
+          di un ciclo `ripeti ... volte`.
+        courseC_harvester_loops6_b: Non dimenticarti di girare alla fine della fila
+          di pannocchie.
+      courseC_harvester_loops6_2019_authored_hint:
         courseC_harvester_loops6_a: Ricorda che puoi mettere più di un blocco all'interno
           di un ciclo `ripeti ... volte`.
         courseC_harvester_loops6_b: Non dimenticarti di girare alla fine della fila
@@ -8470,6 +8632,12 @@ it:
           le zucche e poi le pannocchie.'
         courseC_harvester_loops7_b: Dovrai usare diversi cicli `ripeti ... volte`
           per risolvere questo esercizio.
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: 'Ci sono due modi per risolvere questo esercizio:
+          raccogliere prima le pannocchie e poi le zucche oppure viceversa, prima
+          le zucche e poi le pannocchie.'
+        courseC_harvester_loops7_b: Dovrai usare diversi cicli `ripeti ... volte`
+          per risolvere questo esercizio.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: Non ti sembra che questa gradinata assomigli a
           quella dell'esercizio precedente? I movimenti dovrebbero essere simili,
@@ -8477,6 +8645,12 @@ it:
         courseC_harvester_loops8_b: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Non ti sembra che questa gradinata assomigli a
+          quella dell'esercizio precedente? I movimenti dovrebbero essere simili,
+          ricordati solo di raccogliere gli ortaggi lungo la strada.
+        courseC_harvester_loops8_b: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: Non ti sembra che questa gradinata assomigli a
           quella dell'esercizio precedente? I movimenti dovrebbero essere simili,
           ricordati solo di raccogliere gli ortaggi lungo la strada.
@@ -8542,6 +8716,35 @@ it:
           </block>
           </statement>
           </block></xml>
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: È troppo difficile senza usare i cicli!
+        courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
+          e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
+          ogni angolo.
+        courseC_harvester_loops_challenge1_c: |-
+          Il modo migliore per raccogliere le pannocchie del secondo e terzo lato del percorso è di usare un ciclo `ripeti ... volte` dentro a un altro blocco `ripeti ... volte`.
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -8557,6 +8760,20 @@ it:
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
+          assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
+          soluzioni diverse per un esercizio come questo. Non rinunciare, insisti!
+        courseC_harvester_loops_challenge2_b: Puoi ripetere i blocchi `vai avanti`
+          e `prendi lattuga` tutte le volte che ti serve, poi gira ad ogni angolo.
+        courseC_harvester_loops_challenge2_c: |
+          Lo schema a zig-zag può essere ripetuto due volte per completare l'esercizio usando solo 20 blocchi!
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          Lo schema a spirale può essere ottenuto con solo 18 blocchi!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2019_authored_hint:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
           soluzioni diverse per un esercizio come questo. Non rinunciare, insisti!
@@ -10344,8 +10561,6 @@ it:
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals8_2019_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
-          il video-suggerimento!
         courseD_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
@@ -10353,13 +10568,6 @@ it:
           Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
-        courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
-          alla fine di ogni tratto del percorso, indipendentemente dalla sua lunghezza?
-        courseD_bee_conditionals8_d: |-
-          Nonostante ci sia una nuvola proprio davanti a te (alla partenza), non dovresti analizzarla subito. Prova ad ignorarla, iniziando da quella nell'angolo in basso a destra (alla fine del primo tratto rettilineo).
-
-          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
-        courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Riesci a trovare un percorso che raggiunga
           tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore
@@ -11937,6 +12145,17 @@ it:
         courseD_iceage_loops9_b: Il programma finale dovrebbe avere **4** cicli.
         courseD_iceage_loops9_c: Scrat dovrebbe seguire questo percorso per raggiungere
           la ghianda.
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          la ghianda, vai ancora una volta avanti.
+      courseD_maze_intro5a_2019_authored_hint:
+        courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
+          eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
+          dopo?
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
@@ -12135,11 +12354,11 @@ it:
           il maialino, vai ancora una volta avanti.
       courseD_maze_ramp4_2019_authored_hint:
         courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
-          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
-          significa dirigersi verso il basso.
+          vista di Scrat. Se Scrat è rivolto verso destra, girare a destra significa
+          dirigersi verso la parte bassa dello schermo.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
           una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
-          il maialino, vai ancora una volta avanti.
+          la ghianda, vai ancora una volta avanti.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare

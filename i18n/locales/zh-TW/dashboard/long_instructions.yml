@@ -61,7 +61,7 @@ zh-TW:
         讓我們來畫個機器人的頭吧！你能做出一個邊長為 100 像素的正方形嗎？\r
         \r
         <br/>\r
-        
+
       2-3 Artist Loops New 10: 現在我們用迴圈來把一堆的 V 連接在一起。
       2-3 Artist Loops New 11: "是時候搞出個名堂了！\n\\r\n\\r\n重建上個關卡的程式，不過這次在迴圈裡添加向左轉 30 度的程式。然後將重複 8 次改成 24 次。"
       2-3 Artist Loops New 12: '畫一個邊長為 100 畫素的菱形。 '
@@ -71,7 +71,7 @@ zh-TW:
         現在，畫你喜歡的任何東西！\r
         <br/><br/>\r
         \r
-        
+
       2-3 Artist Loops New 2: |-
         這個關卡和前一關差不多，不過這次，我們只可以用 1 個`移動-向前`積木，還有 1 個`轉向`積木。\r
         \r
@@ -84,7 +84,7 @@ zh-TW:
         \r
         <br/>\r
         \r
-        
+
       2-3 Artist Nested Loops 10: 循環這個程式 12 次來完成這個圖案。
       2-3 Artist Nested Loops 11: 循環這個程式 4 次來完成這個圖案。每繞完一圈就轉向 90 度。
       2-3 Artist Nested Loops 12: 循環這個程式 12 次來完成這個漩渦。
@@ -269,7 +269,7 @@ zh-TW:
         # 預測\r
         \r
         下方的程式有 4 個東西會被紀錄到主控台，你覺得這個程式在主控台上會輸出些什麼結果？\r
-        
+
       CSD - for loop - on off: "＃迴圈及 Color LEDs\\r\n\\r\n迴圈可以讓一些對全部`colorLed`做的事情更簡單\\r\n\\r\n**開始程式：**有兩個按鈕一個是開起全部的`colerLeds`和另一個是關掉全部的。\\r\n\\r\n你可以填入所有的功能函數到每個用到一個迴圈的任務來寫你的演算法嗎？"
       CSD For Loops - Check For Understanding: |
         ＃檢入\r
@@ -401,7 +401,7 @@ zh-TW:
         \r
         \r
         \r
-        
+
       CSDU6 - Arrays - indexPractice: |-
         # 索引練習（Index Practice）\r
         \r
@@ -442,7 +442,7 @@ zh-TW:
         \r
         讓燈光呈現脈衝的效果。\r
         \r
-        
+
       CSDU6L06 - lists and colorLeds -solo light pattern: |-
         #
         燈光模型\r
@@ -480,7 +480,7 @@ zh-TW:
         \r
         \r
         \r
-        
+
       Color Contrast Checker: "# 顏色對比\\r\n\\r\n因為它，我們才能夠看到和閱讀網頁上的內容。但有些人的視力差，有些人是色盲，你要怎麼為這些差異進行設計呢？\\r\n\\r\n有個最簡單的方法，就是在網站上使用能形成足夠的對比的不同顏色，來確保大部分的人都可以閱讀你的站台內容。\\r\n\\r\nhttp://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/\\r\n\\r\n\\r\n#\n做做看\\r\n\\r\n* 使用顏色對比檢查器，看看你在站台使用的顏色是不是有足夠的對比度。"
       Considerations for the 1-to-1 Classroom: |-
         ## 1-1 教室\r
@@ -588,7 +588,7 @@ zh-TW:
         試著用你的新函式來收集所有的花蜜。\r
         \r
         <br/>\r
-        
+
       Course 4 Bee Params 8: "**挑戰：**現在還有蜂蜜也需要處理！\\r\n\\r\n重寫你的函式以使用相同數量的蜂蜜和花蜜。怎樣用這些數字來決定你應該做什麼？"
       Course 4 EC 1a: "**終極挑戰：**沒有規則、沒有提示、只有挑戰！"
       Course 4 EC 1b: "**終極挑戰：**沒有規則、沒有提示、只有挑戰！"
@@ -723,7 +723,7 @@ zh-TW:
         \r
         <hr/>\r
         \r
-        
+
       Course 4 SCV 4: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 5: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？  "
@@ -738,39 +738,39 @@ zh-TW:
       CourseF_PlayLab_vars9: "很好，現在我們來確定這個遊戲不至於太簡單！\\r\n\\r\n每當小狗（角色1）被小貓（角色2）的三明治丟到時就扣 1 分。\\r\n\\r\n初始分數 10 分似乎不大困難，我們把分數從 10 改成 0 後再試試吧。"
       Dance_Party_01: |-
         *來舉行一場舞會！*
-        
+
         將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
-        
+
         * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
       Dance_Party_01_low: |-
         *來舉行一場舞會！*
-        
+
         將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
-        
+
         * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
-        
+
         拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
-        
-        
+
+
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: "*現在我們要跟著音樂律動了！*\n\n將 <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> 程式積木新增至您的工作區。讓舞者在 6 個小節後開始新的動作。"
       Dance_Party_04: |-
         *這支舞需要一些閃光！*
-        
+
         在工具箱中尋找新的程式積木，在舞者的背後新增背景效果。觀看隨著時間和音樂來變化的效果！
       Dance_Party_05: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
-        
+
         * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
       Dance_Party_06: |-
         *我們需要更多舞者！*
-        
+
         建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
       Dance_Party_08: |-
         每個舞者都有一套 _屬性_ 來控制外觀。
-        
+
         您可以縮小 _尺寸_，讓這看起來像一個舞者在背景中。您是否能讓兩個備用舞者的大小相同？
       Dance_Party_09: |-
         舞者具有可以新增一層顏色的「色調」屬性。試著變更其中一個舞者的色調。
@@ -783,7 +783,7 @@ zh-TW:
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
-        
+
         此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
       Dance_Party_11.5_test: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
@@ -793,43 +793,43 @@ zh-TW:
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Dance_Party_extras_battle: |-
         #舞蹈團隊
-        
+
         這是兩個隊員之間的舞蹈。方向鍵控制其中一位舞者，“w、a、s、d”鍵控制另一位舞者。可以和朋友一起跳支舞，然後努力改進你的舞蹈。
-        
+
         * 添加更多按鍵來控制舞蹈
         * 讓後備舞者也在按下按鍵時做出反應
         * 通過設置舞者的可見度，每 4 個節拍替換舞者一次
       Dance_Party_extras_every_beat: |-
         # 四分音符
-        
+
         我們的舞蹈大多採用了完整節拍，但每個節拍都由 4 個四分音符組成。這種舞蹈使用“1/4 節拍”使舞者在每個四分音符拍手。
-        
+
         這種舞蹈還使用_conditional_塊來控制在什麼時候“每 1/4 個節拍”塊可以改變舞蹈。嘗試更改條件塊中的數字，看看這會如何改變舞蹈。
-        
+
         * 嘗試使用其他音符長度（1/2 節拍或 1/8 節拍）。
         * 添加一些 “節拍后”事件。
         * 用“秒”替換“節拍”，並嘗試以這種方式為舞蹈計時。
       Dance_Party_extras_layout: |-
         # 讓我們進入陣型！
-        
+
         查看這種舞蹈的效果，使用“佈局”塊來改變整個舞蹈中後備舞者的陣型。請嘗試以下任一方法進行擴展練習：
-        
+
         * 在不同的佈局中創建第二組舞者
         * 按下按鍵時更改佈局
         * 當舞者改變陣型時改變屬性
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
-        
+
         這種舞蹈會在音樂的不同部分響起時使用“峰值”事件來觸發代碼。嘗試換用不同的歌曲，看看這會如何改變舞蹈。
       Dance_Party_extras_speed: |-
         # 加快速度、減慢速度
-        
+
         最後一種舞蹈使用“設定速度”塊來控制每位舞者的移動速度。嘗試在歌曲中的不同節點使用不同的速度。隨意對舞蹈進行修改，或恢復以前的舞蹈，取得更好的效果。
       Dance_Party_extras_visible: |-
         # 他們要去哪？
-        
+
         這鐘舞蹈可以顯示和隱藏了兩組不同的舞者。看看效果如何，然後嘗試發揮自己的天分。
-        
+
         * 添加另一組舞者
         * 使用方向鍵來顯示和隱藏舞者
         * 隱藏所有舞者並切換到令人興奮的背景效果
@@ -860,7 +860,7 @@ zh-TW:
         2. 切換到「動作」頁籤，並選擇角色的圖像。\r
         3. 使用 sprite.setAnimation() 積木來設置角色的動作。\r
         4. 使用迴圈增量（慢慢增加）它的 x 和 y 值，就可以移動角色。\r
-        
+
       GameLab Livecode Demo 4: |-
         # 創作一個你自己的玩意兒\r
         \r
@@ -883,11 +883,11 @@ zh-TW:
       HOC 2018 Level_9b: "您終於抵達珊瑚礁，現在尋找**海洋之心** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)！使用藍色和紅色的珊瑚抵達藏有寶藏的**箱子** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。\n\n"
       HOC Dance 4_draft: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
-        
+
         * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
       HOC Dance 5_draft: |-
         *我們需要更多舞者！*
-        
+
         建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
       HOC Dance Freeplay: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
@@ -924,11 +924,11 @@ zh-TW:
       MC_HOC_2017_01_Kiki: '若要玩此關卡，按一下遊戲空間下方的橙色「執行」按鈕，然後使用**箭頭按鍵**讓玩家四處移動。'
       MC_HOC_2017_01_RETRY: |-
         房門反鎖住了，代理 Agent 快來幫忙！
-        
+
         將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_01_RETRY_2019: |-
         房門反鎖住了，代理 Agent 快來幫忙！
-        
+
         將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_02: 玩家必須進入秘密樹叢。撰寫代碼，幫助 Agent 打開大門，讓他可以前往壓板。
       MC_HOC_2017_02_Cole: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖** [map_empty]。\\r\n \\r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName} 才可以順利進入。"
@@ -941,8 +941,8 @@ zh-TW:
       MC_HOC_2017_04: 變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。
       MC_HOC_2017_04POINT5_Cole: |-
         您已安全離開沼澤！現在，讓玩家安全地抵達橙色方塊。 
-        
-        
+
+
         找到簡單的圖形，並使用循環來通過前兩個壓板，幫助 Agent 清除路徑。
       MC_HOC_2017_04POINT5_RYAN: "您已經安全通過！ \n\n\n現在，讓 {currentPlayerName} 安全地通過迷宮以收集**斧頭** [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "您已經安全通過！ \n\n\n現在，讓 {currentPlayerName} 安全地通過迷宮以收集**斧頭** [diamond_axe]"
@@ -951,15 +951,15 @@ zh-TW:
       MC_HOC_2017_04_Kiki: "進入秘密樹叢，就可以抵達這片美麗的綠洲！若要完成此關卡，玩家必須前往小屋中的橙色方塊。 \n\n\n使用「重複」循環，幫助 Agent 一路前往壓板，使用壓板即可開啟小屋大門。"
       MC_HOC_2017_05: |-
         循環不一定有幫助。 
-        
-        
+
+
         這些仙人掌長在不起眼的圖形中，因此循環無法正確地清除這些仙人掌。相反的，我們為您提供名為「破壞並移動」的功能，此功能可以在每次 Agent 遇到障礙時幫您清除障礙。
       MC_HOC_2017_05_Cole: "糟糕，橋沒了！ \n\n\n設定 Agent 的代碼，以使用「放置」方塊來重建橋樑，這樣 {currentPlayerName} 才能抵達**鏟子** [diamond_shovel] 的位置。"
       MC_HOC_2017_05_Cole_2019: "糟糕，橋沒了！ \n\n\n設定 Agent 的代碼，以使用「放置」方塊來重建橋樑，這樣 {currentPlayerName} 才能抵達**鏟子** [diamond_shovel] 的位置。"
       MC_HOC_2017_05_Josh: |-
         糟糕，橋沒了！ 
-        
-        
+
+
         幫助 Agent 重建橋樑，讓玩家可以前往**鏟子**的位置。
       MC_HOC_2017_05_Kiki: "是時候讓玩家離開秘密樹叢，並繼續冒險旅程了，不過橋沒了！ \n\n\n幫助 Agent 重建橋樑然後移動木板，這樣玩家才能前往橙色方塊。"
       MC_HOC_2017_06_Cole: "又是一條河，但這條河寬多了！\\r\n \\r\n修正此代碼，幫助 Agent 建造橋樑，這樣 {currentPlayerName} 才能前往**十字鎬** [diamond_pickaxe] 的位置。"
@@ -974,13 +974,13 @@ zh-TW:
       MC_HOC_2017_08_Kiki: "現在，您不需要破壞仙人掌，而是必須在熔岩上放置石頭，然後再破壞砂岩。 \n\n\n變更此關卡使用的功能。"
       MC_HOC_2017_08_RY: |-
         現在您有**兩個**可以選擇使用的功能！ 
-        
-        
+
+
         使用這些功能，快速建造讓 {currentPlayerName} 可以橫跨熔岩的橋樑。
       MC_HOC_2017_08_Will: |-
         現在您有**兩個**可以選擇使用的功能！ 
-        
-        
+
+
         使用這些功能，快速建造讓玩家可以橫跨熔岩的橋樑。
       MC_HOC_2017_09_Cole: 使用功能幫助 Agent 破壞玩家通往壓板路徑上的巨大泥土方塊。
       MC_HOC_2017_09_Kiki: "此起始代碼不可移除。 \n\n\n新增指令至「建立軌跡」功能，讓工作空間中的程式可以引導 Agent 前往壓板。"
@@ -996,8 +996,8 @@ zh-TW:
       MC_HOC_2017_13_Cole: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
       MC_HOC_2017_4.5v2: |-
         您已安全離開沼澤！現在，讓玩家安全地抵達橙色方塊。 
-        
-        
+
+
         找到簡單的圖形，並使用循環來通過前兩個壓板，幫助 Agent 清除路徑。
       MC_HOC_2017_Ali: '請查看下方的功能。您要如何使用這些功能來避開地獄幽靈，並幫助 {currentPlayerName} 安全拿到**附魔書** [book_enchanted]？'
       MC_HOC_2017_Ali_2019: '請查看下方的功能。您要如何使用這些功能來避開地獄幽靈，並幫助 {currentPlayerName} 安全拿到**附魔書** [book_enchanted]？'
@@ -1132,7 +1132,7 @@ zh-TW:
         你可以透過 RGB 製作出超過 1600 萬種的顏色。\r
         </p></details>\r
         </div>\r
-        
+
       What is the difference between formative and summative assessment?: '下面的連結中提供了形成性和總結性評量的定義和範例：'
       aE1: |+
         <img src="https://images.code.org/fa3c416b74ff9071455535955bc4df35-image-1465507662295.gif"
@@ -1150,7 +1150,7 @@ zh-TW:
         </div>\r
         <br/>\r
         \r
-        
+
       aE2: "<img src=\"https://images.code.org/2a67ea28a0fb9f674fd764b350b297da-image-1465514320176.gif\"\nstyle=\"width:400px; margin: 0 20px 20px 10px;\"/>\\r\n\\r\n<div style=\"color:\n#7665a0; font-size: 1.6em; line-height: 1.4em;\" >現在我們足夠的數量分給大家！\\r\n<br/><br/>\\r\n\\r\n我們把剛剛做出的形狀排列，一列 14 個餐巾。  \\r\n<br/>\\r\n當你放置一個迴圈到另一個迴圈裡時，我們稱它是巢狀迴圈。 \\r\n\\r\n要怎樣把前個階段的程式變成迴圈，才能把 14 個餐巾排成一列呢？</div>\\r\n"
       aE3: |+
         <img src="https://images.code.org/e9fe83556eec68be9ebd7de9a16267b1-image-1465516277348.gif"
@@ -1163,7 +1163,7 @@ zh-TW:
         拿出你的餐巾，然後用另一個**外層迴圈**把它們一個個的縫起來，就能為我們的桌子做個桌布了。\r
         </div>\r
         \r
-        
+
       aE3alternate: |2+
         \r
         <div style="color: #7665a0; font-size:
@@ -1171,7 +1171,7 @@ zh-TW:
         如果使用者選擇了五邊形餐巾，然後修改線條的寬度或顏色，這個交替顯示的圖像會是什麼樣子。\r
         </div>\r
         \r
-        
+
       aE3alternateB: |2+
         \r
         <div style="color: #7665a0; font-size:
@@ -1179,7 +1179,7 @@ zh-TW:
         如果使用者選擇了三角形餐巾，然後修改線條的寬度或顏色，這個交替顯示的圖像會是什麼樣子。\r
         </div>\r
         \r
-        
+
       aE4: "\\r\n<div style=\"color: #7665a0; font-size: 1.6em;\nline-height: 1.4em;\" >\\r\n喔不！我們的餐巾都太小了！ \\r\n<br/><br/>\\r\n我們要讓餐巾變成 2 倍大，但桌布的尺寸保持不變，你要修改哪些數字才能完成？\\r\n<br/><br/>\\r\n（如三角形圖像所示）\\r\n</div>\\r\n\\r\n"
       aE5: |2+
         \r
@@ -1190,7 +1190,7 @@ zh-TW:
         這是你用來畫出一列餐巾的原始程式。放個 4 列就可以製作出個花樣來裝飾你的窗框了。\r
         </div>\r
         \r
-        
+
       aE6: |-
         <div style="color: #7665a0; font-size: 1.6em; line-height:
         1.4em;" >\r
@@ -1209,7 +1209,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\r
-        
+
       artistLoopsK2gradek_artist_loops3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1218,7 +1218,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
         width="300"/>\r
-        
+
       artistLoopsK3: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1227,7 +1227,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif"
         width="300"/>\r
-        
+
       artistLoopsK4: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1237,7 +1237,7 @@ zh-TW:
         <img
         src="https://images.code.org/84b93e1b9dad3ee52a46c767524d3558-image-1467935697224.gif"
         width="300"/>\r
-        
+
       artistLoopsK5: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1246,7 +1246,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/f418ccba20b7230baba1328143bd0092-image-1467935762464.gif"
         width="300"/>\r
-        
+
       artistLoopsK6: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1255,7 +1255,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/1efb95ca15f66b46145725769d3d279c-image-1467935856461.gif"
         width="300"/>\r
-        
+
       artistLoopsK7: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1264,7 +1264,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/af040c27be11c3a639e18c440c8a047c-image-1467936046481.gif"
         width="300"/>\r
-        
+
       artistLoopsK8: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1273,7 +1273,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/bf368872da36217b0d19261fc6b84bf6-image-1467936147116.gif"
         width="300"/>\r
-        
+
       artistLoopsK9: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1282,7 +1282,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/cb5646ef57f68b47fa6c2762253a7044-image-1467936260174.gif"
         width="300"/>\r
-        
+
       artistLoopsKA: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1291,7 +1291,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\r
-        
+
       artistLoopsKB: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1300,7 +1300,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/c4263306ebb0ad1d99fe6f200a790d0c-image-1467936424533.gif"
         width="300"/>\r
-        
+
       artistLoopsKFP: |
         畫畫時間到了！使用你所學到的來畫出一個圖案。\r
         \r
@@ -1338,7 +1338,7 @@ zh-TW:
         \r
         </tr>\r
         </table>\r
-        
+
       beeDebugVideo1: 收集所有的花蜜。
       collector example: |-
         使用`收集`積木來取得所有的黃金：\r
@@ -1369,7 +1369,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\r
-        
+
       courseA_artist_loops10_2018: |-
         <div style="color: #7665a0;
         font-size: 1.6em; line-height: 1.4em;" >\r
@@ -1378,7 +1378,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\r
-        
+
       courseA_artist_loops11: |-
         <div style="color: #7665a0;
         font-size: 1.6em; line-height: 1.4em;" >\r
@@ -1387,7 +1387,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif"
         width="300"/>\r
-        
+
       courseA_artist_loops11_2018: |-
         <div style="color: #7665a0;
         font-size: 1.6em; line-height: 1.4em;" >\r
@@ -1396,7 +1396,7 @@ zh-TW:
         \r
         <img src="https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif"
         width="300"/>\r
-        
+
       courseA_artist_loops8: |-
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -1449,14 +1449,14 @@ zh-TW:
         \r
         <img src="https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif"
         width="200px"/>\r
-        
+
       courseA_maze_seq11_2018: "移動以讓鳥抓到猪。\\r\n\\r\n<img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"\nwidth=\"200px\"/>\\r\n"
       courseA_maze_seq12: |-
         抓到那頭豬！\r
         \r
         <img src="https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif"
         width="200px"/>\r
-        
+
       courseA_maze_seq12_2018: "抓到那頭豬！\\r\n\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\r\n"
       courseA_maze_seq1_2018: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
       courseA_maze_seq3: |-
@@ -1550,7 +1550,7 @@ zh-TW:
         \r
         </tr>\r
         </table>\r
-        
+
       courseB_artist_loops10_2018: |-
         你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\r
         \r
@@ -1588,7 +1588,7 @@ zh-TW:
         \r
         </tr>\r
         </table>\r
-        
+
       courseB_artist_loops6: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2018: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops7: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
@@ -1613,11 +1613,11 @@ zh-TW:
       courseB_collector_loops3_predict1: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops_challenge2a: |-
         *快拿到那些寶石！*
-        
+
         幫 Laurel 拿到至少 **5** 塊寶石才能過關。
       courseB_collector_loops_challenge2a_2018: |-
         *快拿到那些寶石！*
-        
+
         幫 Laurel 拿到至少 **5** 塊寶石才能過關。
       courseB_collector_prog3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_maze_seq3: '*「修正這個程式，使我抓到這頭豬！」*'
@@ -1634,6 +1634,7 @@ zh-TW:
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge2: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_harvester_loops_challenge2_2018: "收集所有的生菜。\n注意避開樹木和田地！"
+      courseC_harvester_loops_challenge2_2019: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_maze_loops2_predict1: "哇嗚，神奇的積木出現啦！\\r\n利用`重複`積木，你可以讓一段程式不斷的循環執行。\\r\n\\r\n你能在`重複`積木裡只用上一個`移動-向前`積木，透過迴圈的方式來抓到這隻豬嗎？"
       courseC_maze_loops5: '*「愈快抓到豬愈好！」*'
       courseC_maze_programming1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
@@ -1783,7 +1784,10 @@ zh-TW:
       courseD_maze_ramp2_2019: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseD_maze_ramp3: "*「這隻豬真的把我惹毛了！」*\\r\n\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\r"
       courseD_maze_ramp3_2018: "*「這隻豬真的把我惹毛了！」*\\r\n\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\r"
-      courseD_maze_ramp3_2019: "*「這隻豬真的把我惹毛了！」*\\r\n\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\r"
+      courseD_maze_ramp3_2019: |-
+        *「這隻豬真的把我惹毛了！」*\r
+        \r
+        有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\r
       courseD_maze_ramp4: "*「順著路徑讓我抓到那隻蠢豬。」\\r\n\\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseD_maze_ramp4_2018: "*「順著路徑讓我抓到那隻蠢豬。」\\r\n\\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseD_maze_ramp4_2019: "*「順著路徑讓我抓到那隻蠢豬。」\\r\n\\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
@@ -1956,7 +1960,7 @@ zh-TW:
         正方形螺旋圖中間最小的長度為 50 像素。\r
         - The
         螺旋圖最外圈中最長的長度是 200 像素。\r
-        
+
       courseF_artist_fwp7_2018: |-
         完成這個 draw a spiral edge（畫個螺旋圖）函式，並詢問螺旋圖中間最小的長度。\r
         \r
@@ -1964,21 +1968,21 @@ zh-TW:
         正方形螺旋圖中間最小的長度為 50 像素。\r
         - The
         螺旋圖最外圈中最長的長度是 200 像素。\r
-        
+
       courseF_artist_fwp8: |-
         想一想，要怎麼使用你剛剛創建的函式來畫出這個圖案？\r
         \r
         - 紅色的螺旋圖形是 50 到 200 像素\r
         - 藍色的螺旋圖形是 25 到 125 像素\r
         - 綠色的螺旋圖形是 100 到 300 像素\r
-        
+
       courseF_artist_fwp8_2018: |-
         想一想，要怎麼使用你剛剛創建的函式來畫出這個圖案？\r
         \r
         - 紅色的螺旋圖形是 50 到 200 像素\r
         - 藍色的螺旋圖形是 25 到 125 像素\r
         - 綠色的螺旋圖形是 100 到 300 像素\r
-        
+
       courseF_artist_fwp9: "**自由發揮：**這兒除了你寫的函式，還有更多的函式讓你發揮。畫些令人驚嘆的東西吧！用不同的筆跡寬度來看看你能畫出什麼不一樣的圖形！"
       courseF_artist_fwp9_2018: "**自由發揮：**這兒除了你寫的函式，還有更多的函式讓你發揮。畫些令人驚嘆的東西吧！用不同的筆跡寬度來看看你能畫出什麼不一樣的圖形！"
       courseF_artist_variablesFP: "**自由活動：**用你學過的東西，繪製出自己的作品。\\r\n\\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
@@ -2285,7 +2289,7 @@ zh-TW:
         正方形螺旋圖中間最小的長度為 50 像素。\r
         - The
         螺旋圖最外圈中最長的長度是 200 像素。\r
-        
+
       grade5_artist_functionparameters_6: |-
         做得好！現在編輯這個函式，裡頭添加一個參數以代表多邊形的邊數。\r
         \r

@@ -1944,3 +1944,18 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'niets'
+        dance-extras-gallery:
+          title: Blijf dansen
+          description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            Binary Bracelets:
+              name: Binaire armbanden

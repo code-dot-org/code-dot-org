@@ -5,7 +5,7 @@ ca:
       2-3 Artist 11: "Fes una vora al senyal d'stop dibuixant un octàgon amb vuit costats, cadascun de 100 píxels de llarg. Quants graus hauries de girar? (Pista: quant és 360 dividit per 8?) "
       2-3 Artist 12: |-
         Fes un cercle per acabar l'ull!
-        
+
         Si l'artista gira un grau cada cop, quantes vegades cal repetir-ho per completar el cercle? 180? 360? 500?
       2-3 Artist 2 new: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
       2-3 Artist 2: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
@@ -293,7 +293,7 @@ ca:
       Course 4 Artist 1: 'Ajuda''m a acabar de dibuixar la capsa. (Cada línia fa 200 píxels de llarg) '
       Course 4 Artist 10: |-
         Clica aquí per veure altre cop les instruccions completes!
-        
+
         Aquí hi ha el programa per a una forma interessant. Què passa quan ho repeteixes diverses vegadas, girant després de cada iteració? Adona-te'n que el girs en aquesta forma sumen 420 graus, cosa que vol dir que quan el teu artista hagi acabat, estarà mirant a una direcció diferent de quan ha començat. La nova direcció és exactament 60 graus a la dreta des d'on ha començat.
       Course 4 Artist 11: Ara un repte! Si vols fes assaig i error. No cal que facis la imatge perfecte a la primera. Vols veure més pistes? Clica aquí!
       Course 4 Artist 13: Tens encara ganes de jugar? Aquí hi ha un llenç en blanc perquè hi dissenyis el que prefereixis!
@@ -326,6 +326,7 @@ ca:
       Course 4 Maze 4: Prova amb el bloc "repetir" per usar menys blocs...
       Course 4 Maze 5: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
       Course 4 Maze 6: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      Course E MC Conditionals1: Trobaràs els recursos més valuosos sota terra, però pot estar fosc. Col·loca com a mínim un parell de torxes i excava com a mínim dos carbons.
       Crack Random Substitution: Instruccions
       Crack Random Substitution_2018: Instruccions
       Crack a Caesar Cipher: Instruccions
@@ -622,7 +623,7 @@ ca:
       grade4_artist_functions2: "Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada \"dibuixa un quadrat\". Pots usar la funció \"dibuixa un quadrat\" per crear les ulleres? Els quadrats estan separats 75 píxels."
       grade4_artist_nestedLoops_challenge: |-
         Clica aquí per veure altre cop les instruccions completes!
-        
+
         Aquí hi ha el programa per a una forma interessant. Què passa quan ho repeteixes diverses vegadas, girant després de cada iteració? Adona-te'n que el girs en aquesta forma sumen 420 graus, cosa que vol dir que quan el teu artista hagi acabat, estarà mirant a una direcció diferent de quan ha començat. La nova direcció és exactament 60 graus a la dreta des d'on ha començat.
       grade4_artist_nestedLoops_challenge2: Ara un repte! Si vols fes assaig i error. No cal que facis la imatge perfecte a la primera. Vols veure més pistes? Clica aquí!
       grade4_bee_conditionals_quantum5: |-

@@ -737,6 +737,10 @@ da:
           stages:
             Evaluation Blocks:
               name: Evalueringsblokke
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Spil Laboratoriet
         MikeTest:
           stages:
             Artist Functions:
@@ -1502,3 +1506,18 @@ da:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nul'
+        dance-extras-gallery:
+          title: Bliv ved med at danse
+          description: Overskrid den første time med udvidede projektideer.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Opbygge et fundament
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life algoritmer: Papir fly'
+            Binary Bracelets:
+              name: Binære armbånd

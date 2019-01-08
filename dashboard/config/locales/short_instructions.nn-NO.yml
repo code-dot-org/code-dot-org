@@ -1561,6 +1561,8 @@ nn:
         piksler. Bruk positive og negative tall.
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel
         for sidene? Hver linje skal være 50 piksler lange.
+      Course E MC Conditionals1: Du vil finne dei mest verdfulle ressursane under
+        jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt
         så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til
@@ -3151,14 +3153,21 @@ nn:
         1) flytter seg mot Katten Olive?"
       courseC_PlayLab_events3_2018: "Kan du lage eit program som gjer at Jorge \n(figur
         1) flytter seg mot Katten Olive?"
+      courseC_PlayLab_events3_2019: "Kan du lage eit program som gjer at Jorge \n(figur
+        1) flytter seg mot Katten Olive?"
       courseC_PlayLab_eventsFP: Lag di eiga historie. Når du er ferdig, klikk på Fullfør
         for å dele med vener. Sjå historieidear i hinta.
       courseC_PlayLab_eventsFP_2018: Lag di eiga historie. Når du er ferdig, klikk
+        på Fullfør for å dele med vener. Sjå historieidear i hinta.
+      courseC_PlayLab_eventsFP_2019: Lag di eiga historie. Når du er ferdig, klikk
         på Fullfør for å dele med vener. Sjå historieidear i hinta.
       courseC_PlayLab_events_challenge1: "Bruk ei ny blokk for å la Waddles automatisk
         flytte tilbake til start når han spring inni dinosauren og når han får eit
         poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
       courseC_PlayLab_events_challenge1_2018: "Bruk ei ny blokk for å la Waddles automatisk
+        flytte tilbake til start når han spring inni dinosauren og når han får eit
+        poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
+      courseC_PlayLab_events_challenge1_2019: "Bruk ei ny blokk for å la Waddles automatisk
         flytte tilbake til start når han spring inni dinosauren og når han får eit
         poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
@@ -3345,8 +3354,11 @@ nn:
       courseC_harvester_loops_challenge1: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a_2018: Samle saman alt kornet.
+      courseC_harvester_loops_challenge1a_2019: Samle saman alt kornet.
       courseC_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_harvester_loops_challenge2_2018: "Samle all salaten. \nUnngå tre og
+        åkrar!"
+      courseC_harvester_loops_challenge2_2019: "Samle all salaten. \nUnngå tre og
         åkrar!"
       courseC_maze_debugging10: Rett opp feil i dette nivået ved å flytte rundt på
         og legge til blokker, slik at eg kjem meg bort til grisen!

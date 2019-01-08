@@ -185,11 +185,11 @@ de:
     subject: 'Zu meiner Klasse gehen (auf Code.org)'
     body: |
       Klicke unten und registriere dich für die Informatiktutorials auf Code.org (mit mir als "Lehrer"):
-      
+
       %{link}
-      
+
       Die Tutorials machen Spaß, sind visuell attraktiv und vermitteln spielend einfach die Grundlagen der Informatik. Lerne Programmieren mit Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. :-)
-      
+
       %{name}
   teacher_mailer:
     new_teacher_subject: 'Willkommen bei Code.org!'

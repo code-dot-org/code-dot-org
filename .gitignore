@@ -10,6 +10,7 @@
 .DS_Store
 .dropbox
 .tmputils
+.rakeTasks
 .idea/
 /bin/i18n/*_credentials.yml
 npm-debug.log

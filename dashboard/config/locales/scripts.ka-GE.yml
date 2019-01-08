@@ -5277,6 +5277,8 @@ ka:
               name: ჩადგმული ციკლები ფუტკარში
             Nested Loops in Artist:
               name: ჩადგმული ციკლები მხატვარში
+            Conditionals in Minecraft:
+              name: პირობითი წინადადებები Minecraft-ში
         express-2019:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -5372,3 +5374,41 @@ ka:
               name: დამუშავება
             Project - Propose an App:
               name: პროექტი - შემოგვთავაზეთ აპლიკაცია
+        andrea-test:
+          stages:
+            new stage:
+              name: ახალი დონე
+            'null':
+              name: ნული
+        coursec-2019:
+          description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით.
+            გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის
+            სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+            კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
+            შეძლებთ!
+          description_audience: 'ასაკი: 6-10'
+          stages:
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+            Debugging in Maze:
+              name: გამართვა ლაბირინთში
+            'Real-life Algorithms: Paper Planes':
+              name: 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
+            Programming in Collector:
+              name: პროგრამირება შემგროვებელში
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+            Events in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            Binary Bracelets:
+              name: ორობითი სამაჯურები

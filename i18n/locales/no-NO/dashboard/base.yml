@@ -193,11 +193,11 @@
     subject: 'Delta i min klasse (på Code.org)'
     body: |
       Klikk linken under for å melde deg på informatikk-kurs på Code.org (med meg som lærer):
-      
+
       %{link}
-      
+
       Kursene er morsomme, visuelt stimulerende og lærer deg de grunnleggende konseptene innen informatikk ved å benytte en enkel, spill-lignende opplevelse som du loses igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Logg inn informasjon for Code.org'

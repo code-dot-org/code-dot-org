@@ -168,11 +168,11 @@ lt:
     subject: 'Prisijunk prie mano klasės (Code.org svetainėje)'
     body: |
       Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
-      
+
       %{link}
-      
+
       Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
-      
+
       %{name}
   section:
     type:
