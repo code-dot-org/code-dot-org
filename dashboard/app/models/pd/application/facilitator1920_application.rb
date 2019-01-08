@@ -105,9 +105,23 @@ module Pd::Application
     # memoize in a hash, per course
     FILTERED_LABELS ||= Hash.new do |h, key|
       labels_to_remove = key == 'csf' ?
-        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+        [
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_which_fit_weekend,
+          :csd_csp_workshop_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_deeper_learning_requirement,
+          :csd_csp_good_standing_requirement,
+          :csd_csp_partner_with_summer_workshop,
+          :csd_csp_which_summer_workshop
+        ]
         : # csd / csp
-        [:csf_availability, :csf_partial_attendance_reason]
+        [
+          :csf_good_standing_requirement,
+          :csf_summit_requirement,
+          :csf_workshop_requirement,
+          :csf_community_requirement
+        ]
 
       h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
@@ -134,11 +148,11 @@ module Pd::Application
           'Notes 4',
           'Notes 5',
           'Question 1 Support Teachers',
-          'Question 2 Student Acccess',
+          'Question 2 Student Access',
           'Question 3 Receive Feedback',
           'Question 4 Give Feedback',
           'Question 5 Redirect Conversation',
-          'Question 6 Time Committment',
+          'Question 6 Time Commitment',
           'Question 7 Regional Needs',
           'Regional Partner'
         )
@@ -170,11 +184,11 @@ module Pd::Application
         'Notes 4',
         'Notes 5',
         'Question 1 Support Teachers',
-        'Question 2 Student Acccess',
+        'Question 2 Student Access',
         'Question 3 Receive Feedback',
         'Question 4 Give Feedback',
         'Question 5 Redirect Conversation',
-        'Question 6 Time Committment',
+        'Question 6 Time Commitment',
         'Question 7 Regional Needs'
       )
 
