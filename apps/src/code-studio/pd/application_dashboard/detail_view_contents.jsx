@@ -114,7 +114,7 @@ const styles = {
 
 const NA = "N/A";
 
-const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
+const DEFAULT_NOTES = "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:";
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
