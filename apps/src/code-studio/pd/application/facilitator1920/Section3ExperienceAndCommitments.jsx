@@ -267,7 +267,6 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
       if (!data.regionalPartnerId) {
         requiredFields.push("csdCspNoPartnerSummerWorkshop");
       } else {
-        requiredFields.push("csdCspGoodStandingRequirement");
         if (data.summerWorkshops && data.summerWorkshops.length > 0) {
           requiredFields.push(
             "csdCspPartnerWithSummerWorkshop",
@@ -284,7 +283,8 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         "csdCspFitWeekendRequirement",
         "csdCspWorkshopRequirement",
         "csdCspLeadSummerWorkshopRequirement",
-        "csdCspDeeperLearningRequirement"
+        "csdCspDeeperLearningRequirement",
+        "csdCspGoodStandingRequirement"
       );
     }
 

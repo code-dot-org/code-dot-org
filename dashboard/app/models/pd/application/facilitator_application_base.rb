@@ -281,14 +281,12 @@ module Pd::Application
         end
 
         if hash[:program] == PROGRAMS[:csf]
-          if hash[:regional_partner_id] && !PARTNERS_WITHOUT_CSF.include?(hash[:regional_partner_id])
-            required << :csf_good_standing_requirement
-          end
           required.concat [
             :csf_summit_requirement,
             :csf_workshop_requirement,
             :csf_community_requirement,
-            :csf_previous_workshop
+            :csf_previous_workshop,
+            :csf_good_standing_requirement
           ]
         end
 
@@ -296,7 +294,6 @@ module Pd::Application
           if !hash[:regional_partner_id]
             required << :csd_csp_no_partner_summer_workshop
           else
-            required << :csd_csp_good_standing_requirement
             if hash[:summer_workshops] && !hash[:summer_workshops].empty?
               required.concat [
                 :csd_csp_partner_with_summer_workshop,
@@ -314,7 +311,8 @@ module Pd::Application
             :csd_csp_workshop_requirement,
             :csd_csp_lead_summer_workshop_requirement,
             :csd_csp_deeper_learning_requirement,
-            :csd_csp_completed_pd
+            :csd_csp_completed_pd,
+            :csd_csp_good_standing_requirement
           ]
         end
 
