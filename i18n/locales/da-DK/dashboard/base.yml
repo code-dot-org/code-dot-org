@@ -172,11 +172,11 @@ da:
     subject: 'Deltag i min klasse (på Code.org)'
     body: |
       Klik på linket nedenunder for at tilmelde dig Computer Videnskabs vejledninger på Code.org (Med mig som din lærer):
-      
+
       %{link}
-      
+
       Vejledningerne er sjove, visuelt gode og de lærer alle basis koncepterne ved Computer Videnskab ved brug af simple, vejledende og en spil-lignende oplevelse. Lær at programmere med hjælp fra Bill Gates, Mark Zuckerberg, Angry Birds og Plants Vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Login-oplysninger til Code.org'
@@ -267,6 +267,7 @@ da:
       create: 'Opret'
       applab: 'App Lab'
       artist: 'Kunstner'
+      gamelab: 'Spil Laboratoriet'
       playlab: 'Play Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
@@ -474,6 +475,7 @@ da:
       title: "Galleri"
       body: "Se et galleri af app og kunstnerbilleder skabt af vores brugere"
     gamelab:
+      title: "Spil Laboratoriet"
       audience: "Alder 13+"
     hoc-encryption:
       title: "Enkel kryptering"

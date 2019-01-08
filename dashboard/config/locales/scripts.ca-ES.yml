@@ -1288,3 +1288,19 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+        andrea-test:
+          stages:
+            'null':
+              name: nul
+        dance-extras-gallery:
+          title: Seguir ballant
+          description: Anar més enllà de la primera hora amb idees desenvolupades
+            del projecte.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Posant les bases
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmes de la vida quotidiana: Avions de paper'
+            Binary Bracelets:
+              name: Polseres binàries

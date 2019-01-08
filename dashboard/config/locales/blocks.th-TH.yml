@@ -328,10 +328,24 @@ th:
         options:
           EFFECT:
             '"none"': ไม่มี
-            '"disco"': สี่เหลี่ยมจัตุรัส
-            '"rainbow"': สี
+            '"circles"': อุโมงค์
             '"diamonds"': เพชร
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(สุ่ม)"
+            '"disco_ball"': บอลดิสโก้
+            '"kaleidoscope"': ภาพลานตา
+            '"lasers"': ฟลอร์เต้นรำเลเซอร์
+            '"rainbow"': สี
+            '"text"': ชื่อเพลง
+            '"sparkles"': ประกาย
+            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"stars"': ดาว
+          PALETTE:
+            '"rave"': ขาวดำ
+            '"cool"': น้ำเงิน
+            '"default"': อ่อน
+            '"neon"': นีออน
+            '"tropical"': ทรอปิคอล
+            '"vintage"': วินเทจ
+            '"warm"': แดง
       Dancelab_setBackgroundEffectWithPalette:
         text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
         options:
@@ -392,9 +406,14 @@ th:
         options:
           EFFECT:
             '"none"': ไม่มี
+            '"confetti"': กระดาษสี
+            '"hearts_red"': หัวใจ
+            '"music_notes"': โน๊ตดนตรี
+            '"pineapples"': สับปะรด
+            '"smiling_poop"': อุนจิ
             '"rain"': ฝน
+            '"floating_rainbows"': สายรุ้ง
             '"raining_tacos"': ทาโก้
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(สุ่ม)"
       Dancelab_setForegroundEffectExtended:
         text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
         options:
@@ -699,7 +718,29 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"rotation"': การหมุน
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+          PROPERTY:
+            '"scale"': ขนาด
+            '"rotation"': การหมุน
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": ด้านบน
@@ -711,11 +752,11 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': ทั้งหมด
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -723,6 +764,49 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+          PROPERTY:
+            '"scale"': ขนาด
+            '"rotation"': การหมุน
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+      Mikelab_ifDanceIs:
+        text: |-
+          ถ้า {SPRITE} กำลัง {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Roll: บอดี้โรล
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Rest: ไม่มี
       Mikelab_randomColor:
         text: สุ่มสี
       Mikelab_setBG:
@@ -742,6 +826,18 @@ th:
           CORNER:
             '"right"': ขวา
             '"left"': ซ้าย
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 300, y: 200}": ขวา
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 300, y: 300}": ขวาล่าง
       Mikelab_whenKeyPressed:
         text: เมื่อ {KEY} ถูกกด
         options:
@@ -792,6 +888,22 @@ th:
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
             '"tint"': ระดับอ่อนสี
+      binary_move:
+        options:
+          DIR:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+      binary_whenKey:
+        text: เมื่อ {KEY} ถูกกด
+        options:
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"space"': อวกาศ
       craft_ifPath:
         text: |-
           ถ้ามีเส้นทาง {DIR}

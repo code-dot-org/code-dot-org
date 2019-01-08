@@ -2,39 +2,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { getStore, registerReducers } from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 import { valueOr } from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const stageLevelData = scriptEditorData.stageLevelData;
-  const stages = (scriptData.stages || []).filter(stage => stage.id).map(stage => ({
-    position: stage.position,
-    flex_category: stage.flex_category,
-    lockable: stage.lockable,
-    name: stage.name,
-    // Only include the first level of an assessment (uid ending with "_0").
-    levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
-      position: level.position,
-      activeId: level.activeId,
-      ids: level.ids.slice(),
-      kind: level.kind,
-      skin: level.skin,
-      videoKey: level.videoKey,
-      concepts: level.concepts,
-      conceptDifficulty: level.conceptDifficulty,
-      progression: level.progression
-    }))
-  }));
   const locales = scriptEditorData.locales;
-
-  registerReducers(reducers);
-  const store = getStore();
-  store.dispatch(init(stages, scriptEditorData.levelKeyList));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
@@ -42,9 +17,7 @@ export default function initPage(scriptEditorData) {
   let announcements = scriptData.script_announcements || [];
 
   ReactDOM.render(
-    <Provider store={store}>
       <ScriptEditor
-        beta={scriptEditorData.beta}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         hidden={valueOr(scriptData.hidden, true)}
@@ -66,8 +39,7 @@ export default function initPage(scriptEditorData) {
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}
-      />
-    </Provider>,
+      />,
     document.querySelector('.edit_container')
   );
 }

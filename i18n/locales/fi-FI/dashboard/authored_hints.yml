@@ -31,7 +31,7 @@ fi:
         2-3_Artist_9_a: Tämä timantti on oikeastaan vain neliö käännettynä 45 astetta.
         2-3_Artist_9_b: |-
           Älä unohda kääntää taiteilijaa vasemmalle 45 astetta ennenkuin aloitat piirtämään neliötä!
-          
+
            [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Muista, etä haluat ohjauspaneelin olevan 10 kuvapistettä *laajempi*... joten **lisää** 10 siihen numeroon, jota olet muuttamassa.
@@ -88,7 +88,7 @@ fi:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Muista että koodi edellisessä tehtävässä oli: 
-          
+
           <xml> <block type="when_run" deletable="false" movable="false"> 
           <next> 
           <block type="controls_repeat"> 
@@ -136,6 +136,18 @@ fi:
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "Jokaisen timantin lopussa taiteilija on jo oikeassa suunnassa alkaakseen seuraavan. \n\nTämän vuoksi meidän ei tarvitse lisätä ylimääräistä `käänny vasemmalle` lohkoa, ennen kuin aloitamme uudelleen."
         2-3_Artist_Loops_New_13_b: "Saadakseen jokaisen timantin tehtyä taiteilijan tarvitsee: \n- siirtyä \n- kääntyä oikealle 120 astetta \n- siirtyä \n- kääntyä oikealle 60 astetta \n\nSitten tee kaikki uudelleen!"
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: Taiteilijan pitää kääntyä 45 astetta oikealle ennen kuin hän alkaa piirtämään.
+        2-3_Artist_Loops_New_9_b: Tässä V on oikeastaan puolet neliöstä. Millainen ohjelma piirtäisi puolet neliöstä?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Muista laittaa kaikki harmaat lohkot silmukan sisälle.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Tarvitsetko apua kulmien kanssa?`\n** 360 / 12 = 30 **"
+        2-3_Artist_Nested_Loops_3_b: Muista laittaa kaikki harmaat lohkot ja käänny lohko silmukan sisään.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Tarvitsetko apua kulmien kanssa?`\n** 360 / 12 = 30 **"
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
       Function intro Ryan_authored_hint:
@@ -259,7 +271,7 @@ fi:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -277,7 +289,7 @@ fi:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -296,7 +308,7 @@ fi:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -315,7 +327,7 @@ fi:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -334,7 +346,7 @@ fi:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -351,7 +363,7 @@ fi:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -361,7 +373,7 @@ fi:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -377,7 +389,7 @@ fi:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -396,7 +408,7 @@ fi:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -415,7 +427,7 @@ fi:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -434,7 +446,7 @@ fi:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -457,6 +469,12 @@ fi:
           - Käytä funktiota 
           - Siirrä eteenpäin 100 + 75 kuvapistettä
           - Käytä funktiota
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
+      courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
+        courseD_artist_nestedLoops3_a: "Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.\n\nJos neliöt ovat 20 pikseliä leveitä ja 20 pikselin etäisyydellä toisistaan, kuinka monta pikseliä pitää hypätä?"
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Jokaisella neliöllä on 100 kuvapisteen sivut, se tarkoittaa, että sinun täytyy siirtyä eteenpäin 175 kuvapistettä ennenkuin piirrät seuraavan neliön.
         courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun teet lasit.

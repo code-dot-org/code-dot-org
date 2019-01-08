@@ -596,6 +596,8 @@ tr:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka bölümlerine taşımanı sağlar.
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka bölümlerine taşımanı sağlar.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka bölümlerine taşımanı sağlar.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Sanatçıyı ekranın ortasına ulaştırmak için bu kareyi kullanarak başlayın.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -617,6 +619,8 @@ tr:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Kabak üzerinde dört rakamı, dört adet kabak alınabilir olduğunu gösterir.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Kabak üzerinde dört rakamı, dört adet kabak alınabilir olduğunu gösterir.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Kabak üzerinde dört rakamı, dört adet kabak alınabilir olduğunu gösterir.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
@@ -709,6 +713,8 @@ tr:
         courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu kullanın.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       courseD_maze_ramp1_2018_callout:

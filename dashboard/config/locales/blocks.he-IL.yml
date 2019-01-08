@@ -361,14 +361,13 @@ he:
           EFFECT:
             '"none"': כלום
             '"color_cycle"': צבעים
-            '"disco"': ריבועים
-            '"rainbow"': קשת
             '"diamonds"': יהלומים
-            '"splatter"': בועות
             '"swirl"': הִיפְּנוֹ
+            '"splatter"': בועות
+            '"rainbow"': קשת
             '"snowflakes"': שלג
             '"spiral"': ספירלה
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(רנדומלי)"
+            '"disco"': ריבועים
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -377,6 +376,7 @@ he:
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
             '"swirl"': הִיפְּנוֹ
+            '"splatter"': בועות
             '"rainbow"': קשת
             '"snowflakes"': שלג
             '"spiral"': ספירלה
@@ -417,10 +417,11 @@ he:
         options:
           EFFECT:
             '"none"': כלום
+            '"bubbles"': בועות
+            '"pineapples"': אננסים
             '"rain"': גשם
-            '"raining_tacos"': טָאקוֹ
             '"spotlight"': זרקור
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(רנדומלי)"
+            '"raining_tacos"': טָאקוֹ
       Dancelab_setForegroundEffectExtended:
         text: קבע אפקט חזית {EFFECT}
         options:
@@ -829,7 +830,29 @@ he:
             "{x: 300, y: 100}": למעלה מימין
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"rotation"': סיבוב
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+            '"direction"': כיוון תנועה
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': כולם
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': כולם
+          PROPERTY:
+            '"scale"': גודל
+            '"rotation"': סיבוב
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+            '"direction"': כיוון תנועה
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -841,11 +864,11 @@ he:
             "{x: 300, y: 100}": למעלה מימין
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': כולם
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': גודל
@@ -853,6 +876,49 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': כולם
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': כולם
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': כולם
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': כולם
+          PROPERTY:
+            '"scale"': גודל
+            '"rotation"': סיבוב
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+            '"direction"': כיוון תנועה
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': כולם
+      Mikelab_ifDanceIs:
+        text: |-
+          אם {SPRITE} עושה {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Clown: גאנגם
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
+            MOVES.Rest: כלום
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
@@ -874,6 +940,18 @@ he:
           CORNER:
             '"right"': ימינה
             '"left"': שמאלה
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": עליון
+            "{x: 200, y: 300}": תחתון
+            "{x: 100, y: 200}": שמאלה
+            "{x: 300, y: 200}": ימינה
+            "{x: 200, y: 200}": באמצע
+            "{x: 100, y: 100}": למעלה משמאל
+            "{x: 300, y: 100}": למעלה מימין
+            "{x: 100, y: 300}": למטה משמאל
+            "{x: 300, y: 300}": למטה מימין
       Mikelab_whenClickedOn:
         text: כאשר {SPRITE} נלחץ
       Mikelab_whenKeyPressed:
@@ -940,6 +1018,26 @@ he:
             '"direction"': כיוון תנועה
             '"rotation"': סיבוב או כיוון
             '"tint"': גוון
+      binary_move:
+        options:
+          DIR:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+      binary_whenKey:
+        text: כשמקש {KEY} לחוץ
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           אם יש נתיב {DIR}

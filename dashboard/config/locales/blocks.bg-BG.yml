@@ -282,11 +282,10 @@ bg:
           EFFECT:
             '"none"': Без
             '"color_cycle"': Цветове
-            '"disco"': Квадрати
-            '"rainbow"': Цветове
             '"diamonds"': Диаманти
             '"splatter"': Балончета
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Случаен
+            '"rainbow"': Цветове
+            '"disco"': Квадрати
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -294,6 +293,7 @@ bg:
             '"rand"': Случаен
             '"color_cycle"': Цветове
             '"diamonds"': Диаманти
+            '"splatter"': Балончета
             '"rainbow"': Цветове
             '"disco"': Квадрати
       Dancelab_setDanceSpeed:
@@ -329,10 +329,11 @@ bg:
         options:
           EFFECT:
             '"none"': Без
+            '"bubbles"': Балончета
+            '"pineapples"': Ананаси
             '"rain"': Дъжд
-            '"raining_tacos"': Такос
             '"spotlight"': Прожектор
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Случаен
+            '"raining_tacos"': Такос
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -645,18 +646,6 @@ bg:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": горе
-            "{x: 200, y: 300}": долу
-            "{x: 100, y: 200}": наляво
-            "{x: 300, y: 200}": надясно
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': всички
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -665,6 +654,79 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': всички
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': въртене
+            '"x"': x позиция
+            '"y"': y позиция
+            '"direction"': посока на движение
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': въртене
+            '"x"': x позиция
+            '"y"': y позиция
+            '"direction"': посока на движение
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': всички
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': въртене
+            '"x"': x позиция
+            '"y"': y позиция
+            '"direction"': посока на движение
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': всички
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Clown: Клоун
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
@@ -687,6 +749,14 @@ bg:
           CORNER:
             '"right"': надясно
             '"left"': наляво
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
       Mikelab_whenKeyPressed:
         text: когато {KEY} е натиснат
         options:
@@ -741,6 +811,26 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"tint"': оттенък
+      binary_move:
+        options:
+          DIR:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+      binary_whenKey:
+        text: когато {KEY} е натиснат
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+            '"a"': а
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           ако пътят {DIR}

@@ -328,10 +328,24 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
-            '"disco"': 사각형
-            '"rainbow"': 색상
+            '"circles"': 터널
             '"diamonds"': 다이아몬드
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(임의)"
+            '"disco_ball"': 디스코 볼
+            '"kaleidoscope"': 만화경
+            '"lasers"': 레이저 댄스 플로어
+            '"rainbow"': 색상
+            '"text"': 음악 제목
+            '"sparkles"': 반짝이
+            '"disco"': 사각형
+            '"stars"': 별
+          PALETTE:
+            '"rave"': 흑백
+            '"cool"': 파란색
+            '"default"': 빛
+            '"neon"': 네온
+            '"tropical"': 열대
+            '"vintage"': 빈티지
+            '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
         text: 배경 효과 {EFFECT} {PALETTE} 설정
         options:
@@ -392,9 +406,14 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
+            '"confetti"': 색종이
+            '"hearts_red"': 하트
+            '"music_notes"': 음표
+            '"pineapples"': 파인애플
+            '"smiling_poop"': 똥
             '"rain"': 비
+            '"floating_rainbows"': 무지개
             '"raining_tacos"': 타코
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(임의)"
       Dancelab_setForegroundEffectExtended:
         text: 전경 효과 {EFFECT} 설정
         options:
@@ -539,6 +558,7 @@ ko:
             '"right"': 오른쪽으로
             '"space"': 우주
             '"x"': x
+            '"y"': 예
       Dancelab_whenPeak:
         text: "{RANGE} 피크일 때"
         options:
@@ -699,7 +719,29 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"rotation"': 회전
+            '"x"': x 좌표
+            '"y"': y 좌표
+            '"direction"': 움직임 방향
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': 모두
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': 모두
+          PROPERTY:
+            '"scale"': 크기
+            '"rotation"': 회전
+            '"x"': x 좌표
+            '"y"': y 좌표
+            '"direction"': 움직임 방향
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
@@ -711,11 +753,11 @@ ko:
             "{x: 300, y: 100}": 오른쪽 위
             "{x: 100, y: 300}": 왼쪽 아래
             "{x: 300, y: 300}": 오른쪽 아래
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': 모두
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': 크기
@@ -723,6 +765,49 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': 모두
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': 모두
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': 모두
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': 모두
+          PROPERTY:
+            '"scale"': 크기
+            '"rotation"': 회전
+            '"x"': x 좌표
+            '"y"': y 좌표
+            '"direction"': 움직임 방향
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': 모두
+      Mikelab_ifDanceIs:
+        text: |-
+          만약 {SPRITE}이(가) {DANCE}을(를) 하고 있을 경우
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Clown: 강남
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Roll: 바디롤
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
+            MOVES.Rest: 없음
       Mikelab_randomColor:
         text: 랜덤 색
       Mikelab_setBG:
@@ -742,6 +827,18 @@ ko:
           CORNER:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 맨 위로
+            "{x: 200, y: 300}": 맨 아래로
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: 200, y: 200}": 중간
+            "{x: 100, y: 100}": 왼쪽 위
+            "{x: 300, y: 100}": 오른쪽 위
+            "{x: 100, y: 300}": 왼쪽 아래
+            "{x: 300, y: 300}": 오른쪽 아래
       Mikelab_whenKeyPressed:
         text: "{KEY} 누를 때"
         options:
@@ -796,6 +893,22 @@ ko:
             '"y"': y 좌표
             '"direction"': 움직임 방향
             '"tint"': 색조
+      binary_move:
+        options:
+          DIR:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+      binary_whenKey:
+        text: "{KEY} 누를 때"
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
       craft_ifPath:
         text: |-
           {DIR}에 길이 있을 경우

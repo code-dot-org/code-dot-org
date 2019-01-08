@@ -267,7 +267,21 @@ ar:
         text: عيّن تأثيرات الخلفية {EFFECT}
         options:
           EFFECT:
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(عشوائي)"
+            '"circles"': نفق
+            '"disco_ball"': كرة ديسكو
+            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"lasers"': أرضية رقص بالليزر
+            '"text"': عنوان الأغنية
+            '"sparkles"': بريق
+            '"stars"': نجوم
+          PALETTE:
+            '"rave"': أسود وأبيض
+            '"cool"': الأزرق بدرجاته
+            '"default"': ضوء
+            '"neon"': نيون
+            '"tropical"': استوائي
+            '"vintage"': عتيق
+            '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
         text: عيّن تأثيرات الخلفية {EFFECT} {PALETTE}
         options:
@@ -321,7 +335,11 @@ ar:
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(عشوائي)"
+            '"confetti"': قصاصات من الورق
+            '"hearts_red"': قلوب
+            '"music_notes"': نوتات موسيقية
+            '"smiling_poop"': مؤخرة السفينة
+            '"floating_rainbows"': قوس قزح
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -581,17 +599,6 @@ ar:
             "{x: 200, y: 300}": أسفل
             "{x: 100, y: 200}": اليسار
             "{x: 300, y: 200}": اليمين
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": أعلى
-            "{x: 200, y: 300}": أسفل
-            "{x: 100, y: 200}": اليسار
-            "{x: 300, y: 200}": اليمين
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': الكل
       Mikelab_eval:
         text: تقييم{CODE}
       Mikelab_getProp:
@@ -602,6 +609,80 @@ ar:
             '"x"': موضع س
             '"y"': موضع ص
             '"direction"': اتجاه الحركة
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': الكل
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': الكل
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': الكل
+      Mikelab_ifDanceIs:
+        text: إذا كان {SPRITE} يقوم بِ{DANCE}{DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: تصفيق عالي
+            MOVES.Clown: أغنية Gangnam
+            MOVES.Dab: داب
+            MOVES.DoubleJam: أغنية Double Down
+            MOVES.Drop: اسقاط
+            MOVES.Floss: خيط
+            MOVES.Fresh: طازج
+            MOVES.Roll: تحريك الجسم
+            MOVES.Kick: نجمة
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
       Mikelab_randomColor:
         text: لون عشوائي
       Mikelab_setBG:
@@ -621,6 +702,13 @@ ar:
           CORNER:
             '"right"': اليمين
             '"left"': اليسار
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": أعلى
+            "{x: 200, y: 300}": أسفل
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -672,6 +760,21 @@ ar:
             '"y"': موضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون
+      binary_move:
+        options:
+          DIR:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
       craft_ifPath:
         options:
           DIR:

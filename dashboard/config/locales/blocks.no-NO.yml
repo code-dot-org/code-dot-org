@@ -267,15 +267,28 @@
         options:
           EFFECT:
             '"none"': Ingen
+            '"circles"': Tunnel
             '"color_cycle"': Farger
-            '"disco"': Kvadrater
-            '"rainbow"': Regnbue
             '"diamonds"': Diamanter
-            '"splatter"': Bobler
+            '"disco_ball"': Discokule
             '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Bobler
+            '"rainbow"': Regnbue
             '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"sparkles"': Glitter
             '"spiral"': Spiral
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Tilfeldig)"
+            '"disco"': Kvadrater
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"default"': Lys
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
         text: velg bakgrunnseffekt {EFFECT} {PALETTE}
         options:
@@ -340,10 +353,16 @@
         options:
           EFFECT:
             '"none"': Ingen
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musikknoter
+            '"pineapples"': Ananaser
+            '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"raining_tacos"': Taco
+            '"floating_rainbows"': Regnbue
             '"spotlight"': Spotlight
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Tilfeldig)"
+            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: sett forgrunneffekt {EFFECT}
         options:
@@ -717,17 +736,6 @@
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": venstre
-            "{x: 300, y: 200}": høyre
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': alle
-      Mikelab_edgesDisplace:
-        text: kantene blokkerer {SPRITE} fra å flytte seg
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -736,8 +744,76 @@
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': bevegelsesretning
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høyre
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': bevegelsesretning
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': bevegelsesretning
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alle
       Mikelab_hasBehavior:
         text: "{SPRITE} er foreløpig {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Klapp høyt
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Floss: Floss
+            MOVES.Roll: Kroppsrulling
+            MOVES.Kick: Stjerne
+            MOVES.Rest: Ingen
       Mikelab_randomColor:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
@@ -759,6 +835,11 @@
           CORNER:
             '"right"': høyre
             '"left"': venstre
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høyre
       Mikelab_whenKeyPressed:
         text: når {KEY} trykkes
         options:
@@ -813,6 +894,25 @@
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
             '"tint"': fargetone
+      binary_move:
+        options:
+          DIR:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+      binary_whenKey:
+        text: når {KEY} trykkes
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
+            '"a"': a
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

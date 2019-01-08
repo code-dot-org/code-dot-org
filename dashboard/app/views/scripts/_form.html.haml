@@ -16,8 +16,6 @@
   .edit_container
   - scriptData = {script: @script ? @script.summarize(false) : {},
                   i18n: @script ? @script.summarize_i18n : {},
-                  beta: params[:beta].present?,
-                  levelKeyList: params[:beta] && Level.key_list,
                   stageLevelData: @script_file,
                   locales: options_for_locale_select}
   %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),

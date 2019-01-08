@@ -1663,6 +1663,9 @@ pl:
         liczby dodatnie i ujemne).
       Course 4 Variables Assessment: Czy mógłbyś utworzyć ten obraz używając zmiennej
         dla boków? Każda linia powinna mieć długość 50 pikseli.
+      Course E MC Conditionals1: Najcenniejsze surowce znajdują się pod ziemią, ale
+        robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej
+        2 bloków.
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu,
         po prostu naciśnij "Graj"! '
@@ -1772,7 +1775,7 @@ pl:
         gry w zgadywanie numeru!
       HOC 2018 Level_1: Weź łódkę z kufra.
       HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
-      HOC 2018 Level_11: 'Zbuduj kanał z Prismarine wewnątrz Oceanicznego Monumentu.  '
+      HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
       HOC 2018 Level_12: Zaprojektuj swój własny podwodny świat, to Ty decydujesz!
       HOC 2018 Level_2: Skieruj się do końca doku.
       HOC 2018 Level_3: Kieruj się przez otwarte morza do dorsza.
@@ -2808,6 +2811,8 @@ pl:
         (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że
         Jorge (postać 1) idzie w kierunku Kota Oliwek?
+      courseC_PlayLab_events3_2019: Czy możesz napisać program, który sprawia, że
+        Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_artist_loops5a: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2018: Spróbuj nowych nalepek!
       courseC_artist_loops5a_2019: Spróbuj nowych nalepek!
@@ -2924,24 +2929,34 @@ pl:
         spróbuj ustawić wynik z powrotem na 0.
       courseC_harvester_loops10: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops10_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops10_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops11_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops11_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops4_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops4_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops5_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops5_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops6_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops6_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops7_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops7_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops9_2018: Zbierz całą kukurydzę o wszystkie dynie.
+      courseC_harvester_loops9_2019: Zbierz całą kukurydzę o wszystkie dynie.
       courseC_harvester_loops_challenge1: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge1a_2018: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge1a_2019: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
       courseC_harvester_loops_challenge2_2018: Zbierz wszystkie sałaty. Unikaj drzew
+        i pól!
+      courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
       courseC_harvester_loops_forVid: Zbierz wszystkie kukurydze i dynie.
       courseC_maze_debugging10: Napraw ten program przestawiając lub zmieniając bloki,

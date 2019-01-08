@@ -307,10 +307,22 @@ tr:
         options:
           EFFECT:
             '"none"': Hiçbiri
-            '"disco"': Kareler
-            '"rainbow"': Renkler
+            '"circles"': Tünel
             '"diamonds"': Karolar
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Rastgele)"
+            '"disco_ball"': Disko Topu
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"rainbow"': Renkler
+            '"text"': Şarkı Adı
+            '"sparkles"': Kıvılcımlar
+            '"disco"': Kareler
+            '"stars"': Yıldızlar
+          PALETTE:
+            '"rave"': Siyah Beyaz
+            '"cool"': Maviler
+            '"default"': Aydınlık
+            '"tropical"': Tropikal
+            '"warm"': Kırmızılar
       Dancelab_setBackgroundEffectWithPalette:
         text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
         options:
@@ -369,9 +381,14 @@ tr:
         options:
           EFFECT:
             '"none"': Hiçbiri
+            '"confetti"': Konfeti
+            '"hearts_red"': Kalpler
+            '"music_notes"': Müzik Notaları
+            '"pineapples"': Ananaslar
+            '"smiling_poop"': Kaka
             '"rain"': Yağmur
+            '"floating_rainbows"': Gökkuşağı
             '"raining_tacos"': Tacolar
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Rastgele)"
       Dancelab_setForegroundEffectExtended:
         text: ön plan efektini {EFFECT} olarak ayarla
         options:
@@ -677,7 +694,29 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tüm
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -689,11 +728,11 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': tüm
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': boyut
@@ -701,6 +740,45 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tüm
+          PROPERTY:
+            '"scale"': boyut
+            '"rotation"': yön
+            '"x"': x konumu
+            '"y"': y konumu
+            '"direction"': hareket yönü
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tüm
+      Mikelab_ifDanceIs:
+        text: |-
+          eğer {SPRITE} {DANCE} yapıyorsa
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.Clown: Palyaço
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Roll: Yuvarlanma
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
+            MOVES.Rest: Hiçbiri
       Mikelab_randomColor:
         text: rastgele renk
       Mikelab_setBG:
@@ -720,6 +798,18 @@ tr:
           CORNER:
             '"right"': sağ
             '"left"': sol
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": üst
+            "{x: 200, y: 300}": alt
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: 200, y: 200}": merkez
+            "{x: 100, y: 100}": sol üst
+            "{x: 300, y: 100}": sağ üst
+            "{x: 100, y: 300}": sol alt
+            "{x: 300, y: 300}": sağ alt
       Mikelab_whenKeyPressed:
         text: "{KEY} basıldığında"
         options:
@@ -774,6 +864,22 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
             '"tint"': renk tonu
+      binary_move:
+        options:
+          DIR:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+      binary_whenKey:
+        text: "{KEY} basıldığında"
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
       craft_ifPath:
         text: |-
           eğer yol {DIR}

@@ -1334,13 +1334,13 @@ it:
       Dance_Party_01: |-
         *Organizziamo una festa e balliamo alla grande!*
 
-        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
 
         * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
       Dance_Party_01_low: |-
         *Organizziamo una festa e balliamo alla grande!*
 
-        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
+        Per creare il tuo primo ballerino, trascina il blocco `crea un nuovo` nell’area di lavoro e aggancialo al blocco `quando si clicca su "Esegui"`.
 
         * *Clicca sulla lampadina qui a sinistra, se desideri dei suggerimenti o vuoi affrontare delle sfide aggiuntive.*
       Dance_Party_02: |-
@@ -1363,7 +1363,7 @@ it:
 
         * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
       Dance_Party_06: |-
-        * Abbiamo bisogno di altri ballerini!*
+        *Abbiamo bisogno di altri ballerini!*
 
         Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
       Dance_Party_08: |-
@@ -1425,7 +1425,7 @@ it:
       Dance_Party_extras_layout: |-
         # Tutti in Formazione!
 
-        Dai un'occhiata a questo ballo che usa il blocco `disponi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
+        Dai un'occhiata a questo ballo che usa il blocco `disponi ... nuovi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
 
         * Crea un secondo gruppo di ballerini con una formazione diversa
         * Cambia la disposizione quando si preme un tasto
@@ -1437,7 +1437,7 @@ it:
       Dance_Party_extras_speed: |-
         # Accelerare, Rallentare
 
-        Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimento di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
+        Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_visible: |-
         # Dove sono andati?
 
@@ -1570,7 +1570,7 @@ it:
 
         * Selezionando `(successiva)`, `(precedente)`, o `(casuale)` si ordina al ballerino di eseguire una mossa diversa ogni volta che il codice viene eseguito (e quindi ogni due battute).
       HOC Dance 5_draft: |-
-        * Abbiamo bisogno di altri ballerini!*
+        *Abbiamo bisogno di altri ballerini!*
 
         Crea un ballerino secondario `backup_dancer1` che balli assieme al gatto.
       HOC Dance 9_draft: |-
@@ -2863,6 +2863,10 @@ it:
         Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
 
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8: |-
         Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di "un colpo" e dica "Ahi!" quando sbatte contro il dinosauro?
 
@@ -2875,7 +2879,17 @@ it:
         Quando hai finito, esegui il gioco e falli scontrare.
 
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
+      courseC_PlayLab_events8_2019: |-
+        Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di "un colpo" e dica "Ahi!" quando sbatte contro il dinosauro?
+
+        Quando hai finito, esegui il gioco e falli scontrare.
+
+        ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
       courseC_PlayLab_events_challenge1_2018: |-
+        Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
+
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+      courseC_PlayLab_events_challenge1_2019: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
         Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
@@ -3430,9 +3444,15 @@ it:
         Usa i cicli per raccogliere tutte e quattro le zucche.
       courseC_harvester_loops10: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops10_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops10_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops11: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops11_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops11_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops1_2018: |-
+        I cicli possono essere usati per ripetere più mosse.
+
+        Usa i cicli per raccogliere tutte e quattro le zucche.
+      courseC_harvester_loops1_2019: |-
         I cicli possono essere usati per ripetere più mosse.
 
         Usa i cicli per raccogliere tutte e quattro le zucche.
@@ -3440,8 +3460,11 @@ it:
         verso le zucche e poi raccoglierle tutte?
       courseC_harvester_loops2_2018: Riesci a combinare due diversi cicli per muoverti
         verso le zucche e poi raccoglierle tutte?
+      courseC_harvester_loops2_2019: Riesci a combinare due diversi cicli per muoverti
+        verso le zucche e poi raccoglierle tutte?
       courseC_harvester_loops3: Raccogli tutte le zucche.
       courseC_harvester_loops3_2018: Raccogli tutte le zucche.
+      courseC_harvester_loops3_2019: Raccogli tutte le zucche.
       courseC_harvester_loops4: |-
         Ora crescono anche le pannocchie!
 
@@ -3450,12 +3473,19 @@ it:
         Ora crescono anche le pannocchie!
 
         Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops4_2019: |-
+        Ora crescono anche le pannocchie!
+
+        Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops5: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops5_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops5_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops6: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops6_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops6_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops7: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops7_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops7_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops8: |-
         **Sfida:** Raccogli tutte le pannocchie e tutte le zucche.
 
@@ -3464,12 +3494,19 @@ it:
         **Sfida:** Raccogli tutte le pannocchie e tutte le zucche.
 
         Puoi completare questa sfida in qualunque modo preferisci, ma ci vorrà molto lavoro o molto ragionamento!
+      courseC_harvester_loops8_2019: |-
+        **Sfida:** Raccogli tutte le pannocchie e tutte le zucche.
+
+        Puoi completare questa sfida in qualunque modo preferisci, ma ci vorrà molto lavoro o molto ragionamento!
       courseC_harvester_loops9: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops9_2018: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops9_2019: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops_challenge1: Raccogli tutte le pannocchie.
       courseC_harvester_loops_challenge2: Raccogli tutte le lattughe evitando gli
         alberi e i campi!
       courseC_harvester_loops_challenge2_2018: Raccogli tutte le lattughe evitando
+        gli alberi e i campi!
+      courseC_harvester_loops_challenge2_2019: Raccogli tutte le lattughe evitando
         gli alberi e i campi!
       courseC_harvester_loops_forVid: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_maze_debugging1: |-
@@ -5187,6 +5224,8 @@ it:
         arrivarci usando i cicli?
       courseD_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat
         ad arrivarci usando i cicli?
+      courseD_maze_intro5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire
+        come arrivare fino al maialino!
       courseD_maze_loops_challenge1: A caccia di diamanti - usando i cicli! Aiuta
         la collezionista a raggiungere almeno due diamanti usando solo i blocchi che
         trovi nella cassetta degli attrezzi. È possibile raccoglierli tutti e 4.

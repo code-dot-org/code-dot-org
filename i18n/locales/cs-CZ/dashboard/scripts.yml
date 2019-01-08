@@ -1572,3 +1572,18 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'prázdná hodnota'
+        dance-extras-gallery:
+          title: Nepřestávej tančit
+          description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Budování nadace
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmy ze života: Papírová letadla'
+            Binary Bracelets:
+              name: Binární náramky

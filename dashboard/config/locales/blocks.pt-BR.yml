@@ -102,6 +102,7 @@ pt-BR:
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Dança drop
             MOVES.Floss: Dança do fio dental
@@ -109,6 +110,7 @@ pt-BR:
             MOVES.Clown: Palhaço
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
+            MOVES.XKneel: Ajoelhar
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
@@ -125,6 +127,7 @@ pt-BR:
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Jam
             MOVES.Drop: Dança drop
             MOVES.Floss: Dança do fio dental
@@ -132,6 +135,7 @@ pt-BR:
             MOVES.Clown: Palhaço
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
+            MOVES.XKneel: Ajoelhar
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
@@ -342,25 +346,44 @@ pt-BR:
         options:
           EFFECT:
             '"none"': Nenhum
+            '"circles"': Círculos
             '"color_cycle"': Cores
-            '"disco"': Quadrados
-            '"rainbow"': Arco-íris
             '"diamonds"': Diamantes
-            '"splatter"': Bolhas
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fogos de artifício
             '"swirl"': Hipno
+            '"kaleidoscope"': Caleidoscópio
+            '"lasers"': Laser de pista de dança
+            '"splatter"': Bolhas
+            '"rainbow"': Arco-íris
             '"snowflakes"': Neve
+            '"text"': Título da música
+            '"galaxy"': Espaço
+            '"sparkles"': Brilhos
             '"spiral"': Espiral
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aleatório)"
+            '"disco"': Quadrados
+            '"stars"': Estrelas
+          PALETTE:
+            '"rave"': Preto e branco
+            '"cool"': Tons de azul
+            '"electronic"': Electrônica
+            '"iceCream"': Sorvete
+            '"default"': Claro
+            '"neon"': Néon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Tons de vermelho
       Dancelab_setBackgroundEffectWithPalette:
         text: definir o efeito do plano de fundo {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
-            '"circles"': Túnel
+            '"circles"': Círculos
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fogos de artifício
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
             '"lasers"': Laser de pista de dança
@@ -376,7 +399,12 @@ pt-BR:
           PALETTE:
             '"rave"': Preto e branco
             '"cool"': Tons de azul
+            '"electronic"': Electrônica
+            '"iceCream"': Sorvete
             '"default"': Claro
+            '"neon"': Néon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Tons de vermelho
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
@@ -414,10 +442,18 @@ pt-BR:
         options:
           EFFECT:
             '"none"': Nenhum
+            '"bubbles"': Bolhas
+            '"confetti"': Confete
+            '"hearts_red"': Corações
+            '"music_notes"': Notas musicais
+            '"pineapples"': Abacaxis
+            '"pizzas"': Pizzas
+            '"smiling_poop"': Cocô
             '"rain"': Chuva
-            '"raining_tacos"': Tacos
+            '"floating_rainbows"': Arco-íris
             '"spotlight"': Olofote
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aleatório)"
+            '"color_lights"': Luzes de palco
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: definir o efeito do primeiro plano {EFFECT}
         options:
@@ -429,10 +465,12 @@ pt-BR:
             '"hearts_red"': Corações
             '"music_notes"': Notas musicais
             '"pineapples"': Abacaxis
+            '"pizzas"': Pizzas
             '"smiling_poop"': Cocô
             '"rain"': Chuva
             '"floating_rainbows"': Arco-íris
             '"spotlight"': Olofote
+            '"color_lights"': Luzes de palco
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'Definir {SPRITE} {PROPERTY} para {VAL} '
@@ -470,7 +508,7 @@ pt-BR:
             '"y"': posição vertical
             '"tint"': tonalidade
       Dancelab_setPropRandom:
-        text: randomizar {SPRITE} {PROPERTY}
+        text: aleatorizar {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -578,6 +616,7 @@ pt-BR:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
@@ -1013,8 +1052,31 @@ pt-BR:
             "{x: 100, y: 300}": canto inferior esquerdo
             "{x: 300, y: 300}": canto inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
-      Mikelab_createNewSprite2:
-        text: fazer um novo {COSTUME} em {LOCATION}
+      Mikelab_destroy:
+        text: remover {SPRITE}
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': todos
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': todos
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -1027,17 +1089,11 @@ pt-BR:
             "{x: 100, y: 300}": canto inferior esquerdo
             "{x: 300, y: 300}": canto inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
-      Mikelab_destroy:
-        text: remover {SPRITE}
-      Mikelab_destroyAll:
-        text: remover {SELECT} {COSTUME}
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
-      Mikelab_edgesDisplace:
-        text: bordas bloqueiam {SPRITE} de se mover
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1045,8 +1101,51 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': todos
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': todos
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': todos
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': todos
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': todos
       Mikelab_hasBehavior:
         text: "{SPRITE} está {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        text: |-
+          se {SPRITE} está fazendo {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Clown: Palhaço
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Roll: Rolar
+            MOVES.Kick: Estrela
+            MOVES.ThisOrThat: Isso ou Aquilo
+            MOVES.Rest: Nenhum
       Mikelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1072,6 +1171,19 @@ pt-BR:
           CORNER:
             '"right"': para direita
             '"left"': para esquerda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": parte de cima
+            "{x: 200, y: 300}": parte de baixo
+            "{x: 100, y: 200}": para esquerda
+            "{x: 300, y: 200}": para direita
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": canto superior esquerdo
+            "{x: 300, y: 100}": superior direito
+            "{x: 100, y: 300}": canto inferior esquerdo
+            "{x: 300, y: 300}": canto inferior direito
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_whenClickedOn:
         text: quando {SPRITE} for clicado
       Mikelab_whenKeyPressed:
@@ -1099,8 +1211,6 @@ pt-BR:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: quando o personagem for clicado
-      Mikelab_whenXTouchesY:
-        text: quando {COSTUME} tocar {COSTUME2}
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1146,7 +1256,7 @@ pt-BR:
       aalab_addToSpriteGroup:
         text: adicionar personagem {SPRITE} ao grupo {GROUP}
       aalab_changeGroupPropBy:
-        text: mude o grupo {GROUP}{PROPERTY} por {VAL}
+        text: mude o grupo {GROUP} {PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1171,6 +1281,26 @@ pt-BR:
             '"direction"': direção do movimento
             '"rotation"': rotação ou direção
             '"tint"': tonalidade
+      binary_move:
+        options:
+          DIR:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+      binary_whenKey:
+        text: quando {KEY} for pressionado
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+            '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           se o caminho estiver {DIR}

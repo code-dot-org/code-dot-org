@@ -328,10 +328,24 @@ ru:
         options:
           EFFECT:
             '"none"': Нет
-            '"disco"': Квадраты
-            '"rainbow"': Цвета
+            '"circles"': Туннель
             '"diamonds"': Ромбы
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Случайный)"
+            '"disco_ball"': Зеркальный шар
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерный танцпол
+            '"rainbow"': Цвета
+            '"text"': Название песни
+            '"sparkles"': Блестки
+            '"disco"': Квадраты
+            '"stars"': Звезды
+          PALETTE:
+            '"rave"': Черно-белый
+            '"cool"': Голубой
+            '"default"': Свет
+            '"neon"': Неон
+            '"tropical"': Тропический
+            '"vintage"': Винтаж
+            '"warm"': Красный
       Dancelab_setBackgroundEffectWithPalette:
         text: задать фоновый эффект {EFFECT} {PALETTE}
         options:
@@ -392,9 +406,14 @@ ru:
         options:
           EFFECT:
             '"none"': Нет
+            '"confetti"': Конфетти
+            '"hearts_red"': Сердечки
+            '"music_notes"': Ноты
+            '"pineapples"': Ананасы
+            '"smiling_poop"': Экскременты
             '"rain"': Дождь
+            '"floating_rainbows"': Радуга
             '"raining_tacos"': Тако
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Случайный)"
       Dancelab_setForegroundEffectExtended:
         text: задать эффект переднего плана {EFFECT}
         options:
@@ -700,7 +719,29 @@ ru:
             "{x: 300, y: 100}": вверху справа
             "{x: 100, y: 300}": внизу слева
             "{x: 300, y: 300}": внизу справа
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': вращение
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+            '"direction"': направление движения
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': все
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': все
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': вращение
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+            '"direction"': направление движения
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -712,11 +753,11 @@ ru:
             "{x: 300, y: 100}": вверху справа
             "{x: 100, y: 300}": внизу слева
             "{x: 300, y: 300}": внизу справа
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': все
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': размер
@@ -724,6 +765,49 @@ ru:
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
             '"direction"': направление движения
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': все
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': все
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': все
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': все
+          PROPERTY:
+            '"scale"': размер
+            '"rotation"': вращение
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+            '"direction"': направление движения
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': все
+      Mikelab_ifDanceIs:
+        text: |-
+          если {SPRITE} выполняет {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Clown: Клоун
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Roll: Движение «волна»
+            MOVES.Kick: Звезда
+            MOVES.ThisOrThat: То или это
+            MOVES.Rest: Нет
       Mikelab_randomColor:
         text: случайный цвет
       Mikelab_setBG:
@@ -743,6 +827,18 @@ ru:
           CORNER:
             '"right"': вправо
             '"left"': влево
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": верх
+            "{x: 200, y: 300}": низ
+            "{x: 100, y: 200}": влево
+            "{x: 300, y: 200}": вправо
+            "{x: 200, y: 200}": центр
+            "{x: 100, y: 100}": вверху слева
+            "{x: 300, y: 100}": вверху справа
+            "{x: 100, y: 300}": внизу слева
+            "{x: 300, y: 300}": внизу справа
       Mikelab_whenKeyPressed:
         text: при нажатии {KEY}
         options:
@@ -797,6 +893,22 @@ ru:
             '"y"': позиция ординат (y)
             '"direction"': направление движения
             '"tint"': оттенок
+      binary_move:
+        options:
+          DIR:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+      binary_whenKey:
+        text: при нажатии {KEY}
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
       craft_ifPath:
         text: |-
           если путь {DIR}

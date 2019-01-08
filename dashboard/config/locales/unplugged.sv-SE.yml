@@ -470,3 +470,9 @@ sv:
         desc: Eleverna konstruerar armband som är en binär representation av första
           bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
           på mer än ett sätt.
+      PaperPlanes_2019:
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.

@@ -320,10 +320,22 @@ ca:
         options:
           EFFECT:
             '"none"': Cap
-            '"disco"': Requadres
-            '"rainbow"': Colors
+            '"circles"': Túnel
             '"diamonds"': Diamants
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aleatori)"
+            '"disco_ball"': Bola de discoteca
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"rainbow"': Colors
+            '"text"': Títol de la cançó
+            '"sparkles"': Guspires
+            '"disco"': Requadres
+            '"stars"': Estrelles
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"default"': Llum
+            '"neon"': Neó
+            '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
         text: definir l'efecte de fons {EFFECT} {PALETTE}
         options:
@@ -381,9 +393,14 @@ ca:
         options:
           EFFECT:
             '"none"': Cap
+            '"confetti"': Confeti
+            '"hearts_red"': Cors
+            '"music_notes"': Notes de música
+            '"pineapples"': Pinyes
+            '"smiling_poop"': Caca
             '"rain"': Pluja
+            '"floating_rainbows"': Arc de Sant Martí
             '"raining_tacos"': Tacs
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aleatori)"
       Dancelab_setForegroundEffectExtended:
         text: definir l'efecte de fons {EFFECT}
         options:
@@ -654,7 +671,19 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": part superior
@@ -666,12 +695,35 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_ifDanceIs:
+        text: |-
+          si {SPRITE} està fent {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Clown: Pallasso
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Roll: Rodar per terra
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
       Mikelab_randomColor:
         text: color aleatori
       Mikelab_setBG:
@@ -689,6 +741,18 @@ ca:
           CORNER:
             '"right"': dret
             '"left"': esquerra
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": part superior
+            "{x: 200, y: 300}": part inferior
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: 200, y: 200}": centre
+            "{x: 100, y: 100}": part superior esquerra
+            "{x: 300, y: 100}": part superior dreta
+            "{x: 100, y: 300}": part inferior esquerra
+            "{x: 300, y: 300}": part inferior dreta
       Mikelab_whenKeyPressed:
         text: quan la {KEY} és premuda
         options:
@@ -734,6 +798,22 @@ ca:
           PROPERTY:
             '"scale"': mida
             '"direction"': direcció del moviment
+      binary_move:
+        options:
+          DIR:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+      binary_whenKey:
+        text: quan la {KEY} és premuda
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
       craft_ifPath:
         options:
           DIR:

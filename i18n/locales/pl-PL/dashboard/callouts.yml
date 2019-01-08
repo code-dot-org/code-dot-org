@@ -510,6 +510,8 @@ pl:
         courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do innych części przestrzeni gry.
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do innych części przestrzeni gry.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do innych części przestrzeni gry.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Zacznij używając tego bloku do przesunięcia artysty na środek ekranu.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -525,6 +527,8 @@ pl:
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!

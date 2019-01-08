@@ -1607,6 +1607,8 @@
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
         express-2019:
           stages:
             Relay Programming:
@@ -1627,3 +1629,18 @@
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'
+        dance-extras-gallery:
+          title: Fortsett å danse
+          description: Fortsett etter den første timen med større prosjektideer.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Bygg ett grunnlag
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmer fra virkeligheten: Papirfly'
+            Binary Bracelets:
+              name: Binær armbånd

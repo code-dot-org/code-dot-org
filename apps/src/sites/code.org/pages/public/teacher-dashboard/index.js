@@ -125,15 +125,11 @@ function main() {
   // ROUTES
 
   .config(['$routeProvider', function ($routeProvider) {
-    if (studioUrlPrefix && window.location.search.indexOf("no_home_redirect") === -1) {
-      $routeProvider.when('/',
-        {redirectTo: function () {
-          window.location = `${studioUrlPrefix}/home`;
-        }});
-    } else {
-      $routeProvider.when('/',
-      {templateUrl: '/teacher-dashboard/landing'});
-    }
+    $routeProvider.when('/',
+      {redirectTo: function () {
+        window.location = `${studioUrlPrefix}/home`;
+      }}
+    );
     $routeProvider.when('/plan',
         {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections',

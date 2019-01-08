@@ -321,10 +321,22 @@ sv:
         options:
           EFFECT:
             '"none"': Ingen
-            '"disco"': Fyrkanter
-            '"rainbow"': Färger
+            '"circles"': Tunnel
             '"diamonds"': Diamanter
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Slumpad)"
+            '"disco_ball"': Discokula
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"rainbow"': Färger
+            '"text"': Låttitel
+            '"sparkles"': Gnistror
+            '"disco"': Fyrkanter
+            '"stars"': Stjärnor
+          PALETTE:
+            '"rave"': Svartvitt
+            '"cool"': Blues
+            '"default"': Ljus
+            '"tropical"': Tropisk
+            '"warm"': Röda
       Dancelab_setBackgroundEffectWithPalette:
         text: täll in bakgrundseffekt {EFFECT} {PALETTE}
         options:
@@ -383,8 +395,13 @@ sv:
         options:
           EFFECT:
             '"none"': Ingen
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjärtan
+            '"music_notes"': Musiknoter
+            '"pineapples"': Ananaser
+            '"smiling_poop"': Bajs
             '"rain"': Regn
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Slumpad)"
+            '"floating_rainbows"': Regnbåge
       Dancelab_setForegroundEffectExtended:
         text: ställ in förgrundseffekt {EFFECT}
         options:
@@ -679,7 +696,27 @@ sv:
             "{x: 300, y: 100}": längst upp till höger
             "{x: 100, y: 300}": nederst till vänster
             "{x: 300, y: 300}": nederst till höger
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+            '"direction"': rörelseriktning
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alla
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alla
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+            '"direction"': rörelseriktning
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": topp
@@ -691,17 +728,59 @@ sv:
             "{x: 300, y: 100}": längst upp till höger
             "{x: 100, y: 300}": nederst till vänster
             "{x: 300, y: 300}": nederst till höger
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': alla
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': storlek
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alla
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alla
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alla
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alla
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+            '"direction"': rörelseriktning
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alla
+      Mikelab_ifDanceIs:
+        text: |-
+          om {SPRITE} gör {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Clown: Clown
+            MOVES.Dab: Badda
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Res dig
+            MOVES.Fresh: Färsk
+            MOVES.Roll: Kroppsrullning
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
       Mikelab_randomColor:
         text: slumpad färg
       Mikelab_setBG:
@@ -720,6 +799,18 @@ sv:
           CORNER:
             '"right"': höger
             '"left"': vänster
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": topp
+            "{x: 200, y: 300}": botten
+            "{x: 100, y: 200}": vänster
+            "{x: 300, y: 200}": höger
+            "{x: 200, y: 200}": mittersta delen
+            "{x: 100, y: 100}": längst upp till vänster
+            "{x: 300, y: 100}": längst upp till höger
+            "{x: 100, y: 300}": nederst till vänster
+            "{x: 300, y: 300}": nederst till höger
       Mikelab_whenKeyPressed:
         text: när {KEY} är intryckt
         options:
@@ -769,6 +860,22 @@ sv:
             '"y"': y-position
             '"direction"': rörelseriktning
             '"tint"': färgton
+      binary_move:
+        options:
+          DIR:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+      binary_whenKey:
+        text: när {KEY} är intryckt
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
       craft_ifPath:
         text: |-
           Vid väg {DIR}

@@ -194,11 +194,11 @@ ro:
     subject: 'Alătură-te clasei mele (pe Code.org)'
     body: |
       Dă clic pe linkul de mai jos pentru a te înscrie la tutorialele de informatică pe Code.org (cu mine ca "Profesorul" tău):
-      
+
        %{link}
-      
+
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informații de conectare la Code.org'

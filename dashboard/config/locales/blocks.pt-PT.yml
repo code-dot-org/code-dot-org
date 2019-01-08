@@ -158,6 +158,7 @@ pt:
             '"right"': para a direita
             '"space"': espaço
             '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -254,21 +255,63 @@ pt:
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": para a esquerda
-            "{x: 300, y: 200}": para a direita
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': tudo
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tudo
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tudo
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_setBG:
@@ -286,6 +329,11 @@ pt:
           CORNER:
             '"right"': para a direita
             '"left"': para a esquerda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -294,7 +342,9 @@ pt:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -303,7 +353,9 @@ pt:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -329,6 +381,21 @@ pt:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+      binary_move:
+        options:
+          DIR:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+            '"space"': espaço
       craft_ifPath:
         text: |-
           se o caminho seguir para {DIR}

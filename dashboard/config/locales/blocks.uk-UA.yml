@@ -274,14 +274,14 @@ uk:
         options:
           EFFECT:
             '"color_cycle"': Кольори
-            '"disco"': Квадрати
-            '"rainbow"': Веселка
             '"diamonds"': Ромби
-            '"splatter"': Бульбашки
             '"swirl"': Гіпноз
+            '"splatter"': Бульбашки
+            '"rainbow"': Веселка
             '"snowflakes"': Сніг
+            '"galaxy"': Відступ
             '"spiral"': Спіраль
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Випадковий)"
+            '"disco"': Квадрати
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -289,6 +289,7 @@ uk:
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
             '"swirl"': Гіпноз
+            '"splatter"': Бульбашки
             '"rainbow"': Веселка
             '"snowflakes"': Сніг
             '"galaxy"': Відступ
@@ -329,9 +330,10 @@ uk:
         text: встановити ефект переднього плану {EFFECT}
         options:
           EFFECT:
+            '"bubbles"': Бульбашки
+            '"pineapples"': Ананаси
             '"rain"': Дощ
             '"raining_tacos"': Тако
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Випадковий)"
       Dancelab_setForegroundEffectExtended:
         text: встановити ефект переднього плану {EFFECT}
         options:
@@ -635,7 +637,29 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"rotation"': поворот
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+            '"direction"': напрямок руху
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': усі
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': усі
+          PROPERTY:
+            '"scale"': розмір
+            '"rotation"': поворот
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+            '"direction"': напрямок руху
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -647,11 +671,11 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': усі
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': розмір
@@ -659,6 +683,36 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': усі
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': усі
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': усі
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': усі
+          PROPERTY:
+            '"scale"': розмір
+            '"rotation"': поворот
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+            '"direction"': напрямок руху
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': усі
+      Mikelab_ifDanceIs:
+        text: |-
+          якщо {SPRITE} виконує рух {DANCE}
+          {DO1} {DO2}
       Mikelab_randomColor:
         text: випадковий колір
       Mikelab_setBG:
@@ -678,6 +732,18 @@ uk:
           CORNER:
             '"right"': праворуч
             '"left"': ліворуч
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": вгорі
+            "{x: 200, y: 300}": вниз
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: 200, y: 200}": посередині
+            "{x: 100, y: 100}": верхній лівий кут
+            "{x: 300, y: 100}": верхній правий кут
+            "{x: 100, y: 300}": нижній лівий кут
+            "{x: 300, y: 300}": нижній правий кут
       Mikelab_whenClickedOn:
         text: коли клацнули {SPRITE}
       Mikelab_whenKeyPressed:
@@ -736,6 +802,22 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+      binary_move:
+        options:
+          DIR:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+      binary_whenKey:
+        text: коли натиснуто {KEY}
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
       craft_ifPath:
         text: |-
           якщо є шлях {DIR}

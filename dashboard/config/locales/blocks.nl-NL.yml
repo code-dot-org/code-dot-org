@@ -303,10 +303,22 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
-            '"disco"': Vierkanten
-            '"rainbow"': Kleuren
+            '"circles"': Tunnel
             '"diamonds"': Ruiten
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Willekeurig)"
+            '"disco_ball"': Discobal
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"rainbow"': Kleuren
+            '"text"': Titel van het lied
+            '"sparkles"': Twinkelingen
+            '"disco"': Vierkanten
+            '"stars"': Sterren
+          PALETTE:
+            '"rave"': Zwart-wit
+            '"cool"': Blauw
+            '"default"': Licht
+            '"tropical"': Tropisch
+            '"warm"': Rood
       Dancelab_setBackgroundEffectWithPalette:
         text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
@@ -365,9 +377,13 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
+            '"hearts_red"': Hartjes
+            '"music_notes"': Muzieknoten
+            '"pineapples"': Ananassen
+            '"smiling_poop"': Poep
             '"rain"': Regen
+            '"floating_rainbows"': Regenboog
             '"raining_tacos"': Taco‘s
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Willekeurig)"
       Dancelab_setForegroundEffectExtended:
         text: stel {EFFECT} in als voorgrondeffect
         options:
@@ -643,7 +659,29 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alles
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": boven
@@ -655,11 +693,11 @@ nl:
             "{x: 300, y: 100}": rechtsboven
             "{x: 100, y: 300}": linksonder
             "{x: 300, y: 300}": rechtsonder
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': alles
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': grootte
@@ -667,6 +705,46 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alles
+          PROPERTY:
+            '"scale"': grootte
+            '"rotation"': rotatie
+            '"x"': x positie
+            '"y"': y positie
+            '"direction"': bewegingsrichting
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alles
+      Mikelab_ifDanceIs:
+        text: |-
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Clown
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Roll: Bodyroll
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.Rest: Geen
       Mikelab_randomColor:
         text: willekeurige kleur
       Mikelab_setBG:
@@ -686,6 +764,18 @@ nl:
           CORNER:
             '"right"': rechts
             '"left"': links
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 300}": onder
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: 200, y: 200}": midden
+            "{x: 100, y: 100}": linksboven
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 300}": linksonder
+            "{x: 300, y: 300}": rechtsonder
       Mikelab_whenKeyPressed:
         text: als {KEY} ingedrukt
         options:
@@ -739,6 +829,22 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      binary_move:
+        options:
+          DIR:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+      binary_whenKey:
+        text: als {KEY} ingedrukt
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
       craft_ifPath:
         text: |-
           als pad {DIR}

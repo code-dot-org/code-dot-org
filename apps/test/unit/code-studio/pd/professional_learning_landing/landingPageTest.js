@@ -23,7 +23,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
-      expect(landingPage.childAt(2).prop('subHeading')).to.equal('Submit feedback and order free course kit');
+      expect(landingPage.childAt(2).prop('subHeading')).to.equal('Submit your feedback');
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
@@ -36,7 +36,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
-      expect(landingPage.childAt(2).shallow().text().indexOf('Submit feedback and order free course kit')).to.equal(-1);
+      expect(landingPage.childAt(2).shallow().text().indexOf('Submit your feedback')).to.equal(-1);
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });

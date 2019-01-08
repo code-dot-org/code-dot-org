@@ -31,7 +31,7 @@ fr:
         2-3_Artist_9_a: Ce diamant n'est vraiment juste qu'un carré tourné à 45 degrés.
         2-3_Artist_9_b: |-
           N'oubliez pas de faire pivoter votre artiste de 45° dans le sens anti-horaire avant de commencer à dessiner le carré!
-          
+
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Souvenez-vous, si vous souhaitez que le panneau de contrôle soit 10 pixels *plus large*...alors soyez sûr **d'ajouter** 10 à chaque nombres que vous modifiez.
@@ -114,7 +114,7 @@ fr:
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           Vous avez besoin d'aide pour trouver l'angle correct? 
-          
+
           **360/12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Difficile de trouver ciomment faire descendre les blocs? Essaie la fleur rouge exactement comme une fleur mauve!
@@ -142,7 +142,7 @@ fr:
         2-3_Bee_Functions_8_a: "Si le puzzle semble difficile, essayez de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!"
         2-3_Bee_Functions_8_b: |-
           N’oubliez pas de placer votre code dans le bloc de fonction vert.
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
         2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
@@ -169,30 +169,30 @@ fr:
       Dance short test 2_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
-          
+
           *Ce niveau se termine après 10 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance short test_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
-          
+
           *Ce niveau se termine après 10 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_01_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Assurez-vous qu'un danseur apparaît à l'écran.
-          
+
           *Ce niveau se termine après 4 mesures.*
         challenges: |-
           **Défis optionnels**
@@ -203,7 +203,7 @@ fr:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Assurez-vous qu'un danseur apparaît à l'écran.
-          
+
           *Ce niveau se termine après 4 mesures.*
         challenges: |-
           **Défis optionnels**
@@ -214,61 +214,61 @@ fr:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Le danseur doit passer à un nouveau mouvement après 4 mesures.
-          
+
           *Le niveau se termine après 8 mesures.*
       Dance_Party_03_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
-          
+
           *Le niveau se termine après 12 mesures.*
       Dance_Party_04_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
-          
+
           *Ce niveau se termine après 10 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_06_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez avoir au moins deux danseurs.
-          
+
           *Ce niveau se termine après 6 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           *Ajoutez un troisième danseur (ou autant que vous voulez !)
           *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
       Dance_Party_08_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Deux danseurs doivent avoir une taille autre que 100.
-          
+
           *Ce niveau se termine après 6 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Changez la nuance d'au moins un danseur.
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_1_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Assurez-vous qu'un danseur apparaît à l'écran.
-          
+
           *Ce niveau se termine après 4 mesures.*
         challenges: |-
           **Défis optionnels**
@@ -278,92 +278,92 @@ fr:
       Dance_Party_10_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Les propriétés de deux ou plusieurs danseurs doivent changer.
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Soyez créatif !
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_11_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Soyez créatif !
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Soyez créatif !
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_11b_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Appuyez sur le bloc « lorsque la flèche gauche est appuyée » pour que le Robot fasse un mouvement de danse.
-          
+
           *Ce niveau se termine après 8 mesures.*
       Dance_Party_2_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Le danseur doit passer à un nouveau mouvement après 4 mesures.
-          
+
           *Le niveau se termine après 8 mesures.*
       Dance_Party_3_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
-          
+
           *Le niveau se termine après 12 mesures.*
       Dance_Party_4_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
-          
+
           *Ce niveau se termine après 10 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
-          
+
           *Ce niveau se termine après 12 mesures.*
       Dance_Party_6_authored_hint:
         challenges: |-
           **Défis optionnels**
-          
+
           *Ajoutez un troisième danseur (ou autant que vous voulez !)
           *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
       Dance_Party_8_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Deux danseurs doivent avoir une taille autre que 100.
-          
+
           *Ce niveau se termine après 6 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Changez la nuance d'au moins un danseur.
-          
+
           *Ce niveau se termine après 8 mesures.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour résoudre ce casse-tête.
@@ -377,7 +377,7 @@ fr:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Assurez-vous qu'un danseur apparaît à l'écran.
-          
+
           *Ce niveau se termine après 4 mesures.*
         challenges: |-
           **Défis optionnels**
@@ -388,77 +388,77 @@ fr:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
           *Le danseur doit passer à un nouveau mouvement après 4 mesures.
-          
+
           *Le niveau se termine après 8 mesures.*
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Après 6 mesures, votre danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
-          
+
           *Le niveau se termine après 12 mesures.*
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Vous devez faire en sorte que l’effet de fond change parfois à la septième mesure de la chanson.
-          
+
           *Ce niveau se termine après 10 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           Changez l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Votre danseur doit effectuer différents mouvements au cours des 12 premières mesures de la chanson.
-          
+
           *Ce niveau se termine après 12 mesures.*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Défis optionnels**
-          
+
           *Ajoutez un troisième danseur (ou autant que vous voulez !)
           *Faites en sorte que tous vos danseurs exécutent différents mouvements à différents moments de la chanson.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Deux danseurs doivent avoir une taille autre que 100.
-          
+
           *Ce niveau se termine après 6 mesures.*
         challenges: |-
           **Défis optionnels**
-          
+
           *Expérimentez en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Changez la nuance d'au moins un danseur.
-          
+
           *Ce niveau se termine après 8 mesures.*
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Les propriétés de deux ou plusieurs danseurs doivent changer.
-          
+
           *Ce niveau se termine après 8 mesures.*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Soyez créatif !
-          
+
           *Ce niveau se termine après 8 mesures.*
       HOC Dance make group_authored_hint:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          
+
           *Soyez créatif !
-          
+
           *Ce niveau se termine après 8 mesures.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.
@@ -591,7 +591,7 @@ fr:
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -609,7 +609,7 @@ fr:
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -628,7 +628,7 @@ fr:
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -647,7 +647,7 @@ fr:
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -666,7 +666,7 @@ fr:
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -683,7 +683,7 @@ fr:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
-          
+
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
@@ -693,7 +693,7 @@ fr:
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -709,7 +709,7 @@ fr:
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -728,7 +728,7 @@ fr:
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -747,7 +747,7 @@ fr:
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -766,7 +766,7 @@ fr:
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
-          
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -846,13 +846,13 @@ fr:
         courseE_bee_functions7_a: "Si le puzzle semble difficile, essayez de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!"
         courseE_bee_functions7_b: |-
           N’oubliez pas de placer votre code dans le bloc de fonction vert.
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions7_2018_authored_hint:
         courseE_bee_functions7_a: "Si le puzzle semble difficile, essayez de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!"
         courseE_bee_functions7_b: |-
           N’oubliez pas de placer votre code dans le bloc de fonction vert.
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Si le puzzle semble difficile, essayez de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!"
@@ -938,7 +938,7 @@ fr:
         2-3_Bee_Functions_8_a: "Si le puzzle semble difficile, essayez de construire votre fonction peu à peu. Ajoutez quelques blocs, puis essayez-le. Ajoutez-en d’autres, puis réessayez. Bientôt, vous y arriverez!"
         2-3_Bee_Functions_8_b: |-
           N’oubliez pas de placer votre code dans le bloc de fonction vert.
-          
+
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Si vous utilisez le bloc pour me faire "avancer de 100 pixels", je tracerais une ligne automatiquement.

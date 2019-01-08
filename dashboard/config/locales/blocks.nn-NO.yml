@@ -323,15 +323,28 @@ nn:
         options:
           EFFECT:
             '"none"': Ingen
+            '"circles"': Tunnel
             '"color_cycle"': Farger
-            '"disco"': Kvadrat
-            '"rainbow"': Regnboge
             '"diamonds"': Diamantar
-            '"splatter"': Bobler
+            '"disco_ball"': Discokule
             '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Bobler
+            '"rainbow"': Regnboge
             '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"sparkles"': Glitter
             '"spiral"': Spiral
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Tilfeldig)"
+            '"disco"': Kvadrat
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"default"': Lys
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
         text: velg bakgrunnseffekt {EFFECT} {PALETTE}
         options:
@@ -345,7 +358,7 @@ nn:
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserdansegulv
-            '"splatter"': Rosa splætt
+            '"splatter"': Bobler
             '"rainbow"': Regnboge
             '"snowflakes"': Snø
             '"text"': Sangtittel
@@ -396,10 +409,16 @@ nn:
         options:
           EFFECT:
             '"none"': Ingen
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musikknoter
+            '"pineapples"': Ananasar
+            '"smiling_poop"': Bæsj
             '"rain"': Regn
-            '"raining_tacos"': Taco
+            '"floating_rainbows"': Regnbue
             '"spotlight"': Spotlight
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Tilfeldig)"
+            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: velg forgrunnseffekt {EFFECT}
         options:
@@ -805,7 +824,29 @@ nn:
             "{x: 300, y: 100}": øvst til høgre
             "{x: 100, y: 300}": nedst til venstre
             "{x: 300, y: 300}": nedst til høgre
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': retninga til rørsla
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': retninga til rørsla
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": øvst
@@ -817,13 +858,11 @@ nn:
             "{x: 300, y: 100}": øvst til høgre
             "{x: 100, y: 300}": nedst til venstre
             "{x: 300, y: 300}": nedst til høgre
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': alle
-      Mikelab_edgesDisplace:
-        text: kantene blokkerer {SPRITE} fra å flytte seg
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -831,8 +870,50 @@ nn:
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alle
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"rotation"': rotasjon
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+            '"direction"': retninga til rørsla
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': alle
       Mikelab_hasBehavior:
         text: "{SPRITE} er foreløpig {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        text: |-
+          dersom {SPRITE} gjer {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Klapp høyt
+            MOVES.Clown: Klovn
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dobbeljam
+            MOVES.Drop: Dropp
+            MOVES.Floss: Floss
+            MOVES.Roll: Rull
+            MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller dette
+            MOVES.Rest: Ingen
       Mikelab_randomColor:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
@@ -854,6 +935,18 @@ nn:
           CORNER:
             '"right"': høgre
             '"left"': venstre
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": øvst
+            "{x: 200, y: 300}": nedst
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høgre
+            "{x: 200, y: 200}": i midten
+            "{x: 100, y: 100}": øvst til venstre
+            "{x: 300, y: 100}": øvst til høgre
+            "{x: 100, y: 300}": nedst til venstre
+            "{x: 300, y: 300}": nedst til høgre
       Mikelab_whenKeyPressed:
         text: når {KEY} blir trykka ned
         options:
@@ -910,6 +1003,25 @@ nn:
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
             '"tint"': farge
+      binary_move:
+        options:
+          DIR:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høgre
+      binary_whenKey:
+        text: når {KEY} blir trykka ned
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høgre
+            '"space"': verdsrommmet
+            '"a"': a
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           dersom veien {DIR}
@@ -982,7 +1094,7 @@ nn:
       craft_repeatUntilGoal:
         text: |-
           gjenta til målet
-          {STATEMENT}[0]
+          {STATEMENT}
       craft_spawnEntity:
         text: rogn {ENTITY}
         options:

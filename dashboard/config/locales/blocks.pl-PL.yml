@@ -367,32 +367,18 @@ pl:
         options:
           EFFECT:
             '"none"': Żaden
-            '"color_cycle"': Kolory
-            '"disco"': Kwadraty
-            '"rainbow"': Tęcza
-            '"diamonds"': Diamenty
-            '"splatter"': Bąbelki
-            '"swirl"': Hypno
-            '"snowflakes"': Śnieg
-            '"spiral"': Spirala
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Losowy)"
-      Dancelab_setBackgroundEffectWithPalette:
-        text: ustaw efekt tła {EFFECT} {PALETTE}
-        options:
-          EFFECT:
-            '"none"': Żaden
-            '"rand"': "(Losowy)"
-            '"circles"': Tunel
+            '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
             '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
-            '"splatter"': Plamy farby
+            '"splatter"': Bąbelki
             '"rainbow"': Tęcza
             '"snowflakes"': Śnieg
-            '"text"': Tytuł piosenki
+            '"text"': Tytuły piosenek
             '"sparkles"': Migotanie
             '"spiral"': Spirala
             '"disco"': Kwadraty
@@ -400,8 +386,44 @@ pl:
           PALETTE:
             '"rave"': Czarno-białe
             '"cool"': Niebieskie
+            '"electronic"': Elektroniczny
+            '"iceCream"': Lody
             '"default"': Jasne
+            '"neon"': Neon
             '"tropical"': Tropikalne
+            '"vintage"': Starocie
+            '"warm"': Czerwone
+      Dancelab_setBackgroundEffectWithPalette:
+        text: ustaw efekt tła {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"circles"': Kółka
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"splatter"': Plamy farby
+            '"rainbow"': Tęcza
+            '"snowflakes"': Śnieg
+            '"text"': Tytuły piosenek
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"disco"': Kwadraty
+            '"stars"': Gwiazdy
+          PALETTE:
+            '"rave"': Czarno-białe
+            '"cool"': Niebieskie
+            '"electronic"': Elektroniczny
+            '"iceCream"': Lody
+            '"default"': Jasne
+            '"neon"': Neon
+            '"tropical"': Tropikalne
+            '"vintage"': Starocie
             '"warm"': Czerwone
       Dancelab_setDanceSpeed:
         text: ustaw prędkość tańca {SPRITE} na {SPEED}
@@ -439,10 +461,19 @@ pl:
         options:
           EFFECT:
             '"none"': Żaden
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts_red"': Serca
+            '"music_notes"': Nuty
+            '"pineapples"': Ananasy
+            '"pizzas"': Pizze
+            '"smiling_poop"': Kupa
             '"rain"': Deszcz
-            '"raining_tacos"': Taco
+            '"floating_rainbows"': Tęcze
+            '"smile_face"': Uśmiechy
             '"spotlight"': Reflektor
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Losowo)"
+            '"color_lights"': Światła rampy
+            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: ustaw efekt pierwszego planu {EFFECT}
         options:
@@ -454,10 +485,13 @@ pl:
             '"hearts_red"': Serca
             '"music_notes"': Nuty
             '"pineapples"': Ananasy
+            '"pizzas"': Pizze
             '"smiling_poop"': Kupa
             '"rain"': Deszcz
-            '"floating_rainbows"': Tęcza
+            '"floating_rainbows"': Tęcze
+            '"smile_face"': Uśmiechy
             '"spotlight"': Reflektor
+            '"color_lights"': Światła rampy
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'ustaw {SPRITE} {PROPERTY} na {VAL} '
@@ -603,6 +637,7 @@ pl:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
@@ -803,7 +838,31 @@ pl:
             "{x: 300, y: 100}": górny prawy róg
             "{x: 100, y: 300}": dolny lewy róg
             "{x: 300, y: 300}": dolny prawy róg
-      Mikelab_createNewSprite2:
+      Mikelab_eval:
+        text: oceń {CODE}
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"rotation"': obrót
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+            '"direction"': kierunku ruchu
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': wszystkie
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': wszystkie
+          PROPERTY:
+            '"scale"': rozmiar
+            '"rotation"': obrót
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+            '"direction"': kierunku ruchu
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": u góry
@@ -815,13 +874,11 @@ pl:
             "{x: 300, y: 100}": górny prawy róg
             "{x: 100, y: 300}": dolny lewy róg
             "{x: 300, y: 300}": dolny prawy róg
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': wszystkie
-      Mikelab_eval:
-        text: oceń {CODE}
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': rozmiar
@@ -829,6 +886,50 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': wszystkie
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': wszystkie
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': wszystkie
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': wszystkie
+          PROPERTY:
+            '"scale"': rozmiar
+            '"rotation"': obrót
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+            '"direction"': kierunku ruchu
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': wszystkie
+      Mikelab_ifDanceIs:
+        text: |-
+          jeśli {SPRITE} wykonuje {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Żaden
       Mikelab_randomColor:
         text: losowy kolor
       Mikelab_setBG:
@@ -848,6 +949,18 @@ pl:
           CORNER:
             '"right"': w prawo
             '"left"': w lewo
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 300}": na dole
+            "{x: 100, y: 200}": w lewo
+            "{x: 300, y: 200}": w prawo
+            "{x: 200, y: 200}": środek
+            "{x: 100, y: 100}": górny lewy róg
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 300}": dolny lewy róg
+            "{x: 300, y: 300}": dolny prawy róg
       Mikelab_whenKeyPressed:
         text: po naciśnięciu {KEY}
         options:
@@ -902,6 +1015,26 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
             '"tint"': odcień
+      binary_move:
+        options:
+          DIR:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+      binary_whenKey:
+        text: po naciśnięciu {KEY}
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           jeśli jest ścieżka {DIR}

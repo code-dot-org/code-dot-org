@@ -36,10 +36,10 @@ cs:
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -57,10 +57,10 @@ cs:
             '"prev"': "(Předchozí)"
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -100,10 +100,10 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -119,10 +119,10 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
-            MOVES.ClapHigh: Tleskají vysoko
-            MOVES.Dab: Poklepávají
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
@@ -180,11 +180,11 @@ cs:
           {DO1} {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Tleskají vysoko
+            MOVES.ClapHigh: Clap High
             MOVES.Clown: Šaškují
-            MOVES.Dab: Poklepávají
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Dvojitě dolů
-            MOVES.Drop: Klesají
+            MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Roll: Naklánění
@@ -333,15 +333,27 @@ cs:
         options:
           EFFECT:
             '"none"': Žádný
+            '"circles"': Tunel
             '"color_cycle"': Barvy
-            '"disco"': Čtverce
-            '"rainbow"': Barvy
             '"diamonds"': Diamanty
-            '"splatter"': Bubliny
+            '"disco_ball"': Disco koule
             '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový taneční parket
+            '"splatter"': Bubliny
+            '"rainbow"': Barvy
             '"snowflakes"': Sníh
+            '"text"': Název skladby
+            '"sparkles"': Lesky
             '"spiral"': Spirála
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Náhodně)"
+            '"disco"': Čtverce
+            '"stars"': Hvězdy
+          PALETTE:
+            '"rave"': Černá a bílá
+            '"cool"': Modré
+            '"default"': Světlo
+            '"tropical"': Tropické
+            '"warm"': Červené
       Dancelab_setBackgroundEffectWithPalette:
         text: nastavit efekt pozadí {EFFECT} {PALETTE}
         options:
@@ -405,10 +417,16 @@ cs:
         options:
           EFFECT:
             '"none"': Žádný
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts_red"': Srdce
+            '"music_notes"': Hudební noty
+            '"pineapples"': Ananasy
+            '"smiling_poop"': Hovínko
             '"rain"': Déšť
-            '"raining_tacos"': Tacos
+            '"floating_rainbows"': Duha
             '"spotlight"': Bodový reflektor
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Náhodně)"
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: nastavit efekt popředí {EFFECT}
         options:
@@ -755,7 +773,29 @@ cs:
             "{x: 300, y: 100}": nahoře vpravo
             "{x: 100, y: 300}": dole vlevo
             "{x: 300, y: 300}": dole vpravo
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"rotation"': otočení
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
+            '"direction"': směr pohybu
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': vše
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': vše
+          PROPERTY:
+            '"scale"': velikost
+            '"rotation"': otočení
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
+            '"direction"': směr pohybu
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": nahoře
@@ -767,11 +807,11 @@ cs:
             "{x: 300, y: 100}": nahoře vpravo
             "{x: 100, y: 300}": dole vlevo
             "{x: 300, y: 300}": dole vpravo
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': vše
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': velikost
@@ -779,6 +819,49 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': vše
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': vše
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': vše
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': vše
+          PROPERTY:
+            '"scale"': velikost
+            '"rotation"': otočení
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
+            '"direction"': směr pohybu
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': vše
+      Mikelab_ifDanceIs:
+        text: |-
+          když {SPRITE} dělá {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Šaškují
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Roll: Naklánění
+            MOVES.Kick: Kopou
+            MOVES.ThisOrThat: Toto nebo ono
+            MOVES.Rest: Žádný
       Mikelab_randomColor:
         text: náhodná barva
       Mikelab_removeBehaviorSimple:
@@ -800,6 +883,18 @@ cs:
           CORNER:
             '"right"': vpravo
             '"left"': vlevo
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": nahoře
+            "{x: 200, y: 300}": dole
+            "{x: 100, y: 200}": vlevo
+            "{x: 300, y: 200}": vpravo
+            "{x: 200, y: 200}": uprostřed
+            "{x: 100, y: 100}": nahoře vlevo
+            "{x: 300, y: 100}": nahoře vpravo
+            "{x: 100, y: 300}": dole vlevo
+            "{x: 300, y: 300}": dole vpravo
       Mikelab_whenKeyPressed:
         text: když je stisknuta {KEY}
         options:
@@ -854,6 +949,26 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
             '"tint"': odstín
+      binary_move:
+        options:
+          DIR:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+      binary_whenKey:
+        text: když je stisknuta {KEY}
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           pokud cesta {DIR}

@@ -1722,3 +1722,18 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+        andrea-test:
+          stages:
+            'null':
+              name: 'нічого'
+        dance-extras-gallery:
+          title: Продовжуємо танцювати
+          description: Рухайся далі однієї години з розширеними проектними ідеями.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
+            Binary Bracelets:
+              name: Двійкові браслети

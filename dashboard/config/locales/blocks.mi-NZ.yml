@@ -228,19 +228,55 @@ mi:
           LOCATION:
             "{x: 100, y: 200}": mauī
             "{x: 300, y: 200}": matau
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-      Mikelab_destroyAll:
-        options:
-          SELECT:
-            '"all"': katoa
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': rahinga
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': katoa
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': katoa
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': katoa
       Mikelab_randomColor:
         text: tae matapōkere
       Mikelab_setBG:
@@ -257,6 +293,11 @@ mi:
           CORNER:
             '"right"': matau
             '"left"': mauī
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -296,6 +337,21 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      binary_move:
+        options:
+          DIR:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
       craft_ifPath:
         text: |-
           mena he ara  {DIR}

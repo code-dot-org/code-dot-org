@@ -333,14 +333,26 @@ et:
           EFFECT:
             '"none"': Mitte ükski
             '"color_cycle"': Värvid
-            '"disco"': Ruudud
-            '"rainbow"': Vikerkaar
             '"diamonds"': Teemantid
-            '"splatter"': Mullid
             '"swirl"': Hypno
+            '"splatter"': Mullid
+            '"rainbow"': Vikerkaar
             '"snowflakes"': Lumi
             '"spiral"': Spiraal
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Juhuslik)"
+            '"disco"': Ruudud
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"swirl"': Hypno
+            '"splatter"': Mullid
+            '"rainbow"': Vikerkaar
+            '"snowflakes"': Lumi
+            '"spiral"': Spiraal
+            '"disco"': Ruudud
       Dancelab_setDanceSpeed:
         text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
@@ -377,10 +389,22 @@ et:
         options:
           EFFECT:
             '"none"': Mitte ükski
+            '"bubbles"': Mullid
+            '"pineapples"': Ananassid
             '"rain"': Vihm
-            '"raining_tacos"': Tacod
             '"spotlight"': Punktvalgus
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Juhuslik)"
+            '"raining_tacos"': Tacod
+      Dancelab_setForegroundEffectExtended:
+        text: määra esiplaani efekt {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"bubbles"': Mullid
+            '"pineapples"': Ananassid
+            '"rain"': Vihm
+            '"spotlight"': Punktvalgus
+            '"raining_tacos"': Tacod
       Dancelab_setProp:
         text: 'muuda {SPRITE} {PROPERTY} {VAL} '
         options:
@@ -444,6 +468,8 @@ et:
             '"PINEAPPLE"': kõik ananassid
             '"ROBOT"': kõik robotid
             '"SHARK"': kõik haid
+      Dancelab_setTintInline:
+        text: määra {SPRITE} toon {VAL}
       Dancelab_setVisible:
         text: määra {SPRITE} nähtavus {VISIBILITY}
         options:
@@ -696,7 +722,29 @@ et:
             "{x: 300, y: 100}": üleval paremal
             "{x: 100, y: 300}": keskel vasakul
             "{x: 300, y: 300}": all paremal
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"rotation"': pööramine
+            '"x"': x asukoht
+            '"y"': y asukoht
+            '"direction"': liikumise suund
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': kõik
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': kõik
+          PROPERTY:
+            '"scale"': suurus
+            '"rotation"': pööramine
+            '"x"': x asukoht
+            '"y"': y asukoht
+            '"direction"': liikumise suund
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": üleval
@@ -708,11 +756,11 @@ et:
             "{x: 300, y: 100}": üleval paremal
             "{x: 100, y: 300}": keskel vasakul
             "{x: 300, y: 300}": all paremal
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': kõik
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': suurus
@@ -720,6 +768,49 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': kõik
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': kõik
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': kõik
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': kõik
+          PROPERTY:
+            '"scale"': suurus
+            '"rotation"': pööramine
+            '"x"': x asukoht
+            '"y"': y asukoht
+            '"direction"': liikumise suund
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': kõik
+      Mikelab_ifDanceIs:
+        text: |-
+          kui {SPRITE} teeb {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Clown: Kloun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Roll: Rulli
+            MOVES.Kick: Täht
+            MOVES.ThisOrThat: Seda või teist
+            MOVES.Rest: Mitte ükski
       Mikelab_randomColor:
         text: juhuslik värv
       Mikelab_setBG:
@@ -739,6 +830,18 @@ et:
           CORNER:
             '"right"': paremale
             '"left"': vasakule
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": üleval
+            "{x: 200, y: 300}": all
+            "{x: 100, y: 200}": vasakule
+            "{x: 300, y: 200}": paremale
+            "{x: 200, y: 200}": keskel
+            "{x: 100, y: 100}": üleval vasakul
+            "{x: 300, y: 100}": üleval paremal
+            "{x: 100, y: 300}": keskel vasakul
+            "{x: 300, y: 300}": all paremal
       Mikelab_whenKeyPressed:
         text: kui vajutad {KEY}
         options:
@@ -793,6 +896,26 @@ et:
             '"y"': y asukoht
             '"direction"': liikumise suund
             '"tint"': toon
+      binary_move:
+        options:
+          DIR:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+      binary_whenKey:
+        text: kui vajutad {KEY}
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           kui rada {DIR}

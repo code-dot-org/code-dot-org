@@ -335,15 +335,29 @@ zh-CN:
         options:
           EFFECT:
             '"none"': 没有
+            '"circles"': 隧道
             '"color_cycle"': 颜色
-            '"disco"': 方形
-            '"rainbow"': 彩虹
             '"diamonds"': 菱形
-            '"splatter"': 气泡
+            '"disco_ball"': 迪斯科球
             '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 气泡
+            '"rainbow"': 彩虹
             '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"sparkles"': 火花
             '"spiral"': 螺旋
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": 随机
+            '"disco"': 方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"default"': 光
+            '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
       Dancelab_setBackgroundEffectWithPalette:
         text: 设置背景效果 {EFFECT} {PALETTE}
         options:
@@ -409,10 +423,16 @@ zh-CN:
         options:
           EFFECT:
             '"none"': 没有
+            '"bubbles"': 气泡
+            '"confetti"': 彩纸屑
+            '"hearts_red"': 心
+            '"music_notes"': 音符
+            '"pineapples"': 菠萝
+            '"smiling_poop"': 便便
             '"rain"': 下雨
-            '"raining_tacos"': 玉米卷
+            '"floating_rainbows"': 彩虹
             '"spotlight"': 聚光灯
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": 随机
+            '"raining_tacos"': 玉米卷
       Dancelab_setForegroundEffectExtended:
         text: 设置前景效果为 {EFFECT}
         options:
@@ -996,7 +1016,32 @@ zh-CN:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
-      Mikelab_createNewSprite2:
+      Mikelab_eval:
+        text: 执行 {CODE}
+      Mikelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': 所有
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': 所有
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1009,16 +1054,11 @@ zh-CN:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': 所有
-      Mikelab_edgesDisplace:
-        text: 边缘模块阻止了 {SPRITE} 移动
-      Mikelab_eval:
-        text: 执行 {CODE}
-      Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1026,8 +1066,51 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': 所有
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': 所有
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': 所有
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': 所有
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': 所有
       Mikelab_hasBehavior:
         text: "{SPRITE} 当前在 {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        text: |-
+          如果 {SPRITE} 正在 {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 江南
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Roll: 身体转动
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
       Mikelab_locationAt:
         text: '位置 x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1056,6 +1139,19 @@ zh-CN:
           CORNER:
             '"right"': 向右
             '"left"': 向左
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_whenClickedOn:
         text: 当 {SPRITE} 被点击时
       Mikelab_whenKeyPressed:
@@ -1159,6 +1255,26 @@ zh-CN:
             '"direction"': 移动方向
             '"rotation"': 旋转或方向
             '"tint"': 色调
+      binary_move:
+        options:
+          DIR:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+      binary_whenKey:
+        text: 当 {KEY} 按下时
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           如果路径 {DIR}

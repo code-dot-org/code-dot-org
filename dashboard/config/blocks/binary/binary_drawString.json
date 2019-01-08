@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "drawString",
+    "blockText": "draw string {STR}",
+    "args": [
+      {
+        "name": "STR",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

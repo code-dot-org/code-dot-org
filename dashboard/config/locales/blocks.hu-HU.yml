@@ -317,10 +317,23 @@ hu:
         options:
           EFFECT:
             '"none"': Egyik sem
-            '"disco"': Négyzetek
-            '"rainbow"': Színek
+            '"circles"': Alagút
             '"diamonds"': Gyémántok
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Véletlen)"
+            '"disco_ball"': Diszkógömb
+            '"kaleidoscope"': Kaleidoszkóp
+            '"lasers"': Lézer táncparkett
+            '"rainbow"': Színek
+            '"text"': Dalcím
+            '"sparkles"': Ragyogás
+            '"disco"': Négyzetek
+            '"stars"': Csillagok
+          PALETTE:
+            '"rave"': Fekete-fehér
+            '"cool"': Kékek
+            '"default"': Világos
+            '"tropical"': Trópusi
+            '"vintage"': Régi
+            '"warm"': Vörösek
       Dancelab_setBackgroundEffectWithPalette:
         text: háttéreffekt beállítása {EFFECT} {PALETTE}
         options:
@@ -380,9 +393,14 @@ hu:
         options:
           EFFECT:
             '"none"': Egyik sem
+            '"confetti"': Konfetti
+            '"hearts_red"': Szívek
+            '"music_notes"': Hangjegyek
+            '"pineapples"': Ananászok
+            '"smiling_poop"': Kaki
             '"rain"': Eső
+            '"floating_rainbows"': Szivárvány
             '"raining_tacos"': Taco
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Véletlen)"
       Dancelab_setForegroundEffectExtended:
         text: 'előtéreffekt beállítása: {EFFECT}'
         options:
@@ -687,7 +705,29 @@ hu:
             "{x: 300, y: 100}": jobbra fent
             "{x: 100, y: 300}": balra lent
             "{x: 300, y: 300}": jobbra lent
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"rotation"': forgás
+            '"x"': x pozíció
+            '"y"': y-pozíció
+            '"direction"': mozgás iránya
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': összes
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': összes
+          PROPERTY:
+            '"scale"': méret
+            '"rotation"': forgás
+            '"x"': x pozíció
+            '"y"': y-pozíció
+            '"direction"': mozgás iránya
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": fent
@@ -699,11 +739,11 @@ hu:
             "{x: 300, y: 100}": jobbra fent
             "{x: 100, y: 300}": balra lent
             "{x: 300, y: 300}": jobbra lent
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': összes
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': méret
@@ -711,6 +751,47 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': összes
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': összes
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': összes
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': összes
+          PROPERTY:
+            '"scale"': méret
+            '"rotation"': forgás
+            '"x"': x pozíció
+            '"y"': y-pozíció
+            '"direction"': mozgás iránya
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': összes
+      Mikelab_ifDanceIs:
+        text: |-
+          ha {SPRITE} csinálja {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Taps fent
+            MOVES.Clown: Bohóc
+            MOVES.Dab: Legyintés
+            MOVES.DoubleJam: Duplázás
+            MOVES.Fresh: Friss
+            MOVES.Roll: Testforgás
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
       Mikelab_randomColor:
         text: Véletlen szín
       Mikelab_setBG:
@@ -730,6 +811,18 @@ hu:
           CORNER:
             '"right"': jobbra
             '"left"': balra
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": fent
+            "{x: 200, y: 300}": lent
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: 200, y: 200}": közép
+            "{x: 100, y: 100}": balra fent
+            "{x: 300, y: 100}": jobbra fent
+            "{x: 100, y: 300}": balra lent
+            "{x: 300, y: 300}": jobbra lent
       Mikelab_whenKeyPressed:
         text: "{KEY} lenyomásakor"
         options:
@@ -784,6 +877,22 @@ hu:
             '"y"': y-pozíció
             '"direction"': mozgás iránya
             '"tint"': árnyalat
+      binary_move:
+        options:
+          DIR:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+      binary_whenKey:
+        text: "{KEY} lenyomásakor"
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
       craft_ifPath:
         options:
           DIR:
