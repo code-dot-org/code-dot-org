@@ -1096,15 +1096,17 @@ export class DetailViewContents extends React.Component {
               <td style={styles.scoringColumn}/>
             </tr>
           }
-          <tr>
-            <td style={styles.questionColumn}>
-              Summer Workshop
-            </td>
-            <td style={styles.answerColumn}>
-              {this.renderWorkshopAnswer()}
-            </td>
-            <td style={styles.scoringColumn}/>
-          </tr>
+          {!(this.props.applicationData.course === 'csf') &&
+            <tr>
+              <td style={styles.questionColumn}>
+                Summer Workshop
+              </td>
+              <td style={styles.answerColumn}>
+                {this.renderWorkshopAnswer()}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
           {this.props.applicationData.application_type === ApplicationTypes.facilitator &&
             <tr>
               <td style={styles.questionColumn}>
