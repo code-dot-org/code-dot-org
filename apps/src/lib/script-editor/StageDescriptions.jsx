@@ -42,8 +42,8 @@ const styles = {
  * If you click the import button, it grabs new descriptions from curriculum
  * builder and shows both sets.
  */
-export default class StageDescriptions extends React.Component {
-  static propTypes = {
+const StageDescriptions = React.createClass({
+  propTypes: {
     scriptName: PropTypes.string.isRequired,
     currentDescriptions: PropTypes.arrayOf(
       PropTypes.shape({
@@ -52,23 +52,25 @@ export default class StageDescriptions extends React.Component {
         descriptionTeacher: PropTypes.string.isRequired,
       })
     ).isRequired
-  };
+  },
 
-  state = {
+  getInitialState() {
+    return {
       // start collapsed
       collapsed: true,
       buttonText: null,
       importedDescriptions: [],
       mismatchedStages: [],
-  };
+    };
+  },
 
-  expand = () => {
+  expand() {
     this.setState({
       collapsed: false
     });
-  };
+  },
 
-  processImport = (result) => {
+  processImport(result) {
     let importedDescriptions = [];
     const { currentDescriptions } = this.props;
 
@@ -97,9 +99,9 @@ export default class StageDescriptions extends React.Component {
       importedDescriptions,
       mismatchedStages
     });
-  };
+  },
 
-  importDescriptions = () => {
+  importDescriptions() {
     this.setState({
       buttonText: 'Querying server...'
     });
@@ -111,9 +113,9 @@ export default class StageDescriptions extends React.Component {
         buttonText: jqXHR.statusText
       });
     });
-  };
+  },
 
-  updatedStageDescriptions = () => {
+  updatedStageDescriptions() {
     const { currentDescriptions } = this.props;
     const { importedDescriptions } = this.state;
 
@@ -123,7 +125,7 @@ export default class StageDescriptions extends React.Component {
       descriptionStudent: importedDescriptions[index].descriptionStudent,
       descriptionTeacher: importedDescriptions[index].descriptionTeacher,
     }));
-  };
+  },
 
   render() {
     const { currentDescriptions } = this.props;
@@ -210,4 +212,6 @@ export default class StageDescriptions extends React.Component {
       </div>
     );
   }
-}
+});
+
+export default StageDescriptions;
