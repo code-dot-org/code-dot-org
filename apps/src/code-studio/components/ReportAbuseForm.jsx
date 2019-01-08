@@ -99,7 +99,6 @@ export default class ReportAbuseForm extends React.Component {
             <div>{i18n.t('activerecord.attributes.user.age')}</div>
             <AgeDropdown
               style={{width: DROPDOWN_WIDTH}}
-              age={this.props.age}
               ref="age"
             />
           </div>
