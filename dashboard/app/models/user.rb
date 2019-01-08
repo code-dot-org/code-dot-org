@@ -1491,6 +1491,10 @@ class User < ActiveRecord::Base
     section_courses.include?(course)
   end
 
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.course)
+  end
+
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
     scripts.map(&:course).compact.concat(section_courses).uniq

@@ -429,12 +429,12 @@ class Script < ActiveRecord::Base
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
-  def get_latest_script_family_link(version_year: nil, locale: nil)
-    script = Script.latest_stable_version(
-      family_name,
-      version_year: version_year,
-      locale: locale
-    )
+  def redirect_to_script_url(user, locale: nil)
+    # No redirect unless user is allowed to view this course version and they are not assigned to the course.
+    return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
+
+    # Redirect user to the latest assigned script in this family, if one exists.
+    script = Script.latest_assigned_version(family_name, user)
     script&.link
   end
 
@@ -442,18 +442,17 @@ class Script < ActiveRecord::Base
     Rails.application.routes.url_helpers.script_path(self)
   end
 
-  def can_view_version?(user, locale)
+  def can_view_version?(user, locale: nil)
     return nil unless user
     # Restrictions only apply to students.
     return true if user.teacher?
 
     # A student can view the script version if...
     # it is the latest stable version, they are assigned to it, or they have progress in it.
-    latest_script_version = Script.latest_stable_version(family_name, locale)
-    is_assigned = user.section_scripts.include?(self) || user.section_courses.include?(course)
+    latest_script_version = Script.latest_stable_version(family_name, locale: locale)
     has_progress = user.scripts.include?(self)
 
-    latest_script_version == self || is_assigned || has_progress
+    latest_script_version == self || user.assigned_script?(self) || has_progress
   end
 
   # @param family_name [String] The family name for a script family.
