@@ -1,12 +1,16 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
-  "dependencies": {
-    "expo": "^26.0.0",
-    "react": "16.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz"
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
   },
-  "devDependencies": {
-    "exp": "^49.2.2"
+  "dependencies": {
+    "expo": "^28.0.0",
+    "expo-cli": "^2.6.14",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz"
   }
 }
