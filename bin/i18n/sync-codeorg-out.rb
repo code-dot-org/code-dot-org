@@ -49,7 +49,7 @@ def restore_redacted_files
     Dir.glob("i18n/locales/original/**/*.*").each do |original_path|
       translated_path = original_path.sub("original", locale)
 
-      plugin = 'nonPedanticEmphasis'
+      plugin = nil
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
       end

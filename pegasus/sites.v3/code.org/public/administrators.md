@@ -18,16 +18,16 @@ video_player: true
 
 <div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; max-width: 95%; height: 207px; font-size: 14px;">
 
-Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 700,000 teachers use our platform. Let Code.org's network of Regional Partners across the US help you bring Computer Science to your school or district. Or, use our international courses to start teaching anywhere in the world.
+Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 1 million teachers use our platform. Let Code.org's network of Regional Partners across the US help you bring Computer Science to your school or district. Or, use our international courses to start teaching anywhere in the world.
 
 <br>
 <br>
 
 <div class="desktop-feature">
 <center>
-  <span style="font-size:40px; margin-right: 40px;">700K</span>
-  <span style="font-size:40px; margin-right: 100px;">22M</span>
-  <span style="font-size:40px; margin-right: 55px;">All 7</span>
+  <span style="font-size:40px; margin-right: 40px;">1M</span>
+  <span style="font-size:40px; margin-right: 40px;">34M</span>
+  <span style="font-size:40px; margin-right: 50px;">All 7</span>
   <br>
   <span style="font-size:24px; margin-right: 30px;">teachers</span>
   <span style="font-size:24px; margin-right: 30px;">students</span>
@@ -92,7 +92,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 41 states plus D.C. allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 42 states plus D.C. allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -111,7 +111,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 34 states plus D.C. have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- 33 states plus D.C. have a certification or licensure for computer science; [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
 
 [/col-80]
 

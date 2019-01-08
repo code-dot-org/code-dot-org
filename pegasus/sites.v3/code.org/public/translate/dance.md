@@ -29,6 +29,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. Misc. strings [here](https://crowdin.com/translate/codeorg/43/enus-es#q=select+song) and [here](https://crowdin.com/translate/codeorg/56/enus-es#q=hoc2018_dance_measure)
 1. [Video titles](https://crowdin.com/translate/codeorg/56/enus-es#q=hoc2018_dance_video)
 1. [Strings about Dance Party on Code.org](https://crowdin.com/translate/codeorg/all/enus-es#q=hoc2018_dance)
+1. [Video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=hoc_dance) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
 
 ## Translating the lesson plan
 View the [lesson plan here](https://curriculum.code.org/hoc/plugged/8/). The link below leads directly to the Spanish lesson plan in our Curriculum Builder project on Crowdin. Replace the "es" in the URL with the language code you got earlier.

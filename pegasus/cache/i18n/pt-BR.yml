@@ -40,13 +40,12 @@ pt-BR:
   og_title_soon: A Hora do Código está chegando
   og_title_here: A Hora do Código chegou!
   og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
-    da computação. Isso muda tudo.
+    da computação.
   og_description_celeb: Teste os novos tutoriais e ganhe uma ligação de video com
     uma celebridade para você ou sua classe!
   csedweek_og_title: A Hora do Código está chegando
-  csedweek_og_description: A Hora do Código é um movimento global que atinge dezenas
-    de milhões de alunos de todas as idades em mais de 180 países e em mais de 45
-    idiomas.
+  csedweek_og_description: Ciência da computação é fundamental para todos os alunos
+    a aprender.
   csedweek_og_description_soon: A Hora do Código está chegando de 3 a 9 de Dezembro.
     Aprender ciência da computação é fundamental para a aprendizagem de todo aluno.
   csedweek_og_description_here: A Hora do Código chegou. Aprender ciência da computação
@@ -274,14 +273,14 @@ pt-BR:
   continue_learning_header: Continue aprendendo além da Hora do Código
   continue_learning_body: Existem muitas opções.  Você pode aprender on-line, ou em
     uma escola local, ou no acampamento de verão.
-  learn_code_studio: Experimentar cursos do Code Studio
-  learn_next_level: Continuar para o próximo nível
+  learn_code_studio: Experimentar cursos do Code.org
+  learn_next_level: Experimentar outro curso do Code.org
   learn_online: Experimente outros cursos online
   learn_classes: Encontre aulas locais
   learn_back_to_minecraft: Continue aprendendo com Minecraft
   hoc_is_here: 'A Hora do Código #HourOfCode estará de volta nos dias 5 a 11 de dezembro.
     https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Fiz o #HourOfCode - Confira! @codeorg'
+  just_did_hoc: 'Eu acabei de fazer a #HourOfCode - Confira! @codeorg'
   just_did_course1: Eu acabei de concluir o Curso 1 - confira! @codeorg
   just_did_course2: Eu acabei de concluir o Curso 2 - confira! @codeorg
   just_did_course3: Eu acabei de concluir o Curso 3 - confira! @codeorg
@@ -323,7 +322,7 @@ pt-BR:
   stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate,
     aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
-    - Frank Martinez, professor'
+    - Frank Martinez, Professor'
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explore o Code Studio
   studiobar_elementary_title: Cursos para o Ensino Fundamental
@@ -335,14 +334,14 @@ pt-BR:
   studiobar_flappy_title: Código do Flappy bird
   studiobar_flappy_body: Faça e compartilhe seu próprio jogo Flappy bird
   studiobar_teacher_title: Feito para professores
-  studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
+  studiobar_teacher_body: Apresente o Code.org em sua sala de aula
   studiobar_frozen_title: Hora do Código
   studiobar_frozen_body: Crie um país das maravilhas congelante com Anna e Elsa
   studiobar_donate_title: Faça uma doação
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
-  homepage_stats_students: de estudantes dos EUA que tem contas no Code.org
+  homepage_stats_students: de estudantes dos EUA tem contas no Code.org
   homepage_stats_female: de nossos estudantes são do sexo feminino
   homepage_stats_teachers: professores usam Code.org
   homepage_stats_hourofcodde: dos estudantes ao redor do mundo que fizeram o Hora
