@@ -437,38 +437,6 @@ module Api::V1::Pd
       refute response_csv.first.include?(column)
     end
 
-    test 'csv download for csf facilitator returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csf_availability
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.any? {|x| response_csv.first.exclude?(x)}
-    end
-
-    test 'csv download for csp facilitator returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csf_availability
-      ).values.any? {|x| response_csv.first.exclude?(x)}
-    end
-
     test 'cohort view returns applications that are accepted and withdrawn' do
       expected_applications = []
       (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
@@ -896,7 +864,14 @@ module Api::V1::Pd
         'Notes 2',
         'Notes 3',
         'Notes 4',
-        'Notes 5'
+        'Notes 5',
+        'Question 1 Support Teachers',
+        'Question 2 Student Access',
+        'Question 3 Receive Feedback',
+        'Question 4 Give Feedback',
+        'Question 5 Redirect Conversation',
+        'Question 6 Time Commitment',
+        'Question 7 Regional Needs'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length

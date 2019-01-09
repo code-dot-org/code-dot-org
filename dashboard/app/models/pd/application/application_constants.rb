@@ -18,5 +18,6 @@ module Pd::Application
 
     YES = 'Yes'.freeze
     NO = 'No'.freeze
+    REVIEWING_INCOMPLETE = 'Reviewing Incomplete'.freeze
   end
 end
