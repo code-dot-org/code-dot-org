@@ -4,63 +4,175 @@ import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
+  PartnersWithoutCsf
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
-
-const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
-const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
+import {YES, CSF, CSD, CSP} from '../ApplicationConstants';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.section2ChooseYourProgram;
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.section2ChooseYourProgram),
-    "csdCspTeacherconAvailability_unavailableReason",
-    "csdCspFitAvailability_unavailableReason"
-  ];
+  static associatedFields = [...Object.keys(PageLabels.section2ChooseYourProgram)];
+
+  componentWillUnmount() {
+    if (this.loadPartnerRequest) {
+      this.loadPartnerRequest.abort();
+    }
+  }
+
+  onProgramSelect(selected) {
+    const program = selected.program;
+    this.handleChange({program});
+
+    if (program === CSF) {
+      this.setState({
+        loadingPartner: true,
+        partner: null,
+        loadError: false
+      });
+      this.loadPartnerRequest = null;
+
+      this.loadPartner();
+    }
+  }
+
+  loadPartner() {
+    const params = {
+      zip_code: this.props.data.zipCode,
+      state: this.props.data.state,
+    };
+
+    function onDone(data) {
+      this.loadPartnerRequest = null;
+
+      this.handleChange({
+        regionalPartnerId: data.id,
+        regionalPartnerName: data.name
+      });
+
+      this.setState({
+        loadingPartner: false
+      });
+    }
+
+    function onError() {
+      this.setState({
+        loadingPartner: false,
+        loadError: true
+      });
+    }
+
+    const boundDone = onDone.bind(this);
+    const boundError = onError.bind(this);
+    const url = `/api/v1/pd/regional_partner_workshops/find?${$.param(params)}`;
+    this.loadPartnerRequest = $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done((data) => {
+      boundDone(data);
+    }).error(() => {
+      boundError();
+    });
+  }
 
   render() {
     return (
       <FormGroup>
         <h3>Section 2: {SectionHeaders.section2ChooseYourProgram}</h3>
+        <p>
+          We offer our Facilitator Development Program for three Code.org courses.
+          For more details about the requirements to facilitate each program, please visit the{' '}
+          <a href="https://code.org/files/facilitator/overview-2019-20.pdf" target="_blank">
+            2019-20 Facilitator Development Program Description
+          </a>
+          .
+        </p>
 
-        {this.radioButtonsFor("program")}
+        {
+          this.buildButtons(
+            {
+              name: "program",
+              label: Section2ChooseYourProgram.labels["program"],
+              type: "radio",
+              required: true,
+              answers: [
+                {
+                  answerText: 'CS Fundamentals (K - 5th grade)',
+                  answerValue: CSF
+                },{
+                  answerText: 'CS Discoveries (6 - 10th grade)',
+                  answerValue: CSD
+                },{
+                  answerText: 'CS Principles (9 - 12th grade)',
+                  answerValue: CSP
+                }
+              ],
+              controlWidth: {md: 6},
+              onChange: this.onProgramSelect.bind(this),
+            }
+          )
+        }
 
-        {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
-          [TextFields.otherWithText]: "other"
-        })}
-
-        {this.radioButtonsFor("abilityToMeetRequirements")}
-
-        <br/>
-        {this.props.data.program === PROGRAM_CSF &&
+        {
+          this.props.data.program === CSF &&
           <div>
-            <h4>
-              If selected for the program, you will be required to attend a
-              Facilitator-in-Training Weekend in the spring of 2019.
-            </h4>
+            <p>
+              Code.org facilitators work with their assigned Regional Partner to host workshops
+              for teachers in their region. Facilitator applicants are assigned to Regional
+              Partners based on the zip code they provide in their application.
+            </p>
 
-            {this.radioButtonsFor("csfAvailability")}
-
-            {this.props.data.csfAvailability === CSF_AVAILABILITY_ONLY_WEEKEND &&
-              this.inputFor("csfPartialAttendanceReason", this.indented())
+            {
+              !this.props.data.regionalPartnerId &&
+              <div>
+                <p>
+                  <strong>There is no Regional Partner supporting CS Fundamentals in your region at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
+                </p>
+                <p>
+                  Please note that we prioritize applicants in regions where we currently have a
+                  Regional Partner supporting CS Fundamentals, and there is a need for additional
+                  facilitators. Code.org will review your application and contact you if there is
+                  a need for facilitators. We are not able to guarantee a space for you in a
+                  different location.
+                </p>
+              </div>
+            }
+            {
+              this.props.data.regionalPartnerId && !PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
+              <div>
+                <p>
+                  <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
+                </p>
+                {this.radioButtonsFor('csfGoodStandingRequirement')}
+              </div>
             }
           </div>
         }
+        {this.radioButtonsFor("codeOrgFacilitator")}
 
-        {this.props.data.program && this.props.data.program !== PROGRAM_CSF &&
+        {this.props.data.codeOrgFacilitator === YES &&
           <div>
-            <h4>
-              If selected for the program, you will be required to attend TeacherCon and a
-              Facilitator-in-Training Weekend in the summer of 2019.
-            </h4>
-
-            {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {
-              [TextFields.notAvailableForTeachercon] : "unavailableReason"
+            {this.checkBoxesWithAdditionalTextFieldsFor("codeOrgFacilitatorYears", {
+              [TextFields.otherWithText] : "other"
             })}
-
-            {this.checkBoxesWithAdditionalTextFieldsFor("csdCspFitAvailability", {
-              [TextFields.notAvailableForFitWeekend] : "unavailableReason"
+            {this.checkBoxesWithAdditionalTextFieldsFor("codeOrgFacilitatorPrograms", {
+              [TextFields.otherWithText] : "other"
             })}
           </div>
         }
@@ -74,19 +186,15 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.program === PROGRAM_CSF) {
-      requiredFields.push("csfAvailability");
-
-      if (data.csfAvailability === CSF_AVAILABILITY_ONLY_WEEKEND) {
-        requiredFields.push("csfPartialAttendanceReason");
-      }
+    if (data.codeOrgFacilitator === YES) {
+      requiredFields.push(
+        "codeOrgFacilitatorYears",
+        "codeOrgFacilitatorPrograms"
+      );
     }
 
-    if (data.program && data.program !== PROGRAM_CSF) {
-      requiredFields.push(
-        "csdCspTeacherconAvailability",
-        "csdCspFitAvailability"
-      );
+    if (data.program === CSF && data.regionalPartnerId && !PartnersWithoutCsf.includes(data.regionalPartnerId)) {
+      requiredFields.push("csfGoodStandingRequirement");
     }
 
     return requiredFields;
@@ -98,17 +206,9 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.program !== PROGRAM_CSF) {
-      changes.csfAvailability = undefined;
-
-      if (data.csfAvailability !== CSF_AVAILABILITY_ONLY_WEEKEND) {
-        changes.csfPartialAttendanceReason = undefined;
-      }
-    }
-
-    if (!data.program || data.program === PROGRAM_CSF) {
-      changes.csdCspTeacherconAvailability = undefined;
-      changes.csdCspFitAvailability = undefined;
+    if (data.codeOrgFacilitator !== YES) {
+      changes.codeOrgFacilitatorYears = undefined;
+      changes.codeOrgFacilitatorPrograms = undefined;
     }
 
     return changes;

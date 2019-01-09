@@ -11,6 +11,10 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 
 ## Previous updates
 
+### 2019
+
+- <a href="http://go.pardot.com/webmail/153401/518235870/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">January 2019</a>
+
 ### 2018
 
 - <a href="http://go.pardot.com/webmail/153401/341356954/e46ae3ec91ad4014b64fb4078ff8739e65c753bc5464d16656455ab2891a49bd", target=_"blank">January 2018</a>
