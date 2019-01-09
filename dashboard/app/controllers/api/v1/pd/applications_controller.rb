@@ -205,8 +205,6 @@ module Api::V1::Pd
       end
 
       unless @application.update(application_data)
-        p "Hit 'unless' condition"
-        p @application.errors.full_messages
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
 

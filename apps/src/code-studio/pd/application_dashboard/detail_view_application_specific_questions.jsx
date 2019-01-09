@@ -73,7 +73,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     if (!this.state.principalApproval) {
       return (
         <div>
-          <h4>Select otion</h4>
+          <h4>Select option</h4>
           <PrincipalApprovalButtons
             applicationId={this.props.id}
             showSendEmailButton={true}

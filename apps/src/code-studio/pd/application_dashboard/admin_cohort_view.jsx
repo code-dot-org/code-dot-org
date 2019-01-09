@@ -73,7 +73,7 @@ export default class AdminCohortView extends React.Component {
       date_accepted: 'Date Accepted',
       applicant_name: 'Name',
       district_name: 'School District',
-      school_name: 'School Name 1',
+      school_name: 'School Name',
       email: 'Email',
       assigned_workshop: 'Assigned Workshop',
       registered_workshop: 'Registered Workshop',
