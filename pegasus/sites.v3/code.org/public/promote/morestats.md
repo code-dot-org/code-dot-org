@@ -13,6 +13,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Code.org classrooms with resourceful teachers see [higher scores on English, math, and science standardized tests](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e). 
 * Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * The majority of Americans [want schools to teach computer science](http://codeorg.tumblr.com/post/139445414968).
+* Computer Science is the [4th most popular STEM major](https://medium.com/@codeorg/computer-science-climbs-to-4th-most-popular-stem-major-for-college-bound-students-773ce681b96c) for college-bound students.
 * [More high school students](http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * In manufacturing, openings for [software jobs outpace production jobs](https://medium.com/@codeorg/in-manufacturing-software-jobs-outpace-production-jobs-for-first-time-4a3c40fd8773) for the first time.
 * Computer science jobs account for the majority of "skilled worker" [immigration](http://codeorg.tumblr.com/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas).
