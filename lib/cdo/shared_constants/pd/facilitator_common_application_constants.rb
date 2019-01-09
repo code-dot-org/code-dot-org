@@ -29,6 +29,9 @@ module Pd
         institution_type: 'What type of institution do you work for?',
         current_employer: 'Current employer',
         job_title: 'What is your job title?',
+        gender_identity: 'Gender Identity',
+        race: 'Race',
+        how_heard: 'How did you hear about this opportunity?',
       },
 
       section_2_choose_your_program: {
@@ -48,8 +51,8 @@ module Pd
         csd_csp_fit_weekend_requirement: 'Can you commit to attending one 3-day 2019 Facilitator-in-Training Workshop?',
         csd_csp_which_fit_weekend: 'Please indicate which FiT Workshop you are able to attend.',
         csd_csp_workshop_requirement: 'Can you commit to leading 2019-20 academic year workshops hosted by your assigned Regional Partner (generally four days across the academic year)?',
-        csd_training_requirement: 'Can you commit to attending __one__ 2- or 3-day training in the spring of 2020 to prepare to co-lead five-day summer workshops?',
-        csp_training_requirement: 'Can you commit to attending __two__ 2- or 3-day trainings in the spring of 2020 to prepare to co-lead five-day summer workshops?',
+        csd_training_requirement: 'Can you commit to attending __one__ 2- or 3-day training in the spring of 2020 to prepare to co-lead 5-day summer workshops?',
+        csp_training_requirement: 'Can you commit to attending __two__ 2- or 3-day trainings in the spring of 2020 to prepare to co-lead 5-day summer workshops?',
         csd_csp_lead_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
         csd_csp_deeper_learning_requirement: 'Can you commit to engaging in the Deeper Learning Program, a series of written reflections and peer reviews for each unit of the curriculum throughout the year?',
         development_and_preparation_requirement: clean_multiline(
@@ -117,9 +120,6 @@ module Pd
       },
 
       section_6_submission: {
-        gender_identity: 'Gender Identity',
-        race: 'Race',
-        how_heard: 'How did you hear about this opportunity?',
         agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
       }
     }.freeze

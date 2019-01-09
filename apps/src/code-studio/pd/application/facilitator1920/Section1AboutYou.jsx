@@ -21,7 +21,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
   static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section1AboutYou),
+    ...Object.keys(PageLabels.section1AboutYou).slice(0, 13),
     "institutionType_other"
   ];
 

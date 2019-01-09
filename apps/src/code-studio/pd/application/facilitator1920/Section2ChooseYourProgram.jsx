@@ -50,7 +50,6 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         regionalPartnerName: data.name
       });
 
-      // Update state with all the partner workshop data to display
       this.setState({
         loadingPartner: false
       });
