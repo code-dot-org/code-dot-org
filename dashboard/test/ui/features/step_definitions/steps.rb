@@ -546,6 +546,12 @@ Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |sel
   element_has_css(selector, property, expected_value)
 end
 
+# Example use case: checking webkit and moz overrides for css properties
+Then /^element "([^"]*)" has one of css properties "([^"]*)" equal to "([^"]*)"$/ do |selectors, properties, expected_value|
+  properties = properties.split(',')
+  element_has_css_multiple_properties(selectors, properties, expected_value)
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
     element_css_value(selector, property) == expected_value
@@ -647,6 +653,10 @@ end
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
   expect(value).to eq(negation.nil?)
+end
+
+Then /^I use jquery to set the text of "([^"]*)" to "([^"]*)"$/ do |selector, value|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{value}\");")
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|

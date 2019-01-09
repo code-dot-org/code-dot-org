@@ -3,20 +3,20 @@ ca:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: després de [TIMESTAMP][0] [UNIT][1]
+        text: després de {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
       Dancelab_changeColorBy:
-        text: canvi [COLOR][0] [METHOD][1] per [AMOUNT][2]
+        text: canvi {COLOR} {METHOD} per {AMOUNT}
         options:
           METHOD:
             '"hue"': matís
             '"saturation"': saturació
             '"brightness"': lluïssor
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] fer [MOVE][1] [DIR][2] per sempre"
+        text: "{GROUP} fer {MOVE} {DIR} per sempre"
         options:
           GROUP:
             '"ALIEN"': tots els extraterrestres
@@ -49,7 +49,7 @@ ca:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] fer [MOVE][1] [DIR][2] per sempre"
+        text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
           MOVE:
             '"next"': "(Següent)"
@@ -70,7 +70,7 @@ ca:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: canvi [SPRITE][0] [PROPERTY][1] per [VAL][2]
+        text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
           PROPERTY:
             '"scale"': mida
@@ -80,7 +80,7 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] fer [MOVE][1] [DIR][2] un cop"
+        text: "{GROUP} fer {MOVE} {DIR} un cop"
         options:
           GROUP:
             '"ALIEN"': tots els extraterrestres
@@ -111,7 +111,7 @@ ca:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] fer [MOVE][1] [DIR][2] un cop"
+        text: "{SPRITE} fer {MOVE} {DIR} un cop"
         options:
           MOVE:
             '"rand"': "(Aleatori)"
@@ -130,25 +130,25 @@ ca:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'cada [N][0] [UNIT][1] '
+        text: 'cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
       Dancelab_everySecondsRange:
-        text: 'cada [N][0] [UNIT][1] des de [START][2] a [STOP][3] '
+        text: 'cada {N} {UNIT} des de {START} a {STOP} '
         options:
           UNIT:
             measures: Mesures
             seconds: Segons
       Dancelab_everyVerseChorus:
-        text: 'cada [UNIT][0] '
+        text: 'cada {UNIT} '
         options:
           UNIT:
             '"verse"': vers
             '"chorus"': tornada
       Dancelab_getEnergy:
-        text: obtenir [RANGE][0]
+        text: obtenir {RANGE}
         options:
           RANGE:
             '"low"': baix
@@ -164,15 +164,15 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
       Dancelab_getTime:
-        text: "[UNIT][0] transcorregut"
+        text: "{UNIT} transcorregut"
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
       Dancelab_ifDanceIs:
         text: |-
-          si [SPRITE][0] està fent [DANCE][1]
-          [DO1][2] [DO2][3]
+          si {SPRITE} està fent {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: aplaudir ben fort
@@ -192,7 +192,7 @@ ca:
             '"measures"': mesures
             '"seconds"': segons
       Dancelab_jumpTo:
-        text: "[SPRITE][0] salta a [LOCATION][1]"
+        text: "{SPRITE} salta a {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": part superior
@@ -206,7 +206,7 @@ ca:
             "{x: 300, y: 300}": part inferior dreta
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
       Dancelab_layoutSprites:
-        text: disposició [GROUP][0] com a [FORMAT][1]
+        text: disposició {GROUP} com a {FORMAT}
         options:
           GROUP:
             '"ALIEN"': tots els extraterrestres
@@ -232,8 +232,8 @@ ca:
             '"random"': atzar
       Dancelab_makeNewDanceSprite:
         text: |-
-          fer un nou [COSTUME][0]
-          anomenat [NAME][1] a [LOCATION][2]
+          fer un nou {COSTUME}
+          anomenat {NAME} a {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Extraterrestre
@@ -258,8 +258,8 @@ ca:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          fer [N][0] nou [COSTUME][1]
-          en una [LAYOUT][2]
+          fer {N} nou {COSTUME}
+          en una {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -302,9 +302,9 @@ ca:
             '"plus"': més
             '"random"': atzar
       Dancelab_mixColors:
-        text: barrejar [COLOR1][0] i [COLOR2][1]
+        text: barrejar {COLOR1} i {COLOR2}
       Dancelab_nMeasures:
-        text: "[N][0] mesures"
+        text: "{N} mesures"
       Dancelab_onPointerDown:
         text: amb el punter cap avall
       Dancelab_onPointerDrag:
@@ -314,9 +314,9 @@ ca:
       Dancelab_randomColor:
         text: color aleatori
       Dancelab_setBackground:
-        text: definir el color de fons [COLOR][0]
+        text: definir el color de fons {COLOR}
       Dancelab_setBackgroundEffect:
-        text: definir l'efecte de fons [EFFECT][0]
+        text: definir l'efecte de fons {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -337,7 +337,7 @@ ca:
             '"neon"': Neó
             '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
-        text: definir l'efecte de fons [EFFECT][0] [PALETTE][1]
+        text: definir l'efecte de fons {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Cap
@@ -360,7 +360,7 @@ ca:
             '"neon"': Neó
             '"warm"': Vermells
       Dancelab_setDanceSpeed:
-        text: canviar [SPRITE][0] velocitat de dansa a [SPEED][1]
+        text: canviar {SPRITE} velocitat de dansa a {SPEED}
         options:
           SPEED:
             '1': normal
@@ -389,7 +389,7 @@ ca:
             '0.5': lent
             '0.25': molt lent
       Dancelab_setForegroundEffect:
-        text: definir l'efecte de fons [EFFECT][0]
+        text: definir l'efecte de fons {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -402,7 +402,7 @@ ca:
             '"floating_rainbows"': Arc de Sant Martí
             '"raining_tacos"': Tacs
       Dancelab_setForegroundEffectExtended:
-        text: definir l'efecte de fons [EFFECT][0]
+        text: definir l'efecte de fons {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -416,7 +416,7 @@ ca:
             '"floating_rainbows"': Arc de Sant Martí
             '"raining_tacos"': Tacs
       Dancelab_setProp:
-        text: 'configurar [SPRITE][0] [PROPERTY][1] a [VAL][2] '
+        text: 'configurar {SPRITE} {PROPERTY} a {VAL} '
         options:
           PROPERTY:
             '"scale"': mida
@@ -426,7 +426,7 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
       Dancelab_setPropEach:
-        text: configurar [GROUP][0] [PROPERTY][1] a [VAL][2]
+        text: configurar {GROUP} {PROPERTY} a {VAL}
         options:
           GROUP:
             '"ALIEN"': tots els extraterrestres
@@ -448,7 +448,7 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
       Dancelab_setPropRandom:
-        text: aleatoritzar [SPRITE][0] [PROPERTY][1]
+        text: aleatoritzar {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': mida
@@ -458,7 +458,7 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
       Dancelab_setTint:
-        text: configurar [SPRITE][0] tint a [VAL][1]
+        text: configurar {SPRITE} tint a {VAL}
       Dancelab_setTintEach:
         options:
           THIS:
@@ -473,11 +473,11 @@ ca:
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
       Dancelab_setTintInline:
-        text: configurar [SPRITE][0] tint a [VAL][1]
+        text: configurar {SPRITE} tint a {VAL}
       Dancelab_setVisible:
-        text: conjunt [SPRITE][0] visible per [visibilitat][1]
+        text: conjunt {SPRITE} visible per {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: configurar [THIS][0] visibilitat a [VISIBILITY][1]
+        text: configurar {THIS} visibilitat a {VISIBILITY}
         options:
           THIS:
             '"ALIEN"': tots els extraterrestres
@@ -492,7 +492,7 @@ ca:
             '"SHARK"': tots els taurons
             '"UNICORN"': tots els unicorns
       Dancelab_startMapping:
-        text: "[SPRITE][0] comença a [PROPERTY][1] seguit de [RANGE][2]"
+        text: "{SPRITE} comença a {PROPERTY} seguit de {RANGE}"
         options:
           PROPERTY:
             '"scale"': mida
@@ -506,7 +506,7 @@ ca:
             '"mid"': mig
             '"treble"': agut
       Dancelab_stopMapping:
-        text: "[SPRITE][0] s'atura a [PROPERTY][1] seguit [RANGE][2]"
+        text: "{SPRITE} s'atura a {PROPERTY} seguit {RANGE}"
         options:
           PROPERTY:
             '"scale"': mida
@@ -521,7 +521,7 @@ ca:
             '"mid"': mig
             '"treble"': agut
       Dancelab_whenKey:
-        text: quan la [KEY][0] és premuda
+        text: quan la {KEY} és premuda
         options:
           KEY:
             '"up"': cap amunt
@@ -531,7 +531,7 @@ ca:
             '"space"': espai
             '"x"': x
       Dancelab_whenPeak:
-        text: quan al pic de [RANGE][0]
+        text: quan al pic de {RANGE}
         options:
           RANGE:
             '0': baix
@@ -540,16 +540,16 @@ ca:
       Dancelab_whenSetup:
         text: configuració
       gamelab_changeColor:
-        text: canvi [COLOR][0] [METHOD][1] per [AMOUNT][2]
+        text: canvi {COLOR} {METHOD} per {AMOUNT}
       gamelab_changeColorBy:
-        text: canvi [COLOR][0] [METHOD][1] per [AMOUNT][2]
+        text: canvi {COLOR} {METHOD} per {AMOUNT}
         options:
           METHOD:
             '"hue"': matís
             '"saturation"': saturació
             '"brightness"': lluïssor
       gamelab_changePropBy:
-        text: canvi [SPRITE][0] [PROPERTY][1] per [VAL][2]
+        text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
           PROPERTY:
             '"scale"': mida
@@ -567,7 +567,7 @@ ca:
             '"rotation"': rotació
             '"direction"': direcció del moviment
       gamelab_jumpTo:
-        text: "[SPRITE][0] salta a [LOCATION][1]"
+        text: "{SPRITE} salta a {LOCATION}"
       gamelab_locationDelta:
         options:
           DIR:
@@ -578,15 +578,15 @@ ca:
             '"right"': dret
             '"left"': esquerra
       gamelab_mixColors:
-        text: barrejar [COLOR1][0] i [COLOR2][1]
+        text: barrejar {COLOR1} i {COLOR2}
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
         text: color aleatori
       gamelab_setBackground:
-        text: definir el color de fons [COLOR][0]
+        text: definir el color de fons {COLOR}
       gamelab_setPosition:
-        text: moure [THIS][0] a la posició [POSITION][1]
+        text: moure {THIS} a la posició {POSITION}
         options:
           POSITION:
             "{x: 50, y: 50}": part superior esquerra
@@ -630,7 +630,7 @@ ca:
             '"right"': dret
             '"left"': esquerra
       gamelab_whenKey:
-        text: quan la [KEY][0] és premuda
+        text: quan la {KEY} és premuda
         options:
           KEY:
             '"up"': cap amunt
@@ -709,8 +709,8 @@ ca:
             '"direction"': direcció del moviment
       Mikelab_ifDanceIs:
         text: |-
-          si [SPRITE][0] està fent [DANCE][1]
-          [DO1][2] [DO2][3]
+          si {SPRITE} està fent {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: aplaudir ben fort
@@ -754,7 +754,7 @@ ca:
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
       Mikelab_whenKeyPressed:
-        text: quan la [KEY][0] és premuda
+        text: quan la {KEY} és premuda
         options:
           KEY:
             '"up"': fletxa cap amunt
@@ -806,7 +806,7 @@ ca:
             '"left"': esquerra
             '"right"': dret
       binary_whenKey:
-        text: quan la [KEY][0] és premuda
+        text: quan la {KEY} és premuda
         options:
           KEY:
             '"up"': cap amunt

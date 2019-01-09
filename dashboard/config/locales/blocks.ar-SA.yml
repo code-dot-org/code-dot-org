@@ -3,20 +3,20 @@ ar:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: وبعد [TIMESTAMP][0] [UNIT][1]
+        text: وبعد {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_changeColorBy:
-        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: تغيير {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': صبغة
             '"saturation"': تشبع
             '"brightness"': السطوع
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] نفذ هذا [MOVE][1] [DIR][2] إلى الأبد"
+        text: "{GROUP} نفذ هذا {MOVE} {DIR} إلى الأبد"
         options:
           GROUP:
             sprites: الكل
@@ -50,7 +50,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] نفذ هذا [MOVE][1][DIR][2] الى الابد"
+        text: "{SPRITE} نفذ هذا {MOVE}{DIR} الى الابد"
         options:
           MOVE:
             '"next"': "(التالي)"
@@ -71,7 +71,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: تغيير [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: تغيير {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -80,7 +80,7 @@ ar:
             '"x"': بشكل أفقي
             '"y"': بشكل عمودي
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] نفذ هذا [MOVE][1] [DIR][2] مرة واحدة"
+        text: "{GROUP} نفذ هذا {MOVE} {DIR} مرة واحدة"
         options:
           GROUP:
             sprites: الكل
@@ -112,7 +112,7 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] نفذ هذا [MOVE][1] [DIR][2] مرة واحدة"
+        text: "{SPRITE} نفذ هذا {MOVE} {DIR} مرة واحدة"
         options:
           MOVE:
             '"rand"': "(عشوائي)"
@@ -131,34 +131,34 @@ ar:
             '1': "→"
             "-1": "←"
       Dancelab_eval:
-        text: تقييم[CODE][0]
+        text: تقييم{CODE}
       Dancelab_everySeconds:
-        text: 'كلما [N][0] [UNIT][1] '
+        text: 'كلما {N} {UNIT} '
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_everySecondsRange:
-        text: 'كلما [N][0] [UNIT][1] من [START][2] الى [STOP][3] '
+        text: 'كلما {N} {UNIT} من {START} الى {STOP} '
         options:
           UNIT:
             measures: اجرائات
             seconds: ثانية
       Dancelab_everyVerseChorus:
-        text: 'كلما [UNIT][0] '
+        text: 'كلما {UNIT} '
         options:
           UNIT:
             '"verse"': مقطع
             '"chorus"': دورة
       Dancelab_getEnergy:
-        text: الحصول على [RANGE][0]
+        text: الحصول على {RANGE}
         options:
           RANGE:
             '"low"': صوت عميق
             '"mid"': نصف
             '"high"': ثلاث
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -168,13 +168,13 @@ ar:
             '"y"': بشكل عمودي
             '"tint"': لون
       Dancelab_getTime:
-        text: "[UNIT][0] منقضي"
+        text: "{UNIT} منقضي"
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_ifDanceIs:
-        text: إذا كان [SPRITE][0] يقوم بِ[DANCE][1][DO1][2] [DO2][3]
+        text: إذا كان {SPRITE} يقوم بِ{DANCE}{DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: تصفيق عالي
@@ -194,7 +194,7 @@ ar:
             '"measures"': اجرائات
             '"seconds"': ثوان
       Dancelab_jumpTo:
-        text: "[SPRITE][0] اقفز الى [LOCATION][1]"
+        text: "{SPRITE} اقفز الى {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -264,7 +264,7 @@ ar:
       Dancelab_randomColor:
         text: لون عشوائي
       Dancelab_setBackgroundEffect:
-        text: عيّن تأثيرات الخلفية [EFFECT][0]
+        text: عيّن تأثيرات الخلفية {EFFECT}
         options:
           EFFECT:
             '"circles"': نفق
@@ -283,7 +283,7 @@ ar:
             '"vintage"': عتيق
             '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
-        text: عيّن تأثيرات الخلفية [EFFECT][0] [PALETTE][1]
+        text: عيّن تأثيرات الخلفية {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"rand"': "(عشوائي)"
@@ -404,7 +404,7 @@ ar:
             '"ROBOT"': كل الروبوتات
             '"SHARK"': كل القروش
       Dancelab_setVisible:
-        text: اضبط [SPRITE][0] على مرئي لـ [VISIBILITY][1]
+        text: اضبط {SPRITE} على مرئي لـ {VISIBILITY}
         options:
           VISIBILITY:
             'false': غير مرئي
@@ -426,7 +426,7 @@ ar:
           VISIBILITY:
             'false': غير مرئي
       Dancelab_startMapping:
-        text: "[SPRITE][0] بدأ [PROPERTY][1] بالتالي [RANGE][2]"
+        text: "{SPRITE} بدأ {PROPERTY} بالتالي {RANGE}"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -440,7 +440,7 @@ ar:
             '"mid"': نصف
             '"treble"': ثلاث
       Dancelab_stopMapping:
-        text: "[SPRITE][0] توقع [PROPERTY][1] بالتالي [RANGE][2]"
+        text: "{SPRITE} توقع {PROPERTY} بالتالي {RANGE}"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -470,19 +470,19 @@ ar:
             '1': نصف
             '2': ثلاث
       gamelab_changeColor:
-        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: تغيير {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"tint"': لون
       gamelab_changeColorBy:
-        text: تغيير [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: تغيير {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': صبغة
             '"saturation"': تشبع
             '"brightness"': السطوع
       gamelab_changePropBy:
-        text: تغيير [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: تغيير {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -496,9 +496,9 @@ ar:
             'true': صحيح
             'false': خطأ
       gamelab_eval:
-        text: تقييم[CODE][0]
+        text: تقييم{CODE}
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': الحجم
@@ -508,7 +508,7 @@ ar:
             '"direction"': اتجاه الحركة
             '"tint"': لون
       gamelab_jumpTo:
-        text: "[SPRITE][0] اقفز الى [LOCATION][1]"
+        text: "{SPRITE} اقفز الى {LOCATION}"
       gamelab_locationDelta:
         options:
           DIR:
@@ -600,7 +600,7 @@ ar:
             "{x: 100, y: 200}": اليسار
             "{x: 300, y: 200}": اليمين
       Mikelab_eval:
-        text: تقييم[CODE][0]
+        text: تقييم{CODE}
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -669,7 +669,7 @@ ar:
           SELECT:
             '"all"': الكل
       Mikelab_ifDanceIs:
-        text: إذا كان [SPRITE][0] يقوم بِ[DANCE][1][DO1][2] [DO2][3]
+        text: إذا كان {SPRITE} يقوم بِ{DANCE}{DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: تصفيق عالي

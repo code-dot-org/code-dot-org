@@ -174,11 +174,13 @@ el:
       ιδιωτικότητας</a>.
     additional_information: Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
       η εγγραφή σας.
+    user_type_button: Ενημέρωση τύπου λογαριασμού
     user_type_label: Τύπος λογαριασμού
     user_type_teacher: Καθηγητής
     user_type_student: φοιτητής/μαθητής
     field_is_required: απαιτείται
     accept_terms: Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό
+    error: Παρουσιάστηκε ένα σφάλμα.
     email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
     email_preference_yes: Ναι
     email_preference_no: Όχι

@@ -33,6 +33,9 @@ fr:
       Behaviors: Comportements
       Advanced: Avancé
       Start: Commencer
+      Locations: Emplacements
+      Music: Musique
+      Dancing: Danse
       Dancers: Danseurs
       Groups: Groupes
       Sprite: Lutin
@@ -41,9 +44,13 @@ fr:
       Movement: Mouvement
       Booleans: Booléens
       Functional: Fonctionnel
+      While Events: Événements de boucle
+      Sprite Properties: Propriétés du sprite
       Predefined: Prédéfini
       test: test
       test2: test2
+      Use These Blocks: Utiliser ces blocs
+      Do Not Use: Ne pas utiliser
       Name: Nom
       NEW BLOCKS: NOUVEAUX BLOCS
       'Functions ': 'Fonctions '

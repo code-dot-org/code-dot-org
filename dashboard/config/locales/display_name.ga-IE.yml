@@ -2,6 +2,7 @@
 ga:
   data:
     display_name:
+      AB_Debug_Artist1: 'Debugging Ealaíontóir # 1 (AB)'
       CSD U2 Pair Programming Video: Códáil Bheirte
       CSD U2 Pair Programming Video_2018: Códáil Bheirte
       CSD U3 Animation Tab Map: An Cluaisín Beochana
@@ -41,6 +42,7 @@ ga:
       CSD U6 for loop map_2018: Lúba "Do Gach"
       CSD U6 functions paramters video: Feidhmeanna a ghlacann le Paraiméadair
       CSD U6 functions paramters video_2018: Feidhmeanna a ghlacann le Paraiméadair
+      'CSD: For Loop_2018': Lúba "Do Gach"
       MC_HOC_2017_FP10x10: Saorimirt
       MC_HOC_2017_FP10x10_RE: Saorimirt
       SG U3L07 More Subgoals: Doiciméadú

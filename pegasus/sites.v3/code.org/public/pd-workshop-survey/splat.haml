@@ -316,23 +316,23 @@ title: "Professional Development Workshop Survey"
   #thanks{style: previous_response ? '' : 'display: none;'}
     %h1 Thank you for your survey submission!
 
+    %h2 We appreciate your feedback.
+
     - if course == 'CS Fundamentals'
-      - order_url = CDO.studio_url("/pd/workshop_materials/#{enrollment_code}", CDO.default_scheme)
-
-      %h2 Request your free course kit (US attendees only)
 
       %p
-        As part of Code.org K-5 professional development programs, attendees are provided one free course kit
-        containing supplies for the unplugged lessons in Courses 1-4. If you’d like to request your free course kit,
-        click the button below. You will have to log in to your Code Studio account to complete your order.
+        To help you get started with CS Fundamentals in your classroom, we've created these
+        = succeed "." do
+          %a{:href => 'https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA', :target => '_blank'} Amazon lists
+        Also feel free to source similar items locally and use these lists as a checklist!
 
       %p
-        %a{href: order_url}
-          %button
-            Click here to log in and order your free course kit.
+        If you have any questions, feel free to reach out to us at
+        = succeed ',' do
+          %a{:href => 'mailto:teacher@code.org'} teacher@code.org
+        or connect with other teachers on our
+        = succeed '.' do
+          %a{:href => 'https://forum.code.org/'} teacher forum
 
-      %h2
-        If you are not interested in requesting a course kit, you can close this window.
-
-    - else
-      %h3 We appreciate your feedback.
+      %p
+        Happy teaching!

@@ -3,13 +3,12 @@
 import $ from 'jquery';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
-import exportGamelabWebExport from '../templates/export/gamelabWebExport.html.ejs';
 import exportGamelabCodeEjs from '../templates/export/gamelabCode.js.ejs';
-import exportGamelabExpoIndexEjs from '../templates/export/expo/gamelabIndex.html.ejs';
+import exportGamelabIndexEjs from '../templates/export/gamelabIndex.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
@@ -24,24 +23,27 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 
+const CONTROLS_HEIGHT = 165;
+
 export default {
   async exportAppToZip(appName, code, animationOpts, expoMode) {
 
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
-    var html;
-    if (expoMode) {
-      html = exportGamelabExpoIndexEjs({
-        appName,
-        jQueryPath: jQueryBaseName + ".j",
-        gamelabApiPath: 'gamelab-api.j',
-        p5Path: 'p5.j',
-        p5playPath: 'p5.play.j',
-      });
-    } else {
-      html = exportGamelabWebExport({
-        appName,
-      });
-    }
+    const html = exportGamelabIndexEjs({
+      appName,
+      appHeight,
+      appWidth,
+      jQueryPath: expoMode ? jQueryBaseName + '.j' : 'https://code.jquery.com/jquery-1.12.1.min.js',
+      gamelabApiPath: expoMode ? 'gamelab-api.j' : 'gamelab-api.js',
+      gamelabCssPath: 'gamelab.css',
+      p5Path: expoMode ? 'p5.j' : 'p5.js',
+      p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
+      codePath: expoMode ? 'code.j' : 'code.js',
+      webExport: !expoMode,
+      exportClass: expoMode ? 'expo' : 'web',
+    });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
@@ -86,8 +88,8 @@ export default {
         projectId: project.getCurrentId()
       });
       const appJs = exportExpoAppEjs({
-        appHeight: GAME_HEIGHT,
-        appWidth: GAME_WIDTH,
+        appHeight,
+        appWidth,
         hasDataAPIs: false,
       });
 
@@ -110,10 +112,11 @@ export default {
           () => download('/blockly/js/gamelab-api.js' + cacheBust, 'text')
               .then((data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
                   () => gamelabApiAsset.reject(new Error("failed to fetch gamelab-api.js"))));
-    // Fetch p5.js and p5.play.js:
+    // Fetch gamelab.css, p5.js, and p5.play.js:
+    const cssAsset = download('/blockly/css/gamelab.css' + cacheBust, 'text');
     const p5Asset = download('/blockly/js/p5play/p5.js' + cacheBust, 'text');
     const p5playAsset = download('/blockly/js/p5play/p5.play.js' + cacheBust, 'text');
-    const staticDownloads = [gamelabApiAsset, p5Asset, p5playAsset];
+    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(download(`https://code.jquery.com/${jQueryBaseName}.js`, 'text'));
@@ -127,9 +130,10 @@ export default {
           return download(assetToDownload.url, assetToDownload.dataType || 'text');
         }
       }))).then(
-        ([gamelabApiText], [p5Text], [p5playText], ...rest) => {
+        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/gamelab-api.j" : "gamelab-api.js"),
               gamelabApiText);
+          zip.file(appName + "/gamelab.css", cssText);
           zip.file(appName + "/" + (expoMode ? "assets/p5.j" : "p5.js"), p5Text);
           zip.file(appName + "/" + (expoMode ? "assets/p5.play.j" : "p5.play.js"),
               p5playText);
@@ -246,18 +250,27 @@ export default {
     const gamelabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
       `${origin}/blockly/js/gamelab-api.js` :
       `${origin}/blockly/js/gamelab-api.min.js`;
+    const gamelabCssPath = `${origin}/blockly/css/gamelab.css`;
     const p5Path = `${origin}/blockly/js/p5play/p5.js`;
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
-    const html = exportGamelabExpoIndexEjs({
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
+    const html = exportGamelabIndexEjs({
       appName,
+      appHeight,
+      appWidth,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       gamelabApiPath,
+      gamelabCssPath,
       p5Path,
       p5playPath,
+      codePath: 'code.j',
+      webExport: false,
+      exportClass: 'expo',
     });
     const appJs = exportExpoAppEjs({
-      appHeight: GAME_HEIGHT,
-      appWidth: GAME_WIDTH,
+      appHeight,
+      appWidth,
       hasDataAPIs: false,
     });
 
@@ -278,7 +291,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: project.getCurrentName(),
-      sdkVersion: '25.0.0',
+      sdkVersion: '28.0.0',
     });
 
     // Important that index.html comes first:

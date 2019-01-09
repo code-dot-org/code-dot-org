@@ -127,7 +127,7 @@ sk:
       shift down: posuň dole
       level_up: level_hore
       score_points: skóre_bodov
-      set score: nastaviť skóre
+      set score: nastav skóre
       draw a line of hexagons: nakresli rad šesťuholníkov
       shift down/forward: posuň dole/dopredu
       shift down/backward: posuň dole/dozadu
@@ -188,11 +188,11 @@ sk:
       draw eye: nakresli oko
       Make a Dot: Sprav bodku
       bubble sort: Bubble Sort
-      move right: posuň doprava
+      move right: posuň sa doprava
       say number: povedz číslo
-      move up: posunúť nahor
-      move down: posunúť nadol
-      move left: posuň doľava
+      move up: posuň sa hore
+      move down: posuň sa dole
+      move left: posuň sa doľava
       kill alien: zabi mimozemšťana
       click: klikni
       Send Actor 1 to opposite: Pošli Postavu 1 naproti

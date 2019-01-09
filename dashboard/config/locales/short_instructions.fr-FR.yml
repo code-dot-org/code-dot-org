@@ -105,6 +105,8 @@ fr:
         bon te semble à l'intérieur d'une ou de plusieurs boucles pour faire des images
         que tu pourras partager avec tes amis. Appuie sur « Exécuter » pour voir un
         exemple.
+      2-3 Artist Functions 2 a: 'Sers-toi du petit bloc vert « dessiner un carré »
+        pour appeler cette fonction et dessiner les lunettes. '
       2-3 Artist Functions 2: Les fonctions te permettent de définir de nouveaux blocs
         ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée
         «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner un carré» pour
@@ -829,6 +831,12 @@ fr:
         sol ?  Indice : Utilise la boucle «Tant que» pour les deux."
       4-5 While Loops Assessment 1: Il y a beaucoup de trous et de tas.  Aide-moi
         à les remplir et à les enlever pour niveler le sol.
+      AB_Debug_PlayLab2: |-
+        Pourquoi ce jeu ne fait rien ?
+
+        Peux-tu trouver les bugs « cachés » ? Certains sont plus faciles que d’autres.
+      AB_Debug_PlayLab3: Déplace le chevalier vers chacun des drapeaux. Si quelque
+        chose ne va pas, cherche les bugs !
       AlgPD DR Free Play: Crée une fonction basée sur ton propre puzzle verbal.
       Alien Defender: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
       Alien Defender_2018: 'Idée de projet: Faire un jeu de type Defender dans Play
