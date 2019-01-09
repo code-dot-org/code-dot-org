@@ -166,7 +166,7 @@ class ScriptsController < ApplicationController
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
     # none are assigned.
     redirect_script = Script.latest_assigned_version(script.family_name, current_user)
-    redirect_script ||= Script.latest_stable_version(script.family_name, locale)
+    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
 
     # Do not redirect if we are already on the correct script.
     return nil if redirect_script == script
