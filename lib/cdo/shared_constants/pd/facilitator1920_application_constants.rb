@@ -147,7 +147,7 @@ module Pd
     INTERVIEW_QUESTIONS = {
       question_1: clean_multiline(
         'Question 1: Code.org’s programs are designed for teachers of all backgrounds, especially teachers with
-        little-to-no experience with computer science. What are two strategies you would use to engage and support
+        little to no experience with computer science. What are two strategies you would use to engage and support
         these teachers in your workshops?'
       ),
 

@@ -115,6 +115,7 @@ module Pd::Application
         :csf_community_requirement
       ].each {|x| assert answers.key? x}
       [
+        :csd_csp_good_standing_requirement,
         :csd_csp_lead_summer_workshop_requirement,
         :csd_csp_workshop_requirement,
         :csd_csp_lead_summer_workshop_requirement,
@@ -138,6 +139,7 @@ module Pd::Application
           :csf_community_requirement
         ].each {|x| refute answers.key? x}
         [
+          :csd_csp_good_standing_requirement,
           :csd_csp_lead_summer_workshop_requirement,
           :csd_csp_workshop_requirement,
           :csd_csp_lead_summer_workshop_requirement,

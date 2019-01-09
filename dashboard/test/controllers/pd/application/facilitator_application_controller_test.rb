@@ -63,7 +63,7 @@ module Pd::Application
       sign_in application.user
       get :new
       assert_response :success
-      assert_select 'p', /^As a reminder, your application is not yet matched to a Code.org Regional Partner/
+      assert_select 'p', /As a reminder, your application is not yet matched to a Code.org Regional Partner/
     end
   end
 end

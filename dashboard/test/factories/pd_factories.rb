@@ -979,6 +979,7 @@ FactoryGirl.define do
     end
 
     trait :with_csd_csp_specific_fields do
+      csd_csp_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
       csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
