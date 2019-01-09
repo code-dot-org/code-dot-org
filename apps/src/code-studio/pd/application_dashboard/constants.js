@@ -82,3 +82,8 @@ export const ApplicationFinalStatuses = [
   'waitlisted',
   'withdrawn'
 ];
+
+export const ApplicationTypes = {
+  teacher: 'Teacher',
+  facilitator: 'Facilitator'
+};

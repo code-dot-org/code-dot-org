@@ -13,7 +13,7 @@ export default class Section5YourApproachToLearningAndLeading extends LabeledFor
   largeInputFor(name, props = {}) {
     return super.largeInputFor(name, {
       rows: 6,
-      maxLength: 750,
+      maxLength: 1500,
       ...props
     });
   }
@@ -23,14 +23,11 @@ export default class Section5YourApproachToLearningAndLeading extends LabeledFor
       <FormGroup>
         <h3>Section 5: {SectionHeaders.section5YourApproachToLearningAndLeading}</h3>
 
-        {this.largeInputFor("whoShouldHaveOpportunity")}
-        {this.largeInputFor("howSupportEquity")}
-        {this.largeInputFor("expectedTeacherNeeds")}
-        {this.largeInputFor("describeAdaptingLessonPlan")}
-        {this.largeInputFor("describeStrategies")}
-        {this.largeInputFor("exampleHowUsedFeedback")}
-        {this.largeInputFor("exampleHowProvidedFeedback")}
-        {this.largeInputFor("hopeToLearn")}
+        {this.largeInputFor("whyShouldAllHaveAccess")}
+        {this.largeInputFor("skillsAreasToImprove")}
+        {this.largeInputFor("inquiryBasedLearning")}
+        {this.largeInputFor("whyInterested")}
+        {this.largeInputFor("anythingElse", {required: false})}
       </FormGroup>
     );
   }
