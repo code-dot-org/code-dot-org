@@ -77,17 +77,17 @@ export const FacilitatorScoringFields = {
         </p>
         <p>
           3: Articulates the importance of CS, but is not clear about accessibility for
-          all teachers regardless of background or certification.
+          all teachers regardless of background or certification
         </p>
         <p>
           5: Clearly articulates the importance of CS accessibility for all teachers
-          regardless of background or certification.
+          regardless of background or certification
         </p>
       </div>
     )
   },
   skillsAreasToImprove: {
-    title: 'Growth minded',
+    title: 'Growth Minded',
     rubric: (
       <div>
         <p>
@@ -110,7 +110,7 @@ export const FacilitatorScoringFields = {
           0: Does not provide a clear definition or example of inquiry-based learning
         </p>
         <p>
-          3: Defines inquiry-based learning but has not led an inquiry-based activity.
+          3: Defines inquiry-based learning but has not led an inquiry-based activity
         </p>
         <p>
           5: Defines inquiry-based learning and provides a concrete personal example of an
@@ -132,7 +132,7 @@ export const FacilitatorScoringFields = {
           3: Describes either what they want to learn OR the impact they want to make
         </p>
         <p>
-          5: Describes what they want to learn AND the impact they want to make.
+          5: Describes what they want to learn AND the impact they want to make
         </p>
       </div>
     )
@@ -158,7 +158,7 @@ export const FacilitatorScoringFields = {
     rubric: (
       <div>
         <p>
-          0: No, or unclear, strategies for supporting teachers.
+          0: No, or unclear, strategies for engaging supporting teachers.
         </p>
         <p>
           3: One clear strategy for engaging and supporting teachers.
@@ -175,7 +175,7 @@ export const FacilitatorScoringFields = {
       <div>
         <p>
           0: Not able to clearly describe how they would respond, take next steps or how
-          they like to receive feedback
+          they like to receive feedback.
         </p>
         <p>
           3: Able to describe two parts to this prompt with clarity. Unable to address all
@@ -194,7 +194,7 @@ export const FacilitatorScoringFields = {
       <div>
         <p>
           0: Not able to clearly describe how they would respond, take next steps or offer
-          their own feedback
+          their own feedback.
         </p>
         <p>
           3: Able to describe two parts to this prompt with clarity. Unable to address all
