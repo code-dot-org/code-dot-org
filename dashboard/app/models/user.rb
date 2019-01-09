@@ -1601,11 +1601,20 @@ class User < ActiveRecord::Base
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
-  # is a part of.
+  # is a part of. Includes default scripts for any assigned courses as well.
   # @return [Array<Script>]
   def section_scripts
     all_sections = sections.to_a.concat(sections_as_student).uniq
-    all_sections.map(&:script).compact.uniq
+    all_scripts = []
+    all_sections.each do |section|
+      if section.script.present?
+        all_scripts << section.script
+      elsif section.course.present?
+        all_scripts.concat(section.course.default_scripts)
+      end
+    end
+
+    all_scripts
   end
 
   # return the id of the section the user most recently created.
