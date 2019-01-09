@@ -1017,7 +1017,7 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h3>Principal Approval</h3>
-          <h4>Select One</h4>
+          <h4>Select option</h4>
           <PrincipalApprovalButtons
             applicationId={this.props.applicationId}
             showSendEmailButton={true}
