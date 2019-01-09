@@ -34,7 +34,7 @@ module Pd::Application
       get :new
       assert_response :success
       assert_template :new
-      assert_select 'h1', '2018-2019 Code.org Facilitator Application'
+      assert_select 'h1', '2019-2020 Code.org Facilitator Application'
     end
 
     test 'after Jan 31 2019 applications are closed' do
@@ -54,7 +54,7 @@ module Pd::Application
       sign_in application.user
       get :new
       assert_response :success
-      assert_select 'p', /Your Code.org Regional Partner is:\s#{regional_partner.name}/
+      assert_select 'p', /As a reminder, your Code.org Regional Partner is:\s#{regional_partner.name}/
     end
 
     test 'submitted page displays no partner message when there is no match' do
@@ -63,7 +63,7 @@ module Pd::Application
       sign_in application.user
       get :new
       assert_response :success
-      assert_select 'p', /Your application is not yet matched to a Code\.org Regional Partner\./
+      assert_select 'p', /As a reminder, your application is not yet matched to a Code.org Regional Partner/
     end
   end
 end
