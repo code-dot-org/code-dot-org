@@ -60,18 +60,11 @@ class ScriptOverview extends React.Component {
     showRedirectDialog: false,
   };
 
-  componentDidMount() {
-    const {redirectScriptUrl} = this.props;
-    if (redirectScriptUrl && redirectScriptUrl.length > 0) {
-      this.onOpenRedirectDialog();
-    }
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
+    this.state = {showRedirectDialog};
   }
-
-  onOpenRedirectDialog = () => {
-    this.setState({
-      showRedirectDialog: true,
-    });
-  };
 
   onCloseRedirectDialog = () => {
     this.setState({

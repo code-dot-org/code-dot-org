@@ -74,15 +74,10 @@ export default class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
   };
 
-  state = {
-    showRedirectDialog: false,
-  };
-
-  componentDidMount() {
-    const {redirectToCourseUrl} = this.props;
-    if (redirectToCourseUrl && redirectToCourseUrl.length > 0) {
-      this.onOpenRedirectDialog();
-    }
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
+    this.state = {showRedirectDialog};
   }
 
   onChangeVersion = event => {
@@ -127,12 +122,6 @@ export default class CourseOverview extends Component {
       dismissedRedirectWarnings = this.props.name;
     }
     sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
-  };
-
-  onOpenRedirectDialog = () => {
-    this.setState({
-      showRedirectDialog: true,
-    });
   };
 
   onCloseRedirectDialog = () => {
