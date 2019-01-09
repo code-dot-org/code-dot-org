@@ -10442,6 +10442,8 @@ en:
           stages:
             Start and End Screens:
               name: Start and End Screens
+            Start and End Screens2:
+              name: Start and End Screens2
           title: Game Lab
           description_audience: ''
           description_short: ''
