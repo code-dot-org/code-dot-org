@@ -489,8 +489,6 @@ class Script < ActiveRecord::Base
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
     assigned_script_ids = user.section_scripts.pluck(:id)
-    # Include default scripts from any courses assigned to user sections.
-    user.section_courses.each {|course| assigned_script_ids.concat(course.default_scripts.pluck(:id))}
 
     Script.
       # select only scripts assigned to this user.
