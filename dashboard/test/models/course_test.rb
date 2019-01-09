@@ -262,6 +262,44 @@ class CourseTest < ActiveSupport::TestCase
     end
   end
 
+  class RedirectCourseUrl < ActiveSupport::TestCase
+    setup do
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    end
+
+    test 'returns nil for nil user' do
+      assert_nil @csp_2017.redirect_to_course_url(nil)
+    end
+
+    test 'returns nil for teacher' do
+      teacher = create :teacher
+      assert_nil @csp_2017.redirect_to_course_url(teacher)
+    end
+
+    test 'returns nil for student assigned to this course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      section = create :section, course: @csp_2017
+      student = create :student
+      section.students << student
+      assert_nil @csp_2017.redirect_to_course_url(student)
+    end
+
+    test 'returns nil for student not assigned to any course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      student = create :student
+      assert_nil @csp_2017.redirect_to_course_url(student)
+    end
+
+    test 'returns link to latest assigned course for student assigned to a course in this family' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      section = create :section, course: csp_2018
+      student = create :student
+      section.students << student
+      assert_equal csp_2018.link, @csp_2017.redirect_to_course_url(student)
+    end
+  end
+
   class CanViewVersion < ActiveSupport::TestCase
     setup do
       @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
