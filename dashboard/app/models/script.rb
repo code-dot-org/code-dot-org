@@ -427,9 +427,10 @@ class Script < ActiveRecord::Base
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
-  # @return [String|nil] URL to the script overview page the user should be redirected to.
+  # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
   def redirect_to_script_url(user, locale: nil)
-    # No redirect unless user is allowed to view this course version and they are not assigned to the course.
+    # No redirect unless user is allowed to view this script version and they are not already assigned to this script
+    # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
 
     # Redirect user to the latest assigned script in this family, if one exists.
@@ -461,7 +462,7 @@ class Script < ActiveRecord::Base
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
   # @return [Script|nil] Returns the latest version in a script family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-US')
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
     script_versions = Script.
@@ -488,13 +489,15 @@ class Script < ActiveRecord::Base
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
     assigned_script_ids = user.section_scripts.pluck(:id)
+    # Include default scripts from any courses assigned to user sections.
+    user.section_courses.each {|course| assigned_script_ids.concat(course.default_scripts.pluck(:id))}
 
     Script.
       # select only scripts assigned to this user.
       where(id: assigned_script_ids).
       # select only scripts in the same family.
       where(family_name: family_name).
-      # order by version year.
+      # order by version year descending.
       order("properties -> '$.version_year' DESC")&.
       first
   end
