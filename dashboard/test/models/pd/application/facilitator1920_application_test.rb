@@ -2,6 +2,9 @@ require 'test_helper'
 
 module Pd::Application
   class Facilitator1920ApplicationTest < ActiveSupport::TestCase
+    include Pd::Application::ApplicationConstants
+    include Pd::Facilitator1920ApplicationConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
@@ -105,10 +108,19 @@ module Pd::Application
       application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: :csf
 
       answers = application.full_answers
-      assert answers.key? :csf_availability
-      assert answers.key? :csf_partial_attendance_reason
-      refute answers.key? :csd_csp_fit_availability
-      refute answers.key? :csd_csp_teachercon_availability
+      [
+        :csf_good_standing_requirement,
+        :csf_summit_requirement,
+        :csf_workshop_requirement,
+        :csf_community_requirement
+      ].each {|x| assert answers.key? x}
+      [
+        :csd_csp_good_standing_requirement,
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_workshop_requirement,
+        :csd_csp_lead_summer_workshop_requirement,
+        :csd_csp_deeper_learning_requirement
+      ].each {|x| refute answers.key? x}
     end
 
     test 'csd and csp applications have csf answers filtered out' do
@@ -119,10 +131,20 @@ module Pd::Application
         application = build :pd_facilitator1920_application, form_data_hash: application_hash, course: course
 
         answers = application.full_answers
-        refute answers.key? :csf_availability
-        refute answers.key? :csf_partial_attendance_reason
-        assert answers.key? :csd_csp_fit_availability
-        assert answers.key? :csd_csp_teachercon_availability
+
+        [
+          :csf_good_standing_requirement,
+          :csf_summit_requirement,
+          :csf_workshop_requirement,
+          :csf_community_requirement
+        ].each {|x| refute answers.key? x}
+        [
+          :csd_csp_good_standing_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_workshop_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_deeper_learning_requirement
+        ].each {|x| assert(answers.key?(x), "Expected #{x} to be in the hash")}
       end
     end
 
@@ -132,9 +154,9 @@ module Pd::Application
       csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-6]
-      assert_equal 'false', csv_answers[-7]
-      assert_equal 'accepted', csv_answers[-8]
+      assert_equal 'notes', csv_answers[-13]
+      assert_equal 'false', csv_answers[-14]
+      assert_equal 'accepted', csv_answers[-15]
     end
 
     test 'csv_header and row return same number of columns' do
@@ -318,14 +340,78 @@ module Pd::Application
       Facilitator1920Application::FILTERED_LABELS.clear
 
       filtered_labels_csd = Facilitator1920Application.filtered_labels('csd')
-      assert filtered_labels_csd.key? :csd_csp_fit_availability
-      refute filtered_labels_csd.key? :csf_availability
+      assert filtered_labels_csd.key? :csd_csp_lead_summer_workshop_requirement
+      refute filtered_labels_csd.key? :csf_good_standing_requirement
       assert_equal ['csd'], Facilitator1920Application::FILTERED_LABELS.keys
 
       filtered_labels_csf = Facilitator1920Application.filtered_labels('csf')
-      refute filtered_labels_csf.key? :csd_csp_fit_availability
-      assert filtered_labels_csf.key? :csf_availability
+      refute filtered_labels_csf.key? :csd_csp_lead_summer_workshop_requirement
+      assert filtered_labels_csf.key? :csf_good_standing_requirement
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
+      %w(csf csd csp).each do |course|
+        application = create :pd_facilitator1920_application, course: course
+        score_hash = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym].map {|key| [key, YES]}.to_h
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash}.to_json
+        )
+
+        assert_equal YES, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: NO})}.to_json
+        )
+
+        assert_equal NO, application.meets_criteria
+
+        application.update(
+          response_scores: {meets_minimum_criteria_scores: score_hash.merge({teaching_experience: nil})}.to_json
+        )
+
+        assert_equal REVIEWING_INCOMPLETE, application.meets_criteria
+      end
+    end
+
+    test 'scoring works as expected' do
+      @application.update(
+        response_scores: @application.default_response_score_hash.deep_merge(
+          {
+            bonus_points_scores: {
+              currently_involved_in_cs_education: 5,
+              grades_taught: 5,
+              experience_teaching_this_course: 5,
+              completed_pd: 5,
+              why_should_all_have_access: 5,
+              skills_areas_to_improve: 5,
+              inquiry_based_learning: 5,
+              why_interested: 5,
+              question_1: 5,
+              question_2: 5,
+              question_3: 5,
+              question_4: 5,
+              question_5: 5
+            }
+          }
+        ).to_json
+      )
+
+      assert_equal(
+        {
+          total_score: "65 / 65",
+          application_score: "40 / 40",
+          interview_score: "25 / 25",
+          teaching_experience_score: "10 / 10",
+          leadership_score: "5 / 5",
+          champion_for_cs_score: "5 / 5",
+          equity_score: "15 / 15",
+          growth_minded_score: "15 / 15",
+          content_knowledge_score: "10 / 10",
+          program_commitment_score: "5 / 5"
+        }, @application.all_scores
+      )
     end
   end
 end
