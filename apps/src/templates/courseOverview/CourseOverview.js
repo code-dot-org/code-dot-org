@@ -175,13 +175,15 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
-        <RedirectDialog
-          isOpen={this.state.showRedirectDialog}
-          details={i18n.assignedToNewerVersion()}
-          handleClose={this.onCloseRedirectDialog}
-          redirectUrl={redirectToCourseUrl}
-          redirectButtonText={i18n.goToAssignedVersion()}
-        />
+        {redirectToCourseUrl &&
+          <RedirectDialog
+            isOpen={this.state.showRedirectDialog}
+            details={i18n.assignedToNewerVersion()}
+            handleClose={this.onCloseRedirectDialog}
+            redirectUrl={redirectToCourseUrl}
+            redirectButtonText={i18n.goToAssignedVersion()}
+          />
+        }
         {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
           <Notification
             type={NotificationType.warning}
