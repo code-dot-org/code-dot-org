@@ -11,6 +11,13 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :notes_3,
     :notes_4,
     :notes_5,
+    :question_1,
+    :question_2,
+    :question_3,
+    :question_4,
+    :question_5,
+    :question_6,
+    :question_7,
     :form_data,
     :status,
     :school_name,
@@ -53,6 +60,34 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   # Include the full answers here, unless otherwise specified
   def form_data
     @scope[:raw_form_data] ? object.form_data_hash : object.full_answers_camelized
+  end
+
+  def question_1
+    object.try(:question_1) || nil
+  end
+
+  def question_2
+    object.try(:question_2) || nil
+  end
+
+  def question_3
+    object.try(:question_3) || nil
+  end
+
+  def question_4
+    object.try(:question_4) || nil
+  end
+
+  def question_5
+    object.try(:question_5) || nil
+  end
+
+  def question_6
+    object.try(:question_6) || nil
+  end
+
+  def question_7
+    object.try(:question_7) || nil
   end
 
   def response_scores

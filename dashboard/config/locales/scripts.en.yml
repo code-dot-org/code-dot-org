@@ -10438,3 +10438,13 @@ en:
           description_audience: CSP Students
           description_short: CSP Student Mid-year Survey
           description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        gamelab:
+          stages:
+            Start and End Screens:
+              name: Start and End Screens
+            Start and End Screens2:
+              name: Start and End Screens2
+          title: Game Lab
+          description_audience: ''
+          description_short: ''
+          description: Teacher-facing tutorials for development in Game Lab.  These tutorials go beyond the concepts covered in CSD.

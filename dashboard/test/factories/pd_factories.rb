@@ -824,13 +824,13 @@ FactoryGirl.define do
     plan_on_teaching ['Yes']
     ability_to_meet_requirements '4'
     led_cs_extracurriculars ['Hour of Code']
-    teaching_experience 'No'
-    grades_taught ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    teaching_experience 'No, I do not have classroom teaching experience'
+    grades_taught ['Elementary school']
     grades_currently_teaching ['Grade 7']
     subjects_taught ['Computer Science']
     years_experience 'None'
     experience_leading ['AP CS A', 'Hour of Code']
-    completed_pd ['CS Fundamentals (1 day workshop)']
+    completed_pd ['No, I have not participated in a Code.org Professional Learning Program for any curriculum.']
     code_org_facilitator 'No'
     have_led_pd 'Yes'
     groups_led_pd ['None']
@@ -979,6 +979,7 @@ FactoryGirl.define do
     end
 
     trait :with_csd_csp_specific_fields do
+      csd_csp_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
       csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT

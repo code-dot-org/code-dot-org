@@ -12,11 +12,6 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
-      # @application.assign_default_workshop!
-      # @application.assign_default_fit_workshop!
-      # fit_workshop = @application.find_default_fit_workshop
-      # @application.fit_workshop_id = fit_workshop.id if fit_workshop
-
       @application.queue_email :confirmation, deliver_now: true
     end
   end
