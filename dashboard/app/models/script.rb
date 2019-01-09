@@ -448,7 +448,7 @@ class Script < ActiveRecord::Base
   def can_view_version?(user, locale: nil)
     return nil unless user
     # Restrictions only apply to students.
-    return true if user.teacher?
+    return true unless user.student?
 
     # A student can view the script version if...
     # it is the latest stable version, they are assigned to it, or they have progress in it.
