@@ -2,6 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 import { valueOr } from '@cdo/apps/utils';
@@ -11,12 +14,15 @@ export default function initPage(scriptEditorData) {
   const stageLevelData = scriptEditorData.stageLevelData;
   const locales = scriptEditorData.locales;
 
+  registerReducers({isRtl});
+
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
 
   let announcements = scriptData.script_announcements || [];
 
   ReactDOM.render(
+    <Provider store={getStore()}>
       <ScriptEditor
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
@@ -39,7 +45,8 @@ export default function initPage(scriptEditorData) {
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}
-      />,
+      />
+    </Provider>,
     document.querySelector('.edit_container')
   );
 }
