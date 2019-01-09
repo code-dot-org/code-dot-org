@@ -7,168 +7,148 @@ module Pd
 
     BASE_SECTION_HEADERS = {
       section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Choose Your Program',
-      section_3_leading_students: 'Leading Students',
-      section_4_facilitation_experience: 'Facilitation Experience',
+      section_2_choose_your_program: 'Professional Learning Program',
+      section_3_experience_and_commitments: 'Experience and Commitments',
+      section_4_leading_students: 'Leading Students',
       section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
-      section_6_logistics: 'Logistics',
-      section_7_submission: 'Submission'
+      section_6_submission: 'Submission'
     }.freeze
 
     BASE_PAGE_LABELS = {
       section_1_about_you: {
         title: 'Title',
-        first_name: 'First Name',
-        preferred_first_name: 'Preferred First Name',
-        last_name: 'Last Name',
-        account_email: 'Account Email',
-        alternate_email: 'If you use another email, enter it here:',
-        phone: 'Phone',
-        address: 'Home Address',
+        first_name: 'First name',
+        last_name: 'Last name',
+        account_email: 'Code.org account email',
+        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        phone: 'Home or cell phone',
+        address: 'Home address',
         city: 'City',
         state: 'State',
-        zip_code: 'Zip Code',
-        gender_identity: 'Gender Identity',
-        race: 'Race',
+        zip_code: 'Zip code',
         institution_type: 'What type of institution do you work for?',
         current_employer: 'Current employer',
         job_title: 'What is your job title?',
-        resume_link: 'Please provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience. (500 characters max)',
-        worked_in_cs_job: 'Have you worked in a job that requires computer science knowledge?',
-        cs_related_job_requirements: 'What were your CS-related job requirements? (500 characters max)',
-        completed_cs_courses_and_activities: 'Which of the following computer science education courses or activities have you completed?',
-        diversity_training: 'Have you engaged in training and development focused on diversity, equity, and/or inclusion?',
-        diversity_training_description: 'Please briefly describe (500 characters max)',
-        how_heard: 'How did you hear about this opportunity?'
+        gender_identity: 'Gender Identity',
+        race: 'Race',
+        how_heard: 'How did you hear about this opportunity?',
       },
 
       section_2_choose_your_program: {
-        program: clean_multiline(
-          'We offer our Facilitator Development Program for three Code.org curricula.
-         Please choose one curriculum for which you would like to become a facilitator this year.
-         For more details about the requirements to facilitate each program, please visit the
-         [2018-19 Facilitator Development Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U).'
-        ),
-        plan_on_teaching: 'Do you plan on teaching this course in the 2018-19 school year?',
-        ability_to_meet_requirements: clean_multiline(
-          'After reviewing the [Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U)
-         how would you rate your ability to meet the requirements and commitments for this program?'
-        ),
-        csf_availability: 'Are you available to attend the three-day Facilitator-in-Training workshop from Saturday, March 3 - Monday, March 5, 2018?',
-        csf_partial_attendance_reason: 'Please explain why you will be unable to attend the Monday portion of the training',
-        csd_csp_teachercon_availability:
-          'Are you available to attend one of the following five-day TeacherCons? (You only have to attend one. Mark all that you can attend)',
-        csd_csp_fit_availability: clean_multiline(
-          'Are you available to attend one of the following two-day Facilitator-in-Training workshops?
-        (You only have to attend one. Mark all that you can attend):'
-        )
+        program: 'Please choose the course for which you would like to become a facilitator.',
+        csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+        code_org_facilitator: 'Are you currently (or have you been) a Code.org facilitator?',
+        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator? Mark all that apply.',
+        code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past. Mark all that apply.",
       },
 
-      section_3_leading_students: {
-        led_cs_extracurriculars: 'Have you led or organized extracurricular computer science learning experiences? Please mark all that apply.',
-        teaching_experience: 'Do you have classroom teaching experience for K-12 students or adults?',
-        grades_taught: 'What grade levels have you taught __in the past?__ Check all that apply.',
-        grades_currently_teaching: 'What grade levels do you __currently__ teach? Check all that apply.',
-        subjects_taught: 'Which subjects do you currently or have you previously taught? Check all that apply.',
-        years_experience: 'How many years of experience do you have teaching computer science for K-12 students or adults?',
-        experience_leading: 'Which of the following do you have experience leading __as a teacher__ (mark all that apply)?',
-        completed_pd: 'Which of the following Code.org professional learning programs did you complete __as a teacher__ (mark all that apply)?'
+      section_3_experience_and_commitments: {
+        teaching_experience: 'Do you have experience as a K-12 classroom teacher?',
+        have_led_adults: 'Have you led learning experiences for adults?',
+        csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (May 17-19, 2019 in Atlanta, GA)?',
+        csf_workshop_requirement: 'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
+        csf_community_requirement: 'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
+        csd_csp_fit_weekend_requirement: 'Can you commit to attending one 3-day 2019 Facilitator-in-Training Workshop?',
+        csd_csp_which_fit_weekend: 'Please indicate which FiT Workshop you are able to attend.',
+        csd_csp_workshop_requirement: 'Can you commit to leading 2019-20 academic year workshops hosted by your assigned Regional Partner (generally four days across the academic year)?',
+        csd_training_requirement: 'Can you commit to attending __one__ 2- or 3-day training in the spring of 2020 to prepare to co-lead 5-day summer workshops?',
+        csp_training_requirement: 'Can you commit to attending __two__ 2- or 3-day trainings in the spring of 2020 to prepare to co-lead 5-day summer workshops?',
+        csd_csp_lead_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
+        csd_csp_deeper_learning_requirement: 'Can you commit to engaging in the Deeper Learning Program, a series of written reflections and peer reviews for each unit of the curriculum throughout the year?',
+        development_and_preparation_requirement: clean_multiline(
+          'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops
+          (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?'
+        ),
+        csd_csp_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+        csd_csp_no_partner_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          If a nearby region is interested in considering your application, we will share those workshop dates with you.'
+        ),
+        csd_csp_partner_but_no_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          However, summer workshop dates have not yet been finalized for your region. We will coordinate with
+          you once workshop dates and locations are known.'
+        ),
+        csd_csp_partner_with_summer_workshop: clean_multiline(
+          'The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+          Can you commit to attending one 5-day summer workshop hosted by your assigned Regional Partner?'
+        ),
+        csd_csp_which_summer_workshop: 'Your Regional Partner is hosting summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend.',
       },
 
-      section_4_facilitation_experience: {
-        code_org_facilitator: 'Are you currently or have you been a Code.org facilitator in the past?',
-        code_org_facilitator_years: 'In which years did you work as a Code.org facilitator (mark all that apply)?',
-        code_org_facilitator_programs: "Please check the Code.org programs you've facilitated for us in the past (mark all that apply):",
-        have_led_pd: 'Have you led professional development in the past?',
-        groups_led_pd: 'What groups have you led professional development for in the past? (check all that apply)',
-        describe_prior_pd: 'Please describe your prior experience leading professional development experiences. (500 characters max)'
+      section_4_leading_students: {
+        currently_involved_in_cs_education: 'How are you currently involved in CS education? Mark all that apply.',
+        grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Mark all that apply.',
+        experience_teaching_this_course: 'Do you have experience teaching the full curriculum to students? Mark all that apply.',
+        plan_on_teaching: 'Do you plan on teaching this course in the 2019-20 school year?',
+        completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for this course?",
+        facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays. Mark all that apply.',
       },
 
       section_5_your_approach_to_learning_and_leading: {
-        who_should_have_opportunity: 'Who should have the opportunity to learn computer science? Why? (750 characters max)',
-        how_support_equity: 'How do you support equity in your own classroom or role? (750 characters max)',
-
-        expected_teacher_needs: clean_multiline(
-          "Teachers in Code.org's Professional Learning Program join us with a wide range of experiences
-         (ex: from brand new teachers to teachers who have taught CS for 10+ years)
-         in computer science education. What are some of the unique needs you'd expect
-         to find in a cohort of these teachers? (750 characters max)"
-        ),
-        describe_adapting_lesson_plan: clean_multiline(
-          "Describe a time when you've had to adapt a lesson plan in the moment to meet the needs of your
-         students or participants. (750 characters max)"
+        why_should_all_have_access: clean_multiline(
+          "Code.org's Professional Learning Programs are open to all teachers, regardless of their
+          experience with CS education. Why do you think Code.org believes that all teachers should
+          have access to the opportunity to teach CS? (1500 characters max)"
         ),
 
-        describe_strategies: clean_multiline(
-          'Have you used “lead learner” or “inquiry-based” strategies in your work with youth and/or adults?
-         If so, briefly describe how you have used these strategies. (750 characters max)'
+        skills_areas_to_improve: clean_multiline(
+          "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated
+          a workshop). Include a brief description  of the workshop/lesson topic and audience (one or
+          two sentences). Then describe __two strengths you demonstrated__, as well as __two facilitation skills
+          you would like to improve__. (1500 characters max)"
         ),
 
-        example_how_used_feedback: clean_multiline(
-          "Please provide a brief example of how you've used feedback __you've received from a colleague__
-         to improve your performance. (750 characters max)"
+        inquiry_based_learning: clean_multiline(
+          "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops.
+          Please briefly define inquiry-based learning as you understand it (one or two sentences). Then, if
+          you have led an inquiry-based activity for students, provide a concrete example of an inquiry-based
+          lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.' (1500
+          characters max)"
         ),
 
-        example_how_provided_feedback: clean_multiline(
-          "Please provide a brief example of how __you've provided feedback to a colleague__
-         and how that person responded to your feedback. (750 characters max)"
+        why_interested: clean_multiline(
+          "Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the
+          impact you hope to make. (1500 characters max)"
         ),
 
-        hope_to_learn: 'What do you hope to learn from the facilitator development program? (750 characters max)'
+        anything_else: clean_multiline(
+          "Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn
+          profile, website, or summarize your relevant past experience. (1500 characters max)"
+        ),
       },
 
-      section_6_logistics: {
-        available_during_week:
-          'During the school year, are you available during the week (Monday - Friday) to attend phone calls or virtual meetings?',
-
-        weekly_availability: clean_multiline(
-          'During the school year, what times during the week (Monday - Friday)
-         are you available to attend phone calls or virtual meetings? (mark all that apply)'
-        ),
-
-        travel_distance: clean_multiline(
-          'What distance are you willing to travel to facilitate workshops?
-         Expenses may be covered for travel that requires overnight stays.'
-        )
-      },
-
-      section_7_submission: {
-        additional_info:
-          "Please provide any additional information you'd like Code.org to have about your application. (500 characters max)",
-
+      section_6_submission: {
         agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
       }
     }.freeze
 
     LABEL_OVERRIDES = {
       program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
-      ability_to_meet_requirements: 'How would you rate your ability to meet the requirements and commitments for this program?',
       grades_taught: 'What grade levels have you taught in the past?',
-      grades_currently_teaching: 'What grade levels do you teach?',
-      experience_leading: 'Which of the following do you have experience leading as a teacher?',
-      completed_pd: 'Which of the following Code.org professional learning programs did you complete as a teacher?'
     }.freeze
 
     NUMBERED_QUESTIONS = %w(
-      workedInCsJob csRelatedJobRequirements diversityTraining program
-      abilityToMeetRequirements csfAvailability csdCspTeacherconAvailability
+      program csfAvailability
       csdCspFitAvailability ledCsExtracurriculars teachingExperience gradesTaught
       gradesCurrentlyTeaching subjectsTaught yearsExperience experienceLeading completedPd
-      codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms haveLedPd
-      groupsLedPd describePriorPd whoShouldHaveOpportunity howSupportEquity
-      expectedTeacherNeeds describeAdaptingLessonPlan describeStrategies
-      exampleHowUsedFeedback exampleHowProvidedFeedback hopeToLearn
+      codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms whoShouldHaveOpportunity
     ).freeze
 
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
       other_please_explain: 'Other (Please Explain):'.freeze,
+      other_please_describe: 'Other (Please Describe):'.freeze,
       how_heard_facilitator: 'A Code.org facilitator (please share name):'.freeze,
       how_heard_code_org_staff: 'A Code.org staff member (please share name):'.freeze,
       how_heard_regional_partner: 'A Code.org Regional Partner (please share name):'.freeze,
       not_available_for_teachercon: "I'm not available for either TeacherCon. (Please Explain):".freeze,
-      not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze
+      not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze,
+      not_sure_please_explain: 'Not sure (Please explain):'.freeze,
+      unable_to_attend_please_explain: "I'm not able to attend any of the above workshop dates. (Please explain):".freeze
     }.freeze
+
+    PARTNERS_WITHOUT_CSF = [2, 3, 4, 44, 55, 80]
   end
 end

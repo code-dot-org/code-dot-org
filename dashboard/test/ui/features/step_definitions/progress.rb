@@ -43,7 +43,7 @@ def verify_bubble_type(selector, type)
   end
   steps %{
     And I wait until element "#{selector}" is in the DOM
-    And element "#{selector}" has css property "border-radius" equal to "#{border_radius}"
+    And element "#{selector}" has one of css properties "border-radius,-webkit-border-radius" equal to "#{border_radius}"
   }
 end
 
