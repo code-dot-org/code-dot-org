@@ -1,10 +1,10 @@
-require File.expand_path('../../../../lib/cdo/shared_constants.rb', __FILE__)
+require_relative 'shared_varnish_constants'
 
 # HTTP Cache configuration.
 #
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
-  include SharedConstants
+  include SharedVarnishConstants
 
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze
