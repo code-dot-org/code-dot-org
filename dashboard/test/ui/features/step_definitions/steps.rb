@@ -945,6 +945,32 @@ Given(/^I am enrolled in a plc course$/) do
   enroll_in_plc_course(@users.first[1][:email])
 end
 
+def create_user(**args)
+  name = "Fake User"
+  email, password = generate_user(name)
+  attributes = {
+    name: name,
+    email: email,
+    password: password,
+    user_type: "teacher",
+    age: "21+"
+  }.merge!(args)
+  user = User.new(attributes)
+  user.save ? user : nil
+end
+
+def assign_script_as_student(user_email, script_name)
+  require_rails_env
+  script = Script.find_by_name(script_name)
+  section = Section.create(name: "New Section", user: create_user, script: script)
+  user = User.find_by_email_or_hashed_email(user_email)
+  section.students << user
+end
+
+Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
+  assign_script_as_student(@users.first[1][:email], script_name)
+end
+
 Then(/^I fake completion of the assessment$/) do
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
   unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
