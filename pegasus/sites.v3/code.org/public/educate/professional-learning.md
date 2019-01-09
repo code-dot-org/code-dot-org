@@ -73,4 +73,10 @@ The majority of our workshop attendees rank it the **best professional developme
 
 <img src="/images/k5pdcropped.jpg" width="100%"/>
 
+## Become a Code.org facilitator
+
+Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's courses.
+
+Interested in helping to bring professional learning opportunities to your community? [Learn more about becoming a Code.org facilitator.](/educate/professional-learning/facilitator)
+
 <%= view :answerdash %>

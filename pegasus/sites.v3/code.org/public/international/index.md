@@ -51,3 +51,22 @@ Host events, make presentations, post to social media, and build a community of 
 
 <div style="clear: both;"></div>
 <br>
+
+*** 
+
+## Computer Science at the G20 
+
+In September of 2018, Code.org was honored to travel to Mendoza, Argentina, to present at the summit of G20 Education Ministers (representing 70% of the world’s schools), and to invite students to introduce the ministers to computer science. The [G20 Education Ministers’ Declaration](/files/2018-09-05-g20_education_ministers_declaration_english.pdf) recommended the integration of “computing and coding skills within the curriculum,” adding to the global consensus around computer science. Watch the video of the event and Hadi Partovi’s full speech below.
+
+[col-50]
+
+<%= view :display_video_thumbnail, id: "g20_students", video_code: "_IrGZqaoNIU", caption: "Computer Science at the G20", play_button: 'center' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :display_video_thumbnail, id: "g20_hadi", video_code: "ljqysBIvbL0", caption: "Hadi Partovi at the 2018 G20 Education Ministerial Meeting", play_button: 'center' %>
+
+[/col-50]
+
