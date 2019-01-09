@@ -57,6 +57,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
     1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
+        1. Note, if mysql folder name is "mysql@5.7", replace the command above by `ln -sfv /usr/local/opt/mysql@5.7/*.plist ~/Library/LaunchAgents`. (Use `ls -d /usr/local/opt/mysql*` to check for folder name.)
     1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
         1. Note: if this fails check your plist file (`ls ~/Library/LaunchAgents/`) to see if it is "homebrew.mxcl.mysql@5.7.plist". If it is try: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.7.plist` instead
 1. Set up rbenv

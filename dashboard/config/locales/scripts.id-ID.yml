@@ -1901,6 +1901,8 @@ id:
               name: Unit 1 penilaian bab 2
             CSP Student Post Survey Staging:
               name: CSP Mahasiswa pasca survei pementasan
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1937,6 +1939,8 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Practice PT - Encode an Experience:
               name: Praktek PT - Mengkodekan pengalaman
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp3-2017:
           description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer,
             agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif.
@@ -1973,6 +1977,8 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Creating Functions with Parameters:
               name: Membuat fungsi dengan parameter
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp4-2017:
           stages:
             Cracking the Code:
@@ -2001,6 +2007,8 @@ id:
               name: Unit 4 penilaian bab 1
             CSP Student Post Survey Staging:
               name: CSP Mahasiswa pasca survei pementasan
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2063,6 +2071,8 @@ id:
               name: 'Membangun aplikasi: Kanvas pelukis'
             CSP Student Post Survey Staging:
               name: CSP Mahasiswa pasca survei pementasan
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp6:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -3340,6 +3350,8 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         unit6-csd-draft:
           stages:
             Computing Innovations:
@@ -4026,6 +4038,8 @@ id:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
                 Lain
+            Post-Course Survey:
+              name: Survei Pasca Kursus
           description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan
             dan menyelesaikan AP Tepat Kinerja Tugas.
         csp-create-2017:
@@ -4039,6 +4053,8 @@ id:
               name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
               name: Membuat PT - Menyelesaikan tugas
+            Post-Course Survey:
+              name: Survei Pasca Kursus
         csp3-reovery:
           stages:
             Under the sea recovery:

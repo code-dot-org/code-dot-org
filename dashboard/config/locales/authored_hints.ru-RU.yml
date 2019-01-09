@@ -472,6 +472,9 @@ ru:
           есть число градусов, на которое нужно повернуть. '
         Course_4_Artist_For_Loops_11a_b: 'Каждый раз вам надо идти вперёд на длину
           числа сторон, взятой 10 раз. '
+      Course 4 Artist For Loops 3_authored_hint:
+        Course_4_Artist_For_Loops_3_a: Убедитесь, что используете `counter` в качестве
+          расстояния, чтобы цикл `for` управлял движением.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "** Какое наименьшее число вам понадобиться?
           \  \nКакое наибольшее число?   \nНасколько большим является увеличение каждый
@@ -480,12 +483,31 @@ ru:
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Крупнейшая фигура имеет 19 Сторон.
           Самая маленькая имеет только две стороны.
+        Course_4_Artist_For_Loops_Challenge_b: Цикл `for` каждый раз идёт через 2.
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: У самого большого многоугольника 19
+          сторон.
+        Course_4_Artist_For_Loops_Challenge_b: Каждый многоугольник неполный, с одной
+          стороны меньше, чем он должен быть.
+      Course 4 Artist For Loops inspire_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: Решение предыдущей задачи является основой
+          для этого кода... с несколькими изменениями.
+        Course_4_Artist_For_Loops_inspire_b: Попробуй цикл `for`, идущий от 3 до 10
+          с инкрементом 1.
+      Course 4 Playlab For Loops 5b_authored_hint:
+        Course_4_Playlab_For_Loops_5b_a: Символы находятся примерно в 175 пикселях
+          от центра.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: У каждого шестиугольника сторона 40 пикселей.
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: Вспомните ваши функций из 16го задания.
       Course 4 SCF 2_authored_hint:
         Course_4_SCF_2_a: У каждого восьмиугольника сторона 40 пикселей.
+      Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_d: 'Не забудь поворачиваться на 22.5 градуса в конце каждой
+          итерации. '
+        Course_4_SCF_3_e: Как цвет каждого восьмиугольника, так и ширина пера контролируются
+          переменной `counter`.
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Попробуйте «предопределённый цикл».
       Course 4 SCFL 6_authored_hint:
@@ -789,6 +811,9 @@ ru:
           * Включите креативность!
 
           *Этот уровень заканчивается после 8 тактов.*
+      Harvesting_authored_hint:
+        pointer_harvester_test: Какого рода блоки я могу использовать, чтобы что-то
+          проверить и принять решение?
       Inspirational Artwork_authored_hint:
         brush_width: Мы установили ширину кисти на 1, а цвет - на синий, прежде чем
           начать делать что-то.
@@ -983,6 +1008,9 @@ ru:
       MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Попробуйте возвести с помощью Agent мосты, чтобы Алекс
           или Стив смогли обогнуть края карты.
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_c: Какой код вам понадобится, чтобы сделать
+          звезду, используя обычные линии вместо прямоугольников?
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Мы установили ширину кисти на 1, а цвет - на синий, прежде чем
           начать делать что-то.
@@ -1001,6 +1029,8 @@ ru:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Попробуйте возвести с помощью исполнителя мосты, чтобы
           Алекс или Стив смогли обогнуть края карты.
+      Quantum Bee - Ryan_authored_hint:
+        test_hint: Это тестовая подсказка.
       aE3_authored_hint:
         aE3_d: Если ваш код стал слишком запутанным, то вы всегда можете кликнуть
           "Начать Сначала" и попытаться ещё раз!
@@ -1423,6 +1453,16 @@ ru:
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: "«предопределённый цикл» от 5 до 250 с шагом
           2. "
+      courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_d: 'Не забудь поворачиваться на 22.5 градуса
+          в конце каждой итерации. '
+        courseF_artist_fwp_challenge1_e: Как цвет каждого восьмиугольника, так и ширина
+          пера контролируются переменной `counter`.
+      courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_d: 'Не забудь поворачиваться на 22.5 градуса
+          в конце каждой итерации. '
+        courseF_artist_fwp_challenge1_e: Как цвет каждого восьмиугольника, так и ширина
+          пера контролируются переменной `counter`.
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "** Помните: ** Эта головоломка изменяется при
           каждом выполнении.  Для решения задачи, вам нужен блок условия («если» или
@@ -1686,6 +1726,11 @@ ru:
           рисует единицы справа.
         Course_4_Artist_Binary_Free_Play_2b_c: В каждом повторе нужен 'счётчик' для
           единиц и '16-(2*счётчик)' для нулей.
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: У самого большого многоугольника 19
+          сторон.
+        Course_4_Artist_For_Loops_Challenge_b: Каждый многоугольник неполный, с одной
+          стороны меньше, чем он должен быть.
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "** Какое наименьшее число вам понадобиться?
           \  \nКакое наибольшее число?   \nНасколько большим является увеличение каждый
@@ -1700,6 +1745,11 @@ ru:
           есть число градусов, на которое нужно повернуть. '
         Course_4_Artist_For_Loops_11a_b: 'Каждый раз вам надо идти вперёд на длину
           числа сторон, взятой 10 раз. '
+      grade5_artist_for_loopsfreeplay11_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: Решение предыдущей задачи является основой
+          для этого кода... с несколькими изменениями.
+        Course_4_Artist_For_Loops_inspire_b: Попробуй цикл `for`, идущий от 3 до 10
+          с инкрементом 1.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Мы установили ширину кисти на 1, а цвет - на синий, прежде чем
           начать делать что-то.

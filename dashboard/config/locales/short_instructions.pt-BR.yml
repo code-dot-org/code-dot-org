@@ -1520,6 +1520,9 @@ pt-BR:
       CSDU4 - Design Mode - 16: Adicione um manipulador de eventos para o botão usando
         o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique
         para ver as instruções completas).
+      CSDU4 - Design Mode - 2: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
       CSDU4 - Design Mode - 24: |-
         Introdução de textInput, getText
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
@@ -1677,6 +1680,9 @@ pt-BR:
         o manipulador de eventos ao botão correto. (Curiosamente, o programa
         incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
+      CSPU5_U313 drag Two Buttons: Execute um programa com dois botões que possuem
+        o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer
+        o programa funcionar sem receber uma mensagem de aviso.
       CSPU5_U3L13 - Debug Id Problem: |-
         Esse programa tem um problema! Você pode descobrir
         qual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro
@@ -4507,6 +4513,12 @@ pt-BR:
         o manipulador de eventos ao botão correto. (Curiosamente, o programa
         incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
+      U313 drag Two Buttons: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
+      U313 eventsDetails: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
       U3L03 Creating Procedures 1: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif
@@ -4904,6 +4916,7 @@ pt-BR:
         Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \r\n\r\nSe
         repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses
         blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
+      aEfreeplay: Atividade Livre!
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
       artistFunctionsVideo1: Siga as instruções para fazer sua própria função.
       artistLoopsK1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque
@@ -5437,6 +5450,8 @@ pt-BR:
         cada seta. Pegue todo o tesouro! '
       courseB_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops2: Uso dois blocos de movimento diferentes para chegar até
         a noz!
@@ -5941,6 +5956,18 @@ pt-BR:
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals7: Use o bloco `se/senão` para coletar o nectar das
+        flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2018: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2019: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2019: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
@@ -6105,6 +6132,8 @@ pt-BR:
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
@@ -6176,6 +6205,8 @@ pt-BR:
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
       courseE_artist_concept1_2019: 'Recrie esta imagem. '
@@ -6291,6 +6322,10 @@ pt-BR:
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseF_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
         possíveis.
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de
@@ -6707,6 +6742,8 @@ pt-BR:
       grade3_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_bee_conditionals_quantum4: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
       grade3_maze_Loop1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível!
         \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade

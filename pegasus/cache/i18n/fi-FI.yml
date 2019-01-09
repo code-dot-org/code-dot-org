@@ -274,6 +274,7 @@ fi-FI:
   studiobar_title_nolink: Tutustu Koodistudioon
   studiobar_elementary_title: Alkeiskurssit
   studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
+  studiobar_dance_body: Luo oma Dance Party
   studiobar_hoc_title: Koodaustunti
   studiobar_hoc_body: Opi koodaamaan Angry Birdsien kanssa
   studiobar_flappy_title: Flappy Code
@@ -1460,7 +1461,15 @@ fi-FI:
   user_header_flappy: Flappy
   user_header_view_my_projects: Katso omia projektejasi
   applab_tile_start_tutorial: Aloita
+  applab_tile_teacher_guide: Katso opettajan opas
+  aquatic_name: 'Minecraft: Merellinen matka'
+  hoc_overview_partner_activities_title: Enemmän toimintoja yhteistyökumppaneilta
+  hoc_overview_partner_activities_body: Koodi.fi-sivustolla on yli 100 tietojenkäsittelyn
+    aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt
+    Code.org ja sen yhteistyökumppanit.
+  hoc_overview_partner_activities_link: Näytä tehtävät
   hoc_overview_start_tutorial: Aloita
+  hoc_overview_view_teacher_guide: Katso opettajan opas
   hoc2018_creativity_create: Luo
   hoc2018_mc_page_title: Minecraft Koodaustunnin ohjeet
   hoc2018_mc_details: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
@@ -1480,11 +1489,25 @@ fi-FI:
   hoc2018_mc_video_title_inspire_girl: Inspiroi tyttö
   hoc2018_mc_video_title_cs_intro: Tutustuminen tietojenkäsittelytieteisiin
   hoc2018_mc_video_title_anybody_can_learn: Kuka vain voi oppia
+  hoc2018_mc_homepage_hoc_coming: Koodin hetki on käsillä...
   hoc2018_mc_homepage_join_us: Liity joukkoomme
   hoc2018_mc_homepage_try_it: Kokeile
+  hoc2018_mc_teacher_guide: Katso opettajan opas
   hoc2018_mc_minecraft_education: Minecraft koulutus
+  hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party
+  hoc2018_dance_party_box_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
+    kanssa!
   hoc2018_dance_party_button: Aloita
+  hoc2018_dance_keep_on_dancing_box_title: Jatka tanssimista
+  hoc2018_dance_keep_on_dancing_description: Syvennä ensimmäisen oppitunnin osaamistasi
+    laajennetuilla projekti-ideoilla.
+  hoc2018_dance_keep_on_dancing_button: Aloita osa 2
+  hoc2018_dance_teacher_resources_title: Opettajan resurssit
+  hoc2018_dance_teacher_resources_tile1_description: Tuntisuunnitelmia, todistuksia
+    ja musiikkisuodattimia.
   hoc2018_dance_teacher_resources_tile1_button: Tuntisuunnitelma
+  hoc2018_dance_teacher_resources_tile2_description: Tietokoneita ei tarvita!  Oppikaa
+    koodaamisen käsitteitä ja luokaa koreografia tanssijoille yhdessä.
   hoc2018_dance_teacher_resources_tile2_button: Tietokoneeton tekeminen
   hoc2018_dance_amazon_about_future_engineer_button: Lue lisää
   hoc2018_dance_amazon_scholarship_programs_button: Liity nyt

@@ -94,7 +94,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS PARTNERS_WITHOUT_CSF),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS PARTNERS_WITHOUT_CSF),
       source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),

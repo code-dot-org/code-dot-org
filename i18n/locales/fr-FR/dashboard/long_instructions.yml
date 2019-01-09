@@ -1,6 +1,7 @@
 fr:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": "Si oui, quel(s) cours d’informatique as-tu suivi avant ton cours d’informatique actuel ?\n"
       2-3 Artist 1 new: "Bonjour, je suis un artiste. Vous pouvez écrire du code \npour me faire dessiner presque tout. Utilisez des blocs pour me faire dessiner sur les \nlignes grises de la figure. (chaque ligne a une longueur de 100 pixels)\\r\n\\r\n"
       2-3 Artist 11: "Donne une bordure au panneau stop en ajoutant\nun octogone où chaque côté possède une longueur de 100 pixels. "
       2-3 Artist 12: "Create a circle to finish the eyeball!\n\\r\n\\r\nIf the artist turns 1 degree with each loop, how many times do you\nneed to repeat the code to draw a circle? "
@@ -14,6 +15,7 @@ fr:
       2-3 Artist 9 NEW: Terminer ce cerf-volant
       2-3 Artist 9 REPLACEMENT: Terminez de dessiner ces escaliers !
       2-3 Artist 9: Terminer ce cerf-volant
+      2-3 Artist Assessment 1: "**Évaluation :** Termine de dessiner la dernière dent. Elle fait 25 pixels de large et 25 pixels de haut."
       2-3 Artist Debugging 1: "This hat should only be 50 pixels\nwide. \\r\nCan you fix it?\\r\n\\r\n<br/>\\r\n"
       2-3 Artist Debugging 10: "The direction pad on my game\ncontroller is too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?\\r\n\\r\nTry\nrunning the code first to see what's wrong."
       2-3 Artist Debugging 11: |-
@@ -6805,6 +6807,8 @@ fr:
         at that new rate.\\r
         * Run your program, moving the slider to see whether
         the LED speed changes automatically.
+      CSD U6 params starchaser template: Niveau modèle.
+      CSD U6 params starchaser template_2018: Niveau modèle.
       CSD U6 setProperty Text: |-
         # Changing the Text\\r
         \\r
@@ -13634,6 +13638,27 @@ fr:
       course_playlab_variables3: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
       coursef_maze_ramp3: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by dragging it back to the toolbox."
       coursef_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by dragging it back to the toolbox."
+      csd-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience du cours ?
+      csd-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre à l'avenir ?
+      csd-pulse-check-survey-1-free-response U1Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U1Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response: Autre chose que tu aimerais faire savoir à ton enseignant ?
       csd-thursday-facilitation: |
         # Thursday Facilitation Reflection\\r
         \\r
@@ -13741,6 +13766,34 @@ fr:
       csd6dlp-assessment: "<br><br>\\r\n\\r\n> **NOTE: before\nyou start this reflection, make sure you’ve reviewed the lesson in Unit 6,\nand have a good sense of the the role of assessment across the unit. If you\nhaven’t already reviewed the materials, do that now and come back to this\nreflection later.**\\r\n\\r\n\\r\n# Assessment in Unit 6\\r\n\\r\nFor this reflection,\nyou’re going to consider each of the prompts below and craft a written response\nthat demonstrates your understanding of the lessons in Unit 6. Your response\nshould clearly address each of the items below: \\r\n\\r\n1. What skills and\nknowledge should students leave this unit with? What summative and formative\nassessment opportunities are built into the unit to assess those skills and\nknowledge?\\r\n2. What are the core 2017 CSTA standards concepts (algorithms\n& programming, computing systems, data analysis, impacts of computing, and\nnetworks & the internet), and practices (Fostering an Inclusive Computing\nCulture, Collaborating Around Computing, Recognizing and Defining Computational\nProblems, Developing and Using Abstractions, Creating Computational Artifacts,\nTesting and Refining Computational Artifacts, and Communicating About Computing)\nemphasized in this unit? How are they emphasized?\\r\n\\r\n>## Getting Credit\nfor Completing this Reflection \\r\n\\r\n>- Once you submit your reflection,\nyour response to the prompt above will be shared anonymously and reviewed\nby your peers, and you will review the work done by other facilitators. Reviewers\nwill be looking for thoughtful and thorough answers that demonstrate that\nyou have spent time considering the reflection questions listed above. Reviewers\nwill have an opportunity to give feedback on your submission, and you can\nrespond to that feedback and resubmit.\\r\n- In order to get credit for completing\nthis prompt, two reviewers need to agree that you have responded to the prompts\nfully. If reviewers don’t feel comfortable making a decision about your task\nsubmission, they can elevate to an instructor for review. You will always\nhave a chance to address feedback from your reviewers and resubmit your reflections!\nReviewer feedback will show up at the bottom of this page, once it’s available.\n\\r\n "
       csd6dlp-lessons: "<br><br>\\r\n\\r\n> **NOTE: before you\nstart this reflection, make sure you’ve reviewed the lesson in Unit 6, and\nhave a good sense of the connections between lessons. If you haven’t already\nreviewed the materials, do that now and come back to this reflection later.**\\r\n\\r\n\\r\n#\nUnit 6 Lesson Connections and Philosophy\\r\n\\r\nFor this reflection, you’re\ngoing to consider each of the prompts below and craft a written response that\ndemonstrates your understanding of the lessons in Unit 6. Your response should\nclearly address each of the items below: \\r\n\\r\n1. Which lessons are particularly\ntricky to teach in this unit and why?\\r\n2. Which lessons are particularly\nfoundational in the unit?\\r\n3. Which programming skills from Unit 3 does\nthis unit rely upon? What new skills are introduced?\\r\n4. How does the way\nstudents program with the Circuit Playground connect back to the Input-Output-Store-Process\nmodel from Unit 1?\\r\n\\r\n>## Getting Credit for Completing this Reflection\n\\r\n\\r\n>- Once you submit your reflection, your response to the prompt above\nwill be shared anonymously and reviewed by your peers, and you will review\nthe work done by other facilitators. Reviewers will be looking for thoughtful\nand thorough answers that demonstrate that you have spent time considering\nthe reflection questions listed above. Reviewers will have an opportunity\nto give feedback on your submission, and you can respond to that feedback\nand resubmit.\\r\n- In order to get credit for completing this prompt, two\nreviewers need to agree that you have responded to the prompts fully. If reviewers\ndon’t feel comfortable making a decision about your task submission, they\ncan elevate to an instructor for review. You will always have a chance to\naddress feedback from your reviewers and resubmit your reflections! Reviewer\nfeedback will show up at the bottom of this page, once it’s available. \\r\n\n\\r\n\\r\n"
       csd6dlp-tools: "\\r\n\\r\n<br><br>\\r\n\\r\n> **NOTE: before\nyou start this reflection, make sure you’ve reviewed the lesson in Unit 6,\nand have a good sense of the the role of tools in the lessons. If you haven’t\nalready reviewed the materials, do that now and come back to this reflection\nlater.**\\r\n\\r\n\\r\n# Unit 6 Tool Philosophy and Use\\r\n\\r\nFor this reflection,\nyou’re going to consider each of the prompts below and craft a written response\nthat demonstrates your understanding of the lessons in Unit 6. Your response\nshould clearly address each of the items below: \\r\n\\r\n1. What advice do\nyou have for teachers about how to handle the transition from programming\nin Game Lab to programming in App Lab? \\r\n\\t* What’s the philosophy of programming\nin App Lab with Maker Toolkit? \\r\n2. In what ways are the tools in the unit\neducational rather than professional? \\r\n\\r\n>## Getting Credit for Completing\nthis Reflection \\r\n\\r\n>- Once you submit your reflection, your response\nto the prompt above will be shared anonymously and reviewed by your peers,\nand you will review the work done by other facilitators. Reviewers will be\nlooking for thoughtful and thorough answers that demonstrate that you have\nspent time considering the reflection questions listed above. Reviewers will\nhave an opportunity to give feedback on your submission, and you can respond\nto that feedback and resubmit.\\r\n- In order to get credit for completing\nthis prompt, two reviewers need to agree that you have responded to the prompts\nfully. If reviewers don’t feel comfortable making a decision about your task\nsubmission, they can elevate to an instructor for review. You will always\nhave a chance to address feedback from your reviewers and resubmit your reflections!\nReviewer feedback will show up at the bottom of this page, once it’s available.\n\\r\n \\r\n\\r\n"
+      csp-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience du cours ?
+      csp-post-survey-2017-FR_2018: Réflexions finales sur le cours ou ton expérience.
+      csp-post-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre à l'avenir ?
+      csp-pre-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2019: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q38: Si oui, quel(s) cours d’informatique as-tu suivi avant ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2018: Si oui, quel(s) cours d’informatique as-tu suivi avant ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2019: Si oui, quel(s) cours d’informatique as-tu suivi avant ton cours d’informatique actuel ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2_2018: Autre chose que tu aimerais faire savoir à ton enseignant ?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir à ton enseignant ?
       csp-thursday-facilitation: |-
         # Thursday Facilitation Reflection\\r
         \\r
@@ -14581,6 +14634,10 @@ fr:
         \\r
         ![](https://images.code.org/fc80b1febbb7a472026b6bf2c535b2f4-image-1467989171517.gif)
       playEventsK7: "What else can you do in this fun scene?\\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>Need\nsome ideas?</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>Conversation</strong>\n- Have the sprites talk to eachother when you click on them.</li>\\r\n            <li><strong>Pinball</strong>\n- Make one sprite play a noise when the other runs into it.</li>\\r\n            <li><strong>Arrows</strong>\n- Write a program so when each arrow key is pressed, the sprite moves in that\ndirection!</li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>"
+      post-assessment survey q32: "(Facultatif) : Explique pourquoi tu recommanderais ou non ce cours d’informatique à quelqu’un d’autre."
+      post-assessment survey q37: "(Facultatif) Si tu n’as pas passé l'examen avancé, y aurait-il quelque chose qui t’aurais fait changer d’avis ?"
+      pre-assessment survey q24A: 'Quelles connaissances en informatique utilises-tu dans la vie de tous les jours ? '
+      pre-assessment survey q25A: 'Si oui, quel(s) cours d’informatique as-tu suivi avant ton cours d’informatique actuel ? '
       ramp_artist_loops1: "What a lovely day!  \\r\n\\r\nHelp\nthe Artist cover his flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2018: "What a lovely day!  \\r\n\\r\nHelp\nthe Artist cover his flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2019: "What a lovely day!  \\r\n\\r\nHelp\nthe Artist cover his flowers before the winter by moving forward by 60 pixels."
@@ -14659,6 +14716,8 @@ fr:
         ![](https://images.code.org/5bc66acc4712cf1c835daac0c45422a8-image-1506532056958.png)
       subgoals_u3_top_down_FR: "# Design a program\\r\n\\r\nDescribe,\nusing a top-down approach, how you would create a program to draw a white\nsnowflake on a blue background that uses random numbers, so the snowflake\nwill be unique every time you run the code. \\r\n\\r\nYou don’t need to write\nthe exact code or blocks that you would use, but you should describe what\nfunctions you would need to create, where you would or would not use loops,\nand where you would or would not use random numbers."
       subgoals_u3_top_down_FR_2018: "# Design a program\\r\n\\r\nDescribe,\nusing a top-down approach, how you would create a program to draw a white\nsnowflake on a blue background that uses random numbers, so the snowflake\nwill be unique every time you run the code. \\r\n\\r\nYou don’t need to write\nthe exact code or blocks that you would use, but you should describe what\nfunctions you would need to create, where you would or would not use loops,\nand where you would or would not use random numbers."
+      test_anonymous_student_survey_next_class: Que feras-tu après ce cours ?
+      test_anonymous_student_survey_why_class: Pourquoi suis-tu ce cours ? Donne au moins deux raisons.
       u3-old-drawing-view: |
         # Your Own Drawing\\r
         \\r
