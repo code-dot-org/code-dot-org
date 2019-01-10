@@ -13,6 +13,11 @@ module Pd
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 
+    ALL_KEYS = PAGE_LABELS.values.flat_map(&:keys)
+    CSF_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /^csf/}
+    CSD_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /^csd/}
+    CSP_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /(^csd_csp|^csp)/}
+
     VALID_SCORES = {
       # Minimum requirements
       regional_partner_name: YES_NO,
