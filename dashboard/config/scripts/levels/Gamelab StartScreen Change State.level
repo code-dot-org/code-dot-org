@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-01-08T22:59:44.000Z",
+  "created_at": "2019-01-09T23:28:35.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -189,26 +189,25 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "submittable": "false",
     "never_autoplay_video": "false",
-    "project_template_level_name": "Gamelab StartScreen template",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
+    "submittable": "false",
     "text_mode_at_start": "false",
-    "hide_animation_mode": "false",
-    "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "long_instructions": "# Check all States\r\n\r\nRight now the only state your program can deal with is \"playing\", but you can add more conditionals to account for the other three states.\r\n\r\n## Do this\r\n* Inside the draw loop, add in three more `if` statements that check for `gameState == \"starting\"`, `gameState == \"won\"`, and `gameState == \"lost\"`, respectively.\r\n* Inside each `if` statement, add code that will draw text to the screen, so you can see the results of the different states.  You may also want to use `drawSprites` so you can see the background image and the player sprites, but make sure you are drawing the text on top of the sprites.\r\n* Check your code by running the program in the different states.  (Don't worry about making them perfect yet, just make sure that the conditionals are working as they should.)\r\n\r\nIn order to keep track of your code, you might find it useful to create a function for each of the different text displays, then call those functions inside the conditionals."
+    "long_instructions": "# Changing the State\r\n\r\nNow that you can display a different screen according to the state of your program, you will need a way to change between states.  To go from the \"starting\" state to the \"playing\" state, you can have the user press the \"s\" key.  You'll **only** want the program to check for the key press when the program is in the \"starting\" state, so your code for this will go inside the \"starting\" conditional.\r\n\r\n## Do this\r\n* Inside the `if` statement that checks for \"starting\", add in a new `if` statement that checks whether the user has pressed the \"s\" key.  (`if (keyDown(\"s\")) {`)\r\n* Inside your new `if` statement, set the value of your `gameState` variable to \"playing\". (`gameState = \"playing\";`)\r\n* Test the code by starting the game and pressing \"s\".  The game should start playing after the key is pressed.\r\n\r\nIf the game isn't starting on the start screen, double check that when the `gameState` variable is created at the beginning of the program, its value is \"starting\".  (`var gameState = \"starting\";)"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-09 23:18:04 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-09 23:24:56 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-09 23:28:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-09 23:52:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
