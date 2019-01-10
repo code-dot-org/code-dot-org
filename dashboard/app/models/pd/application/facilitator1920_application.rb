@@ -61,6 +61,19 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    #override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        interview
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
+    end
+
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
     # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
     #   (optional) defaults to all
@@ -142,7 +155,7 @@ module Pd::Application
         columns.push(
           'Status',
           'Locked',
-          'Notes',
+          'General Notes',
           'Notes 2',
           'Notes 3',
           'Notes 4',
@@ -178,7 +191,7 @@ module Pd::Application
       end
 
       columns.push(
-        'Notes',
+        'General Notes',
         'Notes 2',
         'Notes 3',
         'Notes 4',
