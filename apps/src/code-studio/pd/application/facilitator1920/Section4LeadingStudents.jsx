@@ -6,6 +6,7 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+import {CSF} from '../ApplicationConstants';
 
 export default class Section4LeadingStudents extends LabeledFormComponent {
   static labels = PageLabels.section4LeadingStudents;
@@ -32,13 +33,32 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
         }, {
           label: `Do you plan on teaching ${program} in the 2019-20 school year?`,
         })}
-        {this.checkBoxesFor("completedPd", {
-          label: `Have you participated as a teacher in Code.org's full Professional Learning Program for ${program}?`
-        })}
+        {program !== CSF &&
+          this.radioButtonsFor("csdCspCompletedPd", {
+            label: `Have you participated as a teacher in Code.org's full Professional Learning Program for ${program}?`
+          })
+        }
+        {program === CSF &&
+          this.radioButtonsFor('csfPreviousWorkshop')
+        }
         {this.checkBoxesWithAdditionalTextFieldsFor("facilitatorAvailability", {
           [TextFields.otherWithText] : "other"
         })}
       </FormGroup>
     );
+  }
+
+  /**
+   * @override
+   */
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+    const program = data.program || 'CS Program';
+
+    if (program === CSF) {
+      requiredFields.push('csfPreviousWorkshop');
+    } else {
+      requiredFields.push('csdCspCompletedPd');
+    }
   }
 }

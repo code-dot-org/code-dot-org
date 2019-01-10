@@ -1056,6 +1056,7 @@
   "recording": "Recording",
   "recordAudio": "Record Audio",
   "redirectCourseVersionWarningDetails": "It looks like you accidentally went to an outdated version of the course. You've been redirected to the recommended version or the version assigned by your teacher.",
+  "redirectScriptVersionWarningDetails": "It looks like you accidentally went to an outdated version of the script. You've been redirected to the recommended version or the version assigned by your teacher.",
   "reloadPage": "Reload Page",
   "relockStage": "Re-lock stage",
   "relockStageInstructions": "\"Re-lock stage\" to prevent sharing of answers with other classes/schools.",
