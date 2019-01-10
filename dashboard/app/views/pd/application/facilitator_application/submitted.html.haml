@@ -9,7 +9,7 @@
     We will provide a status update to all applicants by the end of February 2019.
 
   %p
-    - if @application.regional_partner
+    - if @display_regional_partner_reminder
       As a reminder, your Code.org Regional Partner is:
       = @application.regional_partner.name
     - else
