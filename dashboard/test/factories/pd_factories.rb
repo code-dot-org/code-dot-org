@@ -976,6 +976,7 @@ FactoryGirl.define do
       csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_previous_workshop Pd::Application::Facilitator1920Application.options[:csf_previous_workshop].first
     end
 
     trait :with_csd_csp_specific_fields do
