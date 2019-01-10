@@ -1,7 +1,11 @@
+require_relative 'shared_varnish_constants'
+
 # HTTP Cache configuration.
 #
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
+  include SharedVarnishConstants
+
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze
 
@@ -222,6 +226,11 @@ class HttpCache
             ),
             headers: [],
             cookies: 'none'
+          },
+          {
+            path: '/xhr*',
+            headers: WHITELISTED_HEADERS + ALLOWED_WEB_REQUEST_HEADERS,
+            cookies: whitelisted_cookies
           },
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
