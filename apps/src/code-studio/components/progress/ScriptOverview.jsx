@@ -56,10 +56,6 @@ class ScriptOverview extends React.Component {
     selectedSectionId: PropTypes.string,
   };
 
-  state = {
-    showRedirectDialog: false,
-  };
-
   constructor(props) {
     super(props);
     const showRedirectDialog = props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
