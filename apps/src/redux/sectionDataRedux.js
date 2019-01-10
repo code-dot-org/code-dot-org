@@ -99,7 +99,7 @@ export const getStudentList = (state) => {
  * Helper functions
  */
 export const asyncSetSection = (sectionId) => (dispatch) => {
-  // Clear any existing section data and being loading.
+  // Clear any existing section data and begin loading.
   dispatch({ type: CLEAR_SECTION_DATA });
   dispatch({ type: ASYNC_LOAD_BEGIN });
 
