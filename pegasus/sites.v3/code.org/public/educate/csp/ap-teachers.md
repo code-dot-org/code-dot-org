@@ -39,7 +39,7 @@ Consider trying one of these techniques from our Hall of Fame teachers to encour
 
 Or tell your students to <a href="https://code.org/educate/csp/ap-students", target=_"blank">check out this website</a>.
 
-<a href="https://code.org/files/ap-student-flyer.pdf"><img src="/images/ap-student-flyer.png" width="25%"/></a>
+<a href="https://code.org/files/ap-student-flyer.pdf", target=_"blank"><img src="/images/ap-student-flyer.png" width="25%"/></a>
 
 ## 3. Give students extra credit for taking the exam
 
