@@ -85,7 +85,7 @@ describe("DetailViewContents", () => {
     it("Uses default value for facilitator applications with no notes", () => {
       const facilitatorDetailView = mountDetailView('Facilitator', {applicationData: {notes: ''}});
       expect(facilitatorDetailView.state().notes).to.eql(
-        "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
+        "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:"
       );
     });
 
