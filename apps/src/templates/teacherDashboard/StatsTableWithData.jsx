@@ -4,7 +4,7 @@ import StatsTable from './StatsTable';
 
 class StatsTableWithData extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
+    sectionId: PropTypes.number,
   };
 
   state = {
