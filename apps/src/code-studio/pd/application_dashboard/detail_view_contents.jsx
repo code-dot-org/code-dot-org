@@ -84,6 +84,9 @@ const styles = {
     marginRight: 5,
     marginLeft: 5,
   },
+  editButton: {
+    width: 'auto',
+  },
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
@@ -621,25 +624,20 @@ export class DetailViewContents extends React.Component {
       </div>
     );
 
-    if (this.props.canLock && this.props.applicationData.application_type === ApplicationTypes.facilitator) {
-      // Render the select with the lock button in a fancy InputGroup
-      return (
-        <InputGroup style={styles.statusSelectGroup}>
-          <InputGroup.Button>
+    // Render the select with the lock button in a fancy InputGroup
+    return (
+      <InputGroup style={styles.statusSelectGroup}>
+        {this.props.canLock && this.props.applicationData.application_type === ApplicationTypes.facilitator && (
+          <InputGroup.Button style={styles.editButton}>
             {this.renderLockButton()}
           </InputGroup.Button>
-          {selectControl}
-        </InputGroup>
-      );
-    } else {
-      // Render just the select; otherwise, rendering a single element in an
-      // InputGroup makes it look funky
-      return (
-        <div style={styles.statusSelectGroup}>
-          {selectControl}
-        </div>
-      );
-    }
+        )}
+        {selectControl}
+        <InputGroup.Button style={styles.editButton}>
+          {this.renderEditButtons()}
+        </InputGroup.Button>
+      </InputGroup>
+    );
   };
 
   showLocked = () => (this.props.applicationData.application_type === ApplicationTypes.facilitator);
@@ -649,7 +647,6 @@ export class DetailViewContents extends React.Component {
       <div>
         <div>
           {this.renderStatusSelect()}
-          {this.renderEditButtons()}
         </div>
         {
           this.showLocked() &&
