@@ -5,6 +5,8 @@ level 'Gamelab StartScreen Intro'
 level 'Gamelab StartScreen base code'
 level 'Gamelab StartScreen State'
 level 'Gamelab StartScreen Check State'
+level 'Gamelab StartScreen Check States'
+level 'Gamelab StartScreen Change State'
 
 stage 'Start and End Screens2'
 level 'Gamelab StartScreen Intro'
