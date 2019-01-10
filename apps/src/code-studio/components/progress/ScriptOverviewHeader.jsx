@@ -11,6 +11,10 @@ import Notification, { NotificationType } from '@cdo/apps/templates/Notification
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
+// A session variable storing a comma-delimited list of course/script names for which
+// the user has already dismissed the version redirect warning.
+const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
+
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
 const styles = {
@@ -68,6 +72,7 @@ class ScriptOverviewHeader extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired,
@@ -99,6 +104,21 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
+    dismissedRedirectWarning = () => {
+      const dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+      return (dismissedRedirectWarnings || '').includes(this.props.scriptName);
+    };
+
+    onDismissRedirectWarning = () => {
+      let dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+      if (dismissedRedirectWarnings) {
+        dismissedRedirectWarnings += `,${this.props.scriptName}`;
+      } else {
+        dismissedRedirectWarnings = this.props.scriptName;
+      }
+      sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
+    };
+
   render() {
     const {
       plcHeaderProps,
@@ -113,6 +133,7 @@ class ScriptOverviewHeader extends Component {
       hasVerifiedResources,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
+      showRedirectWarning,
       versions,
       showHiddenUnitWarning,
     } = this.props;
@@ -146,6 +167,16 @@ class ScriptOverviewHeader extends Component {
           <ScriptAnnouncements
             announcements={verifiedResourcesAnnounce.concat(announcements)}
             width={SCRIPT_OVERVIEW_WIDTH}
+          />
+        }
+        {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectScriptVersionWarningDetails()}
+            dismissible={true}
+            width={SCRIPT_OVERVIEW_WIDTH}
+            onDismiss={this.onDismissRedirectWarning}
           />
         }
         {versionWarningDetails &&
