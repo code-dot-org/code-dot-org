@@ -118,6 +118,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
+    1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
+       `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
@@ -214,6 +216,12 @@ If you run into an issue about therubyracer while running `bundle install` try :
 - `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` 
 
 (Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
+
+#### bundler gem
+
+If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try:
+- `gem install bundler -v 1.17.0`, where the version is the one specified in `Gemlock.file`
+- `bundle install`
 
 #### Xcode Set Up
 
