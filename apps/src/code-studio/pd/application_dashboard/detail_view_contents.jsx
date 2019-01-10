@@ -344,19 +344,19 @@ export class DetailViewContents extends React.Component {
       'notes_3',
       'notes_4',
       'notes_5',
-      'question_1',
-      'question_2',
-      'question_3',
-      'question_4',
-      'question_5',
-      'question_6',
-      'question_7',
       'regional_partner_value',
       'pd_workshop_id'
     ];
 
     if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
       stateValues.push('fit_workshop_id');
+      stateValues.push('question_1');
+      stateValues.push('question_2');
+      stateValues.push('question_3');
+      stateValues.push('question_4');
+      stateValues.push('question_5');
+      stateValues.push('question_6');
+      stateValues.push('question_7');
     }
 
     if (this.props.applicationData.application_type === ApplicationTypes.teacher) {
