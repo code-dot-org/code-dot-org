@@ -413,5 +413,41 @@ module Pd::Application
         }, @application.all_scores
       )
     end
+
+    test 'clear out extraneous csd and csp answers for a csf application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csf, :with_csd_csp_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csf', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csd application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csd, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csd', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csp application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csp, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csp', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert application_hash.key? :csp_training_requirement
+    end
   end
 end
