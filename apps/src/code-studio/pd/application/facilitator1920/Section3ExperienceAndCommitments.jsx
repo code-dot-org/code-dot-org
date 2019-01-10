@@ -239,6 +239,11 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         }
 
         {this.radioButtonsFor("developmentAndPreparationRequirement")}
+
+        {
+          program !== CSF &&
+          this.radioButtonsFor("csdCspGoodStandingRequirement")
+        }
       </FormGroup>
     );
   }
@@ -278,7 +283,8 @@ export default class Section3ExperienceAndCommitments extends LabeledFormCompone
         "csdCspFitWeekendRequirement",
         "csdCspWorkshopRequirement",
         "csdCspLeadSummerWorkshopRequirement",
-        "csdCspDeeperLearningRequirement"
+        "csdCspDeeperLearningRequirement",
+        "csdCspGoodStandingRequirement"
       );
     }
 

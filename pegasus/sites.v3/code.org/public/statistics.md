@@ -20,7 +20,7 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/2018-apstats.png"></a>
+<a href="https://twitter.com/codeorg/status/1075805534681485312" target="_blank"><img src="/images/statistics/fit-250/2018-apstats.png"></a>
 
 <br>
 
@@ -72,7 +72,7 @@ Teachers from any background can teach computer science.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/codeorg-growth.gif"></a>
+<a href="https://twitter.com/codeorg/status/1079103772297740289" target="_blank"><img src="/images/statistics/fit-250/codeorg-growth.gif"></a>
 
 <br>
 

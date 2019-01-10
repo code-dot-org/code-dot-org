@@ -81,7 +81,8 @@ module Pd
         grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Mark all that apply.',
         experience_teaching_this_course: 'Do you have experience teaching the full {{CS Program}} curriculum to students? Mark all that apply.',
         plan_on_teaching: 'Do you plan on teaching {{CS Program}} in the 2019-20 school year?',
-        completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for {{CS Program}}?",
+        csf_previous_workshop: 'Have you attended a Code.org CS Fundamentals workshop?',
+        csd_csp_completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for {{CS Program}}?",
         facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays. Mark all that apply.',
       },
 
