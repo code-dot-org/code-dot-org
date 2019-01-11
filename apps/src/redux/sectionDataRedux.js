@@ -126,7 +126,7 @@ export const asyncSetSection = (sectionId) => (dispatch) => {
   dispatch({ type: START_LOADING_SECTION });
 
   $.ajax({
-    url: `/api/v1/sections/123`,
+    url: `/api/v1/sections/${sectionId}`,
     method: 'GET',
     dataType: 'json'
   }).done(section => {
