@@ -159,9 +159,9 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
                 <p>
                   <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
                 </p>
-                {this.radioButtonsFor('csfGoodStandingRequirement')}
               </div>
             }
+            {this.radioButtonsFor('csfGoodStandingRequirement')}
           </div>
         }
         {this.radioButtonsFor("codeOrgFacilitator")}
@@ -193,7 +193,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       );
     }
 
-    if (data.program === CSF && data.regionalPartnerId && this.state.hasCsf) {
+    if (data.program === CSF) {
       requiredFields.push("csfGoodStandingRequirement");
     }
 
