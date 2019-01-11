@@ -5,20 +5,31 @@ namespace :assets do
     Sprockets::Railtie.build_manifest(app)
   end
 
+  # Record files already in manifest before current precompile run.
+  task record_manifest_files: :environment do
+    @manifest_files = manifest.files
+  end
+
   desc 'Synchronize newly-added assets to S3'
-  task sync: :changed do
-    next if @changed_paths.empty?
-    puts "Copying #{@changed_paths.length} new assets to s3://#{CDO.assets_bucket}/#{CDO.assets_bucket_prefix}/assets/ : #{@changed_paths}"
+  task sync: :record_manifest_files do
+    m = manifest
+    changed_paths = (m.files.to_a - @manifest_files.to_a).
+      map {|key, _| [key, File.join(m.dir, key)]}.to_h
+    next if changed_paths.empty?
+
+    puts "Copying #{changed_paths.length} new assets to s3://#{CDO.assets_bucket}/#{CDO.assets_bucket_prefix}/assets/"
     require 'aws-sdk-s3'
     require 'parallel'
     bucket = Aws::S3::Resource.new.bucket(CDO.assets_bucket)
-    Parallel.each(@changed_paths, in_threads: 16) do |key, path|
+    Parallel.each(changed_paths, in_threads: 16) do |key, path|
       bucket.object("#{CDO.assets_bucket_prefix}/assets/#{key}").upload_file(path, acl: 'public-read', cache_control: 'max-age=31536000')
     end
   rescue
-    puts "Deleting #{@changed_paths.length} new assets because S3 sync failed.
+    if m && changed_paths
+      puts "Removing #{changed_paths.length} new assets because S3 sync failed.
 Rerun `assets:precompile` to regenerate new assets and try again."
-    FileUtils.rm @changed_paths.values
+      changed_paths.each {|key, _| m.remove(key)}
+    end
     raise
   end
 
@@ -52,16 +63,6 @@ Rerun `assets:precompile` to regenerate new assets and try again."
       puts "Copying file #{file} to #{non_digested}"
       FileUtils.cp(file, non_digested)
     end
-  end
-
-  task record_manifest_files: :environment do
-    @manifest_files = manifest.files
-  end
-
-  task changed: :record_manifest_files do
-    m = manifest
-    @changed_paths = (m.files.to_a - @manifest_files.to_a).
-      map {|key, _| [key, File.join(m.dir, key)]}.to_h
   end
 end
 
