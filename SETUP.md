@@ -161,6 +161,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * Select Ubuntu Server 16.04 with at least 8GiB memory and 30GiB storage size.
      * In "Configure Security Group", under "Source", use the IP address of the machine you will be connecting from.
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
+  1. In the AWS EC2 dashboard, find your new instance in the list and select it. Click "Actions > Instance Settings > Attach/Replace IAM Role", then select "DeveloperEC2". Click "Apply".
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY.
   1. Go back up to the [overview](#overview) and run the commands there.
 
