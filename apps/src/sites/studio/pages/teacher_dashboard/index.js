@@ -43,9 +43,8 @@ $(document).ready(function () {
     url: dataUrl,
     dataType: 'json'
    }).done(studentData => {
-    store.dispatch(
-    setStudents(convertStudentServerData(studentData, section.login_type, section.id))
-  );
+    const convertedStudentData = convertStudentServerData(studentData, section.login_type, section.id);
+    store.dispatch(setStudents(convertedStudentData));
   });
 
   ReactDOM.render(
