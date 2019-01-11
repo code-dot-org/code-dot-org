@@ -5,6 +5,7 @@ FactoryGirl.define do
     association :organizer, factory: :workshop_organizer
     funded false
     on_map true
+    location_name 'Hogwarts School of Witchcraft and Wizardry'
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     trait :teachercon do
