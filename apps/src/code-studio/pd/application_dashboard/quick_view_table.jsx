@@ -191,6 +191,22 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         }
       });
+    } else {
+      columns.push(
+        {
+          property: 'meets_criteria',
+          header: {
+            label: 'Meets Criteria',
+            transforms: [sortable]
+          }
+        }, {
+          property: 'total_score',
+          header: {
+            label: 'Total Score',
+            transforms: [sortable]
+          }
+        }
+      );
     }
 
     [

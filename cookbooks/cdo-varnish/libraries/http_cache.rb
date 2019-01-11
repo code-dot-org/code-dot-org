@@ -1,11 +1,7 @@
-require_relative 'shared_varnish_constants'
-
 # HTTP Cache configuration.
 #
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
-  include SharedVarnishConstants
-
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze
 
@@ -52,6 +48,10 @@ class HttpCache
   def self.cached_scripts
     CACHED_SCRIPTS_MAP.keys
   end
+
+  ALLOWED_WEB_REQUEST_HEADERS = %w(
+    Authorization
+  )
 
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
