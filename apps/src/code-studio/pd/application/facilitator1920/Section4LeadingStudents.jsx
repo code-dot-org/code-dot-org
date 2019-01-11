@@ -60,5 +60,7 @@ export default class Section4LeadingStudents extends LabeledFormComponent {
     } else {
       requiredFields.push('csdCspCompletedPd');
     }
+
+    return requiredFields;
   }
 }
