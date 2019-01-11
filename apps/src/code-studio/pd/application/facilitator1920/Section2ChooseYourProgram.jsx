@@ -4,8 +4,7 @@ import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {
   PageLabels,
   SectionHeaders,
-  TextFields,
-  PartnersWithoutCsf
+  TextFields
 } from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
 import {YES, CSF, CSD, CSP} from '../ApplicationConstants';
 
@@ -51,7 +50,8 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       });
 
       this.setState({
-        loadingPartner: false
+        loadingPartner: false,
+        hasCsf: data.has_csf
       });
     }
 
@@ -139,7 +139,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
               </div>
             }
             {
-              this.props.data.regionalPartnerId && PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
+              this.props.data.regionalPartnerId && !this.state.hasCsf &&
               <div>
                 <p>
                   <strong>Your Regional Partner is not accepting applications for CS Fundamentals facilitators at this time.</strong>
@@ -154,7 +154,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
               </div>
             }
             {
-              this.props.data.regionalPartnerId && !PartnersWithoutCsf.includes(this.props.data.regionalPartnerId) &&
+              this.props.data.regionalPartnerId && this.state.hasCsf &&
               <div>
                 <p>
                   <strong>Your Regional Partner is {this.props.data.regionalPartnerName}.</strong>
@@ -193,7 +193,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       );
     }
 
-    if (data.program === CSF && data.regionalPartnerId && !PartnersWithoutCsf.includes(data.regionalPartnerId)) {
+    if (data.program === CSF && data.regionalPartnerId && this.state.hasCsf) {
       requiredFields.push("csfGoodStandingRequirement");
     }
 
