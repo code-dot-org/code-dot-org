@@ -3,7 +3,7 @@ module Pd::Application
     include Pd::Application::ActiveApplicationModels
     include Pd::FacilitatorCommonApplicationConstants
     before_action do
-      @facilitator_program_url = 'https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U'
+      @facilitator_program_url = 'https://code.org/files/facilitator/overview-2019-20.pdf'
     end
 
     def new
