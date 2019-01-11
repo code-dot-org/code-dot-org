@@ -158,7 +158,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard: 
-     * Select Ubuntu Server 16.04 with at least 8GiB memory and 32GB storage size.
+     * Select Ubuntu Server 16.04 with at least 8GiB memory and 30GiB storage size.
      * In "Configure Security Group", under "Source", use the IP address of the machine you will be connecting from.
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY.
@@ -244,7 +244,7 @@ If you run into the error message `can't find gem bundler (>= 0.a) with executab
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
 
 
-### Recomended hardware
+### Recommended hardware
 While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
 - Storage: The repository takes up 16GB
