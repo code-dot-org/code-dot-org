@@ -19,7 +19,7 @@ export default class TeacherDashboard extends Component {
         <Switch>
           <Route
             path="/stats"
-            component={props => <StatsTableWithData {...props} sectionId={sectionId}/>}
+            component={props => <StatsTableWithData {...props}/>}
           />
           <Route
             path="/progress"
