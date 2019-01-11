@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import { NotificationType } from '@cdo/apps/templates/Notification';
 
@@ -54,6 +54,19 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
         </select>
       </div>
     </label>
+    <label>
+      Visibility
+      <div>
+        <select
+          value={announcement.visibility}
+          onChange={event => onChange(index, 'visibility', event.target.value)}
+        >
+          {Object.values(VisibilityType).map(visibility => (
+            <option key={visibility} value={visibility}>{visibility}</option>
+          ))}
+        </select>
+      </div>
+    </label>
     <button
       className="btn"
       onClick={() => onRemove(index)}
@@ -90,7 +103,8 @@ export default class ScriptAnnouncementsEditor extends Component {
         notice: '',
         details: '',
         link: '',
-        type: NotificationType.information
+        type: NotificationType.information,
+        visibility: VisibilityType.teacher,
       })
     });
   };

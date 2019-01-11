@@ -6,7 +6,7 @@ import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -99,6 +99,44 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
+  /*
+  Processes all of the announcements for the script and determines if they should be shown based
+  on the their visibility setting and the current view. For example a teacher should only see
+  announcements for Teacher-only or Teacher and Student.
+  Also defaults to old announcements without a visibility to be Teacher-only.
+  Lastly checks if the non-verified teacher announcement should be shown to a teacher and
+  adds the announcement if needed.
+   */
+  filterAnnouncements = (currentView) => {
+    let currentAnnouncements =[];
+    this.props.announcements.forEach(element => {
+      console.log(currentView);
+      if(element.visibility == VisibilityType.teacherAndStudent){
+        currentAnnouncements.push(element);
+      }
+      // If an announcement does not have a visibility because it is older default to teacher
+      else if(currentView == "Teacher" && (element.visibility == VisibilityType.teacher || element.visibility == undefined)){
+        currentAnnouncements.push(element);
+      }
+      else if(currentView == "Student" && element.visibility == VisibilityType.student ){
+        currentAnnouncements.push(element);
+      }
+    });
+
+    // Checks if the non-verfied teacher announcement should be shown
+    if(currentView == "Teacher") {
+      if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
+        currentAnnouncements.push({
+          notice: i18n.verifiedResourcesNotice(),
+          details: i18n.verifiedResourcesDetails(),
+          link: "https://support.code.org/hc/en-us/articles/115001550131",
+          type: NotificationType.information,
+        });
+      }
+    }
+    return currentAnnouncements;
+  }
+
   render() {
     const {
       plcHeaderProps,
@@ -117,15 +155,7 @@ class ScriptOverviewHeader extends Component {
       showHiddenUnitWarning,
     } = this.props;
 
-    let verifiedResourcesAnnounce = [];
-    if (!isVerifiedTeacher && hasVerifiedResources) {
-      verifiedResourcesAnnounce.push({
-        notice: i18n.verifiedResourcesNotice(),
-        details: i18n.verifiedResourcesDetails(),
-        link: "https://support.code.org/hc/en-us/articles/115001550131",
-        type: NotificationType.information,
-      });
-    }
+
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -142,9 +172,9 @@ class ScriptOverviewHeader extends Component {
             course_view_path={plcHeaderProps.courseViewPath}
           />
         }
-        {viewAs === ViewType.Teacher && isSignedIn &&
+        { isSignedIn &&
           <ScriptAnnouncements
-            announcements={verifiedResourcesAnnounce.concat(announcements)}
+            announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
