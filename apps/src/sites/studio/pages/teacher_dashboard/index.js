@@ -48,19 +48,15 @@ $(document).ready(function () {
   );
   });
 
-
   ReactDOM.render(
-    <div>
-      <Provider store={store}>
-        <Router basename={baseUrl}>
-          <Route
-            path="/"
-            component={props => <TeacherDashboard {...props} sectionId={section.id} section={section} studioUrlPrefix=""/>}
-          />
-        </Router>
-      </Provider>
-    </div>
-    ,
+    <Provider store={store}>
+      <Router basename={baseUrl}>
+        <Route
+          path="/"
+          component={props => <TeacherDashboard {...props} sectionId={section.id} section={section} studioUrlPrefix=""/>}
+        />
+      </Router>
+    </Provider>,
     document.getElementById('teacher-dashboard')
   );
 });
