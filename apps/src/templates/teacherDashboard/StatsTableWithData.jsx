@@ -5,9 +5,6 @@ import StatsTable from './StatsTable';
 
 class StatsTableWithData extends Component {
   static propTypes = {
-    // TODO: remove this!
-    sectionId: PropTypes.string,
-
     // Props provided by redux.
     section: PropTypes.object,
     isLoading: PropTypes.bool.isRequired,
@@ -18,14 +15,17 @@ class StatsTableWithData extends Component {
   };
 
   componentDidMount() {
-    const completedLevelsUrl = `/dashboardapi/sections/${this.props.sectionId}/students/completed_levels_count`;
-    $.ajax({
-      url: completedLevelsUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(studentsCompletedLevelCount => {
-      this.setState({studentsCompletedLevelCount: studentsCompletedLevelCount});
-    });
+    const {section} = this.props;
+    if (section.id) {
+      const completedLevelsUrl = `/dashboardapi/sections/${section.id}/students/completed_levels_count`;
+      $.ajax({
+        url: completedLevelsUrl,
+        method: 'GET',
+        dataType: 'json'
+      }).done(studentsCompletedLevelCount => {
+        this.setState({studentsCompletedLevelCount: studentsCompletedLevelCount});
+      });
+    }
   }
 
   render() {
