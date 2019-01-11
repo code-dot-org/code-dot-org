@@ -136,7 +136,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
-1. **IMPORTANT:** Read the following notes, then go back up to the overview and run the commands there.
+1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
    1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
    1. `rake install` must always be called from the local project's root directory, or it won't work.
@@ -162,7 +162,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * In "Configure Security Group", under "Source", use the IP address of the machine you will be connecting from.
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY.
-  1. Go back up to the overview and run the commands there.
+  1. Go back up to the [overview](#overview) and run the commands there.
 
 ## Enabling JavaScript builds
 The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
