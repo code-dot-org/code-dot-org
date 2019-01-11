@@ -52,6 +52,9 @@ module Api::V1::Pd
         )
       )
 
+      @summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      @fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 

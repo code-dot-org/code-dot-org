@@ -95,6 +95,10 @@ module Pd::Application
       workshop.try(&:date_and_location_name)
     end
 
+    def log_summer_workshop_change(user)
+      update_status_timestamp_change_log(user, "Summer Workshop: #{workshop_date_and_location || 'Unassigned'}")
+    end
+
     # override
     def lock!
       return if locked?
