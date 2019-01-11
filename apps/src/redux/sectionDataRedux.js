@@ -7,6 +7,21 @@ import $ from 'jquery';
  * if they need to respond to a section changing.
  */
 
+ /**
+  * Shape for the section
+  * The section we get directly from angular right now. This gives us a
+  * different shape than some other places we use sections. For now, I'm just
+  * going to document the parts of section that we use here
+  */
+ export const sectionDataPropType = PropTypes.shape({
+   id: PropTypes.number.isRequired,
+   script: PropTypes.object,
+   students: PropTypes.arrayOf(PropTypes.shape({
+     id: PropTypes.number.isRequired,
+     name: PropTypes.string.isRequired,
+   })).isRequired
+ });
+
 /**
  * Action type constants
  */
@@ -32,21 +47,6 @@ export const setSection = (section) => {
 };
 
 /**
- * Shape for the section
- * The section we get directly from angular right now. This gives us a
- * different shape than some other places we use sections. For now, I'm just
- * going to document the parts of section that we use here
- */
-export const sectionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  script: PropTypes.object,
-  students: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired
-});
-
-/**
  * Initial state of sectionDataRedux
  */
 const initialState = {
@@ -54,6 +54,9 @@ const initialState = {
   isLoading: false,
 };
 
+/**
+ * Reducer
+ */
 export default function sectionData(state=initialState, action) {
   if (action.type === SET_SECTION) {
     // Setting the section is the first action to be called when switching
@@ -71,12 +74,14 @@ export default function sectionData(state=initialState, action) {
 
   if (action.type === ASYNC_LOAD_BEGIN) {
     return {
+      ...state,
       isLoading: true,
     };
   }
 
   if (action.type === ASYNC_LOAD_END) {
     return {
+      ...state,
       isLoading: false,
     };
   }

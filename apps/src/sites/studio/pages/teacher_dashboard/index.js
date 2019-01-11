@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import sectionData, {asyncSetSection} from '@cdo/apps/redux/sectionDataRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -17,14 +18,14 @@ $(document).ready(function () {
   store.dispatch(asyncSetSection(sectionId));
 
   ReactDOM.render(
-    <div>
+    <Provider store={store}>
       <Router basename={baseUrl}>
         <Route
           path="/"
           component={props => <TeacherDashboard {...props} sectionId={sectionId} studioUrlPrefix=""/>}
         />
       </Router>
-    </div>
+    </Provider>
     ,
     document.getElementById('teacher-dashboard')
   );

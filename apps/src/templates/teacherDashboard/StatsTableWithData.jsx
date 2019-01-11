@@ -1,16 +1,20 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StatsTable from './StatsTable';
 
 class StatsTableWithData extends Component {
   static propTypes = {
+    // TODO: remove this!
     sectionId: PropTypes.string,
+
+    // Props provided by redux.
+    section: PropTypes.object,
+    isLoading: PropTypes.bool.isRequired,
   };
 
   state = {
     studentsCompletedLevelCount: {},
-    section: {},
-    isLoading: true
   };
 
   componentDidMount() {
@@ -22,29 +26,19 @@ class StatsTableWithData extends Component {
     }).done(studentsCompletedLevelCount => {
       this.setState({studentsCompletedLevelCount: studentsCompletedLevelCount});
     });
-
-    const sectionUrl = `/api/v1/sections/${this.props.sectionId}`;
-    $.ajax({
-      url: sectionUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(section => {
-      this.setState({
-        section: section,
-        isLoading: false
-      });
-    });
   }
 
   render() {
+    const {section, isLoading} = this.props;
+
     return (
       <div>
-        {this.state.isLoading &&
+        {isLoading &&
           <Spinner/>
         }
-        {!this.state.isLoading &&
+        {!isLoading &&
           <StatsTable
-            section={this.state.section}
+            section={section}
             studentsCompletedLevelCount={this.state.studentsCompletedLevelCount}
           />
         }
@@ -53,4 +47,9 @@ class StatsTableWithData extends Component {
   }
 }
 
-export default StatsTableWithData;
+export const UnconnectedStatsTableWithData = StatsTableWithData;
+
+export default connect(state => ({
+  section: state.sectionData.section,
+  isLoading: state.sectionData.isLoading,
+}))(StatsTableWithData);

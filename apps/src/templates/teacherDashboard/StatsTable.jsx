@@ -27,7 +27,7 @@ class StatsTable extends Component {
 
   studentsWithCompletedLevelCount = () => {
     const {section, studentsCompletedLevelCount} = this.props;
-    return section.students.map(student => ({
+    return (section.students || []).map(student => ({
       ...student,
       completed_levels_count: studentsCompletedLevelCount[student.id] || 0
     }));
