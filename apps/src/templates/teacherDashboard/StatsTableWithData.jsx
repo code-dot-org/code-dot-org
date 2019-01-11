@@ -35,7 +35,7 @@ class StatsTableWithData extends Component {
 
     return (
       <div>
-        {loadingStatus === LoadingStatus.IN_PROGRESS &&
+        {(!loadingStatus || loadingStatus === LoadingStatus.IN_PROGRESS) &&
           <Spinner/>
         }
         {loadingStatus === LoadingStatus.SUCCESS &&

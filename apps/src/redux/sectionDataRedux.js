@@ -23,7 +23,7 @@ import $ from 'jquery';
  });
 
  /**
-  * TODO: Description
+  * Status for loading section data from server.
   */
   export const LoadingStatus = {
     IN_PROGRESS: "inProgress",
