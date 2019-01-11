@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../../cookbooks/cdo-varnish/libraries/shared_varnish_constants'
+require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -10,8 +10,6 @@ require_relative '../../cookbooks/cdo-varnish/libraries/shared_varnish_constants
 # result in changes to these other files.
 
 module SharedConstants
-  include SharedVarnishConstants
-
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -553,4 +551,6 @@ module SharedConstants
       "comment": null
     }
   JSON
+
+  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 end
