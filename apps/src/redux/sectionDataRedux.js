@@ -22,13 +22,23 @@ import $ from 'jquery';
    })).isRequired
  });
 
+ /**
+  * TODO: Description
+  */
+  export const LoadingStatus = {
+    IN_PROGRESS: "inProgress",
+    SUCCESS: "success",
+    FAIL: "fail",
+  };
+
 /**
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
 const CLEAR_SECTION_DATA = 'sectionData/CLEAR_SECTION_DATA';
-const ASYNC_LOAD_BEGIN = 'sectionData/ASYNC_LOAD_BEGIN';
-const ASYNC_LOAD_END = 'sectionData/ASYNC_LOAD_END';
+const START_LOADING_SECTION = 'sectionData/START_LOADING_SECTION';
+const LOAD_SECTION_SUCCESS = 'sectionData/LOAD_SECTION_SUCCESS';
+const LOAD_SECTION_FAIL = 'sectionData/LOAD_SECTION_FAIL';
 
 /**
  * Action creators
@@ -51,7 +61,7 @@ export const setSection = (section) => {
  */
 const initialState = {
   section: {},
-  isLoading: false,
+  loadingStatus: null,
 };
 
 /**
@@ -72,17 +82,24 @@ export default function sectionData(state=initialState, action) {
     return initialState;
   }
 
-  if (action.type === ASYNC_LOAD_BEGIN) {
+  if (action.type === START_LOADING_SECTION) {
     return {
       ...state,
-      isLoading: true,
+      loadingStatus: LoadingStatus.IN_PROGRESS,
     };
   }
 
-  if (action.type === ASYNC_LOAD_END) {
+  if (action.type === LOAD_SECTION_SUCCESS) {
     return {
       ...state,
-      isLoading: false,
+      loadingStatus: LoadingStatus.SUCCESS,
+    };
+  }
+
+  if (action.type === LOAD_SECTION_FAIL) {
+    return {
+      ...state,
+      loadingStatus: LoadingStatus.FAIL,
     };
   }
 
@@ -106,17 +123,16 @@ export const getStudentList = (state) => {
 export const asyncSetSection = (sectionId) => (dispatch) => {
   // Clear any existing section data and begin loading.
   dispatch({ type: CLEAR_SECTION_DATA });
-  dispatch({ type: ASYNC_LOAD_BEGIN });
+  dispatch({ type: START_LOADING_SECTION });
 
   $.ajax({
-    url: `/api/v1/sections/${sectionId}`,
+    url: `/api/v1/sections/123`,
     method: 'GET',
     dataType: 'json'
   }).done(section => {
     dispatch(setSection(section));
-    dispatch({ type: ASYNC_LOAD_END });
+    dispatch({ type: LOAD_SECTION_SUCCESS });
   }).fail((jqXhr, status) => {
-    // handle errors
-    dispatch({ type: ASYNC_LOAD_END });
+    dispatch({ type: LOAD_SECTION_FAIL });
   });
 };

@@ -1,13 +1,15 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StatsTable from './StatsTable';
+import {LoadingStatus} from '@cdo/apps/redux/sectionDataRedux';
 
 class StatsTableWithData extends Component {
   static propTypes = {
     // Props provided by redux.
     section: PropTypes.object,
-    isLoading: PropTypes.bool.isRequired,
+    loadingStatus: PropTypes.string,
   };
 
   state = {
@@ -29,18 +31,21 @@ class StatsTableWithData extends Component {
   }
 
   render() {
-    const {section, isLoading} = this.props;
+    const {section, loadingStatus} = this.props;
 
     return (
       <div>
-        {isLoading &&
+        {loadingStatus === LoadingStatus.IN_PROGRESS &&
           <Spinner/>
         }
-        {!isLoading &&
+        {loadingStatus === LoadingStatus.SUCCESS &&
           <StatsTable
             section={section}
             studentsCompletedLevelCount={this.state.studentsCompletedLevelCount}
           />
+        }
+        {loadingStatus === LoadingStatus.FAIL &&
+          <div>{i18n.statsTableFailure()}</div>
         }
       </div>
     );
@@ -51,5 +56,5 @@ export const UnconnectedStatsTableWithData = StatsTableWithData;
 
 export default connect(state => ({
   section: state.sectionData.section,
-  isLoading: state.sectionData.isLoading,
+  loadingStatus: state.sectionData.loadingStatus,
 }))(StatsTableWithData);
