@@ -133,6 +133,9 @@ module Dashboard
       size: 256.megabytes # max size of entire store
     }
 
+    # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
+    config.assets.cache_limit = 1.gigabyte
+
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
 

@@ -951,7 +951,6 @@ FactoryGirl.define do
     whyInterested 'Why interested'
     teachingExperience 'Yes, I am a current classroom teacher'
     gradesTaught ['Elementary school']
-    completedPd 'Yes, I have participated in the Code.org Professional Learning Program for this curriculum.'
     facilitatorAvailability 'Weekdays during the school year'
 
     trait :csf do
@@ -976,6 +975,7 @@ FactoryGirl.define do
       csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_previous_workshop Pd::Application::Facilitator1920Application.options[:csf_previous_workshop].first
     end
 
     trait :with_csd_csp_specific_fields do
@@ -985,6 +985,7 @@ FactoryGirl.define do
       csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_lead_summer_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       csd_csp_deeper_learning_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_completed_pd Pd::Application::Facilitator1920Application.options[:csd_csp_completed_pd].first
     end
   end
 

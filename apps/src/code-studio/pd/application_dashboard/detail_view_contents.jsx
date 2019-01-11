@@ -84,6 +84,9 @@ const styles = {
     marginRight: 5,
     marginLeft: 5,
   },
+  editButton: {
+    width: 'auto',
+  },
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
@@ -114,7 +117,7 @@ const styles = {
 
 const NA = "N/A";
 
-const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
+const DEFAULT_NOTES = "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:";
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -341,19 +344,19 @@ export class DetailViewContents extends React.Component {
       'notes_3',
       'notes_4',
       'notes_5',
-      'question_1',
-      'question_2',
-      'question_3',
-      'question_4',
-      'question_5',
-      'question_6',
-      'question_7',
       'regional_partner_value',
       'pd_workshop_id'
     ];
 
     if (this.props.applicationData.application_type === ApplicationTypes.facilitator) {
       stateValues.push('fit_workshop_id');
+      stateValues.push('question_1');
+      stateValues.push('question_2');
+      stateValues.push('question_3');
+      stateValues.push('question_4');
+      stateValues.push('question_5');
+      stateValues.push('question_6');
+      stateValues.push('question_7');
     }
 
     if (this.props.applicationData.application_type === ApplicationTypes.teacher) {
@@ -621,25 +624,20 @@ export class DetailViewContents extends React.Component {
       </div>
     );
 
-    if (this.props.canLock && this.props.applicationData.application_type === ApplicationTypes.facilitator) {
-      // Render the select with the lock button in a fancy InputGroup
-      return (
-        <InputGroup style={styles.statusSelectGroup}>
-          <InputGroup.Button>
+    // Render the select with the lock button in a fancy InputGroup
+    return (
+      <InputGroup style={styles.statusSelectGroup}>
+        {this.props.canLock && this.props.applicationData.application_type === ApplicationTypes.facilitator && (
+          <InputGroup.Button style={styles.editButton}>
             {this.renderLockButton()}
           </InputGroup.Button>
-          {selectControl}
-        </InputGroup>
-      );
-    } else {
-      // Render just the select; otherwise, rendering a single element in an
-      // InputGroup makes it look funky
-      return (
-        <div style={styles.statusSelectGroup}>
-          {selectControl}
-        </div>
-      );
-    }
+        )}
+        {selectControl}
+        <InputGroup.Button style={styles.editButton}>
+          {this.renderEditButtons()}
+        </InputGroup.Button>
+      </InputGroup>
+    );
   };
 
   showLocked = () => (this.props.applicationData.application_type === ApplicationTypes.facilitator);
@@ -649,7 +647,6 @@ export class DetailViewContents extends React.Component {
       <div>
         <div>
           {this.renderStatusSelect()}
-          {this.renderEditButtons()}
         </div>
         {
           this.showLocked() &&
@@ -836,7 +833,7 @@ export class DetailViewContents extends React.Component {
   renderNotes = () => {
     let notesFields = [];
     [
-      {label: 'Notes', id: 'notes', value: this.state.notes},
+      {label: 'General Notes', id: 'notes', value: this.state.notes},
       {label: 'Notes 2', id: 'notes_2', value: this.state.notes_2},
       {label: 'Notes 3', id: 'notes_3', value: this.state.notes_3},
       {label: 'Notes 4', id: 'notes_4', value: this.state.notes_4},
@@ -1096,15 +1093,17 @@ export class DetailViewContents extends React.Component {
               <td style={styles.scoringColumn}/>
             </tr>
           }
-          <tr>
-            <td style={styles.questionColumn}>
-              Summer Workshop
-            </td>
-            <td style={styles.answerColumn}>
-              {this.renderWorkshopAnswer()}
-            </td>
-            <td style={styles.scoringColumn}/>
-          </tr>
+          {!(this.props.applicationData.course === 'csf') &&
+            <tr>
+              <td style={styles.questionColumn}>
+                Summer Workshop
+              </td>
+              <td style={styles.answerColumn}>
+                {this.renderWorkshopAnswer()}
+              </td>
+              <td style={styles.scoringColumn}/>
+            </tr>
+          }
           {this.props.applicationData.application_type === ApplicationTypes.facilitator &&
             <tr>
               <td style={styles.questionColumn}>
