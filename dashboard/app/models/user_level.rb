@@ -2,7 +2,7 @@
 #
 # Table name: user_levels
 #
-#  id               :integer          not null, primary key
+#  id               :integer          unsigned, not null, primary key
 #  user_id          :integer          not null
 #  level_id         :integer          not null
 #  attempts         :integer          default(0), not null
@@ -46,6 +46,10 @@ class UserLevel < ActiveRecord::Base
     if readonly_answers? && !submitted?
       errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
     end
+  end
+
+  def attempted?
+    !best_result.nil?
   end
 
   def perfect?

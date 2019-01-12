@@ -1,0 +1,51 @@
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/student-dance-projects.css'}
+
+:ruby
+  dance_projects = [
+    {
+      title: "After Party",
+      name: "M",
+      age: "18",
+      image: "after_party_project",
+      link: "https://studio.code.org/projects/dance/PFutNmyVGt9Nj1pyl_JontH303cOEx6pJpoFc9tqFE4"
+    },
+    {
+      title: "Down to the Beat",
+      name: "A",
+      age: "11",
+      image: "down_to_the_beat_project",
+      link: "https://studio.code.org/projects/dance/zDDVcXAaGv-O-wuXn45ba4mZm6uz9wJAyJSsvONN19Y"
+    },
+    {
+      title: "Bear Bop",
+      name: "J",
+      age: "8",
+      image: "bear_bop_project",
+      link: "https://studio.code.org/projects/dance/6I9NriNzSu9WPUNqVvCDPXbkQQbb3I_i86h-ZJdR6T8"
+    },
+    {
+      title: "Friday Night",
+      name: "L",
+      age: "16",
+      image: "friday_night_project",
+      link: "https://studio.code.org/projects/dance/kwpnLI1g67W0FbH1PnKbpc5bNUWaWYm_tp_lSinpspA"
+    },
+  ]
+
+.student_dance_projects
+  - dance_projects.each do |project|
+    %a.project-card{href: project[:link], style: "color: #696969; text-decoration: none"}
+      %img.project-video{src:"/images/dance-hoc/#{project[:image]}.gif"}
+      .project-details
+        .project-title
+          = project[:title]
+        .project-author
+          .span.student-label
+            By:
+          .span.student-name
+            = project[:name]
+        .project-age
+          .span.age-label
+            Age:
+          .span.student-age
+            = project[:age]

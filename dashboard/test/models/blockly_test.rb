@@ -143,6 +143,20 @@ XML
     assert_equal xml, xml2
   end
 
+  def create_custom_block(name, pool, block_text, args, category: 'Events')
+    [{
+      name: name,
+      pool: pool,
+      category: category,
+      config:
+      {
+        "blockText" => block_text,
+        "args" => args,
+      },
+      helperCode: nil
+    }]
+  end
+
   test 'localized shared_blocks' do
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -197,7 +211,7 @@ XML
             "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
+              {"name" => "COLOR", "options" => [["rood", "red"], ["blauw", "blue"]]}
             ],
             "eventBlock" => true
           },
@@ -295,8 +309,8 @@ XML
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "red",
-                "blue": "blue",
+                "red": "rood",
+                "blue": "blauw",
               }
             }
           }
@@ -410,6 +424,50 @@ XML
     localized_custom_block = level.localized_shared_blocks(custom_block)
 
     assert_not_equal localized_custom_block, translated_block
+  end
+
+  test 'option that contains a period in the key is translated' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "ThunderCats_atSelectStrengthLevel" => {
+            "text" => "vérifier la {LEVEL}",
+            "options" => {
+              "LEVEL" => {
+                "LEVELS.Whole": "Entier",
+                "LEVELS.Half": "Moitié",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    test_custom_block = create_custom_block(
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "check the {LEVEL}",
+      [
+        {"name" => "LEVEL", "options" => [["Whole", "LEVELS.Whole"], ["Half", "LEVELS.Half"]]}
+      ],
+    )
+
+    translated_block = create_custom_block(
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "vérifier la {LEVEL}",
+      [
+        {"name" => "LEVEL", "options" => [["Entier", "LEVELS.Whole"], ["Moitié", "LEVELS.Half"]]}
+      ]
+    )
+
+    localized_custom_block = level.localized_shared_blocks(test_custom_block)
+
+    assert_equal localized_custom_block, translated_block
   end
 
   test 'localizes authored hints' do

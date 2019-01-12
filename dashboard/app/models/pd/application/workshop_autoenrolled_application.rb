@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -40,7 +41,6 @@
 module Pd::Application
   class WorkshopAutoenrolledApplication < ApplicationBase
     include RegionalPartnerTeacherconMapping
-    include SerializedProperties
 
     CACHE_TTL = 30.seconds.freeze
 
@@ -152,7 +152,7 @@ module Pd::Application
       if regional_partner.group == 3
         teachercon = get_matching_teachercon(regional_partner)
         if teachercon
-          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: application_year.split('-').first.to_i)
         end
       end
 

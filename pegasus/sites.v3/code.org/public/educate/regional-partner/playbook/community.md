@@ -45,7 +45,7 @@ Hold at least 4 community events for teachers through the year.  Please ensure a
 All events should include teachers from your professional learning programs across CS Fundamentals, Discoveries, and Principles.  We also encourage you to open up these events to CS teachers outside your cohorts. Consider partnering with other organizations to host these events.
 
 **How to get reimbursed:**<br/>
-Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees.  <br/>
+Code.org reimburses up to $500 for venue and catering per event that serves a minimum of 10 teacher attendees.  <br/>
 
 Once you've held your event, please email invoices@code.org, cc'ing your regional manager with the following attachments: <br/>
 1) Signup sheet with an accurate attendance count; <br/>

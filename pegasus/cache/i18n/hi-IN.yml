@@ -63,6 +63,7 @@ hi-IN:
   csedweek_map_search_search: 'खोजें:'
   csedweek_map_legend_event: कोड घंटे की कड़ियाँ
   csedweek_map_legend_cs_tech_jam: विशेष घटना
+  cded_sign_up: साइन अप
   cded_try_it: कर के देखे
   try_now: अधिक जानें
   california_heading: कंप्यूटर विज्ञान पढ़ाने के लिए अपने स्कूल से पूछो
@@ -141,6 +142,7 @@ hi-IN:
   studiobar_donate_title: दान करे
   studiobar_shop_title: दुकान
   homepage_slot_text_shop: दुकान
+  homepage_action_text_sign_up: साइन अप
   homepage_action_text_try_it: कर के देखे
   homepage_banner_text_link: अधिक जानें
   homepage_banner_privacy_link: अधिक जानें
@@ -212,6 +214,7 @@ hi-IN:
   dashboard_correctness_correct: सही
   dashboard_student: छात्र
   learn_more: अधिक जानें
+  learn_sign_up_button: साइन अप
   blockly_name: ब्लॉक्ली
   math_category_name: गणित
   codeorg_gradelevel: उम्र 4-104
@@ -275,6 +278,14 @@ hi-IN:
   sphero_beyond_gradelevel: उम्र 8 +
   flappy_shortcode: फ़ड़फ़ड़ाय
   header_courses: पाठ्यक्रम
+  applab_tile_start_tutorial: शुरू करें
+  account_sign_up_child_accept_terms: अगर मैं उंर के 13 साल से कम कर रहा हूं, मैं
+    पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन Code.org सेवाओं का
+    उपयोग करने की अनुमति है ।
+  hoc_overview_start_tutorial: शुरू करें
   hoc2018_creativity_create: बनाए
   hoc2018_mc_start: शुरू करें
   hoc2018_mc_homepage_try_it: कर के देखे
+  hoc2018_dance_party_button: शुरू करें
+  hoc2018_dance_teacher_resources_tile2_button: अनप्लग की गई गतिविधि
+  hoc2018_dance_amazon_about_future_engineer_button: अधिक जानें

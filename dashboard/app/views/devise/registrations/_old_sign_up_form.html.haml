@@ -15,7 +15,7 @@
 - user_return_to_url = get_and_clear_session_user_return_to
 
 .row
-  .span8.signupblock
+  .span7.signupblock
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'signupform'}) do |f|
       #user_type-block.itemblock
         .labelblock= t('signup_form.user_type_label')
@@ -152,9 +152,13 @@
       -# Temporarily use student_terms so that existing translations get used.
       != t('signup_form.student_terms')
 
-  .span4
-    .devise_links
-      = render "devise/shared/old_links"
+  .span5{style: "display: flex;"}
+    %div.vertical-or
+      %hr
+      = t("or").upcase
+      %hr
+
+    = render "devise/shared/new_links"
 
 %script{src: minifiable_asset_path('js/signup.js')}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}

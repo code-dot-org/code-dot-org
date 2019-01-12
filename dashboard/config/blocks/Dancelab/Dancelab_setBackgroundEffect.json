@@ -6,8 +6,9 @@
       0.45,
       0.65
     ],
+    "inline": false,
     "func": "setBackgroundEffect",
-    "blockText": "set background effect {EFFECT}",
+    "blockText": "set background effect\n{EFFECT} {PALETTE}",
     "args": [
       {
         "name": "EFFECT",
@@ -17,32 +18,117 @@
             "\"none\""
           ],
           [
-            "Squares",
-            "\"disco\""
+            "(Random)",
+            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+          ],
+          [
+            "Circles",
+            "\"circles\""
           ],
           [
             "Colors",
-            "\"rainbow\""
+            "\"color_cycle\""
           ],
           [
             "Diamonds",
             "\"diamonds\""
           ],
           [
-            "Bubbles",
-            "\"splatter\""
+            "Disco Ball",
+            "\"disco_ball\""
+          ],
+          [
+            "Fireworks",
+            "\"fireworks\""
           ],
           [
             "Hypno",
             "\"swirl\""
           ],
           [
+            "Kaleidoscope",
+            "\"kaleidoscope\""
+          ],
+          [
+            "Laser Dance Floor",
+            "\"lasers\""
+          ],
+          [
+            "Paint Splatter",
+            "\"splatter\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Snow",
+            "\"snowflakes\""
+          ],
+          [
+            "Song Names",
+            "\"text\""
+          ],
+          [
+            "Space",
+            "\"galaxy\""
+          ],
+          [
+            "Sparkles",
+            "\"sparkles\""
+          ],
+          [
             "Spiral",
             "\"spiral\""
           ],
           [
-            "(Random)",
-            "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]"
+            "Squares",
+            "\"disco\""
+          ],
+          [
+            "Stars",
+            "\"stars\""
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Black and White",
+            "\"rave\""
+          ],
+          [
+            "Cool",
+            "\"cool\""
+          ],
+          [
+            "Electronic",
+            "\"electronic\""
+          ],
+          [
+            "Ice Cream",
+            "\"iceCream\""
+          ],
+          [
+            "Light",
+            "\"default\""
+          ],
+          [
+            "Neon",
+            "\"neon\""
+          ],
+          [
+            "Tropical",
+            "\"tropical\""
+          ],
+          [
+            "Vintage",
+            "\"vintage\""
+          ],
+          [
+            "Warm",
+            "\"warm\""
           ]
         ]
       }

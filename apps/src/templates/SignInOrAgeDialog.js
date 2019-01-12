@@ -81,7 +81,6 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    noSignIn: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -96,7 +95,8 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    sessionStorage.setItem(sessionStorageKey, true);
+    // Sets cookie to true when anon user is 13+. False otherwise.
+    sessionStorage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -113,7 +113,7 @@ class SignInOrAgeDialog extends Component {
   render() {
     const { signedIn, age13Required } = this.props;
     // Don't show dialog unless script requires 13+, we're not signed in, and
-    // we haven't already given this dialog our age
+    // we haven't already given this dialog our age or we do not require sign-in
     if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
       return null;
     }
@@ -127,6 +127,7 @@ class SignInOrAgeDialog extends Component {
             ref={element => this.ageDropdown = element}
           />
           <Button
+            id="uitest-submit-age"
             onClick={this.onClickAgeOk}
             text={i18n.ok()}
             color={Button.ButtonColor.gray}
@@ -167,37 +168,29 @@ class SignInOrAgeDialog extends Component {
         isOpen={this.state.open}
         uncloseable
       >
-        <div style={styles.container}>
+        <div style={styles.container} className="signInOrAgeDialog">
           <div style={styles.heading}>
-            {this.props.noSignIn ? i18n.signinDanceParty() : i18n.signinOrAge()}
+            {i18n.signinOrAge()}
           </div>
-          <div>
-            {this.props.noSignIn ?
-              <div style={styles.middle}>
-                {provideAge}
-              </div> :
-              <div style={styles.middle}>
-                <div style={styles.middleCell}>
-                  {i18n.signinForProgress()}
-                  <div style={styles.button}>
-                    <Button
-                      href={`/users/sign_in?user_return_to=${location.pathname}`}
-                      text={i18n.signinCodeOrg()}
-                      color={Button.ButtonColor.gray}
-                    />
-                  </div>
-                </div>
-                <div style={styles.center}>
-                  <div style={styles.centerLine}/>
-                  <div style={styles.centerText}>
-                    {i18n.or()}
-                  </div>
-                  <div style={styles.centerLine}/>
-                </div>
-                {provideAge}
+          <div style={styles.middle}>
+            <div style={styles.middleCell}>
+              {i18n.signinForProgress()}
+              <div style={styles.button}>
+                <Button
+                  href={`/users/sign_in?user_return_to=${location.pathname}`}
+                  text={i18n.signinCodeOrg()}
+                  color={Button.ButtonColor.gray}
+                />
               </div>
-            }
-
+            </div>
+            <div style={styles.center}>
+              <div style={styles.centerLine}/>
+              <div style={styles.centerText}>
+                {i18n.or()}
+              </div>
+              <div style={styles.centerLine}/>
+            </div>
+            {provideAge}
           </div>
           <div>
             <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>

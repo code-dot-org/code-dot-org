@@ -95,11 +95,11 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Wenn Sie eine "Hour of Code"-Veranstaltung durchführen, nutzen Sie folgenden Zeitplan, der Sie durch den Tag führt. Vorher melden Sie sich bei der Schule an und begrüßen den Lehrer. Bestätigen Sie den vereinbarten Zeitplan und besprechen Sie alle Gesprächsthemen.
 </p>
 
 <h3>
-  Sample agenda:
+  Beispiel für einen Ablaufplan:
 </h3>
 
 <table>
@@ -189,7 +189,7 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Nach der Veranstaltung:
         </h3>
         <ul>
           <li>
@@ -229,16 +229,16 @@ Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei d
           Ich bin bisher noch nicht von einem Lehrer kontaktiert worden. Wie kann ich trotzdem mithelfen?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Suchen Sie nach einer Schule in der Nähe, rufen Sie den Direktor/Lehrer/das Sekretariat an und fragen Sie, wie Sie helfen können.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Wie lange dauert ein Klassenbesuch?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Ein persönlicher Besuch dauert in der Regel 60-90 Minuten, ein virtueller Besuch in der Regel 20-30 Minuten.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Für welche Altersklasse ist die Hour of Code geeignet?
         </h3>
         <p>
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!

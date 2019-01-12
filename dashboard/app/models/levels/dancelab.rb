@@ -28,6 +28,10 @@ class Dancelab < GamelabJr
     default_song
   )
 
+  def self.skins
+    ['dance']
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -52,9 +56,12 @@ class Dancelab < GamelabJr
   def common_blocks(type)
   end
 
-  # Manually curated
-  # TODO - epeach - manually populate these values from song manifest
   def self.hoc_songs
-    [["MC Hammer - U Can't Touch This", "hammer"], ["Macklemore - Can't Hold Us", "macklemore90"], ["The Black Eyed Peas - I Got a Feeling", "peas"]]
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest.json')[:body].read
+    manifest = JSON.parse(manifest_json)
+    manifest['songs'].map do |song|
+      name = "#{song['text']}#{song['pg13'] ? ' (PG-13)' : ''}"
+      [name, song['id']]
+    end
   end
 end

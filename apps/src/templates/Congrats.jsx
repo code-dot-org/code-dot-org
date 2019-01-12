@@ -30,6 +30,7 @@ export default class Congrats extends Component {
     under13: PropTypes.bool,
     language: PropTypes.string.isRequired,
     randomDonorTwitter: PropTypes.string,
+    hideDancePartyFollowUp: PropTypes.bool
   };
 
   render() {
@@ -40,12 +41,14 @@ export default class Congrats extends Component {
       userType,
       under13,
       language,
-      randomDonorTwitter
+      randomDonorTwitter,
+      hideDancePartyFollowUp
     } = this.props;
 
     const isEnglish = language === 'en';
 
     const tutorialType = {
+      'dance': 'dance',
       'applab-intro': 'applab',
       aquatic: '2018Minecraft',
       hero: '2017Minecraft',
@@ -90,6 +93,7 @@ export default class Congrats extends Component {
             userType={userType}
             under13={under13}
             isEnglish={isEnglish}
+            hideDancePartyFollowUp={hideDancePartyFollowUp}
           />
           {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc/>

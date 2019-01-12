@@ -14,6 +14,8 @@ function processVolunteerUnsubscribeError(data) {
       'Please certify that you are at least 18 years old to update your preferences. ' +
       'If you are not yet 18, please request to remove yourself from the volunteer list by ' +
       '<a href="https://support.code.org/hc/en-us/requests/new" target="_blank">contacting support</a>.';
+    } else if (errors[i] === "email_preference_opt_in_s") {
+      errorMessage = 'Please select an email preference below.';
     }
   }
 

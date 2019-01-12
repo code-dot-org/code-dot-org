@@ -7,6 +7,17 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :regional_partner_emails_sent_by_system,
     :locked,
     :notes,
+    :notes_2,
+    :notes_3,
+    :notes_4,
+    :notes_5,
+    :question_1,
+    :question_2,
+    :question_3,
+    :question_4,
+    :question_5,
+    :question_6,
+    :question_7,
     :form_data,
     :status,
     :school_name,
@@ -31,7 +42,11 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :attending_teachercon,
     :principal_approval_state,
     :meets_scholarship_criteria,
-    :school_stats
+    :school_stats,
+    :status_change_log,
+    :scholarship_status,
+    :all_scores,
+    :total_score
   )
 
   def email
@@ -47,6 +62,34 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     @scope[:raw_form_data] ? object.form_data_hash : object.full_answers_camelized
   end
 
+  def question_1
+    object.try(:question_1) || nil
+  end
+
+  def question_2
+    object.try(:question_2) || nil
+  end
+
+  def question_3
+    object.try(:question_3) || nil
+  end
+
+  def question_4
+    object.try(:question_4) || nil
+  end
+
+  def question_5
+    object.try(:question_5) || nil
+  end
+
+  def question_6
+    object.try(:question_6) || nil
+  end
+
+  def question_7
+    object.try(:question_7) || nil
+  end
+
   def response_scores
     object.try(:response_scores_hash) || {}
   end
@@ -57,6 +100,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def bonus_points
     object.try(:total_score) || nil
+  end
+
+  def all_scores
+    object.try(:all_scores)
+  end
+
+  def total_score
+    object.try(:total_score)
   end
 
   def pd_workshop_id
@@ -110,59 +161,74 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
+    return 'N/A' unless count && total
+
     "#{(100.0 * count / total).round(2)}%"
   end
 
   def school_stats
-    return nil unless object.try(:school_id)
+    return {} unless object.try(:school_id)
 
-    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
-    return nil unless stats
+    school = School.find_by_id(object.school_id)
+    stats = school.school_stats_by_year.order(school_year: :desc).first
+    return {} unless stats
 
-    urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
 
     {
       title_i_status: stats.title_i_status,
+      school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,
-      race_data: [
-        {
-          percent: percent_string(stats.student_am_count, stats.students_total),
-          total: stats.student_am_count,
-          label: "American Indian/Alaska Native Students"
-        },
-        {
-          percent: percent_string(stats.student_as_count, stats.students_total),
-          total: stats.student_as_count,
-          label: "Asian Students"
-        },
-        {
-          percent: percent_string(stats.student_hi_count, stats.students_total),
-          total: stats.student_hi_count,
-          label: "Hispanic Students"
-        },
-        {
-          percent: percent_string(stats.student_bl_count, stats.students_total),
-          total: stats.student_bl_count,
-          label: "Black Students"
-        },
-        {
-          percent: percent_string(stats.student_wh_count, stats.students_total),
-          total: stats.student_wh_count,
-          label: "White Students"
-        },
-        {
-          percent: percent_string(stats.student_hp_count, stats.students_total),
-          total: stats.student_hp_count,
-          label: "Hawaiian Native/Pacific Islander Students"
-        },
-        {
-          percent: percent_string(stats.student_tr_count, stats.students_total),
-          total: stats.student_tr_count,
-          label: "Two or More Races Students"
-        }
-      ]
+      american_indian_alaskan_native_percent: percent_string(stats.student_am_count, stats.students_total),
+      asian_percent: percent_string(stats.student_as_count, stats.students_total),
+      black_or_african_american_percent: percent_string(stats.student_bl_count, stats.students_total),
+      hispanic_or_latino_percent: percent_string(stats.student_hi_count, stats.students_total),
+      native_hawaiian_or_pacific_islander_percent: percent_string(stats.student_hp_count, stats.students_total),
+      white_percent: percent_string(stats.student_wh_count, stats.students_total),
+      two_or_more_races_percent: percent_string(stats.student_tr_count, stats.students_total)
     }
+  end
+
+  def status_change_log
+    serialized_log = {}
+
+    # Old status changes were logged with just the time of the change, not the person
+    # doing the change. So we need to get all changes, and then find a way to resolve
+    # duplicates. So we build a hash where keys are time followed by status, assuming
+    # that if two entries show the same status change and are within a minute of each
+    # other, they are the same change
+
+    status_log = object.try(:status_log) || []
+
+    status_log.each do |entry|
+      entry_time = Time.parse(entry['at']).in_time_zone('America/Los_Angeles')
+      entry_time_string = "#{entry_time.strftime('%F %H:%M')} #{entry_time.zone}"
+      serialized_log[entry_time_string + entry['status']] = {
+        title: entry['status'].titleize,
+        time: entry_time_string
+      }
+    end
+
+    change_log = object.sanitize_status_timestamp_change_log
+    change_log.each do |entry|
+      # Use the time rounded down to the minute to see if these two statuses log entries
+      # are the same.
+      entry_time = Time.parse(entry[:time]).in_time_zone('America/Los_Angeles')
+      entry_time_string = "#{entry_time.strftime('%F %H:%M')} #{entry_time.zone}"
+
+      serialized_log[entry_time_string + entry[:title]] = {
+        title: entry[:title].titleize,
+        time: entry_time_string,
+        changing_user: entry[:changing_user_name]
+      }.compact
+    end
+
+    serialized_log.values.sort {|x, y| Time.parse(y[:time]) <=> Time.parse(x[:time])}
+  end
+
+  def scholarship_status
+    object.try(:scholarship_status)
   end
 end

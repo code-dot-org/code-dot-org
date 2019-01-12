@@ -1,0 +1,14 @@
+login_required true
+
+stage 'Deeper Learning Overview', flex_category: 'required'
+named_level 'andrea_test1', progression: 'What is Deeper Learning'
+
+stage 'andrea-test-stage2'
+level 'andrea-test2', progression: 'President Question'
+level 'andrea-test3', progression: 'President Question'
+
+stage 'andrea-test-stage3'
+variants
+  named_level 'andrea_test1'
+  named_level 'andrea-test2', active: false
+endvariants

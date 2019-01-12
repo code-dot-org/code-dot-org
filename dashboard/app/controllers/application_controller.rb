@@ -177,9 +177,10 @@ class ApplicationController < ActionController::Base
       response[:message] = 'no script provided'
     end
 
+    response[:phone_share_url] = send_to_phone_url
+
     if options[:level_source].try(:id)
       response[:level_source] = level_source_url(id: options[:level_source].id)
-      response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
     end
 

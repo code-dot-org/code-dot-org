@@ -20,6 +20,10 @@ pushd $CHEF_CACHE
   /opt/chef/bin/chef-client -z -N <%=node_name%> -o 'recipe[cdo-apps::hostname]'
 popd
 
+# Increase EC2 instance metadata service retries/timeouts.
+export AWS_METADATA_SERVICE_TIMEOUT=30
+export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
+
 # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
 LIFECYCLE_HOOK=<%=hook%>
 AUTO_SCALING_GROUP=<%=auto_scaling_group%>

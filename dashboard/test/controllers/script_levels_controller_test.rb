@@ -99,33 +99,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
   end
 
-  # Asserts that each expected directive is contained in the cache-control header,
-  # delimited by commas and optional whitespace
-  def assert_cache_control_match(expected_directives, cache_control_header)
-    expected_directives.each do |directive|
-      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
-    end
-  end
-
-  def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
-  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
-    expected_directives = [
-      'public',
-      "max-age=#{max_age}",
-      "s-maxage=#{proxy_max_age}"
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
     netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
@@ -600,6 +573,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute session['warden.user.user.key']
   end
 
+  test "show with the reset param should destroy the storage_id cookie when not logged in" do
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 200
+    # Ensure storage_id is set to empty value and domain is correct
+    cookie_header = response.header['Set-Cookie']
+    assert cookie_header.include?("#{storage_id_cookie_name}=;")
+    assert cookie_header.include?("domain=.test.host;")
+  end
+
+  test "show with the reset param should not create a new storage_id cookie when logged in" do
+    sign_in(create(:user))
+
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 302
+    # Ensure storage_id is not being set
+    cookie_header = response.header['Set-Cookie']
+    refute cookie_header.include?("#{storage_id_cookie_name}=")
+  end
+
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
     get :reset, params: {script_id: Script::HOC_NAME}
@@ -850,6 +842,72 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '#codeApp'
     assert_select '#notStarted', 0
     assert_includes response.body, fake_last_attempt
+  end
+
+  test 'shows submitted time if you are a teacher viewing your student and they have submitted the level' do
+    sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          submitted: true,
+          updated_at: DateTime.new(2017, 12, 15, 18, 5, 8)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp' data-timestamp='2017-12-15 18:05:08 UTC'></div>"
+  end
+
+  test 'shows last update time if you are a teacher viewing your student and they have a best result' do
+    sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          best_result: 1,
+          updated_at: DateTime.new(2000, 1, 5, 8, 30, 45)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp' data-timestamp='2000-01-05 08:30:45 UTC'></div>"
   end
 
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do

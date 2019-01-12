@@ -32,11 +32,11 @@ Scenario: App Lab UI elements from initial code and html
   And I wait for the page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
-  And I click selector "#runButton"
+  And I press "runButton"
   # wait for the last dynamically generated element to appear
   And I wait to see "#radioid"
   Then I see no difference for "dynamically generated elements in code mode"
-  And I click selector "#designModeButton"
+  And I press "designModeButton"
   And I wait for the page to fully load
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes

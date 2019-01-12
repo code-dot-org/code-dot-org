@@ -1091,7 +1091,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).to_i + 1).to_s}
+    id {(School.maximum(:id).next).to_s}
     city "Seattle"
     state "WA"
     zip "98122"

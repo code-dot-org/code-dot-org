@@ -1,8 +1,9 @@
 import React, {PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
-import {orderBy} from 'lodash';
+import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
@@ -21,6 +22,9 @@ const styles = {
     default: {
       color: color.light_gray
     }
+  },
+  notesCell: {
+    maxWidth: '200px',
   }
 };
 
@@ -58,7 +62,7 @@ export default class AdminCohortViewTable extends React.Component {
       styles.sortableColumnHeader
     );
 
-    this.columns = [
+    let columns = [
       {
         property: 'date_accepted',
         header: {
@@ -173,16 +177,44 @@ export default class AdminCohortViewTable extends React.Component {
           label: 'Accepted FiT',
           transforms: [sortable]
         }
-      }, {
-        property: 'id',
-        header: {
-          label: 'View Application'
-        },
-        cell: {
-          format: this.formatViewButton
-        }
       }
     ];
+
+    [
+      {property: 'notes', label: 'General Notes'},
+      {property: 'notes_2', label: 'Notes 2'},
+      {property: 'notes_3', label: 'Notes 3'},
+      {property: 'notes_4', label: 'Notes 4'},
+      {property: 'notes_5', label: 'Notes 5'},
+    ].forEach((notesField)=> {
+      columns.push({
+        property: notesField.property,
+        header: {
+          label: notesField.label,
+            transforms: [sortable]
+        },
+        cell: {
+          format: this.formatNotesTooltip,
+          transforms: [
+            () => ({
+              style: {...styles.notesCell}
+            })
+          ]
+        }
+      });
+    });
+
+    columns.push({
+      property: 'id',
+      header: {
+        label: 'View Application'
+      },
+      cell: {
+        format: this.formatViewButton
+      }
+    });
+
+    this.columns = columns;
   }
 
   getSortingColumns = () => this.state.sortingColumns || {};
@@ -206,6 +238,30 @@ export default class AdminCohortViewTable extends React.Component {
   formatDate = (iso8601Date) => iso8601Date ? moment(iso8601Date).format("MMM D") : "";
 
   formatBoolean = (bool) => bool ? "Yes" : "No";
+
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id, {rowData}) => {
     if (!rowData.type.startsWith("Pd::Application")) {

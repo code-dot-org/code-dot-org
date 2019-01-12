@@ -14,26 +14,34 @@ ________________
 - [6-12 Facilitator Payments & Travel](#612)
 - [Administrator and Counselor Workshops](#ac)
 - [Community Events](#community)
-- [CS Fair](#csfair)
+- [CS Fairs](#csfair)
 
 ________________
 <a id="workshops"></a>
 <br/>
 ## Workshop Payments
-Code.org pays Regional Partners for program expenses related to hosting workshops for teachers according to their contracts. These payments may include funds for facilitators at the workshops, costs for venue space and food during the workshop day, and compensation for time for a Regional Partner staff member to plan and execute the workshop.
+Code.org pays Regional Partners for program expenses related to hosting workshops for teachers according to their contracts. These payments may include funds for facilitators at the workshops, costs for venue rental and food during the workshop day, and compensation for time for a Regional Partner staff member to plan and execute the workshop.
 
 **How you'll be paid**
 
-- All CS Fundamentals, CS Discoveries, CS Principles, and Admin/Counselor workshop payments are now made via ACH direct deposit (unless otherwise agreed with Partner).
+- All CS Fundamentals, CS Discoveries, CS Principles, and Admin/Counselor workshop payments are now made via ACH direct deposit (unless otherwise agreed with a partner).
 - Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Submit your invoice to invoices@code.org with receipts and attendance list (if required) to initiate the payment process.
 
 **When you'll be paid**  
 
-- The Code.org payment cycle runs twice per month to capture workshops that took place between the 1st-15th and 16th-last day of each month. 
+- The Code.org payment cycle runs twice per month to capture workshops that took place between the *1st-15th* and *16th-last day* of each month. 
 - At the close of a payment cycle, Code.org prepares a payment report. 
-- You will receive an email from workshoppayments@code.org for each workshop that you ran during that period with an opportunity to amend any incorrect information within 3 business days. 
-- After that point, Code.org initates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
-	- If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops. 
+- You will receive an email from **workshoppayments@code.org** with summary payment details for each workshop that you ran during that period, with an opportunity to amend any incorrect information within 3 business days. 
+- After the review period, Code.org initates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
+- If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops. 
+
+**Paying Facilitators**
+
+- When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
+	- how much they will be paid, 
+	- any steps they need to take to request payment (e.g., signing an invoice, submitting a timesheet, etc.), and 
+	- how many weeks after the workshop they can expect to receive payment. 
+
 
 [**Back to the top**](#top)
 ________________
@@ -131,7 +139,7 @@ ________________
 <a id="community"></a>
 
 ## Community Events
-To receive reimbursement for a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees. To receive reimbursement for venue or catering costs associated with a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).  
 See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
@@ -141,7 +149,7 @@ See more info in the [Community Building tile](http://code.org/educate/regional-
 ________________
 <a id="csfair"></a>
 
-## CS Fair
+## CS Fairs
 
 To receive reimbursement for a CS Fair, send an official invoice and receipts for [reimbursable expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit) to invoices@code.org within 30 days of the event. Code.org will reimburse each partner up to $5,000 for one CS Fair. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 

@@ -1623,6 +1623,10 @@ bn-BD:
   user_header_playlab: প্লে ল্যাব
   user_header_minecraft: মাইনক্র্যাফট
   user_header_flappy: ফ্লাপি
+  applab_tile_start_tutorial: শুরু করুন
+  account_sign_up_child_accept_terms: আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার
+    করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।
+  hoc_overview_start_tutorial: শুরু করুন
   hoc2018_creativity_create: তৈরি করুন
   hoc2018_mc_start: শুরু করুন
   hoc2018_mc_no_internet: ইন্টারনেট নেই?
@@ -1635,3 +1639,6 @@ bn-BD:
   hoc2018_mc_video_title_anybody_can_learn: যে কেউ শিখতে পারে
   hoc2018_mc_homepage_join_us: আমাদের সাথে যোগ দিন
   hoc2018_mc_homepage_try_it: এটা চেষ্টা করুন।
+  hoc2018_dance_party_button: শুরু করুন
+  hoc2018_dance_teacher_resources_tile1_button: পাঠ পরিকল্পনা
+  hoc2018_dance_amazon_about_future_engineer_button: আরও জানুন

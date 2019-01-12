@@ -50,6 +50,10 @@
           [
             "all sharks",
             "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
@@ -88,6 +92,7 @@
       },
       {
         "name": "VAL",
+        "type": "Number",
         "field": true
       }
     ]

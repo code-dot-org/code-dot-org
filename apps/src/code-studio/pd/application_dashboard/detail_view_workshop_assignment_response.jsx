@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import DetailViewResponse from './detail_view_response';
 import WorkshopAssignmentLoader, {SUBJECT_TYPES} from "./workshop_assignment_loader";
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {
@@ -44,11 +43,9 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
     }
 
     return (
-      <DetailViewResponse
-        question={this.props.question}
-        answer={answer}
-        layout="lineItem"
-      />
+      <div>
+        {answer}
+      </div>
     );
   }
 }

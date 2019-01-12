@@ -66,7 +66,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until {@browser.find_element(selection_criteria)}
+  wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
 When /^I go to the newly opened tab$/ do
@@ -108,8 +108,8 @@ end
 When /^I wait for the page to fully load$/ do
   steps <<-STEPS
     When I wait to see "#runButton"
-    And I close the instructions overlay if it exists
     And I wait to see ".header_user"
+    And I close the instructions overlay if it exists
   STEPS
 end
 
@@ -141,6 +141,11 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS
+end
+
+When /^I reset the puzzle$/ do
+  @browser.find_element(:css, '#clear-puzzle-header').click
+  @browser.find_element(:css, '#confirm-button').click
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -423,6 +428,14 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
   @button.click
 end
 
+# Prefer clicking with selenium over jquery, since selenium clicks will fail
+# if the target element is obscured by another element.
+When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.find_element(:css, selector).click
+  end
+end
+
 When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
@@ -533,6 +546,12 @@ Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |sel
   element_has_css(selector, property, expected_value)
 end
 
+# Example use case: checking webkit and moz overrides for css properties
+Then /^element "([^"]*)" has one of css properties "([^"]*)" equal to "([^"]*)"$/ do |selectors, properties, expected_value|
+  properties = properties.split(',')
+  element_has_css_multiple_properties(selectors, properties, expected_value)
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
     element_css_value(selector, property) == expected_value
@@ -636,6 +655,10 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   expect(value).to eq(negation.nil?)
 end
 
+Then /^I use jquery to set the text of "([^"]*)" to "([^"]*)"$/ do |selector, value|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{value}\");")
+end
+
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
@@ -677,6 +700,29 @@ end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
+end
+
+And (/^I select age (\d+) in the age dialog/) do |age|
+  steps %Q{
+    And element ".age-dialog" is visible
+    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I click selector "#uitest-submit-age"
+  }
+end
+
+And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
+  select_options_text = @browser.execute_script("return $('#{selector} option').val()")
+  expect((select_options_text.include? option)).to eq(false)
+end
+
+And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
+  select_options_text = @browser.execute_script("return $('#{selector} option').text()")
+  expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
+end
+
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
 end
 
 def has_class?(selector, class_name)
@@ -833,8 +879,6 @@ And(/^I set the language cookie$/) do
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
@@ -849,8 +893,6 @@ And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
   end
 
   @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"$/) do |name|
@@ -858,10 +900,10 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -872,10 +914,10 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     And I wait for 5 seconds
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
+    Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -885,7 +927,7 @@ Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -907,6 +949,32 @@ end
 
 Given(/^I am enrolled in a plc course$/) do
   enroll_in_plc_course(@users.first[1][:email])
+end
+
+def create_user(**args)
+  name = "Fake User"
+  email, password = generate_user(name)
+  attributes = {
+    name: name,
+    email: email,
+    password: password,
+    user_type: "teacher",
+    age: "21+"
+  }.merge!(args)
+  user = User.new(attributes)
+  user.save ? user : nil
+end
+
+def assign_script_as_student(user_email, script_name)
+  require_rails_env
+  script = Script.find_by_name(script_name)
+  section = Section.create(name: "New Section", user: create_user, script: script)
+  user = User.find_by_email_or_hashed_email(user_email)
+  section.students << user
+end
+
+Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
+  assign_script_as_student(@users.first[1][:email], script_name)
 end
 
 Then(/^I fake completion of the assessment$/) do
@@ -1009,6 +1077,7 @@ end
 
 And /^I create a new section$/ do
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -1021,6 +1090,7 @@ end
 
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -1363,6 +1433,11 @@ Then /^I navigate to the last shared URL$/ do
   wait_for_jquery
 end
 
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
+  wait_for_jquery
+end
+
 Then /^I enter the last shared URL into input "(.*)"$/ do |selector|
   @browser.execute_script("document.querySelector('#{selector}').value = \"#{last_shared_url}\"")
 end
@@ -1504,7 +1579,7 @@ Then /^I should see the new section dialog$/ do
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
-  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
+  steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
 When /^I press the save button to create a new section$/ do

@@ -16,6 +16,7 @@ var hasProjectChanged = false;
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
+var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
@@ -30,7 +31,6 @@ var events = {
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange',
-  continueButtonPressed: 'continueButtonPressed',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -87,6 +87,7 @@ var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
+let thumbnailPngBlob = null;
 
 /**
  * Current state of our sources API data
@@ -127,6 +128,11 @@ function unpackSources(data) {
  * Used by getProjectUrl() to extract the project URL.
  */
 const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+
+/**
+ * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ */
+const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
 var projects = module.exports = {
   /**
@@ -519,13 +525,9 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        const eventName = appOptions.level.skipRunSave ?
-          events.continueButtonPressed :
-          events.appModeChanged;
-
-        $(window).on(eventName, function (event, callback) {
-          this.saveIfSourcesChanged().then(callback);
-        }.bind(this));
+        if (!appOptions.level.skipRunSave) {
+          $(window).on(events.appModeChanged, this.saveIfSourcesChanged.bind(this));
+        }
 
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
@@ -838,6 +840,12 @@ var projects = module.exports = {
       current.projectType = this.getStandaloneApp();
     }
 
+    if (thumbnailPngBlob) {
+      const blob = thumbnailPngBlob;
+      thumbnailPngBlob = null;
+      this.saveThumbnail(blob);
+    }
+
     unpackSources(sourceAndHtml);
 
     if (this.useSourcesApi()) {
@@ -942,6 +950,10 @@ var projects = module.exports = {
         const selectedSong = this.sourceHandler.getSelectedSong();
         callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
+  },
+
+  getSelectedSong() {
+    return currentSources.selectedSong;
   },
 
   /**
@@ -1189,6 +1201,17 @@ var projects = module.exports = {
    */
   load() {
     var deferred = new $.Deferred();
+
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic = appOptions.share && appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         deferred.resolve();
@@ -1217,7 +1240,7 @@ var projects = module.exports = {
               fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
-            }, queryParams('version'), this.useSourcesApi());
+            }, queryParams('version'), sourcesApi);
           }
         });
       } else {
@@ -1235,7 +1258,7 @@ var projects = module.exports = {
             fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
-          }, queryParams('version'), this.useSourcesApi());
+          }, queryParams('version'), sourcesApi);
         }
       });
     } else {
@@ -1267,6 +1290,23 @@ var projects = module.exports = {
     return current && current.thumbnailUrl;
   },
 
+  setThumbnailUrl() {
+    current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
+    thumbnailChanged = true;
+  },
+
+  /**
+   * Sets the thumbnailPngBlob variable. Caveat: This does not save the thumbnail to the server.
+   * Use the saveThumbnail method to do that.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  setThumbnailPngBlob(pngBlob) {
+    if (pngBlob) {
+      thumbnailPngBlob = pngBlob;
+      projects.setThumbnailUrl();
+    }
+  },
+
   /**
    * Uploads a thumbnail image to the thumbnail path in the files API. If
    * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
@@ -1274,6 +1314,9 @@ var projects = module.exports = {
    * @returns {Promise} A promise indicating whether the upload was successful.
    */
   saveThumbnail(pngBlob) {
+    if (!pngBlob) {
+      return Promise.reject('PNG blob required.');
+    }
     if (!current) {
       return Promise.reject('Project not initialized.');
     }
@@ -1282,12 +1325,10 @@ var projects = module.exports = {
     }
 
     return new Promise((resolve, reject) => {
-      const thumbnailPath = '.metadata/thumbnail.png';
-      filesApi.putFile(thumbnailPath, pngBlob, () => {
-        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+      filesApi.putFile(THUMBNAIL_PATH, pngBlob, () => {
+        projects.setThumbnailUrl();
         if (!initialCaptureComplete) {
           initialCaptureComplete = true;
-          thumbnailChanged = true;
         }
         resolve();
       }, error => {
@@ -1312,9 +1353,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
- * @param {boolean} useSourcesApi use sources api when true
+ * @param {boolean} sources api to use, if present.
  */
-function fetchSource(channelData, callback, version, useSourcesApi) {
+function fetchSource(channelData, callback, version, sourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1325,12 +1366,12 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (useSourcesApi && channelData.migratedToS3) {
+  if (sourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
     }
-    sources.fetch(url, function (err, data, jqXHR) {
+    sourcesApi.fetch(url, function (err, data, jqXHR) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {

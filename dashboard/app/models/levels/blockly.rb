@@ -275,7 +275,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
@@ -284,9 +284,10 @@ class Blockly < Level
       # migrate to the new keys
       set_unless_nil(level_options, 'instructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
-      set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
       if should_localize?
+        set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
+
         if script && !script.localize_long_instructions?
           level_options.delete('markdownInstructions')
         else
@@ -409,20 +410,22 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param resolve [Boolean] if true (default), localize property using I18n#t.
-  #   if false, just return computed property key directly.
   # @param extra_identifier [Boolean] we for some reason use the property name
   #   twice in the internationalization key: once pluralized as a category name,
   #   and once again singularized as an addition to the level name itself. This
   #   is unnecessary, so we are gradually removing the extra key. If this is
   #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
   #   instances of this extra key and then this property.
-  def get_localized_property(property_name, resolve: true, extra_identifier: true)
+  def get_localized_property(property_name, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}"
+      key = name
       key += "_#{property_name.singularize}" if extra_identifier
-      return key unless resolve
-      I18n.t(key, default: nil)
+      I18n.t(
+        key,
+        scope: [:data, property_name.pluralize],
+        default: nil,
+        smart: true
+      )
     end
   end
 
@@ -438,16 +441,14 @@ class Blockly < Level
     return unless authored_hints
 
     if should_localize?
-      authored_hints_key = get_localized_property("authored_hints", resolve: false)
-
-      return unless authored_hints_key
+      scope = [:data, :authored_hints, "#{name}_authored_hint"]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         # Skip empty hints, or hints with videos (these aren't translated).
         next if hint['hint_markdown'].nil? || hint['hint_id'].nil? || hint['hint_video'].present?
 
         translated_text = hint['hint_id'].empty? ? nil :
-          I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
+          I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -573,17 +574,36 @@ class Blockly < Level
       next if level_object.blank?
       block_text = level_object[:config]["blockText"]
       next if block_text.blank?
-      level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
-      options_keys = block_text.scan(/\{(.*?)\}/).flatten
-      options = level_object[:config]["args"]
-      next if options.blank?
-      options.each do |option|
-        next if option["options"].blank? && !options_keys.include?(option["name"])
-        option["options"]&.each_with_index do |name, i|
-          option["options"][i][1] = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[0]}")
+      block_text_translation = I18n.t(
+        "text",
+        scope: [:data, :blocks, level_object[:name]],
+        default: nil,
+        smart: true
+      )
+      level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
+      arguments = level_object[:config]["args"]
+      next if arguments.blank?
+      arguments.each do |argument|
+        next if argument["options"].blank?
+        argument["options"]&.each_with_index do |option, i|
+          # Options come in arrays representing key,value pairs, which will
+          # ultimately determine the display of the dropdown.
+          # When only one element is in the array, it represents both the key
+          # and the value.
+          option_value = option.length > 1 ? option[1] : option[0]
+
+          # Get the translation from the value
+          option_translation = I18n.t(
+            option_value,
+            scope: [:data, :blocks, level_object[:name], :options, argument['name']],
+            default: nil,
+            smart: true
+          )
+          # Update the key (the first element) with the new translated value
+          argument["options"][i][0] = option_translation unless option_translation.nil?
         end
       end
-      level_object[:config]["args"] = options
+      level_object[:config]["args"] = arguments
     end
     level_objects_copy
   end

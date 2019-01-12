@@ -1207,5 +1207,7 @@ MESSAGE
     refute_nil @response.cookies['CloudFront-Policy']
     # only used for canned policies
     assert_nil @response.cookies['CloudFront-Expires']
+
+    assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
   end
 end

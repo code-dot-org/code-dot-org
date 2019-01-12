@@ -27,18 +27,10 @@ const styles = {
   image: {
     width: 310,
     height: 220,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
   },
   jumboImage: {
     width: 473,
     height: 220,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -123,7 +115,9 @@ class VerticalImageResourceCard extends Component {
       require('@cdo/static/resource_cards/thirdpartyteacher.png'),
       "third-party-teacher-small":
       require('@cdo/static/resource_cards/thirdpartyteachersmall.png'),
-      "maker": require('@cdo/static/resource_cards/maker.png')
+      "maker": require('@cdo/static/resource_cards/maker.png'),
+      "dance-party": require('@cdo/static/resource_cards/danceparty.png'),
+      "dance-party-2": require('@cdo/static/resource_cards/danceparty2.png')
     };
     const imgSrc = filenameToImgUrl[image];
 

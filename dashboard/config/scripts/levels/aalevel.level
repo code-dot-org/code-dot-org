@@ -44,7 +44,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-10-25 21:12:55 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:19 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:45 +0000\",\"changed\":[\"block_pools\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:57:34 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:58:52 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 17:39:14 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:43:01 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:44:54 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:32 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:47:39 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:56:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:57:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:57:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 20:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-10-25 21:12:55 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:19 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:45 +0000\",\"changed\":[\"block_pools\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:57:34 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:58:52 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 17:39:14 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:43:01 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:44:54 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:32 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:47:39 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:56:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:57:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:57:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 20:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 19:02:41 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 21:40:06 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:18 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:51 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:38:33 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 20:59:53 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 03:30:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 04:52:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,257 +53,67 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="aalab_createSpriteGroup">
-              <title name="VAR">group1</title>
+            <block type="gamelab_createNewSprite">
+              <title name="NAME">bro</title>
+              <title name="COSTUME">"hippo"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <title name="LOCATION">{"x":192,"y":193}</title>
+                </block>
+              </value>
               <next>
-                <block type="aalab_createSpriteGroup">
-                  <title name="VAR">group2</title>
-                  <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">5</title>
+                <block type="aalab_addBehaviorUntilBoolean">
+                  <value name="SPRITE">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">bro</title>
+                    </block>
+                  </value>
+                  <value name="BEHAVIOR">
+                    <block type="gamelab_behavior_get">
+                      <mutation/>
+                      <title name="VAR">growing</title>
+                    </block>
+                  </value>
+                  <value name="CONDITION">
+                    <block type="logic_compare">
+                      <title name="OP">GTE</title>
+                      <value name="A">
+                        <block type="gamelab_getProp">
+                          <title name="PROPERTY">"scale"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_variables_get">
+                              <title name="VAR">bro</title>
+                            </block>
+                          </value>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="gamelab_createNewSprite">
-                          <title name="NAME">bro</title>
-                          <title name="COSTUME">"green monster"</title>
-                          <value name="LOCATION">
-                            <block type="gamelab_randomLocation"/>
-                          </value>
-                          <next>
-                            <block type="aalab_addToSpriteGroup">
-                              <value name="SPRITE">
-                                <block type="sprite_variables_get">
-                                  <title name="VAR">bro</title>
-                                </block>
-                              </value>
-                              <value name="GROUP">
-                                <block type="sprite_variables_get">
-                                  <title name="VAR">group1</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_createNewSprite">
-                                  <title name="NAME">dude</title>
-                                  <title name="COSTUME">"bear"</title>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_randomLocation"/>
-                                  </value>
-                                  <next>
-                                    <block type="aalab_addToSpriteGroup">
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">dude</title>
-                                        </block>
-                                      </value>
-                                      <value name="GROUP">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">group2</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">150</title>
                         </block>
-                      </statement>
-                      <next>
-                        <block type="controls_repeat_ext">
-                          <value name="TIMES">
-                            <block type="math_number">
-                              <title name="NUM">5</title>
-                            </block>
-                          </value>
-                          <statement name="DO">
-                            <block type="gamelab_createNewSprite">
-                              <title name="NAME">bro</title>
-                              <title name="COSTUME">"green monster"</title>
-                              <value name="LOCATION">
-                                <block type="gamelab_randomLocation"/>
-                              </value>
-                              <next>
-                                <block type="aalab_addToSpriteGroup">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">bro</title>
-                                    </block>
-                                  </value>
-                                  <value name="GROUP">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">group2</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_createNewSprite">
-                                      <title name="NAME">dude</title>
-                                      <title name="COSTUME">"bear"</title>
-                                      <value name="LOCATION">
-                                        <block type="gamelab_randomLocation"/>
-                                      </value>
-                                      <next>
-                                        <block type="aalab_addToSpriteGroup">
-                                          <value name="SPRITE">
-                                            <block type="sprite_variables_get">
-                                              <title name="VAR">dude</title>
-                                            </block>
-                                          </value>
-                                          <value name="GROUP">
-                                            <block type="sprite_variables_get">
-                                              <title name="VAR">group1</title>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="aalab_addBehaviorForDuration">
+                      <title name="SECONDS">3</title>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">bro</title>
                         </block>
-                      </next>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <mutation/>
+                          <title name="VAR">spinning right</title>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
               </next>
             </block>
           </next>
-        </block>
-        <block type="gamelab_whileKey">
-          <title name="KEY">"up"</title>
-          <statement name="DO">
-            <block type="aalab_changeGroupPropBy">
-              <title name="PROPERTY">"y"</title>
-              <value name="GROUP">
-                <block type="sprite_variables_get">
-                  <title name="VAR">group1</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">10</title>
-                </block>
-              </value>
-              <next>
-                <block type="aalab_changeGroupPropBy">
-                  <title name="PROPERTY">"y"</title>
-                  <value name="GROUP">
-                    <block type="sprite_variables_get">
-                      <title name="VAR">group2</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_number">
-                      <title name="NUM">-10</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="gamelab_whileKey">
-          <title name="KEY">"down"</title>
-          <statement name="DO">
-            <block type="aalab_changeGroupPropBy">
-              <title name="PROPERTY">"y"</title>
-              <value name="GROUP">
-                <block type="sprite_variables_get">
-                  <title name="VAR">group1</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">-10</title>
-                </block>
-              </value>
-              <next>
-                <block type="aalab_changeGroupPropBy">
-                  <title name="PROPERTY">"y"</title>
-                  <value name="GROUP">
-                    <block type="sprite_variables_get">
-                      <title name="VAR">group2</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_number">
-                      <title name="NUM">10</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="gamelab_whileKey">
-          <title name="KEY">"right"</title>
-          <statement name="DO">
-            <block type="aalab_changeGroupPropBy">
-              <title name="PROPERTY">"x"</title>
-              <value name="GROUP">
-                <block type="sprite_variables_get">
-                  <title name="VAR">group1</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">10</title>
-                </block>
-              </value>
-              <next>
-                <block type="aalab_changeGroupPropBy">
-                  <title name="PROPERTY">"x"</title>
-                  <value name="GROUP">
-                    <block type="sprite_variables_get">
-                      <title name="VAR">group2</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_number">
-                      <title name="NUM">-10</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="gamelab_whileKey">
-          <title name="KEY">"left"</title>
-          <statement name="DO">
-            <block type="aalab_changeGroupPropBy">
-              <title name="PROPERTY">"x"</title>
-              <value name="GROUP">
-                <block type="sprite_variables_get">
-                  <title name="VAR">group1</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">-10</title>
-                </block>
-              </value>
-              <next>
-                <block type="aalab_changeGroupPropBy">
-                  <title name="PROPERTY">"x"</title>
-                  <value name="GROUP">
-                    <block type="sprite_variables_get">
-                      <title name="VAR">group2</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_number">
-                      <title name="NUM">10</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>

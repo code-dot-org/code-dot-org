@@ -85,6 +85,10 @@ An easy to read comparision of the most popular curricula for the AP CS Principl
 <a href="https://k12cs.org", target=_"blank">CS Framework</a><br/>
 The K–12 Computer Science Framework is a high-level guide for states, districts, and organizations implementing computer science education. Rather than an exhaustive list of computer science topics, the framework represents the essential ideas in computer science for all students. The framework is not a set of standards; rather, it provides an organizing structure and guidance for states and school districts to create their own standards. The framework also informs curriculum and professional development.
 
+<a href="https://www.ncwit.org/sites/default/files/resources/microsoft_digitalskills_cs_toolkit_092018.pdf", target=_"blank">Microsoft Digital Skills Toolkit</a><br/>
+A toolkit for middle and high schools to increase
+diversity in computer science education. 
+
 
 ### Agreeing to Terms
 

@@ -1,10 +1,11 @@
+# Brad (2018-11-14) Skip on IE due to exception on Javascript click or drag functions
+@no_ie
 Feature: Flappy puzzles can be solved
 
 Scenario: Solving puzzle 1
   Given I am on "http://studio.code.org/flappy/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I drag block "1" to block "3"
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.gravity = -1, Flappy.onMouseDown(), true;"
@@ -15,7 +16,6 @@ Scenario: Solving puzzle 2
   Given I am on "http://studio.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I drag block "2" to block "6"
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
@@ -27,7 +27,6 @@ Scenario: Failing puzzle 2
   Given I am on "http://studio.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
   Then I wait to see ".uitest-topInstructions-inline-feedback"

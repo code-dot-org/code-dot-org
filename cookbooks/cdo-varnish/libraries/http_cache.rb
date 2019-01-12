@@ -17,6 +17,12 @@ class HttpCache
     'pm'
   ].freeze
 
+  # A list of script levels that should not be cached, even though they are
+  # in a cacheable script, because they are project-backed.
+  UNCACHED_SCRIPT_LEVEL_PATHS = [
+    '/s/dance/stage/1/puzzle/13'
+  ]
+
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
     aquatic
@@ -42,6 +48,10 @@ class HttpCache
   def self.cached_scripts
     CACHED_SCRIPTS_MAP.keys
   end
+
+  ALLOWED_WEB_REQUEST_HEADERS = %w(
+    Authorization
+  )
 
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
@@ -168,12 +178,12 @@ class HttpCache
             headers: WHITELISTED_HEADERS + ['User-Agent'],
             cookies: whitelisted_cookies
           },
-          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and should not be cached in CloudFront.
-          # Use CloudFront Behavior precedence rules to not cache this path, but all paths in CACHED_SCRIPTS_MAP
-          # that don't match this path will be cached.
+          # Some script levels in cacheable scripts are project-backed and
+          # should not be cached in CloudFront. Use CloudFront Behavior
+          # precedence rules to not cache these paths, but all paths in
+          # CACHED_SCRIPTS_MAP that don't match this path will be cached.
           {
-            # TODO(suresh): lookup the last puzzle from the database
-            path: "/s/dance/stage/1/puzzle/13",
+            path: UNCACHED_SCRIPT_LEVEL_PATHS,
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
@@ -184,6 +194,11 @@ class HttpCache
           },
           {
             path: '/api/v1/projects/gallery/public/*',
+            headers: [],
+            cookies: 'none'
+          },
+          {
+            path: '/api/v1/sound-library/*',
             headers: [],
             cookies: 'none'
           },
@@ -205,9 +220,17 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: '/v3/files-public/*',
+            path: %w(
+              /v3/files-public/*
+              /v3/sources-public/*
+            ),
             headers: [],
             cookies: 'none'
+          },
+          {
+            path: '/xhr*',
+            headers: WHITELISTED_HEADERS + ALLOWED_WEB_REQUEST_HEADERS,
+            cookies: whitelisted_cookies
           },
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
@@ -217,6 +240,10 @@ class HttpCache
         }
       }
     }
+  end
+
+  def self.uncached_script_level_path?(script_level_path)
+    UNCACHED_SCRIPT_LEVEL_PATHS.include?(script_level_path)
   end
 
   # Return true if the levels for the given script name can be publicly cached by proxies.

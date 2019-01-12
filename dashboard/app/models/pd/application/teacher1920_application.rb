@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -38,6 +39,14 @@ module Pd::Application
     include Pd::Teacher1920ApplicationConstants
 
     validates_uniqueness_of :user_id
+
+    PRINCIPAL_APPROVAL_STATE = [
+      NOT_REQUIRED = 'Not required',
+      IN_PROGRESS = 'Incomplete - Principal email sent on ',
+      COMPLETE = 'Complete - '
+    ]
+
+    REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
     serialized_attrs %w(
       status_log
@@ -121,15 +130,15 @@ module Pd::Application
 
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
-      return "Complete - #{response.full_answers[:do_you_approve]}" if response
+      return COMPLETE + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.find_by(email_type: 'principal_approval')
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at&.strftime('%b %-d')}"
+        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return 'Not required' if principal_approval_not_required
+      return NOT_REQUIRED if principal_approval_not_required
 
       nil
     end
@@ -315,9 +324,9 @@ module Pd::Application
         [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920]],
-        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain]],
+        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920], :able_to_attend_multiple_unable_to_attend],
+        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain], :travel_to_another_workshop_not_sure],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
@@ -332,47 +341,21 @@ module Pd::Application
       Teacher1920Application.find_by(user: user)
     end
 
-    # @override
-    def self.cohort_csv_header(optional_columns)
-      columns = [
-        'Date Accepted',
-        'Applicant Name',
-        'District Name',
-        'School Name',
-        'Email',
-        'Status',
-        'Assigned Workshop'
-      ]
-      if optional_columns[:registered_workshop]
-        columns.push 'Registered Workshop'
-      end
-
-      CSV.generate do |csv|
-        csv << columns
-      end
+    def date_applied
+      created_at.to_date.iso8601
     end
 
-    # @override
-    def to_cohort_csv_row(optional_columns)
-      columns = [
-        date_accepted,
-        applicant_name,
-        district_name,
-        school_name,
-        user.email,
-        status,
-        workshop_date_and_location
-      ]
-      if optional_columns[:registered_workshop]
-        if workshop.try(:local_summer?)
-          columns.push(registered_workshop? ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
+    def date_accepted
+      accepted_at&.to_date&.iso8601
+    end
 
-      CSV.generate do |csv|
-        csv << columns
+    def assigned_workshop
+      Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
+    def friendly_scholarship_status
+      if scholarship_status
+        SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
       end
     end
 
@@ -382,18 +365,12 @@ module Pd::Application
       if key == 'csd'
         [
           :csp_which_grades,
-          :csp_course_hours_per_week,
-          :csp_course_hours_per_year,
-          :csp_terms_per_year,
           :csp_how_offer,
-          :csp_ap_exam
+          :csp_ap_exam,
         ]
       else
         [
-          :csd_which_grades,
-          :csd_course_hours_per_week,
-          :csd_course_hours_per_year,
-          :csd_terms_per_year
+          :csd_which_grades
         ]
       end
       )
@@ -411,6 +388,110 @@ module Pd::Application
     def self.filtered_labels(course)
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
+    end
+
+    # Filter out extraneous answers based on selected program (course)
+    def self.columns_to_remove(course)
+      if course == 'csd'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+          ],
+          principal: [
+            :share_ap_scores,
+            :replace_which_course_csp,
+            :csp_implementation
+          ]
+        }
+      else
+        {
+          teacher: [
+            :csd_which_grades
+          ],
+          principal: [
+            :replace_which_course_csd,
+            :csd_implementation
+          ]
+        }
+      end
+    end
+
+    def self.csv_filtered_labels(course)
+      labels = {
+        teacher: {},
+        principal: {},
+        nces: {}
+      }
+      labels_to_remove = columns_to_remove(course)
+
+      CSV_COLUMNS.keys.each do |source|
+        CSV_COLUMNS[source].each do |k|
+          unless labels_to_remove[source]&.include? k.to_sym
+            labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
+          end
+        end
+      end
+      labels
+    end
+
+    def self.csv_header(course)
+      labels = csv_filtered_labels(course)
+      CSV.generate do |csv|
+        columns = []
+        labels.keys.each do |source|
+          labels[source].keys.each do |k|
+            columns.push(labels[source][k])
+          end
+        end
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row(course)
+      columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
+      teacher_answers = full_answers
+      principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
+      principal_answers = principal_application&.csv_data
+      school_stats = School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
+      CSV.generate do |csv|
+        row = []
+        CSV_COLUMNS[:teacher].each do |k|
+          if columns_to_exclude[:teacher]&.include? k.to_sym
+            next
+          end
+          row.push(teacher_answers[k] || try(k) || "")
+        end
+        CSV_COLUMNS[:principal].each do |k|
+          if columns_to_exclude[:principal]&.include? k.to_sym
+            next
+          end
+          if principal_answers
+            row.push(principal_answers[k] || principal_application.try(k) || "")
+          else
+            row.push("")
+          end
+        end
+        CSV_COLUMNS[:nces].each do |k|
+          if school_stats
+            if [:title_i_status, :students_total, :urm_percent].include? k
+              row.push(school_stats[k] || school_stats.try(k) || "")
+            else
+              row.push(school_stats.percent_of_students(school_stats[k]) || "")
+            end
+          else
+            row.push("")
+          end
+        end
+        csv << row
+      end
+    end
+
+    # @override
+    # Additional labels to include in the form data hash
+    def self.additional_labels
+      ADDITIONAL_KEYS_IN_ANSWERS
     end
 
     # @override
@@ -434,7 +515,10 @@ module Pd::Application
       # Section 2
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+
         meets_minimum_criteria_scores[:cs_total_course_hours] = responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
+
+        bonus_points_scores[:cs_terms] = responses[:cs_terms] == options[:cs_terms][4] ? 2 : 0
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
         meets_minimum_criteria_scores[:cs_total_course_hours] = (responses[:cs_total_course_hours]&.>= 100) ? YES : NO
@@ -442,8 +526,10 @@ module Pd::Application
         bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
       end
 
-      meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
-      meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
+      if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
+        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+        meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
+      end
 
       bonus_points_scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
 
@@ -461,21 +547,70 @@ module Pd::Application
       meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      bonus_points_scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
+      bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]
-        meets_scholarship_criteria_scores.merge!(
-          {
-            principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
-            principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
-            principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
-            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
-          }
-        )
+        meets_scholarship_criteria_scores[:principal_approval] =
+          responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
 
-        bonus_points_scores[:principal_free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
-        bonus_points_scores[:principal_underrepresented_minority_percent] = (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+        meets_scholarship_criteria_scores[:principal_diversity_recruitment] =
+          responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
+
+        meets_minimum_criteria_scores[:plan_to_teach] =
+          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first(2)
+            YES
+          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(2..3)
+            NO
+          else
+            nil
+          end
+
+        meets_scholarship_criteria_scores[:plan_to_teach] =
+          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first
+            YES
+          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(1..3)
+            NO
+          else
+            nil
+          end
+
+        meets_minimum_criteria_scores[:principal_schedule_confirmed] =
+          if responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(0..1))
+            YES
+          elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
+            NO
+          else
+            nil
+          end
+
+        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
+          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
+            YES
+          elsif responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(1..2))
+            NO
+          else
+            nil
+          end
+
+        bonus_points_scores[:replace_existing] =
+          if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
+            5
+          elsif responses[:principal_wont_replace_existing_course].in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
+            0
+          else
+            nil
+          end
+
+        if course == 'csd'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+          bonus_points_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csd_implementation][1] ? 2 : 0
+        elsif course == 'csp'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
+        end
+
+        bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
+        bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
       end
 
       update(
@@ -485,7 +620,7 @@ module Pd::Application
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
             bonus_points_scores: bonus_points_scores
           }
-        ) {|_, old_value, _| old_value}.to_json
+        ) {|key, old, new| key.in?([:plan_to_teach, :replace_existing]) ? new : old}.to_json
       )
     end
 
@@ -501,19 +636,28 @@ module Pd::Application
       elsif NO.in? scores
         NO
       else
-        'Reviewing incomplete'
+        REVIEWING_INCOMPLETE
       end
     end
 
     def meets_scholarship_criteria
-      scores = (response_scores_hash[:meets_scholarship_criteria_scores] || {}).values
-
-      if scores.uniq == [YES]
-        YES
-      elsif NO.in? scores
-        NO
+      if principal_approval_state == NOT_REQUIRED
+        # If there is no needed principal approval, then criteria is just whether
+        # the one scholarship question is yes
+        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || REVIEWING_INCOMPLETE
       else
-        'Reviewing incomplete'
+        response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+        scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
+
+        scores = scored_questions.map {|q| response_scores[q]}
+
+        if scores.uniq == [YES]
+          YES
+        elsif NO.in? scores
+          NO
+        else
+          REVIEWING_INCOMPLETE
+        end
       end
     end
 
@@ -558,16 +702,30 @@ module Pd::Application
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
       implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
-
+      principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
+          principal_response_first_name: principal_response[:first_name],
+          principal_response_last_name: principal_response[:last_name],
+          principal_response_email: principal_response[:email],
+          principal_school_name: principal_school.try(:name) || principal_response[:school_name],
+          principal_school_type: principal_school.try(:school_type),
+          principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
           principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_implementation: implementation_string,
+          principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
           principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
+          principal_american_indian_or_native_alaskan_percent: format("%0.02f%%", principal_response[:american_indian]),
+          principal_asian_percent: format("%0.02f%%", principal_response[:asian]),
+          principal_black_or_african_american_percent: format("%0.02f%%", principal_response[:black]),
+          principal_hispanic_or_latino_percent: format("%0.02f%%", principal_response[:hispanic]),
+          principal_native_hawaiian_or_pacific_islander_percent: format("%0.02f%%", principal_response[:pacific_islander]),
+          principal_white_percent: format("%0.02f%%", principal_response[:white]),
+          principal_other_percent: format("%0.02f%%", principal_response[:other]),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],

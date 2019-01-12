@@ -12,7 +12,7 @@ et-EE:
   upgrade_ie_link: Lisateave
   en: Arvutiteadus
   computer_science_edweek: Koodi Tund on siin
-  csedweek_dates: '08-14. detsember, 2014'
+  csedweek_dates: 3-9. detsember, 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja
     korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -187,6 +187,7 @@ et-EE:
   studiobar_title_nolink: Avasta Code.org kursuseid
   studiobar_elementary_title: Baaskursused
   studiobar_elementary_body: Meie kolm uut kursust K&#8209;5 jaoks
+  studiobar_dance_title: Tantsuõhtu
   studiobar_hoc_title: KoodiTund
   studiobar_hoc_body: Õpi programmeerima, mängides Angry Birds mängu
   studiobar_flappy_title: Flappy kood
@@ -358,11 +359,12 @@ et-EE:
   minecraft_adventurer: Minecraft Seikleja
   minecraft_tutorials: Minecraft KoodiTund - juhendid
   minecraft_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
+  minecraft_start_tutorial: Alusta õpetusega
   minecraft_agent_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
   minecraft_agent_button: Alusta
-  minecraft_designer_description: Programmeri loomi ja teisi Minecrafti olendeid sinu
-    enda Minecrafti versioonis.
+  minecraft_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
+    omaenda Minecrafti versioonis.
   minecraft_designer_button: Alusta
   minecraft_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   minecraft_adventurer_button: Alusta
@@ -697,7 +699,7 @@ et-EE:
   dashboard_teacher_worksheet: õpetaja tööleht
   dashboard_curriculum_csina: 'Arvutiteadus algebras:'
   dashboard_curriculum_csins: 'Arvutitehnika teaduses:'
-  dashboard_curriculum_csp: 'AP® Arvutiteaduse põhiprintsiibid:'
+  dashboard_curriculum_csp: 'Arvutiteaduse põhiprintsiibid:'
   dashboard_curriculum_ecs: 'Avastades arvutiteadust:'
   dashboard_grade_k: K
   dashboard_grade_other: Muu
@@ -1500,8 +1502,10 @@ et-EE:
   user_header_settings: Minu konto
   user_header_logout: Logi välja
   user_header_signin: Logi sisse
+  user_header_create: 'Loo '
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
+  user_header_dance: Tantsuõhtu
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_my_projects: Vaata minu projekte
@@ -1515,31 +1519,128 @@ et-EE:
   joining_section_instruct_code: 'Liikuge %{code_org_url} ja sisestage oma Üksuse
     kood: %{section_code}.'
   hero_name: 'Minecraft: Kangelase teekond'
+  applab_tile_start_tutorial: Alusta
+  applab_tile_teacher_guide: Vaata juhendit õpetajatele
+  aquatic_name: 'Minecraft: Voyage Aquatic'
+  hoc_overview_dance_title: Tantsuõhtu
+  hoc_overview_start_tutorial: Alusta
+  hoc_overview_view_teacher_guide: Vaata juhendit õpetajatele
+  hoc2018_creativity: loovus
   hoc2018_creativity_create: Loo
+  hoc2018_creativity_hoc_coming: KoodiTund on tulemas...
+  hoc2018_creativity_what_will_you_create: Mida Sina tahakasid luua?
+  hoc2018_creativity_homepage: Lase loovusel lennata ja nii sünnib innovatsioon. Kasuta
+    KoodiTundi ja oma loomingulisust mistahes vormis. Vaata meie videot.
+  hoc2018_creativity_hoc_about: 'Tänavu on KoodiTunni fookuses loovus. '
+  hoc2018_creativity_social_media: 'Tänavu on #KoodiTund teemaks loovus. Mina löön
+    kaasa! Aga Sina?'
+  hoc2018_creativity_social_media_2: 'Tänavu on #Kooditund teemaks loovus. Mida Sina
+    tahaksid luua?'
+  hoc2018_creativity_courses: Jätka Code.org kursustega
+  hoc2018_creativity_courses_link: Jätka <a href="https://studio.code.org/courses">Code.org
+    kursustega</a>
   hoc2018_mc_page_title: Minecraft KoodiTund - juhendid
   hoc2018_mc_details: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses
     6 +
+  hoc2018_mc_aquatic_announcement: Pane end meie tundi kirja, et proovida üle 150
+    UUE KoodiTunni (3.-9. dets) tegevuse. Vaata kindlasti üle meie uus 2018. aasta
+    Minecrafti tegevus Voyage Aquatic! Pane enda täna tundi kirja.
+  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
   hoc2018_mc_aquatic_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
+  hoc2018_mc_hero_title: 'Minecraft: Kangelase teekond'
   hoc2018_mc_hero_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
   hoc2018_mc_designer_title: Minecraft Kujundaja
-  hoc2018_mc_designer_description: Programmeri loomi ja teisi Minecrafti olendeid
-    sinu enda Minecrafti versioonis.
+  hoc2018_mc_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
+    omaenda Minecrafti versioonis.
   hoc2018_mc_adventurer_title: Minecraft Seikleja
   hoc2018_mc_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   hoc2018_mc_start: Alusta
   hoc2018_mc_no_internet: Ei ole internetti?
   hoc2018_mc_download_adventurer: Lae alla Minecraft Seikleja offline versioon.
+  hoc2018_mc_educators: Haridustöötajatele
+  hoc2018_mc_educators_box1_title: Programmeeri Minecrafti abil
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition pakub standarditele
+    vastavat tunnikava ja koolitust, et Minecrafti abil programmeerida.'
+  hoc2018_mc_educators_box1_button: Alusta
+  hoc2018_mc_educators_box2_title: Laadige alla juhend haridusedendajatele
+  hoc2018_mc_educators_box2_desc: Need tööriistad aitavad teil viia läbi KoodiTundi
+    ja tutvustada oma õpilastele infotehnoloogiat.
   hoc2018_mc_educators_box2_button: Laadi alla
+  hoc2018_mc_educators_box3_title: Võta osa tasuta töötoast õpilastele
+  hoc2018_mc_educators_box3_desc: Külasta oma elukoha lähedal asuvat Microsofti kauplust,
+    et saada osa tasuta Microsofti töötoast. Kõikidele tasemetele alates kuuendast
+    eluaastast.
+  hoc2018_mc_educators_box3_button: Leia töötuba
+  hoc2018_mc_educators_box4_title: Leia veel infotehnoloogiaalaseid materjale
+  hoc2018_mc_educators_box4_desc: Ole oma kogukonnas digioskuste ja infotehnoloogiaalaste
+    muutuste loojaks, kasutades Microsofti materjale.
+  hoc2018_mc_educators_box4_button: Avasta materjale
   hoc2018_mc_video_1min: 1 min
   hoc2018_mc_video_2min: 2 min
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_inspire_girl: Inspireeri tüdrukut
   hoc2018_mc_video_title_schools_dont_teach: Mida enamik koole ei õpeta
+  hoc2018_mc_homepage_hoc_coming: KoodiTund on tulemas...
+  hoc2018_mc_homepage_what_create: Mida Sina tahakasid luua?
+  hoc2018_mc_homepage_give_flight: Päästa kujutlusvõime ja innovatsioon valla. Alusta
+    KoodiTunnist ja enese loomingulisusest, ükskõik milline see ka ei oleks.
+  hoc2018_mc_homepage_watch_video: Vaata meie videot
   hoc2018_mc_homepage_join_us: Liitu meiega
   hoc2018_mc_homepage_try_it: Proovi seda
   hoc2018_mc_back: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
   hoc2018_mc_back_journey: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
     läbi Minecrafti koos koodiga.
+  hoc2018_mc_teacher_guide: Vaata juhendit õpetajatele
   hoc2018_mc_go_to_mc_education: Mine Minecraft Education
+  hoc2018_mc_short_description: Kasuta loomingulisust ja probleemi lahendamise oskuseid,
+    et avastada aardeid ja uurida veealuseid maailmu koodi abil.
+  hoc2018_mc_short_description_shorter: Kasuta loomingulisust ja probleemi lahendamise
+    oskuseid, et uurida ja ehitada veealuseid maailmu koodi abil.
+  hoc2018_mc_journey: Retk läbi Minecrafti koodi abil.
+  hoc2018_dance_party_main_heading: Tantsuõhtu
+  hoc2018_dance_party_subheading: Aita Tantsuõhtut tõlkida
+  hoc2018_dance_create_your_own_dance_title: Tee omaenda Tantsuõhtu
+  hoc2018_dance_party_box_title: Tantsuõhtu
+  hoc2018_dance_party_box_description: Programmeeri Tantsuõhtu, et seda oma sõpradega
+    jagada!
+  hoc2018_dance_party_specs: Keel | formaat | Vanus 6-106
+  hoc2018_dance_party_button: Alusta
+  hoc2018_dance_keep_on_dancing_box_title: Tantsi edasi
+  hoc2018_dance_keep_on_dancing_description: Mine põhjalikumate projjektiideedega
+    esimesest tunnist edasi.
+  hoc2018_dance_keep_on_dancing_specs: Keel | formaat | Vanus 13 +
+  hoc2018_dance_keep_on_dancing_button: Mine edasi
+  hoc2018_dance_teacher_resources_title: Materjalid õpetajale
+  hoc2018_dance_teacher_resources_tile1_description: Tunnikavad, tunnistused ja muusika
+    valimine.
+  hoc2018_dance_teacher_resources_tile1_button: Tunnikava
+  hoc2018_dance_teacher_resources_tile2_title: Unplugged Tantsuõhtu
+  hoc2018_dance_teacher_resources_tile2_description: Arvuteid ei olegi vaja! Sinu
+    klass saab õppida programmeerimise põhitõdesid ja luua koos tantsu koreograafia.
+  hoc2018_dance_teacher_resources_tile2_button: Lahutatud tegevus
+  hoc2018_dance_featured_student_creations_title: Õpilaste esile toodud looming
+  hoc2018_dance_videos_section_heading: Ammutage inspiratsiooni
+  hoc2018_dance_video_title_what_is_creativity: Mis on loovus?
+  hoc2018_dance_view_creativity_video_playlist: Mis on loovus? Vaade kõiki osi
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'Koostöös: '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Tuleviku
+    Insener on põhjalik programm lapsepõlvest kärjääriredelini, mille eesmärgiks on
+    innustada, harida ja koolitada lapsi ja noori madala sissetulekuga perekondadest
+    ning ebasoodsast keskkonnast, et nad valiksid infotehnoloogia-alase karjääri.
+    <a href='%{amazon_future_engineer_link}' target='_blank'>Loe lisaks</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Loe lisaks Amazoni
+    Tuleviku Inseneri kohta
+  hoc2018_dance_amazon_about_future_engineer_button: Lisateave
+  hoc2018_dance_amazon_scholarship_programs_button: Taotle nüüd
+  hoc2018_dance_measure: Ühik
+  hoc2018_dance_measure_colon: 'Ühik:'
+  hoc2018_aquatic_video1: 'Minecraft: Voyage Aquatic - sissejuhatus'
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - tsüklid
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - tingimused
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - palju õnne
+  hoc2018_dance_video1: Tantsuõhtu - Sissejuhatus
+  hoc2018_dance_video2: Tantsuõhtu - sündmused
+  hoc2018_dance_video3: Tantsuõhtu - omadused
+  hoc2018_dance_video4: Tantsuõhtu - Palju õnne

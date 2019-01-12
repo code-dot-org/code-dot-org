@@ -403,6 +403,8 @@ sr-SP:
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_field_email: Емаил адреса
   volunteer_engineer_submission_field_email_placeholder: Емаил адреса
+  volunteer_engineer_submission_field_email_preference_privacy: "(Погледајте нашу
+    политику приватности)"
   volunteer_engineer_submission_field_email_preference_yes: Да
   volunteer_engineer_submission_field_email_preference_no: не
   volunteer_engineer_submission_submit: Пошаљи
@@ -925,6 +927,8 @@ sr-SP:
   user_header_signin: Пријави се
   user_header_playlab: Играоница
   user_header_flappy: Флапи
+  applab_tile_start_tutorial: Покрени
+  hoc_overview_start_tutorial: Покрени
   hoc2018_creativity: креативност
   hoc2018_creativity_create: Креирај
   hoc2018_creativity_hoc_coming: Час програмирања долази…
@@ -952,3 +956,6 @@ sr-SP:
   hoc2018_mc_video_title_anybody_can_learn: Свако може да научи
   hoc2018_mc_homepage_join_us: Pridruži nam se
   hoc2018_mc_homepage_try_it: Пробајте
+  hoc2018_dance_party_button: Покрени
+  hoc2018_dance_teacher_resources_tile2_button: Активност ван мреже
+  hoc2018_dance_amazon_about_future_engineer_button: Сазнајте више

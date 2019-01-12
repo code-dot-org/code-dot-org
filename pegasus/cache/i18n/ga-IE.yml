@@ -2172,12 +2172,15 @@ ga-IE:
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google
     Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
+  applab_tile_start_tutorial: Tosaigh
   account_sign_up_email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat
     maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+  hoc_overview_start_tutorial: Tosaigh
   hoc2018_creativity_create: Cruthaigh
   hoc2018_mc_page_title: Cúrsaí Teagaisc Minecraft don Uair Chódála
   hoc2018_mc_details: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid
     | Aois 7+
+  hoc2018_mc_hero_title: 'Minecraft: Scéal Gaisce'
   hoc2018_mc_designer_title: Dearthóir Minecraft
   hoc2018_mc_designer_description: Códáil ainmhithe agus créatúir eile i do leagan
     féin de Minecraft.
@@ -2214,3 +2217,8 @@ ga-IE:
   hoc2018_mc_minecraft_education: Oideachas Minecraft
   hoc2018_mc_continue_learning: Lean ort ag foghlaim le Minecraft.
   hoc2018_mc_go_to_mc_education: Oscail Oideachas Minecraft
+  hoc2018_dance_party_button: Tosaigh
+  hoc2018_dance_teacher_resources_tile1_button: Plean Ceachta
+  hoc2018_dance_teacher_resources_tile2_button: Gníomhaíocht Dhíphlugáilte
+  hoc2018_dance_amazon_about_future_engineer_button: Tuilleadh eolais
+  hoc2018_dance_amazon_scholarship_programs_button: Cuir iarratas isteach

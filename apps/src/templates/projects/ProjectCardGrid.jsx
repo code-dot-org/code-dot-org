@@ -44,7 +44,6 @@ class ProjectCardGrid extends Component {
     selectedGallery: PropTypes.string.isRequired,
     // Controls hiding/showing view more links for App Lab and Game Lab.
     limitedGallery: PropTypes.bool,
-    includeDanceParty: PropTypes.bool
   };
 
   componentWillReceiveProps(nextProps) {
@@ -62,26 +61,24 @@ class ProjectCardGrid extends Component {
   };
 
   render() {
-    const { projectLists, includeDanceParty } = this.props;
+    const { projectLists } = this.props;
     const numProjects = this.state.showAll ? NUM_PROJECTS_ON_PREVIEW : NUM_PROJECTS_IN_APP_VIEW;
 
     return (
       <div style={styles.grid}>
         {(this.state.showAll) &&
           <div>
-            {includeDanceParty &&
-              <ProjectAppTypeArea
-                labKey="dance"
-                labName={i18n.projectTypeDance()}
-                labViewMoreString={i18n.projectTypeDanceViewMore()}
-                projectList={projectLists.dance}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
+            <ProjectAppTypeArea
+              labKey="dance"
+              labName={i18n.projectTypeDance()}
+              labViewMoreString={i18n.projectTypeDanceViewMore()}
+              projectList={projectLists.dance}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
             <ProjectAppTypeArea
               labKey="gamelab"
               labName={i18n.projectTypeGamelab()}
@@ -177,11 +174,11 @@ class ProjectCardGrid extends Component {
 
         {(!this.state.showAll) &&
           <div>
-            {includeDanceParty && this.state.showApp === 'dance' &&
+            {this.state.showApp === 'dance' &&
               <ProjectAppTypeArea
                 labKey="dance"
                 labName={i18n.projectTypeDance()}
-                labViewMoreString={i18n.projectTypeDanceViewMore()}
+                labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.dance}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
