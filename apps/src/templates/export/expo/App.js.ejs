@@ -107,9 +107,10 @@ export default class App extends React.Component {
         {height && <View style={this.webViewContainerStyle()}>
           <WebView
             originWhitelist={['*']}
+            allowFileAccess
             source={{uri: indexUri}}
             style={styles.webView}
-            javaScriptEnabled={true}
+            javaScriptEnabled
             mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   webView: {
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     flex: 1,
   }
 });
