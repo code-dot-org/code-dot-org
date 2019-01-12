@@ -9,7 +9,6 @@ Feature: Minecraft dialog levels
     And "move forward" refers to block "1"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "Character select dialog"
     And I press "close-character-select"
@@ -47,7 +46,6 @@ Feature: Minecraft dialog levels
     And "inner repeat" refers to block "13"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "House select dialog"
     And I press "close-house-select"

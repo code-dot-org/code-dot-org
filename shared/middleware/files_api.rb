@@ -17,6 +17,8 @@ class FilesApi < Sinatra::Base
     2_000_000_000 # 2 GB
   end
 
+  SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
+
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -142,6 +144,15 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # GET /v3/sources-public/<channel-id>/<filename>
+  #
+  # Read the latest version of a source file, and cache the response.
+  #
+  get %r{/v3/sources-public/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    get_file('sources', encrypted_channel_id, filename, cache_duration: SOURCES_PUBLIC_CACHE_DURATION)
+  end
+
+  #
   # GET /<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
@@ -180,12 +191,13 @@ class FilesApi < Sinatra::Base
   #
   # @return [IO] requested file body as an IO stream
   #
-  def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
+  def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
     buckets = get_bucket_impl(endpoint).new
-    set_object_cache_duration buckets.cache_duration_seconds
+    cache_duration ||= buckets.cache_duration_seconds
+    set_object_cache_duration cache_duration
 
     # Append `no-transform` to existing Cache-Control header
     response['Cache-Control'] += ', no-transform'

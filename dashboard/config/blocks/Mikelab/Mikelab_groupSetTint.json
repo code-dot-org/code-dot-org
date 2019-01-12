@@ -1,0 +1,36 @@
+{
+  "category": "Group Actions",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "groupSetTint",
+    "blockText": "change color of {SELECT} {COSTUME} to {COLOR}",
+    "args": [
+      {
+        "name": "SELECT",
+        "options": [
+          [
+            "all",
+            "\"all\""
+          ],
+          [
+            "this",
+            "\"this\""
+          ]
+        ]
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ],
+    "methodCall": true
+  }
+}

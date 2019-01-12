@@ -502,6 +502,43 @@ pt-BR:
       4-5 While Loops 4: "Uau, que demais! \r\n\r\nEu não sei de quantas\npás cheias
         de terra esse buraco precisa.  \r\nVocê pode escrever um programa que\nfique
         usando o bloco \"preencha\" até que o solo fique nivelado?  "
+      AWS applab: |-
+        # Faça isto agora
+
+        * passo um
+        * passo dois
+      AppLab Intro 4 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
+      AppLab Intro 4 - Full Text: |
+        <div style="float:right"><img src="https://images.code.org/9109abf972acc093fd591eb56619aee5-image-1506617570302.52.18 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Mude as palavras na tela
+
+        **Como:** Defina o `"texto"` do rótulo para o que você quiser, como `"Minha aplicação é in-crível!`
+
+        **Me mostre** ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)</details>
+      AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
+      AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 5 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
       Artist Autorun Test: |-
         Agora coloque a função dentro de um laço
         para desenhar esses três quadrados.
@@ -694,6 +731,136 @@ pt-BR:
         A corrida do último desafio não foi
         muito justa! Altere a variável "velocidade_cão" para garantir que você possa coletar mais
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
+      Craft Aquatic - allthethings: Chegue ao Farol do Mar.
+      Dance_Party_01: |-
+        “Vamos fazer uma festa dançante!”
+
+        Arraste o bloco 'criar novo' para a área de trabalho, conectando-o dentro do bloco de 'configuração' para criar seu(sua) primeiro(a) dançarino(a).
+
+        * * Você também pode clicar na lâmpada à esquerda caso queira mais informações ou desafios adicionais.*
+      Dance_Party_01_low: |-
+        “Vamos fazer uma festa dançante!”
+
+        Arraste o bloco 'criar novo' para a área de trabalho, conectando-o dentro do bloco de 'configuração' para criar seu(sua) primeiro(a) dançarino(a).
+
+        * * Você também pode clicar na lâmpada à esquerda caso queira mais informações ou desafios adicionais.*
+      Dance_Party_02: |-
+        Faça esse alce entrar na dança!
+
+        Arraste o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho. Conecte o bloco abaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O(a) dançarino(a) deve iniciar um novo movimento após o quarto compasso.
+
+
+        Os **compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
+      Dance_Party_03: |-
+        *Agora vamos curtir!*
+
+        Adicione um bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após seis compassos.
+      Dance_Party_04: |-
+        *Esta dança está precisando de brilho!*
+
+        Procure um novo bloco em sua caixa de ferramentas que adicione um efeito em segundo plano, atrás do(a) dançarino(a). Veja os efeitos mudando em sincronia com a música!
+      Dance_Party_05: |-
+        Use outro bloco novo para fazer o(a) dançarino(a) mudar seus movimentos a cada dois **compassos**!
+
+        *Ao clicar em '(Próximo)', '(Anterior)', ou '(Aleatório)', o dançarino vai executar um movimento diferente cada vez que o código for executado.
+      Dance_Party_06: |-
+        *Precisamos de mais dançarinos!*
+
+        Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
+      Dance_Party_08: |-
+        Cada dançarino(a) tem um conjunto de _propriedades_ que controlam sua aparência.
+
+        Você pode fazer parecer que o(a) dançarino(a) está em segundo plano diminuindo o seu _tamanho_. É possível deixar os dois dançarinos de apoio do mesmo tamanho?
+      Dance_Party_09: |-
+        Os dançarinos têm uma propriedade de "tonalidade" que permite adicionar uma camada de cor. Tente alterar a tonalidade de um de seus dançarinos.
+        *As tonalidades vão mesclar a cor que você escolher com as cores do(a) dançarino(a).
+      Dance_Party_10: |-
+        Agora sabemos como alterar as propriedades de um(a) dançarino(a). Nós também podemos fazer com que as mesmas propriedades respondam automaticamente à música usando este bloco:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
+      Dance_Party_11.5_test: |-
+        Veja este bloco:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Agora você pode criar um grupo de dançarinos de uma só vez!
+
+        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
+      Dance_Party_11: |-
+        O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
+
+        Você pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!
+      Dance_Party_11_5: |-
+        Veja este bloco:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Agora você pode criar um grupo de dançarinos de uma só vez!
+
+        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
+      Dance_Party_11b: É hora do concurso de dança! O gato dança dab quando você pressiona
+        a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla
+        da seta para a direita.
+      Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
+        seus amigos.
+      Dance_Party_extras_battle: |-
+        # Equipes de dança
+
+        Aqui está uma disputa de dança entre duas equipes. As teclas de seta controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
+
+        * Adicione mais teclas para controlar as danças
+        * Faça com que os dançarinos auxiliares também respondam quando as teclas são pressionadas
+        * Alterne o dançarino a cada 4 compassos, definindo sua visibilidade
+      Dance_Party_extras_every_beat: |-
+        # Semínimas
+
+        A maioria de nossas danças usou compassos inteiros, mas cada compasso é composto de 4 semínimas. Esta dança usa `a cada 0,25 compassos` para fazer o dançarino aplaudir a cada semínima.
+
+        Esta dança também usa um bloco _condicional_ para controlar quando o bloco `a cada 0,25 compassos' pode mudar a dança. Tente mudar os números no bloco condicional para ver como isso muda a dança.
+
+        * Experimente outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
+        * Adicione alguns eventos `após o compasso`.
+        * Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
+      Dance_Party_extras_layout: |-
+        # Vamos entrar em formação!
+
+        Confira esta dança que usa o bloco `layout` para mudar a formação dos dançarinos auxiliares durante a dança. Tente um destes ides para estendê-la:
+
+        * Crie um segundo grupo de dançarinos em um layout diferente
+        * Mude o layout quando uma tecla é pressionada
+        * Altere uma propriedade quando os dançarinos mudam de formação
+      Dance_Party_extras_on_beat: |-
+        # Grave, médio e agudo
+
+        Esta dança usa eventos de "pico" para acionar o código quando diferentes partes da música ficam altas. Tente mexer com músicas diferentes para ver como eles mudam a dança.
+      Dance_Party_extras_speed: |-
+        # Acelerar, retardar
+
+        Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+      Dance_Party_extras_visible: |-
+        # Onde eles foram?
+
+        Esta dança mostra e oculta dois grupos diferentes de dançarinos. Confira e tente adicionar seu próprio toque.
+
+        * Adicionar outro grupo de dançarinos
+        * Mostrar e ocultar dançarinos usando as teclas de seta
+        * Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
       Eval Booleans Free Play: |-
         Atividade livre: experimente criar algo
         você mesmo usando booleanos.
@@ -722,6 +889,11 @@ pt-BR:
         corretos! \r\n \r\nFixe o bloco verde pequeno duas vezes em sua área de trabalho
         para corrigir o caminho e levar o jogador {currentPlayerName} até a Tocha
         de Redstone [redstone_torch]."
+      Function intro Ryan_2019: "A **função** chamada 'construir ponte' está em sua
+        área de trabalho. Todos os códigos de que você precisa para atravessar o rio
+        estão corretos! \r\n \r\nFixe o bloco verde pequeno duas vezes em sua área
+        de trabalho para corrigir o caminho e levar o jogador {currentPlayerName}
+        até a Tocha de Redstone [redstone_torch]."
       HOC 2018 Level_1: "Você precisa de suprimentos para a viagem adiante. Colete
         um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
@@ -752,6 +924,24 @@ pt-BR:
         o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.\n\n"
+      HOC Dance 4_draft: |-
+        Use outro bloco novo para fazer o(a) dançarino(a) mudar seus movimentos a cada dois **compassos**!
+
+        *Ao clicar em '(Próximo)', '(Anterior)', ou '(Aleatório)', o dançarino vai executar um movimento diferente cada vez que o código for executado.
+      HOC Dance 5_draft: |-
+        *Precisamos de mais dançarinos!*
+
+        Crie um(a) dançarino(a) de apoio intitulado 'backup_dancer1' para dançar com o gato.
+      HOC Dance 9_draft: |-
+        O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
+
+        Você pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!
+      HOC Dance Freeplay: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
+      HOC Dance Freeplay_draft: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
+      HOC Dance Predraw: Entre no ritmo! Crie sua própria dança para compartilhar
+        com seus amigos.
       K-1 Bee Loops 2: |-
         Use um laço "repita" para mover e então coletar o néctar e
         produzir mel!
@@ -794,13 +984,23 @@ pt-BR:
         frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a placa
         de pressão [PressurePlate_Up], então pressione \"Executar\" e use as teclas
         de seta para mover o jogador {currentPlayerName} para fora da casa para coletar
-        o **baú** [chest].  \n"
+        o **baú** [chest].  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} está preso dentro da casa, mas
+        o Agent está aqui para ajudar!  \r\n \r\n   \r\nFixe um bloco 'mover para
+        a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a
+        placa de pressão [PressurePlate_Up], então pressione \"Executar\" e use as
+        teclas de seta para mover o jogador {currentPlayerName} para fora da casa
+        para coletar o **baú** [chest].  "
       MC_HOC_2017_02: O jogador precisa entrar no bosque secreto. Ajude o Agent a
         abrir o portão escrevendo um código para levá-lo até a placa de pressão.
       MC_HOC_2017_02_Cole: "{currentPlayerName} entrou em uma aventura! Para ajudar,
         pegue o **mapa** [map_empty] atrás da porta trancada à direita. \r\n \r\nFixe
         o código na área de trabalho para mover o Agent até a placa de pressão [PressurePlate_Up]
         para que o jogador {currentPlayerName} consiga passar. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} entrou em uma aventura! Para
+        ajudar, pegue o **mapa** [map_empty] atrás da porta trancada à direita. \r\n
+        \r\nFixe o código na área de trabalho para mover o Agent até a placa de pressão
+        [PressurePlate_Up] para que o jogador {currentPlayerName} consiga passar. "
       MC_HOC_2017_02_Kiki: "O jogador entrou em uma aventura, mas primeiro ele tem
         que conseguir a tocha que está escondida do outro lado da porta trancada.
         \r\n\r\nPrograme o Agent para mover-se parar frente duas vezes até o caminho
@@ -814,6 +1014,9 @@ pt-BR:
       MC_HOC_2017_03_Cole: "{currentPlayerName} continua na aventura e precisa da
         **bússola** [compass] para se preparar para a viagem. \r\n   \r\nUse o código
         do Agent para abrir o portão. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na aventura e precisa
+        da **bússola** [compass] para se preparar para a viagem. \r\n   \r\nUse o
+        código do Agent para abrir o portão. "
       MC_HOC_2017_03_Kiki: "A aventura do jogador vai começar atrás da porta fechada,
         no Bosque Secreto! \r\n\r\n\r\nAjude o Agent a abrir a porta escrevendo um
         código para levá-lo até a placa de pressão."
@@ -826,8 +1029,14 @@ pt-BR:
       MC_HOC_2017_04POINT5_RYAN: "Você conseguiu chegar até o outro lado! \r\n\r\nAgora,
         leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar
         o **machado** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Você conseguiu chegar até o outro lado! \r\n\r\nAgora,
+        leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar
+        o **machado** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "O Agent pode mover-se pela água! \r\n \r\nUse um ciclo
         'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar
+        até o **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_04_Cole_2019: "O Agent pode mover-se pela água! \r\n \r\nUse um
+        ciclo 'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar
         até o **balde** [bucket_empty] atrás da porta. "
       MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou a este belo Oásis!
         Para passar deste nível, o jogador precisa chegar até o quadrado laranja na
@@ -840,6 +1049,9 @@ pt-BR:
       MC_HOC_2017_05_Cole: "Ah não, a ponte está interditada! \r\n\r\nUse o código
         do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName}
         consiga pegar a **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ah não, a ponte está interditada! \r\n\r\nUse o código
+        do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName}
+        consiga pegar a **pá** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Ah não, a ponte está interditada! \r\n\r\nUse o código
         do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName}
         consiga pegar a **pá**."
@@ -850,11 +1062,17 @@ pt-BR:
       MC_HOC_2017_06_Cole: "Outro rio, mas este é bem mais largo! \r\n \r\nCorrija
         esse código para ajudar o Agent a construir uma ponte para que {currentPlayerName}
         consiga chegar ate a **picareta** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Outro rio, mas este é bem mais largo! \r\n \r\nCorrija
+        esse código para ajudar o Agent a construir uma ponte para que {currentPlayerName}
+        consiga chegar ate a **picareta** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Outro rio, mas este é bem mais largo! \r\n\r\nCorrija
         este código para ajudar o Agent a construir uma ponte sobre este rio."
       MC_HOC_2017_06_Kiki: "Outro rio, mas este é bem mais largo! \r\n\r\nCorrija
         este código para ajudar o Agent a construir uma ponte sobre a água."
       MC_HOC_2017_07_Cole: "Tem gelo no caminho! \r\n \r\nA função 'abrir caminho'
+        pode ajudá-lo a destruir o gelo e levar {currentPlayerName} até o Carrinho
+        de Minas [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Tem gelo no caminho! \r\n \r\nA função 'abrir caminho'
         pode ajudá-lo a destruir o gelo e levar {currentPlayerName} até o Carrinho
         de Minas [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "O ciclos não são o único modo de repetir códigos! \r\n\r\nAqui,
@@ -892,6 +1110,10 @@ pt-BR:
         área de trabalho? \r\n \r\nUse essas funções com outro código da caixa de
         ferramentas para liberar o caminho até o Carrinho de Minas e, em seguida,
         colete **Pederneira** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Você consegue ver a diferença entre as duas funções
+        na área de trabalho? \r\n \r\nUse essas funções com outro código da caixa
+        de ferramentas para liberar o caminho até o Carrinho de Minas e, em seguida,
+        colete **Pederneira** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Tente criar funções desde o início que torne mais fácil
         para o Agent terminar este carrinho de minas e levar o jogador para a quadrado
         laranja.
@@ -909,12 +1131,17 @@ pt-BR:
       MC_HOC_2017_Ali: 'Olhe as funções abaixo. Como pode você usá-las para evitar
         o Ghasts e ajudar {currentPlayerName} a chegar em segurança até o **Livro
         Encantado** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Olhe as funções abaixo. Como pode você usá-las para evitar
+        o Ghasts e ajudar {currentPlayerName} a chegar em segurança até o **Livro
+        Encantado** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Jogo Livre:** Agora é com você! Você consegue se superar
         e coletar todos os diamantes neste nível? "
       MC_HOC_2017_FP10x10_RE: "**Jogo Livre:** Agora é com você! Você consegue se
         superar e coletar todos os diamantes neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo Livre:** Agora é com você! Use o código do Agent
         para ajudá-lo a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do
+        Agent para ajudá-lo a explorar este mundo."
       MC_HOC_2017_Ryan_03: "Você sabia que pode colocar mais de um código em um ciclo?
         \r\n\r\nUse um ciclo 'repetir' para ajudar o Agent a construir uma ponte sobre
         o rio colocando os blocos na água."
@@ -966,6 +1193,8 @@ pt-BR:
         à ovelha.
       Overworld Move to Sheep_2018: Adicione um segundo comando "andar à frente" para
         chegar à ovelha.
+      Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para
+        chegar à ovelha.
       PS fr prediction q1: 'O que *você* acha que vai acontecer? '
       Play Lab Rocket 3: |-
         Excelente! Agora, você consegue atualizar essa função para
@@ -975,6 +1204,10 @@ pt-BR:
         cheias de terra esse buraco precisa.  \r\nVocê pode escrever um programa que\nfique
         usando o bloco \"preencha\" até que o solo fique nivelado?  "
       Trent Test Level: 'Mais questões!  '
+      U2L16 Free response assessment 1: O que significa "computacionalmente difícil"?
+      U2L17 Assessment 1: Descreva o que significa para um problema ser "computacionalmente
+        difícil."
+      U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
       U4L02 - Objects - Template1: "# Modelo"
@@ -1396,6 +1629,10 @@ pt-BR:
       courseB_Scrat_ramp3a_2018: Pegue um <xml><block type="maze_moveNorth"/></xml>
         da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar
         o código, e então clique em "▶ Executar".
+      courseB_Scrat_ramp3b_2018: |-
+        Há um bloco extra no final desse código!
+
+        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseB_Scrat_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar
         aos outros blocos para terminar este código?
       courseB_Scrat_ramp5a_2018: Tente este sozinho!
@@ -1403,8 +1640,15 @@ pt-BR:
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseB_iceage_loops3: |-
+        Você consegue chegar na noz usando apenas um bloco <xml><block type="maze_moveWest"/></xml>?
+        Tente usar um laço!
       courseB_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseB_iceage_loops5: Você consegue adicionar mais um laço para chegar até
         a noz?
@@ -1413,6 +1657,14 @@ pt-BR:
       courseB_iceage_loops8: 'Você consegue corrigir este código? '
       courseB_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar
         o Scrat a chegar lá?
+      courseB_maze_seq3: '*"Conserte o código para me levar até o porco!"*'
+      courseB_maze_seq3_2018: '*"Conserte o código para me levar até a noz!"*'
+      courseB_maze_seq9: "**Desafio**: Dê a volta na TNT para levar o pássaro até
+        o porco."
+      courseB_maze_seq9_2018: "**Desafio**: Mova-se ao redor do gelo quebrado para
+        levar Scrat até a noz."
+      courseB_maze_seqCold: "**Desafio**: Analise este nível adicionando blocos para
+        levar o pássaro até o porco!"
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -1423,38 +1675,56 @@ pt-BR:
         Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
       courseC_collector_prog9: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_prog9_2019: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA: Ajude Laurel a coletar todo o tesouro.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
+      courseC_harvester_loops3_2019: Colete todas as abóboras.
       courseC_harvester_loops5: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops_forVid: Colete todo os milhos e as abóboras.
       courseC_maze_programming8: '*" Mantenha a calma e ajude-me a encontrar o porco
         mal."*'
       courseC_maze_programming8_2018: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
+      courseC_maze_programming8_2019: '*" Mantenha a calma e ajude-me a encontrar
+        o porco mal."*'
       courseC_maze_programming8_predict1: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
       courseC_maze_programming8_predict1_2018: '*" Mantenha a calma e ajude-me a encontrar
+        o porco mal."*'
+      courseC_maze_programming8_predict1_2019: '*" Mantenha a calma e ajude-me a encontrar
         o porco mal."*'
       courseC_maze_programming_challenge1: 'O pássaro precisa de sua ajuda! O porco
         está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018: 'O pássaro precisa de sua ajuda! O
         porco está escondido, e o objetivo é encontrá-lo. '
+      courseC_maze_programming_challenge1_2019: 'O pássaro precisa de sua ajuda! O
+        porco está escondido, e o objetivo é encontrá-lo. '
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você
         pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor
         embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma vez*.
       courseD_bee_conditionals3_2018: Você só pode coletar nectar das flores, mas
+        você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
+        flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma
+        vez*.
+      courseD_bee_conditionals3_2019: Você só pode coletar nectar das flores, mas
         você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
         flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma
         vez*.
@@ -1464,36 +1734,63 @@ pt-BR:
         na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza
         mel na colmeia. \r\n\r\nUse um laço aninhado. "
+      courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza
+        mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bounce_events1: Vá até a bandeira! Anexe um bloco ao bloco "quando seta
         para esquerda" e clique em "Executar" para mover o jogador até a bandeira.
+      courseD_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
+      courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
+      courseD_iceage_loops6_2019: Você consegue adicionar um laço para chegar até
+        a noz?
       courseD_iceage_loops7: 'Scrat realmente quer aquela noz! '
+      courseD_iceage_loops7_2019: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8: 'Você consegue corrigir este código? '
+      courseD_iceage_loops8_2019: 'Você consegue corrigir este código? '
       courseD_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar
         o Scrat a chegar lá?
+      courseD_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
+        ajudar o Scrat a chegar lá?
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na
         quantidade de códigos que você precisa."
       courseD_maze_nestedLoops4_2018: "Leve-me até o girassol usando o menor número
         de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na
         quantidade de códigos que você precisa."
+      courseD_maze_nestedLoops4_2019: "Leve-me até o girassol usando o menor número
+        de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na
+        quantidade de códigos que você precisa."
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
+      courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_predict2_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until6: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until6_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_ramp5: Evite o gelo com rachadura!
       courseD_scrat_ramp5_2018: Evite o gelo com rachadura!
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions2_2018: "As funções são blocos de código que realizam uma
@@ -1516,6 +1813,9 @@ pt-BR:
         Resolva este desafio com o menor número de blocos
         possível.
       courseF_bee_for_challenge2_2018: |-
+        Resolva este desafio com o menor número de blocos
+        possível.
+      courseF_bee_for_challenge2_2019: |-
         Resolva este desafio com o menor número de blocos
         possível.
       coursea_maze_ramp1_2018: Para levar o pássaro até o porco, encaixe o <xml><block
@@ -1669,6 +1969,7 @@ pt-BR:
         graus entre cada quadrado?
       grade2_CaringForNewPet_11: '*" Mantenha a calma e ajude-me a encontrar o porco
         mal."*'
+      grade2_CaringForNewPet_3D: '*"Siga este caminho para me levar até o porco!"*'
       grade2_MakeDogTag_8: |-
         Agora vamos conectar um monte de "V"
         em um laço.
@@ -1690,6 +1991,7 @@ pt-BR:
       grade2_collector_9: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
+      grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
       grade2_puppy_loops4: |-
@@ -1902,6 +2204,10 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade4_review_artist1: |
+        Olá, eu sou um artista. Você pode escrever códigos para me fazer desenhar praticamente qualquer coisa. Use alguns blocos para me fazer desenhar sobre as retas cinzas na imagem. (Cada reta tem 100 pixels de comprimento)
+
+        <br>
       grade4_review_artist2: "Esta casa precisa de um telhado! Desenhe um triângulo.
         \r\n\r\nDica:\ntodos os três lados tem o mesmo tamanho.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: |-
@@ -1915,6 +2221,17 @@ pt-BR:
         Que abelha trabalhadora!
 
         Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      grade5_artist_binary1: "Binário é uma forma de representar informações usando
+        apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
+        número 0) e \"ligado\" (representada pelo número 1).  \n\nFoi fornecida uma
+        grade de \"pixels\" pela qual você pode andar e criar designs virando em certos
+        quadrados. \n\n**Você consegue fazer o artista desenhar \"01010101\" em binário
+        na primeira fileira?**"
+      grade5_artist_binary10: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n<br/>\n"
       grade5_artist_for_loops1: |-
         Use um bloco "repita" para desenhar este triângulo
         que tem 50 pixels de largura.
@@ -1937,7 +2254,19 @@ pt-BR:
         variável\n\"comprimento\" em todos os lugares corretos. \r\n\r\nVocê percebeu
         que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa
         o valor correto em todos os lugares?"
+      grade5_artist_variables_triangles1: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2018: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_bee_for_loops2: "Adicione o código necessário para garantir que a abelha
+        colete todo o néctar. \n\nOlhe quanto código você precisa para esse desafio!
+        (Vamos aprender uma maneira mais simples no próximo desafio.)"
       grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
+      grade5_bee_for_loops7: "O último número em seu laço para é chamado de **\"incremento\"**.
+        A cada execução do laço, a variável contador é alterada de acordo com o incremento.
+        \n\nTente coletar essas flores usando um incremento de 2."
       grade5_playlab_variables13: |-
         Use o bloco "quando o personagem tocar"
         para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
@@ -1974,5 +2303,7 @@ pt-BR:
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de
         200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados
+        de 200 pixels.
+      ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado com lados
         de 200 pixels.
       test_sarah: oi

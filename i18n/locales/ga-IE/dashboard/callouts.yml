@@ -232,11 +232,15 @@ ga:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla a chruthú!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Insíonn an t-ordú beag seo don ríomhaire an píosa MÓR cóid sa spás oibre leis an ainm céanna a rith.
+      Function intro Ryan_2019_callout:
+        Function_intro_Ryan_1: Insíonn an t-ordú beag seo don ríomhaire an píosa MÓR cóid sa spás oibre leis an ainm céanna a rith.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Seinn fuaim nuair a tharlaíonn an teagmhas seo.
@@ -251,6 +255,8 @@ ga:
         InspirationalArtwork_1: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Nuair a bheidh tú réidh, cliceáil "Rith" le triail a bhaint as.
       MC HOC 2016 New Walk_callout:
@@ -261,17 +267,25 @@ ga:
         MC_HOC_2017_02_Cole_1: Anois tá cara ag an imreoir! Is féidir leat cód a scríobh don Ghníomhaire a chuideoidh leat do bhealach a dhéanamh trí na leibhéil.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Is lúb "athdhéan" é seo! Cuir isteach sa spás oibre é agus cuir cód isteach inti le rith arís is arís eile.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Is lúb "athdhéan" é seo! Cuir isteach sa spás oibre é agus cuir cód isteach inti le rith arís is arís eile.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Tá an Gníomhaire in ann a bheith ar foluain os cionn uisce, ach níl an t-imreoir in ann!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Tá an Gníomhaire in ann a bheith ar foluain os cionn uisce, ach níl an t-imreoir in ann!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Cuir an bloc seo sa spás oibre agus cuir cód isteach ann le rith arís is arís eile!
       MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Ní féidir leat fáil réidh leis na blocanna seo, ach is féidir iad a chur in eagar!
+      MC_HOC_2017_06_Cole_2019_callout:
         MC_HOC_2017_06_Cole_1: Ní féidir leat fáil réidh leis na blocanna seo, ach is féidir iad a chur in eagar!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn laibhe, ach níl an t-imreoir in ann!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn laibhe, ach níl an t-imreoir in ann!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn laibhe, ach níl Steve agus Alex in ann!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn laibhe, ach níl Steve agus Alex in ann!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur leis an gclár
@@ -311,9 +325,13 @@ ga:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc sa chlár cheana
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc sa chlár cheana
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc sa chlár cheana
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Tosóidh an cód seo tógáil do thí. An féidir leat é a chur i gcrích?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Tosóidh an cód seo tógáil do thí. An féidir leat é a chur i gcrích?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Tosóidh an cód seo tógáil do thí. An féidir leat é a chur i gcrích?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
@@ -321,9 +339,14 @@ ga:
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
         craft_drag_block_callout: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
+        craft_drag_block_callout: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é
       Overworld Place Wall_callout:
         craft_inside_repeat: Cuir blocanna anseo chun orduithe a dhéanamh arís is arís eile
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Cuir blocanna anseo chun orduithe a dhéanamh arís is arís eile
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Cuir blocanna anseo chun orduithe a dhéanamh arís is arís eile
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Cliceáil anseo chun an greille a thaispeáint.
@@ -347,6 +370,8 @@ ga:
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_2: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
@@ -384,9 +409,13 @@ ga:
         craft_callout_moveforward: Lorgóidh an cód seo laibhe. An féidir leat ordú a chur leis chun bogadh ar aghaidh?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Lorgóidh an cód seo laibhe. An féidir leat ordú a chur leis chun bogadh ar aghaidh?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Lorgóidh an cód seo laibhe. An féidir leat ordú a chur leis chun bogadh ar aghaidh?
       Underground Iron_callout:
         craft_what_is_iron: Tochail an t-iarann seo!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Tochail an t-iarann seo!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Tochail an t-iarann seo!
       WebLab PS test - 1-12_callout:
         version_history_button: Féach ar stair na leaganacha
@@ -533,29 +562,43 @@ ga:
         courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events8_2018_callout:
         courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
+      courseC_PlayLab_events8_2019_callout:
+        courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun aisteoirí a aistriú timpeall an spáis oibre.
       courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun aisteoirí a aistriú timpeall an spáis oibre.
+      courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun aisteoirí a aistriú timpeall an spáis oibre.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir a chur i lár an scáileáin.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir a chur i lár an scáileáin.
+      courseC_artist_loopsPrePre1a_2019_callout:
+        courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir a chur i lár an scáileáin.
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo.
       courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo.
+      courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca uirlisí má theastaíonn siad uait!
       courseC_collector_prog7_2018_callout:
         courseC_collector_prog7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca uirlisí má theastaíonn siad uait!
+      courseC_collector_prog7_2019_callout:
+        courseC_collector_prog7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca uirlisí má theastaíonn siad uait!
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín go bhfuil ceithre phuimcín ann le baint.
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín go bhfuil ceithre phuimcín ann le baint.
+      courseC_harvester_loops1_2019_callout:
+        courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín go bhfuil ceithre phuimcín ann le baint.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Ní féidir leat blocanna liatha a scriosadh!
       courseC_maze_debugging5_2018_callout:
+        courseC_maze_debugging5_1: Tá na blocanna seo faoi ghlas agus ní féidir iad a scriosadh!
+      courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Tá na blocanna seo faoi ghlas agus ní féidir iad a scriosadh!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo.
@@ -563,9 +606,13 @@ ga:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
@@ -573,9 +620,14 @@ ga:
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir leat fáil réidh leo.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir leat fáil réidh leo.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
+      courseC_maze_programming4_2019_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
@@ -583,9 +635,14 @@ ga:
       courseC_maze_programming7_2018_callout:
         courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
         courseC_maze_programming7_2: Tá na blocanna seo déanta de chloch agus ní féidir leat fáil réidh leo.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+        courseC_maze_programming7_2: Tá na blocanna seo déanta de chloch agus ní féidir leat fáil réidh leo.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo.
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
@@ -595,6 +652,8 @@ ga:
         courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
       courseD_artist_nestedLoops1a_2018_callout:
         courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Is féidir leat an uimhir seo a athrú.
         courseD_artist_ramp11_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
@@ -603,12 +662,16 @@ ga:
         4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun leid FÍSE a fháil!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
         4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun na leideanna úrnua FÍSE a fheiceáil!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Úsáid an lúb seo chun an bloc "téigh ar aghaidh" a athdhéanamh.
@@ -622,13 +685,19 @@ ga:
         courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach a aistriú ar gcúl.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
@@ -636,9 +705,14 @@ ga:
       courseD_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
+        stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
+      courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
@@ -647,6 +721,8 @@ ga:
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_2018_callout:
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
+      courseD_playLab_condFP_2019_callout:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
@@ -688,9 +764,13 @@ ga:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions2_2018_callout:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí.
       courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí.
+      courseE_artist_functions8a_2019_callout:
         courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí.
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
@@ -701,10 +781,16 @@ ga:
       courseE_artist_functions_challenge1_2018_callout:
         courseE_artist_functions_challenge1_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
         courseE_artist_functions_challenge1_callout2: Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge1_callout2: Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
         courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.
         courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!
       courseE_artist_ramp11_callout:
@@ -728,11 +814,17 @@ ga:
         courseE_farmer_functions1_2: Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat.
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
+      courseE_farmer_functions13_2019_callout:
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
       courseE_farmer_functions1a_2018_callout:
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
+      courseE_farmer_functions1a_2019_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
       courseE_farmer_functions2a_callout:
         courseE_farmer_functions2a_2: B'fhéidir nach mar an gcéanna an cód seo agus an cód a scríobh tú, ach déanfaidh sé cúis!
@@ -741,6 +833,8 @@ ga:
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
       courseE_farmer_functions2b_2018_callout:
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
+      courseE_farmer_functions2b_2019_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár.
@@ -784,6 +878,8 @@ ga:
         courseF_artist_for1_1: Tá an bosca uirlisí sa mód "catagóirí" chun tuilleadh spáis a thabhairt don chód. Gheobhaidh tú na lúba "do gach" anseo.
       courseF_artist_for1_2018_callout:
         courseF_artist_for1_1: Tá an bosca uirlisí sa mód "catagóirí" chun tuilleadh spáis a thabhairt don chód. Gheobhaidh tú na lúba "do gach" anseo.
+      courseF_artist_for1_2019_callout:
+        courseF_artist_for1_1: Tá an bosca uirlisí sa mód "catagóirí" chun tuilleadh spáis a thabhairt don chód. Gheobhaidh tú na lúba "do gach" anseo.
       courseF_artist_fwp1_callout:
         courseF_artist_fwp1_1: Cliceáil an cnaipe "eagar" chun an cód laistigh den fheidhm a athrú.
       courseF_artist_fwp1_2018_callout:
@@ -808,13 +904,19 @@ ga:
         courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
       courseF_artist_variables3_2018_callout:
         courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
+      courseF_artist_variables3_2019_callout:
+        courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6_2018_callout:
         courseF_artist_variables6_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
+      courseF_artist_variables6_2019_callout:
+        courseF_artist_variables6_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6a_callout:
         courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6a_2018_callout:
+        courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
+      courseF_artist_variables6a_2019_callout:
         courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables_3_callout:
         courseF_artist_variables_3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
@@ -836,9 +938,13 @@ ga:
         courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
       courseF_bee_for4_2018_callout:
         courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
+      courseF_bee_for4_2019_callout:
+        courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
       courseF_bee_for9_callout:
         courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
       courseF_bee_for9_2018_callout:
+        courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
+      courseF_bee_for9_2019_callout:
         courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Glaonn an bloc seo feidhm. Cliceáil an cnaipe "eagar" le féachaint céard atá laistigh di!
@@ -877,6 +983,8 @@ ga:
       courseF_bee_fwp_challenge2_2018_callout:
         courseF_bee_fwp_challenge2_callout1: Déanann an fheidhm seo jab maith le harbhar, ach cad faoi ghlasraí eile?
       courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Aimseoidh tú do chuid athróg anseo!
+      courseF_bee_variables_1_2019_callout:
         courseF_bee_functions_1_2018_1: Aimseoidh tú do chuid athróg anseo!
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
@@ -1087,6 +1195,8 @@ ga:
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles1_2018_callout:
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
+      grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles2_callout:
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.

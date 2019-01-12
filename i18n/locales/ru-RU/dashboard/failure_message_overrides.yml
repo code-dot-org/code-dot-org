@@ -34,6 +34,7 @@ ru:
       MC HOC 2016 New Walk_failure_message_override: Чтобы открыть дверь, нажмите на кнопку "пробел" или дотроньтесь до поля игры перед ней. Войдите внутрь, чтобы продолжить.
       MC HOC 2016 SCORE LEVEL_failure_message_override: Если у вас есть проблема с касание 5 Големов, то попробуйте изменить счёт до 2 баллов за касание.
       MC HOC 2016 Village Test_failure_message_override: Вам нужно сделать Железного Голема, преследующий и атакующий зомби, чтобы выиграть.
+      Valentine_playlab_01_failure_message_override: Почти! Попробуй снова.
       WhileAdventure_failure_message_override: Поздравляю! Ты собрал X монет!
       courseC19_playLab_EOC3_failure_message_override: Вы должны добавить двух или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.
       courseE_playLab_scaffold3_failure_message_override: Вы должны добавить двух или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.

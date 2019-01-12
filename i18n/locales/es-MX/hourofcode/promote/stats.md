@@ -33,7 +33,7 @@ Esperamos que despierte inquietud en nuestros estudiantes para seguir aprendiend
 
 #### ¿Por qué es importante?
 
-La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. Pero 60 por ciento de las escuelas en los Estados Unidos no ensenan ciencias de computacion. Es tiempo para nosotros de avanzar al siglo XXI. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br /> <br />
+La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. But 65 percent of schools in the U.S. don't teach computer science. Es tiempo para nosotros de avanzar al siglo XXI. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br /> <br />
 
 #### Citas que puedes utilizar en tus materiales
 

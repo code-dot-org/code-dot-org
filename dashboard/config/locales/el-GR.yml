@@ -20,6 +20,7 @@ el:
       messages:
         blank: απαιτείται
         blank_plural: απαιτούμενο
+        invalid: δεν είναι έγκυρο
         invalid_plural: μη έγκυρο
     attributes:
       user:
@@ -37,6 +38,7 @@ el:
         age: Ηλικία
         gender: Φύλο
         edit_header: Στοιχεία Λογαριασμού
+        finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
         error:
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
@@ -87,6 +89,7 @@ el:
   prize: βραβείο
   more_info: Περισσότερες πληροφορίες
   auth:
+    continue_with: Συνέχεια μέσω %{provider}
     sign_in_with: Εγγραφή μέσω  %{provider}
     signed_in: Συνδέθηκες!
     signed_out: Αποσυνδεθήκατε από το <a href="%{url}">Code.org</a>.
@@ -112,6 +115,7 @@ el:
     unable_to_connect_provider: Δεν μπορέσαμε να συνδέσουμε τον λογαριασμό σας στο
       Code.org με τον %{provider} σας. Παρακαλώ δοκιμάστε ξανά.
   signup_form:
+    email_signup: Εγγραφείτε με το email σας
     student_count: "%{count} μαθητές έχουν ήδη εγγραφεί."
     teacher_count: "%{count} καθηγητές έχουν ήδη εγγραφεί."
     overview: Δημιουργήστε έναν λογαριασμό για να παρακολουθείτε την πρόοδό σας ή
@@ -144,6 +148,7 @@ el:
     age: Ηλικία
     user_type: Είστε ένα μαθητής ή δάσκαλος;
     submit: Εγγραφή
+    go_to_account: Προς τον Λογαριασμό μου
     teacher: Είσαι δάσκαλος;
     valid_username: Διαθέσιμο!
     invalid_username: Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες
@@ -154,6 +159,8 @@ el:
     mismatch_password: Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν
     agree_tos_privacy: Συμφωνώ με <a href='http://code.org/tos'>τους Όρους Χρήσης</a>
       και <a href='http://code.org/privacy'> την Πολιτική Απορρήτου</a>.
+    under_13_consent: Εάν είμαι κάτω των 13 ετών, μπορώ να επιβεβαιώσω ότι έχω την
+      άδεια του γονέα ή του κηδεμόνα μου για τη χρήση των υπηρεσιών της Code.org.
     student_terms: Συμφωνώ με τους <a href='http://code.org/tos'>όρους χρήσης</a>
       του Code.org. Εάν είμαι κάτω των 13 ετών, με την υποβολή της παρούσας φόρμας
       επιβεβαιώνω ότι διαθέτω άδεια του γονέα ή κηδεμόνα μου για να χρησιμοποιήσω
@@ -167,11 +174,13 @@ el:
       ιδιωτικότητας</a>.
     additional_information: Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
       η εγγραφή σας.
+    user_type_button: Ενημέρωση τύπου λογαριασμού
     user_type_label: Τύπος λογαριασμού
     user_type_teacher: Καθηγητής
     user_type_student: φοιτητής/μαθητής
     field_is_required: απαιτείται
     accept_terms: Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό
+    error: Παρουσιάστηκε ένα σφάλμα.
     email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
     email_preference_yes: Ναι
     email_preference_no: Όχι
@@ -305,6 +314,7 @@ el:
       playlab: Εργαστήριο Παιχνιδιού
       minecraft: Minecraft
       flappy: Πουλάκι
+      dance: Πάρτι Χορού
     popup:
       progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου
@@ -552,6 +562,8 @@ el:
         να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.
       audience: Ηλικίες 13+
       cta: Μάθε πώς
+    dance:
+      title: Πάρτι Χορού
     hoc:
       title: Κλασικός λαβύρινθος
       body: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν
@@ -603,6 +615,8 @@ el:
       title: Minecraft
     hero:
       title: Minecraft
+      body: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα!
+        Ταξίδι στο Minecraft με κώδικα.
     unplugged:
       audience: Ηλικίες 6+
       body: Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε
@@ -823,6 +837,7 @@ el:
           και το %{link_start_tos}Terms του Service%{link_end}
   flex_category:
     required: Επισκόπηση
+  view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
   pd:
     form_labels:
       email: Ηλεκτρονικό ταχυδρομείο

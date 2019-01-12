@@ -69,6 +69,17 @@ ro:
             '"height"': înălțime
             '"rotation"': rotație
             '"tint"': tentă
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
+          OP:
+            '">"': ">"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -102,7 +113,7 @@ ro:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -112,6 +123,16 @@ ro:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"grid"': rețea
             '"row"': rând
@@ -128,10 +149,18 @@ ro:
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
-            '"disco"': Discotecă
-            '"rainbow"': Curcubeu
+            '"color_cycle"': Curcubeu
             '"diamonds"': Diamante
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Aleatoriu
+            '"rainbow"': Curcubeu
+            '"disco"': Discotecă
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': Aleatoriu
+            '"color_cycle"': Curcubeu
+            '"diamonds"': Diamante
+            '"rainbow"': Curcubeu
+            '"disco"': Discotecă
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -140,10 +169,23 @@ ro:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: toate
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
+          EFFECT: {}
+      Dancelab_setForegroundEffectExtended:
+        options:
           EFFECT:
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatoriu
+            '"rand"': Aleatoriu
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -169,6 +211,11 @@ ro:
             '"width"': lăţime
             '"height"': înălțime
             '"rotation"': rotație
+            '"tint"': tentă
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: toate
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -202,14 +249,15 @@ ro:
         options:
           KEY:
             '"up"': sus
-            '"down"': jos
             '"left"': stânga
+            '"down"': jos
             '"right"': dreapta
             '"space"': spaţiu
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -467,6 +515,69 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': toate
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': toate
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": stânga
+            "{x: 300, y: 200}": dreapta
+            "{x: 200, y: 200}": centru
+            "{x: 100, y: 100}": stânga sus
+            "{x: 300, y: 100}": dreapta sus
+            "{x: 100, y: 300}": stânga jos
+            "{x: 300, y: 300}": dreapta jos
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': toate
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': toate
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': toate
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': toate
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': toate
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': toate
       Mikelab_randomColor:
         text: culoare aleatorie
       Mikelab_setBG:
@@ -486,6 +597,17 @@ ro:
           CORNER:
             '"right"': dreapta
             '"left"': stânga
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": stânga
+            "{x: 300, y: 200}": dreapta
+            "{x: 200, y: 200}": centru
+            "{x: 100, y: 100}": stânga sus
+            "{x: 300, y: 100}": dreapta sus
+            "{x: 100, y: 300}": stânga jos
+            "{x: 300, y: 300}": dreapta jos
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -547,6 +669,25 @@ ro:
             '"direction"': direcţie de mişcare
             '"rotation"': rotire sau direcţie
             '"tint"': tentă
+      binary_move:
+        options:
+          DIR:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

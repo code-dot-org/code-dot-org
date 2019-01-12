@@ -1,13 +1,13 @@
 ---
-title: <%= hoc_s(:title_previous_posters).inspect %>
+title: <%= hoc_s(:title_past_posters).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Past Hour of Code Posters
+# Tidlegare plakatar til Kodetimen
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here](<%= resolve_url('/promote/resources#posters') %>).
+### Finn våre plakatar frå tidlegare år, skriv dei ut og heng dei i klasserommet! Ser du etter nyare plakatar? [Klikk her](<%= resolve_url('/promote/resources#posters') %>).
 
 * * *
 

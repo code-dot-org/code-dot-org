@@ -63,7 +63,7 @@ he:
     submit: הוסף רמז
   appname: Code.org
   stage: שלב
-  stage_number: שלב %{number}
+  stage_number: שיעור %{number}
   puzzle: חידה
   trophies: גביעי ניצחון
   courses: מסלולים
@@ -403,7 +403,6 @@ he:
       example: דוגמא לפתרון
       example_with_number: דוגמה לפתרון %{solution_number}
       submitted_on: הוגש ב-
-      last_updated: 'עודכן לאחרונה:'
       unsubmit: בטל הגשה
       worked_with: עובד יחד עם
       update_lock_settings: עדכן את הגדרות הנעילה כאן.
@@ -642,9 +641,9 @@ he:
   slow_loading: זה לוקח זמן רב מהרגיל...
   try_reloading: נסה טעינה מחדש של הדף
   next_stage: סיימת! המשך לשלב הבא
-  download_pdf: שיעור פתוח
+  download_pdf: פתח מערך שיעור
   lesson_plan: מערך שיעור
-  view_lesson_plan: הצג תוכנית השיעור
+  view_lesson_plan: הצג מערך השיעור
   pdf_download: הורדת PDF
   download_coming_soon: פעילות להורדה בקרוב.
   video_coming_soon: וידאו בקרוב!
@@ -681,6 +680,8 @@ he:
         ובסוף שתף אותה עם חבריך.
       audience: גילאי 13+
       cta: למד כיצד
+    dance:
+      title: מסיבת ריקודים
     hoc:
       title: מבוך קלאסי
       body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.

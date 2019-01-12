@@ -72,6 +72,10 @@ cs:
           než začne kreslit!
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok.
           Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:
@@ -221,9 +225,306 @@ cs:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
           bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Potřebuješ mít alespoň dva tanečníky.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
+          ji zavolat dvakrát, abyste vyřešili tuto hádanku.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační
+          body pro otočení doprava nebo doleva.
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+
+          *Tato úroveň končí po 12 taktech.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -237,7 +538,22 @@ cs:
           mohl provést kód.
         MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
           pomocí kláves se šipkami.
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Přetáhněte jeden blok „pohyb vpřed“ z panelu nástrojů
+          do pracovního prostoru a přichyťte ho k bloku „při spuštění“.
+        MC_HOC_2017_01_RETRY_b: Nezapomeňte kliknout na tlačítko „Spustit“, aby agent
+          mohl provést kód.
+        MC_HOC_2017_01_RETRY_c: Jakmile agent provede celý kód, můžete hráčem pohybovat
+          pomocí kláves se šipkami.
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
+          nášlapnou desku. Otevře tak hráči dveře.
+        MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_02_Cole_c: Jakmile agent otevře dveře, nasměrujte hráče k mapě
+          pomocí kláves se šipkami.
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Posuňte agenta vpřed o dvě políčka a postavte ho na
           nášlapnou desku. Otevře tak hráči dveře.
         MC_HOC_2017_02_Cole_b: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
@@ -258,10 +574,19 @@ cs:
           nasměrovat ke kompasu pomocí kláves se šipkami.
         MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
           „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Když dostanete agenta na nášlapnou desku, můžete hráče
+          nasměrovat ke kompasu pomocí kláves se šipkami.
+        MC_HOC_2017_03_Cole_b: Připadá vám kód příliš dlouhý? Zkuste použít cyklus
+          „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit.
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Přechodem přes tyto dvě nášlapné desky otevřete
           hráči cestu. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
+        MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
+          aby uvolnil Alex nebo Stevovi cestu k sekeře.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: Pomocí bloku „otočit vpravo“ změníte směr agenta.
         MC_HOC_2017_04POINT5_RYAN_a: Agent se musí dostat jen na první nášlapnou desku,
           aby uvolnil Alex nebo Stevovi cestu k sekeře.
@@ -273,7 +598,19 @@ cs:
           nepřijdete na to, kde je chyba."
         MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
           hráči dveře.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent se musí sedmkrát „posunout vpřed“. Jak k tomu
+          lze využít cyklus „opakovat“?
+        MC_HOC_2017_04_Cole_c: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_04_Cole_b: Jakmile se agent dostane na nášlapnou desku, otevře
+          hráči dveře.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
+          Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
+          této hádanky.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Věděli jste, že do cyklu můžete vložit více částí kódu?
           Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
           této hádanky.
@@ -283,9 +620,17 @@ cs:
           této hádanky.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Zkuste do cyklu „opakovat“ vložit více pokynů!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
+          funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
+          malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
+        MC_HOC_2017_07_Cole_b: Zkuste zkombinovat bloky funkcí s ostatními bloky z
+          panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_a: K vyřešení této hádanky musíte přijít na to, co dělá
           funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí
           malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.
@@ -305,6 +650,8 @@ cs:
         MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
       MC_HOC_2017_10_RETRY_authored_hint:
         MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_a: Pomocí funkcí tuto hádanku vyřešíte snadněji!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -316,7 +663,15 @@ cs:
           i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
           nepřijdete na to, kde je chyba."
         MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Stiskněte tlačítko „Spustit“. \nKód můžete spustit,
+          i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud
+          nepřijdete na to, kde je chyba."
+        MC_HOC_2017_08_RY_b: Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
+          Alex nebo Steve projít za kraj mapy.
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
       New Minecraft Hero Project_authored_hint:
@@ -562,6 +917,8 @@ cs:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_loops_challenge2_2019_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
@@ -578,7 +935,12 @@ cs:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_bee_conditionals_challenge2_authored_hint:
@@ -593,6 +955,17 @@ cs:
           </statement>
           </block></xml>
       courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2019_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
 

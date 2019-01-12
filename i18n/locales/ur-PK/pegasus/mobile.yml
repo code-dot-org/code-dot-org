@@ -118,10 +118,10 @@
   homepage_hero_text_bosh: |-
     &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں۔ &rdquo;
     کرس بوش
-  homepage_hero_text_student1: |2
+  homepage_hero_text_student1: |-
     &ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابل ذکر ہے کے یہ بہت ہی مزیدار ہے.&rdquo;
      لونا, ساتویں جماعت
-  homepage_hero_text_student2: |2
+  homepage_hero_text_student2: |-
     &ldquo;میں نے اپنے بچوں کو سیکھنے کے لئے کبھی بھی اتنا پرجوش نہیں دیکھا۔&rdquo;
      مایکل، استاد
   homepage_hero_text_student3: |-
@@ -248,6 +248,7 @@
   volunteer_engineer_submission_field_description: "تفصیل"
   volunteer_engineer_submission_field_email: "ای میل ایڈریس"
   volunteer_engineer_submission_field_email_placeholder: "ای میل ایڈریس"
+  volunteer_engineer_submission_field_email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
   volunteer_engineer_submission_field_email_preference_yes: 'جی'
   volunteer_engineer_submission_field_email_preference_no: 'نہيں'
   volunteer_engineer_submission_submit: "جمع کرائیں"
@@ -299,7 +300,7 @@
   dashboard_action_delete_yes: 'جی'
   dashboard_action_delete_no: 'نہيں'
   dashboard_navigation_home_page: "ٹیچر ہوم پیج"
-  dashboard_students_name: "نام"
+  dashboard_students_name: 'نام'
   dashboard_grade_other: "دیگر"
   dashboard_login_none: "Email"
   dashboard_stage: "اسٹیج"
@@ -344,9 +345,23 @@
   processing_beyond_gradelevel: "ہائی اسکول"
   kidsruby_beyond_longdescription: 'گیمز بنانے اور Ruby سے اپنا ہوم ورک ہیک کرنے کا مزہ لیں! اپنے والدین اور ٹیچرس کو بتایں کے آپ Ruby پروگرامنگ سیکھ رہے ہیں... بالکل مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]'
   flappy_shortcode: "پھڑپھڑایں"
+  header_my_dashboard: "ڈیش بورڈ"
   header_courses: "کورسز"
+  header_professional_learning: "پیشہ ورانہ تعلیم"
   header_educate_hoc: "آور-آف-کوڈ"
+  user_header_view_my_projects: "تمام منصوبوں کو دیکھیں"
+  view_all_sections: "تمام سیکشن دیکھیں"
+  applab_tile_start_tutorial: "شروع کریں"
+  hoc_overview_start_tutorial: "شروع کریں"
   hoc2018_creativity_create: "بنائیں"
+  hoc2018_creativity_what_will_you_create: "آپ کیا بنائیں گے؟"
   hoc2018_mc_start: "شروع کریں"
+  hoc2018_mc_educators_box2_button: "ڈاؤن لوڈ، اتارنا"
   hoc2018_mc_video_title_inspire_girl: "ایک لڑکی کی حوصلہ افزائی"
+  hoc2018_mc_homepage_what_create: "آپ کیا بنائیں گے؟"
   hoc2018_mc_homepage_join_us: "ہمارے ساتھ شامل ہوں"
+  hoc2018_mc_minecraft_education: "Minecraft تعلیم کے لئے جانا"
+  hoc2018_mc_continue_learning: "Minecraft کے ساتھ تعلیم جاری رکھیں ۔"
+  hoc2018_mc_go_to_mc_education: "Minecraft تعلیم کے لئے جانا"
+  hoc2018_dance_party_button: "شروع کریں"
+  hoc2018_dance_amazon_about_future_engineer_button: "مزید سیکھے"

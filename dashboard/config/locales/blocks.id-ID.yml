@@ -30,10 +30,10 @@ id:
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -41,10 +41,10 @@ id:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -70,10 +70,10 @@ id:
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -81,10 +81,10 @@ id:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            MOVES.ClapHigh: Tepuk tangan di atas
-            MOVES.Clown: Badut
-            MOVES.Dab: Oleskan
             '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
             MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
@@ -106,21 +106,21 @@ id:
             '"height"': tinggi
             '"rotation"': Perputaran
             '"tint"': Mewarnai
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Tepuk tangan di atas
-            '1': Badut
-            '2': Oleskan
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Tidak ada
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.Rest: Tidak ada
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -166,6 +166,16 @@ id:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"grid"': Kisi
             '"row"': baris
@@ -177,9 +187,33 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Acak
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
           SPEED:
             '1': normal
             '2': fast
@@ -190,7 +224,11 @@ id:
         options:
           EFFECT:
             '"none"': Tidak ada
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Acak
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+            '"rand"': Acak
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -223,10 +261,35 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"tint"': Mewarnai
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -254,10 +317,12 @@ id:
         options:
           KEY:
             '"up"': atas
-            '"down"': turun
             '"left"': kiri
+            '"down"': turun
             '"right"': kanan
             '"space"': luar angkasa
+            '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -436,6 +501,72 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': semua
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': semua
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': semua
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.Rest: Tidak ada
       Mikelab_randomColor:
         text: warna acak
       Mikelab_setBG:
@@ -455,6 +586,13 @@ id:
           CORNER:
             '"right"': kanan
             '"left"': kiri
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -463,7 +601,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -472,7 +612,9 @@ id:
             '"left"': panah kekiri
             '"right"': panah kekanan
             '"w"': B
+            '"a"': A
             '"s"': S
+            '"d"': S
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -506,6 +648,21 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+      binary_move:
+        options:
+          DIR:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
       craft_ifPath:
         options:
           DIR:

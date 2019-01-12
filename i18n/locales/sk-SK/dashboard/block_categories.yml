@@ -2,10 +2,9 @@ sk:
   data:
     block_categories:
       Actions: Akcie
-      Loops: Slučky
+      Loops: Cykly
       Functions: Funkcie
       Color: Farba
-      Brushes: Štetky
       Math: Matematické
       Logic: Logické
       Variables: Premenné
@@ -27,15 +26,17 @@ sk:
       numbers: čisla
       Numbers: Čísla
       Default: Predvolené
-      World: Svet
+      World: Prostredie
       Behaviors: Správanie
       Advanced: Pokročilé
       Start: Spustiť
+      Locations: Miesta
       Music: Hudba
+      Dancing: Tancovanie
+      Dancers: Tanečníci
       Groups: Skupiny
-      Sprite: Objekt
-      Brush: Štetka
-      Make Sprite: Vytvoriť objekt
+      Sprite: Postavy
+      Make Sprite: Vytvoriť postavu
       Movement: Pohyb
       Functional: Funkcie
       Predefined: Preddefinované

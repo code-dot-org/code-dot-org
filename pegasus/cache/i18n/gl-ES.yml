@@ -417,6 +417,8 @@ gl-ES:
   volunteer_engineer_submission_field_email_desc: O teu enderezo de e-mail nunca será
     compartido, pero enviarémosche solicitudes dos profesores.
   volunteer_engineer_submission_field_email_placeholder: Enderezo de email
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nosa política
+    de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: Si
   volunteer_engineer_submission_field_email_preference_no: Non
   volunteer_engineer_submission_final_paragraph: Estarás nunha lista nun mapa para
@@ -1524,6 +1526,7 @@ gl-ES:
   header_teacher_community: Comunidade de profesorado
   header_report_bug: Comunicar un erro
   user_header_label: Ola, %{username}
+  user_header_team: Equipo
   user_header_settings: A miña conta
   user_header_logout: Pechar sesión
   user_header_signin: Iniciar Sesión
@@ -1532,8 +1535,16 @@ gl-ES:
   user_header_flappy: Flappy bird
   user_header_view_my_projects: Ver os meus proxectos
   view_all_sections: Ver todos os grupos
+  applab_tile_start_tutorial: Comezar
+  account_sign_up_child_accept_terms: Confirmo que teño autorización de meus pais
+    ou titores legais para empregrar os servizos de Code.org.
+  hoc_overview_start_tutorial: Comezar
   hoc2018_creativity_create: Crear
   hoc2018_mc_start: Comezar
   hoc2018_mc_video_title_inspire_girl: Anima a unha nena
   hoc2018_mc_homepage_join_us: Participa
   hoc2018_mc_homepage_try_it: Próbao
+  hoc2018_dance_party_button: Comezar
+  hoc2018_dance_teacher_resources_tile1_button: Planificación da lección
+  hoc2018_dance_teacher_resources_tile2_button: Actividade off-line
+  hoc2018_dance_amazon_about_future_engineer_button: Aprender máis

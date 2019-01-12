@@ -78,7 +78,7 @@ If you meet **all** of the eligibility requirements, you will qualify for a subs
 
 If a teacher has a smaller class size and does not qualify for or need a full 15 board kit (which supports 30 students), they may purchase a <a href="https://www.adafruit.com/product/3795", target=_"blank">Code.org Circuit Playground Individual Kit</a>. The Individual Kit is designed for a single student or share-pair and costs $29.95.
 
-**In January 2019,** teachers will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website. In the meantime, qualified teachers should make sure they're on track in the 2018-19 school year to complete the first semester of CS Discoveries (Units 1-3) with their students.
+**By the end of January 2019,** teachers will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website. In the meantime, qualified teachers should make sure they're on track in the 2018-19 school year to complete the first semester of CS Discoveries (Units 1-3) with their students.
 
 ### For teachers independently using the CS Discoveries curriculum
 

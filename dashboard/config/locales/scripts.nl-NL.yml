@@ -11,7 +11,7 @@ nl:
       name:
         course1:
           title: Cursus 1
-          description: Cursus 1 is ontwikkeld om voor vroege lezers het mogelijk te
+          description: Cursus 1 is ontwikkeld om het voor vroege lezers mogelijk te
             maken om computerprogramma's te maken die ze helpen met het omgaan met
             anderen, met het ontwikkelen van probleemoplossende vaardigheden en vol
             te houden in moeilijke taken. Aan het eind van de cursus maakt de student
@@ -1647,6 +1647,8 @@ nl:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Uur Code
+          description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit!
+            Gebruik code om door Minecraft te reizen.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1900,7 +1902,110 @@ nl:
           stages:
             Artist:
               name: Kunstenaar
+        dance:
+          stages:
+            Dance Party:
+              name: Dansfeest
+          title: Dansfeest
+          description_short: Met Katy Perry, Madonna, J. Calvin, Sia, Keith Urban,
+            Ciara en nog 25 anderen!
+          description: Programmeer je eigen dansfeest om te delen met je vrienden!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstenaar
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquatisch
+          title: 'Minecraft: Aquatische reis'
+          description_short: Minecraft is terug met een gloednieuwe activiteit voor
+            het Codeuur!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        dance-extras:
+          title: Blijf dansen
+          description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            The Artist:
+              name: De Artiest
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            Nested Loops:
+              name: Genestelde lussen
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: niets
+        dance-extras-gallery:
+          title: Blijf dansen
+          description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Een Basis Bouwen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            Binary Bracelets:
+              name: Binaire armbanden

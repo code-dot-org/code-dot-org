@@ -186,11 +186,11 @@ ga:
     subject: 'Téigh isteach i mo sheomra ranga (ar Code.org)'
     body: |
       Cliceáil an nasc thíos chun clárú le cúrsaí ar an ríomheolaíocht ar Code.org (liomsa mar "mhúinteoir"):
-      
+
       %{link}
-      
+
       Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Eolas logála isteach do Code.org'

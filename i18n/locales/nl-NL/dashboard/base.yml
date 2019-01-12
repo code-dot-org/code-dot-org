@@ -188,11 +188,11 @@ nl:
     subject: 'Doe mee met mijn klas (op Code.org)'
     body: |
       Klik op de link hieronder om je aan te melden voor informatica-opdrachten op Code.org (met mij als je "leraar"):
-      
+
       %{link}
-      
+
       De opdrachten zijn leuk, visueel boeiend, en leggen de basisbeginselen van de informatie uit in een eenvoudige, begeleide, speelse ervaring. Leer programmeren van Bill Gates, Mark Zuckerberg, Angry Bird en Planten tegen de Zombies :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Login informatie voor Code.org'
@@ -306,6 +306,7 @@ nl:
       playlab: 'Speel Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dansfeest'
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
@@ -519,6 +520,8 @@ nl:
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
+    dance:
+      title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -560,6 +563,7 @@ nl:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -782,6 +786,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
       email: 'Email'

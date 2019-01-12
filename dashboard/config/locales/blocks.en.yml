@@ -30,21 +30,22 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           MOVE:
-            MOVES.ClapHigh: Clap High
-            MOVES.Clown: Clown
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Drop
-            MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
-            MOVES.Roll: Roll
-            MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thiller
             '"next"': "(Next)"
             '"prev"': "(Previous)"
             '"rand"': "(Random)"
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -53,20 +54,20 @@ en:
         text: "{SPRITE} do {MOVE} {DIR} forever"
         options:
           MOVE:
-            MOVES.ClapHigh: Clap High
-            MOVES.Clown: Clown
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double Jam
-            MOVES.Drop: Drop
-            MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
-            MOVES.Roll: Roll
-            MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thriller
             '"next"': "(Next)"
             '"prev"': "(Previous)"
             '"rand"': "(Random)"
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -96,21 +97,32 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           MOVE:
+            '"rand"': "(Random)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Clown
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Double Jam
+            MOVES.XFever: Disco
+            MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
-            MOVES.Roll: Roll
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
+            MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thriller
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Random)"
+            MOVES.Thriller: Zombie
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -119,20 +131,30 @@ en:
         text: "{SPRITE} do {MOVE} {DIR} once"
         options:
           MOVE:
+            '"rand"': "(Random)"
+            MOVES.XBend: Bend
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap High
-            MOVES.Clown: Clown
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Double Jam
+            MOVES.XFever: Disco
+            MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Kick: Kick
-            MOVES.Roll: Roll
+            MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Head + Hips
+            MOVES.XHop: Hop
+            MOVES.XHighKick: Kick
+            MOVES.XKnee: Knee
+            MOVES.XKneel: Kneel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Reach
+            MOVES.XSlide: Slide
+            MOVES.Kick: Star
+            MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thriller
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Random)"
+            MOVES.Thriller: Zombie
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -176,29 +198,41 @@ en:
             '"y"': vertical position
             '"tint"': tint
       Dancelab_getTime:
-        text: "{UNIT} elapsed"
+        text: current time in {UNIT}
         options:
           UNIT:
-            '"measures"': Measures
-            '"seconds"': Seconds
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_ifDanceIs:
         text: |-
           if {SPRITE} is doing {DANCE}
            {DO1} {DO2}
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '9': Roll
-            '10': This or That
-            '11': Thriller
-            '8': None
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+      Dancelab_ifTime:
+        text: |-
+          if {UNIT} is {OP} {N}
+           {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
         options:
@@ -228,11 +262,16 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           FORMAT:
+            '"border"': border
+            '"inner"': inside square
             '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
+            '"x"': criss-cross
+            '"plus"': plus
             '"random"': random
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -267,7 +306,7 @@ en:
           make {N} new {COSTUME}
            in a {LAYOUT}
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -277,6 +316,16 @@ en:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           COSTUME:
             '"ALIEN"': Aliens
             '"BEAR"': Bears
@@ -290,10 +339,14 @@ en:
             '"SHARK"': Sharks
             '"UNICORN"': Unicorns
           LAYOUT:
+            '"border"': border
+            '"inner"': inside square
             '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
+            '"x"': criss-cross
+            '"plus"': plus
             '"random"': random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
@@ -310,17 +363,101 @@ en:
       Dancelab_setBackground:
         text: set background color {COLOR}
       Dancelab_setBackgroundEffect:
-        text: set background effect {EFFECT}
+        text: |-
+          set background effect
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': None
-            '"disco"': Squares
-            '"rainbow"': Colors
+            ? "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+            : "(Random)"
+            '"circles"': Circles
+            '"color_cycle"': Colors
             '"diamonds"': Diamonds
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": "(Random)"
-      Dancelab_setDanceSpeed:
-        text: change {SPRITE} dance speed to {SPEED}
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"stars"': Stars
+          PALETTE:
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          set background effect
+          {EFFECT} {PALETTE}
         options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"circles"': Circles
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"stars"': Stars
+          PALETTE:
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
+      Dancelab_setDanceSpeed:
+        text: set {SPRITE} dance speed to {SPEED}
+        options:
+          SPEED:
+            '4': very fast
+            '2': fast
+            '1': normal
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        text: set {GROUP} dance speed to {SPEED}
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           SPEED:
             '4': very fast
             '2': fast
@@ -332,10 +469,40 @@ en:
         options:
           EFFECT:
             '"none"': None
-            '"strobe"': Strobe
+            ? "['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]"
+            : "(Random)"
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts_red"': Hearts
+            '"music_notes"': Music Notes
+            '"pineapples"': Pineapples
+            '"pizzas"': Pizzas
+            '"smiling_poop"': Poop
             '"rain"': Rain
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Smiles
+            '"spotlight"': Spotlight
+            '"color_lights"': Stage Lights
             '"raining_tacos"': Tacos
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": "(Random)"
+      Dancelab_setForegroundEffectExtended:
+        text: set foreground effect {EFFECT}
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts_red"': Hearts
+            '"music_notes"': Music Notes
+            '"pineapples"': Pineapples
+            '"pizzas"': Pizzas
+            '"smiling_poop"': Poop
+            '"rain"': Rain
+            '"floating_rainbows"': Rainbows
+            '"smile_face"': Smiles
+            '"spotlight"': Spotlight
+            '"color_lights"': Stage Lights
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
@@ -362,6 +529,7 @@ en:
             '"PINEAPPLE"': all pineapples
             '"ROBOT"': all robots
             '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -380,17 +548,48 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
+            '"tint"': tint
       Dancelab_setTint:
         text: set {SPRITE} tint to {VAL}
+      Dancelab_setTintEach:
+        text: set {THIS} tint to {VAL}
+        options:
+          THIS:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+      Dancelab_setTintInline:
+        text: set {SPRITE} tint to {VAL}
+      Dancelab_setVisible:
+        text: set {SPRITE} visible to {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_setVisibleEach:
         text: set {THIS} visibility to {VISIBILITY}
         options:
           THIS:
             sprites: all
-            '"alien"': Aliens
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizzas
-            '"unicorn"': Unicorns
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+            '"UNICORN"': all unicorns
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -418,7 +617,7 @@ en:
             '"height"': height
             '"rotation"': rotation
             '"x"': horizontal position
-            '"y"': vertial position
+            '"y"': vertical position
             '"direction"': movement direction
             '"tint"': tint
           RANGE:
@@ -430,14 +629,47 @@ en:
         options:
           KEY:
             '"up"': up
-            '"down"': down
             '"left"': left
+            '"down"': down
             '"right"': right
             '"space"': space
+            '"enter"': enter
             '"a"': a
-            '"w"': w
-            '"s"': s
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: when {RANGE} peak
         options:
@@ -458,6 +690,8 @@ en:
         text: add {SPRITE} to group {THIS}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_addBehaviorUntil:
+        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       gamelab_beginBehavior:
         text: begin {BEHAVIOR}
       gamelab_bounceOff:
@@ -718,6 +952,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_spriteSay:
+        text: sprite {SPRITE} say {TEXT}
       gamelab_spritesWhere:
         text: sprites where {PROPERTY} is {VALUE}
         options:
@@ -866,8 +1102,6 @@ en:
         text: remove {SPRITE}
       Mikelab_displace:
         text: "{TARGET} blocks {SPRITE} from moving"
-      Mikelab_edgesDisplace:
-        text: edges block {SPRITE} from moving
       Mikelab_eval:
         text: eval {CODE}
       Mikelab_getAnim:
@@ -881,8 +1115,128 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      Mikelab_groupChangeAnim:
+        text: change {SELECT} {COSTUME} into {COSTUME2}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupChangePropBy:
+        text: change {PROPERTY} of {SELECT} {COSTUME} by {VAL}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupCreateNewSprite:
+        text: make a new {COSTUME} at {LOCATION}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_groupDestroy:
+        text: remove {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupDisplace:
+        text: all {COSTUME} block {COSTUME2} from moving
+      Mikelab_groupEdgesDisplace:
+        text: edges block {COSTUME} from moving
+      Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
+        options:
+          SELECT:
+            '"average"': average
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupRemoveAllBehaviors:
+        text: stop {SELECT} {COSTUME} behaviors
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupRemoveTint:
+        text: remove color from {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupSetProp:
+        text: set {PROPERTY} of {SELECT} {COSTUME} to {VAL}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      Mikelab_groupSetTint:
+        text: change color of {SELECT} {COSTUME} to {COLOR}
+        options:
+          SELECT:
+            '"all"': all
+            '"this"': this
+      Mikelab_groupWhenClickedOn:
+        text: when {COSTUME} clicked
+      Mikelab_groupWhenXTouchesY:
+        text: when{COSTUME} touches {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: 'while clicking on {COSTUME}
+
+'
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          while{COSTUME} is touching {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} is currently {BEHAVIOR}"
+      Mikelab_ifDanceIs:
+        text: |-
+          if {SPRITE} is doing {DANCE}
+           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
       Mikelab_isAnim:
         text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
@@ -943,6 +1297,20 @@ en:
           PREPOSITION:
             '"above"': above
             '"below"': below
+      Mikelab_sprite:
+        text: new {COSTUME} sprite at {LOCATION}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: when {SPRITE} clicked
       Mikelab_whenKeyPressed:
@@ -1035,6 +1403,10 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} begins {BEHAVIOR} for {SECONDS} seconds
+      aalab_addBehaviorUntilBoolean:
+        text: aalab sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       aalab_addToSpriteGroup:
         text: add sprite {SPRITE} to group {GROUP}
       aalab_changeGroupPropBy:
@@ -1046,8 +1418,14 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      aalab_createPropertyGroup:
+        text: |-
+          make a new sprite group called {VAR}
+           of all {COSTUME} sprites
       aalab_createSpriteGroup:
         text: make a new sprite group called {VAR}
+      aalab_spriteSay:
+        text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
       aalab_spritesWhere:
         text: sprites where {PROPERTY} is {VALUE}
         options:
@@ -1059,6 +1437,57 @@ en:
             '"direction"': movement direction
             '"rotation"': rotation or direction
             '"tint"': tint
+      binary_drawBin:
+        text: draw binary {BIN}
+      binary_drawBinScreen:
+        text: |-
+          draw screen
+           {B1}
+           {B2}
+           {B3}
+           {B4}
+           {B5}
+           {B6}
+           {B7}
+           {B8}
+      binary_drawDec:
+        text: draw decimal {DEC}
+      binary_drawPixelHere:
+        text: set pixel {VAL}
+        options:
+          VAL:
+            '1': 'on'
+            '0': 'off'
+            '"toggle"': toggle
+      binary_drawString:
+        text: draw string {STR}
+      binary_goTo:
+        text: jump to {LOC}
+      binary_goToHome:
+        text: jump to top left
+      binary_gridSize:
+        text: set grid size {SIZE}
+      binary_move:
+        text: move {DIR}
+        options:
+          DIR:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+      binary_whenKey:
+        text: when {KEY} pressed
+        options:
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           if path {DIR}

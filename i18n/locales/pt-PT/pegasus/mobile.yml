@@ -416,6 +416,7 @@
   volunteer_engineer_submission_field_email: "Endereço de e-mail"
   volunteer_engineer_submission_field_email_desc: "O seu endereço de e-mail nunca será partilhado, mas vamos enviar-lhe as solicitações dos professores."
   volunteer_engineer_submission_field_email_placeholder: "Endereço de e-mail"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nossa política de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sim'
   volunteer_engineer_submission_field_email_preference_no: 'Não'
   volunteer_engineer_submission_final_paragraph: "Você será listado no mapa para professores locais para que o contactem para a Hora do Código ou para outras oportunidades de voluntariado. O seu e-mail e endereço exato nunca serão partilhados por nós. Mas as outras informações (incluindo a localização aproximada) será visível publicamente por professores na sua zona."
@@ -535,7 +536,7 @@
   dashboard_sections_table_pairing_allowed: "Programação em duplas"
   dashboard_sections_table_students: "Alunos"
   dashboard_sections_table_code: "Código"
-  dashboard_sections_name: "Nome da turma"
+  dashboard_sections_name: 'Nome da turma'
   dashboard_sections_choose_secret: "Se você quer fornecer contas aos seus alunos, escolha um tipo secreto de <b>palavra</b> ou <b>imagem</b> para a turma."
   dashboard_sections_secret_word: "Uma <b>palavra</b> permite que você defina uma palavra secreta para cada aluno."
   dashboard_sections_secret_picture: "Uma <b>imagem</b> permite que você defina uma imagem secreta para cada aluno, o que é ideal para alunos mais jovens que ainda não sabem digitar."
@@ -546,7 +547,7 @@
   dashboard_sections_move_students: "Mover alunos"
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por linha:'
   dashboard_students_new_section: "Você criou uma nova turma! Agora, adicione seus alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b> acima."
-  dashboard_students_name: "Nome"
+  dashboard_students_name: 'Nome'
   dashboard_students_progress: "Progresso"
   dashboard_students_male: "Masculino"
   dashboard_students_female: "Feminino"
@@ -1129,6 +1130,8 @@
   user_header_flappy: "Flappy Bird"
   user_header_view_my_projects: "Ver os meus projetos"
   view_all_sections: "Ver todas as turmas"
+  applab_tile_start_tutorial: "Começar"
+  hoc_overview_start_tutorial: "Começar"
   hoc2018_creativity_create: "Criar"
   hoc2018_mc_designer_title: "Designer de Minecraft"
   hoc2018_mc_designer_description: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
@@ -1137,3 +1140,7 @@
   hoc2018_mc_video_title_inspire_girl: "Inspirar uma rapariga"
   hoc2018_mc_homepage_join_us: "Junta-te a nós"
   hoc2018_mc_homepage_try_it: "Experimentar"
+  hoc2018_dance_party_button: "Começar"
+  hoc2018_dance_teacher_resources_tile1_button: "Plano da aula"
+  hoc2018_dance_teacher_resources_tile2_button: "Atividade offline"
+  hoc2018_dance_amazon_about_future_engineer_button: "Saber mais"

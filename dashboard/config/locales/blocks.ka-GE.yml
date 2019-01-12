@@ -73,21 +73,21 @@ ka:
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
             '"tint"': შეფერადება
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': არცერთი
-            '9': Roll
-            '10': This or That
-            '11': Thriller
+            MOVES.Rest: არცერთი
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
+          OP:
+            '">"': ">"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -131,6 +131,16 @@ ka:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"grid"': ბადე
             '"row"': მწკრივი
@@ -142,12 +152,31 @@ ka:
         options:
           EFFECT:
             '"none"': არცერთი
-            '"disco"': დისკო
-            '"rainbow"': ცისარტყელა
+            '"color_cycle"': ცისარტყელა
             '"diamonds"': ბრილიანტები
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": შემთხვევითი
+            '"rainbow"': ცისარტყელა
+            '"disco"': დისკო
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
+            '"color_cycle"': ცისარტყელა
+            '"diamonds"': ბრილიანტები
+            '"rainbow"': ცისარტყელა
+            '"disco"': დისკო
       Dancelab_setDanceSpeed:
         options:
+          SPEED:
+            '1': ჩვეულებრივი
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: ყველა
           SPEED:
             '1': ჩვეულებრივი
             '2': fast
@@ -158,7 +187,11 @@ ka:
         options:
           EFFECT:
             '"none"': არცერთი
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": შემთხვევითი
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"rand"': შემთხვევითი
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -184,6 +217,11 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
+            '"tint"': შეფერადება
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: ყველა
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -217,14 +255,16 @@ ka:
         options:
           KEY:
             '"up"': ზემოთ
-            '"down"': ქვემოთ
             '"left"': მარცხნივ
+            '"down"': ქვემოთ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -472,6 +512,73 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': ყველა
+          PROPERTY:
+            '"scale"': ზომა
+            '"rotation"': შებრუნება
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+            '"direction"': მოძრაობის მიმართულება
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": მარცხნივ
+            "{x: 300, y: 200}": მარჯვნივ
+            "{x: 200, y: 200}": ცენტრი
+            "{x: 100, y: 100}": ზედა მარცხენა
+            "{x: 300, y: 100}": ზედა მარჯვენა
+            "{x: 100, y: 300}": ქვედა მარცხენა
+            "{x: 300, y: 300}": ქვედა მარჯვენა
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"rotation"': შებრუნება
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+            '"direction"': მოძრაობის მიმართულება
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': ყველა
+          PROPERTY:
+            '"scale"': ზომა
+            '"rotation"': შებრუნება
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+            '"direction"': მოძრაობის მიმართულება
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': ყველა
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: არცერთი
       Mikelab_randomColor:
         text: შემთხვევითი ფერი
       Mikelab_setBG:
@@ -491,6 +598,17 @@ ka:
           CORNER:
             '"right"': მარჯვნივ
             '"left"': მარცხნივ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": მარცხნივ
+            "{x: 300, y: 200}": მარჯვნივ
+            "{x: 200, y: 200}": ცენტრი
+            "{x: 100, y: 100}": ზედა მარცხენა
+            "{x: 300, y: 100}": ზედა მარჯვენა
+            "{x: 100, y: 300}": ქვედა მარცხენა
+            "{x: 300, y: 300}": ქვედა მარჯვენა
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -552,6 +670,25 @@ ka:
             '"direction"': მოძრაობის მიმართულება
             '"rotation"': მოტრიალება ან მიმართულება
             '"tint"': შეფერადება
+      binary_move:
+        options:
+          DIR:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

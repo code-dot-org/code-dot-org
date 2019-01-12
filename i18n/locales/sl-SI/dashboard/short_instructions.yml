@@ -349,7 +349,7 @@ sl:
       4-5 While Loops 7: Vau, zdaj so kupi zemlje kar trije! Lahko napišeš program, ki odstrani vse tri, tako da so tla ravna?
       4-5 While Loops 8: "Tukaj je res globoka luknja in visok kup zemlje. Kolikokrat je treba zamahniti z lopato, da zravnaš tla?"
       4-5 While Loops Assessment 1: Zdaj je lukenj in kupov zemlje več. Pomagaj mi zapolniti luknje in odstraniti zemljo, da bodo tla ravna.
-      App Lab test: preizkusi
+      App Lab test: preizkus
       Artist - Nested Loops 1: 'Dokončaj kodo tako, da izriše te trikotnike. Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
       Artist - Nested Loops 11: Lahko narišeš 10 kvadratov, ki predstavljajo pločnik, z uporabo ugnezdene zanke? Vsak kvadrat ima stranico dolgo 30 pikslov.
       Artist - Nested Loops 12: Lahko narišeš 36 trikotnikov z uporabo ugnezdene zanke?
@@ -440,6 +440,7 @@ sl:
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       Course 4 Play Lab Vars 7: Fino, zdaj pa igro naredimo bolj zapleteno. Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2), igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje število točk iz 10 na nič, da končaš to nalogo.
       Course 4 SCF 1: Uporabi predlagane funkcije za izris štirih vrst šestkotnikov. Opaziš, kako so sode vrstice zamaknjene v desno?
+      Course E MC Conditionals1: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       CourseF_PlayLab_vars2: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
       CourseF_PlayLab_vars3: Uporabi puščici levo in desno za premikanje psa in puščico gor za skok. Ali lahko zbereš vse zastave?
       CourseF_PlayLab_vars6: |-
@@ -462,6 +463,13 @@ sl:
       Crack Random Substitution_2018: Navodila
       Crack a Caesar Cipher: Navodila
       Crack a Caesar Cipher_2018: Navodila
+      HOC 2018 Level_1: Vzemi čoln iz zaboja.
+      HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
+      HOC 2018 Level_11: 'Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.'
+      HOC 2018 Level_12: 'Izoblikuj si svoj podvodni svet, kakor želiš.'
+      HOC 2018 Level_3: 'Odveslaj na odprto morje proti ribi.'
+      HOC 2018 Level_6: Pojdi po ledu do lososa.
+      HOC 2018 Level_9b: 'Korale uporabi kot navigacijski točki, da prideš do zaklada.'
       Infinity_catch: "Ali lahko naredis tako, da bo Elsa (\"igralka 2\") dohitela\nAno, z uporabo tipk s puščicami?"
       Infinity_finale: Ustvari karkoli želiš in deli!
       Infinity_move_collide: "Hiro je \"igralec 1\". Premakni ga čisto do Baymaxa\nin dodaj zvok, ko se dotakneta."
@@ -633,25 +641,35 @@ sl:
       New Infinity Project: Ustvari karkoli želiš in deli!
       Overworld Avoid Monsters: Tekmovanje v teku v a Creeper je slaba ideja. Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Avoid Monsters_2018: Tekmovanje v teku v a Creeper je slaba ideja. Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
+      Overworld Avoid Monsters_2019: Tekmovanje v teku v a Creeper je slaba ideja. Previdno premakniti mimo na Creepers in doseči varnost vašega doma.
       Overworld Chop Tree - allthethings: Les je zelo pomembna surovina. Veliko se da narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Tree: Les je zelo pomembna surovina. Veliko se da narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Tree_2018: Les je zelo pomembna surovina. Veliko se da narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
+      Overworld Chop Tree_2019: Les je zelo pomembna surovina. Veliko se da narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Trees: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Chop Trees_2018: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo veliko lesa. Posekaj vsa 3 drevesa.
+      Overworld Chop Trees_2019: Zgraditi moramo hišo preden sonce zaide. Hiše potrebujejo veliko lesa. Posekaj vsa 3 drevesa.
       Overworld Free Play 20x20: Čestitamo! Zaključili ste vse uganke! Sedaj pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega do sedaj.
       Overworld Free Play 20x20_2018: Čestitamo! Zaključili ste vse uganke! Sedaj pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega do sedaj.
+      Overworld Free Play 20x20_2019: Čestitamo! Zaključili ste vse uganke! Sedaj pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega naučenega do sedaj.
       Overworld House Frame Chosen: Zgradite preostalo hišo iz poljubnih materialov. Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld House Frame Chosen_2018: Zgradite preostalo hišo iz poljubnih materialov. Ukaz +ponovi' vam bo tukaj prišel prav.
+      Overworld House Frame Chosen_2019: Zgradite preostalo hišo iz poljubnih materialov. Ukaz +ponovi' vam bo tukaj prišel prav.
       Overworld Move to Sheep: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Move to Sheep_2018: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
+      Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Place Wall: Vsaka hiša se začne z zidom. Zgradite prvi del hiše z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Place Wall_2018: Vsaka hiša se začne z zidom. Zgradite prvi del hiše z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
+      Overworld Place Wall_2019: Vsaka hiša se začne z zidom. Zgradite prvi del hiše z uporabo ukazov 'postavi' in 'premakni naprej' znotraj zanke za ponavljanje.
       Overworld Plant Crops: Dobro je načrtovati vnaprej. Posadite pridelke na obeh straneh vode, da ne boste lačni kasneje.
       Overworld Plant Crops_2018: Dobro je načrtovati vnaprej. Posadite pridelke na obeh straneh vode, da ne boste lačni kasneje.
+      Overworld Plant Crops_2019: Dobro je načrtovati vnaprej. Posadite pridelke na obeh straneh vode, da ne boste lačni kasneje.
       Overworld Powered Minecart: Dobro opravljeno! Zbrali ste veliko virov in si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat vaše hiše.
       Overworld Powered Minecart_2018: Dobro opravljeno! Zbrali ste veliko virov in si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat vaše hiše.
+      Overworld Powered Minecart_2019: Dobro opravljeno! Zbrali ste veliko virov in si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida do vrat vaše hiše.
       Overworld Shear Sheep: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in zberite volno od obeh ovc.
       Overworld Shear Sheep_2018: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in zberite volno od obeh ovc.
+      Overworld Shear Sheep_2019: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in zberite volno od obeh ovc.
       PDK5 Functions 2: Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "nariši kvadrat". Znaš uporabiti funkcijo, "nariši kvadrat" za risanje očal? Očala so razmaknjena za 75 pikslov.
       PS copy 2-3 Bee Conditionals 5: "Vijolične rože imajo lahko 1 ali 0 nektarja,\na ne veš, katere! Pazi, da ne\nnabiraš nektarja iz\nvijolične rože, če ga nima. Preveri, če ima\nnektar vrednost ena tako,\nda uporabiš če kocko."
       SpecialFrozenLevel: Uradno si postal mojster umetnik! Ustvari zimsko čudežno deželo.
@@ -672,6 +690,7 @@ sl:
       U4 vigenere cipher 2: Navodila
       Underground Mining Coal: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2018: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
+      Underground Mining Coal_2019: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       aE7: "Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo namesto desno? Lahko to ponavljaš, da narišeš val?"
       aE8: "Zdaj pa naredimo to štirikrat, da ustvarimo okvir za sliko. Pazi na vogale - ne smeš se kar obrniti za 90 stopinj! Če 60 ponovitev zanke s 3 stopinjskim obratom naredi pol kroga, kateri od teh blokov bo naredil dodatno četrtino kroga za vogale okvirja? "
       beeDebugVideo1: Ali lahko uporabiš zanko, da nabereš ves nektar?
@@ -718,9 +737,12 @@ sl:
       course4_artist_fwp_challenge1: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
       courseC_PlayLab_events3: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2018: Lahko narediš program, da bo pes šel do mačke?
+      courseC_PlayLab_events3_2019: Lahko narediš program, da bo pes šel do mačke?
       courseC_artist_prog5: |-
         Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
       courseC_artist_prog5_2018: |-
+        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
+      courseC_artist_prog5_2019: |-
         Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
       courseC_maze_debugging10: Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička!
       courseD_bee_debugging3: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
@@ -728,6 +750,7 @@ sl:
       courseD_bee_nestedLoops5: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2018: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
+      courseD_bee_nestedLoops8_2019: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bounce_events10: Zdaj je na vrhu gol. Dodaj bloke "dosežena točka" in "nasprotnik doseže točko" na bloka "ko je žoga v golu" in "ko žoga zgreši lopar", da narediš igro. Preizkusi, koliko točk lahko dosežeš, preden nasprotnik doseže dve točki.
       courseD_bounce_events11: Zdaj lahko dodaš bloke na blok "ob zagonu". Dodati moraš nov blok "izstreli novo žogo" na več kot enem mestu. Poleg tega poskusi spremeniti sceno ali hitrost loparja in žoge, da vidiš, koliko točk lahko dosežeš, preden tvoj nasprotnik doseže dve točki.
       courseD_bounce_events12: Ustvarite svojo igrico Skokica. Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
@@ -744,6 +767,7 @@ sl:
       courseE_artist_functions1_2018: "Živio! Jaz Zombi umetnik. Jaz rad risati!\nPomagaj mi narisati kvadratna očala. Namig: Prehod med očali je \n25 pixlov krajši od dolžine kvadrata."
       courseE_bee_concept1: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
       courseE_bee_concept1_2018: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
+      courseE_bee_concept1_2019: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
       courseE_bee_functions1: Zberi nektar iz vseh cvetov.
       courseE_bee_functions1_2018: Zberi nektar iz vseh cvetov.
       courseE_bee_functions3: Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo "get 5" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število.
@@ -751,8 +775,10 @@ sl:
       courseE_farmer_concept4: Pojdimo za en nivo globlje! Celoten blok kode smo ugnezdili v novo zanko, ti pa moraš poskrbeti, da se umetnik postavi nazaj na pravo mesto, da nariše naslednjo črto. Katerega od teh blokov lahko umestiš na konec zunanje zanke, da narišeš celotno mrežo?
       courseF_artist_for7: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
       courseF_artist_for7_2018: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
+      courseF_artist_for7_2019: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
       courseF_bee_for8: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       courseF_bee_for8_2018: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
+      courseF_bee_for8_2019: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       flappy_1: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi". Klikni ali tapni na zaslon, da premakneš Flappya do cilja.
       flappy_11: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
       flappy_11_2018: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.

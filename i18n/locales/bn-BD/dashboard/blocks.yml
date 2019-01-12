@@ -40,6 +40,14 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -58,7 +66,7 @@ bn:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -68,11 +76,29 @@ bn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': এলোমেলো
       Dancelab_randomColor:
         text: যেকোনো রঙ
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ bn:
         options:
           KEY:
             '"up"': উপরে
-            '"down"': নিচে
             '"left"': বামে
+            '"down"': নিচে
             '"right"': ডানে
             '"space"': স্থান
+            '"x"': এক্স
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -201,6 +228,23 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
       Mikelab_setBG:
@@ -216,6 +260,11 @@ bn:
           CORNER:
             '"right"': ডানে
             '"left"': বামে
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -255,6 +304,21 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      binary_move:
+        options:
+          DIR:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
       craft_ifPath:
         options:
           DIR:

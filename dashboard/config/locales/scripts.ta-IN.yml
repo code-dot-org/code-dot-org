@@ -236,3 +236,11 @@ ta:
           stages:
             The Internet:
               name: இணையம்
+        coursef-2019:
+          stages:
+            The Artist:
+              name: கலைஞர்
+        andrea-test:
+          stages:
+            'null':
+              name: வெறுமை

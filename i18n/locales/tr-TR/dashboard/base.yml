@@ -316,6 +316,8 @@ tr:
       playlab: 'Oyun Laboratuvarı'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dans Partisi'
+      view_all: 'Tüm projeleri görüntüle...'
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: 'İlerlemeniz'
@@ -556,6 +558,8 @@ tr:
       body_short: " Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın."
       audience: '13 + Yaş grubu'
       cta: 'Nasıl olduğunu öğren'
+    dance:
+      title: 'Dans Partisi'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
@@ -602,6 +606,7 @@ tr:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın"
     sports:
       title: "Spor"
       body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
@@ -939,6 +944,7 @@ tr:
   return_unit_overview: 'Ünite genel bakışına git'
   return_course_overview: 'Ünite genel bakışına git'
   view_all_units: 'Tüm üniteleri göster'
+  view_teacher_guide: 'Öğretmen kılavuzunu görüntüle'
   pd:
     form_labels:
       email: 'e-posta'

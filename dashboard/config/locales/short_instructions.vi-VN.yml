@@ -186,7 +186,7 @@ vi:
       2-3 Bee Conditionals 12: |-
         Sử dụng một vòng lặp để kiểm tra và thu thập mật hoa
         từ tất cả các bông hoa.
-      2-3 Bee Conditionals 13: |
+      2-3 Bee Conditionals 13: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
@@ -475,12 +475,56 @@ vi:
         rộng 2o điểm ảnh, dài 50 điểm ảnh. Sử dụng một vòng lặp sẽ có ích. '
       Course 4 Bee Params 5: Hãy bắt đầu từ đầu - bạn có thể tạo ra một chức năng
         mới được gọi là "lấy 5 mật hoa " với một tham số hướng?
+      Course E MC Conditionals1: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
+        dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
+        2 khối than.
       Crack Random Substitution: lời chỉ đẫn
       Crack Random Substitution_2018: lời chỉ đẫn
       Crack a Caesar Cipher: lời chỉ đẫn
       Crack a Caesar Cipher_2018: lời chỉ đẫn
+      Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc và kết nối
+        nó với bên trong khối `setup`.
+      Dance_Party_01_low: Kéo khối `make a new` vào trong không gian làm việc và kết
+        nối nó với bên trong khối `setup`.
+      Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
+      Dance_Party_03: Bây giờ, hãy làm vũ công bắt đầu động tác mới sau 6 nhịp!
+      Dance_Party_04: Thêm một hiệu ứng nền vào chương trình của bạn.
+      Dance_Party_05: Sử dụng một khối mới khác để làm cho các vũ công thay đổi động
+        tác sau mỗi 2 nhịp.
+      Dance_Party_06: Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy
+        cùng con mèo.
+      Dance_Party_08: Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích cỡ không?
+      Dance_Party_09: Sử dụng khối `set tint` để thay đổi màu sắc của một vũ công.
+      Dance_Party_10: Làm cho các vũ công khác phản hồi theo nhạc bằng cách sử dụng
+        khối `begins following`.
+      Dance_Party_11.5_test: Sử dụng các khối "all ducks" để làm cho những con vịt
+        nhảy cùng nhau.
+      Dance_Party_11: Khối `when up pressed` cho phép bạn chạy mã nguồn khi nhấn vào
+        mũi tên lên. Cố gắng làm cho các vũ công thực hiện một động tác nhanh khi
+        bạn bấm mũi tên lên.
+      Dance_Party_11_5: Sử dụng các khối "all ducks" để làm cho những con vịt nhảy
+        cùng nhau.
+      Dance_Party_11b: Làm cho Robot làm động tác "drop" một lần khi bạn nhấn phím
+        mũi tên phải và làm động tác "floss" một lần khi bạn nhấn phím mũi tên lên.
+        Làm động tác drop-floss nhanh nhất có thể!
+      Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ
+        với bạn bè.
       Function intro Ryan: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra
         con đường đi tới với ngọn đuốc.
+      Function intro Ryan_2019: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo
+        ra con đường đi tới với ngọn đuốc.
+      HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
+      HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
+      HOC 2018 Level_11: 'Xây một ống dẫn với prismarine bên trong Tòa nhà Đại dương.  '
+      HOC 2018 Level_12: 'Thiết kế môi trường dưới nước của riêng bạn, nó chỉ dành
+        cho bạn!  '
+      HOC 2018 Level_2: 'Đi đến cuối bến tàu.  '
+      HOC 2018 Level_3: 'Đi qua vùng biển khơi để tới chỗ cá tuyết.  '
+      HOC 2018 Level_4: Sử dụng vòng lặp để đến chỗ cá heo.
+      HOC 2018 Level_5: Khám phá con tàu đắm để đến chỗ chiếc rương.
+      HOC 2018 Level_6: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
+      HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc rương.
+      HOC 2018 Level_9b: 'Sử dụng san hô như điểm chỉ đường để tới kho báu.  '
       Infinity_catch: Bạn có thể làm cho Elsa ("diễn viên 2") đuổi Anna bằng cách
         sử dụng các phím mũi tên?
       Infinity_finale: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
@@ -640,33 +684,46 @@ vi:
       MC_HOC_2017_01_RETRY: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực, sau
         đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra khỏi
         ngôi nhà. '
+      MC_HOC_2017_01_RETRY_2019: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực,
+        sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra
+        khỏi ngôi nhà. '
       MC_HOC_2017_02: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_02_Cole: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
+        có thể di chuyển vào và lấy được tấm bản đồ. '
+      MC_HOC_2017_02_Cole_2019: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
         có thể di chuyển vào và lấy được tấm bản đồ. '
       MC_HOC_2017_02_Kiki: Cho Đặc vụ đi đến tấm áp lực, sau đó người chơi di chuyển
         đến ô vuông màu cam.
       MC_HOC_2017_02_Will: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_03_Cole: 'Lập trình để Đặc vụ mở cánh cửa. '
+      MC_HOC_2017_03_Cole_2019: 'Lập trình để Đặc vụ mở cánh cửa. '
       MC_HOC_2017_03_Kiki: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04: Thay đổi vòng lặp từ câu đố trước để giúp Đặc vụ tạo ra một
         con đường đi qua phần rộng hơn của con sông.
       MC_HOC_2017_04POINT5_Cole: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04POINT5_RYAN: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04POINT5_RYAN_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Cole: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_Cole_2019: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_04_Kiki: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_05: Sử dụng một nhóm lệnh chức năng để giúp Đặc vụ đi đến tấm áp
         lực.
       MC_HOC_2017_05_Cole: Người chơi cần di chuyển tới chỗ cái xẻng.
+      MC_HOC_2017_05_Cole_2019: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_05_Josh: Người chơi cần di chuyển tới chỗ cái xẻng.
       MC_HOC_2017_05_Kiki: Người chơi cần di chuyển đến ô vuông màu cam.
       MC_HOC_2017_06_Cole: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc ngang
         qua con sông.
+      MC_HOC_2017_06_Cole_2019: Sửa lại các lệnh sau để Đặc vụ xây một cây cầu bắc
+        ngang qua con sông.
       MC_HOC_2017_06_Josh: Sửa lại các lệnh sau để giúp Đặc vụ xây một cây cầu bắc
         ngang qua con sông.
       MC_HOC_2017_06_Kiki: Sửa lại các lệnh sau để giúp Đặc vụ xây một cây cầu bắc
         ngang qua con sông.
       MC_HOC_2017_07_Cole: Phá băng và để cho {currentPlayerName} di chuyển tới xe
         chở quặng (Minecart).
+      MC_HOC_2017_07_Cole_2019: Phá băng và để cho {currentPlayerName} di chuyển tới
+        xe chở quặng (Minecart).
       MC_HOC_2017_07_Kiki: Sử dụng một nhóm lệnh chức năng để dọn đường đi tới ô vuông
         màu cam.
       MC_HOC_2017_07a_Kiki: Dọn đường đi tới ô vuông màu cam.
@@ -689,6 +746,8 @@ vi:
         vụ tới xe chở quặng này.
       MC_HOC_2017_10_RETRY: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn thành
         nhiệm vụ tới xe chở quặng.
+      MC_HOC_2017_10_RETRY_2019: Sử dụng các nhóm lệnh chức năng dưới đây để hoàn
+        thành nhiệm vụ tới xe chở quặng.
       MC_HOC_2017_10_RYAN: Tạo ra một nhóm lệnh chức năng để giúp bạn hoàn thành nhiệm
         vụ tới xe chở quặng này.
       MC_HOC_2017_10_RYAN2: Tạo ra một nhóm lệnh chức năng để giúp bạn hoàn thành
@@ -696,11 +755,15 @@ vi:
       MC_HOC_2017_13_Cole: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
       MC_HOC_2017_4.5v2: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_Ali: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung nham.
+      MC_HOC_2017_Ali_2019: Sử dụng các nhóm lệnh chức năng để tìm đường đi qua dung
+        nham.
       MC_HOC_2017_FP10x10: 'Chơi tự do: Bạn có thể thử thách bản thân tự thu thập
         hết các viên kim cương trong cấp độ này không? '
       MC_HOC_2017_FP10x10_RE: 'Chơi tự do: Bạn có thể thử thách bản thân tự thu thập
         hết các viên kim cương trong cấp độ này không? '
       MC_HOC_2017_FP20x20: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
+      MC_HOC_2017_FP20x20_2019: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
+        tạo!'
       MC_HOC_2017_Ryan_03: Bây giờ sử dụng các vòng lặp để giúp Đặc vụ xây một cây
         cầu qua sông bằng cách đặt các khối đá trong nước.
       MC_HOC_2017_Ryan_05: Tiêu diệt những cây xương rồng để di chuyển người chơi
@@ -736,6 +799,8 @@ vi:
         Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2018: Đi thẳng về phía một Creeper là một ý kiến không
         hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
+      Overworld Avoid Monsters_2019: Đi thẳng về phía một Creeper là một ý kiến không
+        hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Chop Tree - allthethings: Gỗ là tài nguyên rất quan trọng. Có nhiều
         thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để
         đốn cây.
@@ -743,14 +808,21 @@ vi:
         từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Tree_2018: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được
         làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
+      Overworld Chop Tree_2019: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được
+        làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
       Overworld Chop Trees: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời
         lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Chop Trees_2018: Chúng ta cần phải xây một ngôi nhà trước khi mặt
+        trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
+      Overworld Chop Trees_2019: Chúng ta cần phải xây một ngôi nhà trước khi mặt
         trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Free Play 20x20: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố
         của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng
         tất cả những gì bạn đã học được.
       Overworld Free Play 20x20_2018: Xin chúc mừng! Bạn đã hoàn thành tất cả các
+        câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách
+        sử dụng tất cả những gì bạn đã học được.
+      Overworld Free Play 20x20_2019: Xin chúc mừng! Bạn đã hoàn thành tất cả các
         câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách
         sử dụng tất cả những gì bạn đã học được.
       Overworld House Frame Chosen: Xây nốt các phần còn lại của ngôi nhà với bất
@@ -759,9 +831,14 @@ vi:
       Overworld House Frame Chosen_2018: Xây nốt các phần còn lại của ngôi nhà với
         bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực
         hiện nhanh hơn.
+      Overworld House Frame Chosen_2019: Xây nốt các phần còn lại của ngôi nhà với
+        bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực
+        hiện nhanh hơn.
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến
         con cừu.
       Overworld Move to Sheep_2018: Hãy thêm một lệnh "move forward" thứ hai để đi
+        đến con cừu.
+      Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
         đến con cừu.
       Overworld Place Wall: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy xây phần
         đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward" trong
@@ -769,9 +846,14 @@ vi:
       Overworld Place Wall_2018: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy
         xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward"
         trong vòng lặp.
+      Overworld Place Wall_2019: Mỗi ngôi nhà đều bắt đầu bằng một bức tường. Hãy
+        xây phần đầu tiên của ngôi nhà bằng cách đặt các lệnh "place" và "move forward"
+        trong vòng lặp.
       Overworld Plant Crops: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây ở cả
         hai bên bờ sông để bạn không bị đói sau này.
       Overworld Plant Crops_2018: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây
+        ở cả hai bên bờ sông để bạn không bị đói sau này.
+      Overworld Plant Crops_2019: Tốt hơn là nên lập kế hoạch trước. Hãy trồng cây
         ở cả hai bên bờ sông để bạn không bị đói sau này.
       Overworld Powered Minecart: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài nguyên
         và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên mép bản
@@ -779,9 +861,14 @@ vi:
       Overworld Powered Minecart_2018: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài
         nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên
         mép bản đồ đến cửa nhà của bạn.
+      Overworld Powered Minecart_2019: Tốt lắm! Bạn đã thu thập được nhiều nguồn tài
+        nguyên và xây được một ngôi nhà đơn giản. Bây giờ, hãy đặt đường đi từ bên
+        mép bản đồ đến cửa nhà của bạn.
       Overworld Shear Sheep: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
         để thu thập lông của cả hai con cừu.
       Overworld Shear Sheep_2018: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
+        để thu thập lông của cả hai con cừu.
+      Overworld Shear Sheep_2019: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear"
         để thu thập lông của cả hai con cừu.
       PDK5 Functions 2: |-
         Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là "vẽ hình vuông".
@@ -811,20 +898,32 @@ vi:
         bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh
         "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá
         này.
+      Underground Avoiding Lava_2019: Dung nham đang ẩn bên dưới một số khối đá này,
+        bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử dụng lệnh
+        "if" ở đây. Hãy thêm lệnh "move forward" vào đúng vị trí để đào các khối đá
+        này.
       Underground If Statements: Mọi việc hiện đang trở nên rắc rối. Hãy đào 3 viên
         đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt đá cuội
         bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground If Statements_2018: Mọi việc hiện đang trở nên rắc rối. Hãy đào
         3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt
         đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
+      Underground If Statements_2019: Mọi việc hiện đang trở nên rắc rối. Hãy đào
+        3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để đặt
+        đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
       Underground Iron: Đi vào dung nham nóng chảy không phải là ý kiến hay. Hãy đặt
         đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Iron_2018: Đi vào dung nham nóng chảy không phải là ý kiến hay.
+        Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
+      Underground Iron_2019: Đi vào dung nham nóng chảy không phải là ý kiến hay.
         Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
       Underground Mining Coal: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất dưới
         mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất 2 khối
         than.
       Underground Mining Coal_2018: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
+        dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
+        2 khối than.
+      Underground Mining Coal_2019: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
         dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
         2 khối than.
       beeDebugVideo1: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
@@ -922,6 +1021,8 @@ vi:
       courseC_artist_prog5: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý:
         Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2018: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
+        ý: Cả 3 cạnh đều dài như nhau.'
+      courseC_artist_prog5_2019: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
       courseD_bee_debugging3: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo
         mật.
@@ -1079,7 +1180,7 @@ vi:
         có thể sửa lại nó không?"
       grade3_Conditionals_1: Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa từ
         những bông hoa. Sử dụng hàm Loop.
-      grade3_Conditionals_10: |
+      grade3_Conditionals_10: |-
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?

@@ -50,7 +50,7 @@ def restore_redacted_files
       source_path = redacted_path.sub("redacted", "source")
       translated_path = redacted_path.sub("redacted", locale)
 
-      plugin = 'nonPedanticEmphasis'
+      plugin = nil
       if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
@@ -70,6 +70,8 @@ def sanitize!(data)
     data.each {|datum| sanitize!(datum)}
   elsif data.is_a? String
     data.gsub!(/\\r/, "\r")
+  elsif [true, false].include? data
+    # pass
   elsif data.nil?
     # pass
   else

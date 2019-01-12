@@ -1,6 +1,5 @@
 ---
 ro-RO:
-  ! '': "[șir gol]"
   hour_of_code: Hour of Code
   hello: Salutare lume
   'yes': Da
@@ -2167,12 +2166,15 @@ ro-RO:
   google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu
     contul Google":'
   applab-intro_name: Introducere Laborator de Aplicații
+  applab_tile_start_tutorial: Începe
   account_sign_up_email_opt_in: Sunteți de acord să vă trimitem prin e-mail actualizări
     cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul
     informaticii?
+  hoc_overview_start_tutorial: Începe
   hoc2018_creativity_create: Crează
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
   hoc2018_mc_details: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
+  hoc2018_mc_hero_title: 'Minecraft: Călătoria eroului'
   hoc2018_mc_designer_title: Minecraft Designer
   hoc2018_mc_designer_description: Programeaza animale şi alte creaturi Minecraft
     în propria ta versiune a jocului.
@@ -2204,3 +2206,8 @@ ro-RO:
   hoc2018_mc_video_title_my_name_is_aracely: Numele meu este Aracely
   hoc2018_mc_homepage_join_us: Alatura-ni-te
   hoc2018_mc_homepage_try_it: Încearcă
+  hoc2018_dance_party_button: Începe
+  hoc2018_dance_teacher_resources_tile1_button: Plan de lecţie
+  hoc2018_dance_teacher_resources_tile2_button: Activitate fără Calculator
+  hoc2018_dance_amazon_about_future_engineer_button: Află mai mult
+  hoc2018_dance_amazon_scholarship_programs_button: Înscrieți-vă acum

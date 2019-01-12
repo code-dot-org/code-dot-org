@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org proponuje Twoim pracownikom możliwość [połączenia się](%= codeorg_url('/volunteer') %) z lokalnymi klasami uczestniczącymi w Godzinie Kodowania, w których mogą oni dzielić się swoim doświadczeniem zawodowym i inspirować uczniów do nauki informatyki.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

@@ -18,6 +18,7 @@ id:
       messages:
         blank: diperlukan
         blank_plural: diperlukan
+        invalid: " tidak valid"
         invalid_plural: tidak benar
     attributes:
       user:
@@ -35,6 +36,11 @@ id:
         age: Umur
         gender: Jenis kelamin
         edit_header: Edit rincian akun
+        finish_sign_up_header: Profil Anda selesai dibuat
+        finish_sign_up_subheader: Mengisi informasi berikut untuk menyelesaikan membuat
+          akun Code.org untuk <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Mengisi informasi berikut untuk menyelesaikan
+          membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         error:
           future: tidak mungkin di masa depan
   hello: Halo dunia
@@ -85,6 +91,7 @@ id:
   prize: hadiah
   more_info: Info lebih lanjut
   auth:
+    continue_with: Lanjutkan dengan %{provider}
     sign_in_with: Masuk pakai akun %{provider}
     signed_in: Masuk!
     signed_out: Anda telah sign out dari <a href="%{url}">Code.org</a>.
@@ -98,14 +105,23 @@ id:
     windowslive: Akun Microsoft
     microsoft_v2_auth: Akun Microsoft
     clever: Akun pintar
+    powerschool: Powerschool
     forgot_password: Lupa kata sandi?
+    migration_success: Sukses! Anda telah diperbarui untuk pengalaman akun baru.
+    demigration_success: Pengalaman akun baru sekarang dinonaktifkan pada account
+      Anda.
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
     not_linked: Maaf, akun Code.org Anda tidak ditautkan ke %{provider} Anda. Anda
       harus masuk dengan mengetikkan kata sandi Anda di bawah ini.
     use_clever: Maaf, akun Code.org Anda tidak ditautkan ke%{provider} Anda. Silahkan
       masuk melalui Portal pintar anda.
+    unable_to_connect_provider: Tidak dapat menghubungkan account Code.org Anda ke
+      akun %{provider}. Silakan coba lagi.
+    already_in_use: Akun %{provider} sudah terhubung ke akun Code.org yang lain.
+    already_linked: "%{provider} akun Anda sudah ditautkan ke akun Code.org."
   signup_form:
+    email_signup: Mendaftar dengan alamat email Anda
     student_count: "%{count} Pelajar telah mendaftar."
     teacher_count: "%{count} Pengajar telah mendaftar."
     overview: Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas Anda.
@@ -135,6 +151,7 @@ id:
     age: Umur
     user_type: Anda Pelajar atau Pengajar?
     submit: Daftar
+    go_to_account: Pergi ke account saya
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
     invalid_username: Nama pengguna harus minimal 5 karakter
@@ -142,6 +159,16 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
+    agree_tos_privacy: Saya setuju untuk <a href='http://code.org/tos'>Ketentuan Layanan</a>
+      dan <a href='http://code.org/privacy'>kebijakan privasi</a>.
+    under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
+      saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
+    student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
+      hukum izin untuk menggunakan layanan Code.org.
+    agree_us_website: Saya setuju untuk menggunakan sebuah situs web yang berbasis
+      di Amerika Serikat.
+    my_data_to_us: Data dari penggunaan situs ini saya dapat dikirimkan ke dan disimpan
+      atau diproses di Amerika Serikat.
     student_terms: Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'>
       persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi
       dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali
@@ -155,14 +182,19 @@ id:
       kebijakan privasi </a> kami.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
       pendaftaran anda
+    user_type_button: Perbarui tipe akun
     user_type_label: Jenis akun
     user_type_teacher: Pelajar
     user_type_student: siswa
     field_is_required: diperlukan
     accept_terms: Anda menyetujui untuk membuat akun
     error: Sebuah kesalahan terjadi.
+    email_preference_question: Dapat kami email Anda tentang pembaruan kursus kami,
+      peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
+    email_preference_privacy: "(Lihat kebijakan privasi)"
     email_preference_yes: Ya
     email_preference_no: Tidak
+    email_preference_required: Anda harus menentukan preferensi email.
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -233,6 +265,7 @@ id:
     student_associated_subject: Masukkan code informasi Code.org
   teacher_mailer:
     new_teacher_subject: Selamat datang di Code.org!
+    delete_teacher_subject: 'Code.org pemberitahuan: Akun anda telah dihapus'
   section:
     your_section:
       one: 'Sesi Anda:'
@@ -240,6 +273,7 @@ id:
     code_with_teacher: "%{section_code} dengan %{teacher_name}"
     confirm:
       remove: Anda yakin untuk meninggalkan sesi ini?
+    default_name: Bagian tanpa judul
     remove: "(hapus sesi)"
     type:
       picture: Gambar Sandi
@@ -350,6 +384,7 @@ id:
       signin: Masuk
       signup: Buat sebuah akun
       already_registered: Apa Sudah Terdaftar?
+      pair_programming: Pemrograman berpasangan
       team: Tim
       driver: Masuk
       navigator: Mitra
@@ -394,6 +429,7 @@ id:
       example: Contoh solusi
       example_with_number: Contoh solusi %{solution_number}
       submitted_on: Dikirimkan pada %{date}
+      last_updated: 'Terakhir Diperbarui:'
       unsubmit: Unsubmit
       worked_with: Bekerja bersama
       update_lock_settings: Perbarui pengaturan kunci di sini.
@@ -403,11 +439,15 @@ id:
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
     email_confirm_wrong_email: "(Alamat email salah?)"
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
+    new_email_hint: "(Pastikan Anda dapat menerima email ke alamat email ini.)"
     new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
     current_password_hint: "(kita perlu password Anda saat ini untuk mengkonfirmasi
       perubahan Anda)"
     delete: Hapuslah akun anda
     delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
+    delete_text_teacher_managed_note: Anda tidak memiliki izin untuk menghapus akun
+      ini karena dikelola oleh guru Anda. Teacher(s) Anda akan perlu untuk menghapus
+      Anda dari bagian mereka sebelum Anda dapat menghapus account Anda.
     delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus
       akun murid-murid Anda.'
     delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
@@ -425,6 +465,8 @@ id:
     create_personal_login_info: Jika anda tetap ingin menggunakan akun Code.org anda
       meskipun setelah selesai masa sekolah, anda bisa membuat login anda sendiri
       dibawah.
+    create_personal_login_link_account: Anda dapat juga memilih untuk tersambung ke
+      akun pribadi di bawah bagian "Mengelola akun terkait".
     create_personal_login_terms: Dengan membuat login pribadi, Saya setuju untuk terikat
       dengan<a href='%{terms_of_service_url}', target='_blank'>syarat-syarat layanan
       Code.org</a>. Jika saya berusia dibawah 13 tahun, Saya mengkonfirmasi bahwa
@@ -438,8 +480,12 @@ id:
     enter_new_login_info: Masukkan informasi login baru anda
     confirm_secret_words: Konfirmasi bahwa ini adalah anda dengan memasukkan kata-kata
       rahasia yang anda miliki sekarang
+    parent_email_label: Orang tua/wali email (opsional)
+    parent_email_hint: "(ini dapat digunakan untuk pemulihan password)"
     enter_parent_email: Masukkan alamat surel orang tua atau wali anda (untuk pemulihan
       sandi)
+    update: Perbarui Akun
+    account_successfully_updated: Akun sukses diperbarui.
   user_level:
     completed: Selesai
     tried: Telah mencoba
@@ -642,6 +688,8 @@ id:
       di bagian Anda.
     already_enrolled_in_new_section: Anda tidak dapat memindahkan siswa ini karena
       mereka sudah dalam bagian baru.
+    third_party_login: Anda tidak bisa pindahkan siswa ke bagian yang disinkronisasikan
+      dengan alat pihak ketiga.
   share:
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
@@ -650,6 +698,8 @@ id:
   gender:
     male: Laki-laki
     female: Wanita
+    non_binary: Non-biner
+    not_listed: Istilah yang disukai tidak terdaftar
     none: Memilih untuk tidak menjawab
   user_type:
     student: siswa
@@ -1147,6 +1197,7 @@ id:
   flex_category:
     required: Tinjauan
     content: Konten
+    ramp_up: Jalan-Naik
     main_course: Kursus Utama
     extra_course_content: Isi Kursus Tambahan
     csf_e_1: Jalur naik tujuan E (opsional)
@@ -1165,6 +1216,7 @@ id:
     csd5_2: 'Bab 2: Memecahkan Masalah Data'
     csd6_1: 'Bab 1: Pemrograman dengan Hardware'
     csd6_2: 'Bab 2: Membangun Prototipe Fisik'
+    csd_survey: Survei Pasca Kursus
     csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
     csp1_2: 'Bab 2: Menciptakan Internet'
     csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
@@ -1175,8 +1227,12 @@ id:
     csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
     cspSurvey: Survei
     cspAssessment: Bab Penilaian
+    csp_ap_1: 'Bab 1: Pengaturan Teknologi AP'
     csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
     csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
+    csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
+    csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
+    csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
     dlp: Anjuran Refleksi
   external_links:
     disclaimer: Disclaimer
@@ -1247,6 +1303,10 @@ id:
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
     windows: Windows (64-bit)
     mac: Mac OS X
+  stage_extras_teacher_message: Anda memiliki pelajaran tambahan dimatikan untuk beberapa
+    bagian Anda. Siswa Anda tidak akan melihat Halaman ini kecuali Anda hidupkan keduanya.
+    Anda dapat mengaktifkan pelajaran tambahan dengan mengunjungi Anda <a href='http://code.org/teacher-dashboard'>Dashboard
+    guru</a>.
   locked_stage: Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci.
     Guru anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau
     kembali jawaban anda.
@@ -1259,14 +1319,30 @@ id:
   view_all_units: Melihat semua satuan
   pd:
     form_labels:
+      first_name: Nama Depan
+      first_name_preferred: Pilihan nama pertama
+      last_name: Nama Belakang
       email: email
+      email_alternate: Email alternatif
+      gender: Identitas gender
       school_name: Nama Sekolah
       school_city: Kota sekolah
       school_country: Negara Sekolah
+      ages: Umur berapa kamu mengajar tahun ini?
+      subjects: Subjek mana kamu mengajar tahun ini?
+      resources: Sumber daya pendidikan CS mana yang Anda gunakan?
+      robotics: Sumber daya Robotika mana yang Anda gunakan?
+      workshop_organizer: Penyelenggara lokakarya
+      workshop_facilitator: Fasilitator Lokakarya
+      workshop_course: Kursus Lokakarya
+      email_opt_in: Bisa kami email Anda tentang Code.org's program internasional,
+        update ke kursus kami, atau Berita Sains komputer lainnya?
     form_entries:
       gender:
         male: Laki-laki
         female: Wanita
+        non_binary: Non-biner
+        not_listed: Istilah yang disukai tidak terdaftar
         none: Memilih untuk tidak menjawab
       subjects:
         cs: Ilmu komputer

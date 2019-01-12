@@ -265,7 +265,7 @@ AS(
      LEFT JOIN dashboard_production_pii.regional_partners rp2 
         ON  rpm.regional_partner_id = rp2.id  
     WHERE pdw.course = 'CS Fundamentals'
-    AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')  or pdw.subject is null)
+    AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive')  or pdw.subject is null)
     group by 1, 2, 3, 4, 5,  7,   10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, u.name, 22, 23, 25
   ),
   

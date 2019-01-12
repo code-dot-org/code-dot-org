@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.orgは、企業の社員がHour of Codeの授業を行う地域の学校と[繋がり](<%= resolve_url('https://code.org/volunteer') %>)、自らの技術キャリアで身につけた経験を共有し、生徒たちがコンピューターサイエンスを学ぶきっかけづくりの機会を提供します。
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 

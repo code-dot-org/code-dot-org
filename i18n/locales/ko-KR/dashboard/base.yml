@@ -10,6 +10,7 @@ ko:
       messages:
         blank: "이(가) 필요합니다."
         blank_plural: "이(가) 필요합니다."
+        invalid: "에 무제가 있습니다."
         invalid_plural: "가(이) 유효하지 않습니다"
     attributes:
       user:
@@ -26,6 +27,8 @@ ko:
         age: '나이'
         gender: '성별'
         edit_header: '계정 정보 수정'
+        finish_sign_up_header: '계정 만들기를 마칩니다.'
+        finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보들을 입력 하세요.'
         error:
           future: 오늘 이전 날짜만 가능합니다.
   hello: "Hello world"
@@ -195,11 +198,11 @@ ko:
     subject: '내 학급 가기(on Code.org)'
     body: |
       Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
-      
+
       %{link}
-      
+
       이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
@@ -322,6 +325,7 @@ ko:
       playlab: 'Play Lab'
       minecraft: '마인크래프트'
       flappy: '플래피'
+      dance: '댄스 파티'
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: '내 진도'
@@ -543,6 +547,8 @@ ko:
       body_short: "앱을 디자인하고, 블록이나 자바스크립트를 이용해 실제로 움직이도록 해보세요. 그리고 여러분들이 만든 앱을 바로 공유할 수 있습니다."
       audience: '13세 이상'
       cta: '방법 알아보기'
+    dance:
+      title: '댄스 파티'
     hoc:
       title: '고전 미로게임'
       body: '컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.'
@@ -585,6 +591,7 @@ ko:
       title: "마인크래프트"
     hero:
       title: "마인크래프트"
+      body: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
     unplugged:
       title: "언플러그드 레슨"
       audience: "6세 이상"
@@ -888,6 +895,7 @@ ko:
   locked_stage: '현재 스테이지가 잠겨있기 때문에 해당 컨텐츠가 보이지 않습니다. 담당교사는 해당 스테이지에 대한 작업이 필요하거나 당신의 답을 검토하기 위해서 잠금을 해제할 수 있습니다.'
   hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
   return_course_overview: '단위별 개요로 이동'
+  view_teacher_guide: '선생님 가이드 보기'
   pd:
     form_labels:
       email: '이메일'

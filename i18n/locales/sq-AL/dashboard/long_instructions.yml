@@ -127,7 +127,7 @@ sq:
       4-5 Nested Loops 12: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       4-5 Nested Loops 3: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       4-5 Nested Loops 5: Ciklo kodin e dhënë për të krijuar një mulli ere.
       4-5 Nested Loops 6: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       4-5 Nested Loops 7: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
@@ -187,19 +187,23 @@ sq:
       NEW Course 4 Artist Vars 6: "Vizato këtë model duke zhvendosur variablin e gjatësisë në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë. (Udhëzim: Është shumfish i 10). \\r\n\\r\nE patë se si e vendosët vlerën për gjatësinë dhe kodi përdori vlerën e duhur kudo?\\r\n\\r\n\\r\n"
       Overworld Move to Sheep: "Shto një komandë të dytë \"ec përpara\" për të\narritur delet."
       Overworld Move to Sheep_2018: "Shto një komandë të dytë \"ec përpara\" për të\narritur delet."
+      Overworld Move to Sheep_2019: "Shto një komandë të dytë \"ec përpara\" për të\narritur delet."
       Testing Quantum Farmer: "Wow, gjeta nje grope shume te thelle! Nuk e di sa lopata balte nevojiten. Mund te shkruash nje program qe e mbush derisa toka te jete e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj here."
       course4_artist_fwp_challenge1: Provo ta ekzekutosh këtë program dhe bëj ndryshime për të parë se çfarë ndodh. A mund ta kuptosh se si punon? (Ose fshije atë dhe zëvëndësoje me diçka komplet ndryshe)
       courseD_bee_nestedLoops5: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events1: Shko te flamuri! Bashkangjit një bllok te blloku "kur shigjeta majtas" dhe shtypni "Run" për të lëvizur lojtarin te flamuri.
       courseD_maze_nestedLoops4: 'Më ço tek luledielli!'
       courseD_maze_nestedLoops4_2018: 'Më ço tek luledielli!'
+      courseD_maze_nestedLoops4_2019: 'Më ço tek luledielli!'
       courseE_bee_functions3: "Funksionet janë blloqe kodi që performojnë\nnjë detyrë. Përdor funksionin \"merr 5\" për të marrë 5 nektarë në një kohë. Sigurohu të\npërdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu."
       courseE_bee_functions3_2018: "Funksionet janë blloqe kodi që performojnë\nnjë detyrë. Përdor funksionin \"merr 5\" për të marrë 5 nektarë në një kohë. Sigurohu të\npërdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu."
       courseE_farmer_concept4: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
       courseF_bee_for_challenge2: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       courseF_bee_for_challenge2_2018: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
+      courseF_bee_for_challenge2_2019: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       frozen circle function in circle: Tani le të krijojmë 20 rrathë të mbivendosur, duke kthyer 18 gradë ndërmjet çdo rrethi.
       frozen circle function with parameter: "Këtu kemi një bllok \"Krijo një rreth\" \nqë bën rrathët me madhësi të ndryshme. A mund ta përdorësh këtë për të krijuar \nnjë rreth të vogël me masë 5 dhe një rreth më të madh me masën 10?"
       frozen circle function: Përdor bllokun e ri "Create a circle" për të krijuar 10 rrathë të mbivendosur. Mos harro të hidhesh përpara ndërmjet rrathëve.
@@ -273,14 +277,14 @@ sq:
       grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
       grade4_arist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_functions2: "Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi\nlëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur \"vizato një katror\".\nA mund ta përdorësh funksionin \"vizato një katror\" për të krijuar xhamat? Katrorët\njanë 75 piksela të veçuar."
       grade4_artist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli ere.
       grade4_artist_nested_loop_polygons1: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
       grade4_artist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
-        
+
       grade4_artist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_parameters_triangles2: A vure re diçka ndryshe te keto blloqe funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade4_bee_conditionals_quantum2: "Bleta dëshiron vetëm nektar \ntani. Kujto, jo të gjithë objektet janë lule, kështu që kontrollo për të mblehdur nektar vetëm\ntek lulet."
@@ -306,7 +310,7 @@ sq:
       grade4_review_bee1: Tani përdor bllokun e ri të përsëritjes për të mbledhur të gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
       grade5_artist_for_loops1: Vizato këtë trekëndësh që është në masë 50 piksel.
       grade5_artist_for_loops10: "Mund ta zbulosh se si të përdorësh të gjitha gjërat që ke mësuar për të krijuar këtë figurë?\\r\n\\r\nTë nevojitet një udhezim? Kliko këtu."
-      grade5_artist_for_loops5: |2
+      grade5_artist_for_loops5: |-
         Vetëm një ndryshim i vogël në kod nga figura e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është 
         ai ndryshim? \r
          \r

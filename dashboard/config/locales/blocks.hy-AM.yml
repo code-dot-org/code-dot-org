@@ -40,6 +40,14 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ hy:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ hy:
         options:
           KEY:
             '"up"': մինչեւ
-            '"down"': ներքեւ
             '"left"': ձախ
+            '"down"': ներքեւ
             '"right"': ճիշտ
             '"space"': տարածություն
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -201,6 +228,23 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
       Mikelab_randomColor:
         text: կամայական գույն
       Mikelab_setBG:
@@ -216,6 +260,11 @@ hy:
           CORNER:
             '"right"': ճիշտ
             '"left"': ձախ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -255,6 +304,21 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      binary_move:
+        options:
+          DIR:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
       craft_ifPath:
         options:
           DIR:

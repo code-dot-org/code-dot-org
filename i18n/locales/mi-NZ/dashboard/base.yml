@@ -145,11 +145,11 @@ mi:
     subject: 'Whakapiri mai ki taku akomanga (ki Code.org)'
     body: |
       Pāwhiritia te honongaitua kei raro iho nei ki te uru ki ngā whakaakoranga pūtaiao rorohiko kei Code.org (ko au hei "pouako" mōu):
-      
+
       %{link}
-      
+
       He ngahau, he pai ā-tirohanga hoki ngā whakaakoranga, ā, ka whakaakona ngā ariā waiwai o te pūtaiao rorohiko mā ētahi wheako māmā, ārahi, rite ki te kēmu te hanga. Ka ako i ngā mahi waehere i a Bill Gates, a Mark Zuckerberg, i te kēmu Manu Takariri me Ngā Tipu ki Ngā Kairoro. :-)
-      
+
       %{name}
   section:
     type:
@@ -709,6 +709,7 @@ mi:
   locked_stage: 'I te mea kua maukati tēnei wāhanga i tēnei wā kāore ōna ihirangi e kitea ana. E āhei ana tō pouako tēnei wāhanga te whakawātea i te wā ka arohia, ki te tirohia anō rānei o whakautu.'
   hidden_stage: "Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā."
   return_course_overview: 'Haere ki te tirohanga whānui o te kōwae ako'
+  view_teacher_guide: 'Tirohia te aratohu kaiako'
   pd:
     form_labels:
       email: 'Īmēra'

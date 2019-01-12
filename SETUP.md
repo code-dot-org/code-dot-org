@@ -19,24 +19,47 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install` (Problems with rmagick? See [tips](#tips) below.) (OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
+1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.) 
 1. `rake install:hooks`
+    <details>
+        <summary>Troubleshoot: `rake aborted!..` </summary>
+      
+        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this." 
+            * Follow the instructions and add `bundle exec` in front of the command
+    </details>
+
 1. `rake install`
-1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
+1. [Enable JavaScript builds](#enabling-javascript-builds)
+    1. Note: You can skip this step if not editing javascript frequently.
+1. Setup AWS - Ask a Code.org engineer how to complete this step
 1. `rake build`
 
 ## OS-specific prerequisites
 
-### OS X Mavericks / Yosemite / El Capitan / Sierra
+### OS X Mojave / Mavericks / Yosemite / El Capitan / Sierra
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
-    1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
-    1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite`
+    <details>
+        <summary>Troubleshoot: `Formula.sha1` is disabled</summary>
+      
+        If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
+    </details>
+    
+    <details>
+          <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
+          
+          If it complains about an old version of `&lt;package&gt;`, run `brew unlink &lt;package&gt;` and run `brew install &lt;package&gt;` again
+    </details>
+
+1. Install PhantomJS: `brew cask install phantomjs`
 1. Set up MySQL
+    1. Force link 5.7 version: `brew link mysql@5.7 --force`
     1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
+        1. Note, if mysql folder name is "mysql@5.7", replace the command above by `ln -sfv /usr/local/opt/mysql@5.7/*.plist ~/Library/LaunchAgents`. (Use `ls -d /usr/local/opt/mysql*` to check for folder name.)
     1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
+        1. Note: if this fails check your plist file (`ls ~/Library/LaunchAgents/`) to see if it is "homebrew.mxcl.mysql@5.7.plist". If it is try: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.7.plist` instead
 1. Set up rbenv
     1. Run `rbenv init`
     1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
@@ -68,9 +91,20 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         ```
     1. close and reopen your current terminal window
     1. make sure that `ulimit -n` returns 8192
-1. install the Xcode Command Line Tools:
+1. Install the Xcode Command Line Tools:
     1. `xcode-select --install`
-
+    
+    <details>
+              <summary>Troubleshoot: command line tools already installed</summary>
+              
+              If it complains 
+              
+              ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
+              
+              check to make sure XCode is downloaded and up to date manually.
+              
+    </details>
+    
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
@@ -92,7 +126,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
-1. Read the following notes, then go back up to the overview and run the commands there. 
+1. Read the following notes, then go back up to the overview and run the commands there.
    1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
    1. `rake install` must always be called from the local project's root directory, or it won't work.
@@ -145,7 +179,9 @@ Please also see our other documentation, including our:
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
 
 ---
-### Tips
+### Bundle Install Tips
+
+#### rmagick
 If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
 - `convert --version`
 - `brew install imagemagick@6`
@@ -154,6 +190,35 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.15.4`
+
+#### libv8
+
+If you run into an error with libv8 while running bundle install
+- Uninstall libv8: `gem uninstall libv8`
+- Make sure the gem no longer exists with: `gem list libv8`
+- Install the current version used in code.org repo: `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
+
+#### mysql2
+
+If you run into an issue about mysql2 while running `bundle install` and the error output includes "ld: library not found for -lssl" try :
+- `brew install openssl`
+- `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
+
+(Steps from [this github issue](https://github.com/brianmario/mysql2/issues/795#issuecomment-439579677))
+
+#### therubyracer
+
+If you run into an issue about therubyracer while running `bundle install` try :
+- `gem uninstall libv8`
+- `gem install therubyracer -v CURRENT_CODEORG_VERSION` (you can find the current version in the [Gemfile.lock](./Gemfile.lock)).
+- `gem install libv8 -v CURRENT_CODEORG_VERSION -- --with-system-v8` 
+
+(Steps from [this stackoverflow question](https://stackoverflow.com/questions/19577759/installing-libv8-gem-on-os-x-10-9))
+
+#### Xcode Set Up
+
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
+
 
 ### Recomended hardware
 While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.

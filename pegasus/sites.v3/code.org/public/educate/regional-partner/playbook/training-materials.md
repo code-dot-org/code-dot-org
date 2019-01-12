@@ -24,8 +24,8 @@ ________________
 
 November 2018
 
-- November 14 Facilitator Application Process Webinar
-- November 16 Facilitator Application Process Webinar
+- November 14 Facilitator Application Process Webinar ([Recording](https://code.zoom.us/recording/share/s-m98QxMkDX-s3u9ISax4qv9RNWRBJclxHfNuZR3yPuwIumekTziMw), [Slides](https://docs.google.com/presentation/d/1MbX2mxZBSVFMPT6F7XZ3esyRhHwQ7pcvMnTCjksSRVo/edit#slide=id.g14d6c3396a_0_0))
+- November 16 Facilitator Application Process Webinar ([Recording](https://code.zoom.us/recording/share/4cg8Bm_H4PLJ8q_xk0Xpl7S4AiZOM6XvTzAA7abRP3mwIumekTziMw?startTime=1542391027000), [Slides](https://docs.google.com/presentation/d/1MbX2mxZBSVFMPT6F7XZ3esyRhHwQ7pcvMnTCjksSRVo/edit#slide=id.g14d6c3396a_0_0))
 
 October 2018
 

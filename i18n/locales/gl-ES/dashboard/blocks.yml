@@ -40,6 +40,14 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -58,7 +66,7 @@ gl:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -68,11 +76,29 @@ gl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': aleatorio
       Dancelab_randomColor:
         text: cor aleatoria
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,8 +135,8 @@ gl:
         options:
           KEY:
             '"up"': arriba
-            '"down"': abaixo
             '"left"': esquerda
+            '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
       gamelab_changePropBy:
@@ -215,6 +241,29 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
       Mikelab_randomColor:
         text: cor aleatoria
       Mikelab_setBG:
@@ -232,6 +281,11 @@ gl:
           CORNER:
             '"right"': dereita
             '"left"': esquerda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -240,7 +294,9 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -249,7 +305,9 @@ gl:
             '"left"': frecha esquerda
             '"right"': frecha dereita
             '"w"': O
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -275,6 +333,21 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      binary_move:
+        options:
+          DIR:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
       craft_ifPath:
         options:
           DIR:

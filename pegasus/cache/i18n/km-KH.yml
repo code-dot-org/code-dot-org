@@ -821,11 +821,14 @@ km-KH:
   user_header_view_my_projects: មើលគម្រោងរបស់ខ្ញុំ
   view_all_sections: មើលផ្នែកទាំងអស់
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+  applab_tile_start_tutorial: ចាប់​ផ្ដើម
+  hoc_overview_start_tutorial: ចាប់​ផ្ដើម
   hoc2018_creativity_create: បង្កើត
   hoc2018_mc_page_title: មេរៀន Minecraft Hour of Code
   hoc2018_mc_details: ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រទំនើបៗ និង tablets | ថ្នាក់ទី២ឡើងទៅ
   hoc2018_mc_aquatic_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
     ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+  hoc2018_mc_hero_title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
   hoc2018_mc_hero_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
     ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
   hoc2018_mc_designer_title: Minecraft Designer
@@ -854,3 +857,6 @@ km-KH:
   hoc2018_mc_back: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
   hoc2018_mc_back_journey: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
     ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+  hoc2018_dance_party_button: ចាប់​ផ្ដើម
+  hoc2018_dance_amazon_about_future_engineer_button: សិក្សាបន្ថែម
+  hoc2018_dance_amazon_scholarship_programs_button: ចូលរួមឥលូវនេះ

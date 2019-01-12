@@ -1,0 +1,41 @@
+---
+title: Dance
+theme: responsive
+---
+
+%link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
+
+=view :dance_tutorial_section
+
+.dance-text-icon-container.desktop-only
+  %a.translate-link{href: "/translate/dance"}
+    .dance-translate-link-text
+      =I18n.t(:hoc2018_dance_party_subheading)
+    %i.fa.fa-chevron-right.dance-chevron-icon
+
+=view :dance_teacher_resources
+
+=view :dance_sponsor_logo
+
+%h2.dance-responsive-padding.add-margintop-between-sections= I18n.t(:hoc2018_dance_featured_student_creations_title)
+=view :student_dance_projects
+
+%h2.dance-responsive-padding= I18n.t(:hoc2018_dance_videos_section_heading)
+.thumbnail-wrapper
+  .dance-videos.dance-clear-element
+    =view :dance_creativity_video
+    .col-50.dance-add-padding
+      .videothumbnail
+        .thumbnail-wrapper
+          %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank"}
+            %img.dance-thumbnail-tile-img{src:"/images/dance-hoc/dance_playlist_thumbnail.png"}
+          .dance-thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
+
+.dance-videos.dance-clear-element
+  =view :dance_videos
+
+- if request.language == 'en'
+  %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
+  =view :dance_amazon_future_engineer
+
+.amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)

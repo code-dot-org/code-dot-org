@@ -13,6 +13,9 @@ import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const styles = {
+  container: {
+    overflowX: 'auto'
+  },
   table: {
     width: '100%',
   },
@@ -176,28 +179,61 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         }
       }, {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
+        }
+      }, {
         property: 'total_score',
         header: {
           label: 'Bonus Points',
           transforms: [sortable]
         }
       });
+    } else {
+      columns.push(
+        {
+          property: 'meets_criteria',
+          header: {
+            label: 'Meets Criteria',
+            transforms: [sortable]
+          }
+        }, {
+          property: 'total_score',
+          header: {
+            label: 'Total Score',
+            transforms: [sortable]
+          }
+        }
+      );
     }
 
+    [
+      {property: 'notes', label: 'General Notes'},
+      {property: 'notes_2', label: 'Notes 2'},
+      {property: 'notes_3', label: 'Notes 3'},
+      {property: 'notes_4', label: 'Notes 4'},
+      {property: 'notes_5', label: 'Notes 5'},
+    ].forEach((notesField)=> {
+      columns.push({
+        property: notesField.property,
+        header: {
+          label: notesField.label,
+            transforms: [sortable]
+        },
+        cell: {
+          format: this.formatNotesTooltip,
+          transforms: [
+            () => ({
+              style: {...styles.notesCell}
+            })
+          ]
+        }
+      });
+    });
+
     columns.push({
-      property: 'notes',
-      header: {
-        label: 'Notes'
-      },
-      cell: {
-        format: this.formatNotesTooltip,
-        transforms: [
-          () => ({
-            style: {...styles.notesCell}
-          })
-        ]
-      }
-    },{
       property: 'id',
       header: {
         label: 'Actions',
@@ -307,15 +343,17 @@ export class QuickViewTable extends React.Component {
     })(rows);
 
     return (
-      <Table.Provider
-        id="quick-view"
-        className="pure-table table-striped"
-        columns={this.columns}
-        style={styles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
+      <div style={styles.container}>
+        <Table.Provider
+          id="quick-view"
+          className="pure-table table-striped"
+          columns={this.columns}
+          style={styles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
+      </div>
     );
   }
 }

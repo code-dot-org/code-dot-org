@@ -1768,6 +1768,8 @@ ne-NP:
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  applab_tile_start_tutorial: Start
+  hoc_overview_start_tutorial: Start
   hoc2018_creativity_create: बनाउनुहोस्
   hoc2018_mc_page_title: Minecraft Hour of Code Tutorials
   hoc2018_mc_details: Many languages | Modern browsers and tablets | Grades 2+
@@ -1797,3 +1799,7 @@ ne-NP:
   hoc2018_mc_video_title_anybody_can_learn: Anybody Can Learn
   hoc2018_mc_homepage_join_us: Join us
   hoc2018_mc_homepage_try_it: Try it
+  hoc2018_dance_party_button: Start
+  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
+  hoc2018_dance_amazon_about_future_engineer_button: थप जान्नुहोस्

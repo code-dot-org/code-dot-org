@@ -1582,6 +1582,9 @@ de:
         (und dabei positive und negative Zahlen nutzt).
       Course 4 Variables Assessment: Kannst du dieses Bild mit einer Variablen für
         die Seiten erstellen? Jede Seite sollte 50 Pixel lang sein.
+      Course E MC Conditionals1: Du wirst die wertvollsten Rohstoffe unter der Erde
+        finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und
+        baue mindestens 2 Kohleblöcke ab.
       CourseF_PlayLab_vars10: |-
         Zeit für freies Spiel! Hier sind alle Variablen, mit denen wir bis jetzt in dieser Phase gespielt haben, sowie ein paar mehr, falls du sie möchtest.
 
@@ -1621,6 +1624,35 @@ de:
       Crack Random Substitution_2018: Anweisungen
       Crack a Caesar Cipher: Anweisungen
       Crack a Caesar Cipher_2018: Anweisungen
+      Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_Party_01_low: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
+      Dance_Party_03: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
+        beginnen.
+      Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
+      Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle
+        2 Takte den Tanzschritt wechselt.
+      Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der
+        mit der Katze tanzt.
+      Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
+      Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton
+        eines Tänzers zu verändern.
+      Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren,
+        indem Sie den Block "beginnt danach" verwenden.
+      Dance_Party_11.5_test: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam
+        tanzen zu lassen.
+      Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen,
+        wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine
+        schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
+      Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam
+        tanzen zu lassen.
+      Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte
+        Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben
+        drücken. Machen Sie den Drop-Floss, so schnell es geht!
+      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       Food Fight!: |-
         Wir haben für dich eine letzte Funktion ergänzt.
 
@@ -1634,6 +1666,20 @@ de:
         kannst.
       Function intro Ryan: Verwende zweimal die "Brücke bauen"-Funktion, um einen
         Weg zur Fackel zu bauen.
+      Function intro Ryan_2019: Verwende zweimal die "Brücke bauen"-Funktion, um einen
+        Weg zur Fackel zu bauen.
+      HOC 2018 Level_1: Hol dir ein Boot aus der Truhe.
+      HOC 2018 Level_10: Erreiche den Eingang dieses Ozeanmonuments.
+      HOC 2018 Level_11: Baue mit dem Prismarin im Ozeanmonument einen Aquisator.
+      HOC 2018 Level_12: Entwirf deine eigene Unterwasserwelt. Lass deiner Fantasie
+        freien Lauf.
+      HOC 2018 Level_2: Begib dich zum Ende des Anlegestegs.
+      HOC 2018 Level_3: Fahre über das Meer zum Kabeljau.
+      HOC 2018 Level_4: Verwende eine Schleife, um zum Delfin zu gelangen.
+      HOC 2018 Level_5: Erkunde das Schiffswrack, um die Truhe zu erreichen.
+      HOC 2018 Level_6: Navigiere durch das Eis, um den Lachs zu erreichen.
+      HOC 2018 Level_7a: Suche in diesen Unterwasserruine nach einer Truhe.
+      HOC 2018 Level_9b: Verwende die Korallen als Wegpunkte, um den Schatz zu erreichen.
       Infinity_catch: Kannst du Elsa („Figur 2") dazu bewegen, Anna mithilfe der Pfeiltasten
         einzufangen?
       Infinity_finale: Erstelle alles, was dir gefällt und teile es!
@@ -1663,6 +1709,8 @@ de:
       InspirationalArtwork: Wenn dich dieses Bild inspiriert, versuche etwas ähnliches
         zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       InspirationalArtwork_2018: Wenn dich dieses Bild inspiriert, versuche etwas
+        ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
+      InspirationalArtwork_2019: Wenn dich dieses Bild inspiriert, versuche etwas
         ähnliches zu machen. Andererseits kannst du auch etwas komplett eigenes machen.
       K-1 Artist 1 Assessment 1: Zeichne eine kurze Linie nach oben und eine lange
         Linie nach rechts!
@@ -1879,31 +1927,44 @@ de:
       MC_HOC_2017_01_RETRY: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen"
         aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und
         die Truhe einzusammeln. '
+      MC_HOC_2017_01_RETRY_2019: 'Führe den Agenten zur Druckplatte. Wähle dann "Ausführen"
+        aus und verwende die Pfeiltasten, um den Spieler aus dem Haus zu lenken und
+        die Truhe einzusammeln. '
       MC_HOC_2017_02: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_02_Cole: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName}
+        zur Karte gelangen kann. '
+      MC_HOC_2017_02_Cole_2019: 'Bewege den Agenten zur Druckplatte, sodass {currentPlayerName}
         zur Karte gelangen kann. '
       MC_HOC_2017_02_Kiki: Bewege den Agenten zur Druckplatte, sodass der Spieler
         zum organgefarbenen Quadrat gelangen kann.
       MC_HOC_2017_02_Will: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_03_Cole: 'Lass den Agenten das Tor öffnen. '
+      MC_HOC_2017_03_Cole_2019: 'Lass den Agenten das Tor öffnen. '
       MC_HOC_2017_03_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent
         einen Weg über den breiteren Teil des Flusses baut.
       MC_HOC_2017_04POINT5_Cole: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04POINT5_RYAN: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04POINT5_RYAN_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Cole: Führe den Agenten zur Druckplatte.
+      MC_HOC_2017_04_Cole_2019: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_04_Kiki: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_05: Verwende eine Funktion, um den Agenten zur Druckplatte zu führen.
       MC_HOC_2017_05_Cole: Bringe den Spieler zur Schaufel.
+      MC_HOC_2017_05_Cole_2019: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Josh: Bringe den Spieler zur Schaufel.
       MC_HOC_2017_05_Kiki: Bringe den Spieler zum orangefarbenen Quadrat.
       MC_HOC_2017_06_Cole: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
+      MC_HOC_2017_06_Cole_2019: Ändere diesen Code, um den Agenten eine Brücke über
+        den Fluss bauen zu lassen.
       MC_HOC_2017_06_Josh: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
       MC_HOC_2017_06_Kiki: Ändere diesen Code, um den Agenten eine Brücke über den
         Fluss bauen zu lassen.
       MC_HOC_2017_07_Cole: Zerstöre das Eis und bringe {currentPlayerName} zur Lore.
+      MC_HOC_2017_07_Cole_2019: Zerstöre das Eis und bringe {currentPlayerName} zur
+        Lore.
       MC_HOC_2017_07_Kiki: Verwende die Funktion, um den Weg zum orangefarbenen Quadrat
         zu räumen.
       MC_HOC_2017_07a_Kiki: Räume den Weg zum orangefarbenen Quadrat.
@@ -1920,16 +1981,21 @@ de:
       MC_HOC_2017_10_Cole_old: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_Kiki: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RETRY: Erstelle eine Funktion, um diese Lore fertigzustellen.
+      MC_HOC_2017_10_RETRY_2019: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_10_RYAN2: Erstelle eine Funktion, um diese Lore fertigzustellen.
       MC_HOC_2017_13_Cole: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
       MC_HOC_2017_4.5v2: Führe den Agenten zur Druckplatte.
       MC_HOC_2017_Ali: Verwende die Funktion, um einen Weg durch die Lava zu suchen.
+      MC_HOC_2017_Ali_2019: Verwende die Funktion, um einen Weg durch die Lava zu
+        suchen.
       MC_HOC_2017_FP10x10: "**Freies Spiel:** Schaffst du es, alle Diamanten in diesem
         Level einzusammeln? "
       MC_HOC_2017_FP10x10_RE: "**Freies Spiel:** Schaffst du es, alle Diamanten in
         diesem Level einzusammeln? "
       MC_HOC_2017_FP20x20: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
+      MC_HOC_2017_FP20x20_2019: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust
+        losziehen!"
       MC_HOC_2017_Ryan_03: Verwende jetzt Schleifen, um den Agenten eine Brücke über
         den Fluss bauen zu lassen, indem er Blöcke im Wasser platziert.
       MC_HOC_2017_Ryan_05: Zerstöre diese Kakteen, sodass der Spieler das Ziel erreichen
@@ -2138,6 +2204,9 @@ de:
       Overworld Avoid Monsters_2018: In einen Creeper hinein zu laufen, ist eine schlechte
         Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
+      Overworld Avoid Monsters_2019: In einen Creeper hinein zu laufen, ist eine schlechte
+        Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
+        Zuhause.
       Overworld Chop Tree - allthethings: Holz ist ein sehr wichtiger Rohstoff. Viele
         Dinge werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm
         und benutze den „Zerstören“-Baustein.
@@ -2147,9 +2216,14 @@ de:
       Overworld Chop Tree_2018: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge
         werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und
         benutze den „Zerstören“-Baustein.
+      Overworld Chop Tree_2019: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge
+        werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und
+        benutze den „Zerstören“-Baustein.
       Overworld Chop Trees: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
         Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
       Overworld Chop Trees_2018: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
+        Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
+      Overworld Chop Trees_2019: Wir müssen ein Haus bauen, bevor die Sonne untergeht.
         Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
       Overworld Free Play 20x20: Herzlichen Glückwunsch! Du hast alle Aufgaben gelöst!
         Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles bisher
@@ -2157,13 +2231,20 @@ de:
       Overworld Free Play 20x20_2018: Herzlichen Glückwunsch! Du hast alle Aufgaben
         gelöst! Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles
         bisher Gelernte anwendest.
+      Overworld Free Play 20x20_2019: Herzlichen Glückwunsch! Du hast alle Aufgaben
+        gelöst! Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles
+        bisher Gelernte anwendest.
       Overworld House Frame Chosen: Baue den Rest deines Hauses aus einem Material
         deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
       Overworld House Frame Chosen_2018: Baue den Rest deines Hauses aus einem Material
         deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
+      Overworld House Frame Chosen_2019: Baue den Rest deines Hauses aus einem Material
+        deiner Wahl. Der „Wiederhole“-Befehl ist dabei sehr nützlich.
       Overworld Move to Sheep: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den
         Schafen zu gelangen.
       Overworld Move to Sheep_2018: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
+        zu den Schafen zu gelangen.
+      Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
       Overworld Place Wall: Alle Häuser beginnen mit einer Wand. Baue den ersten Teil
         deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die Wiederholungsschleife
@@ -2171,9 +2252,14 @@ de:
       Overworld Place Wall_2018: Alle Häuser beginnen mit einer Wand. Baue den ersten
         Teil deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die
         Wiederholungsschleife platzierst.
+      Overworld Place Wall_2019: Alle Häuser beginnen mit einer Wand. Baue den ersten
+        Teil deines Hauses, indem du die „Platzieren“- und „Vorwärts“-Befehle in die
+        Wiederholungsschleife platzierst.
       Overworld Plant Crops: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
         des Wassers Getreide an, damit du später nicht hungrig wirst.
       Overworld Plant Crops_2018: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
+        des Wassers Getreide an, damit du später nicht hungrig wirst.
+      Overworld Plant Crops_2019: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten
         des Wassers Getreide an, damit du später nicht hungrig wirst.
       Overworld Powered Minecart: Gute Arbeit! Du hast viele Rohstoffe gesammelt und
         ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis zur
@@ -2181,9 +2267,14 @@ de:
       Overworld Powered Minecart_2018: Gute Arbeit! Du hast viele Rohstoffe gesammelt
         und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis
         zur Tür deines Hauses.
+      Overworld Powered Minecart_2019: Gute Arbeit! Du hast viele Rohstoffe gesammelt
+        und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis
+        zur Tür deines Hauses.
       Overworld Shear Sheep: Zeit zum Schafescheren! Benutze den Befehl "scheren",
         um Wolle von beiden Schafen zu sammeln.
       Overworld Shear Sheep_2018: Zeit zum Schafescheren! Benutze den Befehl "scheren",
+        um Wolle von beiden Schafen zu sammeln.
+      Overworld Shear Sheep_2019: Zeit zum Schafescheren! Benutze den Befehl "scheren",
         um Wolle von beiden Schafen zu sammeln.
       PDK5 Conditionals 1: Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben,
         aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume
@@ -2275,10 +2366,17 @@ de:
         die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist
         hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle
         ein, um diese Bausteine zu meiden.
+      Underground Avoiding Lava_2019: Lava versteckt sich unter manchen dieser Bausteine,
+        die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist
+        hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle
+        ein, um diese Bausteine zu meiden.
       Underground If Statements: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
         ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
         über alle von dir entdeckte Lava zu platzieren.
       Underground If Statements_2018: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
+      Underground If Statements_2019: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
         ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
         über alle von dir entdeckte Lava zu platzieren.
       Underground Iron: In geschmolzene Lava zu laufen, ist keine gute Idee. Platziere
@@ -2287,10 +2385,16 @@ de:
       Underground Iron_2018: In geschmolzene Lava zu laufen, ist keine gute Idee.
         Platziere Kopfsteinpflaster, um eine Brücke zu erstellen, und baue mindestens
         zwei Eisenblöcke ab.
+      Underground Iron_2019: In geschmolzene Lava zu laufen, ist keine gute Idee.
+        Platziere Kopfsteinpflaster, um eine Brücke zu erstellen, und baue mindestens
+        zwei Eisenblöcke ab.
       Underground Mining Coal: Du wirst die wertvollsten Rohstoffe unter der Erde
         finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und
         baue mindestens 2 Kohleblöcke ab.
       Underground Mining Coal_2018: Du wirst die wertvollsten Rohstoffe unter der
+        Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
+        und baue mindestens 2 Kohleblöcke ab.
+      Underground Mining Coal_2019: Du wirst die wertvollsten Rohstoffe unter der
         Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln
         und baue mindestens 2 Kohleblöcke ab.
       aE7: Wenn du die Schleife kopierst und eine Linksdrehung anstelle einer Rechtsdrehung
@@ -2620,9 +2724,13 @@ de:
         Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2018: Kannst Du ein Programm schreiben, so dass Jorge,
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
+      courseC_PlayLab_events3_2019: Kannst Du ein Programm schreiben, so dass Jorge,
+        der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_artist_prog5: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2018: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
+        alle drei Seiten sind gleich lang.'
+      courseC_artist_prog5_2019: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_maze_debugging10: Bereinige diesen Level von Fehlern, indem du die Bausteine
         so anordnest, dass ich das Schwein erreiche.
@@ -2634,17 +2742,27 @@ de:
         Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
 
         Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
+      courseD_artist_binary1_2019: |-
+        Bei der binären Schreibweise werden Informationen mit nur zwei Optionen repräsentiert.  Hier nutzen wir die Option „aus“ (dargestellt durch die Nummer 0) und „an“ (dargestellt durch die Nummer 1).
+
+        Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
       courseD_artist_binary4: Kannst du dieses Muster zeichnen, indem du eine dreistellige
         Binärzeichenfolge durchlaufen lässt?
       courseD_artist_binary4_2018: Kannst du dieses Muster zeichnen, indem du eine
+        dreistellige Binärzeichenfolge durchlaufen lässt?
+      courseD_artist_binary4_2019: Kannst du dieses Muster zeichnen, indem du eine
         dreistellige Binärzeichenfolge durchlaufen lässt?
       courseD_artist_binary6: Welche sechsstellige Binärzeichenfolge wird dieses Bild
         zeichnen, wenn sie 11 Mal wiederholt wird?
       courseD_artist_binary6_2018: Welche sechsstellige Binärzeichenfolge wird dieses
         Bild zeichnen, wenn sie 11 Mal wiederholt wird?
+      courseD_artist_binary6_2019: Welche sechsstellige Binärzeichenfolge wird dieses
+        Bild zeichnen, wenn sie 11 Mal wiederholt wird?
       courseD_artist_binary7: Was ist die kürzeste binäre Zeichenfolge, die du wiederholen
         kannst, um dieses Bild zu zeichnen?
       courseD_artist_binary7_2018: Was ist die kürzeste binäre Zeichenfolge, die du
+        wiederholen kannst, um dieses Bild zu zeichnen?
+      courseD_artist_binary7_2019: Was ist die kürzeste binäre Zeichenfolge, die du
         wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_autorun_binary4_2019: Kannst du dieses Muster zeichnen, indem du eine
         dreistellige Binärzeichenfolge durchlaufen lässt?
@@ -2662,6 +2780,8 @@ de:
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bounce_events10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt
         erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und
@@ -2701,8 +2821,12 @@ de:
       courseD_maze_nestedLoops4_2018: |-
         Bring mich zu der Sonnenblume!
         (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
+      courseD_maze_nestedLoops4_2019: |-
+        Bring mich zu der Sonnenblume!
+        (Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen.
       courseD_maze_nestedLoops6: Bring mich zu der Sonnenblume!
       courseD_maze_nestedLoops6_2018: Bring mich zu der Sonnenblume!
+      courseD_maze_nestedLoops6_2019: Bring mich zu der Sonnenblume!
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
@@ -2712,6 +2836,8 @@ de:
       courseE_bee_concept1: Sammle den ganzen Nektar von allen Blumen. Benutze eine
         verschachtelte Schleife.
       courseE_bee_concept1_2018: Sammle den ganzen Nektar von allen Blumen. Benutze
+        eine verschachtelte Schleife.
+      courseE_bee_concept1_2019: Sammle den ganzen Nektar von allen Blumen. Benutze
         eine verschachtelte Schleife.
       courseE_bee_functions1: Sammle den ganzen Nektar von allen Blumen.
       courseE_bee_functions1_2018: Sammle den ganzen Nektar von allen Blumen.
@@ -2742,11 +2868,16 @@ de:
         Level vor, um dies zu erreichen!
       courseF_artist_for7_2018: Nimm drei kleine Änderungen an dem Code aus dem vorherigem
         Level vor, um dies zu erreichen!
+      courseF_artist_for7_2019: Nimm drei kleine Änderungen an dem Code aus dem vorherigem
+        Level vor, um dies zu erreichen!
       courseF_artist_for_challenge1: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge1_2018: Kriegst du heraus, wie man das Bild nachzeichnet?
+      courseF_artist_for_challenge1_2019: Kriegst du heraus, wie man das Bild nachzeichnet?
       courseF_artist_for_challenge2: Kriegst du heraus, wie man das Bild mit einer
         einzigen Schleife nachzeichnet?
       courseF_artist_for_challenge2_2018: Kriegst du heraus, wie man das Bild mit
+        einer einzigen Schleife nachzeichnet?
+      courseF_artist_for_challenge2_2019: Kriegst du heraus, wie man das Bild mit
         einer einzigen Schleife nachzeichnet?
       courseF_artist_fwp1: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler
         zu finden.
@@ -2794,8 +2925,13 @@ de:
       courseF_bee_for8_2018: |-
         Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
         Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?
+      courseF_bee_for8_2019: |-
+        Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
+        Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
+        wie möglich.
+      courseF_bee_for_challenge2_2019: Löse diese Aufgabe mit so wenig Bausteinen
         wie möglich.
       courseF_bee_for_challenge3: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_functions4: Die „bewege und hole Nektar“- Funktion dreht die Biene,

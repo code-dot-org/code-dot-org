@@ -277,6 +277,7 @@ et:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: Flappy
+      dance: Tantsuõhtu
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -549,6 +550,8 @@ et:
         rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.
       audience: Vanus 13+
       cta: Õpi kuidas
+    dance:
+      title: Tantsuõhtu
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -589,7 +592,7 @@ et:
       body: Uuri Minecrafti maailma koodi kaudu.
     minecraft2016:
       title: Minecraft
-      body: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
+      body: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis.
     aquatic:
       title: Minecraft
     hero:
@@ -946,6 +949,7 @@ et:
     tunnis sa peaksid olema.
   return_course_overview: Mine teema ülevaatesse
   view_all_units: Vaata kõik
+  view_teacher_guide: Vaata juhendit õpetajatele
   pd:
     form_labels:
       email: E-post

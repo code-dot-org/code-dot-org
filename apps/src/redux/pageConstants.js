@@ -60,7 +60,8 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
-  'songManifest',
+  'exportApp',
+  'allowExportExpo',
 ]);
 
 const initialState = {

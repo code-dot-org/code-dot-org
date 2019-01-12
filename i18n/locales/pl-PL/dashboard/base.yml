@@ -26,6 +26,7 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        finish_sign_up_subheader_provider: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.'
         error:
           future: nie może być w przyszłości
   hello: "Witaj świecie"
@@ -116,6 +117,7 @@ pl:
     invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
     mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
     under_13_consent: "Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services."
+    student_consent: "Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie Code.org."
     agree_us_website: "Zgadzam się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych."
     my_data_to_us: "Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych."
     student_terms: "Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'> z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby uzyskać więcej informacji."
@@ -189,11 +191,11 @@ pl:
     subject: 'Dołącz do mojej klasy (na Code.org)'
     body: |
       Kliknij w poniższy link, by zarejestrować się na kursy z informatyki na Code.org (ze mną w roli Twojego nauczyciela):
-      
+
       %{link}
-      
+
       Kursy są zabawne, mają ładną oprawę graficzną i uczą podstawowych pojęć z dziedziny informatyki przy użyciu prostych gier z instrukcjami. Naucz się kodowania od Billa Gatesa, Marka Zuckerberga, Angry Birds i Plants vs. Zombies! :)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informacje logowania Code.org'
@@ -318,6 +320,8 @@ pl:
       playlab: 'Play Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Potańcówka'
+      view_all: 'Zobacz wszystkie projekty...'
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'
@@ -558,6 +562,8 @@ pl:
       body_short: "Zaprojektuj aplikację i zakoduj za pomocą bloków lub JavaScript, aby działała, następnie natychmiast udostępnij swoją aplikację."
       audience: 'Wiek 13+'
       cta: 'Zobacz instrukcję'
+    dance:
+      title: 'Potańcówka'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
@@ -936,6 +942,7 @@ pl:
   return_unit_overview: 'Przejdź do przeglądu jednostek'
   return_course_overview: 'Przejdź do omówienia jednostki'
   view_all_units: 'Zobacz wszystkie jednostki'
+  view_teacher_guide: 'Zobacz przewodnik nauczyciela'
   pd:
     form_labels:
       email: 'e-mail'
@@ -958,6 +965,7 @@ pl:
       robotics:
         kodable: 'Kodable'
       workshop_course:
+        csd: 'Odkrycia CS'
         csp: 'Podstawy Informatyki ''16-''17'
       email_opt_in:
         opt_in_yes: 'Tak'

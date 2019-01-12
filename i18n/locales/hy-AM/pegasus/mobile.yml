@@ -575,7 +575,7 @@
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Ուսանողներ"
   dashboard_sections_table_code: "Section Code"
-  dashboard_sections_name: "Section Name"
+  dashboard_sections_name: 'Section Name'
   dashboard_sections_choose_secret: "If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section."
   dashboard_sections_secret_word: "A <b>word</b> allows you to set a secret word for each student."
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -598,7 +598,7 @@
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_name: "Անուն"
+  dashboard_students_name: 'Անուն'
   dashboard_students_progress: "Progress"
   dashboard_students_male: "արական"
   dashboard_students_female: "իգական"
@@ -1214,6 +1214,8 @@
   user_header_playlab: "Play Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Սկսել"
+  hoc_overview_start_tutorial: "Սկսել"
   hoc2018_creativity_create: "Ստեղծել"
   hoc2018_mc_details: "Շատ լեզուներ | Ժամանակակից դիտարկիչներ և պլանշետներ | 8 տարեկանից"
   hoc2018_mc_designer_title: "Minecraft Ոճաբան"
@@ -1227,3 +1229,7 @@
   hoc2018_mc_video_title_inspire_girl: "Inspire a girl"
   hoc2018_mc_homepage_join_us: "Join us"
   hoc2018_mc_homepage_try_it: "Try it"
+  hoc2018_dance_party_button: "Սկսել"
+  hoc2018_dance_teacher_resources_tile1_button: "Դաս Plan"
+  hoc2018_dance_teacher_resources_tile2_button: "unplugged Ակտիվություն"
+  hoc2018_dance_amazon_about_future_engineer_button: "Սովորել ավելին"

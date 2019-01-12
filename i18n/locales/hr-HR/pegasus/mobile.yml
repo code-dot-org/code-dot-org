@@ -386,7 +386,7 @@
   dashboard_sections_table_pairing_allowed: "Programiranje u paru"
   dashboard_sections_table_students: "Učenici"
   dashboard_sections_table_code: "Šifra odjeljenja"
-  dashboard_sections_name: "Ime odjeljenja"
+  dashboard_sections_name: 'Ime odjeljenja'
   dashboard_sections_choose_secret: "Ako želite napraviti račune za svoje učenike, odaberite tajni tip <b>riječi</b> ili <b>slike</b> za to odjeljenje."
   dashboard_sections_secret_word: "<b>Riječ</b> vam dopušta da postavite tajnu riječ za svakog učenika."
   dashboard_sections_secret_picture: "<b>Slika</b> vam dopušta da postavite tajnu sliku za svakog učenika, što je idealno za mlađe učenike koji još ne znaju tipkati."
@@ -396,7 +396,7 @@
   dashboard_sections_close: "Zatvori"
   dashboard_students_add_multiple: 'Upiši ili zalijepi imena svojih učenika, jedno ime po retku:'
   dashboard_students_new_section: "Napravili ste novo odjeljenje! Sad dodajte svoje učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>."
-  dashboard_students_name: "Ime"
+  dashboard_students_name: 'Ime'
   dashboard_students_progress: "Napredak"
   dashboard_students_male: "Muško"
   dashboard_students_female: "Žensko"
@@ -899,8 +899,14 @@
   user_header_playlab: "Laboratorij igara"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  applab_tile_start_tutorial: "Početak"
+  hoc_overview_start_tutorial: "Početak"
   hoc2018_creativity_create: "Stvori"
   hoc2018_mc_start: "Početak"
   hoc2018_mc_video_title_inspire_girl: "Inspiriraj djevojku"
   hoc2018_mc_homepage_join_us: "Pridružite nam se"
   hoc2018_mc_homepage_try_it: "Isprobaj"
+  hoc2018_dance_party_button: "Početak"
+  hoc2018_dance_teacher_resources_tile1_button: "Nastavni plan"
+  hoc2018_dance_teacher_resources_tile2_button: "Izvanmrežna aktivnost"
+  hoc2018_dance_amazon_about_future_engineer_button: "Doznaj više"

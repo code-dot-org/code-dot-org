@@ -194,11 +194,11 @@ ja:
     subject: '私のクラス (Code.org) に参加'
     body: |
       下のリンクを使ってコンピュータサイエンスのチュートリアルにサインアップしてください（Code.org から、私とあなたの「先生」として） 。
-      
+
       %{link}
-      
+
       チュートリアルは、見た目にも楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータサイエンスの基本的な概念を学びます。ビル ・ ゲイツ氏、マーク・ザッカーバーグ氏、アングリーバード、Plants vs. Zombiesからコードを学ぼう ！:-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org のログイン情報'
@@ -216,6 +216,8 @@ ja:
       picture: '画像パスワード'
       word: '秘密の言葉'
       email: 'Eメール'
+      google_classroom: 'Google Classroom'
+      clever: 'クレバー'
   follower:
     invite_sent: '招待状を送信しました'
     added_teacher: '%{name} あなたの先生として追加'
@@ -257,7 +259,7 @@ ja:
         personal_login_created_username: '個人ログインの作成が完了しました。あなたのユーザー名 (%{username}) とパスワードを使用してアカウントにサインインすることができます。'
   nav:
     header:
-      finished_hoc: "Hour of Code できました"
+      finished_hoc: "終了しました！"
       sign_in_to_save: '進捗状況を保存するためにサインインする'
       free_play:
         playlab: 'プレイラボ で作る'
@@ -266,7 +268,7 @@ ja:
         gamelab: 'ゲームラボで作る'
         weblab: 'Web 研究室 (ベータ版) のプロジェクトを作る'
       my_dashboard: "マイ ダッシュボード"
-      course_catalog: "コース カタログ"
+      course_catalog: "コースカタログ"
       project_gallery: "プロジェクト"
       sections: "セクション"
       help_support: "ヘルプとサポート"
@@ -320,6 +322,7 @@ ja:
       playlab: 'プレイラボ'
       minecraft: 'マインクラフト'
       flappy: 'フラッピー'
+      dance: 'ダンスパーティー'
       view_all: 'すべてのプロジェクトを見る'
     popup:
       progress_for_user: "%{name} の進捗状況"
@@ -560,6 +563,8 @@ ja:
       body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
       audience: '13才以上'
       cta: 'もっと知る'
+    dance:
+      title: 'ダンスパーティー'
     hoc:
       title: '古典的な迷路'
       body: 'コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます'
@@ -603,6 +608,7 @@ ja:
       title: "マインクラフト"
     hero:
       title: "マインクラフト"
+      body: "Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ"
     sports:
       title: "スポーツ"
       body: "バスケットボールゲームや、様々なスポーツの混合競技をつくろう！"
@@ -913,7 +919,9 @@ ja:
     mac: 'Mac OS X'
   locked_stage: 'このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。'
   hidden_stage: "先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。"
-  return_course_overview: 'ユニットの概要へ'
+  return_unit_overview: 'ユニットの概要へ'
+  return_course_overview: 'コースの概要へ'
+  view_teacher_guide: '教師用ガイドを表示'
   pd:
     form_labels:
       email: 'Eメール'

@@ -1431,6 +1431,7 @@ de:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1656,7 +1657,102 @@ de:
           stages:
             Artist:
               name: Künstler
+        dance:
+          stages:
+            Dance Party:
+              name: Tanzparty
+          title: Tanzparty
+          description_short: Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!
+          description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Künstler
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        dance-extras:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
+            The Artist:
+              name: Der Künstler
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relais-Programmierung
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Digital Citizenship:
+              name: Digitalen Staatsbürgerschaft
+            'Unplugged: Binary':
+              name: 'Offline: Binär'
+            Artist Binary:
+              name: Künstler Binär
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            Nested Loops:
+              name: Verschachtelte Schleifen
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Conditionals:
+              name: Bedingungen
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relais-Programmierung
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
+            Binary Bracelets:
+              name: Binäre Armbänder
+            'Unplugged: Binary':
+              name: 'Offline: Binär'
+            Artist Binary:
+              name: Künstler Binär
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nichts'
+        dance-extras-gallery:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Alltagsalgorithmen: Papierflieger'
+            Binary Bracelets:
+              name: Binäre Armbänder

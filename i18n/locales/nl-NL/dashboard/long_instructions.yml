@@ -62,7 +62,7 @@ nl:
         Laat ons het hoofd van een robot tekenen! 
         Kan je een vierkant maken met zijden van 100 pixels? \r 
         \r
-        
+
       2-3 Artist Loops New 10: Laat ons nu enkele V's aan elkaar vastmaken in een herhaling.
       2-3 Artist Loops New 11: "Tijd om iets hip te maken!\n\\r \n\\r\nHerprogrammeer de code van de laatste puzzel, maar voeg deze keer een linkse draai van 30 graden toe aan de herhaling."
       2-3 Artist Loops New 12: 'Teken een diamant met zijden van 100 pixels. '
@@ -70,7 +70,7 @@ nl:
       2-3 Artist Loops New 14: "Speel met de code voor de diamant en zoek uit welke andere patronen je kan maken. \\r \\r\nHet aantal graden dat je draait en het aantal keren dat je de herhaling volgt, kan je aanpassen."
       2-3 Artist Loops New 15: |+
         Nu kan je tekenen wat je wilt! \r \r
-        
+
       2-3 Artist Loops New 2: |-
         Dit is dezelfde puzzel die we net hebben opgelost, maar deze keer mag je enkel één blok 'beweeg vooruit' en één blok 'draai' gebruiken. \r 
         \r
@@ -81,7 +81,7 @@ nl:
         \r
         Plaats een 'herhaal' blok rond de hele stapel codes om een patroon te tekenen. \r 
         \r
-        
+
       2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het patroon af te maken.
       2-3 Artist Nested Loops 11: Laat deze code in een lus 4 keer uitvoeren om het patroon af te maken en draai 90 graden na iedere cirkel.
       2-3 Artist Nested Loops 12: Herhaal deze code 12 keer om de krullen af te werken.
@@ -175,7 +175,7 @@ nl:
       4-5 Nested Loops 12: Kan je deze 36 driehoeken tekenen met een geneste lus?
       4-5 Nested Loops 3: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       4-5 Nested Loops 5: Maak een windmolen met een lus rond de voorbeeldcode.
       4-5 Nested Loops 6: Kan je een zeskant tekenen met een lus rond de driehoek-code?
       4-5 Nested Loops 7: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
@@ -209,7 +209,129 @@ nl:
       Course 4 SCFP 1: Maak een functie met parameters die de kunstenaar naar voren en naar achteren laat springen met x pixels en naar boven en naar beneden met y pixels. X en y kunnen positief of negatief zijn.
       Course 4 SCVP 1: Maak een functie met parameters die de kunstenaar naar voren en naar achteren laat springen met x pixels en naar boven en naar beneden met y pixels. X en y kunnen positief of negatief zijn.
       CourseF_PlayLab_vars2: Die wedstrijd was niet eerlijk! Verander de "hond_snelheid" variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat. Wie als eerst 10 vlaggen heeft wint.
+      Dance_Party_01: |-
+        *Laten we een dansfeestje houden!*
+
+        Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok om je eerste danser te maken.
+
+        * *Je kunt ook op het lampje links in beeld klikken voor meer informatie of extra uitdagingen.*
+      Dance_Party_01_low: |-
+        *Laten we een dansfeestje houden!*
+
+        Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok om je eerste danser te maken.
+
+        * *Je kunt ook op het lampje links in beeld klikken voor meer informatie of extra uitdagingen.*
+      Dance_Party_02: |-
+        Laten we deze eland aan het dansen krijgen!
+
+        Sleep het blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> naar de werkruimte. Verbind hem onder het blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Je danser zou na de vierde maat een nieuwe move moeten beginnen.
+
+
+        **Maten** worden in de muziek gebruikt om de tijd te tellen. In deze tutorial is de maat vier beats lang.
+      Dance_Party_03: "*Nu gaan we lekker!*\n\nVoeg een blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> toe aan je werkruimte. Zorg ervoor dat de danser een nieuwe move start na 6 maten."
+      Dance_Party_04: |-
+        *Deze dans heeft wat extra‘s nodig!*
+
+        Ga op zoek naar een nieuw blok in je gereedschapskist, die je danser een achtergrondeffect geeft. Bekijk hoe de effecten met de muziek mee veranderen!
+      Dance_Party_05: |-
+        Gebruik nog een nieuw blok om de danser **elke 2 maten** een nieuwe move te laten doen!
+
+        * Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
+      Dance_Party_06: |-
+        * We hebben meer dansers nodig!*
+
+        Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
+      Dance_Party_08: |-
+        Elke danser heeft zijn eigen _eigenschappen_ die bepalen hoe hij eruitziet.
+
+        Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
+      Dance_Party_09: |-
+        Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
+        *Tinten mengen de kleur die je kiest met de kleuren van de danser.
+      Dance_Party_10: |-
+        Nu weten we hoe we de eigenschappen van dansers kunnen veranderen. We kunnen deze eigenschappen ook automatisch op de muziek laten reageren met behulp van dit blok:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dit programma gebruikt het "bas" volume (de lage tonen) om de hoogte van een danser in te stellen. Kun je de andere danser ook laten reageren op de muziek?
+      Dance_Party_11.5_test: "Bekijk dit blok eens:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kun je een heleboel dansers tegelijk maken!\n\nProbeer met een deel van de \"alle eenden\" blokken code te schrijven waarmee alle eenden samen gaan dansen."
+      Dance_Party_11: "Met het <xml><block type=\"Dancelab_whenKey\"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.\n\nJe kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!"
+      Dance_Party_11_5: "Bekijk dit blok eens:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNu kun je een heleboel dansers tegelijk maken!\n\nProbeer met een deel van de \"alle eenden\" blokken code te schrijven waarmee alle eenden samen gaan dansen."
+      Dance_Party_11b: |-
+        Hoog tijd voor een danswedstrijd! De kat doet een dab wanneer je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets te drukken.
+      Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      Dance_Party_extras_battle: |-
+        # Dancecrews
+
+        Hier is een danswedstrijd tussen twee crews: De pijltoetsen besturen één van de dansers en de "w, a, s, d"-toetsen besturen de andere. Ga een danswedstrijd aan met een vriend, en probeer de wedstrijd vervolgens te verbeteren.
+
+        * Voeg meer toetsen toe om de dans te besturen
+        * Zorg ervoor dat de achtergronddansers ook meedoen als je de toetsen ingedrukt
+        * Wissel elke 4 maten van danser door hun zichtbaarheid in te stellen
+      Dance_Party_extras_every_beat: |-
+        # kwartnoten
+
+        De meeste dansen die we kennen bestaan uit hele maten, maar elke maat bestaat uit 4 kwartnoten. Deze dans gebruikt 'elke 0,25 maat' om de danser op elke kwartnoot te laten klappen.
+
+        Deze dans gebruikt ook een _voorwaardelijk_ blok om te bepalen wanneer het blok "elke 0,25 maat" de dans kan wijzigen. Probeer de nummers in het voorwaardelijke blok te veranderen om te zien hoe deze de dans verandert.
+
+        * Experimenteer met andere nootlengtes (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
+        * Voeg gebeurtenissen 'na de maat' toe.
+        * Wissel "maten" om met "seconden" en probeer de dans op die manier te timen.
+      Dance_Party_extras_layout: |-
+        # Ga in positie staan!
+
+        Bekijk deze dans die het 'lay-out'-blok gebruikt om de positie van de achtergronddansers tijdens de dans te veranderen. Probeer het uit te breiden met één van deze ideeën:
+
+        * Maak een tweede groep dansers met een andere lay-out
+        * Verander de lay-out door een toets in te drukken
+        * Verander een eigenschap wanneer de dansers van positie wisselen
+      Dance_Party_extras_on_beat: |-
+        # Bass, mid en treble
+
+        Deze dans gebruikt "piek"-gebeurtenissen om code te activeren wanneer verschillende delen van de muziek extra luid worden. Probeer het met verschillende liedjes uit om te zien hoe het de dans verandert.
+      Dance_Party_extras_speed: |-
+        # Versnellen, vertragen
+
+        Deze laatste dans gebruikt het blok 'snelheid instellen' om te bepalen hoe snel elke danser beweegt. Probeer tijdens het lied te experimenteren met verschillende snelheden. Blijf aan deze dans knutselen, of ga terug naar de eerdere dansen om ze nog cooler te maken.
+      Dance_Party_extras_visible: |-
+        # Waar zijn ze heen?
+
+        Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
+
+        * Voeg nog een groep dansers toe
+        * Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
+        * Verberg alle dansers en schakel over naar een spannend achtergrondeffect
       Function intro Ryan: "Er is een **function** genaamd 'brug bouwen' in de werkruimte.  Alle code die je nodig hebt om de rivier over te steken, zit hierin! \\r\n \\r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te repareren en {currentPlayerName} naar de Redstone-fakkel [redstone_torch] te leiden."
+      Function intro Ryan_2019: "Er is een **function** genaamd 'brug bouwen' in de werkruimte.  Alle code die je nodig hebt om de rivier over te steken, zit hierin! \\r\n \\r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te repareren en {currentPlayerName} naar de Redstone-fakkel [redstone_torch] te leiden."
+      HOC 2018 Level_1: "Je moet je voorbereiden op de reis die voor je ligt. Verzamel een **boot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) uit de **kist** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
+      HOC 2018 Level_10: "Ergens in dit Oceaanmonument verstopt zich een **inktvis** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), kun jij hem vinden?"
+      HOC 2018 Level_11: Bouw een muur van **prismarien** ![] (https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) rond het zwarte beton. Dit activeert de **kracht van de zee** ![] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) waarmee je de uitdaging wint!
+      HOC 2018 Level_12: Gefeliciteerd! De open wereld van de oceaan wacht op je. Bouw een koraalrif! Een vulkaan! Een scheepswrak! Jij bepaalt het.
+      HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open water! Ga naar het einde van de steiger en klim aan boord.
+      HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee om de ** kabeljauw ** ![] (https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png) te vangen.
+      HOC 2018 Level_4: Laten we de kabeljauw aan de ** dolfijn ** ![] (https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
+      HOC 2018 Level_5: Er is ergens een ** nautilusschelp** ![] (https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) verborgen! Verken het scheepswrak om de **kist** ![] (https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png) te vinden.
+      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** ![] (https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) op weg naar de onderwaterruïnes.
+      HOC 2018 Level_7a: "Je hebt de onderwaterruïnes gevonden. Doorzoek het zandsteen voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) met een schat van **prismarien** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)."
+      HOC 2018 Level_8: "Eerst ijsbergen, nu lava? Overleef dit vulkanische eiland en vind de **tropische vis** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) in het koraalrif."
+      HOC 2018 Level_9b: "Je hebt het rif gehaald, ga nu op zoek naar **het hart van de zee** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Gebruik het blauwe en rode koraal om de schat **kist** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) te vinden."
+      HOC Dance 4_draft: |-
+        Gebruik nog een nieuw blok om de danser **elke 2 maten** een nieuwe move te laten doen!
+
+        * Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
+      HOC Dance 5_draft: |-
+        * We hebben meer dansers nodig!*
+
+        Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
+      HOC Dance 9_draft: "Met het <xml><block type=\"Dancelab_whenKey\"></block></xml> blok kun je code uitvoeren door de pijlomhoogtoets in te drukken.\n\nJe kunt de dansmoves veranderen, eigenschappen van dansers aanpassen, of een move tussendoor doen. Wees creatief en ga op zoek naar nieuwe blokken!"
+      HOC Dance Freeplay: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      HOC Dance Freeplay_draft: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      HOC Dance Predraw: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       K-1 Bee Loops 2: Gebruik een lus om te verplaatsen en pak dan te nectar en maak honing!
       K-1 Bee Loops 3: Gebruik lussen om nectar te pakken en honing te maken!
       K-1 Bee Loops 4: Gebruik lussen om de nectar te pakken, honing te maken en te verplaatsen!
@@ -224,55 +346,67 @@ nl:
       MC_HOC_2017_01: "Klik op 'Uitvoeren' om de speler met de **pijltoetsen** te bewegen.  \\r\n\\r\nOm het level te halen, moet je de deur bereiken en deze openen (met de **spatiebalk**) zodat je het oranje vakje erbinnen kunt bereiken."
       MC_HOC_2017_01_Cole: "Je moet tijdens deze reis alle hulpmiddelen verzamelen.\nBeweeg rond met de **pijltjestoetsen**, en bereik de kist op het pad om te winnen"
       MC_HOC_2017_01_Kiki: 'Om dit level te spelen, klik je op de oranje knop ''Uitvoeren'' onder de speelruimte en beweeg je de speler met de **pijltoetsen**.  '
-      MC_HOC_2017_01_RETRY: |2
+      MC_HOC_2017_01_RETRY: |-
+        {currentPlayerName} is gevangen in het huis, maar de agent is er om te helpen!   \r
+         \r
+           \r
+        Maak een 'naar voren'-blok vast aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de drukplaat [PressurePlate_Up] te leiden. Druk vervolgens op 'Uitvoeren' en gebruik de pijltoetsen om {currentPlayerName} het huis uit te bewegen en de **kist** [chest] te bereiken.  
+      MC_HOC_2017_01_RETRY_2019: |-
         {currentPlayerName} is gevangen in het huis, maar de agent is er om te helpen!   \r
          \r
            \r
         Maak een 'naar voren'-blok vast aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de drukplaat [PressurePlate_Up] te leiden. Druk vervolgens op 'Uitvoeren' en gebruik de pijltoetsen om {currentPlayerName} het huis uit te bewegen en de **kist** [chest] te bereiken.  
       MC_HOC_2017_02: De speler moet de geheime gaard bereiken.  Help de agent de poort te openen door een code te schrijven om hem naar de drukplaat te leiden.
       MC_HOC_2017_02_Cole: "{currentPlayerName} gaat op avontuur! Bereik hiervoor de **kaart** [map_empty] achter de gesloten deur aan de rechterkant. \\r\n \\r\nMaak de code vast in de werkruimte om de agent naar de drukplaat [PressurePlate_Up] te bewegen zodat {currentPlayerName} door kan. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} gaat op avontuur! Bereik hiervoor de **kaart** [map_empty] achter de gesloten deur aan de rechterkant. \\r\n \\r\nMaak de code vast in de werkruimte om de agent naar de drukplaat [PressurePlate_Up] te bewegen zodat {currentPlayerName} door kan. "
       MC_HOC_2017_02_Kiki: "De speler gaat op avontuur, maar eerst heeft deze een fakkel nodig die zich achter die gesloten deur bevindt. \\r\n\\r\nProgrammeer de agent om twee keer naar voren te bewegen over het witte pad en de drukplaat te bereiken zodat hij de deur voor de speler kan openen."
       MC_HOC_2017_02_Will: "Om dit level af te maken, moet de speler in de geheime gaard het oranje vakje bereiken, dat zich achter een gesloten deur bevindt.  \\r\n\\r\nMet de code in werkruimte beweegt de agent twee keer naar voren om de drukplaat te bereiken waardoor de deur voor Alex of Steve wordt geopend."
       MC_HOC_2017_03_Cole: "{currentPlayerName} gaat verder op avontuur en heeft een **kompas** [compass] nodig om zich voor te bereiden op de tocht.  \\r\n   \\r\nProgrammeer de agent om de poort te openen. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} gaat verder op avontuur en heeft een **kompas** [compass] nodig om zich voor te bereiden op de tocht.  \\r\n   \\r\nProgrammeer de agent om de poort te openen. "
       MC_HOC_2017_03_Kiki: "Het avontuur van de speler begint achter een gesloten deur in de geheime gaard!  \\r\n\\r\n\\r\nHelp de agent de deur te openen door een code te schrijven om hem naar de drukplaat te leiden."
       MC_HOC_2017_04: Verander de lus van de vorige puzzel om de Agent te helpen een brug over dit bredere deel van de rivier te bouwen.
       MC_HOC_2017_04POINT5_Cole: |-
         Je bent uit het moeras ontsnapt!  Leid de speler nu veilig naar het oranje vakje. 
-        
-        
+
+
         Help de agent het pad vrij te maken door een simpel patroon te vinden en lussen te gebruiken om de eerste twee drukplaten te passeren.
       MC_HOC_2017_04POINT5_RYAN: "Je hebt de oversteek gemaakt! \\r\n\\r\nLeid {currentPlayerName} nu veilig door het doolhof om het **bijl** [diamond_axe] te bereiken\\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Je hebt de oversteek gemaakt! \\r\n\\r\nLeid {currentPlayerName} nu veilig door het doolhof om het **bijl** [diamond_axe] te bereiken\\r\n"
       MC_HOC_2017_04_Cole: "De agent kan over water bewegen!  \\r\n \\r\nGebruik een 'herhalen'-lus om deze puzzel op te lossen en {currentPlayerName} naar de **emmer** [bucket_empty] achter de deur te leiden. "
+      MC_HOC_2017_04_Cole_2019: "De agent kan over water bewegen!  \\r\n \\r\nGebruik een 'herhalen'-lus om deze puzzel op te lossen en {currentPlayerName} naar de **emmer** [bucket_empty] achter de deur te leiden. "
       MC_HOC_2017_04_Kiki: "De geheime gaard leidt tot deze prachtige oase!  Om dit level te halen, moet de speler het oranje vakje in de hut bereiken.  \\r\n\\r\nGebruik een 'herhalen'-lus om de agent naar de drukplaat te leiden waarmee de deur van de hut wordt geopend."
       MC_HOC_2017_05: |-
         Lussen zijn niet altijd handig. 
-        
-        
+
+
         Deze cactussen groeien niet volgens een vast patroon, dus met een lus kun je de weg niet goed vrijmaken.  In plaats daarvan heb je nu een functie genaamd 'vernietigen en bewegen' die het zware werk uit handen neemt elke keer dat de agent een obstakel tegenkomt.
       MC_HOC_2017_05_Cole: "O nee, de brug is stuk! \\r\n\\r\nProgrammeer de agent om de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName} de **spade** [diamond_shovel] kan bereiken."
+      MC_HOC_2017_05_Cole_2019: "O nee, de brug is stuk! \\r\n\\r\nProgrammeer de agent om de brug te herbouwen met het 'plaatsen'-blok, zodat {currentPlayerName} de **spade** [diamond_shovel] kan bereiken."
       MC_HOC_2017_05_Josh: |-
         O nee, de brug is stuk! 
-        
-        
+
+
         Help de agent de brug te herbouwen zodat de speler de **spade** kan bereiken.
       MC_HOC_2017_05_Kiki: "Het is tijd voor de speler om de geheime gaard te verlaten en verder te gaan op avontuur, maar de brug is stuk! \\r\n\\r\nHelp de agent de brug te herbouwen en beweeg vervolgens naar de houten plank zodat de speler het oranje vakje kan bereiken."
       MC_HOC_2017_06_Cole: "Nog een rivier, en deze is nog breder! \\r\n \\r\nCorrigeer deze code om de agent te helpen een brug te bouwen, zodat {currentPlayerName} het **pikhouweel** [diamond_pickaxe] kan bereiken. "
+      MC_HOC_2017_06_Cole_2019: "Nog een rivier, en deze is nog breder! \\r\n \\r\nCorrigeer deze code om de agent te helpen een brug te bouwen, zodat {currentPlayerName} het **pikhouweel** [diamond_pickaxe] kan bereiken. "
       MC_HOC_2017_06_Josh: "Nog een rivier, en deze is nog breder!  \\r\n\\r\nCorrigeer deze code om de agent te helpen een brug te bouwen."
       MC_HOC_2017_06_Kiki: "Nog een rivier, en deze is nog breder!  \\r\n\\r\nCorrigeer deze code om de agent te helpen een brug over het water te bouwen."
       MC_HOC_2017_07_Cole: "Er ligt ijs in de weg!  \\r\n \\r\nMet de 'pad vrijmaken'-functie kun je het ijs vernietigen en {currentPlayerName} naar het mijnkarretje [minecart_normal] leiden! "
+      MC_HOC_2017_07_Cole_2019: "Er ligt ijs in de weg!  \\r\n \\r\nMet de 'pad vrijmaken'-functie kun je het ijs vernietigen en {currentPlayerName} naar het mijnkarretje [minecart_normal] leiden! "
       MC_HOC_2017_07_Kiki: "Lussen zijn niet de enige manier om code te herhalen!  \\r\n\\r\nJe hebt nu een functie genaamd 'cactussen verwijderen' die het zware werk uit handen neemt door elke keer drie cactussen te verwijderen.  Gebruik twee 'cactussen verwijderen'-blokken om het pad naar het oranje vakje vrij te maken. "
       MC_HOC_2017_07a_Kiki: Bewerk nu deze lus om de agent te helpen het pad naar het oranje vakje vrij te maken.
       MC_HOC_2017_08_Cole: "In plaats van te vernietigen en vervolgens te bewegen, moet je nu een blok plaatsen.  \\r\n\\r\nVervander de gegeven functie zodat deze werkt voor de woestijn."
       MC_HOC_2017_08_Kiki: "In plaats van cactussen te vernietigen, moet je nu steen op lava plaatsen en vervolgens zandsteen vernietigen.  \\r\n\\r\nVerander de functie zodat deze werkt voor dit level."
       MC_HOC_2017_08_RY: |-
         Er zijn nu **TWEE** functies om uit te kiezen! 
-        
-        
+
+
         Gebruik deze functies om snel een brug over de lava voor {currentPlayerName} te maken.
       MC_HOC_2017_08_Will: |-
         Er zijn nu **TWEE** functies om uit te kiezen! 
-        
-        
+
+
         Gebruik deze functies om snel een brug over de lava voor de speler te maken.
       MC_HOC_2017_09_Cole: Gebruik functies om de agent te helpen de grote blokken aarde te vernietigen die het pad van de speler naar de drukplaat blokkeren.
       MC_HOC_2017_09_Kiki: "Deze begincode kan niet worden verwijderd.\\r\n\\r\nVoeg opdrachten aan de 'spoor maken'-functie toe zodat met het programma in de werktruimte de agent naar de drukplaat wordt geleid. "
@@ -281,19 +415,22 @@ nl:
       MC_HOC_2017_10_Cole_old: Probeer aan het begin een functie te maken waarmee het makkelijker is voor de agent om dit mijnkarretje af te maken en de speler naar het oranje vakje te leiden.
       MC_HOC_2017_10_Kiki: Probeer aan het begin een functie te maken waarmee het makkelijker is voor de agent om dit mijnkarretje af te maken en de speler naar het oranje vakje te leiden.
       MC_HOC_2017_10_RETRY: "Zie jij het verschil tussen de twee functies in de werkruimte? \\r\n \\r\nGebruik deze functies met andere code uit de werkplaats om de weg naar het mijnkarretje vrij te maken en vervolgens **vuursteen en staal** [flint_and_steel] te bereiken. \\r\n "
+      MC_HOC_2017_10_RETRY_2019: "Zie jij het verschil tussen de twee functies in de werkruimte? \\r\n \\r\nGebruik deze functies met andere code uit de werkplaats om de weg naar het mijnkarretje vrij te maken en vervolgens **vuursteen en staal** [flint_and_steel] te bereiken. \\r\n "
       MC_HOC_2017_10_RYAN: Probeer aan het begin functies te maken waarmee het makkelijker is voor de agent om dit mijnkarretje af te maken en de speler naar het oranje vakje te leiden.
       MC_HOC_2017_10_RYAN2: Probeer aan het begin functies te maken waarmee het makkelijker is voor de agent om dit mijnkarretje af te maken en de speler naar het oranje vakje te leiden.
       MC_HOC_2017_11_Kiki: Het is nu aan jou! Kijk wat je rondom dit bevroren meer kunt maken.
       MC_HOC_2017_13_Cole: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
       MC_HOC_2017_4.5v2: |-
         Je bent uit het moeras ontsnapt!  Leid de speler nu veilig naar het oranje vakje. 
-        
-        
+
+
         Help de agent het pad vrij te maken door een simpel patroon te vinden en lussen te gebruiken om de eerste twee drukplaten te passeren.
       MC_HOC_2017_Ali: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde boek** [book_enchanted] te bereiken?  '
+      MC_HOC_2017_Ali_2019: 'Bekijk de onderstaande functies.  Hoe kun je deze gebruiken om de Ghasts te vermijden en {currentPlayerName} helpen veilig het **betoverde boek** [book_enchanted] te bereiken?  '
       MC_HOC_2017_FP10x10: "**Vrij spel:** Het is nu aan jou! Durf jij jezelf uit te dagen om alle diamanten in dit level te verzamelen? "
       MC_HOC_2017_FP10x10_RE: "**Vrij spel:** Het is nu aan jou! Durf jij jezelf uit te dagen om alle diamanten in dit level te verzamelen? "
       MC_HOC_2017_FP20x20: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
+      MC_HOC_2017_FP20x20_2019: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
       MC_HOC_2017_Ryan_03: "Wist je dat je meerdere stukken code in één lus kunt plaatsen?  \\r\n\\r\nGebruik een 'herhalen'-lus om de agent te helpen een brug over de rivier te bouwen door blokken in het water te plaatsen."
       MC_HOC_2017_Ryan_05: "Soms moet je dingen neerhalen die de weg van de speler blokkeren.  \\r\nGebruik het 'vernietigen'-blok om alle cactussen tussen de agent en de drukplaat te verwijderen."
       MC_HOC_Kiki_02: Iemand moet op de drukplaat staan om de deur aan de zijkant te openen.  Leid de agent naar de drukplaat zodat de speler het huis kan verlaten.
@@ -308,6 +445,7 @@ nl:
       New Minecraft Hero Project: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
       Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Move to Sheep_2018: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
+      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Testing Quantum Farmer: "Wow, ik heb een heel diep gat gevonden! Ik weet niet hoeveel scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus."
       course1_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken, maar ze staan in de verkeerde volgorde!
@@ -332,34 +470,46 @@ nl:
       courseB_maze_seq9_challenge1: "*Waar verbergt dat varken zich nu?*"
       courseC_artist_loops2a: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
+      courseC_artist_loops2a_2019: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
       courseC_artist_prog_challenge1-doghouse: Laten we een hondenhok voor Jorge bouwen!
       courseC_artist_prog_challenge2: "Help me de gele lijnen op deze weg schilderen! *"
       courseC_collector_prog9: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog9_2018: '*"Laten we alle schatten verzamelen!"*'
+      courseC_collector_prog9_2019: '*"Laten we alle schatten verzamelen!"*'
       courseC_flappy_events7: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events7_2018: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events7_2019: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events9: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
       courseC_flappy_events9_2018: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
+      courseC_flappy_events9_2019: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
       courseC_harvester_loops_challenge1: Verzamel alle maïs.
       courseC_harvester_loops_challenge2: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_harvester_loops_challenge2_2018: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      courseC_harvester_loops_challenge2_2019: "Verzamel alle sla.\nVermijd de bomen en de velden!"
       courseC_maze_loops_challenge2: "Laten we naar schatten zoeken, gebruik makende van loops!\nHelp de verzamelaar door deze code te debuggen.\nVerzamel alle schatten!"
       courseC_maze_programming1: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseC_maze_programming1_2018: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      courseC_maze_programming1_2019: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseC_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseC_maze_programming_challenge2_2018: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
+      courseC_maze_programming_challenge2_2019: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseD_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge1_2018: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge1_2019: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_project_embedded: Hier is wat je zo dadelijk zal maken!
       courseD_bee_nestedLoops5: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
       courseD_bee_nestedLoops8: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
       courseD_bee_nestedLoops8_2018: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
+      courseD_bee_nestedLoops8_2019: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
       courseD_maze_nestedLoops4: 'Help me tot bij de zonnebloem!'
       courseD_maze_nestedLoops4_2018: 'Help me tot bij de zonnebloem!'
+      courseD_maze_nestedLoops4_2019: 'Help me tot bij de zonnebloem!'
       courseD_maze_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start" om het te zien bewegen!
       courseD_maze_ramp1_2018: Plak alle blokken aaneen bij deze puzzel en klik op "Start" om het te zien bewegen!
+      courseD_maze_ramp1_2019: Plak alle blokken aaneen bij deze puzzel en klik op "Start" om het te zien bewegen!
       courseD_maze_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_maze_ramp2_2018: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
+      courseD_maze_ramp2_2019: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_scrat_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start" om het te zien bewegen!
       courseD_scrat_ramp1_2018: Plak alle blokken aaneen bij deze puzzel en klik op "Start" om het te zien bewegen!
       courseD_scrat_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
@@ -373,6 +523,7 @@ nl:
       courseE_maze_ramp2_2018: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseF_bee_for_challenge2: Los deze puzzel op en gebruik zo weinig mogelijk blokken.
       courseF_bee_for_challenge2_2018: Los deze puzzel op en gebruik zo weinig mogelijk blokken.
+      courseF_bee_for_challenge2_2019: Los deze puzzel op en gebruik zo weinig mogelijk blokken.
       frozen circle function in circle: Laten we nu 20 overlappende cirkels maken, draai 18 graden tussen elke cirkel.
       frozen circle function with parameter: Hier is een "Maak een cirkel" blok dat cirkels van verschillende grootte kan maken. Kun jij dit blok gebruiken om een kleine cirkel van grootte 5 en grotere cirkel van grootte 10 te maken?
       frozen circle function: Gebruik het nieuwe "Maak een cirkel" blok om 10 overlappende cirkels te maken. Vergeet niet vooruit te springen tussen de cirkels.
@@ -445,14 +596,14 @@ nl:
       grade4_arist_nested_loop_triangles4: Teken de tanden in de mond van de krokodil!
       grade4_arist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_arist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_functions2: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
       grade4_artist_nested_loop_flags1: Maak een windmolen met een lus rond de voorbeeldcode.
       grade4_artist_nested_loop_polygons1: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
       grade4_artist_nested_loop_triangles5: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
-        
+
       grade4_artist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_parameters_triangles2: Zie je een verschil tussen deze functie blokken? Druk op "Start" om te zien wat er gebeurt.
       grade4_bee_conditionals_quantum2: "De bij wil nu alleen nectar. Vergeet niet dat niet alle objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen."

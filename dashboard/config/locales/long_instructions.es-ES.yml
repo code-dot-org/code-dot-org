@@ -909,8 +909,153 @@ es:
       CourseF_PlayLab_vars2: |-
         ¡Esa carrera en ese ultimo problema no
         fue justa! Cambia la variable de "velocidad_perro" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!
+      Dance_Party_01: |-
+        *¡Hagamos una fiesta para bailar!*
+
+        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+
+        * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
+      Dance_Party_01_low: |-
+        *¡Hagamos una fiesta para bailar!*
+
+        Arrastra el bloque `hacer uno nuevo` al espacio de trabajo y conéctalo dentro del bloque `establecer` para crear tu primer bailarín.
+
+        * *También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos extra.*
+      Dance_Party_02: |-
+        ¡Pongamos a este alce a bailar!
+
+        Arrastra el bloque de «floss» <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo bajo el bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Tu bailarín debería iniciar un nuevo movimiento después del cuarto compás.
+
+
+        Los **compases** se utilizan para contar el tiempo en música. En este tutorial, un compás tiene cuatro tiempos.
+      Dance_Party_03: |-
+        *¡Ahora movemos el esqueleto!*
+
+        Añade un bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases.
+      Dance_Party_04: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      Dance_Party_05: |-
+        ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
+
+        * Elegir «(Siguiente)», «(Anterior)» o «(Aleatorio)» indica al bailarín que debe hacer un movimiento diferente cada vez que se ejecuta el código.
+      Dance_Party_06: |-
+        *¡Necesitamos más bailarines!*
+
+        Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      Dance_Party_08: |-
+        Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto.
+
+        Puedes hacer que parezca que un bailarín está en el fondo si reduces su _tamaño_. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
+      Dance_Party_09: |-
+        Los bailarines tienen una propiedad de «tonalidad» que puede añadir una capa de color. Intenta cambiar la tonalidad de uno de tus bailarines.
+        * Las tonalidades mezclarán el color que elijas con los colores del bailarín.
+      Dance_Party_10: |-
+        Ahora ya sabemos cómo cambiar las propiedades de un bailarín. También podemos hacer que las mismas propiedades respondan automáticamente a la música con este bloque:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Este programa utiliza el volumen «bajo» de la música (los sonidos bajos) para controlar la altura de un bailarín. ¿Puedes hacer que el otro bailarín responda también a la música?
+      Dance_Party_11.5_test: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un montón de bailarines a la vez!
+
+        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!
+      Dance_Party_11_5: |-
+        Echa un vistazo a este bloque:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        ¡Ahora puedes crear un montón de bailarines a la vez!
+
+        Trata de usar algunos de los bloques «todos los patos» para escribir el código que hará que todos los patos bailen juntos.
+      Dance_Party_11b: "¡Es hora de un concurso de baile! El Gato hace el paso «dab»
+        cuando pulsas la tecla de flecha izquierda. Indica al Robot que haga «drop»
+        cuando pulsas la tecla de flecha derecha."
+      Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos."
+      Dance_Party_3: |-
+        *¡Ahora movemos el esqueleto!*
+
+        Añade un bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín inicie un movimiento nuevo después de 6 compases.
+      Dance_Party_4: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      Dance_Party_8: Cada bailarín tiene un conjunto de _propiedades_ que controlan
+        su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces
+        su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
+      Dance_Party_extras_battle: |-
+        # Compañías de baile
+
+        Esto es una competición de baile entre dos compañías. Las flechas del teclado controlan a uno de los bailarines y las teclas «w,a,s,d» al otro. Reta a un amigo a una batalla de baile y después intenta mejorar esta.
+
+        * Añade más teclas para controlar los bailes
+        * Consigue que los bailarines del fondo respondan también al presionar las teclas
+        * Cambia de bailarín cada 4 compases configurando la visibilidad
+      Dance_Party_extras_every_beat: |-
+        # Negras
+
+        La mayoría de nuestros bailes utilizan compases completos, pero cada compás se compone de 4 negras. Este baile utiliza particiones que abarcan `un 0,25 del compás` para que el bailarín dé una palmada cada nota negra.
+
+        Este baile también utiliza un bloque_condicional_ para controlar cuándo el bloque de particiones de `un 0,25 del compás` cambia el baile. Cambia los números del bloque condicional para ver cómo cambia el baile.
+
+        * Experimenta con notas que tengan otras duraciones (como 0,5 para una blanca o 0,125 para una corchea).
+        * Añade eventos `después del compás`.
+        * Cambia los "compases" por "segundos" e intenta coreografiar a los bailarines así.
+      Dance_Party_extras_layout: |-
+        # ¡Todos en formación!
+
+        Fíjate en este baile que utiliza el bloque `formación` para cambiar la distribución de los bailarines del fondo a lo largo del baile. Prueba una de estas ideas para ampliarlo:
+
+        * Crear un segundo grupo de bailarines con una formación diferente
+        * Cambiar la formación cuando se presiona una tecla
+        * Cambiar una propiedad cuando los bailarines cambian de formación
+      Dance_Party_extras_on_beat: |-
+        # Graves, medios y agudos
+
+        Este baile utiliza eventos "especiales" para desencadenar código cuando partes diferentes de la música aumentan de volumen. Juguetea con diferentes canciones para ver cómo cambia el baile.
+      Dance_Party_extras_speed: |-
+        # Acelera, frena
+
+        Este último baile utiliza el bloque `establecer velocidad` para controlar el ritmo al que se mueven los bailarines. Experimenta con diferentes velocidades en diferentes momentos de la canción. Puedes seguir jugueteando con este baile o volver a uno de los anteriores para hacerlos aún más chulos.
+      Dance_Party_extras_visible: |-
+        # ¿Dónde están?
+
+        Este baile muestra u oculta dos grupos de bailarines diferentes. Échale un vistazo y después sigue tu propio instinto.
+
+        * Añade otro grupo de bailarines
+        * Muestra y oculta bailarines utilizando las flechas del teclado
+        * Oculta a todos los bailarines y utiliza un efecto chulo de fondo
       Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\"
+        en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
+        ya está implementado! \r\n \r\nLleva dos veces el pequeño bloque verde a tu
+        espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
+        alcance la antorcha de redstone [redstone_torch]."
+      Function intro Ryan_2019: "Cuentas con una **función** llamada \"construir puente\"
         en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
         ya está implementado! \r\n \r\nLleva dos veces el pequeño bloque verde a tu
         espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
@@ -945,6 +1090,34 @@ es:
       HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC Dance 3_draft: |-
+        *¡A este baile le hace falta brillo!*
+
+        Busca un bloque nuevo en tu caja de herramientas que añada un efecto de fondo detrás de tu bailarín. ¡Observa cómo cambian los efectos al ritmo de la música!
+      HOC Dance 4_draft: |-
+        ¡Utiliza otro bloque nuevo para que el bailarín cambie de movimientos **cada 2 compases**!
+
+        * Elegir «(Siguiente)», «(Anterior)» o «(Aleatorio)» indica al bailarín que debe hacer un movimiento diferente cada vez que se ejecuta el código.
+      HOC Dance 5_draft: |-
+        *¡Necesitamos más bailarines!*
+
+        Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      HOC Dance 6_draft: Cada bailarín tiene un conjunto de _propiedades_ que controlan
+        su aspecto. Puedes hacer que parezca que un bailarín está en el fondo si reduces
+        su tamaño. ¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?
+      HOC Dance 9_draft: |-
+        El bloque <xml><block type="Dancelab_whenKey"></block></xml> te permite ejecutar código cuando se pulsa la flecha arriba.
+
+        Puedes cambiar el movimiento del baile, cambiar las propiedades de un bailarín o hacer solo una vez un movimiento rápido. ¡Usa tu creatividad y estate pendiente de los nuevos bloques!
+      HOC Dance Freeplay: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      HOC Dance Freeplay_draft: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      HOC Dance Predraw: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
       K-1 Bee Loops 2: |-
         ¡Utiliza un enlace para moverte obtener el nectar y
         hacer miel!
@@ -976,12 +1149,23 @@ es:
         de \"avanzar\" en el bloque de \"al ejecutar\" dentro del área de trabajo
         para llevar al Agent al plato de presión [PressurePlate_Up], y entonces pulsa
         \"Ejecutar\" y utiliza las flechas direccionales para sacar a {currentPlayerName}
-        de la casa y conseguir el **cofre** [chest].\n"
+        de la casa y conseguir el **cofre** [chest]."
+      MC_HOC_2017_01_RETRY_2019: "¡{currentPlayerName} está atrapado en el interior
+        de la casa, pero el Agent está aquí para ayudar!   \r\n \r\n   \r\nPon un
+        bloque de \"avanzar\" en el bloque de \"al ejecutar\" dentro del área de trabajo
+        para llevar al Agent al plato de presión [PressurePlate_Up], y entonces pulsa
+        \"Ejecutar\" y utiliza las flechas direccionales para sacar a {currentPlayerName}
+        de la casa y conseguir el **cofre** [chest]."
       MC_HOC_2017_02: El jugador necesita llegar a esa arboleda secreta. Ayuda al
         Agent a abrir la puerta escribiendo código para llevarlo al plato de presión.
       MC_HOC_2017_02_Cole: "¡{currentPlayerName} se ha embarcado en una gran aventura!
         Para proporcionarle ayuda, tendrás que conseguir el **mapa** [map_empty] que
         hay detrás de la puerta cerrada que está a la derecha. \r\n \r\nIntroduce
+        el código en el espacio de trabajo para llevar al Agent al Plato de presión
+        [PressurePlate_Up] para que {currentPlayerName} pueda seguir adelante."
+      MC_HOC_2017_02_Cole_2019: "¡{currentPlayerName} se ha embarcado en una gran
+        aventura! Para proporcionarle ayuda, tendrás que conseguir el **mapa** [map_empty]
+        que hay detrás de la puerta cerrada que está a la derecha. \r\n \r\nIntroduce
         el código en el espacio de trabajo para llevar al Agent al Plato de presión
         [PressurePlate_Up] para que {currentPlayerName} pueda seguir adelante."
       MC_HOC_2017_02_Kiki: "El jugador se ha embarcado en una gran aventura, pero
@@ -997,6 +1181,9 @@ es:
       MC_HOC_2017_03_Cole: "{currentPlayerName} continúa con su aventura, y ahora
         necesita la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nPrograma
         al Agent para abrir la puerta. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continúa con su aventura, y ahora
+        necesita la **brújula** [compass] para prepararse para el viaje.  \r\n   \r\nPrograma
+        al Agent para abrir la puerta. "
       MC_HOC_2017_03_Kiki: "¡La aventura del jugador comenzará detrás de la puerta
         cerrada, en la arboleda secreta! \r\n\r\n\r\nAyuda al Agent a abrir la puerta
         escribiendo código para que llegue al plato de presión."
@@ -1008,7 +1195,14 @@ es:
         primeros platos de presión."
       MC_HOC_2017_04POINT5_RYAN: "¡Lo has conseguido! \r\n\r\nAhora, haz que {currentPlayerName}
         atraviese sin problemas el laberinto para hacerse con el **hacha** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "¡Lo has conseguido! \r\n\r\nAhora, haz que
+        {currentPlayerName} atraviese sin problemas el laberinto para hacerse con
+        el **hacha** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "¡El Agent puede moverse por el agua!  \r\n \r\nUtiliza
+        un bucle de \"repetición\" para ayudar a resolver este rompecabezas y ayudar
+        a {currentPlayerName} a llegar al **cubo** [bucket_empty] que hay detrás de
+        la puerta. "
+      MC_HOC_2017_04_Cole_2019: "¡El Agent puede moverse por el agua!  \r\n \r\nUtiliza
         un bucle de \"repetición\" para ayudar a resolver este rompecabezas y ayudar
         a {currentPlayerName} a llegar al **cubo** [bucket_empty] que hay detrás de
         la puerta. "
@@ -1024,6 +1218,9 @@ es:
       MC_HOC_2017_05_Cole: "¡Oh, no! ¡El puente ha desaparecido! \r\n\r\nPrograma
         al Agent para reconstruir el puente utilizando el bloque \"colocar\", para
         que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "¡Oh, no! ¡El puente ha desaparecido! \r\n\r\nPrograma
+        al Agent para reconstruir el puente utilizando el bloque \"colocar\", para
+        que {currentPlayerName} pueda llegar a la **pala** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "¡Oh, no! ¡El puente ha desaparecido! \n\n\nAyuda al Agent
         a reconstruir el puente para que el jugador pueda llegar a la **pala**."
       MC_HOC_2017_05_Kiki: "Ha llegado el momento de que el jugador abandone la arboleda
@@ -1033,6 +1230,9 @@ es:
       MC_HOC_2017_06_Cole: "Otro río, ¡pero este es mucho más amplio! \r\n \r\nArregla
         este código para ayudar al Agent a construir un puente y así {currentPlayerName}
         pueda llegar al **pico** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Otro río, ¡pero este es mucho más amplio! \r\n \r\nArregla
+        este código para ayudar al Agent a construir un puente y así {currentPlayerName}
+        pueda llegar al **pico** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Otro río, ¡pero este es mucho más amplio! \r\n\r\nArregla
         este código para ayudar al Agent a levantar un puente sobre el río."
       MC_HOC_2017_06_Kiki: "Otro río, ¡pero este es mucho más amplio! \r\n\r\nArregla
@@ -1040,6 +1240,9 @@ es:
       MC_HOC_2017_07_Cole: "¡El hielo se interpone en tu camino! \r\n \r\nLa función
         \"despejar camino\" puede ayudarte a destruir el hielo y conseguir que {currentPlayerName}
         llegue a la vagoneta [minecart_normal]."
+      MC_HOC_2017_07_Cole_2019: "¡El hielo se interpone en tu camino! \r\n \r\nLa
+        función \"despejar camino\" puede ayudarte a destruir el hielo y conseguir
+        que {currentPlayerName} llegue a la vagoneta [minecart_normal]."
       MC_HOC_2017_07_Kiki: "Los bucles no son la única forma de repetir código.  \r\n\r\nMira,
         te hemos dado una función llamada \"despejar cactus\", que se encargará de
         quitar tres cactus cada vez que la uses. Utiliza dos bloques de \"despejar
@@ -1076,6 +1279,10 @@ es:
         en tu espacio de trabajo? \r\n \r\nUtiliza estas funciones con otro código
         de la caja de herramientas para despejar el camino para la vagoneta; a continuación,
         hazte con el **chisquero de pedernal** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "¿Eres capaz de ver la diferencia entre las dos funciones
+        en tu espacio de trabajo? \r\n \r\nUtiliza estas funciones con otro código
+        de la caja de herramientas para despejar el camino para la vagoneta; a continuación,
+        hazte con el **chisquero de pedernal** [flint_and_steel]. \r\n "
       MC_HOC_2017_10_RYAN: Intenta crear funciones desde el principio que hagan más
         sencillo que el Agent finalice con la vagoneta y lleve al jugador al recuadro
         naranja.
@@ -1093,12 +1300,17 @@ es:
       MC_HOC_2017_Ali: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas
         para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas
         al **Libro Encantado** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Mira las funciones que hay abajo. ¿Cómo puedes utilizarlas
+        para evitar a los Ghasts y ayudar a {currentPlayerName} a llegar sin problemas
+        al **Libro Encantado** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Juego libre:** ¡Te toca! ¿Podrás ponerte a prueba a
         ti mismo y conseguir todos los diamantes de este nivel?  "
       MC_HOC_2017_FP10x10_RE: "**Juego libre:** ¡Te toca! ¿Podrás ponerte a prueba
         a ti mismo y conseguir todos los diamantes de este nivel?  "
       MC_HOC_2017_FP20x20: "**Juego libre:** ¡Te toca! Utiliza el código del Agent
         para ayudarte a explorar este mundo."
+      MC_HOC_2017_FP20x20_2019: "**Juego libre:** ¡Te toca! Utiliza el código del
+        Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_Ryan_03: "¿Sabías que puedes poner más de un trozo de código en
         un bucle? \r\n\r\nUtiliza un bucle de \"repetición\" para ayudar al Agent
         a construir un puente sobre el río colocando bloques en el agua."
@@ -1138,6 +1350,8 @@ es:
         oveja.
       Overworld Move to Sheep_2018: Añade un segundo comando "avanzar" para llegar
         a la oveja.
+      Overworld Move to Sheep_2019: Añade un segundo comando "avanzar" para llegar
+        a la oveja.
       PS copy 2-3 Bee Conditionals 5: "Estas flores púrpura cambian!\r\n\r\nCada vez
         que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero
         no sabrás el número hasta que ejecutes el código! \r\n\r\nTen cuidado de no
@@ -1176,10 +1390,13 @@ es:
         en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2018: 'Recolecta todo el néctar de cada flor y haz
         miel en cada panel. Utiliza un bucle anidado. '
+      courseD_bee_nestedLoops8_2019: 'Recolecta todo el néctar de cada flor y haz
+        miel en cada panel. Utiliza un bucle anidado. '
       courseD_bounce_events1: ¡Llegar a la bandera! Coloque un bloque en "cuando flecha"
         bloquear y pulse "Ejecutar" para mover el jugador a la bandera.
       courseD_maze_nestedLoops4: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018: "¡Llévame al girasol!"
+      courseD_maze_nestedLoops4_2019: "¡Llévame al girasol!"
       courseE_bee_functions2: "Las funciones son bloques de código que realizan una
         tarea. \r\n\r\nUsa la función `obtener 2 néctar` para recolectar el néctar
         de cada flor."
@@ -1201,6 +1418,8 @@ es:
       courseF_bee_for_challenge2: Resuelve este rompecabezas con el menor número de
         bloques posible.
       courseF_bee_for_challenge2_2018: Resuelve este rompecabezas con el menor número
+        de bloques posible.
+      courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número
         de bloques posible.
       frozen circle function in circle: Ahora crearemos 20 círculos superpuestos,
         girando 18 grados entre cada círculo.
@@ -1510,4 +1729,6 @@ es:
       ramp_artist_loops4: "¿Qué sucede cuando agregas un giro a la derecha \nde 72
         grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas un giro a la derecha \nde
+        72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2019: "¿Qué sucede cuando agregas un giro a la derecha \nde
         72 grados después de todo lo demás dentro de tu bucle?"

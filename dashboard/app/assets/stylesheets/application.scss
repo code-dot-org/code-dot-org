@@ -378,39 +378,40 @@ img.video_thumbnail {
       top: 55px;
       right: 55px;
       background-color: $white;
-      width: 260px;
+      width: max-content;
       z-index: 10000;
+      border: 1px solid $charcoal;
+      border-bottom: 0;
       a {
         color: $teal;
-        font-family: $gotham-bold;
-        height: 70px;
-        width: 258px;
+        font-family: 'Gotham 5r', sans-serif;
+        min-width: 240px;
         font-size: 14px;
-        float: left;
-        border-left: 1px solid $charcoal;
-        border-right: 1px solid $charcoal;
-        border-top: 1px solid $charcoal;
+        border-bottom: 1px solid $charcoal;
+        box-sizing: content-box;
+        white-space: nowrap;
       }
       a:hover {
         color: $teal;
-        font-family: $gotham-bold;
+        font-weight: 900;
         background-color: $white;
         cursor: pointer;
       }
       img {
         height: 70px;
         width: 70px;
-        float: left;
+      }
+      .project_link_box {
+        display: block;
       }
       .project_link {
-        padding-left: 10px;
-        line-height: 70px;
-        float: left;
+        display: inline-block;
+        padding: 0 10px 0 4px;
+        line-height: 67px;
       }
       #view_all_projects {
-        width: 248px;
         height: 70px;
-        border-bottom: 1px solid $charcoal;
+        padding-left: 10px;
       }
     }
 
@@ -464,6 +465,18 @@ img.video_thumbnail {
   .project_list {
     float: left;
     margin-top: 6px;
+  }
+}
+
+#language_dir.rtl #pageheader-wrapper {
+  .create_options {
+    direction: rtl;
+    .project_link {
+      padding: 0 4px 0 10px;
+    }
+    #view_all_projects {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -1599,25 +1612,73 @@ a.download-video {
   }
 }
 
-#signin {
+.flex-container {
   display: flex;
+  justify-content: space-between;
 }
 
-#signin, #signup, #school-info-modal {
-  // NEW SIGN-UP & SIGN-IN FORMS
-  .signin, .signup {
-    margin: 20px 0;
+#signin {
+  $field-width: 310px;
+  $button-width: 324px;
+
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+
+  form {
+    display: flex;
+    flex-direction: column;
   }
 
-  .signin {
-    width: 550px;
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input[type=text], input[type=password] {
+      width: $field-width;
+      height: 40px;
+      padding: 0 6px;
+    }
+  }
+
+  .field-aligned {
+    width: $button-width;
+    align-self: flex-end;
+  }
+
+  #forgot-password {
+    font-family: $gotham-extra-bold-italics;
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-family: $gotham-extra-bold;
+    margin: 5px 0;
+    width: $button-width;
+  }
+
+  .blue-button {
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+}
+
+#signup, #school-info-modal {
+  // NEW SIGN-UP FORM
+  .signup {
+    margin: 20px 0;
   }
 
   .finish-signup {
     width: 800px;
   }
 
-  .signin, .signup, .finish-signup {
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
 
@@ -1860,10 +1921,6 @@ a.download-video {
   #user_type-block {
     margin-bottom: 20px;
   }
-  .devise_links {
-    padding-left: 20px;
-    margin-top: 20px;
-  }
 }
 
 .vertical-or {
@@ -1904,7 +1961,7 @@ a.download-video {
 
 // NEW STYLES FOR devise/shared/_new_links
 .devise-links {
-  margin: 10px 0;
+  flex-grow: 2;
 
   form {
     margin: 0;
@@ -1926,16 +1983,16 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-weight: bolder;
-      padding: 0 20px;
-      margin: 5px;
+      font-family: $gotham-extra-bold;
+      padding: 10px 20px;
+      margin-right: 0;
     }
   }
 
   .oauth-sign-in {
     color: $white;
-    font-weight: bolder;
-    min-width: 400px;
+    font-family: $gotham-extra-bold;
+    width: 100%;
     margin: 5px 0;
 
     &.with-google_oauth2 {

@@ -340,6 +340,7 @@ zh-TW:
       playlab: Play Lab
       minecraft: Minecraft
       flappy: 像素鳥
+      dance: 舞蹈派對
       view_all: 瀏覽所有專案…
     popup:
       progress_for_user: "%{name} 的進度"
@@ -626,6 +627,8 @@ zh-TW:
       body_short: 設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a
       audience: 年齡 13+
       cta: 學習如何做
+    dance:
+      title: 舞蹈派對
     hoc:
       title: 經典迷宮
       body: 試試數百萬人已經體驗過的計算機科學基礎課程。
@@ -990,6 +993,7 @@ zh-TW:
   return_unit_overview: 移至單元概覽
   return_course_overview: 移至課程概覽
   view_all_units: 檢視所有單元
+  view_teacher_guide: 查看教師指導
   pd:
     form_labels:
       first_name: 名字

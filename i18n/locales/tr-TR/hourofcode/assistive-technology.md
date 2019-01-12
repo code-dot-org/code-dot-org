@@ -1,20 +1,20 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
 ---
-# Completing an Hour of Code with Assistive Technology
+# Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir.
 
-## Using Screen Readers
+## Ekran okuyucularını kullanma
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Ekran okuyucusu kullanıyorsanız, [Yeni başlayanlar için Quorum eğitimi ](https://quorumlanguage.com/hourofcode/astro1.html) ya da [Deneyimli kullanıcılar için Quorum eğitimi](https://quorumlanguage.com/hourofcode/part1.html) kodlama saatine başlamak için idealdir. Quorum, ekran okuyucuları tarafından erişilebilir olması için yorumlanabilir bir programlama dili olarak başladı. Zamanla tüm kullanıcılar için genel amaçlı bir programlama dili haline geldi. Bir Kodlama Saati'nden daha fazlasını istiyorsanız, Quorum ekibi ekstra müfredat ve araç da sunuyor.
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+[![Yeni başlayanlar için dersler](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Deneyimliler için dersler](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-## Code.org Tutorials Without Audio
+## Sessiz code.org dersleri
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+[Code.org dersleri ](https://studio.code.org/courses) sesli veya sessiz olarak kullanılabilir. Tüm videolarda alt yazı bulunmaktadır.
 
-## Pair Programming
+## Eşli programlama
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+Eşli programlama (pair programming) bilgisayar mühendislerinin problem çözmede takımlar veya eşler halinde çalıştıkları bir yöntemdir. Kodlama saati etkinliklerini bir arkadaşınızla yapmayı deneyin. Eşli programlama (pair programming) nın en iyi yöntemlerini anlatan [ videoyu ](https://www.youtube.com/watch?v=vgkahOzFH2Q) izlemeyi unutmayın.

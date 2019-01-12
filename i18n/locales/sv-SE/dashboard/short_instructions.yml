@@ -377,7 +377,7 @@ sv:
       4-5 Nested Loops 2: 'Sätt nu in denna slinga inuti en annan slinga för att rita 10 trianglar.  Detta kallas en nästlad slinga. Tips: Alla 10 trianglar slutför en 360 graders rotation.  '
       4-5 Nested Loops 3: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
-        
+
       4-5 Nested Loops 5: Repetera den givna koden för att skapa en väderkvarn.
       4-5 Nested Loops 6: Kan du rita en hexagon genom att upprepa triangelkoden?
       4-5 Nested Loops 7: "Upprepa denna design 10 gånger. Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 10?)"
@@ -669,6 +669,7 @@ sv:
       Course 4 SCV 6: Klicka här för att se anvisningarna igen.
       Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal bildpunkter (med positiva och negativa tal).
       Course 4 Variables Assessment: Kan du skapa denna bild med en variabel för sidor? Varje rad ska vara 50 bildpunkter lång.
+      Course E MC Conditionals1: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       CourseF_PlayLab_vars10: "Fri speltid! Här är alla variabler vi har lekt med så här långt, samt några fler om du vill ha dem. \\r \\r Notera att det nu finns så många block i vår verktygslåda att de måste organiseras!  Här har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt som finns. När du är klar, gör ett spel eller en berättelse med repetitioner, variabler och händelser.  \\r \\r Tips: scrolla ner för att se alla kommandon på arbetsytan."
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist! Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först att samla in 10 flaggor vinner!
       CourseF_PlayLab_vars3: Här är en ny typ av spel! Använd vänster och höger pilarna för att flytta och uppåtpilen för att hoppa. Se om du kan samla in alla flaggor.
@@ -685,8 +686,35 @@ sv:
       Crack Random Substitution_2018: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Crack a Caesar Cipher_2018: Instruktioner
+      Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
+      Dance_Party_01_low: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
+      Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
+      Dance_Party_03: Gör nu så att dansaren startar en ny rörelse efter 6 åtgärder!
+      Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
+      Dance_Party_05: Använda ett annat nytt block för att få dansaren att ändra rörelse efter 2 åtgärder.
+      Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1” för att dansa med katten.
+      Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
+      Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
+      Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken med ”börjar imitera”-blocket.
+      Dance_Party_11.5_test: Använd ”bara ankor”-blocken för att göra så att ankorna dansar tillsammans.
+      Dance_Party_11: '”Knapptryck uppåt”-blocket låter dig köra koden när du trycker på uppåtpilen. Försök att få dansaren att göra en snabb rörelse när du trycker uppåt.'
+      Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar tillsammans.
+      Dance_Party_11b: Gör så att roboten ”faller” en gång när du trycker på högerpilen och ”reser sig” när du trycker på uppåtpilen. Genomför ”fall-ihop-res-upp” så fort du kan!
+      Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
       Food Fight!: "Vi har lagt till en sista funktion åt dig. \\r \\r Använd ett \"om-uttalande\" för att programmera ditt spel att anropa funktionen \"level_up\" först när \"player_score\" blir större än ett visst antal. \\r \\r T ex: \"player_score\" > 6\\r \\r Spela spelet, och spela förbi förbi nivå 4 för att komma till nästa pussel. "
       Function intro Ryan: Använd "bygg bro"-funktionen två gånger för att skapa en väg till facklan.
+      Function intro Ryan_2019: Använd "bygg bro"-funktionen två gånger för att skapa en väg till facklan.
+      HOC 2018 Level_1: Skaffa en båt från kistan
+      HOC 2018 Level_10: Ta dig till ingången av detta havsmonument.
+      HOC 2018 Level_11: 'Bygg en kanal med prismarin inuti havsmonumentet.'
+      HOC 2018 Level_12: 'Designa din egen undervattensmiljö – det är helt upp till dig!'
+      HOC 2018 Level_2: 'Bege dig till slutet av bryggan.'
+      HOC 2018 Level_3: 'Ta dig över det öppna havet till torsken.'
+      HOC 2018 Level_4: Använd dig av en slinga för att ta dig till delfinen.
+      HOC 2018 Level_5: Utforska skeppsvraket för att nå kistan.
+      HOC 2018 Level_6: Navigera genom isen för att komma till laxen.
+      HOC 2018 Level_7a: Sök igenom dessa undervattensruiner efter en skattkista.
+      HOC 2018 Level_9b: 'Använd korallen som riktmärken för att nå skatten.'
       Infinity_catch: Kan du göra så att Elsa ("spelkaraktär 2") kommer till Anna genom att använda piltangenterna?
       Infinity_finale: Skapa vad du vill och dela det!
       Infinity_move_collide: Hiro är "spelkaraktär 1". Flytta honom direkt till Baymax och spela upp ett ljud när rör vid varandra.
@@ -839,25 +867,33 @@ sv:
       MC HOC 2016 Village Test: Åh nej! Zombies har fångat dig inomhus! Koda Iron Golem för att jaga och attackera zombies!
       MC_HOC_2017_01_Cole: Du måste samla på dig alla verktyg på den här resan. Styr med **piltangenterna** och gå till kistan på vägen för att vinna.
       MC_HOC_2017_01_RETRY: 'Ta agenten till tryckplattan, tryck sedan på "Kör" och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
+      MC_HOC_2017_01_RETRY_2019: 'Ta agenten till tryckplattan, tryck sedan på "Kör" och använd piltangenterna för att styra spelaren ut ur huset och ta kistan. '
       MC_HOC_2017_02: Ta agenten till tryckplattan.
       MC_HOC_2017_02_Cole: 'Flytta agenten till tryckplattan så att {currentPlayerName} kan ta sig till kartan. '
+      MC_HOC_2017_02_Cole_2019: 'Flytta agenten till tryckplattan så att {currentPlayerName} kan ta sig till kartan. '
       MC_HOC_2017_02_Kiki: Ta agenten till tryckplattan, ta sedan spelaren till den orangefärgade rutan.
       MC_HOC_2017_02_Will: Ta agenten till tryckplattan.
       MC_HOC_2017_03_Cole: 'Koda agenten att öppna grinden. '
+      MC_HOC_2017_03_Cole_2019: 'Koda agenten att öppna grinden. '
       MC_HOC_2017_03_Kiki: Ta agenten till tryckplattan.
       MC_HOC_2017_04: Ändra loopen från det senaste pusslet för att hjälpa agenten skapa en väg över den bredare delen av den här floden.
       MC_HOC_2017_04POINT5_Cole: Ta agenten till tryckplattan.
       MC_HOC_2017_04POINT5_RYAN: Ta agenten till tryckplattan.
+      MC_HOC_2017_04POINT5_RYAN_2019: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Cole: Ta agenten till tryckplattan.
+      MC_HOC_2017_04_Cole_2019: Ta agenten till tryckplattan.
       MC_HOC_2017_04_Kiki: Ta agenten till tryckplattan.
       MC_HOC_2017_05: Använd en funktion för att hjälpa agenten till tryckplattan.
       MC_HOC_2017_05_Cole: Ta spelaren till spaden.
+      MC_HOC_2017_05_Cole_2019: Ta spelaren till spaden.
       MC_HOC_2017_05_Josh: Ta spelaren till spaden.
       MC_HOC_2017_05_Kiki: Ta spelaren till den orangefärgade rutan.
       MC_HOC_2017_06_Cole: Fixa koden för att få agenten att bygga en bro över floden.
+      MC_HOC_2017_06_Cole_2019: Fixa koden för att få agenten att bygga en bro över floden.
       MC_HOC_2017_06_Josh: Fixa koden för att hjälpa agenten bygga en bro över floden.
       MC_HOC_2017_06_Kiki: Fixa koden för att hjälpa agenten bygga en bro över floden.
       MC_HOC_2017_07_Cole: Förstör isen och ta {currentPlayerName} till gruvvagnen.
+      MC_HOC_2017_07_Cole_2019: Förstör isen och ta {currentPlayerName} till gruvvagnen.
       MC_HOC_2017_07_Kiki: Använd en funktion för att rensa vägen till den orangefärgade rutan.
       MC_HOC_2017_07a_Kiki: Rensa vägen till den orangefärgade rutan.
       MC_HOC_2017_08_Cole: Ändra funktionen så att den fungerar i det här ekosystemet.
@@ -870,14 +906,17 @@ sv:
       MC_HOC_2017_10_Cole_old: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_Kiki: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RETRY: Skapa en funktion som hjälper dig bygga gruvvagnen.
+      MC_HOC_2017_10_RETRY_2019: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RYAN: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_10_RYAN2: Skapa en funktion som hjälper dig bygga gruvvagnen.
       MC_HOC_2017_13_Cole: "**Spela fritt:**  Dags att utforska på egen hand!"
       MC_HOC_2017_4.5v2: Ta agenten till tryckplattan.
       MC_HOC_2017_Ali: Använd funktionerna för att ta dig över lavan.
+      MC_HOC_2017_Ali_2019: Använd funktionerna för att ta dig över lavan.
       MC_HOC_2017_FP10x10: "**Spela fritt:** Klarar du av att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP10x10_RE: "**Spela fritt:** Klarar du av att samla alla diamanter på den här banan? "
       MC_HOC_2017_FP20x20: "**Spela fritt:**  Dags att utforska på egen hand!"
+      MC_HOC_2017_FP20x20_2019: "**Spela fritt:**  Dags att utforska på egen hand!"
       MC_HOC_2017_Ryan_03: Använd loopar för att hjälpa agenten bygga en bro över floden genom att placera ut block i vattnet.
       MC_HOC_2017_Ryan_05: Förstör kaktusarna så att spelaren kan nå målet.
       MC_HOC_Kiki_02: Ta agenten till tryckplattan.
@@ -932,7 +971,7 @@ sv:
       NEW Course 4 Bee For Loops 5 5: Har du förstått "för loop"? Låt oss hjälpa biet att få resten av nektarn.
       NEW Course 4 Bee For Loops 5: Du kan också använda en "för loop" för att räkna ner. Försök samla denna nektar genom att räkna ner från 5 till 1, 1 i taget.
       NEW Course 4 Bee For Loops 6: Det sista numret i din slinga kallas "ökningen". Varje gång loopen körs, ändras 'räknar' -variabeln med värdet av ökningen. Försök samla dessa blommor genom att använda en ökning av 2.
-      NEW Course 4 Bee For Loops 7: |2
+      NEW Course 4 Bee For Loops 7: |-
         Låt oss nu kombinera variabeln "räknare" med ett matematik block! Hur kan du använda variabeln "räknare" för att navigerai denna trädgård med minsta möjliga antal block? Vad behöver du göra för att samla in 3, 6, 9, 12, 15 nektar denna gång? Hemligheten ligger i variabeln "räknare"! \r \r Kom ihåg: om din slinga räknar upp, läggs 'ökningen' till i 'räknar-
          variabeln varje gång.
       NEW Course 4 Bee For Loops 8: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
@@ -953,25 +992,35 @@ sv:
       New Minecraft Hero Project: "**Spela fritt:**  Dags att utforska på egen hand!"
       Overworld Avoid Monsters: Att springa på en smygare är en dålig idé. Gå försiktigt förbi smygarna och nå tryggheten i ditt hem.
       Overworld Avoid Monsters_2018: Att springa på en smygare är en dålig idé. Gå försiktigt förbi smygarna och nå tryggheten i ditt hem.
+      Overworld Avoid Monsters_2019: Att springa på en smygare är en dålig idé. Gå försiktigt förbi smygarna och nå tryggheten i ditt hem.
       Overworld Chop Tree - allthethings: Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.
       Overworld Chop Tree: Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.
       Overworld Chop Tree_2018: Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.
+      Overworld Chop Tree_2019: Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.
       Overworld Chop Trees: Vi måste bygga ett hus innan solen går ned. Hus kräver mycket träd. Hugg ned alla 3 träd.
       Overworld Chop Trees_2018: Vi måste bygga ett hus innan solen går ned. Hus kräver mycket träd. Hugg ned alla 3 träd.
+      Overworld Chop Trees_2019: Vi måste bygga ett hus innan solen går ned. Hus kräver mycket träd. Hugg ned alla 3 träd.
       Overworld Free Play 20x20: Grattis! Du har klarat alla pussel! Bryt, bygg och skapa något unikt med allt du har lärt dig hittills.
       Overworld Free Play 20x20_2018: Grattis! Du har klarat alla pussel! Bryt, bygg och skapa något unikt med allt du har lärt dig hittills.
+      Overworld Free Play 20x20_2019: Grattis! Du har klarat alla pussel! Bryt, bygg och skapa något unikt med allt du har lärt dig hittills.
       Overworld House Frame Chosen: Bygg resten av ditt hus med valfritt material. Kommandot "Upprepa" kommer bra till hands.
       Overworld House Frame Chosen_2018: Bygg resten av ditt hus med valfritt material. Kommandot "Upprepa" kommer bra till hands.
+      Overworld House Frame Chosen_2019: Bygg resten av ditt hus med valfritt material. Kommandot "Upprepa" kommer bra till hands.
       Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Overworld Move to Sheep_2018: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
+      Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Overworld Place Wall: Varje hus börjar med en vägg. Bygg den första delen av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
       Overworld Place Wall_2018: Varje hus börjar med en vägg. Bygg den första delen av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
+      Overworld Place Wall_2019: Varje hus börjar med en vägg. Bygg den första delen av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.
       Overworld Plant Crops: Det är bra att planera framåt. Plantera grödor på båda sidor om vattnet så att du inte blir hungrig längre fram.
       Overworld Plant Crops_2018: Det är bra att planera framåt. Plantera grödor på båda sidor om vattnet så att du inte blir hungrig längre fram.
+      Overworld Plant Crops_2019: Det är bra att planera framåt. Plantera grödor på båda sidor om vattnet så att du inte blir hungrig längre fram.
       Overworld Powered Minecart: Bra jobbat! Du har samlat många resurser och byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
       Overworld Powered Minecart_2018: Bra jobbat! Du har samlat många resurser och byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
+      Overworld Powered Minecart_2019: Bra jobbat! Du har samlat många resurser och byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
       Overworld Shear Sheep: Dags för fårklippning! Använd kommandot "klipp" för att samla ull från båda får.
       Overworld Shear Sheep_2018: Dags för fårklippning! Använd kommandot "klipp" för att samla ull från båda får.
+      Overworld Shear Sheep_2019: Dags för fårklippning! Använd kommandot "klipp" för att samla ull från båda får.
       PDK5 Conditionals 1: Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om-blocket.
       PDK5 Functions 2: Med funktioner kan du definiera nya block! Vi har flyttat blocken för att rita en kvadrat till en funktion som kallas "Rita en kvadrat". Kan du använda funktionen "Rita en kvadrat" för att skapa glasögonen? kvadraterna är 75 pixlar isär.
       PS copy 2-3 Bee Conditionals 5: "Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om-blocket."
@@ -1004,12 +1053,16 @@ sv:
       U4L02 - Objects - Template1_2018: Mall
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground Avoiding Lava_2018: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
+      Underground Avoiding Lava_2019: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground If Statements: Nu blir det svårare. Bryt 3 eldstenar utan att ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över lava du hittar.
       Underground If Statements_2018: Nu blir det svårare. Bryt 3 eldstenar utan att ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över lava du hittar.
+      Underground If Statements_2019: Nu blir det svårare. Bryt 3 eldstenar utan att ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över lava du hittar.
       Underground Iron: Det är ingen bra idé att gå in i lava. Placera kullersten för att skapa en bro och bryt minst två av järnblocken.
       Underground Iron_2018: Det är ingen bra idé att gå in i lava. Placera kullersten för att skapa en bro och bryt minst två av järnblocken.
+      Underground Iron_2019: Det är ingen bra idé att gå in i lava. Placera kullersten för att skapa en bro och bryt minst två av järnblocken.
       Underground Mining Coal: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       Underground Mining Coal_2018: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      Underground Mining Coal_2019: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       aE7: "Vad händer om du kopierar slingan och vänder åt vänster i stället för höger? Kan du upprepa för att måla vågen?"
       aE8: "Låt oss nu upprepa fyra gånger för att skapa ramen. Tänk på hörnen, du kan inte bara vända 90 grader! Om du behöver upprepa en sväng på 3 grader 60 gånger för att få en halvcirkel, vilka av dessa kodblock kommer då att skapa en fjärdedels cirkel för hörnen?"
       beeDebugVideo1: Kan du använda en loop för att samla all nektar?
@@ -1068,19 +1121,26 @@ sv:
       courseA_maze_seq2_2018: Ändra koden för att få mig till grisen!
       courseC_PlayLab_events3: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
       courseC_PlayLab_events3_2018: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
+      courseC_PlayLab_events3_2019: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
       courseC_artist_prog5: |-
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
       courseC_artist_prog5_2018: |-
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
+      courseC_artist_prog5_2019: |-
+        Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
       courseC_maze_debugging10: Felsök denna nivå genom att ordna om och lägga till block för att få mig till grisen!
       courseD_artist_binary1: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
       courseD_artist_binary1_2018: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
+      courseD_artist_binary1_2019: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
       courseD_artist_binary4: Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?
       courseD_artist_binary4_2018: Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?
+      courseD_artist_binary4_2019: Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?
       courseD_artist_binary6: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
       courseD_artist_binary6_2018: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
+      courseD_artist_binary6_2019: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
       courseD_artist_binary7: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
       courseD_artist_binary7_2018: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
+      courseD_artist_binary7_2019: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
       courseD_autorun_binary4_2019: Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?
       courseD_autorun_binary6_2019: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
       courseD_autorun_binary7_2019: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
@@ -1090,6 +1150,7 @@ sv:
       courseD_bee_nestedLoops6_2018: Få mig till Solrosen!
       courseD_bee_nestedLoops8: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bee_nestedLoops8_2018: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
+      courseD_bee_nestedLoops8_2019: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '
       courseD_bounce_events10: Det finns ett nytt mål längst upp.Lägg till "poäng" och "poäng motståndare" blocken till  "när bollen i mål" och "när bollen missar paddel" blocken för att göra ett spel. Se hur många poäng du kan få innan dina motståndare får två poäng.
       courseD_bounce_events11: Nu kan du koppla block till  "när kör"block. Du måste lägga till det nya "starta ny boll" blocket på mer än ett ställe. Prova också att ändra scenen eller hastigheten på paddeln och bollen och se hur många poäng du kan få innan din motståndare får två poäng.
       courseD_bounce_events12: Skapa ditt eget Studsa Spel. Du kan ändra alla bilder och regler. När du är klar, klicka på Slutför för att låta dina vänner prova ditt spel på sina telefoner.
@@ -1104,12 +1165,15 @@ sv:
       courseD_debugging_3: Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung.
       courseD_maze_nestedLoops4: 'Få mig till Solrosen!'
       courseD_maze_nestedLoops4_2018: 'Få mig till Solrosen!'
+      courseD_maze_nestedLoops4_2019: 'Få mig till Solrosen!'
       courseD_maze_nestedLoops6: Få mig till Solrosen!
       courseD_maze_nestedLoops6_2018: Få mig till Solrosen!
+      courseD_maze_nestedLoops6_2019: Få mig till Solrosen!
       courseE_artist_functions1: "Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar kortare än längden på kvadraten."
       courseE_artist_functions1_2018: "Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar kortare än längden på kvadraten."
       courseE_bee_concept1: Samla nektar från alla blommor. Använd en nästlad lopp. 
       courseE_bee_concept1_2018: Samla nektar från alla blommor. Använd en nästlad lopp. 
+      courseE_bee_concept1_2019: Samla nektar från alla blommor. Använd en nästlad lopp. 
       courseE_bee_functions1: Samla all nektar från varje blomma.
       courseE_bee_functions1_2018: Samla all nektar från varje blomma.
       courseE_bee_functions3: Funktioner är block av kod som utför en uppgift. Använd funktionen "få 5" för att få 5 nektar i taget. Se till att använda en loop för att få ett perfekt antal block också.
@@ -1119,14 +1183,19 @@ sv:
       courseE_farmer_concept4: Låt oss nu gå ytterligare en nivå djupare! Vi har nästlat hela kodblocket i en annan slinga men du behöver få konstnären tillbaka på plats för att rita nästa linje. Vilket av dessa kodblock kan du lägga i slutet av den yttersta loppen för att rita hela rutnätet?
       courseF_artist_for7: Gör tre små ändringar i koden från den sista nivån för att få den här!
       courseF_artist_for7_2018: Gör tre små ändringar i koden från den sista nivån för att få den här!
+      courseF_artist_for7_2019: Gör tre små ändringar i koden från den sista nivån för att få den här!
       courseF_artist_for_challenge1: Kan du lista ut hur du kan återskapa denna ritning?
       courseF_artist_for_challenge1_2018: Kan du lista ut hur du kan återskapa denna ritning?
+      courseF_artist_for_challenge1_2019: Kan du lista ut hur du kan återskapa denna ritning?
       courseF_artist_for_challenge2: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
       courseF_artist_for_challenge2_2018: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
+      courseF_artist_for_challenge2_2019: Kan du lista ut hur du kan återskapa denna ritning med en enda slinga?
       courseF_bee_for8: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
       courseF_bee_for8_2018: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
+      courseF_bee_for8_2019: 'Du kan detta! Vad bör din ökning vara för att samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att få numret efter det?'
       courseF_bee_for_challenge2: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge2_2018: Lösa detta pussel med minsta möjliga antal block.
+      courseF_bee_for_challenge2_2019: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge3: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_functions4: Funktionen "flytta och få nektar" vänder biet, samlar nektar, och vänder sedan tillbaka biet till där det började. Använd funktionen för att samla all nektar.
       courseF_bee_functions4_2018: Funktionen "flytta och få nektar" vänder biet, samlar nektar, och vänder sedan tillbaka biet till där det började. Använd funktionen för att samla all nektar.
@@ -1281,7 +1350,7 @@ sv:
       grade4_arist_nested_loop_triangles4: Rita tänderna i alligatorns mun!
       grade4_arist_nested_loop_triangles5: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
-        
+
       grade4_arist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en nästlad slinga?
       grade4_artist_functions1: "Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan glasen är 25 pixlar kortare än längden på kvadraten."
       grade4_artist_functions2: "Med funktioner kan du definiera nya block! Vi har flyttat blocken för att rita en kvadrat till en funktion som kallas \"Rita en kvadrat\". Kan du använda funktionen \"Rita en kvadrat\" för att skapa glasögonen? kvadraterna är 75 pixlar isär."
@@ -1300,7 +1369,7 @@ sv:
       grade4_artist_nested_loop_triangles1: 'Komplettera koden som ritar dessa trianglar.  Den första är gjord åt dig.  Tips: 3 trianglar med 360 graders rotation.'
       grade4_artist_nested_loop_triangles5: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
-        
+
       grade4_artist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en nästlad slinga?
       grade4_artist_parameters_squares1: 'Klicka på "Redigera" för att fylla i funktionsdefinitionen för "Rita en kvadrat" och lägga till en parameter. Den bör ta en längdparameter, precis som triangeln. Den här gången ska du rita 3 rutor: 25, 50 och 75 pixel i längd, var och en är 100 pixlar isär.'
       grade4_artist_parameters_triangles2: Märker du något annorlunda med dessa funktionsblock? Klicka på "Kör" för att se vad som händer.

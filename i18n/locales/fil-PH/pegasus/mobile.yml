@@ -409,7 +409,7 @@
   mc_gradelevel: "Edad 4-104"
   mc_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   mc_specs: "Maraming wika | Modernong mga browser at mga tablet | Edad 6-106"
-  minecraft_agent: 'Minecraft: Ang Paglalakbay ng Isang Bayani'
+  minecraft_agent: "Minecraft: Ang Paglalakbay ng Isang Bayani"
   minecraft_designer: "Designer ng Minecraft"
   minecraft_adventurer: "Tagapaglakbay sa Minecraft"
   minecraft_tutorials: "Mga Tutoryal sa Minecraft Hour of Code"
@@ -658,7 +658,7 @@
   dashboard_sections_table_stage_extras: "Mga Ekstra na Yugto"
   dashboard_sections_table_students: "Mga mag-aaral"
   dashboard_sections_table_code: "Code ng Seksiyon"
-  dashboard_sections_name: "Pangalan ng Section"
+  dashboard_sections_name: 'Pangalan ng Section'
   dashboard_sections_choose_secret: "Kung nais mo na gumawa ng account para sa iyong mga estudyante, pumili ng sekretong <b>salita</b> o <b>picture</b> para sa section na iyon."
   dashboard_sections_secret_word: "Ang <b>salita</b> ay nagbibigay daan sa iyo na mag-set ng sekretong salita para sa bawat estudyante."
   dashboard_sections_secret_picture: "Ang <b>picture</b> ay nagbibigay daan sa iyo na mag-set ng sekretong picture para sa bawat estudyante, ideal ito sa mga estudyante na hindi pa marunong mag-type."
@@ -684,7 +684,7 @@
   dashboard_students_add_multiple: 'I-type o i-paste ang mga pangalan ng iyong mga mag-aaral, isa sa bawat linya:'
   dashboard_students_new_google_classroom_section: "Para makadagdag ng mga estudyante, gamitin ang <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> at pagkatapos ay i-click ang <b>Sync students from Google Classrom</b> na button sa itaas."
   dashboard_students_new_section: "Nalikha mo ang isang bagong seksyon! Ngayon idagdag ang iyong mga mag-aaral gamit ang <b> Magdagdag ng mag-aaral </b> at <b>Magdagdag ng maramihang mga mag-aaral </b> sa mga pindutan sa itaas."
-  dashboard_students_name: "Pangalan"
+  dashboard_students_name: 'Pangalan'
   dashboard_students_progress: "Progreso"
   dashboard_students_male: "Lalaki"
   dashboard_students_female: "Babae"
@@ -1445,10 +1445,13 @@
   google_sign_in_instruct: 'Mula dito, sila ay dapat pipili sa "Sign in with Google Account" na opsyon:'
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
+  applab_tile_start_tutorial: "Panimula"
+  hoc_overview_start_tutorial: "Panimula"
   hoc2018_creativity_create: "I-create"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
   hoc2018_mc_details: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
   hoc2018_mc_aquatic_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
+  hoc2018_mc_hero_title: "Minecraft: Ang Paglalakbay ng Isang Bayani"
   hoc2018_mc_hero_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
   hoc2018_mc_designer_title: "Designer ng Minecraft"
   hoc2018_mc_designer_description: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
@@ -1479,3 +1482,8 @@
   hoc2018_mc_minecraft_education: "Edukasyon ng Minecraft"
   hoc2018_mc_continue_learning: "Magpatuloy sa pag-aaral ng Minecraft."
   hoc2018_mc_go_to_mc_education: "Pumunta sa Edukasyon ng Minecraft"
+  hoc2018_dance_party_button: "Panimula"
+  hoc2018_dance_teacher_resources_tile1_button: "Banghay-aralin"
+  hoc2018_dance_teacher_resources_tile2_button: "Unplugged na Aktibidad"
+  hoc2018_dance_amazon_about_future_engineer_button: "Matuto nang higit pa"
+  hoc2018_dance_amazon_scholarship_programs_button: "Mag-apply ngayon"

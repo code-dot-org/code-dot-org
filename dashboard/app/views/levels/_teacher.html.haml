@@ -47,9 +47,13 @@
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')
-                  .timestamp= @user_level.updated_at.iso8601
+                  .timestamp{"data-timestamp" => @user_level.updated_at}
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
+              - elsif @user_level.attempted?
+                #last_updated
+                  %div= t('teacher.panel.last_updated')
+                  .timestamp{"data-timestamp" => @user_level.updated_at}
         - if @level && @level.contained_levels.any?
           - contained_level = @level.contained_levels.first
           -# if we have a student user, show their level. otherwise show teacher's
@@ -122,4 +126,10 @@
   :javascript
     $(document).ready(function () {
       window.dashboard.teacher.onReady();
+      // For all elements with class timestamp and attribute data-timestamp, set their content to be the timestamp
+      // rendered for the current locale.
+      $(".timestamp[data-timestamp]").each(function() {
+        const date = new Date($(this).attr('data-timestamp'));
+        $(this).html(date.toLocaleString());
+      });
     });

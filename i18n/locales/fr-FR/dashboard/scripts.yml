@@ -9,8 +9,8 @@ fr:
         csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
         csp_category_name: "Principes de l'informatique"
         csp_2018_category_name: Principes de l'informatique (2018-2019)
-        cspexams_category_name: Test d'entrainement aux principes du CS
-        csp17_category_name: Principes de CS 16-17
+        cspexams_category_name: Test d'entraînement aux principes de l'informatique
+        csp17_category_name: Principes de l'informatique (2017-2018)
         full_course_category_name: Cours complets
         hoc_category_name: Heure de Code
         math_category_name: Math
@@ -755,8 +755,14 @@ fr:
               name: Problèmes difficiles - Le problème du marchant itinérant
             Cracking the Code:
               name: Casser le code
+            DNS in the Real World:
+              name: DNS dans le monde réel
             Encryption Algorithms:
               name: Clés et mot de passes
+            HTTP and Abstraction:
+              name: HTTP et l’abstraction sur Internet
+            Packets and Making a Reliable Internet:
+              name: Paquets et créer un Internet fiable
             The Internet:
               name: L'Internet est pour tout le monde
         algebraPD2a:
@@ -946,6 +952,8 @@ fr:
               name: Conclusions
         Equity-OnlinePD:
           stages:
+            Introduction to Equity:
+              name: Introduction à l’équité
             Next Steps:
               name: Prochaines étapes
         sciencePD2b-iZone:
@@ -1215,6 +1223,8 @@ fr:
               name: Nombres binaires
             Number Systems:
               name: Systèmes de numération
+            Packets and Making a Reliable Internet:
+              name: Paquets et créer un Internet fiable
             Personal Innovations:
               name: Innovations personnelles
             Sending Binary Messages:
@@ -1287,6 +1297,8 @@ fr:
         CSDU3-Draft:
           description_short: Programmation
           stages:
+            Draw Loop and Randomization:
+              name: La boucle draw et la randomisation
             Functions:
               name: fonctions
             Velocity:
@@ -1329,11 +1341,51 @@ fr:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Game Lab
+              name: Labo des jeux
+        CSDU4-Draft:
+          stages:
+            Design Mode:
+              name: Mode création
         CSDU2-Draft:
           stages:
+            Quality Websites:
+              name: Sites Web de qualité
+            Text on the Web:
+              name: Le texte sur le Web
+            Website Design:
+              name: Conception de sites Web
+            Intellectual Property:
+              name: Propriété intellectuelle
+            Introduction to Styling with CSS:
+              name: Introduction aux styles avec CSS
+            'Personal Website: Connecting Pages':
+              name: 'Site Web personnel : Connecter les pages'
+            Classes and External Style Sheets:
+              name: Les classes et les feuilles de style externes
+            Box Model and Page Layout:
+              name: Modèle de boîte et mise en page
+            Publishing a Website:
+              name: Publier un site Web
+            Introduction to HTML:
+              name: Introduction à l’HTML
+            Headers and Lists:
+              name: En-têtes et listes
+            Designing Web Pages:
+              name: Concevoir des pages Web
+            Describing Web pages:
+              name: Décrire des pages Web
+            Multi-Page Websites:
+              name: Sites Web multi-pages
+            Classes:
+              name: Classes
+            External Style Sheets:
+              name: Feuilles de style externes
+            Usability and Accessibility:
+              name: Utilisabilité et accessibilité
             Peer Review:
               name: Commentaire par un pair
+            Describing Web Pages:
+              name: Décrire des pages Web
         MikeTest:
           stages:
             Artist Functions:
@@ -1432,29 +1484,43 @@ fr:
               name: Aperçu de la leçon
         grade3:
           stages:
+            " Bee: Conditionals":
+              name: " Abeille : Instructions conditionnelles"
             'Artist: Nested Loops':
               name: 'Artiste: Boucles imbriquées'
             Bee Debugging:
               name: Abeilles et debugging
             Bounce:
               name: Rebond
+            Build a Game:
+              name: Créer un jeu
             'Farmer: While Loops':
               name: 'Fermier: Boucles «Tant que»'
         csd3-2017:
           description_short: "Programmation"
           stages:
+            Draw Loop and Randomization:
+              name: La boucle draw et la randomisation
             Velocity:
               name: Vitesse
             Functions:
               name: fonctions
             Variables:
               name: variables
+            The Draw Loop:
+              name: La boucle Draw
+              description_student: Cette leçon présente la boucle draw, l’un des principaux paradigmes de programmation du labo des jeux. La classe combine la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. Ensuite, tout le monde utilise ce qu'il a appris pour mettre à jour la scène du sprite de la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec la boucle d’étirage, l’un des principaux paradigmes de programmation du labo des jeux. Pour commencer la leçon, les élèves examinent des folioscopes afin de constater que le fait de montrer plusieurs images à la suite crée l’impression de mouvement. Les élèves regardent ensuite une vidéo expliquant comment la boucle draw du labo des jeux contribue à créer cette même impression dans leurs programmes. Les élèves combinent la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. À la fin de la leçon, les élèves utilisent ce qu'ils ont appris pour mettre à jour la scène de sprites de la leçon précédente.
             Conditionals:
               name: Instructions conditionnelles
         grade2:
           stages:
             Flappy:
               name: Flappy
+            New Home for My Pet:
+              name: Nouvelle maison pour mon animal de compagnie
+            Online Internet Safety:
+              name: Sécurité sur Internet
             Binary Bracelets:
               name: Bracelets binaires
             'Real-life Algorithms: Paper Planes':
@@ -1512,14 +1578,39 @@ fr:
               name: Bracelets binaires
             Binary Images:
               name: Les images binaires
+            RGB Color:
+              name: Couleur RVB
             Play Lab:
               name: Labo de jeux
         csd2-2017:
+          description_short: "  Apprends à construire ton propre site web avec le labo du web."
           stages:
+            Quality Websites:
+              name: Sites Web de qualité
+            Website Design:
+              name: Conception de sites Web
+            Describing Web pages:
+              name: Décrire des pages Web
+            Text on the Web:
+              name: Le texte sur le Web
+            Introduction to Styling with CSS:
+              name: Introduction aux styles avec CSS
+            Multi-Page Websites:
+              name: Sites Web multi-pages
+            Classes:
+              name: Classes
+            External Style Sheets:
+              name: Feuilles de style externes
             Peer Review:
               name: Commentaire par un pair
+            Box Model and Page Layout:
+              name: Modèle de boîte et mise en page
             Digital Footprint:
               description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \\r\n\\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\\r\n\\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
+            Publishing a Website:
+              name: Publier un site Web
+            Intellectual Property:
+              name: Propriété intellectuelle
             Styling Text with CSS:
               description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\\r\n\\r\n"
             Lists:
@@ -1528,6 +1619,10 @@ fr:
               description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
+            RGB Colors and Classes:
+              name: Couleurs RVB et classes
+              description_student: Cette leçon couvre les classes et les couleurs personnalisées. La classe commence par apprendre à spécifier des couleurs personnalisées à l'aide de valeurs RVB (rouge, vert, bleu), puis à appliquer ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. À l'aide des classes, la classe ajoute plus de styles à la page web Quatre saisons, puis les utilise pour styliser ses sites web personnels.
+              description_teacher: Dans cette leçon, les élèves apprennent d’abord comment définir des couleurs personnalisées en utilisant leurs valeurs RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. Les classes CSS permettent aux développeurs web de traiter des groupes d’éléments qu’il veulent styliser différemment d’autres éléments du même type. En utilisant les classes, les élèves ajoutent plus de styles à la page web Quatre saisons, puis les utilisent pour styliser leurs sites web personnels.
             Project - Personal Portfolio Website:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         csd4-2017:
@@ -1564,6 +1659,8 @@ fr:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algorithmes du monde réel: Avions en papier'
+            Online Internet Safety:
+              name: Sécurité sur Internet
             Binary Bracelets:
               name: Bracelets binaires
             Your Digital Footprint:
@@ -1646,6 +1743,12 @@ fr:
           stages:
             Welcome Back!:
               name: Bon retour parmi nous !
+        csdgraveyard:
+          stages:
+            Introduction to Styling with CSS:
+              name: Introduction aux styles avec CSS
+            External Style Sheets:
+              name: Feuilles de style externes
         sciencepd4:
           stages:
             Welcome!:
@@ -1859,6 +1962,8 @@ fr:
           stages:
             Variables:
               name: variables
+            The Draw Loop:
+              name: La boucle Draw
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
@@ -1867,18 +1972,30 @@ fr:
               name: fonctions
         csd3-old:
           stages:
+            Draw Loop and Randomization:
+              name: La boucle draw et la randomisation
             Velocity:
               name: Vitesse
             Functions:
               name: fonctions
         csd2-draft:
           stages:
+            Text on the Web:
+              name: Le texte sur le Web
+            Headers and Lists:
+              name: En-têtes et listes
+            Intellectual Property:
+              name: Propriété intellectuelle
+            RGB Colors and Classes:
+              name: Couleurs RVB et classes
             Lists:
               name: Listes
         csd3-chapters:
           stages:
             Variables:
               name: variables
+            The Draw Loop:
+              name: La boucle Draw
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
@@ -1895,8 +2012,24 @@ fr:
               name: Labo de jeux Âge de Glace
         csd2-old:
           stages:
+            Quality Websites:
+              name: Sites Web de qualité
+            Website Design:
+              name: Conception de sites Web
+            Describing Web pages:
+              name: Décrire des pages Web
+            Text on the Web:
+              name: Le texte sur le Web
+            Multi-Page Websites:
+              name: Sites Web multi-pages
+            Classes:
+              name: Classes
             Peer Review:
               name: Commentaire par un pair
+            Publishing a Website:
+              name: Publier un site Web
+            Intellectual Property:
+              name: Propriété intellectuelle
         artist-and-bb8:
           stages:
             Ice Age Play Lab:
@@ -1912,13 +2045,14 @@ fr:
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
           title: Cours A
           assignment_family_title: Cours A
-          description_short: Une introduction à l’informatique pour les jeunes lecteurs.
+          description_short: Une introduction à l’informatique pour les primo-lecteurs.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorithmes du monde réel: Planter une graine'
           title: Cours B
           assignment_family_title: Cours B
+          description_short: Une introduction à l'informatique pour les primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants plus âgés.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1932,6 +2066,7 @@ fr:
               name: Boucles imbriquées
           title: Cours D
           assignment_family_title: Cours D
+          description_short: Voyez rapidement les notions du cours C, puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles et plus encore.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1948,12 +2083,14 @@ fr:
               name: Boucles imbriquées
           title: Cours E
           assignment_family_title: Cours E
+          description_short: Voyez rapidement les notions des cours C et D, et allez plus loin avec les fonctions.
         coursef-2017:
           stages:
             Building a Foundation:
               name: Construire une fondation
           title: Cours F
           assignment_family_title: Cours F
+          description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
         csdnovice:
           stages:
             Tuesday:
@@ -2047,6 +2184,8 @@ fr:
               name: Artiste binaire
             Building a Foundation:
               name: Construire une fondation
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
         new-express:
           stages:
             Introduction:
@@ -2102,7 +2241,7 @@ fr:
               name: Heure de Code Minecraft
           title: 'Minecraft: Le voyage du héros'
           description_short: Minecraft est de retour pour une toute nouvelle activité de l'Heure de Code!
-          description: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité! Le voyage dans Minecraft avec du code.
+          description: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2171,6 +2310,8 @@ fr:
           stages:
             Variables:
               name: variables
+            The Draw Loop:
+              name: La boucle Draw
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
@@ -2183,6 +2324,10 @@ fr:
           stages:
             Variables:
               name: variables
+            The Draw Loop:
+              name: La boucle Draw
+              description_student: Cette leçon présente la boucle draw, l’un des principaux paradigmes de programmation du labo des jeux. La classe combine la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. Ensuite, tout le monde utilise ce qu'il a appris pour mettre à jour la scène du sprite de la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec la boucle d’étirage, l’un des principaux paradigmes de programmation du labo des jeux. Pour commencer la leçon, les élèves examinent des folioscopes afin de constater que le fait de montrer plusieurs images à la suite crée l’impression de mouvement. Les élèves regardent ensuite une vidéo expliquant comment la boucle draw du labo des jeux contribue à créer cette même impression dans leurs programmes. Les élèves combinent la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. À la fin de la leçon, les élèves utilisent ce qu'ils ont appris pour mettre à jour la scène de sprites de la leçon précédente.
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
@@ -2190,6 +2335,7 @@ fr:
             Functions:
               name: fonctions
         csd2-2018:
+          description_short: "  Apprends à construire ton propre site web avec le labo du web."
           stages:
             Digital Footprint:
               description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \\r\n\\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\\r\n\\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
@@ -2201,11 +2347,15 @@ fr:
               description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             Styling Text with CSS:
               description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\\r\n\\r\n"
+            RGB Colors and Classes:
+              name: Couleurs RVB et classes
+              description_student: Cette leçon couvre les classes et les couleurs personnalisées. La classe commence par apprendre à spécifier des couleurs personnalisées à l'aide de valeurs RVB (rouge, vert, bleu), puis à appliquer ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. À l'aide des classes, la classe ajoute plus de styles à la page web Quatre saisons, puis les utilise pour styliser ses sites web personnels.
+              description_teacher: Dans cette leçon, les élèves apprennent d’abord comment définir des couleurs personnalisées en utilisant leurs valeurs RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une nouvelle page web Quatre saisons, qui utilise des classes CSS. Les classes CSS permettent aux développeurs web de traiter des groupes d’éléments qu’il veulent styliser différemment d’autres éléments du même type. En utilisant les classes, les élèves ajoutent plus de styles à la page web Quatre saisons, puis les utilisent pour styliser leurs sites web personnels.
             Project - Personal Portfolio Website:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         coursea-2018:
           assignment_family_title: Cours A
-          description_short: Une introduction à l’informatique pour les jeunes lecteurs.
+          description_short: Une introduction à l’informatique pour les primo-lecteurs.
           stages:
             'Debugging: Unspotted Bugs':
               name: Bugs passés inaperçus
@@ -2264,6 +2414,8 @@ fr:
               name: Ton empreinte numérique
             Move It, Move It:
               name: Bouge, Bouge
+            Copyright and Creativity:
+              name: C'est bien de créer et de jouer équitablement
         coursed-2018:
           assignment_family_title: Cours D
           stages:
@@ -2281,6 +2433,8 @@ fr:
               name: Les images binaires
             Artist Binary:
               name: Artiste binaire
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
             Relay Programming:
@@ -2349,8 +2503,11 @@ fr:
               name: Instructions conditionnelles avec des cartes
             Minecraft Hour of Code:
               name: Heure de Code Minecraft
+            Copyright and Creativity:
+              name: Partage numérique
         coursef-2018:
           assignment_family_title: Cours F
+          description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
           stages:
             'Programming: My Robotic Friends':
               name: Mes amis les robots
@@ -2384,6 +2541,8 @@ fr:
               name: Envoi de Nombres
             The Internet:
               name: Internet et les réseaux connectés
+            Packets and Making a Reliable Internet:
+              name: Paquets et créer un Internet fiable
         csd4-2018:
           stages:
             Understanding Your User:
@@ -2475,6 +2634,8 @@ fr:
               name: Bouge, Bouge
             Your Digital Footprint:
               name: Ton empreinte numérique
+            Copyright and Creativity:
+              name: C'est bien de créer et de jouer équitablement
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie et le grand projet
         frozen-2018:
@@ -2485,7 +2646,110 @@ fr:
           stages:
             Artist:
               name: Artiste
+        dance:
+          stages:
+            Dance Party:
+              name: Fête dansante
+          title: Fête dansante
+          description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !
+          description: Codez votre propre soirée dansante à partager avec vos amis !
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artiste
+        aquatic:
+          description_short: Utilise ta créativité et tes compétences de résolution de problèmes pour explorer et construire des mondes sous-marins avec du code !
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Fête dansante
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Fête dansante
+        dance-extras:
+          title: Continuez à danser
+          description: Allez au-delà de la première heure avec de longues idées de projets.
+        coursef-2019:
+          description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            The Artist:
+              name: L'Artiste
+        dance-low:
+          stages:
+            Dance Party:
+              name: Fête dansante
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Digital Citizenship:
+              name: Citoyenneté numérique
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            Nested Loops:
+              name: Boucles imbriquées
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Conditionals:
+              name: Instructions conditionnelles
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            Binary Bracelets:
+              name: Bracelets binaires
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+        andrea-test:
+          stages:
+            'null':
+              name: 'invalide'
+        dance-extras-gallery:
+          title: Continuez à danser
+          description: Allez au-delà de la première heure avec de longues idées de projets.
+        coursec-2019:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+          stages:
+            Building a Foundation:
+              name: Construire une fondation
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algorithmes du monde réel: Avions en papier'
+            Looking Ahead:
+              name: Regarder en avant
+            Binary Bracelets:
+              name: Bracelets binaires

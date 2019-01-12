@@ -80,6 +80,7 @@ zh-CN:
   prize: 奖品
   more_info: 更多信息
   auth:
+    continue_with: 用%{provider} 继续
     sign_in_with: 用%{provider}登录
     signed_in: 登录成功！
     signed_out: 您已注销 <a href="%{url}"> Code.org</a>。
@@ -91,7 +92,7 @@ zh-CN:
     facebook: Facebook
     windowslive: 微软
     microsoft_v2_auth: 微软
-    clever: Clever 账号
+    clever: Clever
     powerschool: Powerschool
     forgot_password: 忘记了您的密码吗？
     migration_success: 成功！已经更新为新的帐户体验。
@@ -104,6 +105,7 @@ zh-CN:
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
   signup_form:
+    email_signup: 用电子邮件地址登录
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
     overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
@@ -526,8 +528,8 @@ zh-CN:
     thank_you: 我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners">
       合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors">
       教育顾问</a>在创建代码工作室中给予的支持。
-    help_from_html: 特别感谢来自谷歌、 微软、 Facebook 和 Twitter 的工程师帮助创建了本教程。
-    help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
+    help_from_html: 我们要特别感谢来自亚马逊、谷歌和微软的工程师帮助创建本教程。
+    help_from_html_old: 来自亚马逊、谷歌和微软的工程师们帮助创建了本教程。
     art_from_html: "《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482;
       &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year}
       迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482;
@@ -622,6 +624,8 @@ zh-CN:
       body_short: 设计一个应用，用代码模块或者JavaScript 来写出这个程序，然后马上分享你的应用吧。
       audience: 13岁以上
       cta: 了解操作方法
+    dance:
+      title: 舞蹈派对
     hoc:
       title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
@@ -1015,6 +1019,7 @@ zh-CN:
   return_unit_overview: 转到单元概述
   return_course_overview: 转到课程概述
   view_all_units: 查看所有单元
+  view_teacher_guide: 查看教师指南
   pd:
     form_labels:
       first_name: 名

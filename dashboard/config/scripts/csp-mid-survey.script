@@ -1,0 +1,6 @@
+hidden false
+login_required true
+has_verified_resources true
+
+stage 'CSP Mid-year survey', flex_category: 'cspSurvey'
+assessment 'csp-post-survey-2017-levelgroup_2018', progression: 'CS Principles Mid-year Survey'

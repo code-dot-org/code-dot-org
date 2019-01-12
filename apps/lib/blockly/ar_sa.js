@@ -41,7 +41,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "لكل عنصر";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "لكل عنصر في قائمة ما، عين المتغير '%1' إلى هذا العنصر، ومن ثم نفذ بعض الأوامر.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "من %1 إلى %2 بمعدل %3";
-Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "العد بـ";
+Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "لأجل";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "اجعل المتغير %1 يأخذ القيم من رقم البداية إلى رقم النهاية وبالعد مستخدماً الفترات المحددة، وطبق أوامر المربعات البرمجية المحددة.";
 Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "إضافة شرط إلى المربع البرمجي \"إذا كان\".";
 Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "أضف شرط \"نهاية، اجمع\" إلى المربع البرمجي \"إذا كان\".";
@@ -57,7 +57,7 @@ Blockly.Msg.CONTROLS_IF_TOOLTIP_4 = "إذا كانت القيمة الأولى �
 Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://en.wikipedia.org/wiki/For_loop";
 Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "نفّذ";
 Blockly.Msg.CONTROLS_REPEAT_TITLE = "التكرار %1 مرات";
-Blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT = "تكرار";
+Blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT = "كرر";
 Blockly.Msg.CONTROLS_REPEAT_TITLE_TIMES = "مرات";
 Blockly.Msg.CONTROLS_REPEAT_TOOLTIP = "تنفيذ بعض الأوامر عدة مرات.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL = "http://code.google.com/p/blockly/wiki/Repeat";

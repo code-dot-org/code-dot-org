@@ -2005,6 +2005,8 @@ is-IS:
     Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google
     aðgangi":'
+  applab_tile_start_tutorial: Byrja
+  hoc_overview_start_tutorial: Byrja
   hoc2018_creativity_create: Búa til
   hoc2018_mc_page_title: Klukkustund kóðunar með Minecraft efni
   hoc2018_mc_details: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+
@@ -2036,3 +2038,8 @@ is-IS:
   hoc2018_mc_video_title_anybody_can_learn: Allir geta lært
   hoc2018_mc_homepage_join_us: Vertu með
   hoc2018_mc_homepage_try_it: Prófið hana
+  hoc2018_dance_party_button: Byrja
+  hoc2018_dance_teacher_resources_tile1_button: Kennsluáætlun
+  hoc2018_dance_teacher_resources_tile2_button: Verkefni án tölvu
+  hoc2018_dance_amazon_about_future_engineer_button: Læra meira
+  hoc2018_dance_amazon_scholarship_programs_button: Sækja um nú

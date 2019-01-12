@@ -827,12 +827,47 @@ fi:
         määrän lohkoja?
       Course 4 Maze 6: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
         määrän lohkoja?
+      Course E MC Conditionals1: Kaikkein arvokkaimmat resurssit löytyvät maan alta,
+        mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään 2 hiiltä.
       Crack Random Substitution: Ohjeet
       Crack Random Substitution_2018: Ohjeet
       Crack a Caesar Cipher: Ohjeet
       Crack a Caesar Cipher_2018: Ohjeet
+      Dance_Party_01: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
+        sisällä.
+      Dance_Party_01_low: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
+        sisällä.
+      Dance_Party_02: Laita hirvi aloittamaan uusi tanssiliike neljän tahdin jälkeen!
+      Dance_Party_03: Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen!
+      Dance_Party_04: Lisää taustaefekti ohjelmaasi.
+      Dance_Party_05: Käytä uutta blokkia saadaksesi tanssijasi muuttamaan liikkeitään
+        joka toisella tahdilla!
+      Dance_Party_06: Luo taustatanssija nimellä `backup_dancer1` tanssimaan kissan
+        kanssa.
+      Dance_Party_08: Voitko tehdä molemmista taustatanssijoista samankokoisia?
+      Dance_Party_09: Käytä `aseta sävy`-blokkia muuttaaksesi tanssijan väriä.
+      Dance_Party_10: Saa muut tanssijat reagoimaan musiikkiin käyttämällä myös `alkaa
+        seurata`-blokkia.
+      Dance_Party_11: "`Kun ylänuoli pohjassa`-blokki antaa sinun käyttää koodia,
+        kun ylänuolta painetaan. Koeta saada tanssijasi tekemään nopea liike, kun
+        painat ylänuolta."
+      Dance_Party_11b: Laita Robotti “droppaamaan” painamalla oikeaa nuolta ja “flossaamaan”
+        kun painat ylänuolta. Tee drop-flossaus niin nopeasti kuin pystyt!
       Function intro Ryan: Luo polku soihdulle käyttämällä kahdesti toimintoa rakenna
         silta.
+      Function intro Ryan_2019: Luo polku soihdulle käyttämällä kahdesti toimintoa
+        rakenna silta.
+      HOC 2018 Level_1: Kerää vene arkusta.
+      HOC 2018 Level_10: Mene tämän Ocean Monumentin sisäänkäynnille.
+      HOC 2018 Level_11: Rakenna väylä prismariinilla Ocean Monumentin sisälle.
+      HOC 2018 Level_12: Suunnittele oma vedenalainen ympäristösi, se on sinusta kiinni!
+      HOC 2018 Level_2: Suuntaa kannen päähän.
+      HOC 2018 Level_3: Suuntaa avomerelle turskia kohti.
+      HOC 2018 Level_4: Käytä silmukkaa päästäksesi delfiinin luo.
+      HOC 2018 Level_5: Tutki hylkyä päästäksesi arkulle.
+      HOC 2018 Level_6: Navigoi jään läpi päästäksesi lohien luo.
+      HOC 2018 Level_7a: Etsi näistä vedenalaisista hylyistä arkkua.
+      HOC 2018 Level_9b: Käytä korallia reittipisteenä päästäksesi aarteelle.
       Infinity_catch: Osaatko ohjata Elsan (hahmo 2) saamaan Annan kiinni kun painat
         nuolinäppäimiä?
       Infinity_finale: Luo mitä tahansa ja jaa se!
@@ -881,30 +916,41 @@ fi:
         käyttämällä **nuolinäppäimiä**. Voitat pääsemällä polulla olevalle arkulle.
       MC_HOC_2017_01_RETRY: Vie Agent painelaatalle, paina Suorita ja liikuta pelaaja
         nuolinäppäimillä ulos talosta keräämään arkku.
+      MC_HOC_2017_01_RETRY_2019: Vie Agent painelaatalle, paina Suorita ja liikuta
+        pelaaja nuolinäppäimillä ulos talosta keräämään arkku.
       MC_HOC_2017_02: Vie Agent painelaatalle.
       MC_HOC_2017_02_Cole: 'Liikuta Agent painelaatalle, jotta {currentPlayerName}
+        pääse kartan luo. '
+      MC_HOC_2017_02_Cole_2019: 'Liikuta Agent painelaatalle, jotta {currentPlayerName}
         pääse kartan luo. '
       MC_HOC_2017_02_Kiki: Vie Agent painelaatalle ja sitten pelaaja oranssiin ruutuun.
       MC_HOC_2017_02_Will: Vie Agent painelaatalle.
       MC_HOC_2017_03_Cole: 'Koodaa Agent avaamaan portti. '
+      MC_HOC_2017_03_Cole_2019: 'Koodaa Agent avaamaan portti. '
       MC_HOC_2017_03_Kiki: Vie Agent painelaatalle.
       MC_HOC_2017_04: Auta Agentia tekemään tie joen leveämmän osan yli muuttamalla
         edellisen tehtävän silmukkaa.
       MC_HOC_2017_04POINT5_Cole: Vie Agent painelaatalle.
       MC_HOC_2017_04POINT5_RYAN: Vie Agent painelaatalle.
+      MC_HOC_2017_04POINT5_RYAN_2019: Vie Agent painelaatalle.
       MC_HOC_2017_04_Cole: Vie Agent painelaatalle.
+      MC_HOC_2017_04_Cole_2019: Vie Agent painelaatalle.
       MC_HOC_2017_04_Kiki: Vie Agent painelaatalle.
       MC_HOC_2017_05: Auta Agentia pääsemään painelaatalle käyttämällä toimintoa.
       MC_HOC_2017_05_Cole: Vie pelaaja lapiolle.
+      MC_HOC_2017_05_Cole_2019: Vie pelaaja lapiolle.
       MC_HOC_2017_05_Josh: Vie pelaaja lapiolle.
       MC_HOC_2017_05_Kiki: Vie pelaaja oranssiin ruutuun.
       MC_HOC_2017_06_Cole: Korjaa tämä koodi siten, että Agent rakentaa sillan joen
         yli.
+      MC_HOC_2017_06_Cole_2019: Korjaa tämä koodi siten, että Agent rakentaa sillan
+        joen yli.
       MC_HOC_2017_06_Josh: Korjaa tämä koodi auttaaksesi Agentia rakentamaan silta
         joen yli.
       MC_HOC_2017_06_Kiki: Korjaa tämä koodi auttaaksesi Agentia rakentamaan silta
         joen yli.
       MC_HOC_2017_07_Cole: Tuhoa jää ja vie {currentPlayerName} kaivosvaunulle.
+      MC_HOC_2017_07_Cole_2019: Tuhoa jää ja vie {currentPlayerName} kaivosvaunulle.
       MC_HOC_2017_07_Kiki: Raivaa polku oranssille ruudulle käyttämällä toimintoa.
       MC_HOC_2017_07a_Kiki: Muuta polkua oranssiin ruutuun.
       MC_HOC_2017_08_Cole: Muuta annettua toimintoa siten, että se toimii tässä biomissa.
@@ -918,16 +964,19 @@ fi:
       MC_HOC_2017_10_Cole_old: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_Kiki: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RETRY: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
+      MC_HOC_2017_10_RETRY_2019: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RYAN: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_10_RYAN2: Luo toiminto avuksi kaivosvaunun loppuun rakentamiseen.
       MC_HOC_2017_13_Cole: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
       MC_HOC_2017_4.5v2: Vie Agent painelaatalle.
       MC_HOC_2017_Ali: Käytä toimintoja löytääksesi tie laavan yli.
+      MC_HOC_2017_Ali_2019: Käytä toimintoja löytääksesi tie laavan yli.
       MC_HOC_2017_FP10x10: "**Vapaa peli:** Saatko haastettua itsesi keräämään kaikki
         tämän tason timantit? "
       MC_HOC_2017_FP10x10_RE: "**Vapaa peli:** Saatko haastettua itsesi keräämään
         kaikki tämän tason timantit? "
       MC_HOC_2017_FP20x20: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
+      MC_HOC_2017_FP20x20_2019: "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!"
       MC_HOC_2017_Ryan_03: Käytä nyt silmukoita auttaaksesi Agentia rakentamaan silta
         joen yli asettamalla kuutioita veteen.
       MC_HOC_2017_Ryan_05: Tuhoa nämä kaktukset, jotta pelaaja pääsee maaliin.
@@ -952,6 +1001,8 @@ fi:
         varovasti ja etene kotiisi turvaan.
       Overworld Avoid Monsters_2018: Lurkkiin törmääminen on huono juttu. Ohita lurkki
         varovasti ja etene kotiisi turvaan.
+      Overworld Avoid Monsters_2019: Lurkkiin törmääminen on huono juttu. Ohita lurkki
+        varovasti ja etene kotiisi turvaan.
       Overworld Chop Tree - allthethings: Puu on hyvin tärkeä resurssi. Monet asiat
         valmistetaan siitä. Kävele puun luokse ja kaada se käyttämällä "tuhoa kuutio"
         -komentoa.
@@ -959,38 +1010,57 @@ fi:
         siitä. Kävele puun luokse ja kaada se käyttämällä "tuhoa kuutio" -komentoa.
       Overworld Chop Tree_2018: Puu on hyvin tärkeä resurssi. Monet asiat valmistetaan
         siitä. Kävele puun luokse ja kaada se käyttämällä "tuhoa kuutio" -komentoa.
+      Overworld Chop Tree_2019: Puu on hyvin tärkeä resurssi. Monet asiat valmistetaan
+        siitä. Kävele puun luokse ja kaada se käyttämällä "tuhoa kuutio" -komentoa.
       Overworld Chop Trees: Meidän pitää rakentaa talo ennen kuin tulee pimeää. Taloon
         tarvitaan paljon puuta. Kaada kaikki 3 puuta.
       Overworld Chop Trees_2018: Meidän pitää rakentaa talo ennen kuin tulee pimeää.
+        Taloon tarvitaan paljon puuta. Kaada kaikki 3 puuta.
+      Overworld Chop Trees_2019: Meidän pitää rakentaa talo ennen kuin tulee pimeää.
         Taloon tarvitaan paljon puuta. Kaada kaikki 3 puuta.
       Overworld Free Play 20x20: Onnittelut! Suoritit kaikki tehtävämme. Nyt voit
         louhia, rakentaa ja luoda jotain ihan omaasi hyödyntämällä kaikkea oppimaasi.
       Overworld Free Play 20x20_2018: Onnittelut! Suoritit kaikki tehtävämme. Nyt
         voit louhia, rakentaa ja luoda jotain ihan omaasi hyödyntämällä kaikkea oppimaasi.
+      Overworld Free Play 20x20_2019: Onnittelut! Suoritit kaikki tehtävämme. Nyt
+        voit louhia, rakentaa ja luoda jotain ihan omaasi hyödyntämällä kaikkea oppimaasi.
       Overworld House Frame Chosen: Rakenna loput talostasi mistä materiaalista haluat.
         "Toista"-komento on tulee olemaan hyödyllinen.
       Overworld House Frame Chosen_2018: Rakenna loput talostasi mistä materiaalista
+        haluat. "Toista"-komento on tulee olemaan hyödyllinen.
+      Overworld House Frame Chosen_2019: Rakenna loput talostasi mistä materiaalista
         haluat. "Toista"-komento on tulee olemaan hyödyllinen.
       Overworld Move to Sheep: Lisää toinen "liiku eteenpäin" -komento, jotta pääset
         lampaiden luo.
       Overworld Move to Sheep_2018: Lisää toinen "liiku eteenpäin" -komento, jotta
         pääset lampaiden luo.
+      Overworld Move to Sheep_2019: Lisää toinen "liiku eteenpäin" -komento, jotta
+        pääset lampaiden luo.
       Overworld Place Wall: Jokainen talo alkaa seinästä. Rakenna talosi ensimmäinen
         osa asettamalla "aseta"-komento ja "liiku eteenpäin" -komento luupin sisään.
       Overworld Place Wall_2018: Jokainen talo alkaa seinästä. Rakenna talosi ensimmäinen
         osa asettamalla "aseta"-komento ja "liiku eteenpäin" -komento luupin sisään.
+      Overworld Place Wall_2019: Jokainen talo alkaa seinästä. Rakenna talosi ensimmäinen
+        osa asettamalla "aseta"-komento ja "liiku eteenpäin" -komento luupin sisään.
       Overworld Plant Crops: On hyvä suunnitella eteenpäin. Istuta viljaa veden molemmille
         puolille, jotta nälkä ei yllätä myöhemmin.
       Overworld Plant Crops_2018: On hyvä suunnitella eteenpäin. Istuta viljaa veden
+        molemmille puolille, jotta nälkä ei yllätä myöhemmin.
+      Overworld Plant Crops_2019: On hyvä suunnitella eteenpäin. Istuta viljaa veden
         molemmille puolille, jotta nälkä ei yllätä myöhemmin.
       Overworld Powered Minecart: Hienoa! Olet kerännyt paljon resursseja ja rakentanut
         vaatimattoman kodin. Rakenna nyt raiteet kartan reunalta talosi ovelle.
       Overworld Powered Minecart_2018: Hienoa! Olet kerännyt paljon resursseja ja
         rakentanut vaatimattoman kodin. Rakenna nyt raiteet kartan reunalta talosi
         ovelle.
+      Overworld Powered Minecart_2019: Hienoa! Olet kerännyt paljon resursseja ja
+        rakentanut vaatimattoman kodin. Rakenna nyt raiteet kartan reunalta talosi
+        ovelle.
       Overworld Shear Sheep: On aika keritä lampaat! Kerää villa molemmista lampaista
         käyttämällä "keritse"-komentoa.
       Overworld Shear Sheep_2018: On aika keritä lampaat! Kerää villa molemmista lampaista
+        käyttämällä "keritse"-komentoa.
+      Overworld Shear Sheep_2019: On aika keritä lampaat! Kerää villa molemmista lampaista
         käyttämällä "keritse"-komentoa.
       PDK5 Conditionals 1: Violeteilla kukilla on joko 1 tai 0 mettä, mutta sitä ei
         voi tietää! Varo, ettet kerää mettä violetista kukasta, jos sillä ei ole mettä.
@@ -1029,18 +1099,30 @@ fi:
         Se täytyy peittää, ennen kuin voit kulkea eteenpäin. Nyt "jos"-komento tulee
         tarpeeseen. Louhi nämä kuutiot lisäämällä "liiku eteenpäin"-komento oikeaan
         paikkaan.
+      Underground Avoiding Lava_2019: Joidenkin kuutioiden alla on laavaa piilossa.
+        Se täytyy peittää, ennen kuin voit kulkea eteenpäin. Nyt "jos"-komento tulee
+        tarpeeseen. Louhi nämä kuutiot lisäämällä "liiku eteenpäin"-komento oikeaan
+        paikkaan.
       Underground If Statements: Nyt homma hankaloituu. Louhi 3 punakiveä, mutta älä
         putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä "jos"-komentoa.
       Underground If Statements_2018: Nyt homma hankaloituu. Louhi 3 punakiveä, mutta
+        älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä
+        "jos"-komentoa.
+      Underground If Statements_2019: Nyt homma hankaloituu. Louhi 3 punakiveä, mutta
         älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä
         "jos"-komentoa.
       Underground Iron: Sulaan laavaan kävely on huono juttu. Luo silta asettamalla
         laavan päälle mukulakivi ja louhi sitten vähintään kaksi rautakuutiota.
       Underground Iron_2018: Sulaan laavaan kävely on huono juttu. Luo silta asettamalla
         laavan päälle mukulakivi ja louhi sitten vähintään kaksi rautakuutiota.
+      Underground Iron_2019: Sulaan laavaan kävely on huono juttu. Luo silta asettamalla
+        laavan päälle mukulakivi ja louhi sitten vähintään kaksi rautakuutiota.
       Underground Mining Coal: Kaikkein arvokkaimmat resurssit löytyvät maan alta,
         mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään 2 hiiltä.
       Underground Mining Coal_2018: Kaikkein arvokkaimmat resurssit löytyvät maan
+        alta, mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään
+        2 hiiltä.
+      Underground Mining Coal_2019: Kaikkein arvokkaimmat resurssit löytyvät maan
         alta, mutta siellä on pimeää. Aseta vähintään 2 soihtua ja louhi vähintään
         2 hiiltä.
       XML Scratchpad: Käytetään tätä testitasoa napataksemme xml yksikkötesteihin
@@ -1184,6 +1266,8 @@ fi:
         kolme sivua ovat saman pituisia.'
       courseC_artist_prog5_2018: 'Tämä talo tarvitsee katon. Piirrä kolmio. Vihje:
         kaikki kolme sivua ovat saman pituisia.'
+      courseC_artist_prog5_2019: 'Tämä talo tarvitsee katon. Piirrä kolmio. Vihje:
+        kaikki kolme sivua ovat saman pituisia.'
       courseD_bee_debugging3: Nämä lohkot todella häiritsevät minua. Korjaa virhe(et)
         kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
       courseD_bee_nestedLoops3: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä
@@ -1194,6 +1278,8 @@ fi:
       courseD_bee_nestedLoops8: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
         Käytä sisäkkäistä silmukkaa. '
       courseD_bee_nestedLoops8_2018: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
+        Käytä sisäkkäistä silmukkaa. '
+      courseD_bee_nestedLoops8_2019: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin.
         Käytä sisäkkäistä silmukkaa. '
       courseD_bounce_events10: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää
         piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa
@@ -1226,8 +1312,10 @@ fi:
         kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
       courseD_maze_nestedLoops4: Vie minut auringonkukan luo!
       courseD_maze_nestedLoops4_2018: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops4_2019: Vie minut auringonkukan luo!
       courseD_maze_nestedLoops6: Vie minut auringonkukan luo!
       courseD_maze_nestedLoops6_2018: Vie minut auringonkukan luo!
+      courseD_maze_nestedLoops6_2019: Vie minut auringonkukan luo!
       courseE_artist_functions1: 'Moro! Mää zombie taitelija. Mää rakastaa piirtämistä!  Auta
         minua tekemään neliölasit. Vihje: lasien nenäkappale on 25 kuvapistettä lyhyempi
         kuin neliön pituus.'
@@ -1237,6 +1325,8 @@ fi:
       courseE_bee_concept1: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä
         silmukkaa.
       courseE_bee_concept1_2018: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä
+        silmukkaa.
+      courseE_bee_concept1_2019: Kerää kaikki metsi jokaisesta kukasta. Käytä sisäistä
         silmukkaa.
       courseE_bee_functions1: Kerää kaikki mesi kustakin kukasta.
       courseE_bee_functions1_2018: Kerää kaikki mesi kustakin kukasta.

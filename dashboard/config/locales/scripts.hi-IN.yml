@@ -181,3 +181,11 @@ hi:
           stages:
             The Internet:
               name: इंटरनेट
+        coursee-2019:
+          stages:
+            Conditionals:
+              name: शर्तें
+        andrea-test:
+          stages:
+            'null':
+              name: शून्य

@@ -60,11 +60,29 @@ ms:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': rawak
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -101,10 +119,11 @@ ms:
         options:
           KEY:
             '"up"': atas
-            '"down"': bawah
             '"left"': kiri
+            '"down"': bawah
             '"right"': kanan
             '"space"': angkasa
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -193,6 +212,23 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       Mikelab_randomColor:
         text: warna rawak
       Mikelab_setBG:
@@ -208,6 +244,11 @@ ms:
           CORNER:
             '"right"': kanan
             '"left"': kiri
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -232,6 +273,21 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      binary_move:
+        options:
+          DIR:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
       craft_ifPath:
         options:
           DIR:

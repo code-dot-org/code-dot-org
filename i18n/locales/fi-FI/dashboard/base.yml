@@ -182,11 +182,11 @@ fi:
     subject: 'Liity luokkaani (Code.org palvelussa)'
     body: |
       Klikkaa alla olevaa linkkiä rekisteröityäksesi Code.org tietojenkäsittelyn peruskursille (jossa minä olen "opettajasi"):
-      
+
       %{link}
-      
+
       Kurssin tehtävät ovat hauskoja, visuaalisesti näyttäviä ja opettavat tietojenkäsittelyt peruskäsitteet käyttäen yksinkertaisia, opastettuja pelejä. Opit koodaamisen alkeet Bill Gatesin, Mark Zuckerbergin, Angry Birdsin ja Plants vs. Zombiesin avulla! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org Kirjautumistiedot'
@@ -790,6 +790,7 @@ fi:
   return_unit_overview: 'Siirry sarjan yleisesittelyyn'
   return_course_overview: 'Siirry sarjan yleisesittelyyn'
   view_all_units: 'Näytä kaikki sarjat'
+  view_teacher_guide: 'Katso opettajan opas'
   pd:
     form_labels:
       email: 'Sähköposti'

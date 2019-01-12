@@ -106,6 +106,7 @@ sr:
     user_type_student: "студент"
     field_is_required: "је обавезан"
     accept_terms: "Морате се сложити да бисте креирали свој налог"
+    email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: "Да"
     email_preference_no: "не"
   school_info:
@@ -141,11 +142,11 @@ sr:
     subject: 'Придружи се мом предавању (на Code.org)'
     body: |
       Кликни линк испод како би се пријавио за туторијале на Code.org (ја ћу ти бити "учителј"):
-      
+
       %{link}
-      
+
       Туторијали су забавни, визуелни, и уче основе програмиранја користећи једноставне примјере у облику игрица. Научите програмирати од Bill Gatesа, Mark Zuckerbergа, Angry Birds, и Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:

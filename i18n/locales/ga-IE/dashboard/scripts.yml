@@ -1562,3 +1562,75 @@ ga:
           stages:
             Artist:
               name: Ealaíontóir
+        coursef-2019:
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+          stages:
+            Building a Foundation:
+              name: Dúshraith a Leagan
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Envelope Variables:
+              name: Athróga i gClúdach Litreach
+            For Loop Fun:
+              name: Spraoi le Lúba
+            The Artist:
+              name: An tEalaíontóir
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Códáil sealaíochta
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Digital Citizenship:
+              name: Saoránacht Dhigiteach
+            'Unplugged: Binary':
+              name: 'Díphlugáilte: Dénártha'
+            Artist Binary:
+              name: 'Ealaíontóir: Dénártha'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Dúshraith a Leagan
+            Nested Loops:
+              name: Lúba Neadaithe
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Conditionals:
+              name: Coinníollacha
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Códáil sealaíochta
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Envelope Variables:
+              name: Athróga i gClúdach Litreach
+            For Loop Fun:
+              name: Spraoi le Lúba
+            Binary Bracelets:
+              name: Bráisléid Dhénártha
+            'Unplugged: Binary':
+              name: 'Díphlugáilte: Dénártha'
+            Artist Binary:
+              name: 'Ealaíontóir: Dénártha'
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú
+        andrea-test:
+          stages:
+            'null':
+              name: 'nialas'
+        coursec-2019:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
+          stages:
+            Building a Foundation:
+              name: Dúshraith a Leagan
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
+            Binary Bracelets:
+              name: Bráisléid Dhénártha

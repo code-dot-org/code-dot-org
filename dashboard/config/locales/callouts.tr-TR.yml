@@ -284,6 +284,19 @@ tr:
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
           İçindeki parçaları görmek için başlıkları tıkla.
+      Dance_Party_01_callout:
+        dance_callout_01: Bu bloğu programınıza ekleyin!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Bu bloğu programınıza ekleyin!
+      Dance_Party_02_callout:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
+      Dance_Party_04_callout:
+        dance_callout_04: Bu bloğu programınıza ekleyin!
+      Dance_Party_06_callout:
+        dance_callout_06: Buraya yeni dansçınızı ekleyin
+      Dance_Party_11_callout:
+        dance_callout_11_a: Yeni blok!
+        dance_callout_11_b: Yeni blok!
       Eval Design Recipe .1_callout:
         edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
       Frozen Project Test Toolbox_callout:
@@ -291,6 +304,9 @@ tr:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
       Function intro Ryan_callout:
+        Function_intro_Ryan_1: Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma
+          alanındaki aynı adla çalıştırmasını söyler.
+      Function intro Ryan_2019_callout:
         Function_intro_Ryan_1: Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma
           alanındaki aynı adla çalıştırmasını söyler.
       Geometric Pattern_callout:
@@ -302,6 +318,10 @@ tr:
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
           gittiğini görebilirsin!
       Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
+          organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
+          gittiğini görebilirsin!
+      Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
           gittiğini görebilirsin!
@@ -321,6 +341,9 @@ tr:
       InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Programın içinde kendinize notlar bırakmak için bu
           başlığın altından yeni 'yorum' bloğunu kullanın!
+      InspirationalArtwork_2019_callout:
+        InspirationalArtwork_1: Programın içinde kendinize notlar bırakmak için bu
+          başlığın altından yeni 'yorum' bloğunu kullanın!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Hazır olduğunda programı denemek için "Çalıştır"
           tuşuna bas.
@@ -335,18 +358,27 @@ tr:
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Bu bir `tekrarla` döngüsü!  Çalışma alanında döngüye
           tıkla ve tekrar tekrar çalıştırmak istediğin kodu ekle.
+      MC_HOC_2017_03_Cole_2019_callout:
+        MC_HOC_2017_03_Cole_1: Bu bir `tekrarla` döngüsü!  Çalışma alanında döngüye
+          tıkla ve tekrar tekrar çalıştırmak istediğin kodu ekle.
       MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent suyun üzerinde durabilir ama oyuncu duramaz!
+      MC_HOC_2017_04_Cole_2019_callout:
         MC_HOC_2017_04_Cole_a: Agent suyun üzerinde durabilir ama oyuncu duramaz!
       MC_HOC_2017_04_Kiki_callout:
         MC_HOC_2017_04_Kiki_1: Çalışma alanında buna tıkla ve defalarca tekrarlamak
           için kod ekle!
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Bu blokları atamazsın ama düzenleyebilirsin!
+      MC_HOC_2017_06_Cole_2019_callout:
+        MC_HOC_2017_06_Cole_1: Bu blokları atamazsın ama düzenleyebilirsin!
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent lavın üzerinde durabilir ama oyuncu duramaz!  '
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'Agent lavın üzerinde durabilir ama oyuncu duramaz!  '
       MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'Agent lavın üzerinde durabilir ama oyuncu duramaz!  '
+      MC_HOC_2017_Ali_2019_callout:
         MC_HOC_2017_08_RY_1: 'Agent lavın üzerinde durabilir ama oyuncu duramaz!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Kategorilere ait blokları görmek için tıklayın!
@@ -397,10 +429,15 @@ tr:
         craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
           bitirebilecek misiniz?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
+          bitirebilecek misiniz?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
           bitirebilecek misiniz?
       Overworld Move to Sheep_callout:
@@ -411,9 +448,15 @@ tr:
         craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
         craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
           altına dayayın
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
+        craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
+          altına dayayın
       Overworld Place Wall_callout:
         craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
@@ -446,6 +489,9 @@ tr:
         4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize notlar bırakmak
           için bu başlığın altından yeni 'yorum' bloğunu kullanın!
       Robot Doodle_2018_callout:
+        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize notlar bırakmak
+          için bu başlığın altından yeni 'yorum' bloğunu kullanın!
+      Robot Doodle_2019_callout:
         4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize notlar bırakmak
           için bu başlığın altından yeni 'yorum' bloğunu kullanın!
       Robot Drawing_callout:
@@ -498,9 +544,14 @@ tr:
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
           gitmek için bir komut ekleyebilir misiniz?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
+          gitmek için bir komut ekleyebilir misiniz?
       Underground Iron_callout:
         craft_what_is_iron: Bu demiri çıkar!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Bu demiri çıkar!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Bu demiri çıkar!
       WebLab PS test - 1-12_callout:
         version_history_button: Sürüm geçmişini kontrol et
@@ -695,10 +746,16 @@ tr:
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
           bölümlerine taşımanı sağlar.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
+          bölümlerine taşımanı sağlar.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Sanatçıyı ekranın ortasına ulaştırmak için
           bu kareyi kullanarak başlayın.
       courseC_artist_loopsPrePre1a_2018_callout:
+        courseC_artist_loopsPrePre1a_1: Sanatçıyı ekranın ortasına ulaştırmak için
+          bu kareyi kullanarak başlayın.
+      courseC_artist_loopsPrePre1a_2019_callout:
         courseC_artist_loopsPrePre1a_1: Sanatçıyı ekranın ortasına ulaştırmak için
           bu kareyi kullanarak başlayın.
       courseC_collector_prog1_callout:
@@ -707,10 +764,16 @@ tr:
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseC_collector_prog1_2019_callout:
+        courseC_collector_prog1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Eğer ihtiyacın olursa alet kutusunun içinden daha
           fazla blok alabilirsin!
       courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Eğer ihtiyacın olursa alet kutusunun içinden daha
+          fazla blok alabilirsin!
+      courseC_collector_prog7_2019_callout:
         courseC_collector_prog7_1: Eğer ihtiyacın olursa alet kutusunun içinden daha
           fazla blok alabilirsin!
       courseC_harvester_loops1_callout:
@@ -719,9 +782,14 @@ tr:
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: Kabak üzerinde dört rakamı, dört adet kabak
           alınabilir olduğunu gösterir.
+      courseC_harvester_loops1_2019_callout:
+        courseC_harvester_loops1_callout1: Kabak üzerinde dört rakamı, dört adet kabak
+          alınabilir olduğunu gösterir.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
       courseC_maze_debugging5_2018_callout:
+        courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
+      courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
@@ -731,10 +799,16 @@ tr:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
       courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
+      courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
       courseC_maze_programming3_callout:
@@ -745,10 +819,17 @@ tr:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
           doğru \n sürükleyebilirsin."
         courseC_maze_programming3_3: Bu kareler taştan ve atılamaz.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
+        courseC_maze_programming3_3: Bu kareler taştan ve atılamaz.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
       courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
+      courseC_maze_programming4_2019_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
       courseC_maze_programming7_callout:
@@ -759,9 +840,15 @@ tr:
         courseC_maze_programming7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor
           oolduğu anlamına gelir ve bir kaç deneme yapman gerekir.
         courseC_maze_programming7_2: Bu bloklar taştan yapılmış ve atılabilir değildir.
+      courseC_maze_programming7_2019_callout:
+        courseC_maze_programming7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor
+          oolduğu anlamına gelir ve bir kaç deneme yapman gerekir.
+        courseC_maze_programming7_2: Bu bloklar taştan yapılmış ve atılabilir değildir.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
+      courseC_starWars_loops2_2019_callout:
         courseC_starWars_loops2: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: |-
@@ -778,6 +865,10 @@ tr:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
           renkleri kullanmak zorunda değilsiniz. İsterseniz, bu 'rastgele renk' bloğu
           işi kolaylaştırır!
+      courseD_artist_nestedLoops1a_2019_callout:
+        courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
+          renkleri kullanmak zorunda değilsiniz. İsterseniz, bu 'rastgele renk' bloğu
+          işi kolaylaştırır!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Bu numarayı değiştirebilrisin.
         courseD_artist_ramp11_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
@@ -790,6 +881,9 @@ tr:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
+          görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
@@ -799,6 +893,9 @@ tr:
         courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal)
           bir çiçekten (veya petekten) toplamak için kullanın.
       courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal)
+          bir çiçekten (veya petekten) toplamak için kullanın.
+      courseD_bee_conditionals_challenge2_2019_callout:
         courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal)
           bir çiçekten (veya petekten) toplamak için kullanın.
       courseD_bee_conditionals_challenge3_callout:
@@ -818,16 +915,25 @@ tr:
           kullanın.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
       courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
+      courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
       courseD_maze_ramp3_callout:
@@ -838,10 +944,17 @@ tr:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
           doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
+        stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
       courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
+      courseD_maze_ramp4_2019_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
       courseD_maze_ramp6_callout:
@@ -855,6 +968,10 @@ tr:
           için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
           gittiğini görmek için buraya tıkla.
       courseD_playLab_condFP_2018_callout:
+        courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek
+          için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
+          gittiğini görmek için buraya tıkla.
+      courseD_playLab_condFP_2019_callout:
         courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek
           için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
           gittiğini görmek için buraya tıkla.
@@ -922,10 +1039,17 @@ tr:
         courseD_artist_functions2_1: |-
           Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
           Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
+      courseE_artist_functions2_2019_callout:
+        courseD_artist_functions2_1: |-
+          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
+          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
           kutusunun içindeki bu etiketin altına taşındı.
       courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
+          kutusunun içindeki bu etiketin altına taşındı.
+      courseE_artist_functions8a_2019_callout:
         courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
           kutusunun içindeki bu etiketin altına taşındı.
       courseE_artist_functions_challenge_callout:
@@ -943,12 +1067,22 @@ tr:
           bu programı sürdürün.
         courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
           istediğin değişikliği yap!
+      courseE_artist_functions_challenge1_2019_callout:
+        courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
         courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
           istediğin değişikliği yap!
       courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
+      courseE_artist_functions_challenge2_2019_callout:
         courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
         courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
@@ -981,13 +1115,22 @@ tr:
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
+      courseE_farmer_functions13_2019_callout:
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
+          Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
+      courseE_farmer_functions1_2019_callout:
         courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
           Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
       courseE_farmer_functions1a_2018_callout:
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
+      courseE_farmer_functions1a_2019_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
       courseE_farmer_functions2a_callout:
@@ -1000,6 +1143,9 @@ tr:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
       courseE_farmer_functions2b_2018_callout:
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
+      courseE_farmer_functions2b_2019_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
       courseE_farmer_functions3b_callout:
@@ -1076,16 +1222,24 @@ tr:
         courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
       courseF_artist_variables3_2018_callout:
         courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
+      courseF_artist_variables3_2019_callout:
+        courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Aynı sayının birden fazla kopyasını değiştirmek
           zorunda olduğunda değişkenler çok kullanışlı olabilir.
       courseF_artist_variables6_2018_callout:
         courseF_artist_variables6_1: Aynı sayının birden fazla kopyasını değiştirmek
           zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables6_2019_callout:
+        courseF_artist_variables6_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
       courseF_artist_variables6a_callout:
         courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
           zorunda olduğunda değişkenler çok kullanışlı olabilir.
       courseF_artist_variables6a_2018_callout:
+        courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables6a_2019_callout:
         courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
           zorunda olduğunda değişkenler çok kullanışlı olabilir.
       courseF_artist_variables_3_callout:
@@ -1111,6 +1265,8 @@ tr:
       courseF_bee_for4_callout:
         courseF_bee_for4_1: Burada 'için' döngüsünü bulacaksınız!
       courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: Burada 'için' döngüsünü bulacaksınız!
+      courseF_bee_for4_2019_callout:
         courseF_bee_for4_1: Burada 'için' döngüsünü bulacaksınız!
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Bu blok bir fonksiyonu çağırır.  İçinde ne olduğunu
@@ -1143,6 +1299,8 @@ tr:
         courseF_bee_fwp_challenge2_callout1: Bu işlev mısır ile iyi bir iş çıkaracaktır,
           ancak diğer sebzelerde nasıl acaba?
       courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Değişkenlerini altta bulabilirsin!
+      courseF_bee_variables_1_2019_callout:
         courseF_bee_functions_1_2018_1: Değişkenlerini altta bulabilirsin!
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''

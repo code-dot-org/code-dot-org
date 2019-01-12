@@ -2280,12 +2280,15 @@ fil-PH:
     Account" na opsyon:'
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
+  applab_tile_start_tutorial: Panimula
+  hoc_overview_start_tutorial: Panimula
   hoc2018_creativity_create: I-create
   hoc2018_mc_page_title: Mga Tutoryal sa Minecraft Hour of Code
   hoc2018_mc_details: Maraming wika | Modernong mga browser at mga tablet | Baitang
     2+
   hoc2018_mc_aquatic_description: Ang Minecraft ay nagbabalik para sa Oras ng Code
     na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code.
+  hoc2018_mc_hero_title: 'Minecraft: Ang Paglalakbay ng Isang Bayani'
   hoc2018_mc_hero_description: Ang Minecraft ay nagbabalik para sa Oras ng Code na
     may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code.
   hoc2018_mc_designer_title: Designer ng Minecraft
@@ -2327,3 +2330,8 @@ fil-PH:
   hoc2018_mc_minecraft_education: Edukasyon ng Minecraft
   hoc2018_mc_continue_learning: Magpatuloy sa pag-aaral ng Minecraft.
   hoc2018_mc_go_to_mc_education: Pumunta sa Edukasyon ng Minecraft
+  hoc2018_dance_party_button: Panimula
+  hoc2018_dance_teacher_resources_tile1_button: Banghay-aralin
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged na Aktibidad
+  hoc2018_dance_amazon_about_future_engineer_button: Matuto nang higit pa
+  hoc2018_dance_amazon_scholarship_programs_button: Mag-apply ngayon

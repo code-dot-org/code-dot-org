@@ -173,10 +173,56 @@ da:
         al honningen ved hjælp af løkker."
       4-5 Nested Loops 9: Tegn tænderne i alligatorens mund!
       Artist Autorun Test: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
+      Dance_Party_extras_battle: |-
+        # Dansegrupper
+
+        Her er en dansekonkurrence mellem to grupper. Piletasterne styrer en af danserne, og tasterne "w, a, s, d" kontrollere den anden. Dans mod en ven, og gør det endnu bedre i en revanche.
+
+        *Tilføj flere taster for at kontrollere dansene
+        *Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
+        *Forandr danseren hver 4. takt ved at indstille deres synlighed
+      Dance_Party_extras_every_beat: |-
+        # Fjerdedelsnoder
+
+        De fleste af vores danse bruger hele takter, men hver takt består af 4 fjerdedelsnoder. Denne dans bruger 'den enkelte 0,25-takt' til at få danseren til at klappe ved hver fjerdedelsnode.
+
+        Denne dans bruger også blokken _betingelse_ til at styre, hvornår blokken 'den enkelte 0,25-takt' skal ændre dansen. Prøv at ændre tallene i 'betinget'-blokken for at se, hvordan det ændrer dansen.
+
+        *Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
+        *Tilføj nogle 'eftertakt'-hændelser.
+        *Skift takter ud med sekunder, og prøv at time dine danse på den måde.
+      Dance_Party_extras_layout: |-
+        # Lad os tage stilling!
+
+        Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
+
+        *Opret en anden gruppe dansere i et andet layout
+        *Skift layout, når der trykkes på en tast
+        *Skift en egenskab, når danserne ændrer stilling
+      Dance_Party_extras_on_beat: |-
+        # Lav, medio og høj
+
+        Denne dans bruger "peak"-hændelser til at udløse kode, når forskellige dele af musikken bliver høj. Prøv dig frem med forskellige sange for at se, hvordan de ændrer dansen.
+      Dance_Party_extras_speed: |-
+        # Sæt fart på, sænk farten
+
+        Denne sidste dans bruger blokken 'sæt hastighed' til at styre, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige steder i sangen. Det er helt i orden at prøve sig lidt frem i denne dans, eller vend tilbage til en af de tidligere danse for at gøre dem endnu sejere.
+      Dance_Party_extras_visible: |-
+        # Hvor forsvandt de hen?
+
+        Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
+
+        *Tilføj en anden gruppe dansere
+        *Vis og skjul dansere ved hjælp af piletasterne
+        *Skjul alle danserne, og skift til en spændende baggrundseffekt
       Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.
         \ Den indeholder al den nødvendige kode til at komme over floden! \r\n \r\nKlik
         den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej
         hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+      Function intro Ryan_2019: "Du har en **funktion**, der hedder \"byg bro\" i
+        dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over
+        floden! \r\n \r\nKlik den lille grønne blok ind i dit arbejdsområde to gange
+        for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       K-1 Maze Loops 11: Få mig hen til grisen! Brug gentag-blokken.
       K-1 Maze Loops 12: Få mig hen til grisen! Brug gentag-blokken.
       K-1 Maze Loops 2: Brug gentag-blokken for at få mig hen til grisen!
@@ -198,12 +244,22 @@ da:
         på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen til
         trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
         til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
-        \ \n"
+        \ "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} er fanget inde i huset, men
+        heldigvis er agenten klar til at hjælpe!   \r\n \r\n   \r\nKlik en \"gå fremad\"
+        blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen
+        til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
+        til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
+        \ "
       MC_HOC_2017_02: Spilleren skal ind i den hemmelige lund.  Hjælp agenten med
         at åbne porten ved at skrive kode, der hjælper den hen til trykpladen.
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på vej på eventyr! **Kortet** [map_empty]
         bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik kode ind
         i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
+        og åbner op for {currentPlayerName}. "
+      MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på vej på eventyr! **Kortet**
+        [map_empty] bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik
+        kode ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
         og åbner op for {currentPlayerName}. "
       MC_HOC_2017_02_Kiki: "Spilleren er på vej på eventyr, men først gælder det faklen,
         der er skjult bag den låste dør. \r\n\r\nProgrammér agenten til gå fremad
@@ -216,6 +272,9 @@ da:
       MC_HOC_2017_03_Cole: "{currentPlayerName} fortsætter sit eventyr og har nu brug
         for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til at åbne
         porten. "
+      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsætter sit eventyr og har
+        nu brug for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til
+        at åbne porten. "
       MC_HOC_2017_03_Kiki: "Spillerens eventyr begynder i den hemmelige lund bag den
         låste dør!  \r\n\r\n\r\nHjælp agenten med at åbne døren ved at skrive kode,
         der får den hen til trykpladen."
@@ -226,7 +285,12 @@ da:
         at finde et simpelt mønster og bruge loop til at krydse de første to trykplader."
       MC_HOC_2017_04POINT5_RYAN: "Du slap over! \r\n\r\nNu gælder det om at få {currentPlayerName}
         sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \r\n\r\nNu gælder det om at få
+        {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
+        med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
+        [bucket_empty] bag ved døren. "
+      MC_HOC_2017_04_Cole_2019: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
         med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
         [bucket_empty] bag ved døren. "
       MC_HOC_2017_04_Kiki: "Indgangen til den hemmelige lund førte til denne vidunderlige
@@ -240,12 +304,18 @@ da:
       MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \r\n\r\nKod agenten til at genopbygge
         broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen**
         [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \r\n\r\nKod agenten til at
+        genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå frem
+        til **skovlen** [diamond_shovel]."
       MC_HOC_2017_05_Josh: "Åh nej, broen er væk! \n\n\nHjælp agenten med at genopbygge
         broen, så spilleren kan nå frem til **skovlen**."
       MC_HOC_2017_05_Kiki: "Spilleren er klar til at forlade den hemmelige lund og
         fortsætte eventyret, men broen er væk! \r\n\r\nHjælp agenten med at genopbygge
         broen og gå hen til træplanken, så spilleren kan nå frem til det orange felt."
       MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
+        koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
+        **hakken** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2019: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
         koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
         **hakken** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Endnu en flod – og den er meget bredere!  \r\n\r\nRet
@@ -255,6 +325,9 @@ da:
       MC_HOC_2017_07_Cole: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen kan
         hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til minevognen
         [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen
+        kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
+        minevognen [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Loop er ikke den eneste måde at gentage kode på!  \r\n\r\nHer
         giver vi dig funktionen \"fjern kaktusser\", der fælder tre kaktusser, hver
         gang du bruger den.  Brug to \"fjern kaktusser\" blokke til at rydde vejen
@@ -287,6 +360,10 @@ da:
       MC_HOC_2017_10_RETRY: "Kan du se forskellen mellem de to funktioner i dit arbejdsområde?
         \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen, så du kan
         rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel]. \r\n "
+      MC_HOC_2017_10_RETRY_2019: "Kan du se forskellen mellem de to funktioner i dit
+        arbejdsområde? \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen,
+        så du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
+        \r\n "
       MC_HOC_2017_10_RYAN: Prøv at bygge funktioner fra bunden, der gør det lettere
         for at agenten at færdiggøre minevognen og få spilleren hen til det orange
         felt.
@@ -303,12 +380,17 @@ da:
       MC_HOC_2017_Ali: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til
         at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede
         bog** [book_enchanted]?  '
+      MC_HOC_2017_Ali_2019: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem
+        til at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den
+        **fortryllede bog** [book_enchanted]?  '
       MC_HOC_2017_FP10x10: "**Fri leg:** Nu er det op til dig! Tør du udfordre dig
         selv til at finde alle diamanterne på kortet? "
       MC_HOC_2017_FP10x10_RE: "**Fri leg:** Nu er det op til dig! Tør du udfordre
         dig selv til at finde alle diamanterne på kortet? "
       MC_HOC_2017_FP20x20: "**Fri leg:** Nu er det op til dig! Brug agentens kode
         til at hjælpe dig med at udforske verden."
+      MC_HOC_2017_FP20x20_2019: "**Fri leg:** Nu er det op til dig! Brug agentens
+        kode til at hjælpe dig med at udforske verden."
       MC_HOC_2017_Ryan_03: "Har du opdaget, at der kan være mere end ét kodestykke
         i et loop?  \r\n\r\nBrug et gentagelsesloop til at hjælpe agenten med at bygge
         en bro ved at placere blokke i vandet."
@@ -323,6 +405,8 @@ da:
         til fårene.
       Overworld Move to Sheep_2018: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
+      Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
+        hen til fårene.
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer
         for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet
         det og erstat det med noget helt andet)
@@ -332,8 +416,11 @@ da:
         i alle bikuber. Brug indlejrede løkker. '
       courseD_bee_nestedLoops8_2018: 'Indsaml al nektar fra alle blomster, og lav
         honning i alle bikuber. Brug indlejrede løkker. '
+      courseD_bee_nestedLoops8_2019: 'Indsaml al nektar fra alle blomster, og lav
+        honning i alle bikuber. Brug indlejrede løkker. '
       courseD_maze_nestedLoops4: Få mig til solsikken!
       courseD_maze_nestedLoops4_2018: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2019: Få mig til solsikken!
       courseE_bee_functions3: Funktioner er blokke/klodser af code som udfører en
         arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster
         ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.

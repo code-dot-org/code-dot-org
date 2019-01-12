@@ -1504,6 +1504,8 @@ kk-KZ:
   user_header_playlab: Ойындар Лабораториясы
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  applab_tile_start_tutorial: Бастау
+  hoc_overview_start_tutorial: Бастау
   hoc2018_creativity_create: Құру
   hoc2018_mc_page_title: Minecraft Кодтау Сағатының сабақтары
   hoc2018_mc_details: Әр түрлі тілдерде| Заманауи браузерлер, планшеттер | 2 жастан
@@ -1519,3 +1521,7 @@ kk-KZ:
   hoc2018_mc_video_title_inspire_girl: Қызды шабыттандыр
   hoc2018_mc_homepage_join_us: Бізге қосыл
   hoc2018_mc_homepage_try_it: Қолданып көріңіз
+  hoc2018_dance_party_button: Бастау
+  hoc2018_dance_teacher_resources_tile1_button: Оқу Жоспары
+  hoc2018_dance_teacher_resources_tile2_button: Іс-әрекеттерді өшіру
+  hoc2018_dance_amazon_about_future_engineer_button: толығырақ білу

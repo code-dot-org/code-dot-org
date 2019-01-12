@@ -7,7 +7,7 @@ Feature: Markdown rendering across the website
     And I rotate to landscape
     And I wait to see "#extra-details-tag"
     Then element "#extra-details-tag" is hidden
-    And I click selector "#summary-tag"
+    And I press "summary-tag"
     Then element "#extra-details-tag" is visible
 
   @eyes
@@ -16,7 +16,6 @@ Feature: Markdown rendering across the website
     And I am on "http://studio.code.org/s/allthethings/stage/21/puzzle/2?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I see no difference for "basic embedded blockly"
     And I close my eyes
 
@@ -24,6 +23,5 @@ Feature: Markdown rendering across the website
     And I am on "http://studio.code.org/s/allthethings/stage/21/puzzle/3?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I see no difference for "K1 embedded blockly"
     And I close my eyes

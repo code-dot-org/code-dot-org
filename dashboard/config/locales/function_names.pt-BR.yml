@@ -48,7 +48,7 @@ pt-BR:
       draw a tree: desenhe uma árvore
       draw triangle: desenhar triângulo
       draw circle: desenhe um círculo
-      draw goal: desenhar alvo
+      draw goal: desenhar objetivo
       graph: gráfico
       draw waves: desenhar ondas
       draw a wave: desenhar uma onda
@@ -283,7 +283,7 @@ pt-BR:
       check flower: verificar flor
       get next row: obter próxima linha
       check space: checar espaço
-      follow path: andar pelo caminho
+      follow path: seguir caminho
       physics: física
       initialization: inicialização
       Make Actor 1 Jump: Fazer Ator 1 Pular

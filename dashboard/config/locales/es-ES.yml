@@ -39,6 +39,8 @@ es:
         finish_sign_up_header: Termina la creación de tu cuenta
         finish_sign_up_subheader: Llena la siguiente información para completar la
           creación de tu cuenta en Code.org.
+        finish_sign_up_subheader_provider: Llena la siguiente información para terminar
+          de crear una cuenta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.
         error:
           future: No puede ser en el futuro
   hello: Hola mundo
@@ -88,6 +90,7 @@ es:
   prize: Premio
   more_info: 'Más información '
   auth:
+    continue_with: Conectate con %{provider}
     sign_in_with: Iniciar sesión con %{provider}
     signed_in: "¡Sesión iniciada!"
     signed_out: Has finalizado tu sesión en <a href="%{url}">Code.org</a>.
@@ -116,6 +119,7 @@ es:
     already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
     already_linked: Tu %{provider} ya está vinculado a otra cuenta de Code.org.
   signup_form:
+    email_signup: Regístrate con tu correo electrónico
     student_count: "%{count} estudiantes ya se han registrado."
     teacher_count: "%{count} profesores ya se han registrado."
     overview: Regístrate para darle seguimiento a tu avance o administrar tu salón
@@ -144,6 +148,7 @@ es:
     age: Edad
     user_type: "¿Eres estudiante o profesor?"
     submit: Registrarse
+    go_to_account: Eliminar mi cuenta
     teacher: "¿Eres profesor/a?"
     valid_username: "¡Disponible!"
     invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
@@ -181,8 +186,9 @@ es:
     field_is_required: es requerido
     accept_terms: Debes estar de acuerdo para crear una cuenta
     error: Un error ha ocurrido.
-    email_preference_question: "¿Podemos enviarle por correo electrónico las actualizaciones
-      a nuestros cursos, oportunidades locales u otras noticias de informática?"
+    email_preference_question: "¿Podemos enviarte por correo electrónico actualizaciones
+      a nuestros cursos, oportunidades locales u otras noticias de informática? (aproximadamente
+      una vez al mes)"
     email_preference_privacy: "(Vea nuestra política de privacidad)"
     email_preference_yes: Sí
     email_preference_no: 'No'
@@ -390,6 +396,7 @@ es:
       playlab: Laboratorio de juegos
       minecraft: Minecraft
       flappy: Flappy
+      dance: Fiesta para bailar
       view_all: Ver todos los proyectos...
     popup:
       progress_for_user: progreso de %{name}
@@ -810,6 +817,8 @@ es:
         hacerla funcionar y luego compartela en segundos.
       audience: Edad 13+
       cta: Cómo hacerlo
+    dance:
+      title: Fiesta para bailar
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
@@ -867,6 +876,8 @@ es:
       title: Minecraft
     hero:
       title: Minecraft
+      body: "¡Minecraft ha vuelto a la Hora del código con una actividad completamente
+        nueva! Viaje por Minecraft a través del código."
     sports:
       title: Спорт
       body: Crea un partido de baloncesto o una mezcla de otros deportes.
@@ -1306,6 +1317,7 @@ es:
   return_unit_overview: Ir al resumen de la unidad
   return_course_overview: Ir al resumen de la unidad
   view_all_units: Ver todas las unidades
+  view_teacher_guide: Ver la guía del profesor
   pd:
     form_labels:
       first_name: Primer nombre

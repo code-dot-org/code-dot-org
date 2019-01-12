@@ -9,6 +9,7 @@ import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
@@ -107,11 +108,11 @@ import ChallengeDialog from './templates/ChallengeDialog';
  */
 FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
-
   options.level = options.level || {};
 
-  var hadShareFailure = (options.response && options.response.share_failure);
-  var showingSharing = options.showingSharing && !hadShareFailure && options.shareLink;
+  const {onContinue, shareLink} = options;
+  const hadShareFailure = (options.response && options.response.share_failure);
+  const showingSharing = options.showingSharing && !hadShareFailure && shareLink;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -202,13 +203,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   };
 
-  const onContinue = () => {
-    if (options.level.skipRunSave) {
-      $(window).trigger('continueButtonPressed', options.onContinue);
-    } else {
-      options.onContinue();
-    }
-  };
+  // If we're showing a share link, fire-and-forget a project save right before showing the dialog
+  // so that any changes made since the last Run are reflected in the shared project.
+  if (showingSharing) {
+    project.saveIfSourcesChanged();
+  }
 
   var onHidden = onlyContinue ? onContinue : function () {
     if (!continueButton || feedbackDialog.hideButDontContinue) {
@@ -534,8 +533,7 @@ FeedbackUtils.saveThumbnail = function (image) {
   }
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
-    // Don't pass any arguments to project.save().
-    .then(() => project.save());
+    .then(() => project.saveIfSourcesChanged());
 };
 
 FeedbackUtils.isLastLevel = function () {
@@ -832,11 +830,12 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
-  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare ||
+        window.appOptions.disableSocialShare ||
+        options.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.sendToPhone = false;
   } else {
 
     // set up the twitter share url
@@ -870,6 +869,13 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   }
 
   options.assetUrl = this.studioApp_.assetUrl;
+
+  // An early optimization; only render the container for
+  // DownloadReplayVideoButton if we think we're actually going to use it.
+  // @see DownloadReplayVideoButton.hasReplayVideo
+  options.downloadReplayVideo =
+    getStore().getState().pageConstants.appType === 'dance' &&
+    window.appOptions.signedReplayLogUrl;
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
@@ -937,6 +943,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var params = $.param({
             level_source: options.response.level_source_id,
             channel_id: options.channelId,
+            type: project.getStandaloneApp(),
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -957,6 +964,19 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         $(sendToPhone).hide();
       }
     });
+  }
+
+  var downloadReplayVideoContainer = sharingDiv.querySelector('#download-replay-video-container');
+  if (downloadReplayVideoContainer) {
+    const onDownloadError = () => $('#download-replay-video-error').show();
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <DownloadReplayVideoButton
+          onError={onDownloadError}
+        />
+      </Provider>,
+      downloadReplayVideoContainer
+    );
   }
 
   return sharingDiv;

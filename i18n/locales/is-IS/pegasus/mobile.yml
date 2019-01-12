@@ -644,7 +644,7 @@
   dashboard_sections_table_stage_extras: "Aukaefni stigs"
   dashboard_sections_table_students: "Nemendur"
   dashboard_sections_table_code: "Hópkóði"
-  dashboard_sections_name: "Hópsheiti"
+  dashboard_sections_name: 'Hópsheiti'
   dashboard_sections_choose_secret: "Ef þú vilt búa til aðgang fyrir nemendur þína, þarft þú að velja <b>leyniorð</b> eða <b>leynimynd</b> fyrir aðgang að hópi."
   dashboard_sections_secret_word: "Ef <b>leyniorð</b> er notað, þarf hver nemandi að fá sitt eigið."
   dashboard_sections_secret_picture: "Ef <b>leynimynd</b> er notuð, þarf hver nemandi að fá sína mynd. Þetta hentar fyrir yngri nemendur sem kunna ekki á lyklaborð."
@@ -670,7 +670,7 @@
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja línu:'
   dashboard_students_new_google_classroom_section: "Ef þú vilt bæta við nemendum notaðu þá <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> og smelltu svo á <b>Spegla nemendur frá Google Classroom</b> hnappinn hér fyrir ofan."
   dashboard_students_new_section: "Þú hefur búið til nýjan hóp! Bættu nemendum í hann með hnöppunum <b>Bæta við nemanda</b> eða <b>Bæta við mörgum nemendum</b> hér fyrir ofan."
-  dashboard_students_name: "Nafn"
+  dashboard_students_name: 'Nafn'
   dashboard_students_progress: "Framvinda"
   dashboard_students_male: "Karlkyns"
   dashboard_students_female: "Kvenkyns"
@@ -1421,6 +1421,8 @@
   syncing_students: "Speglun nemenda"
   syncing_students_instructions: 'Ef upp kemur ósamræmi milli Code.org hópsins þíns og nemendalistans í Google Classroom, getur þú smellt á "Spegla nemendur frá Google Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google aðgangi":'
+  applab_tile_start_tutorial: "Byrja"
+  hoc_overview_start_tutorial: "Byrja"
   hoc2018_creativity_create: "Búa til"
   hoc2018_mc_page_title: "Klukkustund kóðunar með Minecraft efni"
   hoc2018_mc_details: "Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+"
@@ -1447,3 +1449,8 @@
   hoc2018_mc_video_title_anybody_can_learn: "Allir geta lært"
   hoc2018_mc_homepage_join_us: "Vertu með"
   hoc2018_mc_homepage_try_it: "Prófið hana"
+  hoc2018_dance_party_button: "Byrja"
+  hoc2018_dance_teacher_resources_tile1_button: "Kennsluáætlun"
+  hoc2018_dance_teacher_resources_tile2_button: "Verkefni án tölvu"
+  hoc2018_dance_amazon_about_future_engineer_button: "Læra meira"
+  hoc2018_dance_amazon_scholarship_programs_button: "Sækja um nú"

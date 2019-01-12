@@ -1070,7 +1070,7 @@ et:
               name: Loendid
         minecraft:
           title: KoodiTund Minecraft Designer
-          description_short: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
+          description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis.
           description: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
           stages:
             Minecraft Hour of Code Designer:
@@ -1371,6 +1371,8 @@ et:
               name: Kunstnik Binaar
             Building a Foundation:
               name: Vundamendi ehitus
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         new-express:
           stages:
             Introduction:
@@ -1542,6 +1544,8 @@ et:
               name: Binaarsed pildid
             Artist Binary:
               name: Kunstnik Binaar
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
             Relay Programming:
@@ -1638,7 +1642,104 @@ et:
           stages:
             Artist:
               name: Kunstnik
+        dance:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+          title: Tantsuõhtu
         frozen-2018-test-b:
           stages:
             Artist:
               name: Kunstnik
+        aquatic:
+          title: 'Minecraft: Voyage Aquatic'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        dance-extras:
+          title: Tantsi edasi
+          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            The Artist:
+              name: Kunstnik
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relee programmeerimine
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            Nested Loops:
+              name: Korduvad tsüklid
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Conditionals:
+              name: Tingimuslaused
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relee programmeerimine
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+        andrea-test:
+          stages:
+            'null':
+              name: 'tühi'
+        dance-extras-gallery:
+          title: Tantsi edasi
+          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Vundamendi ehitus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Päris elu algoritmid: paberlennukid'
+            Binary Bracelets:
+              name: Binaarsed käevõrud

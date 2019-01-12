@@ -163,18 +163,18 @@
     top: 55px;
     right: 55px;
     background-color: $white;
-    width: 260px;
+    width: max-content;
     z-index: 10000;
+    border: 1px solid $charcoal;
+    border-bottom: 0;
     a {
       color: $teal;
       font-family: 'Gotham 5r', sans-serif;
-      width: 258px;
+      min-width: 240px;
       font-size: 14px;
-      float: left;
-      border-left: 1px solid $charcoal;
-      border-right: 1px solid $charcoal;
-      border-top: 1px solid $charcoal;
+      border-bottom: 1px solid $charcoal;
       box-sizing: content-box;
+      white-space: nowrap;
     }
     a:hover {
       color: $teal;
@@ -185,17 +185,18 @@
     img {
       height: 70px;
       width: 70px;
-      float: left;
+    }
+    .project_link_box {
+      display: block;
     }
     .project_link {
-      padding-left: 10px;
-      line-height: 70px;
-      float: left;
+      display: inline-block;
+      padding: 0 10px 0 4px;
+      line-height: 67px;
     }
     #view_all_projects {
-      width: 100%;
       height: 70px;
-      border-bottom: 1px solid $charcoal;
+      padding-left: 10px;
     }
   }
 
@@ -213,7 +214,19 @@
       display: none !important;
     }
     #signin_button {
-     margin-top: -4px !important;
-   }
+      margin-top: -4px !important;
+    }
+  }
+}
+
+#language_dir.rtl #pageheader-wrapper {
+  .create_options {
+    direction: rtl;
+    .project_link {
+      padding: 0 4px 0 10px;
+    }
+    #view_all_projects {
+      padding-right: 10px;
+    }
   }
 }

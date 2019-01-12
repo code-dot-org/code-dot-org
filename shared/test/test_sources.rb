@@ -93,6 +93,44 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
+  def test_sources_public
+    filename = MAIN_JSON
+    file_data = '{"someData":"abc 123"}'
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    max_age = 20
+    s_max_age = 10
+
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+    assert_equal(file_data, last_response.body)
+    assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+
+    get "/v3/sources-public/#{@channel}/#{filename}"
+    assert successful?
+    assert_equal(file_data, last_response.body)
+    assert_match "public, max-age=#{max_age}, s-maxage=#{s_max_age}", last_response['Cache-Control']
+
+    # non-owner can view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      assert successful?
+      assert_equal(file_data, last_response.body)
+      assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+
+      get "/v3/sources-public/#{@channel}/#{filename}"
+      assert successful?
+      assert_equal(file_data, last_response.body)
+      assert_match "public, max-age=#{max_age}, s-maxage=#{s_max_age}", last_response['Cache-Control']
+    end
+
+    delete_all_source_versions(filename)
+  end
+
   def test_404_on_malformed_version_id
     filename = MAIN_JSON
     file_data = '{"someData":"abc 123"}'

@@ -133,7 +133,7 @@
   mc_longdescription: "ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ"
   mc_shortdescription: "ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ"
   mc_specs: "ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Ages 6-106"
-  minecraft_agent: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
+  minecraft_agent: "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်"
   minecraft_designer: "Minecraft ဒီဇိုင်းနာ"
   minecraft_adventurer: "Minecraft စွန့်စားခန်း"
   minecraft_tutorials: "Minecraft Hour of Code နည်းပြ Tutorialများ"
@@ -162,7 +162,7 @@
   volunteer_engineer_submission_submit: "ပေးပို့ပါ"
   dashboard_announce_learn_more_button: "ဆက်သင်ယူရန်"
   dashboard_action_cancel: "ပယ်ဖျတ်သည်"
-  dashboard_students_name: "အမည္"
+  dashboard_students_name: 'အမည္'
   dashboard_login_none: "email လိပ္စာ"
   blockly_name: "Blockly"
   math_category_name: "သင်္ချာ"
@@ -181,6 +181,7 @@
   hoc2018_mc_page_title: "Minecraft Hour of Code နည်းပြ Tutorialများ"
   hoc2018_mc_details: "ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Grades 2+"
   hoc2018_mc_aquatic_description: "Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်"
+  hoc2018_mc_hero_title: "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်"
   hoc2018_mc_hero_description: "Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်"
   hoc2018_mc_designer_title: "Minecraft ဒီဇိုင်းနာ"
   hoc2018_mc_adventurer_title: "Minecraft စွန့်စားခန်း"
@@ -194,3 +195,4 @@
   hoc2018_mc_minecraft_education: "Mincraftပညာ​ရေး"
   hoc2018_mc_continue_learning: "Minecraft နှင့် ဆက်လက်သင်ယူပါ."
   hoc2018_mc_go_to_mc_education: "Minecraft ပညာရေးသို့သွားပါ"
+  hoc2018_dance_amazon_about_future_engineer_button: "ဆက်သင်ယူရန်"

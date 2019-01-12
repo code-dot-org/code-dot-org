@@ -1418,6 +1418,38 @@ bs:
       Crack Random Substitution_2018: Upute
       Crack a Caesar Cipher: Upute
       Crack a Caesar Cipher_2018: Upute
+      Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar
+        bloka `postavke`.
+      Dance_Party_01_low: Prevuci blok `kreiranje novog` u radni prostor i spoji ga
+        unutar bloka `postavke`.
+      Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
+      Dance_Party_03: Sada napravi da plesač započne novi pokret svako 6 taktova!
+      Dance_Party_04: Dodaj efekat pozadine u svoj program.
+      Dance_Party_05: Iskoristi drugi novi blok kako bi plesač promjenio pokrete svako
+        2 takta.
+      Dance_Party_06: Kreiraj dodatnog plesača koji se naziva `dodatni_plesac1` kako
+        bi plesao sa mačkom.
+      Dance_Party_08: Da li možeš podesiti istu visinu za oba plesača?
+      Dance_Party_09: Upotrijebi blok `podesi nijanse` da bi promjenio boju plesača.
+      Dance_Party_10: Napravi da drugi plesač reaguje na muziku korištenjem bloka
+        `započni pratiti`.
+      Dance_Party_11.5_test: Iskoristi blok "sve patke" kako bi sve patke plesale
+        skupa.
+      Dance_Party_11: Blok `kada pritisneš gore` omogučava ti da pokreneš kod kada
+        pritisneš strelicu gore. Pokušaj da napraviš da plesač uradi brzi pokret kada
+        pritisneš strelicu gore.
+      Dance_Party_11_5: Iskoristi blok "sve patke" kako bi sve patke plesale skupa.
+      Dance_Party_11b: Napravi da se robot "spusti" jednom kada pritisneš strelicu
+        desno i da "klapne" jednom kada pritisneš stralicu gore. Uradi kombinaciju
+        spusti-klapni što brže može!
+      Dance_Party_extras_battle: Plesne skupine (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_every_beat: Četvrtina nota (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_layout: Uspostavimo formaciju! (Klikni "Opširnije" za više
+        detalja)
+      Dance_Party_extras_on_beat: Basovi, Mid i Trebl (Klikni "Opširnije" za više
+        detalja)
+      Dance_Party_extras_speed: Ubrzaj, uspori (Klikni "Opširnije" za više detalja)
+      Dance_Party_extras_visible: Gdje su otišli? (Klikni "Opširnije" za više detalja)
       Eval Booleans 2: Možeš li postaviti vrijednosti tako da ovaj izraz vraća vrijednost
         "istinito"?
       Eval Booleans 3: Funkcija "dužina-niza-karaktera" vraća broj karaktera u nizu
@@ -2051,19 +2083,27 @@ bs:
         stranice su iste dužine.'
       courseC_artist_prog5_2018: 'Ova kuća treba krov! Nacrtaj trokut. Savjet: sve
         tri stranice su iste dužine.'
+      courseC_artist_prog5_2019: 'Ova kuća treba krov! Nacrtaj trokut. Savjet: sve
+        tri stranice su iste dužine.'
       courseC_maze_debugging10: Ispravi ovaj nivo tako što ćeš preraspodijeliti i
         dodati blokove da bi me doveo/la do svinje!
       courseD_artist_binary4: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti
         pomoću petlje kroz ovaj trocifreni binarni niz?
       courseD_artist_binary4_2018: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti
         pomoću petlje kroz ovaj trocifreni binarni niz?
+      courseD_artist_binary4_2019: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti
+        pomoću petlje kroz ovaj trocifreni binarni niz?
       courseD_artist_binary6: Koji će šestocifreni binarni niz. ponovljen 11 puta,
         nacrtati ovu sliku?
       courseD_artist_binary6_2018: Koji će šestocifreni binarni niz. ponovljen 11
         puta, nacrtati ovu sliku?
+      courseD_artist_binary6_2019: Koji će šestocifreni binarni niz. ponovljen 11
+        puta, nacrtati ovu sliku?
       courseD_artist_binary7: Koji je to najkraći binarni niz kojeg možeš ponavljati
         da bi nacrtao/la ovu sliku?
       courseD_artist_binary7_2018: Koji je to najkraći binarni niz kojeg možeš ponavljati
+        da bi nacrtao/la ovu sliku?
+      courseD_artist_binary7_2019: Koji je to najkraći binarni niz kojeg možeš ponavljati
         da bi nacrtao/la ovu sliku?
       courseD_autorun_binary4_2019: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti
         pomoću petlje kroz ovaj trocifreni binarni niz?
@@ -2081,6 +2121,8 @@ bs:
       courseD_bee_nestedLoops8: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom
         saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bee_nestedLoops8_2018: 'Sakupi nektar iz svakog cvijeta i napravi med
+        u svakom saću meda. Upotrijebi ugniježdenu petlju. '
+      courseD_bee_nestedLoops8_2019: 'Sakupi nektar iz svakog cvijeta i napravi med
         u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bounce_events10: Sada je gol na vrhu. Dodaj blokove "dodaj bod" i "dodaj
         bod protivniku" na blokove "kada je lopta u golu" i "kada lopta promaši reket"
@@ -2114,8 +2156,10 @@ bs:
         se pokupio sav nektar i napravio sav med.
       courseD_maze_nestedLoops4: Dovedi me do suncokreta!
       courseD_maze_nestedLoops4_2018: Dovedi me do suncokreta!
+      courseD_maze_nestedLoops4_2019: Dovedi me do suncokreta!
       courseD_maze_nestedLoops6: Dovedi me do suncokreta!
       courseD_maze_nestedLoops6_2018: Dovedi me do suncokreta!
+      courseD_maze_nestedLoops6_2019: Dovedi me do suncokreta!
       courseE_artist_functions1: 'Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi
         mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela
         kraća od dužine kvadrata.'
@@ -2125,6 +2169,8 @@ bs:
       courseE_bee_concept1: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu
         petlju.
       courseE_bee_concept1_2018: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu
+        petlju.
+      courseE_bee_concept1_2019: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu
         petlju.
       courseE_bee_functions1: Pokupi sav nektar iz svakog cvijeta.
       courseE_bee_functions1_2018: Pokupi sav nektar iz svakog cvijeta.
@@ -2148,6 +2194,9 @@ bs:
         varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi
         sakupio/la 3, 6, 9 nektara?\r\n"
       courseF_bee_for8_2018: "Ako tvoja petlja broji prema gore, prirast je dodat
+        na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati
+        da bi sakupio/la 3, 6, 9 nektara?\r\n"
+      courseF_bee_for8_2019: "Ako tvoja petlja broji prema gore, prirast je dodat
         na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati
         da bi sakupio/la 3, 6, 9 nektara?\r\n"
       courseF_bee_functions4: Funkcije "pokreni se i pokupi nektar" funkcije čine

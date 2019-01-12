@@ -40,6 +40,14 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -52,7 +60,7 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
+          'N':
             '2': '2'
             '3': '3'
             '4': '4'
@@ -62,9 +70,27 @@ ne:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
       Dancelab_randomColor:
         text: कुनै एक  रङ
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -101,10 +127,11 @@ ne:
         options:
           KEY:
             '"up"': माथि
-            '"down"': तल
             '"left"': बाँया
+            '"down"': तल
             '"right"': दाँया
             '"space"': space
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -185,6 +212,23 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': size
       Mikelab_randomColor:
         text: कुनै एक  रङ
       Mikelab_setBG:
@@ -200,6 +244,11 @@ ne:
           CORNER:
             '"right"': दाँया
             '"left"': बाँया
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -239,6 +288,21 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      binary_move:
+        options:
+          DIR:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
       craft_ifPath:
         options:
           DIR:

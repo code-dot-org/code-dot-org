@@ -40,6 +40,8 @@ fr:
         finish_sign_up_header: Terminez la création de votre profil
         finish_sign_up_subheader: Remplissez les informations suivantes pour finir
           de créer votre compte Code.org.
+        finish_sign_up_subheader_provider: Remplissez les informations suivantes pour
+          compléter la création d'un Code.org avec <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
@@ -90,6 +92,7 @@ fr:
   prize: prix
   more_info: Plus d'informations
   auth:
+    continue_with: Continuer avec %{provider}
     sign_in_with: Se connecter avec %{provider}
     signed_in: Connecté!
     signed_out: Déconnexion de <a href="%{url}">Code.org</a>.
@@ -105,6 +108,10 @@ fr:
     clever: Compte Clever
     powerschool: Compte Powerschool
     forgot_password: Mot de passe oublié ?
+    migration_success: Succès! Vous avez fait la mise à jour pour la nouvelle expérience
+      de compte.
+    demigration_success: La nouvelle expérience de compte est désormais désactivée
+      sur votre compte.
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
     not_linked: Désolé, ton compte Code.org n'est pas lié à ton %{provider}. Tu dois
@@ -113,7 +120,12 @@ fr:
       connecter avec votre compte Clever.
     unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
       %{provider}. Veuillez réessayer s'il vous plaît.
+    already_in_use: Votre compte de %{provider} est déjà connecté à un autre compte
+      de Code.org.
+    already_linked: Votre compte de %{provider} est déjà associé à votre compte de
+      Code.org.
   signup_form:
+    email_signup: Inscrivez-vous avec votre adresse email
     student_count: "%{count} élèves se sont déjà inscrits."
     teacher_count: "%{count} enseignants se sont déjà inscrits."
     overview: Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a
@@ -146,6 +158,7 @@ fr:
     age: Age
     user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
+    go_to_account: Vers mon compte
     teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
@@ -157,6 +170,8 @@ fr:
       de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>.
     under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
       de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
+    student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
+      tuteur légal pour utiliser les services de Code.org.
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
     my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
       et enregistrées ou traitées aux États-Unis.
@@ -261,6 +276,7 @@ fr:
     student_associated_subject: Informations de connexion pour Code.org
   teacher_mailer:
     new_teacher_subject: Bienvenue sur Code.org!
+    delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
   section:
     your_section:
       one: 'Ta section:'
@@ -268,6 +284,7 @@ fr:
     code_with_teacher: "%{section_code} avec %{teacher_name}"
     confirm:
       remove: Êtes-vous sûr de vouloir quitter cette section ?
+    default_name: Section sans titre
     remove: "(supprimer la section)"
     type:
       picture: Mot de passe par image
@@ -386,10 +403,12 @@ fr:
       create: Créer
       applab: Labo des applis
       artist: Artiste
-      gamelab: Game Lab
+      gamelab: Labo des jeux
       playlab: Labo de jeux
       minecraft: Minecraft
       flappy: Flappy
+      dance: Fête dansante
+      view_all: Afficher tous les projets...
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès
@@ -424,6 +443,7 @@ fr:
       example: Exemple de solution
       example_with_number: Exemple de solution %{solution_number}
       submitted_on: 'Soumis le :'
+      last_updated: 'Dernière mise à jour :'
       unsubmit: Ne pas envoyer
       worked_with: A travaillé avec
       update_lock_settings: Mettre à jour les paramètres de verrouillage ici.
@@ -441,6 +461,9 @@ fr:
       les modifications)"
     delete: Supprimer votre compte
     delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
+    delete_text_teacher_managed_note: Vous n’êtes pas autorisé à supprimer ce compte
+      parce qu’il est géré par votre enseignant. Votre enseignant devra vous supprimer
+      de ses sections pour qu vous puissiez supprimer votre compte.
     delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
       pas les comptes de vos élèves.'
     delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
@@ -458,6 +481,8 @@ fr:
     create_personal_login_info: Si tu veux continuer d'utiliser ton compte Code.org
       après la fin de ton année scolaire, demande à tes parents ou ton tuteur de t'aider
       à créer tes propres informations de connexion.
+    create_personal_login_link_account: Vous pouvez choisir de vous connecter à un
+      compte personnel dans la section « Gérer les comptes liés ».
     create_personal_login_terms: En créant un login personnel, j'accepte les <a href='%{terms_of_service_url}',
       target='_blank'>termes et conditions</a> de Code.org . Si j'ai moins de 13 ans,
       je confirme en soumettant ce formulaire que j'ai l'autorisation des mes parents
@@ -469,6 +494,8 @@ fr:
       de confidentialité</a> pour plus d’informations.'
     enter_new_login_info: Entrez vous nouvelles informations de connexion
     confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
+    parent_email_label: E-mail du parent / tuteur (facultatif)
+    parent_email_hint: "(cela peut être utilisé pour la récupération du mot de passe)"
     enter_parent_email: Entrez l'adresse e-mail de vos parents ou de votre tuteur
       (pour la récupération de mot de passe)
     update: Mise à jour du compte
@@ -639,11 +666,11 @@ fr:
       l'enseignement de l’informatique dans votre école et demandez à participer à
       nos programmes d'enseignement de haute qualité <strong>absolument sans aucun
       frais pour vous ou votre école</strong>. Fin des inscriptions le 14 avril.
-    announcement_applab_export: App Lab, notre environnement de programmation basé
-      sur le web, prend désormais en charge l’exportation de votre code ! Vous pouvez
-      commencer à construire des applications avec le glisser-déplacer de blocs JavaScript,
-      puis exporter le code afin de continuer à éditer dans n’importe quel environnement
-      de développement professionnel.
+    announcement_applab_export: Le labo des applis, notre environnement de programmation
+      basé sur le web, prend désormais en charge l’exportation de votre code ! Vous
+      pouvez commencer à construire des applications avec le glisser-déplacer de blocs
+      JavaScript, puis exporter le code afin de continuer à éditer dans n’importe
+      quel environnement de développement professionnel.
     announcement_csp_survey: "<b>Bravo aux enseignants des Principes de l'Informatique !</b>
       <br/> Vos étudiants qui passent l'examen rejoignent plus de 50.000 autres étudiants
       dans notre plus grand lancement d’examen jusqu'ici. Que les voix de vos élèves
@@ -681,6 +708,7 @@ fr:
     male: Masculin
     female: Féminin
     non_binary: Non binaire
+    not_listed: Terme préféré non listé
     none: Préfère ne pas répondre
   user_type:
     student: Élève
@@ -694,7 +722,7 @@ fr:
       Microsoft, Facebook, Twitter et beaucoup d'autres organismes qui ont contribué
       à créer ce matériel.
     help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont
-      contribué à créer ce matériel.
+      contribué à créer ces matériels.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
       réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm.
       Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year}
@@ -756,12 +784,12 @@ fr:
         navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
         avoir des choses qui ne fonctionnent pas.
       link: Pour en savoir plus
-      applab_unsupported_tablet: App Lab fonctionne mieux sur un ordinateur portable
-        ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes
-        avec de cet outil sur votre appareil actuel.
+      applab_unsupported_tablet: Le labo des applis fonctionne mieux sur un ordinateur
+        portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer
+        des problèmes avec de cet outil sur votre appareil actuel.
       gamelab_unsupported_tablet: Game Lab fonctionne mieux sur un ordinateur portable
         ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes
-        avec de cet outil sur votre appareil actuel.
+        avec cet outil sur votre appareil actuel.
       weblab_unsupported_browser: Malheureusement, Web Lab a quelques problèmes de
         chargement avec ce navigateur. Vous pouvez utiliser un autre navigateur jusqu'à
         ce que les soucis soient résolu. Désolé pour la gêne occasionnée.
@@ -814,6 +842,8 @@ fr:
         pour la faire fonctionner, puis partagez votre application en quelques secondes.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
+    dance:
+      title: Fête dansante
     hoc:
       title: Labyrinthe classique
       body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
@@ -837,7 +867,7 @@ fr:
       body: Regarde une galerie des applications et des images d'artistes créées par
         nos utilisateurs.
     gamelab:
-      title: Game Lab
+      title: Labo des jeux
       body: Game Lab est un environnement de programmation où vous pouvez créer des
         animations simples et des jeux avec des objets et des personnages qui interagissent
         entre eux.
@@ -873,8 +903,8 @@ fr:
       title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité!
-        Le voyage dans Minecraft avec du code.
+      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
+        Exploration de Minecraft avec le code.
     sports:
       title: Sports
       body: Créer un jeu de basket ou un mélange avec d'autres sports.
@@ -1239,6 +1269,7 @@ fr:
     csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
     csp3_1_2018: 'Unité 3 : Introduction à la programmation'
+    dlp: Sujets de réflexion
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
@@ -1325,6 +1356,7 @@ fr:
   return_unit_overview: Accéder à la vue d'ensemble de l'unité
   return_course_overview: Accéder à la vue d'ensemble de l'unité
   view_all_units: Voir toutes les unités
+  view_teacher_guide: Voir le guide de l'enseignant
   pd:
     form_labels:
       first_name: Prénom
@@ -1338,29 +1370,130 @@ fr:
       school_country: Pays de l’école
       ages: Quel est l'âge de vos étudiants cette année ?
       subjects: Quel(s) matière(s) enseignez-vous cette année ?
+      resources: Lesquelles des ressources d’éducation en informatique suivantes utilisez-vous
+        ?
+      robotics: Lesquelles des ressources d’éducation en robotique suivantes utilisez-vous
+        ?
+      workshop_organizer: Organisateur d’atelier
+      workshop_facilitator: Animateur d’atelier
+      workshop_course: Cours d’atelier
+      email_opt_in: Pouvons-nous vous envoyer des e-mails sur le programme international
+        de Code.org, les mises à jours de nos cours, ou d’autres actualités sur l’informatique
+        ?
+      legal_opt_in: 'En envoyant ce formulaire, vous acceptez de permettre à Code.org
+        de partager des informations sur votre utilisation de Code.org et des ressources
+        de formation professionnelle avec le partenaire international Code.org de
+        votre pays, de votre district scolaire et des animateurs. Nous partagerons
+        vos informations de contact, les cours / unités que vous utilisez et des données
+        agrégées sur vos cours avec ces partenaires. Cela inclut le nombre d''élèves
+        dans vos classes, la répartition démographique de votre classe, ainsi que
+        le nom de votre école et de votre district. Nous ne partagerons aucune information
+        sur les élèves avec nos partenaires : toutes les informations sur les élèves
+        seront désidentifiées et agrégées. Nos partenaires internationaux et nos animateurs
+        sont contractuellement tenus de traiter ces informations avec le même niveau
+        de confidentialité que Code.org.'
     form_entries:
       gender:
         male: Masculin
         female: Féminin
         non_binary: Non binaire
+        not_listed: Terme préféré non listé
         none: Préfère ne pas répondre
+      school_country:
+        canada: Canada
+        chile: Chili
+        israel: Israël
+        malaysia: Malaisie
+        mexico: Mexique
+        thailand: Thaïlande
+      ages:
+        ages_under_6: "< 6 ans"
+        ages_7_8: 7-8 ans
+        ages_9_10: 9-10 ans
+        ages_11_12: 11-12 ans
+        ages_13_14: 13-14 ans
+        ages_15_16: 15-16 ans
+        ages_17_18: 17-18 ans
+        ages_19_over: Plus de 19 ans
       subjects:
         cs: Informatique/Sciences informatiques
+        ict: Informatique (TIC)
         math: Math
         science: Sciences
+        history: Histoire / Études sociales
         la: Langues
+        efl: Anglais comme langue étrangère
+        music: Musique
+        art: Art
+        other: 'Autre :'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Autre :'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Autre :'
       workshop_course:
+        csf_af: CS Fundamentals (Cours A-F)
+        csf_express: CS Fundamentals (Pré-Express ou Express)
         csd: Découvertes de l'informatique
-        csp: Principes de CS 16-17
+        csp: Principes de l'informatique
       email_opt_in:
         opt_in_yes: Oui
         opt_in_no: Non
+    international_opt_in:
+      title: Participation à l’atelier
+      intro: Merci d’avoir pris le temps de recevoir une formation sur le programme
+        d’études de Code.org. Notre mission d’apporter des possibilités d’éducation
+        en informatique à tous les enfants de toutes les écoles du monde entier ne
+        serait pas possible sans vous.
+      instructions: Veuillez remplir le formulaire ci-dessous pour indiquer que 1)
+        vous avez participé à un atelier de formation dirigé par un des partenaires
+        internationaux de Code.org et 2) vous acceptez de partager vos informations
+        avec notre partenaire international dans votre pays agin qu’il puisse vous
+        soutenir lors de votre voyage comme professeur d’informatique.
+      thanks: Merci pour votre soumission ! Nous nous réjouissons de vous soutenir
+        pendant que vous apprenez à connaître les programmes d’études et outils de
+        Code.org. Veuillez continuer à partager vos questions et vos commentaires
+        avec nous en nous écrivant à <a href='%{support_email_url}'>support@code.org</a>
+        ou en postant sur le <a href='%{teacher_forum_url}' target='_blank'>forum
+        des enseignants</a> !
+    logged_out:
+      heading: Merci de votre intérêt pour le programme d’apprentissage professionnel !
+      body: Pour commencer, vous devez d’abord être connecté à votre compte de Code.org.
+        Si vous désirez plus d’informations sur le programme avant de commencer votre
+        demande, veuillez consulter l’<a href="%{url}">aperçu du programme d’apprentissage
+        professionnel</a>.
+    not_teacher:
+      body: Merci de votre intérêt pour le programme d’apprentissage professionnel
+        de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez
+        soit créer un compte enseignant, soit <a href="%{user_settings}">aller dans
+        vos paramètres utilisateur</a> pour mettre à niveau votre compte d’élève à
+        enseignant.
+      more: Si vous désirez plus d’informations sur le programme avant de commencer
+        votre demande, veuillez consulter l’<a href="%{pl_overview}">aperçu du programme
+        d’apprentissage professionnel</a>.
+    no_teacher_email:
+      body: Votre compte n’est pas associé à une adresse e-mail. Veuillez <a href="%{user_registration}">consulter
+        les paramètres de votre compte</a> pour ajouter votre adresse e-mail avant
+        de remplir ce formulaire.
   courses_category: Cours complets
   cookie_banner:
+    message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
+      vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.
+    more_information: Consulter la politique de confidentialité de Code.org.
     accept: J'accepte
   gdpr_dialog:
     heading: Etes-vous d'accord pour utiliser un site internet situé aux Etats-Unis

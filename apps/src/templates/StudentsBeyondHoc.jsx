@@ -29,10 +29,11 @@ class StudentsBeyondHoc extends Component {
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     under13: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
+    hideDancePartyFollowUp: PropTypes.bool,
   };
 
   render() {
-    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, under13 } = this.props;
+    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, under13, hideDancePartyFollowUp } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
 
@@ -74,6 +75,30 @@ class StudentsBeyondHoc extends Component {
         break;
       case completedTutorialType === 'applab' && !signedIn:
           specificCardSet = 'signedOutApplabCards';
+        break;
+      case completedTutorialType === 'dance' && signedIn && isEnglish && hideDancePartyFollowUp:
+          specificCardSet = 'signedInEnglishDancePartyAquaticCards';
+        break;
+      case completedTutorialType === 'dance' && signedIn && !isEnglish && hideDancePartyFollowUp:
+          specificCardSet = 'signedInNonEnglishDancePartyAquaticCards';
+        break;
+      case completedTutorialType === 'dance' && !signedIn && isEnglish && hideDancePartyFollowUp:
+          specificCardSet = 'signedOutEnglishDancePartyAquaticCards';
+        break;
+      case completedTutorialType === 'dance' && !signedIn && !isEnglish && hideDancePartyFollowUp:
+          specificCardSet = 'signedOutNonEnglishDancePartyAquaticCards';
+        break;
+      case completedTutorialType === 'dance' && signedIn && isEnglish:
+          specificCardSet = 'signedInEnglishDancePartyCards';
+        break;
+      case completedTutorialType === 'dance' && signedIn && !isEnglish:
+          specificCardSet = 'signedInNonEnglishDancePartyCards';
+        break;
+      case completedTutorialType === 'dance' && !signedIn && isEnglish:
+          specificCardSet = 'signedOutEnglishDancePartyCards';
+        break;
+      case completedTutorialType === 'dance' && !signedIn && !isEnglish:
+          specificCardSet = 'signedOutNonEnglishDancePartyCards';
         break;
       case completedTutorialType === 'other' && isEnglish && under13:
           specificCardSet = 'youngerThan13DefaultCards';

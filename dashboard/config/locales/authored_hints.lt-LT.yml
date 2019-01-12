@@ -420,7 +420,15 @@ lt:
           pixelių', aš linija nupiešiu automatiškai.
         courseC_artist_prog2_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių
           dešinėn bloką.
+      courseC_artist_prog2_2019_authored_hint:
+        courseC_artist_prog2_a: Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100
+          pixelių', aš linija nupiešiu automatiškai.
+        courseC_artist_prog2_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių
+          dešinėn bloką.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -435,6 +443,11 @@ lt:
           20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia
           peršokti?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum
+          nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po
+          20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia
+          peršokti?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum
           nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po
           20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia
@@ -458,6 +471,12 @@ lt:
           – Judama pirmyn 100 + 75 pikselių
           – Panaudota komanda
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: |-
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Tavo programoje turi būti:
           – Panaudota komanda

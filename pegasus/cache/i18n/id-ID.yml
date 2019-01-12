@@ -622,6 +622,8 @@ id-ID:
   volunteer_engineer_submission_field_email_desc: Alamat email Anda tidak akan pernah
     dibagikan, tetapi kami akan mengirimkan anda permintaan dari guru.
   volunteer_engineer_submission_field_email_placeholder: Alamat email
+  volunteer_engineer_submission_field_email_preference_privacy: "(Lihat kebijakan
+    privasi)"
   volunteer_engineer_submission_field_email_preference_yes: Ya
   volunteer_engineer_submission_field_email_preference_no: Tidak
   volunteer_engineer_submission_final_paragraph: Anda akan didaftarkan dalam sebuah
@@ -1911,9 +1913,16 @@ id-ID:
   signing_in: Masuk di
   sign_in_instruct_button: Tekan tombol "masuk".
   reset_student_password: Mengatur ulang pelajar kata sandi
+  applab_tile_start_tutorial: Mulai
+  account_sign_up_email_opt_in: Dapat kami email Anda tentang pembaruan kursus kami,
+    peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
+  account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
+    tua atau wali hukum izin untuk menggunakan layanan Code.org.
+  hoc_overview_start_tutorial: Mulai
   hoc2018_creativity_create: Buat
   hoc2018_mc_page_title: Tutorial Minecraft Jam Kode
   hoc2018_mc_details: Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+
+  hoc2018_mc_hero_title: 'Minecraft: Perjalanan Pahlawan'
   hoc2018_mc_designer_title: Perancang Minecraft
   hoc2018_mc_designer_description: Program animal dan objek - objek Minecraft lainnya
     dalam versi Minecraft Anda sendiri.
@@ -1942,3 +1951,8 @@ id-ID:
   hoc2018_mc_minecraft_education: Pendidikan Minecraft
   hoc2018_mc_continue_learning: Lanjutkan pembelajaran dengan Minecraft.
   hoc2018_mc_go_to_mc_education: Pergi ke pendidikan Minecraft
+  hoc2018_dance_party_button: Mulai
+  hoc2018_dance_teacher_resources_tile1_button: Rencana Pelajaran
+  hoc2018_dance_teacher_resources_tile2_button: Kegiatan tanpa komputer
+  hoc2018_dance_amazon_about_future_engineer_button: Pelajari lebih banyak
+  hoc2018_dance_amazon_scholarship_programs_button: Daftar sekarang

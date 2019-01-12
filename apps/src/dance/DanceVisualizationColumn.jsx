@@ -7,9 +7,7 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import * as danceRedux from "../dance/redux";
-import Sounds from "../Sounds";
-import project from "../code-studio/initApp/project";
+import AgeDialog, {signedOutOver13} from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -22,60 +20,33 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
-    retrieveMetadata: PropTypes.func.isRequired,
+    enableSongSelection: PropTypes.bool,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired
-  };
-
-  state = {
-    songsData: []
+    selectedSong: PropTypes.string,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    filterOff: PropTypes.bool.isRequired
   };
 
   changeSong = (event) => {
-    const song = event.target.value;
-    this.props.setSong(song);
-    this.loadSong(song);
+    const songId = event.target.value;
+    this.props.setSong(songId);
   };
-
-  loadSong(song) {
-    //Load song
-    let options = {id: song};
-    options['mp3'] = this.state.songsData[options.id].url;
-    Sounds.getSingleton().register(options);
-
-    this.props.retrieveMetadata(song);
-
-    if (this.props.hasChannel) {
-      //Save song to project
-      project.saveSelectedSong(song);
-    }
-  }
-
-  componentDidMount() {
-    this.parseSongOptions(this.props.songManifest);
-  }
-
-  parseSongOptions(songManifest) {
-    let songs = {};
-    if (songManifest) {
-      songManifest.forEach((song) => {
-          songs[song.id] = {title: song.text, url: song.url};
-      });
-    }
-    this.setState({songsData: songs}, () => {
-      this.loadSong(this.props.selectedSong);
-    });
-  }
 
   render() {
     return (
-      <div>
+      <div id="song-selector-wrapper">
         <label><b>{i18n.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(this.state.songsData).map((option, i) => (
-            <option key={i} value={option}>{this.state.songsData[option].title}</option>
+        <select
+          id="song_selector"
+          style={styles.selectStyle}
+          onChange={this.changeSong}
+          value={this.props.selectedSong}
+          disabled={!this.props.enableSongSelection}
+        >
+          {Object.keys(this.props.songData).map((option, i) => (
+            (this.props.filterOff || !this.props.songData[option].pg13) &&
+              <option key={i} value={option}>{this.props.songData[option].title}</option>
+
           ))}
         </select>
       </div>
@@ -86,54 +57,113 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
-    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
+    levelIsRunning: PropTypes.bool,
+    levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    userType: PropTypes.string.isRequired
   };
+
+  state = {
+    filterOff: this.setFilterStatus()
+  };
+
+  /*
+    Turn the song filter off
+  */
+  turnFilterOff = () => {
+    this.setState({filterOff: true});
+  };
+
+  /*
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+   */
+  setFilterStatus() {
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const signedOutAge = signedOutOver13();
+    return signedInOver13 || signedOutAge;
+  }
 
   render() {
     const divDanceStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT,
-      backgroundColor: '#fff',
+      background: '#fff',
       position: 'relative',
       overflow: 'hidden',
     };
+
+    const p5LoadingStyle = {
+      width: 400,
+      height: 400,
+      display: 'none',
+      alignItems: 'center',
+      justifyContent: 'center'
+    };
+
+    const p5LoadingGifStyle = {
+      width: 100,
+      height: 100,
+    };
+
+    const filenameToImgUrl = {
+      "click-to-run": require('@cdo/static/dance/click-to-run.png'),
+    };
+
+    const imgSrc = filenameToImgUrl["click-to-run"];
+
+    const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
+
     return (
-      <span>
+      <div>
         {!this.props.isShareView &&
-          <SongSelector
-            retrieveMetadata={this.props.retrieveMetadata}
-            setSong={this.props.setSong}
-            selectedSong={this.props.selectedSong}
-            songManifest={this.props.songManifest}
-            hasChannel={this.props.hasChannel}
+          <AgeDialog
+            turnOffFilter={this.turnFilterOff}
           />
         }
-        <ProtectedVisualizationDiv>
-          <div
-            id="divDance"
-            style={divDanceStyle}
-          />
-        </ProtectedVisualizationDiv>
-        <GameButtons showFinishButton={this.props.showFinishButton}>
-          <ArrowButtons />
-        </GameButtons>
-        <BelowVisualization />
-      </span>
+        <span>
+          {!this.props.isShareView &&
+            <SongSelector
+              enableSongSelection={enableSongSelection}
+              setSong={this.props.setSong}
+              selectedSong={this.props.selectedSong}
+              songData={this.props.songData}
+              filterOff={this.state.filterOff}
+            />
+          }
+          <ProtectedVisualizationDiv>
+            <div
+              id="divDance"
+              style={divDanceStyle}
+            >
+              <div id="divDanceLoading" style={p5LoadingStyle}>
+                <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
+              </div>
+              {this.props.isShareView &&
+                <img src={imgSrc} id="danceClickToRun"/>
+              }
+            </div>
+          </ProtectedVisualizationDiv>
+          <GameButtons showFinishButton={this.props.showFinishButton}>
+            <ArrowButtons />
+          </GameButtons>
+          <BelowVisualization />
+        </span>
+      </div>
     );
   }
 }
 
 export default connect(state => ({
-  hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
-  songManifest: state.pageConstants.songManifest,
-  selectedSong: state.selectedSong,
-}), dispatch => ({
-  setSong: song => dispatch(danceRedux.setSong(song))
+  songData: state.songs.songData,
+  selectedSong: state.songs.selectedSong,
+  userType: state.progress.userType,
+  levelIsRunning: state.runState.isRunning,
+  levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);

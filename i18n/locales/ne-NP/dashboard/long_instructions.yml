@@ -204,12 +204,14 @@ ne:
       NEW Course 4 Artist Vars 6: "Draw this pattern of pentagons with\n100 pixel sides by setting the right value for `length` and dropping the `length`\nvariable into all of the the correct places. \\r\n\\r\nSee how you only have\nto set the value for `length` once, and the code uses the right value everywhere?"
       Overworld Move to Sheep: "Add a second “move forward” command to\nreach the sheep."
       Overworld Move to Sheep_2018: "Add a second “move forward” command to\nreach the sheep."
+      Overworld Move to Sheep_2019: "Add a second “move forward” command to\nreach the sheep."
       Testing Quantum Farmer: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
       course4_artist_fwp_challenge1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
       courseD_bounce_events1: झण्डा सम्म पुग्नुहोस्! Attach a block to the "when left arrow" block and press "Run" to move the player to the flag.
       courseE_farmer_concept4: "Now let's go one level deeper! We've\nnested that whole block of code into another loop, but you need to get the\nartist back in place to draw the next line. Which of these code blocks can\nyou place at the end of the outermost loop to draw the whole grid?"
       courseF_bee_for_challenge2: "Solve this puzzle with the fewest number of blocks\npossible."
       courseF_bee_for_challenge2_2018: "Solve this puzzle with the fewest number of blocks\npossible."
+      courseF_bee_for_challenge2_2019: "Solve this puzzle with the fewest number of blocks\npossible."
       frozen circle function in circle: "Now let's create 20 overlapping\ncircles, turning 18 degrees between each circle."
       frozen circle function with parameter: "Here's a ”Create circle”\nblock that can make circles of different sizes. Can you use this to create\na small circle of size 5 and a larger circle of size 10?"
       frozen circle function: "Use the new “Create a circle” block to\ncreate 10 overlapping circles. Don't forget to jump forward between circles."

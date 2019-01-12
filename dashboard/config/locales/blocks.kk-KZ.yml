@@ -40,6 +40,14 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -68,11 +76,29 @@ kk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -109,10 +135,11 @@ kk:
         options:
           KEY:
             '"up"': жоғары
-            '"down"': төмен
             '"left"': солға
+            '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -201,6 +228,23 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
       Mikelab_randomColor:
         text: кездейсоқ түс
       Mikelab_setBG:
@@ -216,6 +260,11 @@ kk:
           CORNER:
             '"right"': оңға
             '"left"': солға
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -255,6 +304,21 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      binary_move:
+        options:
+          DIR:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
       craft_ifPath:
         options:
           DIR:
