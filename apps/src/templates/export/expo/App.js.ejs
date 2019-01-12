@@ -106,6 +106,7 @@ export default class App extends React.Component {
       <View onLayout={this.onLayout} style={styles.container}>
         {height && <View style={this.webViewContainerStyle()}>
           <WebView
+            originWhitelist={['*']}
             source={{uri: indexUri}}
             style={styles.webView}
             javaScriptEnabled={true}
