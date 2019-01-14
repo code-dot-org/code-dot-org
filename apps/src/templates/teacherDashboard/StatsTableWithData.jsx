@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StatsTable from './StatsTable';
 import {LoadingStatus} from '@cdo/apps/redux/sectionDataRedux';
-import {getStudentCompletedLevelCount} from './statsRedux';
+import {getStudentsCompletedLevelCount} from './statsRedux';
 
 class StatsTableWithData extends Component {
   static propTypes = {
@@ -41,5 +41,5 @@ export const UnconnectedStatsTableWithData = StatsTableWithData;
 export default connect(state => ({
   section: state.sectionData.section,
   sectionLoadingStatus: state.sectionData.loadingStatus,
-  studentsCompletedLevelCount: getStudentCompletedLevelCount(state, state.sectionData.section.id),
+  studentsCompletedLevelCount: getStudentsCompletedLevelCount(state, state.sectionData.section.id),
 }))(StatsTableWithData);
