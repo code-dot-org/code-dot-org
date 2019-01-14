@@ -44,6 +44,14 @@ module Pd::Application
       class_name: 'Pd::FitWeekend1920Registration',
       foreign_key: 'pd_application_id'
 
+    serialized_attrs %w(
+      status_log
+    )
+
+    before_save :log_status, if: -> {status_changed?}
+
+    after_create :clear_extraneous_answers
+
     #override
     def year
       YEAR_19_20
@@ -53,6 +61,19 @@ module Pd::Application
     APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
+    #override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        interview
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
     end
 
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
@@ -79,12 +100,43 @@ module Pd::Application
       Pd::FitWeekend1920Registration.find_by_pd_application_id(id)
     end
 
+    # @override
+    # @param [Pd::Application::Email] email
+    # Note - this should only be called from within Pd::Application::Email.send!
+    def deliver_email(email)
+      unless email.pd_application_id == id
+        raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
+      end
+
+      # email_type maps to the mailer action
+      Facilitator1920ApplicationMailer.send(email.email_type, self).deliver_now
+    end
+
+    def log_status
+      self.status_log ||= []
+      status_log.push({status: status, at: Time.zone.now})
+    end
+
     # memoize in a hash, per course
     FILTERED_LABELS ||= Hash.new do |h, key|
       labels_to_remove = key == 'csf' ?
-        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+        [
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_which_fit_weekend,
+          :csd_csp_workshop_requirement,
+          :csd_csp_lead_summer_workshop_requirement,
+          :csd_csp_deeper_learning_requirement,
+          :csd_csp_good_standing_requirement,
+          :csd_csp_partner_with_summer_workshop,
+          :csd_csp_which_summer_workshop
+        ]
         : # csd / csp
-        [:csf_availability, :csf_partial_attendance_reason]
+        [
+          :csf_good_standing_requirement,
+          :csf_summit_requirement,
+          :csf_workshop_requirement,
+          :csf_community_requirement
+        ]
 
       h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
@@ -105,11 +157,18 @@ module Pd::Application
         columns.push(
           'Status',
           'Locked',
-          'Notes',
+          'General Notes',
           'Notes 2',
           'Notes 3',
           'Notes 4',
           'Notes 5',
+          'Question 1 Support Teachers',
+          'Question 2 Student Access',
+          'Question 3 Receive Feedback',
+          'Question 4 Give Feedback',
+          'Question 5 Redirect Conversation',
+          'Question 6 Time Commitment',
+          'Question 7 Regional Needs',
           'Regional Partner'
         )
         csv << columns
@@ -134,11 +193,18 @@ module Pd::Application
       end
 
       columns.push(
-        'Notes',
+        'General Notes',
         'Notes 2',
         'Notes 3',
         'Notes 4',
-        'Notes 5'
+        'Notes 5',
+        'Question 1 Support Teachers',
+        'Question 2 Student Access',
+        'Question 3 Receive Feedback',
+        'Question 4 Give Feedback',
+        'Question 5 Redirect Conversation',
+        'Question 6 Time Commitment',
+        'Question 7 Regional Needs'
       )
 
       CSV.generate do |csv|
@@ -159,6 +225,13 @@ module Pd::Application
           notes_3,
           notes_4,
           notes_5,
+          question_1,
+          question_2,
+          question_3,
+          question_4,
+          question_5,
+          question_6,
+          question_7,
           regional_partner_name
         )
         csv << row
@@ -195,12 +268,75 @@ module Pd::Application
         notes_2,
         notes_3,
         notes_4,
-        notes_5
+        notes_5,
+        question_1,
+        question_2,
+        question_3,
+        question_4,
+        question_5,
+        question_6,
+        question_7
       )
 
       CSV.generate do |csv|
         csv << columns
       end
+    end
+
+    # @override
+    def default_response_score_hash
+      {
+        meets_minimum_criteria_scores: {},
+        bonus_points_scores: {}
+      }
+    end
+
+    def meets_criteria
+      response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
+
+      scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
+
+      scores = scored_questions.map {|q| response_scores[q]}
+
+      if scores.uniq == [YES]
+        YES
+      elsif NO.in? scores
+        NO
+      else
+        REVIEWING_INCOMPLETE
+      end
+    end
+
+    def total_score
+      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+    end
+
+    def all_scores
+      bonus_points_scores = response_scores_hash[:bonus_points_scores]
+      all_score_hash = {
+        total_score: "#{bonus_points_scores.values.map(&:to_i).reduce(:+) || 0} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
+      }
+
+      BONUS_POINT_CATEGORIES.each_pair do |category, keys|
+        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.map(&:to_i).reduce(:+) || 0} / #{keys.length * 5}"
+      end
+
+      all_score_hash
+    end
+
+    def clear_extraneous_answers
+      course_specific_questions_to_remove =
+        if course == 'csf'
+          [CSD_SPECIFIC_KEYS, CSP_SPECIFIC_KEYS].flatten.uniq
+        elsif course == 'csd'
+          [CSF_SPECIFIC_KEYS, CSP_SPECIFIC_KEYS - CSD_SPECIFIC_KEYS].flatten.uniq
+        elsif course == 'csp'
+          [CSF_SPECIFIC_KEYS, CSD_SPECIFIC_KEYS - CSP_SPECIFIC_KEYS].flatten.uniq
+        end
+
+      self.form_data_hash = sanitize_form_data_hash.except(*course_specific_questions_to_remove)
+
+      save
     end
   end
 end

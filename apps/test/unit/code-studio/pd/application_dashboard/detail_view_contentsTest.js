@@ -41,7 +41,20 @@ describe("DetailViewContents", () => {
         taughtInPast: 'No',
       },
       response_scores: {
-        committed: 'Yes'
+        meets_minimum_criteria_scores: {
+          committed: 'Yes'
+        },
+        bonus_points_scores: {
+          committed: 5,
+          question_1: 5,
+          question_2: 5,
+          question_3: 5,
+          question_4: 5,
+          question_5: 5
+        },
+        meets_scholarship_criteria_scores: {
+          principal_approval: 'Yes'
+        }
       },
       school_stats: {}
     };
@@ -72,7 +85,7 @@ describe("DetailViewContents", () => {
     it("Uses default value for facilitator applications with no notes", () => {
       const facilitatorDetailView = mountDetailView('Facilitator', {applicationData: {notes: ''}});
       expect(facilitatorDetailView.state().notes).to.eql(
-        "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
+        "Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:"
       );
     });
 

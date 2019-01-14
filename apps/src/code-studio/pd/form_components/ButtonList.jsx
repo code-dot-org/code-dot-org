@@ -36,6 +36,10 @@ class ButtonList extends React.Component {
          inputId: PropTypes.string,
          inputValue: PropTypes.string,
          onInputChange: PropTypes.func
+       }),
+       PropTypes.shape({
+        answerText: PropTypes.string.isRequired,
+        answerValue: PropTypes.string.isRequired
        })
      ])
     ).isRequired,
@@ -86,21 +90,22 @@ class ButtonList extends React.Component {
 
     const options = answers.map((answer, i) => {
       const answerText = typeof answer === "string" ? answer : answer.answerText;
+      const answerValue = typeof answer === "string" ? answer : (answer.answerValue || answerText);
 
       const checked = this.props.type === 'radio' ?
-          (this.props.selectedItems === answerText) :
-          !!(this.props.selectedItems && this.props.selectedItems.indexOf(answerText) >= 0);
+          (this.props.selectedItems === answerValue) :
+          !!(this.props.selectedItems && this.props.selectedItems.indexOf(answerValue) >= 0);
 
       return (
         <InputComponent
-          value={answerText}
+          value={answerValue}
           label={answerText}
           key={i}
           name={this.props.groupName}
           onChange={this.props.onChange ? this.handleChange : undefined}
           checked={this.props.onChange ? checked : undefined}
         >
-          {typeof answer === "object" ?
+          {(typeof answer === "object" && answer.answerValue === undefined) ?
             <div>
               <span style={styles.inputLabel}>
                 {answerText}
