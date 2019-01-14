@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import sectionData, {asyncSetSection} from '@cdo/apps/redux/sectionDataRedux';
+import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -13,9 +14,10 @@ const sectionId = scriptData.section_id;
 const baseUrl = `/teacher_dashboard/sections/${sectionId}`;
 
 $(document).ready(function () {
-  registerReducers({sectionData});
+  registerReducers({sectionData, stats});
   const store = getStore();
   store.dispatch(asyncSetSection(sectionId));
+  store.dispatch(asyncSetCompletedLevelCount(sectionId));
 
   ReactDOM.render(
     <Provider store={store}>
