@@ -1,6 +1,6 @@
 # Brad 2018-11-15 Known crash on SafariYosemite
 @no_older_chrome @no_safari_yosemite
-Feature: Dance Lab
+Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
   @no_firefox
@@ -15,7 +15,7 @@ Feature: Dance Lab
     Then page text does contain "placeholder for testing"
 
   @no_mobile
-  Scenario: Can toggle run/reset in DanceLab
+  Scenario: Can toggle run/reset in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/2?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
@@ -36,7 +36,7 @@ Feature: Dance Lab
     And element "#song_selector" is enabled
 
   @no_mobile
-  Scenario: Can get to level success in DanceLab
+  Scenario: Can get to level success in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load

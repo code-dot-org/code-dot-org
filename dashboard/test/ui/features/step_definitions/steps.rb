@@ -546,6 +546,12 @@ Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |sel
   element_has_css(selector, property, expected_value)
 end
 
+# Example use case: checking webkit and moz overrides for css properties
+Then /^element "([^"]*)" has one of css properties "([^"]*)" equal to "([^"]*)"$/ do |selectors, properties, expected_value|
+  properties = properties.split(',')
+  element_has_css_multiple_properties(selectors, properties, expected_value)
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
     element_css_value(selector, property) == expected_value
@@ -647,6 +653,10 @@ end
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
   expect(value).to eq(negation.nil?)
+end
+
+Then /^I use jquery to set the text of "([^"]*)" to "([^"]*)"$/ do |selector, value|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{value}\");")
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
@@ -939,6 +949,32 @@ end
 
 Given(/^I am enrolled in a plc course$/) do
   enroll_in_plc_course(@users.first[1][:email])
+end
+
+def create_user(**args)
+  name = "Fake User"
+  email, password = generate_user(name)
+  attributes = {
+    name: name,
+    email: email,
+    password: password,
+    user_type: "teacher",
+    age: "21+"
+  }.merge!(args)
+  user = User.new(attributes)
+  user.save ? user : nil
+end
+
+def assign_script_as_student(user_email, script_name)
+  require_rails_env
+  script = Script.find_by_name(script_name)
+  section = Section.create(name: "New Section", user: create_user, script: script)
+  user = User.find_by_email_or_hashed_email(user_email)
+  section.students << user
+end
+
+Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
+  assign_script_as_student(@users.first[1][:email], script_name)
 end
 
 Then(/^I fake completion of the assessment$/) do

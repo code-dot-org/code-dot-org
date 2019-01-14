@@ -3209,6 +3209,23 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "section_scripts returns an empty array if user has no sections" do
+    user = create :user
+    assert_empty user.section_scripts
+  end
+
+  test "section_scripts returns assigned scripts and default scripts in assigned courses" do
+    student = create :student
+    single_script = create :script
+    (create :section, script: single_script).students << student
+    course_script = create :script
+    course_with_script = create :course
+    create :course_script, course: course_with_script, script: course_script, position: 1
+    (create :section, course: course_with_script).students << student
+
+    assert_equal [single_script, course_script], student.section_scripts
+  end
+
   test "last_joined_section returns the most recently joined section" do
     student = create :student
     teacher = create :teacher

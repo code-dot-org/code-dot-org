@@ -6,26 +6,26 @@ sk:
       too_young: Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších
         študentov.
       teacher_must_accept_terms: Tento obsah má vekové obmedzenia a nie je dostupný
-        pre mladších študentov. Požiadaj svojho učiteľa, aby aktualizoval "Podmienky
-        Služieb" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže spraviť
-        prihlásením do Kódového Štúdia a kliknutím na tlačítko "Kontrola aktualizovaných
-        služieb" v hornej časti domovskej stránky Kód Štúdio.
+        pre mladších študentov. Požiadaj svojho učiteľa, aby akceptoval nové "Podmienky
+        používania služby" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže
+        spraviť prihlásením do Code Studia a kliknutím na tlačítko "Prezrieť aktualizované
+        podmienky" v hornej časti domovskej stránky Code Štúdia.
       pair_programmer: Aktuálne pracuješ v páre so študentom, ktorý nemá prístup k
-        tomuto obsahu. Aby sa sem mohol dostať, zruš programovanie v páre a začni
+        tomuto obsahu. Aby si sa sem mohol dostať, zruš párové programovanie a začni
         odznova.
   activerecord:
     errors:
       messages:
-        blank: sa vyžaduje
+        blank: je povinné
         blank_plural: sú požadované
         invalid: je neplatné
         invalid_plural: sú neplatné
     attributes:
       user:
         name: Zobrazované meno
-        name_example: Zobraziť Meno<br/>(e.g. SuperKóder alebo Jana S.)
-        email: E-mail
-        parent_email: Email rodiča alebo zákonného zástupcu
+        name_example: Zobrazované meno <br/>(napr. SuperKóder alebo Jana S.)
+        email: Email
+        parent_email: Email rodiča/zákonného zástupcu
         personal_email: Súkromná emailová addresa <a href="%{url}">(kliknite sem,
           ak nemáte emailovú adresu)</a>
         username: Používateľské meno
@@ -36,17 +36,17 @@ sk:
         age: Vek
         gender: Pohlavie
         edit_header: Upraviť údaje o účte
-        finish_sign_up_header: Dokončite vytvorenie svojho účtu
+        finish_sign_up_header: Dokonči vytvorenie svojho účtu
         finish_sign_up_subheader: Vyplň nasledujúce informácie na dokončenie vytvorenia
           Code.org účtu pre <strong>%{email}</strong>.
         finish_sign_up_subheader_provider: Vyplň nasledujúce informácie na dokončenie
           vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.
         error:
-          future: nemôže byť v buducnosti
+          future: nemôže byť v budúcnosti
   hello: Ahoj svet
   welcome_back: Vitaj späť, %{name}
   your_professional_learning_plan: Tvoj profesionálny učebný plán
-  see_your_learning_plan: Vidieť tvoj učebný plán
+  see_your_learning_plan: Pozrieť svoj učebný plán
   submit: Odoslať
   unsubmit: Neodoslať
   previous_page: Predchádzajúca strana
@@ -60,21 +60,21 @@ sk:
     code:
       label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
-      instructions: Zadaj prosím kód, ktorý si obdržal od tvojho učiteľa. Je to 6
-        písmenový reťazec, niečo ako "ABCDEF".
-      instructions_short: Zadajte 6-miestný kód Vašej sekcie
+      instructions: Zadaj prosím kód, ktorý si dostal od tvojho učiteľa. Je to 6 písmenový
+        kód, niečo ako "ABCDEF".
+      instructions_short: Zadaj 6-miestný kód triedy
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadaj sem svoj tip
     submit: Pridať tip
   appname: Code.org
   stage: Úroveň
-  stage_number: Úroveň %{number}
+  stage_number: Lekcia %{number}
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
   courses_page:
-    title_student: Informácie o Code štúdiu
+    title_student: Uč sa informatiku
     title_teacher: Vyučujte informatiku
   unplugged_activity: Aktivity bez počítača
   of: z
@@ -82,15 +82,15 @@ sk:
   less: MENEJ
   beta: beta
   try_hoc: 'Vyskúšaj si Hodinu Kódu tu >> '
-  try_k8intro: Vyskúšaj si náš K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hodín)
-  k8intro: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
+  try_k8intro: Vyskúšaj si náš K-8 Úvod do Kurzu Informatiky (15-25 hodín)
+  k8intro: K-8 Úvod do Kurzu Informatiky (15-25 hours)
   already_started: 'Už si začal(a)? Pokračuj tu >> '
   demos: 'Admin: Všetky ukážky'
   continue: Pokračovať
   prize: trofej
   more_info: Viac info
   auth:
-    continue_with: Pokračujte s %{provider}
+    continue_with: Pokračovať s %{provider}
     sign_in_with: Prihlásiť sa cez %{provider}
     signed_in: Prihlásený!
     signed_out: Úspešne si sa odhlásil z <a href="%{url}">Code.org</a>.
@@ -106,33 +106,32 @@ sk:
     clever: Smart konto
     powerschool: Hlavný školský účet
     forgot_password: Zabudli ste heslo?
-    migration_success: Podarilo sa to! Aktualizoval si si svoj účet s novými skúsenosťami.
-    demigration_success: Nové skúsenosti s účtom sú teraz na tvojom účte zablokované.
+    migration_success: Podarilo sa to! Aktualizoval si si svoj účet s novými funkcionalitami.
+    demigration_success: Nové funkcionality sú teraz na tvojom účte zablokované.
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?
     not_linked: Ľutujeme, Váš účet Code.org nie je prepojený s účtom %{provider}.
       Musíte sa prihlásiť zadaním hesla nižšie.
     use_clever: Ľutujeme, Váš účet Code.org nie je prepojený s účtom %{provider}.
-      Musíte sa prihlásiť cez Smart portál nižšie.
-    unable_to_connect_provider: Nedokázali sme prepojiť Váš účet na Code.org s %{provider}.
-      Skúste prosím znova.
-    already_in_use: Váš účet %{provider} účet je už prepojený s iným Code.org účtom.
+      Musíte sa prihlásiť cez Váš Clever Portal.
+    unable_to_connect_provider: Nedokázali sme prepojiť Váš účet na Code.org s Vaším
+      %{provider} účtom. Skúste prosím znova.
+    already_in_use: Váš účet %{provider} je už prepojený s iným Code.org účtom.
     already_linked: Váš účet %{provider} je už prelinkovný s Vaším Code.org účtom.
   signup_form:
     email_signup: Prihlás sa so svojou emailovou adresou
     student_count: "%{count} študentov sa už zaregistrovalo."
-    teacher_count: "%{count} učitelov sa už zaregistrovalo."
-    overview: Prihlás sa na účet, aby si mohol sledovať svoj pokroky alebo spravovať
-      svoju triedu. <a href="/">Môžeš prechádzať jednotlivé stupne a skladačky</a>
-      aj bez účtu, ale ak budeš chcieť uložiť svoje pokroky alebo projekty, musíš
-      sa Zaregistrovať.
+    teacher_count: "%{count} učiteľov sa už zaregistrovalo."
+    overview: Vytvor si účet, aby si mohol sledovať svoj pokrok alebo spravovať svoju
+      triedu. <a href="/">Môžeš prechádzať jednotlivými úlohy</a> aj bez účtu, ale
+      ak si budeš chcieť uložiť svoj pokrok alebo projekty, musíš sa zaregistrovať.
     hoc_already_signed_up_heading: Začať bez prihlásenia
-    hoc_already_signed_up_content: Zaregistrovali ste sa, aby ste učil Hodinu Kódu!
+    hoc_already_signed_up_content: Zaregistrovali ste sa, aby ste učili Hodinu Kódu!
       Vy ani Vaši študenti sa nemusíte prihlasovať, aby ste sa Hodiny Kódu zúčastnili.
       Začnite <a href="%{learn_url}">výberom kurzu</a> pre vašu triedu a pošlite žiakom
       jeho odkaz.:<br/><br/>Ak sa vám Hodina Kódu páčila a chcete pokračovať, možete
-      si nižšie nastaviť vytvoriť účet a nastaviť heslo, aby ste mohli vašich študentov
-      zapísať na ktorýkoľvek z našich <a href="%{educate_url}">rozsiahlejších kurzov</a>.
+      si nižšie vytvoriť účet a nastaviť heslo, aby ste mohli vašich študentov zapísať
+      na ktorýkoľvek z našich <a href="%{educate_url}">rozsiahlejších kurzov</a>.
     hoc_already_signed_up_content_post_hoc: Ďakujeme Vám za usporiadanie Hodiny Kódu.
       Pre prihlásenie sa do Code Studio, musíte nastaviť heslo pre Vaše konto. Toto
       Vám umožní uložiť Váš pokrok a spravovať Vašu triedu. Môžete priraďovať lekcie
@@ -156,13 +155,13 @@ sk:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    agree_tos_privacy: Súhlasím s <a href='http://code.org/tos'>podmienkami</a> a
-      so <a href='http://code.org/privacy'>Zásadami ochrany osobných údajov</a>.
-    under_13_consent: Ak mám menej ako 13 rokov, potvrdzujem že mám súhlas rodiča
-      alebo zákonného zástupcu pre použitie a návštevu stránky Code.org a služieb
-      na nej obsiahnutých.
+    agree_tos_privacy: Súhlasím s <a href='http://code.org/tos'>Podmienkami používania
+      služby</a> a so <a href='http://code.org/privacy'>Zásadami ochrany osobných
+      údajov</a>.
+    under_13_consent: Ak mám menej ako 13 rokov potvrdzujem že mám súhlas rodiča alebo
+      zákonného zástupcu používať stránku a služby Code.org.
     student_consent: Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať
-      služby Code.org.
+      stránkua služby Code.org.
     agree_us_website: Súhlasím s používaním stránky prevádzkovanej z územia Spojených
       štátov amerických (USA).
     my_data_to_us: Údaje z používania tejto stránky môžu byť zaslané a uložené alebo
@@ -171,30 +170,30 @@ sk:
       kontaktovať študentov. Študenti nikdy nedostanú emaily od Code.org okrem emailov
       na obnovenie hesla. Pre viac informácií si pozrite naše <a href='http://code.org/privacy'>
       Zásady ochrany osobných údajov</a>.
-    teacher_terms: Súhlasím, že budem dodržiavať Podmienky služieb. Pre viac informácií
-      o súkromí, nájdete na <a href='http://code.org/privacy'> Zásady ochrany osobných
-      údajov</a>.
+    teacher_terms: Súhlasím, že budem dodržiavať Podmienky používania služby. Pre
+      viac informácií o ochrane súkromia, kliknite na <a href='http://code.org/privacy'>
+      Zásady ochrany osobných údajov</a>.
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
       vášho prihlásenia/registrácie.
     user_type_button: Zmeniť typ účtu
     user_type_label: Typ účtu
     user_type_teacher: Učiteľ
     user_type_student: Študent
-    field_is_required: sa vyžaduje
+    field_is_required: je povinné
     accept_terms: Musíte súhlasiť s vytvorením účtu.
     error: Vyskytla sa chyba.
     email_preference_question: Môžeme Vám zasielať emailom aktualizácie o lekciách,
       možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne
       raz za mesiac)
-    email_preference_privacy: "(Prezrite si naše zásady ochrany súkromia)"
+    email_preference_privacy: "(Prezrite si naše Zásady ochrany osobných údajov)"
     email_preference_yes: Áno
     email_preference_no: Nie
-    email_preference_required: Musíte zadať preferencie e-mailu.
+    email_preference_required: Musíte zadať emailové preferencie.
   school_info:
     title: Informácie o škole (voliteľné)
     school_country: Krajina
     select_school_type: Typ školy
-    charter: Zriadovateľ
+    charter: Charterová
     private: Súkromná
     public: Verejná
     homeschool: Domáca výučba
@@ -203,28 +202,28 @@ sk:
     state: Kraj
     district: Okres
     other_district_not_listed: Okres neuvedený vyššie
-    district_name: Názov okresu
+    district_name: Názov školského okresu
     school: Škola
     other_school_not_listed: Škola neuvedená vyššie
     school_name: Názov školy
-    school_zip: PSČ
-    school_address: Adresa
-    school_organization_name: Názov školy alebo organizácie
-    school_organization_zip: PSČ
+    school_zip: PSČ školy
+    school_address: Adresa školy
+    school_organization_name: Názov školy/organizácie
+    school_organization_zip: PSČ školy/organizácie
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
-    login: E-mail
-    login_username: E-mail alebo užívateľské meno
+    login: Email
+    login_username: Email alebo užívateľské meno
     password: Heslo
     remember: Zapamätať prihlásenie
     submit: Prihlásiť sa
   signin:
     try_heading: Chcete vyskúšať programovanie bez prihlásenia?
-    try_hoc: Skúste najprv jednu Hodinu kódovania
-    try_20hours: Skúste náš 20 hodinový Úvod do počítačových vied
+    try_hoc: Skúste najprv jednu Hodinu Kódu
+    try_20hours: Skúste náš 20 hodinový Úvod do informatiky
   signinsection:
     welcome: Vitajte v %{section_name}
-    name: Vyber tvoje meno
+    name: Vyber si meno
     picture: Vyber tvoj tajný obrázok
     words: Teraz zadajte vaše tajné slová
     login: Prihlásiť sa
@@ -236,8 +235,8 @@ sk:
     reset_form:
       title: Zabudli ste heslo?
       instructions: Potvrďte svoju emailovú adresu prepojenú s Vašim účtom nižšie
-        a my vám pošleme pokyny pre obnovenie hesla.
-      email: E-mailová adresa
+        a my Vám pošleme pokyny pre obnovenie hesla.
+      email: Emailová adresa
       submit: Odoslať
     reset_errors:
       captcha_required: Vyplňťe prosím CAPTCHA pre reset Vášho hesla.
@@ -252,35 +251,35 @@ sk:
   welcome_email:
     subject: Pripojte sa k mojej triede (na Code.org)
     body: |
-      Kliknite na preklik nižšie pre prihlásenie na kurzy počítačovej vedy na Code.org (so mnou ako vaším "učiteľom"):
+      Kliknite na link nižšie pre prihlásenie na kurzy informatiky na Code.org (so mnou ako vaším "učiteľom"):
 
       %{link}
 
-      Kurzy sú zábavné, vizuálne pútavé a naučia základné pojmy počítačovej vedy pomocou jednoduchého, usmerňovaného, hre podobného zážitku. Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies, naučte sa s nimi kódovať!  :-)
+      Kurzy sú zábavné, vizuálne pútavé a naučia základné pojmy informatiky pomocou jednoduchého, usmerňovaného, hre podobného zážitku. Naučte sa programovať s Billom Gatesom, Markom Zuckerbergom, Angry Birds a Plants vs. Zombies! :-)
 
       %{name}
   parent_mailer:
-    student_associated_subject: Prihlasovacie informácie na Code.org
+    student_associated_subject: Prihlasovacie údaje pre Code.org
   teacher_mailer:
     new_teacher_subject: Vitajte na Code.org!
     delete_teacher_subject: 'Správa z Code.org: Tvoj účet bol vymazaný'
   section:
     your_section:
-      one: 'Vaša sekcia:'
-      other: 'Vaše sekcie:'
+      one: 'Vaša trieda:'
+      other: 'Vaše triedy:'
     code_with_teacher: "%{section_code} s %{teacher_name}"
     confirm:
-      remove: Naozaj chcete opustiť túto sekciu?
-    default_name: Neoznačená sekcia
-    remove: "(odstrániť sekciu)"
+      remove: Naozaj chcete opustiť túto triedu?
+    default_name: Neoznačená trieda
+    remove: "(odstrániť triedu)"
     type:
       picture: Obrázkové heslo
       word: Tajné slovo
-      email: E-mail
+      email: Email
       google_classroom: Google Classroom
       clever: Clever
   follower:
-    invite_sent: Pozvanie odoslané
+    invite_sent: Pozvánka odoslaná
     added_teacher: "%{name} pridaný ako váš učiteľ"
     registered: Zaregistrovali ste sa na %{section_name}.
     error:
@@ -288,17 +287,17 @@ sk:
       username_not_found: Užívateľské meno %{username} nebolo nájdené
       username_in_use: "%{username} je už obsadené, prosím vyberte si iné"
       no_teacher: Nepodarilo sa nájsť žiadne prihlásenie pomocou "%{teacher_email_or_code}".
-        Prosím požiadajte ich, aby sa zaregistrovali tu a následne sa pokúste opakovane
+        Prosím požiadajte ich, aby sa zaregistrovali a následne sa ich pokúste znovu
         pridať
       section_not_found: Nepodarilo sa nájsť sekciu s kódom "%{section_code}".
-      blank_code: Zadaj kód sekcie
-      cant_join_own_section: Prepáč, nemôžeš sa pridať do vlastnej sekcie.
-      provider_managed_section: Túto sekciu spravuje iný poskytovateľ a nie je možné
+      blank_code: Zadajte, prosím, kód triedy
+      cant_join_own_section: Prepáčte, nemôžete sa pridať do vlastnej sekcie.
+      provider_managed_section: Túto triedu spravuje iný poskytovateľ a nie je možné
         sa k nej pripojiť. Požiadajte prosím Vášho školiteľa o pridanie pomocou %{provider}
-        a opätovné synchronizovanie ich sekcie.
+        a opätovné synchronizovanie ich triedy.
     mail:
       student_disassociated:
-        subject: 'Code.org upozornenie: %{student_name} už nie je tvoj študent.'
+        subject: 'Code.org upozornenie: %{student_name} už nie je Vaším študentom.'
   reports:
     error:
       access_denied: Nemáš prístup k štatistikám tejto osoby
@@ -311,11 +310,11 @@ sk:
     submit: Odoslať
     destroy: Zničiť
     back: Naspäť
-    confirm: Určite?
+    confirm: Ste si istý?
     created: "%{model} bol úspešne vytvorený."
     updated: "%{model} bol úspešne aktualizovaný."
     destroyed: "%{model} bol úspešne odstránený."
-    access_denied: Nemáš prístup k %{model}.
+    access_denied: Nemáš prístup k tomuto %{model}.
   devise:
     registrations:
       user:
@@ -340,10 +339,10 @@ sk:
       my_dashboard: Môj hlavný panel
       course_catalog: Katalóg kurzov
       project_gallery: Projekty
-      sections: Sekcie
+      sections: Triedy
       help_support: Pomoc a podpora
       report_bug: Nahlásiť chybu
-      teacher_community: Komunita školiteľov
+      teacher_community: Komunita učiteľov
       professional_learning: Vzdelávanie pre profesionálov
       documentation: Dokumentácia
       tutorials: Návody
@@ -354,7 +353,7 @@ sk:
       educate_hoc: Hodina Kódu
       educate_partner: Staňte sa naším partnerom
       educate_beyond: Nad rámec Code.org
-      educate_inspire: Inšpirujte študenta
+      educate_inspire: Inšpiruj študenta
       educate_community: Online komunita
       educate_tools: Nástroje a videá
       about_us: O nás
@@ -374,15 +373,15 @@ sk:
       about: O nás
     user:
       classroom: Domovská stránka učiteľa
-      district_dashboard: Oblasť Nástenka
+      district_dashboard: Prehľad pre školský okres
       label: Ahoj %{username}
-      stats: Môj pokrok
+      stats: Code Studio
       settings: Nastavenia účtu
       logout: Odhlásiť sa
       signin: Prihlásiť sa
       signup: Vytvoriť účet
       already_registered: Ste už zaregistrovaný?
-      pair_programming: Párové programovanie
+      pair_programming: Programovanie v páre
       team: Tím
       driver: Prihlásený
       navigator: Navigátor
@@ -402,9 +401,9 @@ sk:
       close: ZAVRIEŤ
       mastery: Koncept
       puzzle_map: Etapy
-      prizes: Zhromažďi všetky trofeje %{total_trophies} a vyhrajte ceny!
+      prizes: Zhromaždi všetky trofeje %{total_trophies} a vyhraj ceny!
       prize_earned: Všetky %{total_trophies} trofeje získané. Vyhral si cenu!
-      prize_us_only: "(Iba USA študenti)"
+      prize_us_only: "(Iba študenti z U.S.A)"
       prizes_link: viac info
   teacher:
     answer: Odpoveď
@@ -412,13 +411,13 @@ sk:
     title:
       one: 'Tvoj učiteľ:'
       other: 'Tvoji učitelia:'
-    remove: "(odstránenie učiteľ)"
+    remove: "(odstrániť učiteľa)"
     confirm:
       remove: Naozaj chcete odstrániť tohto učiteľa?
     students:
-      dashboard: Prejsť na Učiteľovu Nástenku
+      dashboard: Prejsť na Hlavný panel učiteľa
     user_not_found: Učiteľa sa nepodarilo nájsť.
-    student_teacher_disassociated: Opustili ste sekciu %{section_code} s %{teacher_name}.
+    student_teacher_disassociated: Opustili ste triedu %{section_code} s %{teacher_name}.
     panel:
       answer_viewer: Panel pre učiteľa
       student: Študent
@@ -434,9 +433,9 @@ sk:
       update_lock_settings: Tu aktualizujte nastavenie zámku.
       clear_response: Odstráň odozvu
   user:
-    email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
-    email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
-    email_confirm_wrong_email: "(Zlá e-mailová adresa?)"
+    email_confirm_needed: 'Emailová adresa nebola potvrdená:'
+    email_confirm_needed_required: 'Vaša emailová adresa %{email} nebola potvrdená:'
+    email_confirm_wrong_email: "(Zlá emailová adresa?)"
     email_resend_confirm: Poslať potvrdzovacie inštrukcie znova
     new_email_hint: "(uistite sa, že môžete prijímať emaily na túto adresu)"
     new_password_hint: "(nechajte prázdne, ak to nechcete zmeniť)"
@@ -447,38 +446,38 @@ sk:
       s týmto účtom.
     delete_text_teacher_managed_note: Nemáš oprávnenie vymazať tento účet pretože
       je spravovaný tvojím učiteľom. Tvoj učiteľ (učitelia) ťa bude (budú) musieť
-      odstrániť zo svojej sekcie predtým, ako si budeš môcť vymazať svoj účet.
+      odstrániť zo svojej trieby predtým, ako si budeš môcť vymazať svoj účet.
     delete_text_teacher_note: 'Poznámka: vymazaním svojho účtu nevymažete účty Vašich
       študentov.'
     delete_confirm: Naozaj chcete odstrániť tento účet?
     deleted_user: zmazaný používateľ
     no_password_because_oauth: Heslo nie je požadované, pretože ste prihlásený cez
       poskytovateľa služieb.
-    no_password_because_sponsored: Vyhľadaj učiteľa pre správu hesla.
+    no_password_because_sponsored: Pre správu hesla vyhľadaj svojho učiteľa.
     create_personal_login: Vytvorte si vlastné prihlasovacie údaje
     create_personal_login_under_13_info: Ak si chcete ponechať Vaše konto na Code.org
       aj po skončení školského roka, poproste Vášho rodiča/zákonného zástupcu, aby
       Vám pomohol vytvoriť Váš osobný účet nižšie.
-    create_personal_login_under_13_username: Prihlasovacie meno (nepoužívajte Vaše
-      pravé meno!)
+    create_personal_login_under_13_username: Prihlasovacie meno (nepoužívaj tvoje
+      skutočné meno!)
     create_personal_login_under_13_parent_email: Emailová adresa rodiča/zákonného
       zástupcu
     create_personal_login_info: Ak si chceš ponechať svoje konto na Code.org aj po
-      skončení školského roka, môžeš si vytvoriť heslo nižšie.
+      skončení školského roka, tu si môžeš vytvoriť vlastný účet.
     create_personal_login_link_account: Namiesto toho si tiež môžeš vybrať pripojenie
       sa k osobného účtu v sekcii “Spravovanie prepojených účtov”.
-    create_personal_login_terms: Vytvorením užívateľského konta súhlasíte s <a href='%{terms_of_service_url}',
-      target='_blank'>podmienkami používania</a> Code.org. Súhlasím, že mám súhlás
+    create_personal_login_terms: Vytvorením užívateľského konta súhlasím s <a href='%{terms_of_service_url}',
+      target='_blank'>podmienkami používania</a> Code.org. Potvrdzujem, že mám súhlás
       rodiča alebo zákonného zástupcu používať Code.org aj bez prítomnosti učiteľa.
     create_personal_login_email_note: 'Poznámka: Emailové adresy neukladáme vo formáte,
       ktorý by nám umožňoval kontaktovať študentov. Študenti od nás nikdy nedostanú
       emaily s výnimkou obnovenia hesla. Prečítajte si naše <a href=''%{privacy_policy_url}'',
       target=''_blank''>podmienky ochrany súkromia</a> pre viac informácií.'
     enter_new_login_info: Zadajte Vaše nové prihlasovacie informácie
-    confirm_secret_words: Potvrďte, že ste to vy, zadaním Vašich tajných slov
+    confirm_secret_words: Potvrď, že si to ty zadaním tvojich tajných slov
     parent_email_label: Email rodiča / zákonného zástupcu (nepovinné)
-    parent_email_hint: "(toto môže byť použité pre obnovenie hesla)"
-    enter_parent_email: Zadajte emailovú adresu rodiča alebo zákonného zástupcu (pre
+    parent_email_hint: "(môže byť použité pre obnovenie hesla)"
+    enter_parent_email: Zadaj emailovú adresu rodiča alebo zákonného zástupcu (pre
       obnovenie hesla)
     update: Aktualizujte konto
     account_successfully_updated: Konto bolo úspešne aktualizované.
@@ -488,7 +487,7 @@ sk:
   home:
     title: Štúdio kódu
     description: Code Studio je domov pre online kurzy vytvorené Code.org
-    lines_of_code: "%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÉ ŠTUDENTAMI"
+    lines_of_code: "%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÝCH ŠTUDENTAMI"
     lines_of_code_linebreak: "%{lines_count} RIADKOV KÓDU<br/>NAPÍSANÉ %{students_count}
       MILIÓNMI ŠTUDENTOV"
     all_courses: Prehľad kurzov 1, 2 a 3
@@ -496,15 +495,15 @@ sk:
     signin_message: Máte účet? %{link}
     student_reg_link: Prihlásiť sa ako študent
     teacher_reg_link: Registrácia učiteľa
-    signin_directions: Použite Váš účet na sledovanie pokroku.<br/> Učitelia, môžete
-      sledovať celú Vašu triedu.
-    teacher_dashboard: Zobraziť nástenku pokroku
+    signin_directions: Použite Váš účet na sledovanie pokroku.<br/> Učitelia, sledujte
+      celú Vašu triedu.
+    teacher_dashboard: Zobraziť prehľad pokroku
     teacher_student_count_one: Máte %{count} študenta.
     teacher_student_count: Máte %{count} študentov.
     teacher_averages: Vaši študenti získali v priemere %{trophy_average} z %{trophy_max}
       trofejí "Concept Mastery".
-    teacher_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť tento
-      kurz
+    teacher_print_certificates: Vytlač certifikáty pre študentov, ktorí dokončili
+      tento kurz
     teacher_read_blog: Prečítajte si o novinkách a aktualizáciách materiálov na našom
       Educator blogu
     classroom: Tvoja trieda
@@ -517,8 +516,8 @@ sk:
     online: online
     see_details: Pozri detaily
     view_course: Prezrieť kurz
-    prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
-      v odmenách tried.'
+    prize_info: 'Ceny pre účastníkov (iba pre učiteľov verejných škôl v U.S.A): až
+      do $1,000 ako odmeny pre triedy.'
     tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
     trynow: Skúsiť teraz
     add_hint_help: Prosím pomôžte nám pridať tipy pre Code.org tutoriály
@@ -528,15 +527,16 @@ sk:
     test_videos_help: Otestujte naše nové video prehrávače na vašej škole
     try_beta_courses: Novinka! Vyskúšajte naše beta kurzy pre žiakov 1. stupňa ZŠ
     use_as_teacher: Použiť túto stránku ako učiteľ
-    heading_hoc2014: "<h2>Hodina kódovania pre</h2><h1>všetky vekové kategórie</h1>"
-    heading_elementary: "<h2>20 hodín kurzov pre</h2><h1>Začiatočníkov (rôzneho veku)</h1>"
+    heading_hoc2014: "<h2>Hodina Kódu pre</h2><h1>všetky vekové kategórie</h1>"
+    heading_elementary: "<h2>20 hodinové kurzy pre </h2><h1> Základy informatiky (všetky
+      vekové kategórie)</h1>"
     heading_apps: "<h2>Zábava pre</h2><h1>všetkých</h1>"
     heading_tools: "<h2>Pripravený na ďalší krok?</h2> <h1> Nástroje pre 2. stupeň
       základných škôl a stredné školy</h1>"
-    heading_legacy: "<h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>"
+    heading_legacy: "<h2>Náš zrýchlený kurz pre</h2><h1>všetky vekové kategórie</h1>"
     your_gallery: Galéria
-    no_primary_course: Vyskúšajte kurz v Štúdiu kódu
-    choose_next_course: Vyskúšajte Code Studio kurz výberom niektorého z nižsie uvedených
+    no_primary_course: Vyskúšaj kurz v Code Studiu
+    choose_next_course: Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie
     print_certificate: Vytlačiť certifikát
     announcement_title: Oznámenia
     announcement_message_fall2016_features: Celé leto sme pracovali na zapracovávaní
@@ -546,18 +546,18 @@ sk:
       interaktívne nástroje</a> z našich kurzov Základov informatiky v <i>ktorejkoľvek</i>
       triede. A Vaši študenti si môžu <a href="%{unused_code_url}" target="_blank">ponechať
       nepoužitý kód</a> na svojej pracovnej ploche a experimentovať s ním! Pozrite
-      si všetky nové vlastnosti a dajte nám vedieť, čo si o nich myslíte.
-    announcement_csp_widgets_message: Hľadáte zábavnú formu lekcií na témy ako funguje
-      internet, ako kryptografia pomáha uchovať dáta v bezpečí a iné? Vybrali sme
-      najlepšie interaktívne nástroje z našich osnov Základy informatiky a vydali
+      si všetky nové funkcionality a dajte nám vedieť, čo si o nich myslíte.
+    announcement_csp_widgets_message: Hľadáte zábavnú formu ako vyučovať ako funguje
+      internet, ako kryptografia pomáha uchovať dáta v bezpečí a podobne? Vybrali
+      sme najlepšie interaktívne nástroje z našich osnov Základy informatiky a vydali
       sme ich ako samostatné časti, ktoré možete kedykoľvek použiť!
     announcement_learn_more_button: Zistiť viac
     announcement_try_now_button: Skúsiť teraz
-    announcement_host_an_hour_button: Hosťuj Hodinu kódu
+    announcement_host_an_hour_button: Hosťuj Hodinu Kódu
     announcement_watch_video_button: Prehrať video
     announcement_petition: Ako učiteľ patríte medzi propagátorov hnutia za to, aby
       každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz
-      je čas, aby si vaši zástupcovia vypočuli Váš názor. Tento týždeň sa zástupcovia
+      je čas, aby si vaši zástupcovia vypočuli váš názor. Tento týždeň sa zástupcovia
       učiteľov, 28 guvernérov a generálni riaditelia najväčších amerických spoločností
       spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
       informatiky v rámci celej školskej dochádzky na základných i stredných školách.
@@ -566,22 +566,21 @@ sk:
     announcement_apply_now: Použiť teraz
     announcement_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu.
       <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
-    announcement_hoc_launch: Tisíce vyučujúcich vo viac než 180 krajinách odštartuje
-      výučbu počítačových technológii prostredníctvom Hodiny Kódovania 5-11 decembra.
-      Počítame aj s vašou pomocou, zaangažovať ešte viac študentov než kedykoľvek
-      predtým. <a href='%{signup_url}' target='_blank'>Zaregistruj si svoju vlastnú
-      Hodinu Kódovania</a> a daj vedieť svojím kolegom o tom, že ktokoľvek môže začať
-      s výučbou počítačových technológií.
-    announcement_mc_launch: Jeden z našich najpopulárnejších návodov má teraz pokračovanie!
-      Celkom nový Minecraft Dizajnér Hodiny Kódu umožňuje študentom vytvoriť si pravidlá
-      pre svet Minecraft-u. Môžu stvoriť totálne unikátne Minecraft-ové zážitky, následne
-      ich zdieľať s priateľmi, či zahrať si ich na telefónoch. Vytvorte si ich vo
-      svojej triede na Hodine Kódu.
+    announcement_hoc_launch: Tisíce vyučujúcich vo viac než 180 krajinách odštartujú
+      výučbu informatiky prostredníctvom Hodiny Kódu 5-11 decembra. Počítame aj s
+      vašou pomocou zaangažovať ešte viac študentov než kedykoľvek predtým. <a href='%{signup_url}'
+      target='_blank'>Zaregistruj si svoju vlastnú Hodinu Kódu</a> a daj vedieť svojím
+      kolegom o tom, že ktokoľvek môže začať vyučovať informatiku.
+    announcement_mc_launch: Jeden z našich najpopulárnejších kurzov má teraz pokračovanie!
+      Celkom nová Hodina Kódu Minecraft Dizajnér umožní študentom vytvoriť vlastné
+      pravidlá pre svet Minecraftu. Žiaci vytvoria unikátne Minecraftové zážitky,
+      ktoré následne môžu zdieľať s priateľmi, či zahrať sa s nimi na telefóne. Prejdite
+      si kurz vo vašej triede na Hodine Kódu.
     announcement_how_code_studio: Nepotrebujete žiadne skúsenosti na to, aby ste začali
-      učiť informatiku vo vašej triede. Code.org ponúka osnovy, ušebné plány, vysoko-kvalitné
-      profesionálne vyučovacie programy a tonu skvelých nástrojov pre všetky úrovne&mdash;všetko,
-      čo potrebujete, všetko zadarmo. Hľadáte, kde začať? Stiahnite si <a href='%{video_download_url}'>toto
-      video</a>!
+      vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány,
+      vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov
+      pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde
+      začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!
     announcement_go_beyond: Pokračujte aj nad rámec Hodiny Kódu a objavujte koncepty
       v informatike každý týždeň. Code.org ponúka osnovy, učebné plány, vysoko kvalitné
       vzdelávacie programy pre učiteľov a veľa výborných nástrojov pre všetky ročníky&mdash;a
@@ -605,10 +604,10 @@ sk:
       a jari v roku 2017. Veľmi radi si vypočujeme Vaše názory pred spustením aktualizácií
       plánovaných na august 2017."
     announcement_student_privacy: V Code.org pristupujeme k ochrane súkromia študentov
-      veľmi zodpovedne. Pre ochranu súkromia študentov sme upravili Vašu prihlasovaciu
-      stránku tak, že nezobrazuje celé mená. Aj keď táto zmena prispeje k ochrane
-      osobných údajov, naďalej odporúčame používateľom stránky <i>nepoužívať celé
-      mená pre študentov</i>.
+      veľmi zodpovedne. Pre ochranu súkromia študentov sme upravili prihlasovaciu
+      stránku vašej triedy tak, že nezobrazuje celé mená. Aj keď táto zmena prispeje
+      k ochrane osobných údajov, naďalej odporúčame používateľom stránky <i>nepoužívať
+      celé mená študentov</i>.
     announcement_apcsp_recruitment: '<strong>Učitelia Základov informatiky:</strong>
       Vaši žiaci môžu účinkovať v ďalšom virálnom videu Code.org a podporiť rovesníkov
       v absolvovaní tohtoročnej skúšky AP Základy informatiky. Pozývame všetkých študentov
@@ -635,21 +634,21 @@ sk:
       výučbových programov pre profesionálov <strong>zadarmo a bez nákladov pre Vás
       i Vašu školu</strong>. Prihlásiť sa môžete do 14. apríla.
     announcement_applab_export: App Lab, naše webové programovacie prostredie odteraz
-      podporuje export tvojho kódu! Môžeš začať tvoriť aplikácie presúvanim JavaScriptových
+      podporuje export tvojho kódu! Môžeš začať tvoriť aplikácie presúvaním JavaScriptových
       blokov, potom si vyexportovať tvoj kód a pokračovať v ktoromkoľvek profesionálnom
       vývojovom prostredí.
     announcement_csp_survey: "<b>Gratulujeme všetkým učiteľom Základov informatiky!</b><br
       />Vaši žiaci Základov informatiky zúčastňujúci sa AP skúšky v informatike sa
-      pridajú k ďaľším viac než 50 000 študentom v najväčšej AP skúške v histórií.
+      pridajú k ďalším viac než 50 000 študentom v najväčšej AP skúške v histórií.
       Nechajme teraz znieť hlas Vašich študentov - pripomeňte im, aby na konci vyplnili
-      anketu! Nudete si môcť prezrieť odpovede Vašich študentov a takisto Vám poskytneme
-      súhrnný report z Vašej krajiny."
-    announcement_navigation_redesign: "<b>Nadchdzajúce zmeny v navigácií na stránke</b><br
+      anketu! Budete si môcť prezrieť odpovede Vašich študentov a takisto Vám poskytneme
+      súhrnný report z celej krajiny."
+    announcement_navigation_redesign: "<b>Nadchádzajúce zmeny v navigácií na stránke</b><br
       />Už toto leto vylepšíme navigáciu na Code.org, aby ste vždy mali prístup k
       Vašim najpoužívanejším položkám z akéhokoľvek miesta na tejto stránke. Hneď
-      po prihlásení sa do Vášho konta školiteľa bude na každej stránke nová navigačná
-      lišta s odkazmi na Vašu domovskú stránku, kurzy, galériu projektov, sekcie a
-      výuku pre profesionálov."
+      po prihlásení sa do Vášho učiteľského účtu bude na každej stránke nová navigačná
+      lišta s odkazmi na Vašu domovskú stránku, kurzy, galériu projektov, triedy a
+      profesionálne vzdelávanie."
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.
@@ -658,7 +657,7 @@ sk:
     current_section_dne: Ospravedlňujeme sa, ale sekcia %{current_section_code} neexistuje.
       Zadajte kód inej sekcie.
     student_ids_not_entered: Uveďte, prosím, študentove ids.
-    student_not_found: Jeden alebo viac študentov nemožno nájsť.
+    student_not_found: Jedného, alebo viacerých študentov sme nenašli.
     all_students_must_be_in_current_section: Všetci študenti musia byť v súčasnosti
       zapísaní v sekcii.
     already_enrolled_in_new_section: Nemôžete premiestniť týchto študentov, pretože
@@ -669,7 +668,7 @@ sk:
     title: Informácie o Code štúdiu
     description: Ktokoľvek sa môže naučiť informatiku. Programujte hry a aplikácie
       s Code štúdiom.
-    try_hour_of_code: Vyskusaj lekciu kódovania!
+    try_hour_of_code: Vyskúšaj Hodinu Kódu!
   gender:
     male: Muž
     female: Žena
@@ -688,26 +687,27 @@ sk:
       a Microsoftu, ktorí pomohli vytvoriť tieto materiály.
     help_from_html_old: Tieto materiály pomohli vytvoriť inžinieri z firiem Amazon,
       Google a Microsoft.
-    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené.
-      < br / > Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva
-      vyhradené. < br / > Frozen &#8482; © %{current_year} Disney. Všetky práva vyhradené.
-      < br / > Doba ľadová &#8482; © %{current_year} 20th Century Fox. Všetky práva
-      vyhradené. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment
-      Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; © %{current_year}
-      Electronic Arts Inc. Všetky práva vyhradené. < br / > The Amazing World of Gumball
-      je ochranná známka a © 2015 Cartoon Network.
-    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Všetky práva
-      vyhradené. Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva
-      vyhradené. Frozen&#8482; © %{current_year} Disney. Všetky práva vyhradené. Ice
-      Age &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. Angry
-      Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené.
-      Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva
-      vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Všetky práva
+      vyhradené.<br />Star Wars&#8482; &copy;%{current_year} Disney a Lucasfilm. Všetky
+      práva vyhradené.<br />Frozen&#8482; &copy;%{current_year} Disney. Všetky práva
+      vyhradené.<br />Doba ľadová&#8482; &copy;%{current_year} 20th Century Fox. Všetky
+      práva vyhradené.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Všetky práva vyhradené.<br />Plants vs Zombies&#8482; &copy;%{current_year}
+      Electronic Arts Inc. Všetky práva vyhradené.<br />The Amazing World of Gumball
+      je ochranná známka a &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Všetky
+      práva vyhradené. Star Wars &#8482; &copy; %{current_year} Disney a Lucasfilm.
+      Všetky práva vyhradené. Frozen&#8482; &copy; %{current_year} Disney. Všetky
+      práva vyhradené. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Všetky
+      práva vyhradené. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Všetky práva vyhradené. Plants vs. Zombies &#8482; &copy; %{current_year}
+      Electronic Arts Inc. Všetky práva vyhradené. The Amazing World of Gumball je
+      ochranná známka a &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org používa p5.play, ktorý je licencovaný pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Poháňaný službami Amazon Web Services
-    trademark: "&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code
-      ® sú ochranné známky Code.org."
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
+      of Code&reg; sú ochranné známky Code.org."
     copyright: Autorské práva
     more: Viac
     feedback: Poskytnúť spätnú väzbu
@@ -715,18 +715,18 @@ sk:
     support: Podpora
     support_url: http://support.code.org/
     tos_short: Podmienky
-    tos: Podmienky
+    tos: Podmienky používania služby
     privacy: Zásady ochrany súkromia
     secure: Bezpečná verzia
     report_abuse: Nahlásenie zneužitia
     built_on_code_studio: Vyvinuté v Code Studio
     make_my_own_app: Urob svoju vlastnú aplikáciu
     how_it_works: Ako to funguje (Pozrite si kód)
-    try_hour_of_code: Vyskusaj lekciu kódovania!
+    try_hour_of_code: Vyskúšaj Hodinu Kódu!
   reference_area:
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy
-    teacher: Pozrite si riešenie
+    teacher: Zobraziť riešenie
     teacher_no_solution: Skryť zobrazenie riešenia
     auth_error: Nemáte oprávnenie vidieť riešenie.
     submit: Aktualizovať umiestnenie Umelca
@@ -741,9 +741,10 @@ sk:
     show_video: Zobraziť video
   compatibility:
     upgrade:
-      unsupported_message: Váš prehliadač internetu nepodporujeme. Prosím aktualizujte
-        si váš prehliadač internetu, <a href='%{supported_browsers_url}', target='_blank'>podporované
-        prehliadače</a>. Skúste obnoviť stránku.
+      unsupported_message: Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte
+        si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'>
+        na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku,
+        ale očakávajte poruchy niektorých funckionalít.
       link: Zistiť viac
       applab_unsupported_tablet: App Lab funguje najlepšie na stolnom počítači alebo
         notebooku s myšou a klávesnicou. Pri používaní App Labu na tomto zariadení
@@ -760,7 +761,7 @@ sk:
   slow_loading: Trvá to dlhšie než zvyčajne...
   try_reloading: Skúste načítať stránku znovu
   next_stage: Hotovo! Pokračujte do ďalšej úrovne
-  download_pdf: Otvoriť plán lekccií
+  download_pdf: Otvoriť plán lekcií
   lesson_plan: Plán lekcie
   view_lesson_plan: Zobraziť plán lekcie
   pdf_download: Stiahnuť PDF
@@ -768,9 +769,9 @@ sk:
   video_coming_soon: Video už čoskoro!
   not_started: Študent neprešiel túto úroveň.
   share_code:
-    title: Kliknite na 'Beh' na zobrazenie môjho kódu za behu
-    bounce_og_title: Pozri sa na moju Skákaciu hru
-    flappy_og_title: Pozri sa na moju Flappy hru
+    title: Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii
+    bounce_og_title: Pozri sa na moju Bounce Game
+    flappy_og_title: Pozri si moju Flappy hru
     studio_og_title: Pozri si moju Play Lab appku
     check_out_what_i_made: Pozrite, čo som vytvoril/a
     og_description: Tento kód som napísal/a sama s Code.org
@@ -816,11 +817,11 @@ sk:
         ale určite pobaví študentov všetkých vekových kategórií!
       body_short: Nauč sa základy informatiky v zrýchlenej verzií kurzov 2-4.
     hoc2014:
-      try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
+      try_new_tutorial: Skúste náš nový kurz Hodina Kódu v betaverzii
       try_frozen: Umelec s Annou a Elsou z Frozen
     gallery:
       title: Galéria
-      body: Zobraziť galériu aplikácií a obrázkov vytvorených našími užívateľmi
+      body: Zobraziť galériu aplikácií a obrázkov vytvorených našimi užívateľmi
     gamelab:
       title: Game Lab
       body: Game Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché
@@ -857,10 +858,10 @@ sk:
       body: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po
         Minecrafte s kódom.
     sports:
-      body: Vytvor basketbalovú hru alebo pospájaj a pomiešaj viaceré športy.
+      body: Vytvor basketbalový zápas alebo pospájaj a pomiešaj viaceré športy.
     text-compression:
-      body: V tejto lekcií budú študenti používať nástroj Kompresia textu na kompresiu
-        textu pomocou nahradenia opakujúcich sa vzorov symbolmi.
+      body: V tejto lekcii študenti použijú nástroj Kompresia textu na kompresiu textu
+        pomocou nahradenia opakujúcich sa vzorov symbolmi.
     unplugged:
       title: Lekcie bez počítača
       audience: Vek 4+
@@ -875,35 +876,35 @@ sk:
         nepotrebuješ!
     widgets:
       title: Widgety
-      body: Študenti môžu preskúmať koncepty z našich kurzov Základov informatiky
-        priamo na vlastnej koži použitím týchto digitálnych nástrojov. Použite widgety
+      body: Študenti môžu použitím týchto digitálnych nástrojovpreskúmať koncepty
+        z našich kurzov Základov informatiky priamo na vlas tnej koži. Použite widgety
         podľa vlastnej vôle alebo vytvorte lekciu zameranú na konkrétny koncept pre
         Vašu triedu.
       audience: Vek 14+
       cta: Nauč sa ako
   gallery:
-    students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
-    students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
-    picture_count: V posledných <b>%{days}</b> dňoch, študenti nakreslil <b>%{count}</b>
-      obrázkov napísaním vlastného počítačového programu. Kliknutím na obrázok uvidíte
-      program v akcii.
-    activity_count: V posledných dňoch <b>%{days}</b>, študenti vytvorili<b>%{count}</b>
-      aplikacií a fotiek napísaním vlastného počítačového programu. Kliknutím na obrázok
-      a screenshot uvidíte program v akcii.
+    students_drew_these_with_code: Študenti nakreslili tieto obrázky pomocou kódu!
+    students_made_these_with_code: Študenti vytvorili tieto výtvory pomocou kódu!
+    picture_count: V posledných <b>%{days}</b> dňoch, študenti nakreslili <b>%{count}</b>
+      obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky a uvidíte
+      každý program v akcii.
+    activity_count: V posledných <b>%{days}</b> dňoch, študenti vytvorili<b>%{count}</b>
+      appiek a obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky
+      a uvidíte každý program v akcii.
     want_to_make_your_own: Chceš vytvoriť svoj vlastný?
     how_to_save: Na konci všetkých návodov klikni na "Ukončiť" a "Uložiť", pre uloženie
       svojej práce do galérie.
     more: Viac &rarr;
     caption_by_name_age: podľa %{name}, vek %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: "%{time_ago} v minulosti"
     header: Galéria
     header_playlab: Príbehy a hry
-    header_artist: Kód art
+    header_artist: Code umenie
     report_abuse: Nahlásenie zneužitia
   landing:
     prerelease: Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená,
-      že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok
-      a vylepšení, ktoré sú vykonané.
+      že to nie je finálna verzia kurzu a kurz môže byť zmenený na základe prijatých
+      pripomienok a následných vylepšení.
     prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
       a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
     report_bug: Nahlásiť chybu
@@ -939,13 +940,13 @@ sk:
     wrong_body: Ďakujeme za odoslanie odpovedí.
     correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
-    unsubmit-title: Odvolaj tvoje hodnotenie
-    unsubmit-body: Odvolanie tvojho hodnotenia obnoví čas a dátum odoslania.  Si si
-      istý?
-    submit-incomplete-title: Odošli tvoje hodnotenie
-    submit-incomplete-body: Niektoré otázky si nechal nevyplnené.  Nemôžeš upravovať
-      svoje hodnotenie po odoslaní.  Si si istý?
-    submit-complete-title: Odošli tvoje hodnotenie
+    unsubmit-title: Zrušiť zaslané odpovede
+    unsubmit-body: Zrušenie zaslaných odpovedí vynuluje čas a dátum odoslania.  Si
+      si istý?
+    submit-incomplete-title: Odoslať odpovede
+    submit-incomplete-body: Niektoré otázky si nechal nevyplnené. Po odoslaní svoje
+      odpovede už nemôžeš upravovať. Si si istý?
+    submit-complete-title: Odoslať odpovede
     submit-complete-body: Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý?
   match:
     wrong_title: Nesprávne riešenie
@@ -971,8 +972,8 @@ sk:
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
-    startover_body: Toto vynuluje puzzle na štartovaciu pozíciu a vymaže všetky údaje,
-      ktoré boli pridané alebo zmenené.
+    startover_body: Toto vráti úlohu do východzej situácie a vymaže všetky údaje,
+      ktoré boli pridané, alebo zmenené.
     startover_ok: Začať odznova
     startover_cancel: Zrušiť
   time:
@@ -981,31 +982,31 @@ sk:
     week: týždeň
   age_interstitial:
     age: Váš vek
-    header: Konto aktualizácia údajov
+    header: Aktualizácia údajov na účte
     message: Sme v procese aktualizácie našich skúseností, ktoré vám poskytnú ešte
       silnejšiu ochranu súkromia. K tomu potrebujeme aby existujúci používatelia zadali
       ich vek. <br/> Ako vždy, code.org nikdy neprenajme, nepredá alebo nezdieľa tieto
       informácie s tretími stranami.
-    sign_out: Ak si neželáte poskytnúť váš vek môže sa <a href="%{url}"> odhlásiť</a>.
+    sign_out: Ak si neželáte poskytnúť váš vek, môžete sa <a href="%{url}"> odhlásiť</a>.
   terms_interstitial:
     title: Aktualizované podmienky poskytovania služby a ochrany súkromia
-    intro_desc: Aktualizovali sme naše zmluvné podmienky a dokument o ochrane osovných
+    intro_desc: Aktualizovali sme naše Zmluvné podmienky a Zásady ochrany osobných
       údajov. Zmeny sú účinné od 24. augusta 2016.  Najväčšou zmenou je,  že <i>už
-      viac nebudeme uchovávať e-mailové adresy študentských účtov na v Code Studio.</i>
+      viac nebudeme uchovávať emailové adresy študentských účtov v Code Studiu.</i>
       Je to pre nás veľký krok a dúfame, že sme nastavili nový štandard pre súkromie
-      študentov v technológiách pre vzdelávanie. Súhrn zmien sme vám poslali e-mailom.
+      študentov v technológiách pre vzdelávanie. Súhrn zmien sme vám poslali emailom.
     intro_instructions: Je potrebné, aby ste akceptovali tieto nové podmienky pre
-      študentov vo veku menej ako 13 rokov vo vašej triede, aby získali plný prístup
-      k všetkýn najnovším funkciám v Code Studio.  Pri registrácii účtu pre študenta
-      s vekom menej ako 13 rokov, budete musieť potvrdiť, že vaša škola má súhlas
-      rodiča pre zhromažďovanie osobných údajov študenta na využitie a prínos pre
-      školu, vrátane vzdelávacích programov, ako napríklad Code Studio.
-    tos: Podmienky
+      študentov mladších ako 13 rokov, aby získali plný prístup ku všetkýn najnovším
+      funkciám Code Studia.  Pri registrácii účtu pre študenta mladšieho ako 13 rokov
+      budete musieť potvrdiť, že vaša škola má súhlas rodiča na zhromažďovanie osobných
+      údajov študenta a ich využitie vo vzdelávacích programoch, ako napríklad Code
+      Studio.
+    tos: Podmienky používania služby
     privacy: Zásady ochrany súkromia
     privacy_notice: Ochrana osobných údajov
     accept_label: Súhlasím s aktualizáciou <a href="%{tos_url}" target="_blank">Podmienok
-      poskytovania služieb</a> a s <a href="%{privacy_url}" target="_blank">Ochranou
-      súkromia</a>
+      poskytovania služby</a> a s <a href="%{privacy_url}" target="_blank">Zásad ochrany
+      osobných údajov</a>.
     accept: Prijať
     print: Tlačiť
     reminder_desc: Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné
@@ -1013,7 +1014,7 @@ sk:
       údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť.
       Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje
       výučby JavaScript môžu byť nedostupné vašim študentom.
-    review_terms: Prehodnoť aktualizované podmienky
+    review_terms: Prezrieť aktualizované podmienky
   school_info_interstitial:
     title: Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať
       náš pokrok!
@@ -1037,10 +1038,10 @@ sk:
     decline: Zatvoriť
   zendesk_too_young_message: Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu
     stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a>
-    bez prihlásenia, prípadne požiadať tvojich rodičov alebo učiteľov, aby nás za
-    teba kontaktovali.
+    bez prihlásenia, alebo požiadaj svojich rodičov alebo učiteľa, aby nás za teba
+    kontaktovali.
   progress:
-    not_started: nezačal
+    not_started: nezačaté
     in_progress: v procese
     completed_too_many_blocks: dokončené, príliš veľa blokov
     completed_perfect: dokončené, super
@@ -1048,19 +1049,19 @@ sk:
     assessment: ocenenie
     submitted: predložené
   studio:
-    courses_working_on: Kurzy na ktorých pracujete
+    courses_working_on: Kurzy na ktorých pracuješ
     completed_courses: Absolvované kurzy
     all_courses: Všetky kurzy
   project:
     projects: Projekty
-    create: Vytvoriť Projekt
+    create: Vytvoriť projekt
     create_a_project: 'Vytvoriť nový projekt:'
-    new: Vytvoriť Nový
+    new: Vytvoriť nový
     rename: Premenovať
     save: Uložiť
     delete: Vymazať
     import: Import
-    share_link_import_bad_link_header: Link na zdieľanie nebol nerozpoznaný
+    share_link_import_bad_link_header: Link na zdieľanie nebol rozpoznaný
     share_link_import_bad_link_body: 'Link na zdieľanie sa nám nepodarilo importovať.
       Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý
       link.'
@@ -1077,8 +1078,8 @@ sk:
     share_copy_link: 'Skopírujte odkaz:'
     share_embed_description: Môžete vložiť kód do HTML stránky pre zobrazenie projektu
       na webovej stránke.
-    share_u13_warning: Opýtajte sa svojho učiteľa predtým, ako niečo zdieľate. Zdieľajte
-      len v rámci školi.
+    share_u13_warning: Opýtaj sa učiteľa predtým, ako niečo zdieľaš. Zdieľaj len v
+      rámci školy.
     embed: Vložiť
     advanced_share: Zobraziť rozšírené možnosti
     no_projects: Momentálne nemáte žiadne projekty. Kliknite na jedno z tlačidiel
@@ -1089,7 +1090,7 @@ sk:
     updated: Aktualizovaný
     project_type: Typ projektu
     help_text: Klikni na <strong>Vytvoriť Appku</strong> alebo <strong>Nakresliť niečo</strong>
-      a vytvor nový projekt!<br/> Kedykoľvek sa môžeš vrátiť spať a pokračovať v práci
+      a vytvor nový projekt!<br/> Kedykoľvek sa môžeš vrátiť späť a pokračovať v práci
       na svojom projekte.
     need_help: Potrebujete pomôcť so štartom?
     thumbnail_help: Nevidíte správny obrázok Vášho projektu? Spustite Vašu aplikáciu
@@ -1102,46 +1103,46 @@ sk:
     not_saved: Neuložené
     cancel: Zrušiť
     delete_confirm_title: Naozaj chcete odstrániť tento projekt?
-    delete_confirm_text: Vymazaním tohto projektu sa navždy zmaže aj z Vášho Projektového
-      zoznamu. Všetci, s ktorými ste zdieľali odkaz, nebudú schopní naďalej Váš projekt
-      vidieť.
-    view_all: Zobraziť moje Projekty
+    delete_confirm_text: Vymazaním tohto projektu sa projekt navždy zmaže aj z tvojho
+      zoznamu Moje Projekty. Nikto, s kým si zdieľal odkaz, si už tvoj projekt nebude
+      môcť pozrieť.
+    view_all: Zobraziť Moje Projekty
     remix: Remix
     click_to_remix: Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!
     edit_project: Upraviť projekt
-    sharing_disabled: Prepáčte, ale tento projekt nie je možné zdieľať. Ak je to Váš
-      projekt alebo projekt Vášho študenta, <a href='https://studio.code.org/users/sign_in'>prihláste
+    sharing_disabled: Je nám ľúto, ale tento projekt nie je možné zdieľať. Ak je to
+      Váš projekt alebo projekt Vášho študenta, <a href='https://studio.code.org/users/sign_in'>prihláste
       sa</a> do Vášho konta pre zobrazenie projektu.
     abuse:
       tos: Tento projekt bol nahlásený za porušenie <a href='http://code.org/tos'>
         Používateľských podmienok</a> Code.org a nie je ho možné zdieľať s ostatnými.
-      policy_violation: Tento projekt obsahuje informácie, ktoré nie je možné zdielať
-        s ostatnými užívateľmi. Pre úpravu obsahu aplikácie sa prosím skontaktujte
-        s vlastníkom aplikácie.
+      policy_violation: Tento projekt obsahuje informácie, ktoré nie je možné zdieľať
+        s ostatnými užívateľmi. Pre úpravu obsahu aplikácie prosím kontaktujte vlastníka
+        aplikácie.
       contact_us: Ak si myslíte, že to je chyba, prosím <a href='https://code.org/contact'>
         kontaktujte nás.</a>
-      go_to_code_studio: Prejsť na kód Studio
+      go_to_code_studio: Prejsť na Code Studio
       report_abuse_form:
-        intro: Ak ste sa stretli s urážlivým obsahom, hrozbou, šikanovaním, obťažovaním
-          alebo porušením autorských práv na obsah ktorý vlastníte počas používania
-          aplikácií vyvinutých v Code Studio, prosím vyplňte formulár nižšie. Berieme
+        intro: Ak ste sa počas používania aplikácií vyvinutých v Code Studio stretli
+          s urážlivým obsahom, hrozbou, šikanovaním, obťažovaním alebo porušením autorských
+          práv na obsahu, ktorý vlastníte, vyplňte, prosím, formulár nižšie. Berieme
           vaše správy veľmi vážne, primerane ich prešetríme a prijmeme vhodné opatrenia.
         validation:
-          email: Uveďte e-mailovú adresu
+          email: Uveďte emailovú adresu
           age: Uveďte prosím vek
           abuse_type: Odpovedzte, prosím, ako tento obsah porušuje podmienky služby
           abuse_detail: Uveďte prosím podrobnosti týkajúce sa obsahu, ktorý nahlasujete
         abusive_url: URL adresa obsahu bude nahlásená
         abuse_type:
           question: Ako tento obsah porušuje %{link_start}Podmienky používania%{link_end}?
-          harassment: Hrozby, internetové šikanovanie, obťažovanie
+          harassment: Hrozby, kyberšikana, obťažovanie
           offensive: Nevhodný obsah
           infringement: Porušenie autorských práv
           other: Ostatné
         detail: Uveďte čo najviac podrobností ohľadom obsahu ktorý nahlasujete.
-        acknowledge: Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať
-          v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end}
-          a %{link_start_tos}Podmienky používania%{link_end}
+        acknowledge: Odoslaním týchto informácií beriete na vedomie, že sa s nimi
+          bude zaobchádzať v súlade s %{link_start_privacy}Podmienkami ochrany súkromia%{link_end}
+          a %{link_start_tos}Podmienkami používania%{link_end}.
   peer_review:
     accepted:
       name: Prijaté
@@ -1151,7 +1152,7 @@ sk:
       description: "<strong>Nie</strong>, toto zadanie<strong>nespĺňa</strong> požiadavky"
     escalated:
       name: Vyriešené
-      description: Inštruktor by mohol preskúmať tento návrh
+      description: Chcel by som, aby inštruktor preskúmal tento návrh
     instructor_feedback: Spätná väzba inštruktora
     peer_feedback: Spätná väzba spoluriešiteľa
     outdated: Táto spätná väzba bola pridaná k predchádzajúcej verzii
@@ -1167,33 +1168,26 @@ sk:
     csf_e_2: Obsah kurzu E
     csf_f_1: Posuňte sa do kurzu F (voliteľné)
     csf_f_2: Obsah kurzu F
-    csd1_1: 'Kapitola 1: Proces riešenia problému'
-    csd1_2: 'Kapitola 2: Počítače a riešenia problémov'
-    csd2_1: 'Kapitola 1: Webový obsah a HTML'
-    csd2_2: 'Kapitola 2: Štýly a CSS'
+    csd1_1: 'Kapitola 1: Proces riešenia problémov'
+    csd1_2: 'Kapitola 2: Počítače a riešenie problémov'
+    csd2_1: 'Kapitola 1: Obsah webu a HTML'
+    csd2_2: 'Kapitola 2: Dizajn a CSS'
     csd3_1: 'Kapitola 1: Obrázky a animácie'
     csd3_2: 'Kapitola 2: Tvorba hier'
     csd4_1: 'Kapitola 1: Užívateľsky orientovaný dizajn'
     csd4_2: 'Kapitola 2: Prototypovanie aplikácií'
-    csd5_1: 'Kapitola 1: Predstavenie informácie'
     csd5_2: 'Kapitola 2: Riešenie problémov s dátami'
     csd6_1: 'Kapitola 1: Programovanie s hardvérom'
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: Hodnotenie kurzu
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
-    csp1_2: 'Kapitola 2: Vynájdenie internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
-    csp2_2: 'Kapitola 2: Práca s dátami a vizualizácia dát'
-    csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'
     csp4_1: 'Kapitola 1: Svet Big Data a šifrovania'
     csp5_1: 'Kapitola 1: Udalosťami riadené programovanie'
     csp5_2: 'Kapitola 2: Programovanie s dátovými štruktúrami'
     cspSurvey: Anketa
     cspAssessment: Hodnotenie kapitoly
     csp_ap_1: 'Kapitola 1: AP technické nastavenie'
-    csp_ap_2: 'Kapitola 2: AP prehliadanie výkonovej úlohy'
-    csp_ap_3: 'Kapitola 3: AP výtváranie výkonovej úlohy'
-    csp_postap_1: 'Kapitola 1: Práca s dátami a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
     csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
@@ -1204,66 +1198,66 @@ sk:
       Code.org.
     disclaimer_text: Táto stránka môže obsahovať iné zásady ochrany údajov, než je
       to v prípade Code.org. Zdroje z tretích strán sme vybrali pre to, že si myslíme,
-      že môžu byť pre teba užitočné. Hoci nie sme priamo zodpovedný za obsah tejto
-      webovej stránky, prosíme <a href='%{support_url}'>skontaktuj podporu</a> ak
-      objavíš nevhodný obsah, alebo nefunkčný odkaz k prepojenej lokalite.
+      že môžu byť užitočné. Hoci nie sme priamo zodpovední za obsah tejto webovej
+      stránky, prosíme <a href='%{support_url}'>skontaktujte podporu</a> ak objavíte
+      nevhodný obsah, alebo ak referovaná stránka už nie je k dispozícii.
   hoc_download:
-    title: Hodina kódu - súbory na stiahnutie
+    title: Hodina Kódu - súbory na stiahnutie
     capsule_title: Máte prístup na internet?
     capsule_desc: Používaj online webovú aplikáciu <a href="%{url}">%{app_name}</a>.
     instructions_headline: Žiadny internet?
-    instructions: 'Pokyny pre učiteľov: ak máte nedostatočné internetové služby, návody
-      Hodiny Kódovania sú dostupné na stiahnutie a inštaláciu pre prácu v autonómnom
-      režime (angl. offline). Zvoľte svoj jazyk a platformu, stiahnite a nainštalujte
-      na všetky počítače vo svojej triede. Poznámka: študenti sa nemôžu prihlásiť
-      do Kódovacieho Štúdia, uložiť postup, alebo vytlačiť certifikáty. Učitelia môžu
-      vytlačiť certifikáty v predstihu <a href="%{url}">tu</a>.'
-    minecraft_name: Hodina kódu Minecraft
+    instructions: 'Pokyny pre učiteľov: ak máte slabé pripojenie na internet, tieto
+      kurzy Hodiny Kódu sú dostupné na stiahnutie a inštaláciu na počítači pre prácu
+      bez internetu (angl. offline). Zvoľte svoj jazyk a platformu, stiahnite si kurz
+      a nainštalujte ho na všetky počítače vo svojej triede. Poznámka: študenti sa
+      nemôžu prihlásiť do svojho účtu, ukladať postup, alebo tlačiť certifikáty. Učitelia
+      môžu vytlačiť certifikáty v predstihu <a href="%{url}">tu</a>.'
+    minecraft_name: Hodina Kódu Minecraft
     starwars_blocks_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (bloky)'
     starwars_javascript_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
     download_message: Stiahnuť %{app_name} na použitie v offline móde (136MB)
-    download_in_Albanian: 'Stiahnúť v albánčine:'
-    download_in_Arabic: 'Stiahnúť v arabčine:'
-    download_in_Azerbaijani: 'Stiahnúť v azerbajdžančine:'
-    download_in_Basque: 'Stiahnúť v baskičtine:'
-    download_in_Bosnian: 'Stiahnúť v bosiačtine:'
-    download_in_Bulgarian: 'Stiahnúť v bulharčine:'
-    download_in_Catalan: 'Stiahnúť v katalánčine:'
-    download_in_Chinese-Taiwan: 'Stiahnúť v taiwanskej činštine:'
-    download_in_Chinese: 'Stiahnúť v čínštine:'
-    download_in_Croatian: 'Stiahnúť v chorvátčine:'
-    download_in_Czech: 'Stiahnúť v češtine:'
-    download_in_Danish: 'Stiahnúť v dánčine:'
-    download_in_Dutch: 'Stiahnúť v holandčine:'
-    download_in_English: 'Stiahnúť v angličtine:'
-    download_in_Finnish: 'Stiahnúť vo fínčine:'
-    download_in_French: 'Stiahnúť vo francúzštine:'
-    download_in_German: 'Stiahnúť v nemčine:'
-    download_in_Greek: 'Stiahnúť v gréčtine:'
-    download_in_Hebrew: 'Stiahnúť v hebrejčine:'
-    download_in_Hungarian: 'Stiahnúť v madarčine:'
-    download_in_Icelandic: 'Stiahnúť v islandčine:'
-    download_in_Indonesian: 'Stiahnúť v indonézčine:'
-    download_in_Irish: 'Stiahnúť v írčine:'
-    download_in_Italian: 'Stiahnúť v talainčine:'
-    download_in_Japanese: 'Stiahnúť v japončine:'
-    download_in_Korean: 'Stiahnúť v kórejčine:'
-    download_in_Latvian: 'Stiahnúť v lotyštine:'
-    download_in_Lithuanian: 'Stiahnúť v litovčine:'
-    download_in_Norwegian: 'Stiahnúť v nórčine:'
-    download_in_Norwegian-Nynorsk: 'Stiahnúť v nynorskej nórčine:'
-    download_in_Polish: 'Stiahnúť v poľštine:'
-    download_in_Portuguese-Brazil: 'Stiahnúť v brazílskej portugalčine:'
-    download_in_Portuguese: 'Stiahnúť v portugalčine:'
-    download_in_Romanian: 'Stiahnúť v rumunčine:'
-    download_in_Russian: 'Stiahnúť v ruštine:'
-    download_in_Serbian: 'Stiahnúť v srbčine:'
-    download_in_Slovenian: 'Stiahnúť v slovinčine:'
-    download_in_Spanish: 'Stiahnúť v španielčine:'
-    download_in_Swedish: 'Stiahnúť v švédčine:'
-    download_in_Turkish: 'Stiahnúť v turečtine:'
-    download_in_Ukrainian: 'Stiahnúť v ukrajinčine:'
-    download_in_Vietnamese: 'Stiahnúť v vietnamčine:'
+    download_in_Albanian: 'Stiahnuť v albánčine:'
+    download_in_Arabic: 'Stiahnuť v arabčine:'
+    download_in_Azerbaijani: 'Stiahnuť v azerbajdžančine:'
+    download_in_Basque: 'Stiahnuť v baskičtine:'
+    download_in_Bosnian: 'Stiahnuť v bosniačtine:'
+    download_in_Bulgarian: 'Stiahnuť v bulharčine:'
+    download_in_Catalan: 'Stiahnuť v katalánčine:'
+    download_in_Chinese-Taiwan: 'Stiahnuť v taiwanskej čínštine:'
+    download_in_Chinese: 'Stiahnuť v čínštine:'
+    download_in_Croatian: 'Stiahnuť v chorvátčine:'
+    download_in_Czech: 'Stiahnuť v češtine:'
+    download_in_Danish: 'Stiahnuť v dánčine:'
+    download_in_Dutch: 'Stiahnuť v holandčine:'
+    download_in_English: 'Stiahnuť v angličtine:'
+    download_in_Finnish: 'Stiahnuť vo fínčine:'
+    download_in_French: 'Stiahnuť vo francúzštine:'
+    download_in_German: 'Stiahnuť v nemčine:'
+    download_in_Greek: 'Stiahnuť v gréčtine:'
+    download_in_Hebrew: 'Stiahnuť v hebrejčine:'
+    download_in_Hungarian: 'Stiahnuť v maďarčine:'
+    download_in_Icelandic: 'Stiahnuť v islandčine:'
+    download_in_Indonesian: 'Stiahnuť v indonézčine:'
+    download_in_Irish: 'Stiahnuť v írčine:'
+    download_in_Italian: 'Stiahnuť v taliančine:'
+    download_in_Japanese: 'Stiahnuť v japončine:'
+    download_in_Korean: 'Stiahnuť v kórejčine:'
+    download_in_Latvian: 'Stiahnuť v lotyštine:'
+    download_in_Lithuanian: 'Stiahnuť v litovčine:'
+    download_in_Norwegian: 'Stiahnuť v nórčine:'
+    download_in_Norwegian-Nynorsk: 'Stiahnuť v nynorskej nórčine:'
+    download_in_Polish: 'Stiahnuť v poľštine:'
+    download_in_Portuguese-Brazil: 'Stiahnuť v brazílskej portugalčine:'
+    download_in_Portuguese: 'Stiahnuť v portugalčine:'
+    download_in_Romanian: 'Stiahnuť v rumunčine:'
+    download_in_Russian: 'Stiahnuť v ruštine:'
+    download_in_Serbian: 'Stiahnuť v srbčine:'
+    download_in_Slovenian: 'Stiahnuť v slovinčine:'
+    download_in_Spanish: 'Stiahnuť v španielčine:'
+    download_in_Swedish: 'Stiahnuť v švédčine:'
+    download_in_Turkish: 'Stiahnuť v turečtine:'
+    download_in_Ukrainian: 'Stiahnuť v ukrajinčine:'
+    download_in_Vietnamese: 'Stiahnuť vo vietnamčine:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
   stage_extras_teacher_message: Pre niektoré z Vašich sekcií máte vypnuté Doplnky
@@ -1284,9 +1278,9 @@ sk:
   pd:
     form_labels:
       first_name: Krstné meno
-      first_name_preferred: Uprednostňované krstné meno
+      first_name_preferred: Preferované krstné meno
       last_name: Priezvisko
-      email: E-mail
+      email: Email
       email_alternate: Ďaľšia emailová adresa
       gender: Rodová identita
       school_name: Názov školy
@@ -1300,17 +1294,17 @@ sk:
       workshop_facilitator: Usporiadateľ workshopov
       workshop_course: Kurz workshopov
       email_opt_in: Môžeme Vám zasielať emaily o medzinárodnom programe Code.org,
-        aktualizáciáchnašich kurzov alebo iných novinkách zo sveta počítačovej vedy?
-      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte so zdieľaním Vašich informácií
-        a spôsobu používania Code.org a Nástrojov pre vzdelávanie profesionálov s
-        medzinárodným Code.org partnerom vo Vašej krajine, školským obvodom a organizátormi.
-        S týmito partnermi budeme zdieľať Vaše kontaktné údaje, ktoré kurzy/lekcie
+        aktualizáciáchnašich kurzov alebo iných novinkách zo sveta informatiky?
+      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte s tým, aby Code.org zdieľal
+        informácie o Vašom využívaní Code.org a profesionánálnych vzdelávacích nástrojov
+        s medzinárodným partnerom code.org vo Vašej krajine, školskom obvode a orgánizatormi
+        podujatí. S týmito partnermi budeme zdieľať Vaše kontaktné údaje, ktoré kurzy/lekcie
         absolvujete a súhrnné dáta o Vašej triede. Tie zahrňujú počet študentov vo
         Vašich triedach, demografické rozdelenie Vašej triedy a názov Vašej školy
         a mestskej časti. Nebudeme zdieľať žiadne informácie o jednotlivých študentoch:
         všetky takéto informácie budú anonymizované a súhrnné. Naši medzinárodní partneri
         a organizátori sú zmluvne zaviazaní zaobchádzať s týmito údajmi na rovnako
-        dôvernej úrovni ako na Code.org všeobecne.'
+        dôvernej úrovni ako Code.org.'
     form_entries:
       gender:
         male: Muž
@@ -1357,7 +1351,7 @@ sk:
       robotics:
         grok: Grok Learning
         kodable: Kodable
-        lego: LEGO pre vzdelávanie
+        lego: LEGO Education
         microbit: Microbit
         ozobot: Ozobot
         sphero: Sphero
@@ -1374,18 +1368,18 @@ sk:
         opt_in_no: Nie
     international_opt_in:
       title: Účasť na workshope
-      intro: Ďakujeme, že ste obetovali Váš čas a absolvovali tréning podľa osnov
-        na Code.org. Naša misia - priniesť možnosť naučiť sa informatiku všetkým deťom
-        po celom svete - by nebola možná bez Vašej podpory.
+      intro: Ďakujeme, že ste obetovali Váš čas a absolvovali tréning na Code.org.
+        Naša misia - priniesť možnosť naučiť sa informatiku všetkým deťom po celom
+        svete - by nebola možná bez Vašej podpory.
       instructions: Vyplňte prosím nasledujúci formulár na potvrdenie, že 1) ste sa
         zúčastnili tréningového workshopu organizovaného jedným z našich medzinárodných
         Code.org partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným
         Code.org partnerom vo Vašej krajine, aby sme Vám mohli pomôcť pri Vašej práci
         - výučbe informatiky.
-      thanks: Ďakujeme Vám za odoslanie! Tešíme sa, že Vás budeme môcť podporovať
-        pri spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
+      thanks: Ďakujeme za odoslanie! Tešíme sa, že Vás budeme môcť podporovať pri
+        spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
         otázky a postrehy emailom na <a href='%{support_email_url}'>support@code.org</a>
-        alebo príspevkom vo <a href='%{teacher_forum_url}' target='_blank'>fóre pre
+        alebo príspevkom na <a href='%{teacher_forum_url}' target='_blank'>fóre pre
         učiteľov</a>!
     logged_out:
       heading: Ďakujeme Vám za prejavený záujem o Vzdelávací program pre profesionálov!
@@ -1393,10 +1387,10 @@ sk:
         Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte
         <a href="%{url}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
     not_teacher:
-      body: Ďakujeme Vám za záujem o Vzdelávací program pre profesionálov na Code.org!
-        Momentálne ste prihlásený ako študent. Vytvorte si prosím konto pre učiteľa
-        alebo prejdite do <a href="%{user_settings}">nastavení užívateľa</a> pre zmenu
-        typu Vášho konta zo študentského na učiteľské.
+      body: Ďakujeme Vám za záujem o Profesionálny vzdelávací program Code.org! Momentálne
+        ste prihlásený ako študent. Vytvorte si prosím konto pre učiteľa alebo prejdite
+        do <a href="%{user_settings}">nastavení užívateľa</a> pre zmenu typu Vášho
+        konta zo študentského na učiteľské.
       more: Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku,
         navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
     no_teacher_email:
@@ -1415,6 +1409,6 @@ sk:
     message: Údaje z Vášho používania tejto stránky môžu byť zaslané a uložené alebo
       spracované v Spojených štátoch amerických (USA).
     link_intro: Pre ďalšie informácie si pozrite naše
-    privacy_policy: zásady ochrany osobných údajov
+    privacy_policy: Zásady ochrany osobných údajov
     logout: Odhlásiť sa
     true: Áno

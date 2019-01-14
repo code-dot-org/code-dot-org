@@ -111,23 +111,23 @@ sk:
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil celý kruh
       Course 4 Artist 7_callout:
-        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použi blok "Opakuj" a vlož do neho bloky z pracovnej plochy
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Presuňte do tohto bloku Vašu premennú počítadla
       Course 4 Artist Functions 4_callout:
-        create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite na tlačidlo "Vytvoriť funkciu".
+        create_function: Klikni sem, aby si otvoril panel "Funkcie" a potom klikni na tlačidlo "Vytvoriť funkciu".
       Course 4 Artist Functions 5 OLD_callout:
         house_hint: Je v poriadku, ak obrázok ešte nevyzerá ako dom. Opravíme to v ďaľšej úlohe.
       Course 4 Artist Functions 8_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
       Course 4 Artist Functions challenge_callout:
         Course_4_Artist_Functions_challenge_1: Všimnite si, že sme zoradili všetky bloky a zaradili ich do kategórií pre udržanie čistoty. Kliknite sem pre všetky bloky, ktoré potrebujete.
       Course 4 Artist Params 2_callout:
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter "dĺžka"?
       Course 4 Artist Params 4_callout:
-        create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite na tlačidlo "Vytvoriť funkciu".
+        create_function: Klikni sem, aby si otvoril panel "Funkcie" a potom klikni na tlačidlo "Vytvoriť funkciu".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Použite blok "Opakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použi blok "Opakuj" a vlož do neho bloky z pracovnej plochy
       Course 4 Artist Vars 10_callout:
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
       Course 4 Artist Vars 12_callout:
@@ -147,22 +147,22 @@ sk:
       Course 4 Bee 3_callout:
         if_else_bee: Použite blok "if/else", aby včela pozbierala nektár z kvetiny, respektíve spravila med, ak sa nejedná o kvetinu
       Course 4 Bee For Loops 1_callout:
-        get_nectar: Použite nový blok "Získať nektár".
+        get_nectar: Použi nový blok "Získaj nektár".
       Course 4 Bee For Loops 6_callout:
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz tu.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: Použite toto tlačidlo pre úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
+        edit_get_nectar: Použi toto tlačidlo na úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Nastavenie týchto premenných na "0" alebo "1" sa volá nastavenie "flagu" (vlajky). Toto signalizuje našej funkcií smer, ktorým sa má vydať naša včela.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Stlačte "Spustiť" pre vyskúšanie programu
+        Course 4 Maze 1_callout1: Vyskúšaj svoj program stlačením "Spustiť"
         Course 4 Maze 1_callout2: Presuňte blok "pohnúť" a pripojte ho pod ostatné bloky na pracovnej ploche
       Course 4 Maze 4_callout:
         repeat: Pre opakovanie príkazov, vlož bloky do cyklu "opakuj"
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Kliknite na "Upraviť" pre úpravu tejto funkcie tak, aby v nej bol použitý parameter výška.
       Course 4 Play Lab Params 3_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
       Course 4 Play Lab Params 6_callout:
         edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie pridať parameter
       Course 4 Play Lab Vars 1_callout:
@@ -198,7 +198,7 @@ sk:
       Dance_Party_11_5_callout:
         dance_party_11_5_groups: Tu hľadaj blok "všetky kačice"
       Eval Design Recipe .1_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       Frozen Project Toolbox (Old)_callout:
@@ -221,7 +221,7 @@ sk:
         Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: Tu pridaj blok posunúť
+        Infinity_move_right_runbutton: Sem pridaj blok posuň sa
       Infinity_repeat_callout:
         Infinity_repeat_callout: Sem umiestni bloky Posunúť
       InspirationalArtwork_callout:
@@ -231,7 +231,7 @@ sk:
       InspirationalArtwork_2019_callout:
         InspirationalArtwork_1: Vyskúšajte použitie bloku "komentovať" v tejto sekcií a zanechajte si poznámky vo vnútri Vášho programu!
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: Keď ste pripravení, stlačte "Spustiť" pre vyskúšanie Vášho programu.
+        craft2_run_button_callout: Keď si pripravený vyskúšaj svoj program stlačením "Spustiť".
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Kliknite na "Spusti" pre začatie pohybu.
       MC_HOC_2017_01_Cole_callout:
@@ -239,9 +239,9 @@ sk:
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Tvoj hráč má odteraz kamaráta. Pre agenta môžeš napísať kód, aby ti pomohol splniť úlohy.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Toto je cyklus "opakuj". Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
       MC_HOC_2017_03_Cole_2019_callout:
-        MC_HOC_2017_03_Cole_1: Toto je cyklus "opakuj". Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou!
       MC_HOC_2017_04_Cole_2019_callout:
@@ -267,14 +267,14 @@ sk:
       NEW Course 4 Artist Functions 3_callout:
         NEW_Course_4_Artist_Functions_3_1: Kliknite sem pre úpravu novej funkcie, aby vytvorila štvorec.
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
         function_editor_draw_square: Toto je definícia tvojej funkcie. Tieto bloky sa spustia vždy keď použiješ blok "Nakresli štvorec"
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
       NEW Course 4 Artist Params 10_callout:
-        create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite na tlačidlo "Vytvoriť funkciu".
+        create_function: Klikni sem, aby si otvoril panel "Funkcie" a potom klikni na tlačidlo "Vytvoriť funkciu".
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie pridať parameter
         add_and_drag_parameter: Napíšte sem meno Vášho parametr, kliknite na Pridať a potom ho presuňte do definície Vašej funkcie
@@ -307,13 +307,13 @@ sk:
       Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
+        craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod iný blok
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
+        craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod iný blok
       Overworld Move to Sheep_2019_callout:
-        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
+        craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod iný blok
       Overworld Place Wall_callout:
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
@@ -556,11 +556,11 @@ sk:
       courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte sa, neskôr Vám ukážeme, ako ich používať.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov, ak ich potrebujete!
+        courseC_collector_prog7_1: Ak potrebuješ, z panela nástrojov môžeš vziať aj viac blokov!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov, ak ich potrebujete!
+        courseC_collector_prog7_1: Ak potrebuješ, z panela nástrojov môžeš vziať aj viac blokov!
       courseC_collector_prog7_2019_callout:
-        courseC_collector_prog7_1: Z panela nástrojov si môžete zobrať viac blokov, ak ich potrebujete!
+        courseC_collector_prog7_1: Ak potrebuješ, z panela nástrojov môžeš vziať aj viac blokov!
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Čislo štyri na tekvici Vám hovorí, že na zozbieranie sú k dispozícií štyri tekvice.
       courseC_harvester_loops1_2018_callout:
@@ -842,7 +842,7 @@ sk:
       courseE_playLab_scaffold3_2018_callout:
         courseE_playLab_scaffold3_1: Dostaňte herca k tejto vlajočke pre postup do ďaľšieho levelu.
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: Presuňte sem blok "herec č. 1 povie" sem a napíšte "Ahoj!"
+        playlab_drag_say_a: Presuň sem blok 'postava 1 povie' a napíš "Ahoj!"
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Pridajte bloky sem
       courseF_artist_for1_callout:
@@ -1031,11 +1031,11 @@ sk:
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen cross_callout:
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
-        repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
+        repeat_blocks_2: (2) Presuň sem blok "Opakuj" a šedé bloky umiestni do jeho vnútra
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
       frozen diamond_callout:
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen freeplay_b_callout:
@@ -1044,13 +1044,13 @@ sk:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen line_callout:
         run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
-        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+        move_elsa_forward: Presuň blok "Posuň sa dopredu" a pripoj ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen line_b_callout:
         run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
-        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+        move_elsa_forward: Presuň blok "Posuň sa dopredu" a pripoj ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen line_test_callout:
         run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
-        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+        move_elsa_forward: Presuň blok "Posuň sa dopredu" a pripoj ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen perpendicular_callout:
         turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí
       frozen perpendicular_b_callout:
@@ -1102,7 +1102,7 @@ sk:
       grade2_CaringForNewPet_3_callout:
         grade2_CaringForNewPet_3_1: Toto je Váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť.
       grade2_collector_7_callout:
-        grade2_collector_7_1: Z panela nástrojov si môžete zobrať viac blokov, ak ich potrebujete!
+        grade2_collector_7_1: Ak potrebuješ, z panela nástrojov môžeš vziať aj viac blokov!
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: V tejto hre máte iba jeden takýto blok k dispozícií.
       grade3_ConditionalsElse_2_callout:
@@ -1129,11 +1129,11 @@ sk:
       grade4_frozen_functions3_callout:
         frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
       grade4_frozen_square_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade4_frozen_square_loop1_callout:

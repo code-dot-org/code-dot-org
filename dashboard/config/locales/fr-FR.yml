@@ -403,11 +403,12 @@ fr:
       create: Créer
       applab: Labo des applis
       artist: Artiste
-      gamelab: Game Lab
+      gamelab: Labo des jeux
       playlab: Labo de jeux
       minecraft: Minecraft
       flappy: Flappy
       dance: Fête dansante
+      view_all: Afficher tous les projets...
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès
@@ -442,6 +443,7 @@ fr:
       example: Exemple de solution
       example_with_number: Exemple de solution %{solution_number}
       submitted_on: 'Soumis le :'
+      last_updated: 'Dernière mise à jour :'
       unsubmit: Ne pas envoyer
       worked_with: A travaillé avec
       update_lock_settings: Mettre à jour les paramètres de verrouillage ici.
@@ -492,6 +494,8 @@ fr:
       de confidentialité</a> pour plus d’informations.'
     enter_new_login_info: Entrez vous nouvelles informations de connexion
     confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
+    parent_email_label: E-mail du parent / tuteur (facultatif)
+    parent_email_hint: "(cela peut être utilisé pour la récupération du mot de passe)"
     enter_parent_email: Entrez l'adresse e-mail de vos parents ou de votre tuteur
       (pour la récupération de mot de passe)
     update: Mise à jour du compte
@@ -662,11 +666,11 @@ fr:
       l'enseignement de l’informatique dans votre école et demandez à participer à
       nos programmes d'enseignement de haute qualité <strong>absolument sans aucun
       frais pour vous ou votre école</strong>. Fin des inscriptions le 14 avril.
-    announcement_applab_export: App Lab, notre environnement de programmation basé
-      sur le web, prend désormais en charge l’exportation de votre code ! Vous pouvez
-      commencer à construire des applications avec le glisser-déplacer de blocs JavaScript,
-      puis exporter le code afin de continuer à éditer dans n’importe quel environnement
-      de développement professionnel.
+    announcement_applab_export: Le labo des applis, notre environnement de programmation
+      basé sur le web, prend désormais en charge l’exportation de votre code ! Vous
+      pouvez commencer à construire des applications avec le glisser-déplacer de blocs
+      JavaScript, puis exporter le code afin de continuer à éditer dans n’importe
+      quel environnement de développement professionnel.
     announcement_csp_survey: "<b>Bravo aux enseignants des Principes de l'Informatique !</b>
       <br/> Vos étudiants qui passent l'examen rejoignent plus de 50.000 autres étudiants
       dans notre plus grand lancement d’examen jusqu'ici. Que les voix de vos élèves
@@ -704,6 +708,7 @@ fr:
     male: Masculin
     female: Féminin
     non_binary: Non binaire
+    not_listed: Terme préféré non listé
     none: Préfère ne pas répondre
   user_type:
     student: Élève
@@ -779,12 +784,12 @@ fr:
         navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
         avoir des choses qui ne fonctionnent pas.
       link: Pour en savoir plus
-      applab_unsupported_tablet: App Lab fonctionne mieux sur un ordinateur portable
-        ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes
-        avec de cet outil sur votre appareil actuel.
+      applab_unsupported_tablet: Le labo des applis fonctionne mieux sur un ordinateur
+        portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer
+        des problèmes avec de cet outil sur votre appareil actuel.
       gamelab_unsupported_tablet: Game Lab fonctionne mieux sur un ordinateur portable
         ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes
-        avec de cet outil sur votre appareil actuel.
+        avec cet outil sur votre appareil actuel.
       weblab_unsupported_browser: Malheureusement, Web Lab a quelques problèmes de
         chargement avec ce navigateur. Vous pouvez utiliser un autre navigateur jusqu'à
         ce que les soucis soient résolu. Désolé pour la gêne occasionnée.
@@ -862,7 +867,7 @@ fr:
       body: Regarde une galerie des applications et des images d'artistes créées par
         nos utilisateurs.
     gamelab:
-      title: Game Lab
+      title: Labo des jeux
       body: Game Lab est un environnement de programmation où vous pouvez créer des
         animations simples et des jeux avec des objets et des personnages qui interagissent
         entre eux.
@@ -1264,6 +1269,7 @@ fr:
     csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
     csp3_1_2018: 'Unité 3 : Introduction à la programmation'
+    dlp: Sujets de réflexion
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
@@ -1364,29 +1370,130 @@ fr:
       school_country: Pays de l’école
       ages: Quel est l'âge de vos étudiants cette année ?
       subjects: Quel(s) matière(s) enseignez-vous cette année ?
+      resources: Lesquelles des ressources d’éducation en informatique suivantes utilisez-vous
+        ?
+      robotics: Lesquelles des ressources d’éducation en robotique suivantes utilisez-vous
+        ?
+      workshop_organizer: Organisateur d’atelier
+      workshop_facilitator: Animateur d’atelier
+      workshop_course: Cours d’atelier
+      email_opt_in: Pouvons-nous vous envoyer des e-mails sur le programme international
+        de Code.org, les mises à jours de nos cours, ou d’autres actualités sur l’informatique
+        ?
+      legal_opt_in: 'En envoyant ce formulaire, vous acceptez de permettre à Code.org
+        de partager des informations sur votre utilisation de Code.org et des ressources
+        de formation professionnelle avec le partenaire international Code.org de
+        votre pays, de votre district scolaire et des animateurs. Nous partagerons
+        vos informations de contact, les cours / unités que vous utilisez et des données
+        agrégées sur vos cours avec ces partenaires. Cela inclut le nombre d''élèves
+        dans vos classes, la répartition démographique de votre classe, ainsi que
+        le nom de votre école et de votre district. Nous ne partagerons aucune information
+        sur les élèves avec nos partenaires : toutes les informations sur les élèves
+        seront désidentifiées et agrégées. Nos partenaires internationaux et nos animateurs
+        sont contractuellement tenus de traiter ces informations avec le même niveau
+        de confidentialité que Code.org.'
     form_entries:
       gender:
         male: Masculin
         female: Féminin
         non_binary: Non binaire
+        not_listed: Terme préféré non listé
         none: Préfère ne pas répondre
+      school_country:
+        canada: Canada
+        chile: Chili
+        israel: Israël
+        malaysia: Malaisie
+        mexico: Mexique
+        thailand: Thaïlande
+      ages:
+        ages_under_6: "< 6 ans"
+        ages_7_8: 7-8 ans
+        ages_9_10: 9-10 ans
+        ages_11_12: 11-12 ans
+        ages_13_14: 13-14 ans
+        ages_15_16: 15-16 ans
+        ages_17_18: 17-18 ans
+        ages_19_over: Plus de 19 ans
       subjects:
         cs: Informatique/Sciences informatiques
+        ict: Informatique (TIC)
         math: Math
         science: Sciences
+        history: Histoire / Études sociales
         la: Langues
+        efl: Anglais comme langue étrangère
+        music: Musique
+        art: Art
+        other: 'Autre :'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Autre :'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Autre :'
       workshop_course:
+        csf_af: CS Fundamentals (Cours A-F)
+        csf_express: CS Fundamentals (Pré-Express ou Express)
         csd: Découvertes de l'informatique
-        csp: Principes de CS 16-17
+        csp: Principes de l'informatique
       email_opt_in:
         opt_in_yes: Oui
         opt_in_no: Non
+    international_opt_in:
+      title: Participation à l’atelier
+      intro: Merci d’avoir pris le temps de recevoir une formation sur le programme
+        d’études de Code.org. Notre mission d’apporter des possibilités d’éducation
+        en informatique à tous les enfants de toutes les écoles du monde entier ne
+        serait pas possible sans vous.
+      instructions: Veuillez remplir le formulaire ci-dessous pour indiquer que 1)
+        vous avez participé à un atelier de formation dirigé par un des partenaires
+        internationaux de Code.org et 2) vous acceptez de partager vos informations
+        avec notre partenaire international dans votre pays agin qu’il puisse vous
+        soutenir lors de votre voyage comme professeur d’informatique.
+      thanks: Merci pour votre soumission ! Nous nous réjouissons de vous soutenir
+        pendant que vous apprenez à connaître les programmes d’études et outils de
+        Code.org. Veuillez continuer à partager vos questions et vos commentaires
+        avec nous en nous écrivant à <a href='%{support_email_url}'>support@code.org</a>
+        ou en postant sur le <a href='%{teacher_forum_url}' target='_blank'>forum
+        des enseignants</a> !
+    logged_out:
+      heading: Merci de votre intérêt pour le programme d’apprentissage professionnel !
+      body: Pour commencer, vous devez d’abord être connecté à votre compte de Code.org.
+        Si vous désirez plus d’informations sur le programme avant de commencer votre
+        demande, veuillez consulter l’<a href="%{url}">aperçu du programme d’apprentissage
+        professionnel</a>.
+    not_teacher:
+      body: Merci de votre intérêt pour le programme d’apprentissage professionnel
+        de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez
+        soit créer un compte enseignant, soit <a href="%{user_settings}">aller dans
+        vos paramètres utilisateur</a> pour mettre à niveau votre compte d’élève à
+        enseignant.
+      more: Si vous désirez plus d’informations sur le programme avant de commencer
+        votre demande, veuillez consulter l’<a href="%{pl_overview}">aperçu du programme
+        d’apprentissage professionnel</a>.
+    no_teacher_email:
+      body: Votre compte n’est pas associé à une adresse e-mail. Veuillez <a href="%{user_registration}">consulter
+        les paramètres de votre compte</a> pour ajouter votre adresse e-mail avant
+        de remplir ce formulaire.
   courses_category: Cours complets
   cookie_banner:
+    message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
+      vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.
+    more_information: Consulter la politique de confidentialité de Code.org.
     accept: J'accepte
   gdpr_dialog:
     heading: Etes-vous d'accord pour utiliser un site internet situé aux Etats-Unis

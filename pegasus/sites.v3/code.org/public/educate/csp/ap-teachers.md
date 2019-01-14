@@ -7,7 +7,7 @@ style_min: true
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
-# Sign up your students for the AP CS Principles Exam
+# Help your students sign up for the AP CS Principles Exam
 
 <img src="/images/csp-hof-2.png" width="100%"/>
 
@@ -15,7 +15,7 @@ Did you know that girls and students of color are less likely to take the AP exa
 
 Teachers and parents are key to motivating students to try the exam. Join the 350+ teachers at schools in our [AP CS Principles Hall of Fame](/educate/csp/hall-of-fame) who have helped lead record-breaking change in computer science by encouraging girls and underrepresented minorities in their classrooms.
 
-Taking the exam can save your students money in college credits, help in applications, and, even if they don't pass, [preparing for and taking the exam has been shown to set students up for success](https://files.eric.ed.gov/fulltext/ED519365.pdf) in higher education. 
+Taking the exam can save your students money in college credits, help in applications, and, even if they don't pass, preparing for and taking the exam may even help to set students up for success in higher education. [Students who take the AP Exam are more likely to graduate from college](https://files.eric.ed.gov/fulltext/ED519365.pdf)) than their counterparts who don’t — whether or not they pass.
 
 # So, how can you get your students to sign up?
 
@@ -37,9 +37,9 @@ Consider trying one of these techniques from our Hall of Fame teachers to encour
 
 ## 2. Send home this flyer 
 
-Or share <a href="https://code.org/educate/csp/ap-students", target=_"blank">this link</a>.
+Or tell your students to <a href="https://code.org/educate/csp/ap-students", target=_"blank">check out this website</a>.
 
-<a href="https://code.org/files/ap-student-flyer.pdf"><img src="/images/ap-student-flyer.png" width="25%"/></a>
+<a href="https://code.org/files/ap-student-flyer.pdf", target=_"blank"><img src="/images/ap-student-flyer.png" width="25%"/></a>
 
 ## 3. Give students extra credit for taking the exam
 
@@ -52,4 +52,11 @@ Have some of your students already signed up? Encourage them to tell other stude
 ## 5. Send individual emails or encourage students in your class 1:1 to take the exam 
 
 This can be especially valuable with the girls or underrepresented minorities in your class. They are less likely to be given personal encouragement by teachers and parents, and your support can really boost their confidence. 
+
+# Do your students need help paying for the exam?
+
+There is federal and state-level AP exam fee assistance available for low income students! 
+
+For more information about the funding options in your state, please check out the College Board's resources for <a href="https://apcentral.collegeboard.org/ap-coordinators/exam-ordering-fees/exam-fees/federal-state-assistance", target=_"blank">Federal and State AP Exam Fee Assistance</a> 
+
 

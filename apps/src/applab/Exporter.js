@@ -3,7 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -569,7 +569,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: project.getCurrentName(),
-      sdkVersion: '25.0.0',
+      sdkVersion: '28.0.0',
     });
 
     // Important that index.html comes first:

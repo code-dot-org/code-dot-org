@@ -1487,6 +1487,14 @@ class User < ActiveRecord::Base
     section_courses.map(&:summarize_short)
   end
 
+  def assigned_course?(course)
+    section_courses.include?(course)
+  end
+
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.course)
+  end
+
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
     scripts.map(&:course).compact.concat(section_courses).uniq
@@ -1590,6 +1598,23 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of. Includes default scripts for any assigned courses as well.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+    all_scripts = []
+    all_sections.each do |section|
+      if section.script.present?
+        all_scripts << section.script
+      elsif section.course.present?
+        all_scripts.concat(section.course.default_scripts)
+      end
+    end
+
+    all_scripts
   end
 
   # return the id of the section the user most recently created.

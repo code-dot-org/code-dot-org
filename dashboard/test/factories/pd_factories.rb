@@ -824,13 +824,13 @@ FactoryGirl.define do
     plan_on_teaching ['Yes']
     ability_to_meet_requirements '4'
     led_cs_extracurriculars ['Hour of Code']
-    teaching_experience 'No'
-    grades_taught ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    teaching_experience 'No, I do not have classroom teaching experience'
+    grades_taught ['Elementary school']
     grades_currently_teaching ['Grade 7']
     subjects_taught ['Computer Science']
     years_experience 'None'
     experience_leading ['AP CS A', 'Hour of Code']
-    completed_pd ['CS Fundamentals (1 day workshop)']
+    completed_pd ['No, I have not participated in a Code.org Professional Learning Program for any curriculum.']
     code_org_facilitator 'No'
     have_led_pd 'Yes'
     groups_led_pd ['None']
@@ -941,30 +941,51 @@ FactoryGirl.define do
     travel_distance 'Within my city'
     additional_info 'none'
     agree true
+    have_led_adults 'Yes'
+    developmentAndPreparationRequirement 'Yes, I can commit to this requirement'
+    currentlyInvolvedInCsEducation 'I teach CS courses for credit to K-12, community college, or university students'
+    experienceTeachingThisCourse 'Yes, to elementary school students'
+    whyShouldAllHaveAccess 'Why should all'
+    skillsAreasToImprove 'Skills areas'
+    inquiryBasedLearning 'Inquiry'
+    whyInterested 'Why interested'
+    teachingExperience 'Yes, I am a current classroom teacher'
+    gradesTaught ['Elementary school']
+    facilitatorAvailability 'Weekdays during the school year'
 
     trait :csf do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csf]
-      csf_availability 'Yes'
+      with_csf_specific_fields
     end
 
     trait :csd do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csd]
+      csd_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :csp do
       program Pd::Application::Facilitator1920Application::PROGRAMS[:csp]
+      csp_training_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
       with_csd_csp_specific_fields
     end
 
     trait :with_csf_specific_fields do
-      csf_availability Pd::Application::Facilitator1920Application::ONLY_WEEKEND
-      csf_partial_attendance_reason 'reasons'
+      csf_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_summit_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_community_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csf_previous_workshop Pd::Application::Facilitator1920Application.options[:csf_previous_workshop].first
     end
 
     trait :with_csd_csp_specific_fields do
-      csd_csp_fit_availability Pd::Application::Facilitator1920Application.options[:csd_csp_fit_availability].first
-      csd_csp_teachercon_availability Pd::Application::Facilitator1920Application.options[:csd_csp_teachercon_availability].first
+      csd_csp_good_standing_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_no_partner_summer_workshop Pd::Application::Facilitator1920Application.options[:csd_csp_no_partner_summer_workshop].first
+      csd_csp_fit_weekend_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_lead_summer_workshop_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_deeper_learning_requirement Pd::Application::Facilitator1920Application::YES_COMMIT
+      csd_csp_completed_pd Pd::Application::Facilitator1920Application.options[:csd_csp_completed_pd].first
     end
   end
 

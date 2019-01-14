@@ -92,6 +92,7 @@ Scenario: Versions warning announcement on script overview page
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
+  Given I am assigned to script "coursea-2017"
   When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
