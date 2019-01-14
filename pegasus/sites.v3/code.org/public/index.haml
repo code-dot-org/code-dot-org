@@ -22,10 +22,11 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
-  = view :curriculum_banner
 
   - if request.language == "en"
+    = view :curriculum_banner
     = view :homepage_below_hero_announcement
+    = view :homepage_below_hero_plane_banner
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
