@@ -10,7 +10,6 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 registerReducers({isRtl, responsive});
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("document ready");
   initResponsive();
 
   const container = document.getElementById('regional-partner-playbook');
