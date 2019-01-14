@@ -41,12 +41,16 @@ const initialState = {
 /**
  * Helper functions
  */
- export const asyncSetCompletedLevelCount = (sectionId) => (dispatch) => {
-   $.ajax({
-     url: `/dashboardapi/sections/${sectionId}/students/completed_levels_count`,
-     method: 'GET',
-     dataType: 'json'
-   }).done(completedLevelCountByStudentId => {
-     dispatch(setCompletedLevelCount(sectionId, completedLevelCountByStudentId));
-   });
- };
+export const getStudentCompletedLevelCount = (state, sectionId) => {
+  return state.stats.completedLevelCountBySectionId[sectionId] || {};
+};
+
+export const asyncSetCompletedLevelCount = (sectionId) => (dispatch) => {
+  $.ajax({
+    url: `/dashboardapi/sections/${sectionId}/students/completed_levels_count`,
+    method: 'GET',
+    dataType: 'json'
+  }).done(completedLevelCountByStudentId => {
+    dispatch(setCompletedLevelCount(sectionId, completedLevelCountByStudentId));
+  });
+};
