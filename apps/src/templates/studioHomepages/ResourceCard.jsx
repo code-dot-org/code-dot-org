@@ -25,7 +25,6 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 15,
     fontSize: 27,
-    width: 260,
     display: 'inline',
   },
   titleNoWrap: {
@@ -69,6 +68,7 @@ class ResourceCard extends Component {
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     allowWrap: PropTypes.bool,
+    allowDangerouslySetInnerHtml: PropTypes.bool,
     linkId: PropTypes.string,
     linkClass: PropTypes.string,
   };
@@ -81,6 +81,7 @@ class ResourceCard extends Component {
       link,
       isRtl,
       allowWrap,
+      allowDangerouslySetInnerHtml,
       linkId,
       linkClass,
     } = this.props;
@@ -98,10 +99,22 @@ class ResourceCard extends Component {
       titleStyles.push(styles.titleNoWrap);
     }
 
+    let descriptionContainer;
+    if (allowDangerouslySetInnerHtml) {
+      descriptionContainer = (
+        <div
+          style={descriptionStyles}
+          dangerouslySetInnerHTML={{__html: description}} // eslint-disable-line react/no-danger
+        />
+      );
+    } else {
+      descriptionContainer = <div style={descriptionStyles}>{description}</div>;
+    }
+
     return (
       <div style={cardStyles}>
         <div style={titleStyles}>{title}</div>
-        <div style={descriptionStyles}>{description}</div>
+        {descriptionContainer}
         <br />
         <Button
           id={linkId}
