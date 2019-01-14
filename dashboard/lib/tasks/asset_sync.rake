@@ -22,7 +22,12 @@ namespace :assets do
     require 'parallel'
     bucket = Aws::S3::Resource.new.bucket(CDO.assets_bucket)
     Parallel.each(changed_paths, in_threads: 16) do |key, path|
-      bucket.object("#{CDO.assets_bucket_prefix}/assets/#{key}").upload_file(path, acl: 'public-read', cache_control: 'max-age=31536000')
+      bucket.object("#{CDO.assets_bucket_prefix}/assets/#{key}").upload_file(
+        path,
+        acl: 'public-read',
+        cache_control: 'max-age=31536000',
+        content_type: Rack::Mime.mime_type(File.extname(key))
+      )
     end
   rescue
     if m && changed_paths
