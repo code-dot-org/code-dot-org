@@ -38,13 +38,16 @@ const initialState = {
    return state;
  }
 
-/**
- * Helper functions
- */
+ /**
+  * Selector functions
+  */
 export const getStudentsCompletedLevelCount = (state, sectionId) => {
   return state.stats.completedLevelCountBySectionId[sectionId] || {};
 };
 
+/**
+ * Helper functions
+ */
 export const asyncSetCompletedLevelCount = (sectionId) => (dispatch) => {
   $.ajax({
     url: `/dashboardapi/sections/${sectionId}/students/completed_levels_count`,
