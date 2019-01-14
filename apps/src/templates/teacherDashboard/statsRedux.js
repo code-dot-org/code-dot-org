@@ -13,13 +13,13 @@ import { SET_SECTION } from '@cdo/apps/redux/sectionDataRedux';
 /**
  * Action creators
  */
-const setCompletedLevelCount = completedLevelCountByStudentId => ({ type: SET_COMPLETED_LEVEL_COUNT, completedLevelCountByStudentId });
+const setCompletedLevelCount = (sectionId, completedLevelCountByStudentId) => ({ type: SET_COMPLETED_LEVEL_COUNT, sectionId, completedLevelCountByStudentId });
 
 /**
  * Initial state of statsRedux
  */
 const initialState = {
-  completedLevelCountByStudentId: {},
+  completedLevelCountBySectionId: {},
 };
 
 /**
@@ -34,7 +34,10 @@ const initialState = {
    if (action.type === SET_COMPLETED_LEVEL_COUNT) {
      return {
        ...state,
-       completedLevelCountByStudentId: action.completedLevelCountByStudentId,
+       completedLevelCountBySectionId: {
+         ...state.completedLevelCountBySectionId,
+         [action.sectionId]: action.completedLevelCountByStudentId,
+       },
      };
    }
 
@@ -50,6 +53,6 @@ const initialState = {
      method: 'GET',
      dataType: 'json'
    }).done(completedLevelCountByStudentId => {
-     dispatch(setCompletedLevelCount(completedLevelCountByStudentId));
+     dispatch(setCompletedLevelCount(sectionId, completedLevelCountByStudentId));
    });
  };
