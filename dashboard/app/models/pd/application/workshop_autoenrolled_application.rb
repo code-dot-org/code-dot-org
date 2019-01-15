@@ -96,7 +96,7 @@ module Pd::Application
     end
 
     def log_summer_workshop_change(user)
-      update_status_timestamp_change_log(user, "Summer Workshop: #{workshop_date_and_location || 'Unassigned'}")
+      update_status_timestamp_change_log(user, "Summer Workshop: #{pd_workshop_id ? workshop_date_and_location : 'Unassigned'}")
     end
 
     # override
