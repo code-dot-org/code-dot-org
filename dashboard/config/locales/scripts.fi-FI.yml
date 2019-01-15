@@ -1341,6 +1341,8 @@ fi:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Koodaustunti
+          description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla! Matkaa
+            halki Minecraftin koodin matkassa
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1559,6 +1561,10 @@ fi:
           stages:
             Artist:
               name: Taiteilija
+        dance:
+          description_short: Mukana Katy Perry, Madonna, J.Balvinin, Sia, Keith Urban,
+            Ciara ja 25 muuta!
+          description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1645,3 +1651,5 @@ fi:
               name: 'Tosielämän algoritmit: paperilentokoneet'
             Binary Bracelets:
               name: Binäärikorut
+        gamelab:
+          title: Pelilabra
