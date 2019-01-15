@@ -561,6 +561,7 @@ describe('entry tests', () => {
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
