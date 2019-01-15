@@ -372,6 +372,37 @@ module Api::V1::Pd
       ], @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
+    test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
+      sign_in @program_manager
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]')
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: @fit_workshop.id, pd_workshop_id: @summer_workshop.id, status: @csp_facilitator_application.status}}
+      @csp_facilitator_application.reload
+
+      expected_log = [
+        {
+          title: "Fit Workshop: #{@csp_facilitator_application.fit_workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }, {
+          title: "Summer Workshop: #{@csp_facilitator_application.workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ]
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: @fit_workshop.id, pd_workshop_id: @summer_workshop.id, status: @csp_facilitator_application.status}}
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
