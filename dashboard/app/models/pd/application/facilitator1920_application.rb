@@ -50,6 +50,8 @@ module Pd::Application
 
     before_save :log_status, if: -> {status_changed?}
 
+    after_create :clear_extraneous_answers
+
     #override
     def year
       YEAR_19_20
@@ -59,6 +61,19 @@ module Pd::Application
     APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
+    #override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        interview
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
     end
 
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
@@ -142,7 +157,7 @@ module Pd::Application
         columns.push(
           'Status',
           'Locked',
-          'Notes',
+          'General Notes',
           'Notes 2',
           'Notes 3',
           'Notes 4',
@@ -178,7 +193,7 @@ module Pd::Application
       end
 
       columns.push(
-        'Notes',
+        'General Notes',
         'Notes 2',
         'Notes 3',
         'Notes 4',
@@ -279,7 +294,9 @@ module Pd::Application
     def meets_criteria
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
-      scores = response_scores.values
+      scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
+
+      scores = scored_questions.map {|q| response_scores[q]}
 
       if scores.uniq == [YES]
         YES
@@ -317,6 +334,21 @@ module Pd::Application
       elsif regional_partner.contact&.email.present?
         "#{regional_partner.contact.name} <#{regional_partner.contact.email}>"
       end
+    end
+
+    def clear_extraneous_answers
+      course_specific_questions_to_remove =
+        if course == 'csf'
+          [CSD_SPECIFIC_KEYS, CSP_SPECIFIC_KEYS].flatten.uniq
+        elsif course == 'csd'
+          [CSF_SPECIFIC_KEYS, CSP_SPECIFIC_KEYS - CSD_SPECIFIC_KEYS].flatten.uniq
+        elsif course == 'csp'
+          [CSF_SPECIFIC_KEYS, CSD_SPECIFIC_KEYS - CSP_SPECIFIC_KEYS].flatten.uniq
+        end
+
+      self.form_data_hash = sanitize_form_data_hash.except(*course_specific_questions_to_remove)
+
+      save
     end
   end
 end

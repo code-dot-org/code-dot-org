@@ -13,6 +13,11 @@ module Pd
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 
+    ALL_KEYS = PAGE_LABELS.values.flat_map(&:keys)
+    CSF_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /^csf/}
+    CSD_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /^csd/}
+    CSP_SPECIFIC_KEYS = ALL_KEYS.select {|a| a.to_s =~ /(^csd_csp|^csp)/}
+
     VALID_SCORES = {
       # Minimum requirements
       regional_partner_name: YES_NO,
@@ -23,6 +28,7 @@ module Pd
       csf_workshop_requirement: YES_NO,
       csf_community_requirement: YES_NO,
       development_and_preparation_requirement: YES_NO,
+      csd_csp_workshop_requirement: YES_NO,
       csd_csp_lead_summer_workshop_requirement: YES_NO,
       csd_csp_fit_weekend_requirement: YES_NO,
       csd_training_requirement: YES_NO,
@@ -30,19 +36,19 @@ module Pd
       csd_csp_good_standing_requirement: YES_NO,
       csp_training_requirement: YES_NO,
       # Bonus Points
-      currently_involved_in_cs_education: [5, 3, 0],
-      grades_taught: [5, 3, 0],
-      experience_teaching_this_course: [5, 3, 0],
-      completed_pd: [5, 3, 0],
-      why_should_all_have_access: [5, 3, 0],
-      skills_areas_to_improve: [5, 3, 0],
-      inquiry_based_learning: [5, 3, 0],
-      why_interested: [5, 3, 0],
-      question_1: [5, 3, 0],
-      question_2: [5, 3, 0],
-      question_3: [5, 3, 0],
-      question_4: [5, 3, 0],
-      question_5: [5, 3, 0]
+      currently_involved_in_cs_education: [0, 3, 5],
+      grades_taught: [0, 3, 5],
+      experience_teaching_this_course: [0, 3, 5],
+      completed_pd: [0, 3, 5],
+      why_should_all_have_access: [0, 3, 5],
+      skills_areas_to_improve: [0, 3, 5],
+      inquiry_based_learning: [0, 3, 5],
+      why_interested: [0, 3, 5],
+      question_1: [0, 3, 5],
+      question_2: [0, 3, 5],
+      question_3: [0, 3, 5],
+      question_4: [0, 3, 5],
+      question_5: [0, 3, 5]
     }
 
     SCOREABLE_QUESTIONS = {
@@ -75,6 +81,7 @@ module Pd
         :regional_partner_name,
         :teaching_experience,
         :have_led_adults,
+        :csd_csp_workshop_requirement,
         :csd_csp_lead_summer_workshop_requirement,
         :csd_csp_fit_weekend_requirement,
         :csd_training_requirement,
@@ -87,6 +94,7 @@ module Pd
         :regional_partner_name,
         :teaching_experience,
         :have_led_adults,
+        :csd_csp_workshop_requirement,
         :csd_csp_lead_summer_workshop_requirement,
         :csd_csp_fit_weekend_requirement,
         :csp_training_requirement,

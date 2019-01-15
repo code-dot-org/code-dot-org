@@ -181,11 +181,36 @@
       "return": null,
       "comment": null
     },
-    "show_debug_watch": true,
+    "show_debug_watch": "true",
     "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "project_template_level_name": "Gamelab StartScreen template",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "long_instructions": "# Check all States\r\n\r\nRight now the only state your program can deal with is \"playing\", but you can add more conditionals to account for the other three states.\r\n\r\n## Do this\r\n* Inside the draw loop, add in three more `if` statements that check for `gameState == \"starting\"`, `gameState == \"won\"`, and `gameState == \"lost\"`, respectively.\r\n* Inside each `if` statement, add code that will draw text to the screen, so you can see the results of the different states.  You may also want to use `drawSprites` so you can see the background image and the player sprites, but make sure you are drawing the text on top of the sprites.\r\n* Check your code by running the program in the different states.  (Don't worry about making them perfect yet, just make sure that the conditionals are working as they should.)\r\n\r\nIn order to keep track of your code, you might find it useful to create a function for each of the different text displays, then call those functions inside the conditionals."
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-09 23:18:04 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-09 23:24:56 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-09 23:28:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

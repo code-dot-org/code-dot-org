@@ -1,4 +1,5 @@
 require 'json'
+require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -551,7 +552,5 @@ module SharedConstants
     }
   JSON
 
-  ALLOWED_WEB_REQUEST_HEADERS = %w(
-    Authorization
-  )
+  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 end
