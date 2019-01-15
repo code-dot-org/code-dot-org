@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-01-09T23:28:35.000Z",
+  "created_at": "2019-01-14T21:46:24.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -184,22 +184,23 @@
     "show_debug_watch": "true",
     "embed": "false",
     "instructions_important": "false",
+    "submittable": "false",
     "never_autoplay_video": "false",
+    "project_template_level_name": "Gamelab StartScreen template",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
-    "submittable": "false",
     "text_mode_at_start": "false",
-    "hide_view_data_button": "false",
-    "expand_debugger": "false",
-    "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "long_instructions": "# Changing the State\r\n\r\nNow that you can display a different screen according to the state of your program, you will need a way to change between states.  To go from the \"starting\" state to the \"playing\" state, you can have the user press the \"s\" key.  You'll **only** want the program to check for the key press when the program is in the \"starting\" state, so your code for this will go inside the \"starting\" conditional.  Putting one `if` block inside another is called **nesting** conditionals.\r\n\r\n## Do this\r\n* Inside the `if` statement that checks for \"starting\", add in a new `if` statement that checks whether the user has pressed the \"s\" key.  (`if (keyDown(\"s\")) {`)\r\n* Inside your new `if` statement, set the value of your `gameState` variable to \"playing\". (`gameState = \"playing\";`)\r\n* Test the code by starting the game and pressing \"s\".  The game should start playing after the key is pressed.\r\n\r\nIf the game isn't starting on the start screen, double check that when the `gameState` variable is created at the beginning of the program, its value is \"starting\".  (`var gameState = \"starting\";`)",
-    "project_template_level_name": "Gamelab StartScreen template",
+    "long_instructions": "# Hide and Show Sprites\r\n\r\nYou may prefer that the platform, coin, and rock sprites only be visible when the game is playing.  You can change the game setup to set their visible property to `false` at the beginning of the game, then set it to `true` when you start the game, then `false` again when the game is won or lost.\r\n\r\n## Do this\r\n* Add code after you create your platforms, gold, and rocks sprite groups that sets those sprite groups' visible properties to `false` (e.g. `platforms.setVisibileEach(false);` )\r\n* In the same  three places where you set `gameState = \"playing\";`, set the sprite groups' visible properties to `true`.\r\n* In the same places where you set `gameState = \"lost\";` and `gameState = \"won\";`, set the sprite groups' visible\r\n* Check your code by running the game and losing and restarting the game.\r\n* Check your code by running the game and winning and restarting the game.",
+    "parent_level_id": 15584,
     "contained_level_names": null,
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -208,7 +209,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-09 23:52:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-11 23:27:06 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-14 20:36:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-14 20:38:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-14 20:47:04 +0000\",\"changed\":[\"name\",\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-14 21:45:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-14 22:07:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-14 22:08:19 +0000\",\"changed\":[\"name\",\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
