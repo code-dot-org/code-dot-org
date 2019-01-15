@@ -1114,7 +1114,7 @@ it:
             'Farmer: While Loops':
               name: 'Contadina: Cicli "Mentre"'
         csd3-2017:
-          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          description_short: Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi.
           stages:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
@@ -3412,3 +3412,7 @@ it:
               name: Uno Sguardo Avanti
             Binary Bracelets:
               name: Braccialetti Binari
+            'End of Course Project: Play Lab':
+              name: 'Progetto di fine corso: Laboratorio'
+        gamelab:
+          title: Sviluppo Giochi
