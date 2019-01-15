@@ -97,7 +97,7 @@ module Pd::Application
     end
 
     def log_fit_workshop_change(user)
-      update_status_timestamp_change_log(user, "Fit Workshop: #{fit_workshop_date_and_location || 'Unassigned'}")
+      update_status_timestamp_change_log(user, "Fit Workshop: #{fit_workshop_id ? fit_workshop_date_and_location : 'Unassigned'}")
     end
 
     def registered_fit_workshop?
