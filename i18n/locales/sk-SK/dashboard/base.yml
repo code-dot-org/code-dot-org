@@ -365,7 +365,7 @@ sk:
     user_not_found: 'Učiteľa sa nepodarilo nájsť.'
     student_teacher_disassociated: 'Opustili ste triedu %{section_code} s %{teacher_name}.'
     panel:
-      answer_viewer: 'Panel pre učiteľa'
+      answer_viewer: 'Panel učiteľa'
       student: 'Študent'
       viewing_solution: 'Prehliadnuť riešenie'
       try_it_yourself: 'Skúste to sami'
@@ -564,7 +564,7 @@ sk:
   not_started: 'Študent neprešiel túto úroveň.'
   share_code:
     title: "Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii"
-    bounce_og_title: "Pozri sa na moju Bounce Game"
+    bounce_og_title: "Pozri si moju hru Bounce"
     flappy_og_title: "Pozri si moju Flappy hru"
     studio_og_title: "Pozri si moju Play Lab appku"
     check_out_what_i_made: "Pozrite, čo som vytvoril/a"
@@ -641,6 +641,7 @@ sk:
       title: "Minecraft"
       body: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
     sports:
+      title: "Športy"
       body: "Vytvor basketbalový zápas alebo pospájaj a pomiešaj viaceré športy."
     text-compression:
       body: "V tejto lekcii študenti použijú nástroj Kompresia textu na kompresiu textu pomocou nahradenia opakujúcich sa vzorov symbolmi."
@@ -873,12 +874,12 @@ sk:
     content: 'Obsah'
     practice: 'Učiteľské cvičenia'
     peer_review: 'Recenzia'
-    ramp_up: 'Posuňte sa'
+    ramp_up: 'Príprava'
     main_course: 'Hlavný kurz'
     extra_course_content: 'Obsah ku kurzom navyše'
-    csf_e_1: 'Posuňte sa do kurzu E (voliteľné)'
+    csf_e_1: 'Príprava na Kurz E (voliteľné)'
     csf_e_2: 'Obsah kurzu E'
-    csf_f_1: 'Posuňte sa do kurzu F (voliteľné)'
+    csf_f_1: 'Príprava na Kurz F (voliteľné)'
     csf_f_2: 'Obsah kurzu F'
     csd1_1: 'Kapitola 1: Proces riešenia problémov'
     csd1_2: 'Kapitola 2: Počítače a riešenie problémov'
@@ -888,18 +889,25 @@ sk:
     csd3_2: 'Kapitola 2: Tvorba hier'
     csd4_1: 'Kapitola 1: Užívateľsky orientovaný dizajn'
     csd4_2: 'Kapitola 2: Prototypovanie aplikácií'
+    csd5_1: 'Kapitola 1: Prezentácia informácií'
     csd5_2: 'Kapitola 2: Riešenie problémov s dátami'
     csd6_1: 'Kapitola 1: Programovanie s hardvérom'
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: 'Hodnotenie kurzu'
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
+    csp1_2: 'Kapitola 2: Vynájdenie Internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
+    csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
+    csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'
     csp4_1: 'Kapitola 1: Svet Big Data a šifrovania'
     csp5_1: 'Kapitola 1: Udalosťami riadené programovanie'
     csp5_2: 'Kapitola 2: Programovanie s dátovými štruktúrami'
     cspSurvey: 'Anketa'
     cspAssessment: 'Hodnotenie kapitoly'
     csp_ap_1: 'Kapitola 1: AP technické nastavenie'
+    csp_ap_2: 'Kapitola 2: AP zoznám sa s výkonovými úlohami'
+    csp_ap_3: 'Kapitola 3: AP vytvor výkonové úlohy'
+    csp_postap_1: 'Kapitola 1: Manipulácia a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
     csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
@@ -1014,12 +1022,12 @@ sk:
         ages_17_18: '17-18 rokov'
         ages_19_over: '19 a viac rokov'
       subjects:
-        cs: 'Počítačová veda'
+        cs: 'Informatika'
         ict: 'IT'
         math: 'Matematické'
         science: 'Veda'
         history: 'História / Sociálne vedy'
-        la: 'Jazykové umenia'
+        la: 'Jazyky'
         efl: 'Angličtina ako cudzí jazyk'
         music: 'Hudba'
         art: 'Umenie'
@@ -1045,8 +1053,8 @@ sk:
         other: "Iné:"
       workshop_course:
         csf_af: 'Základy informatiky (kurzy A-F)'
-        csf_express: 'Základy informatiky (skrátená verzia)'
-        csd: 'Objavujeme Informatiku'
+        csf_express: 'Základy informatiky (rýchlokurz)'
+        csd: 'Objavujeme informatiku'
         csp: 'Princípy Informatiky'
       email_opt_in:
         opt_in_yes: 'Áno'
@@ -1068,7 +1076,7 @@ sk:
   cookie_banner:
     message: 'Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s uložením cookies na Vašom počítači alebo zariadení.'
     more_information: "Prečítajte si Zásady ochrany súkromia pre Code.org."
-    accept: 'súhlasím'
+    accept: 'Súhlasím'
   gdpr_dialog:
     heading: 'Súhlasíte s používanim webovej stránky umiestnenej v Spojených štátoch amerických (USA)?'
     message: 'Údaje z Vášho používania tejto stránky môžu byť zaslané a uložené alebo spracované v Spojených štátoch amerických (USA).'
