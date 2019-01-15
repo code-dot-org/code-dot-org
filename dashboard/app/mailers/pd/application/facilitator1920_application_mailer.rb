@@ -16,39 +16,33 @@ module Pd::Application
     def declined(facilitator_application)
       @application = facilitator_application
 
+      mail_data = {
+        to: @application.user.email,
+        from: from(@application),
+        subject: "Your Code.org facilitator application status"
+      }
+
       if @application.regional_partner
-        mail(
-          to: @application.user.email,
-          from: from(@application),
-          cc: @application.formatted_partner_contact_email,
-          subject: "Your Code.org facilitator application status"
-        )
-      else
-        mail(
-          to: @application.user.email,
-          from: from(@application),
-          subject: "Your Code.org facilitator application status"
-        )
+        mail_data = mail_data.merge({cc: @application.formatted_partner_contact_email})
       end
+
+      mail(mail_data)
     end
 
     def waitlisted(facilitator_application)
       @application = facilitator_application
 
+      mail_data = {
+        to: @application.user.email,
+        from: from(@application),
+        subject: "Your Code.org facilitator application status"
+      }
+
       if @application.regional_partner
-        mail(
-          to: @application.user.email,
-          from: from(@application),
-          cc: @application.formatted_partner_contact_email,
-          subject: "Your Code.org facilitator application status"
-        )
-      else
-        mail(
-          to: @application.user.email,
-          from: from(@application),
-          subject: "Your Code.org facilitator application status"
-        )
+        mail_data = mail_data.merge({cc: @application.formatted_partner_contact_email})
       end
+
+      mail(mail_data)
     end
 
     private
