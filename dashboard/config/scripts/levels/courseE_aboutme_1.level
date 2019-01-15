@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-01-07T23:16:57.000Z",
+  "created_at": "2019-01-11T18:26:33.000Z",
   "level_num": "custom",
   "user_id": 833,
   "properties": {
@@ -38,658 +38,24 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "preload_asset_list": null
+    "parent_level_id": 15577,
+    "contained_level_names": [
+      "courseE_aboutme_1_predict"
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:13:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:14:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:17:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:28:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:27:26 +0000\",\"changed\":[\"block_pools\",\"helper_libraries\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:29:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:50:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:55:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:39:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:47:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:55:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:13:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:14:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:17:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:28:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:27:26 +0000\",\"changed\":[\"block_pools\",\"helper_libraries\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:29:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:50:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:55:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:39:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:47:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:55:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:00:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:02:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:04:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:05:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:08:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:12:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:19:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:26:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:37:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:38:38 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:52:35 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 18:26:13 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 23:39:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false">
-          <next>
-            <block type="gamelab_setBackground">
-              <value name="COLOR">
-                <block type="colour_picker">
-                  <title name="COLOUR">#009900</title>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_createNewSprite">
-                  <title name="NAME">dude1</title>
-                  <title name="COSTUME">"green monster"</title>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <title name="LOCATION">{"x":80,"y":210}</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_createNewSprite">
-                      <title name="NAME">dude2</title>
-                      <title name="COSTUME">"hippo"</title>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <title name="LOCATION">{"x":331,"y":204}</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_console.log">
-                          <value name="MESSAGE">
-                            <block type="text">
-                              <title name="TEXT">Welcome to Text World!</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="variables_set">
-                              <title name="VAR">userName</title>
-                              <value name="VALUE">
-                                <block type="text">
-                                  <title name="TEXT">Aaron</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="variables_set">
-                                  <title name="VAR">dude1Name</title>
-                                  <value name="VALUE">
-                                    <block type="text">
-                                      <title name="TEXT">Cutiepie</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="variables_set">
-                                      <title name="VAR">dude2Name</title>
-                                      <value name="VALUE">
-                                        <block type="text">
-                                          <title name="TEXT">Rhinobro</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_whenKey">
-          <title name="KEY">"space"</title>
-          <next>
-            <block type="gamelab_comment">
-              <title name="COMMENT">#Simulate console input.</title>
-              <next>
-                <block type="variables_set">
-                  <title name="VAR">input</title>
-                  <value name="VALUE">
-                    <block type="aalab_prompt">
-                      <value name="MESSAGE">
-                        <block type="text">
-                          <title name="TEXT">Enter input [userName, spriteName, dance, stop]: </title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_console.log">
-                      <value name="MESSAGE">
-                        <block type="text_join_simple" inputcount="2">
-                          <value name="ADD0">
-                            <block type="variables_get">
-                              <title name="VAR">userName</title>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="text_join_simple" inputcount="2">
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">: </title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="variables_get">
-                                  <title name="VAR">input</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="controls_if">
-                          <mutation elseif="3" else="1"/>
-                          <value name="IF0">
-                            <block type="logic_compare">
-                              <title name="OP">EQ</title>
-                              <value name="A">
-                                <block type="variables_get">
-                                  <title name="VAR">input</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="text">
-                                  <title name="TEXT">dance</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO0">
-                            <block type="variables_set">
-                              <title name="VAR">input</title>
-                              <value name="VALUE">
-                                <block type="aalab_prompt">
-                                  <value name="MESSAGE">
-                                    <block type="text_join_simple" inputcount="2">
-                                      <value name="ADD0">
-                                        <block type="text">
-                                          <title name="TEXT">Who should dance?: [</title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD1">
-                                        <block type="text_join_simple" inputcount="2">
-                                          <value name="ADD0">
-                                            <block type="variables_get">
-                                              <title name="VAR">dude1Name</title>
-                                            </block>
-                                          </value>
-                                          <value name="ADD1">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <title name="TEXT">, </title>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="text_join_simple" inputcount="2">
-                                                  <value name="ADD0">
-                                                    <block type="variables_get">
-                                                      <title name="VAR">dude2Name</title>
-                                                    </block>
-                                                  </value>
-                                                  <value name="ADD1">
-                                                    <block type="text">
-                                                      <title name="TEXT">]</title>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="controls_if">
-                                  <mutation elseif="1" else="1"/>
-                                  <value name="IF0">
-                                    <block type="logic_compare">
-                                      <title name="OP">EQ</title>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <title name="VAR">input</title>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="variables_get">
-                                          <title name="VAR">dude1Name</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="gamelab_addBehaviorSimple">
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">dude1</title>
-                                        </block>
-                                      </value>
-                                      <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get">
-                                          <mutation/>
-                                          <title name="VAR">jittering</title>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_console.log">
-                                          <value name="MESSAGE">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <title name="TEXT">Let's dance, </title>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="text_join_simple" inputcount="2">
-                                                  <value name="ADD0">
-                                                    <block type="variables_get">
-                                                      <title name="VAR">input</title>
-                                                    </block>
-                                                  </value>
-                                                  <value name="ADD1">
-                                                    <block type="text">
-                                                      <title name="TEXT">!</title>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF1">
-                                    <block type="logic_compare">
-                                      <title name="OP">EQ</title>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <title name="VAR">input</title>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="variables_get">
-                                          <title name="VAR">dude2Name</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO1">
-                                    <block type="gamelab_addBehaviorSimple">
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">dude2</title>
-                                        </block>
-                                      </value>
-                                      <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get">
-                                          <mutation/>
-                                          <title name="VAR">wandering</title>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_console.log">
-                                          <value name="MESSAGE">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <title name="TEXT">Let's dance, </title>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="text_join_simple" inputcount="2">
-                                                  <value name="ADD0">
-                                                    <block type="variables_get">
-                                                      <title name="VAR">input</title>
-                                                    </block>
-                                                  </value>
-                                                  <value name="ADD1">
-                                                    <block type="text">
-                                                      <title name="TEXT">!</title>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="gamelab_console.log">
-                                      <value name="MESSAGE">
-                                        <block type="text">
-                                          <title name="TEXT">I don't see anyone with that name.</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </statement>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <value name="IF1">
-                            <block type="logic_compare">
-                              <title name="OP">EQ</title>
-                              <value name="A">
-                                <block type="variables_get">
-                                  <title name="VAR">input</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="text">
-                                  <title name="TEXT">userName</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO1">
-                            <block type="variables_set">
-                              <title name="VAR">userName</title>
-                              <value name="VALUE">
-                                <block type="aalab_prompt">
-                                  <value name="MESSAGE">
-                                    <block type="text">
-                                      <title name="TEXT">Please enter your name!</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_console.log">
-                                  <value name="MESSAGE">
-                                    <block type="text_join_simple" inputcount="2">
-                                      <value name="ADD0">
-                                        <block type="text">
-                                          <title name="TEXT">Great! Your name is now: </title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD1">
-                                        <block type="variables_get">
-                                          <title name="VAR">userName</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <value name="IF2">
-                            <block type="logic_compare">
-                              <title name="OP">EQ</title>
-                              <value name="A">
-                                <block type="variables_get">
-                                  <title name="VAR">input</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="text">
-                                  <title name="TEXT">spriteName</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO2">
-                            <block type="variables_set">
-                              <title name="VAR">input</title>
-                              <value name="VALUE">
-                                <block type="aalab_prompt">
-                                  <value name="MESSAGE">
-                                    <block type="text_join_simple" inputcount="2">
-                                      <value name="ADD0">
-                                        <block type="text">
-                                          <title name="TEXT">Rename whom?: [</title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD1">
-                                        <block type="text_join_simple" inputcount="2">
-                                          <value name="ADD0">
-                                            <block type="variables_get">
-                                              <title name="VAR">dude1Name</title>
-                                            </block>
-                                          </value>
-                                          <value name="ADD1">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <title name="TEXT">, </title>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="text_join_simple" inputcount="2">
-                                                  <value name="ADD0">
-                                                    <block type="variables_get">
-                                                      <title name="VAR">dude2Name</title>
-                                                    </block>
-                                                  </value>
-                                                  <value name="ADD1">
-                                                    <block type="text">
-                                                      <title name="TEXT">]</title>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="controls_if">
-                                  <mutation elseif="1" else="1"/>
-                                  <value name="IF0">
-                                    <block type="logic_compare">
-                                      <title name="OP">EQ</title>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <title name="VAR">input</title>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="variables_get">
-                                          <title name="VAR">dude1Name</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="variables_set">
-                                      <title name="VAR">dude1Name</title>
-                                      <value name="VALUE">
-                                        <block type="aalab_prompt">
-                                          <value name="MESSAGE">
-                                            <block type="text">
-                                              <title name="TEXT">Please enter a new name!</title>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_console.log">
-                                          <value name="MESSAGE">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <title name="TEXT">Great! That sprite's new name is: </title>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="variables_get">
-                                                  <title name="VAR">dude1Name</title>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF1">
-                                    <block type="logic_compare">
-                                      <title name="OP">EQ</title>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <title name="VAR">input</title>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="variables_get">
-                                          <title name="VAR">dude2Name</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO1">
-                                    <block type="variables_set">
-                                      <title name="VAR">dude2Name</title>
-                                      <value name="VALUE">
-                                        <block type="variables_get">
-                                          <title name="VAR">input</title>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_console.log">
-                                          <value name="MESSAGE">
-                                            <block type="text_join_simple" inputcount="2">
-                                              <value name="ADD0">
-                                                <block type="aalab_prompt">
-                                                  <value name="MESSAGE">
-                                                    <block type="text">
-                                                      <title name="TEXT">Please enter a new name!</title>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="variables_get">
-                                                  <title name="VAR">dude2Name</title>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="gamelab_console.log">
-                                      <value name="MESSAGE">
-                                        <block type="text">
-                                          <title name="TEXT">I don't see anyone with that name.</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </statement>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <value name="IF3">
-                            <block type="logic_compare">
-                              <title name="OP">EQ</title>
-                              <value name="A">
-                                <block type="variables_get">
-                                  <title name="VAR">input</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="text">
-                                  <title name="TEXT">stop</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <statement name="DO3">
-                            <block type="gamelab_removeAllBehaviors">
-                              <value name="SPRITE">
-                                <block type="sprite_variables_get">
-                                  <title name="VAR">dude1</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_removeAllBehaviors">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude2</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_console.log">
-                                      <value name="MESSAGE">
-                                        <block type="text">
-                                          <title name="TEXT">Everybody freeze!</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                          <statement name="ELSE">
-                            <block type="gamelab_console.log">
-                              <value name="MESSAGE">
-                                <block type="text">
-                                  <title name="TEXT">Sorry, I don't understand that command!</title>
-                                </block>
-                              </value>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_clickedOn">
-          <value name="SPRITE">
-            <block type="sprite_variables_get">
-              <title name="VAR">dude1</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_console.log">
-              <value name="MESSAGE">
-                <block type="text_join_simple" inputcount="2">
-                  <value name="ADD0">
-                    <block type="variables_get">
-                      <title name="VAR">dude1Name</title>
-                    </block>
-                  </value>
-                  <value name="ADD1">
-                    <block type="text">
-                      <title name="TEXT"> got clicked!</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_clickedOn">
-          <value name="SPRITE">
-            <block type="sprite_variables_get">
-              <title name="VAR">dude2</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_console.log">
-              <value name="MESSAGE">
-                <block type="text_join_simple" inputcount="2">
-                  <value name="ADD0">
-                    <block type="variables_get">
-                      <title name="VAR">dude2Name</title>
-                    </block>
-                  </value>
-                  <value name="ADD1">
-                    <block type="text">
-                      <title name="TEXT"> got clicked!</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -809,6 +175,30 @@
             </block>
           </statement>
         </block>
+        <block type="gamelab_setup">
+          <next>
+            <block type="gamelab_createNewSprite">
+              <title name="NAME">dude1</title>
+              <title name="COSTUME">"green monster"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <title name="LOCATION">{"x":67,"y":198}</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_createNewSprite">
+                  <title name="NAME">dude2</title>
+                  <title name="COSTUME">"hippo"</title>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <title name="LOCATION">{"x":335,"y":209}</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -830,6 +220,253 @@
               </value>
             </block>
           </statement>
+        </block>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_console.log">
+              <value name="MESSAGE">
+                <block type="text">
+                  <title name="TEXT">Welcome to Text Input Event World!</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenKey">
+          <title name="KEY">"space"</title>
+          <next>
+            <block type="gamelab_comment">
+              <title name="COMMENT">#Simulate console input. Pressing space simulates clicking text input area in console.</title>
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">input</title>
+                  <value name="VALUE">
+                    <block type="aalab_prompt">
+                      <value name="MESSAGE">
+                        <block type="text">
+                          <title name="TEXT">Simulate user text input. Try these commands: ["dude1 dance", "dude2 spin right", "everybody stop", "dude1 crab", "dude2 green", "world red"]:</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_console.log">
+                      <value name="MESSAGE">
+                        <block type="text_join_simple" inputcount="2">
+                          <value name="ADD0">
+                            <block type="text">
+                              <title name="TEXT">User entered: </title>
+                            </block>
+                          </value>
+                          <value name="ADD1">
+                            <block type="variables_get">
+                              <title name="VAR">input</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_comment">
+                          <title name="COMMENT">#Imagine each if-expression below as a "user enters X" event block, with the string param and the code within being student-defined.</title>
+                          <next>
+                            <block type="controls_if">
+                              <mutation elseif="5"/>
+                              <value name="IF0">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">dude1 dance</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">dude1</title>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation/>
+                                      <title name="VAR">jittering</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_addBehaviorSimple">
+                                      <value name="SPRITE">
+                                        <block type="sprite_variables_get">
+                                          <title name="VAR">dude1</title>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation/>
+                                          <title name="VAR">wandering</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <value name="IF1">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">dude2 spin right</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO1">
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">dude2</title>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation/>
+                                      <title name="VAR">spinning right</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <value name="IF2">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">everybody stop</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO2">
+                                <block type="gamelab_removeAllBehaviors">
+                                  <value name="SPRITE">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">dude1</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_removeAllBehaviors">
+                                      <value name="SPRITE">
+                                        <block type="sprite_variables_get">
+                                          <title name="VAR">dude2</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <value name="IF3">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">dude1 crab</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO3">
+                                <block type="gamelab_setAnimation">
+                                  <title name="ANIMATION">"crab"</title>
+                                  <value name="THIS">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">dude1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <value name="IF4">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">dude2 green</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO4">
+                                <block type="gamelab_setTint">
+                                  <value name="THIS">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">dude2</title>
+                                    </block>
+                                  </value>
+                                  <value name="COLOR">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#33cc00</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <value name="IF5">
+                                <block type="logic_compare">
+                                  <title name="OP">EQ</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">input</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text">
+                                      <title name="TEXT">world red</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO5">
+                                <block type="gamelab_setBackground">
+                                  <value name="COLOR">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#ff0000</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
@@ -1145,513 +782,6 @@
             <description>move a sprite across the screen, reversing direction if it touches the edges</description>
           </mutation>
           <title name="NAME">patrolling</title>
-          <statement name="STACK">
-            <block type="gamelab_moveForward">
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-              <next>
-                <block type="controls_if">
-                  <value name="IF0">
-                    <block type="gamelab_isTouchingEdges">
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <statement name="DO0">
-                    <block type="gamelab_edgesDisplace">
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_changePropBy">
-                          <title name="PROPERTY">"direction"</title>
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_number">
-                              <title name="NUM">180</title>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite, changing its direction randomly</description>
-          </mutation>
-          <title name="NAME">wandering2</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">5</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="gamelab_changePropBy">
-                  <title name="PROPERTY">"direction"</title>
-                  <value name="SPRITE">
-                    <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">-25</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">25</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <next>
-                <block type="gamelab_moveForward">
-                  <value name="SPRITE">
-                    <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_if">
-                      <value name="IF0">
-                        <block type="gamelab_isTouchingEdges">
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <statement name="DO0">
-                        <block type="gamelab_edgesDisplace">
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_changePropBy">
-                              <title name="PROPERTY">"direction"</title>
-                              <value name="SPRITE">
-                                <block type="sprite_parameter_get">
-                                  <title name="VAR">this sprite</title>
-                                </block>
-                              </value>
-                              <value name="VAL">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <title name="NUM">135</title>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <title name="NUM">225</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite to the right across the screen</description>
-          </mutation>
-          <title name="NAME">moving east2</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"East"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>rotate a sprite to its left</description>
-          </mutation>
-          <title name="NAME">spinning left2</title>
-          <statement name="STACK">
-            <block type="gamelab_turn">
-              <title name="DIRECTION">"left"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="N">
-                <block type="math_number">
-                  <title name="NUM">6</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>rotate a sprite to its right</description>
-          </mutation>
-          <title name="NAME">spinning right2</title>
-          <statement name="STACK">
-            <block type="gamelab_turn">
-              <title name="DIRECTION">"right"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="N">
-                <block type="math_number">
-                  <title name="NUM">6</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>change the size of a sprite</description>
-          </mutation>
-          <title name="NAME">shrinking2</title>
-          <statement name="STACK">
-            <block type="gamelab_changePropBy">
-              <title name="PROPERTY">"scale"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">-1</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>change the size of a sprite</description>
-          </mutation>
-          <title name="NAME">growing2</title>
-          <statement name="STACK">
-            <block type="gamelab_changePropBy">
-              <title name="PROPERTY">"scale"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite downwards across the screen</description>
-          </mutation>
-          <title name="NAME">moving south2</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"South"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
-          </mutation>
-          <title name="NAME">swimming left and right2</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <mutation elseif="1"/>
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="gamelab_getProp">
-                      <title name="PROPERTY">"direction"</title>
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="gamelab_mirrorSprite">
-                  <title name="DIRECTION">"right"</title>
-                  <value name="SPRITE">
-                    <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <value name="IF1">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="gamelab_getProp">
-                      <title name="PROPERTY">"direction"</title>
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <title name="NUM">180</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO1">
-                <block type="gamelab_mirrorSprite">
-                  <title name="DIRECTION">"left"</title>
-                  <value name="SPRITE">
-                    <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <next>
-                <block type="gamelab_moveForward">
-                  <value name="SPRITE">
-                    <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="math_number">
-                      <title name="NUM">5</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_if">
-                      <value name="IF0">
-                        <block type="gamelab_isTouchingEdges">
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <statement name="DO0">
-                        <block type="gamelab_edgesDisplace">
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_changePropBy">
-                              <title name="PROPERTY">"direction"</title>
-                              <value name="SPRITE">
-                                <block type="sprite_parameter_get">
-                                  <title name="VAR">this sprite</title>
-                                </block>
-                              </value>
-                              <value name="VAL">
-                                <block type="math_number">
-                                  <title name="NUM">180</title>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite upwards across the screen</description>
-          </mutation>
-          <title name="NAME">moving north2</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"North"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>randomly change the size of a sprite</description>
-          </mutation>
-          <title name="NAME">jittering2</title>
-          <statement name="STACK">
-            <block type="gamelab_changePropBy">
-              <title name="PROPERTY">"scale"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_random_int">
-                  <value name="FROM">
-                    <block type="math_number">
-                      <title name="NUM">-1</title>
-                    </block>
-                  </value>
-                  <value name="TO">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite to the left across the screen</description>
-          </mutation>
-          <title name="NAME">moving west2</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"West"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">5</title>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>move a sprite across the screen, reversing direction if it touches the edges</description>
-          </mutation>
-          <title name="NAME">patrolling2</title>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">
