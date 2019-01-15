@@ -416,8 +416,11 @@ az-AZ:
   next: Növbəti
   frozen_name: Anna və Elza ilə proqramlaşdır
   starwars_name: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
+  codeorg_name: Ənənəvi labirint
+  codeintl_name: Ənənəvi labirint
   scratch_name: Proqramlaşdırma ilə yaradıcı olun
   blockly_name: '"Blockly"'
+  hourofcode_name: Ənənəvi labirint
   playlab_name: Oyun labı
   artist_name: Rəssam
   course1_name: Kurs 1
@@ -427,6 +430,7 @@ az-AZ:
   accelerated_name: Sürətləndirilmiş kurs
   20-hour_name: Sürətləndirilmiş kurs
   gumball_name: Gumball
+  classicmaze_name: Ənənəvi labirint
   iceage_name: Buz dövrü
   minecraft_name: Minecraft
   math_category_name: Riyaziyyat
