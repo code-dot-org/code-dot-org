@@ -324,18 +324,6 @@ module Pd::Application
       all_score_hash
     end
 
-    def formatted_partner_contact_email
-      return nil unless regional_partner && regional_partner.contact_email_with_backup.present?
-
-      if regional_partner.contact_name.present? && regional_partner.contact_email.present?
-        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>"
-      elsif regional_partner.program_managers&.first.present?
-        "#{regional_partner.program_managers.first.name} <#{regional_partner.program_managers.first.email}>"
-      elsif regional_partner.contact&.email.present?
-        "#{regional_partner.contact.name} <#{regional_partner.contact.email}>"
-      end
-    end
-
     def clear_extraneous_answers
       course_specific_questions_to_remove =
         if course == 'csf'
