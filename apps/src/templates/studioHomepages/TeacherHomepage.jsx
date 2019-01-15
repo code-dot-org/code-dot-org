@@ -128,7 +128,7 @@ export default class TeacherHomepage extends Component {
     const { hocLaunch, courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
-    const { canViewAdvancedTools, queryStringOpen } = this.props;
+    const { canViewAdvancedTools, queryStringOpen, isEnglish } = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
@@ -148,7 +148,7 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="teacherReminders"
         />
-        {showSpecialAnnouncement && (
+        {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock
             hocLaunch={hocLaunch}
           />
