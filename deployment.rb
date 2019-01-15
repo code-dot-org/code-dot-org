@@ -272,7 +272,7 @@ class CDOImpl < OpenStruct
   def curriculum_url(locale, path = '')
     locale = locale.downcase.to_s
     uri = URI("https://curriculum.code.org")
-    uri += locale if CURRICULUM_LANGUAGES.include? locale
+    path = File.join(locale, path) if CURRICULUM_LANGUAGES.include? locale
     uri += path
     uri.to_s
   end

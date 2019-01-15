@@ -15,7 +15,7 @@ Did you know that girls and students of color are less likely to take the AP exa
 
 Teachers and parents are key to motivating students to try the exam. Join the 350+ teachers at schools in our [AP CS Principles Hall of Fame](/educate/csp/hall-of-fame) who have helped lead record-breaking change in computer science by encouraging girls and underrepresented minorities in their classrooms.
 
-Taking the exam can save your students money in college credits, help in applications, and, even if they don't pass, [preparing for and taking the exam has been shown to set students up for success](https://files.eric.ed.gov/fulltext/ED519365.pdf) in higher education. 
+Taking the exam can save your students money in college credits, help in applications, and, even if they don't pass, preparing for and taking the exam may even help to set students up for success in higher education. [Students who take the AP Exam are more likely to graduate from college](https://files.eric.ed.gov/fulltext/ED519365.pdf)) than their counterparts who don’t — whether or not they pass.
 
 # So, how can you get your students to sign up?
 
