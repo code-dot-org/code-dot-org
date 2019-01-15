@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
 
+import i18n from '@cdo/locale';
 import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
 import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const CARDS = [
   {
-    title: 'App Lab',
-    description:
-      'Start with App Lab:  an introductory programming environment where you can design an app, code with blocks or JavaScript to make it work, then share your app in seconds.',
+    title: i18n.projectTypeApplab(),
+    description: i18n.projectDescriptionApplab(),
     link: '/applab',
   },
   {
-    title: 'Game Lab',
-    description:
-      'Ready to go further? Game Lab is a more complex programming environment where you can make animations and games with characters that run, jump, fly and more.',
+    title: i18n.projectTypeGamelab(),
+    description: i18n.projectDescriptionGamelab(),
     link: '/gamelab',
   },
   {
-    title: 'Web Lab',
-    description:
-      'Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds.',
+    title: i18n.projectTypeWeblab(),
+    description: i18n.projectDescriptionWeblab(),
     link: '/weblab',
   },
 ];
@@ -29,7 +28,13 @@ export default class MiddleHighResourceCards extends Component {
     return (
       <ResourceCardResponsiveContainer>
         {CARDS.map(card => (
-          <ResourceCard {...card} key={card.title} buttonText="Learn More" />
+          <ResourceCard
+            description={card.description}
+            key={card.title}
+            link={pegasus(card.link)}
+            title={card.title}
+            buttonText={i18n.learnMore()}
+          />
         ))}
       </ResourceCardResponsiveContainer>
     );
