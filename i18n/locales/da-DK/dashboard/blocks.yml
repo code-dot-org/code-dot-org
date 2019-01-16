@@ -491,19 +491,90 @@ da:
             '"right"': højre
             '"space"': rummet
       craft_ifPath:
+        text: |-
+          hvis stien {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": forude
+            "'right'": til højre
+            "'left'": til venstre
       craft_ifStandingOn:
+        text: |-
+          hvis stående på {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": blå koral
+            "'redCoralBlock'": rød koral
             "'sand'": sand
+            "'wool_blue'": dybt vand
             "'planksOak'": egetræsplanker
+            "'seaLantern'": havlanterne
       craft_ifStandingOnLimit:
+        text: |-
+          hvis stående på {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sand
+            "'darkPrismarine'": mørk prismarine
+            "'seaLantern'": havlanterne
       craft_moveForward:
         text: flyt fremad
+      craft_placeBlock:
+        text: sted {blockType}
+        options:
+          blockType:
+            '"strippedOak"': afbarket eg
+            '"strippedDarkOak"': afbarket mørk eg
+            '"stoneBricks"': mursten
+            '"mossyStoneBricks"': mursten med mos
+            '"crackedStoneBricks"': knækkede mursten
+            '"decorativeStoneBricks"': dekorative mursten
+            '"blueCoralBlock"': blå koral-blok
+            '"pinkCoralBlock"': pink koral-blok
+            '"magentaCoralBlock"': magenta koral-blok
+            '"redCoralBlock"': rød koral-blok
+            '"yellowCoralBlock"': gul koral-blok
+            '"blueDeadCoralBlock"': død blå koral-blok
+            '"pinkDeadCoralBlock"': død pink koral-blok
+            '"magentaDeadCoralBlock"': død magenta koral-blok
+            '"readDeadCoralBlock"': død rød koral-blok
+            '"yellowDeadCoralBlock"': død gul koral-blok
+            '"darkPrismarine"': mørk prismarine
+            '"seaLantern"': havlanterne
+            '"packedIce"': pakis
+            '"blueIce"': blå is
+            '"blackConcrete"': sort beton
+            '"seaGrass"': søgræs
+            '"kelp"': tang
+            '"polishedGranite"': poleret granit
+      craft_placePrismarine:
+        text: placer prismarine
       craft_placeTorch:
         text: placér fakkel
+      craft_repeatUntilConduit:
+        text: |-
+          gentag, indtil kanalen er færdig
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          gentag indtil, du er i mål
+          {STATEMENT}
+      craft_spawnEntity:
+        text: fiskeyngel {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': torsk
+            '"dolphin"': delfin
+            '"salmon"': laks
+            '"seaTurtle"': havskildpadde
+            '"squid"': blæksprutte
+            '"tropicalFish"': tropisk fisk
+      craft_turn:
+        text: drej {DIR}
+        options:
+          DIR:
+            right: til højre ↻
+            left: til venstre ↺

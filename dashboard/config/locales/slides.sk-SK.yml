@@ -436,6 +436,74 @@ sk:
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
       2: 
+    infinity_playlab_events:
+      1:
+        text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
+          Sú to Udalosti. Udalosť hovorí tvojmu programu, aby čakal na to, keď sa
+          niečo stane. A potom, keď sa to stane, program vykoná nejakú aktivitu. Príkladmi
+          udalostí sú napríklad čakanie na kliknutie myši, stlačenie šípky alebo ťuknutie
+          na obrazovku.
+      2:
+        text: V tejto úlohe naprogramujeme Baymaxa tak, aby sa posunul hore a dotkol
+          sa Hira a potom dole a dotkol sa Rapunzel vtedy, keď hráč použije šípky
+          hore a dole. Použijem blok "keď šípka hore" a pripojím k nemu blok "posuň
+          postavu hore". Keď hráč stlačí šípku hore, program vykoná všetky aktivity
+          pripojené pod blok "keď šípka hore". To isté spravíme aj pre pohyb dole.
+          Krok po kroku sa naša hra stáva viac interaktívnou.
+    infinity_playlab_intro:
+      1:
+        text: V ktorom si ročníku? V druhom. V desiatom. V prvom. Ja som sa naučil
+          programovať, keď som bol ôsmak. Prvý počítač som dostal v šiestej triede.
+          Baví ma na tom hlavne to, že viem riešiť problémy iných ľudí. Môžeš vyjadriť
+          svoje cítenie, môžeš z nápadu vybudovať skutočné veci.
+      2:
+        text: Informatika je základom pre veľa vecí, ktoré odborníci budú robiť najbližších
+          20 či 30 rokov. Mám rád programovanie, lebo ma baví pomáhať ľuďom. Mám príležitosť
+          vytvoriť niečo, čo ľuďom uľahčí živo. Myslím, že to je najbližšie ako sa
+          vieme dostať ku superschopnostiam. Začať je to najdôležitejšie. Ja sám som
+          začiatočník a chcem, aby ste sa učili spolu so mnou.
+      3:
+        text: Som John Vechey a som jeden so spoluzakladateľov PopCap Games. Vytvorili
+          sme hry ako Plants vs. Zombies, Bejeweled a Peggle. Veľa hier nie je o tom,
+          ako perfektne vieš programovať, ani o tom, aké perfektné je tvoje umenie.
+          Sú o tom, ako sa v nich cítiš a ako sú zábavné. Tento pocit ale získaš len
+          tak, že budeš skúšať, opakovať, učiť sa a prispôsobovať a zlepšovať svoje
+          schopnosti vyrábať hry.
+      4:
+        text: Máš obľúbenú video hru? Teraz urobíme pomocou Play Labu prvý krôčik
+          k vytváraniu takých hier. Dobré hry majú príbeh a každý príbeh má postavy.
+          Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na
+          základe pravidiel hry aj získavajú body. Dnes sa budeme učiť ako spraviť
+          všetky tieto veci s Disney postavičkami ako Anna, Elsa, Hiro, Baymax a Rapunzel.
+          Postavíme od základu hru, ktorú si potom budeš môcť zahrať na mobile.
+      5:
+        text: Tvoja obrazovka je rozdelená na tri hlavné časti. Naľavo je herný priestor,
+          v ktorom pobeží tvoj program. Inštrukcie pre každú úroveň sú napísané tu.
+          Táto stredná oblasť je panel s nástrojmi. Každý z týchto blokov je riadok
+          kódu. Biela časť napravo sa volá pracovný priestor a je miestom, na ktorom
+          vybudujeme náš program.
+      6:
+        text: Pre začiatok musíš pripojiť bloky ku oranžovému bloku "pri spustení".
+          Môžeš pripojť viacero blokov tak, že ich potiahneš až kým neuvidíš žltý
+          obrys a potom sa spoja. V tejto prvej úlohe je Hiro postava 1 a Baymax postava
+          2. Potrebujeme, aby sa Hiro dostal ku Baymaxovi. Spravíme to tak, že blok
+          "posuň postavu doprava" presunieme a pripojíme pod blok "pri spustení".
+          Keď bloky umiestniš stlač tlačidlo "Spustiť", aby si si overil, čo si naprogramoval.
+      7:
+        text: Začni a na konci budeš môcť vytvoriť vlastnú hru s týmito úžasnými postavami,
+          ktoré sa vedia hýbať, získavať body, hádzať microbotov, čerešne, panvice
+          aj ľad.. a nechať jeden druhého zmiznúť. Je to len na tebe!
+    infinity_playlab_repeat_forever:
+      1:
+        text: Vieš si predstaviť, že by si mal niečo opakovať donekonečna? Stále znova
+          a znova... Dúfajme, že to nikdy nebudeš musieť robiť, lebo v opakovaní sú
+          fakt dobré počítače. Tento blok sa volá "opakuj donekonečna". Čokoľvek vo
+          vnútri toho bloku sa bude v hre neustále opakovať.
+      2:
+        text: Ak chceme, aby postava opakovala niečo bez toho, aby sa o to staral
+          hráč, tak tie bloky umiestnime do vnútra bloku "opakuj donekonečna". V nasledujúcej
+          úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš
+          používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času.
     starwars_intro:
       1: 
       2: 

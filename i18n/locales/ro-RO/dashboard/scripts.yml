@@ -1656,7 +1656,7 @@ ro:
             Lesson 2,3:
               name: Lecția 2,3
         csd3-2017:
-          description_short: "Programare"
+          description_short: Programare
           description_audience: '[șir gol]'
           stages:
             Velocity:
@@ -3981,3 +3981,7 @@ ro:
               name: Brăţări Binare
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+        gamelab:
+          title: Laborator de jocuri
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'

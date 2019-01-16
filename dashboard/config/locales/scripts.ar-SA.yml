@@ -1028,18 +1028,26 @@ ar:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+          title: الدورة A
+          assignment_family_title: الدورة A
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+          title: الدورة B
+          assignment_family_title: الدورة B
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+          title: الدورة C
+          assignment_family_title: الدورة C
         coursed-2017:
           stages:
             Nested Loops:
               name: الحلقات المتداخلة
+          title: الدورة D
+          assignment_family_title: الدورة D
         coursee-2017:
           stages:
             Envelope Variables:
@@ -1052,10 +1060,14 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          title: الدورة E
+          assignment_family_title: الدورة E
         coursef-2017:
           stages:
             Building a Foundation:
               name: بناء قاعدة
+          title: الدورة F
+          assignment_family_title: الدورة F
         express-2017:
           stages:
             Introduction:
@@ -1076,6 +1088,8 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          title: دورة سريعة
+          assignment_family_title: دورة سريعة
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1216,12 +1230,14 @@ ar:
             Lists:
               name: القوائم
         coursea-2018:
+          assignment_family_title: الدورة A
           stages:
             'Programming: Happy Maps':
               name: الخرائط السعيدة
             Going Places Safely:
               name: الذهاب للأماكن بأمان
         express-2018:
+          assignment_family_title: دورة سريعة
           stages:
             'Algorithms: Graph Paper Programming':
               name: برمجة ورقة الرسم البياني
@@ -1256,6 +1272,7 @@ ar:
             Relay Programming:
               name: برمجة السباق
         courseb-2018:
+          assignment_family_title: الدورة B
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
@@ -1264,6 +1281,7 @@ ar:
             Move It, Move It:
               name: حركها , حركها
         coursed-2018:
+          assignment_family_title: الدورة D
           stages:
             'Algorithms: Graph Paper Programming':
               name: برمجة ورقة الرسم البياني
@@ -1284,6 +1302,7 @@ ar:
             Relay Programming:
               name: برمجة السباق
         coursec-2018:
+          assignment_family_title: الدورة C
           stages:
             Building a Foundation:
               name: بناء قاعدة
@@ -1298,6 +1317,7 @@ ar:
             Functions with Parameters:
               name: الدوال والمعاملات
         coursee-2018:
+          assignment_family_title: الدورة E
           stages:
             'Programming: My Robotic Friends':
               name: أصدقائي من الروبوت
@@ -1316,6 +1336,7 @@ ar:
             Minecraft Hour of Code:
               name: ساعة البرمجة ماين كرافت
         coursef-2018:
+          assignment_family_title: الدورة F
           stages:
             'Programming: My Robotic Friends':
               name: أصدقائي من الروبوت
@@ -1374,6 +1395,13 @@ ar:
           stages:
             Artist:
               name: الرسام
+        aquatic:
+          stages:
+            Aquatic:
+              name: Minecraft
+          title: 'المائي: الرحلة المائية'
+          description_short: Minecraft عاد إليكم بأنشطة جديدة تمامًا ومخصصة لساعة
+            من البرمجة!
         dance--draft:
           stages:
             Dance Party:

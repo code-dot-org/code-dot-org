@@ -1189,7 +1189,7 @@ is:
           Þetta er fyrsta vísbendingin.
 
           Hún hefur *einhvern* **einfaldan** kóða
-        second_hint: "Þetta er önnur vísbendingin. Hún er með mynd.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)"
+        second_hint: Þetta er önnur vísbendingin. Hún er með myndskeið.
         last_hint: Þetta er þriðja og síðasta vísbendingin. Hún hefur ekkert sérstakt.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -1699,9 +1699,10 @@ is:
           </xml>
         courseB_collector_loops_challenge1_a: |
           Mynstrið fyrir fyrir norður er aðeins öðruvísi en mynstrið fyrir suður.
-        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
+        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
         courseB_collector_loops_challenge1_d: |-
           Prófaðu þetta!
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -1783,6 +1784,7 @@ is:
         courseB_collector_loops_challenge2_c: Ekki gleyma að nota `endurtaka` lykkju til að safna síðustu fjársjóðshrúgunni!
         courseB_collector_loops_challenge2_d: |-
           Prófaðu þessa lausn:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -1830,14 +1832,14 @@ is:
         courseB_maze_seq_challenge1_a: Það er ekki víst að stysta slóðin virki í þetta sinn.
         courseB_maze_seq_challenge1_b: Prófaðu að fara fyrst í vestur.
       course1_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Þú getur látið reitt skrímsli urra.
 
@@ -1963,7 +1965,7 @@ is:
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Ef þú kallar á fallið einu sinni enn, getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað` á aðra staði eða breytt þessu öllu bara eins og þú vilt!
       course3_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað safnar hún miklum blómasafa í hvert sinn sem hún fer yfir blóm?
         courseD_bee_debugging_challenge1_b: Á leiðinni til baka ætti býflugan að fylgja sama mynstri. Hvað þarf býflugan að búa til mikið hunang í hvert sinn sem hún fer á býkúpu?
@@ -2203,7 +2205,7 @@ is:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur neðan við skilyrðingalistann.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Spyrja spurningar\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_b: "Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur neðan við skilyrðingalistann.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Spyrja spurningar\"></mutation>\n        </block></block></xml>"
         courseE_playlab_challenge2_c: "Þú þarft að bæta við fleiri skilyrtum setningum til að gefa leikmönnunum fleira að segja.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nEkki gleyma að stilla hvaða skap leikmennirnir sýna innan í `endurtaka endalaust` lykkjunni. Þú getur líka stillt skap þeirra af handahófi!"
         courseE_playlab_challenge2_d: |-
           Þegar þú skilur allan kóðann sem tengist leikmanni 1, getur þú reynt að skrifa samskonar kóða fyrir leikmann 2.
@@ -2222,11 +2224,12 @@ is:
         courseE_artist_concept_challenge2_a: Þegar þú hefur skilgreint fall, getur þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!
         courseE_artist_concept_challenge2_b: |-
           Þú getur hoppað á mismunandi staði á myndfletinum með þessari skipun:
+
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
       course4_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Hver lóðrétt lína hefur lengdina 10. Hver lárétt lína ætti að hafa lengdina `lengd`.
         courseF_artist_variables_challenge1_b: Þú ættir að prófa að hækka `lengd` um 10 **tvisvar** innan lykkjunnar.
@@ -2394,6 +2397,7 @@ is:
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           Aðalforritið ætti líta út einhvern veginn svona:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -2785,6 +2789,7 @@ is:
       course4_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           Þú þarft að nota fleiri kubba úr verkfærakassanum til að láta leikmennina tala.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -2816,6 +2821,7 @@ is:
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur eftir að leikmaðurinn segir spána.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -2874,11 +2880,11 @@ is:
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Reyndu að nota það sem þú hefur lært um lykkjukubba til að ljúka þessari þraut!
         courseA_artist_loops5_b: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum, getur þú breytt tölunni efst í kubbnum.
-        courseA_artist_loops5_c: "Þar sem þú getur bara notað einn Austur kubb, ættirðu að prófa að setja hann í `endurtaka` lykkjuna."
+        courseA_artist_loops5_c: "Þar sem þú getur bara notað einn <xml><block type=\"simple_move_right\"/></xml> kubb, ættirðu að prófa að setja hann í <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjuna."
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: Reyndu að nota það sem þú hefur lært um lykkjukubba til að ljúka þessari þraut!
         courseA_artist_loops5_b: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum, getur þú breytt tölunni efst í kubbnum.
-        courseA_artist_loops5_c: "Þar sem þú getur bara notað einn Austur kubb, ættirðu að prófa að setja hann í `endurtaka` lykkjuna."
+        courseA_artist_loops5_c: "Þar sem þú getur bara notað einn <xml><block type=\"simple_move_right\"/></xml> kubb, ættirðu að prófa að setja hann í <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjuna."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Ertu ekki viss um hvernig á að búa til hæðina? Prófaðu hina ýmsu kubba til að sjá hvað þeir gera.
         courseA_artist_loops6_b: Þú þarft að nota tvo kubba með mismunandi stefnur til að leysa þessa þraut.
@@ -2953,28 +2959,32 @@ is:
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og svo taka fjársjóð.
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og svo taka fjársjóð.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Þú verður að færa áður en þú getur safnað fjársjóði.
         courseA_collector_loops2_b: |-
-          Þegar þú ert á reit með fjársjóði, þá þarftu að muna að nota þennan kubb til að taka hann upp.
+          Þegar þú ert á reit með fjársjóði, þá notar þú þennan kubb til að taka hann upp.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Þú verður að færa áður en þú getur safnað fjársjóði.
         courseA_collector_loops2_b: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Prófaðu að nota <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju!"
+        courseA_collector_loops3_a: "Prófaðu að nota \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju!"
         courseA_collector_loops3_b: Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> lykkju.
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Prófaðu að nota <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju!"
+        courseA_collector_loops3_a: "Prófaðu að nota \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju!"
         courseA_collector_loops3_b: Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> lykkju.
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Þú getur stjórnað því hve langt Laurel færist með því að breyta því hve oft lykkjan keyrir.
@@ -3017,9 +3027,9 @@ is:
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Prófaðu að breyta tölunum í hverri lykkju ef eitthvað fer úrskeiðis.
         courseA_collector_loops_challenge1_b: Þú þarft ekki að nota lykkju ef þú ert að gera eitthvað bara einu sinni.
-        courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?
+        courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í hellinum þegar þú byrjar, en þú þarft bara að safna 5 sinnum á leið suður. Veistu af hverju?
         courseA_collector_loops_challenge1_d: |-
-          Forritið, sem byrjað er með, safnar ekki síðustu 2 gersemenum. Prófaðu að bæta þessum kóða við alveg síðast:
+          Gefna forritið safnar ekki síðustu 2 eðalsteinunum. Prófaðu að bæta þessum kóða við alveg síðast:
           <xml><block type="maze_moveEast">
           <next>
           <block type="collector_collect_simplified">
@@ -3036,9 +3046,9 @@ is:
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Prófaðu að breyta tölunum í hverri lykkju ef eitthvað fer úrskeiðis.
         courseA_collector_loops_challenge1_b: Þú þarft ekki að nota lykkju ef þú ert að gera eitthvað bara einu sinni.
-        courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?
+        courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í hellinum þegar þú byrjar, en þú þarft bara að safna 5 sinnum á leið suður. Veistu af hverju?
         courseA_collector_loops_challenge1_d: |-
-          Forritið, sem byrjað er með, safnar ekki síðustu 2 gersemenum. Prófaðu að bæta þessum kóða við alveg síðast:
+          Gefna forritið safnar ekki síðustu 2 eðalsteinunum. Prófaðu að bæta þessum kóða við alveg síðast:
           <xml><block type="maze_moveEast">
           <next>
           <block type="collector_collect_simplified">
@@ -3069,23 +3079,27 @@ is:
         courseA_collector_preLoops6_a: Þú verður að nota tvo ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) kubba til að leysa þessa þraut.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
-          Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+          Eftir að þú hefur farið á reit með fjársjóði þá notarðu þennan kubb til að taka hann upp.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Notaðu svona `endurtaka` kubb til að hjálpa þér!
+
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">3</title>
           </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
           Þegar þú ert hjá maís getur þú notað þennan kubb til að tína hann!
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` kubba og **fjóra** `tína maís` kubba. "
+        courseA_harvester_loops2_a: "Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` <xml><block type=\"maze_moveWest\"/></xml>\n\n kubba og **fjóra** `tína maís` <xml>\n<block type=\"harvester_corn\"/>\n</xml> kubba. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Svona `endurtaka` kubbur getur bjargað málunum!
+
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
@@ -3308,20 +3322,20 @@ is:
           <title name="SPRITE2">0</title>
           </block></xml>
       courseA_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2018_authored_hint:
-        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "Þú getur látið fugl syngja.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Þú getur látið vélmenni pípa.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Þú getur látið fugl syngja.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Þú getur látið vélmenni pípa.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge1_c: |-
           Þú getur látið reitt skrímsli urra.
 
@@ -3347,8 +3361,8 @@ is:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Þú getur látið reitt skrímsli urra.
 
@@ -3374,8 +3388,8 @@ is:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Þú getur látið reitt skrímsli urra.
 
@@ -3401,9 +3415,9 @@ is:
           </next>
           </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
-        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
@@ -3545,10 +3559,10 @@ is:
         courseB_artist_loops_challenge1_b: Þegar hverjum teningi er lokið, áttu að `hoppa` á þann næsta!
         courseB_artist_loops_challenge1_c: 'Þú þarft að stundum að `færa` eða `hoppa` yfir sömu línurnar tvisvar. '
       courseB_artist_loops_challenge2_authored_hint:
-        courseB_artist_loops_challenge2_a: Þú færð gefinn kóðann til að teikna X. Allt sem þú þarft að gera er að endurtaka X-ið og hoppa á næsta stað.
+        courseB_artist_loops_challenge2_a: Þú færð gefinn kóðann til að teikna X. Allt sem þú þarft að gera er að endurtaka X-ið og `hoppa` á næsta stað.
         courseB_artist_loops_challenge2_b: Þú getur notað `hoppa` kubba til að fara á önnur svæði.
       courseB_artist_loops_challenge2_2018_authored_hint:
-        courseB_artist_loops_challenge2_a: Þú færð gefinn kóðann til að teikna X. Allt sem þú þarft að gera er að endurtaka X-ið og hoppa á næsta stað.
+        courseB_artist_loops_challenge2_a: Þú færð gefinn kóðann til að teikna X. Allt sem þú þarft að gera er að endurtaka X-ið og `hoppa` á næsta stað.
         courseB_artist_loops_challenge2_b: Þú getur notað `hoppa` kubba til að fara á önnur svæði.
       courseB_collector_loops1_authored_hint:
         courseB_collector_loops1_a: Með kubbnum <xml><block type="collector_collect_simplified"/></xml> getur þú tekið upp fjársjóð sem þú hefur farið á.
@@ -3606,9 +3620,10 @@ is:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
+        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
         courseB_collector_loops_challenge1_d: |-
           Prófaðu þetta!
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3675,9 +3690,10 @@ is:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
+        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
         courseB_collector_loops_challenge1_d: |-
           Prófaðu þetta!
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3759,6 +3775,7 @@ is:
         courseB_collector_loops_challenge2_c: Ekki gleyma að nota `endurtaka` lykkju til að safna síðustu fjársjóðshrúgunni!
         courseB_collector_loops_challenge2_d: |-
           Prófaðu þessa lausn:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3820,6 +3837,7 @@ is:
         courseB_collector_loops_challenge2_c: Ekki gleyma að nota `endurtaka` lykkju til að safna síðustu fjársjóðshrúgunni!
         courseB_collector_loops_challenge2_d: |-
           Prófaðu þessa lausn:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3960,9 +3978,10 @@ is:
           ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Náðu til allra flagganna til að ljúka þrautinni!
       courseB_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events_challenge1_a: "Láttu hin dýrin hreyfast niður þegar þú ýtir á `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">niður</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "Láttu hin dýrin hreyfast niður þegar þú ýtir á `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">niður</title>\n  </block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
           Breyttu hraða dýranna með því að nota þennan kubb:
+
           <xml>
           <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
@@ -3970,6 +3989,7 @@ is:
           </block></xml>
         courseB_playlab_events_challenge1_c: |-
           Hvað munu allir segja þegar keppninni er lokið? Láttu þau tala með þessum atburði:
+
           <xml>
           <block type="studio_whenSpriteClicked">
           <title name="SPRITE">2</title>
@@ -3982,9 +4002,10 @@ is:
           </block>
           </xml>
       courseB_playlab_events_challenge1_2018_authored_hint:
-        courseB_playlab_events_challenge1_a: "Láttu hin dýrin hreyfast niður þegar þú ýtir á `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">niður</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "Láttu hin dýrin hreyfast niður þegar þú ýtir á `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">niður</title>\n  </block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
           Breyttu hraða dýranna með því að nota þennan kubb:
+
           <xml>
           <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
@@ -3992,6 +4013,7 @@ is:
           </block></xml>
         courseB_playlab_events_challenge1_c: |-
           Hvað munu allir segja þegar keppninni er lokið? Láttu þau tala með þessum atburði:
+
           <xml>
           <block type="studio_whenSpriteClicked">
           <title name="SPRITE">2</title>
@@ -4015,6 +4037,7 @@ is:
           </xml>
         courseB_playlab_events_challenge2_c: |-
           Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!
+
           <xml>
           <block type="studio_playSound">
           <title name="SOUND">skellur</title>
@@ -4038,6 +4061,7 @@ is:
           </xml>
         courseB_playlab_events_challenge2_c: |-
           Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!
+
           <xml>
           <block type="studio_playSound">
           <title name="SOUND">skellur</title>
@@ -4061,6 +4085,7 @@ is:
           </xml>
         courseB_playlab_events_challenge2_c: |-
           Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!
+
           <xml>
           <block type="studio_playSound">
           <title name="SOUND">skellur</title>
@@ -4084,6 +4109,7 @@ is:
           </xml>
         courseB_playlab_events_challenge2_c: |-
           Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!
+
           <xml>
           <block type="studio_playSound">
           <title name="SOUND">skellur</title>
@@ -4107,6 +4133,7 @@ is:
           </xml>
         courseB_playlab_events_challenge2_c: |-
           Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!
+
           <xml>
           <block type="studio_playSound">
           <title name="SOUND">skellur</title>
@@ -4122,11 +4149,13 @@ is:
         courseB_starWars_prog1_a: Prófaðu að bæta einum kubbi við í einu og keyra forritið til að sjá hvað gerist.
         courseB_starWars_prog1_b: |
           Þú þarft að fara í Austur til að leysa þessa þraut. Hve langt þarftu að fara?
+
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: Prófaðu að bæta einum kubbi við í einu og keyra forritið til að sjá hvað gerist.
         courseB_starWars_prog1_b: |
           Þú þarft að fara í Austur til að leysa þessa þraut. Hve langt þarftu að fara?
+
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: 'Þú getur skipt þessu verkefni í tvo hluta: fyrst að ná einni hrúgu af brotajárni, síðan að finna út hvernig þú kemst frá henni til næstu hrúgu.'
@@ -4142,6 +4171,7 @@ is:
         courseB_starWars_prog4_a: Mundu að þú getur skrifað kóðann eitt skref í einu og svo keyrt hann til að sjá hvað þarf að gera næst.
         courseB_starWars_prog4_b: |-
           Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
+
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4150,6 +4180,7 @@ is:
         courseB_starWars_prog4_a: Mundu að þú getur skrifað kóðann eitt skref í einu og svo keyrt hann til að sjá hvað þarf að gera næst.
         courseB_starWars_prog4_b: |-
           Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
+
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4166,6 +4197,7 @@ is:
         courseB_starWars_prog6_a: Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
         courseB_starWars_prog6_b: |-
           Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
+
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4174,6 +4206,7 @@ is:
         courseB_starWars_prog6_a: Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
         courseB_starWars_prog6_b: |-
           Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.
+
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4367,13 +4400,15 @@ is:
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.
+
           <xml> <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
         courseC_PlayLab_events_challenge_b: Prófaðu að nota `setja leikmann 1 í miðju til vinstri` þegar hann snertir hina leikmennina. Þetta mun endurstilla leikinn svo að spilarinn getur haldið áfram að reyna!
         courseC_PlayLab_events_challenge_c: |-
-          Þú vilt kannske líka breyta hraða leikmannanna til að gera leikinn auðveldari eða erfiðari!
+          Þú vilt kannske líka breyta hraða hinna ýmsu leikmanna til að gera leikinn auðveldari eða erfiðari!
+
           <xml>  <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -4381,13 +4416,15 @@ is:
       courseC_PlayLab_events_challenge1_2018_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.
+
           <xml> <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
         courseC_PlayLab_events_challenge_b: Prófaðu að nota `setja leikmann 1 í miðju til vinstri` þegar hann snertir hina leikmennina. Þetta mun endurstilla leikinn svo að spilarinn getur haldið áfram að reyna!
         courseC_PlayLab_events_challenge_c: |-
-          Þú vilt kannske líka breyta hraða leikmannanna til að gera leikinn auðveldari eða erfiðari!
+          Þú vilt kannske líka breyta hraða hinna ýmsu leikmanna til að gera leikinn auðveldari eða erfiðari!
+
           <xml>  <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -4395,13 +4432,15 @@ is:
       courseC_PlayLab_events_challenge1_2019_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.
+
           <xml> <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
         courseC_PlayLab_events_challenge_b: Prófaðu að nota `setja leikmann 1 í miðju til vinstri` þegar hann snertir hina leikmennina. Þetta mun endurstilla leikinn svo að spilarinn getur haldið áfram að reyna!
         courseC_PlayLab_events_challenge_c: |-
-          Þú vilt kannske líka breyta hraða leikmannanna til að gera leikinn auðveldari eða erfiðari!
+          Þú vilt kannske líka breyta hraða hinna ýmsu leikmanna til að gera leikinn auðveldari eða erfiðari!
+
           <xml>  <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -4410,6 +4449,7 @@ is:
         courseC_PlayLab_events_challenge_a: Gildin tvö á þessum kubbi gera mögulegt að færa leikmann á hvað díl sem er á leiksvæðinu. Þú getur valið tölu frá 0-400.
         courseC_PlayLab_events_challenge_b: |-
           Til að velja tölur til að staðsetja þig þarft þú að hugsa út frá horninu uppi til vinstri. Fyrri talan er fjöldi díla frá vinstri brún. Hin talan er fjöldi díla frá efri brún.
+
           <xml><block type="studio_setSpriteXY" inline="true">
           <value name="SPRITE">
           <block type="math_number" movable="false">
@@ -4662,7 +4702,10 @@ is:
         courseC_artist_loopsPrePre1a_a: |-
           Fyrsti kubburinn sem þú þarft er:
 
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml> <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           Notaðu þennan kubb til að fara áfram um 50 díla:
 
@@ -4671,7 +4714,10 @@ is:
         courseC_artist_loopsPrePre1a_a: |-
           Fyrsti kubburinn sem þú þarft er:
 
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml> <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           Notaðu þennan kubb til að fara áfram um 50 díla:
 
@@ -4822,11 +4868,11 @@ is:
       courseC_collector_prog5_2019_authored_hint:
         courseC_collector_prog5_c: Ef þú festist, er ráð að skrifa þrepin á pappír.
       courseC_collector_prog6_authored_hint:
-        courseC_collector_prog6_b: Það eru margar slóðir sem þú getur farið til að safna öllum fjársjóðunum. Ekki hika við að prófa fleiri en eina til að finna stystu leiðina.
+        courseC_collector_prog6_b: Finnurðu ekki lausn? Prófaðu þessa slóð.
       courseC_collector_prog6_2018_authored_hint:
-        courseC_collector_prog6_b: Það eru margar slóðir sem þú getur farið til að safna öllum fjársjóðunum. Ekki hika við að prófa fleiri en eina til að finna stystu leiðina.
+        courseC_collector_prog6_b: Finnurðu ekki lausn? Prófaðu þessa slóð.
       courseC_collector_prog6_2019_authored_hint:
-        courseC_collector_prog6_b: Það eru margar slóðir sem þú getur farið til að safna öllum fjársjóðunum. Ekki hika við að prófa fleiri en eina til að finna stystu leiðina.
+        courseC_collector_prog6_b: Finnurðu ekki lausn? Prófaðu þessa slóð.
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
       courseC_collector_prog_challenge1_2018_authored_hint:
@@ -4834,11 +4880,11 @@ is:
       courseC_collector_prog_challenge1_2019_authored_hint:
         courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
       courseC_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
+        courseC_collector_prog_challenge1_a: Þú getur notað fleiri en eina `taka` skipunin á hverjum stað.
       courseC_collector_prog_challenge2_2018_authored_hint:
-        courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
+        courseC_collector_prog_challenge1_a: Þú getur notað fleiri en eina `taka` skipunin á hverjum stað.
       courseC_collector_prog_challenge2_2019_authored_hint:
-        courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
+        courseC_collector_prog_challenge1_a: Þú getur notað fleiri en eina `taka` skipunin á hverjum stað.
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -5172,31 +5218,31 @@ is:
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
         courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur! Hann þarf að snúa eins í hvert skipti!
-        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt og fundið aðra lausn!
       courseC_maze_debugging_challenge1_2018_authored_hint:
         courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
         courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur! Hann þarf að snúa eins í hvert skipti!
-        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt og fundið aðra lausn!
       courseC_maze_debugging_challenge1_2019_authored_hint:
         courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
         courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur! Hann þarf að snúa eins í hvert skipti!
-        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt og fundið aðra lausn!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, ættirðu að villuprófa kóðann. Hvað er það sem virkar ekki?
         courseC_maze_debugging_challenge2_c: |-
-          Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
+          Þú getur farið tvær mismunandi slóðir með því að fara áfram og snúa fjórum sinnum. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2018_authored_hint:
-        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, ættirðu að villuprófa kóðann. Hvað er það sem virkar ekki?
         courseC_maze_debugging_challenge2_c: |-
-          Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
+          Þú getur farið tvær mismunandi slóðir með því að fara áfram og snúa fjórum sinnum. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2019_authored_hint:
-        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
+        courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, ættirðu að villuprófa kóðann. Hvað er það sem virkar ekki?
         courseC_maze_debugging_challenge2_c: |-
-          Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
+          Þú getur farið tvær mismunandi slóðir með því að fara áfram og snúa fjórum sinnum. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_loops6_authored_hint:
@@ -5281,15 +5327,21 @@ is:
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: '*Ef þú sendir mig aftur á bak, þarftu að passa sérstaklega að ég snúi í rétta átt!*'
         courseC_maze_programming_challenge2_b: |-
-          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: 
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
         courseC_maze_programming_challenge2_a: '*Ef þú sendir mig aftur á bak, þarftu að passa sérstaklega að ég snúi í rétta átt!*'
         courseC_maze_programming_challenge2_b: |-
-          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: 
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_a: '*Ef þú sendir mig aftur á bak, þarftu að passa sérstaklega að ég snúi í rétta átt!*'
         courseC_maze_programming_challenge2_b: |-
-          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: 
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: Þegar BB-8 fer yfir brotamálm tínir hann brotin upp sjálfkrafa.
         courseC_starWars_loops1_b: Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
@@ -5365,27 +5417,39 @@ is:
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_b: Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri. Hvernig leystirðu það áður?
         course_starWars_loops8_c: |-
-          Eftir að tröppumynstrið er leyst skaltu færa BB-8 upp til að ná afganginum af málminum!
+          Kíktu á þessa slóð.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2018_authored_hint:
         course_starWars_loops8_b: Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri. Hvernig leystirðu það áður?
         course_starWars_loops8_c: |-
-          Eftir að tröppumynstrið er leyst skaltu færa BB-8 upp til að ná afganginum af málminum!
+          Kíktu á þessa slóð.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019_authored_hint:
         course_starWars_loops8_b: Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri. Hvernig leystirðu það áður?
         course_starWars_loops8_c: |-
-          Eftir að tröppumynstrið er leyst skaltu færa BB-8 upp til að ná afganginum af málminum!
+          Kíktu á þessa slóð.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: Mundu að þú getur sett fleiri en einn kubb inn í `endurtaka` lykkju.
         course_starWars_loops9_c: |-
           Þú þarft ekki að snúa til vinstri til að leysa þessa þraut. Allir snúningar geta verið til hægri.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
         course_starWars_loops9_b: Mundu að þú getur sett fleiri en einn kubb inn í `endurtaka` lykkju.
         course_starWars_loops9_c: |-
           Þú þarft ekki að snúa til vinstri til að leysa þessa þraut. Allir snúningar geta verið til hægri.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: Mundu að þú getur sett fleiri en einn kubb inn í `endurtaka` lykkju.
         course_starWars_loops9_c: |-
           Þú þarft ekki að snúa til vinstri til að leysa þessa þraut. Allir snúningar geta verið til hægri.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_Frozen_nested1_authored_hint:
         courseD_artist_project1_a: "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n- Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n- Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
         courseD_artist_project1_b: Mundu að `færa áfram` teiknar línu, en `hoppa fram` gerir það ekki.
@@ -5689,17 +5753,17 @@ is:
           - hoppaðu áfram 50 díla
           - snúðu til hægri um 45 gráður
       courseD_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á að nota faldaða lykkju til að búa til fjóra átthyrninga. Snúðu um 45 gráður til teikna átthyrninginn. Hoppaðu og snúðu svo um 90 gráður eftir hvern.
-        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til að teikna þríhyrning innan í földuðu lykkjunni. Notaðu 120 gráðu snúninga fyrir þríhyrninginn.
-        courseD_artist_nestedLoops_challenge1_c: "Notaðu faldaða lykkju:\n- Endurtaktu 8 sinnum\n- teiknaðu átthyrning\n- teiknaðu þríhyrning\n- hoppaðu áfram 50 díla\n- snúðu til hægri um 90 gráður"
+        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á breyta litnum í bláan, og búðu svo til átthyrning með 50 díla hliðar og 45 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til breyta litnum í grænan og búðu til þríhyrning með 50 díla hliðar og 120 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_c: Eftir að þú hefur teiknað bæði formin, þarft þú að hoppa áfram um 50 díla áður en þú snýrð 90 gráður til hægri.
       courseD_artist_nestedLoops_challenge1_2018_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á að nota faldaða lykkju til að búa til fjóra átthyrninga. Snúðu um 45 gráður til teikna átthyrninginn. Hoppaðu og snúðu svo um 90 gráður eftir hvern.
-        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til að teikna þríhyrning innan í földuðu lykkjunni. Notaðu 120 gráðu snúninga fyrir þríhyrninginn.
-        courseD_artist_nestedLoops_challenge1_c: "Notaðu faldaða lykkju:\n- Endurtaktu 8 sinnum\n- teiknaðu átthyrning\n- teiknaðu þríhyrning\n- hoppaðu áfram 50 díla\n- snúðu til hægri um 90 gráður"
+        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á breyta litnum í bláan, og búðu svo til átthyrning með 50 díla hliðar og 45 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til breyta litnum í grænan og búðu til þríhyrning með 50 díla hliðar og 120 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_c: Eftir að þú hefur teiknað bæði formin, þarft þú að hoppa áfram um 50 díla áður en þú snýrð 90 gráður til hægri.
       courseD_artist_nestedLoops_challenge1_2019_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á að nota faldaða lykkju til að búa til fjóra átthyrninga. Snúðu um 45 gráður til teikna átthyrninginn. Hoppaðu og snúðu svo um 90 gráður eftir hvern.
-        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til að teikna þríhyrning innan í földuðu lykkjunni. Notaðu 120 gráðu snúninga fyrir þríhyrninginn.
-        courseD_artist_nestedLoops_challenge1_c: "Notaðu faldaða lykkju:\n- Endurtaktu 8 sinnum\n- teiknaðu átthyrning\n- teiknaðu þríhyrning\n- hoppaðu áfram 50 díla\n- snúðu til hægri um 90 gráður"
+        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á breyta litnum í bláan, og búðu svo til átthyrning með 50 díla hliðar og 45 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til breyta litnum í grænan og búðu til þríhyrning með 50 díla hliðar og 120 gráðu vinstri snúningum.
+        courseD_artist_nestedLoops_challenge1_c: Eftir að þú hefur teiknað bæði formin, þarft þú að hoppa áfram um 50 díla áður en þú snýrð 90 gráður til hægri.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: Til að teikna reglulegan átthyrning, þarf listamaðurinn að snúa 45 gráður í hvert sinn.
         courseD_artist_nestedLoops_challenge2_b: Til að teikna reglulegan sexhyrning, þarf listamaðurinn að snúa 60 gráður í hvert sinn.
@@ -5899,15 +5963,15 @@ is:
       courseD_bee_conditionals4_2019_authored_hint:
         courseD_bee_conditionals4_c: Notaðu kubbinn <xml><block type="maze_untilBlocked"/></xml> og í honum `færa áfram` og athuga með blóm. Ef það er blóm, hvað ætti býflugan að gera?
       courseD_bee_conditionals5_authored_hint:
-        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Faldaðu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
+        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
         courseD_bee_conditionals5_c: Þrjár hliðar rétthyrningsins hafa blóm, svo að kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er blóm, á býflugan að `sækja blómasafa`.
         courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað gerir þú ef þar er blóm?
       courseD_bee_conditionals5_2018_authored_hint:
-        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Faldaðu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
+        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
         courseD_bee_conditionals5_c: Þrjár hliðar rétthyrningsins hafa blóm, svo að kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er blóm, á býflugan að `sækja blómasafa`.
         courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað gerir þú ef þar er blóm?
       courseD_bee_conditionals5_2019_authored_hint:
-        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Faldaðu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
+        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?
         courseD_bee_conditionals5_c: Þrjár hliðar rétthyrningsins hafa blóm, svo að kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er blóm, á býflugan að `sækja blómasafa`.
         courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað gerir þú ef þar er blóm?
       courseD_bee_conditionals6_authored_hint:
@@ -6067,14 +6131,17 @@ is:
       courseD_bounce_events10s_authored_hint:
         courseD_bounce_events10s_a: |-
           Þú ættir að hafa báða þessa atburði í kóðanum:
+
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events10s_2018_authored_hint:
         courseD_bounce_events10s_a: |-
           Þú ættir að hafa báða þessa atburði í kóðanum:
+
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events10s_2019_authored_hint:
         courseD_bounce_events10s_a: |-
           Þú ættir að hafa báða þessa atburði í kóðanum:
+
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: Þú þarft að kasta bolta þegar leikurinn byrjar, þegar þú hittir körfuna og þegar höndin nær ekki boltanum.
@@ -6152,30 +6219,36 @@ is:
         courseD_bounce_events5s_a: Þú þarft ekki að færa höndina til að leysa þessa þraut.
         courseD_bounce_events5s_b: |-
           Gættu þess að þú hafir sett þennan kóða á vinnusvæðið:
+
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
         courseD_bounce_events5s_a: Þú þarft ekki að færa höndina til að leysa þessa þraut.
         courseD_bounce_events5s_b: |-
           Gættu þess að þú hafir sett þennan kóða á vinnusvæðið:
+
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2019_authored_hint:
         courseD_bounce_events5s_a: Þú þarft ekki að færa höndina til að leysa þessa þraut.
         courseD_bounce_events5s_b: |-
           Gættu þess að þú hafir sett þennan kóða á vinnusvæðið:
+
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_authored_hint:
         courseD_bounce_events6s_a: |-
           Ertu með atburð sem lítur svona út?
+
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Ef þú hefur skrifað kóðann rétt þá þarftu ekki að færa höndina til að vinna.
       courseD_bounce_events6s_2018_authored_hint:
         courseD_bounce_events6s_a: |-
           Ertu með atburð sem lítur svona út?
+
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Ef þú hefur skrifað kóðann rétt þá þarftu ekki að færa höndina til að vinna.
       courseD_bounce_events6s_2019_authored_hint:
         courseD_bounce_events6s_a: |-
           Ertu með atburð sem lítur svona út?
+
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Ef þú hefur skrifað kóðann rétt þá þarftu ekki að færa höndina til að vinna.
       courseD_bounce_events7s_authored_hint:
@@ -6270,7 +6343,7 @@ is:
       courseD_collector_debugging7_authored_hint:
         courseD_collector_debugging7_c: Eitt ráð í vandræðum er að skrifa þrepin á blað og setja svo kubbana í sömu röð.
       courseD_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Einbeittu þér fyrst að því að safna TVEIMUR eðalsteinum úr tveimur fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Byrjaðu á að safna bara **tveimur** eðalsteinum úr hvorri af **tveimur** fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Safnaðu svo öllum steinunum sem eru eftir í þessari röð.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nBættu þessum kubbum í forritið þitt.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Safnaðu svo þeim fjársjóðum sem eftir eru. Bættu þessum kubbum í forritið þitt.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
@@ -6319,7 +6392,7 @@ is:
           </block>
           </xml>
       courseD_collector_debugging_challenge2_2018_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Einbeittu þér fyrst að því að safna TVEIMUR eðalsteinum úr tveimur fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Byrjaðu á að safna bara **tveimur** eðalsteinum úr hvorri af **tveimur** fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nNotaðu þessa kubba.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Safnaðu svo öllum steinunum sem eru eftir í þessari röð.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nBættu þessum kubbum í forritið þitt.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Safnaðu svo þeim fjársjóðum sem eftir eru. Bættu þessum kubbum í forritið þitt.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
@@ -6964,6 +7037,7 @@ is:
         courseE_artist_concept_challenge2_a: Þegar þú hefur skilgreint fall, getur þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!
         courseE_artist_concept_challenge2_b: |-
           Þú getur hoppað á mismunandi staði á myndfletinum með þessari skipun:
+
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -6971,6 +7045,7 @@ is:
         courseE_artist_concept_challenge2_a: Þegar þú hefur skilgreint fall, getur þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!
         courseE_artist_concept_challenge2_b: |-
           Þú getur hoppað á mismunandi staði á myndfletinum með þessari skipun:
+
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -6978,6 +7053,7 @@ is:
         courseE_artist_concept_challenge2_a: Þegar þú hefur skilgreint fall, getur þú kallað á það aftur og aftur - hvar og hvenær sem þú vilt!
         courseE_artist_concept_challenge2_b: |-
           Þú getur hoppað á mismunandi staði á myndfletinum með þessari skipun:
+
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -7008,6 +7084,7 @@ is:
         courseD_artist_functions2_b: Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.
         courseD_artist_functions2_c: |-
           Notaðu græna `teikna ferning` kubbinn til að "kalla á" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.
+
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Forritið þitt ætti að:
@@ -7018,6 +7095,7 @@ is:
         courseD_artist_functions2_b: Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.
         courseD_artist_functions2_c: |-
           Notaðu græna `teikna ferning` kubbinn til að "kalla á" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.
+
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Forritið þitt ætti að:
@@ -7028,6 +7106,7 @@ is:
         courseD_artist_functions2_b: Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.
         courseD_artist_functions2_c: |-
           Notaðu græna `teikna ferning` kubbinn til að "kalla á" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.
+
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Forritið þitt ætti að:
@@ -7139,11 +7218,11 @@ is:
         courseE_artist_functions_challenge1_a: Ef þú kallar á fallið einu sinni enn, getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað` á aðra staði eða breytt þessu öllu bara eins og þú vilt!
         courseE_artist_functions_challenge1_b: Þú getur líka notað `hoppa` til að fara á aðra staði eða breytt teikningunni hvernig sem þú vilt!
       courseE_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2019_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Ekki gleyma að snúa um 60 gráður eftir hvern þríhyrning. Í hvaða lykkju þarft þú að setja þá skipun?
         courseD_artist_ramp10_b: Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!
@@ -7684,7 +7763,7 @@ is:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur neðan við skilyrðingalistann.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Spyrja spurningar\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_b: "Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur neðan við skilyrðingalistann.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Spyrja spurningar\"></mutation>\n        </block></block></xml>"
         courseE_playlab_challenge2_c: "Þú þarft að bæta við fleiri skilyrtum setningum til að gefa leikmönnunum fleira að segja.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nEkki gleyma að stilla hvaða skap leikmennirnir sýna innan í `endurtaka endalaust` lykkjunni. Þú getur líka stillt skap þeirra af handahófi!"
         courseE_playlab_challenge2_d: |-
           Þegar þú skilur allan kóðann sem tengist leikmanni 1, getur þú reynt að skrifa samskonar kóða fyrir leikmann 2.
@@ -7708,6 +7787,7 @@ is:
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur eftir að leikmaðurinn segir spána.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -8558,11 +8638,11 @@ is:
           Prófaðu eina af þessum teikningum.
           ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_fwp_challenge1_authored_hint:
-        courseF_artist_fwp_challenge1_b: Þetta er röð af átthyrningum með hliðar sem eru `teljari` dílar á lengd.
-        courseF_artist_fwp_challenge1_c: Hver átthyrningur er gerður innan í `frá` lykkju sem telur frá 200 niður í 2 hlaupandi á 2.
+        courseF_artist_fwp_challenge1_b: Þetta er röð af marghyrningum með hliðar sem eru `teljari` dílar á lengd.
+        courseF_artist_fwp_challenge1_c: Hver marghyrningur er gerður innan í `frá` lykkju sem telur frá 3 til 6 hlaupandi á 1. Hvaða form er lykkjan að teikna?
       courseF_artist_fwp_challenge1_2018_authored_hint:
-        courseF_artist_fwp_challenge1_b: Þetta er röð af átthyrningum með hliðar sem eru `teljari` dílar á lengd.
-        courseF_artist_fwp_challenge1_c: Hver átthyrningur er gerður innan í `frá` lykkju sem telur frá 200 niður í 2 hlaupandi á 2.
+        courseF_artist_fwp_challenge1_b: Þetta er röð af marghyrningum með hliðar sem eru `teljari` dílar á lengd.
+        courseF_artist_fwp_challenge1_c: Hver marghyrningur er gerður innan í `frá` lykkju sem telur frá 3 til 6 hlaupandi á 1. Hvaða form er lykkjan að teikna?
       courseF_artist_fwp_challenge2_authored_hint:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: 'Þetta er röð af átthyrningum með hliðar sem eru `teljari` dílar á lengd. '
@@ -9282,10 +9362,10 @@ is:
         courseF_bee_conditionals5_d: Til að halda áfram eftir slóðinni þarf býflugan að `fara áfram` Á slóðinni þarf býflugan að athuga hvort þar sé blóm. Hvað á hún að gera ef það er blóm?
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Mundu:** Þessi þraut breytist í hvert sinn sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`) til að leysa þessa áskorun."
-        courseF_bee_conditionals8_c: Hvað gerist ef þú notar `meðan slóð framundan` kubbinn og nærð síðast til fyrsta blómsins?
+        courseF_bee_conditionals8_c: Hvað gerist ef þú sleppir fyrsta blóminu en notar svo `meðan slóð framundan` kubbinn?
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "**Mundu:** Þessi þraut breytist í hvert sinn sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`) til að leysa þessa áskorun."
-        courseF_bee_conditionals8_c: Hvað gerist ef þú notar `meðan slóð framundan` kubbinn og nærð síðast til fyrsta blómsins?
+        courseF_bee_conditionals8_c: Hvað gerist ef þú sleppir fyrsta blóminu en notar svo `meðan slóð framundan` kubbinn?
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_b: Þú þarft að hafa tvo kubba í `endurtaka` lykkjunni til að ná öllum blómasafanum.
       courseF_bee_for10_authored_hint:
@@ -9915,7 +9995,7 @@ is:
         courseF_bee_functions5a_b: Notaðu `meðan` lykkju til að fara eftir öllum aðalslóðunum því að þær eru mislangar.
         courseF_bee_functions5a_c: Innan `meðan` lykkjunnar þarftu að gæta þess að fara áfram og síðan nota fallið til að kanna hvort þar er slóð.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "Ef þrautin virðist erfið, er ráð að byggja upp fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum við og prófaðu aftur. Þetta heppnast áður en þú veist!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Ef þrautin virðist erfið, er ráð að byggja upp fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum við og prófaðu aftur. Þetta heppnast áður en þú veist!\n\n<xml>\n<block type=\"procedures_defnoreturn\" editable=\"false\">\n<mutation/>\n<title name=\"NAME\">get nectar make honey</title>\n<statement name=\"STACK\">\n</statement>\n</block>\n</xml>"
         courseF_bee_functions6_b: Fallið þitt ætti að athuga hvort það er blóm eða býkúpa, ná blómasafa eða búa til hunang og síðan snúa.
         courseF_bee_functions6_c: Þar sem þú ert að snúa innan í fallinu, þarft þú aðeins eina `meðan` lykkju til að koma þér í gegnum völundarhúsið.
       courseF_bee_functions6_2018_authored_hint:
@@ -9939,7 +10019,14 @@ is:
         courseF_bee_functions7_b: |
           Mundu að smíða kóðann innan í græna fallkubbnum.
 
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          <xml>
+          <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">get nectar make honey</title>
+          <statement name="STACK">
+          </statement>
+          </block>
+          </xml>
         courseF_bee_functions7_c: Í hvaða átt ættir þú að snúa ef það býkúpa? En ef það er blóm? En ef það er ekki neitt?
       courseF_bee_functionsPre7_2018_authored_hint:
         courseF_bee_functions7_a: "Ef þrautin virðist erfið, er ráð að byggja upp fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum við og prófaðu aftur. Þetta heppnast áður en þú veist!"
@@ -10220,6 +10307,7 @@ is:
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           Aðalforritið ætti líta út einhvern veginn svona:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -10407,6 +10495,7 @@ is:
       courseF_bee_fwp_challenge1_2018_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           Aðalforritið ætti líta út einhvern veginn svona:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -10597,9 +10686,8 @@ is:
 
           Bættu skilyrðingum við fallið til að athuga með maís, grasker og kál.
         courseF_bee_fwp_challenge2_b: |-
-          Eru `færa áfram` kubbarnir að klárast? Prófaðu að nota *aðra* `frá` lykkju í aðalforritinu þínu.
-
-          **Athugaðu:** Gættu þess að rugla ekki saman `teljari` og `teljari2` í kóðanum.
+          Eru `færa áfram` kubbarnir að klárast? 
+          Prófaðu að nota *aðra* `frá` lykkju í aðalforritinu þínu.
         courseF_bee_fwp_challenge2_c: |-
           **Svona ætti fallið þitt að líta út:**
 
@@ -10741,9 +10829,8 @@ is:
 
           Bættu skilyrðingum við fallið til að athuga með maís, grasker og kál.
         courseF_bee_fwp_challenge2_b: |-
-          Eru `færa áfram` kubbarnir að klárast? Prófaðu að nota *aðra* `frá` lykkju í aðalforritinu þínu.
-
-          **Athugaðu:** Gættu þess að rugla ekki saman `teljari` og `teljari2` í kóðanum.
+          Eru `færa áfram` kubbarnir að klárast? 
+          Prófaðu að nota *aðra* `frá` lykkju í aðalforritinu þínu.
         courseF_bee_fwp_challenge2_c: |-
           **Svona ætti fallið þitt að líta út:**
 
@@ -10976,6 +11063,7 @@ is:
       courseF_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           Þú þarft að nota fleiri kubba úr verkfærakassanum til að láta leikmennina tala.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -10996,6 +11084,7 @@ is:
       courseF_playlab_variables_challenge1_2018_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           Þú þarft að nota fleiri kubba úr verkfærakassanum til að láta leikmennina tala.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -11281,6 +11370,7 @@ is:
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           Það mun virka eins og leikurinn byrji alveg upp á nýtt ef þú kallar á `spyrja spurningar` fallið aftur eftir að leikmaðurinn segir spána.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
