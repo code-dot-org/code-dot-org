@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <ProjectCardRow
       galleryType="public"
+      showFullThumbnail={true}
       projects={DANCE_PROJECTS}
     />,
     container,
