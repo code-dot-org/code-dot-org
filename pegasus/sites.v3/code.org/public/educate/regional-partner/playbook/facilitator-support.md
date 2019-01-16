@@ -63,7 +63,7 @@ ________________
 - [2019-20 Facilitator Selection Process Doc] (https://docs.google.com/document/d/1c6wXrVZ0u4yjV1eJg2INzqacvZV71hwfIxWIQHCM9_I/edit)
 - [2019-20 Facilitator Application Questions & Rubric](https://docs.google.com/document/d/1r7Cmn9j7BibblU979dDHKg_5yRtbrEJeMLThMsbbSMo/edit?usp=sharing)
 - [Facilitator Program Landing Page](https://code.org/facilitator) on the Code.org website
-- [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
+- [Facilitator Development Program Overview](https://code.org/files/facilitator/overview-2019-20.pdf)
 - [CS Fundamentals Facilitator Commitments](https://code.org/files/facilitator/csf-commitments.pdf)
 - [CS Discoveries Facilitator Commitments](https://code.org/files/facilitator/csd-commitments.pdf)
 - [CS Principles Facilitator Commitments](https://code.org/files/facilitator/csp-commitments.pdf)
