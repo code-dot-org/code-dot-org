@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//import ProjectCard from '@cdo/apps/templates/projects/ProjectCard';
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
 
 const DANCE_PROJECTS = ([
