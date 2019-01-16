@@ -23,7 +23,8 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    height: 18
+    height: 18,
+    boxSizing: 'content-box'
   },
   titleLink: {
     color: color.charcoal
@@ -60,8 +61,8 @@ const styles = {
   },
   image:{
     flexShrink: 0,
-    minWidth: '100%',
-    minHeight: '100%'
+    width: '100%',
+    weight: '100%'
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
@@ -135,7 +136,7 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </span>
-          {isPublicGallery && (
+          {isPublicGallery && projectData.publishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
@@ -147,7 +148,7 @@ export default class ProjectCard extends React.Component {
               </time>
             </div>
           )}
-          {isPersonalGallery && (
+          {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <time
