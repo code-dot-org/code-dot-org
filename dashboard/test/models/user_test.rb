@@ -3209,6 +3209,23 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "section_scripts returns an empty array if user has no sections" do
+    user = create :user
+    assert_empty user.section_scripts
+  end
+
+  test "section_scripts returns assigned scripts and default scripts in assigned courses" do
+    student = create :student
+    single_script = create :script
+    (create :section, script: single_script).students << student
+    course_script = create :script
+    course_with_script = create :course
+    create :course_script, course: course_with_script, script: course_script, position: 1
+    (create :section, course: course_with_script).students << student
+
+    assert_equal [single_script, course_script], student.section_scripts
+  end
+
   test "last_joined_section returns the most recently joined section" do
     student = create :student
     teacher = create :teacher
@@ -3302,6 +3319,27 @@ class UserTest < ActiveSupport::TestCase
     google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+  end
+
+  test 'password_required? is false if user is not creating their own account' do
+    user = build :user
+    user.expects(:managing_own_credentials?).returns(false)
+    refute user.password_required?
+  end
+
+  test 'password_required? is true for new users with no encrypted password' do
+    user = build :user, encrypted_password: nil
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.encrypted_password.nil?
+    assert user.password_required?
+  end
+
+  test 'password_required? is true for user changing their password' do
+    user = create :user
+    user.password = "mypassword"
+    user.password_confirmation = "mypassword"
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.password_required?
   end
 
   test 'summarize' do
@@ -4057,5 +4095,26 @@ class UserTest < ActiveSupport::TestCase
     assert_equal section3.id, teacher.last_section_id
     section3.delete
     assert_equal section1.id, teacher.last_section_id
+  end
+
+  test 'find_channel_owner finds channel owner' do
+    student = create :student
+    with_channel_for student do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_equal student, result
+    end
+  end
+
+  test 'find_channel_owner returns nil for channel with no owner' do
+    with_anonymous_channel do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_nil result
+    end
+  end
+
+  test 'find_channel_owner returns nil for a malformed channel id' do
+    assert_nil User.find_channel_owner 'not-a-channel-id'
   end
 end

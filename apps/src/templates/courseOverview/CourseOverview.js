@@ -10,8 +10,13 @@ import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+
+// A session variable storing a comma-delimited list of course/script names for which
+// the user has already dismissed the version redirect warning.
+const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
 
 const styles = {
   main: {
@@ -65,7 +70,15 @@ export default class CourseOverview extends Component {
       version_year: PropTypes.string.isRequired
     })).isRequired,
     showVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    redirectToCourseUrl: PropTypes.string,
   };
+
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
+    this.state = {showRedirectDialog};
+  }
 
   onChangeVersion = event => {
     const courseName = event.target.value;
@@ -96,6 +109,27 @@ export default class CourseOverview extends Component {
     });
   };
 
+  dismissedRedirectWarning = () => {
+    const dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+    return (dismissedRedirectWarnings || '').includes(this.props.name);
+  };
+
+  onDismissRedirectWarning = () => {
+    let dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
+    if (dismissedRedirectWarnings) {
+      dismissedRedirectWarnings += `,${this.props.name}`;
+    } else {
+      dismissedRedirectWarnings = this.props.name;
+    }
+    sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
+  };
+
+  onCloseRedirectDialog = () => {
+    this.setState({
+      showRedirectDialog: false,
+    });
+  };
+
   render() {
     const {
       name,
@@ -113,6 +147,8 @@ export default class CourseOverview extends Component {
       hasVerifiedResources,
       versions,
       showVersionWarning,
+      showRedirectWarning,
+      redirectToCourseUrl,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -128,6 +164,24 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
+        {redirectToCourseUrl &&
+          <RedirectDialog
+            isOpen={this.state.showRedirectDialog}
+            details={i18n.assignedToNewerVersion()}
+            handleClose={this.onCloseRedirectDialog}
+            redirectUrl={redirectToCourseUrl}
+            redirectButtonText={i18n.goToAssignedVersion()}
+          />
+        }
+        {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            onDismiss={this.onDismissRedirectWarning}
+          />
+        }
         {showVersionWarning &&
           <Notification
             type={NotificationType.warning}

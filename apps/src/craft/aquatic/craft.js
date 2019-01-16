@@ -394,6 +394,14 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
+    case 1:
+      return ['aquaticIslandAssets'];
+    case 2:
+      return ['aquaticIslandAssets'];
+    case 3:
+      return ['aquaticLevelThreeAndFourAssets'];
+    case 4:
+      return ['aquaticLevelThreeAndFourAssets'];
     default:
       return ['aquaticAllAssetsMinusPlayer'];
   }
@@ -534,10 +542,6 @@ Craft.executeUserCode = function () {
     },
   };
 
-  const isWalkable = block => {
-    return block && block.isWalkable;
-  };
-
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
@@ -547,16 +551,16 @@ Craft.executeUserCode = function () {
     },
     ...asyncMethods,
     api: appCodeOrgAPI,
-    walkableAhead: () => isWalkable(Craft.gameController.levelModel.getForwardBlock()),
+    walkableAhead: () => Craft.gameController.levelModel.canMoveForward()[0],
     walkableToRight: () => {
       Craft.gameController.levelModel.turnRight();
-      const value = isWalkable(Craft.gameController.levelModel.getForwardBlock());
+      const value = Craft.gameController.levelModel.canMoveForward()[0];
       Craft.gameController.levelModel.turnLeft();
       return value;
     },
     walkableToLeft: () => {
       Craft.gameController.levelModel.turnLeft();
-      const value = isWalkable(Craft.gameController.levelModel.getForwardBlock());
+      const value = Craft.gameController.levelModel.canMoveForward()[0];
       Craft.gameController.levelModel.turnRight();
       return value;
     },
@@ -564,6 +568,7 @@ Craft.executeUserCode = function () {
       Craft.gameController.getEntity().position).blockType,
     isStandingOnMiniBlock: () => Craft.gameController.levelModel.actionPlane.getBlockAt(
       Craft.gameController.getEntity().position).getIsMiniblock(),
+    isFinished: () => (Craft.gameController.levelModel.isFailed() || Craft.gameController.levelModel.isSolved())
   }, {
     asyncFunctionList: Object.values(asyncMethods),
   });

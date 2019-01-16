@@ -1,0 +1,32 @@
+name 'AP_practice_Qs_rqb_113_CSP_4_1_1'
+wrong '`NOT red OR NOT pedestrians`'
+wrong '`NOT (red OR pedestrians)`'
+right '`NOT red AND NOT pedestrians`'
+wrong '`red OR NOT pedestrians`'
+markdown <<MARKDOWN
+An AI program has been written for a self-driving car to navigate intersections.  Assume that `red` and `pedestrian` are Boolean variables The car should proceed through the intersection only if the light is not `red` and there are no `pedestrians` in the cross-walk.
+
+Which of the following could replace `<MISSING EXPRESSION>`   so that the code segment works as intended?
+Select _two_ answers.
+<pre>
+IF (<MISSING EXPRESSION>) 
+{
+ProceedThruIntersection();
+}
+</pre>
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1C**
+<hr>
+ (A) This option is incorrect.  `OR` allows for just one of the conditions (for example, `NOT red`) to evaluate to `true`.  In this situation, <em>both</em> conditions must evaluate to `true`.
+
+<hr>
+ (B) This option is correct. By placing the `NOT` outside of parentheses, this is logically equivalent to Answer C.
+
+<hr>
+ (C) This option is correct. Both of the listed conditions must be true.
+
+<hr>
+ (D) This option is incorrect. This would direct the car to go through a `red` light.
+
+MARKDOWN

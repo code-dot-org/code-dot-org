@@ -72,6 +72,8 @@ class CompletionButton extends Component {
   }
 }
 
+export const UnconnectedCompletionButton = CompletionButton;
+
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
@@ -80,7 +82,3 @@ export default connect(state => ({
 }))(CompletionButton);
 
 export {styles};
-
-export var __TestInterface__ = {
-  UnconnectedCompletionButton: CompletionButton
-};

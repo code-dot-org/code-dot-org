@@ -215,13 +215,15 @@ AS(
             ELSE pdw.subject 
             END as subject,
          min(pds.start)::date as workshop_date,
+         pdw.ended_at as workshop_date_pdw_ended_at, 
          date_part(month, workshop_date) month_workshop,
          date_part(dayofweek, workshop_date) day_of_week_workshop,
          CASE WHEN pdw.on_map = 1 THEN 'Public' WHEN pdw.on_map = 0 THEN 'Private' ELSE null END as audience,
          pdw.funded,
          pdw.funding_type,
          capacity,
-         CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
+         CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,-- using this definition for now for regional_partner_dash
+         CASE WHEN pdw.funding_type = 'partner' THEN 1 ELSE 0 END AS trained_by_regional_partner_truth,  -- temporary until we figure out how ed team wants to present data to RPs
          CASE WHEN rp1.name IS NOT NULL THEN rp1.name
               WHEN rp2.name IS NOT NULL THEN rp2.name 
               ELSE 'No Partner' END 
@@ -243,6 +245,7 @@ AS(
         ON pdw.id = pde.pd_workshop_id
      LEFT JOIN dashboard_production_pii.pd_attendances pda 
          ON pde.id = pda.pd_enrollment_id
+         AND pda.deleted_at is null 
      LEFT JOIN dashboard_production_pii.pd_workshops_facilitators pdf
          ON pdw.id = pdf.pd_workshop_id
      LEFT JOIN dashboard_production_pii.users u
@@ -262,8 +265,8 @@ AS(
      LEFT JOIN dashboard_production_pii.regional_partners rp2 
         ON  rpm.regional_partner_id = rp2.id  
     WHERE pdw.course = 'CS Fundamentals'
-    AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')  or pdw.subject is null)
-    group by 1, 2, 3, 4, 5,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, u.name, 20, 21, 23
+    AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive')  or pdw.subject is null)
+    group by 1, 2, 3, 4, 5,  7,   10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, u.name, 22, 23, 25
   ),
   
 sections_based 
@@ -275,6 +278,7 @@ AS(
          tt.section_id as section_id, -- using section_id as workshop_ids for those workshops not in pd_workshops
          'Intro Workshop' as subject,
          tt.trained_at as workshop_date,
+         tt.trained_at as workshop_date_pdw_ended_at,
          date_part(month, tt.trained_at) month_workshop,
          date_part(dayofweek, tt.trained_at) day_of_week_workshop,
          JSON_EXTRACT_PATH_TEXT(forms.data_text,'type_s') as audience,
@@ -286,6 +290,7 @@ AS(
            else null  
            end::int as capacity,
          0 AS trained_by_regional_partner,
+         0 AS trained_by_reginal_partner_truth,  -- temporary until we figure out how ed team wants to present data to RPs
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
          ssz.zip as zip,
@@ -297,7 +302,7 @@ AS(
          sy.school_year, 
          0 AS not_attended,
          0 AS future_event
-    FROM anlysis.csf_teachers_trained tt
+    FROM analysis.csf_teachers_trained tt
     JOIN dashboard_production.sections se 
        ON se.id = tt.section_id 
     JOIN dashboard_production_pii.users u -- join to get facilitator data

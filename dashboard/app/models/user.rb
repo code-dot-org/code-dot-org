@@ -641,7 +641,7 @@ class User < ActiveRecord::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
     User.find(user_id)
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
   end
 
@@ -683,6 +683,23 @@ class User < ActiveRecord::Base
         other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
+  end
+
+  # For a user signing up with email/password, we require certain fields to be present and valid
+  # before the user can move on to the "finish signup" step.
+  def validate_for_finish_sign_up
+    raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
+
+    valid? # Run all validations
+
+    # For this step, we only care about email, password, and password confirmation.
+    # Remove any other validation errors for now.
+    required_fields = [:email, :password, :password_confirmation]
+    errors.each do |attribute, _|
+      errors.delete(attribute) unless required_fields.include?(attribute)
+    end
+
+    email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
   def self.normalize_gender(v)
@@ -787,12 +804,20 @@ class User < ActiveRecord::Base
     end
   end
 
+  def managing_own_credentials?
+    provider.blank? || (provider == User::PROVIDER_MANUAL)
+  end
+
   def password_required?
-    # password is required if:
-    (!persisted? || # you are a new user
-     !password.nil? || !password_confirmation.nil?) && # or changing your password
-      (provider.blank? || (User::PROVIDER_MANUAL == provider)) # and you are a person creating your own account
-    # (as opposed to a person who had their account created for them or are logging in with oauth)
+    # Password is not required if the user is not managing their own account
+    # (i.e., someone is creating their account for them or the user is using OAuth).
+    return false unless managing_own_credentials?
+
+    # Password is required for:
+    # New users with no encrypted_password set and users changing their password.
+    new_without_password = !persisted? && encrypted_password.blank?
+    is_changing_password = password.present? || password_confirmation.present?
+    new_without_password || is_changing_password
   end
 
   def email_required?
@@ -1462,18 +1487,62 @@ class User < ActiveRecord::Base
     section_courses.map(&:summarize_short)
   end
 
+  def assigned_course?(course)
+    section_courses.include?(course)
+  end
+
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.course)
+  end
+
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
     scripts.map(&:course).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
-  # @return [Boolean]
-  def any_visible_assigned_scripts?
+  # @return [Array] of Scripts
+  def visible_assigned_scripts
     user_scripts.where("assigned_at").
       map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
-      flatten.
-      any?
+      flatten
+  end
+
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    visible_assigned_scripts.any?
+  end
+
+  def most_recently_assigned_user_script
+    user_scripts.
+    where("assigned_at").
+    order(assigned_at: :desc).
+    first
+  end
+
+  def most_recently_assigned_script
+    most_recently_assigned_user_script.script
+  end
+
+  def user_script_with_most_recent_progress
+    user_scripts.
+    where("last_progress_at").
+    order(last_progress_at: :desc).
+    first
+  end
+
+  def script_with_most_recent_progress
+    user_script_with_most_recent_progress.script
+  end
+
+  def most_recent_progress_in_recently_assigned_script?
+    script_with_most_recent_progress == most_recently_assigned_script
+  end
+
+  def last_assignment_after_most_recent_progress?
+    most_recently_assigned_user_script[:assigned_at] >=
+    user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
@@ -1529,6 +1598,23 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of. Includes default scripts for any assigned courses as well.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+    all_scripts = []
+    all_sections.each do |section|
+      if section.script.present?
+        all_scripts << section.script
+      elsif section.course.present?
+        all_scripts.concat(section.course.default_scripts)
+      end
+    end
+
+    all_scripts
   end
 
   # return the id of the section the user most recently created.
@@ -2014,6 +2100,7 @@ class User < ActiveRecord::Base
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     authentication_options.with_deleted.each(&:really_destroy!)
+    self.primary_contact_info = nil
 
     districts.clear
     self.district_as_contact = nil

@@ -16,6 +16,7 @@ import {
 } from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {styles} from "./TeacherApplicationConstants";
+import _ from 'lodash';
 
 const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
@@ -34,7 +35,9 @@ export default class Section1AboutYou extends LabeledFormComponent {
   static labels = PageLabels.section1AboutYou;
 
   static associatedFields = [
-    ...Object.keys(PageLabels.section1AboutYou)
+    // Gender Identity and Race are things we want rendered in Section 1 in the detail view
+    // but we want to ask in section 5. So they need to be removed here
+    ..._.difference(Object.keys(PageLabels.section1AboutYou), ['genderIdentity', 'race'])
   ];
 
   handleSchoolChange = selectedSchool => this.handleChange({school: selectedSchool && selectedSchool.value});

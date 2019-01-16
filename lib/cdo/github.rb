@@ -172,7 +172,8 @@ module GitHub
   # @raise [Octokit::NotFound] If the specified branch does not exist.
   # @return [String] The sha hash (abbreviated to eight characters) of the most
   #   recent commit to branch.
-  def self.sha(branch)
+  def self.sha(branch, authenticate_api_request = false)
+    configure_octokit if authenticate_api_request
     response = Octokit.branch(REPO, branch)
     response.commit.sha[0..7]
   end

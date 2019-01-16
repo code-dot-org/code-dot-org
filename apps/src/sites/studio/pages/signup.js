@@ -149,11 +149,10 @@ window.SignupManager = function (options) {
   });
 
   function trackUserTypeSelected(type) {
-    const eventName = "select-" + type;
     firehoseClient.putRecord({
-      study: 'account-sign-up',
-      study_group: 'control',
-      event: eventName,
+      study: 'account-sign-up-v5',
+      study_group: 'control-v4',
+      event: 'select-' + type,
       data_string: self.options.signUpUID,
     });
   }

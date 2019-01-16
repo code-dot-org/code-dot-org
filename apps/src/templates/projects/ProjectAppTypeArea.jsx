@@ -213,7 +213,7 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div
         style={styles.grid}
-        className="ui-project-app-type-area"
+        className={`ui-project-app-type-area ui-${this.props.labKey}`}
       >
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
         {!this.props.hideViewMoreLink &&

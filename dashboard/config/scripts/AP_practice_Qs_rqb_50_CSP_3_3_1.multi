@@ -1,0 +1,29 @@
+name 'AP_practice_Qs_rqb_50_CSP_3_3_1'
+wrong 'Combine multiple files to create a single, compressed file that can be restored to its original form.'
+wrong 'Compress a high resolution photo to a low resolution format such as .jpg
+'
+wrong 'Extract a compressed zip file to its original size
+'
+right 'Enlarge a file in order to increase the resolution in the original, thereby increasing the file size
+'
+markdown <<MARKDOWN
+Digital data can be compressed in order to reduce file size, and speed of transmission through a network. While some compression techniques are lossy, others preserve the original data in the compressed form. Compression techniques (lossy or lossless) can do the following, EXCEPT:
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1C, 3.3.1D, 3.3.1E**
+<hr>
+ (A) This option is incorrect. Multiple files can be compressed in a single zipped file, which than then be unzipped to retrieve the original files. This is lossless compression.
+
+
+<hr>
+ (B) This option is incorrect. Jpg is a valid result of a lossy type of compression technique
+
+<hr>
+ (C) This option is incorrect. A compressed zip file can be extracted to retrieve its original. This is lossless compression. 
+
+
+<hr>
+ (D) This option is correct. Compression techniques involve encoding information using fewer bits than the original representation. They can either preserve the original (lossless), or they can compress the original in a way that they permanently lose some of the original data (lossy) 
+
+
+MARKDOWN

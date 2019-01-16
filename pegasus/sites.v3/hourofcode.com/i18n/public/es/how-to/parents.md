@@ -5,42 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to do an Hour of Code with your child
+# Cómo hacer una Hora de Código con tu hijo
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+### ¡Haz una Hora de Código en casa, u ofrécete voluntario para hacerla en la clase de su hijo! ¡Vea cómo!
 
 ---
 
 ## 1) Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Choose a tutorial
+## 2) Elije un tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Ofrecemos una gran variedad de tutoriales divertidos, de una hora de duración, para estudiantes de todas las edades, creados por distintos colaboradores. [¡Pruébalos!](<%= resolve_url('https://code. org/learn') %>)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Todas los tutoriales de la Hora del Código son autoguiados - permitiendo que tu hijo trabaje a su propio ritmo y nivel de habilidad**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Planifique sus necesidades tecnológicas
+## 3) Planifica tus necesidades tecnológicas
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+La mejor experiencia para la Hora del Código será con ordenadores conectados a Internet. Pero **no** necesitas un ordenador. Hay muchas actividades que son "desconectadas" y se pueden hacer sin ninguna tecnología. Prueba tutoriales en tu computadora o dispositivo. Asegúrate de que funcionen correctamente en los navegadores con sonido y video.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+**¿Quieres aprender junto a tu hijo?** Prueba [la programación por parejas.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) La Informática es social y colaborativa.
 
-## 4) Start your Hour of Code with an inspiring video
+## 4) Empieza tu Hora del Código con un vídeo inspirador
 
 Empiece su Hora de Código motivando a los niños y comentando cómo la informática tiene un impacto en cada parte de nuestras vidas.
 
 **Muestre un video inspirador:**
 
 - El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentre más [recursos](<%= codeorg_url('/inspire') %>) inspiradores y [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 No importe si usted y sus estudiantes son nuevos en la Informática. Aquí tiene algunas ideas para presentar su actividad de Hora de Código:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Explica algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (habla acerca de las tecnologías que salvan vidas, ayudando a las personas, conectándolas, etc.).
 - Haga una lista de las cosas que utilizan código en la vida cotidiana.
 - Vea consejos para que las chicas se interesen en la informática [aquí](<%= codeorg_url('/girls') %>).
 
@@ -66,13 +66,13 @@ Está bien responder:
 
 Comparta fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar su éxito!
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+Revisa las [FAQ de Hora de Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) si todavía tienes dudas.
 
 ## ¿Qué viene después de la Hora de Código?
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+La Hora de Código es sólo el primer paso de un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones informáticas. Para continuar este viaje:
 
-- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
+- Anima a tu hijo a continuar [aprendiendo en línea](<%= codeorg_url('/learn/beyond') %>).
+- Ayuda a [promover](<%= resolve_url('/promote') %>) la enseñanza de Informática en la escuela de tu hijo.
 
 <%= view :signup_button %>

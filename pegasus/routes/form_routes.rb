@@ -16,7 +16,13 @@ post '/forms/:kind' do |kind|
     content_type :json
     cache_control :private, :must_revalidate, max_age: 0
     form = insert_or_upsert_form(kind, params)
-    JSON.load(form[:data]).merge(secret: form[:secret]).to_json
+    data = JSON.load(form[:data]).merge(secret: form[:secret])
+    if form[:kind] == "VolunteerContact2015"
+      data.delete "volunteer_secret_s"
+      data.delete "volunteer_email_s"
+      data.delete "volunteer_id_i"
+    end
+    data.to_json
   rescue FormError => e
     halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
   rescue Sequel::UniqueConstraintViolation

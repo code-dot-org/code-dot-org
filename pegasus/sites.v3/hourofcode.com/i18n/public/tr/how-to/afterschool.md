@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-### Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+### Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! Sınıfınızda Kod-Saati eğitimleri için size yardım edecek birisini istiyorsanız, bu adreste [ kulüpleriniz ya da okul sonrası aktiviteleriniz için yerel bir gönüllü](<%= resolve_url('https://code. org/volunteer/local') %>) bulabilirsiniz.
 
 ---
 
@@ -15,7 +15,7 @@ nav: how_to_nav
 
 ## 2. Bir öğretici içerik seçin
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Bunları deneyin](<%= resolve_url('/learn') %>)!
+Platformumuzda, farklı iş-ortaklarımız tarafından geliştirilmiş, tüm yaş gruplarına uygun, [eğlenceli ve öğretici, pek çok kod-saati içeriği ](<%= resolve_url('/learn') %>) sunulmaktadır. [Bunları deneyin](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 

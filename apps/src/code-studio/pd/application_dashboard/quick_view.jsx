@@ -195,7 +195,7 @@ export class QuickView extends React.Component {
     return (
       <QuickViewTable
         path={this.props.route.path}
-        data={this.state.applications}
+        applications={this.state.applications}
         statusFilter={this.state.filter}
         regionalPartnerName={this.props.regionalPartnerFilter.label}
         viewType={this.props.route.viewType}

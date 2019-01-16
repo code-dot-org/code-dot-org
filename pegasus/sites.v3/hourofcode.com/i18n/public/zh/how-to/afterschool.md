@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # 如何在課後及興趣班中講授編程一小時
 
-### 參與活動，并用下面的步驟向學生們介紹他們第一個小時的計算機科學。 編程一小時的課程對初學者來說都非常容易上手的！ If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+### 參與活動，并用下面的步驟向學生們介紹他們第一個小時的計算機科學。 編程一小時的課程對初學者來說都非常容易上手的！ 如果你需要更多的幫助，你可以在 [ 本地志願者](<%= codeorg_url('/volunteer/local') %>) 幫助你在課後活動或在社團內執行編程一小時的課程
 
 ---
 

@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -38,6 +39,26 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
+
+    serialized_attrs %w(
+      scholarship_status
+    )
+
+    validate :scholarship_status_valid
+
+    def scholarship_status_valid
+      unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
+        errors.add(:scholarship_status, 'is not included in the list.')
+      end
+    end
+
+    def self.scholarship_statuses
+      %w(
+        no
+        yes_code_dot_org
+        yes_other
+      )
+    end
 
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:
@@ -65,7 +86,7 @@ module Pd::Application
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
 
     VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
-    validates_uniqueness_of :user_id
+
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
@@ -505,7 +526,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval
+    def principal_approval_state
       principal_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
 
       if principal_approval
@@ -516,60 +537,6 @@ module Pd::Application
         end
       else
         'No approval sent'
-      end
-    end
-
-    # @override
-    def self.csv_header(course, user)
-      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
-      CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
-        columns.push(
-          'Principal Approval',
-          'Principal Approval Form',
-          'Meets Criteria',
-          'Total Score',
-          'Regional Partner',
-          'School District',
-          'School',
-          'School Type',
-          'School Address',
-          'School City',
-          'School State',
-          'School Zip Code',
-          'Date Submitted',
-          'Notes',
-          'Status'
-        )
-        columns.push('Locked') if can_see_locked_status?(user)
-        csv << columns
-      end
-    end
-
-    # @override
-    def to_csv_row(user)
-      answers = full_answers
-      CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push(
-          principal_approval,
-          principal_approval_url,
-          meets_criteria,
-          total_score,
-          regional_partner_name,
-          district_name,
-          school_name,
-          school_type,
-          school_address,
-          school_city,
-          school_state,
-          school_zip_code,
-          created_at.to_date.iso8601,
-          notes,
-          status
-        )
-        row.push locked? if self.class.can_see_locked_status?(user)
-        csv << row
       end
     end
 
@@ -589,10 +556,10 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_dont_know_explain],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
-        [:committed, TEXT_FIELDS[:no_explain], :committed_explain]
+        [:committed, TEXT_FIELDS[:no_explain], :committed_other]
       ]
     end
 
@@ -660,9 +627,8 @@ module Pd::Application
       workshops.first
     end
 
-    # @override
-    def self.can_see_locked_status?(user)
-      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+    def friendly_registered_workshop
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
     end
 
     # override
@@ -733,6 +699,18 @@ module Pd::Application
 
       # Update the hash, but don't override existing scores
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+    end
+
+    # Called after the application is created. Do any manipulation needed for the form data
+    # hash here, as well as wend emails
+    def on_successful_create
+      # no-op for the base class
+    end
+
+    # Called after principal approval has been created. Do any manipulation needed for the
+    # form data has here, as well as send emails
+    def on_successful_principal_approval_create
+      # no-op for the base class
     end
 
     protected

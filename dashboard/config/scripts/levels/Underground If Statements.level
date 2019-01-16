@@ -50,14 +50,14 @@
     "use_player": "false",
     "markdown_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "hint_prompt_attempts_threshold": 12,
-    "contained_level_names": null,
-    "preload_asset_list": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "agent_start_direction": "0",
     "is_agent_level": "false",
     "is_aquatic_level": "false",
-    "boat": "false"
+    "boat": "false",
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -65,7 +65,7 @@
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 3,
-    "conditionals": 3
+    "conditionals": 2
   }
 }]]></config>
   <blocks>

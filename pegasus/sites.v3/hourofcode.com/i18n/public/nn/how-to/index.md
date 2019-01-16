@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # How to teach one Hour of Code with your class
 
-### Bli med i rørsla og introdusér ei gruppe elevar til deira fyrste time i koding med desse trinna. Kodetimen er enkel å organisere, sjølv for nybyrjarar! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>) som kan hjelpe til med å organisere Kodetimen for klassen din.
+### Bli med i rørsla og introdusér ei gruppe elevar til deira fyrste time i koding med desse trinna. Kodetimen er enkel å organisere, sjølv for nybyrjarar! Viss du treng eit par ekstra hender til å hjelpe til kan du finne ein [frivillig i nærleiken](<%= codeorg_url('/volunteer/local') %>) til å hjelpe til med å gjennomføre Kodetimen i di klasse.
 
 ### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
 

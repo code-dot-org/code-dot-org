@@ -247,8 +247,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       name: '',
     }
 
-    assert_equal 'New Section', returned_json['name']
-    assert_equal 'New Section', returned_section.name
+    assert_equal 'Untitled Section', returned_json['name']
+    assert_equal 'Untitled Section', returned_section.name
   end
 
   Section::LOGIN_TYPES.each do |desired_type|

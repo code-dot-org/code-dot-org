@@ -16,9 +16,6 @@ export const CANCEL_LOCATION_SELECTION = 'gamelab/CANCEL_LOCATION_SELECTION';
 export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
 export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
-export const SET_MOBILE_CONTROLS_CONFIG = 'gamelab/SET_MOBILE_CONTROLS_CONFIG';
-export const SET_SONG = 'SET_SONG';
-
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
@@ -46,15 +43,6 @@ export function toggleGridOverlay(showGridOverlay) {
   };
 }
 
-export function setMobileControlsConfig(mobileControlsConfig) {
-  return function (dispatch) {
-    dispatch({
-      type: SET_MOBILE_CONTROLS_CONFIG,
-      mobileControlsConfig: mobileControlsConfig
-    });
-  };
-}
-
 export function viewAnimationJson(animationJson) {
   return {
     type: VIEW_ANIMATION_JSON,
@@ -64,11 +52,4 @@ export function viewAnimationJson(animationJson) {
 
 export function hideAnimationJson() {
   return {type: HIDE_ANIMATION_JSON};
-}
-
-export function setSong(song) {
-  return {
-    type: SET_SONG,
-    value: song,
-  };
 }

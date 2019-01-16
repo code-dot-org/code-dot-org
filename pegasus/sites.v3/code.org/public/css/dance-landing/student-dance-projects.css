@@ -1,0 +1,31 @@
+.project-card {
+  width: 216px;
+  border: 1px solid gray;
+  display: inline-block;
+  margin: 10px;
+}
+
+.project-video {
+  width: 100%;
+}
+
+.project-details {
+  padding: 10px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+.student-label, .age-label {
+  font-size: 14px;
+  font-family: 'Gotham 7r', sans-serif;
+  display: inline-block;
+}
+
+.student-name, .student-age {
+  font-size: 14px;
+  display: inline-block;
+  font-family: 'Gotham 4r', sans-serif;
+}

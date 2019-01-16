@@ -1,4 +1,4 @@
-/* global Blockly, droplet, addToHome */
+/* global Blockly, droplet */
 
 import $ from 'jquery';
 import React from 'react';
@@ -269,9 +269,6 @@ StudioApp.prototype.init = function (config) {
     if (dom.isMobile()) {
       $("body").addClass("legacy-share-view-mobile");
       $('#main-logo').hide();
-    }
-    if (dom.isIOS() && !window.navigator.standalone) {
-      addToHome.show(true);
     }
   }
 
@@ -615,13 +612,20 @@ StudioApp.prototype.scaleLegacyShare = function () {
   var phoneFrameScreen = document.getElementById('phoneFrameScreen');
   var vizWidth = $(vizContainer).width();
 
-  // On mobile, scale phone frame to full screen (portrait). Otherwise use given dimensions from css.
+  // On mobile, scale up phone frame to full screen (portrait) as needed.
+  // Otherwise use given dimensions from css.
   if (dom.isMobile()) {
-    var screenWidth = Math.min(window.innerWidth, window.innerHeight);
-    var screenHeight = Math.max(window.innerWidth, window.innerHeight);
-    $(phoneFrameScreen).width(screenWidth);
-    $(phoneFrameScreen).height(screenHeight);
-    $(vizColumn).width(screenWidth);
+    const { clientHeight, clientWidth } = document.documentElement;
+    const screenWidth = Math.min(clientHeight, clientWidth);
+    const screenHeight = Math.max(clientWidth, clientHeight);
+    // Choose the larger of the document client size and the existing
+    // phoneFrameScreen size:
+    const newWidth = Math.max(screenWidth, $(phoneFrameScreen).width());
+    const newHeight = Math.max(screenHeight, $(phoneFrameScreen).height());
+
+    $(phoneFrameScreen).width(newWidth);
+    $(phoneFrameScreen).height(newHeight);
+    $(vizColumn).width(newWidth);
   }
 
   var frameWidth = $(phoneFrameScreen).width();
@@ -1234,30 +1238,31 @@ StudioApp.prototype.onResize = function () {
  * view mode.
  */
 function resizePinnedBelowVisualizationArea() {
-  var pinnedBelowVisualization = document.querySelector(
+  const pinnedBelowVisualization = document.querySelector(
       '#visualizationColumn.pin_bottom #belowVisualization');
   if (!pinnedBelowVisualization) {
     return;
   }
 
-  var top = 0;
+  let top = 0;
 
-  var possibleBelowVisualizationElements = [
+  const possibleElementsAbove = [
     'playSpaceHeader',
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
+    'song-selector-wrapper'
   ];
-  possibleBelowVisualizationElements.forEach(id => {
+  possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
     if (element) {
       top += $(element).outerHeight(true);
     }
   });
 
-  var visualization = document.getElementById('visualization');
+  const visualization = document.getElementById('visualization');
   if (visualization) {
-    var parent = $(visualization).parent();
+    const parent = $(visualization).parent();
     if (parent.attr('id') === 'phoneFrameWrapper') {
       // Phone frame itself doesnt have height. Loop through children
       parent.children().each(function () {
@@ -1268,10 +1273,10 @@ function resizePinnedBelowVisualizationArea() {
     }
   }
 
-  var bottom = 0;
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+  let bottom = 0;
+  const smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
-    var codeApp = $('#codeApp');
+    const codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
     // Footer is relative to the document, not codeApp, so we need to
     // remove the codeApp bottom offset to get the correct margin.
@@ -2008,9 +2013,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           // /c/ URLs go to /edit when we click open workspace.
           // /project/ URLs we want to go to /view (which doesnt require login)
           if (/^\/c\//.test(location.pathname)) {
-            location.href += '/edit';
+            location.pathname += '/edit';
           } else {
-            location.href += '/view';
+            location.pathname += '/view';
           }
         });
 

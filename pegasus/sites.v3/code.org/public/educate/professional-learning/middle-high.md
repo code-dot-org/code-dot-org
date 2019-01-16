@@ -19,7 +19,7 @@ theme: responsive
 </div>
 
 [col-50]
- 
+
 <div style="width: 96%;">
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: "false" %>
@@ -135,7 +135,7 @@ The Code.org Professional Learning Program is open to educators who are interest
 * Plan to teach the course in the 2019-20 school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
-* Support the recruitment and enrollment of a diverse group of stuents in the course, representative of the school's student population
+* Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 
 ## <a name="cost"></a>When does the program start and what does it cost?
 
@@ -145,11 +145,11 @@ Generous scholarships and grants are available across the country to cover the c
 
 Enter your school's zip code to learn more.
 
-<%= view :regional_partner_search %>
+<%= view :regional_partner_search, source_page_id: "middle-high" %>
 
 ## Have questions?
 
-Along with our Regional Partners, we're here to help! 
+Along with our Regional Partners, we're here to help!
 
 Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or <a href="https://studio.code.org/pd/regional_partner_contact/new">contact your Regional Partner</a>.
 
