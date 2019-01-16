@@ -6,7 +6,7 @@ sk:
         Maze: Bludisko
         Multi: Vyber správnu odpoveď
         Unplug2: Algoritmické myslenie
-        Unplug3: Programovanie na milimetrovom papieri
+        Unplug3: Programovanie na štvorčekový papier
         Artist: Umelec
         Unplug4: Algoritmy
         Artist2: Umelec 2
@@ -24,7 +24,7 @@ sk:
         Artist5: Umelec 5
         Unplug11: Zhrnutie
         MazeEC: Bludisko
-        Bounce: Odraziť
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Skladačka
         MazeStep: Krokový režim bludiska
@@ -270,7 +270,7 @@ sk:
         hoc_wrapup: Zhrnutie Hodiny Kódu
         Unplug1: Čo je to CS?
         Unplug2: Algoritmické myslenie
-        Unplug3: Programovanie na milimetrovom papieri
+        Unplug3: Programovanie na štvorčekový papier
         Unplug4: Algoritmy
         Unplug5: Funkcie
         Unplug6: Podmienky
@@ -289,30 +289,30 @@ sk:
         C1_bee_level_intro: Úlohy s včelami - Úvod
         C1_artist_intro: Umelec - Úvod
         C1_spelling_bee_intro: Úvod do hláskovania
-        C1_zuck_repeat_loop: 'Bludisko: Cykly'
+        C1_zuck_repeat_loop: Cykly v Bludisku
         C1_bee_loops: 'Včela: Cykly'
-        C1_maze_loops: 'Bludisko: Cykly'
+        C1_maze_loops: Cykly v Bludisku
         C1_playlab_storytelling: Play Lab - Vytvor príbeh
         C1_planting_seed: Sadenie semiačka
         C1_building_foundation: Stavanie základov
         C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Úvod do bludiska
         C2_artist_intro: Umelec - Úvod
-        C2_zuck_repeat_loop: 'Bludisko: Cykly'
+        C2_zuck_repeat_loop: Cykly v Bludisku
         C2_artist_loops: Umelec - Cykly
         C2_artist_debugging: Umelec - Hľadanie a odstraňovanie chýb
         C2_bee_loops: 'Včela: Cykly'
         C2_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C2_bee_conditionals: Podmienky s včelou
         C2_playlab_createstory: Play Lab - Vytvor príbeh
-        C2_graph_paper: Programovanie na milimetrovom papieri
+        C2_graph_paper: Programovanie na štvorčekový papier
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
         C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Papierové lietadlá
         C2_digital_footprint: Tvoja digitálna stopa
         C2_digital_footprint_v2: Tvoja digitálna stopa
-        C3_maze_level_4: 'Bludisko: Cykly'
+        C3_maze_level_4: Cykly v Bludisku
         C3_artist_intro: Umelec - Úvod
         C3_artist_functions: Umelec - Funkcie
         C3_bee_functions: Funkcie s včelou
@@ -322,7 +322,7 @@ sk:
         C3_farmer_while: Podmieňovacie cykly "Kým"
         C3_bee_nested_loops: Vnorené cykly
         C3_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
-        C3_bounce: Odraziť
+        C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Vytvor hru
         C3_computational_thinking: Algoritmické myslenie
         C3_dice_race: Preteky s kockami
@@ -349,7 +349,7 @@ sk:
         C4_unplugged_forloops: Cykly For
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
-        CSF_artist_angles: Umelec - Uhly
+        CSF_artist_angles: Uhly v Umelcovi
         CSF_collector_k1_blocks: 'Základy informatiky: Kolektor'
         CSF_collector_repeat_loops: Použitie bloku "Opakuj"
         CSF_collector_text_blocks: 'Základy informatiky: Kolektor'
@@ -370,11 +370,11 @@ sk:
         frozen_functions: Úvod do funkcií
         playlab_intro: Úvod do Play Lab
         playlab_events: Play Lab Udalosti
-        playlab_repeat_forever: Play Lab Doživotné opakovanie
+        playlab_repeat_forever: Play Lab Nekonečné opakovanie
         tutorial_puzzle_challenge: Tutoriál - Puzzle výzva
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_events: Play Lab - Udalosti
-        infinity_playlab_repeat_forever: Play Lab - Doživotné opakovanie
+        infinity_playlab_repeat_forever: Play Lab - Nekonečné opakovanie
         csd_concept_how_computers_work: Úvádzame Ako pracujú počítače
         csd_concept_computer: 'Ako pracujú počítače: Čo robí počítač počítačom?'
         csd_concept_binary_data: 'Ako pracujú počítače: Binárne a všeobecné dáta'
@@ -547,7 +547,7 @@ sk:
         Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
-        Infinity_repeat_callout: Sem umiestni bloky Posunúť
+        Infinity_repeat_callout: Sem umiestni bloky "posuň"
         craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
         craft_drag_block_callout: Potiahni blok "moveForward()" a pripoj ho pod iný blok
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať

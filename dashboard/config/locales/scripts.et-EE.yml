@@ -1788,3 +1788,5 @@ et:
               name: 'Päris elu algoritmid: paberlennukid'
             Binary Bracelets:
               name: Binaarsed käevõrud
+        gamelab:
+          title: Game Lab

@@ -456,6 +456,8 @@ fi-FI:
   minecraft_adventurer: Minecraft seikkailija
   minecraft_tutorials: Minecraft Koodaustunnin ohjeet
   minecraft_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
+  minecraft_agent_description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+    Matkaa halki Minecraftin koodin matkassa
   minecraft_agent_button: Aloita
   minecraft_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
     Minecraft versiollasi.
@@ -1471,8 +1473,13 @@ fi-FI:
   hoc_overview_start_tutorial: Aloita
   hoc_overview_view_teacher_guide: Katso opettajan opas
   hoc2018_creativity_create: Luo
+  hoc2018_creativity_what_will_you_create: Mitä luot?
   hoc2018_mc_page_title: Minecraft Koodaustunnin ohjeet
   hoc2018_mc_details: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
+  hoc2018_mc_aquatic_description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+    Matkaa halki Minecraftin koodin matkassa
+  hoc2018_mc_hero_description: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+    Matkaa halki Minecraftin koodin matkassa
   hoc2018_mc_designer_title: Minecraft suunnittelija
   hoc2018_mc_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
     Minecraft versiollasi.
@@ -1490,8 +1497,11 @@ fi-FI:
   hoc2018_mc_video_title_cs_intro: Tutustuminen tietojenkäsittelytieteisiin
   hoc2018_mc_video_title_anybody_can_learn: Kuka vain voi oppia
   hoc2018_mc_homepage_hoc_coming: Koodin hetki on käsillä...
+  hoc2018_mc_homepage_what_create: Mitä luot?
   hoc2018_mc_homepage_join_us: Liity joukkoomme
   hoc2018_mc_homepage_try_it: Kokeile
+  hoc2018_mc_back_journey: Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla!
+    Matkaa halki Minecraftin koodin matkassa
   hoc2018_mc_teacher_guide: Katso opettajan opas
   hoc2018_mc_minecraft_education: Minecraft koulutus
   hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party

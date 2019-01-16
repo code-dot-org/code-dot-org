@@ -535,6 +535,8 @@ pt-BR:
               name: Codificação de números no mundo real
             Encoding and Sending Text:
               name: Codificação e envio de texto
+            Lossy Compression and File Formats:
+              name: Compressão com perdas e formatos de arquivo
             Number Systems:
               name: Sistemas numéricos
             Personal Innovations:
@@ -693,6 +695,12 @@ pt-BR:
               name: APIs e parâmetros de função
             Beyond Buttons Toward Apps:
               name: Além dos botões para aplicativos
+            Canvas and Arrays in Apps:
+              name: Telas e matrizes nos aplicativos
+            Compound Conditional Logic:
+              name: Condicionais compostas
+            Controlling Memory with Variables:
+              name: Controlando a memória com variáveis
             Creating Functions:
               name: Criando funções
             Creating functions with Parameters:
@@ -703,8 +711,12 @@ pt-BR:
               name: Programação Orientada a Evento e Depuração
             Events Unplugged:
               name: Eventos offline
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Image Scroller with Key Events:
+              name: Rolagem de imagem com eventos principais
             Introducing Design Mode:
               name: Introduzindo o Modo Design
             Introduction to Arrays:
@@ -719,6 +731,10 @@ pt-BR:
               name: Laços e Simulações
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
+            'Practice PT: Create':
+              name: 'Tarefa para prática - Crie'
             Processing Arrays:
               name: Processando Listas
             The Need For Programming Languages:
@@ -891,6 +907,16 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Creating Breeds in Starlogo Nova:
+              name: Criação de raças em Nova Starlogo
+            Epidemic Model Extensions:
+              name: Extensões de modelo de epidemia
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Revisiting Agent Movement:
+              name: Revisitando o movimento do agente
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
@@ -900,6 +926,8 @@ pt-BR:
           stages:
             Decode and Share:
               name: Decifre e Compartilhe
+            Mystery Model:
+              name: Modelo do mistério
             Welcome Back!:
               name: Bem-vindo(a) de volta!
         Testing:
@@ -912,6 +940,12 @@ pt-BR:
         cspunit2:
           description_short: Programação
           stages:
+            Algorithms Detour - Hard Problems TSP:
+              name: Problemas difíceis - o problema do vendedor ambulante
+            Algorithms Detour - How Routers Learn:
+              name: Como os roteadores aprendem
+            Alice and Bob and Asymmetric Keys:
+              name: Chaves assimétricas - copos e feijão
             Cracking the Code:
               name: Quebrando o Código
             DNS in the Real World:
@@ -920,6 +954,20 @@ pt-BR:
               name: Chaves e Senhas
             HTTP and Abstraction:
               name: HTTP e Abstração na Internet
+            Invent an Addressing Protocol:
+              name: Invente um protocolo de endereçamento
+            One Way Functions - Ice Cream Vans:
+              name: Funções de uma via - o problema de ponto de acesso Wi-Fi
+            Packets and Making a Reliable Internet:
+              name: Pacotes e Fazendo uma Internet Confiável
+            Practice PT - Cybersecurity Innovations:
+              name: Prática PT - Inovações de segurança cibernética
+            Practice PT - The Internet and Society:
+              name: Prática PT - A Internet e a Sociedade
+            Public Key Crypto:
+              name: Criptografia de chave pública
+            Routers and Redundancy:
+              name: Roteadores e redundância
             Tell Me a Secret - Encrypting Text:
               name: A Necessidade de Encriptar
             The Internet:
@@ -978,12 +1026,16 @@ pt-BR:
               name: Abelha
             Bounce:
               name: Pingue-pongue
+            CSinA:
+              name: CSinA
             Farmer:
               name: Fazendeiro
             Flappy:
               name: Flappy bird
             Free Response:
               name: Resposta livre
+            Gamelab:
+              name: Laboratório de jogos
             Jigsaw:
               name: Quebra-cabeça
             Long assessment:
@@ -998,18 +1050,44 @@ pt-BR:
               name: Minecraft
             Multi:
               name: Multi
+            Multi2:
+              name: Multi2
+            Netsim:
+              name: Netsim
             Odometer:
               name: Hodômetro
             Online PD:
               name: DP on-line
             Pixelation:
               name: Pixelização
+            Public Key Cryptography:
+              name: Criptografia de chave pública
+            Rich long assessment:
+              name: Avaliação longa
+            Sample PLC Assessment:
+              name: Avaliação de amostra PLC
+            Star wars:
+              name: Star wars
             Studio:
               name: Estúdio
+            Swapped Levels:
+              name: Níveis trocados
             Text Compression:
               name: Compressão de texto
+            TextMatch:
+              name: Comparador de texto
             Web Lab:
               name: Laboratório Web
+            Multi page assessment:
+              name: Avaliação de múltiplas página
+            Single page assessment:
+              name: Avaliação de página única
+            Standalone video:
+              name: Vídeo independente
+            Curriculum Reference:
+              name: Currículo de referência
+            Dance Lab:
+              name: Tapete de Dança
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1043,10 +1121,30 @@ pt-BR:
               name: Laboratório de Aplicativo
             Internet Simulator:
               name: Simulador de internet
+            Text Compression Lesson:
+              name: Aula de compressão de texto
+            Text Compression Widget:
+              name: Widget de compressão de texto
             Welcome!:
               name: Bem-vindo!
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Fundamentos de Ciência da Computação
+            Getting Started:
+              name: Iniciando
+            Looking Ahead:
+              name: Olhando para o futuro
+            'Mastering the Basics: Conditionals':
+              name: 'Dominando o básico: Condicionais'
+            'Mastering the Basics: Events':
+              name: 'Dominando o básico: Eventos'
+            'Mastering the Basics: Functions':
+              name: 'Dominando o básico: Funções'
+            'Mastering the Basics: Loops':
+              name: 'Dominando o básico: Ciclos'
+            'Mastering the Basics: Sequencing':
+              name: 'Dominando o básico: Sequenciamento'
             Next Steps:
               name: Próximas etapas
             Planning:
@@ -1057,6 +1155,10 @@ pt-BR:
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidade 1, Dia 10 Contando uma História com Dados
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Unidade 1, Dia 11-14 Modelagem de dados e design
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
@@ -1083,26 +1185,60 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Remixing Phases 1 and 2:
+              name: Remixando as fases 1 e 2
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Reviewing the Modules:
+              name: Revisando os módulos
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
               name: Resumo
+        equity-pd:
+          stages:
+            Code.org Equity PD:
+              name: Code.org igualdade PD
         science-PD2:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Remixing Phases 1 and 2:
+              name: Remixando as fases 1 e 2
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Reviewing the Modules:
+              name: Revisando os módulos
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
               name: Resumo
         Equity-OnlinePD:
           stages:
+            Creating Equitable Learning Environments:
+              name: Criando ambientes de aprendizagem equitativa
+            Getting Started:
+              name: Iniciando
+            Introduction to Equity:
+              name: Introdução a equidade
             Next Steps:
               name: Próximas etapas
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Remixing Phases 1 and 2:
+              name: Remixando as fases 1 e 2
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Reviewing the Modules:
+              name: Revisando os módulos
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
@@ -1113,6 +1249,10 @@ pt-BR:
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidade 1, Dia 10 Contando uma História com Dados
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Unidade 1, Dia 11-14 Modelagem de dados e design
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
@@ -1131,6 +1271,10 @@ pt-BR:
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidade 1, Dia 10 Contando uma História com Dados
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Unidade 1, Dia 11-14 Modelagem de dados e design
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
@@ -1143,6 +1287,22 @@ pt-BR:
               name: Bem-vindo!
             Wrap-up:
               name: Resumo
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Iniciando
+            Lesson Chunk 1- Sending Binary Messages:
+              name: Lição-parte 1 - Enviando mensagens binárias
+            Lesson Chunk 2- Encoding and Sending Numbers:
+              name: Lição-parte 2 - Codificando e enviando números
+            Lesson Chunk 3- Encoding and Sending Text:
+              name: Lição-parte 3 - Codificando e enviando texto
+            Lesson Chunk 4- Compressing and Storing Information:
+              name: Lição-parte 4 - Compactando e armazenando informações
+            Welcome to the Course!:
+              name: Bem-vindo ao curso!
+            Wrap Up and Next Steps:
+              name: Embrulhe e próximos passos
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -1165,18 +1325,31 @@ pt-BR:
               name: O grande evento
         algebraPD3a:
           title: Ciência da computação em álgebra PD
+          stages:
+            Updates - The Big Game and Projects:
+              name: Atualizações - O grande jogo e projetos
+            Updates - The Design Recipe:
+              name: Atualizações - A receita de Design
+            Updates - Tweaks and Polish:
+              name: Atualizações - ajustes e polonês
         sciencePD3_pre1:
           stages:
+            Prep With Your Modules:
+              name: Prepare-se com seus módulos
             Welcome Back!:
               name: Bem-vindo(a) de volta!
         ECSPD3-Unit2:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
               name: Unidade 2 Desafio
         ECSPD3-Unit3:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
@@ -1185,6 +1358,8 @@ pt-BR:
               name: Unidade 3 Dia-a-Dia
         ECSPD3-Unit4:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
@@ -1195,38 +1370,119 @@ pt-BR:
           stages:
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
+            Unit 5 Overview:
+              name: Visão geral da unidade 5
+            Unit 5 lessons:
+              name: Lições da unidade 5
         ECSPD3-Unit6:
           stages:
+            Alternative Ideas for Unit 6:
+              name: Ideias alternativas para a unidade 6
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
             Unit 6 Challenge:
               name: Unidade 6 Desafio
+            Unit 6 Overview:
+              name: Visão geral da unidade 6
+            Unit 6 lessons:
+              name: Lições da unidade 6
         cspunit4draft:
           stages:
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Cleaning Data:
+              name: Limpeza de dados
+            Compiling Data:
+              name: Compilação de dados
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
             Data, Security, and Privacy:
               name: Dados, Segurança e Privacidade
+            Designing Data Collection:
+              name: Projetando a coleta de dados
+            Designing for Your User:
+              name: Projetando para seu usuário
+            Discover a Data Story:
+              name: Descubra uma história de dados
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
             Import, Export, and Visualize Data:
               name: Importar, Exportar e Visualizar Dados
             Interpreting Data Visualizations:
               name: Interpretando Visualização de Dados
             Permanent Data Storage and Clicker Completion:
               name: Armazenamento permanente de dados e conclusão do Clicker
+            Search Terms:
+              name: Termos de pesquisa
+            Unique IDs, Delete and Update Records:
+              name: Identificadores únicos, exclusão e atualização de registros
+            Using Data in the Real World:
+              name: Enviando dados no mundo real
+            Web Requests and APIs:
+              name: APIs e requisições web
             What Data Can Tell Us:
               name: O Que Os Dados Podem Nos Dizer
+            Why Make Apps?:
+              name: Por que fazer Apps?
         ScienceP3OLPT2:
           stages:
+            Earth Science Challenges:
+              name: Desafios de Ciências da terra
+            Life Science Challenges:
+              name: Desafios de ciência da vida
+            Physical Science Challenges:
+              name: Desafios da ciência física
+            Thinking About Implementation:
+              name: Pensando sobre implementação
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
               name: Resumo
         algebraPD3b:
           title: Ciência da computação em álgebra PD
+          stages:
+            Close and Next Steps:
+              name: Fechar e próximos passos
+            Getting Started:
+              name: Iniciando
+            Teaching Support - Lessons 1-3:
+              name: Suporte de ensino - Aulas 1-3
+            Teaching Support - Lessons 13-16:
+              name: Suporte de ensino - Aulas 13-16
+            Teaching Support - Lessons 17-20:
+              name: Suporte de ensino - Aulas 17-20
+            Teaching Support - Lessons 4-7:
+              name: Suporte de ensino - Aulas 4-7
+            Teaching Support - Lessons 8-12:
+              name: Suporte de ensino - Aulas 8-12
         CSPPD3-Unit2:
           stages:
+            Challenge Overview:
+              name: Visão geral do desafio
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
+            Unit 2 Overview:
+              name: Visão geral da unidade 2
         duino:
           stages:
             Basic Circuits:
               name: Circuitos Básicos
+            Blinky Lights:
+              name: Luzes piscantes
         Special Fun:
           description_audience: 10-18 anos de idade
         SpecialSeries:
@@ -1240,19 +1496,31 @@ pt-BR:
               name: Laboratório da Era do Gelo
         CSPPD3-Unit3:
           stages:
+            Challenge Overview:
+              name: Visão geral do desafio
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
         cspunit3temp:
           title: "CSP Unidade 3 - Programação"
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
           description_short: Programação
           stages:
+            Canvas and Arrays in Apps:
+              name: Telas e matrizes nos aplicativos
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Image Scroller with Key Events:
+              name: Rolagem de imagem com eventos principais
             Introduction to Arrays:
               name: Introdução a Arrays
             Loops and Simulations:
               name: Laços e Simulações
+            'Practice PT: Create':
+              name: 'Tarefa para prática - Crie'
             Processing Arrays:
               name: Processando Listas
             While Loops:
@@ -1287,8 +1555,12 @@ pt-BR:
               name: Hora do Código 2015
         CSPPD3-Unit3-pt2:
           stages:
+            Challenge Overview:
+              name: Visão geral do desafio
             Complete the Challenge:
               name: Complete o Desafio
+            Share out and Submit:
+              name: Compartilhar e submeter
         ScienceP3OLPT3:
           stages:
             Welcome!:
@@ -1300,16 +1572,50 @@ pt-BR:
         cspunit4:
           description_short: Programação
           stages:
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Cleaning Data:
+              name: Limpeza de dados
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
+            Discover a Data Story:
+              name: Descubra uma história de dados
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
             What is Big Data?:
               name: O que é Big Data?
         CSPPD3-Unit4:
           stages:
+            Challenge Overview:
+              name: Visão geral do desafio
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
+        cspunit6draft:
+          stages:
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
         CSPPD3-Unit5:
           stages:
+            Challenge Overview:
+              name: Visão geral do desafio
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
+            Unit 5 Overview:
+              name: Visão geral da unidade 5
+        cspunit6:
+          stages:
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
         AlgebraA:
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
@@ -1378,14 +1684,23 @@ pt-BR:
               name: Por que a ciência da computação faz parte da álgebra
         algebraPD3c:
           title: Ciência da computação em álgebra PD
+          stages:
+            Getting Started:
+              name: Iniciando
         csp1-2017:
           stages:
             Binary Numbers:
               name: Números binários
             Number Systems:
               name: Sistemas numéricos
+            Packets and Making a Reliable Internet:
+              name: Pacotes e Fazendo uma Internet Confiável
             Personal Innovations:
               name: Inovações Pessoais
+            Practice PT - The Internet and Society:
+              name: Prática PT - A Internet e a Sociedade
+            Routers and Redundancy:
+              name: Roteadores e redundância
             Sending Binary Messages:
               name: Enviando mensagens binárias
             Sending Binary Messages with the Internet Simulator:
@@ -1406,10 +1721,24 @@ pt-BR:
           stages:
             Bytes and File Sizes:
               name: Bytes e Tamanhos de Arquivos
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Cleaning Data:
+              name: Limpeza de dados
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
+            Discover a Data Story:
+              name: Descubra uma história de dados
             Encoding B&W Images:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
               name: Codificação de imagens coloridas
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
+            Lossy Compression and File Formats:
+              name: Compressão com perdas e formatos de arquivo
             Text Compression:
               name: Compressão de texto
             Post-Course Survey:
@@ -1423,8 +1752,12 @@ pt-BR:
               name: APIs e parâmetros de função
             Creating Functions:
               name: Criando funções
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
             Using Simple Commands:
@@ -1439,6 +1772,8 @@ pt-BR:
           stages:
             Cracking the Code:
               name: Quebrando o Código
+            Practice PT - Cybersecurity Innovations:
+              name: Prática PT - Inovações de segurança cibernética
             Simple Encryption:
               name: Criptografia simples
             What is Big Data?:
@@ -1453,6 +1788,12 @@ pt-BR:
           stages:
             Beyond Buttons Toward Apps:
               name: Além dos botões para aplicativos
+            Canvas and Arrays in Apps:
+              name: Telas e matrizes nos aplicativos
+            Compound Conditional Logic:
+              name: Condicionais compostas
+            Controlling Memory with Variables:
+              name: Controlando a memória com variáveis
             Digital Assistant Project:
               name: Projeto de Assistente Digital
             Event-Driven Programming and Debugging:
@@ -1461,6 +1802,8 @@ pt-BR:
               name: Eventos offline
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            Image Scroller with Key Events:
+              name: Rolagem de imagem com eventos principais
             Introducing Design Mode:
               name: Introduzindo o Modo Design
             Introduction to Arrays:
@@ -1473,6 +1816,8 @@ pt-BR:
               name: Laços e Simulações
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            'Practice PT: Create':
+              name: 'Tarefa para prática - Crie'
             Processing Arrays:
               name: Processando Listas
             Understanding Program Flow and Logic:
@@ -1673,6 +2018,10 @@ pt-BR:
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidade 1, Dia 10 Contando uma História com Dados
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Unidade 1, Dia 11-14 Modelagem de dados e design
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
@@ -1687,12 +2036,16 @@ pt-BR:
               name: Resumo
         ecs-unit2:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
               name: Unidade 2 Desafio
         ecs-unit3:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
@@ -1701,6 +2054,8 @@ pt-BR:
               name: Unidade 3 Dia-a-Dia
         ecs-unit4:
           stages:
+            Getting Started:
+              name: Iniciando
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
@@ -1711,12 +2066,30 @@ pt-BR:
           stages:
             Complete the Challenge:
               name: Complete o Desafio
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
+            Unit 5 Overview:
+              name: Visão geral da unidade 5
+            Unit 5 lessons:
+              name: Lições da unidade 5
             Unit 5 Challenge:
               name: Unidade 5 Desafio
         ecs-unit6:
           stages:
+            Alternative Ideas for Unit 6:
+              name: Ideias alternativas para a unidade 6
+            Getting Started:
+              name: Iniciando
+            Share out and Submit:
+              name: Compartilhar e submeter
             Unit 6 Challenge:
               name: Unidade 6 Desafio
+            Unit 6 Overview:
+              name: Visão geral da unidade 6
+            Unit 6 lessons:
+              name: Lições da unidade 6
         grade3:
           stages:
             " Bee: Conditionals":
@@ -1730,7 +2103,7 @@ pt-BR:
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
         csd3-2017:
-          description_short: "Programação"
+          description_short: Programação
           stages:
             Variables and Animation:
               name: Variáveis e Animação
@@ -1801,6 +2174,12 @@ pt-BR:
           stages:
             Processing:
               name: Processando
+        csp-online-test:
+          stages:
+            Unit 2 Overview:
+              name: Visão geral da unidade 2
+            Unit 5 Overview:
+              name: Visão geral da unidade 5
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -1808,6 +2187,10 @@ pt-BR:
           stages:
             Bounce:
               name: Pingue-pongue
+        sample-csp5:
+          stages:
+            Controlling Memory with Variables:
+              name: Controlando a memória com variáveis
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -1829,6 +2212,10 @@ pt-BR:
               name: Cabeçalhos
             Lists:
               name: Listas
+        csp2-support:
+          stages:
+            Unit 2 Overview:
+              name: Visão geral da unidade 2
         csd4-2017:
           stages:
             Improving and Iterating:
@@ -1964,28 +2351,54 @@ pt-BR:
           stages:
             Welcome!:
               name: Bem-vindo!
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Reviewing the Modules:
+              name: Revisando os módulos
+            Remixing Phases 1 and 2:
+              name: Remixando as fases 1 e 2
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Wrap-Up:
               name: Resumo
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
               name: Bem-vindo!
+            Review StarLogo Nova:
+              name: Revisão StarLogo Nova
+            Reviewing the Modules:
+              name: Revisando os módulos
+            Remixing Phases 1 and 2:
+              name: Remixando as fases 1 e 2
+            Thinking Ahead to Implementation:
+              name: Pensando no futuro para implementação
             Wrap-Up:
               name: Resumo
         sciencepd3-2016:
           stages:
             Welcome Back!:
               name: Bem-vindo(a) de volta!
+            Prep With Your Modules:
+              name: Prepare-se com seus módulos
         sciencepd4:
           stages:
             Welcome!:
               name: Bem-vindo!
+            Thinking About Implementation:
+              name: Pensando sobre implementação
             Wrap-Up:
               name: Resumo
         science-pd-ol-pt-5:
           stages:
             Welcome!:
               name: Bem-vindo!
+            Earth Science Challenges:
+              name: Desafios de Ciências da terra
+            Life Science Challenges:
+              name: Desafios de ciência da vida
+            Physical Science Challenges:
+              name: Desafios da ciência física
             Wrap-Up:
               name: Resumo
         csf2harvey:
@@ -1996,10 +2409,22 @@ pt-BR:
           stages:
             Welcome!:
               name: Bem-vindo!
+            Earth Science Challenges:
+              name: Desafios de Ciências da terra
+            Life Science Challenges:
+              name: Desafios de ciência da vida
+            Physical Science Challenges:
+              name: Desafios da ciência física
             Wrap-Up:
               name: Resumo
+        csp5-support:
+          stages:
+            Unit 5 Overview:
+              name: Visão geral da unidade 5
         csppostap-2017:
           stages:
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csd6-draft:
@@ -2286,10 +2711,14 @@ pt-BR:
               name: Usando comandos simples
             Creating Functions:
               name: Criando funções
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
           title: CSP Unidade 3 - Programação
@@ -2391,10 +2820,14 @@ pt-BR:
               name: Usando comandos simples
             Creating Functions:
               name: Criando funções
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
         pwc:
@@ -2767,8 +3200,14 @@ pt-BR:
               name: A Internet
             The Need for Addressing:
               name: A Necessidade de Endereçar
+            Routers and Redundancy:
+              name: Roteadores e redundância
+            Packets and Making a Reliable Internet:
+              name: Pacotes e Fazendo uma Internet Confiável
             The Need for DNS:
               name: A Necessidade de DNS
+            Practice PT - The Internet and Society:
+              name: Prática PT - A Internet e a Sociedade
         csd1-2018:
           stages:
             Processing:
@@ -2791,6 +3230,20 @@ pt-BR:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
               name: Codificação de imagens coloridas
+            Lossy Compression and File Formats:
+              name: Compressão com perdas e formatos de arquivo
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
+            Discover a Data Story:
+              name: Descubra uma história de dados
+            Cleaning Data:
+              name: Limpeza de dados
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
         csp3-2018:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
@@ -2802,10 +3255,14 @@ pt-BR:
               name: Usando comandos simples
             Creating Functions:
               name: Criando funções
+            Functions and Top-Down Design:
+              name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Practice PT - Design a Digital Scene:
+              name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
             Creating Functions with Parameters:
@@ -2818,10 +3275,16 @@ pt-BR:
               name: Criptografia simples
             Unit 4 Chapter 1 Assessment:
               name: Unidade 4 Capítulo 1 Avaliação
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Check Your Assumptions:
+              name: Verifique suas suposições
         csp5-2018:
           stages:
             Multi-screen Apps:
               name: Aplicativos Multi-Tela
+            Controlling Memory with Variables:
+              name: Controlando a memória com variáveis
             User Input and Strings:
               name: Entradas de Usuário e Strings
             While Loops:
@@ -2834,6 +3297,24 @@ pt-BR:
               name: Processando Listas
             Functions with Return Values:
               name: Funções com Valores de Retorno
+            'Practice PT: Create':
+              name: 'Tarefa para prática - Crie'
+        csppostap-2018:
+          stages:
+            Creating Javascript Objects:
+              name: Criando objetos Javascript
+            Finding Trends with Visualizations:
+              name: Encontrar tendências com visualizações
+            Check Your Assumptions:
+              name: Verifique suas suposições
+            Good and Bad Data Visualizations:
+              name: Visualização de Dados Bons e Ruins
+            Discover a Data Story:
+              name: Descubra uma história de dados
+            Cleaning Data:
+              name: Limpeza de dados
+            Creating Summary Tables:
+              name: Criando tabelas de resumo
         csd-novice-18:
           stages:
             Friday:
@@ -3056,5 +3537,9 @@ pt-BR:
               name: Programação no labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: aviões de papel'
+            Looking Ahead:
+              name: Olhando para o futuro
             Binary Bracelets:
               name: Pulseiras binárias
+        gamelab:
+          title: Laboratório de Jogos

@@ -212,12 +212,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: './node_modules/gif.js/dist',
-          src: ['gif.worker.js'],
-          dest: 'build/package/js/dance/'
-        },
-        {
-          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen
@@ -560,7 +554,6 @@ describe('entry tests', () => {
     'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-    'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
     'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
