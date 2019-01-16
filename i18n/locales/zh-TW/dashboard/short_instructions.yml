@@ -199,7 +199,7 @@ zh-TW:
       2-3 Bee Loops 9: While迴圈等同於在迴圈中加上if的敘述。在這個程式碼中加上一個while迴圈來執行同樣的任務。
       2-3 Bee Loops Assessment 1: '評量：使用一個`當…`迴圈來採集這些花朵上的所有花蜜。'
       2-3 Maze 1: '你可以幫我抓住那頑皮的豬嗎？把幾個`移動-向前`積木放到`當運行時`積木的下面，然後點擊「運行」。 '
-      2-3 Maze 10: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+      2-3 Maze 10: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze 11: 我餓了！讓我到花那兒！你需要重複使用一個積木幾次？
       2-3 Maze 12 (copy 1): '你能夠只用兩個程式積木就完成先前的任務嗎？(提示：用"重複次數"的程式積木來建立一個迴圈)'
       2-3 Maze 12 (copy 2): '你能夠只用兩個程式積木就完成先前的任務嗎？(提示：用"重複次數"的程式積木來建立一個迴圈)'
@@ -217,12 +217,12 @@ zh-TW:
       2-3 Maze 16: 迴圈裡還可以放入更多的積木！你可以循環這個序列，讓殭屍吃到向日葵嗎？
       2-3 Maze 2: 那隻豬惹毛我了，幫助我抓到牠！
       2-3 Maze 3: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
-      2-3 Maze 4: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
-      2-3 Maze 5: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+      2-3 Maze 4: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
+      2-3 Maze 5: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze 6: 保持冷靜，幫我找到那隻壞豬豬。否則我真的會憤怒！
-      2-3 Maze 7: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+      2-3 Maze 7: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze 8: 讓我抓到那隻豬！
-      2-3 Maze 9: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+      2-3 Maze 9: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze Loops 1: 你可以只用 5 個相同的積木就讓我抓到豬嗎？
       2-3 Maze Loops 17: 用你學到的，讓我吃到向日葵！
       2-3 Maze Loops 18: "使用最少的積木帶我吃到向日葵！\\r\n\\r\n試試把一個`重複`迴圈放到另一個`重複`迴圈裡頭，這樣可以減少積木的使用次數。"
@@ -233,7 +233,7 @@ zh-TW:
       2-3 Maze sq10: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
       2-3 Maze sq10v2: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
       2-3 Maze sq2: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
-      2-3 Maze sq3: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+      2-3 Maze sq3: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze sq4: 保持冷靜，幫我找到那隻壞豬豬。否則我真的會憤怒！
       2-3 Maze sq5: 帶我到那隻豬旁邊！你需要重複幾次程式積木呢？
       2-3 Maze sq6: '你能夠只用兩個程式積木就完成先前的任務嗎？(提示：用"重複次數"的程式積木來建立一個迴圈)'
@@ -423,7 +423,7 @@ zh-TW:
         \r
         要能夠製作出這樣酷炫的圖案，你必須在轉向之前向前跳一段距離。
       4-5 Nested Loops 5: 重複已給的代碼來畫出一個風車。
-      4-5 Nested Loops 6: 你可以藉由重複畫三角形的代碼來畫出一個六邊形嗎？
+      4-5 Nested Loops 6: 你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
       4-5 Nested Loops 7: "循環這個圖樣 10 次。\\r\n\\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       4-5 Nested Loops 8: "重複這個圖案6次。\\r\n\\r\n你知道每次重複畫圖案時需要轉多少度？ "
       4-5 Nested Loops 9: 在鱷魚的嘴內畫出牙齒!
@@ -752,9 +752,10 @@ zh-TW:
       Course 4 SCV 5: 盡可能使用最少的程式積木來完成這個關卡。
       Course 4 SCV 6: 點擊此處再次觀看說明。
       Course 4 SCVP 1: 建立一個帶參數的函式，讓小藝術家能往前、往後跳躍 x 像素，還有往上、往下 y 像素（使用正數和負數）。
+      Course E MC Conditionals1: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Course1BeePuzzle12: 讓我採3次花蜜來製作2次蜂蜜
       CourseF_PlayLab_vars10: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\\r\n\\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\\r\n\\r\n提示：可以捲動頁面以查看工作區裡的所有指令。"
-      CourseF_PlayLab_vars2: 上一關的比賽一點都不公平！修改 dog_speed 變數，確保你可以收集到比貓還要多的旗子，誰先拿到 10 個旗子就勝利！
+      CourseF_PlayLab_vars2: 上一關的比賽一點都不公平！修改 `dog_speed`（小狗的速度）變數，確保你可以收集到比貓還要多的旗子，誰先拿到 10 個旗子就勝利！
       CourseF_PlayLab_vars3: 使用向左鍵和向右鍵移動、向上鍵是跳，看看你能不能收集到所有的旗子。
       CourseF_PlayLab_vars4: 現在，我們使用了一個叫作 height（高度）的變數來控制小狗能跳躍的高度。更新 height 變數來讓小狗能夠跳得夠高以碰到所有旗子。
       CourseF_PlayLab_vars5: '讓我們來創造一個遊戲吧！首先我們需要計分，我們將分數設為 10 分。 '
@@ -775,6 +776,21 @@ zh-TW:
       Crack Random Substitution_2018: 說明
       Crack a Caesar Cipher: 說明
       Crack a Caesar Cipher_2018: 說明
+      Dance_Party_01: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      Dance_Party_01_low: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
+      Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
+      Dance_Party_04: 將背景效果新增至您的程式。
+      Dance_Party_05: 使用另一個新的程式積木，讓舞者每 2 個小節改變動作。
+      Dance_Party_06: 建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      Dance_Party_08: 您是否能讓兩個備用舞者的大小相同？
+      Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
+      Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
+      Dance_Party_11.5_test: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      Dance_Party_11: '「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。'
+      Dance_Party_11_5: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      Dance_Party_11b: 按下向右鍵時，會讓機器人「掉落」一次，而按下向上鍵時，會讓機器人跳「牙線舞」一次。盡可能快速地掉落又跳牙線舞！
+      Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Eval Booleans 1: 布林運算子（像是 >、 <、 =）讓我們能夠比較不同的值，並返回 true 或 false。點擊「運行」來看看這個運算式的結果。
       Eval Booleans: 布林值（Booleans）讓我們能夠比較不同的值，如果二者相等則返回 true；如果沒有則返回 false。你覺得這個程式運行後的結果會是什麼呢？
       Find the Wizard: 做你喜歡的任何東西。比方說一個猜數字遊戲！
@@ -783,10 +799,22 @@ zh-TW:
       FoodFight: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
       FoodFight_2018: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
       Function intro Ryan: 使用「建造橋樑」功能兩次，以開闢路徑前往火把。
+      Function intro Ryan_2019: 使用「建造橋樑」功能兩次，以開闢路徑前往火把。
       Get To The Goal: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Guess The Number 2: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Guess The Number: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Guess The Number_2018: 做你喜歡的任何東西。比方說一個猜數字遊戲！
+      HOC 2018 Level_1: 打開箱子以取得小船。
+      HOC 2018 Level_10: 前往這個海洋遺址的入口。
+      HOC 2018 Level_11: '使用海洋遺址內部的海磷石建造一根導管。'
+      HOC 2018 Level_12: '設計您自己的水下環境，您自己決定！'
+      HOC 2018 Level_2: '走向碼頭盡頭。'
+      HOC 2018 Level_3: '穿越開放海域前往鱈魚的所在位置。'
+      HOC 2018 Level_4: 使用循環前往海豚的所在位置。
+      HOC 2018 Level_5: 探索沉船以找到箱子。
+      HOC 2018 Level_6: 在冰塊中尋找以找到鮭魚。
+      HOC 2018 Level_7a: 搜尋這些水底廢墟以尋找箱子。
+      HOC 2018 Level_9b: '使用珊瑚做為航點以找到寶藏。'
       Infinity_catch: 您能用方向鍵控制艾莎（角色2），讓她追上安娜嗎？
       Infinity_finale: 自由發揮吧！然後把您的成果分享出來！
       Infinity_move_collide: 阿廣是「角色1」，讓他向右走到杯麵那裡，然後在他們碰面時播放一個音效。
@@ -802,6 +830,7 @@ zh-TW:
       Inspirational Artwork: "自由發揮靈感：你已經學會了所有需要創建這個模式的知識了！如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r \n想要知道我們的這些創意圖案是怎麼做出來的嗎？ "
       InspirationalArtwork: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
       InspirationalArtwork_2018: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
+      InspirationalArtwork_2019: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
       K-1 Artist 1 Assessment 1: 繪製一條短線條在上及一條長線條在右！
       K-1 Artist Loops 1: 向東移動 4 次來畫出這條線。
       K-1 Artist Loops 2: 現在，使用一個迴圈畫出相同的線條。
@@ -914,7 +943,7 @@ zh-TW:
       K-1 maze debug 2: 找找看遺失了哪些積木，添加積木以到達豬那兒！
       K-1 maze debug 3: 有些地方不大正確，移除這些程式積木，讓我抓到這隻豬！
       K-1 maze debug 4: 運行並檢查這些程式積木，修正他們！我想我或許是走錯方向了。
-      K-1 maze debug 5: 在這個關卡中，重新更改程式積木的順序並增加程式積木來除錯，使我能走到豬在的地方!
+      K-1 maze debug 5: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
       K-1 maze debug 6: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
       K-1 maze debug 7: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
       K-1 maze debug 8: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
@@ -929,7 +958,7 @@ zh-TW:
       Kiki_StarWars_Test_4: 文字
       Kiki_StarWars_Test_5: 文字
       Kiki_StarWars_Test_5_Example: 文字
-      LaurelDebugging4Video1: 移動 Laurel，幫助牠找到愈多的黃金愈好！
+      LaurelDebugging4Video1: 移動 Laurel，幫助他找到愈多的寶石愈好！
       MC Agent Freeplay: "**自由遊戲：**是自己探索的時候了！"
       MC HOC 2016 Level 10: 是時候讓你打造自己的 Minecraft 啦！你可以生成生物，讓牠們做你要牠們做的事，好好享受遊戲吧！
       MC HOC 2016 Level 2-2: 讓呆住的雞動起來。在`當生成時`裡放置`移動`和`轉向`積木。
@@ -945,25 +974,33 @@ zh-TW:
       MC HOC 2016 Village Test: 不好了！殭屍把你困住啦！對鐵魔像編寫程式，讓它們追蹤並攻擊殭屍！
       MC_HOC_2017_01_Cole: 您必須在途中收集所有工具。使用**箭頭按鍵**四處移動，在路徑上抵達箱子的位置便可贏得遊戲
       MC_HOC_2017_01_RETRY: '讓 Agent 前往壓板，然後按「執行」並使用箭頭按鍵，移動玩家離開房屋以收集箱子。'
+      MC_HOC_2017_01_RETRY_2019: '讓 Agent 前往壓板，然後按「執行」並使用箭頭按鍵，移動玩家離開房屋以收集箱子。'
       MC_HOC_2017_02: 讓 Agent 前往壓板。
       MC_HOC_2017_02_Cole: '移動 Agent 前往壓板，這樣 {currentPlayerName} 才能前往地圖。'
+      MC_HOC_2017_02_Cole_2019: '移動 Agent 前往壓板，這樣 {currentPlayerName} 才能前往地圖。'
       MC_HOC_2017_02_Kiki: 讓 Agent 前往壓板，然後讓玩家前往橙色方塊。
       MC_HOC_2017_02_Will: 讓 Agent 前往壓板。
       MC_HOC_2017_03_Cole: '設定 Agent 的代碼以開啟大門。'
+      MC_HOC_2017_03_Cole_2019: '設定 Agent 的代碼以開啟大門。'
       MC_HOC_2017_03_Kiki: 讓 Agent 前往壓板。
       MC_HOC_2017_04: 變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。
       MC_HOC_2017_04POINT5_Cole: 讓 Agent 前往壓板。
       MC_HOC_2017_04POINT5_RYAN: 讓 Agent 前往壓板。
+      MC_HOC_2017_04POINT5_RYAN_2019: 讓 Agent 前往壓板。
       MC_HOC_2017_04_Cole: 讓 Agent 前往壓板。
+      MC_HOC_2017_04_Cole_2019: 讓 Agent 前往壓板。
       MC_HOC_2017_04_Kiki: 讓 Agent 前往壓板。
       MC_HOC_2017_05: 使用一種功能，讓 Agent 可前往壓板。
       MC_HOC_2017_05_Cole: 讓玩家前往鏟子的位置。
+      MC_HOC_2017_05_Cole_2019: 讓玩家前往鏟子的位置。
       MC_HOC_2017_05_Josh: 讓玩家前往鏟子的位置。
       MC_HOC_2017_05_Kiki: 讓玩家前往橙色方塊。
       MC_HOC_2017_06_Cole: 修正此代碼，讓 Agent 可建造橫跨這條河流的橋樑。
+      MC_HOC_2017_06_Cole_2019: 修正此代碼，讓 Agent 可建造橫跨這條河流的橋樑。
       MC_HOC_2017_06_Josh: 修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。
       MC_HOC_2017_06_Kiki: 修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。
       MC_HOC_2017_07_Cole: 破壞冰塊，並讓 {currentPlayerName} 前往礦車。
+      MC_HOC_2017_07_Cole_2019: 破壞冰塊，並讓 {currentPlayerName} 前往礦車。
       MC_HOC_2017_07_Kiki: 使用一種功能，清除前往橙色方塊的路徑。
       MC_HOC_2017_07a_Kiki: 清除前往橙色方塊的路徑。
       MC_HOC_2017_08_Cole: 變更提供的功能以於此生態域中使用。
@@ -976,14 +1013,17 @@ zh-TW:
       MC_HOC_2017_10_Cole_old: 建立一種功能，幫助您完成此礦車。
       MC_HOC_2017_10_Kiki: 建立一種功能，幫助您完成此礦車。
       MC_HOC_2017_10_RETRY: 建立一種功能，幫助您完成此礦車。
+      MC_HOC_2017_10_RETRY_2019: 建立一種功能，幫助您完成此礦車。
       MC_HOC_2017_10_RYAN: 建立一種功能，幫助您完成此礦車。
       MC_HOC_2017_10_RYAN2: 建立一種功能，幫助您完成此礦車。
       MC_HOC_2017_13_Cole: "**自由遊戲：**是自己探索的時候了！"
       MC_HOC_2017_4.5v2: 讓 Agent 前往壓板。
       MC_HOC_2017_Ali: 使用功能以找到穿過熔岩的路。
+      MC_HOC_2017_Ali_2019: 使用功能以找到穿過熔岩的路。
       MC_HOC_2017_FP10x10: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
       MC_HOC_2017_FP10x10_RE: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
       MC_HOC_2017_FP20x20: "**自由遊戲：**是自己探索的時候了！"
+      MC_HOC_2017_FP20x20_2019: "**自由遊戲：**是自己探索的時候了！"
       MC_HOC_2017_Ryan_03: 現在就使用循環，在水中放置方塊，協助 Agent 建造橫跨河流的橋樑。
       MC_HOC_2017_Ryan_05: 破壞仙人掌，讓玩家可以抵達目的地。
       MC_HOC_Kiki_02: 讓 Agent 前往壓板。
@@ -1053,25 +1093,35 @@ zh-TW:
       New Sports Project: '創建你自己的遊戲 ！這裡一切由你做主：你可以更改所有規則、混合搭配不同的運動，愈多創意愈好！當你完成後，點擊完成就可以讓你的朋友在手機上試試看你創造的遊戲。'
       Overworld Avoid Monsters: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
       Overworld Avoid Monsters_2018: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
+      Overworld Avoid Monsters_2019: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
       Overworld Chop Tree - allthethings: 木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「摧毀方塊」指令把它砍下。
       Overworld Chop Tree: 木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「摧毀方塊」指令把它砍下。
       Overworld Chop Tree_2018: 木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「摧毀方塊」指令把它砍下。
+      Overworld Chop Tree_2019: 木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「摧毀方塊」指令把它砍下。
       Overworld Chop Trees: 我們必須在太陽下山前蓋好房子，房屋需要用到大量木材。請將 3 棵樹全部砍倒。
       Overworld Chop Trees_2018: 我們必須在太陽下山前蓋好房子，房屋需要用到大量木材。請將 3 棵樹全部砍倒。
+      Overworld Chop Trees_2019: 我們必須在太陽下山前蓋好房子，房屋需要用到大量木材。請將 3 棵樹全部砍倒。
       Overworld Free Play 20x20: 恭喜！您已完成所有關卡！現在，運用您學習到的一切，採礦、建造並創造出一些獨特的東西吧。
       Overworld Free Play 20x20_2018: 恭喜！您已完成所有關卡！現在，運用您學習到的一切，採礦、建造並創造出一些獨特的東西吧。
+      Overworld Free Play 20x20_2019: 恭喜！您已完成所有關卡！現在，運用您學習到的一切，採礦、建造並創造出一些獨特的東西吧。
       Overworld House Frame Chosen: 使用你喜歡的材料建立房子的其它部份。「重複」指令會派得上用場。
       Overworld House Frame Chosen_2018: 使用你喜歡的材料建立房子的其它部份。「重複」指令會派得上用場。
+      Overworld House Frame Chosen_2019: 使用你喜歡的材料建立房子的其它部份。「重複」指令會派得上用場。
       Overworld Move to Sheep: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2018: 添加第二個「移動-向前」指令，到達綿羊的位置。
+      Overworld Move to Sheep_2019: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Place Wall: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
       Overworld Place Wall_2018: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
+      Overworld Place Wall_2019: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
       Overworld Plant Crops: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
       Overworld Plant Crops_2018: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
+      Overworld Plant Crops_2019: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
       Overworld Powered Minecart: 做得好！您收集到了許多資源，也蓋了一棟體面的房屋。現在請從地圖邊緣鋪設一條軌道，通向你的房屋門口。
       Overworld Powered Minecart_2018: 做得好！您收集到了許多資源，也蓋了一棟體面的房屋。現在請從地圖邊緣鋪設一條軌道，通向你的房屋門口。
+      Overworld Powered Minecart_2019: 做得好！您收集到了許多資源，也蓋了一棟體面的房屋。現在請從地圖邊緣鋪設一條軌道，通向你的房屋門口。
       Overworld Shear Sheep: 剪羊毛的時候到了！用「修剪」指令從 2 隻綿羊身上收集羊毛。
       Overworld Shear Sheep_2018: 剪羊毛的時候到了！用「修剪」指令從 2 隻綿羊身上收集羊毛。
+      Overworld Shear Sheep_2019: 剪羊毛的時候到了！用「修剪」指令從 2 隻綿羊身上收集羊毛。
       PDK5 Functions 2: 函式（Functions）能讓你能夠製作一個屬於自己的新積木！我們已經把要繪製出一個正方形的所有積木放到一個名為 draw a square 的函式裡。你可以使用 draw a square 函式以建立這幅眼鏡？兩個鏡框之間的距離是 75 像素。
       PS - test - pixelation: 利用 0 和 1 來完成這個 X 圖形。
       PS copy 2-3 Bee Conditionals 5: "小心不要採集到沒有任何花蜜的紫花。\\r\n你必須用`如果花蜜`積木先檢查看看。"
@@ -1186,14 +1236,18 @@ zh-TW:
       U4L06 Data Storage 7: 添加第二個畫面到我們所建立的簡單應用程式裡，用來截取使用者的圖像。在 JSON 物件被儲存到資料表之後返回畫面 1。
       Underground Avoiding Lava: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
       Underground Avoiding Lava_2018: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
+      Underground Avoiding Lava_2019: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
       Underground If Statements: 現在情況有些棘手。請開採 3 塊紅石，但可別掉進熔岩。使用「如果」指令，將鵝卵石放在你發現的任何熔岩上。
       Underground If Statements_2018: 現在情況有些棘手。請開採 3 塊紅石，但可別掉進熔岩。使用「如果」指令，將鵝卵石放在你發現的任何熔岩上。
+      Underground If Statements_2019: 現在情況有些棘手。請開採 3 塊紅石，但可別掉進熔岩。使用「如果」指令，將鵝卵石放在你發現的任何熔岩上。
       Underground Iron: 走進熔化的岩漿是不智的行為。放置鵝卵石來造出一座橋，接著開採至少 2 個鐵方塊。
       Underground Iron_2018: 走進熔化的岩漿是不智的行為。放置鵝卵石來造出一座橋，接著開採至少 2 個鐵方塊。
+      Underground Iron_2019: 走進熔化的岩漿是不智的行為。放置鵝卵石來造出一座橋，接著開採至少 2 個鐵方塊。
       Underground Mining Coal: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Underground Mining Coal_2018: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
+      Underground Mining Coal_2019: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       XML Scratchpad: 使用這個測試標準來抓取 xml 以作為單元測試
-      aE7: "如果你要再建立一個像這樣的迴圈，然後把向左轉改成向右，會發生什麼事呢？\\r\n\\r\n你可以重複那些程式來畫出波浪嗎？"
+      aE7: "如果要建立另一個像這樣的迴圈，不過把左轉改成右轉，那會發生什麼事呢？\\r\n\\r\n你可以重複那些程式來畫出波浪嗎？"
       aE8: "現在我們來循環做這件 4 次以建立這個畫框。當心轉角處 - 你不能直接轉向 90 度！\\r\n\\r\n如果循環 3 度 60 次會產生一個半圓，這些程式中的哪些積木可以額外畫出四分之一圓作為畫框圓角呢？"
       artistDebugVideo1: 使用`重複`迴圈為水添加波紋。
       artistFunctionsVideo1: 按照指示來做出你自己的函式。
@@ -1292,14 +1346,14 @@ zh-TW:
       courseA_artist_loops9_2018: '挑戰：修復這些階梯。'
       courseA_artist_loops_challenge2: '啾啾！你能幫我做兩個鳥屋嗎？'
       courseA_artist_loops_challenge3: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
-      courseA_collector_loops1: 幫助 Laurel 移動，盡可能讓他找到所有的寶藏！
+      courseA_collector_loops1: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
       courseA_collector_loops10: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
       courseA_collector_loops10_2018: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
-      courseA_collector_loops11: 幫助 Laurel 獲得洞穴中的所有黃金。
-      courseA_collector_loops11_2018: 幫助 Laurel 獲得洞穴中的所有黃金。
+      courseA_collector_loops11: 幫助 Laurel 獲得洞穴中的所有寶石。
+      courseA_collector_loops11_2018: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseA_collector_loops12: '發現寶藏啦！盡可能的收集到所有的寶藏吧！'
       courseA_collector_loops12_2018: '發現寶藏啦！盡可能的收集到所有的寶藏吧！'
-      courseA_collector_loops1_2018: 幫助 Laurel 移動，盡可能讓他找到所有的寶藏！
+      courseA_collector_loops1_2018: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
       courseA_collector_loops2: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_collector_loops2_2018: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_collector_loops4: 修正 Laurel 的路徑，讓牠能收集到寶藏。
@@ -1362,15 +1416,15 @@ zh-TW:
       courseB_artist_loops_challenge2: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_artist_loops_challenge2_2018: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_collector_loops1: 這位是冒險家 Laurel！你能幫助他移動以取得寶藏嗎？
-      courseB_collector_loops10: 幫助 Laurel 獲得洞穴中的所有黃金。
-      courseB_collector_loops10_2018: 幫助 Laurel 獲得洞穴中的所有黃金。
+      courseB_collector_loops10: 幫助 Laurel 獲得洞穴中的所有寶石。
+      courseB_collector_loops10_2018: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseB_collector_loops11: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseB_collector_loops11_2018: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseB_collector_loops1_2018: 這位是冒險家 Laurel！你能幫助他移動以取得寶藏嗎？
       courseB_collector_loops2: 收集所有的 4 堆以通過這個關卡。
       courseB_collector_loops2_2018: 收集所有的 4 堆以通過這個關卡。
-      courseB_collector_loops3: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆黃金？
-      courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆黃金？
+      courseB_collector_loops3: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆寶石？
+      courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆寶石？
       courseB_collector_loops3_predict1: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops4: 修正 Laurel 的路徑，讓牠能收集到寶藏！
       courseB_collector_loops4_2018: 修正 Laurel 的路徑，讓牠能收集到寶藏！
@@ -1386,6 +1440,8 @@ zh-TW:
       courseB_collector_loops9_2018: '*「幫我拿到深谷裡的所有寶藏。」*'
       courseB_collector_loops_challenge1: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_loops_challenge1_2018: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
+      courseB_collector_loops_challenge2a: 幫 Laurel 拿到至少 **5** 塊寶石。
+      courseB_collector_loops_challenge2a_2018: 幫 Laurel 拿到至少 **5** 塊寶石。
       courseB_collector_loops_challenge`: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_prog1: 這位是冒險家 Laurel！你能幫助她移動以取得黃金嗎？
       courseB_collector_prog3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
@@ -1426,67 +1482,101 @@ zh-TW:
       courseB_starWars_prog8_2018: "**挑戰：**幫助 BB-8 收集所有的發光廢金屬"
       courseB_starWars_prog9: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog9_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseC19_playLab_EOC5: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseC_PlayLab_events3: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_PlayLab_events3_2018: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
+      courseC_PlayLab_events3_2019: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_artist_prog5: |-
         這棟房子需要屋頂！請畫出三角形。
         提示：三邊都是同樣的長度。
       courseC_artist_prog5_2018: |-
         這棟房子需要屋頂！請畫出三角形。
         提示：三邊都是同樣的長度。
+      courseC_artist_prog5_2019: |-
+        這棟房子需要屋頂！請畫出三角形。
+        提示：三邊都是同樣的長度。
       courseC_artist_prog7: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
       courseC_artist_prog7_2018: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
+      courseC_artist_prog7_2019: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
+      courseC_collector_prog1: 利用這些程式積木，幫 Laurel 收集寶石。
+      courseC_collector_prog1_2018: 利用這些程式積木，幫 Laurel 收集寶石。
+      courseC_collector_prog1_2019: 利用這些程式積木，幫 Laurel 收集寶石。
       courseC_collector_prog2: 幫 Laurel 移動到寶藏的位置，接著使用`收集`積木拿到寶藏。
       courseC_collector_prog2_2018: 幫 Laurel 移動到寶藏的位置，接著使用`收集`積木拿到寶藏。
+      courseC_collector_prog2_2019: 幫 Laurel 移動到寶藏的位置，接著使用`收集`積木拿到寶藏。
       courseC_collector_prog8: '*「就是這樣！繼續幫助我收集所有的硬幣。」*'
       courseC_collector_prog8_2018: '*「就是這樣！繼續幫助我收集所有的硬幣。」*'
+      courseC_collector_prog8_2019: '*「就是這樣！繼續幫助我收集所有的硬幣。」*'
       courseC_collector_prog9: '*「讓我們獲得所有的硬幣！」*'
       courseC_collector_prog9_2018: '*「讓我們獲得所有的硬幣！」*'
+      courseC_collector_prog9_2019: '*「讓我們獲得所有的硬幣！」*'
+      courseC_collector_progA: 幫 Laurel 收集到所有寶石。
       courseC_harvester_loops8: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops8_2018: "**挑戰：**收集所有的玉米和所有的南瓜。"
+      courseC_harvester_loops8_2019: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge1a: 收集所有的玉米。
       courseC_harvester_loops_challenge1a_2018: 收集所有的玉米。
+      courseC_harvester_loops_challenge1a_2019: 收集所有的玉米。
       courseC_harvester_loops_challenge2: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_harvester_loops_challenge2_2018: "收集所有的生菜。\n注意避開樹木和田地！"
+      courseC_harvester_loops_challenge2_2019: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_maze_debugging10: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
       courseC_maze_debugging7: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
       courseC_maze_debugging7_2018: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
+      courseC_maze_debugging7_2019: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
       courseC_maze_loops5: '*「愈快抓到豬愈好！」*'
       courseC_maze_programming1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseC_maze_programming1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
+      courseC_maze_programming1_2019: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseC_maze_programming3: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseC_maze_programming3_2018: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
+      courseC_maze_programming3_2019: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseC_maze_programming4: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseC_maze_programming4_2018: 小心 TNT 炸藥，不然羽毛會被炸飛！
+      courseC_maze_programming4_2019: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseC_maze_programming5: 小心 TNT 炸藥。
       courseC_maze_programming5_2018: 小心 TNT 炸藥。
+      courseC_maze_programming5_2019: 小心 TNT 炸藥。
       courseC_maze_programming6: '「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」'
       courseC_maze_programming6_2018: '「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」'
+      courseC_maze_programming6_2019: '「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」'
       courseC_maze_programming7: "**挑戰：**這個程式有很多的臭蟲（bugs，錯誤的地方），你必須移除一些，同時添加其它的積木。"
       courseC_maze_programming7_2018: "**挑戰：**這個程式有很多的臭蟲（bugs，錯誤的地方），你必須移除一些，同時添加其它的積木。"
+      courseC_maze_programming7_2019: "**挑戰：**這個程式有很多的臭蟲（bugs，錯誤的地方），你必須移除一些，同時添加其它的積木。"
       courseC_maze_programming8: '*「保持冷靜，幫我找到那隻壞豬豬」*'
       courseC_maze_programming8_2018: '*「保持冷靜，幫我找到那隻壞豬豬」*'
+      courseC_maze_programming8_2019: '*「保持冷靜，幫我找到那隻壞豬豬」*'
       courseC_maze_programming8_predict1: '*「保持冷靜，幫我找到那隻壞豬豬」*'
       courseC_maze_programming8_predict1_2018: '*「保持冷靜，幫我找到那隻壞豬豬」*'
+      courseC_maze_programming8_predict1_2019: '*「保持冷靜，幫我找到那隻壞豬豬」*'
       courseC_maze_programming9: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
       courseC_maze_programming9_2018: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
+      courseC_maze_programming9_2019: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
       courseD_artist_binary1: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
       courseD_artist_binary1_2018: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
+      courseD_artist_binary1_2019: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
       courseD_artist_binary4: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
       courseD_artist_binary4_2018: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
+      courseD_artist_binary4_2019: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
       courseD_artist_binary6: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
       courseD_artist_binary6_2018: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
+      courseD_artist_binary6_2019: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
       courseD_artist_binary7: 能讓你重複畫出這個圖案的最短的二進制字符串是什麼？
       courseD_artist_binary7_2018: 能讓你重複畫出這個圖案的最短的二進制字符串是什麼？
+      courseD_artist_binary7_2019: 能讓你重複畫出這個圖案的最短的二進制字符串是什麼？
       courseD_artist_binary8: 完成這些程式來畫出圖案。
       courseD_artist_binary8_2018: 完成這些程式來畫出圖案。
+      courseD_artist_binary8_2019: 完成這些程式來畫出圖案。
       courseD_artist_binary8_predict1: 完成這些程式來畫出圖案。
       courseD_artist_binary8_predict1_2018: 完成這些程式來畫出圖案。
+      courseD_artist_binary8_predict1_2019: 完成這些程式來畫出圖案。
       courseD_artist_nestedLoops9: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_2018: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
+      courseD_artist_nestedLoops9_2019: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_predict1: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_predict1_2018: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
+      courseD_artist_nestedLoops9_predict1_2019: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_ramp11: 現在用小藝術家來畫出一個正方形！
       courseD_artist_ramp12: 使用你學到的方法，在正方形裡頭畫出這個三角形。
       courseD_autorun_binary4_2019: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
@@ -1497,20 +1587,26 @@ zh-TW:
       courseD_bee_conditionals1: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseD_bee_conditionals1_predict1: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseD_bee_conditionals1_predict1_2018: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
+      courseD_bee_conditionals1_predict1_2019: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseD_bee_conditionals7: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_conditionals7_2018: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
+      courseD_bee_conditionals7_2019: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_conditionals7_predict2: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_conditionals7_predict2_2018: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
+      courseD_bee_conditionals7_predict2_2019: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_debugging3: 修復錯誤（可能不只一個）以收集所有的花蜜與蜂蜜。
       courseD_bee_nestedLoops2: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
+      courseD_bee_nestedLoops2_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_predict1: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_predict1_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
+      courseD_bee_nestedLoops2_predict1_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops3: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseD_bee_nestedLoops5: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       courseD_bee_nestedLoops6_2018: 帶我到那朵向日葵的位置!
       courseD_bee_nestedLoops8: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       courseD_bee_nestedLoops8_2018: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
+      courseD_bee_nestedLoops8_2019: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       courseD_bounce_events10: 畫面上方有個新的目標區域，把「得分 - 自己」和「得分 - 對手」積木分別附加到「當球命中目標時」和「當球沒有碰到球拍時」積木下以製作一個遊戲。看看在對手得到 2 分前，你能得到幾分。
       courseD_bounce_events11: 現在你可以附加積木到「當運行時」積木下。你必須在超過一個地方附加新的「重新新球」積木。並且試著改變場景、球拍和球的移動速度，看看在對手得 2 分之前，你可以獲得多少分。
       courseD_bounce_events12: 創造你自己的彈跳遊戲。您可以改變所有看的到的東西，也可以改變規則。當你完成時，點擊完成，讓朋友可以在他們的手機上試試你的遊戲。
@@ -1522,47 +1618,68 @@ zh-TW:
       courseD_bounce_events5: 我們將發送一顆球到手上。添加一個程式到「當球碰到手」積木下，確保球能到達旗幟的位置。
       courseD_bounce_events6: 現在目標在最上方，你需要附加一些積木到二個「當球碰到…」積木中間以完成這個關卡。
       courseD_bounce_events7: 新增一個積木到「當…」積木中。試著讓球反彈，直到球擊中目標區為止。
+      courseD_collector_nested_loops_challenge2a: 幫 Laurel 收集到至少 2 塊寶石。
+      courseD_collector_ramp10: 幫 Laurel 收集到所有寶石。
+      courseD_collector_ramp8: 幫 Laurel 收集到所有寶石。
+      courseD_collector_ramp9: 幫 Laurel 收集到所有寶石。
       courseD_debugging_3: 修復錯誤（可能不只一個）以收集所有的花蜜與蜂蜜。
       courseD_farmer_condLoops3: '*「玉米、生菜、南瓜！幫我收成它們。」*'
       courseD_farmer_condLoops3_2018: '*「玉米、生菜、南瓜！幫我收成它們。」*'
+      courseD_farmer_condLoops3_2019: '*「玉米、生菜、南瓜！幫我收成它們。」*'
       courseD_farmer_condLoops8: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops8_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops8_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops9_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_predict1: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_predict1_2018: 收集所有的玉米和生菜，然後收成南瓜。
+      courseD_farmer_condLoops9_predict1_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_conditionals6: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
       courseD_farmer_while6: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
       courseD_farmer_while6_2018: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
+      courseD_farmer_while6_2019: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
       courseD_maze_nestedLoops4: '帶我到那朵向日葵的位置!'
       courseD_maze_nestedLoops4_2018: '帶我到那朵向日葵的位置!'
+      courseD_maze_nestedLoops4_2019: '帶我到那朵向日葵的位置!'
       courseD_maze_nestedLoops6: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops6_2018: 帶我到那朵向日葵的位置!
+      courseD_maze_nestedLoops6_2019: 帶我到那朵向日葵的位置!
       courseD_maze_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_maze_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
+      courseD_maze_ramp1_2019: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_maze_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
-      courseD_maze_ramp2_2018: 從工具箱中拉出另外的`移動-向前`積木來完成這個程式。
+      courseD_maze_ramp2_2018: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
+      courseD_maze_ramp2_2019: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseD_maze_ramp3: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseD_maze_ramp3_2018: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
+      courseD_maze_ramp3_2019: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseD_maze_ramp4: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseD_maze_ramp4_2018: 小心 TNT 炸藥，不然羽毛會被炸飛！
+      courseD_maze_ramp4_2019: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseD_maze_ramp5: 小心 TNT 炸藥。
       courseD_maze_ramp5_2018: 小心 TNT 炸藥。
+      courseD_maze_ramp5_2019: 小心 TNT 炸藥。
       courseD_maze_ramp6: '「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」'
       courseD_maze_ramp6a: '「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」'
       courseD_maze_ramp7: 讓鳥抓到這隻豬！
       courseD_maze_until10: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until10_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until10_predict2_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until6_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until7: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until7_2018: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until7_2019: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until8: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until8_2018: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until9: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2018: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
+      courseD_maze_until9_2019: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_scrat_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
@@ -1582,12 +1699,16 @@ zh-TW:
       courseE_artist_ramp9_2_2018: 使用你學到的方法來畫出這個三角形。
       courseE_bee_concept1: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_concept1_2018: 使用巢狀迴圈從每朵花中收集所有的花蜜。
+      courseE_bee_concept1_2019: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_functions1: 收集每一朵花的花蜜。
       courseE_bee_functions1_2018: 收集每一朵花的花蜜。
       courseE_bee_functions3: "函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。\n記得用迴圈來計算理想的積木塊次數。"
       courseE_bee_functions3_2018: "函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。\n記得用迴圈來計算理想的積木塊次數。"
       courseE_bee_functions4: "\"移動，並得到花蜜\"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。\n使用函式來收集所有的花蜜。"
       courseE_bee_functions4_2018: "\"移動，並得到花蜜\"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。\n使用函式來收集所有的花蜜。"
+      courseE_collector_ramp10: 幫 Laurel 收集到所有寶石。
+      courseE_collector_ramp8: 幫 Laurel 收集到所有寶石。
+      courseE_collector_ramp9: 幫 Laurel 收集到所有寶石。
       courseE_farmer_concept4: "現在讓我們加深難度！\n我們已經將整個程式積木嵌套在另一個迴圈內，但你需要讓小藝術家回到初始位置來畫出下一行。要在最外層迴圈下添加哪個積木，才能畫完整個網格？"
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions4b_2018: 使用你的新函式以完成這個關卡。
@@ -1603,6 +1724,7 @@ zh-TW:
       courseE_farmer_ramp12_2018: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap_2018: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
+      courseE_farmer_ramp12_forswap_2019: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp13: 如果有玉米就收集玉米；如果有生菜就收集生菜。
       courseE_farmer_ramp13_2018: 如果有玉米就收集玉米；如果有生菜就收集生菜。
       courseE_maze_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
@@ -1624,13 +1746,16 @@ zh-TW:
       courseE_playLab_scaffold5_2018: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseF_artist_for7: 修改 3 個小地方，把上個關卡的程式修改成這樣！
       courseF_artist_for7_2018: 修改 3 個小地方，把上個關卡的程式修改成這樣！
+      courseF_artist_for7_2019: 修改 3 個小地方，把上個關卡的程式修改成這樣！
       courseF_artist_for_challenge1: 想想看，如何重複的繪製出這個圖？
       courseF_artist_for_challenge1_2018: 想想看，如何重複的繪製出這個圖？
+      courseF_artist_for_challenge1_2019: 想想看，如何重複的繪製出這個圖？
       courseF_artist_for_challenge2: 想想看，如何用單一迴圈重複的繪製出這個圖？
       courseF_artist_for_challenge2_2018: 想想看，如何用單一迴圈重複的繪製出這個圖？
+      courseF_artist_for_challenge2_2019: 想想看，如何用單一迴圈重複的繪製出這個圖？
       courseF_artist_fwp1: 編輯函式 draw a square（畫個正方形），找出程式裡頭的錯誤。
       courseF_artist_fwp1_2018: 編輯函式 draw a square（畫個正方形），找出程式裡頭的錯誤。
-      courseF_artist_fwp2: 編輯這個函式，讓函式裡頭帶有一個稱做 length（長度）的參數。
+      courseF_artist_fwp2: 編輯這個函式，讓函式裡頭帶有一個稱做 `length`（長度）的參數。
       courseF_artist_fwp2_2018: 編輯這個函式，讓函式裡頭帶有一個稱做 `length`（長度）的參數。
       courseF_artist_fwp2_predict1: 編輯這個函式，讓函式裡頭帶有一個稱做 `length`（長度）的參數。
       courseF_artist_fwp2_predict1_2018: 編輯這個函式，讓函式裡頭帶有一個稱做 `length`（長度）的參數。
@@ -1661,10 +1786,13 @@ zh-TW:
       courseF_bee_conditionals7_predict2_2018: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseF_bee_for10: "**挑戰：**利用你學過的迴圈來解決這個問題。 "
       courseF_bee_for10_2018: "**挑戰：**利用你學過的迴圈來解決這個問題。 "
+      courseF_bee_for10_2019: "**挑戰：**利用你學過的迴圈來解決這個問題。 "
       courseF_bee_for8: 你明白了吧！如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
       courseF_bee_for8_2018: 你明白了吧！如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
+      courseF_bee_for8_2019: 你明白了吧！如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
       courseF_bee_for_challenge2: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge2_2018: 盡可能使用最少的程式積木來完成這個關卡。
+      courseF_bee_for_challenge2_2019: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge3: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_functions4: "\"移動，並得到花蜜\"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。\n使用函式來收集所有的花蜜。"
       courseF_bee_functions4_2018: "\"移動，並得到花蜜\"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。\n使用函式來收集所有的花蜜。"
@@ -1803,10 +1931,14 @@ zh-TW:
         看起來Ｃ被畫反了！\r
         \r
         你可以將它改正嗎？
+      grade2_collector_2: 讓 Laurel  移動到寶石處，然後用「採集」積木把它撿起來。
       grade2_collector_3: 把這些積木按照一個次序排列，收集所有的黃金以完成這個關卡。
       grade2_collector_8: '「就是這樣！繼續幫助我收集所有的硬幣。」'
       grade2_collector_9: '*「讓我們獲得所有的硬幣！」*'
       grade2_collector_9a: "**挑戰：**拿到所有的硬幣。"
+      grade2_collector_A: 幫 Laurel 收集到所有寶石。
+      grade2_collector_A_2018: 幫 Laurel 收集到所有寶石。
+      grade2_collector_A_2019: 幫 Laurel 收集到所有寶石。
       grade2_collector_pre1: "「嗨，我是 Laurel。今天我要在狗狗公園尋找寶藏！」\\r\n\\r\n利用這些程式積木，看看你能不能幫助 Laurel 收集到一些黃金。"
       grade2_maze_debuggingFP: '「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」'
       grade2_playlab_project_1: 現在，寫一個程式來控制企鵝，用向上/下/左/右鍵來到達所有目標！
@@ -1845,7 +1977,7 @@ zh-TW:
       grade3_ConditionalsElse_6: "我不確定這朵花裡有多少花蜜，也許是 1 或 2 或 3 個。\\r\n\\r\n組合這個條件判斷積木（`如果`和`如果…否則`）來取得花朵中實際的花蜜數。\n\\r\n\\r\n記住，花蜜的數量會在你每次運行之後改變！"
       grade3_ConditionalsElse_7: "這些花朵上可能有 3、2 或 1 個花蜜。\\r\n\\r\n完成 `check purple flower`（檢查紫花）這個函式，並使用它來收集花朵上的所有花蜜。"
       grade3_ConditionalsElse_8: "寫個 `check flower make honey`（檢查花朵釀造蜂蜜）的函式。\\r\n\\r\n你的函式應該要檢查紫花裡有多少的花蜜（1-3 不等）並採集起來。\\r\n然後，再向前移動釀造蜂蜜。"
-      grade3_ConditionalsElse_9: "**評量：**雲朵中可能隱藏著帶有花蜜的花朵，或是可裝蜂蜜的蜂窩。\\r\n\\r\n完成這個「採到花蜜或釀成蜂蜜」的函式，然後調用它來收集花蜜或蜂蜜。\\r\n"
+      grade3_ConditionalsElse_9: "**評量：**雲朵中可能隱藏著帶有花蜜的花朵，或是可裝蜂蜜的蜂窩。\\r\n\\r\n完成這個`get nectar or make honey`的函式，然後調用它來收集花蜜或蜂蜜。（註：get nectar or make honey 是採到花蜜或釀成蜂蜜的意思）\\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         雲下藏的不是花朵就是蜂窩！\r
         \r
@@ -2003,9 +2135,9 @@ zh-TW:
       grade4_frozen_functions3: 這裡有一個「建立一個圓形」的程式積木，可以畫出不同大小的圓。您可以用這個來建立一個大小為 5 的小圓，跟一個大小為 10 的較大的圓嗎？
       grade4_frozen_functions4: 精細複雜的雪花樣式其實可以用非常簡單的形狀來產生。您可以畫重複五個大小為 5 的圓，以及五個大小為 10 個圓嗎？
       grade4_frozen_nested_loop_diamonds2: 你知道每個雪花的形狀都不同嗎？讓我們用另一個「循環」積木創造一個新的雪花，它是由 4 個重複的平行四邊形所組成，每畫完一個平行四邊形就向右轉 90 度。
-      grade4_frozen_nested_loop_diamonds3: 現在，我們用「重複」的程式積木來把平行四邊形重複 10 次，每次都向右轉 36 度試試看，看看出現一片怎麼樣的雪花。
-      grade4_frozen_square: 嗨，我是艾倫戴爾的安娜公主！讓我們用「循環」積木畫個正方形，這樣一來我們就可以用較少的積木完成。你覺得要「循環」幾次（???）才能畫出一個正方形呢？
-      grade4_frozen_square_loop1: 嗨，我是艾倫戴爾的安娜公主！讓我們用「循環」積木畫個正方形，這樣一來我們就可以用較少的積木完成。你覺得要「循環」幾次（???）才能畫出一個正方形呢？
+      grade4_frozen_nested_loop_diamonds3: 現在，讓我們創建新的雪花圖案，通過使用「重複」積木來畫出平行四邊形 10 次，每畫一個之後轉向 36 度。
+      grade4_frozen_square: 嗨，我是艾倫戴爾的安娜公主！讓我們用「重複」積木畫個正方形，這樣一來我們就可以用較少的積木完成。你覺得要「重複」幾次（???）才能畫出一個正方形呢？
+      grade4_frozen_square_loop1: 嗨，我是艾倫戴爾的安娜公主！讓我們用「重複」積木畫個正方形，這樣一來我們就可以用較少的積木完成。你覺得要「重複」幾次（???）才能畫出一個正方形呢？
       grade4_frozen_square_loop2: 這次我們來建立 3 個正方形吧！每個正方形完成後，記得要轉 120 度，再畫下一個正方形。
       grade4_frozen_square_loop3: 你可以用「重複」積木來畫 10 次正方形，每次轉 36 度嗎？這樣可以繪製出一個雪花喔！
       grade4_playlab_freeplay: '自由發揮的時間到了，用工具箱裡的程式積木來做一些好玩的事吧。 '
@@ -2072,7 +2204,7 @@ zh-TW:
         \r
         如果想看到更好的效果，試試使用顏色積木！在循環裡面使用隨機取色，看看效果如何。
       grade5_artist_variables_freeplay15: |-
-        想再看一次啟發人的設計或者提示嗎？點擊這裡！ \r
+        想再看個啟發人的設計或者提示嗎？點擊這裡！ \r
         \r
         除此之外，你也可以設計自己的圖形！
       grade5_artist_variables_freeplay16: 還在玩啊？給你一張空白畫布，你可以在上面設計任何東西，隨你高興！
@@ -2148,6 +2280,7 @@ zh-TW:
       level 'grade3_Loops_8: 使用最少的積木來收集所有花蜜及蜂蜜。
       level 'grade3_Loops_9: 使用最少的積木，從每一朵花中採集花蜜，並在每一個蜂窩裡釀造蜂蜜。
       level grade3_Loops_2: 這一回，用一個迴圈來收集所有的花蜜。
+      loops_forvideo_collector_cf: 用迴圈的方式讓 Laurel 收集到寶石！
       mike3bitmario: "粗心的二進位編碼器（binary coder）在圖像數據裡頭多輸入了一個 0 還是 1。這個額外的位元（bit）害得瑪利歐故障了！\\r\n\\r\n刪除這個額外的位元，讓瑪利歐恢復原狀！"
       scrat 16 (copy 1): 橡樹！果實！橡樹果實！用「如果」積木帶我到達那裡，使用的積木數愈少愈好。
       scrat 16: 橡樹！果實！橡樹果實！用「如果」積木帶我到達那裡，使用的積木數愈少愈好。
@@ -2156,7 +2289,7 @@ zh-TW:
       scrat 18 (copy 1): '「如果…否則」積木會先檢查條件是否成立，然後才決定執行什麼操作。如果想讓我得到橡樹果實，就用用這個新的積木。'
       scrat 18: '「如果…否則」積木會先檢查條件是否成立，然後才決定執行什麼操作。如果想讓我得到橡樹果實，就用用這個新的積木。'
       scrat 19 (copy 1): 再練習一次「如果…否則」積木，你可以一次就完成嗎？
-      scrat 19: 再練習一次「如果…否則」積木，你可以一次就成功嗎？
+      scrat 19: 再練習一次「如果…否則」積木，你可以一次就完成嗎？
       scrat 20: 你可以只靠 3 個積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，不管是多長的曲徑，我都能自己通過囉！快點！冰快融化啦！
       skratDebugVideo1: 幫鼠奎特拿到橡樹果實。
       template test: 怎麼了

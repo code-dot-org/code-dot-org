@@ -21,10 +21,18 @@ const styles = {
     minHeight: 260,
     boxSizing: 'border-box'
   },
-  subheading: {
+  subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
     fontSize: 27,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  subHeadingSmallFont: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 25,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
@@ -57,16 +65,18 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
+    subHeadingSmallFont: PropTypes.bool,
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       target: PropTypes.string,
+      id: PropTypes.string,
     })),
   };
 
   render() {
-    const { isRtl, responsiveSize, imageUrl, heading, subHeading, description, buttons } = this.props;
+    const { isRtl, responsiveSize, imageUrl, heading, subHeading, subHeadingSmallFont, description, buttons } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = (responsiveSize === 'lg') ? '50%' : '100%';
 
@@ -89,7 +99,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
           <div style={{float, width}}>
             <div style={styles.textItem}>
               {subHeading && (
-                <div style={styles.subheading}>
+                <div style={subHeadingSmallFont ? styles.subHeadingSmallFont : styles.subHeading}>
                   {subHeading}
                 </div>
               )}
@@ -103,6 +113,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={Button.ButtonColor.gray}
                     text={button.text}
                     target={button.target}
+                    id={button.id}
                   />
                   &nbsp;
                   &nbsp;
@@ -155,10 +166,15 @@ export class AdministratorResourcesActionBlock extends Component {
       <TwoColumnActionBlock
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
-        subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
         buttons={[
           {
+            id: 'your_school_professional_learning',
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.yourSchoolProfessionalLearningProgramsButton()
+          },
+          {
+            id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton()
           }
@@ -169,18 +185,22 @@ export class AdministratorResourcesActionBlock extends Component {
 }
 
 export class SpecialAnnouncementActionBlock extends Component {
+  static propTypes = {
+    hocLaunch: PropTypes.string
+  };
 
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-4.png')}
-        subHeading={i18n.specialAnnouncementHeading()}
-        description={i18n.specialAnnouncementDescription()}
+        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg')}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
+        subHeadingSmallFont={true}
+        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}
         buttons={[
           {
-            url: pegasus('/educate/professional-learning-2018'),
-            text: i18n.learnMore()
-          },
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.joinUs()
+          }
         ]}
       />
     );

@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Has de crear un dansaire.",
+  "danceFeedbackNoDancers": "No tens cap ballarí.",
+  "danceFeedbackNoBackground": "Has d'afegir un efecte de fons.",
+  "danceFeedbackTooManyDancers": "Vés amb compte! Si poses el bloc `fés-ne un de nou` a dins del de `cada dues mesures`, crearàs una pila de dansaires.",
+  "danceFeedbackUseSetSize": "Fés servir el bloc `configurar mida del ballarí_reserva2` per fer el dansaire més petit.",
+  "danceFeedbackUseSetTint": "Fés servir el bloc de `configura tint` per canviar el tint del ballarí.",
+  "danceFeedbackUseStartMapping": "Prova a afegir el bloc de <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">pinya_dreta</title><title name=\"PROPERTY\">\"balança\"</title><title name=\"RANGE\">\"baix\"</title></block></xml> al teu programa.",
+  "danceFeedbackStartNewMove": "El teu dansaire no feia cap moviment nou després de la quarta mesura.",
+  "danceFeedbackNeedDifferentDance": "Has de fer servir una dansa diferent.",
+  "danceFeedbackNeedEveryTwoMeasures": "Assegureu-vos-en que esteu utilitzant el bloc 'cada 2 mesures'",
+  "danceFeedbackNeedMakeANewDancer": "Empra el bloc `fés-ne un de nou` per crear un segon ballarí.",
+  "measure": "Mesure:"
+}

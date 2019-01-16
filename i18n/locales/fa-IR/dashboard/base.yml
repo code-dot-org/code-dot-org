@@ -35,6 +35,7 @@ fa:
   next_resource: منبع بعدی
   cancel: "لغو"
   okay: "باشه"
+  or: "یا"
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
   add_teacher_form:
     code:
@@ -77,6 +78,7 @@ fa:
     twitter: 'توییتر'
     facebook: 'فیس‌بوک'
     windowslive: 'حساب مایکروسافت'
+    microsoft_v2_auth: 'حساب مایکروسافت'
     forgot_password: 'کلمه عبور خود را فراموش کرده اید؟'
     need_confirmation: "دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟"
     need_unlock: "دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟"
@@ -107,6 +109,7 @@ fa:
     user_type_student: "دانش آموز"
     field_is_required: "%s لازم است"
     error: "خطایی رخ داد."
+    email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
     email_preference_yes: "بله"
     email_preference_no: "نه"
   school_info:
@@ -150,10 +153,10 @@ fa:
     subject: 'عضویت در کلاس من (در Code.org)'
     body: |
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
-      
+
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
-      
-      
+
+
   section:
     your_section:
       one: 'بخش شما:'
@@ -201,16 +204,9 @@ fa:
         playlab: 'ایجاد یک برنامه'
         artist: 'چیزی بکش'
         applab: 'ایجاد یک برنامه'
+      course_catalog: "کاتالوگ دوره‌ها"
       project_gallery: "پروژه ها"
       educate_hoc: "ساعت کد نویسی"
-    create_button:
-      create: 'ایجاد'
-      applab: 'آزمایشگاه نرم افزار'
-      artist: 'هنرمند'
-      gamelab: 'کارگاه بازی سازی'
-      playlab: 'آزمایشگاه بازی'
-      minecraft: 'ماینکرفت'
-      flappy: 'فلاپی'
     user:
       classroom: 'صفحه اصلی معلم'
       district_dashboard: 'محدوده ی داشبورد'
@@ -220,7 +216,13 @@ fa:
       logout: 'خروج'
       signin: 'ورود'
       already_registered: 'قبلا ثبت نام کرده اید؟?'
-      pair_programming: 'برنامه نویسی دوتایی'
+      create: 'ایجاد'
+      applab: 'آزمایشگاه نرم افزار'
+      artist: 'هنرمند'
+      gamelab: 'کارگاه بازی سازی'
+      playlab: 'آزمایشگاه بازی'
+      minecraft: 'ماینکرفت'
+      flappy: 'فلاپی'
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
@@ -443,8 +445,11 @@ fa:
       body: "یک جهان ماینکرفتی را از طریق کد کاوش کنید."
     minecraft2016:
       title: "ماینکرفت"
+    aquatic:
+      title: "ماینکرفت"
     hero:
       title: "ماینکرفت"
+      body: "ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید."
     unplugged:
       audience: "سنین بالای 4 سال"
     unplugged_conditionals:

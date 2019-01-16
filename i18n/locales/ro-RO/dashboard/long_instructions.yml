@@ -126,7 +126,7 @@ ro:
       4-5 Nested Loops 12: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       4-5 Nested Loops 3: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       4-5 Nested Loops 5: Buclează codul dat pentru a crea o moară de vânt.
       4-5 Nested Loops 6: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
       4-5 Nested Loops 7: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
@@ -179,19 +179,23 @@ ro:
       NEW Course 4 Artist Vars 6: "Deseneaza acest model prin mutarea variabilei lungime in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont: este un multiplu de 10). \\r\\r Vezi cum setezi valoarea pentru lungime doar o data, iar codurile folosesc aceeasi valoare peste tot? \\r\\r\\r\n"
       Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
       Overworld Move to Sheep_2018: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
+      Overworld Move to Sheep_2019: Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.
       Testing Quantum Farmer: "Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla \"în timp ce\" de data asta."
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
       courseD_bee_nestedLoops5: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2018: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bee_nestedLoops8_2019: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bounce_events1: Trebuie sa ajungi la steag! Ataseaza un bloc "cand sageata stanga" si apasa "Ruleaza" pentru a misca jucatorul catre steag.
       courseD_maze_nestedLoops4: 'Du-mă la floarea-soarelui! Foloseste bucla "repeta" pentru a folosi mai putine blocuri.'
       courseD_maze_nestedLoops4_2018: 'Du-mă la floarea-soarelui! Foloseste bucla "repeta" pentru a folosi mai putine blocuri.'
+      courseD_maze_nestedLoops4_2019: 'Du-mă la floarea-soarelui! Foloseste bucla "repeta" pentru a folosi mai putine blocuri.'
       courseE_bee_functions3: "Funcţiile sunt blocuri de cod care efectuează \no activitate. Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare ideală de bloc."
       courseE_bee_functions3_2018: "Funcţiile sunt blocuri de cod care efectuează \no activitate. Utilizează funcţia \"obţine 5\" pentru a colecta 5 nectare dintr-o data. De asemenea, asigură-te că\nfolosești și o buclă pentru a obține o numarătoare ideală de bloc."
       courseE_farmer_concept4: Acum, hai să mergem încă un nivel în profunzimea problemei?
       courseF_bee_for_challenge2: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       courseF_bee_for_challenge2_2018: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
+      courseF_bee_for_challenge2_2019: Rezolva acest puzzle cu cel mai mic număr de blocuri posibil.
       frozen circle function in circle: Acum haideți să creăm 20 de cercuri suprapuse, rotind 18 grade după fiecare cerc.
       frozen circle function with parameter: Aici este un bloc "Creează cerc", care poate face cercuri de diferite dimensiuni. Îl poţi folosi pentru a crea un mic cerc cu dimensiunea de 5 şi un cerc mai mare de dimensiune 10?
       frozen circle function: Utilizează noul bloc "Creează cerc" pentru a realiza 10 cercuri suprapuse. Nu uita să "sari înainte" printre cercuri.
@@ -258,14 +262,14 @@ ro:
       grade4_arist_nested_loop_triangles4: Desenează dinţii în gura aligatorului!
       grade4_arist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_arist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_functions2: "Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită \"desenează un pătrat\". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele."
       grade4_artist_nested_loop_flags1: Buclează codul dat pentru a crea o moară de vânt.
       grade4_artist_nested_loop_polygons1: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
       grade4_artist_nested_loop_triangles5: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
-        
+
       grade4_artist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_parameters_triangles2: "Observi ceva diferit \nla aceste blocuri de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
       grade4_bee_conditionals_quantum2: "Albina vrea acum doar nectar. Ia aminte, nu toate obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul doar din flori."

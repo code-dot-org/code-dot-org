@@ -8,7 +8,7 @@ export default class ConfirmationDialog extends React.Component {
   static propTypes = {
     show: PropTypes.bool,
     onOk: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
+    onCancel: PropTypes.func,
     headerText: PropTypes.string.isRequired,
     bodyText: PropTypes.string.isRequired,
     okText: PropTypes.string,
@@ -44,9 +44,12 @@ export default class ConfirmationDialog extends React.Component {
           <Button bsStyle="primary" onClick={this.props.onOk}>
             {this.props.okText}
           </Button>
-          <Button onClick={this.props.onCancel}>
-            {this.props.cancelText}
-          </Button>
+          {
+            this.props.onCancel &&
+            <Button onClick={this.props.onCancel}>
+              {this.props.cancelText}
+            </Button>
+          }
         </Modal.Footer>
       </Modal>
     );

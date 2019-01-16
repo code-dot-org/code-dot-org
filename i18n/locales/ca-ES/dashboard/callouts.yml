@@ -49,6 +49,19 @@ ca:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
+      Dance_Party_01_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      Dance_Party_02_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
+      Dance_Party_04_callout:
+        dance_callout_04: Afegir aquest bloc al teu programa!
+      Dance_Party_06_callout:
+        dance_callout_06: Afegir el teu nou dansaire aquí
+      Dance_Party_11_callout:
+        dance_callout_11_a: Nou bloc!
+        dance_callout_11_b: Nou bloc!
       Eval Design Recipe .1_callout:
         edit_function: Fes clic aquí per editar la teva funció.
       Frozen Project Test Toolbox_callout:
@@ -86,25 +99,37 @@ ca:
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
       Overworld Chop Trees_2018_callout:
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+      Overworld Chop Trees_2019_callout:
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
       Overworld House Frame Chosen_callout:
         craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
       Overworld House Frame Chosen_2018_callout:
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+      Overworld House Frame Chosen_2019_callout:
         craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+      Overworld Move to Sheep_2019_callout:
+        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
       Overworld Place Wall_callout:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Overworld Place Wall_2018_callout:
+        craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
       Underground Avoiding Lava_2018_callout:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
+      Underground Avoiding Lava_2019_callout:
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
       Underground Iron_callout:
         craft_what_is_iron: Aquest ferro és meu!
       Underground Iron_2018_callout:
+        craft_what_is_iron: Aquest ferro és meu!
+      Underground Iron_2019_callout:
         craft_what_is_iron: Aquest ferro és meu!
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle" i canvia la mida.

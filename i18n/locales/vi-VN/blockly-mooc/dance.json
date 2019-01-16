@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Bạn cần tạo ra một vũ công.",
+  "danceFeedbackNoDancers": "Bạn không có vũ công.",
+  "danceFeedbackNoBackground": "Bạn cần thêm hiệu ứng nền.",
+  "danceFeedbackTooManyDancers": "Hãy cẩn thận! Nếu bạn đặt khối `make a new` bên trong `every 2 measures`, bạn sẽ tạo ra rất nhiều vũ công.",
+  "danceFeedbackUseSetSize": "Sử dụng khối `set backup_dancer2 size` để tạo ra vũ công có kích cỡ nhỏ hơn.",
+  "danceFeedbackUseSetTint": "Sử dụng khối `set tint` để thay đổi sắc thái của một vũ công.",
+  "danceFeedbackUseStartMapping": "Hãy thử thêm các khối <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> vào chương trình của bạn.",
+  "danceFeedbackStartNewMove": "Vũ công của bạn không làm động tác mới sau nhịp thứ tư.",
+  "danceFeedbackNeedDifferentDance": "Bạn cần sử dụng một điệu nhảy khác.",
+  "danceFeedbackNeedEveryTwoMeasures": "Hãy đảm bảo bạn đang sử dụng khối `every 2 measures`",
+  "danceFeedbackNeedMakeANewDancer": "Sử dụng khối `make a new` để tạo ra vũ công thứ hai.",
+  "measure": "Nhịp:"
+}

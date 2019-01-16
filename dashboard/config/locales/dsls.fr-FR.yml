@@ -232,6 +232,9 @@ fr:
       CSDU2L01 SFLP:
         description here: description ici
         title: titre
+      CSP ExploreL02 SFLP:
+        description here: description ici
+        title: titre
       CSP Journal Entry Placeholder2:
         description here: description ici
         title: titre

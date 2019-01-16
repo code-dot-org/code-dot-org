@@ -4,10 +4,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::Application::RegionalPartnerTeacherconMapping
 
   COLLECTION_ACTIONS = [:index, :filter].freeze
-  before_action :load_workshops, only: COLLECTION_ACTIONS
 
   load_and_authorize_resource class: 'Pd::Workshop', only:
-    [:show, :update, :create, :destroy, :start, :end, :summary] + COLLECTION_ACTIONS
+    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen] + COLLECTION_ACTIONS
+
+  before_action :load_workshops, only: COLLECTION_ACTIONS
 
   # GET /api/v1/pd/workshops
   def index
@@ -162,10 +163,22 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     head :no_content
   end
 
+  # POST /api/v1/pd/workshops/1/unstart (admin only)
+  def unstart
+    @workshop.update!(started_at: nil)
+    head :no_content
+  end
+
   # POST /api/v1/pd/workshops/1/end
   def end
     @workshop.end!
     Pd::AsyncWorkshopHandler.process_ended_workshop @workshop.id
+    head :no_content
+  end
+
+  # POST /api/v1/pd/workshops/1/reopen (admin only)
+  def reopen
+    @workshop.update!(ended_at: nil)
     head :no_content
   end
 

@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "تحتاج إلى إعداد راقص.",
+  "danceFeedbackNoDancers": "لا يوجد لديك راقصون.",
+  "danceFeedbackNoBackground": "تحتاج إلى إضافة خلفية.",
+  "danceFeedbackTooManyDancers": "كن حذرًا! في حالة وضع المربع البرمجي \"إنشاء جديد\" ضمن \"كل إجراءين\"، فستنشئ الكثير من الراقصين.",
+  "danceFeedbackUseSetSize": "استخدم المربع البرمجي \"set backup_dancer2 size\" لجعل حجم الراقص أصغر.",
+  "danceFeedbackUseSetTint": "استخدام كتلة 'تعيين لون' لتغيير لون الراقص.",
+  "danceFeedbackUseStartMapping": "حاول إضافة كتلة <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>  للبرنامج.",
+  "danceFeedbackStartNewMove": "الراقص الخاص بك لم يقم بخطوة جديدة بعد الإجراء الرابع.",
+  "danceFeedbackNeedDifferentDance": "تحتاج إلى استخدام رقصة مختلفة.",
+  "danceFeedbackNeedEveryTwoMeasures": "تأكد من استخدامك للمربع البرمجي \"كل إجراءين\"",
+  "danceFeedbackNeedMakeANewDancer": "استخدم المربع البرمجي \"إنشاء جديد\" لإنشاء راقص ثانٍ.",
+  "measure": ""
+}

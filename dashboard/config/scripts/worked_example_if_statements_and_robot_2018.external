@@ -25,12 +25,12 @@ Before clicking continue:
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-!!!tip
-    Again, this page is largely meant as reference.
+**Teaching Tip**    
+Again, this page is largely meant as reference.
    
-    You don't need to belabor the points here, as students will get **much more practice** with the "Will it crash?" activity.
+You don't need to belabor the points here, as students will get **much more practice** with the "Will it crash?" activity.
    
-    Remind students that this is here if they need to refer back to it when doing the next activity.
+Remind students that this is here if they need to refer back to it when doing the next activity.
    
 You have a few options for how to review this worked example:
 

@@ -232,6 +232,9 @@ pt:
       CSDU2L01 SFLP:
         description here: descrição
         title: título
+      CSP ExploreL02 SFLP:
+        description here: descrição
+        title: título
       CSP Journal Entry Placeholder2:
         description here: descrição
         title: título

@@ -120,6 +120,8 @@ cs:
         title: název
       CSDU2L01 SFLP:
         title: název
+      CSP ExploreL02 SFLP:
+        title: název
       CSP Journal Entry Placeholder2:
         title: název
       CSPPD3-u2 Welcome:
@@ -922,11 +924,11 @@ cs:
         Use the key to match each code to its letter: Použij klíč odpovídající každému
           kódu na tvůj dopis
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: Porovnej mřížku do programu.
+        Match the grid to the program.: Přiřaď program k mřížce.
         Matching: Porovnání
       2-3 Maze Match 2:
         Instructions: Pokyny
-        Match the puzzles to the blocks: Porovnej puzzly s bloky
+        Match the puzzles to the blocks: Přiřaď bloky k hádankám
         Maze Match: Porovnávací bludiště
       2-3 Relay Programming Match 1:
         Matching: Porovnání
@@ -941,7 +943,7 @@ cs:
       2-3 flappy match 1:
         Matching: Porovnání
       2-3 maze match 1:
-        Match the puzzles to the blocks: Porovnej puzzly s bloky
+        Match the puzzles to the blocks: Přiřaď bloky k hádankám
         Maze Match One: Bludištní shoda jedna
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
@@ -976,7 +978,7 @@ cs:
         Matching: Porovnání
       4-5 maze match 1:
         Instructions: Pokyny
-        Match the puzzles to the blocks: Porovnej puzzly s bloky
+        Match the puzzles to the blocks: Přiřaď bloky k hádankám
         Maze Match: Porovnávací bludiště
       CSD U3 CSS Vocab Match:
         '1': '1'
@@ -1093,6 +1095,8 @@ cs:
         Which program makes this image?: Který program dělá tento obrázek?
       2-3 Maze Multi 2:
         Maze Multiple Choice: Bludištní vícenásobná volba
+        Which set of blocks will get me to the pig?: Která sada bloků mě dostane k
+          praseti?
       2-3 Relay Programming Multi 1:
         Multiple Choice: Vícenásobná volba
       2-3 Relay Programming Multi 2:
@@ -1636,6 +1640,10 @@ cs:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Nevím
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Nevím
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
@@ -1686,6 +1694,34 @@ cs:
         16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Nevím
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Nevím
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
       csd-post-survey-2018-topic-ai:
         'No': Ne
         'Yes': Ano
@@ -1746,9 +1782,11 @@ cs:
         'No': Ne
         'Yes': Ano
       csp-post-survey-2017-q65:
+        I don't know: Nevím
         'No': Ne
         'Yes': Ano
       csp-post-survey-2017-q65_2018:
+        I don't know: Nevím
         'No': Ne
         'Yes': Ano
       csp-post-survey-2018-topic-ai:

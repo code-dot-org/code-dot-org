@@ -333,7 +333,7 @@ uk:
         C3_functional_suncatchers: Функції для блискіток
         C3_songwriting_with_parameters: Пісні з параметрами
         C4_intro: Вступ
-        C4_loops_zombie: петлі
+        C4_loops_zombie: Цикли
         C4_bee_conditional: Бджола - умови
         C4_variables_artist: Змінні - Художник
         C4_variables_playlab: Змінні - Ігрова лабораторія
@@ -375,9 +375,16 @@ uk:
         infinity_playlab_intro: Ігрова лабораторія - Вступ
         infinity_playlab_events: Ігрова лабораторія - Події
         infinity_playlab_repeat_forever: Ігрова лабораторія - Повторювати завжди
-        csd_concept_computer: 'Як комп''ютери працюють: Що робить комп''ютер, комп''ютер?'
+        csd_concept_how_computers_work: Вступ до Як працюють комп'ютери
+        csd_concept_computer: 'Як працюють комп''ютери: Що робить комп''ютер, комп''ютером?'
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
+        csd_concept_circuits_logic: 'Як працюють комп''ютери: Схеми та логіка'
+        csd_concept_memory_cpu_input_output: 'Як працюють комп''ютери: Пам''ять, процесор, введення та виведення'
+        csd_concept_hardware_software: 'Як працюють комп''ютери: Апаратне та програмне забезпечення'
         csd_concept_search: Як працює пошук
+        csd_external_amazon_data: Як Amazon використовує Великі дані у своїй рекомендаційній системі для покращення нашого життя
+        csd_external_netflix_data: Як Netflix створює рекомендації передач та фільмів?
+        csd_external_waze_data: Чому так багато користувачів обманюють Waze?
         csd_gamelab_animation_tab: Анімація
         csd_gamelab_velocity: Швидкість
         csd_weblab_intro_1: Основи у Веб лабораторії - частина 1
@@ -387,8 +394,9 @@ uk:
         csd_weblab_intro_3: Основи у Веб лабораторії - частина 3
         csp_applab_functions: Вступ до функцій
         csp_applab_functions_parameters: Функції з параметрами
-        csp_applab_loops: петлі
+        csp_applab_loops: Цикли
         csp_concept_rgb: Трохи про пікселі
+        csp_cs_is_changing_everything: Інформатика змінює все
         csp_pixelation_color_1: Інструмент пикселизации кольору - частина 1
         csp_pixelation_color_2: Інструмент пикселизации кольору - частина 2
         csp_pixelation_color_3: Інструмент пикселизации кольору - частина 3
@@ -441,8 +449,57 @@ uk:
         applab_hoc_onevent: Додаток лабораторії "Година коду" - Події
         applab_hoc_designmode: Додаток лабораторії "Година коду" - Режим дизайну
         applab_hoc_share: Додаток лабораторії "Година коду" - Поширити
+        mc_2017_agent_intro: Година коду Minecraft - Виконавець
+        mc_2017_repeat: Година коду Minecraft - Цикли і повторення
+        mc_2017_functions: Година коду Minecraft - Функції
         mc_2017_congratulations: Година коду від Майнкрафт - Вітання
-        CSF_loops_AB: петлі
+        mc_2017_puzzle_1: Година коду Minecraft - Виконавець
+        mc_2017_puzzle_3: Година коду Minecraft - Цикли і повторення
+        mc_2017_puzzle_8: Година коду Minecraft - Функції
+        mc_2017_puzzle_12: Година коду Minecraft - Вільна гра
+        hint_videos_d_11_3_first: 'Підказки Відео: D.11.3 Перша'
+        hint_videos_d_11_3_last: 'Підказка Відео: D.11.3 Остання'
+        hint_videos_d_11_4_first: 'Підказка Відео: D.11.4 Перша'
+        hint_videos_d_11_4_last: 'Підказка Відео: D.11.4 Остання'
+        hint_videos_d_11_5_first: 'Підказка Відео: D.11.5 Перша'
+        hint_videos_d_11_5_last: 'Підказка Відео: D.11.5 Остання'
+        hint_videos_d_11_6_first: 'Підказка Відео: D.11.6 Перша'
+        hint_videos_d_11_6_last: 'Підказка Відео: D.11.6 Остання'
+        hint_videos_d_11_7_first: 'Підказка Відео: D.11.7 Перша'
+        hint_videos_d_11_7_last: 'Підказка Відео: D.11.7 Остання'
+        hint_videos_d_11_9_first: 'Підказка Відео: D.11.9 Перша'
+        hint_videos_d_11_9_last: 'Підказка Відео: D.11.9 Остання'
+        hint_videos_d_11_11_first: 'Підказка Відео: D.11.11 Перша'
+        hint_videos_d_11_11_last: 'Підказка Відео: D.11.11 Остання'
+        applab_intro_welcome: Апп Лаб - Початок Роботи
+        applab_intro_events: Апп Лаб - Зробити це Інтерактивним
+        applab_intro_sounds: Апп Лаб - Зображення та Звуки
+        applab_intro_designmode: Апп Лаб - Режим Дизайну
+        applab_intro_share: Апп Лаб - Поділіться своїм Додатком
+        CSF_skinOverview_Harvester: Лісоруб
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_harvester_skinOverview_K-1: Лісоруб
+        CSF_scrat_loops_K1: Петлі в Ice Age
+        CSF_scrat_loops_CF: Петлі в Ice Age
+        CSF_if_allskins: Блок Якщо
+        CSF_ifelse_allskins: Використання Якщо/Ще Блоків
+        CSF_ifelseifelse_allskins: Використання Якщо/Інше/Ще Блоків
+        CSF_loops_AB: Цикли
+        csd_gamelab_booleans: Булеві вирази
+        csd_gamelab_conditional_statements: Умовні твердження
+        csd_gamelab_if_else: Якщо/Інші Твердження
+        CSF_SpriteLabIntro_CDEF: Це Спрайт Лаб
+        CSF_Spritelab_MakeSprite_CDEF: Як зробити Спрайт в Спрайт Лаб
+        CDEF_Video_SpritesInAction: Спрайт в Дії
+        CSF_SpriteLab_SpritesInAction_CDEF: Спрайт в Дії
+        CSF_StarWars_ProjectIntro: Вступ до проекту Зоряні Війни
+        mc_2018_intro: 'Minecraft: Вступ у Водний Вояж'
+        MC_2018_loops: 'Minecraft: Водний Вояж Повторити до'
+        mc_2018_conditionals: 'Minecraft: Водний Вояж Умови'
+        mc_2018_closing: 'Minecraft: Водний Вояж Вітання'
+        hoc_dance_warmup: Танцювальна вечірка - Розминка
+        hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

@@ -1,3 +1,4 @@
+---
 kk:
   data:
     blocks:
@@ -7,17 +8,11 @@ kk:
             '"seconds"': секунд
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,17 +23,11 @@ kk:
             '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -51,17 +40,54 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
@@ -72,7 +98,25 @@ kk:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': шама
@@ -91,18 +135,11 @@ kk:
         options:
           KEY:
             '"up"': жоғары
-            '"down"': төмен
             '"left"': солға
+            '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': жоғары
-            '"down"': төмен
-            '"left"': солға
-            '"right"': оңға
-            '"space"': кеңестік
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -110,8 +147,8 @@ kk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'дұрыс'
-            'false': 'Жалған'
+            'true': дұрыс
+            'false': Жалған
       gamelab_getProp:
         options:
           PROPERTY:
@@ -182,7 +219,29 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': шама
@@ -201,6 +260,11 @@ kk:
           CORNER:
             '"right"': оңға
             '"left"': солға
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -226,6 +290,35 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      RyanLab_moveForward:
+        text: алдыға қозғалу
+      RyanLab_turnLeft:
+        text: солға бұрылу
+      RyanLab_turnRight:
+        text: оңға бұрылу
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      binary_move:
+        options:
+          DIR:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
       craft_ifPath:
         options:
           DIR:
@@ -235,6 +328,10 @@ kk:
           TYPE:
             "'sand'": құм
             "'planksOak'": емен тақталар
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": құм
       craft_moveForward:
         text: алдыға қозғалу
       craft_placeTorch:

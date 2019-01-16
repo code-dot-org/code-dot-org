@@ -15,9 +15,9 @@ nav: how_to_nav
 
 ## 2. Elige un tutorial
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [¡Pruébalos!](%= resolve_url('/learn') %)
+Contamos con una variedad de [tutoriales divertidos de una hora](%= resolve_url('/learn') %) para participantes de todas las edades, creados por una distintos socios. [¡Pruébalos!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Todas las actividades de la Hora del Código** requieren un tiempo de preparación mínimo y son auto guiadas, lo que permite a los participantes trabajar a su propio ritmo y nivel de habilidad.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 

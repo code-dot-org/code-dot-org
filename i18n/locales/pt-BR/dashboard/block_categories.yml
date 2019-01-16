@@ -23,7 +23,7 @@ pt-BR:
       Picker: Seletor
       Comment: Comentário
       'Variables ': 'Variáveis '
-      everythingelse: variados
+      everythingelse: todoresto
       numbers: números
       Numbers: Números
       Input: Entrada
@@ -36,14 +36,16 @@ pt-BR:
       Locations: Localizações
       Music: Música
       Dancing: Dança
-      Sprite: Sprite
-      Brush: Pincel
       Dancers: Bailarinos
       Groups: Grupos
+      Sprite: Sprite
+      Brush: Pincel
       Make Sprite: Fazer Sprite
       Movement: Movimento
       Booleans: Booleanos
       Functional: Funcional
+      While Events: Eventos Enquanto
+      Sprite Properties: Propriedades do Sprite
       Predefined: Predefinido
       test: teste
       test2: teste2

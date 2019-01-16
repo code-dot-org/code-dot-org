@@ -233,6 +233,9 @@ ro:
       CSDU2L01 SFLP:
         description here: descrierea aici
         title: titlu
+      CSP ExploreL02 SFLP:
+        description here: descrierea aici
+        title: titlu
       CSP Journal Entry Placeholder2:
         description here: descrierea aici
         title: titlu

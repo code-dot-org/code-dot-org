@@ -164,6 +164,18 @@ sl:
       CourseF_PlayLab_vars6: "Uporabi gumb puščica desno, da vržeš pito.\nKako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke \"points\" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo \"ko igralec 2 se dotakne česarkoli\" tudi za večanje vrednosti spremenljivke \"points\".\nVrednost spremenljivke lahko večaš tako, da nastaviš \"points = points + 1.\"\nZberi 10 točk (vsako posebej...) da končaš to nalogo."
       CourseF_PlayLab_vars7: "Uporabi gumb puščica desno, da vržeš pito.\nKako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke \"points\" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo \"ko igralec 2 se dotakne česarkoli\" tudi za večanje vrednosti spremenljivke \"points\".\nVrednost spremenljivke lahko večaš tako, da nastaviš \"points = points + 1.\"\nZberi 10 točk (vsako posebej...) da končaš to nalogo."
       CourseF_PlayLab_vars8: "Uporabi gumb puščica desno, da vržeš pito.\nKako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke \"points\" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo \"ko igralec 2 se dotakne česarkoli\" tudi za večanje vrednosti spremenljivke \"points\".\nVrednost spremenljivke lahko večaš tako, da nastaviš \"points = points + 1.\"\nZberi 10 točk (vsako posebej...) da končaš to nalogo."
+      HOC 2018 Level_1: "Potrebuješ pripomočke za potovanje, ki te čaka. Poberi **čoln** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png). \n\n"
+      HOC 2018 Level_10: "Nekje v tem morskem svetu se skriva  **velika hobotnica** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Ali jo lahko najdeš? "
+      HOC 2018 Level_11: Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) in končal svojo nalogo!
+      HOC 2018 Level_12: Čestitamo, odprti podmorski svet te pričakuje. Zgradi koralni greben, vulkan, ladijsko razbitino... Kar hočeš.
+      HOC 2018 Level_2: Čolni so bolj primerni kot plavanje po morju. Odpravi se na koneec pomola in se vkrcaj.
+      HOC 2018 Level_3: Zgrabi vesla in odveslaj proti ribi ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Z ribo nahranimo **delfina** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Uporabi "repeat until" blok (ponavljaj dokler) da prečkaš morje hitreje.
+      HOC 2018 Level_5: Tu nekje se skriva **školjka** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) ! Razišči razbitino ladje, da jo najdeš v **zaboju** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Tu je precej mrzlo! Ujemi **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) na poti do podvodnih ruševin.
+      HOC 2018 Level_7a: "Našel si podvodne ruševine. Preišči ruševine in najdi **zaboj** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) ki vsebuje **dragulj** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) ."
+      HOC 2018 Level_8: "Najprej ledene gore, zdaj pa še lava? Prebij se okoli vulkanskega otoka in najdi **tropsko ribico** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) na koralnem grebenu.."
+      HOC 2018 Level_9b: "Uspelo ti je priveslati do koralnega grebena. Zdaj pa poišči  **središče morja** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Uporabi moder in rdeč koral, da prideš do zaklada v  **zaboju** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
       K-1 Bee Loops 2: Uporabi zanko "ponovi", da se premakneš, nato dobi nektar in naredi med!
       K-1 Bee Loops 3: Uporabi tri "ponovi" zanke, da dobiš nektar in narediš med!
       K-1 Bee Loops 4: Uporabi "ponovi" zanke, da se premakneš, dobiš nektar in narediš med!
@@ -186,6 +198,7 @@ sl:
       NEW Course 4 Bee For Loops 7: "Zdaj pa združimo \"števec\" spremenljivko z matematičnim blokom! Kako lahko uporabiš \"števec\" spremenljivko, da se premikaš po tem vrtu z najmanj možnimi bloki? Kaj moraš narediti, da dobiš 3, 6, 9, 12, 15 nektarja? Skrivnost je v \"števec\" spremenljivki! \nZapomni si: vsakič, ko se zanka izvede, se k števcu prišteje prirastek."
       Overworld Move to Sheep: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Move to Sheep_2018: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
+      Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Standalone_Artist_1: "Dobrodošel pri Umetniku! Najprej poskusi narediti enostaven kvadrat z uporabo zavi desno in premakni se naprej blokov. Vsaka stran naj bo 100 pikslov dolga."
       Standalone_Artist_2: "Nariši diamant s 120 in 60 stopinjskimi koti ter 150 pikslov dolgimi stranicami."
       Standalone_Artist_7: "Funkcija je še eno programsko orodje, ki pomaga pri izogibanju ponavljanja. Ta funkcija nariše cvet, tako da ga lahko uporabiš kadarkoli želiš narisati cvet. Uporabi to in nov blok za skakanje in nariši te rože. Namig: Cvetovi so narazen 150 točk"
@@ -195,12 +208,15 @@ sl:
       courseD_bee_nestedLoops5: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseD_bee_nestedLoops8_2018: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
+      courseD_bee_nestedLoops8_2019: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       courseE_bee_functions3: Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo "get 5" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število.
       courseE_bee_functions3_2018: Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo "get 5" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število.
       courseE_farmer_concept4: Pojdimo za en nivo globlje! Celoten blok kode smo ugnezdili v novo zanko, ti pa moraš poskrbeti, da se umetnik postavi nazaj na pravo mesto, da nariše naslednjo črto. Katerega od teh blokov lahko umestiš na konec zunanje zanke, da narišeš celotno mrežo?
       courseF_artist_for_Template: |-
         Če se obrneš malo manj ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo kvadratno spiralo.
       courseF_artist_for_Template_2018: |-
+        Če se obrneš malo manj ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo kvadratno spiralo.
+      courseF_artist_for_Template_2019: |-
         Če se obrneš malo manj ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo kvadratno spiralo.
       frozen circle function in circle: Sedaj ustvarimo 20 prekrivajočih se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       frozen circle function with parameter: "Tu je kocka \"Ustvari krog\",\ns katero lahko narediš kroge različnih velikosti. \nAli jo znaš uporabiti tako, da narediš krog, velik 5 in krog, velik 10?"

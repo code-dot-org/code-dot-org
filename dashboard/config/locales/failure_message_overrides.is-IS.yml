@@ -90,6 +90,8 @@ is:
         láta járnþursinn elta og ráðast á uppvakinganna.
       Valentine_playlab_01_failure_message_override: Næstum því!  Reyndu aftur.
       WhileAdventure_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      courseC19_playLab_EOC3_failure_message_override: Þú verður að bæta tveimur eða
+        fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
       courseE_playLab_scaffold3_failure_message_override: Þú verður að bæta tveimur
         eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
       courseE_playLab_scaffold3_2018_failure_message_override: Þú verður að bæta tveimur

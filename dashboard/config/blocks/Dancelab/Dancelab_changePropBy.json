@@ -35,15 +35,12 @@
           [
             "vertical position",
             "\"y\""
-          ],
-          [
-            "tint",
-            "\"tint\""
           ]
         ]
       },
       {
         "name": "VAL",
+        "type": "Number",
         "field": true
       }
     ]

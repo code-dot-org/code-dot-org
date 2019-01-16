@@ -818,6 +818,16 @@ it:
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
         CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
+        mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
+        MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
+        mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
+        mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
+        hoc_dance_warmup: Ballando col codice - Riscaldamento
+        hoc_dance_events: Ballando col codice - Eventi
+        hoc_dance_properties: Ballando col codice - Proprietà
+        hoc_dance_congrats: Ballando col codice - Parte la festa!
+        c_and_c_great_to_create: È Fantastico Creare e Comportarsi Lealmente
+        c_and_c_digital_sharing: Condivisione Digitale
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

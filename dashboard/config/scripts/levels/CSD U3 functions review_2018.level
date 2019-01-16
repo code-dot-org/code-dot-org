@@ -7,12 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Functions Review",
-    "reference": "/docs/csd/functions/index.html",
+    "reference": "/docs/concepts/javascript/functions/index.html",
     "parent_level_id": 9335,
     "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-16 22:14:48 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-16 22:14:48 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-12-20 00:13:56 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

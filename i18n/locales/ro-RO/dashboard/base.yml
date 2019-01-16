@@ -40,6 +40,7 @@ ro:
   next_resource: Următoarea resursă
   cancel: "Revocare"
   okay: "Bine"
+  or: "sau"
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
   add_teacher_form:
     code:
@@ -84,6 +85,7 @@ ro:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Cont Microsoft'
+    microsoft_v2_auth: 'Cont Microsoft'
     clever: 'Cont inteligent'
     powerschool: 'Cont de SuperȘcoală'
     forgot_password: 'Ai uitat parola?'
@@ -162,7 +164,7 @@ ro:
     remember: 'Ține-mă minte'
     submit: 'Loghează-te'
   signin:
-    try_heading: 'Dorești să încerci să programezi fără a te înregistra?'
+    try_heading: 'Dorești să încerci să programezi fără înscriere?'
     try_hoc: 'Încearcă prima dată o Oră de Programare'
     try_20hours: 'Încearcă cele 20 de ore ale noastre de Introducere în Informatică'
   signinsection:
@@ -190,13 +192,13 @@ ro:
       submit: 'Schimbă-mi parola'
   welcome_email:
     subject: 'Alătură-te clasei mele (pe Code.org)'
-    body: |2
+    body: |
       Dă clic pe linkul de mai jos pentru a te înscrie la tutorialele de informatică pe Code.org (cu mine ca "Profesorul" tău):
-      
+
        %{link}
-      
+
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Informații de conectare la Code.org'
@@ -256,7 +258,7 @@ ro:
         personal_login_created_username: 'Aţi creat cu succes un cont de utilizator personal. Vă puteţi conecta acum la contul dvs. cu numele de utilizator (%{username}) şi parola dvs.'
   nav:
     header:
-      finished_hoc: "Am terminat Ora mea de Programare"
+      finished_hoc: "Am terminat Ora mea de Cod"
       sign_in_to_save: 'Loghează-te pentru a salva progresul'
       free_play:
         playlab: 'Creează o aplicație "Play Lab"'
@@ -297,14 +299,6 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
-    create_button:
-      create: 'Crează'
-      applab: 'Laboratului Aplicației'
-      artist: 'Artist'
-      gamelab: 'Laborator de jocuri'
-      playlab: 'Laborator de Joacă'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
@@ -315,10 +309,17 @@ ro:
       signin: 'Loghează-te'
       signup: 'Creează un cont'
       already_registered: 'Eşti deja înregistrat?'
-      pair_programming: 'Programare în perechi'
       team: 'Echipa'
       driver: 'Conducătorul'
       navigator: 'Navigator'
+      create: 'Crează'
+      applab: 'Laboratului Aplicației'
+      artist: 'Artist'
+      gamelab: 'Laborator de jocuri'
+      playlab: 'Laborator de Joacă'
+      spritelab: 'Laborator Sprite'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
@@ -603,6 +604,8 @@ ro:
     minecraft2016:
       title: "Minecraft"
       body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:

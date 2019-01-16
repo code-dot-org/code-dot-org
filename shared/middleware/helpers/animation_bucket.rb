@@ -31,6 +31,7 @@ class AnimationBucket < BucketHelper
     # If requesting latest version, get latest non-deleted version if one exists.
     # Otherwise, use the parameter version.
     if version == 'latestVersion'
+      track_list_operation 'AnimationBucket.s3_get_object(A)'
       versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
       requested_version = !versions.empty? ? versions.first.version_id : version
     end
@@ -41,6 +42,7 @@ class AnimationBucket < BucketHelper
     raise if version.nil?
 
     # Locate the latest non-deleted version
+    track_list_operation 'AnimationBucket.s3_get_object(B)'
     versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
     raise if versions.empty?
 

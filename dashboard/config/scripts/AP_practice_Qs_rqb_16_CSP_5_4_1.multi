@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_16_CSP_5_4_1'
+wrong 'The number 0 is displayed'
+wrong 'The number 6 is displayed'
+wrong 'The number 10 is displayed'
+right 'Nothing is displayed; the program results in an infinite loop'
+markdown <<MARKDOWN
+Consider the following program code.
+
+<br><img src="https://curriculum.code.org/media/uploads/csp/8571a18067b88ead9ff07d1d5f23738d"><br>
+
+Which of the following best describes the result of running the program code?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.4.1** and Essential Knowledge statements: **5.4.1E, 5.4.1N, 5.4.1K**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

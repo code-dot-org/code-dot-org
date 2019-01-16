@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Sie müssen Sie einen Tänzer erstellen.",
+  "danceFeedbackNoDancers": "Sie haben keine Tänzer.",
+  "danceFeedbackNoBackground": "Sie müssen einen Hintergrundeffekt hinzufügen.",
+  "danceFeedbackTooManyDancers": "Vorsicht! Wenn Sie innerhalb von \"alle 2 Takte\" den Block \"einen Neuen erstellen\" einfügen, werden Sie eine ganze Menge Tänzer erstellen.",
+  "danceFeedbackUseSetSize": "Verwenden Sie den Block \"set backup_dancer2 size\", um den Tänzer zu verkleinern.",
+  "danceFeedbackUseSetTint": "Verwenden Sie den Block \"Farbton einstellen\", um den Farbton eines Tänzers zu verändern.",
+  "danceFeedbackUseStartMapping": "Versuchen Sie, den Block <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"Größe\"</title><title name=\"RANGE\">\"Bass\"</title></block></xml> zu Ihrem Programm hinzuzufügen.",
+  "danceFeedbackStartNewMove": "Ihr Tänzer hat nach dem vierten Takt keinen neuen Tanzschritt getan.",
+  "danceFeedbackNeedDifferentDance": "Sie müssen einen anderen Tanz verwenden.",
+  "danceFeedbackNeedEveryTwoMeasures": "Stellen Sie sicher, dass Sie den Block \"alle 2 Takte\" verwenden",
+  "danceFeedbackNeedMakeANewDancer": "Verwenden Sie den Block \"einen Neuen erstellen\", um zu einen zweiten Tänzer zu erstellen.",
+  "measure": "Takt:"
+}

@@ -1,17 +1,19 @@
 import React, {PropTypes} from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
+import classNames from 'classnames';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
-import * as gameLabConstants from './constants';
+import { GAME_HEIGHT, GAME_WIDTH, GAMELAB_DPAD_CONTAINER_ID } from './constants';
 import CompletionButton from '../templates/CompletionButton';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
-import {toggleGridOverlay, setSong} from './actions';
+import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
 import {
   cancelLocationSelection,
@@ -20,14 +22,7 @@ import {
   isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
-import dom from '../dom';
-import experiments from "@cdo/apps/util/experiments";
-import Radium from "radium";
-import songLibrary from "../code-studio/songLibrary.json";
-import gamelabMsg from '@cdo/gamelab/locale';
 
-const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
-const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 const MODAL_Z_INDEX = 1050;
 
 const styles = {
@@ -39,36 +34,12 @@ const styles = {
   }
 };
 
-const SongSelector = Radium(class extends React.Component {
-  static propTypes = {
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
-  };
-
-  changeSong = (event) => {
-    this.props.setSong(event.target.value);
-  };
-
-  render() {
-    return (
-      <div>
-        <label><b>{gamelabMsg.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
-          ))}
-        </select>
-      </div>
-    );
-  }
-});
-
-
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
@@ -77,10 +48,6 @@ class GameLabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    mobileControlsConfig: PropTypes.object.isRequired,
-    danceLab: PropTypes.bool,
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -163,15 +130,7 @@ class GameLabVisualizationColumn extends React.Component {
   }
 
   render() {
-    const { isResponsive, isShareView, mobileControlsConfig } = this.props;
-    const { dpadVisible, spaceButtonVisible, mobileOnly } = mobileControlsConfig;
-    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
-    const dpadStyle = {
-      display: (dpadVisible && mobileControlsOk) ? 'inline' : 'none',
-    };
-    const spaceButtonStyle = {
-      display: (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none',
-    };
+    const { isResponsive, isShareView } = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
@@ -184,9 +143,6 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        {this.props.danceLab && experiments.isEnabled("songSelector") &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
-        }
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -212,17 +168,13 @@ class GameLabVisualizationColumn extends React.Component {
 
           <CompletionButton />
 
-          {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
+          {!spriteLab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
         {!spriteLab && this.renderAppSpaceCoordinates()}
-        <div id="studio-dpad-container" className={isResponsive ? "responsive" : undefined}>
-          <div id="studio-dpad">
-            <div id="studio-dpad-rim" style={dpadStyle} />
-            <div id="studio-dpad-cone" style={dpadStyle} />
-            <button id="studio-dpad-button" style={dpadStyle} />
-            <button id="studio-space-button" style={spaceButtonStyle}/>
-          </div>
-        </div>
+        <ProtectedStatefulDiv
+          id={GAMELAB_DPAD_CONTAINER_ID}
+          className={classNames({responsive: isResponsive})}
+        />
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}
@@ -239,16 +191,14 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
+  isProjectLevel: state.pageConstants.isProjectLevel,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
-  selectedSong: state.selectedSong,
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
   cancelPicker: () => dispatch(cancelLocationSelection()),
   updatePicker: loc => dispatch(updateLocation(loc)),
   selectPicker: loc => dispatch(selectLocation(loc)),
-  setSong: song => dispatch(setSong(song))
 }))(GameLabVisualizationColumn);

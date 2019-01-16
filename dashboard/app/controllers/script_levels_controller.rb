@@ -29,7 +29,8 @@ class ScriptLevelsController < ApplicationController
   def self.cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
-    script && ScriptConfig.allows_public_caching_for_script(script.name)
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   def reset
@@ -47,6 +48,7 @@ class ScriptLevelsController < ApplicationController
     else
       client_state.reset
       reset_session
+      destroy_storage_id_cookie
 
       @redirect_path = redirect_path
       render 'levels/reset_and_redirect', formats: [:html], layout: false
@@ -217,7 +219,8 @@ class ScriptLevelsController < ApplicationController
   # described here:
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
-    if script && ScriptConfig.allows_public_caching_for_script(script.name)
+    if script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
@@ -399,6 +402,11 @@ class ScriptLevelsController < ApplicationController
       is_bonus_level: @script_level.bonus,
     )
     readonly_view_options if @level.channel_backed? && params[:version]
+
+    # Add video generation URL for only the last level of Dance
+    # If we eventually want to add video generation for other levels or level
+    # types, this is the condition that should be extended.
+    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

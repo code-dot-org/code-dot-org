@@ -24,6 +24,7 @@ export default class WorkshopAssignmentLoader extends React.Component {
     courseName: PropTypes.string.isRequired,
     subjectType: PropTypes.oneOf(SUBJECT_TYPES).isRequired,
     assignedWorkshopId: PropTypes.number,
+    year: PropTypes.number,
     onChange: PropTypes.func.isRequired
   };
 
@@ -48,8 +49,8 @@ export default class WorkshopAssignmentLoader extends React.Component {
       state: 'Not Started',
       course: this.props.courseName,
       subject: SUBJECT_NAME_MAP[this.props.subjectType],
-      start: `${new Date().getFullYear()}-1-1`,
-      end: `${new Date().getFullYear()}-12-31`,
+      start: `${this.props.year || (new Date().getFullYear())}-1-1`,
+      end: `${this.props.year || (new Date().getFullYear())}-12-31`,
     };
     const url = `/api/v1/pd/workshops/filter?${$.param(params)}`;
     return _.tap(

@@ -2,7 +2,14 @@ cs:
   data:
     function_names:
       x: x
+      details: podrobnosti
+      draw eyebrow: nakreslit obočí
       draw a circle: nakreslete kružnici
+      draw a car: nakreslit auto
+      draw square: nakreslit čtverec
+      draw a head: nakreslit hlavu
+      draw head: nakreslit hlavu
+      draw arms: nakreslit ruce
       draw a hexagon: nakreslete šestiúhelník
       draw a flower: nakreslete květinu
       draw a square: nakreslete čtverec

@@ -187,6 +187,7 @@ end
 def process_proxy(behavior, app)
   proxy = (behavior[:proxy] || app).to_s
   proxy = 'dashboard' if proxy == 'cdo-assets'
+  proxy = 'dashboard' if proxy == 'cdo-restricted'
   unless %w(pegasus dashboard).include? proxy
     raise ArgumentError.new("Invalid proxy: #{proxy}")
   end

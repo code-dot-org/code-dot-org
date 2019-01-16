@@ -232,6 +232,9 @@ sq:
       CSDU2L01 SFLP:
         description here: përshkrimi këtu
         title: titull
+      CSP ExploreL02 SFLP:
+        description here: përshkrimi këtu
+        title: titull
       CSP Journal Entry Placeholder2:
         description here: përshkrimi këtu
         title: titull

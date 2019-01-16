@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Du skal lave en danser.",
+  "danceFeedbackNoDancers": "Du har ingen dansere.",
+  "danceFeedbackNoBackground": "Du skal tilføje en baggrunde effekt.",
+  "danceFeedbackTooManyDancers": "Vær forsigtig! Hvis du sætter 'lave en ny' blok inde i \"hver 2 foranstaltninger\", så vil du oprette en masse dansere.",
+  "danceFeedbackUseSetSize": "Bruge 'sæt backup_dancer2 størrelse' blokken til at gøre denne danser mindre.",
+  "danceFeedbackUseSetTint": "Brug 'indstille farvetone' blokken til at ændre en danser farvetone.",
+  "danceFeedbackUseStartMapping": "Prøv at tilføje <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"bas\"</title></block></xml> blok til dit program.",
+  "danceFeedbackStartNewMove": "Din danser lavede ikke et nyt dansetrin efter den fjerde foranstaltning.",
+  "danceFeedbackNeedDifferentDance": "Du skal bruge en anden dans.",
+  "danceFeedbackNeedEveryTwoMeasures": "Kontroller, at du bruger 'hver 2 foranstaltninger'-blok",
+  "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser.",
+  "measure": ""
+}

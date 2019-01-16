@@ -44,27 +44,25 @@ export default storybook => storybook
       story: () => (
         <StudentSections
           initialSections={[]}
-          canLeave={false}
         />
       )
     },
     {
-      name: 'Sections - student, enrolled in sections but does NOT have permission to leave the sections',
+      name: 'Sections - student, enrolled in sections',
       description: 'shows a sections table, no column for leave buttons, and a solid border join section component',
       story: () => (
         <StudentSections
           initialSections={sections}
-          canLeave={false}
         />
       )
     },
     {
-      name: 'Sections - student, enrolled in sections and does have permission to leave the sections',
+      name: 'Sections - teacher, enrolled in sections as a student and does have permission to leave the sections',
       description: 'shows a sections table, including a column for leave buttons, and a solid border join section component',
       story: () => (
         <StudentSections
           initialSections={sections}
-          canLeave={true}
+          isTeacher={true}
         />
       )
     },

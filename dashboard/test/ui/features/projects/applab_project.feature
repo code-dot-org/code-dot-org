@@ -163,4 +163,4 @@ Scenario: Remix project creates and redirects to new channel
   And check that the URL contains "http://studio.code.org/projects/applab"
   And current URL is different from the last saved URL
   And element "#runButton" is visible
-  And I click selector "#runButton"
+  And I press "runButton"

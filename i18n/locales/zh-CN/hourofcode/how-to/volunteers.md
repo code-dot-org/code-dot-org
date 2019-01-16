@@ -21,11 +21,11 @@ nav: how_to_nav
 
 ## 任何人都可以做志愿者
 
-### Volunteers and speakers in tech:
+### 技术志愿者和演讲者:
 
 Do you have a connection to CS or tech? 任何在技术公司从事软件工程开发，不论职位（工程师或非工程师），或者是由上过计算机科学课程的人都可以激励我们的学生。 很多学生从没有遇过在科技行业工作的人，我们的老师也乐意让他们班级的学生和专业人士和大学学生联系起来。
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+你可以到课堂做客座演讲，或者帮助老师一起来展开教学。通过到当地课堂做客来鼓励学生继续学习计算机科学. <br /> <br />
 
 <a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
 
@@ -38,16 +38,16 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </p>
 
 <h3>
-  How do you get started?
+  如何开始？
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#help-schools') %">发送邮件</a> 来告诉你孩子的教师：你愿意协助举办编程一小时的活动。
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    提议并帮助在你孩子的学校举办一次《编程一小时》的课余活动。你可以借助这份<a href="%= resolve_url('/how-to') %">引导指南</a>来筹划活动。
   </li>
 </ol>
 
@@ -56,7 +56,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  把编程一小时告诉给你的朋友和同事们。 Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -95,11 +95,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  当你在主办编程一小时的活动的时候，请参照以下示例来帮助指导你的日程安排。 在此之前，请确保你已经在学校备案并且与老师充分沟通了这一天的活动详情。 并确认最终的日程安排和讨论要点。
 </p>
 
 <h3>
-  Sample agenda:
+  活动安排示例：
 </h3>
 
 <table>
@@ -189,7 +189,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          活动结束后：
         </h3>
         <ul>
           <li>
@@ -226,22 +226,22 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           在编程一小时活动中做志愿服务时的常见问题
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          目前，还没有老师联系过我，我该如何做志愿者？
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          尝试搜索当地学校，打电话给校长/老师/前台，并询问你如何能帮忙。
         </p>
         <h3>
-          How long do classroom visits last for?
+          课堂访问要持续多长时间？
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          面对面的课堂访问通常持续60-90分钟，而虚拟教室访问通常持续20-30分钟。
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          编程一小时教程适合哪个年龄层？
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org 和我们的伙伴设计了编程一小时相关的所有活动，并鼓励各种背景、各个年级/年龄段的、无论男孩还是女孩参与其中。任何人，甚至是成年人都可以在其中获得乐趣！
         </p>
         <p>
           <%= view :signup_button %>

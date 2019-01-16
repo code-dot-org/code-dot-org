@@ -49,6 +49,7 @@ ka:
   next_resource: შემდეგი რესურსი
   cancel: გაუქმება
   okay: კარგი
+  or: ან
   heading_x_of_y: "%{heading} (გვერდი %{x} %{y}-ის)"
   add_teacher_form:
     code:
@@ -95,6 +96,7 @@ ka:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft  ანგარიში
+    microsoft_v2_auth: Microsoft  ანგარიში
     clever: Clever-ის ანგარიში
     forgot_password: დაგავიწყდათ თქვენი პაროლი?
     need_confirmation: არ მოგსვლიათ დადასტურების ინსტრუქციები?
@@ -305,7 +307,7 @@ ka:
           ახლა თქვენ შეგიძლიათ ანგარიშში შესვლა სახელით (%{username}) და პაროლით
   nav:
     header:
-      finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
+      finished_hoc: დავასრულე "კოდის წერის 1 საათი"
       sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
       free_play:
         playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
@@ -313,9 +315,7 @@ ka:
         applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
         gamelab: შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
         weblab: შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი
-      home: მთავარი
       my_dashboard: ჩემი მთავარი პანელი
-      courses: კურსები
       course_catalog: კურსების კატალოგი
       project_gallery: პროექტები
       sections: განყოფილებები
@@ -360,10 +360,16 @@ ka:
       signin: შესვლა
       signup: ანგარიშის შექმნა
       already_registered: უკვე გაქვთ ანგარიში?
-      pair_programming: პროგრამირება წყვილებში
       team: გუნდი
       driver: შესულია
       navigator: პარტნიორი
+      create: შექმნა
+      applab: App Lab
+      artist: მხატვარი
+      gamelab: თამაშების ლაბი
+      playlab: თამაშების ლაბი
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: თქვენი პროგრესი
@@ -824,6 +830,8 @@ ka:
     minecraft2016:
       title: Minecraft
       body: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

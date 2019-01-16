@@ -209,7 +209,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
         AccountsPurged: 2,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer)
@@ -234,7 +233,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_b.id}
       Purging user_id #{student_c.id}
       Done purging user_id #{student_c.id}
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 2
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
@@ -259,7 +257,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
         AccountsPurged: 1,
         AccountsQueued: 1,
         ManualReviewQueueDepth: is_a(Integer)
@@ -283,7 +280,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_a.id}
       Done purging user_id #{student_a.id}
       Purging user_id #{student_b.id}
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 1
       AccountsQueued: 1
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
@@ -318,7 +314,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_b.id} (dry-run)
       Purging user_id #{student_c.id} (dry-run)
       Done purging user_id #{student_c.id} (dry-run)
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 2
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
@@ -358,7 +353,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       (dry-run)
       Purging user_id #{student_a.id} (dry-run)
       Purging user_id #{student_b.id} (dry-run)
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 1
       AccountsQueued: 1
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
@@ -383,7 +377,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
         AccountsPurged: 0,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer),
@@ -404,7 +397,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_teachers_to_purge: 5
       max_accounts_to_purge: #{edap.max_accounts_to_purge}
       Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 0
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
@@ -424,7 +416,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
         AccountsPurged: 6,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer),
@@ -451,7 +442,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{students[4].id}
       Purging user_id #{students[5].id}
       Done purging user_id #{students[5].id}
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 6
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
@@ -475,7 +465,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
         AccountsPurged: 0,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer),
@@ -496,7 +485,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_teachers_to_purge: #{edap.max_teachers_to_purge}
       max_accounts_to_purge: 5
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
-      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       AccountsPurged: 0
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}

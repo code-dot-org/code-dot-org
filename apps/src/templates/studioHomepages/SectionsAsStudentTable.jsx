@@ -104,11 +104,9 @@ const styles = {
 };
 
 class SectionsAsStudentTable extends React.Component {
-  // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
   static propTypes = {
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
     updateSectionsResult: PropTypes.func
@@ -132,7 +130,7 @@ class SectionsAsStudentTable extends React.Component {
   }
 
   render() {
-    const { sections, isRtl, isTeacher, canLeave } = this.props;
+    const { sections, isRtl, canLeave } = this.props;
 
     return (
       <table style={styles.table}>
@@ -148,26 +146,17 @@ class SectionsAsStudentTable extends React.Component {
                 {i18n.course()}
               </div>
             </td>
-            {isTeacher && (
-              <td style={{...styles.col, ...styles.studentsCol}}>
-                <div style={styles.colText}>
-                  {i18n.students()}
-                </div>
-              </td>
-            )}
-            {!isTeacher && (
-              <td style={{...styles.col, ...styles.teacherCol}}>
-                <div style={styles.colText}>
-                  {i18n.teacher()}
-                </div>
-              </td>
-            )}
+            <td style={{...styles.col, ...styles.teacherCol}}>
+              <div style={styles.colText}>
+                {i18n.teacher()}
+              </div>
+            </td>
             <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
             </td>
-            {!isTeacher && canLeave && (
+            {canLeave && (
               <td style={{...styles.col, ...styles.leaveCol}}>
                 <div style={styles.colText}>
                 </div>
@@ -186,16 +175,9 @@ class SectionsAsStudentTable extends React.Component {
               className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                {isTeacher && (
-                  <a href={this.sectionHref(section)} style={styles.link}>
-                    {section.name}
-                  </a>
-                )}
-                {!isTeacher && (
-                  <div>
-                    {section.name}
-                  </div>
-                )}
+                <div>
+                  {section.name}
+                </div>
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
                 <a href={section.linkToAssigned} style={styles.link}>
@@ -210,24 +192,15 @@ class SectionsAsStudentTable extends React.Component {
                   </div>
                 )}
               </td>
-              {isTeacher && (
-                <td style={{...styles.col, ...styles.col3}}>
-                  <a href={section.linkToStudents} style={styles.link}>
-                    {section.numberOfStudents}
-                  </a>
-                </td>
-              )}
-              {!isTeacher && (
-                <td style={{...styles.col, ...styles.col3Student}}>
-                  {section.teacherName}
-                </td>
-              )}
+              <td style={{...styles.col, ...styles.col3Student}}>
+                {section.teacherName}
+              </td>
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
                 {section.login_type === SectionLoginType.clever ? i18n.loginTypeClever() :
                     section.login_type === SectionLoginType.google_classroom ? i18n.loginTypeGoogleClassroom() :
                         section.code}
               </td>
-              {!isTeacher && canLeave && (
+              {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   {!/^(C|G)-/.test(section.code) &&
                     <Button

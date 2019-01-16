@@ -34,6 +34,7 @@ eu:
   unsubmit: Bidalketa ezeztatu
   cancel: Ezeztatu
   okay: Ongi da
+  or: edo
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -77,6 +78,7 @@ eu:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft kontua
+    microsoft_v2_auth: Microsoft kontua
     forgot_password: Pasahitza ahaztu duzu?
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu liberatzeko argibideak jaso?
@@ -190,7 +192,6 @@ eu:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
         applab: Aplikazio bat sortu
-      courses: Mailak
       project_gallery: Proiektuak
       educate_hoc: Kode Ordua
     user:
@@ -202,7 +203,12 @@ eu:
       logout: Amaitu saioa
       signin: Hasi saioa
       already_registered: Dagoeneko izena emanda?
-      pair_programming: Bikoteka programatzen
+      create: Sortu
+      applab: App laborategia
+      artist: Artista
+      playlab: Jolas Laborategia
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
@@ -449,6 +455,8 @@ eu:
       title: Minecraft
       body: Esploratu Minecraft mundu bat kodearen bitartez.
     minecraft2016:
+      title: Minecraft
+    aquatic:
       title: Minecraft
     hero:
       title: Minecraft

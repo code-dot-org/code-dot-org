@@ -152,8 +152,6 @@ class ExpiredDeletedAccountPurger
 
   def build_metrics(review_queue_depth)
     {
-      # Number of soft-deleted accounts in system after this run
-      SoftDeletedAccounts: soft_deleted_accounts.count,
       # Number of accounts purged during this run
       AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run

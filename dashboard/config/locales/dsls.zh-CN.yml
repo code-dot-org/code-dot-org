@@ -1,7 +1,13 @@
 ---
 zh-CN:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: 大三角形
+        Big Triangle|Image|Number|String: 大三角形|图像|数字|字符串
     evaluation_multi:
+      U2 evaluation q0:
+        Interpreting visual data to better understand a topic: 可视化表达数据来更好地理解主题
       U5 evaluation q1:
         'No': 不
         'Yes': 对
@@ -234,6 +240,9 @@ zh-CN:
         description here: 描述
         title: 标题
       CSDU2L01 SFLP:
+        description here: 描述
+        title: 标题
+      CSP ExploreL02 SFLP:
         description here: 描述
         title: 标题
       CSP Journal Entry Placeholder2:
@@ -1827,10 +1836,16 @@ zh-CN:
         Matching: 匹配
       PDAlg Design Recipe Video:
         Definition: 定义
+        Intro to Data Types: 数据类型简介
       PDAlg Types Video:
         Image: 图像
+        Intro to Data Types: 数据类型简介
+        Match each data type with its color code: 将每个数据类型与其颜色代码匹配
         Number: 数字
         String: 字符串
+        https://studio.code.org/script_assets/pd/blue.png: https://studio.code.org/script_assets/pd/blue.png
+        https://studio.code.org/script_assets/pd/purple.png: https://studio.code.org/script_assets/pd/purple.png
+        https://studio.code.org/script_assets/pd/teal.png: https://studio.code.org/script_assets/pd/teal.png
       PDK5 What is unplugged:
         Question: 问题
       'U2L06 - Matching: Label the Diagram':
@@ -1866,7 +1881,14 @@ zh-CN:
         '5': '5'
         '6': '6'
       parts of contract:
+        Here is a contract for a new function. Match each item with the word that describes it.: 这里是一个新的函数的约束。匹配每一项目和描述它的词。
+        Parts of a Contract: 合同的组成
+        domain: 域名
+        example: 示例
+        function name: 函数名称
         image: 图片
+        range: 范围
+        yearbook-picture: 年鉴图片
       test matching image:
         Instructions: 说明
       test matching text:
@@ -2322,6 +2344,40 @@ zh-CN:
         '6': '6'
         '8': '8'
         '9': '9'
+      U2L09 Assessment1:
+        0: "？一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？"
+        1: "：一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？"
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A.
+          让每个人都在互联网上维护自己的IP地址列表是完全没有效率的。
+        B. There are too few IP addresses to meet the current demand.: B. 当前的ip地址数量太少，无法满足需求。
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C.
+          当某人新加入互联网时，必须告知其他人他的 IP 地址
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D.
+          当IP地址改变时，在拥有者声明改动前，在网络上找到那台计算机是不可能的。
+        'The Need for DNS: Question 1': DNS需求：问题 1
+      U2L09 Assessment1_2018:
+        0: "？一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？"
+        1: "：一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？"
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A.
+          让每个人都在互联网上维护自己的IP地址列表是完全没有效率的。
+        B. There are too few IP addresses to meet the current demand.: B. 当前的ip地址数量太少，无法满足需求。
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C.
+          当某人新加入互联网时，必须告知其他人他的 IP 地址
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D.
+          当IP地址改变时，在拥有者声明改动前，在网络上找到那台计算机是不可能的。
+        'The Need for DNS: Question 1': DNS需求：问题 1
+      U2L11 Assessment 2:
+        An HTTP response code is only used when a server could not fulfill a request.: 只有当服务器无法满足请求时,
+          才使用 HTTP协议状态码。
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: 为了获取所有必要的数据,
+          显示网页通常需要发起多个 HTTP 请求。
+        HTTP requests and responses have identical formats.: HTTP 的请求和响应具有相同的格式。
+      U2L11 Assessment 2_2018:
+        An HTTP response code is only used when a server could not fulfill a request.: 只有当服务器无法满足请求时,
+          才使用 HTTP协议状态码。
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: 为了获取所有必要的数据,
+          显示网页通常需要发起多个 HTTP 请求。
+        HTTP requests and responses have identical formats.: HTTP 的请求和响应具有相同的格式。
       U2L13 Assessment4:
         '26': '26'
       U2L13 Assessment4_2018:

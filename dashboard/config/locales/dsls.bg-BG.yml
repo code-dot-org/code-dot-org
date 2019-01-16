@@ -232,6 +232,9 @@ bg:
       CSDU2L01 SFLP:
         description here: опишете тук
         title: Заглавие
+      CSP ExploreL02 SFLP:
+        description here: опишете тук
+        title: Заглавие
       CSP Journal Entry Placeholder2:
         description here: опишете тук
         title: Заглавие
@@ -1698,6 +1701,10 @@ bg:
         Matching: Съвпадение
       PDAlg Design Recipe Video:
         Definition: Дефиниция
+      PDAlg Types Video:
+        Image: Изображение
+        Number: Число
+        String: Низ
       PDK5 What is unplugged:
         Question: Въпрос
       'U2L06 - Matching: Label the Diagram':
@@ -1717,6 +1724,7 @@ bg:
         '5': '5'
         '7': '7'
         '8': '8'
+        a: а
         description here: опишете тук
         title: Заглавие
       U3L19 - MC what are values of abc:
@@ -2803,6 +2811,15 @@ bg:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_mysterySwap:
+        a: а
+        d: d
+      cspu5_assess3_mysterySwap_2018:
+        a: а
+        d: d
+      cspu5_assess3_mysterySwap_exam_prep:
+        a: а
+        d: d
       cspu5_assess4_dataReturns:
         '10': '10'
         '16': '16'

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Comment enseigner une Heure de Code en activités para-scolaires ou en clubs
 
-### Rejoignez le mouvement et initiez un groupe d'élèves à leur première heure d'informatique grâce à ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### Rejoignez le mouvement et initiez un groupe d'élèves à leur première heure d'informatique grâce à ces étapes. L'Heure de Code est facile à exécuter - même pour les débutants! Si vous souhaitez de l'aide, vous pouvez trouver un [bénévole local](%= codeorg_url('/volunteer/local') %) pour vous aider à animer l'Heure de Code dans votre classe ou votre club.
 
 * * *
 
@@ -15,7 +15,7 @@ nav: how_to_nav
 
 ## 2. Choisir un tutoriel
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [N'hésitez pas à les essayer !](%= resolve_url('/learn') %)
+Nous fournissons une variété de [tutoriels amusants d'une durée d'une heure](%= resolve_url('/learn') %) pour des participants de tous âges, créés par de nombreux partenaires. [N'hésitez pas à les essayer !](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 

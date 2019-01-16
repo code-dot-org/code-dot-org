@@ -232,6 +232,9 @@ sv:
       CSDU2L01 SFLP:
         description here: Beskrivning här
         title: titel
+      CSP ExploreL02 SFLP:
+        description here: Beskrivning här
+        title: titel
       CSP Journal Entry Placeholder2:
         description here: Beskrivning här
         title: titel

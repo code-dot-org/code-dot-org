@@ -26,6 +26,7 @@ ku:
   submit: بنێرە
   previous_page: لاپەرەی پێشوو
   next_page: لاپەرەی دواتر
+  or: یان
   add_teacher_form:
     code:
       label: 'زیادکردنی مامۆستایەک:'
@@ -44,6 +45,7 @@ ku:
     twitter: تویتەر
     facebook: فەیسبووک
     windowslive: هەژماری مایکڕۆسۆفت
+    microsoft_v2_auth: هەژماری مایکڕۆسۆفت
     forgot_password: تێپەڕەوشەت لەبیر کردووە؟
   signup_form:
     age: تەمەن
@@ -91,6 +93,7 @@ ku:
       logout: دەرچوون
       signin: چوونەژوورەوە
       already_registered: پێشوو تۆمارکراویت؟
+      create: ez
     popup:
       close: داخستن
       puzzle_map: قۆناغەکان

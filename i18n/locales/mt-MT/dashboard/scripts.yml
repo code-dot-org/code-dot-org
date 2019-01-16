@@ -20,3 +20,7 @@ mt:
           stages:
             Thanks:
               name: Grazzi
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'

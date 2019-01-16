@@ -67,18 +67,25 @@ class Api::V1::RegionalPartnersController < ApplicationController
       end
     end
 
+    result = nil
+
     if partner
       render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+      result = 'partner-found'
     elsif state
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+      result = 'no-partner'
     else
-      FirehoseClient.instance.put_record(
-        study: 'regional-partner-search-log',
-        event: "no-state-for-zip",
-        data_string: params[:zip_code]
-      )
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
+      result = 'no-state'
     end
+
+    FirehoseClient.instance.put_record(
+      study: 'regional-partner-search-log',
+      event: result,
+      data_string: params[:zip_code],
+      source_page_id: params[:source_page_id]
+    )
   end
 
   private
@@ -92,9 +99,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
       if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
+        return regional_partner&.cohort_capacity_csd
       elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
+        return regional_partner&.cohort_capacity_csp
       end
     end
     nil

@@ -5,9 +5,9 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# পরে স্কুল ক্লাস এবং ক্লাব এক ঘণ্টা কোড শেখান কিভাবে
+# স্কুল ও পড়া শেষে কিভাবে এক ঘন্টায় কোডিং শিখানো যায়
 
-### আন্দোলনের সাথে যোগ দিন এবং এই ধাপগুলি দিয়ে কম্পিউটার বিজ্ঞানের প্রথম ঘন্টা তাদের ছাত্রদের একটি গ্রুপ চালু করুন. কোড অফ ঘন্টা সহজ চালানো হয় - এমনকি beginners জন্য! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### আগামীর সাথে যোগ দিন এবং নতুন একদল ছাত্রকে কে কম্পিউটার বিজ্ঞানের প্রথম এক ঘন্টার সাথে পরিচয় করিয়ে দিন নিম্নোক্ত ধাপগুলির মাধ্যমে-. আওয়ার অফ কোড খুব সহজেই শিখা ও চালানো যায় - এমনকি নতুনরাও পারে! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
 
 * * *
 

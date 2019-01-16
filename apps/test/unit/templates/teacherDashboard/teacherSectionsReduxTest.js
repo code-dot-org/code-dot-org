@@ -593,7 +593,7 @@ describe('teacherSectionsRedux', () => {
     // Fake server responses to reuse in our tests
     const newSectionDefaults = {
       id: 13,
-      name: 'New Section',
+      name: 'Untitled Section',
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
@@ -784,7 +784,7 @@ describe('teacherSectionsRedux', () => {
     // Fake server responses to reuse in our tests
     const newSectionDefaults = {
       id: 13,
-      name: 'New Section',
+      name: 'Untitled Section',
       login_type: 'email',
       grade: undefined,
       providerManaged: false,

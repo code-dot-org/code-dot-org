@@ -771,7 +771,7 @@ window.TutorialExplorerManager = function (options) {
         locale={options.locale}
         backButton={options.backButton}
         roboticsButtonUrl={options.roboticsButtonUrl}
-        showSortDropdown={true}
+        showSortDropdown={options.showSortDropdown}
         disabledTutorials={options.disabledTutorials}
         defaultSortBy={defaultSortBy}
       />,

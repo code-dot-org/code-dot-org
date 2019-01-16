@@ -137,8 +137,12 @@ export class Summary extends React.Component {
   }
 }
 
-export default connect(state => ({
-  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
-  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
-  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
-}))(Summary);
+export default connect(state => {
+  const isWorkshopAdmin = state.applicationDashboard.permissions.workshopAdmin;
+
+  return {
+    regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+    isWorkshopAdmin,
+    showRegionalPartnerDropdown: isWorkshopAdmin || state.regionalPartners.regionalPartners.length > 1
+  };
+})(Summary);

@@ -44,6 +44,7 @@ sv:
   next_resource: Nästa resurs
   cancel: Avbryt
   okay: Okej
+  or: eller
   heading_x_of_y: "%{heading} (sida %{x} av %{y})"
   add_teacher_form:
     code:
@@ -88,6 +89,7 @@ sv:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     forgot_password: Glömt ditt lösenord?
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
@@ -244,8 +246,6 @@ sv:
         playlab: Skapa en App
         artist: Rita något
         applab: Skapa en App
-      home: Hem
-      courses: kurser
       project_gallery: Projekt
       sections: Avsnitt
       help_support: Hjälp och support
@@ -286,10 +286,16 @@ sv:
       signin: Logga in
       signup: Skapa ett konto
       already_registered: Redan registrerad?
-      pair_programming: Par-programmering
       team: Team
       driver: Förare
       navigator: Navigator
+      create: Skapa
+      applab: App Lab
+      artist: Konstnären
+      playlab: Spel-labb
+      minecraft: Minecraft
+      flappy: Flappy
+      dance: Dansparty
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
@@ -554,6 +560,8 @@ sv:
         av den till andra.
       audience: Ålder 13+
       cta: Läs mer
+    dance:
+      title: Dansparty
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
@@ -594,8 +602,12 @@ sv:
     minecraft2016:
       title: Minecraft
       body: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
+      body: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom
+        Minecraft via koden.
     sports:
       title: Sport
     text-compression:
@@ -902,6 +914,7 @@ sv:
   hidden_stage: Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna
     din lärare vilka lektion som du bör vara på.
   return_course_overview: Gå till avsnittets översikt
+  view_teacher_guide: Visa lärarhandledning
   pd:
     form_labels:
       email: E-post

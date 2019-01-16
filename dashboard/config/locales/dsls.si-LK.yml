@@ -120,6 +120,8 @@ si:
         title: මාතෘකාව
       CSDU2L01 SFLP:
         title: මාතෘකාව
+      CSP ExploreL02 SFLP:
+        title: මාතෘකාව
       CSP Journal Entry Placeholder2:
         title: මාතෘකාව
       CSPPD3-u2 Welcome:
@@ -1015,6 +1017,8 @@ si:
         Matching: ගැලපෙනවා
       PDAlg Design Recipe Video:
         Definition: අර්ථ දැක්වීම
+      PDK5 Pair programming match:
+        Pair programming: යුගල වශයෙන් ක්‍රමලේඛනය
       PDK5 What is unplugged:
         Question: ප්‍රශ්නය
       'U2L06 - Matching: Label the Diagram':

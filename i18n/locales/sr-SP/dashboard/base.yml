@@ -32,6 +32,7 @@ sr:
   next_page: Следећа страница
   cancel: "Откажи"
   okay: "У реду"
+  or: "или"
   add_teacher_form:
     code:
       label: 'Додај наставника:'
@@ -73,6 +74,7 @@ sr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Мајкрософт налог'
+    microsoft_v2_auth: 'Мајкрософт налог'
     forgot_password: 'Заборавили сте лозинку?'
     need_confirmation: "Нисте примили инструкције за потврду?"
     need_unlock: "Нисте примили инструкције за откључавање?"
@@ -104,6 +106,7 @@ sr:
     user_type_student: "студент"
     field_is_required: "је обавезан"
     accept_terms: "Морате се сложити да бисте креирали свој налог"
+    email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: "Да"
     email_preference_no: "не"
   school_info:
@@ -139,11 +142,11 @@ sr:
     subject: 'Придружи се мом предавању (на Code.org)'
     body: |
       Кликни линк испод како би се пријавио за туторијале на Code.org (ја ћу ти бити "учителј"):
-      
+
       %{link}
-      
+
       Туторијали су забавни, визуелни, и уче основе програмиранја користећи једноставне примјере у облику игрица. Научите програмирати од Bill Gatesа, Mark Zuckerbergа, Angry Birds, и Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:
@@ -190,11 +193,6 @@ sr:
         artist: 'Нацртај нешто'
         applab: 'Направи апликацију'
       educate_hoc: "Час кода"
-    create_button:
-      create: 'Креирај'
-      artist: 'Уметник'
-      playlab: 'Играоница'
-      flappy: 'Флапи'
     user:
       classroom: 'Почетна страница за учитеље'
       district_dashboard: 'Регионална огласна табла'
@@ -204,6 +202,10 @@ sr:
       logout: 'Одјави се'
       signin: 'Пријави се'
       already_registered: 'Већ си регистрован?'
+      create: 'Креирај'
+      artist: 'Уметник'
+      playlab: 'Играоница'
+      flappy: 'Флапи'
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'

@@ -40,6 +40,7 @@ fi:
   next_resource: Seuraava resurssi
   cancel: "Peru"
   okay: "Selvä"
+  or: "tai"
   heading_x_of_y: "%{heading} (sivu %{x} %{y}) sivusta"
   add_teacher_form:
     code:
@@ -84,6 +85,7 @@ fi:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-tili'
+    microsoft_v2_auth: 'Microsoft-tili'
     clever: 'Clever-tili'
     powerschool: 'Powerschool-tili'
     forgot_password: 'Unohditko salasanasi?'
@@ -180,11 +182,11 @@ fi:
     subject: 'Liity luokkaani (Code.org palvelussa)'
     body: |
       Klikkaa alla olevaa linkkiä rekisteröityäksesi Code.org tietojenkäsittelyn peruskursille (jossa minä olen "opettajasi"):
-      
+
       %{link}
-      
+
       Kurssin tehtävät ovat hauskoja, visuaalisesti näyttäviä ja opettavat tietojenkäsittelyt peruskäsitteet käyttäen yksinkertaisia, opastettuja pelejä. Opit koodaamisen alkeet Bill Gatesin, Mark Zuckerbergin, Angry Birdsin ja Plants vs. Zombiesin avulla! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org Kirjautumistiedot'
@@ -237,7 +239,7 @@ fi:
     access_denied: 'Sinulla ei ole pääsyä tähän %{model}.'
   nav:
     header:
-      finished_hoc: "Olen suorittanut Koodaustuntini"
+      finished_hoc: "Olen suorittanut Koodituntini"
       sign_in_to_save: 'Kirjaudu, jos haluat tallentaa edistymisesi'
       free_play:
         playlab: 'Tee sovellus'
@@ -279,14 +281,6 @@ fi:
       help_us: "Auta meitä"
       teach: "Opettaa"
       about: "Tietoja"
-    create_button:
-      create: 'Luo'
-      applab: 'Sovelluslabra'
-      artist: 'Taiteilija'
-      gamelab: 'Pelilabra'
-      playlab: 'Pelilabra'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Opettajan kotisivu'
       district_dashboard: 'Koulupiirin hallintapaneeli'
@@ -297,10 +291,16 @@ fi:
       signin: 'Kirjaudu sisään'
       signup: 'Luo käyttäjätili'
       already_registered: 'Jo rekisteröitynyt?'
-      pair_programming: 'Pariohjelmointi'
       team: 'Tiimi'
       driver: 'Johtaja'
       navigator: 'Neuvonantaja'
+      create: 'Luo'
+      applab: 'Sovelluslabra'
+      artist: 'Taiteilija'
+      gamelab: 'Pelilabra'
+      playlab: 'Pelilabra'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Käyttäjän %{name} edistyminen"
       progress: 'Sinun edistymisesi'
@@ -542,8 +542,11 @@ fi:
     minecraft2016:
       title: "Minecraft"
       body: "Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft on palannut Koodi.fi:hin uusilla toiminnoilla! Matkaa halki Minecraftin koodin matkassa"
     unplugged:
       title: "Oppitunnit ilman tietokonetta"
       audience: "4+ -vuotiaille"
@@ -788,6 +791,7 @@ fi:
   return_unit_overview: 'Siirry sarjan yleisesittelyyn'
   return_course_overview: 'Siirry sarjan yleisesittelyyn'
   view_all_units: 'Näytä kaikki sarjat'
+  view_teacher_guide: 'Katso opettajan opas'
   pd:
     form_labels:
       email: 'Sähköposti'

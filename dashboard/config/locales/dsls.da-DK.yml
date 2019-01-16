@@ -232,6 +232,9 @@ da:
       CSDU2L01 SFLP:
         description here: Beskrivelse her
         title: titel
+      CSP ExploreL02 SFLP:
+        description here: Beskrivelse her
+        title: titel
       CSP Journal Entry Placeholder2:
         description here: Beskrivelse her
         title: titel

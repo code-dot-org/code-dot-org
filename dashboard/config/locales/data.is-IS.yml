@@ -616,7 +616,7 @@ is:
         csd_concept_computer: 'Hvernig tölvur virka: Hvað gerir tölvu að tölvu?'
         csd_concept_binary_data: 'Hvernig tölvur virka: Tvenndir & Gögn'
         csd_concept_circuits_logic: 'Hvernig tölvur virka: rásir og rökvísi'
-        csd_concept_memory_cpu_input_output: 'Hvernig tölvur viirka: minni, örgjörvi,
+        csd_concept_memory_cpu_input_output: 'Hvernig tölvur virka: minni, örgjörvi,
           inntak og úttak'
         csd_concept_hardware_software: 'Hvernig tölvur virka: vélbúnaður og hugbúnaður'
         csd_concept_search: Hvernig leit virkar
@@ -699,8 +699,8 @@ is:
         mc_2017_puzzle_3: Klukkustund kóðunar með Minecraft - Lykkjur
         mc_2017_puzzle_8: Klukkustund kóðunar með Minecraft - Föll
         mc_2017_puzzle_12: Klukkustund kóðunar - Minecraft - Frjáls æfing
-        hint_videos_d_11_3_first: 'Myndbandahjálp: D.11.3 Fyrst'
-        hint_videos_d_11_3_last: 'Myndbandahjálp: D.11.3 Síðast'
+        hint_videos_d_11_3_first: 'Hjálparmyndbönd: D.11.3 fyrst'
+        hint_videos_d_11_3_last: 'Hjálparmyndbönd: D.11.3 síðast'
         hint_videos_d_11_4_first: 'Hjálparmyndbönd: D.11.4 fyrst'
         hint_videos_d_11_4_last: 'Hjálparmyndbönd: D.11.4 síðast'
         hint_videos_d_11_5_first: 'Hjálparmyndbönd: D.11.5 fyrst'
@@ -719,10 +719,10 @@ is:
         applab_intro_designmode: Appsmiðjan - Hönnunarstaða
         applab_intro_share: Appsmiðjan - Deildu appinu
         csd_applab_arrays: Kynning á fylkjum
-        CSF_skinOverview_Harvester: Sláttuvélin
+        CSF_skinOverview_Harvester: Bóndinn
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_harvester_skinOverview_K-1: Sláttuvélin
+        CSF_harvester_skinOverview_K-1: Bóndinn
         CSF_scrat_loops_K1: Lykkjur í Ísöld
         CSF_scrat_loops_CF: Lykkjur í Ísöld
         CSF_if_allskins: Ef kubburinn
@@ -732,6 +732,8 @@ is:
         csd_gamelab_booleans: Rökyrðingar
         csd_gamelab_conditional_statements: Skilyrðingar
         csd_gamelab_if_else: Ef/Annars yrðingar
+        hoc_dance_warmup: Danspartý - Upphitun
+        hoc_dance_congrats: Danspartý - Meira fjör!
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

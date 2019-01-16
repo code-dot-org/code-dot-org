@@ -45,7 +45,6 @@ h1.tools-title {
 }
 
 .tutorial-tile {
-  padding-right: 20px;
   padding-bottom: 20px;
 }
 
@@ -57,6 +56,19 @@ h1.tools-title {
   border: 1px solid #949ca2;
   padding: 20px;
   min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activities-info {
+  background-color: #00adbc;
+  color: #fff;
+  padding: 30px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h3.tutorial-info-h {
@@ -81,6 +93,18 @@ button.tutorial-gray {
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #5b6770;
+}
+
+.bold-text {
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+.set-margin {
+  margin-top: 0px;
+}
+
+.set-container-padding {
+  padding: 5px;
 }
 
 .pl-callout {

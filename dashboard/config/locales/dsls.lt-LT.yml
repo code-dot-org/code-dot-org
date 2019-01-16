@@ -232,6 +232,9 @@ lt:
       CSDU2L01 SFLP:
         description here: aprašymas čia
         title: pavadinimas
+      CSP ExploreL02 SFLP:
+        description here: aprašymas čia
+        title: pavadinimas
       CSP Journal Entry Placeholder2:
         description here: aprašymas čia
         title: pavadinimas

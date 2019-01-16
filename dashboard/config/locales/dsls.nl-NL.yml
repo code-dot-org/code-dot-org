@@ -233,6 +233,9 @@ nl:
       CSDU2L01 SFLP:
         description here: beschrijving hier
         title: titel
+      CSP ExploreL02 SFLP:
+        description here: beschrijving hier
+        title: titel
       CSP Journal Entry Placeholder2:
         description here: beschrijving hier
         title: titel

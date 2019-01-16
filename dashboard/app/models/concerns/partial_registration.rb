@@ -22,7 +22,6 @@ module PartialRegistration
           user.send("#{param}=", cache.read(cache_key)) if cache
         end
         yield user if block_given?
-        user.valid?
       end
     end
   end
@@ -45,6 +44,18 @@ module PartialRegistration
       end
     end
     session[USER_ATTRIBUTES_SESSION_KEY] = user.attributes
+  end
+
+  def self.get_provider(session)
+    in_progress?(session) ? session[USER_ATTRIBUTES_SESSION_KEY]['provider'] : nil
+  end
+
+  def self.cancel(session)
+    provider = get_provider(session) || 'email'
+    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.end_sign_up_tracking(session)
+    session.delete(USER_ATTRIBUTES_SESSION_KEY)
+    session
   end
 
   def self.cache_key(param_name, user)

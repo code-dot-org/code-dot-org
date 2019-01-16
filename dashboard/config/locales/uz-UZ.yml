@@ -25,6 +25,7 @@ uz:
   welcome_back: Qayta tashrifingiz bilan, %{name}
   submit: Taqdim qilmoq
   cancel: Bekor qilish
+  or: yoki
   add_teacher_form:
     code:
       label: 'O`qituvchi qo`shing:'
@@ -57,6 +58,7 @@ uz:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft akkaunti
+    microsoft_v2_auth: Microsoft akkaunti
     forgot_password: Parolni unutdingizmi?
     need_confirmation: Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?
   signup_form:
@@ -82,10 +84,11 @@ uz:
     confirm: Aminmisiz?
   nav:
     header:
-      courses: Kurslar
       educate_hoc: Dasturlash soati
     user:
       classroom: O‘qituvchining bosh sahifasi
+      create: Yaratmoq
+      applab: Ilova labaratoriyasi
   teacher:
     panel:
       student: O‘quvchi

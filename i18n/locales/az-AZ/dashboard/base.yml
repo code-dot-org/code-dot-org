@@ -32,6 +32,7 @@ az:
   next_resource: Növbəti resurs
   cancel: "İmtina et"
   okay: "Oldu"
+  or: "və ya"
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -68,6 +69,7 @@ az:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    microsoft_v2_auth: 'Microsoft Hesabı'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -136,11 +138,11 @@ az:
     subject: 'Sinifimizə qoşulun ("Code.org"da)'
     body: |
       "Code.org"dakı informatika dərslərinə qeydiyyatdan keçmək üçün aşağıdakı keçidi klikləyin (mən sizin "müəlliminiz" olacağam):
-      
+
       %{link}
-      
+
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
-      
+
       %{name}
   section:
     type:
@@ -207,13 +209,6 @@ az:
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
       about: "Haqqımızda"
-    create_button:
-      create: 'Düzəlt'
-      applab: 'Proqram Labı'
-      artist: 'Rəssam'
-      playlab: 'Oyun labı'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Müəllimin ev səhifəsi'
       label: 'Salam %{username}'
@@ -225,6 +220,12 @@ az:
       already_registered: 'Artıq qeydiyyatdan keçmisiniz?'
       team: 'Komanda'
       driver: 'Sürücü'
+      create: 'Düzəlt'
+      applab: 'Proqram Labı'
+      artist: 'Rəssam'
+      playlab: 'Oyun labı'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: 'Sizin nəticələriniz'
@@ -346,6 +347,7 @@ az:
       title: 'Proqram Labı'
       audience: '13+ yaş'
     hoc:
+      title: 'Ənənəvi labirint'
       body: 'İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.'
     flappy:
       title: 'Qanadlı Kod'
@@ -371,6 +373,8 @@ az:
       title: "Minecraft"
       body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

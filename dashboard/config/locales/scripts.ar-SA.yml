@@ -831,6 +831,8 @@ ar:
               name: أساور الثنائية
             Binary Images:
               name: صور ثنائية
+            Play Lab:
+              name: مختبر اللعب
         csd2-2017:
           stages:
             Lists:
@@ -1026,18 +1028,26 @@ ar:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+          title: الدورة A
+          assignment_family_title: الدورة A
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+          title: الدورة B
+          assignment_family_title: الدورة B
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+          title: الدورة C
+          assignment_family_title: الدورة C
         coursed-2017:
           stages:
             Nested Loops:
               name: الحلقات المتداخلة
+          title: الدورة D
+          assignment_family_title: الدورة D
         coursee-2017:
           stages:
             Envelope Variables:
@@ -1050,10 +1060,14 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          title: الدورة E
+          assignment_family_title: الدورة E
         coursef-2017:
           stages:
             Building a Foundation:
               name: بناء قاعدة
+          title: الدورة F
+          assignment_family_title: الدورة F
         express-2017:
           stages:
             Introduction:
@@ -1074,6 +1088,8 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          title: دورة سريعة
+          assignment_family_title: دورة سريعة
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1151,8 +1167,14 @@ ar:
               name: إضافة الدوال
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'ماين كرافت/: رحلة البطل ساعة من البرمجة'
             Minecraft Hour of Code:
               name: ساعة البرمجة ماين كرافت
+          title: 'ماين كرافت: رحلة البطل'
+          description_short: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
+          description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
+            رحلة عبر Minecraft مع البرمجة.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1208,12 +1230,14 @@ ar:
             Lists:
               name: القوائم
         coursea-2018:
+          assignment_family_title: الدورة A
           stages:
             'Programming: Happy Maps':
               name: الخرائط السعيدة
             Going Places Safely:
               name: الذهاب للأماكن بأمان
         express-2018:
+          assignment_family_title: دورة سريعة
           stages:
             'Algorithms: Graph Paper Programming':
               name: برمجة ورقة الرسم البياني
@@ -1248,6 +1272,7 @@ ar:
             Relay Programming:
               name: برمجة السباق
         courseb-2018:
+          assignment_family_title: الدورة B
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
@@ -1256,6 +1281,7 @@ ar:
             Move It, Move It:
               name: حركها , حركها
         coursed-2018:
+          assignment_family_title: الدورة D
           stages:
             'Algorithms: Graph Paper Programming':
               name: برمجة ورقة الرسم البياني
@@ -1276,6 +1302,7 @@ ar:
             Relay Programming:
               name: برمجة السباق
         coursec-2018:
+          assignment_family_title: الدورة C
           stages:
             Building a Foundation:
               name: بناء قاعدة
@@ -1290,6 +1317,7 @@ ar:
             Functions with Parameters:
               name: الدوال والمعاملات
         coursee-2018:
+          assignment_family_title: الدورة E
           stages:
             'Programming: My Robotic Friends':
               name: أصدقائي من الروبوت
@@ -1308,6 +1336,7 @@ ar:
             Minecraft Hour of Code:
               name: ساعة البرمجة ماين كرافت
         coursef-2018:
+          assignment_family_title: الدورة F
           stages:
             'Programming: My Robotic Friends':
               name: أصدقائي من الروبوت
@@ -1354,7 +1383,110 @@ ar:
           stages:
             Artist:
               name: الرسام
+        dance:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+          title: حفلة رقص
+          description_short: تحييها كاتي بيري ومادونا وجيه بالفين وسيا وكيث أوربان
+            وسيارا و 25 شخصية أخرى!
+          description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         frozen-2018-test-b:
           stages:
             Artist:
               name: الرسام
+        aquatic:
+          stages:
+            Aquatic:
+              name: Minecraft
+          title: 'المائي: الرحلة المائية'
+          description_short: Minecraft عاد إليكم بأنشطة جديدة تمامًا ومخصصة لساعة
+            من البرمجة!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        dance-draft:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        dance-extras:
+          title: استمر في الرقص
+          description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            The Artist:
+              name: الاعب
+        dance-low:
+          stages:
+            Dance Party:
+              name: حفلة رقص
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Binary Bracelets:
+              name: أساور الثنائية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
+        andrea-test:
+          stages:
+            'null':
+              name: خالي
+        dance-extras-gallery:
+          title: استمر في الرقص
+          description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: بناء قاعدة
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            Binary Bracelets:
+              name: أساور الثنائية

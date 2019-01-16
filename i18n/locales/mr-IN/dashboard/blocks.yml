@@ -1,3 +1,4 @@
+---
 mr:
   data:
     blocks:
@@ -21,6 +22,28 @@ mr:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
       Dancelab_randomColor:
         text: कोणताही रंग
       Dancelab_setDanceSpeed:
@@ -31,10 +54,18 @@ mr:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'बरोबर'
+            'true': बरोबर
       gamelab_randColor:
         text: कोणताही रंग
       gamelab_randomColor:

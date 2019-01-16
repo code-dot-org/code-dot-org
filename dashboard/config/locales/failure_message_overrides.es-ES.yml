@@ -80,6 +80,9 @@ es:
         del Golem de hierro y atacar a los zombies para ganar.
       Valentine_playlab_01_failure_message_override: "¡Casi! Inténtalo de nuevo."
       WhileAdventure_failure_message_override: "¡Felicitaciones! Usted recogió X monedas!"
+      courseC19_playLab_EOC3_failure_message_override: |-
+        Debe agregar dos o más
+        Nuevos actores a tu juego y programarlos para que se muevan.
       courseE_playLab_scaffold3_failure_message_override: |-
         Debe agregar dos o más
         Nuevos actores a tu juego y programarlos para que se muevan.

@@ -12,6 +12,7 @@
     Script::COURSED_NAME,
     Script::COURSEE_NAME,
     Script::COURSEF_NAME,
+    Script::MINECRAFT_AQUATIC_NAME,
     Script::MINECRAFT_HERO_NAME,
     Script::STARWARS_NAME,
     Script::FROZEN_NAME,
@@ -19,15 +20,13 @@
     Script::FLAPPY_NAME,
     Script::INFINITY_NAME,
     Script::PLAYLAB_NAME,
-    Script::ARTIST_NAME
+    Script::ARTIST_NAME,
+    Script::APPLAB_INTRO,
+    Script::DANCE_PARTY_NAME
   ]
 
   wide_blocks = [
-    "applab",
-    "widgets",
-    "gamelab",
-    "weblab",
-    "twenty_hour",
+    Script::TWENTY_HOUR_NAME,
     "unplugged",
     Script::EXPRESS_NAME,
     Script::PRE_READER_EXPRESS_NAME,
@@ -36,11 +35,11 @@
 .all-course-blocks
   - tall_blocks.each do |script_name|
     %div{id: script_name}
-      = render partial: 'shared/course_tall_block', locals: { id: script_name, showState: show_state }
+      = render partial: 'shared/course_tall_block', locals: { id: script_name }
 
   - wide_blocks.each do |script_name|
     %div{id: script_name}
-      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small", showState: show_state }
+      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
 
 .csf-courses-header
   .row

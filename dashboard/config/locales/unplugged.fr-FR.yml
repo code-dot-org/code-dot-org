@@ -57,7 +57,7 @@ fr:
           utilisation d'espaces réservés génériques est une merveilleuse introduction
           aux variables.
       Unplug6:
-        title: Les conditions
+        title: Conditions
         desc: Il s'agit d'un jeu s’adressant à toute la classe.  Après avoir introduit
           la notion d’instructions conditionnelles, d’instructions «Si» et de boucles,
           la classe peut s'entrainer ensemble à l'aide d'un programme pré-écrit, d'un
@@ -296,6 +296,8 @@ fr:
         title: Activité manuelle
         desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
           en ligne.
+      deeper learning description:
+        desc: 'traduction manquante : en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algorithmes du monde réel: Planter une graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
@@ -369,6 +371,7 @@ fr:
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       courseE_unplugged_diceRace:
+        title: 'Les algorithmes du monde réel : La course de dés'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
           dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
           l'algorithme pour un jeu de course de dés.
@@ -417,8 +420,54 @@ fr:
           grand programme. Cette leçon aidera les élèves à comprendre intuitivement
           pourquoi associer des morceaux de code à des fonctions est une pratique
           très utile.
+      swipeRightPassThrough:
+        title: Séance scénarios de recrutement
+        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
+          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
+          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
+          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
+          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
+          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
+          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
+          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
+          les citations que vous jugeriez efficaces pour convaincre les élèves de
+          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
+          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
+          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
+          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
+          direction les autres personnes de votre atelier ont balayé pour chacun des
+          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
+          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
+          êtes connecté sur Code.org."
+      swipeRightPassThrough-test123:
+        title: Séance scénarios de recrutement
+        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
+          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
+          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
+          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
+          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
+          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
+          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
+          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
+          les citations que vous jugeriez efficaces pour convaincre les élèves de
+          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
+          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
+          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
+          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
+          direction les autres personnes de votre atelier ont balayé pour chacun des
+          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
+          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
+          êtes connecté sur Code.org."
+      brad-repro-bug-000:
+        title: Brad reproduction de bug 000
+        desc: "# Brad reproduction de bug 000\r\n## Tentative de recréer un bug rapporté
+          par Brooke\r\nle processus est le suivant :\r\n1. commencer avec un niveau
+          « déconnecté ». peupler d'informations. sauvegarder et publier.\r\n2. «
+          détruire » le niveau\r\n3. créer un niveau « markdown » avec le même contenu
+          et le même nom. sauvegarder et publier"
       courseB_unplugged_MRF_2018:
         title: Mes amis les robots
+        desc: Apprenez à programmer en écrivant du code pour vos amis !
       PlantASeed_2018:
         title: 'Algorithmes du monde réel: Planter une graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
@@ -490,5 +539,115 @@ fr:
           être représentées et stockées de plus d’une façon.
       MoveItMoveIt_2018:
         title: Bouge, Bouge
+      courseB_unplugged_CnC_2018:
+        title: C'est bien de créer et de jouer équitablement
+        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+          and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
+          processus créatif de partage et d'inspiration. Parallèlement à cela vient
+          la promotion de l'expression créative et le besoin d'être juste avec le
+          travail créatif.
+      courseE_unplugged_CnC_2018:
+        title: Partage numérique
+        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
+          défis et les avantages du respect de la propriété et du droit d'auteur,
+          en particulier dans les environnements numériques. Les étudiants devraient
+          être encouragés à respecter les droits des artistes, qui constituent un
+          élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
         title: Programmation de relais
+        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
+          puis passera rapidement à une course contre la montre pendant que les élèves
+          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
+          instruction par instruction.
+      courseB_unplugged_MRF_2019:
+        title: Mes amis les robots
+        desc: Apprenez à programmer en écrivant du code pour vos amis !
+      BuildingAFoundation_2019:
+        title: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
+      Conditionals_2019:
+        title: Instructions conditionnelles
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
+          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+      courseF_unplugged_powerOfWords_2019:
+        title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.desc'
+      GraphPaperProgramming_2019:
+        title: Programmation sur papier quadrillé
+        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
+          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
+          reproduire un dessin.
+      RelayProgramming_2018_2019:
+        title: Programmation de relais
+        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
+          puis passera rapidement à une course contre la montre pendant que les élèves
+          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
+          instruction par instruction.
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+      BinaryImages_2019:
+        title: Les images binaires
+        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
+          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
+          informations peuvent être représentées d’une variété d'options binaires.  Cette
+          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
+          ordinateur peut stocker des informations encore plus complexes (telles que
+          les images et les couleurs) également en binaire.
+      courseE_unplugged_privateInformation_2019:
+        title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+      SongwritingParameters_2019:
+        title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Partage numérique
+        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
+          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
+          défis et les avantages du respect de la propriété et du droit d'auteur,
+          en particulier dans les environnements numériques. Les étudiants devraient
+          être encouragés à respecter les droits des artistes, qui constituent un
+          élément important de leur citoyenneté numérique.
+      Internet_2019:
+        title: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
+      GettingLoopy_2019:
+        title: Tourner en rond
+        desc: Cette leçon présente le concept de programmation des boucles (instructions
+          répétées) par le biais d’une activité de danse. Les élèves apprendront une
+          chorégraphie simple, puis devront la répéter.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
+          en ligne.
+      BigEvent_2019:
+        title: Le Grand Événement
+        desc: Les élèves découvrent le concept de la programmation d’«événements»,
+          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
+          appuiera sur des boutons à distance et les élèves réagiront en fonction
+          du bouton choisi.
+      BinaryBracelets_2019:
+        title: Bracelets binaires
+        desc: Les élèves créent des bracelets comme des représentations binaires de
+          la première lettre de leur nom. Les élèves apprennent que les données peuvent
+          être représentées et stockées de plus d’une façon.
+      PaperPlanes_2019:
+        title: 'Algorithmes du monde réel: Avions en papier'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
+          Cette leçon se concentre également sur l'informatique en général et la façon
+          dont les algorithmes jouent un rôle essentiel.

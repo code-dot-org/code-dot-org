@@ -428,6 +428,11 @@ lv:
         text: Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
           uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā
           ietaupīsi daudz laika, kad veidosi savu spēli.
+    C1_artist_intro:
+      1: 
+      2:
+        text: Tie ir lēkšanas bloki. Kad tos lieto, mākslinieks kustās, bet nezīmē,
+          tāpēc izmanto tos, lai lēktu uz nākamo pelēko līniju.
     C2_playlab_createstory:
       1:
         text: Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu

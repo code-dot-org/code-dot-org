@@ -27,6 +27,8 @@ zh-TW:
         age: '年齡'
         gender: '性別'
         edit_header: '編輯帳戶資料'
+        finish_sign_up_header: '已成功創建你的帳戶'
+        finish_sign_up_subheader: '填妥下面的資料以完成帳戶申請。'
         error:
           future: 不能選擇將來的時間
   hello: "Hello world"
@@ -40,6 +42,7 @@ zh-TW:
   next_resource: 下一個資源
   cancel: "取消"
   okay: "OK！"
+  or: "或"
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
   add_teacher_form:
     code:
@@ -80,10 +83,11 @@ zh-TW:
     sign_out_of: '您正在使用 %{provider} 登入。<a href="%{url}">點這裡</a>登出 %{provider}。'
     already_signedup: '已經註冊了？'
     notyet_signedup: "還沒加入？"
-    google_oauth2: 'Google 帳戶'
+    google_oauth2: 'Google帳戶'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
+    microsoft_v2_auth: '微軟帳戶'
     clever: 'Clever 帳號'
     powerschool: 'Powerschool 帳戶'
     forgot_password: '忘記了您的密碼嗎？'
@@ -94,6 +98,8 @@ zh-TW:
     not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
     use_clever: "對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請改從 Clever 平台登入。"
     unable_to_connect_provider: "無法將你的 Code.org 帳戶連接到 %{provider} ，麻煩再試一次。"
+    already_in_use: "你的 %{provider} 已與 Code.org 的另一個帳戶綁定。"
+    already_linked: "你的 %{provider} 已與 Code.org 的另一個帳戶綁定。"
   signup_form:
     student_count: '%{count} 名學生已經註冊。'
     teacher_count: '%{count} 名教師已經註冊。'
@@ -120,6 +126,7 @@ zh-TW:
     mismatch_password: "你輸入的兩次密碼不一致"
     agree_tos_privacy: "我同意<a href='http://code.org/tos'>服務條款</a>以及<a href='http://code.org/privacy'>隱私政策</a>。"
     under_13_consent: "如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。"
+    student_consent: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "
     agree_us_website: "我同意使用位於美國境內的網站。"
     my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
     student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a href='http://code.org/privacy'>隱私權政策</a>。"
@@ -166,7 +173,7 @@ zh-TW:
     remember: '記住我'
     submit: '登入'
   signin:
-    try_heading: '還沒註冊嗎？先試試再說'
+    try_heading: '想要在還沒註冊之前就先試試寫程式嗎？'
     try_hoc: '先來試試一小時玩程式'
     try_20hours: '試試我們的 20 小時介紹計算機科學'
   signinsection:
@@ -196,11 +203,11 @@ zh-TW:
     subject: '加入我的班級'
     body: |
       點選下方的連結來報名參加在 Code.org 的資訊科學課程（我會是你的老師）：
-      
+
       %{link}
-      
+
       這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 的登入資訊'
@@ -305,14 +312,6 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
-    create_button:
-      create: '建立'
-      applab: 'App Lab'
-      artist: '藝術家'
-      gamelab: 'Game Lab'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: '像素鳥'
     user:
       classroom: '教師主頁'
       district_dashboard: '分區控制台'
@@ -323,10 +322,18 @@ zh-TW:
       signin: '登入'
       signup: '建立一個帳戶'
       already_registered: '已經註冊過了？'
-      pair_programming: '小組編程'
       team: '團隊'
       driver: '已登入'
       navigator: '夥伴'
+      create: '建立'
+      applab: 'App Lab'
+      artist: '藝術家'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: '像素鳥'
+      dance: '舞蹈派對'
+      view_all: '瀏覽所有專案…'
     popup:
       progress_for_user: "%{name} 的進度"
       progress: '你的學習進度'
@@ -572,6 +579,8 @@ zh-TW:
       body_short: "設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a"
       audience: '年齡 13+'
       cta: '學習如何做'
+    dance:
+      title: '舞蹈派對'
     hoc:
       title: '經典迷宮'
       body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
@@ -595,6 +604,8 @@ zh-TW:
     hoc-encryption:
       title: "簡單加密"
     weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
       audience: "年齡 13+"
       cta: "學習如何做"
     frozen:
@@ -610,6 +621,8 @@ zh-TW:
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
@@ -925,13 +938,21 @@ zh-TW:
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
   view_all_units: '檢視所有單元'
+  view_teacher_guide: '查看教師指導'
   pd:
     form_labels:
       first_name: '名字'
+      first_name_preferred: '名字'
+      last_name: '姓氏'
       email: '電子信箱'
+      email_alternate: '備用信箱'
+      gender: '性別'
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
+      ages: '你今年教授的學生的年齡？'
+      subjects: '你今年教授的科目？'
+      resources: '你使用哪些資源來教授計算機科學？'
       robotics: '你使用的機器人設備是？'
       workshop_organizer: '工作室發起人'
       workshop_facilitator: '工作室主持人'

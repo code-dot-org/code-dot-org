@@ -4,16 +4,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
-const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp} = scriptData;
+const {usIp, signUpUID} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -26,46 +25,70 @@ $(document).ready(() => {
   init();
 
   function init() {
-    const userType = $("#user_user_type")[0].value;
-    setUserType(userType);
+    setUserType(getUserType());
     renderSchoolInfo();
   }
 
   $(".finish-signup").submit(function () {
+    // Clean up school data and set age for teachers.
+    if (getUserType() === "teacher") {
+      cleanSchoolInfo();
+      $("#user_age").val("21+");
+    }
+  });
+
+  function cleanSchoolInfo() {
     // The country set in our form is the long-form string name of the country.
     // We want it to be the 2-letter country code, so we change the value on form submission.
     const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
     countryInputEl.val(schoolData.countryCode);
-  });
+
+    // Clear school_id if the searched school is not found.
+    if (schoolData.ncesSchoolId === '-1') {
+      const schoolIdEl = $('input[name="user[school_info_attributes][school_id]"]');
+      schoolIdEl.val("");
+    }
+  }
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
     setUserType(value);
   });
 
+  function getUserType() {
+    return $("#user_user_type")[0].value;
+  }
+
   function setUserType(userType) {
-    switch (userType) {
-      case "teacher":
-        switchToTeacher();
-        break;
-      case "student":
-        switchToStudent();
-        break;
-      default:
-        hideFields(ALL_FIELDS);
+    if (userType) {
+      trackUserType(userType);
+    }
+
+    if (userType === "teacher") {
+      switchToTeacher();
+    } else {
+      // Show student fields by default.
+      switchToStudent();
     }
   }
 
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
   }
 
   function switchToStudent() {
     fadeInFields(STUDENT_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
+  }
+
+  function trackUserType(type) {
+    firehoseClient.putRecord({
+      study: 'account-sign-up-v5',
+      study_group: 'experiment-v4',
+      event: 'select-' + type,
+      data_string: signUpUID,
+    });
   }
 
   function fadeInFields(fields) {

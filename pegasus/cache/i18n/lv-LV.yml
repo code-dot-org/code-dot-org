@@ -74,6 +74,7 @@ lv-LV:
   congratulations: Apsveicu!
   congratulations_on_completing_hoc: Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
+  third_party_organization: Organizācija
   third_party_curriculum: Mācību programmas
   enter_valid_age: Lūdzu norādiet derīgu vecumu
   enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
@@ -616,6 +617,7 @@ lv-LV:
   math_category_name: Matemātika
   hoc_category_name: Programmēšanas stunda
   applab_name: Aplikāciju laborotorija
+  applab_gradelevel: Vecums 13+
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   khan_gradelevel: Pamatskola +
@@ -1174,8 +1176,25 @@ lv-LV:
     zināšanas matemātikā un dabaszinībās.
   flappy_shortcode: vicināt
   header_courses: Kursi
+  header_course_catalog: Kursu katalogs
   header_educate_hoc: Programmēšanas stunda
+  header_about_us: Par mums
+  header_about_partners: Partneri
+  header_documentation: Dokumentācija
   user_header_label: Sveiki, %{username}
+  user_header_team: Komanda
   user_header_settings: Mans konts
   user_header_logout: Izrakstīties
   user_header_signin: Pierakstīties
+  user_header_playlab: Spēles laboratorija
+  user_header_flappy: Flapijs
+  applab_tile_start_tutorial: Sākt
+  hoc_overview_start_tutorial: Sākt
+  hoc2018_creativity_create: Izveidot
+  hoc2018_mc_start: Sākt
+  hoc2018_mc_educators_box2_button: Lejuplādēt
+  hoc2018_mc_homepage_try_it: Izmēģini
+  hoc2018_dance_party_button: Sākt
+  hoc2018_dance_teacher_resources_tile1_button: Nodarbību plāns
+  hoc2018_dance_teacher_resources_tile2_button: Atvienota aktivitāte
+  hoc2018_dance_amazon_about_future_engineer_button: Uzzini vairāk

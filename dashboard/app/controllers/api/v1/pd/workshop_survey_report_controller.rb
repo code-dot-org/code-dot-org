@@ -125,9 +125,12 @@ module Api::V1::Pd
     private
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
-    # NOT a workshop organizer - the filter is the user's name.
+    # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.
     def facilitator_name_filter
-      current_user.facilitator? && !(current_user.workshop_organizer? || current_user.program_manager?) ? current_user.name : nil
+      return nil if current_user.workshop_admin? || current_user.workshop_organizer? || current_user.program_manager?
+      return current_user.name if current_user.facilitator?
+
+      raise "Unexpected permission for #{current_user.id}. Expected at least one of facilitator, workshop_admin, workshop_organizer, program_manager"
     end
   end
 end

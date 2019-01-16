@@ -1,0 +1,100 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "setPropEach",
+    "blockText": "set {GROUP} {PROPERTY} to {VAL}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "all aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "all bears",
+            "\"BEAR\""
+          ],
+          [
+            "all cats",
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
+            "all ducks",
+            "\"DUCK\""
+          ],
+          [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
+            "all moose",
+            "\"MOOSE\""
+          ],
+          [
+            "all pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "all robots",
+            "\"ROBOT\""
+          ],
+          [
+            "all sharks",
+            "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

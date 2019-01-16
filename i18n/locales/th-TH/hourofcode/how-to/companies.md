@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org มอบโอกาสให้ลูกจ้างของคุณได้[เชื่อมต่อ](%= codeorg_url('/volunteer') %)กับห้องเรียนในท้องถิ่นที่ทำ Hour of Code ซึ่งพวกเขาสามารถแบ่งปันประสบการณ์การทำงานด้านเทคโนโลยีและสร้างแรงบันดาลใจให้นักเรียนมาเรียนวิชาวิทยาการคอมพิวเตอร์
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

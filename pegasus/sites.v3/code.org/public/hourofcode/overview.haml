@@ -1,32 +1,54 @@
 ---
 title: Hour of Code Teacher Resources
-nav: hoc_teacher_resources_nav
 theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://<%=request.host%>/hourofcode/overview"
+  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
+  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
+  "og:title": "<%= hoc_s(:hour_of_code) %>"
+  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
+  "og:image" : "<%= 'https://' + request.host + '/images/social-media/code-2018-creativity.png' %>"
+  "og:image:width": '1200'
+  "og:image:height": '630'
 ---
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
-%h1 Hour of Code for all ages
+%h1= I18n.t(:hoc_overview_title)
 
-The
-%a{href:"https://hourofcode.com"} Hour of Code
-is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages. Teachers, to view lesson plans and additional teacher resources please select your desired Hour of Code tutorial from the side menu to the left.
+= I18n.t(:hoc_overview_subtitle)
 
-#resources.responsive-body
+.full-resource-block{style: "margin-top: 20px;"}
+  %a{href: "/dance"}
+    %img.full-resource-image{src: "/images/dance_party.gif"}
+  .tutorial-info{style: "padding: 30px;"}
+    %span
+      %h2.resource-title= I18n.t(:hoc_overview_dance_title)
+      = I18n.t(:hoc_overview_dance_subtitle)
+    %span
+      %a{href: "/dance"}
+        %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+      .tutorial-info-guide
+        %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+          = I18n.t(:hoc_overview_view_teacher_guide)
+
+.tile-container-responsive{style: "margin-top: 20px;"}
   = view :top_hoc_tutorials
 .clear
 
-%br
-%br
-.hoc-tiles-container
-
 .full-resource-block
-  %img.side-image.left.col-50-student{src: "/images/hoc_overview.png"}
-  .side-description-area.right.col-50-student
-    .description
-      %h2.resource-title More Activities from Partners
-      The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners.
-    %a{href: "/learn"}
-      %button.orange-button{style: "margin-bottom: 20px;"} Go
+  %img.full-resource-image{src: "/images/hoc2018.png"}
+  .activities-info
+    %span
+      %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
+      = I18n.t(:hoc_overview_partner_activities_body)
+    %span
+      %a{href: "https://hourofcode.com/learn"}
+        %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
+
+.hoc-tiles-container

@@ -38,6 +38,7 @@ zh-TW:
         2 分。
       MC HOC 2016 Village Test_failure_message_override: 你必須要讓鐵魔像追到殭屍並攻擊牠們才能贏得勝利。
       WhileAdventure_failure_message_override: 恭喜！你收集了 X 枚硬幣！
+      courseC19_playLab_EOC3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       courseE_playLab_scaffold3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       courseE_playLab_scaffold3_2018_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       grade4_scaffolded_project3_failure_message_override: 你必須添加 2 個以上的新角色到你的遊戲中。

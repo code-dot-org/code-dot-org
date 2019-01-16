@@ -21,33 +21,33 @@ Confira alguns depoimentos de antigos voluntários:
 
 ## Qualquer um pode ser voluntário
 
-### Volunteers and speakers in tech:
+### Voluntarios e Oradores na area de Tecnologia:
 
-Do you have a connection to CS or tech? Se você trabalha em engenharia de software, em uma empresa de tecnologia, em qualquer papel (técnico ou não), ou você participou de cursos de ciência da computação, você pode ajudar a inspirar os alunos! Muitos alunos nunca conheceram alguém que trabalha no setor de tecnologia, e nossos professores adoram poder fazer o contato dos seus alunos com profissionais e estudantes universitários.
+Você tem uma conexão com CS ou tecnologia? Se você trabalha em engenharia de software, em uma empresa de tecnologia, em qualquer papel (técnico ou não), ou você participou de cursos de ciência da computação, você pode ajudar a inspirar os alunos! Muitos alunos nunca conheceram alguém que trabalha no setor de tecnologia, e nossos professores adoram poder fazer o contato dos seus alunos com profissionais e estudantes universitários.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Você pode ser um palestrante convidado na sala de aula, ou ajudar um professor executar a atividade. Visite uma sala de aula no seu bairro para inspirar os alunos a continuar aprendendo informática. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Cadastre-se hoje para ser um voluntário de tecnologia!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Qualquer um animado com a oportunidade de expandir:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Ajude em uma sala de aula local, ou organize um evento extra-curricular! Você não precisa de qualquer experiência em ciência da computação para sediar uma Hora do Código. E muitas vezes, só de se oferecer para ajudar pode ser suficiente para convencer o professor do seu filho, um amigo ou um clube a tentar uma hora.
+  Você acredita que aprender informática pode abrir oportunidade para os estudantes? Ajude em uma sala de aula local, ou organize um evento extra-curricular! Você não precisa de qualquer experiência em ciência da computação para sediar uma Hora do Código. E muitas vezes, só de se oferecer para ajudar pode ser suficiente para convencer o professor do seu filho, um amigo ou um clube a tentar uma hora.
 </p>
 
 <h3>
-  How do you get started?
+  Como começar?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="%= resolve_url('/promote/resources#help-schools') %"> Envie este e-mail</a> para o/a professor/a do seu filho, oferecendo-se para ajudá-lo a executar uma sessão Hora do Código.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Ofereça-se para sediar um evento de Hora do Código depois das aulas em uma escola no seu bairro. <a href="%= resolve_url('/how-to') %"> Use este guia de instruções</a> para ajudá-lo a planejar.
   </li>
 </ol>
 
@@ -56,7 +56,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Conte a seus amigos e colegas de trabalho sobre a Hora do Código. Temos milhares de professores cadastrados procurando por voluntários, então peça a eles para se <a href="https://code.org/volunteer">cadastrar como voluntários</a>. Peça para seu empregador para participar. <a href="%= resolve_url('/promote/resources#sample-emails') %">Envie esse e-mail</a> para seu gerente ou o presidente da empresa, para que todos estejam envolvidos.
 </p>
 
 <h2>
@@ -95,11 +95,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Quando estiver hospedando um evento da Hora do Código, siga a agenda do exemplo abaixo para ajudar a guiar o seu dia. Antes disso, certifique-se de ir a secretaria da escola e cumprimentar o professor no dia do evento. Confirme o cronograma combinado para o dia e discuta sobre o que será apresentado.
 </p>
 
 <h3>
-  Sample agenda:
+  Modelo de agenda:
 </h3>
 
 <table>
@@ -189,7 +189,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Após o evento:
         </h3>
         <ul>
           <li>
@@ -226,22 +226,22 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Perguntas frequentes sobre o trabalho de voluntariado na Hora do Código
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Até agora não fui contactado por um professor. De que outra maneira eu posso ser um voluntário?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Tente procurar por escolas de sua região e ligar para o diretor/professor/secretaria e perguntar como você pode ajudar.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Quanto tempo duram as visitas à sala de aula?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Uma visita presencial à sala de aula geralmente tem duração de 60-90 minutos, enquanto uma virtual tem aproximadamente de 20 a 30 minutos.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Para que faixa etária o tutorial da Hora do Código é apropriado?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org e nossos parceiros criaram todas as atividades da Hora de código para engajar estudantes de todas as series (Jardim de Infancia - 3o ano), meninos e meninas, com qualquer nível de experiência. Qualquer um, até mesmo adultos, podem se divertir jogando!
         </p>
         <p>
           <%= view :signup_button %>

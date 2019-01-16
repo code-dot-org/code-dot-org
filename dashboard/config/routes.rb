@@ -1,6 +1,10 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#index', via: :all
+  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#index'
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -14,7 +18,7 @@ Dashboard::Application.routes.draw do
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
-  get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
@@ -133,11 +137,13 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
+    get '/users/cancel', to: 'registrations#cancel'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect'
@@ -371,7 +377,9 @@ Dashboard::Application.routes.draw do
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
+          post :unstart
           post :end
+          post :reopen
           get  :summary
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
@@ -403,7 +411,7 @@ Dashboard::Application.routes.draw do
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
       post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
       post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
+      post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
@@ -419,8 +427,13 @@ Dashboard::Application.routes.draw do
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
-        post :teacher, to: 'teacher_applications#create'
-        post 'resend_principal_approval/:id', to: 'teacher_applications#resend_principal_approval'
+
+        resources :teacher, controller: 'teacher_applications', only: :create do
+          member do
+            post :send_principal_approval
+            post :principal_approval_not_required
+          end
+        end
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
@@ -477,10 +490,10 @@ Dashboard::Application.routes.draw do
     get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
     get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
-    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
     delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
-    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'

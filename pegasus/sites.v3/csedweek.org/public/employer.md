@@ -32,7 +32,7 @@ groups. There is a 1-minute version and a 5-minute version.
 
 ## Sample email to employees
 
-[Send this email](mailto:employees@yourorg.com?subject=The%20Hour%20of%20Code%20Campaign&body=Our%20world%20is%20surrounded%20by%20technology.%20Information%2C%20commerce%2C%20communication%2C%20and%20entertainment%20all%20rely%20on%20computers.%20But%20only%20a%20tiny%20fraction%20of%20us%20learn%20computer%20science%2C%20the%20basics%20of%20how%20computers%20work%2C%20or%20how%20to%20create%20software%2C%20apps%2C%20or%20web%20sites.%0A%0AThis%20year%2C%20to%20celebrate%20Computer%20Science%20Education%20Week%20%28Dec%208-14%29%2C%20we%E2%80%99re%20joining%20a%20massive%20campaign%20to%20prepare%20our%20population%20for%20the%2021st%20century.%0A%0AThe%20Hour%20of%20Code%20campaign%20has%20an%20audacious%20goal%3A%20to%20introduce%2010%20million%20students%20to%20one%20hour%20of%20computer%20science.%20I%20encourage%20all%20of%20you%20to%20participate%2C%20in%20two%20ways%3A%0A%0A1%29%20As%20a%20student%20-%20set%20aside%20an%20hour%20in%20December%20to%20learn%20the%20basics.%0A%0A2%29%20If%20you%E2%80%99re%20a%20parent%2C%20recruit%20your%20school%20to%20participate%20-%20ask%20your%20teacher%20or%20principal.%0A%0ASee%20http%3A%2F%2Fhourofcode.org%20for%20details.%20Sign%20up%20to%20participate!) to your employees to ask them to participate in the Hour of Code. Ideally send the email once now, and once at the beginning of Computer Science Education Week (on Dec 9, 2013)
+[Send this email](mailto:employees@yourorg.com?subject=The%20Hour%20of%20Code%20Campaign&body=Our%20world%20is%20surrounded%20by%20technology.%20Information%2C%20commerce%2C%20communication%2C%20and%20entertainment%20all%20rely%20on%20computers.%20But%20only%20a%20tiny%20fraction%20of%20us%20learn%20computer%20science%2C%20the%20basics%20of%20how%20computers%20work%2C%20or%20how%20to%20create%20software%2C%20apps%2C%20or%20web%20sites.%0A%0AThis%20year%2C%20to%20celebrate%20Computer%20Science%20Education%20Week%20%28Dec%208-14%29%2C%20we%E2%80%99re%20joining%20a%20massive%20campaign%20to%20prepare%20our%20population%20for%20the%2021st%20century.%0A%0AThe%20Hour%20of%20Code%20campaign%20has%20an%20audacious%20goal%3A%20to%20introduce%2010%20million%20students%20to%20one%20hour%20of%20computer%20science.%20I%20encourage%20all%20of%20you%20to%20participate%2C%20in%20two%20ways%3A%0A%0A1%29%20As%20a%20student%20-%20set%20aside%20an%20hour%20in%20December%20to%20learn%20the%20basics.%0A%0A2%29%20If%20you%E2%80%99re%20a%20parent%2C%20recruit%20your%20school%20to%20participate%20-%20ask%20your%20teacher%20or%20principal.%0A%0ASee%20http%3A%2F%2Fhourofcode.com%20for%20details.%20Sign%20up%20to%20participate!) to your employees to ask them to participate in the Hour of Code. Ideally send the email once now, and once at the beginning of Computer Science Education Week (on Dec 9, 2013)
 
 ---
 
@@ -48,7 +48,7 @@ The Hour of Code campaign has an audacious goal: to introduce 10 million student
 
 2) If you’re a parent, recruit your school to participate - ask your teacher or principal if they are hosting Hour of Code in their classrooms.
 
-http://hourofcode.org for details. Sign up to participate!
+https://hourofcode.com for details. Sign up to participate!
 
 ---
 

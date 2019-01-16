@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Vous devez faire un danseur.",
+  "danceFeedbackNoDancers": "Vous n’avez aucun danseur.",
+  "danceFeedbackNoBackground": "Vous devez ajouter un effet de fond.",
+  "danceFeedbackTooManyDancers": "Attention ! Si vous placez le bloc « créer un nouveau » dans « toutes les 2 mesures », vous créerez beaucoup de danseurs.",
+  "danceFeedbackUseSetSize": "Utilisez le bloc « set backup_dancer2 size » pour rendre ce danseur plus petit.",
+  "danceFeedbackUseSetTint": "Utilisez le bloc « définir la nuance » pour changer la nuance d'un danseur.",
+  "danceFeedbackUseStartMapping": "Essayez d’ajouter le bloc <block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\"> \"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> à votre programme.",
+  "danceFeedbackStartNewMove": "Votre danseur n’effectuait pas un nouveau mouvement après la quatrième mesure.",
+  "danceFeedbackNeedDifferentDance": "Vous devez utiliser une danse différente.",
+  "danceFeedbackNeedEveryTwoMeasures": "Assurez-vous que vous utilisez le bloc « toutes les 2 mesures »",
+  "danceFeedbackNeedMakeANewDancer": "Utilisez le bloc de « créer un nouveau » pour créer un second danseur.",
+  "measure": "Mesure:"
+}
