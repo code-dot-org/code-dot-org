@@ -7,8 +7,10 @@ const sampleAnnouncement = {
   notice: "This course has recently been updated!",
   details: "See what changed and how it may affect your classroom.",
   link: "https://support.code.org/hc/en-us/articles/115001931251",
-  type: "information"
+  type: "information",
+  visibility: "Teacher-only"
 };
+
 const defaultProps = {
   defaultAnnouncements: [],
   inputStyle: {}
@@ -56,6 +58,7 @@ describe('ScriptAnnouncementsEditor', () => {
     assert.equal(wrapper.find('Announce').props().announcement.details, '');
     assert.equal(wrapper.find('Announce').props().announcement.link, '');
     assert.equal(wrapper.find('Announce').props().announcement.type, 'information');
+    assert.equal(wrapper.find('Announce').props().announcement.visibility, 'Teacher-only');
   });
 
   it('removes announcements when we click remove', () => {
@@ -124,6 +127,37 @@ describe('ScriptAnnouncementsEditor', () => {
     wrapper.find('button').simulate('click');
     wrapper.find('Announce').dive().find('.uitest-type').simulate('change', { target: { value: 'bullhorn' }});
     assert.equal(wrapper.state('announcements')[0].type, 'bullhorn');
+  });
+
+  it('updates visibility', () => {
+    const wrapper = shallow(
+      <ScriptAnnouncementsEditor
+        {...defaultProps}
+      />
+  );
+
+    wrapper.find('button').simulate('click');
+    wrapper.find('Announce').dive().find('.uitest-visibility').simulate('change', { target: { value: 'Student-only' }});
+    assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
+  });
+
+  it('updates visibility when no visibility in existing announcement', () => {
+    const oldSampleAnnouncement = {
+      notice: "This announcement was made before students could see announcements",
+      details: "So I don't have a visibility",
+      link: "https://support.code.org/hc/en-us/articles/115001931251",
+      type: "information"
+    };
+    const wrapper = shallow(
+      <ScriptAnnouncementsEditor
+        {...defaultProps}
+        defaultAnnouncements={[oldSampleAnnouncement]}
+      />
+  );
+
+    assert.equal(wrapper.state('announcements')[0].visibility, undefined);
+    wrapper.find('Announce').dive().find('.uitest-visibility').simulate('change', { target: { value: 'Student-only' }});
+    assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
   });
 
   it('includes a hidden input with value for server', () => {

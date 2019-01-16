@@ -108,23 +108,19 @@ class ScriptOverviewHeader extends Component {
   adds the announcement if needed.
    */
   filterAnnouncements = (currentView) => {
-    let currentAnnouncements =[];
+    let currentAnnouncements = [];
     this.props.announcements.forEach(element => {
-      console.log(currentView);
-      if(element.visibility == VisibilityType.teacherAndStudent){
+      if (element.visibility === VisibilityType.teacherAndStudent) {
         currentAnnouncements.push(element);
-      }
-      // If an announcement does not have a visibility because it is older default to teacher
-      else if(currentView == "Teacher" && (element.visibility == VisibilityType.teacher || element.visibility == undefined)){
+      } else if (currentView === "Teacher" && (element.visibility === VisibilityType.teacher || element.visibility === undefined)) {
         currentAnnouncements.push(element);
-      }
-      else if(currentView == "Student" && element.visibility == VisibilityType.student ){
+      } else if (currentView === "Student" && element.visibility === VisibilityType.student ) {
         currentAnnouncements.push(element);
       }
     });
 
-    // Checks if the non-verfied teacher announcement should be shown
-    if(currentView == "Teacher") {
+    // Checks if the non-verified teacher announcement should be shown
+    if (currentView === "Teacher") {
       if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
         currentAnnouncements.push({
           notice: i18n.verifiedResourcesNotice(),
@@ -135,20 +131,17 @@ class ScriptOverviewHeader extends Component {
       }
     }
     return currentAnnouncements;
-  }
+  };
 
   render() {
     const {
       plcHeaderProps,
-      announcements,
       scriptName,
       scriptTitle,
       scriptDescription,
       betaTitle,
       viewAs,
       isSignedIn,
-      isVerifiedTeacher,
-      hasVerifiedResources,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       versions,
@@ -172,7 +165,7 @@ class ScriptOverviewHeader extends Component {
             course_view_path={plcHeaderProps.courseViewPath}
           />
         }
-        { isSignedIn &&
+        {isSignedIn &&
           <ScriptAnnouncements
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
