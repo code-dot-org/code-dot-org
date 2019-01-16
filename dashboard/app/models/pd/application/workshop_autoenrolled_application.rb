@@ -103,7 +103,6 @@ module Pd::Application
     def lock!
       return if locked?
       super
-      enroll_user if accepted?
     end
 
     def enroll_user
