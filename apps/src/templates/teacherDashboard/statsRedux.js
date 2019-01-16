@@ -12,7 +12,7 @@ import $ from 'jquery';
 /**
  * Action creators
  */
-const setCompletedLevelCount = (sectionId, completedLevelCountByStudentId) => ({ type: SET_COMPLETED_LEVEL_COUNT, sectionId, completedLevelCountByStudentId });
+export const setCompletedLevelCount = (sectionId, completedLevelCountByStudentId) => ({ type: SET_COMPLETED_LEVEL_COUNT, sectionId, completedLevelCountByStudentId });
 
 /**
  * Initial state of statsRedux
