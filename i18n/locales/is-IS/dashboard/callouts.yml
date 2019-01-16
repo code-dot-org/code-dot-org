@@ -33,7 +33,7 @@ is:
         onEventFirstTime: Smelltu á og dragðu "onEvent" kubb út á vinnusvæðið hægra megin
         setScreenFirstTime: Smelltu og dragðu inn í plássið í "onEvent" kubbnum
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Smelltu hér þegar þetta er tilbúið!
+        applab_hoc_finish: Varð skjárinn grænn? Ef svo geturðu ýtt á `Ljúka`. Ef ekki skaltu ýta á `Endurstilla`, breyta kóðanum og keyra þetta aftur.
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: Þú ert nú í Hönnunarstöðu.
       CSD U3 Variables Predict Where X_callout:
@@ -210,9 +210,9 @@ is:
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
+        InspirationalArtwork_1: Prófaðu að setja ' aths ' kubbinn neðan við þetta merki. Þannig getur þú haft athugasemd í forritinu þínu!
       InspirationalArtwork_2019_callout:
-        InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
+        InspirationalArtwork_1: Prófaðu að setja ' aths ' kubbinn neðan við þetta merki. Þannig getur þú haft athugasemd í forritinu þínu!
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Smelltu á "Keyra" þegar þú vilt prófa forritið.
       MC HOC 2016 New Walk_callout:
@@ -539,11 +539,11 @@ is:
       courseC_collector_prog1_2019_callout:
         courseC_collector_prog1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+        courseC_collector_prog7_1: Þú getur tekið fleiri kubba úr verkfærakassanum þegar þú þarft!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+        courseC_collector_prog7_1: Þú getur tekið fleiri kubba úr verkfærakassanum þegar þú þarft!
       courseC_collector_prog7_2019_callout:
-        courseC_collector_prog7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+        courseC_collector_prog7_1: Þú getur tekið fleiri kubba úr verkfærakassanum þegar þú þarft!
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
       courseC_harvester_loops1_2018_callout:
@@ -551,7 +551,7 @@ is:
       courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
+        courseC_maze_debugging5_1: Það er ekki hægt að eyða gráum kubbum!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
       courseC_maze_debugging5_2019_callout:
@@ -675,15 +675,15 @@ is:
       courseD_maze_ramp6a_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+        courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+        courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_playLab_condFP_2019_callout:
-        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+        courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_playLab_condFP_a_callout:
-        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+        courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_playLab_condForVideo_callout:
-        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+        courseD_playLab_condFP_1: Við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_scrat_ramp1_callout:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_scrat_ramp1_2018_callout:
@@ -831,19 +831,19 @@ is:
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Bættu kubbum við hér
       courseF_artist_for1_callout:
-        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar eru hér undir.
       courseF_artist_for1_2018_callout:
-        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar eru hér undir.
       courseF_artist_for1_2019_callout:
-        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar eru hér undir.
       courseF_artist_fwp1_callout:
         courseF_artist_fwp1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       courseF_artist_fwp1_2018_callout:
         courseF_artist_fwp1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       courseF_artist_fwp4_callout:
-        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
+        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360:`hliðar` gráður.
       courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
+        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360:`hliðar` gráður.
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
@@ -1015,7 +1015,7 @@ is:
       grade2_CaringForNewPet_3_callout:
         grade2_CaringForNewPet_3_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       grade2_collector_7_callout:
-        grade2_collector_7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+        grade2_collector_7_1: Þú getur tekið fleiri kubba úr verkfærakassanum þegar þú þarft!
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: Þú hefur ekki nema einn svona kubb í þessari þraut.
       grade3_ConditionalsElse_2_callout:
@@ -1065,7 +1065,7 @@ is:
       grade5_artist_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
+        grade5_artist_functionparameters_6_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360:`hliðar` gráður.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
         add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við og dragðu hann síðan inn í skilgreininguna á fallinu þínu

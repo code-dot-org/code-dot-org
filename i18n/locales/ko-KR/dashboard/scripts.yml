@@ -921,7 +921,7 @@ ko:
             'Farmer: While Loops':
               name: '농부: ~인동안 반복'
         csd3-2017:
-          description_short: "프로그래밍"
+          description_short: 프로그래밍
           stages:
             Velocity:
               name: 속도
@@ -1680,3 +1680,5 @@ ko:
               name: '실시간 알고리즘: 종이 비행기'
             Binary Bracelets:
               name: 2진 팔찌
+        gamelab:
+          title: Game Lab

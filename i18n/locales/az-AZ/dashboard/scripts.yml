@@ -109,6 +109,7 @@ az:
             Artist:
               name: Rəssam
         hourofcode:
+          title: Ənənəvi labirint
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!
           stages:
             Maze:

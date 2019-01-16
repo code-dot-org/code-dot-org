@@ -2009,3 +2009,5 @@ nl:
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
             Binary Bracelets:
               name: Binaire armbanden
+        gamelab:
+          title: Game Lab

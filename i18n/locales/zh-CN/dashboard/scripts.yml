@@ -2830,7 +2830,7 @@ zh-CN:
         csd3-2017:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
-          description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
+          description_short: ' 在游戏实验室中学习编写动画，交互和比赛等的程序。'
           stages:
             Booleans and Conditionals:
               name: 布尔和条件
@@ -8786,3 +8786,5 @@ zh-CN:
               name: 二进制的手镯
         csp-mid-survey:
           description_audience: 计算机科学原理学生
+        gamelab:
+          title: 游戏实验室

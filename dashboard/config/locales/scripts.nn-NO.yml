@@ -2284,3 +2284,5 @@ nn:
               name: Hendingar i Spel-lab
             Binary Bracelets:
               name: Binær armbånd
+        gamelab:
+          title: Spel-lab
