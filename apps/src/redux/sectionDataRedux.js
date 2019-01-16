@@ -35,10 +35,10 @@ import $ from 'jquery';
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
-const CLEAR_SECTION_DATA = 'sectionData/CLEAR_SECTION_DATA';
-const START_LOADING_SECTION = 'sectionData/START_LOADING_SECTION';
-const LOAD_SECTION_SUCCESS = 'sectionData/LOAD_SECTION_SUCCESS';
-const LOAD_SECTION_FAIL = 'sectionData/LOAD_SECTION_FAIL';
+export const CLEAR_SECTION_DATA = 'sectionData/CLEAR_SECTION_DATA';
+export const START_LOADING_SECTION = 'sectionData/START_LOADING_SECTION';
+export const LOAD_SECTION_SUCCESS = 'sectionData/LOAD_SECTION_SUCCESS';
+export const LOAD_SECTION_FAIL = 'sectionData/LOAD_SECTION_FAIL';
 
 /**
  * Action creators

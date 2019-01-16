@@ -38,9 +38,9 @@ const initialState = {
    return state;
  }
 
- /**
-  * Selector functions
-  */
+/**
+ * Selector functions
+ */
 export const getStudentsCompletedLevelCount = (state, sectionId) => {
   return state.stats.completedLevelCountBySectionId[sectionId] || {};
 };
