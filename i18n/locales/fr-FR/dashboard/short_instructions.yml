@@ -1168,9 +1168,9 @@ fr:
       Underground Mining Coal: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       Underground Mining Coal_2018: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
       Underground Mining Coal_2019: Les ressources les plus précieuses sont en sous-sol, mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins 2 blocs de charbon.
-      aE1: "Tu as choisi de faire une serviette carrée ! \\r\n\\r\nPour terminer, trace un carré de 20 pixels de côté. "
+      aE1: "Tu as choisi de faire une serviette carrée ! \n\nPour terminer, trace un carré de 20 pixels de côté. "
       aE2: Si tu places ta boucle de carré à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Que faut-il ajouter à ta boucle externe pour s'assurer que les 14 serviettes sont bien alignées côte à côte ?
-      aE3: "Nous devons avoir une nappe!  \\r\n\\r\nPrenez votre rangée de 14 serviettes et cousez-les ensemble grâce à une autre **boucle externe** pour fabriquer une nappe."
+      aE3: "Nous avons besoin d’une nappe !  \n\nPrends ta rangée de 14 serviettes et couds-les ensemble grâce à une autre **boucle externe** pour fabriquer une nappe."
       aE3alternate: Alternative
       aE3alternateB: Alternative
       aE4: Alternative

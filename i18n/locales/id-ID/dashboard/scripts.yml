@@ -2608,7 +2608,7 @@ id:
             Test stage with bubbles:
               name: Tahap ujian dengan gelembung
         csd3-2017:
-          description_short: "Pemrograman"
+          description_short: Pemrograman
           stages:
             Draw Loop and Randomization:
               name: Menarik loop dan pengacakan
@@ -4586,3 +4586,5 @@ id:
               name: Melihat ke depan
             Binary Bracelets:
               name: Gelang biner
+        gamelab:
+          title: Laboratorium Game

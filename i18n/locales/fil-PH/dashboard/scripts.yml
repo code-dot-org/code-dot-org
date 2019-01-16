@@ -2727,7 +2727,7 @@ fil:
             Test stage with bubbles:
               name: Pagsubok na antas ng mga bula
         csd3-2017:
-          description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
+          description_short: ' Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab.'
           stages:
             Booleans and Conditionals:
               name: Mga Boolean at Kondisyonal
@@ -7709,3 +7709,5 @@ fil:
               name: Binary na mga Pulseras
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
+        gamelab:
+          title: Game Lab

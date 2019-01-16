@@ -800,7 +800,7 @@ kk:
             'Farmer: While Loops':
               name: 'Фермер: While (Шарт орындалғанша) Ілмектері'
         csd3-2017:
-          description_short: "Бағдарламалау"
+          description_short: Бағдарламалау
           stages:
             Functions:
               name: Функциялар

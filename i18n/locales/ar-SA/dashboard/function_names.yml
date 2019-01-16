@@ -7,20 +7,20 @@ ar:
       draw pupil: ارسم التلميذ
       draw a circle: رسم دائرة
       draw a car: ارسم سيارة
-      draw_rect: ارسم_مثلث
+      draw_rect: ارسم_مستطيل
       draw square: ارسم مربع
       jump to controller top left: الانتقال إلى وحدة التحكم لأعلى اليسار
-      jump to middle: اقفز للوسط
+      jump to middle: اقفز إلى الوسط
       draw a button: ارسم زر
       draw cord: ارسم حبل
-      draw left leg: ارسم القدم اليسرى
-      draw right leg: ارسم القدم اليمنى
+      draw left leg: ارسم الرجل اليسرى
+      draw right leg: ارسم الرجل اليمنى
       draw body and arms: ارسم جسم وذراعين
       draw a head: ارسم رأس
       draw sitting stick figure: ارسم شكل عصا جالسة
       draw head: ارسم رأس
       draw arms: ارسم ذراعين
-      jump to neck: اقفز للرقبة
+      jump to neck: اقفز إلى الرقبة
       draw O: ارسم حرف O
       draw D: ارسم حرف D
       draw E: ارسم حرف E
@@ -56,7 +56,7 @@ ar:
       draw a triangle: رسم مثلث
       draw a house: رسم منزل
       check purple flower: تحقق من الزهور الأرجوانية
-      check flower make honey: تحقق من الزهر واصنع العسل
+      check flower make honey: تحقق من الزهرة واصنع العسل
       get nectar or make honey: احصل على الرحيق أو اصنع العسل
       make 3 honey: اصنع ٣ من العسل
       get 5 nectar: احصل على ٥ من الرحيق
@@ -113,7 +113,7 @@ ar:
       triangle: مثلث
       draw a spiral shape: ارسم شكل حلزوني
       get 3 nectar: احصل على ٣ من الرحيق
-      get many nectar: احصل على كثير من الرحيق
+      get many nectar: احصل على العديد من الرحيق
       get nectar make honey: احصل على الرحيق اصنع العسل
       draw an octagon: ارسم شكل ثماني
       draw octagons: ارسم أشكال ثمانية
@@ -121,15 +121,15 @@ ar:
       score_points: سجل_نقاط
       set score: تعيين النتيجة
       draw a line of hexagons: ارسم خط من الأشكال السداسية
-      shift down/forward: الانتقال لأسفل/إلى الأمام
-      shift down/backward: الانتقال لأسفل/للخلف
+      shift down/forward: الانتقال إلى الأسفل/إلى الأمام
+      shift down/backward: الانتقال إلى الأسفل/إلى الخلف
       get nectar: الحصول على الرحيق
       setActors: ضع_ممثلين
       check guess: تحقق من تخمين
       Jump: اقفز
       test: اختبار
-      build bridge: بناء جسر
-      run right: اركض لليمين
+      build bridge: ابن جسراً
+      run right: اركض إلى اليمين
       grow forever: النمو للأبد
       draw grass: ارسم عشب
       sun: شمس
@@ -154,10 +154,10 @@ ar:
       '"simple" solution': 'حل "بسيط"'
       potential solution: حل محتمل
       my design: تصميمي
-      get 3 nectar or honey: احصل على ٣ من الرحيق اول عسل
+      get 3 nectar or honey: احصل على ٣ من الرحيق أو عسل
       move and collect: تحرك واجمع
-      check nectar or honey: تحقق من الرحيق او العسل
-      row of nectar: سطر من الرحيق
+      check nectar or honey: تحقق من الرحيق أو العسل
+      row of nectar: صف من الرحيق
       rowOfNectar: سطر_من_الرحيق
       move and check: تحرك وتأكد
       win game: الفوز باللعبة
@@ -197,6 +197,6 @@ ar:
       move forward: تحريك إلى الأمام
       turn right: اتجه إلى اليمين
       drawDot: ارسم_نقطة
-      draw a rectangle: ارسم مستطيل
-      Which Course for My Students?: أي دورة لطلابي ؟
-      draw a heart: ارسم قلب
+      draw a rectangle: ارسم مستطيلاً
+      Which Course for My Students?: أي دورة لطلابي؟
+      draw a heart: ارسم قلباً

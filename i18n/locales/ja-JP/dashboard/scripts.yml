@@ -1565,3 +1565,5 @@ ja:
               name: プレイ ラボのイベント
             Binary Bracelets:
               name: バイナリブレスレット
+        gamelab:
+          title: ゲーム ラボ

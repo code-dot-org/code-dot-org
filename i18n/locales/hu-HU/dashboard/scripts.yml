@@ -861,7 +861,7 @@ hu:
             'Farmer: While Loops':
               name: 'Farmer: feltételes ciklusok'
         csd3-2017:
-          description_short: "Programozás"
+          description_short: Programozás
           stages:
             Functions:
               name: funkciók

@@ -405,9 +405,9 @@ module Pd::Application
     # Record when the status changes and who changed it
     # Ideally we'd implement this as an after_save action, but since we want the current
     # user to be included, this needs to be explicitly passed in in the controller
-    def update_status_timestamp_change_log(user)
+    def update_status_timestamp_change_log(user, title = status)
       log_entry = {
-        title: status,
+        title: title,
         changing_user_id: user.try(:id),
         changing_user_name: user.try(:name) || user.try(:email),
         time: Time.zone.now

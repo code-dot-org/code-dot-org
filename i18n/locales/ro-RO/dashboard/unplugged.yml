@@ -316,3 +316,5 @@ ro:
       PaperPlanes_2019:
         title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
         desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.
+      test-uid-passthrough:
+        title: '[șir gol]'

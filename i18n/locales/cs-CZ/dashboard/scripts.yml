@@ -840,7 +840,7 @@ cs:
               name: 'Farmář - While cykly'
         csd3-2017:
           title: CSD Jednotka 3 - Animace and hry ('17-'18)
-          description_short: "Programování"
+          description_short: Programování
           stages:
             Functions:
               name: Funkce
