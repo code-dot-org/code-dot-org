@@ -1424,6 +1424,8 @@ en:
            of all {COSTUME} sprites
       aalab_createSpriteGroup:
         text: make a new sprite group called {VAR}
+      aalab_prompt:
+        text: ask question {MESSAGE}
       aalab_spriteSay:
         text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
       aalab_spritesWhere:

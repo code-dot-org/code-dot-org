@@ -537,12 +537,19 @@ sk:
       Function intro Ryan_2019: Dvakrát použi funkciu 'Postav most' na vytvorenie cesty k fakli.
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
-      Infinity_finale: Vytvorte čo len chcete a zdieľajte to!
-      Infinity_move_collide: Hiro je "herec 1".  Posuň ho vpravo k Baymaxovi tak, aby sa prehral zvuk, sa dotknú.
-      Infinity_move_directions: Baymax je "herec 2".  Pridaj bloky "Posuň sa" a potom s použitím šípok posuň Baymaxa tak, aby sa dotkol ostatných dvoch postavičiek.
-      Infinity_move_right: Hiro je "herec 1".  Použi blok "Posuň sa" tak, aby sa Hiro posunul vpravo a dotkol sa Baymaxa.
-      Infinity_repeat: Použi blok "Opakuj neustále" tak, aby sa Anna posunula hore a dole o 400 pixelov.
+      Infinity_catch: Dokážeš Elsou ("postava 2") hýbať šípkami tak, aby s Annou udržala krok?
+      Infinity_finale: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      Infinity_move_collide: Hiro je "postava 1".  Posuň ho vpravo k Baymaxovi a prehraj zvuk, keď sa dotknú.
+      Infinity_move_directions: Baymax je "postava 2".  Do programu pridaj bloky "Posuň postavu" a potom pomocou šípok pohni Baymaxom a dotkni sa ďalších dvoch postáv.
+      Infinity_move_right: Hiro je "postava 1".  Použi blok "Posuň sa" tak, aby sa Hiro posunul vpravo a dotkol sa Baymaxa.
+      Infinity_repeat: Použi blok "opakuj donekonečna" tak, aby Anna chodila hore-dole vždy o 400 pixelov.
+      Infinity_say: Nechaj Annu povedať "Ahoj" pomocou bloku "Povedz".
+      Infinity_shoot: Baymax je "postava 2". Naprogramuj ho tak, aby hodil na Hira raketu.
+      Infinity_shoot_directions: Hiro je "postava 3". Nechaj Hira hodiť predmet na každú zo 4 postáv. Po každom hode počkaj 1 sekundu.
+      Infinity_test: Toto je Infinity test.
       Infinity_touch_faster: Dotknite sa aj ďaľších vločiek!
+      Infinity_touch_four: Posúvaj Annou hore, dole, doľava a doprava a dotkni sa každej vločky.
+      Infinity_touch_score: Pridaj Anne bod vždy, keď sa dotkne vločky. Potom klikni na "Spustiť" a posuň Annu ku každej snehovej vločke.
       K-1 Artist 1 Assessment 1: Nakreslite krátku čiaru hore a dlhú čiaru doprava!
       K-1 Artist Loops 1: Nakreslite túto čiaru posunutím sa na Východ 4 krát.
       K-1 Artist Loops 2: A teraz nakresli tú istú čiaru použitím cyklu.
@@ -641,9 +648,9 @@ sk:
       Mike Test Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       NEW Course 4 Bee For Loops 1: Použite slučku pre pozbieranie nektáru z každej kvetinky.
       New Basketball Project: Vytvor si svoj vlastný basketbalový zápas! Môžeš zmeniť pravidlá ako len chceš. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.
-      New Gumball Project: Vytvorte čo len chcete a zdieľajte to!
-      New Ice Age Project: Vytvorte čo len chcete a zdieľajte to!
-      New Infinity Project: Vytvorte čo len chcete a zdieľajte to!
+      New Gumball Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Ice Age Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       New Sports Project: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.'
       Overworld Avoid Monsters: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."

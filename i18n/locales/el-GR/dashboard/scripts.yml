@@ -858,7 +858,7 @@ el:
             'Farmer: While Loops':
               name: 'Αγρότης: Βρόχοι όσο'
         csd3-2017:
-          description_short: "Προγραμματισμός"
+          description_short: Προγραμματισμός
           stages:
             Functions:
               name: Συναρτήσεις
@@ -1578,3 +1578,5 @@ el:
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
+        gamelab:
+          title: Game Lab

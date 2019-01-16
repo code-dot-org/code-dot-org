@@ -6,7 +6,7 @@ Feature: Report Abuse Form
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
     Then I click selector "#uitest-submit-report-abuse" once I see it
-    Then check that the URL matches "https://support.code.org/hc/en-us"
+    Then I wait until current URL contains "support.code.org"
 
   Scenario: Reporting abuse as a signed-in student
     Given I create a student named "Harry"
@@ -17,7 +17,7 @@ Feature: Report Abuse Form
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
     Then I click selector "#uitest-submit-report-abuse" once I see it
-    Then check that the URL matches "https://support.code.org/hc/en-us"
+    Then I wait until current URL contains "support.code.org"
 
   Scenario: Reporting abuse as a signed-in teacher
     Given I create a teacher named "Dumbledore"
@@ -28,4 +28,4 @@ Feature: Report Abuse Form
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
     Then I click selector "#uitest-submit-report-abuse" once I see it
-    Then check that the URL matches "https://support.code.org/hc/en-us"
+    Then I wait until current URL contains "support.code.org"

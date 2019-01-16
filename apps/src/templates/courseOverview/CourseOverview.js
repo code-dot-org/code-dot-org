@@ -10,15 +10,12 @@ import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
-import BaseDialog from '../BaseDialog';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
-import Button from "../Button";
-import DialogFooter from "../teacherDashboard/DialogFooter";
-import {navigateToHref} from '@cdo/apps/utils';
 
-// A session variable storing a comma-delimited list of course names for which
-// the user has already dismissed the course version redirect warning.
+// A session variable storing a comma-delimited list of course/script names for which
+// the user has already dismissed the version redirect warning.
 const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
 
 const styles = {
@@ -47,12 +44,6 @@ const styles = {
   },
   versionDropdown: {
     marginBottom: 13,
-  },
-  dialog: {
-    padding: 20,
-  },
-  dialogHeader: {
-    marginTop: 0,
   },
 };
 
@@ -83,15 +74,10 @@ export default class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
   };
 
-  state = {
-    showRedirectDialog: false,
-  };
-
-  componentDidMount() {
-    const {redirectToCourseUrl} = this.props;
-    if (redirectToCourseUrl && redirectToCourseUrl.length > 0) {
-      this.onOpenRedirectDialog();
-    }
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
+    this.state = {showRedirectDialog};
   }
 
   onChangeVersion = event => {
@@ -138,20 +124,10 @@ export default class CourseOverview extends Component {
     sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
   };
 
-  onOpenRedirectDialog = () => {
-    this.setState({
-      showRedirectDialog: true,
-    });
-  };
-
   onCloseRedirectDialog = () => {
     this.setState({
       showRedirectDialog: false,
     });
-  };
-
-  onRedirectToCourse = () => {
-    navigateToHref(this.props.redirectToCourseUrl);
   };
 
   render() {
@@ -172,6 +148,7 @@ export default class CourseOverview extends Component {
       versions,
       showVersionWarning,
       showRedirectWarning,
+      redirectToCourseUrl,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -187,29 +164,15 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
-        <BaseDialog
-          useUpdatedStyles
-          isOpen={this.state.showRedirectDialog}
-          style={styles.dialog}
-          handleClose={this.onCloseRedirectDialog}
-        >
-          <div>
-            <h2 style={styles.dialogHeader}>{i18n.notInRightPlace()}</h2>
-            {i18n.assignedToNewerVersion()}
-          </div>
-          <DialogFooter>
-            <Button
-              text={i18n.stayHere()}
-              onClick={this.onCloseRedirectDialog}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              text={i18n.goToAssignedVersion()}
-              onClick={this.onRedirectToCourse}
-              color={Button.ButtonColor.orange}
-            />
-          </DialogFooter>
-        </BaseDialog>
+        {redirectToCourseUrl &&
+          <RedirectDialog
+            isOpen={this.state.showRedirectDialog}
+            details={i18n.assignedToNewerVersion()}
+            handleClose={this.onCloseRedirectDialog}
+            redirectUrl={redirectToCourseUrl}
+            redirectButtonText={i18n.goToAssignedVersion()}
+          />
+        }
         {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
           <Notification
             type={NotificationType.warning}

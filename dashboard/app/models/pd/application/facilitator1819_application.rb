@@ -50,10 +50,30 @@ module Pd::Application
       YEAR_18_19
     end
 
+    ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training"
+
     # Are we still accepting applications?
     APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
+    end
+
+    # @override
+    def self.options
+      super.merge(
+        {
+          csd_csp_teachercon_availability: [
+            'TeacherCon 1: June 17 - 22, 2018',
+            'TeacherCon 2: July 22 - 27, 2018',
+            TEXT_FIELDS[:not_available_for_teachercon]
+          ],
+          csd_csp_fit_availability: [
+            'June 23 - 24, 2018 (immediately following TeacherCon 1)',
+            'July 28 - 29, 2018 (immediately following TeacherCon 2)',
+            TEXT_FIELDS[:not_available_for_fit_weekend]
+          ],
+        }
+      )
     end
 
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
@@ -74,6 +94,103 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Facilitator1819Application.find_by(user: user)
+    end
+
+    # @override
+    def self.required_fields
+      %i(
+        first_name
+        last_name
+        phone
+        address
+        city
+        state
+        zip_code
+        gender_identity
+        race
+        institution_type
+        current_employer
+        job_title
+        resume_link
+        worked_in_cs_job
+        completed_cs_courses_and_activities
+        diversity_training
+        how_heard
+
+        program
+        plan_on_teaching
+        ability_to_meet_requirements
+
+        led_cs_extracurriculars
+        teaching_experience
+
+        code_org_facilitator
+        have_led_pd
+
+        who_should_have_opportunity
+        how_support_equity
+        expected_teacher_needs
+        describe_adapting_lesson_plan
+        describe_strategies
+        example_how_used_feedback
+        example_how_provided_feedback
+        hope_to_learn
+
+        available_during_week
+        travel_distance
+
+        agree
+      )
+    end
+
+    # @override
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        required << :cs_related_job_requirements if hash[:worked_in_cs_job] == YES
+        required << :diversity_training_description if hash[:diversity_training] == YES
+
+        if hash[:program] == PROGRAMS[:csf]
+          required << :csf_availability
+          required << :csf_partial_attendance_reason if hash[:csf_availability] == ONLY_WEEKEND
+        elsif hash[:program].present?
+          required << :csd_csp_teachercon_availability
+          required << :csd_csp_fit_availability
+        end
+
+        if hash[:teaching_experience] == YES
+          required.concat [
+            :grades_taught,
+            :grades_currently_teaching,
+            :subjects_taught,
+            :years_experience
+          ]
+        end
+
+        if hash[:years_experience].present? && hash[:years_experience] != NONE
+          required.concat [
+            :experience_leading,
+            :completed_pd
+          ]
+        end
+
+        if hash[:code_org_facilitator] == YES
+          required.concat [
+            :code_org_facilitator_years,
+            :code_org_facilitator_programs
+          ]
+        end
+
+        if hash[:have_led_pd] == YES
+          required.concat [
+            :groups_led_pd,
+            :describe_prior_pd
+          ]
+        end
+
+        if hash[:available_during_week] == YES
+          required << :weekly_availability
+        end
+      end
     end
 
     # G1 facilitators are always associated with Phoenix

@@ -154,7 +154,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir {RANGE}
+        text: obtenir [RANGE][0]
         options:
           RANGE:
             '"low"': grave
@@ -652,7 +652,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
       gamelab_clickedOn:
-        text: lorsque {SPRITE} est cliqué
+        text: quand on clique sur {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
       gamelab_debugSprite:
@@ -1093,7 +1093,7 @@ fr:
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
       Mikelab_whenClickedOn:
-        text: lorsque {SPRITE} est cliqué
+        text: quand on clique sur {SPRITE}
       Mikelab_whenKeyPressed:
         text: En appuyant sur {KEY}
         options:

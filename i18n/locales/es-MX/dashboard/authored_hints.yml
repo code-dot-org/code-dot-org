@@ -10953,18 +10953,33 @@ es-MX:
         courseE_artist_functions1_b: Está correcto dibujar líneas superpuestas para hacer tus anteojos.
         courseE_artist_functions1_c: Para código más corto, intente usar un ciclo de repetición para dibujar los cuadrados de los lentes.
       courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_b: La función que escribe no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.
+        courseD_artist_functions2_c: |-
+          Utilizar el bloque verde 'dibujar un cuadrado' para "llamar" a su función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           El programa debe:
           - Usar la función
           - Avanzar 100 + 75 pixeles
           - Usar la función
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_b: La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.
+        courseD_artist_functions2_c: |-
+          Asegúrese de utilizar el bloque verde 'dibujar un cuadrado' para "llamar" a su función. De lo contrario, el código en la función no se ejecutará.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           El programa debe:
           - Usar la función
           - Avanzar 100 + 75 pixeles
           - Usar la función
       courseE_artist_functions2_2019_authored_hint:
+        courseD_artist_functions2_b: La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.
+        courseD_artist_functions2_c: |-
+          Asegúrese de utilizar el bloque verde 'dibujar un cuadrado' para "llamar" a su función. De lo contrario, el código en la función no se ejecutará.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           El programa debe:
           - Usar la función
@@ -10987,6 +11002,7 @@ es-MX:
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
         courseD_artist_functions5_b: Las funciones facilitan la llamada al código guardado en cualquier momento, ¡no solo desde dentro de un bucle!
+        courseD_artist_functions5_c: Comience arrastrando el código para una forma de estrella en la función 'dibujar una estrella', entonces utilizar esta función para dibujar las tres estrellas!
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
         courseD_artist_functions5_b: Las funciones facilitan la llamada al código guardado en cualquier momento, ¡no solo desde dentro de un bucle!
@@ -11008,9 +11024,12 @@ es-MX:
         courseD_artist_functions7_b: No debería necesitar agregar ningún ciclo de repetición adicional. Simplemente salta al artista 100 píxeles entre cada ventana superior, luego baja 150 píxeles para llegar a las ventanas inferiores.
       courseE_artist_functions7_2018_authored_hint:
         courseD_artist_functions7_a: Trate de crear su función primero y luego agregar ventanas de uno a la vez.
+        courseD_artist_functions7_b: Para llegar desde las ventanas superiores a las ventanas inferiores, simplemente gire a la derecha el artista, salte 150 pixels, girar nuevamente a la derecha el artista!  Ahora el artista estará mirando  en la dirección correcta para terminar el resto de la casa!
       courseE_artist_functions7_2019_authored_hint:
         courseD_artist_functions7_a: Trate de crear su función primero y luego agregar ventanas de uno a la vez.
+        courseD_artist_functions7_b: Para llegar desde las ventanas superiores a las ventanas inferiores, simplemente gire a la derecha el artista, salte 150 pixels, girar nuevamente a la derecha el artista!  Ahora el artista estará mirando  en la dirección correcta para terminar el resto de la casa!
       courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_f: Usted sólo necesita un bloque 'avanzar', pero necesitaras varios bloques 'salto adelante' o 'salto atrás'!
         courseD_artist_functions8_a: |-
           Comience haciendo una función para un cuadrado, luego intente hacer una función para una línea de cuadrados. ¿Cómo usarías la función ` dibujar una línea de cuadrados` para hacer esta imagen?
         courseD_artist_functions8_d: |-
@@ -11020,6 +11039,7 @@ es-MX:
         courseD_artist_functions8_c: Al final de cada línea de cuadrados, el artista tendrá que saltar hacia abajo y hacia atrás antes de dibujar la siguiente línea de cuadrados.
         courseD_artist_functions8_g: "! [] (https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_f: Usted sólo necesita un bloque 'avanzar', pero necesitaras varios bloques 'salto adelante' o 'salto atrás'!
         courseD_artist_functions8_a: |-
           Comience haciendo una función para un cuadrado, luego intente hacer una función para una línea de cuadrados. ¿Cómo usarías la función ` dibujar una línea de cuadrados` para hacer esta imagen?
         courseD_artist_functions8_d: |-
@@ -11029,6 +11049,7 @@ es-MX:
         courseD_artist_functions8_c: Al final de cada línea de cuadrados, el artista tendrá que saltar hacia abajo y hacia atrás antes de dibujar la siguiente línea de cuadrados.
         courseD_artist_functions8_g: "! [] (https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_f: Usted sólo necesita un bloque 'avanzar', pero necesitaras varios bloques 'salto adelante' o 'salto atrás'!
         courseD_artist_functions8_a: |-
           Comience haciendo una función para un cuadrado, luego intente hacer una función para una línea de cuadrados. ¿Cómo usarías la función ` dibujar una línea de cuadrados` para hacer esta imagen?
         courseD_artist_functions8_d: |-
@@ -11064,6 +11085,11 @@ es-MX:
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
           ¿Puedes ver los cuatro lugares donde se puede usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          Este rompecabezas puede separarse en tres partes:
+          - crear la función 'dibujar un triángulo'
+          - crear la función 'dibujar una línea de triángulos'
+          - usar su función 'dibujar una línea de triángulos' cuatro veces para completar el dibujo
         courseD_artist_functions9_b: Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 o 120 grados antes de dibujar la línea siguiente triángulo.
         courseD_artist_functions9_c: |-
           Para dibujar una línea de triángulos: - repetir 4 veces - dibujar un triángulo 
@@ -11073,6 +11099,11 @@ es-MX:
       courseE_artist_functions9_2018_authored_hint:
         courseD_artist_functions9_e: |-
           ¿Puedes ver los cuatro lugares donde se puede usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          Este rompecabezas puede separarse en tres partes:
+          - crear la función 'dibujar un triángulo'
+          - crear la función 'dibujar una línea de triángulos'
+          - usar su función 'dibujar una línea de triángulos' cuatro veces para completar el dibujo
         courseD_artist_functions9_b: Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 o 120 grados antes de dibujar la línea siguiente triángulo.
         courseD_artist_functions9_c: |-
           Para dibujar una línea de triángulos: - repetir 4 veces - dibujar un triángulo 
@@ -11082,6 +11113,11 @@ es-MX:
       courseE_artist_functions9_2019_authored_hint:
         courseD_artist_functions9_e: |-
           ¿Puedes ver los cuatro lugares donde se puede usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          Este rompecabezas puede separarse en tres partes:
+          - crear la función 'dibujar un triángulo'
+          - crear la función 'dibujar una línea de triángulos'
+          - usar su función 'dibujar una línea de triángulos' cuatro veces para completar el dibujo
         courseD_artist_functions9_b: Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 o 120 grados antes de dibujar la línea siguiente triángulo.
         courseD_artist_functions9_c: |-
           Para dibujar una línea de triángulos: - repetir 4 veces - dibujar un triángulo 
@@ -11415,10 +11451,19 @@ es-MX:
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: Use el bloque verde `maíz y calabaza` para llamar a esta función.
         courseE_farmer_functions2ba_b: Arrastra todos los bloques del espacio de trabajo junto con 'al ejecutar' para ver cómo funciona esta función.
+      courseE_farmer_functions2ba_2018_authored_hint:
+        courseE_farmer_functions2ba_a: '¡Utilizar el bloque verde ''obtener todas las calabazas'' para asegurarse de conseguir todas las calabazas!'
+      courseE_farmer_functions2ba_2019_authored_hint:
+        courseE_farmer_functions2ba_a: '¡Utilizar el bloque verde ''obtener todas las calabazas'' para asegurarse de conseguir todas las calabazas!'
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Intenta usar un ciclo "mientras haya camino por delante" para llegar a donde necesitas.
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: '¿Qué secuencia se repite a menudo en este programa? ¿Puedes arrastrar estos bloques a la función?'
+        courseE_farmer_functions3c_b: No olvides llamar a tu función en el programa principal siempre que quites los bloques.
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_b: Qué código necesitas agregar para llegar a las esquinas?
+      courseE_farmer_functions3c1_2019_authored_hint:
+        coursee_farmer_functions3c1_2018_b: Qué código necesitas agregar para llegar a las esquinas?
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Arrastra todo el código fuera de tu ciclo 'repetir' y en la función 'ir a buscar calabazas'.
         courseE_farmer_functions4_b: No te olvides de poner el bloque que llama a las funciones de 'ir a buscar calabazas' dentro de su ciclo antes de ejecutar el código.
@@ -11433,8 +11478,10 @@ es-MX:
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: Tendrás que usar un ciclo 'mientras maiz', un ciclo 'mientras lechuga' y 'mientras calabaza' para asegurarte de que consigues todo.
       courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_a: Hay algún otro patron que puedas enlazar en este acertijo?
         courseE_farmer_functions5c_b: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas.'
       courseE_farmer_functions5c_2018_authored_hint:
+        courseE_farmer_functions5c_a: Hay algún otro patron que puedas enlazar en este acertijo?
         courseE_farmer_functions5c_b: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas.'
       courseE_farmer_functions6c_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
@@ -11442,6 +11489,10 @@ es-MX:
       courseE_farmer_functions6c_2018_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
         courseE_farmer_functions6c_c: '¡No olvides seguir buscando maiz!'
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_b: No olvides usar tu función cuando hayas terminado de crearla!
+      courseE_farmer_functions7a1_2019_authored_hint:
+        courseE_farmer_functions7a1_2018_b: No olvides usar tu función cuando hayas terminado de crearla!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: '¡No necesitas una función aquí, pero puedes hacer una si te ayuda!'
         courseE_farmer_functions7b_c: Un ciclo 'repetir hasta calabaza' puede ayudarte a llegar al final del laberinto.
@@ -15880,23 +15931,25 @@ es-MX:
         triangle_geometry_hint: 'Recuerda: Un triangulo equilátero tiene tres lados y giros o ángulos de 60 grados entre ellos!'
         repeat_pointer: Debe dibujar un lado y dar tres giros...¿Que bloque puede usar para repetir la misma instrucción varias veces?
         repeat_bottom_out: '¡Usa un bloque `repetir 3 veces`!'
+      farmer-test-lb_authored_hint:
+        hint_2: Señalando 123
       grade1_adventurer_loops10_authored_hint:
-        grade1_adventurer_loops10_a: Necesitarás tres bucles `repetir` para resolver este puzzle.
+        grade1_adventurer_loops10_a: Necesitarás tres bucles `repetir` para resolver este acertijo.
       grade1_adventurer_loops2_authored_hint:
         grade1_adventurer_loops2_a: Intenta usar un bloque de repetición para recolectar tu oro.
       grade1_adventurer_loops3_authored_hint:
-        grade1_adventurer_loops3_a: '¿Algo no está bien? Prueba usando el botón de paso para descubrir dónde están las cosas mal.'
+        grade1_adventurer_loops3_a: '¿Algo no está bien? Prueba usando el botón de paso para descubrir dónde está el problema.'
       grade1_adventurer_loops4_authored_hint:
-        grade1_adventurer_loops4_a: Intenta usar más de un bucle para hacer el trabajo.
+        grade1_adventurer_loops4_a: Intenta usar más de un bucle para completar el trabajo.
       grade1_adventurer_loops5_authored_hint:
         grade1_adventurer_loops5_a: '¿No puede imaginarse dónde las cosas empiezan a ir mal? Use el botón "Paso" para ejecutar su programa un bloque a la vez.'
       grade1_adventurer_loops6_authored_hint:
         grade1_adventurer_loops6_a: Si tiene dificultades con este puzzle, intente dibujarlo en un papel para ayudar a resolverlo.
       grade1_adventurer_loops7_challenge_authored_hint:
         grade1_adventurer_loops7_challenge_a: 'Si no puede averiguar dónde colocar los bucles de repetición, prográmalo paso a paso y busca un patrón. '
-        grade1_adventurer_loops7_challenge_b: '¿El código se siente un poco largo? Puede hacerlo mucho más corto moviendo dos de tus bucles `repetir` dentro de otro bucle.'
+        grade1_adventurer_loops7_challenge_b: '¿El código parece un poco largo? Puedes hacerlo mucho más corto moviendo dos de tus bucles `repetir` dentro de otro bucle.'
       grade1_adventurer_loops9_authored_hint:
-        grade1_adventurer_loops9_a: '¿Esto parece demasiado difícil? Divídelo en 4 pequeños problemas para que se sienta más fácil.'
+        grade1_adventurer_loops9_a: '¿Esto parece demasiado difícil? Divídelo en 4 pequeños problemas para que sea más fácil.  '
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: Si desea que el loop se repita más de 4 veces, puede cambiar el número en la parte superior del bloque.
       grade1_artist_loops2_authored_hint:
@@ -15905,9 +15958,13 @@ es-MX:
         grade1_artist_loops4_a: Arrastre un loop de "repetición", luego coloque los otros bloques dentro de él. ¿Cuántas veces necesita repetir?
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: '¡Este desafío utiliza CUATRO loops, uno tras otro!'
+        grade1_artist_loops6_b: |-
+          Observe que cada bucle hace un patrón de escalera que va en una dirección diferente. ! [] (https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         grade1_artist_loops6_c: "Los loops deberían hacer esto:\nLoo 1\n-Derecha\n-Abajo\n\nLoop 2\n-Derecha\n-Arriba\n\nLoop 3:\n-Izquierda\n-Arriba\n\n-Loop 4:\n-Izquierda\n-Abajo"
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: '¡Este desafío utiliza CUATRO loops, uno tras otro!'
+        artistLoopsK9_b: |-
+          Observe que cada bucle hace un patrón de escalera que va en una dirección diferente. ! [] (https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         artistLoopsK9_c: "Los loops deberían hacer esto:\nLoo 1\n-Derecha\n-Abajo\n\nLoop 2\n-Derecha\n-Arriba\n\nLoop 3:\n-Izquierda\n-Arriba\n\n-Loop 4:\n-Izquierda\n-Abajo"
       grade1_artist_loops7b_authored_hint:
         grade1_artist_loops7b_a: '¿Cuántas veces debes repetir el patrón para hacer la escalera?'
@@ -15985,6 +16042,8 @@ es-MX:
         2-3_Artist_Debugging_2_a: 'Pista: Cada bigote tiene 75 pixeles de largo.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: '¿Qué pasa si haces que el artista se mueva o salte hacia atrás después de que dibuje la primera línea?'
+      grade2_collector_2_authored_hint:
+        hint1: Puedes utilizar el bloque 'avanzar' o usar el bloque 'repita 4 veces' para hacer el programa más corto.
       grade2_playlab_project_6_authored_hint:
         idea1: |-
           * ¿Necesitas una idea? * ** ¿Quién está ahí? ** Haz que los personajes aparezcan con imágenes aleatorias , para que nadie sepa quién aparece a continuación. ! [] (https: // images .code.org / a56e03479801995d93ad5a4e4384a79e- image -1475340154498.gif)
@@ -16331,17 +16390,17 @@ es-MX:
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: Para dibujar un polígono regular, gire ** 360 / lados ** cada vez.
       grade5_artist_variables_triangles1_authored_hint:
-        grade5_artist_variables_triangles1_a: Para formar un ángulo interno de 60 grados en este triángulo, recuerda girar el artista 120 grados.
-        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar su código.
-        grade5_artist_variables_triangles1_c: Dentro de tu bucle, querras avanzar 50 píxeles, luego gira a la izquierda 120 grados.
+        grade5_artist_variables_triangles1_a: Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar el artista 120 grados.
+        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar tu código.
+        grade5_artist_variables_triangles1_c: Dentro de tu bucle, tienes que avanzar 50 píxeles, luego gira a la izquierda 120 grados.
       grade5_artist_variables_triangles1_2018_authored_hint:
-        grade5_artist_variables_triangles1_a: Para formar un ángulo interno de 60 grados en este triángulo, recuerda girar el artista 120 grados.
-        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar su código.
-        grade5_artist_variables_triangles1_c: Dentro de tu bucle, querras avanzar 50 píxeles, luego gira a la izquierda 120 grados.
+        grade5_artist_variables_triangles1_a: Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar el artista 120 grados.
+        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar tu código.
+        grade5_artist_variables_triangles1_c: Dentro de tu bucle, tienes que avanzar 50 píxeles, luego gira a la izquierda 120 grados.
       grade5_artist_variables_triangles1_2019_authored_hint:
-        grade5_artist_variables_triangles1_a: Para formar un ángulo interno de 60 grados en este triángulo, recuerda girar el artista 120 grados.
-        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar su código.
-        grade5_artist_variables_triangles1_c: Dentro de tu bucle, querras avanzar 50 píxeles, luego gira a la izquierda 120 grados.
+        grade5_artist_variables_triangles1_a: Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar el artista 120 grados.
+        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar tu código.
+        grade5_artist_variables_triangles1_c: Dentro de tu bucle, tienes que avanzar 50 píxeles, luego gira a la izquierda 120 grados.
       grade5_bee_for_loops10_authored_hint:
         grade5_bee_for_loops10_a: "¿Cuánto menos es 12 que 15?\n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón'?"
       grade5_bee_for_loops11_authored_hint:
@@ -16384,16 +16443,18 @@ es-MX:
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: '¡Intenta escribir los pasos en papel para encontrar una solución!'
       gradek_adventurer_loops3_authored_hint:
-        gradek_adventurer_loops3_a: Para cambiar la distancia que recorre el aventurero, cambia la cantidad de veces que se ejecuta el bucle.
-        gradek_adventurer_loops3_b: '¡No olvides que el aventurero necesita caminar hacia abajo y recoger oro después de que termine el bucle `repetir`!'
+        gradek_adventurer_loops3_a: Para cambiar qué tan lejos va e aventurero, cambia la cantidad de veces que se ejecuta el bucle.
+        gradek_adventurer_loops3_b: '¡No olvides que el aventurero necesita bajary recoger oro después de que termine el bucle `repetir`!'
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: Si usted no puede encontrar la respuesta de inmediato, trate de usar un trozo de papel para averiguar las flechas que se necesita y mirar un patrón.
       gradek_adventurer_loops5_authored_hint:
         gradek_adventurer_loops5_a: Si no puede descubrir qué viene después, intente ejecutar el código para ver dónde termina Laurel.
       gradek_adventurer_loops7_challenge_authored_hint:
-        gradek_adventurer_loops7_challenge_a: '¿El código se siente realmente largo? Intenta poner dos de tus bucles `repetir` dentro de otro bucle para hacerlo mucho más corto!'
+        gradek_adventurer_loops7_challenge_a: '¿El código parece realmente largo? Intenta poner dos de tus bucles `repetir` dentro de otro bucle para hacerlo mucho más corto!'
       gradek_adventurer_loops9_authored_hint:
         gradek_adventurer_loops9_a: Si no se puede averiguar dónde colocar los ciclos, intentar escribir el código paso a paso y buscar para los patrones.
+      gradek_artist_loops1_authored_hint:
+        gradek_artist_loops1_a: '¿No sabes cómo dibujar una línea? Empieza uniendo bloques a el bloque ''''cuando se ejecuta'' a ver qué pasa.'
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Si desea que el loop se repita más de 4 veces, puede cambiar el número en la parte superior del bloque.
       gradek_artist_loops4_authored_hint:

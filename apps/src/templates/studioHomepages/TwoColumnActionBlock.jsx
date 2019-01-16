@@ -21,10 +21,18 @@ const styles = {
     minHeight: 260,
     boxSizing: 'border-box'
   },
-  subheading: {
+  subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
     fontSize: 27,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  subHeadingSmallFont: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 25,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
@@ -57,6 +65,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
+    subHeadingSmallFont: PropTypes.bool,
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       url: PropTypes.string.isRequired,
@@ -67,7 +76,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
   };
 
   render() {
-    const { isRtl, responsiveSize, imageUrl, heading, subHeading, description, buttons } = this.props;
+    const { isRtl, responsiveSize, imageUrl, heading, subHeading, subHeadingSmallFont, description, buttons } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = (responsiveSize === 'lg') ? '50%' : '100%';
 
@@ -90,7 +99,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
           <div style={{float, width}}>
             <div style={styles.textItem}>
               {subHeading && (
-                <div style={styles.subheading}>
+                <div style={subHeadingSmallFont ? styles.subHeadingSmallFont : styles.subHeading}>
                   {subHeading}
                 </div>
               )}
@@ -183,13 +192,14 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-posthoc.jpg')}
-        subHeading={i18n.specialAnnouncementHeadingPostHoc2018()}
-        description={i18n.specialAnnouncementDescriptionPostHoc2018()}
+        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg')}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
+        subHeadingSmallFont={true}
+        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}
         buttons={[
           {
-            url: pegasus('/yourschool'),
-            text: i18n.learnMore()
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.joinUs()
           }
         ]}
       />
