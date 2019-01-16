@@ -1972,7 +1972,7 @@ es-MX:
             'Farmer: While Loops':
               name: 'Granjero: Bucles Mientras'
         csd3-2017:
-          description_short: "Programación"
+          description_short: Programación
           stages:
             Booleans and Conditionals:
               name: Booleanos y condicionales
@@ -4439,3 +4439,5 @@ es-MX:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras binarias
+        gamelab:
+          title: Laboratorio de juegos

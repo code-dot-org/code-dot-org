@@ -221,9 +221,9 @@ sk:
         Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: Sem pridaj blok posuň sa
+        Infinity_move_right_runbutton: Sem pridaj blok posuň
       Infinity_repeat_callout:
-        Infinity_repeat_callout: Sem umiestni bloky Posunúť
+        Infinity_repeat_callout: Sem umiestni bloky "posuň"
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Vyskúšajte použitie nového bloku "komentovať" v tejto sekcií a zanechajte si poznámky vo vnútri Vášho programu!
       InspirationalArtwork_2018_callout:
@@ -415,7 +415,7 @@ sk:
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Toto číslo znamená počet blokov, ktoré môžete použiť v tejto hre.
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
       course3_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: Pokračujte v behu programu pridaním ďaľšieho kódu na jeho spodok.
         courseE_artist_functions_challenge1_callout2: Ak sa Vám nepáči tento dizajn, zmeňte ho na čo len chcete!
@@ -641,11 +641,11 @@ sk:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete trochu pomôcť? Kliknite sem pre naše nové VIDEONÁPOVEDY!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge2_2018_callout:
-        courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge2_2019_callout:
-        courseD_bee_conditionals_challenge2_1: Použite túto slučku pre pozbieranie všetkého nektáru (alebo medu) z jednej kvetinky (alebo medového plástu).
+        courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Skús zopakovať bloky, ktoré posúvajú včelu dopredu pomocou tohoto cyklu.
       courseD_bee_debugging_challenge1_callout:
@@ -906,11 +906,11 @@ sk:
       courseF_bee_for3_callout:
         courseF_bee_for3_1: Cyklus "for" je taký široký, že sme zmenili panel nástrojov do módu Kategórie, ktorý nám ušetrí miesto. Nový cyklus "for" nájdeš v ňom!
       courseF_bee_for4_callout:
-        courseF_bee_for4_1: Slučku "for" nájdete tu!
+        courseF_bee_for4_1: Cyklus "for" nájdete tu!
       courseF_bee_for4_2018_callout:
-        courseF_bee_for4_1: Slučku "for" nájdete tu!
+        courseF_bee_for4_1: Cyklus "for" nájdete tu!
       courseF_bee_for4_2019_callout:
-        courseF_bee_for4_1: Slučku "for" nájdete tu!
+        courseF_bee_for4_1: Cyklus "for" nájdete tu!
       courseF_bee_for9_callout:
         courseF_bee_for9_1: Blok "math" nájdete tu.
       courseF_bee_for9_2018_callout:

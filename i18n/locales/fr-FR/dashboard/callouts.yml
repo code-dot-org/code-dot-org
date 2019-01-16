@@ -1,6 +1,26 @@
 fr:
   data:
     callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: L’artiste n’a pas un bouton « étape », mais tu peux faire glisser le curseur pour voir ton programme s’exécuter plus attentivement.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Les fleurs mauves peuvent avoir 1 ou 0 nectar...mais tu ne le sauras pas à moins d’exécuter le code !
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      AppLab Intro 2 - Edit place1 2_callout:
+        dragTextAreaIn: Clique et fais glisser une « zone de texte » sur l’écran
+        screenSelectorCallout3: Sélectionne l’écran que tu as créé
+      AppLab Intro 2 - Edit place1_callout:
+        screenSelectorCallout2: Ceci est le sélecteur d’écran
+        changePlace1ID: Change l’ID de ton écran ici.
+      AppLab Intro 2 - Edit startScreen_callout:
+        applabIntro2_1: Clique sur le titre de ton appli
+        appLabIntro2_designMenu: Utilise ces menus pour changer le « texte » de ton appli
+        appLabIntro2_textColor: Défile vers le bas pour changer la « couleur du texte »
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 colorLeds intensity_2018_callout:
@@ -96,6 +116,14 @@ fr:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail.
       Function intro Ryan_2019_callout:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail.
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Geometric Sun_2019_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
       Infinity_move_directions_callout:
@@ -173,6 +201,18 @@ fr:
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Les fleurs mauves peuvent avoir 1 ou 0 nectar...mais tu ne le sauras pas à moins d’exécuter le code !
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter une commande pour avancer ?
       Underground Avoiding Lava_2018_callout:
@@ -185,6 +225,22 @@ fr:
         craft_what_is_iron: Minez ce fer !
       Underground Iron_2019_callout:
         craft_what_is_iron: Minez ce fer !
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      courseD_bee_conditionals2_2019_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
+      courseD_bee_conditionals_challenge2_2019_callout:
+        courseD_bee_conditionals_challenge2_1: Utilise cette boucle pour collecter tout le nectar (ou miel) d’une fleur (ou d’un gâteau de miel).
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle » et change la taille.
       frozen cross rotate_callout:
@@ -242,9 +298,21 @@ fr:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       frozen square snowflake_test_callout:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: Les fleurs mauves peuvent avoir 1 ou 0 nectar...mais tu ne le sauras pas à moins d’exécuter le code !
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta fonction
         add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter», et glisse-le ensuite dans la définition de ta fonction.
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons de neige !
       grade4_frozen_functions3_callout:
@@ -263,6 +331,8 @@ fr:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       grade4_frozen_square_loop3_callout:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Tous tes blocs favoris sont maintenant organisés en catégories. Clique sur ces mots pour voir où tout est rangé !
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta fonction
         add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter», et glisse-le ensuite dans la définition de ta fonction.

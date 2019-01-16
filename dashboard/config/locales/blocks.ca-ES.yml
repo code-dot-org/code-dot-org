@@ -815,19 +815,91 @@ ca:
             '"right"': dret
             '"space"': espai
       craft_ifPath:
+        text: |-
+          si camí {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": endavant
+            "'right'": a la dreta
+            "'left'": a l'esquerra
       craft_ifStandingOn:
+        text: |-
+          si es queda dret a {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": corall blau
+            "'redCoralBlock'": corall vermell
             "'sand'": sorra
+            "'wool_blue'": aigües profundes
             "'planksOak'": tauló de roure
+            "'seaLantern'": llanterna de mar
       craft_ifStandingOnLimit:
+        text: |-
+          si es queda dret a {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sorra
+            "'darkPrismarine'": prismarina fosca
+            "'seaLantern'": llanterna de mar
       craft_moveForward:
         text: avança
+      craft_placeBlock:
+        text: posar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': roure clivellat
+            '"strippedDarkOak"': roure fosc clivellat
+            '"stoneBricks"': maons de pedra
+            '"mossyStoneBricks"': maons de pedra amb molsa
+            '"crackedStoneBricks"': maons de pedra esquerdats
+            '"decorativeStoneBricks"': maons de pedra decoratius
+            '"blueCoralBlock"': bloc de corall blau
+            '"pinkCoralBlock"': bloc de corall rosa
+            '"magentaCoralBlock"': bloc de corall magenta
+            '"redCoralBlock"': bloc de corall vermell
+            '"yellowCoralBlock"': bloc de corall groc
+            '"blueDeadCoralBlock"': bloc de corall mort blau
+            '"pinkDeadCoralBlock"': bloc de corall mort rosa
+            '"magentaDeadCoralBlock"': bloc de corall mort magenta
+            '"readDeadCoralBlock"': bloc de corall mort vermell
+            '"yellowDeadCoralBlock"': bloc de corall mort groc
+            '"prismarine"': prismarina
+            '"darkPrismarine"': prismarina fosca
+            '"seaLantern"': llanterna de mar
+            '"packedIce"': bloc de gel
+            '"blueIce"': gel blau
+            '"blackConcrete"': formigó negre
+            '"seaGrass"': herba de mar
+            '"kelp"': algues
+            '"polishedGranite"': granit polit
+      craft_placePrismarine:
+        text: posar la prismarina
       craft_placeTorch:
         text: posa una torxa
+      craft_repeatUntilConduit:
+        text: |-
+          repetir fins acabar el conducte
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repetir fins que estigui complert
+          {STATEMENT}
+      craft_spawnEntity:
+        text: fer néixer {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': Bacallà
+            '"dolphin"': Dofí
+            '"salmon"': Salmó
+            '"seaTurtle"': Tortuga de mar
+            '"squid"': Calamar
+            '"tropicalFish"': Peixos tropicals
+      craft_turn:
+        text: girar {DIR}
+        options:
+          DIR:
+            right: dreta ↻
+            left: esquerra ↺

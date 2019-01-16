@@ -4079,3 +4079,7 @@ ro:
               name: Brăţări Binare
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+        gamelab:
+          title: Laborator de jocuri
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"

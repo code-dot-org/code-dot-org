@@ -754,7 +754,7 @@ sr:
             'Farmer: While Loops':
               name: 'Фармер: Условне петље'
         csd3-2017:
-          description_short: "Programming"
+          description_short: Programming
           stages:
             Velocity:
               name: Брзина

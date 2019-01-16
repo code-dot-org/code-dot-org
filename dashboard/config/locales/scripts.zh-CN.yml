@@ -9230,3 +9230,5 @@ zh-CN:
               name: 二进制的手镯
         csp-mid-survey:
           description_audience: 计算机科学原理学生
+        gamelab:
+          title: 游戏实验室

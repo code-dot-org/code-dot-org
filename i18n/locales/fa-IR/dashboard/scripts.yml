@@ -862,7 +862,7 @@ fa:
             'Farmer: While Loops':
               name: 'کشاورز: حلقه‌های "در حالیکه"'
         csd3-2017:
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           stages:
             Functions:
               name: توابع
@@ -1522,3 +1522,5 @@ fa:
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Binary Bracelets:
               name: دستبند دودویی
+        gamelab:
+          title: کارگاه بازی سازی

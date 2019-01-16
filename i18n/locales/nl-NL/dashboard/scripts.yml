@@ -1175,7 +1175,7 @@ nl:
             'Farmer: While Loops':
               name: 'Boer: Zolang-lussen'
         csd3-2017:
-          description_short: "Programmeren"
+          description_short: Programmeren
           stages:
             Velocity:
               name: Snelheid
@@ -1959,3 +1959,5 @@ nl:
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
             Binary Bracelets:
               name: Binaire armbanden
+        gamelab:
+          title: Game Lab

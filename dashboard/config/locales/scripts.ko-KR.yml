@@ -1694,3 +1694,5 @@ ko:
               name: '실시간 알고리즘: 종이 비행기'
             Binary Bracelets:
               name: 2진 팔찌
+        gamelab:
+          title: Game Lab

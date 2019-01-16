@@ -824,7 +824,7 @@ da:
             'Farmer: While Loops':
               name: 'Landmand: Når sløjfer'
         csd3-2017:
-          description_short: "Programmering"
+          description_short: Programmering
           stages:
             Functions:
               name: Funktioner
@@ -1433,6 +1433,12 @@ da:
           stages:
             Artist:
               name: Kunstner
+        aquatic:
+          stages:
+            Aquatic:
+              name: Akvatisk
+          title: 'Minecraft: Akvatisk rejse'
+          description_short: Minecraft er tilbage med en splinterny aktivitet for En Times Kodning!
         dance--draft:
           stages:
             Dance Party:
@@ -1521,3 +1527,5 @@ da:
               name: 'Real-life algoritmer: Papir fly'
             Binary Bracelets:
               name: Binære armbånd
+        gamelab:
+          title: Spil Laboratoriet
