@@ -415,12 +415,14 @@ module Api::V1::Pd
       post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: true}}
       @csp_facilitator_application.reload
 
-      expected_log = [{
+      expected_log = [
+        {
           title: 'Application is locked',
           changing_user_id: @workshop_admin.id,
           changing_user_name: @workshop_admin.name,
           time: Time.zone.now
-        }]
+        }
+      ]
 
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
 
@@ -443,12 +445,14 @@ module Api::V1::Pd
       post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: false}}
       @csp_facilitator_application.reload
 
-      expected_log = [{
+      expected_log = [
+        {
           title: 'Application is unlocked',
           changing_user_id: @workshop_admin.id,
           changing_user_name: @workshop_admin.name,
           time: Time.zone.now
-        }]
+        }
+      ]
 
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
 
