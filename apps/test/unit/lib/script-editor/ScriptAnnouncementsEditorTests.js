@@ -122,7 +122,7 @@ describe('ScriptAnnouncementsEditor', () => {
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce').dive().find('select').simulate('change', { target: { value: 'bullhorn' }});
+    wrapper.find('Announce').dive().find('.uitest-type').simulate('change', { target: { value: 'bullhorn' }});
     assert.equal(wrapper.state('announcements')[0].type, 'bullhorn');
   });
 
