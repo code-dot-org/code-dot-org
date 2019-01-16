@@ -103,20 +103,20 @@ describe('ScriptOverviewHeader', () => {
   it('displays old teacher announcement for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    announcements={[fakeOldTeacherAnnouncement]}
-    />
-  );
+        {...defaultProps}
+        announcements={[fakeOldTeacherAnnouncement]}
+      />
+    );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 1);
   });
 
   it('does not display old teacher announcement for student', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    viewAs={ViewType.Student}
-    announcements={[fakeOldTeacherAnnouncement]}
-    />
+        {...defaultProps}
+        viewAs={ViewType.Student}
+        announcements={[fakeOldTeacherAnnouncement]}
+      />
   );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 0);
   });
@@ -136,11 +136,11 @@ describe('ScriptOverviewHeader', () => {
   it('has non-verified and provided teacher announcements if necessary', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    hasVerifiedResources={true}
-    isVerifiedTeacher={false}
-    announcements={[fakeTeacherAnnouncement, fakeTeacherAndStudentAnnouncement]}
-    />
+        {...defaultProps}
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        announcements={[fakeTeacherAnnouncement, fakeTeacherAndStudentAnnouncement]}
+      />
   );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 3);
   });
@@ -148,13 +148,13 @@ describe('ScriptOverviewHeader', () => {
   it('has only teacher announcements', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    announcements={[fakeStudentAnnouncement, fakeTeacherAndStudentAnnouncement, fakeTeacherAnnouncement]}
-    />
+        {...defaultProps}
+        announcements={[fakeStudentAnnouncement, fakeTeacherAndStudentAnnouncement, fakeTeacherAnnouncement]}
+      />
   );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 2);
     wrapper.find('ScriptAnnouncements').props().announcements.forEach((node) => {
-      expect((node.visibility == NotificationType.teacher) || (node.visibility == NotificationType.teacherAndStudent));
+      expect((node.visibility === NotificationType.teacher) || (node.visibility === NotificationType.teacherAndStudent));
     });
   });
 
@@ -162,12 +162,12 @@ describe('ScriptOverviewHeader', () => {
   it('has student announcement if necessary', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    hasVerifiedResources={true}
-    isVerifiedTeacher={false}
-    viewAs={ViewType.Student}
-    announcements={[fakeStudentAnnouncement]}
-    />
+        {...defaultProps}
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        viewAs={ViewType.Student}
+        announcements={[fakeStudentAnnouncement]}
+      />
   );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 1);
   });
@@ -175,16 +175,16 @@ describe('ScriptOverviewHeader', () => {
   it('has all student announcements but no teacher announcements if necessary', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
-    {...defaultProps}
-    hasVerifiedResources={true}
-    isVerifiedTeacher={false}
-    viewAs={ViewType.Student}
-    announcements={[fakeStudentAnnouncement, fakeTeacherAndStudentAnnouncement, fakeTeacherAnnouncement]}
-    />
+        {...defaultProps}
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        viewAs={ViewType.Student}
+        announcements={[fakeStudentAnnouncement, fakeTeacherAndStudentAnnouncement, fakeTeacherAnnouncement]}
+      />
   );
     assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 2);
     wrapper.find('ScriptAnnouncements').props().announcements.forEach((node) => {
-      expect((node.visibility == NotificationType.student) || (node.visibility == NotificationType.teacherAndStudent));
+      expect((node.visibility === NotificationType.student) || (node.visibility === NotificationType.teacherAndStudent));
     });
   });
 });
