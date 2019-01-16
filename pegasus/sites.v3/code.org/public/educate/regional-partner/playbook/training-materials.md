@@ -22,6 +22,11 @@ ________________
 <br/>
 ## Virtual Trainings
 
+January 2019
+
+- January 9 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/play/2n-IjhW8o7xCjYAGXY2BpMOx38v0SCA3bsd7tIc1AgLuvc1uNSr4nGNiZbitNcTI?startTime=1547064114000), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
+- January 11 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/share/_CtI7t0LlClt0aGOGRdMwyaFpnK_QhTvR7Cn0NzQ9MY), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
+
 November 2018
 
 - November 14 Facilitator Application Process Webinar ([Recording](https://code.zoom.us/recording/share/s-m98QxMkDX-s3u9ISax4qv9RNWRBJclxHfNuZR3yPuwIumekTziMw), [Slides](https://docs.google.com/presentation/d/1MbX2mxZBSVFMPT6F7XZ3esyRhHwQ7pcvMnTCjksSRVo/edit#slide=id.g14d6c3396a_0_0))

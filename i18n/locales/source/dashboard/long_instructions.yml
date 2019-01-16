@@ -10511,7 +10511,7 @@ en:
       CSD U3 game choose background_2018: |
         # Choose your Backgrounds
 
-        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 15 Level 11](/s/csd3/stage/15/puzzle/11).
+        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](../../19/puzzle/11).
 
         After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
       CSD U3 game create sprites: |
@@ -10553,7 +10553,7 @@ en:
       CSD U3 game display boards_2018: |
         # Display Boards
 
-        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 12 Puzzle 9](../../../stage/12/puzzle/9) for an example of how to make a scoreboard.
+        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](../../16/puzzle/9) for an example of how to make a scoreboard.
 
         For each display board:
         * Create a function to display the information
@@ -17400,7 +17400,7 @@ en:
 
 
       CSPU5_Debugging predict unexpected behavior - two onEvents to one ID: "# Debugging Unexpected Behavior\n\n## Predict - Observe - Reflect\n\nTo understand a new piece of code good programmers often try to **first make a prediction about what will happen before running the program**. \n\nBy forcing yourself to make a prediction (it doesn't matter if you're right or not) you are immediately alerted to any **unusual or unexpected behavior** and you can ask yourself, *\"Huh? why did it do that?  Was that supposed to happen?\"*  It might not be an error, but you gain invaluable insight and actually **learn faster**.\n\n**Predict:** For the code that is here, what will happen when the \"Click Me\" button is clicked? \n\n  * **Study the code** - This program has **two event handlers** listening for events on the same button?\n  * **Force yourself to make a prediction!** - \"I don't know\" is not a prediction!. \n\nHere are some options to think about:\n\n* There will be an error in the console immediately after hitting run\n* There will be an error in the console but not until you hit the button\n* Program does nothing\n* turtle only moves forward\n* turtle only turns left\n* turtle move forward *then* turn left \n* turtle turn left *then* move forward?\n* something else? \n\n**Observe:** Once you've made a prediction, close these instructions and **run the program** to observe what happens.\n\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Talk about it with a classmate and experiment with the code to make sure you understand what is happening."
-      CSPU5_Debugging predict unexpected behavior - two onEvents to one_2018: "# Debugging Unexpected Behavior\n\n## Predict - Observe - Reflect\n\nTo understand a new piece of code good programmers often try to **first make a prediction about what will happen before running the program**. \n\nBy forcing yourself to make a prediction (it doesn't matter if you're right or not) you are immediately alerted to any **unusual or unexpected behavior** and you can ask yourself, *\"Huh? why did it do that?  Was that supposed to happen?\"*  It might not be an error, but you gain invaluable insight and actually **learn faster**.\n\n**Predict:** For the code that is here, what will happen when the \"Click Me\" button is clicked? \n\n  * **Study the code** - This program has **two event handlers** listening for events on the same button?\n  * **Force yourself to make a prediction!** - \"I don't know\" is not a prediction!. \n\nHere are some options to think about:\n\n* There will be an error in the console immediately after hitting run\n* There will be an error in the console but not until you hit the button\n* Program does nothing\n* turtle only moves forward\n* turtle only turns left\n* turtle move forward *then* turn left \n* turtle turn left *then* move forward?\n* something else? \n\n**Observe:** Once you've made a prediction, close these instructions and **run the program** to observe what happens.\n\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Talk about it with a classmate and experiment with the code to make sure you understand what is happening."
+      CSPU5_Debugging predict unexpected behavior - two onEvents to one_2018: "# Debugging Unexpected Behavior\n\n## Predict - Observe - Reflect\n\nTo understand a new piece of code good programmers often try to **first make a prediction about what will happen before running the program**. \n\nBy forcing yourself to make a prediction (it doesn't matter if you're right or not) you are immediately alerted to any **unusual or unexpected behavior** and you can ask yourself, *\"Huh? why did it do that?  Was that supposed to happen?\"*  It might not be an error, but you gain invaluable insight and actually **learn faster**.\n\n**Predict:** For the code that is here, what will happen when the \"Forward!\" button is clicked? \n\n  * **Study the code** - This program has **two event handlers** listening for events on the same button?\n  * **Force yourself to make a prediction!** - \"I don't know\" is not a prediction!. \n\nHere are some options to think about:\n\n* There will be an error in the console immediately after hitting run\n* There will be an error in the console but not until you hit the button\n* Program does nothing\n* turtle only moves forward\n* turtle only turns left\n* turtle move forward *then* turn left \n* turtle turn left *then* move forward?\n* something else? \n\n**Observe:** Once you've made a prediction, close these instructions and **run the program** to observe what happens.\n\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Talk about it with a classmate and experiment with the code to make sure you understand what is happening."
       CSPU5_FinalizeChaserGame: |+
         # Add an Image and Make a Chaser Game!
         <img src="https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif" style="float: right">
@@ -21337,6 +21337,76 @@ en:
         Now that we've created a simple game, take some time to explore the environment on your own and add to your game. You'll notice that there are a bunch of new blocks available to you in the toolbox - take a look around and try some out!
       'GameLab Workshop: Draw Loop Shapes': "# Experiment with the Draw Loop\n\nHere's a simple app that we've slowed down by changing the _frame rate_ (the number of times the draw loop is run each second).\n\nWith a neighbor:\n\n* Read through the code and discuss what you think it will do\n* Run and observe the program\n* Try reordering the blocks to see how it impacts the drawing\n\t* Can you make the rectangle appear above the circle?\n    * What happens if you place one of the commands before or after the draw loop?\n    * Try adding some new shapes to the program"
       Gamelab AllTheThings Embed Level: "# How Many Counter Variables?\n\nYou can use counter variables (`x = x + 1` , `x = x - 1` , `x = x + 0.5`, etc.) to animate a scene. What happens when scenes start to get larger and more complicated? \n\nWatch this animation. With a partner: \n\n* Decide how many counter variables you would need to create this scene\n* Decide what you would name your counter variables\n* **Draw a Labels-Values-Connectors** diagram of your variables at the first frame of this scene. Don't worry about getting the values exactly correct.\n* Share your answer with another group **and be ready to share your ideas with the class**"
+      Gamelab StartScreen Change State: |-
+        # Changing the State
+
+        Now that you can display a different screen according to the state of your program, you will need a way to change between states.  To go from the "starting" state to the "playing" state, you can have the user press the "s" key.  You'll **only** want the program to check for the key press when the program is in the "starting" state, so your code for this will go inside the "starting" conditional.
+
+        ## Do this
+        * Inside the `if` statement that checks for "starting", add in a new `if` statement that checks whether the user has pressed the "s" key.  (`if (keyDown("s")) {`)
+        * Inside your new `if` statement, set the value of your `gameState` variable to "playing". (`gameState = "playing";`)
+        * Test the code by starting the game and pressing "s".  The game should start playing after the key is pressed.
+
+        If the game isn't starting on the start screen, double check that when the `gameState` variable is created at the beginning of the program, its value is "starting".  (`var gameState = "starting";)
+      Gamelab StartScreen Check State: |
+        # Checking Game State
+
+        Now that you have your game state stored in a variable, you can check it to determine what should be displayed.  This should happen inside the draw loop, since it's something that will change as the program is being run.  The program should check whether the game is in the "playing" state, and only run the program if it is.  We can worry about the other states later.
+
+        ## Do This
+        * Inside the draw loop, add a conditional (`if` statement).
+        * For the condition, check if `gameState == "playing"`.
+        * Move the rest of the code from the draw loop inside the `if` statement, so it only runs if the game is "playing".
+        * Run the program.  Nothing should happen because the game is still in the "starting" state.
+        * Go back to where you set the value of your `gameState` variable and change it from "starting" to "playing".
+        * Run the game again, and it should play normally, because it is now in the "playing" state.
+        * Change the value of the variable back to "starting".
+
+        (It is important to find ways to check your code as you go, rather than wait until the end of many complex changes to run it.  By checking both the playing and starting states, you know that your conditional is working properly and that the game should play while in the "playing" state.)
+      Gamelab StartScreen Check States: |-
+        # Check all States
+
+        Right now the only state your program can deal with is "playing", but you can add more conditionals to account for the other three states.
+
+        ## Do this
+        * Inside the draw loop, add in three more `if` statements that check for `gameState == "starting"`, `gameState == "won"`, and `gameState == "lost"`, respectively.
+        * Inside each `if` statement, add code that will draw text to the screen, so you can see the results of the different states.  You may also want to use `drawSprites` so you can see the background image and the player sprites, but make sure you are drawing the text on top of the sprites.
+        * Check your code by running the program in the different states.  (Don't worry about making them perfect yet, just make sure that the conditionals are working as they should.)
+
+        In order to keep track of your code, you might find it useful to create a function for each of the different text displays, then call those functions inside the conditionals.
+      Gamelab StartScreen Intro: |-
+        # Start and End Screens
+        This tutorial will teach you how to make start and end screens in Game Lab, as well as restart the game from the end screen.
+
+        Hit run to play the game on the left.  Follow the instructions on the start screen to play.  Once the game is over, follow the instructions on the end screen to restart the game.
+
+        In the next bubble, you'll see the code for game play and start to add your own start and end screens.
+
+        ## Start Screen
+
+        The start screen is the introductory screen that appears before the user starts playing the game.  It usually has the title of the game and some basic instructions for playing.  It might also include the game developer.
+
+        ## End Screen
+
+        The end screen appears after the user has won or lost the game.  It sometimes includes the final score, player rankings or other information.  It can also have an option to play the game again.
+      Gamelab StartScreen State: |
+        # Game State Variable
+
+        Our sample game had four different scenarios (or **states**) that we need to keep track of in order to display the right screen: "starting", "playing", "won", and "lost".  The first step in adding a start or end screen to the game is creating a variable to keep track of any changes in the state of the game.
+
+        ## Do This
+        * Declare a variable called `gameState` at the beginning of the program.  (A good place to do this would be near where `score` and `lives` are declared.
+        * Set the initial value of  your `gameState` variable to "starting"
+
+        (Because you are not using this variable yet, you will see a warning triangle next to the line where it is declared.  It also will not affect how the program runs.)
+      Gamelab StartScreen base code: |-
+        # Game Code
+
+        This is the code for the game without the start and end screens.  The function `gameStatus` (called on line 43 and defined on line 208) checks whether the user has won or lost, but it only adds a text message to the screen.  Gameplay also continues even after the game is over.
+
+        ## Do This
+        Read the code, in particular the code before the draw loop (lines 1-24), inside the draw loop (lines 27-43), and inside the `gameStatus` function (lines 209-224).  It's okay if you don't understand everything in the game, but you should see that the code before the draw loop sets up the sprites, and the code inside the draw loop controls the gameplay.
+      Gamelab StartScreen template: "==Template for Start Screen Tutorial=="
       Geometric Pattern: "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!"
       Geometric Sun: "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!"
       Geometric Sun_2018: "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!"
@@ -29137,7 +29207,7 @@ en:
       U5 if-else dropdown movie checker: "<img src=\"https://images.code.org/38b037a468dd7a9df53ce29b5b720a03-image-1479852997408.gif\" style=\"float: right\">\n\n## You Try It\n\nThis example is very similar to the worked example on the previous page - it is a version of the movie age checker that uses a dropdown.\n\nWe've provided the starting UI elements, including the dropdown - but none of the code.\n\n**Do this:**\nUsing the examples on the previous page as a guide...\n\n* Add an event handler for the *dropdown menu that triggers on *\"change\"*.\n* Add an if statement to check if the age chosen in the dropdown is `>=` to 13 and set the text in the *result_label*\n\t* if the age is 13 or over set the text to \"You are old enough to see a PG-13 movie alone\"\n    * Otherwise, set the text to \"You are not old enough to see a PG-13 movie alone\"\n\n**Tip:** Use `getNumber(id)` instead of `getText(id)` to get the value out of the dropdown\n\n* One major difference from the example is that we want to compare the value of the dropdown to a number using `>=` rather than with `==`\n* You should to use `getNumber(\"age_dropdown\")` to extract the value *as a number rather than text*. \n* This is the same reason we use `promptNum` instead of `prompt` for simple console examples.\n* It will still work if you use `getText` but isn't good form."
       U5 if-else dropdown movie checker_2018: "<img src=\"https://images.code.org/38b037a468dd7a9df53ce29b5b720a03-image-1479852997408.gif\" style=\"float: right\">\n\n## You Try It\n\nThis example is very similar to the worked example on the previous page - it is a version of the movie age checker that uses a dropdown.\n\nWe've provided the starting UI elements, including the dropdown - but none of the code.\n\n**Do this:**\nUsing the examples on the previous page as a guide...\n\n* Add an event handler for the *dropdown menu that triggers on *\"change\"*.\n* Add an if statement to check if the age chosen in the dropdown is `>=` to 13 and set the text in the *result_label*\n\t* if the age is 13 or over set the text to \"You are old enough to see a PG-13 movie alone\"\n    * Otherwise, set the text to \"You are not old enough to see a PG-13 movie alone\"\n\n**Tip:** Use `getNumber(id)` instead of `getText(id)` to get the value out of the dropdown\n\n* One major difference from the example is that we want to compare the value of the dropdown to a number using `>=` rather than with `==`\n* You should to use `getNumber(\"age_dropdown\")` to extract the value *as a number rather than text*. \n* This is the same reason we use `promptNum` instead of `prompt` for simple console examples.\n* It will still work if you use `getText` but isn't good form."
       U5 if-else simple movie ratings example: "## You Try It\n\n**Recreate the simple movie age example from the video.**\n\n* We've provided the first line to prompt the user to enter their age.\n* Add and `if-else` statement that checks to see if the age is `>=` 13 and \n* Use `console.log` to display appropriate messages\n\nHere is pseudocode for what you should add\n\n```\nIF age >= 13\n    DISPLAY \"You can see a PG-13 movie alone\"\nELSE\n    DISPLAY \"You are not old enough to see a PG-13 movie alone\"\n```\n\n\n"
-      U5 if-else simple movie ratings example_2018: "## You Try It\n\n**Recreate the simple movie age example from the video.**\n\n* We've provided the first line to prompt the user to enter their age.\n* Add and `if-else` statement that checks to see if the age is `>=` 13 and \n* Use `console.log` to display appropriate messages\n\nHere is pseudocode for what you should add\n\n```\nIF age >= 13\n    DISPLAY \"You can see a PG-13 movie alone\"\nELSE\n    DISPLAY \"You are not old enough to see a PG-13 movie alone\"\n```\n\n\n"
+      U5 if-else simple movie ratings example_2018: "## You Try It\n\n**Recreate the simple movie age example from the video.**\n\n* We've provided the first line to prompt the user to enter their age.\n* Add an `if-else` statement that checks to see if the age is `>=` 13 and \n* Use `console.log` to display appropriate messages\n\nHere is pseudocode for what you should add\n\n```\nIF age >= 13\n    DISPLAY \"You can see a PG-13 movie alone\"\nELSE\n    DISPLAY \"You are not old enough to see a PG-13 movie alone\"\n```\n\n\n"
       U5 if-else weeekend challenge: "<img src=\"https://images.code.org/42591321cf2bf9e4b90e89e0ea613c9f-image-1479909970655.gif\" style=\"float: right\">\n\n## Challenge: It's the weekend!\n\n**Make an app tells you whether to stay home or go to school based on what day of the week it is.**\n\n\nIn this challenge you will:\n\n* Add your own dropdown menu in design mode\n* Add an event handler for the dropdown\n* Write an if-statement that's slightly tricky\n\n## Do this:\n\n* In Design Mode **add a dropdown** menu and fill it with the days of the week: *Monday, Tuesday,...,Sunday*\n* **Add an event handler** for that dropdown that activates on *\"change\"*\n* **Add an `if-else` statement** to the event handler that checks which day was selected and...\n\n\t* **If** the day selected was a weekend day (*Saturday* or *Sunday*) then display a message that says \"It's the weekend! Stay home!\"\n\n\t* **Otherwise** (the day is a weekday) display a message that says \"It's a weekday. Go to school\".\n* Your message should be displayed by setting the text of the *msg_label* provided in design mode.\n\n## Testing:\n\n* Once you have something functional, make sure you test *every* day of the week to verify the output is correct\n* The if-statement here is trickier than before.\n\n<details>\n\n<summary>\n\nHINT: [click to expand]\n\n</summary>\n\n<br>\n\n<li>The trick here is that, unless you want to check all seven days with individual if-statements, you need to <strong>nest</strong> one if-statement inside another.</li>\n<li>The reason is that in order to know it's a weekday you need to know <em>both</em> that it's NOT Sunday <em>and</em> that it's not Saturday either.  That's two boolean conditions.</li>\n<li>Here is the skeleton of an if-else structure that will work.  Notice that the the if-statement that checks for Sunday is <em>inside</em> the else clause of the statement that checks for Saturday</li>\n\n\n<pre>\n\nIF it's saturday\n   ...\nELSE\n   IF it's sunday\n      ...\n   ELSE\n      ...\n</pre>\n\n\n</details>\n\n"
       U5 if-else weeekend challenge_2018: "<img src=\"https://images.code.org/42591321cf2bf9e4b90e89e0ea613c9f-image-1479909970655.gif\" style=\"float: right\">\n\n## Challenge: It's the weekend!\n\n**Make an app tells you whether to stay home or go to school based on what day of the week it is.**\n\n\nIn this challenge you will:\n\n* Add your own dropdown menu in design mode\n* Add an event handler for the dropdown\n* Write an if-statement that's slightly tricky\n\n## Do this:\n\n* In Design Mode **add a dropdown** menu and fill it with the days of the week: *Monday, Tuesday,...,Sunday*\n* **Add an event handler** for that dropdown that activates on *\"change\"*\n* **Add an `if-else` statement** to the event handler that checks which day was selected and...\n\n\t* **If** the day selected was a weekend day (*Saturday* or *Sunday*) then display a message that says \"It's the weekend! Stay home!\"\n\n\t* **Otherwise** (the day is a weekday) display a message that says \"It's a weekday. Go to school\".\n* Your message should be displayed by setting the text of the *msg_label* provided in design mode.\n\n## Testing:\n\n* Once you have something functional, make sure you test *every* day of the week to verify the output is correct\n* The if-statement here is trickier than before.\n\n<details>\n\n<summary>\n\nHINT: [click to expand]\n\n</summary>\n\n<br>\n\n<li>The trick here is that, unless you want to check all seven days with individual if-statements, you need to <strong>nest</strong> one if-statement inside another.</li>\n<li>The reason is that in order to know it's a weekday you need to know <em>both</em> that it's NOT Sunday <em>and</em> that it's not Saturday either.  That's two boolean conditions.</li>\n<li>Here is the skeleton of an if-else structure that will work.  Notice that the the if-statement that checks for Sunday is <em>inside</em> the else clause of the statement that checks for Saturday</li>\n\n\n<pre>\n\nIF it's saturday\n   ...\nELSE\n   IF it's sunday\n      ...\n   ELSE\n      ...\n</pre>\n\n\n</details>\n\n"
       U5 if-else-if movie example: |+
@@ -32287,6 +32357,10 @@ en:
       courseD_scrat_ramp7_2018: Help Scrat get to the acorn!
       courseD_scrat_ramp8: "**Challenge:** Use what you've learned to get Scrat to the acorn!"
       courseD_scrat_ramp8_2018: "**Challenge:** Use what you've learned to get Scrat to the acorn!"
+      courseE_aboutme_1_predict: |-
+        **Make a prediction:** This is Ritchie. He likes to talk!
+
+        Look at the code below, as well as the **text box** below the canvas. What do you think will happen if you press "▶ Run"?
       courseE_artist_concept1: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept1_2018: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."
       courseE_artist_concept1_2019: "Recreate this image. \n\n- The hexagons have sides of 50 pixels\n- The hexagons are 100 pixels apart\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels."

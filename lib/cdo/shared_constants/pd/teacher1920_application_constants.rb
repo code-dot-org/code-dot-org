@@ -153,7 +153,7 @@ module Pd
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
         total_score: "Bonus Points",
-        notes: "Notes",
+        notes: "General Notes",
         notes_2: "Notes 2",
         notes_3: "Notes 3",
         notes_4: "Notes 4",

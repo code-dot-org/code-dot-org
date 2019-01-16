@@ -45,11 +45,11 @@ Passing an AP Exam can help you <strong>skip introductory courses</strong> so yo
 Steps <strong>YOU</strong> can take today:
 <br>
 <br>
-1. Talk to your school's AP Coordinator. 
+1. Talk to your school's AP coordinator. 
 <br>
 2. Ask about sign up deadlines and financial assistance options in your district.
 <br>
-3. Sign up!
+3. Register to take the exam (Or find out your school's deadline today!)
 
 </div>
 
