@@ -140,7 +140,7 @@ export default class ScriptAnnouncementsEditor extends Component {
         <h4>Script Announcements</h4>
         <div>
           This can be used to provide one or more announcements that will show
-          up for signed in teachers on the script overview page.
+          up for signed in teachers, students, or teachers and students on the script overview page.
         </div>
         {announcements.map((announce, index) => (
           <Announce
