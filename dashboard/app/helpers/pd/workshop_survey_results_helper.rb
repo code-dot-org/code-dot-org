@@ -416,17 +416,24 @@ module Pd::WorkshopSurveyResultsHelper
         # histogram. Do the same thing for both this_workshop and all_my_workshops.
         # When all_workshops is implemented, it will be in S3 and not computed on the fly
         histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
+
+        if histogram_for_this_workshop.values.first.is_a? Hash
+          next unless histogram_for_this_workshop.key? facilitator
+        end
+
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
+
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
-
-        next if histogram_for_this_workshop.nil?
 
         # Now that we have the histogram, the average is just the sum of option values
         # divided by the total number of responses for this particular question
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
 
-        total_answer_for_this_workshop_sum = histogram_for_this_workshop.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
+        total_answer_for_this_workshop_sum = histogram_for_this_workshop.map do |k, v|
+          question[:option_map][k] * v
+        end.reduce(:+) || 0
+
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
         total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
