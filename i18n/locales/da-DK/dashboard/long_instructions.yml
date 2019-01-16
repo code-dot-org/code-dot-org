@@ -140,6 +140,18 @@ da:
         *Skjul alle danserne, og skift til en spændende baggrundseffekt
       Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over floden! \\r\n \\r\nKlik den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       Function intro Ryan_2019: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over floden! \\r\n \\r\nKlik den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+      HOC 2018 Level_1: "Du har brug for forsyninger til rejsen. Indsaml en **båd** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
+      HOC 2018 Level_10: "Der er en **blæksprutte** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), der gemmer sig i havmonumentet et sted, kan du finde den?"
+      HOC 2018 Level_11: Byg en mur af **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) rundt om den sorte beton. Dette vil aktivere **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) og færdiggøre din udfordring!
+      HOC 2018 Level_12: Tillykke! Det åbne vand venter dig. Byg et koralrev! En vulkan! Et skibbrud! Det er op til dig.
+      HOC 2018 Level_2: Det er meget lettere at tage en båd end at svømme i åbent vand! Gå til enden af molen, og hop om bord.
+      HOC 2018 Level_3: Tag årene, og ro båden over det åbne hav for at fange **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Lad os give torsken til **delfinen** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Brug en blok magen til for at krydse havet hurtigere.
+      HOC 2018 Level_5: Der er en **nautil-skal.** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) gemt et sted! Udforsk skibsvraget for at nå til **kisten** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Det ser koldt ud derude! Fang en **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) på din vej ud til de undersøiske ruiner.
+      HOC 2018 Level_7a: "Du har fundet de undersøiske ruiner. Søg efter en **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) med en **prismarineskat** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) ved sandstenen."
+      HOC 2018 Level_8: "De første isbjerge, nu lava? Kryds vulkanøen, og find den **tropiske fisk** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) i koralrevet."
+      HOC 2018 Level_9b: "Du har nået koralrevet, led nu efter **Havets hjerte** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Brug den blå og røde koral til at nå hen til **skattekisten** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
       K-1 Maze Loops 11: "Få mig hen til grisen! Brug gentag-blokken."
       K-1 Maze Loops 12: "Få mig hen til grisen! Brug gentag-blokken."
       K-1 Maze Loops 2: Brug gentag-blokken for at få mig hen til grisen!

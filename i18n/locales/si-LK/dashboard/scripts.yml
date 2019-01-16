@@ -821,7 +821,7 @@ si:
             'Farmer: While Loops':
               name: 'ගොවියා: ලූපයන් අතරේ'
         csd3-2017:
-          description_short: "ක්‍රමලේඛනය"
+          description_short: ක්‍රමලේඛනය
           stages:
             Functions:
               name: ශ්‍රිතයන්
