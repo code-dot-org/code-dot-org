@@ -171,7 +171,8 @@ module TextToSpeech
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      tts_short_instructions_override || short_instructions || try(:localized_short_instructions) || ""
+      # If there are contained levels, use that text in TTS
+      tts_short_instructions_override || tts_for_contained_level || short_instructions || try(:localized_short_instructions) || ""
     else
       TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end
@@ -197,7 +198,7 @@ module TextToSpeech
   def contained_level_text(contained)
     # For multi questions, create a string for TTS of the markdown, question, and answers
     if contained.long_instructions.nil?
-      combined_text = contained.properties["markdown"] + "\n"
+      combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
       contained.properties["questions"].each do |question|
         combined_text += question["text"] + "\n"
       end
@@ -208,6 +209,7 @@ module TextToSpeech
     else
       #For free response, create a string for TTS of the instructions
       contained.long_instructions
+
     end
   end
 
