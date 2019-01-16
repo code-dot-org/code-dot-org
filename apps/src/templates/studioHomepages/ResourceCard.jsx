@@ -25,7 +25,9 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 15,
     fontSize: 27,
+    width: "100%",
     display: 'inline',
+    boxSizing: 'border-box',
   },
   titleNoWrap: {
     whiteSpace: 'nowrap',
