@@ -212,12 +212,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: './node_modules/gif.js/dist',
-          src: ['gif.worker.js'],
-          dest: 'build/package/js/dance/'
-        },
-        {
-          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen

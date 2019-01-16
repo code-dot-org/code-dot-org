@@ -365,7 +365,7 @@ class Course < ApplicationRecord
   def can_view_version?(user)
     return nil unless user
     # Restrictions only apply to students.
-    return true if user.teacher?
+    return true unless user.student?
 
     # A student can view the course version if...
     # it is the latest, they are assigned to it, or they have progress in it.
