@@ -547,6 +547,7 @@ describe('The Exporter,', function () {
           'my-app/assets/jquery-1.12.1.min.j',
           'my-app/assets/style.css',
           'my-app/assets/zoo.mp3',
+          'my-app/metro.config.js',
           'my-app/package.json',
           'my-app/packagedFiles.js',
         ]);
