@@ -41,7 +41,7 @@
     "short_instructions": "Get all the metal.",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Get all the metal.\"_",
     "ideal": "6",
-    "tts_markdown_instructions_override": "Get all the metal.",
+    "tts_long_instructions_override": "Get all the metal.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Split this problem into two parts. Get one one pile of scrap metal, then figure out how to get to the other one.\",\"hint_id\":\"courseB_starWars_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ac6c8b9b54285d2226779c71fb8c4796/courseB_starWars_prog2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9203,

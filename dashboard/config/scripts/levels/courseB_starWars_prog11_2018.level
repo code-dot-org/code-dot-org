@@ -41,7 +41,7 @@
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "ideal": "14",
     "authored_hints": "[]",
-    "tts_markdown_instructions_override": "Help BB-8 gather the glowing scrap metal",
+    "tts_long_instructions_override": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going!\"_",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9214,
