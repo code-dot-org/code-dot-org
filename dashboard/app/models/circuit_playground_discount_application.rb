@@ -31,10 +31,11 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     yes1819: 3,
     yesAfter: 4,
     unsure: 5,
+    yes1920: 6,
   }
 
   def eligible_unit_6_intention?
-    yes1718? || yes1819?
+    yes1819? || yes1920?
   end
 
   # We will set the application's school_id when the user confirms their school. This means
