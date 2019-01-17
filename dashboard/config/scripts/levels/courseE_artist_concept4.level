@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Recreate this drawing. \r\n\r\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
+    "long_instructions": "Recreate this drawing. \r\n\r\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

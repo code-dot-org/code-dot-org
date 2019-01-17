@@ -19,7 +19,7 @@
     "skip_instructions_popup": "true",
     "scrollbars": "false",
     "ideal": "6",
-    "markdown_instructions": "Use a `repeat` loop to get the nectar, get honey, and to move!",
+    "long_instructions": "Use a `repeat` loop to get the nectar, get honey, and to move!",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

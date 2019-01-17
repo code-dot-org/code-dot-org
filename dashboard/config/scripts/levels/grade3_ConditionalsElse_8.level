@@ -18,7 +18,7 @@
     "honey_goal": "2",
     "ideal": "16",
     "disable_param_editing": "true",
-    "markdown_instructions": "Write the function for `check flower make honey`. \r\n\r\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \r\nThen, move forward and make honey.",
+    "long_instructions": "Write the function for `check flower make honey`. \r\n\r\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \r\nThen, move forward and make honey.",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

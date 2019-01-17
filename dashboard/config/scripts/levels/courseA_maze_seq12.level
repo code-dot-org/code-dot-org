@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "Get that pig!\r\n\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)",
+    "long_instructions": "Get that pig!\r\n\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

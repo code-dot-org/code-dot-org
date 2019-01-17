@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Snowy Pass",
-    "markdown_instructions": "There's ice in the way!  \r\n \r\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! ",
+    "long_instructions": "There's ice in the way!  \r\n \r\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! ",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,9]",

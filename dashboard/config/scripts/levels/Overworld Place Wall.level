@@ -50,7 +50,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
+    "long_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
     "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null,
     "preload_asset_list": null

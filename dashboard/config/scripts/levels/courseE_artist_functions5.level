@@ -32,7 +32,7 @@
     "x": "50",
     "y": "100",
     "ideal": "11",
-    "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

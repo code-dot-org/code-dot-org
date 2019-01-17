@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "callout_json": "[]",
-    "markdown_instructions": "Help the bee collect all of the nectar.",
+    "long_instructions": "Help the bee collect all of the nectar.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

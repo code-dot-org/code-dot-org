@@ -27,7 +27,7 @@
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one.\r\n\r\nEdit the `jump` function so that it uses the `actor` parameter to make the correct character jump.",
+    "long_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one.\r\n\r\nEdit the `jump` function so that it uses the `actor` parameter to make the correct character jump.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

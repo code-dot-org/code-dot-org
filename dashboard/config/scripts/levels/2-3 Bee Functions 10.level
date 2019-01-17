@@ -17,7 +17,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "10",
     "honey_goal": "0",
-    "markdown_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects nectar only from purple flowers that have nectar.",
+    "long_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects nectar only from purple flowers that have nectar.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

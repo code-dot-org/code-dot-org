@@ -25,7 +25,7 @@
     "disable_examples": "false",
     "input_output_table": "[[1,10],[12,120],[31,310],[50,500]]",
     "examples_required": "true",
-    "markdown_instructions": "We don't have to call our function `f` every time; create a function called `times-ten` that should take a parameter `x` and return `x * 10`. Once you've created the function, run `times-ten(50)`.",
+    "long_instructions": "We don't have to call our function `f` every time; create a function called `times-ten` that should take a parameter `x` and return `x * 10`. Once you've created the function, run `times-ten(50)`.",
     "never_autoplay_video": "false"
   }
 }]]></config>

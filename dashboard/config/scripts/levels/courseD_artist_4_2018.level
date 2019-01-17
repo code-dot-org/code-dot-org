@@ -34,7 +34,7 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let's make our snowflakes special!\"_\r\n\r\n**Inspiration:** Where do you need to add code if you want to draw a tiny square at the tip of each long line?\r\n\r\n---\r\nYou can try whatever you want in this puzzle, but here is an idea:\r\n\r\nTry making a tiny square at the end of each line\r\n- Each side should be 15 pixels long\r\n- You should turn by 90 degrees\r\n- Repeat those actions a total of 4 times",
+    "long_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let's make our snowflakes special!\"_\r\n\r\n**Inspiration:** Where do you need to add code if you want to draw a tiny square at the tip of each long line?\r\n\r\n---\r\nYou can try whatever you want in this puzzle, but here is an idea:\r\n\r\nTry making a tiny square at the end of each line\r\n- Each side should be 15 pixels long\r\n- You should turn by 90 degrees\r\n- Repeat those actions a total of 4 times",
     "project_template_level_name": "courseD_artist_Template_2018",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9224,

@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "*\"Keep calm and help me find the bad pig.\"*",
+    "long_instructions": "*\"Keep calm and help me find the bad pig.\"*",
     "contained_level_names": null
   },
   "published": true,

@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Move me to the pile of dirt and remove it with 5 shovel scoops, using the `remove 1` block.",
+    "long_instructions": "Move me to the pile of dirt and remove it with 5 shovel scoops, using the `remove 1` block.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",

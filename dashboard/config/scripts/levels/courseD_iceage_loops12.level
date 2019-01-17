@@ -33,7 +33,7 @@
     "parent_level_id": 12173,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Get to the acorn any way you can!",
+    "long_instructions": "Get to the acorn any way you can!",
     "ideal": "0",
     "contained_level_names": null,
     "preload_asset_list": null

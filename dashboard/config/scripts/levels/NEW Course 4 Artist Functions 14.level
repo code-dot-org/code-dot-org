@@ -28,7 +28,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "It's free-play time! Draw anything you like!",
+    "long_instructions": "It's free-play time! Draw anything you like!",
     "examples_required": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",

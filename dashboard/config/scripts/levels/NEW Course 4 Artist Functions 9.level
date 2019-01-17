@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you solve this by adding only one block?",
+    "long_instructions": "Can you solve this by adding only one block?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

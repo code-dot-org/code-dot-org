@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "The following link to Cornell University Center for Teaching Excellence provides a brief description of group learning along with a handful of specific techniques for designing and implementing group work activities:  ",
+    "long_instructions": "The following link to Cornell University Center for Teaching Excellence provides a brief description of group learning along with a handful of specific techniques for designing and implementing group work activities:  ",
     "link_title": "Cornell University Center for Teaching Excellence - Group Work Strategies and Design Ideas ",
     "url": "http://www.cte.cornell.edu/teaching-ideas/engaging-students/collaborative-learning.html"
   },

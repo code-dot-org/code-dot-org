@@ -39,7 +39,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "instructions": "Get all the scrap metal",
-    "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going, BB-8!\"_",
+    "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going, BB-8!\"_",
     "ideal": "7",
     "tts_instructions_override": "Help BB-8 gather all of the glowing scrap metal",
     "tts_markdown_instructions_override": "Help BB-8 gather all of the glowing scrap metal!  \r\nWatch out for walls and crates!  ",

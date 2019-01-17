@@ -33,7 +33,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"arrows_move_actor\",\"callout_text\":\"Use the arrows to move the actor\",\"element_id\":\"#soft-buttons\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom right\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This time you don't have to write any code, just hit `Run` to play the game!\r\n\r\nIn this game, you're the dog who is trying to collect more flags than the cat. Use the down arrow to control the dog. Press `Finish` when you're done playing.",
+    "long_instructions": "This time you don't have to write any code, just hit `Run` to play the game!\r\n\r\nIn this game, you're the dog who is trying to collect more flags than the cat. Use the down arrow to control the dog. Press `Finish` when you're done playing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

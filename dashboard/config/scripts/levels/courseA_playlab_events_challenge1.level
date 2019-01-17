@@ -48,7 +48,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "long_instructions": "Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
     "instructions": "Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/23d3f55633fe288afd62908745ec0c5b=levelbuilder/24912.png",

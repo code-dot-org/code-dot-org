@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,9]",
-    "markdown_instructions": "Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  ",
+    "long_instructions": "Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  ",
     "place_block_options": [
       "glowstone",
       "netherBrick",

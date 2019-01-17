@@ -45,7 +45,7 @@
     "day_night_cycle_time": "0",
     "display_name": "The Woods",
     "instructions": "Get the Agent to the pressure plate.",
-    "markdown_instructions": "You made it out of the swamp!  Now, get the player safely to the orange square.\r\n\r\nHelp The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.",
+    "long_instructions": "You made it out of the swamp!  Now, get the player safely to the orange square.\r\n\r\nHelp The Agent clear the path by finding a simple pattern and using loops to cross the first two pressure plates.",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,9]",

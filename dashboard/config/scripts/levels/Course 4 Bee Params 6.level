@@ -21,7 +21,7 @@
     "instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "markdown_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\\\r\n\\\r\n\\\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
+    "long_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\\\r\n\\\r\n\\\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

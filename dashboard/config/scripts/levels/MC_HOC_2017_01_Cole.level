@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Homestead",
-    "markdown_instructions": "You need to collect all the tools on this journey. Move around using the **arrow keys**, and get to the chest on the path to win",
+    "long_instructions": "You need to collect all the tools on this journey. Move around using the **arrow keys**, and get to the chest on the path to win",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"MC_HOC_2017_01_Cole_2\",\r\n  \"callout_text\": \"Use the arrow keys or click here to start moving the player.\",\r\n  \"element_id\": \"#soft-buttons\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",

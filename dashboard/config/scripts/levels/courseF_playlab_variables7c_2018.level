@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Add another `ask` block to ask the user to guess a color.  \r\n\r\nKeep your `if/else` statement such that your codename always wins the game, but every other codename always loses.",
+    "long_instructions": "Add another `ask` block to ask the user to guess a color.  \r\n\r\nKeep your `if/else` statement such that your codename always wins the game, but every other codename always loses.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

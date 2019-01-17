@@ -33,7 +33,7 @@
     "start_direction": "90",
     "x": "70",
     "y": "70",
-    "markdown_instructions": "Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. ",
+    "long_instructions": "Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. ",
     "parent_level_id": 11701,
     "name_suffix": "_2019",
     "contained_level_names": null,

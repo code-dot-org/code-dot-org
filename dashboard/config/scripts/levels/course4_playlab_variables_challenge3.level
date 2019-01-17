@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Can you figure out how this \"Fortune Teller\" app works? Try adding some of the following features to this game:\r\n\r\n* Change the \"yes\" and \"no\" answers to something more interesting.\r\n* Let the player ask another question after the actor says the fortune.\r\n* Give the witch two more things to say when she is in an `angry` or `normal` mood.\r\n* Give the wizard his own set of fortunes.\r\n* Make each actor change mood randomly.\r\n\r\nCheck the hints if you need help with these challenges!",
+    "long_instructions": "Can you figure out how this \"Fortune Teller\" app works? Try adding some of the following features to this game:\r\n\r\n* Change the \"yes\" and \"no\" answers to something more interesting.\r\n* Let the player ask another question after the actor says the fortune.\r\n* Give the witch two more things to say when she is in an `angry` or `normal` mood.\r\n* Give the wizard his own set of fortunes.\r\n* Make each actor change mood randomly.\r\n\r\nCheck the hints if you need help with these challenges!",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

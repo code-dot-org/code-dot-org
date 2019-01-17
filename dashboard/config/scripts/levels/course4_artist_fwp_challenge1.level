@@ -15,7 +15,7 @@
     "instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
     "ideal": "0",
     "embed": "false",
-    "markdown_instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
+    "long_instructions": "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",

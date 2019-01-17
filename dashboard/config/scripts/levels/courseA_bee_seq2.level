@@ -35,7 +35,7 @@
     "step_speed": "1",
     "nectar_goal": "1",
     "instructions": "Help the bee get the nectar!",
-    "markdown_instructions": "Add *one* block to help the bee get nectar from the flower.",
+    "long_instructions": "Add *one* block to help the bee get nectar from the flower.",
     "authored_hints": "[]",
     "parent_level_id": 11158,
     "ideal": "5",

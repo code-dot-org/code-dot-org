@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".6",
-    "markdown_instructions": "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\" width=\"250px\"/>\r\n\r\nFree Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own. \r\n\r\n<br/>",
+    "long_instructions": "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\" width=\"250px\"/>\r\n\r\nFree Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own. \r\n\r\n<br/>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Now let's loop that whole thing four times to create this picture frame. Watch out for the corners - you can't just turn 90 degrees! \r\n\r\nIf looping a 3 degree turn 60 times makes a half circle, which of these blocks of code will make an additional quarter circle for the corners?",
+    "long_instructions": "Now let's loop that whole thing four times to create this picture frame. Watch out for the corners - you can't just turn 90 degrees! \r\n\r\nIf looping a 3 degree turn 60 times makes a half circle, which of these blocks of code will make an additional quarter circle for the corners?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

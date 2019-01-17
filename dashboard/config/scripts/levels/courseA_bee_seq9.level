@@ -35,7 +35,7 @@
     "step_speed": "1",
     "nectar_goal": "4",
     "instructions": "Make sure to get nectar from every flower!",
-    "markdown_instructions": "This bee needs nectar! Do you see a pattern?",
+    "long_instructions": "This bee needs nectar! Do you see a pattern?",
     "authored_hints": "[]",
     "parent_level_id": 11168,
     "ideal": "9",

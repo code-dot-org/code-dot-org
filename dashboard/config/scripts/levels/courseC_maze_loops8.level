@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "step_speed": "2",
     "tts_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
-    "markdown_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
+    "long_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

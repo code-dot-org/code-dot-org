@@ -33,7 +33,7 @@
     "parent_level_id": 12291,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Can you get to the acorn with just one <xml><block type=\"maze_moveForward\"/></xml> block? Try using a loop!",
+    "long_instructions": "Can you get to the acorn with just one <xml><block type=\"maze_moveForward\"/></xml> block? Try using a loop!",
     "ideal": "3",
     "authored_hints": "[]",
     "contained_level_names": null

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Sending Numbers:  Reflection",
-    "markdown_instructions": "How did collaboration play a role in the creation of your protocol?",
+    "long_instructions": "How did collaboration play a role in the creation of your protocol?",
     "skip_dialog": true,
     "skip_sound": true
   },

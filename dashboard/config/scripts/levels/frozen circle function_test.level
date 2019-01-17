@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "video_key": "frozen_functions",
-    "markdown_instructions": "We've moved the code from the last puzzle into a function!  \r\n  \r\nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!",
+    "long_instructions": "We've moved the code from the last puzzle into a function!  \r\n  \r\nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!",
     "never_autoplay_video": "true",
     "contract_highlight": "false",
     "contract_collapse": "false",

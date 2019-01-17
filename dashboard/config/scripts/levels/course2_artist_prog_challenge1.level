@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun!",
+    "long_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

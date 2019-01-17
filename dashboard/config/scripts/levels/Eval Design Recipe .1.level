@@ -28,7 +28,7 @@
     "coordinate_grid_background": "false",
     "video_key": "alg_8_design_recipe",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a Design Recipe for a function called `square-circle` with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided).",
+    "long_instructions": "Here's a Design Recipe for a function called `square-circle` with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided).",
     "examples_required": "true"
   }
 }]]></config>

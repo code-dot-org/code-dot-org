@@ -15,7 +15,7 @@
     "instructions": "Try this code to see how it works, then make the program your own!",
     "ideal": "0",
     "embed": "false",
-    "markdown_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\r\n\r\n<xml>\r\n  <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n    <title name=\"YPOS\">???</title>\r\n    </block></xml>",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\r\n\r\n<xml>\r\n  <block type=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n    <title name=\"YPOS\">???</title>\r\n    </block></xml>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

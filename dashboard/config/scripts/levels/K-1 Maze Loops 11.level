@@ -26,7 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier."
+    "long_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier."
   },
   "published": false,
   "level_concept_difficulty": {

@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Use the `join` block (in the toolbox under \"Text\") to make the win/lose messages more personal by incorporating both the `codename` and the `color` variables into the responses.",
+    "long_instructions": "Use the `join` block (in the toolbox under \"Text\") to make the win/lose messages more personal by incorporating both the `codename` and the `color` variables into the responses.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

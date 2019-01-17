@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "callout_json": "[]",
-    "markdown_instructions": "You can also use a `for` loop to count down. \r\n\r\nTry gathering this nectar by counting down from **5** to **1** by **1**.",
+    "long_instructions": "You can also use a `for` loop to count down. \r\n\r\nTry gathering this nectar by counting down from **5** to **1** by **1**.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

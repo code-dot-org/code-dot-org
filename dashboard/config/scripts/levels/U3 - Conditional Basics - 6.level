@@ -29,7 +29,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# What happens after an *if* ?\r\n\r\nYou may have noticed that our flowchart for our game so far only does something if the condition is true. What happens after the `if` statement? Let's find out.\r\n\r\n<img src=\"https://images.code.org/90b7a527091704a6ab4612b9f84db305-image-1446234882661.png\" style=\"width: 200px\">\r\n\r\n# Do This:\r\n\r\n* **Add a `setText` after the `if` statement** to \"Nope. Guess again.\"\r\n\r\n<img src=\"https://images.code.org/f5c5de1b77a9caf16027e65ed24f91ec-image-1446234785600.gif\" style=\"width: 450px\">\r\n\r\n* **Run the program** a couple times to **look for a bug**. We will fix this on the next level.",
+    "long_instructions": "# What happens after an *if* ?\r\n\r\nYou may have noticed that our flowchart for our game so far only does something if the condition is true. What happens after the `if` statement? Let's find out.\r\n\r\n<img src=\"https://images.code.org/90b7a527091704a6ab4612b9f84db305-image-1446234882661.png\" style=\"width: 200px\">\r\n\r\n# Do This:\r\n\r\n* **Add a `setText` after the `if` statement** to \"Nope. Guess again.\"\r\n\r\n<img src=\"https://images.code.org/f5c5de1b77a9caf16027e65ed24f91ec-image-1446234785600.gif\" style=\"width: 450px\">\r\n\r\n* **Run the program** a couple times to **look for a bug**. We will fix this on the next level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

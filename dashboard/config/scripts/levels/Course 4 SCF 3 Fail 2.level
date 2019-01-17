@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Functions Super Challenge #1:** \r\n\r\n",
+    "long_instructions": "**Functions Super Challenge #1:** \r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -13,7 +13,7 @@
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,0,0,2,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,4,1,1,1,1,4,0],[0,0,4,0,0,4,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
-    "markdown_instructions": "**Assessment:** Get to the sunflower using as few blocks as possible.",
+    "long_instructions": "**Assessment:** Get to the sunflower using as few blocks as possible.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

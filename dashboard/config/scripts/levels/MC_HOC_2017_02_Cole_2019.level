@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "The Farm",
-    "markdown_instructions": "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \r\n \r\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. ",
+    "long_instructions": "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \r\n \r\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. ",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[6,9]",

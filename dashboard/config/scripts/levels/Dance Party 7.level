@@ -48,7 +48,7 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14105,
-    "markdown_instructions": "Finally, add a new bell sprite called `myBell`.  \r\n\r\nWhen you click on it, make all the aliens start doing the same dance move!",
+    "long_instructions": "Finally, add a new bell sprite called `myBell`.  \r\n\r\nWhen you click on it, make all the aliens start doing the same dance move!",
     "project_template_level_name": "Dance Party 6",
     "show_type_hints": "true",
     "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",

@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,9]",
-    "markdown_instructions": "Now there are **TWO** functions to choose from!\r\n\r\nUse these functions to quickly build a bridge across the lava for {currentPlayerName}.",
+    "long_instructions": "Now there are **TWO** functions to choose from!\r\n\r\nUse these functions to quickly build a bridge across the lava for {currentPlayerName}.",
     "place_block_options": [
       "lava",
       "oreIron",

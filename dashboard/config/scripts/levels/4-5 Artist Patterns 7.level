@@ -20,7 +20,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "markdown_instructions": "Let's modify the code from the last puzzle to make this more complex pattern. Notice how the diamonds overlap now, try changing the first \"jump backwards\" from 100 to 50 (half as far) - now how far should the artist go in the second \"jump backwards\"?\r\n\r\n",
+    "long_instructions": "Let's modify the code from the last puzzle to make this more complex pattern. Notice how the diamonds overlap now, try changing the first \"jump backwards\" from 100 to 50 (half as far) - now how far should the artist go in the second \"jump backwards\"?\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

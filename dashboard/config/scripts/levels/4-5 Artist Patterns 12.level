@@ -15,7 +15,7 @@
     "instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?",
     "ideal": "8",
     "embed": "false",
-    "markdown_instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?",
+    "long_instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

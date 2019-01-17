@@ -33,7 +33,7 @@
     "instructions_important": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides",
+    "long_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": [

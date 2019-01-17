@@ -44,7 +44,7 @@
     "step_speed": "3",
     "instructions": "You are doing great! Keep it up!",
     "tts_markdown_instructions_override": "You are doing great! Keep it up!",
-    "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n _\"Go BB-8!\"_\r\n\r\nYou are doing great! Keep it up!",
+    "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n _\"Go BB-8!\"_\r\n\r\nYou are doing great! Keep it up!",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",

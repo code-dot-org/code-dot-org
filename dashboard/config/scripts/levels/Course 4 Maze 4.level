@@ -26,7 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
+    "long_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 2,

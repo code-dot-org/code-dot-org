@@ -48,7 +48,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
+    "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "hint_prompt_attempts_threshold": 12,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",

@@ -189,7 +189,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
+    "long_instructions": "# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
     "instructions_important": "false",
     "display_name": "Sensor Experiment",
     "submittable": "false",

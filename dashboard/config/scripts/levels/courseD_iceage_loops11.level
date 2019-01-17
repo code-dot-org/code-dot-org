@@ -33,7 +33,7 @@
     "parent_level_id": 12172,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
     "ideal": "12",
     "contained_level_names": null,
     "preload_asset_list": null

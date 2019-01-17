@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "step_speed": "1",
-    "markdown_instructions": "*\"Get me to the pig!\"*\r\n\r\nUse what you learned in other puzzles!",
+    "long_instructions": "*\"Get me to the pig!\"*\r\n\r\nUse what you learned in other puzzles!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

@@ -14,7 +14,7 @@
     "free_play": "false",
     "instructions": "Call the `draw a square` function from inside your `draw a line of squares` function to make this even easier!",
     "embed": "false",
-    "markdown_instructions": "*\"Zombie get dizzy.\"*\r\n\r\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\r\n\r\n---\r\n\r\n- The squares are *50* pixels apart.",
+    "long_instructions": "*\"Zombie get dizzy.\"*\r\n\r\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\r\n\r\n---\r\n\r\n- The squares are *50* pixels apart.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

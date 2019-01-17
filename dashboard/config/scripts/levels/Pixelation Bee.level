@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "# Example of 12 bits per pixel\n* This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel.\n* If you switch to binary mode - hold on to your hat - it's a lot of bits.\n* Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?",
+    "long_instructions": "# Example of 12 bits per pixel\n* This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel.\n* If you switch to binary mode - hold on to your hat - it's a lot of bits.\n* Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?",
     "instructions": "This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel. If you switch to binary mode - hold on to your hat - it's a lot of bits. Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?",
     "version": "3",
     "hex": true,

@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This is Pirate Pegleg.  He's awfully hard to understand these days!  \r\n\r\nDecode his speech by changing these pieces of text in the code:\r\n- \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n",
+    "long_instructions": "This is Pirate Pegleg.  He's awfully hard to understand these days!  \r\n\r\nDecode his speech by changing these pieces of text in the code:\r\n- \"arrrg\" should be \"a\" \r\n- \"ye\" should be \"e\"\r\n\r\n",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

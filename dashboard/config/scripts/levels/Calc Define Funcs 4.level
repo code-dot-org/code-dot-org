@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "input_output_table": "[[2,1],[4,2],[21,10.5],[32.5,16.25]]",
-    "markdown_instructions": "Write a function called `half` that takes a number `x` and returns half that number. Once you've written the function, use it to calculate `half(21)`",
+    "long_instructions": "Write a function called `half` that takes a number `x` and returns half that number. Once you've written the function, use it to calculate `half(21)`",
     "examples_required": "true",
     "never_autoplay_video": "false"
   }

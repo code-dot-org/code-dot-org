@@ -21,7 +21,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Experiment with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? ",
+    "long_instructions": "**Free Play:** Experiment with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

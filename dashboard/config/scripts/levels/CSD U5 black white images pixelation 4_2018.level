@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "markdown_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
+    "long_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",

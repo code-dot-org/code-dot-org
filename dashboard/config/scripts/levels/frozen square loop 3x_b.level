@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"replace_questions\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#turn_right_qtip > .blocklyEditableText:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "permitted_errors": "0",
-    "markdown_instructions": "Did you know that you can put a repeat loop inside of another repeat loop?  \r\n  \r\nHelp Anna draw three squares, turning **120 degrees** after each one. ",
+    "long_instructions": "Did you know that you can put a repeat loop inside of another repeat loop?  \r\n  \r\nHelp Anna draw three squares, turning **120 degrees** after each one. ",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

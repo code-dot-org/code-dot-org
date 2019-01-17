@@ -21,7 +21,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you use a loop to draw the greyed out square?  \r\n(Each side is 300px long)",
+    "long_instructions": "Can you use a loop to draw the greyed out square?  \r\n(Each side is 300px long)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

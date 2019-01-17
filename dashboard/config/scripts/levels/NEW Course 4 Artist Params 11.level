@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you figure out how to draw this shape? \r\n\r\nEdit the function to use the `sides` parameter.",
+    "long_instructions": "Can you figure out how to draw this shape? \r\n\r\nEdit the function to use the `sides` parameter.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

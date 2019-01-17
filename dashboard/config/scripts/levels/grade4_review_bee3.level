@@ -18,7 +18,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-1,0,0,0],[0,0,1,0,1,0,0,0],[0,0,-1,1,-1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "7",
-    "markdown_instructions": "Such a busy bee!\r\n\r\nHelp Bee collect all of the nectar and make all of the honey with the fewest blocks possible.",
+    "long_instructions": "Such a busy bee!\r\n\r\nHelp Bee collect all of the nectar and make all of the honey with the fewest blocks possible.",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You should end up with five blocks inside your loop.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",

@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a star shape using the `draw a line of squares` function?  \r\n\r\n(Be sure to `move forward` 60 pixels before you turn 144 degrees!)",
+    "long_instructions": "Can you draw a star shape using the `draw a line of squares` function?  \r\n\r\n(Be sure to `move forward` 60 pixels before you turn 144 degrees!)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

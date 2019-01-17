@@ -14,7 +14,7 @@
     "free_play": "false",
     "instructions": "Add one more function that creates this stack of staggered squares.",
     "embed": "false",
-    "markdown_instructions": "Add one more function that creates this stack of staggered squares using the `draw a line of squares` function.",
+    "long_instructions": "Add one more function that creates this stack of staggered squares using the `draw a line of squares` function.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

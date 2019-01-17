@@ -22,7 +22,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "ideal": "11",
-    "markdown_instructions": "Can you draw 3 squares 20 pixels apart from one another? \r\n\r\nEach square is 100 pixels in size.",
+    "long_instructions": "Can you draw 3 squares 20 pixels apart from one another? \r\n\r\nEach square is 100 pixels in size.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

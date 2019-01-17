@@ -38,7 +38,7 @@
     "instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
     "instructions_important": "false",
     "contained_level_names": null
   },

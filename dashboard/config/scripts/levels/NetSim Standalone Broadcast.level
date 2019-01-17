@@ -51,7 +51,7 @@
     "connected_routers": "false",
     "show_log_browser_button": "false",
     "video_key": "csp_internetsimulator_3",
-    "markdown_instructions": "# Broadcast messages in the Internet Simulator\r\n\r\nIn this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "long_instructions": "# Broadcast messages in the Internet Simulator\r\n\r\nIn this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>

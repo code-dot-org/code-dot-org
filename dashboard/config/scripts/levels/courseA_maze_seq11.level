@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig.\r\n\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)",
+    "long_instructions": "Time for a shorter puzzle!  Move one way, then another to get the bird to the pig.\r\n\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Saving After Input\r\n\r\n\r\n# Do This\r\n\r\n* **Starter Code:**  The starter code has already saved the name to a variable for later use.\r\n\r\n* ** Create a variable to store age ** and use `getText()` to save age for later use.\r\n\r\n* ** Remember ** you can always check the value of a variable during execution by typing the name of the variable in the Debug Console.",
+    "long_instructions": "# Saving After Input\r\n\r\n\r\n# Do This\r\n\r\n* **Starter Code:**  The starter code has already saved the name to a variable for later use.\r\n\r\n* ** Create a variable to store age ** and use `getText()` to save age for later use.\r\n\r\n* ** Remember ** you can always check the value of a variable during execution by typing the name of the variable in the Debug Console.",
     "start_blocks": "var name;\r\nonEvent(\"doneButton\", \"click\", function(event) {\r\n  name = getText(\"nameInput\");\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",

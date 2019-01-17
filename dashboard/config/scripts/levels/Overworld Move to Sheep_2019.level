@@ -94,7 +94,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Add a second `move forward` block to reach the sheep.",
+    "long_instructions": "Add a second `move forward` block to reach the sheep.",
     "top_level_procedure_autopopulate": "false",
     "agent_start_direction": "0",
     "is_agent_level": "false",

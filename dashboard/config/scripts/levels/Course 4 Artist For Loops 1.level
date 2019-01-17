@@ -22,7 +22,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a repeat block to draw this triangle that is 50 pixels wide.\r\n\r\n",
+    "long_instructions": "Use a repeat block to draw this triangle that is 50 pixels wide.\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

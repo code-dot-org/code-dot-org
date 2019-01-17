@@ -28,7 +28,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "markdown_instructions": "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove to the pile of dirt and use the `remove` block to remove it.",
+    "long_instructions": "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove to the pile of dirt and use the `remove` block to remove it.",
     "contained_level_names": null
   },
   "published": true,
