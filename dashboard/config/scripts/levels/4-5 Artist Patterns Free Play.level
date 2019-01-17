@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free play - try your hand at making a pattern of your own!",
+    "short_instructions": "Free play - try your hand at making a pattern of your own!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

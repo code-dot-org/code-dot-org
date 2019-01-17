@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

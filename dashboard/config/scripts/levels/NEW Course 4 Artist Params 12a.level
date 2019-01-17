@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
+    "short_instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

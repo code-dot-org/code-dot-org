@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you solve this by adding only one block?",
+    "short_instructions": "Can you solve this by adding only one block?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

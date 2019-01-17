@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "It seems like we're halfway to making a square. Let's put 4 lines together to create a square.",
+    "short_instructions": "It seems like we're halfway to making a square. Let's put 4 lines together to create a square.",
     "x": "150",
     "y": "150",
     "start_direction": "90",

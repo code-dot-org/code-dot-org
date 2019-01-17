@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  ",
+    "short_instructions": "Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  ",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

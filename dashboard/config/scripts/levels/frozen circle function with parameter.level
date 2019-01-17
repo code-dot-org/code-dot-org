@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
+    "short_instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
     "x": "200",
     "y": "150",
     "start_direction": "90",

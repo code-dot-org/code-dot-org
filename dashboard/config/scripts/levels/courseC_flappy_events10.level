@@ -12,7 +12,7 @@
     "score": "true",
     "free_play": "true",
     "scale": "{\"snapRadius\":2}",
-    "instructions": "Create your own Flappy game! ",
+    "short_instructions": "Create your own Flappy game! ",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

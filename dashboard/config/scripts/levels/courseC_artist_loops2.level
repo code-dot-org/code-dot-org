@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "Now that the zombie knows his way, help him dig holes along the path to plant more flowers!",
+    "short_instructions": "Now that the zombie knows his way, help him dig holes along the path to plant more flowers!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

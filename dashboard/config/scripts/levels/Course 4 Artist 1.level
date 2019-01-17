@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Help me draw a box. (Each line is 200 pixels long) ",
+    "short_instructions": "Help me draw a box. (Each line is 200 pixels long) ",
     "x": "100",
     "y": "100",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "scrat",
-    "instructions": "Challenge: Move around the broken ice to get Scrat to the acorn.",
+    "short_instructions": "Challenge: Move around the broken ice to get Scrat to the acorn.",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",

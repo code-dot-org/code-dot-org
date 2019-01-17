@@ -54,7 +54,7 @@
     "encrypted_examples": [
 
     ],
-    "instructions": "Look at the code for this app and see how the code works to update the count variable when the up arrow is clicked. (Click to see full instructions).",
+    "short_instructions": "Look at the code for this app and see how the code works to update the count variable when the up arrow is clicked. (Click to see full instructions).",
     "execute_palette_apis_only": "false"
   }
 }]]></config>

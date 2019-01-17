@@ -21,7 +21,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This time, when you press 'run', you will see a 'prompt' asking you for a number. This number will be stored in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how this program is written!",
+    "short_instructions": "This time, when you press 'run', you will see a 'prompt' asking you for a number. This number will be stored in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how this program is written!",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",

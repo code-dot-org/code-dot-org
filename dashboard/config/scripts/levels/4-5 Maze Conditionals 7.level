@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "The solution to this puzzle isn't very different, but watch out for the chompers!",
+    "short_instructions": "The solution to this puzzle isn't very different, but watch out for the chompers!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

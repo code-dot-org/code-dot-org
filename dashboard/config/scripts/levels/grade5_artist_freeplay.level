@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
+    "short_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

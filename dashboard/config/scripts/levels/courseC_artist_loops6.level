@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "What should the zombie put inside of the garden?  \r\n\r\n\r\n",
+    "short_instructions": "What should the zombie put inside of the garden?  \r\n\r\n\r\n",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

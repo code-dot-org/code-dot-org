@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Put these blocks in order to collect all of the gold and solve the puzzle.",
+    "short_instructions": "Put these blocks in order to collect all of the gold and solve the puzzle.",
     "long_instructions": "*\"Sequence matters!\"*\r\n\r\nThe blocks you need are already in the workspace, but not connected.  Put these blocks in order to collect all of the gold and solve the puzzle.",
     "instructions_important": "false",
     "min_collected": "2",

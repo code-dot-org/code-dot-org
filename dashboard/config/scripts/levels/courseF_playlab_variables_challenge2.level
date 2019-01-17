@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This game will use variables to keep track of points.  Tag Cat to get 2 points. Tag Penguin to get 3 points.  When Cat and Penguin touch, take points away. Get exactly 10 points to win!",
+    "short_instructions": "This game will use variables to keep track of points.  Tag Cat to get 2 points. Tag Penguin to get 3 points.  When Cat and Penguin touch, take points away. Get exactly 10 points to win!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

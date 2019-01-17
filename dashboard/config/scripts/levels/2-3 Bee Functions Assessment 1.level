@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Assessment: Use the given function to collect nectar from each flower.",
+    "short_instructions": "Assessment: Use the given function to collect nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

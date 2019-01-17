@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.2",
-    "instructions": "Draw a line that is **100** pixels long, then move back to the center before turning **90 degrees**. Repeat **4** times.",
+    "short_instructions": "Draw a line that is **100** pixels long, then move back to the center before turning **90 degrees**. Repeat **4** times.",
     "impressive": "false",
     "use_modal_function_editor": "false",
     "ideal": "5",

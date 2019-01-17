@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "These stones are in the wrong place.  Help me move them so I don't fall in!",
+    "short_instructions": "These stones are in the wrong place.  Help me move them so I don't fall in!",
     "x": "25",
     "y": "200",
     "start_direction": "90",

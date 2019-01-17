@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "In the last puzzle we kept Sam from leaving on the left, now let's do the same thing on the right. Complete the safe-right? function to make sure Sam can't go off the right side of the screen.",
+    "short_instructions": "In the last puzzle we kept Sam from leaving on the left, now let's do the same thing on the right. Complete the safe-right? function to make sure Sam can't go off the right side of the screen.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

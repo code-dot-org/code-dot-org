@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse the function to collect all of the nectar.",
+    "short_instructions": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse the function to collect all of the nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

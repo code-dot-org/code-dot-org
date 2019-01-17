@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we need to fix the top of the castle. Can you loop the code three times?",
+    "short_instructions": "Now we need to fix the top of the castle. Can you loop the code three times?",
     "x": "25",
     "y": "125",
     "start_direction": "90",

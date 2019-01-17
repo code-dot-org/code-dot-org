@@ -35,7 +35,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "instructions": "Try out the demo app (Click to see full instructions)",
+    "short_instructions": "Try out the demo app (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

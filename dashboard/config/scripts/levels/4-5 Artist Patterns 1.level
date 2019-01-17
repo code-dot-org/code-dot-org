@@ -9,7 +9,7 @@
     "x": "190",
     "y": "190",
     "start_direction": "90",
-    "instructions": "Draw this square using a loop.\r\n\r\nEach side is 20 pixels long.",
+    "short_instructions": "Draw this square using a loop.\r\n\r\nEach side is 20 pixels long.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "4",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "We need a ladder up to the boat.",
+    "short_instructions": "We need a ladder up to the boat.",
     "x": "260",
     "y": "350",
     "start_direction": "90",

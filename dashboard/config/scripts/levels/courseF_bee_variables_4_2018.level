@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Edit the code to work for this puzzle.",
+    "short_instructions": "Edit the code to work for this puzzle.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

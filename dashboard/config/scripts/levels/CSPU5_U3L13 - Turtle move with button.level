@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add a button that moves the turtle when clicked.  (Click to see full instructions)",
+    "short_instructions": "Add a button that moves the turtle when clicked.  (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

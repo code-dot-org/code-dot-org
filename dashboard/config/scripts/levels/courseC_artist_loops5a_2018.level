@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Try new stickers!",
+    "short_instructions": "Try new stickers!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

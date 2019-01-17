@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "This tower is lovely, what is downstairs? Build another staircase to find out! ",
+    "short_instructions": "This tower is lovely, what is downstairs? Build another staircase to find out! ",
     "x": "50",
     "y": "50",
     "start_direction": "90",

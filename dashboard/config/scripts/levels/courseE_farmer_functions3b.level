@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Now help the farmer pick the corn, lettuce, **and** pumpkin.",
+    "short_instructions": "Now help the farmer pick the corn, lettuce, **and** pumpkin.",
     "instructions_important": "false",
     "ideal": "21",
     "long_instructions": "*\"Oooh, veggies are cropping up everywhere!\"*\r\n\r\nNow help the farmer pick the corn, lettuce, **and** pumpkin.",

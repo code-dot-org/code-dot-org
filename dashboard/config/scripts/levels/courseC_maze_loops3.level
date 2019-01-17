@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Solve this puzzle by creating a loop!",
+    "short_instructions": "Solve this puzzle by creating a loop!",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",

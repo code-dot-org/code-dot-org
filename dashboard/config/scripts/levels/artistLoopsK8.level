@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Wow! There's a garden over there!  Help fix these stairs so I can get to it.",
+    "short_instructions": "Wow! There's a garden over there!  Help fix these stairs so I can get to it.",
     "x": "50",
     "y": "150",
     "start_direction": "90",

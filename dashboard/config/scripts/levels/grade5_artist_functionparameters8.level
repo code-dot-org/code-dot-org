@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.  Use the `multiplication` block to make this all happen with just one function call. Be sure to jump 100 pixels between polygons.",
+    "short_instructions": "The triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.  Use the `multiplication` block to make this all happen with just one function call. Be sure to jump 100 pixels between polygons.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

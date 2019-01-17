@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Complete the green lines. The lines are 300 pixels long and 15 pixels apart.",
+    "short_instructions": "Complete the green lines. The lines are 300 pixels long and 15 pixels apart.",
     "x": "50",
     "y": "350",
     "start_direction": "90",

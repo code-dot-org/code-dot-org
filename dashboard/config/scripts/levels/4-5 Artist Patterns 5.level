@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
     "free_play": "false",
-    "instructions": "Repeat this code to make a row of 6 diamonds. \r\n\r\nNotice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?\r\n",
+    "short_instructions": "Repeat this code to make a row of 6 diamonds. \r\n\r\nNotice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?\r\n",
     "ideal": "8",
     "embed": "false",
     "long_instructions": "Repeat this code to make a row of 6 diamonds. \r\n\r\nNotice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?",

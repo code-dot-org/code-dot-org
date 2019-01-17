@@ -36,7 +36,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "instructions": "Can you figure out the pattern that you need to solve this puzzle?",
+    "short_instructions": "Can you figure out the pattern that you need to solve this puzzle?",
     "hint_prompt_attempts_threshold": 14,
     "contained_level_names": null
   },

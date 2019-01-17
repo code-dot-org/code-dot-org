@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Add one more function that creates this stack of staggered squares.",
+    "short_instructions": "Add one more function that creates this stack of staggered squares.",
     "embed": "false",
     "long_instructions": "Add one more function that creates this stack of staggered squares using the `draw a line of squares` function.",
     "disable_param_editing": "true",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.\r\n",
+    "short_instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.\r\n",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

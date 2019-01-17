@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Now let's add some grass to our picture. \r\n\r\nEach tuft of grass is 50 pixels apart.",
+    "short_instructions": "Now let's add some grass to our picture. \r\n\r\nEach tuft of grass is 50 pixels apart.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

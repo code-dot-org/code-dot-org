@@ -36,7 +36,7 @@
     "instructions_important": "false",
     "callout_json": "[]",
     "authored_hints": "[]",
-    "instructions": "Use this `for loop` to collect all of the nectar. ",
+    "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",

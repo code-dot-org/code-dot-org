@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Complete the collide? function so that it returns true if the distance between two points is less than 100 pixels apart.",
+    "short_instructions": "Complete the collide? function so that it returns true if the distance between two points is less than 100 pixels apart.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

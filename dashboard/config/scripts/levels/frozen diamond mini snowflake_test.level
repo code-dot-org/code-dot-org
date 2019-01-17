@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Make a new snowflake by repeating this diamond 4 times.",
+    "short_instructions": "Make a new snowflake by repeating this diamond 4 times.",
     "x": "200",
     "y": "200",
     "start_direction": "180",

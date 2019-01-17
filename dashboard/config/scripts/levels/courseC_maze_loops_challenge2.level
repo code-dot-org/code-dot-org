@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!",
+    "short_instructions": "Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!",
     "long_instructions": "Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!",
     "callout_json": "[]",
     "ideal": "15",

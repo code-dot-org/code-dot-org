@@ -49,7 +49,7 @@
     "data_properties": "{\r\n  \"myFavoriteNumber\": 3\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Create and update your key value pairs using setKeyValue. (Click to see full instructions)",
+    "short_instructions": "Create and update your key value pairs using setKeyValue. (Click to see full instructions)",
     "encrypted_examples": [
 
     ]

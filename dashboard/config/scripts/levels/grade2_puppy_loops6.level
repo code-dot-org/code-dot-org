@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "\"This pig is ruffling my feathers!\"\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
+    "short_instructions": "\"This pig is ruffling my feathers!\"\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

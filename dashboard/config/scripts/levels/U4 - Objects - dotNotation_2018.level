@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use dot notation to display individual properties of the object. (Click to see full instructions)",
+    "short_instructions": "Use dot notation to display individual properties of the object. (Click to see full instructions)",
     "start_blocks": "onEvent(\"screen1\", \"click\", function(event){\r\n\tconsole.log(\"You clicked at \");\r\n});\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log(\"You pressed \");\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",

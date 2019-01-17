@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the new “draw a circle” function to create 10 overlapping circles. Don't forget to jump forward between circles.",
+    "short_instructions": "Use the new “draw a circle” function to create 10 overlapping circles. Don't forget to jump forward between circles.",
     "x": "80",
     "y": "150",
     "start_direction": "90",

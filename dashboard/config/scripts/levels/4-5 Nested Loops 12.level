@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw these 36 triangles using a nested loop?",
+    "short_instructions": "Can you draw these 36 triangles using a nested loop?",
     "x": "200",
     "y": "200",
     "start_direction": "90",

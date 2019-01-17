@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "Ah, the \"for loop\" makes this much easier! All the code you need is here, take a look at how it is put together then click \"Run\" to see how it works. ",
+    "short_instructions": "Ah, the \"for loop\" makes this much easier! All the code you need is here, take a look at how it is put together then click \"Run\" to see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "video_key": "C4_for_loops_bee",

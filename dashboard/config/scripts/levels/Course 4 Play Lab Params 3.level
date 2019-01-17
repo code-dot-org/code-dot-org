@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the \"jump\" function so that it uses the \"actor\" parameter to make the correct character jump. ",
+    "short_instructions": "We have added another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the \"jump\" function so that it uses the \"actor\" parameter to make the correct character jump. ",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
     "embed": "false",

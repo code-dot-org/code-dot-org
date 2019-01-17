@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Put a `repeat` block around this whole stack of code to draw the pattern.",
+    "short_instructions": "Put a `repeat` block around this whole stack of code to draw the pattern.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

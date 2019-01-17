@@ -69,7 +69,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "instructions": "Write the drawStep function. (Click to see full instructions)",
+    "short_instructions": "Write the drawStep function. (Click to see full instructions)",
     "project_template_level_name": "SG U3L03 - drawDiamond Template",
     "droplet_tooltips_disabled": "true",
     "submittable": "false",

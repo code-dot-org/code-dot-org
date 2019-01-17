@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help the harvester find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.",
+    "short_instructions": "Help the harvester find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.",
     "instructions_important": "false",
     "ideal": "12",
     "long_instructions": "*\"This harvest is a-MAZE-ing!\"*\r\n\r\nHelp the harvester find her way down this confusing path and to the pumpkin by turning **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't forget to collect all of the produce along the way!)*",

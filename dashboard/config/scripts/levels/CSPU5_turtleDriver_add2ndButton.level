@@ -21,7 +21,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
+    "short_instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

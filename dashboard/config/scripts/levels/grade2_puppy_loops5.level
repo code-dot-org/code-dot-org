@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,2,0],[0,3,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "\"Get me to the pig as quickly as possible!\"",
+    "short_instructions": "\"Get me to the pig as quickly as possible!\"",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",

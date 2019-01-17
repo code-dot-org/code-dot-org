@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
+    "short_instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
     "long_instructions": "# This is the template for the U4 model app",
     "is_k1": "false",
     "skip_instructions_popup": "false",

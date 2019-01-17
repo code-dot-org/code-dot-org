@@ -51,7 +51,7 @@
     "long_instructions": "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \r\n\r\n**Add code to change the color of each alien when it gets clicked.**",
     "project_template_level_name": "Dance Party 2",
     "show_type_hints": "true",
-    "instructions": "Add code to change the color of each alien when it gets clicked.",
+    "short_instructions": "Add code to change the color of each alien when it gets clicked.",
     "include_shared_functions": "false",
     "block_pool": "gamelab",
     "contained_level_names": null,

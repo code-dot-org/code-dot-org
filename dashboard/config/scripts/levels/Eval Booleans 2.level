@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Can you set the values so that this expression evaluates as true?",
+    "short_instructions": "Can you set the values so that this expression evaluates as true?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

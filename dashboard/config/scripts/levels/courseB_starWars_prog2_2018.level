@@ -38,7 +38,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Get all the metal.",
+    "short_instructions": "Get all the metal.",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Get all the metal.\"_",
     "ideal": "6",
     "tts_markdown_instructions_override": "Get all the metal.",

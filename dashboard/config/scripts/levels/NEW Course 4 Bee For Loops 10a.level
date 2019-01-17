@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,2,0],[0,0,0,0,0,0,1,0],[0,0,0,1,0,0,1,0],[0,0,0,1,1,0,1,0],[0,1,1,1,1,0,1,0],[0,1,0,0,1,0,1,0],[0,1,0,0,0,0,1,0],[0,1,1,1,1,1,1,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,6,2,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,10,0,0,0,0,14,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Ready for a challenge?  Take what you've learned about loops and try to solve this problem. Remember: You may have to run through solutions multiple times before you figure out all of the steps.",
+    "short_instructions": "Ready for a challenge?  Take what you've learned about loops and try to solve this problem. Remember: You may have to run through solutions multiple times before you figure out all of the steps.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "14",

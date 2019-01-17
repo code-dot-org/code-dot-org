@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Draw!  Draw whatever you are inspired to create.",
+    "short_instructions": "Free Draw!  Draw whatever you are inspired to create.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

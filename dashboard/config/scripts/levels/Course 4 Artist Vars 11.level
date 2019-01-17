@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "Here’s more complicated code using the same concepts from the last puzzle - what should you set the \"sides\" variable to in order to draw this picture made of squares?",
+    "short_instructions": "Here’s more complicated code using the same concepts from the last puzzle - what should you set the \"sides\" variable to in order to draw this picture made of squares?",
     "slider_speed": ".7",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",

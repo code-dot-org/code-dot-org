@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's one more boolean block called NOT. This block flips true to false, or false to true. If you wrap this block of code in a NOT block, it should return true (because we are asking if the two expressions do NOT produce equal values).",
+    "short_instructions": "Here's one more boolean block called NOT. This block flips true to false, or false to true. If you wrap this block of code in a NOT block, it should return true (because we are asking if the two expressions do NOT produce equal values).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

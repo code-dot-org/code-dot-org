@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Are you persistent enough to restore this logo back to normal?",
+    "short_instructions": "Are you persistent enough to restore this logo back to normal?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

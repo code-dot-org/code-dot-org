@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Create a function that sends the harvester down a square path to pick a single head of lettuce from the middle of each row.",
+    "short_instructions": "Create a function that sends the harvester down a square path to pick a single head of lettuce from the middle of each row.",
     "instructions_important": "false",
     "ideal": "8",
     "long_instructions": "*\"Functions __lettuce__ do more with less work!\"*\r\n\r\nCreate a function that sends the harvester down a square path to pick a single head of lettuce from the middle of each row.",

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click here to see the full instructions again!\r\n\r\nHere is the code for an interesting shape.  What happens when you repeat it multiple times, turning between each iteration?   Notice that the turns in this shape add up to 420 degrees, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly 60 degrees to the right of where you began.",
+    "short_instructions": "Click here to see the full instructions again!\r\n\r\nHere is the code for an interesting shape.  What happens when you repeat it multiple times, turning between each iteration?   Notice that the turns in this shape add up to 420 degrees, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly 60 degrees to the right of where you began.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

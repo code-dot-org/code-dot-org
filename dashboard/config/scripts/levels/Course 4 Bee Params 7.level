@@ -18,7 +18,7 @@
     "nectar_goal": "95",
     "flower_type": "redWithNectar",
     "ideal": "40",
-    "instructions": "Try using your new function to collect all of this nectar.",
+    "short_instructions": "Try using your new function to collect all of this nectar.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "never_autoplay_video": "false",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,1,1,1,2,1,4,1],[0,1,0,0,0,1,0,4],[0,4,0,0,0,1,0,0],[0,1,1,1,1,1,1,1],[0,1,0,0,0,1,0,1],[0,3,0,0,0,1,0,1],[0,1,4,1,1,1,1,1],[0,1,1,1,1,0,0,4]]",
-    "instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
+    "short_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "long_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "instructions_important": "false",
     "is_k1": "false",

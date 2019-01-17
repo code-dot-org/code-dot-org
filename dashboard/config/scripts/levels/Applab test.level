@@ -43,7 +43,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "instructions": "This level is submittable. For testing only!",
+    "short_instructions": "This level is submittable. For testing only!",
     "callout_json": "[]",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",

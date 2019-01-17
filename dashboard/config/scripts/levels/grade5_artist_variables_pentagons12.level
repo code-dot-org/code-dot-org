@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "Let's set the \"sides\" variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! Notice that there is another variable called \"length\". We can now use that wherever we have a \"move forward.\" Set the \"length\" variable to 75 for this shape.",
+    "short_instructions": "Let's set the \"sides\" variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! Notice that there is another variable called \"length\". We can now use that wherever we have a \"move forward.\" Set the \"length\" variable to 75 for this shape.",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

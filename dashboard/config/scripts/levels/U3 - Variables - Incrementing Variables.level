@@ -87,7 +87,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Create a repeat loop for the repeated code and use increment to recreate the original program with less lines of code! (Click to see full instructions)"
+    "short_instructions": "Create a repeat loop for the repeated code and use increment to recreate the original program with less lines of code! (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

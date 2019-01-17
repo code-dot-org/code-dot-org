@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Draw a hexagon with **50** pixel long sides.  \r\n",
+    "short_instructions": "Draw a hexagon with **50** pixel long sides.  \r\n",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit the function 'draw a square' to find bugs.",
+    "short_instructions": "Edit the function 'draw a square' to find bugs.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

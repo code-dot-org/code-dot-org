@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Let's use the Design Recipe to create a function called cube - this function should take in a Number and return that number to the power of 3. Make sure to write two example cases! When you're done, use your new function to calculate cube(7).",
+    "short_instructions": "Let's use the Design Recipe to create a function called cube - this function should take in a Number and return that number to the power of 3. Make sure to write two example cases! When you're done, use your new function to calculate cube(7).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

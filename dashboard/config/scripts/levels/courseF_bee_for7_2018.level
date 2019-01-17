@@ -17,7 +17,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "nectar_goal": "16",
-    "instructions": "Try collecting these flowers using an increment of 2.",
+    "short_instructions": "Try collecting these flowers using an increment of 2.",
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

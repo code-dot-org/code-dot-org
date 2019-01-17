@@ -41,7 +41,7 @@
     "data_properties": "{\r\n  \"totalLikes\": 0\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Create an image like app. (Click to see full instructions)",
+    "short_instructions": "Create an image like app. (Click to see full instructions)",
     "encrypted_examples": [
 
     ]

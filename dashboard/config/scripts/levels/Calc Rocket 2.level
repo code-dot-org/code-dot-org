@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Great, let's do one more example before writing the function - what should the rocket height be after 30 seconds?",
+    "short_instructions": "Great, let's do one more example before writing the function - what should the rocket height be after 30 seconds?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

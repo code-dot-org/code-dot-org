@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,1,3,4,0,0,0],[0,0,1,0,0,0,0,0],[0,0,2,0,0,0,0,0],[0,0,4,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Use the new `comment` block to leave yourself quick reminders.",
+    "short_instructions": "Use the new `comment` block to leave yourself quick reminders.",
     "start_direction": "0",
     "step_mode": "1",
     "is_k1": "false",

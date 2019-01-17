@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit this function to add a parameter for the number of sides in your polygon.\r\n\r\nThe sides of all the shapes are 100 pixels long.",
+    "short_instructions": "Edit this function to add a parameter for the number of sides in your polygon.\r\n\r\nThe sides of all the shapes are 100 pixels long.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

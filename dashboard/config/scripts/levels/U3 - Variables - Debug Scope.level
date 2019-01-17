@@ -91,7 +91,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Why isn't the value of foo changing correctly? Make a guess. (Click to see full instructions)"
+    "short_instructions": "Why isn't the value of foo changing correctly? Make a guess. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

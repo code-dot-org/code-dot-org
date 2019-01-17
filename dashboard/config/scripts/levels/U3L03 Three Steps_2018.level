@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Define a function called drawSide() which draws three steps and moves the turtle to prepare for the next side (Click to see full instructions)",
+    "short_instructions": "Define a function called drawSide() which draws three steps and moves the turtle to prepare for the next side (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

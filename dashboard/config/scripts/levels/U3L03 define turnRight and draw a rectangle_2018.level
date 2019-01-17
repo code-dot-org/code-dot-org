@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Define a function called right() that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. (Click to see full instructions)",
+    "short_instructions": "Define a function called right() that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

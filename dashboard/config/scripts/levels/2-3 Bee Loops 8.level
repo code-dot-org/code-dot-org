@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "These purple flowers have different amount of nectar each time you run the puzzle. \r\n\r\nUse the `while nectar` loop to collect all of the nectar. \r\n\r\nThis loop will run as long as the condition is true, in this case `nectar > 0`.",
+    "short_instructions": "These purple flowers have different amount of nectar each time you run the puzzle. \r\n\r\nUse the `while nectar` loop to collect all of the nectar. \r\n\r\nThis loop will run as long as the condition is true, in this case `nectar > 0`.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

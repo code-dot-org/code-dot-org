@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
+    "short_instructions": "If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",

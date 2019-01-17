@@ -52,7 +52,7 @@
     "parent_level_id": 14390,
     "long_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "show_type_hints": "true",
-    "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "include_shared_functions": "false",
     "validation_code": "if (World.frameCount > 400) {\r\n  var status = 3;\r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if(sprite.getAnimationLabel() == \"giraffe\"){\r\n        console.log(\"We got in!\");\r\n        if(sprite.isTouching(puddle)){\r\n          console.log(\"touching\");\r\n  \t\t  levelSuccess();\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
     "block_pool": "gamelab",

@@ -51,7 +51,7 @@
     "long_instructions": "Finally, add a new bell sprite called `myBell`.  \r\n\r\nWhen you click on it, make all the aliens start doing the same dance move!",
     "project_template_level_name": "Dance Party 6_2019",
     "show_type_hints": "true",
-    "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
+    "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
     "include_shared_functions": "false",
     "block_pool": "gamelab",
     "name_suffix": "_2019",

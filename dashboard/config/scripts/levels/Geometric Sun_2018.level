@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Project Idea: Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
+    "short_instructions": "Project Idea: Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
     "x": "200",
     "y": "225",
     "start_direction": "90",

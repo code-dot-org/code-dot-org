@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: We've provided a function that fills your screen with my-image. Change my-image to see what patterns you can make.",
+    "short_instructions": "Free Play: We've provided a function that fills your screen with my-image. Change my-image to see what patterns you can make.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

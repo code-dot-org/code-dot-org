@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a circle to finish the eyeball!\r\n\r\nIf the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? 180? 360? 500?",
+    "short_instructions": "Create a circle to finish the eyeball!\r\n\r\nIf the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? 180? 360? 500?",
     "x": "140",
     "y": "125",
     "start_direction": "90",

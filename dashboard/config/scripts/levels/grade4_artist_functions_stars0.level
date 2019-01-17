@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "You can make this drawing by adding a repeat block.",
+    "short_instructions": "You can make this drawing by adding a repeat block.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

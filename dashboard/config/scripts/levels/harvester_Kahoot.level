@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Now help the farmer pick the corn, lettuce, **and** pumpkin.",
+    "short_instructions": "Now help the farmer pick the corn, lettuce, **and** pumpkin.",
     "instructions_important": "false",
     "ideal": "6",
     "long_instructions": "*\"Oooh, veggies are cropping up everywhere!\"*\r\n\r\nNow help the farmer pick all of the corn on the way to the pumpkin at the end.\r\n___\r\n##### Note: Every square on the path that leads to the pumpkin will either have *one* corn or nothing.  You will need to use an `if` statement to check whether there is corn before you try to pick it!",

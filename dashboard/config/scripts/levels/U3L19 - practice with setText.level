@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add another button that changes the text to the value of a new variable. (Click to see full instructions)",
+    "short_instructions": "Add another button that changes the text to the value of a new variable. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

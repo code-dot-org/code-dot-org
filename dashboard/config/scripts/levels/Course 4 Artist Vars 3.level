@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
+    "short_instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
     "x": "100",
     "y": "300",
     "start_direction": "90",

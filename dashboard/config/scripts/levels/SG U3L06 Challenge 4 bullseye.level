@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create the bullseye using hexadecimal colors and dot(). (Click to see full instructions)",
+    "short_instructions": "Create the bullseye using hexadecimal colors and dot(). (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.9",

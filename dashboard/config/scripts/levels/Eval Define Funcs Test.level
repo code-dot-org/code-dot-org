@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Here's the start of another new function called purple-circle with a domain of one Number (the radius) and a range of Image. The body of the function is broken though - fix it and then make a purple circle with 150 pixel radius",
+    "short_instructions": "Here's the start of another new function called purple-circle with a domain of one Number (the radius) and a range of Image. The body of the function is broken though - fix it and then make a purple circle with 150 pixel radius",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

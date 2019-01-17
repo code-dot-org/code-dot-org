@@ -6,7 +6,7 @@
   "user_id": 24,
   "properties": {
     "skin": "artist",
-    "instructions": "Free-play time! ",
+    "short_instructions": "Free-play time! ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

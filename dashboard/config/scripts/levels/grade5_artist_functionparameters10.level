@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? ",
+    "short_instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",

@@ -18,7 +18,7 @@
     "timeout_after_when_run": "true",
     "goal": "{}",
     "success_condition": "function successCondition() {\r\n\t      return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);\r\n\t    }",
-    "instructions": "Connect a block to the `when actor touches` event to play a sound when Diego finds Manny.",
+    "short_instructions": "Connect a block to the `when actor touches` event to play a sound when Diego finds Manny.",
     "callout_json": "[{\"localization_key\":\"playlab_play_sound\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",

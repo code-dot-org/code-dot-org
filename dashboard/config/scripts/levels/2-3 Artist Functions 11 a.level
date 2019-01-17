@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares! Can you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r\n\r\nDraw the image using the new function!",
+    "short_instructions": "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares! Can you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r\n\r\nDraw the image using the new function!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

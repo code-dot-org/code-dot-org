@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "false",
-    "instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "short_instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",

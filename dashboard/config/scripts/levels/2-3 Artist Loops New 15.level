@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Now, draw anything you like!",
+    "short_instructions": "Now, draw anything you like!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

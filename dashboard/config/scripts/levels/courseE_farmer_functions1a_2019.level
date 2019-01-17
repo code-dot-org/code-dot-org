@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help the harvester pick all of the corn, then the pumpkin.",
+    "short_instructions": "Help the harvester pick all of the corn, then the pumpkin.",
     "instructions_important": "false",
     "ideal": "8",
     "long_instructions": "*\"Oooh, veggies are cropping up everywhere!\"*\r\n\r\nNow help the harvester pick all of the corn on the way to the pumpkin at the end.\r\n___\r\n##### Note: Every square on the way to the pumpkin either has **1** corn or nothing at all.  Use the provided `check for corn` function to make sure you get everything. ",

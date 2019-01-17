@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Now repeat this code 3 times and draw the whole row. \r\n\r\nEach hexagon is 80 pixels wide from the furthest points left to right.",
+    "short_instructions": "Now repeat this code 3 times and draw the whole row. \r\n\r\nEach hexagon is 80 pixels wide from the furthest points left to right.",
     "slider_speed": ".6",
     "ideal": "6",
     "embed": "false",

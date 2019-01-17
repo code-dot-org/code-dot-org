@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Create a new function called aqua-star that has a Domain of a single Number for radius and returns an aqua star of the given radius. Run your new function with a radius of 75.",
+    "short_instructions": "Create a new function called aqua-star that has a Domain of a single Number for radius and returns an aqua star of the given radius. Run your new function with a radius of 75.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

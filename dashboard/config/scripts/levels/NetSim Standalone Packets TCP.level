@@ -46,7 +46,7 @@
     "show_router_memory_control": "true",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
-    "instructions": "Messages on the Internet can take many paths to get to their destination, and sometimes along the way the message gets dropped. In this version of the Internet Simulator, there is a 10% chance of a packet being dropped, multiple packets may take different paths to the destination, and the default max packet size is set to 6 additional characters. ",
+    "short_instructions": "Messages on the Internet can take many paths to get to their destination, and sometimes along the way the message gets dropped. In this version of the Internet Simulator, there is a 10% chance of a packet being dropped, multiple packets may take different paths to the destination, and the default max packet size is set to 6 additional characters. ",
     "default_packet_size_limit": "64",
     "show_tabs": "[\"instructions\",\"my_device\",\"router\"]",
     "default_tab_index": "0",

@@ -53,7 +53,7 @@
     "long_instructions": "Freeplay: What more can you make your giraffe do? \r\n\r\n- Can you add more special items for your giraffe?  \r\n- Can you give her some friends?  ",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2_simple",
-    "instructions": "Freeplay: What more can you make your giraffe do? ",
+    "short_instructions": "Freeplay: What more can you make your giraffe do? ",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
     "block_pool": "gamelab",

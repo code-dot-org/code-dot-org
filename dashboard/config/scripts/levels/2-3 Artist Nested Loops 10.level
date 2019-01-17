@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this code 12 times to complete the pattern.",
+    "short_instructions": "Loop this code 12 times to complete the pattern.",
     "x": "100",
     "y": "150",
     "start_direction": "90",

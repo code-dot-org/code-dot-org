@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "short_instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
     "x": "150",
     "y": "115",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Challenge: This tag is a special one!  Can you figure out how to draw the outline?",
+    "short_instructions": "Challenge: This tag is a special one!  Can you figure out how to draw the outline?",
     "x": "125",
     "y": "150",
     "start_direction": "90",

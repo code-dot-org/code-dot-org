@@ -41,7 +41,7 @@
     "data_properties": "{\r\n  \"userLives\": 3,\r\n  \"userScore\": 100\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
+    "short_instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
     "start_blocks": "getKeyValue(\"userLives\", function (lives) {\r\n  console.log(\"Lives remaining:\");\r\n  console.log(lives);\r\n});\r\nsetKeyValue(\"userScore\", function (score) {\r\n  console.log(\"Score:\");\r\n\r\n});",
     "encrypted_examples": [
 

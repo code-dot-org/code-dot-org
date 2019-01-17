@@ -53,7 +53,7 @@
     "long_instructions": "You can change many things in this program.\r\n\r\nAdd code to change the color of each alien when it gets clicked.",
     "project_template_level_name": "Dance Party 2_simple",
     "show_type_hints": "true",
-    "instructions": "Add code to change the color of each alien when it gets clicked.",
+    "short_instructions": "Add code to change the color of each alien when it gets clicked.",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
     "block_pool": "gamelab",

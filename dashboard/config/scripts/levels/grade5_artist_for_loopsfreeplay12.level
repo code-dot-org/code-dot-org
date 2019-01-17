@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
+    "short_instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

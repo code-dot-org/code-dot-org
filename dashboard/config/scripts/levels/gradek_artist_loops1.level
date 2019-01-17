@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Help the artist draw this line two times forward.",
+    "short_instructions": "Help the artist draw this line two times forward.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

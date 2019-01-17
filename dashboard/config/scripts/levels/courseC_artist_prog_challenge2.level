@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "*Help me paint the yellow lines on this road!*",
+    "short_instructions": "*Help me paint the yellow lines on this road!*",
     "x": "50",
     "y": "300",
     "start_direction": "90",

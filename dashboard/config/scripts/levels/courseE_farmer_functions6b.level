@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Pick all of the produce.",
+    "short_instructions": "Pick all of the produce.",
     "instructions_important": "false",
     "ideal": "20",
     "long_instructions": "Pick all of the produce.",

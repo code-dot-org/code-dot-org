@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "Try this puzzle using the `for` loop and the `counter` variable to see how much shorter your code becomes.",
+    "short_instructions": "Try this puzzle using the `for` loop and the `counter` variable to see how much shorter your code becomes.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "video_key": "C4_for_loops_bee",

@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Now that you've got safe-left?, let's fill in safe-right? - it should take in a sprite's x coordinate and return true if that coordinate is less than 450. Once your safe-right? is complete you should see the Target go off the right side of the screen and return on the left.",
+    "short_instructions": "Now that you've got safe-left?, let's fill in safe-right? - it should take in a sprite's x coordinate and return true if that coordinate is less than 450. Once your safe-right? is complete you should see the Target go off the right side of the screen and return on the left.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

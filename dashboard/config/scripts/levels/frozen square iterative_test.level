@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Add four more blocks of code to finish the square.",
+    "short_instructions": "Add four more blocks of code to finish the square.",
     "x": "150",
     "y": "150",
     "start_direction": "90",

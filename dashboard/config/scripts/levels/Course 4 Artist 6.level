@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the code to draw these three, equilateral triangles.",
+    "short_instructions": "Complete the code to draw these three, equilateral triangles.",
     "level_num": "custom",
     "x": "200",
     "y": "200",

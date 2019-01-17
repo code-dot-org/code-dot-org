@@ -52,7 +52,7 @@
     "parent_level_id": 14161,
     "long_instructions": "There is brown dirt in the corner.\r\n\r\nCreate an **event** so that when Geraldine touches the dirt, her color changes to brown.",
     "show_type_hints": "true",
-    "instructions": "Create an **event** so that when Geraldine touches the dirt, her color changes to brown.",
+    "short_instructions": "Create an **event** so that when Geraldine touches the dirt, her color changes to brown.",
     "include_shared_functions": "false",
     "name_suffix": "_simple",
     "block_pool": "gamelab",

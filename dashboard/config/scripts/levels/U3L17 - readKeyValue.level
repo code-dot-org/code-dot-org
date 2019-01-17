@@ -82,7 +82,7 @@
     "data_properties": "{\r\n  \"permanentNumber\": 0\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Explore your key value pairs with the Data Viewer. (Click to see full instructions)"
+    "short_instructions": "Explore your key value pairs with the Data Viewer. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "What do you need to add this program to check whether a sprout is corn or lettuce?",
+    "short_instructions": "What do you need to add this program to check whether a sprout is corn or lettuce?",
     "instructions_important": "false",
     "ideal": "14",
     "long_instructions": "*\"Lettuce pick all of the produce!\"*\r\n\r\nNow the sprouts can be either corn **or** lettuce.  What do you need to add to this program to check each sprout before you pick?\r\n___\r\n##### Note: Each sprout will turn into either **one** corn or **one** lettuce.",

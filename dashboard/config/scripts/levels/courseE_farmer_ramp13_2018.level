@@ -29,7 +29,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Pick corn if there is corn, and pick lettuce while there is lettuce.",
+    "short_instructions": "Pick corn if there is corn, and pick lettuce while there is lettuce.",
     "ideal": "9",
     "step_speed": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!\",\"hint_id\":\"courseE_farmer_ramp13_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/58234adbe601a627f041dff039c7f245/courseE_farmer_ramp13.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat` loop so that you don't have to write a separate if statement for each square.\",\"hint_id\":\"courseE_farmer_ramp13_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9f0d8f8ea3aa1ab0650edc9fcdfdb465/courseE_farmer_ramp13.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.\",\"hint_id\":\"courseE_farmer_ramp13_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/88cf5dcfbdd7b09cd4228d09ce1abb1b/courseE_farmer_ramp13.mp3\"}]",

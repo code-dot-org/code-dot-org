@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.",
+    "short_instructions": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

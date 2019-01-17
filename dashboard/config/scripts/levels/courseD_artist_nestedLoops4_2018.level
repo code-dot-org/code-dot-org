@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": "1.0",
     "free_play": "false",
-    "instructions": "Great!  Do the same thing with these circles.",
+    "short_instructions": "Great!  Do the same thing with these circles.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

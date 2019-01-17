@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,4,1,0],[0,1,1,4,1,1,1,0],[0,4,1,0,4,4,1,4],[0,0,1,4,3,1,1,1],[0,1,1,4,1,1,1,0],[0,1,1,1,1,1,4,0],[0,4,4,0,1,4,0,0]]",
     "skin": "birds",
-    "instructions": "The pig is hiding, and the goal is to find it. ",
+    "short_instructions": "The pig is hiding, and the goal is to find it. ",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

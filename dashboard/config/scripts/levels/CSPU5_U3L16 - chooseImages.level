@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
+    "short_instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

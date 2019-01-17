@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "I'm a hungry bee! \r\nHelp me collect all of the nectar from the flowers using the fewest number of blocks.",
+    "short_instructions": "I'm a hungry bee! \r\nHelp me collect all of the nectar from the flowers using the fewest number of blocks.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",

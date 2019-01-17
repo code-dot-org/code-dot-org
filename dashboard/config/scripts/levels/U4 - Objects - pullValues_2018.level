@@ -39,7 +39,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Create an event handler for the \"Save Contact\" button that displays the contents of the 4 text input fields in the console. (Click to see full instructions)",
+    "short_instructions": "Create an event handler for the \"Save Contact\" button that displays the contents of the 4 text input fields in the console. (Click to see full instructions)",
     "encrypted_examples": "6wC9bZw7MvfeC5UcG3JCHMDlzcthkXmqITAqnojrY3I6l/J0d+TmHE+MasNV\nXNC9\n",
     "parent_level_id": 4063,
     "name_suffix": "_2018",

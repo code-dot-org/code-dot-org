@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Let’s use a repeat block to create a rhombus. Like a square, all sides are equal length, but the angles are different. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
+    "short_instructions": "Let’s use a repeat block to create a rhombus. Like a square, all sides are equal length, but the angles are different. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
     "x": "120",
     "y": "150",
     "start_direction": "90",

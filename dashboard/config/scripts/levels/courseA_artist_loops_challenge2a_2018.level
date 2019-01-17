@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "*\"Help me get these three tents set up!\"*",
+    "short_instructions": "*\"Help me get these three tents set up!\"*",
     "x": "150",
     "y": "300",
     "start_direction": "90",

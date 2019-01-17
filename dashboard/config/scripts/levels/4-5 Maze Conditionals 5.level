@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "\"Me want sunflower!\"  \r\n\r\nUse an `if` statement to get the zombie to the sunflower with the fewest number of blocks.",
+    "short_instructions": "\"Me want sunflower!\"  \r\n\r\nUse an `if` statement to get the zombie to the sunflower with the fewest number of blocks.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

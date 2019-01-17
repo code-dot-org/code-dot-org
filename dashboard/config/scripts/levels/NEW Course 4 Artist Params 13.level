@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's edit this \"draw a polygon\" function. It already has a \"sides\" parameter. Now, let's add a \"length\" parameter. \r\nThe perimeter of each shape is 200 pixels long. Do you remember the equation to make shapes the same size when they have a different number of sides?",
+    "short_instructions": "Let's edit this \"draw a polygon\" function. It already has a \"sides\" parameter. Now, let's add a \"length\" parameter. \r\nThe perimeter of each shape is 200 pixels long. Do you remember the equation to make shapes the same size when they have a different number of sides?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

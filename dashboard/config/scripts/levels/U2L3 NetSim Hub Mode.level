@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "Use the Internet Simulator to test out your group's binary communication protocol for battleship. How short can you make the message and response?",
+    "short_instructions": "Use the Internet Simulator to test out your group's binary communication protocol for battleship. How short can you make the message and response?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

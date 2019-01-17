@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "\"Can you help me make two bird houses?\"",
+    "short_instructions": "\"Can you help me make two bird houses?\"",
     "x": "75",
     "y": "250",
     "start_direction": "90",

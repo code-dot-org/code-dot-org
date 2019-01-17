@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!",
+    "short_instructions": "Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

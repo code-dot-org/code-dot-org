@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit the function to accept a parameter called `length`.",
+    "short_instructions": "Edit the function to accept a parameter called `length`.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

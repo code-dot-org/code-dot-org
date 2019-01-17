@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "18",
-    "instructions": "Add the code necessary to make sure the bee collects all the nectar. Look at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
+    "short_instructions": "Add the code necessary to make sure the bee collects all the nectar. Look at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",

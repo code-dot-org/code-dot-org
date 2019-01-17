@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get to the pig! But this time, you can only use one `move forward` block. Do you see any other blocks that could help you?",
+    "short_instructions": "Get to the pig! But this time, you can only use one `move forward` block. Do you see any other blocks that could help you?",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

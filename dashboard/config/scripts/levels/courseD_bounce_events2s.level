@@ -14,7 +14,7 @@
       "leftButton",
       "rightButton"
     ],
-    "instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
+    "short_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,8]]",
     "instructions_important": "false",
     "is_k1": "false",

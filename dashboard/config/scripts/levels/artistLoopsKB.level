@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Look!  It's a theater.  Help me set up the chairs so we can all see the stage. ",
+    "short_instructions": "Look!  It's a theater.  Help me set up the chairs so we can all see the stage. ",
     "x": "325",
     "y": "250",
     "start_direction": "270",

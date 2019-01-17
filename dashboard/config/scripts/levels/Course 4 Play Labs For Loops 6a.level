@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
-    "instructions": "Dog will still keep time by counting with our \"for loop\" by \"increment\", but this time, we will add The Wizard into the mix.  Can you change the code so that \"increment\" goes up by two each time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!",
+    "short_instructions": "Dog will still keep time by counting with our \"for loop\" by \"increment\", but this time, we will add The Wizard into the mix.  Can you change the code so that \"increment\" goes up by two each time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",

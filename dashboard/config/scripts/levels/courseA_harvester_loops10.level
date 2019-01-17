@@ -34,7 +34,7 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "5",
     "nectar_goal": "4",
-    "instructions": "Help the harvester pick all five ears of corn!",
+    "short_instructions": "Help the harvester pick all five ears of corn!",
     "long_instructions": "Help the harvester pick all five ears of corn!",
     "authored_hints": "[]",
     "parent_level_id": 11958,

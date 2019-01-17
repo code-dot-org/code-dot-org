@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw rooms for each of the animals. ",
+    "short_instructions": "Draw rooms for each of the animals. ",
     "x": "100",
     "y": "150",
     "start_direction": "90",

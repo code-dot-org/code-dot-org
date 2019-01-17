@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "\r\n1. ReadRecords for all records\r\n2. Way to loop through and count\r\n",
+    "short_instructions": "\r\n1. ReadRecords for all records\r\n2. Way to loop through and count\r\n",
     "long_instructions": "\r\n1. ReadRecords for all records\r\n2. Way to loop through and count",
     "is_k1": "false",
     "skip_instructions_popup": "false",

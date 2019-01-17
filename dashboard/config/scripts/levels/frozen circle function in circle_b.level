@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's create **20** overlapping circles, turning **18 degrees** between each circle.",
+    "short_instructions": "Now let's create **20** overlapping circles, turning **18 degrees** between each circle.",
     "x": "350",
     "y": "180",
     "start_direction": "180",

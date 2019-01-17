@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge:** Grab all of the coins.",
+    "short_instructions": "**Challenge:** Grab all of the coins.",
     "long_instructions": "**Challenge:** Grab all of the coins.",
     "callout_json": "[]",
     "ideal": "27",

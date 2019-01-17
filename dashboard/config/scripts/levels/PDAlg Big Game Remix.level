@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Here's your Big Game as you last left it. Try clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny changes you make after you click Remix will be saved on your new remix and not on your main Big Game.",
+    "short_instructions": "Here's your Big Game as you last left it. Try clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny changes you make after you click Remix will be saved on your new remix and not on your main Big Game.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

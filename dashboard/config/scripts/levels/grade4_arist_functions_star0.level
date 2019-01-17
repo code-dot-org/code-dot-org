@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Have you drawn something like this star before? Practice making it one more time by adding a turn and a repeat block.",
+    "short_instructions": "Have you drawn something like this star before? Practice making it one more time by adding a turn and a repeat block.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

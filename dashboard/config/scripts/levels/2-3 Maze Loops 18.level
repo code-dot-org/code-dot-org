@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get me to the sunflower using the fewest blocks possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down on the amount of code you need.",
+    "short_instructions": "Get me to the sunflower using the fewest blocks possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down on the amount of code you need.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Help Elsa draw a line that is 100 pixels long.",
+    "short_instructions": "Help Elsa draw a line that is 100 pixels long.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

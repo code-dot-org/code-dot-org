@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "One more practice puzzle with the `if/else` block!\r\n\r\nTrace it with your finger to see if you can figure it out on your first try.",
+    "short_instructions": "One more practice puzzle with the `if/else` block!\r\n\r\nTrace it with your finger to see if you can figure it out on your first try.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

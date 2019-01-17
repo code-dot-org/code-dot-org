@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Press \"Run\" to try the code. Then, repeat it enough times to complete the drawing. The colors will be different every time.",
+    "short_instructions": "Press \"Run\" to try the code. Then, repeat it enough times to complete the drawing. The colors will be different every time.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

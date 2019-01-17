@@ -12,7 +12,7 @@
     "hex": "false",
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
-    "instructions": "Complete the X shape by typing 0s and 1s",
+    "short_instructions": "Complete the X shape by typing 0s and 1s",
     "data": "11"
   },
   "published": true,

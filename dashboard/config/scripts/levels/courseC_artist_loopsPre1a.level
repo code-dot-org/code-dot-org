@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Time to spin that line around!",
+    "short_instructions": "Time to spin that line around!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

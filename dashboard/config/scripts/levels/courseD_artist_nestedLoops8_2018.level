@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.",
+    "short_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

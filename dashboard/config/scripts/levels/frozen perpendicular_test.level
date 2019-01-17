@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now, create two lines with a 90 degree turn between them.",
+    "short_instructions": "Now, create two lines with a 90 degree turn between them.",
     "x": "150",
     "y": "180",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Help me put down stones so I don't fall in!",
+    "short_instructions": "Help me put down stones so I don't fall in!",
     "x": "25",
     "y": "200",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the `draw a line of squares` function from the last puzzle to draw this pattern.",
+    "short_instructions": "Use the `draw a line of squares` function from the last puzzle to draw this pattern.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

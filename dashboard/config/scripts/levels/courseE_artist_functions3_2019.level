@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Build a function that will create this star.",
+    "short_instructions": "Build a function that will create this star.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

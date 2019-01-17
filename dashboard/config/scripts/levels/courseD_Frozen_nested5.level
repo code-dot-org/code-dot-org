@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Play with the snowflakes!",
+    "short_instructions": "Play with the snowflakes!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

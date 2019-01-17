@@ -6,7 +6,7 @@
   "user_id": 20,
   "properties": {
     "skin": "artist",
-    "instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!",
+    "short_instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

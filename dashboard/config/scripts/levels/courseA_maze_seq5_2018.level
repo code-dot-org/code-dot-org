@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,2,4,4,0,0],[0,4,4,1,4,4,0,0],[0,4,4,1,4,4,0,0],[0,4,4,3,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Give this one a try.",
+    "short_instructions": "Give this one a try.",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

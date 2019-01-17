@@ -40,7 +40,7 @@
     "data_properties": "{\r\n  \"predictableBit\": 0\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
+    "short_instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
     "encrypted_examples": [
 
     ],

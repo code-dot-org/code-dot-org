@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs.  Can you write a program that fills it until the ground is even?  Hint:  Try using the while loop this time.",
+    "short_instructions": "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs.  Can you write a program that fills it until the ground is even?  Hint:  Try using the while loop this time.",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "false",

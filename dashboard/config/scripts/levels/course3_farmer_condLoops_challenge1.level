@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Turn right at the pumpkins. Collect everything to complete the level. Each hidden crop has only one corn or lettuce.",
+    "short_instructions": "Turn right at the pumpkins. Collect everything to complete the level. Each hidden crop has only one corn or lettuce.",
     "step_speed": "1",
     "long_instructions": "The pumpkins mark the place where you should turn. *Turn right at the pumpkins.* Otherwise keep going forward, but remember to collect all of the lettuce or corn along the way. \r\n\r\n**Each hidden crop has only one corn or lettuce.**",
     "ideal": "10",

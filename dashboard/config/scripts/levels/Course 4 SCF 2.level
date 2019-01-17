@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Use what you learned in the previous level to draw an image like this. Note: The code becomes more simple if you incorporate parameters. ",
+    "short_instructions": "Use what you learned in the previous level to draw an image like this. Note: The code becomes more simple if you incorporate parameters. ",
     "ideal": "33",
     "embed": "false",
     "long_instructions": "**Functions Super Challenge:** Use what you learned in the previous level to draw an image like this.\r\n\r\n*Note: The code becomes more simple if you incorporate parameters.*  ",

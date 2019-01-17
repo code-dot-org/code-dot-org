@@ -34,7 +34,7 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "5",
     "nectar_goal": "3",
-    "instructions": "Pick all the corn.",
+    "short_instructions": "Pick all the corn.",
     "long_instructions": "*Thank you for helping me!* \r\n\r\nPick all the corn.",
     "authored_hints": "[]",
     "parent_level_id": 11646,

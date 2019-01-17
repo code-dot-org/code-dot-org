@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.5",
-    "instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
+    "short_instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

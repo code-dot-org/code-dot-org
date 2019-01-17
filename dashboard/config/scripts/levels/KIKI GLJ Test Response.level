@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "instructions": "Look carefully at the code below.  What do you think the plane will do when you click \"Run\"?\r\n",
+    "short_instructions": "Look carefully at the code below.  What do you think the plane will do when you click \"Run\"?\r\n",
     "instructions_important": "true",
     "allow_user_uploads": "false",
     "submittable": "false",

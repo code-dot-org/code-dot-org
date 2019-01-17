@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "instructions": "Let's repeat the line **90** times!",
+    "short_instructions": "Let's repeat the line **90** times!",
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

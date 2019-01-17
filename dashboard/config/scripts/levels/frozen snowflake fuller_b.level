@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "What happens if you jump back before you draw each branch?",
+    "short_instructions": "What happens if you jump back before you draw each branch?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

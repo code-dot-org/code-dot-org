@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help the bee collect the nectar from the flowers?",
+    "short_instructions": "Help the bee collect the nectar from the flowers?",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "3",

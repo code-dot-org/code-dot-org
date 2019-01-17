@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Complete the onscreen? function so that it checks whether both safe-left? and safe-right? are true.",
+    "short_instructions": "Complete the onscreen? function so that it checks whether both safe-left? and safe-right? are true.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

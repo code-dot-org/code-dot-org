@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,4,2,1,3,4,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Snap all blocks together to finish your code, then click \"Run\".",
+    "short_instructions": "Snap all blocks together to finish your code, then click \"Run\".",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",

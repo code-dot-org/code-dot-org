@@ -50,7 +50,7 @@
     "parent_level_id": 13342,
     "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\r\n* Create two bell sprites, and make the aliens do a different dance move for each\r\n* Make the aliens do a new dance move whenever they touch each other",
     "show_type_hints": "true",
-    "instructions": "Now create your own alien disco!",
+    "short_instructions": "Now create your own alien disco!",
     "include_shared_functions": "true",
     "block_pool": "gamelab",
     "block_pools": [

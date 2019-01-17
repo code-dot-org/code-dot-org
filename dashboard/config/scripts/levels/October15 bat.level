@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Here are some functions to play with.  Can you draw a bat?\r\n",
+    "short_instructions": "Freeplay: Here are some functions to play with.  Can you draw a bat?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",

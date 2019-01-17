@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Edit the update-player function so the player moves up when the up arrow (keycode 38) is pressed, and moves down (keycode 40) when the down arrow is pressed.",
+    "short_instructions": "Edit the update-player function so the player moves up when the up arrow (keycode 38) is pressed, and moves down (keycode 40) when the down arrow is pressed.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

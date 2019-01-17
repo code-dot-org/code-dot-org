@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Edit this `for` loop to create a game that's fun for you to play! \r\nPress \"Run\" and click Madame Unicorn as many times as you can.  Can you beat our score of 24? ",
+    "short_instructions": "Edit this `for` loop to create a game that's fun for you to play! \r\nPress \"Run\" and click Madame Unicorn as many times as you can.  Can you beat our score of 24? ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",

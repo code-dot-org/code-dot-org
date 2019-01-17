@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this shape 6 times. \r\n\r\nHow much do you have to turn each time you loop? ",
+    "short_instructions": "Loop this shape 6 times. \r\n\r\nHow much do you have to turn each time you loop? ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

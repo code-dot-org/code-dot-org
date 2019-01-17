@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Remember back in a previous stage when we used a variable to control the number of sides in a shape? We are going to do the same thing with the `counter` variable now. This pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long. ",
+    "short_instructions": "Remember back in a previous stage when we used a variable to control the number of sides in a shape? We are going to do the same thing with the `counter` variable now. This pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

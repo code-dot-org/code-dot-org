@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "How can Laurel collect all five piles of gold using only one `E -->` block?",
+    "short_instructions": "How can Laurel collect all five piles of gold using only one `E -->` block?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `repeat` block to collect your gold.\",\"hint_id\":\"grade1_adventurer_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a8536a05e37be242435e3816f712a647/grade1_adventurer_loops2.mp3\"}]",
     "ideal": "4",
     "long_instructions": "How can Laurel collect all five piles of gold using only one `E -->` block?",

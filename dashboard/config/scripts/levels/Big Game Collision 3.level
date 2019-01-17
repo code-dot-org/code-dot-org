@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Use the Distance Formula, so the distance function returns the distance between the player's center coordinates (px, py) and another sprite's center coordinates (cx, cy).",
+    "short_instructions": "Use the Distance Formula, so the distance function returns the distance between the player's center coordinates (px, py) and another sprite's center coordinates (cx, cy).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

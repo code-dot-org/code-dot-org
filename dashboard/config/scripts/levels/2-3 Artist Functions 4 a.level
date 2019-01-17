@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Now, put the function inside of a loop and add an extra turn to draw these three squares.",
+    "short_instructions": "Now, put the function inside of a loop and add an extra turn to draw these three squares.",
     "x": "200",
     "y": "200",
     "start_direction": "0",

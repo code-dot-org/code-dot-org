@@ -53,7 +53,7 @@
     "long_instructions": "The giraffe is hungry!\r\n\r\nAdd an apple and use an action to make the giraffe its normal size when the apple and giraffe touch.  \r\n",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2_simple",
-    "instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
+    "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
     "include_shared_functions": "false",
     "name_suffix": "_simple",
     "block_pool": "gamelab",

@@ -55,7 +55,7 @@
     "contained_level_names": [
       "Dance Party Predict_simple"
     ],
-    "instructions": "What do you think will happen when you click on the alien?  ",
+    "short_instructions": "What do you think will happen when you click on the alien?  ",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
     "block_pool": "gamelab"

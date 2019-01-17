@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.",
+    "short_instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

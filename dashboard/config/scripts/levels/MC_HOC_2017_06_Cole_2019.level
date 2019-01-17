@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "High Tide",
-    "instructions": "Fix this code to get the Agent to build a bridge across this river.",
+    "short_instructions": "Fix this code to get the Agent to build a bridge across this river.",
     "long_instructions": "Another river, but this one is much wider! \r\n \r\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. ",
     "agent_start_direction": "0",
     "is_agent_level": "true",

@@ -15,7 +15,7 @@
       "rightButton"
     ],
     "fail_on_ball_exit": "true",
-    "instructions": "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand. Bounce the ball until it hits the finish target.",
+    "short_instructions": "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand. Bounce the ball until it hits the finish target.",
     "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,32,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,4,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
     "instructions_important": "false",
     "is_k1": "false",
