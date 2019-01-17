@@ -113,7 +113,7 @@ class ScriptOverviewHeader extends Component {
   adds the announcement if needed.
    */
   filterAnnouncements = (currentView) => {
-    let currentAnnouncements = [];
+    const currentAnnouncements = [];
     this.props.announcements.forEach(element => {
       if (element.visibility === VisibilityType.teacherAndStudent) {
         currentAnnouncements.push(element);

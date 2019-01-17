@@ -125,7 +125,7 @@ describe('ScriptAnnouncementsEditor', () => {
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce').dive().find('.uitest-type').simulate('change', { target: { value: 'bullhorn' }});
+    wrapper.find('Announce').dive().find('.uitest-announcement-type').simulate('change', { target: { value: 'bullhorn' }});
     assert.equal(wrapper.state('announcements')[0].type, 'bullhorn');
   });
 
@@ -137,7 +137,7 @@ describe('ScriptAnnouncementsEditor', () => {
   );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce').dive().find('.uitest-visibility').simulate('change', { target: { value: 'Student-only' }});
+    wrapper.find('Announce').dive().find('.uitest-announcement-visibility').simulate('change', { target: { value: 'Student-only' }});
     assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
   });
 
@@ -156,7 +156,7 @@ describe('ScriptAnnouncementsEditor', () => {
   );
 
     assert.equal(wrapper.state('announcements')[0].visibility, undefined);
-    wrapper.find('Announce').dive().find('.uitest-visibility').simulate('change', { target: { value: 'Student-only' }});
+    wrapper.find('Announce').dive().find('.uitest-announcement-visibility').simulate('change', { target: { value: 'Student-only' }});
     assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
   });
 
