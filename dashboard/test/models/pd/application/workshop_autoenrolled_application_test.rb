@@ -44,38 +44,6 @@ module Pd::Application
       refute application.registered_workshop?
     end
 
-    test 'teachercon_cohort' do
-      teachercon = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
-
-      included = [
-        create(:pd_workshop_autoenrolled_application, :locked, pd_workshop_id: teachercon.id, status: :accepted),
-        create(:pd_workshop_autoenrolled_application, :locked, pd_workshop_id: teachercon.id, status: :waitlisted)
-      ]
-
-      excluded = [
-        # not teachercon
-        create(:pd_workshop_autoenrolled_application, :locked, pd_workshop_id: @workshop.id, status: :accepted),
-
-        # not locked
-        create(:pd_workshop_autoenrolled_application, pd_workshop_id: teachercon.id, status: :accepted),
-
-        # not accepted or waitlisted
-        @application,
-
-        # no workshop
-        @application_no_workshop
-      ]
-
-      teachercon_cohort = WorkshopAutoenrolledApplication.teachercon_cohort
-
-      included.each do |application|
-        assert teachercon_cohort.include? application
-      end
-      excluded.each do |application|
-        refute teachercon_cohort.include? application
-      end
-    end
-
     test 'no unnecessary workshop query when none assigned' do
       @application.update!(pd_workshop_id: nil)
 
