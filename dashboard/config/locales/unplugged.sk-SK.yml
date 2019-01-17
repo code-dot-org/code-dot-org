@@ -22,10 +22,10 @@ sk:
           Tímy si navzájom vymenia návody a pokúsia sa nakresliť príšerku podľa uvedeného
           návodu. Je kresba podobná tomu, čo si pôvodný tím vybral?
       Unplug3:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: '"Naprogramovaním" jeden druhého tak, aby kreslili obrázky, študenti
           začnú chápať, o čom skutočne programovanie je. Hodina začne tým, že študenti
-          si budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na milimetrovom
+          si budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na štvorčekovom
           papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok
           času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
       Unplug4:
@@ -122,7 +122,7 @@ sk:
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       GraphPaperProgramming:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
           príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       PaperPlanes:
@@ -311,7 +311,7 @@ sk:
           krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené
           viac ako jedným spôosobom.
       courseD_unplugged_graphPaperProgramming:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
           príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       courseD_unplugged_relayProgramming:
@@ -438,11 +438,11 @@ sk:
           diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
           je práve stlačené.
       GraphPaperProgramming_2018:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
           príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivity bez počítača
@@ -524,7 +524,7 @@ sk:
         title: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných
           príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       RelayProgramming_2018_2019:
@@ -533,7 +533,7 @@ sk:
           potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých,
           pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       BinaryImages_2019:
         title: Binárne obrázky

@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import Button from '../Button';
-import color from '../../util/color';
-import {connect} from 'react-redux';
+import color from "../../util/color";
+import { connect } from 'react-redux';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 
@@ -10,10 +10,13 @@ const styles = {
   card: {
     height: 250,
     width: 310,
-    background: color.teal,
+    background: color.teal
+  },
+  cardSmall: {
+    width: "100%"
   },
   cardAllowWrap: {
-    position: 'relative',
+    position: 'relative'
   },
   text: {
     paddingLeft: 20,
@@ -25,23 +28,32 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 15,
     fontSize: 27,
+    width: 260,
     display: 'inline',
+  },
+  titleSmall: {
+    width: "100%",
+    boxSizing: 'border-box'
   },
   titleNoWrap: {
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   titleAllowWrap: {
-    lineHeight: '1.1',
+    lineHeight: '1.1'
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
-    lineHeight: '21px',
+    lineHeight: "21px",
     height: 140,
     marginBottom: 5,
-    overflowY: 'auto',
+    overflowY: 'auto'
+  },
+  descriptionSmall: {
+    width: "100%",
+    boxSizing: 'border-box'
   },
   button: {
     marginLeft: 20,
@@ -67,8 +79,8 @@ class ResourceCard extends Component {
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
     allowWrap: PropTypes.bool,
-    allowDangerouslySetInnerHtml: PropTypes.bool,
     linkId: PropTypes.string,
     linkClass: PropTypes.string,
   };
@@ -81,15 +93,23 @@ class ResourceCard extends Component {
       link,
       isRtl,
       allowWrap,
-      allowDangerouslySetInnerHtml,
       linkId,
       linkClass,
+      responsiveSize,
     } = this.props;
+
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    let buttonStyles = [styles.button];
-    let cardStyles = [styles.card, localeStyle];
-    let titleStyles = [styles.title, styles.text, localeStyle];
-    let descriptionStyles = [styles.text, styles.description, localeStyle];
+
+    const buttonStyles = [styles.button];
+    const cardStyles = [styles.card, localeStyle];
+    const titleStyles = [styles.title, styles.text, localeStyle];
+    const descriptionStyles = [styles.text, styles.description, localeStyle];
+
+    if (['sm', 'xs'].includes(responsiveSize)) {
+      cardStyles.push(styles.cardSmall);
+      titleStyles.push(styles.titleSmall);
+      descriptionStyles.push(styles.descriptionSmall);
+    }
 
     if (allowWrap) {
       buttonStyles.push(styles.buttonAllowWrap);
@@ -99,23 +119,15 @@ class ResourceCard extends Component {
       titleStyles.push(styles.titleNoWrap);
     }
 
-    let descriptionContainer;
-    if (allowDangerouslySetInnerHtml) {
-      descriptionContainer = (
-        <div
-          style={descriptionStyles}
-          dangerouslySetInnerHTML={{__html: description}} // eslint-disable-line react/no-danger
-        />
-      );
-    } else {
-      descriptionContainer = <div style={descriptionStyles}>{description}</div>;
-    }
-
     return (
       <div style={cardStyles}>
-        <div style={titleStyles}>{title}</div>
-        {descriptionContainer}
-        <br />
+        <div style={titleStyles}>
+          {title}
+        </div>
+        <div style={descriptionStyles}>
+          {description}
+        </div>
+        <br/>
         <Button
           id={linkId}
           className={linkClass}
@@ -131,4 +143,5 @@ class ResourceCard extends Component {
 
 export default connect(state => ({
   isRtl: state.isRtl,
+  responsiveSize: state.responsive.responsiveSize,
 }))(Radium(ResourceCard));

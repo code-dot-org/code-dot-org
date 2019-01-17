@@ -2210,7 +2210,7 @@ is:
             Lesson 2,3:
               name: Kennslustund 2,3
         csd3-2017:
-          description_short: "Forritun"
+          description_short: Forritun
           stages:
             Complex Conditionals:
               name: Samsettar skilyrðingar
@@ -3706,3 +3706,5 @@ is:
               name: Horft fram á við
             Binary Bracelets:
               name: Stafræn armbönd
+        gamelab:
+          title: Leikjasmiðjan

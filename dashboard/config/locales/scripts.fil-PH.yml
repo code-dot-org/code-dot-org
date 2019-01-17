@@ -11736,3 +11736,5 @@ fil:
               name: Binary na mga Pulseras
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
+        gamelab:
+          title: Game Lab

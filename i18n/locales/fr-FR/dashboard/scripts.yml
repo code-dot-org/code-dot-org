@@ -1497,7 +1497,7 @@ fr:
             'Farmer: While Loops':
               name: 'Fermier: Boucles «Tant que»'
         csd3-2017:
-          description_short: "Programmation"
+          description_short: Programmation
           stages:
             Draw Loop and Randomization:
               name: La boucle draw et la randomisation
@@ -2753,3 +2753,5 @@ fr:
               name: Regarder en avant
             Binary Bracelets:
               name: Bracelets binaires
+        gamelab:
+          title: Labo des jeux

@@ -6,7 +6,7 @@ video_player: true
 <link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
 <script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
-<script src="https://cdn.optimizely.com/js/400912536.js"></script>
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
 
 # Administrators: Computer science in your school or district
 
