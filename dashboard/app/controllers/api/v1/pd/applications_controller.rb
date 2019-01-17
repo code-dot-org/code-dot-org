@@ -172,6 +172,14 @@ module Api::V1::Pd
         status_changed = true
       end
 
+      if application_data[:fit_workshop_id] != @application.try(:fit_workshop_id)
+        fit_workshop_changed = true
+      end
+
+      if application_data[:pd_workshop_id] != @application.pd_workshop_id
+        summer_workshop_changed = true
+      end
+
       if application_data[:response_scores]
         application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
@@ -186,6 +194,10 @@ module Api::V1::Pd
 
       %w(notes notes_2 notes_3 notes_4 notes_5).each do |notes_field|
         application_data[notes_field] = application_data[notes_field].strip_utf8mb4 if application_data[notes_field]
+      end
+
+      %w(question_1 question_2 question_3 question_4 question_5 question_6 question_7).each do |interview_field|
+        application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
       end
 
       # only allow those with full management permission to lock/unlock and edit form data
@@ -205,6 +217,8 @@ module Api::V1::Pd
       end
 
       @application.update_status_timestamp_change_log(current_user) if status_changed
+      @application.log_fit_workshop_change(current_user) if fit_workshop_changed
+      @application.log_summer_workshop_change(current_user) if summer_workshop_changed
 
       render json: @application, serializer: ApplicationSerializer
     end
@@ -258,6 +272,13 @@ module Api::V1::Pd
         :notes_3,
         :notes_4,
         :notes_5,
+        :question_1,
+        :question_2,
+        :question_3,
+        :question_4,
+        :question_5,
+        :question_6,
+        :question_7,
         :regional_partner_value,
         :response_scores,
         :pd_workshop_id,

@@ -1,14 +1,14 @@
 /* global dashboard */
+/* eslint no-unused-vars: ["error", { "ignoreRestSiblings": true }] */
 import $ from 'jquery';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
-import exportGamelabWebExport from '../templates/export/gamelabWebExport.html.ejs';
 import exportGamelabCodeEjs from '../templates/export/gamelabCode.js.ejs';
-import exportGamelabExpoIndexEjs from '../templates/export/expo/gamelabIndex.html.ejs';
+import exportGamelabIndexEjs from '../templates/export/gamelabIndex.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
@@ -23,34 +23,42 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 
-export default {
-  async exportAppToZip(appName, code, expoMode) {
+const CONTROLS_HEIGHT = 165;
 
+export default {
+  async exportAppToZip(appName, code, animationOpts, expoMode) {
+
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
-    var html;
-    if (expoMode) {
-      html = exportGamelabExpoIndexEjs({
-        appName,
-        jQueryPath: jQueryBaseName + ".j",
-        gamelabApiPath: 'gamelab-api.j',
-        p5Path: 'p5.j',
-        p5playPath: 'p5.play.j',
-      });
-    } else {
-      html = exportGamelabWebExport({
-        appName,
-      });
-    }
-    const exportCode = exportGamelabCodeEjs({ code });
+    const html = exportGamelabIndexEjs({
+      appName,
+      appHeight,
+      appWidth,
+      jQueryPath: expoMode ? jQueryBaseName + '.j' : 'https://code.jquery.com/jquery-1.12.1.min.js',
+      gamelabApiPath: expoMode ? 'gamelab-api.j' : 'gamelab-api.js',
+      gamelabCssPath: 'gamelab.css',
+      p5Path: expoMode ? 'p5.j' : 'p5.js',
+      p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
+      codePath: expoMode ? 'code.j' : 'code.js',
+      webExport: !expoMode,
+      exportClass: expoMode ? 'expo' : 'web',
+    });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
     const zipAssetPrefix = appName + '/assets/';
 
-    const appAssets = generateAppAssets({
-      code: exportCode,
+    const { appAssets, animationListJSON } = this.generateAppAssetsAndJSON({
+      code,
+      animationOpts,
       rootRelativeAssetPrefix,
       zipAssetPrefix,
+    });
+    const exportCode = exportGamelabCodeEjs({
+      code,
+      animationOpts,
+      animationListJSON,
     });
 
     if (expoMode) {
@@ -80,8 +88,8 @@ export default {
         projectId: project.getCurrentId()
       });
       const appJs = exportExpoAppEjs({
-        appHeight: GAME_HEIGHT,
-        appWidth: GAME_WIDTH,
+        appHeight,
+        appWidth,
         hasDataAPIs: false,
       });
 
@@ -104,22 +112,28 @@ export default {
           () => download('/blockly/js/gamelab-api.js' + cacheBust, 'text')
               .then((data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
                   () => gamelabApiAsset.reject(new Error("failed to fetch gamelab-api.js"))));
-    // Fetch p5.js and p5.play.js:
+    // Fetch gamelab.css, p5.js, and p5.play.js:
+    const cssAsset = download('/blockly/css/gamelab.css' + cacheBust, 'text');
     const p5Asset = download('/blockly/js/p5play/p5.js' + cacheBust, 'text');
     const p5playAsset = download('/blockly/js/p5play/p5.play.js' + cacheBust, 'text');
-    const staticDownloads = [gamelabApiAsset, p5Asset, p5playAsset];
+    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(download(`https://code.jquery.com/${jQueryBaseName}.js`, 'text'));
     }
 
     return new Promise((resolve, reject) => {
-      $.when(...staticDownloads, ...(appAssets.map(
-        (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
-      ))).then(
-        ([gamelabApiText], [p5Text], [p5playText], ...rest) => {
+      $.when(...staticDownloads, ...(appAssets.map(assetToDownload => {
+        if (assetToDownload.blob) {
+          return $.Deferred().resolve([assetToDownload.blob]);
+        } else {
+          return download(assetToDownload.url, assetToDownload.dataType || 'text');
+        }
+      }))).then(
+        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/gamelab-api.j" : "gamelab-api.js"),
               gamelabApiText);
+          zip.file(appName + "/gamelab.css", cssText);
           zip.file(appName + "/" + (expoMode ? "assets/p5.j" : "p5.js"), p5Text);
           zip.file(appName + "/" + (expoMode ? "assets/p5.play.j" : "p5.play.js"),
               p5playText);
@@ -152,13 +166,53 @@ export default {
     });
   },
 
-  async exportApp(appName, code, suppliedExpoOpts) {
+  generateExportableAnimationListJSON(animationList) {
+  // Some information in the animationList doesn't belong in the exported version
+  // This function currently removes:
+  // pendingFrames from the top level
+  // blob and dataURI from each animation
+  const { pendingFrames, propsByKey, orderedKeys, ...rest} = animationList;
+    const exportAnimationList = {
+      orderedKeys,
+      propsByKey: {},
+      ...rest
+    };
+    orderedKeys.map(key => {
+      const props = propsByKey[key];
+      const { blob, dataURI, ...otherProps } = props;
+      exportAnimationList.propsByKey[key] = otherProps;
+    });
+    return JSON.stringify(exportAnimationList);
+  },
+
+  rewriteAnimationListSourceUrls(animationList, appAssets) {
+    const { propsByKey, ...rest } = animationList;
+    const rewrittenAnimationList = { propsByKey: {}, ...rest };
+    Object.entries(propsByKey).forEach(([key, anim]) => {
+      const appAsset = appAssets.find(asset => asset.key === key);
+      const { rootRelativePath } = appAsset || {};
+      rewrittenAnimationList.propsByKey[key] = {
+        ...anim,
+        rootRelativePath,
+      };
+    });
+    return rewrittenAnimationList;
+  },
+
+  async exportApp(appName, code, animationOpts, suppliedExpoOpts) {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'expoPublish') {
-      return await this.publishToExpo(appName, code);
+      return await this.publishToExpo(
+          appName,
+          code,
+          animationOpts);
     }
-    return this.exportAppToZip(appName, code, expoOpts.mode === 'expoZip')
-      .then(function (zip) {
+    return this.exportAppToZip(
+        appName,
+        code,
+        animationOpts,
+        expoOpts.mode === 'expoZip'
+      ).then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");
         });
@@ -191,28 +245,41 @@ export default {
     return exportExpoPackagedFilesEjs({ entries });
   },
 
-  async publishToExpo(appName, code) {
+  async publishToExpo(appName, code, animationOpts) {
     const { origin } = window.location;
     const gamelabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
       `${origin}/blockly/js/gamelab-api.js` :
       `${origin}/blockly/js/gamelab-api.min.js`;
+    const gamelabCssPath = `${origin}/blockly/css/gamelab.css`;
     const p5Path = `${origin}/blockly/js/p5play/p5.js`;
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
-    const html = exportGamelabExpoIndexEjs({
+    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = GAME_WIDTH;
+    const html = exportGamelabIndexEjs({
       appName,
+      appHeight,
+      appWidth,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       gamelabApiPath,
+      gamelabCssPath,
       p5Path,
       p5playPath,
+      codePath: 'code.j',
+      webExport: false,
+      exportClass: 'expo',
     });
-    const exportCode = exportGamelabCodeEjs({ code });
     const appJs = exportExpoAppEjs({
-      appHeight: GAME_HEIGHT,
-      appWidth: GAME_WIDTH,
+      appHeight,
+      appWidth,
       hasDataAPIs: false,
     });
 
-    const appAssets = generateAppAssets({ code: exportCode });
+    const { appAssets, animationListJSON } = this.generateAppAssetsAndJSON({ code, animationOpts });
+    const exportCode = exportGamelabCodeEjs({
+      code,
+      animationOpts,
+      animationListJSON,
+    });
 
     const files = {
       'App.js': { contents: appJs, type: 'CODE'},
@@ -224,7 +291,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: project.getCurrentName(),
-      sdkVersion: '25.0.0',
+      sdkVersion: '28.0.0',
     });
 
     // Important that index.html comes first:
@@ -252,9 +319,13 @@ export default {
       assetLocation: 'appassets/',
     });
 
-    const assetDownloads = appAssets.map(asset =>
-      download(asset.url, asset.dataType || 'text')
-    );
+    const assetDownloads = appAssets.map(asset => {
+      if (asset.blob) {
+        return $.Deferred().resolve(asset.blob);
+      } else {
+        return download(asset.url, asset.dataType || 'text');
+      }
+    });
 
     const downloadedAssets = await Promise.all(assetDownloads);
     const assetUploads = downloadedAssets.map(downloadedAsset =>
@@ -278,41 +349,75 @@ export default {
     const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
 
     return expoURL;
+  },
+
+  generateAppAssetsAndJSON(params) {
+    const {
+      animationOpts,
+      code = '',
+      rootRelativeAssetPrefix = '',
+      zipAssetPrefix = ''
+    } = params;
+    const { animationList } = animationOpts;
+    const { propsByKey: animationPropsByKey } = animationList;
+
+    const appAssets = dashboard.assets.listStore.list().map(asset => {
+      const filename = asset.filename.replace(/^\/+/g, '');
+      return {
+        url: assetPrefix.fixPath(asset.filename),
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename: filename,
+      };
+    });
+
+    const animAssets = Object.entries(animationPropsByKey).map(([key, anim]) => {
+      const { blob, sourceUrl } = anim;
+      // If we have a sourceUrl, use it for the filename and url. Otherwise (in
+      // cases where we only have a Blob), generate a filename/url from the key:
+      const filename = sourceUrl ? sourceUrl.replace(/^\/+/g, '') : `${key}.png`;
+      const url = sourceUrl ? assetPrefix.fixPath(sourceUrl) : filename;
+      return {
+        blob,
+        key,
+        sourceUrl,
+        url,
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename,
+      };
+    });
+
+    const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    const allSounds = code.match(soundRegex) || [];
+    const uniqueSounds = [...(new Set(allSounds))];
+    const soundAssets = uniqueSounds.map(soundProtocolUrl => {
+      const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
+      const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
+      return {
+        url: soundOriginUrl,
+        rootRelativePath: rootRelativeAssetPrefix + filename,
+        zipPath: zipAssetPrefix + filename,
+        dataType: 'binary',
+        filename,
+        searchUrl: soundProtocolUrl,
+      };
+    });
+
+    const rewrittenAnimList = this.rewriteAnimationListSourceUrls(animationList, animAssets);
+
+    return {
+      appAssets: [
+        ...appAssets,
+        ...animAssets,
+        ...soundAssets,
+      ],
+      animationListJSON: this.generateExportableAnimationListJSON(rewrittenAnimList),
+    };
   }
 };
-
-function generateAppAssets(params) {
-  const { code = '', rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
-
-  const appAssets = dashboard.assets.listStore.list().map(asset => ({
-    url: assetPrefix.fixPath(asset.filename),
-    rootRelativePath: rootRelativeAssetPrefix + asset.filename,
-    zipPath: zipAssetPrefix + asset.filename,
-    dataType: 'binary',
-    filename: asset.filename,
-  }));
-
-  const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-  const allSounds = code.match(soundRegex) || [];
-  const uniqueSounds = [...(new Set(allSounds))];
-  const soundAssets = uniqueSounds.map(soundProtocolUrl => {
-    const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
-    const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
-    return {
-      url: soundOriginUrl,
-      rootRelativePath: rootRelativeAssetPrefix + filename,
-      zipPath: zipAssetPrefix + filename,
-      dataType: 'binary',
-      filename,
-      searchUrl: soundProtocolUrl,
-    };
-  });
-
-  return [
-    ...appAssets,
-    ...soundAssets,
-  ];
-}
 
 // TODO: for expoMode, replace spaces in asset filenames or wait for this fix
 // to make it into Metro Bundler:

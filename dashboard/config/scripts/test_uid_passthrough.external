@@ -1,0 +1,13 @@
+name 'test-uid-passthrough'
+title 'test user id passthrough'
+description 'testing to see if i can get the user id to passthrough via a markdown level'
+markdown <<MARKDOWN
+# asdfjkladjgkl
+
+
+<span style="display:none">submitButton next-stage</span>
+
+<a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/82476368657170?uid=<user_id/>"> Click here to test!</a>
+
+
+MARKDOWN

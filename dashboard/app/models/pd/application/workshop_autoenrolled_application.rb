@@ -95,6 +95,10 @@ module Pd::Application
       workshop.try(&:date_and_location_name)
     end
 
+    def log_summer_workshop_change(user)
+      update_status_timestamp_change_log(user, "Summer Workshop: #{pd_workshop_id ? workshop_date_and_location : 'Unassigned'}")
+    end
+
     # override
     def lock!
       return if locked?
@@ -152,7 +156,7 @@ module Pd::Application
       if regional_partner.group == 3
         teachercon = get_matching_teachercon(regional_partner)
         if teachercon
-          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: application_year.split('-').first.to_i)
         end
       end
 

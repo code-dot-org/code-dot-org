@@ -9,6 +9,7 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+script_announcements [{"notice"=>"CS Discoveries End of Semester Survey Now Open!", "details"=>"You can find the survey at the end of Unit 3 - you need to unlock it for students to take it.", "link"=>"", "type"=>"information"}]
 family_name 'csd3'
 version_year '2018'
 is_stable true
@@ -327,3 +328,6 @@ level 'CSD U3 game user controls_2018', progression: 'Project - Sprites and Inte
 level 'CSD U3 game interactions_2018', progression: 'Project - Sprites and Interactions'
 named_level 'CSD U3 finishing touches_2018'
 assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection'
+
+stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'csd-post-survey-2017-levelgroup_2018'

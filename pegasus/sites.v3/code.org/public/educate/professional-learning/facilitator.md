@@ -15,11 +15,13 @@ theme: responsive
 
 ## Change the face of computer science education - become a Code.org facilitator.
 
-Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science (CS) educators. 
+Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
 
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+Ready to take your leadership to the next level?
 
-<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
+
+Our online applications take 25-30 minutes to complete, and are not optimized for mobile devices. The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.**
 
 [/col-50]
 
@@ -178,6 +180,30 @@ Have questions? We have answers!
 
 Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
 
+## Apply now!
+
+Ready to apply? Follow these steps:
+
+1. Check out our program specific commitments:
+	* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+	* <a href="https://code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+	* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
+
+1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
+
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
+
+The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.** Any appliaction submitted after January 31 will be considered if space is available.
+
+In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
+
+
+<!--
+
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+
+<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+
 ## Interested in applying?
 
 Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
@@ -192,23 +218,6 @@ In the meantime, be sure to visit our curriculum pages for additional informatio
 - [CS Principles - Grades 9-12](/educate/csp)
 
 
-<!--
-
-## Apply now!
-
-Ready to apply? Follow these steps:
-
-1. Check out our program specific commitments:
-	* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
-	* <a href="https://code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
-	* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
-
-1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
-
-<button>Apply now!</button></a>
-
-
-In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
 
 -->
 
