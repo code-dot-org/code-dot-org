@@ -19,7 +19,7 @@ class StatsTable extends Component {
     section: PropTypes.shape({
       id: PropTypes.number,
       students: PropTypes.array
-    }),
+    }).isRequired,
     studentsCompletedLevelCount: PropTypes.object
   };
 
