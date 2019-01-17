@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import color from '../../util/color';
-import Button from '../Button';
 
 const styles = {
   card: {
@@ -12,49 +11,39 @@ const styles = {
     // Set width to form a three-column layout on 970px teacher dashboard.
     width: 312,
     // Uniform height, even in different rows
-    height: 240,
-    paddingTop: 15,
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingBottom: 15,
+    height: 150,
+    padding: 16,
     marginBottom: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
+    borderRadius: 5,
     background: color.white
   },
   title: {
-    paddingTop: 10,
-    paddingBottom: 5,
-    fontSize: 18,
+    paddingBottom: 6,
+    fontSize: 24,
     lineHeight: '18px',
-    fontFamily:'"Gotham 4r", sans-serif',
+    fontFamily:'"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal,
-    fontWeight: 'bold'
+    color: color.charcoal,
   },
   subtitle: {
+    paddingBottom: 12,
     fontSize: 14,
     lineHeight: '18px',
     fontFamily:'"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal,
-    fontWeight: 'bold'
+    color: color.charcoal,
   },
   description: {
     paddingTop: 10,
     paddingBottom: 5,
-    fontSize: 14,
+    fontSize: 13,
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.dark_charcoal
-  },
-  button: {
-    alignSelf: 'flex-start',
-    marginTop: 20,
-    marginBottom: 10,
-    zIndex: 2,
+    color: color.charcoal,
   },
 };
 
@@ -63,10 +52,16 @@ class LoginTypeCard extends Component {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
-    disabled: PropTypes.bool,
+  };
+
+  state = {
+    hover: false,
+  };
+
+  toggleHover = () => {
+    this.setState({ hover: !this.state.hover });
   };
 
   render() {
@@ -74,13 +69,29 @@ class LoginTypeCard extends Component {
       title,
       subtitle,
       description,
-      buttonText,
       onClick,
-      disabled
     } = this.props;
 
+    if (this.state.hover) {
+      styles.card.borderColor = color.dark_charcoal;
+      styles.title.color = color.dark_charcoal;
+      styles.subtitle.color = color.dark_charcoal;
+      styles.description.color = color.dark_charcoal;
+    } else {
+      styles.card.borderColor = color.border_gray;
+      styles.title.color = color.charcoal;
+      styles.subtitle.color = color.charcoal;
+      styles.description.color = color.charcoal;
+    }
+
     return (
-      <div style={styles.card} className={this.props.className}>
+      <div
+        style={styles.card}
+        onClick={onClick}
+        onMouseEnter={this.toggleHover}
+        onMouseLeave={this.toggleHover}
+        className={this.props.className}
+      >
         <div>
           <div style={styles.title}>
             {title}
@@ -94,14 +105,6 @@ class LoginTypeCard extends Component {
             {description}
           </div>
         </div>
-        <Button
-          className="uitest-button"
-          onClick={onClick}
-          color={Button.ButtonColor.gray}
-          text={buttonText}
-          style={styles.button}
-          disabled={disabled}
-        />
       </div>
     );
   }

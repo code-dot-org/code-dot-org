@@ -811,7 +811,7 @@ hy:
             'Farmer: While Loops':
               name: 'Farmer: While Loops'
         csd3-2017:
-          description_short: "Programming"
+          description_short: Programming
           stages:
             Functions:
               name: գործառույթները
@@ -1478,3 +1478,15 @@ hy:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'անվավեր'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Building a Foundation
+            'Real-life Algorithms: Paper Planes':
+              name: 'Real-life Algorithms: Paper Planes'
+            Binary Bracelets:
+              name: Binary Bracelets

@@ -219,6 +219,13 @@ pt-BR:
         o néctar das flores usando o menor número possível de blocos."
       2-3 Bee Conditionals 3: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar
         todo o néctar e produzir mel usando o menor número possível de blocos.  "
+      2-3 Bee Conditionals 5: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       2-3 Bee Conditionals Assessment 1: "**Avaliação:** Colete todo o néctar. \nTenha
         cuidado para não coletar néctar das flores roxas que não o tiverem."
       2-3 Bee Debugging 1: |-
@@ -287,6 +294,10 @@ pt-BR:
       2-3 Maze 12 - One Move Block: "Pegue o porco! Mas, desta vez, você só pode usar
         um bloco `mover para frente`. \n\nAh, olhe com cuidado - você está vendo mais
         algum bloco que poderia te ajudar?"
+      2-3 Maze 12: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       2-3 Maze 13: Leve-me até o porco! Você só pode usar um bloco `mover para frente`
         desta vez
       2-3 Maze 15: |-
@@ -507,9 +518,119 @@ pt-BR:
 
         * passo um
         * passo dois
+      AWS link: "# Utilize esta ferramenta para coisas"
+      AlgPD DR Free Play: Usando um problema de palavra de seu currículo existente
+        ou de um outro local, complete a Receita de Projeto e uma função do programa.
+        Usar um formulário de Receita de Projeto de sua pasta de trabalho ou baixar
+        uma cópia [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
+      Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      AllTheThings Applab - Turtle move with button: "# Por favor faça o login para
+        testar os níveis do applab (Por padrão, os níveis do applab só funcionam se
+        autenticado. Normalmente, pedimos que faça o login, mas é apenas obrigatório
+        para um script completo e seria chato fazer para o script todasascoisas\n#
+        Sua Primeira Aplicação Interativa!\n<img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png'
+        style='float: right; width: 250px'>Um novo grupo de comandos foi adicionado
+        à caixa de ferramentas chamado **Controles de UI** (Controles da Interface
+        de Usuário) que são comandos que permitem interagir com o(a), e responder
+        ao(à), usuário(a) da sua aplicação. Por questão de simplicidade, começaremos
+        com apenas dois comandos: \n* `onEvent` que lhe permite executar a função
+        em resposta à algum evento ocorrido (como o clique de um botão)\n* `button`
+        que coloca um botão na tela\n\n# Faça Isto\nVocê irá replicar a pequena aplicação,
+        mostrada abaixo, que faz a tartaruga se mover com o clique de um botão. Você
+        irá fazer três coisas:\n* Adicionar um `button`\n* Adicionar um bloco `onEvent`\n*
+        Adicionar `moveForward` dentro do bloco da função onEvent\n\nVeja aqui o que
+        você deve fazer - pode assistir quantas vezes precisar para conseguir completar
+        a atividade.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\"
+        style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      App Lab test: <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
+        target="_blank">Projeto Inovação</a>
+      AppLab Intro 1 - Add Button: "# Começando - Adicionar um botão\n\nVocê vai precisar
+        de um botão na sua tela principal para ir para sua nova tela. Você pode fazer
+        um novo botão de duas maneiras. \n\n1. Se você gosta do estilo do botão de
+        \"Cães\" você pode fazer uma cópia do mesmo. Clique no botão e clique em \"Duplicar\".
+        \\t! [a] (https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\n\n2. Você também pode fazer um novo botão do zero arrastando-o da
+        caixa de ferramentas de Projeto. \\t! [a] (https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\n\n3. Clique e arraste para mover seu novo botão onde você quiser.\n\n4.
+        Uma vez que você tenha um novo botão atribua um nome claro para identificá-lo,
+        \"botãoGato\". Você também pode alterar o seu texto para ler \"Gatos\"!. \\t!
+        [a] (https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\n    \n5. Há muitas outras maneiras que você pode alterar a aparência
+        do seu botão. Experimente o menu completo de opções.\n\n6. Assim que estiver
+        pronto, execute seu aplicativo para certificar-se que o botão aparece. Clique
+        em \"Finalizar\" para continuar a aprender como fazer o seu botão funcionar
+        de verdade."
+      AppLab Intro 1 - Template: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 1 - Try App: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 2 - Edit place1 2: |-
+        Pense em como você deseja que sua aventura continue nessa tela. Adicione então algum texto para contar sua história!
+
+        1. Use o seletor de tela para escolher a tela que acabou de criar ([Mostre-me onde] (# triggercallout = selector))
+        2. Arraste uma nova "área de texto" para a sua tela para adicioná-la. ([Mostre-me onde] (# triggercallout = textArea))
+        3. Arraste o canto inferior direito da sua área de texto para alterar seu tamanho.
+        4. Altere o texto para informar ao usuário o que acontece nessa tela. Então mude a cor de seu texto se você quiser!
+
+        Clique em "Executar" e depois "Concluir" para seguir em frente.
+
+        ![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif) Clique para ver um GIF destes passos
+      AppLab Intro 2 - Template: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 2 - add more buttons 2: |-
+        Hora de adicionar um segundo botão e escrever o código para que ele funcione.
+
+        1. Arraste um segundo botão para o seu "startScreen" e dê um "id" claro de entender
+        2. Altere o texto e a cor do seu botão
+        3. No Modo de Código, arraste um segundo bloco `onEvent ()` e arraste um `setScreen ()` dentro dele
+        4. Defina os "id" s dos seus blocos `onEvent ()` e `setScreen ()` para o botão e telas que você adicionou
+
+        Se tudo funcionou, você deve ter agora um segundo botão que muda a tela. "Execute" seu aplicativo e clique em "Concluir" se funcionar.
+
+        ![expandable](https://images.code.org/33d1a6d2dcc81ed8ecd0966d2f0682ca-image-1505770427380.gif) Clique para ver um GIF de todas as etapas
+      AppLab Intro 2 - finish and share: |-
+        Parabéns ao terminar a sua hora de código! Você pode compartilhar seu trabalho com os amigos! Clique em "Compartilhar" para obter um link ou até mesmo mandar uma mensagem para eles.
+
+        Você pode continuar trabalhando em seu projeto aqui. Sempre que seus amigos vão para o link que você compartilhou que vai ter a versão mais recente que você fez. Quão longe você vai construir sua aventura?
+      AppLab Intro 4 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
+      AppLab Intro 4 - Full Text: |
+        <div style="float:right"><img src="https://images.code.org/9109abf972acc093fd591eb56619aee5-image-1506617570302.52.18 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Mude as palavras na tela
+
+        **Como:** Defina o `"texto"` do rótulo para o que você quiser, como `"Minha aplicação é in-crível!`
+
+        **Me mostre** ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)</details>
       AppLab Intro 4 - Video onEvent: "# Usando o onEvent"
       AppLab Intro 4 - Video share your work: "# Crie e compartilhe seu aplicativo!"
       AppLab Intro 4 - Video share: "# Crie e compartilhe seu aplicativo!"
+      AppLab Intro 5 - Change Two Buttons: |-
+        <div style="float:right">
+        \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
+        </div>
+
+        **Objetivo:** Faça os botões `"vermelho"` e `"azul"`
+
+        **Como:** Passe o mouse sobre os botões para ver seu `"id"`. Então defina a `"cor de fundo"` de cada bloco
+
+        **Me mostre:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)
       Artist Autorun Test: |-
         Agora coloque a função dentro de um laço
         para desenhar esses três quadrados.
@@ -1166,6 +1287,13 @@ pt-BR:
         chegar à ovelha.
       Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para
         chegar à ovelha.
+      PS copy 2-3 Bee Conditionals 5: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       PS fr prediction q1: 'O que *você* acha que vai acontecer? '
       Play Lab Rocket 3: |-
         Excelente! Agora, você consegue atualizar essa função para
@@ -1175,6 +1303,10 @@ pt-BR:
         cheias de terra esse buraco precisa.  \r\nVocê pode escrever um programa que\nfique
         usando o bloco \"preencha\" até que o solo fique nivelado?  "
       Trent Test Level: 'Mais questões!  '
+      U2L16 Free response assessment 1: O que significa "computacionalmente difícil"?
+      U2L17 Assessment 1: Descreva o que significa para um problema ser "computacionalmente
+        difícil."
+      U3 Variables misconceptions 2: Qual a saída do Programa 2?
       U3 Variables misconceptions 3: Qual a saída do Programa 3?
       U3 Variables misconceptions 4: Qual a saída do Programa 4?
       U4L02 - Objects - Template1: "# Modelo"
@@ -1596,6 +1728,10 @@ pt-BR:
       courseB_Scrat_ramp3a_2018: Pegue um <xml><block type="maze_moveNorth"/></xml>
         da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar
         o código, e então clique em "▶ Executar".
+      courseB_Scrat_ramp3b_2018: |-
+        Há um bloco extra no final desse código!
+
+        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseB_Scrat_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar
         aos outros blocos para terminar este código?
       courseB_Scrat_ramp5a_2018: Tente este sozinho!
@@ -1603,8 +1739,15 @@ pt-BR:
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseB_iceage_loops3: |-
+        Você consegue chegar na noz usando apenas um bloco <xml><block type="maze_moveWest"/></xml>?
+        Tente usar um laço!
       courseB_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseB_iceage_loops5: Você consegue adicionar mais um laço para chegar até
         a noz?
@@ -1613,6 +1756,14 @@ pt-BR:
       courseB_iceage_loops8: 'Você consegue corrigir este código? '
       courseB_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar
         o Scrat a chegar lá?
+      courseB_maze_seq3: '*"Conserte o código para me levar até o porco!"*'
+      courseB_maze_seq3_2018: '*"Conserte o código para me levar até a noz!"*'
+      courseB_maze_seq9: "**Desafio**: Dê a volta na TNT para levar o pássaro até
+        o porco."
+      courseB_maze_seq9_2018: "**Desafio**: Mova-se ao redor do gelo quebrado para
+        levar Scrat até a noz."
+      courseB_maze_seqCold: "**Desafio**: Analise este nível adicionando blocos para
+        levar o pássaro até o porco!"
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -1627,18 +1778,25 @@ pt-BR:
       courseC_collector_progA: Ajude Laurel a coletar todo o tesouro.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
+      courseC_harvester_loops3_2019: Colete todas as abóboras.
       courseC_harvester_loops5: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops_forVid: Colete todo os milhos e as abóboras.
       courseC_maze_programming8: '*" Mantenha a calma e ajude-me a encontrar o porco
         mal."*'
@@ -1679,10 +1837,16 @@ pt-BR:
         mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bounce_events1: Vá até a bandeira! Anexe um bloco ao bloco "quando seta
         para esquerda" e clique em "Executar" para mover o jogador até a bandeira.
+      courseD_iceage_loops1: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
+      courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar
+        na noz!
       courseD_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseD_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
@@ -1724,6 +1888,8 @@ pt-BR:
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_scrat_ramp5: Evite o gelo com rachadura!
       courseD_scrat_ramp5_2018: Evite o gelo com rachadura!
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions2_2018: "As funções são blocos de código que realizam uma
@@ -1913,6 +2079,10 @@ pt-BR:
         a ação 24 vezes, em vez de 8.
       grade2_PuppyLoops_10: "Meu professor diz que eu devo terminar o que\ncomecei!\r\n\r\nAjude-me
         a terminar meu cata-vento. Você consegue descobrir o que há de errado?"
+      grade2_PuppyLoops_2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade2_PuppyLoops_4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
@@ -1927,6 +2097,10 @@ pt-BR:
       grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
+      grade2_puppy_loops2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade2_puppy_loops4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
@@ -1977,6 +2151,13 @@ pt-BR:
         para não coletar néctar das flores roxas que não o tiverem."
       grade3_Conditionals_2: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar
         todo o néctar e produzir mel usando o menor número possível de blocos.  "
+      grade3_Conditionals_3: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       grade3_Conditionals_8: "O que será que tem por aí!\r\n\r\nAjude-me\na voar pelo
         jardim e coletar o néctar apenas das flores que têm\nnéctar para oferecer. "
       grade3_Debugging_1: |-
@@ -2015,6 +2196,10 @@ pt-BR:
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível!
         \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade
         de códigos que você precisa."
+      grade3_maze_nestedLoops2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade3_maze_nestedLoops3: Leve-me até o porco! Você só pode usar um bloco `mover
         para frente` desta vez
       grade3_maze_nestedLoops4: |-
@@ -2137,6 +2322,10 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade4_review_artist1: |
+        Olá, eu sou um artista. Você pode escrever códigos para me fazer desenhar praticamente qualquer coisa. Use alguns blocos para me fazer desenhar sobre as retas cinzas na imagem. (Cada reta tem 100 pixels de comprimento)
+
+        <br>
       grade4_review_artist2: "Esta casa precisa de um telhado! Desenhe um triângulo.
         \r\n\r\nDica:\ntodos os três lados tem o mesmo tamanho.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: |-
@@ -2150,6 +2339,17 @@ pt-BR:
         Que abelha trabalhadora!
 
         Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      grade5_artist_binary1: "Binário é uma forma de representar informações usando
+        apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
+        número 0) e \"ligado\" (representada pelo número 1).  \n\nFoi fornecida uma
+        grade de \"pixels\" pela qual você pode andar e criar designs virando em certos
+        quadrados. \n\n**Você consegue fazer o artista desenhar \"01010101\" em binário
+        na primeira fileira?**"
+      grade5_artist_binary10: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"
+        width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: agora você aprendeu
+        tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
+        inspira você, tente fazer algo similar. Caso contrário, crie algo você mesmo.
+        \n<br/>\n"
       grade5_artist_for_loops1: |-
         Use um bloco "repita" para desenhar este triângulo
         que tem 50 pixels de largura.
@@ -2172,7 +2372,19 @@ pt-BR:
         variável\n\"comprimento\" em todos os lugares corretos. \r\n\r\nVocê percebeu
         que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa
         o valor correto em todos os lugares?"
+      grade5_artist_variables_triangles1: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2018: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
+        \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado.\n\n"
+      grade5_bee_for_loops2: "Adicione o código necessário para garantir que a abelha
+        colete todo o néctar. \n\nOlhe quanto código você precisa para esse desafio!
+        (Vamos aprender uma maneira mais simples no próximo desafio.)"
       grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
+      grade5_bee_for_loops7: "O último número em seu laço para é chamado de **\"incremento\"**.
+        A cada execução do laço, a variável contador é alterada de acordo com o incremento.
+        \n\nTente coletar essas flores usando um incremento de 2."
       grade5_playlab_variables13: |-
         Use o bloco "quando o personagem tocar"
         para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.

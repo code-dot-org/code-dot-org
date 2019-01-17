@@ -231,8 +231,7 @@ eu:
         text: ausazko kolorea
       Dancelab_setBackgroundEffect:
         options:
-          EFFECT:
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": Ausazkoa
+          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -266,8 +265,7 @@ eu:
             '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
-          EFFECT:
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": Ausazkoa
+          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -546,12 +544,6 @@ eu:
             "{x: 100, y: 200}": ezkerrera
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
-      Mikelab_createNewSprite2:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": ezkerrera
-            "{x: 300, y: 200}": eskuinera
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
       Mikelab_eval:
         text: ebal {CODE}
       Mikelab_getProp:
@@ -562,6 +554,49 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ezkerrera
+            "{x: 300, y: 200}": eskuinera
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Clown: Pailazoa
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Roll: Biratu
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
       Mikelab_randomColor:
         text: ausazko kolorea
       Mikelab_setBG:
@@ -581,6 +616,12 @@ eu:
           CORNER:
             '"right"': eskuinera
             '"left"': ezkerrera
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ezkerrera
+            "{x: 300, y: 200}": eskuinera
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Ausazkoa
       Mikelab_whenClickedOn:
         text: "{SPRITE} klik egitean"
       Mikelab_whenKeyPressed:
@@ -635,6 +676,26 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
             '"tint"': tinta
+      binary_move:
+        options:
+          DIR:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+      binary_whenKey:
+        text: "{KEY} zapaltzean"
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

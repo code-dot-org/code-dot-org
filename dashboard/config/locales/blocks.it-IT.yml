@@ -363,15 +363,32 @@ it:
         options:
           EFFECT:
             '"none"': Nessuno
+            '"circles"': Tunnel
             '"color_cycle"': Colori
-            '"disco"': Quadrati
-            '"rainbow"': Arcobaleno
             '"diamonds"': Rombi
-            '"splatter"': Bolle
+            '"disco_ball"': Palla da discoteca
+            '"fireworks"': Fuochi d'artificio
             '"swirl"': Ipnotico
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista da ballo laser
+            '"splatter"': Bolle
+            '"rainbow"': Arcobaleno
             '"snowflakes"': Neve
+            '"text"': Titolo della canzone
+            '"sparkles"': Scintille
             '"spiral"': Spirale
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Casuale)"
+            '"disco"': Quadrati
+            '"stars"': Stelle
+          PALETTE:
+            '"rave"': Bianco e nero
+            '"cool"': Blu
+            '"electronic"': Elettronica
+            '"iceCream"': Gelato
+            '"default"': Chiaro
+            '"neon"': Neon
+            '"tropical"': Tropicale
+            '"vintage"': Vintage
+            '"warm"': Rossi
       Dancelab_setBackgroundEffectWithPalette:
         text: imposta effetto di sfondo {EFFECT} {PALETTE}
         options:
@@ -382,9 +399,10 @@ it:
             '"color_cycle"': Colori
             '"diamonds"': Rombi
             '"disco_ball"': Palla da discoteca
+            '"fireworks"': Fuochi d'artificio
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
-            '"lasers"': Pista da ballo del laser
+            '"lasers"': Pista da ballo laser
             '"splatter"': Schizzi di vernice
             '"rainbow"': Arcobaleno
             '"snowflakes"': Neve
@@ -396,8 +414,12 @@ it:
           PALETTE:
             '"rave"': Bianco e nero
             '"cool"': Blu
+            '"electronic"': Elettronica
+            '"iceCream"': Gelato
             '"default"': Chiaro
+            '"neon"': Neon
             '"tropical"': Tropicale
+            '"vintage"': Vintage
             '"warm"': Rossi
       Dancelab_setDanceSpeed:
         text: imposta la velocità di ballo del {SPRITE} a {SPEED}
@@ -435,10 +457,19 @@ it:
         options:
           EFFECT:
             '"none"': Nessuno
+            '"bubbles"': Bolle
+            '"confetti"': Coriandoli
+            '"hearts_red"': Cuori
+            '"music_notes"': Note musicali
+            '"pineapples"': Ananas
+            '"pizzas"': Pizze
+            '"smiling_poop"': Cacca
             '"rain"': Pioggia
-            '"raining_tacos"': Tacos
+            '"floating_rainbows"': Arcobaleno
+            '"smile_face"': Smiley
             '"spotlight"': Riflettore
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Casuale)"
+            '"color_lights"': Luci del palco
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: imposta effetto di primo piano {EFFECT}
         options:
@@ -450,9 +481,13 @@ it:
             '"hearts_red"': Cuori
             '"music_notes"': Note musicali
             '"pineapples"': Ananas
+            '"pizzas"': Pizze
+            '"smiling_poop"': Cacca
             '"rain"': Pioggia
             '"floating_rainbows"': Arcobaleno
+            '"smile_face"': Smiley
             '"spotlight"': Riflettore
+            '"color_lights"': Luci del palco
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'imposta la {PROPERTY} di {SPRITE} a {VAL} '
@@ -800,7 +835,32 @@ it:
             "{x: 100, y: 300}": in basso a sinistra
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
-      Mikelab_createNewSprite2:
+      Mikelab_getAnim:
+        text: "{SPRITE} [COSTUME][1]"
+      Mikelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tutto
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tutto
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -813,14 +873,11 @@ it:
             "{x: 100, y: 300}": in basso a sinistra
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': tutto
-      Mikelab_getAnim:
-        text: "{SPRITE} [COSTUME][1]"
-      Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -828,6 +885,50 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tutto
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tutto
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tutto
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tutto
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tutto
+      Mikelab_ifDanceIs:
+        text: |-
+          se {SPRITE} sta eseguendo la mossa {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Applauso alto
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doppio giù
+            MOVES.Drop: Spaccata
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Ruota il corpo
+            MOVES.Kick: Stella
+            MOVES.ThisOrThat: Questo o quello
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Nessuno
       Mikelab_isAnim:
         text: "{SPRITE} {COSTUME}"
       Mikelab_location_picker:
@@ -851,6 +952,19 @@ it:
           CORNER:
             '"right"': a destra
             '"left"': a sinistra
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": in alto
+            "{x: 200, y: 300}": in basso
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": al centro
+            "{x: 100, y: 100}": in alto a sinistra
+            "{x: 300, y: 100}": in alto a destra
+            "{x: 100, y: 300}": in basso a sinistra
+            "{x: 300, y: 300}": in basso a destra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
       Mikelab_whenKeyPressed:
         text: quando si preme {KEY}
         options:
@@ -921,6 +1035,26 @@ it:
             '"direction"': direzione del movimento
             '"rotation"': rotazione o direzione
             '"tint"': tonalità
+      binary_move:
+        options:
+          DIR:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+      binary_whenKey:
+        text: quando si preme {KEY}
+        options:
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           se c'è strada {DIR}

@@ -375,7 +375,7 @@ eu:
       4-5 Nested Loops 2: 'Orain sartu begizta hau beste begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
       4-5 Nested Loops 3: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       4-5 Nested Loops 5: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       4-5 Nested Loops 7: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
@@ -676,6 +676,7 @@ eu:
       Course 4 SCV 6: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCVP 1: Parametrodun funtzio bat egin behar duzu artistak aurrera eta atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki positiboak eta negatiboak erabiiz).
       Course 4 Variables Assessment: Sor al dezakezu irudi hau aldeetarako aldagai bat erabiliz? Lerro bakoitza 50 pixelekoa izan beharko zukeen.
+      Course E MC Conditionals1: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       CourseF_PlayLab_vars10: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
       CourseF_PlayLab_vars2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       CourseF_PlayLab_vars3: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
@@ -1262,7 +1263,7 @@ eu:
       grade4_arist_nested_loop_triangles4: Marraztu krokodiloaren ahoko hortzak!
       grade4_arist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_arist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       grade4_artist_functions2: "Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak \"marraztu karratua\" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu \"marraztu karratua\" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da."
@@ -1280,7 +1281,7 @@ eu:
       grade4_artist_nested_loop_triangles1: 'Osatu kodea triangelu hauek marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
       grade4_artist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_artist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_squares1: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
       grade4_artist_parameters_triangles2: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.

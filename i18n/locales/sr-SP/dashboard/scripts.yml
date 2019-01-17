@@ -754,7 +754,7 @@ sr:
             'Farmer: While Loops':
               name: 'Фармер: Условне петље'
         csd3-2017:
-          description_short: "Programming"
+          description_short: Programming
           stages:
             Velocity:
               name: Брзина
@@ -1255,3 +1255,15 @@ sr:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'ништа'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Изградња темеља
+            'Real-life Algorithms: Paper Planes':
+              name: 'Стварни алгоритми: Папирни авиони'
+            Binary Bracelets:
+              name: Бинарне наруквице

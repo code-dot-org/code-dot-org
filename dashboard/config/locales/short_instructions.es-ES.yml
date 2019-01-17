@@ -1545,6 +1545,9 @@ es:
         una cantidad y de pixeles (utilizando números positivos y negativos).
       Course 4 Variables Assessment: "¿Puedes crear esta imagen utilizando una variable
         para los lados? Cada línea debe tener 50 píxeles de largo."
+      Course E MC Conditionals1: Encontrarás los recursos más valiosos bajo tierra,
+        pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
+        de carbón.
       CourseF_PlayLab_vars10: "¡Momento de un juego gratis! Aquí están todas las variables
         con las que hemos jugado hasta ahora en esta etapa, así como algunas más en
         caso de que las desees. \r\n\r\n¡Observa que ahora hay tantos bloques en nuestra
@@ -2624,6 +2627,8 @@ es:
         se mueva hasta el gato?"
       courseC_PlayLab_events3_2018: "¿Puedes escribir un programa para hacer que el
         perro se mueva hasta el gato?"
+      courseC_PlayLab_events3_2019: "¿Puedes escribir un programa para hacer que el
+        perro se mueva hasta el gato?"
       courseC_artist_prog5: "¡Esta casa necesita un techo! Dibuja el triángulo. Pista:
         Los 3 lados tienen la misma longitud."
       courseC_artist_prog5_2018: "¡Esta casa necesita un techo! Dibuja el triángulo.
@@ -3592,8 +3597,6 @@ es:
       ramp_artist_loops4: "¿Qué sucede cuando agregas un giro a la derecha \nde 72
         grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops4_2018: "¿Qué sucede cuando agregas un giro a la derecha \nde
-        72 grados después de todo lo demás dentro de tu bucle?"
-      ramp_artist_loops4_2019: "¿Qué sucede cuando agregas un giro a la derecha \nde
         72 grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops6: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2018: Edita tu bucle para dibujar esta escalera.

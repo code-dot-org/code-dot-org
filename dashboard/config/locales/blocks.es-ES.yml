@@ -308,15 +308,27 @@ es:
         options:
           EFFECT:
             '"none"': Ninguno
+            '"circles"': Túnel
             '"color_cycle"': Colores
-            '"disco"': Cuadrados
-            '"rainbow"': Colores
             '"diamonds"': Diamantes
-            '"splatter"': Burbujas
+            '"disco_ball"': Bola de discoteca
             '"swirl"': Hipnótico
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista de baile láser
+            '"splatter"': Burbujas
+            '"rainbow"': Colores
             '"snowflakes"': Nieve
+            '"text"': Título de la canción
+            '"sparkles"': Brillos
             '"spiral"': Espiral
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aleatorio)"
+            '"disco"': Cuadrados
+            '"stars"': Estrellas
+          PALETTE:
+            '"rave"': Blanco y negro
+            '"cool"': Azules
+            '"default"': Luz
+            '"neon"': Neón
+            '"warm"': Rojos
       Dancelab_setBackgroundEffectWithPalette:
         text: stablecer efecto de fondo {EFFECT} {PALETTE}
         options:
@@ -379,10 +391,16 @@ es:
         options:
           EFFECT:
             '"none"': Ninguno
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts_red"': Corazones
+            '"music_notes"': Notas musicales
+            '"pineapples"': Piñas
+            '"smiling_poop"': Caca
             '"rain"': Lluvia
-            '"raining_tacos"': Tacos
+            '"floating_rainbows"': Arcoíris
             '"spotlight"': Destacado
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aleatorio)"
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: establecer efecto de primer plano {EFFECT}
         options:
@@ -716,7 +734,29 @@ es:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"rotation"': rotación
+            '"x"': posición x
+            '"y"': posición y
+            '"direction"': dirección del movimiento
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': todo
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': todo
+          PROPERTY:
+            '"scale"': tamaño
+            '"rotation"': rotación
+            '"x"': posición x
+            '"y"': posición y
+            '"direction"': dirección del movimiento
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -728,11 +768,11 @@ es:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': todo
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -740,6 +780,45 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección del movimiento
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': todo
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': todo
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': todo
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': todo
+          PROPERTY:
+            '"scale"': tamaño
+            '"rotation"': rotación
+            '"x"': posición x
+            '"y"': posición y
+            '"direction"': dirección del movimiento
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': todo
+      Mikelab_ifDanceIs:
+        text: |-
+          si {SPRITE} hace {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Clown: Clown
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Roll: Bamboleo
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Este o aquel
+            MOVES.Rest: Ninguno
       Mikelab_randomColor:
         text: color aleatorio
       Mikelab_setBG:
@@ -759,6 +838,18 @@ es:
           CORNER:
             '"right"': derecha
             '"left"': izquierda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": arriba
+            "{x: 200, y: 300}": abajo
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": arriba a la izquierda
+            "{x: 300, y: 100}": arriba a la derecha
+            "{x: 100, y: 300}": abajo a la izquierda
+            "{x: 300, y: 300}": abajo a la derecha
       Mikelab_whenKeyPressed:
         text: al pulsar {KEY}
         options:
@@ -813,6 +904,26 @@ es:
             '"y"': posición y
             '"direction"': dirección del movimiento
             '"tint"': tonalidad
+      binary_move:
+        options:
+          DIR:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+      binary_whenKey:
+        text: al pulsar {KEY}
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           si en ruta {DIR}

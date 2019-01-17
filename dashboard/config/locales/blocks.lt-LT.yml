@@ -236,12 +236,30 @@ lt:
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -264,6 +282,11 @@ lt:
           CORNER:
             '"right"': dešinėn
             '"left"': kairėn
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -307,6 +330,21 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      binary_move:
+        options:
+          DIR:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
       craft_ifPath:
         options:
           DIR:

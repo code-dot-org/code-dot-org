@@ -99,3 +99,7 @@ en-GB:
           stages:
             Lists:
               name: Lists
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'

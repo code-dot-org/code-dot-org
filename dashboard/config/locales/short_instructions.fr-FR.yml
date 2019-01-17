@@ -105,6 +105,8 @@ fr:
         bon te semble à l'intérieur d'une ou de plusieurs boucles pour faire des images
         que tu pourras partager avec tes amis. Appuie sur « Exécuter » pour voir un
         exemple.
+      2-3 Artist Functions 2 a: 'Sers-toi du petit bloc vert « dessiner un carré »
+        pour appeler cette fonction et dessiner les lunettes. '
       2-3 Artist Functions 2: Les fonctions te permettent de définir de nouveaux blocs
         ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée
         «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner un carré» pour
@@ -829,6 +831,12 @@ fr:
         sol ?  Indice : Utilise la boucle «Tant que» pour les deux."
       4-5 While Loops Assessment 1: Il y a beaucoup de trous et de tas.  Aide-moi
         à les remplir et à les enlever pour niveler le sol.
+      AB_Debug_PlayLab2: |-
+        Pourquoi ce jeu ne fait rien ?
+
+        Peux-tu trouver les bugs « cachés » ? Certains sont plus faciles que d’autres.
+      AB_Debug_PlayLab3: Déplace le chevalier vers chacun des drapeaux. Si quelque
+        chose ne va pas, cherche les bugs !
       AlgPD DR Free Play: Crée une fonction basée sur ton propre puzzle verbal.
       Alien Defender: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
       Alien Defender_2018: 'Idée de projet: Faire un jeu de type Defender dans Play
@@ -1623,6 +1631,9 @@ fr:
         le bas de «y» pixels (en utilisant des chiffres positifs et négatifs).
       Course 4 Variables Assessment: Peux-tu créer cette image en utilisant une variable
         pour les côtés ? Chaque ligne doit mesurer 50 pixels.
+      Course E MC Conditionals1: Les ressources les plus précieuses sont en sous-sol,
+        mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
+        2 blocs de charbon.
       Course1BeePuzzle12: Recueille trois nectars et fabrique ensuite deux miels
       CourseF_PlayLab_vars1: 'Pour jouer à ce jeu, tu n''as besoin d''écrire aucun
         code, juste d''appuyer sur "Run"! '
@@ -2462,13 +2473,13 @@ fr:
       Underground Mining Coal_2019: Les ressources les plus précieuses sont en sous-sol,
         mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
         2 blocs de charbon.
-      aE1: "Tu as choisi de faire une serviette carrée ! \r\n\r\nPour terminer, trace
+      aE1: "Tu as choisi de faire une serviette carrée ! \n\nPour terminer, trace
         un carré de 20 pixels de côté. "
       aE2: Si tu places ta boucle de carré à l'intérieur d'une autre boucle, on appelle
         ça une boucle imbriquée. Que faut-il ajouter à ta boucle externe pour s'assurer
         que les 14 serviettes sont bien alignées côte à côte ?
-      aE3: "Nous devons avoir une nappe!  \r\n\r\nPrenez votre rangée de 14 serviettes
-        et cousez-les ensemble grâce à une autre **boucle externe** pour fabriquer
+      aE3: "Nous avons besoin d’une nappe !  \n\nPrends ta rangée de 14 serviettes
+        et couds-les ensemble grâce à une autre **boucle externe** pour fabriquer
         une nappe."
       aE3alternate: Alternative
       aE3alternateB: Alternative
@@ -2718,6 +2729,9 @@ fr:
         Peux-tu écrire un programme pour que ce c
         hien se déplace jusqu'au chat ?
       courseC_PlayLab_events3_2018: |-
+        Peux-tu écrire un programme pour que ce c
+        hien se déplace jusqu'au chat ?
+      courseC_PlayLab_events3_2019: |-
         Peux-tu écrire un programme pour que ce c
         hien se déplace jusqu'au chat ?
       courseC_artist_prog5: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice

@@ -388,6 +388,150 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'redirect_to_script_url returns nil unless user can view script version' do
+    Script.any_instance.stubs(:can_view_version?).returns(false)
+    student = create :student
+    script = create :script, name: 'my-script'
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns nil if user is assigned to script' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    script = create :script, name: 'my-script'
+    section = create :section, script: script
+    section.students << student
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns nil if user is not assigned to any script in family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    script = create :script, name: 'my-script'
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
+    create :course_script, course: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    create :course_script, course: csp_2018, script: csp1_2018, position: 1
+    section = create :section, course: csp_2018
+    section.students << student
+
+    assert_equal csp1_2018.link, csp1_2017.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns script url of latest assigned script version in family for script not belonging to course family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
+    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    section = create :section, script: courseg_2018
+    section.students << student
+
+    assert_equal courseg_2018.link, courseg_2017.redirect_to_script_url(student)
+  end
+
+  test 'can_view_version? is true for teachers' do
+    script = create :script, name: 'my-script'
+    teacher = create :teacher
+    assert script.can_view_version?(teacher)
+  end
+
+  test 'can_view_version? is true if script is latest stable version in student locale' do
+    script = create :script, name: 'my-script'
+    Script.stubs(:latest_stable_version).returns(script)
+    student = create :student
+
+    script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student is assigned to script' do
+    script = create :script, name: 'my-script'
+    student = create :student
+    student.expects(:assigned_script?).returns(true)
+
+    script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student has progress in script' do
+    script = create :script, name: 'my-script'
+    student = create :student
+    student.scripts << script
+
+    script.can_view_version?(student)
+  end
+
+  test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
+
+    assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
+  end
+
+  test 'self.latest_stable_version returns latest stable version for user locale' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
+  end
+
+  test 'self.latest_stable_version returns latest stable version for English locales' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family')
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
+  end
+
+  test 'self.latest_stable_version returns correct script version in family if version_year is supplied' do
+    script_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
+
+    assert_equal script_2017, Script.latest_stable_version('fake-family', version_year: '2017')
+  end
+
+  test 'self.latest_assigned_version returns nil if no scripts in family are assigned to user' do
+    script1 = create :script, name: 's-1', family_name: 'family-1'
+    student = create :student
+    student.scripts << script1
+
+    assert_nil Script.latest_assigned_version('family-2', student)
+  end
+
+  test 'self.latest_assigned_version returns latest assigned script in family if script is in course family' do
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
+    create :course_script, course: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    create :course_script, course: csp_2018, script: csp1_2018, position: 1
+
+    student = create :student
+    section = create :section, course: csp_2017
+    section.students << student
+
+    assert_equal csp1_2017, Script.latest_assigned_version('csp', student)
+  end
+
+  test 'self.latest_assigned_version returns latest assigned script in family if script is not in course family' do
+    student = create :student
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
+    create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    section = create :section, script: courseg_2017
+    section.students << student
+
+    assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
+  end
+
   test 'banner image' do
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
@@ -400,6 +544,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'hoc?' do
+    assert Script.find_by_name('dance').hoc?
     assert Script.find_by_name('flappy').hoc?
     assert Script.find_by_name('mc').hoc?
     assert Script.find_by_name('hourofcode').hoc?

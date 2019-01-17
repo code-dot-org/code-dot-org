@@ -328,10 +328,24 @@ zh-TW:
         options:
           EFFECT:
             '"none"': 無
-            '"disco"': 正方形
-            '"rainbow"': 顏色
+            '"circles"': 隧道
             '"diamonds"': 方塊
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "（隨機）"
+            '"disco_ball"': 迪斯科球
+            '"kaleidoscope"': 萬花筒
+            '"lasers"': 鐳射舞池
+            '"rainbow"': 顏色
+            '"text"': 歌曲標題
+            '"sparkles"': 火花
+            '"disco"': 正方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 藍調
+            '"default"': 光亮
+            '"neon"': 霓虹
+            '"tropical"': 熱帶
+            '"vintage"': 復古
+            '"warm"': 紅色
       Dancelab_setBackgroundEffectWithPalette:
         text: 設定背景效果 {EFFECT} {PALETTE}
         options:
@@ -392,9 +406,14 @@ zh-TW:
         options:
           EFFECT:
             '"none"': 無
+            '"confetti"': 紙屑
+            '"hearts_red"': 心形
+            '"music_notes"': 音樂音符
+            '"pineapples"': 鳳梨
+            '"smiling_poop"': 船尾
             '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
             '"raining_tacos"': 墨西哥捲餅
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "（隨機）"
       Dancelab_setForegroundEffectExtended:
         text: 設定前景效果 {EFFECT}
         options:
@@ -699,7 +718,29 @@ zh-TW:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"rotation"': 旋轉
+            '"x"': x 座標
+            '"y"': y 座標
+            '"direction"': 移動方向
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': 全部
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': 全部
+          PROPERTY:
+            '"scale"': 尺寸
+            '"rotation"': 旋轉
+            '"x"': x 座標
+            '"y"': y 座標
+            '"direction"': 移動方向
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": 頂端
@@ -711,11 +752,11 @@ zh-TW:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': 全部
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -723,6 +764,49 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': 全部
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': 全部
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': 全部
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': 全部
+          PROPERTY:
+            '"scale"': 尺寸
+            '"rotation"': 旋轉
+            '"x"': x 座標
+            '"y"': y 座標
+            '"direction"': 移動方向
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': 全部
+      Mikelab_ifDanceIs:
+        text: |-
+          如果 {SPRITE} 正在進行 {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 高舉擊掌
+            MOVES.Clown: 江南舞
+            MOVES.Dab: 輕拍
+            MOVES.DoubleJam: 踢躂舞
+            MOVES.Drop: 掉落
+            MOVES.Floss: 跳牙線舞
+            MOVES.Fresh: 新鮮
+            MOVES.Roll: 轉體
+            MOVES.Kick: 星星舞
+            MOVES.ThisOrThat: 這個或那個
+            MOVES.Rest: 無
       Mikelab_randomColor:
         text: 隨機顏色
       Mikelab_setBG:
@@ -742,6 +826,18 @@ zh-TW:
           CORNER:
             '"right"': 到右方
             '"left"': 到左方
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 頂端
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 到左方
+            "{x: 300, y: 200}": 到右方
+            "{x: 200, y: 200}": 中心
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
       Mikelab_whenKeyPressed:
         text: 按下 {KEY} 時
         options:
@@ -796,6 +892,22 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
             '"tint"': 色調
+      binary_move:
+        options:
+          DIR:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 到右方
+      binary_whenKey:
+        text: 按下 {KEY} 時
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 到右方
+            '"space"': 太空
       craft_ifPath:
         text: |-
           如果路徑{DIR}

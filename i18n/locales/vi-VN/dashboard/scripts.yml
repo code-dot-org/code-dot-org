@@ -2582,7 +2582,7 @@ vi:
             Test stage with bubbles:
               name: Giai đoạn thử nghiệm với bong bóng
         csd3-2017:
-          description_short: "Lập trình"
+          description_short: Lập trình
           stages:
             Booleans and Conditionals:
               name: Boolean và các điều kiện
@@ -4693,7 +4693,11 @@ vi:
             Artist:
               name: Họa sĩ
         aquatic:
+          stages:
+            Aquatic:
+              name: Minecraft
           title: 'Minecraft Chuyến thám hiểm đại dương'
+          description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Giờ Lập trình!
         dance--draft:
           stages:
             Dance Party:
@@ -4783,3 +4787,26 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+        andrea-test:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            'null':
+              name: 'giá trị rỗng'
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dance-extras-gallery:
+          title: Hãy Tiếp tục Nhảy
+          description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Xây dựng nền tảng
+            'Real-life Algorithms: Paper Planes':
+              name: 'Thuật toán trong đời sống: Máy bay giấy'
+            Looking Ahead:
+              name: Nhìn về phía trước
+            Binary Bracelets:
+              name: Vòng đeo tay nhị phân
+        gamelab:
+          title: Kho Trò chơi

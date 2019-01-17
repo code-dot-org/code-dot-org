@@ -117,6 +117,7 @@ az:
             Artist:
               name: Rəssam
         hourofcode:
+          title: Ənənəvi labirint
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
           stages:
@@ -811,3 +812,9 @@ az:
               name: Estafet proqramlaşdırması
             Internet:
               name: İnternet
+        andrea-test:
+          stages:
+            'null':
+              name: boş
+        dance-extras-gallery:
+          title: Rəqs etməyə davam edin

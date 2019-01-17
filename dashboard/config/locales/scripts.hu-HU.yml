@@ -1786,3 +1786,18 @@ hu:
                 referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+        andrea-test:
+          stages:
+            'null':
+              name: semmi
+        dance-extras-gallery:
+          title: Táncolj tovább
+          description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Alapozás
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Binary Bracelets:
+              name: Bináris karkötők

@@ -2,6 +2,10 @@
 fr:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": 'Si oui, quel(s) cours d’informatique as-tu
+        suivi avant ton cours d’informatique actuel ?
+
+'
       2-3 Artist 1 new: "Bonjour, je suis un artiste. Vous pouvez écrire du code \npour
         me faire dessiner presque tout. Utilisez des blocs pour me faire dessiner
         sur les \nlignes grises de la figure. (chaque ligne a une longueur de 100
@@ -31,6 +35,8 @@ fr:
       2-3 Artist 9 NEW: Terminer ce cerf-volant
       2-3 Artist 9 REPLACEMENT: Terminez de dessiner ces escaliers !
       2-3 Artist 9: Terminer ce cerf-volant
+      2-3 Artist Assessment 1: "**Évaluation :** Termine de dessiner la dernière dent.
+        Elle fait 25 pixels de large et 25 pixels de haut."
       2-3 Artist Debugging 1: "This hat should only be 50 pixels\nwide. \r\nCan you
         fix it?\r\n\r\n<br/>\r\n"
       2-3 Artist Debugging 10: "The direction pad on my game\ncontroller is too narrow.
@@ -71,6 +77,10 @@ fr:
         a hexagon`, but it's still giving us squares!  \r\n\r\nCan\nyou modify the
         `draw a hexagon` function to draw a hexagon with 50 pixel sides?\n\r\n\r\nDraw
         the image using the new function!"
+      2-3 Artist Functions 11.5 a: |-
+        Voici cette même fonction ˋdessiner un hexagone`.
+
+        Que se passe-t-il si tu fais boucler le programme principal **6** fois en tournant de **60** degrés à chaque boucle ?
       2-3 Artist Functions 11.5: Voici cette même fonction « dessiner un hexagone ».
         Que se passe-t-il si tu mets seulement 60 degrés à chaque fois que tu boucles ?
       2-3 Artist Functions 11: "We've renamed the `draw a square`\nfunction to `draw
@@ -205,8 +215,15 @@ fr:
       2-3 Bee Functions 4: La fonction «Déplacer et obtenir le nectar» déplace l'abeille,
         recueille le nectar et renvoie l'abeille là où elle a commencé. Utilise la
         fonction pour récolter tout le nectar.
+      2-3 Bee Functions Assessment 1: "**Évaluation :** Utilise les fonctions données
+        pour recueillir le nectar de chaque fleur."
+      2-3 Bee Functions Assessment 2: "**Évaluation :** Crée une fonction pour tourner,
+        avancer et fabriquer du miel 3 fois, puis faire retourner l’abeille au point
+        de départ et la retourner."
       2-3 Bee Loops 1: 'Chaque fleur contient une unité de nectar. Récolte le nectar
         de chacune des fleurs. '
+      2-3 Bee Loops 13: "**Évaluation :** Recueille tout le nectar en utilisant le
+        moins de blocs possible."
       2-3 Bee Loops 3A: Peux-tu utiliser une boucle pour recueillir tout ce nectar
         ?
       2-3 Bee Loops 3B: Maintenant, utilise le nouveau bloc «Répéter» pour recueillir
@@ -222,6 +239,8 @@ fr:
       2-3 Bee Loops 8: Ces fleurs pourpres ont une quantité inconnue de nectar. Utilise
         une boucle «Tant que nectar» pour recueillir tout le nectar. Cette boucle
         s'exécutera tant que la condition est vraie, dans ce cas «Nectar > 0».
+      2-3 Bee Loops Assessment 1: "**Évaluation :** Utilise une boucle `tant que`
+        pour recueillir tout le nectar de ces fleurs."
       2-3 Maze 1: "Can you help me catch the naughty\npig? \r\n\r\nStack a couple
         of `move forward` blocks below the `when run`\nblock and press \"Run\". "
       2-3 Maze 12 - One Move Block: "Get the mean pig! But this\ntime, you can only
@@ -230,6 +249,8 @@ fr:
       2-3 Maze 12: "Suddenly, a magical block appears!  With\nthe `repeat` block,
         you can loop code over and over.\\\r\n\\\r\nCan you get to\nthe pig by creating
         a loop that uses only one `move forward` block inside\nof a `repeat`?"
+      2-3 Maze 13: Amène-moi au cochon ! Tu ne peux utiliser qu’un seul bloc ˋavancer
+        plus` cette fois-ci
       2-3 Maze 15: Utilise deux boucles « Répéter » pour aller au cochon avec le plus
         petit nombre de blocs possible.
       2-3 Maze Loops 18: |-
@@ -237,6 +258,8 @@ fr:
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       2-3 Maze Loops 19: "Let's take this to another level!\n\r\n\r\nUse loops to
         get me to the sunflower with the fewest loops possible."
+      2-3 Maze Loops Assessment 1: "**Évaluation :** Amène-moi au tournesol en n’utilisant
+        que 5 blocs ! "
       4-5 Artist 1: "Help me finish drawing my box. (Each line\nis 300 pixels long)
         \r\n\r\n"
       4-5 Artist 10: Appuie sur « Exécuter » pour tester le code. Ensuite, répète-le
@@ -265,6 +288,8 @@ fr:
         line."
       4-5 Artist 9: "Draw the right half of this image so that\nthe design is symmetrical.
         \r\nThe triangles are equilateral and have sides\nthat are 50 pixels long."
+      4-5 Artist Assessment 1: "**Évaluation :** Utilise une boucle pour dessiner
+        le triangle équilatéral. Chaque côté fait 300 pixels."
       4-5 Artist Free Draw 1: Dessin libre !  Dessine tout ce qui t’inspire.
       4-5 Artist Patterns 1: Peux-tu dessiner ce carré à l'aide d'une boucle ? Chaque
         côté mesure 20 pixels de long.
@@ -339,6 +364,7 @@ fr:
       4-5 Bee Debugging 1: Ces blocs-là me gênent vraiment. Peux-tu les réparer ?
       4-5 Bee Debugging 6: La fleur pourpre a une quantité inconnue de nectar. Répare
         les blocs pour obtenir tout le nectar de la fleur.
+      4-5 Bee Debugging Assessment 1: "**Évaluation :** Corrige le code."
       4-5 Bee Nested Loops 2: "Collect all of the nectar from\neach flower. \r\n\r\nUse
         a nested loop. "
       4-5 Bee Nested Loops 4: Recueille tout le nectar de chaque fleur et fabrique
@@ -348,6 +374,8 @@ fr:
       4-5 Maze 7: "Get the zombie to the sunflower quickly!  \r\n\r\nCan\nyou solve
         the puzzle in fewer than 11 blocks?"
       4-5 Maze 9: Crée une boucle avec le bloc « Répéter jusqu’à ».
+      4-5 Maze Assessment 1: "**Évaluation :** Va au tournesol en utilisant le moins
+        de blocs possible."
       4-5 Maze Conditionals 1: Utilise le bloc « Répéter jusqu'à » pour amener le
         zombie au tournesol.
       4-5 Maze Conditionals 10: "Peux tu rajouter juste 3 blocs pour aider le zombie
@@ -395,6 +423,8 @@ fr:
       4-5 Nested Loops 8: 'Boucle ce dessin 6 fois. De combien dois-tu tourner chaque
         fois que tu fais une boucle ? (Indice : combien fait 360 divisé par 6?)'
       4-5 Nested Loops 9: Dessine les dents dans la bouche de l'alligator !
+      4-5 Nested Loops Assessment 1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       4-5 While Loops 1: Déplace-moi vers le trou et remplis-le avec deux pelletées
         de terre, en utilisant le bloc «Remplir».
       4-5 While Loops 2: Déplace-moi vers le tas de terre et enlève-le en 5 coups
@@ -3216,9 +3246,9 @@ fr:
         code, then add a second `text` to write in a different\npart of the screen.\\\r\n\\\r\n_Tip:
         The default text size is pretty small, but\nyou can use the `textSize` block
         to change that. You can also use `fill` to\nchange the color of your text._"
-      CSD U3 Sprites text_2018: "# Adding Text\\\r\n\\\r\nYou can put\ntext anywhere
-        you'd like on the screen using `text`. Change the displayed\ntext in the provided
-        code, then add a second `text` to write in a different\npart of the screen.\\\r\n\\\r\n_Tip:
+      CSD U3 Sprites text_2018: "# Adding Text\r\n\r\nYou can put\ntext anywhere you'd
+        like on the screen using `text`. Change the displayed\ntext in the provided
+        code, then add a second `text` to write in a different\npart of the screen.\r\n\r\n_Tip:
         The default text size is pretty small, but\nyou can use the `textSize` block
         to change that. You can also use `fill` to\nchange the color of your text._"
       CSD U3 Variables Challenge: "# Challenge: Updating Variables\\\r\n\\\r\n_Check\nwith
@@ -4349,6 +4379,8 @@ fr:
         get the interval value from the slider and use it to make the LED blink\nat
         that new rate.\\\r\n* Run your program, moving the slider to see whether\nthe
         LED speed changes automatically."
+      CSD U6 params starchaser template: Niveau modèle.
+      CSD U6 params starchaser template_2018: Niveau modèle.
       CSD U6 setProperty Text: "# Changing the Text\\\r\n\\\r\nThe\n`setProperty`
         block can be used to changed lots of things about your design\nelements, including
         the text they contain.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Drag\nout a `setProperty`
@@ -8503,6 +8535,12 @@ fr:
         the game and move Waddles with the arrows until you score\nenough points.
         Waddles must be moved to the `middle left` position of the\nscreen to complete
         this challenge."
+      courseC_PlayLab_events_challenge1_2019: "Use a new block to\nmake Waddles automatically
+        move back to the start when he runs into the Dinosaur\nand when he scores
+        a point. This will make your game more challenging and\nfun!\\\r\n\\\r\nPlay
+        the game and move Waddles with the arrows until you score\nenough points.
+        Waddles must be moved to the `middle left` position of the\nscreen to complete
+        this challenge."
       courseC_artist_loop1: "Fantastic!  \r\n\r\nLet's add\nsome style by changing
         the brush using the `set pattern` block before our\nloop starts."
       courseC_artist_loop1_2018: "Fantastic!  \r\n\r\nLet's add\nsome style by changing
@@ -9300,15 +9338,15 @@ fr:
       courseD_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
-        one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
+      courseD_maze_ramp3_2019: "*\"This pig is ruffling my feathers.\"*\\\r\n\\\r\nThere\nis
+        one extra block that is going to cause the bird to crash.  \\\r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
       courseD_maze_ramp4: "*\"Trace the path and lead me to\nthe silly pig.\"* \r\n\r\nAvoid
         TNT or feathers will fly!"
       courseD_maze_ramp4_2018: "*\"Trace the path and lead me to\nthe silly pig.\"*
         \r\n\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp4_2019: "*\"Trace the path and lead me to\nthe silly pig.\"*
-        \r\n\r\nAvoid TNT or feathers will fly!"
+        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
       courseD_maze_ramp5: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
         the TNT."
       courseD_maze_ramp5_2018: "*\"Follow this path to get me to\nthe pig!\"*\\\r\n\\\r\nAvoid
@@ -10069,6 +10107,48 @@ fr:
       coursef_maze_ramp3_2018: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \r\nThrow it\naway
         by dragging it back to the toolbox."
+      csd-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience
+        du cours ?
+      csd-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre
+        à l'avenir ?
+      csd-pulse-check-survey-1-free-response U1Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U1Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U2Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U3Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U4Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U5Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch1_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response U6Ch2_2018: Autre chose que tu aimerais
+        faire savoir à ton enseignant ?
+      csd-pulse-check-survey-1-free-response: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
       csd-thursday-facilitation: "# Thursday Facilitation Reflection\\\r\n\\\r\n##\nDiscussion-Based
         Sessions\\\r\n\\\r\nYou have now seen a couple discussion heavy\nsessions.
         Some specific examples include the Community (Wednesday), and Recruitment/Student\nNeeds
@@ -10608,6 +10688,56 @@ fr:
         to address feedback from your reviewers and resubmit your reflections!\nReviewer
         feedback will show up at the bottom of this page, once it’s available.\n\r\n
         \r\n\r\n"
+      csp-post-survey-2017-FR: As-tu quelque chose à ajouter à propos de ton expérience
+        du cours ?
+      csp-post-survey-2017-FR_2018: Réflexions finales sur le cours ou ton expérience.
+      csp-post-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-post-survey-2018-topics-want-FR: Quels autres sujets souhaites-tu apprendre
+        à l'avenir ?
+      csp-pre-survey-2017-q36-e: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2018: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q36-e_2019: 'Je suis inquiet pour une autre raison :'
+      csp-pre-survey-2017-q38: Si oui, quel(s) cours d’informatique as-tu suivi avant
+        ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2018: Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ?
+      csp-pre-survey-2017-q38_2019: Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2_2018: Autre chose que tu aimerais faire
+        savoir à ton enseignant ?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2: Autre chose que tu aimerais faire savoir
+        à ton enseignant ?
       csp-thursday-facilitation: "# Thursday Facilitation Reflection\\\r\n\\\r\n##\nDiscussion-Based
         Sessions\\\r\n\\\r\nYou have now seen a couple discussion heavy\nsessions.
         Some specific examples include the Community (Wednesday), and Recruitment/Student\nNeeds
@@ -11852,6 +11982,8 @@ fr:
       grade3_Conditionals_10: 'Recueille le nectar et fabrique du miel. Indice : que
         se passe-t-il si tu utilises l’instruction conditionnelle «Si nectar» sur
         une fleur rouge ? Peux-tu terminer ceci avec une boucle ?'
+      grade3_Conditionals_11 BAD: "**Évaluation :** Utilise une boucle `tant que`
+        pour recueillir tout le nectar de ces fleurs."
       grade3_Conditionals_11: "Let's put everything together!\r\n\r\nUse\nwhat you've
         learned to help me collect nectar only from flowers that have\nit, using as
         few blocks as possible.  \r\n\r\nDon't forget to make honey\nat the end."
@@ -11894,14 +12026,20 @@ fr:
         Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour
         voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du
         nectar.
+      grade3_maze_Loop1: "**Évaluation :** Amène-moi au tournesol en n’utilisant que
+        5 blocs ! "
       grade3_maze_loops2: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       grade3_maze_nestedLoops2: "Suddenly, a magical block appears!  With\nthe `repeat`
         block, you can loop code over and over.\\\r\n\\\r\nCan you get to\nthe pig
         by creating a loop that uses only one `move forward` block inside\nof a `repeat`?"
+      grade3_maze_nestedLoops3: Amène-moi au cochon ! Tu ne peux utiliser qu’un seul
+        bloc ˋavancer plus` cette fois-ci
       grade3_maze_nestedLoops4: Utilise deux boucles « Répéter » pour aller au cochon
         avec le plus petit nombre de blocs possible.
+      grade4_arist_nested_loop_circles1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       grade4_arist_nested_loop_flags1: Insère le code fourni dans une boucle pour
         créer un moulin à vent.
       grade4_arist_nested_loop_polygons1: 'Boucle ce dessin 10 fois. De combien dois-tu
@@ -11954,6 +12092,8 @@ fr:
         to use trial and error. You are not expected to\nget it perfect the first
         time.\r\n\r\nThe repeated shape is almost identical\nto the one from the last
         puzzle, except that the length used in the first\nloop is a little smaller. "
+      grade4_artist_nested_loop_circles1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       grade4_artist_nested_loop_flags1: Insère le code fourni dans une boucle pour
         créer un moulin à vent.
       grade4_artist_nested_loop_polygons1: 'Boucle ce dessin 10 fois. De combien dois-tu
@@ -12013,6 +12153,10 @@ fr:
         Veille également à utiliser une boucle pour obtenir un compte de bloc idéal.
       grade4_bee_nestedLoops4: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
+      grade4_bee_nestedLoops_assess: |-
+        **Évaluation :** Recueille tout le nectar et fabrique tout le miel en utilisant des boucles.
+
+        **Indice :** *Il y a plusieurs solutions possibles !*
       grade4_frozen_freeplay: Tu es officiellement devenu un artiste maître ! Crée
         un merveilleux paysage hivernal.
       grade4_frozen_functions0: Un cercle est une forme spéciale. Peux-tu trouver
@@ -12363,6 +12507,14 @@ fr:
         Make one sprite play a noise when the other runs into it.</li>\r\n            <li><strong>Arrows</strong>\n-
         Write a program so when each arrow key is pressed, the sprite moves in that\ndirection!</li>\r\n
         \       </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>"
+      post-assessment survey q32: "(Facultatif) : Explique pourquoi tu recommanderais
+        ou non ce cours d’informatique à quelqu’un d’autre."
+      post-assessment survey q37: "(Facultatif) Si tu n’as pas passé l'examen avancé,
+        y aurait-il quelque chose qui t’aurais fait changer d’avis ?"
+      pre-assessment survey q24A: 'Quelles connaissances en informatique utilises-tu
+        dans la vie de tous les jours ? '
+      pre-assessment survey q25A: 'Si oui, quel(s) cours d’informatique as-tu suivi
+        avant ton cours d’informatique actuel ? '
       ramp_artist_loops1: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover his
         flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2018: "What a lovely day!  \r\n\r\nHelp\nthe Artist cover
@@ -12417,6 +12569,9 @@ fr:
         or blocks that you would use, but you should describe what\nfunctions you
         would need to create, where you would or would not use loops,\nand where you
         would or would not use random numbers."
+      test_anonymous_student_survey_next_class: Que feras-tu après ce cours ?
+      test_anonymous_student_survey_why_class: Pourquoi suis-tu ce cours ? Donne au
+        moins deux raisons.
       u3-old-drawing-view: "# Your Own Drawing\\\r\n\\\r\nIt is\nyour turn to create
         your own drawing. You should have drawn out your plan\non paper first.\\\r\n\\\r\n#
         Do This\\\r\nAs a reminder make sure you hit the objectives:\\\r\n\\\r\n*\nCreates

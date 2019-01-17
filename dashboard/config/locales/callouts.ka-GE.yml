@@ -555,6 +555,9 @@ ka:
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
           მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
+      courseC_PlayLab_events_challenge1_2019_callout:
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ,
           დაიწყეთ ამ ბლოკის გამოყენებით.
@@ -577,6 +580,9 @@ ka:
         courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
           იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
       courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
+          იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
+      courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
           იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
       courseC_maze_debugging5_callout:

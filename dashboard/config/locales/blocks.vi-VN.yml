@@ -311,11 +311,23 @@ vi:
         options:
           EFFECT:
             '"none"': Không có
-            '"disco"': Hình vuông
-            '"rainbow"': Màu sắc
+            '"circles"': Đường hầm
             '"diamonds"': Kim cương
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Ngẫu
-              nhiên)"
+            '"disco_ball"': Bóng Disco
+            '"kaleidoscope"': Kính vạn hoa
+            '"lasers"': Sàn nhảy laze
+            '"rainbow"': Màu sắc
+            '"text"': Tiêu đề bài hát
+            '"sparkles"': Lấp lánh
+            '"disco"': Hình vuông
+            '"stars"': Sao
+          PALETTE:
+            '"rave"': Đen và trắng
+            '"cool"': Xanh
+            '"default"': Sáng
+            '"tropical"': Nhiệt đới
+            '"vintage"': Cổ điển
+            '"warm"': Đỏ
       Dancelab_setBackgroundEffectWithPalette:
         text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
         options:
@@ -375,9 +387,14 @@ vi:
         options:
           EFFECT:
             '"none"': Không có
+            '"confetti"': Hoa giấy
+            '"hearts_red"': Trái tim
+            '"music_notes"': Nốt nhạc
+            '"pineapples"': Trái dứa
+            '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
+            '"floating_rainbows"': Cầu vồng
             '"raining_tacos"': Taco
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Ngẫu nhiên)"
       Dancelab_setForegroundEffectExtended:
         text: thiết lập hiệu ứng tiền cảnh {EFFECT}
         options:
@@ -683,7 +700,29 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': tất cả
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -695,11 +734,11 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
-      Mikelab_destroyAll:
+      Mikelab_groupDestroy:
         options:
           SELECT:
             '"all"': tất cả
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -707,6 +746,46 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': tất cả
+          PROPERTY:
+            '"scale"': kích cỡ
+            '"rotation"': xoay
+            '"x"': hoành độ
+            '"y"': tung độ
+            '"direction"': phương hướng chuyển động
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': tất cả
+      Mikelab_ifDanceIs:
+        text: |-
+          nếu {SPRITE} đang {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Clown: Chú hề
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Fresh: Tươi
+            MOVES.Roll: Cuộn cơ thể
+            MOVES.Kick: Ngôi sao
+            MOVES.ThisOrThat: Đây hoặc đó
+            MOVES.Rest: Không có
       Mikelab_randomColor:
         text: màu ngẫu nhiên
       Mikelab_setBG:
@@ -727,6 +806,18 @@ vi:
           CORNER:
             '"right"': phải
             '"left"': trái
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": trên
+            "{x: 200, y: 300}": dưới
+            "{x: 100, y: 200}": trái
+            "{x: 300, y: 200}": phải
+            "{x: 200, y: 200}": giữa
+            "{x: 100, y: 100}": trên trái
+            "{x: 300, y: 100}": trên phải
+            "{x: 100, y: 300}": dưới trái
+            "{x: 300, y: 300}": dưới phải
       Mikelab_whenKeyPressed:
         text: khi nhấn {KEY}
         options:
@@ -781,6 +872,22 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
             '"tint"': sắc thái
+      binary_move:
+        options:
+          DIR:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+      binary_whenKey:
+        text: khi nhấn {KEY}
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
       craft_ifPath:
         text: |-
           nếu có đường dẫn {DIR}

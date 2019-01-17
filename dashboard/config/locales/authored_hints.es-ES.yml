@@ -3677,6 +3677,13 @@ es:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: "¿Está frente al camino correcto? El 'bloque destruir' explota el
+          bloque en frente de usted."
+        mc_9_b: "¡Las machas negras en el muro son carbón! Utilice 'destruir bloque'
+          en estas para minar el carbón."
+        mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde
+          está parado.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
@@ -4502,6 +4509,9 @@ es:
           que hacer en cada panal?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Esto es una pista.
+      Tortoise and Hare_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Todo el código está en su lugar para asegurarse de la lava y enfrentarla.
           Todo lo que necesitas hacer es agregar un bloque para moverte.
@@ -4728,6 +4738,15 @@ es:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este
           rompecabezas.
+      behaviors 3_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
+      behaviors 5a_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
+      behaviors 6_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
+          la velocidad de cada sprite?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer tu código.

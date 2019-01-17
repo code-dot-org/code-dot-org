@@ -343,3 +343,7 @@ uz:
           stages:
             Relay Programming:
               name: Estafetali dasturlash
+        andrea-test:
+          stages:
+            'null':
+              name: 'nol'

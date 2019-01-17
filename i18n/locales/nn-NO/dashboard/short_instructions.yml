@@ -114,7 +114,7 @@ nn:
       2-3 Bee Conditionals 12: Hjelp meg å finne all nektaren med så få blokker som mogleg!
       2-3 Bee Conditionals 13: |-
         Her skjer det mykje!
-        
+
         Bruk det du har lært til å samle all nektaren og lage honning.
       2-3 Bee Conditionals 14: |-
         Lat oss sette alt saman!\r
@@ -335,7 +335,7 @@ nn:
       4-5 Bee Conditionals 4: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "dersom/elles"-blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       4-5 Bee Conditionals 5: |-
         Det kan vere ein blome eller ein bikube under skyene. 
-        
+
         Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       4-5 Bee Conditionals 6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\n\nKombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.\n\nHugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!"
@@ -394,13 +394,13 @@ nn:
       4-5 Maze Conditionals 5: "\"Meg vil ha solsikke!\"\n\nBruk ei \"dersom\"-blokk for å få meg dit med så få blokker som mogleg."
       4-5 Maze Conditionals 6: |-
         "Et solsikke!"
-        
+
         Bruk ei "dersom"-blokk for å få meg dit med så få blokker som mogleg.
       4-5 Maze Conditionals 7: Denne løysinga er ikkje så ulik, men pass deg for dei kjøttetande plantane!
       4-5 Maze Conditionals 8: "\"Dersom/elles\"-blokka sjekkar ein føresetnad og gjer det eine ELLER det andre. \n\nBruk denne nye blokka for å få meg til solsikka."
       4-5 Maze Conditionals 9: |-
         Ei siste øving med "dersom/elles"-blokka!\
-        
+
         Følg det med fingeren din for å sjå om du finn ut av det på første forsøk.
       4-5 Maze Conditionals Assessment 1: "**Oppgåve:** Bruk ein \"Gjenta til\" og ei \"dersom/elles\"-blokk for å få meg til solsikka med så få blokker som mogleg."
       4-5 Nested Loops 1: 'Fullfør koden for å teikne desse trekantane. Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.'
@@ -802,6 +802,7 @@ nn:
       Course 4 SCV 6: Klikk her for å sjå instruksjonane ein gong til.
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel for sidene? Hver linje skal være 50 piksler lange.
+      Course E MC Conditionals1: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt. Den fyrste til å samle 10 flagg vinn! 
@@ -1656,13 +1657,16 @@ nn:
       courseB_starWars_prog9_2018: Hjelp BB-8 å samle det glødande skrapmetallet
       courseC_PlayLab_events3: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
       courseC_PlayLab_events3_2018: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
+      courseC_PlayLab_events3_2019: "Kan du lage eit program som gjer at Jorge \n(figur 1) flytter seg mot Katten Olive?"
       courseC_PlayLab_eventsFP: Lag di eiga historie. Når du er ferdig, klikk på Fullfør for å dele med vener. Sjå historieidear i hinta.
       courseC_PlayLab_eventsFP_2018: Lag di eiga historie. Når du er ferdig, klikk på Fullfør for å dele med vener. Sjå historieidear i hinta.
+      courseC_PlayLab_eventsFP_2019: Lag di eiga historie. Når du er ferdig, klikk på Fullfør for å dele med vener. Sjå historieidear i hinta.
       courseC_PlayLab_events_challenge1: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
       courseC_PlayLab_events_challenge1_2018: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
+      courseC_PlayLab_events_challenge1_2019: "Bruk ei ny blokk for å la Waddles automatisk flytte tilbake til start når han spring inni dinosauren og når han får eit poeng. \nSpel spelet og flytt Waddles med pilene til du får nok poeng."
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Her er ei ny blokk som er litt komplisert. Bruk den til å flytte Waddles tilbake til start når han spring inni diosauren og når han får eit poeng. Dette vil gjere spelet meir utfordrande og morosamt!
-        
+
         Spel spelet og flytt Waddles med pilene til du får nok poeng.
       courseC_artist_loop1: La oss legge til nokre pizazz!
       courseC_artist_loop1_2018: La oss legge til nokre pizazz!
@@ -1770,8 +1774,10 @@ nn:
       courseC_harvester_loops_challenge1: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a: Samle saman alt kornet.
       courseC_harvester_loops_challenge1a_2018: Samle saman alt kornet.
+      courseC_harvester_loops_challenge1a_2019: Samle saman alt kornet.
       courseC_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_harvester_loops_challenge2_2018: "Samle all salaten. \nUnngå tre og åkrar!"
+      courseC_harvester_loops_challenge2_2019: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_maze_debugging10: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       courseC_maze_debugging_challenge1: '*"Går eg berre rundt i sirklar?"*'
       courseC_maze_debugging_challenge1_2018: '*"Går eg berre rundt i sirklar?"*'
@@ -1794,7 +1800,7 @@ nn:
       courseC_maze_programming_challenge2_2019: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
       courseC_playLab_embedded: |-
         Her er eit spel du kan spele! For å vinne, må du bruke piltastane for å få pingvinen til å springe inn i blekkspruten.
-        
+
         Når du er ferdig, vil du lære deg korleis du kan lage dette spelet!
       courseC_puppy_loops10: Du er flink! Fortsett med det!
       courseC_puppy_loops9: Du er flink! Fortsett med det!
@@ -2185,7 +2191,7 @@ nn:
       grade3_ConditionalsElse_4: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "dersom/elles"-blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       grade3_ConditionalsElse_5: |-
         Det kan vere ein blome eller ein bikube under skyene. 
-        
+
         Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       grade3_ConditionalsElse_6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\n\nKombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.\n\nHugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!"
@@ -2194,7 +2200,7 @@ nn:
       grade3_ConditionalsElse_9: "**Oppgåve** Denne skya gjømmer ein blomst med ein nektar eller ei honningkake som treng ein honning.\n\\r\n\\r\nGjer ferdig \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller honning.\\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Det kan vere ein blome eller ein bikube under skyene. 
-        
+
         Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       grade3_Conditionals_1 BAD: Bruk ei løkke til å samle inn all nektaren.
@@ -2202,7 +2208,7 @@ nn:
       grade3_Conditionals_10 BAD: Samle nektar frå radene med blomar! Bruk løkke i løkke.
       grade3_Conditionals_10: |-
         Her skjer det mykje!
-        
+
         Bruk det du har lært til å samle all nektaren og lage honning.
       grade3_Conditionals_11 BAD: 'Oppgåve: Bruk ein medan-løkke til å samle inn all nektaren frå denne blomen.'
       grade3_Conditionals_11: |-
@@ -2304,7 +2310,7 @@ nn:
       grade4_bee_conditionals_quantum4: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "dersom/elles"-blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       grade4_bee_conditionals_quantum5: |-
         Det kan vere ein blome eller ein bikube under skyene. 
-        
+
         Bruk "dersom/elles"-blokka til å samle inn nektar om det er ein blome. 
         Om ikkje lagar du honning (for da er det ein bikube).
       grade4_bee_functions1: Samla inn all nektar frå kvar blome.

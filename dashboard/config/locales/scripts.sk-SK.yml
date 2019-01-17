@@ -3,8 +3,8 @@ sk:
   data:
     script:
       category:
-        csd_category_name: Objavujeme Informatiku ('17-'18)
-        csd_2018_category_name: Objavujeme Informatiku ('18-'19)
+        csd_category_name: Objavujeme informatiku ('17-'18)
+        csd_2018_category_name: Objavujeme informatiku ('18-'19)
         csf_category_name: Základy Informatiky
         csf_2018_category_name: Základy Informatiky (2018)
         csf_international_category_name: Základy Informatiky (medzinárodná verzia)
@@ -95,7 +95,7 @@ sk:
             Getting Loopy:
               name: Neustále opakovanie
             Graph Paper Programming:
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             'Maze: Loops':
               name: 'Bludisko: Cykly'
             'Maze: Sequence':
@@ -139,7 +139,7 @@ sk:
             'Bee: Nested Loops':
               name: 'Včela: Vnorené cykly'
             Bounce:
-              name: Odraziť
+              name: Bounce
             Computational Thinking:
               name: Algoritmické myslenie
             Crowdsourcing:
@@ -151,7 +151,7 @@ sk:
             'Farmer: While Loops':
               name: 'Farmár: Cykly typu "Zatiaľ čo"'
             Functional Suncatchers:
-              name: Dekorácie
+              name: Dekorácie s funkciami
             Internet:
               name: Internet
             Maze:
@@ -159,7 +159,7 @@ sk:
             'Maze: Conditionals':
               name: 'Bludisko: Podmienky'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             'Studio: Create a Game':
               name: 'Play Lab: Vytvor hru'
             'Studio: Create a Story':
@@ -181,7 +181,7 @@ sk:
         hourofcode:
           title: Klasické bludisko
           description: Vyskúšaj si základy informatiky s postavičkami ako sú Angry
-            Birds, Plants vs Zombies a Scrat z doby ľadovej!
+            Birds, Plants vs Zombies a Scrat z Doby ľadovej!
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Maze:
@@ -261,7 +261,7 @@ sk:
           description_short: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
           stages:
             Infinity:
-              name: Nekonečno
+              name: Infinity
         algebrademo:
           stages:
             The Design Recipe:
@@ -290,7 +290,7 @@ sk:
             Functions:
               name: Funkcie
             Graph Paper Programming:
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             Introduction to Computer Science:
               name: Úvod do vedy o počítačoch (informatiky)
             Relay Programming:
@@ -338,7 +338,7 @@ sk:
           description_short: Udalosti
           stages:
             Bounce:
-              name: Odraziť
+              name: Bounce
         flappy:
           title: Flappy kód
           description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš
@@ -373,7 +373,7 @@ sk:
             Creating Functions:
               name: Tvorba funkcií
             While Loops:
-              name: Podmieňovacie cykly While
+              name: Podmieňovacie cykly "Kým"
         algebraPD3:
           stages:
             Teacher Dashboard:
@@ -407,7 +407,7 @@ sk:
             Artist:
               name: Umelec
             Bounce:
-              name: Odraziť
+              name: Bounce
             Flappy:
               name: Flappy
             Gamelab:
@@ -430,6 +430,10 @@ sk:
               name: App Lab
             Internet Simulator:
               name: Simulátor Internetu
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Základy informatiky
         ECSPD2:
           stages:
             0: |-
@@ -487,7 +491,7 @@ sk:
             Getting Loopy:
               name: Neustále opakovanie
             Graph Paper Programming:
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             Happy Maps:
               name: Veselé mapy
             Move it, Move it:
@@ -495,7 +499,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             The Big Event:
               name: Veľká udalosť
         ScienceP3OLPT2:
@@ -506,10 +510,24 @@ sk:
           description_audience: Vek 10-18
         SpecialSeries:
           description_audience: Vek 10-18
+        iceage:
+          title: Play Lab Doba ľadová
+          description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
+          description_short: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
+          stages:
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
         cspunit3temp:
           stages:
             While Loops:
-              name: Podmieňovacie cykly While
+              name: Podmieňovacie cykly "Kým"
+        gumball:
+          title: Gumball Play Lab
+          description: Vytvor príbeh alebo hru s Gumball Play Labom!
+          description_short: Vytvor príbeh alebo hru s Gumball Play Labom!
+          stages:
+            Gumball Play Lab:
+              name: Gumball Play Lab
         starwars:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
@@ -562,15 +580,13 @@ sk:
         csp5-2017:
           stages:
             While Loops:
-              name: Podmieňovacie cykly While
+              name: Podmieňovacie cykly "Kým"
             Post-Course Survey:
               name: Hodnotenie kurzu
         CSDU3-Draft:
           stages:
             Functions:
               name: Funkcie
-            Velocity:
-              name: Rýchlosť
         CSF_Secret_Sample:
           description_audience: Vek 8-18
         algebraFacilitator:
@@ -604,7 +620,7 @@ sk:
             'Jigsaw: Learn to drag and drop':
               name: 'Skladačka: Nauč sa presúvať bloky'
             Loops:
-              name: Slučky
+              name: Cykly
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
         grade4:
@@ -614,7 +630,7 @@ sk:
             'New Artist: Functions':
               name: 'Nový Umelec: Funkcie'
             Songwriting:
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
         grade1:
           stages:
             Debugging:
@@ -624,7 +640,7 @@ sk:
             'Jigsaw: Learn to drag and drop':
               name: 'Skladačka: Nauč sa presúvať bloky'
             Loops:
-              name: Slučky
+              name: Cykly
             Unspotted Bugs:
               name: Nenájdené chyby
         grade5:
@@ -654,15 +670,13 @@ sk:
             Bee Debugging:
               name: 'Včela: Hľadanie a odstraňovanie chýb'
             Bounce:
-              name: Odraziť
+              name: Bounce
             'Farmer: While Loops':
               name: 'Farmár: Cykly typu "Zatiaľ čo"'
         csd3-2017:
           stages:
             Drawing in Game Lab:
               name: Kreslenie v Game Labe
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
             Variables:
@@ -696,13 +710,13 @@ sk:
             Functions with Parameters:
               name: Funkcie s parametrami
             Loops:
-              name: Slučky
+              name: Cykly
             Nested Loops:
               name: Vnorené cykly
             Variables:
               name: Premenné
             While Loops:
-              name: Podmieňovacie cykly While
+              name: Podmieňovacie cykly "Kým"
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -715,7 +729,7 @@ sk:
           description: Vyber si tím a priprav basketbalový zápas
           stages:
             Bounce:
-              name: Odraziť
+              name: Bounce
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -778,14 +792,34 @@ sk:
               name: Stavanie základov
         coursed-draft:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmy: Programovanie na štvorčekový papier'
+            Events in Bounce:
+              name: Udalosti v Bounce
+            Nested Loops in Maze:
+              name: Vnorené cykly v Bludisku
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programovanie'
+            Debugging in Bee:
+              name: Hľadanie chýb so Včelou
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals with Bee:
+              name: Podmienky so Včelou
+            Conditionals & Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
+            Conditionals in Bee:
+              name: Podmienky s Včelou
             Digital Citizenship:
               name: Digitálne Občianstvo
             Artist Binary:
               name: Binárny Umelec
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Nested Loops:
               name: Vnorené cykly
             Introduction:
@@ -824,6 +858,8 @@ sk:
               name: Písanie pesničiek s parametrami
             Introduction:
               name: Úvod
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
         classic-hoc-impact-study:
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
@@ -834,6 +870,13 @@ sk:
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
+        sports:
+          title: Naprogramuj si vlastný zápas
+          description_short: Pomiešaj športy
+          description: Pomiešaj športy
+          stages:
+            Sports:
+              name: Športy
         2016_sciencePD-phase2b:
           stages:
             Wrap-Up:
@@ -905,14 +948,10 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd3-old:
           stages:
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd2-draft:
@@ -925,8 +964,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
             'null':
@@ -935,6 +972,8 @@ sk:
           stages:
             Introduction:
               name: Úvod
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
         csd2-old:
           stages:
             Peer Review:
@@ -945,8 +984,10 @@ sk:
               name: C9 cykly s Umelcom
             D6 Frozen Artist:
               name: D6 Umelec Frozen
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
             Bounce:
-              name: Odraziť
+              name: Bounce
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -979,11 +1020,14 @@ sk:
               name: 'Algoritmus z reálneho života: Papierové lietadielka'
             Programming in Artist:
               name: Programovanie s Umelecom
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
           title: Kurz C
           assignment_family_title: Kurz C
         coursed-2017:
           stages:
             Introduction:
+              name: Predstavenie online úloh
               description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
                 - podľa toho, ako pokročilá je Vaša trieda) do online pracovného prostredia
                 Code.org. Videá Vám vysvetlia ako funguje pracovné prostredie, vrátane
@@ -991,10 +1035,26 @@ sk:
                 bloky, ako ich vymazať či spájať. Následne si študenti precvičia svoje
                 schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Po tom študenti
                 uvidia nové typy úloh ako napríklad Collector, Umelec a Harvester.
+            'Algorithms: Graph Paper Programming':
+              name: 'Programovanie: Programovanie na štvorčekový papier'
+            Events in Bounce:
+              name: Udalosti v Bounce
             Nested Loops:
               name: Vnorené cykly
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
+            'Algorithms: Relay Programming':
+              name: 'Hľadanie chýb: Štafetové programovanie'
+            Debugging in Bee:
+              name: Hľadanie chýb so Včelou
+            Conditionals with Cards:
+              name: 'Ak/Inak: Podmienky s Kartami'
+            Conditionals in Bee:
+              name: Podmienky s Včelou
+            Conditionals & Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Artist Binary:
               name: Binárny umelec
               description_student: Naviguj svojho umelca tak, aby vytvoril binárny
@@ -1020,6 +1080,7 @@ sk:
         coursee-2017:
           stages:
             Introduction:
+              name: Predstavenie online úloh
               description_teacher: V tomto postupe študenti začínaju úvodom do online
                 pracovného prostredia Code.org alebo (revidovaním v závislosti na
                 skúsenostiach tvojej triedy). Študenti sa naučia základné funkčnosti
@@ -1027,6 +1088,8 @@ sk:
                 vymazanie a spájanie blokov Blockly predstavuje úvodné video. V tejto
                 úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti
                 v sekvenovaní a odstraňovaní chýb.
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1066,6 +1129,8 @@ sk:
                 Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky.
                 Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
                 jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Present Your Project:
               description_teacher: V priebehu štyroch hodín budú študenti pracovať
                 na programovaní dizajnu vlastného projektu v kurze Play Lab alebo
@@ -1082,10 +1147,18 @@ sk:
               name: Vnorené cykly
           title: Kurz E
           assignment_family_title: Kurz E
-          description_short: Rýchlo pokryme pojmy v kurzoch C & D a poďme ďalej s
-            funkciami.
+          description_short: Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať
+            s funkciami.
         coursef-2017:
           stages:
+            Introduction:
+              name: Predstavenie online úloh
+            Ice Age Play Lab:
+              name: Doba ľadová - Udalosti
+              description_teacher: V tomto kurze žiaci prejdú príbehom s postavami
+                z Doby ľadovej. Žiaci budú pracovať s udalosťami a opakovacími cyklami,
+                ktoré im umožnia pohybovať postavami po obrazovke. Na koniec dostanú
+                príležitosť vytvoriť si vlastnú hru alebo príbeh,.
             Variables in Artist:
               name: Premenné s Umelcom
               description_student: Nezabudni do triedy priniesť svoju tvorivosť! V
@@ -1148,20 +1221,28 @@ sk:
               name: Vnorené cykly s Frozen
           title: Kurz F
           assignment_family_title: Kurz F
-          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme
-            si vlastné umenelecké diela, príbeh alebo hru.
+          description_short: Nauč sa všetky koncepty v kurze Základy informatiky a
+            vytvor vlastné umelecké diela, príbeh alebo hru.
         express-2017:
           stages:
             Introduction:
               name: Úvod
+            'Algorithms: Graph Paper Programming':
+              name: 'Programovanie: Programovanie na štvorčekový papier'
+            'Algorithms: Relay Programming':
+              name: 'Hľadanie chýb: Štafetové programovanie'
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
             Internet:
               name: Internet
             Digital Citizenship:
               name: Digitálne Občianstvo
+            Events in Bounce:
+              name: Udalosti v Bounce
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals & Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1174,6 +1255,8 @@ sk:
               name: Funkcie s parametrami s Umelcom
             Nested Loops Project in Frozen:
               name: Vnorené cykly vo Frozen
+            Conditional Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
             Building a Foundation:
               name: Stavanie základov
             Nested Loops:
@@ -1213,36 +1296,60 @@ sk:
               name: Podmienky
             Functions in Artist:
               name: Funkcie s Umelcom
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
         new-d:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmy: Programovanie na štvorčekový papier'
             Introduction:
               name: Úvod
+            Events in Bounce:
+              name: Udalosti v Bounce
             Nested Loops:
               name: Vnorené cykly
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programovanie'
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals in Bee:
+              name: Podmienky s Včelou
+            Conditionals & Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
             Digital Citizenship:
               name: Digitálne Občianstvo
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Artist Binary:
               name: Binárny Umelec
             Building a Foundation:
               name: Stavanie základov
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
         new-express:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmy: Programovanie na štvorčekový papier'
             Introduction:
               name: Úvod
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programovanie'
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
+            Events in Bounce:
+              name: Udalosti v Bounce
             Variables in Artist:
               name: Premenné s Umelcom
             Functions with Parameters in Artist:
@@ -1265,6 +1372,8 @@ sk:
               name: Podmienky
             Functions in Artist:
               name: Funkcie s Umelcom
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1277,6 +1386,8 @@ sk:
               name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1344,6 +1455,8 @@ sk:
               name: Podmienky
             Functions in Artist:
               name: Funkcie s Umelcom
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1358,6 +1471,8 @@ sk:
               name: Vnorené cykly s Frozen
             Introduction:
               name: Úvod
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1380,8 +1495,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd3-2018:
@@ -1390,8 +1503,6 @@ sk:
               name: Premenné
             Conditionals:
               name: Podmienky
-            Velocity:
-              name: Rýchlosť
             Functions:
               name: Funkcie
         csd2-2018:
@@ -1405,7 +1516,7 @@ sk:
             'Debugging: Unspotted Bugs':
               name: Nenájdené chyby
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Števko a Veľký projekt
+              name: Stevie a Veľký projekt
             'Programming: Happy Maps':
               name: Veselé mapy
             Going Places Safely:
@@ -1422,12 +1533,12 @@ sk:
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Števko a Veľký projekt
+              name: Stevie a Veľký projekt
         express-2018:
           assignment_family_title: Zrýchlený kurz
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1440,22 +1551,30 @@ sk:
               name: Projekt s vnorenými cyklami vo Frozen
             'Events: The Big Event':
               name: Veľká udalosť
+            Events in Bounce:
+              name: Udalosti v Bounce
             Variables in Artist:
               name: Premenné s Umelcom
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
+            Programming in Collector:
+              name: Zbieranie pokladov s Laurelom
             Programming in Artist:
               name: Kódovať Umenie
             'Loops: Getting Loopy':
               name: Neustále opakovanie
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Nested Loops in Frozen:
               name: Vnorené cykly s Annou a Elsou
             Conditionals with Cards:
               name: Podmienky s kartami
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelcom
             Envelope Variables:
@@ -1487,25 +1606,36 @@ sk:
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+            Programming in Ice Age:
+              name: Programovanie so Scratom
+            Loops in Ice Age:
+              name: Cykly so Scratom
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
         coursed-2018:
+          title: Kurz D (2018)
           assignment_family_title: Kurz D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             Introduction:
               name: Úvod
             Building a Foundation:
               name: Stavanie základov
+            Events in Bounce:
+              name: Udalosti v Bounce
+            Nested Loops in Bee:
+              name: Vnorené cykly v Bludisku
             Nested Loops in Artist:
               name: Ozdobné tvary použitím vnorených cyklov
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals & Loops in Maze:
+              name: Podmienky & Cykly v Bludisku
             Digital Citizenship:
-              name: Digitálne Občianstvo
+              name: Digitálne občianstvo
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
@@ -1515,9 +1645,13 @@ sk:
             Nested Loops in Frozen:
               name: Snehové vločky s Annou a Elsou
             Graph Paper Programming:
-              name: Programovanie na milimetrovom papieri
+              name: Programovanie na štvorčekový papier
             Relay Programming:
               name: Štafetové programovanie
+            Introduction to Online Puzzles:
+              name: Predstavenie online úloh
+            Nested Loops in Maze:
+              name: Vnorené cykly v Bludisku
         jr-test:
           stages:
             Alien Dance Party - Input:
@@ -1527,10 +1661,14 @@ sk:
           stages:
             Building a Foundation:
               name: Stavanie základov
+            Programming in Collector:
+              name: Zbieranie pokladov s Laurelom
             Programming in Artist:
               name: Kódovať Umenie
             'Loops: Getting Loopy':
               name: Neustále opakovanie
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
             Loops in Artist:
               name: Pečiatkovanie v Cykloch
             'Events: The Big Event':
@@ -1550,6 +1688,8 @@ sk:
               name: Stavanie základov
             Programming in Artist:
               name: Kódovať Umenie
+            Nested Loops:
+              name: Vnorené cykly v Bludisku
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
@@ -1562,7 +1702,7 @@ sk:
                 úlohe, v kurzoch Bludisko a Umelec, si študenti precvičujú zručnosti
                 v sekvenovaní a odstraňovaní chýb.
             'Functions: Songwriting':
-              name: Písanie pesničiek s parametrami
+              name: Písanie pesničiek
             Functions in Artist:
               name: Funkcie s Umelecom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
@@ -1570,6 +1710,8 @@ sk:
                 Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky.
                 Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
                 jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Explore Project Ideas:
               description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie,
                 dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi.
@@ -1612,8 +1754,8 @@ sk:
               name: Digitálne zdieľanie
         coursef-2018:
           assignment_family_title: Kurz F
-          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme
-            si vlastné umenelecké diela, príbeh alebo hru.
+          description_short: Nauč sa všetky koncepty v kurze Základy informatiky a
+            vytvor vlastné umelecké diela, príbeh alebo hru.
           stages:
             'Programming: My Robotic Friends':
               name: Moji robotickí priatelia
@@ -1621,10 +1763,18 @@ sk:
               name: Stavanie základov
             Programming in Artist:
               name: Umenie s Kódom
+            Nested Loops in Bee/Zombie:
+              name: Vnorené cykly v Bludisku
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
               name: Úvod
+            Ice Age Play Lab:
+              name: Play Lab Doba ľadová
+              description_teacher: V tomto kurze žiaci prejdú príbehom s postavami
+                z Doby ľadovej. Žiaci budú pracovať s udalosťami a opakovacími cyklami,
+                ktoré im umožnia pohybovať postavami po obrazovke. Na koniec dostanú
+                príležitosť vytvoriť si vlastnú hru alebo príbeh,.
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
@@ -1708,7 +1858,7 @@ sk:
         csp5-2018:
           stages:
             While Loops:
-              name: Podmieňovacie cykly While
+              name: Podmieňovacie cykly "Kým"
         spritelab:
           stages:
             Alien Dance Party - Input:
@@ -1718,19 +1868,23 @@ sk:
             'Debugging: Unspotted Bugs':
               name: Nenájdené chyby
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Števko a Veľký projekt
+              name: Stevie a Veľký projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Spelling Bee:
               name: Hláskovanie
             Move It, Move It:
-              name: Posuň to, Posuň to
+              name: Posuň, Posuň
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+            Programming in Ice Age:
+              name: Programovanie so Scratom
             Copyright and Creativity:
               name: Je super tvoriť a hrať férovo
+            Loops in Ice Age:
+              name: Cykly so Scratom
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Števko a Veľký projekt
+              name: Stevie a Veľký projekt
         spritelab-validated:
           stages:
             Alien Dance Party - Input:
@@ -1758,7 +1912,9 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty
-          description: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s kamarátmi!
+          description_short: Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara, a 25 ďalších!
+          description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
           stages:
@@ -1783,12 +1939,12 @@ sk:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
           title: Pokračuj v tancovaní
-          description_short: Choď za hranice Hodiny Kódu s touto nadväzujúcou aktivitou
-            na Code.org Tanečná Párty tutoriály.
-          description: Pokračuj za hranice prvej hodiny s rozšírenými nápadmi na projekt.
+          description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
+            na Code.org Tanečnú Párty.
+          description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
         coursef-2019:
-          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme
-            si vlastné umenelecké diela, príbeh alebo hru.
+          description_short: Nauč sa všetky koncepty v kurze Základy informatiky a
+            vytvor vlastné umelecké diela, príbeh alebo hru.
           stages:
             Building a Foundation:
               name: Stavanie základov
@@ -1844,22 +2000,34 @@ sk:
             Dance Party:
               name: Tanečná Párty
           title: Tanečná Párty (slabé pripojenie)
-          description_short: Nakódujte svoju vlastnú tanečnú párty pre zdielanie s
-            kamarátmi! (Táto verzia je pre pomalé pripojenie)
+          description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
+            (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmy: Programovanie na štvorčekový papier'
+            Introduction to Online Puzzles:
+              name: Predstavenie online úloh
             Relay Programming:
               name: Štafetové programovanie
+            Events in Bounce:
+              name: Udalosti v Bounce
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals in Bee:
+              name: Podmienky s Včelou
             Digital Citizenship:
               name: Digitálne Občianstvo
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Artist Binary:
               name: Binárny Umelec
         coursee-2019:
@@ -1919,22 +2087,32 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
         express-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmy: Programovanie na štvorčekový papier'
             Relay Programming:
               name: Štafetové programovanie
             Programming in Artist:
               name: Programovanie s Umelecom
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            Nested Loops in Bee:
+              name: Vnorené cykly s Včelou
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
             Conditionals with Cards:
               name: Podmienky s kartami
+            Conditionals in Bee:
+              name: Podmienky s Včelou
             Functions in Artist:
               name: Funkcie s Umelcom
             Envelope Variables:
@@ -1951,3 +2129,29 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: nič
+        dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Tanečná párty - Pokračuj ďalej
+          title: Pokračuj v tancovaní
+          description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
+            na Code.org Tanečnú Párty.
+          description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Stavanie základov
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmus z reálneho života: Papierové lietadielka'
+            Programming in Artist:
+              name: Programovanie s Umelecom
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
+            Binary Bracelets:
+              name: Binárne náramky
+        gamelab:
+          title: Game Lab

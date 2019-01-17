@@ -180,6 +180,10 @@ hi:
         text: बाएँ मुड़ें
       RyanLab_turnRight:
         text: दाएँ मुड़ें
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
       craft_ifPath:
         options:
           DIR:

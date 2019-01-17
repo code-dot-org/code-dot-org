@@ -1037,7 +1037,13 @@ pt-BR:
         com cores usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha
         com sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de
         azul. Linha 4 - sombras de cinza.'
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': Vamos começar
+        com você com a imagem 4x2 que Maddie estava criando, más deixamos de fora
+        os últimos dois quadrados. Termine a imagem descobrindo quais duas cores estão
+        faltando e codifique-as.
       App Lab test: teste
+      AppLab_test02: Resumo de uma frase da atividade. Clique para ver as instruções
+        completas.
       Applab AllTheThings ResourcesTab AllResources: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
@@ -1050,6 +1056,7 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      Applab test: Você pode enviar este nível. Apenas para testes!
       Artist - Nested Loops 1: |-
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -1290,39 +1297,212 @@ pt-BR:
       CSD Hackathon Pt 2: "(Clique para ver todas as instruções)"
       CSD Hackathon Week 1: "(Clique para ver todas as instruções)"
       CSD Hackathon Week 2: "(Clique para ver todas as instruções)"
+      CSD U3 Background Discuss: Aqui está um programa que é bem similar com o que
+        você tem escrito, mas pode se comportar de maneira bem diferente. Você vai
+        querer parar e discutir com a classe antes de continuar.
+      CSD U3 Background Experiment: Aqui está um programa que é bem similar com o
+        que você tem escrito, mas pode se comportar de maneira bem diferente. Você
+        vai querer parar e discutir com a classe antes de continuar.
+      CSD U3 Boolean Modify: Modifique o código para que todos os comandos console.log
+        imprimam 'true'
+      CSD U3 Boolean Modify_2018: Modifique o código para que todos os comandos console.log
+        imprimam 'true'
+      CSD U3 Boolean Predict: O que você acha que este código irá fazer quando for
+        executado? Preveja o que cada comando console.log() irá imprimir, e então
+        execute o programa para verificar suas previsões.
+      CSD U3 Boolean Predict_2018: O que você acha que este código irá fazer quando
+        for executado? Preveja o que cada comando console.log() irá imprimir, e então
+        execute o programa para verificar suas previsões.
+      CSD U3 Draw Loop Discuss: Aqui está um programa que é bem similar com o que
+        você tem escrito, mas pode se comportar de maneira bem diferente. Você vai
+        querer parar e discutir com a classe antes de continuar.
+      CSD U3 Draw Loop Experiment: Tente usar algumas das outras funções de formatos
+        que você aprendeu na repetição de desenho. O que acontece quando você utiliza
+        randomNumber() para gerar algumas das entradas? Você vai querer parar e discutir
+        com sua classe antes de continuar.
+      CSD U3 Expressions calculator: Adicione os números de 1 a 10. Multiplique os
+        números de 1 a 10. Verifique suas respostas com um vizinho.
+      CSD U3 Frame Rate: Torne a animação do Gary do Gamelab mais devagar com frameRate()
+      CSD U3 Keypress Boolean-2018: Modifique o código para que todos os comandos
+        console.log imprimam 'true'
+      CSD U3 Keypress Boolean: Modifique o código para que todos os comandos console.log
+        imprimam 'true'
+      CSD U3 Keypress Boolean_2018: Modifique o código para que todos os comandos
+        console.log imprimam 'true'
+      CSD U3 Keypress Watchers: Modifique o código para que todos os comandos console.log
+        imprimam 'true'
+      CSD U3 Keypress Watchers_2018: Modifique o código para que todos os comandos
+        console.log imprimam 'true'
+      CSD U3 L5 Freeplay: Mude o valor de petalSize múltiplas vezes. Como isto muda
+        o seu desenho?
+      CSD U3 L5 Freeplay_2018: Mude o valor de petalSize múltiplas vezes. Como isto
+        muda o seu desenho?
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
+      CSD U3 Random Animation: Use randomNumber() para animar a boca de Gary.
+      CSD U3 Random Choice: Use um bloco randomNumber() para gerar 0 ou 1
+      CSD U3 Random Color: Você poderia usar randomNumber() para escolher cores aleatórias
+        também? Tente definir um ou mais dos canais no bloco rgb com um número aleatório.
+        Qual deve ser o valor máximo?
+      CSD U3 Random Intro: O que você acha que este código vai fazer quando for executado?
+        Faça uma previsão, e então execute este código de 5 a 10 vezes, guardando
+        a saída a cada vez. Compartilhe os seus resultados com seu vizinho.
+      CSD U3 Random Min Max: Usando console.log() escreva um programa que retorna
+        aleatoriamente um número no intervalo que você definiu.
+      CSD U3 Random Width Height: Escolha um formato de bloco e use chamadas para
+        randomNumber() no lugar de um ou mais parâmetros. Certifique-se que você rode
+        algumas vezes para ver o efeito de aleatoriedade.
+      CSD U3 Simple Drawing - Animation 2: Use randomNumber() na posição x e a largura
+        da sua nuvem elíptica para introduzir um pouco de animação.
+      CSD U3 Simple Drawing - Animation: Use randomNumber() na posição x e a largura
+        da sua nuvem elíptica para introduzir um pouco de animação.
+      CSD U3 Simple Drawing - Background: Coloque todo o seu código em uma repetição
+        draw() e então defina o plano de fundo como azul com o bloco background().
       CSD U3 Simple Drawing - Personal Animation: FAÇA isso
       CSD U3 Sprites intro sprites: Faça isso
       CSD U3 Sprites intro sprites_2018 - Validation Test: Faça isso
       CSD U3 Sprites intro sprites_2018: Faça isso
+      CSD U3 Variable Arithmetic pt2: 'Preveja: Quais dois números irão aparecer no
+        console?'
       CSD U3 Variable Arithmetic: Modifique o valor "tamanho" inicial para fazer um
         quadrado maior.
+      CSD U3 Variable Incrementation pt2: 'Preveja: Quais dois números irão aparecer
+        no console?'
+      CSD U3 Variable Incrementation: 'Preveja: Quais dois números irão aparecer no
+        console?'
+      CSD U3 Variables CHALLENGE gamelab gary: Use variáveis para animar o Game Lab
+        Gary
+      CSD U3 Variables Initialize: 'Preveja: O que vai ser mostrado no console?'
       CSD U3 Variables Intro: 'Crie sua própria variável '
+      CSD U3 Variables Random: 'Preveja: O que vai ser mostrado no console?'
       CSD U3 Variables Reassign pt2: Crie e atribua uma nova variável em uma única
         linha.
+      CSD U3 Variables Reassign: 'Preveja: O que vai ser mostrado no console?'
+      CSD U3 Variables Square Random Loop: Teste suas previsões do ultimo nível.
       CSD U3 Variables Square Random: Modifique o valor "tamanho" inicial para fazer
         um quadrado maior.
       CSD U3 Variables Square: Modifique o valor "tamanho" inicial para fazer um quadrado
         maior.
+      CSD U3 Variables TEMPLATE square: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables change circle size: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables change circle size_2018: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
       CSD U3 Variables create and assign: Crie e atribua o tamanho em uma única linha
         de código.
+      CSD U3 Variables draw loop newVars: Estenda esse projeto para criar sua própria
+        visualização de arte aleatória com variáveis.
+      CSD U3 Variables draw loop rgb: Atribua as variáveis x1 e y1 valores aleatórios
+        dentro da repetição de desenhar e use-os para controlar onde o quadrado é
+        desenhado.
+      CSD U3 Variables draw loop xy: Atribua as variáveis x1 e y1 valores aleatórios
+        dentro da repetição de desenhar e use-os para controlar onde o quadrado é
+        desenhado.
+      CSD U3 Variables eyeBrows: Preveja o que acontecerá quando você mover a atribuição
+        de eyeSize dentro da repetição de desenhar. Então tente você mesmo
+      CSD U3 Variables make a big square: Altere o valor de tamanho várias vezes.
+        Como muda seu desenho?
+      CSD U3 Variables make a square: Altere o valor de tamanho várias vezes. Como
+        muda seu desenho?
+      CSD U3 Variables multiple assignments: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables naming rules v2-2018: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables naming rules v2: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables naming rules v2_2018: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables naming rules: Mude o valor de petalSize múltiplas vezes. Como
+        isto muda o seu desenho?
+      CSD U3 Variables random assignment: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      CSD U3 Variables random draw loop: Preveja o que acontecerá quando você mover
+        a atribuição de eyeSize dentro da repetição de desenhar. Então tente você
+        mesmo
+      CSD U3 Variables random drawing exemplar: Confira este exemplo aleatório de
+        desenho.
+      CSD U3 Variables random with assignment: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
+      CSD U3 Variables random with assignment_2018: Mude o valor de petalSize múltiplas
+        vezes. Como isto muda o seu desenho?
+      CSD U3 Variables use value rect: 'Preveja: O que vai ser mostrado no console?'
+      CSD U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
+      CSD U3 Variables2 expressions in commands: Use expressões dentro de um comando
+        de desenho
+      CSD U3 Variables2 expressions in variables: Atribua o valor de cada expressão
+        a uma variável e console.log essa variável.
+      CSD U3 Variables2 expressions: Use o console.log para exibir os resultados de
+        cada expressão. Em seguida, crie seu próprio.
+      CSD U4 - Events Template: Adicione um grande botão vermelho na sua tela usando
+        o Modo de Design. (Clique para ver as instruções completas)
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
+      CSD U5 black white images pixelation 3: Altere os controles deslizantes de largura
+        e altura para encontrar a imagem (clique aqui para ver mais)
+      CSD U5 black white images pixelation 3_2018: Altere os controles deslizantes
+        de largura e altura para encontrar a imagem (clique aqui para ver mais)
       CSD U5 black white images pixelation 4: Adicione sobrancelhas ao rosto sorridente
         (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 4_2018: Adicione sobrancelhas ao rosto
         sorridente (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 5: Desenho algo que você gosta
       CSD U5 black white images pixelation 5_2018: Desenho algo que você gosta
+      CSD U5 black white images pixelation: Complete a forma X digitando 0s e 1s
+      CSD U5 black white images pixelation_2018: Complete a forma X digitando 0s e
+        1s
+      CSD U6 params modify clouds: |-
+        # Nuvens
+
+        Este programa faz as nuvens se mover quando você soprar no sensor de som, mas não termina por aqui.
+
+        # Faça isso
+        * Crie uma nova função 'moverNuvem(nome)' que irá mover qualquer nuvem.
+        * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
+        * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
+        * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
+      CSD U6 params modify clouds_2018: |-
+        # Nuvens
+
+        Este programa faz as nuvens se mover quando você soprar no sensor de som, mas não termina por aqui.
+
+        # Faça isso
+        * Crie uma nova função 'moverNuvem(nome)' que irá mover qualquer nuvem.
+        * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
+        * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
+        * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
+      CSD U6 params modify planes: |-
+        # Controlador Multiplo de Aviões
+
+        Este programa move os três aviões usando a placa do acelerômetro e as caixas de seleção na tela.  Neste momento, apenas o avião vermelho funciona.
+
+        # Faça isso
+        * Crie uma nova função de 'moverAviao(nome)' que pode mover qualquer avião.
+        * Chame a função 'moverAviao(nome)' dentro do bloco do evento, tal que ele só se move quando a sua caixa de seleção está marcada.
+
+        _Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_
+      CSD U6 params modify planes_2018: |-
+        # Controlador Multiplo de Aviões
+
+        Este programa move os três aviões usando a placa do acelerômetro e as caixas de seleção na tela.  Neste momento, apenas o avião vermelho funciona.
+
+        # Faça isso
+        * Crie uma nova função de 'moverAviao(nome)' que pode mover qualquer avião.
+        * Chame a função 'moverAviao(nome)' dentro do bloco do evento, tal que ele só se move quando a sua caixa de seleção está marcada.
+
+        _Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_
       CSDU4 - AppLab - 1: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
         larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
       CSDU4 - AppLab - 2: Escreva um programa que atue como uma calculadora simples.
         (clique aqui para ver todas as instruções)
+      CSDU4 - AppLab - 3: Use o console para verificar o valor final de num. (Clique
+        para ver as instruções completas)
+      CSDU4 - AppLab - 4: " Use os Comandos de Análise para fazer uma lista de todos
+        os valores que rolaram antes um 6. (Clique para ver as instruções completas)"
       CSDU4 - Design Mode - 1: "Arraste um botão para fora da tela e\ndefina seu texto
         como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz
         a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
@@ -1337,11 +1517,42 @@ pt-BR:
         o\nbotão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código\ninicial
         similar ao resultado do último nível, então você pode copiar o código do\núltimo
         nível aqui se você preferir. "
+      CSDU4 - Design Mode - 16: Adicione um manipulador de eventos para o botão usando
+        o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique
+        para ver as instruções completas).
+      CSDU4 - Design Mode - 17: Atualize os nomes de ID e as mensagens de 'console.log'
+        para associar com o botão correto. (Clique para ver as instruções completas.)
+      CSDU4 - Design Mode - 18: Conserte o formato do jogo bullseye. (Clique para
+        ver as instruções completas)
+      CSDU4 - Design Mode - 2: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
       CSDU4 - Design Mode - 24: |-
         Introdução de textInput, getText
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
+      CSDU4 - Design Mode - 25: Adicione um manipulador de eventos para o botão Submeter
+        para que quando o botão é clicado, ele irá exibir o nome digitado da caixa
+        de texto no console.  Use getText para obter o valor da caixa de texto. (Clique
+        para ver as instruções completas)
+      CSDU4 - Design Mode - 26: Salve a idade e o nome do usuário em variáveis (clique
+        para ver as instruções completas)
+      CSDU4 - Design Mode - 27: Mostre uma mensagem na 'textArea' (clique para ver
+        as instruções completas)
+      CSDU4 - Design Mode - 28: Escreva uma saudação para o usuário quando eles clicarem
+        em 'entrar' no texto de entrada, usando o evento 'mudança'. (Clique para ver
+        as instruções completas)
+      CSDU4 - Design Mode - 29: Adicione um menu de opções para o palpite em vez de
+        promptNum (clique para ver as instruções completas)
+      CSDU4 - Design Mode - 30: Mostre imagens diferentes para o número aleatório
+        gerado. (Clique para ver as instruções completas)
+      CSDU4 - Design Mode - 31: Crie um manipulador de eventos para responder aos
+        eventos de apertar tecla e exibir event.key no console. Aperte as teclas do
+        teclado para ver o que acontece. (Clique para ver as instruções completas)
+      CSDU4 - Design Mode - 32: Experimente os eventos de soltar tecla e pressionar
+        tecla para ver como eles são diferentes de apertar tecla. (Clique para ver
+        as instruções completas)
       CSDU4 - Design Mode - 33: Modifique o código para que o som só seja tocado quando
         a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       CSDU4 - Design Mode - 4: |-
@@ -1350,6 +1561,12 @@ pt-BR:
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      CSDU4 - Design Mode - 5: Analise o programa verificando que suas identidades
+        estão sendo referenciadas corretamente. (Clique para ver as instruções completas)
+      CSDU4 - Design Mode - 6: Analise o programa ordenando corretamente seus botões
+        de comandos e manipuladores de eventos. (Clique para ver as instruções completas)
+      CSDU4 - Design Mode - 7: Analise o programa corrigindo o erro lógico dentro
+        do programa. (Clique para ver as instruções completas)
       CSDU4 - Design Mode - 8: Mova o botão para o meio da tela. (Clique aqui para
         ver todas as instruções)
       CSDU4 nameAgeTemplate: |-
@@ -1361,6 +1578,10 @@ pt-BR:
         uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
         numérica. (Clique aqui para ver todas as instruções)
+      CSDU6 - Arrays - length: Use list.length para determinar o comprimento de cada
+        vetor. (Clique para ver as instruções completas)
+      CSDU6 - Arrays - lengthMinus1: Use list.length - 1 para registrar o último item
+        do vetor para o console. (Clique para ver as instruções completas)
       CSDU6 - for loop - color buttons with for: Mostre o conteúdo da lista na tela
         em ordem numérica. (Clique aqui para ver todas as instruções)
       CSDU6 - for loop - color buttons: Mostre o conteúdo da lista na tela em ordem
@@ -1387,7 +1608,92 @@ pt-BR:
         uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)
       CSDU6 arrays variable: Escreva um programa que escolha e mostre uma cor aleatória
         do vetor. (Clique aqui para ver todas as instruções)
+      CSP Data Unit - Counting Multiple Things: |-
+        Se você pode contar uma coisa também consegue contar muitas coisas
+
+        Encontre quantas pessoas gostam de alguma coisa que não seja cães e gatos
+
+        Contar cães
+        Contar gatos
+        Contar total
+        Faça as contas
+
+        em branco/ em branco total
+
+        Também pode ser usado para encontrar porcentagens desses
+
+        x% são amantes de cão
+      CSP Loops: Mude a condição "se" para uma repetição "enquanto" para que o programa
+        execute até que role um 6. (Clique para ver as instruções completas)
+      CSP U4 - JSON Object Intro - Bad Way: Acione ambos os eventos do teclado e do
+        mouse e examine os objetos de evento exibidos no console. Por que um objeto
+        seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
+        completas)
+      CSP U4 - JSON Object Intro - Good Way: 'Crie um objeto pelo menos 5 valores
+        incluindo pelo menos um string e um número. (Clique para ver as instruções
+        completas) '
+      CSP U4 - Objects - createObject: 'Crie um objeto pelo menos 5 valores incluindo
+        pelo menos um string e um número. (Clique para ver as instruções completas) '
       CSP student contact info: Por favor, insira seu endereço de email.
+      CSPU5 Add Screens to Chaser Game: Recrie o jogo a partir do "Jogo do Caçador"
+        com uma tela de boas vindas e uma tela de fim de jogo. (Clique para ver as
+        instruções completas).
+      CSPU5 Add a 2nd Screen: Faça um app com 2 telas com uma tela preta e uma tela
+        branca. (Clique para ver instruções detalhadas)
+      CSPU5 Add a 2nd Screen_2018: Faça um app com 2 telas com uma tela preta e uma
+        tela branca. (Clique para ver instruções detalhadas)
+      CSPU5 Add full screen image to bg of chaser game: Recrie o jogo a partir do
+        "Jogo do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
+        para ver as instruções completas).
+      CSPU5 Add full screen image to bg of chaser game_2018: Recrie o jogo a partir
+        do "Jogo do Caçador" com uma tela de boas vindas e uma tela de fim de jogo.
+        (Clique para ver as instruções completas).
+      CSPU5 Add game over screen: Recrie o jogo a partir do "Jogo do Caçador" com
+        uma tela de boas vindas e uma tela de fim de jogo. (Clique para ver as instruções
+        completas).
+      CSPU5 Add game over screen_2018: Recrie o jogo a partir do "Jogo do Caçador"
+        com uma tela de boas vindas e uma tela de fim de jogo. (Clique para ver as
+        instruções completas).
+      CSPU5 Add onEvent from Design Mode: Adicione um manipulador de eventos para
+        o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de
+        Design (clique para ver as instruções completas).
+      CSPU5 Add onEvent from Design Mode_2018: Adicione um manipulador de eventos
+        para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo
+        de Design (clique para ver as instruções completas).
+      CSPU5 Add welcome screen to chaser game: Recrie o jogo a partir do "Jogo do
+        Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique para
+        ver as instruções completas).
+      CSPU5 Add welcome screen to chaser game_2018: Recrie o jogo a partir do "Jogo
+        do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
+        para ver as instruções completas).
+      CSPU5 Adding Screens Template: Faça um app com 2 telas com uma tela preta e
+        uma tela branca. (Clique para ver instruções detalhadas)
+      CSPU5 Adding Screens Template_2018: Faça um app com 2 telas com uma tela preta
+        e uma tela branca. (Clique para ver instruções detalhadas)
+      CSPU5 Debugging Overlapping Objects and Screen Events: Recrie o "Jogo do Caçador"
+        da última lição usando o Modo Design. (Clique para ver as instruções completas).
+      CSPU5 Debugging Overlapping Objects and Screen Events_2018: Recrie o "Jogo do
+        Caçador" da última lição usando o Modo Design. (Clique para ver as instruções
+        completas).
+      CSPU5 First Time Console.log: Adicione 3 mensagens de console.log e os teste.
+        (Clique para ver as instruções completas.)
+      CSPU5 First Time Console.log_2018: Adicione 3 mensagens de console.log e os
+        teste. (Clique para ver as instruções completas.)
+      CSPU5 Layering and Deleting in Design Mode: Conserte o formato do jogo bullseye.
+        (Clique para ver as instruções completas)
+      CSPU5 Layering and Deleting in Design Mode_2018: Conserte o formato do jogo
+        bullseye. (Clique para ver as instruções completas)
+      CSPU5 Project - Multi Screen App: Crie seu app com várias telas (clique para
+        ver as instruções completas).
+      CSPU5 Use Console.log to update IDs: Atualize os nomes de ID e as mensagens
+        de 'console.log' para associar com o botão correto. (Clique para ver as instruções
+        completas.)
+      CSPU5 Use setScreen for first time: Fazer uma app com 2 telas que pode alternar
+        entre uma tela preta e uma tela branca com botões. (Clique para ver instruções
+        detalhadas.)
+      CSPU5 Use setScreen for first time_2018: Fazer uma app com 2 telas que pode
+        alternar entre uma tela preta e uma tela branca com botões. (Clique para ver
+        instruções detalhadas.)
       CSPU5_AddImageToChaserGame: |-
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
@@ -1422,10 +1728,29 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_Project - Multi Screen App: Crie seu app com várias telas (clique para
+        ver as instruções completas).
+      CSPU5_U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode
+        este app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - Demo App_2018: Uso o app "Minhas coisas favoritas". Como
+        pode este app estar fazendo uso de um vetor? (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando
+        appendItem. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - appendItem_2018: Crie um vetor de números ímpares 1-11 usando
+        appendItem. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor
+        de 1 para 0. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados
         em um vetor. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - assignment2_2018: Calcule a soma dos três valores armazenados
         em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment3: Aumente o valor em 1 de cada valor no vetor
+        gerada aleatoriamente. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment3_2018: Aumente o valor em 1 de cada valor no
+        vetor gerada aleatoriamente. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - assignment_2018: Use índices para alterar os valores nesse
+        vetor de 1 para 0. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir
         de 0 até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para
         ver todas as instruções)
@@ -1442,34 +1767,248 @@ pt-BR:
       CSPU5_U3 - Arrays - favThings Counting Variable_2018: Crie uma variável global
         para o índice atual e use-a para mostrar o primeiro item no vetor. (Clique
         aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - favThings Next: Escreva código que permite o usuário mover
+        para frente através de sua lista clicando no botão "Próximo". (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings Next_2018: Escreva código que permite o usuário
+        mover para frente através de sua lista clicando no botão "Próximo". (Clique
+        para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings Prev: Escreva um código que permita o usuário
+        mover para trás através de sua lista clicando no botão "Último". (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings Prev_2018: Escreva um código que permita o usuário
+        mover para trás através de sua lista clicando no botão "Último". (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings addItem: Escreva um código que permita que um
+        usuário adicione suas próprias coisas favoritas para a lista. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings addItem_2018: Escreva um código que permita que
+        um usuário adicione suas próprias coisas favoritas para a lista. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings bounds: Adicione declarações "se" no seus manipuladores
+        de eventos para que impeça o índice global de sair dos limites. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings bounds_2018: Adicione declarações "se" no seus
+        manipuladores de eventos para que impeça o índice global de sair dos limites.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo
         suas coisas favoritas. (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - favThings createArray_2018: Crie um array de palavras descrevendo
         suas coisas favoritas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings firstOutput: Use "setar texto" para exibir o primeiro
+        item na matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings firstOutput_2018: Use "setar texto" para exibir
+        o primeiro item na matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings giveIDs: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Arrays - favThings giveIDs_2018: Dê a seus elementos de interface
+        do usuário, identificadores descritivos e significativos. (Clique para ver
+        as instruções completas)
+      CSPU5_U3 - Arrays - favThings keepPlaying: Faça qualquer outra melhoria que
+        você quiser! (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - favThings keepPlaying_2018: Faça qualquer outra melhoria
+        que você quiser! (Clique para ver as instruções completas)
       CSPU5_U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem
         numérica. (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Arrays - indexPractice_2018: Mostre o conteúdo da lista na tela em
         ordem numérica. (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Arrays - insertingItems: Insira itens em uma matriz para formar uma
+        frase completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - insertingItems_2018: Insira itens em uma matriz para formar
+        uma frase completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - insertionErrors: Execute cada comando que referencia os
+        índices que estão fora dos limites e observe os resultados. (Clique para ver
+        as instruções completas)
+      CSPU5_U3 - Arrays - insertionErrors_2018: Execute cada comando que referencia
+        os índices que estão fora dos limites e observe os resultados. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Arrays - introIndex: Exiba o primeiro e o último elemento na matriz.
+        Exiba o número 5 da matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - introIndex_2018: Exiba o primeiro e o último elemento na
+        matriz. Exiba o número 5 da matriz. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - length: Use list.length para determinar o comprimento de
+        cada vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - lengthMinus1: Use list.length - 1 para registrar o último
+        item do vetor para o console. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - lengthMinus1_2018: Use list.length - 1 para registrar o
+        último item do vetor para o console. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - length_2018: Use list.length para determinar o comprimento
+        de cada vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - remove: Remova itens de uma matriz para formar uma frase
+        completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - remove_2018: Remova itens de uma matriz para formar uma
+        frase completa. (Clique para ver as instruções completas)
+      CSPU5_U3 - Arrays - stringsInArrays: Escreva uma frase, palavra por palavra,
+        adicionando sequências de caracteres em uma matriz. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Arrays - stringsInArrays_2018: Escreva uma frase, palavra por palavra,
+        adicionando sequências de caracteres em uma matriz. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - 200dots: Adicione um loop ao seu programa que desenha 200
+        pontos na sua tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - 200dots_2018: Adicione um loop ao seu programa que desenha
+        200 pontos na sua tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - One Dot sprayPaint: Escreva um código que redesenha sua
+        imagem usando um ponto cujas posições x e y usam margens X e Y com um pequeno
+        valor aleatório adicionado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - One Dot sprayPaint_2018: Escreva um código que redesenha
+        sua imagem usando um ponto cujas posições x e y usam margens X e Y com um
+        pequeno valor aleatório adicionado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - appendToArray: Crie uma matriz para armazenar cada parâmetro
+        de evento. Acrescente cada parâmetro de evento nesta matriz dentro de seu
+        manipulador de eventos. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - appendToArray_2018: Crie uma matriz para armazenar cada
+        parâmetro de evento. Acrescente cada parâmetro de evento nesta matriz dentro
+        de seu manipulador de eventos. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - changeToMouseMove: Altere seu programa para que pontos sejam
+        desenhados no local do mouse de acordo que o usuário move o mouse sobre a
+        tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - changeToMouseMove_2018: Altere seu programa para que pontos
+        sejam desenhados no local do mouse de acordo que o usuário move o mouse sobre
+        a tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - clickToAdd: Altere seu programa para que os pontos sejam
+        adicionados à tela quando o usuário clicar nela. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - clickToAdd_2018: Altere seu programa para que os pontos
+        sejam adicionados à tela quando o usuário clicar nela. (Clique para ver as
+        instruções completas)
+      CSPU5_U3 - Canvas - delete: Crie um botão que exclui o desenho, limpando a tela
+        e removendo todos os valores armazenados. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - delete_2018: Crie um botão que exclui o desenho, limpando
+        a tela e removendo todos os valores armazenados. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - draw at click point: Altere seu programa para que pontos
+        sejam desenhados no local do clique do mouse. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - draw at click point_2018: Altere seu programa para que pontos
+        sejam desenhados no local do clique do mouse. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou
         crie um novo de sua preferência. (Clique para ver todas as instruções)
       CSPU5_U3 - Canvas - freePlay_2018: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      CSPU5_U3 - Canvas - introCanvas: Adicione uma tela ao seu aplicativo e configure
+        ela para ser a tela ativa. Em seguida, adicione um grande ponto em sua sua
+        tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - introCanvas_2018: Adicione uma tela ao seu aplicativo e
+        configure ela para ser a tela ativa. Em seguida, adicione um grande ponto
+        em sua sua tela. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction fix Orig: Modifique o manipulador de eventos
+        do botão "Original" para que considere o movimento do mouse. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction fix Orig_2018: Modifique o manipulador
+        de eventos do botão "Original" para que considere o movimento do mouse. (Clique
+        para ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction: Escreva uma função que usa o movimento
+        do mouse como entrada e gere uma largura de linha como saída. (Clique para
+        ver as instruções completas)
+      CSPU5_U3 - Canvas - movementFunction_2018: Escreva uma função que usa o movimento
+        do mouse como entrada e gere uma largura de linha como saída. (Clique para
+        ver as instruções completas)
       CSPU5_U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor,
         redesenhando os pontos da forma que eles aparecem originalmente (Clique aqui
         para ver todas as instruções)
       CSPU5_U3 - Canvas - redrawOriginal_2018: Escreva uma função que processa seu
         vetor, redesenhando os pontos da forma que eles aparecem originalmente (Clique
         aqui para ver todas as instruções)
+      CSPU5_U3 - Canvas - redrawRandom: Defina um botão e manipulador de eventos para
+        a função aleatória. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - redrawRandom2: Escreva uma função que processa sua matriz,
+        redesenhando cada ponto com um tamanho aleatório. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Canvas - redrawRandom2_2018: Escreva uma função que processa sua
+        matriz, redesenhando cada ponto com um tamanho aleatório. (Clique para ver
+        as instruções completas)
+      CSPU5_U3 - Canvas - redrawRandom_2018: Defina um botão e manipulador de eventos
+        para a função aleatória. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - shiftKey: Adicione uma declaração "se" para seu manipulador
+        de eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - shiftKey_2018: Adicione uma declaração "se" para seu manipulador
+        de eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sketch: Escreva código que redesenha sua imagem usando um
+        efeito de esboço. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sketch_2018: Escreva código que redesenha sua imagem usando
+        um efeito de esboço. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sprayPaint: Atualize o código de tinta spray para que ele
+        redesenhe sua imagem usando múltiplos pontos aleatórios em vez de usar uma
+        repetição aninhada. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - sprayPaint_2018: Atualize o código de tinta spray para que
+        ele redesenhe sua imagem usando múltiplos pontos aleatórios em vez de usar
+        uma repetição aninhada. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - transparentDots: Mude as cores de seus pontos para que eles
+        tenham um traço totalmente transparente e preenchimento parcialmente transparente.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - transparentDots_2018: Mude as cores de seus pontos para
+        que eles tenham um traço totalmente transparente e preenchimento parcialmente
+        transparente. (Clique para ver as instruções completas)
+      CSPU5_U3 - Canvas - usingOffsetXY: Adicione um comando de console.log dentro
+        da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
+        Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
+        as instruções completas)
+      CSPU5_U3 - Canvas - usingOffsetXY_2018: Adicione um comando de console.log dentro
+        da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
+        Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
+        as instruções completas)
+      CSPU5_U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens
+        de 'console.log' para associar com o botão correto. (Clique para ver as instruções
+        completas.)
+      CSPU5_U3 - Design Mode - Layers and Delete: Conserte o formato do jogo bullseye.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Design Mode - Multi Screens 2: Fazer uma app com 2 telas que pode
+        alternar entre uma tela preta e uma tela branca com botões. (Clique para ver
+        instruções detalhadas.)
+      CSPU5_U3 - Design Mode - Multi Screens: Faça um app com 2 telas com uma tela
+        preta e uma tela branca. (Clique para ver instruções detalhadas)
+      CSPU5_U3 - Design Mode - WTF Console Log: Adicione 3 mensagens de console.log
+        e os teste. (Clique para ver as instruções completas.)
+      CSPU5_U3 - Design Mode -Recreate Beyond Buttons: Recrie o jogo a partir do "Jogo
+        do Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique
+        para ver as instruções completas).
+      CSPU5_U3 - Design Mode 1: Adicione um grande botão vermelho na sua tela usando
+        o Modo de Design. (Clique para ver as instruções completas)
+      CSPU5_U3 - Design Mode 1_2018: Adicione um grande botão vermelho na sua tela
+        usando o Modo de Design. (Clique para ver as instruções completas)
+      CSPU5_U3 - Dice - If: Mostre imagens diferentes para o número aleatório gerado.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - High Low - Dropdown: Adicione um menu de opções para o palpite em
+        vez de promptNum (clique para ver as instruções completas)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e
+        pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
+        para ver as instruções completas)
+      CSPU5_U3 - Keys - Key Up and Down_2018: Experimente os eventos de soltar tecla
+        e pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
+        para ver as instruções completas)
       CSPU5_U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo
         for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para
         baixo for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para
+        que o programa execute até que role um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto"
+        para que o programa execute até que role um 6. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Loops - Typing in Console: Use o console para verificar o valor final
+        de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor
+        final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - User Input - Save getText To Variable: Salve a idade e o nome do
+        usuário em variáveis (clique para ver as instruções completas)
+      CSPU5_U3 - User Input - Save getText To Variable_2018: Salve a idade e o nome
+        do usuário em variáveis (clique para ver as instruções completas)
+      CSPU5_U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos
+        para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo
+        de Design (clique para ver as instruções completas).
+      CSPU5_U3-Design Mode-Image: Recrie o "Jogo do Caçador" da última lição usando
+        o Modo Design. (Clique para ver as instruções completas).
       CSPU5_U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -1477,12 +2016,31 @@ pt-BR:
         o manipulador de eventos ao botão correto. (Curiosamente, o programa
         incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
+      CSPU5_U313 drag Two Buttons: Execute um programa com dois botões que possuem
+        o mesmo id para ver a mensagem de aviso no console. Altere os ids para fazer
+        o programa funcionar sem receber uma mensagem de aviso.
       CSPU5_U3L13 - Debug Id Problem: |-
         Esse programa tem um problema! Você pode descobrir
         qual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      CSPU5_U3L13 - Debugging 1: Analise o programa verificando que suas identidades
+        estão sendo referenciadas corretamente. (Clique para ver as instruções completas)
+      CSPU5_U3L13 - Debugging 2: Analise o programa ordenando corretamente seus botões
+        de comandos e manipuladores de eventos. (Clique para ver as instruções completas)
+      CSPU5_U3L13 - Debugging 3: Analise o programa corrigindo o erro lógico dentro
+        do programa. (Clique para ver as instruções completas)
+      CSPU5_U3L13 - Debugging 3_2018: Analise o programa corrigindo o erro lógico
+        dentro do programa. (Clique para ver as instruções completas)
+      CSPU5_U3L13 - Debugging IDs case sensitive: Analise o programa verificando que
+        suas identidades estão sendo referenciadas corretamente. (Clique para ver
+        as instruções completas)
+      CSPU5_U3L13 - Debugging IDs case sensitive_2018: Analise o programa verificando
+        que suas identidades estão sendo referenciadas corretamente. (Clique para
+        ver as instruções completas)
+      CSPU5_U3L13 - Project: Crie seu app com várias telas (clique para ver as instruções
+        completas).
       CSPU5_U3L13 - Turtle Driver Project: |-
         Desafio: crie uma "tartaruga motorista"
         com pelo menos três botões na tela para mover a tartaruga para a frente e
@@ -1499,8 +2057,23 @@ pt-BR:
         uma calculadora simples. (clique aqui para ver todas as instruções)
       CSPU5_U3L14 - User Input Division calculator_2018: Escreva um programa que atue
         como uma calculadora simples. (clique aqui para ver todas as instruções)
+      CSPU5_U3L16 - challenge say hi app: Escreva uma saudação para o usuário quando
+        eles clicarem em 'entrar' no texto de entrada, usando o evento 'mudança'.
+        (Clique para ver as instruções completas)
+      CSPU5_U3L16 - intro getText: Adicione um manipulador de eventos para o botão
+        Submeter para que quando o botão é clicado, ele irá exibir o nome digitado
+        da caixa de texto no console.  Use getText para obter o valor da caixa de
+        texto. (Clique para ver as instruções completas)
+      CSPU5_U3L16 - intro getText_2018: Adicione um manipulador de eventos para o
+        botão Submeter para que quando o botão é clicado, ele irá exibir o nome digitado
+        da caixa de texto no console.  Use getText para obter o valor da caixa de
+        texto. (Clique para ver as instruções completas)
       CSPU5_U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione
         qual deles você acha melhor. (Clique aqui para ver todas as instruções)
+      CSPU5_U3L16 - outputWithTextArea: Mostre uma mensagem na 'textArea' (clique
+        para ver as instruções completas)
+      CSPU5_U3L16 - outputWithTextArea_2018: Mostre uma mensagem na 'textArea' (clique
+        para ver as instruções completas)
       CSPU5_U3L16 - setPosition to fixed location: |-
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
@@ -1548,6 +2121,12 @@ pt-BR:
         linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável,
         atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome
         da variável de\nx para alguma outra coisa.\r\n"
+      CSPU5_U3L25 - drag out key event: Crie um manipulador de eventos para responder
+        aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas
+        do teclado para ver o que acontece. (Clique para ver as instruções completas)
+      CSPU5_U3L25 - drag out key event_2018: Crie um manipulador de eventos para responder
+        aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas
+        do teclado para ver o que acontece. (Clique para ver as instruções completas)
       CSPU5_U3L25 - play sound when up key: Modifique o código para que o som só seja
         tocado quando a seta para cima for pressionada (Clique aqui para ver todas
         as instruções)
@@ -1566,6 +2145,10 @@ pt-BR:
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      CSPU5_playWithEventTypes: Analise o programa corrigindo o erro lógico dentro
+        do programa. (Clique para ver as instruções completas)
+      CSPU5_playWithEventTypes_2018: Analise o programa corrigindo o erro lógico dentro
+        do programa. (Clique para ver as instruções completas)
       CSPU5_setPosition to fixed location: |-
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
@@ -1574,6 +2157,11 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_turtleDriver_add2ndButton: Analise o programa verificando que suas identidades
+        estão sendo referenciadas corretamente. (Clique para ver as instruções completas)
+      CSPU5_turtleDriver_add2ndButton_2018: Analise o programa verificando que suas
+        identidades estão sendo referenciadas corretamente. (Clique para ver as instruções
+        completas)
       Calc Circles of Eval .1: |-
         Você vai escrever um tipo de código chamado
         Bloco de cálculo, porque cada bloco de código retorna um único valor.
@@ -2627,6 +3215,9 @@ pt-BR:
       Course 4 Variables Assessment: |-
         Você consegue criar essa imagem usando
         uma variável para os lados? Cada linha deve ter 50 pixels de comprimento.
+      Course E MC Conditionals1: Você encontrará os recursos mais valiosos no subterrâneo,
+        mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo
+        menos 2 carvões.
       Course1BeePuzzle12: Obtenha três néctares e então fabrique duas unidades de
         mel
       Course1MazeAssessment1: "Isso é um teste!\r\nMova-me por um caminho e então\npor
@@ -3027,6 +3618,9 @@ pt-BR:
       GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
         eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
         fazem.
+      'Game Lab Workshop: Random': Escolha um formato de bloco e use chamadas para
+        randomNumber() no lugar de um ou mais parâmetros. Certifique-se que você rode
+        algumas vezes para ver o efeito de aleatoriedade.
       HOC 2018 Level_1: Colete um barco no baú.
       HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
       HOC 2018 Level_11: Construa um canal usando Prismarinho dentro do Monumento
@@ -3912,6 +4506,7 @@ pt-BR:
         Temos aqui outro desafio para praticar o uso de laços. O que acontece
         se você usar o bloco repita para executar o código fornecido na área de trabalho
         4 vezes?
+      PS - test - pixelation: Complete a forma X digitando 0s e 1s
       PS Log test - Define and use turnAround: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito.
@@ -3943,6 +4538,14 @@ pt-BR:
         usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com
         sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul.
         Linha 4 - sombras de cinza.'
+      Pixelation - Lesson 15 - Complete 3-bit color: Vamos começar com você com a
+        imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
+        quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
+        codifique-as.
+      Pixelation - Lesson 15 - Complete 3-bit color_2018: Vamos começar com você com
+        a imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
+        quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
+        codifique-as.
       Play Lab Rocket 1: |-
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
@@ -3982,6 +4585,10 @@ pt-BR:
         inicial da tartaruga.
       Project - Finish your canvas app: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
+      Project - Your Own Multi Screen App: Crie seu app com várias telas (clique para
+        ver as instruções completas).
+      Project - Your Own Multi Screen App_2018: Crie seu app com várias telas (clique
+        para ver as instruções completas).
       Quantum Bee: |-
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa
@@ -4215,8 +4822,16 @@ pt-BR:
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       U2L14 frequency random: Teste
+      U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode este
+        app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
+      U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando appendItem.
+        (Clique para ver as instruções completas)
+      U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor de
+        1 para 0. (Clique para ver as instruções completas)
       U3 - Arrays - assignment2: Calcule a soma dos três valores armazenados em um
         vetor. (Clique para ver as instruções completas)
+      U3 - Arrays - assignment3: Aumente o valor em 1 de cada valor no vetor gerada
+        aleatoriamente. (Clique para ver as instruções completas)
       U3 - Arrays - createFirstArray: Crie um vetor de números pares a partir de 0
         até 10 e mostre o conteúdo da lista com console.log. (Clique aqui para ver
         todas as instruções)
@@ -4225,20 +4840,137 @@ pt-BR:
       U3 - Arrays - favThings Counting Variable: Crie uma variável global para o índice
         atual e use-a para mostrar o primeiro item no vetor. (Clique aqui para ver
         todas as instruções)
+      U3 - Arrays - favThings Next: Escreva código que permite o usuário mover para
+        frente através de sua lista clicando no botão "Próximo". (Clique para ver
+        as instruções completas)
+      U3 - Arrays - favThings Prev: Escreva um código que permita o usuário mover
+        para trás através de sua lista clicando no botão "Último". (Clique para ver
+        as instruções completas)
+      U3 - Arrays - favThings addItem: Escreva um código que permita que um usuário
+        adicione suas próprias coisas favoritas para a lista. (Clique para ver as
+        instruções completas)
+      U3 - Arrays - favThings bounds: Adicione declarações "se" no seus manipuladores
+        de eventos para que impeça o índice global de sair dos limites. (Clique para
+        ver as instruções completas)
       U3 - Arrays - favThings createArray: Crie um array de palavras descrevendo suas
         coisas favoritas. (Clique para ver as instruções completas)
+      U3 - Arrays - favThings firstOutput: Use "setar texto" para exibir o primeiro
+        item na matriz. (Clique para ver as instruções completas)
+      U3 - Arrays - favThings giveIDs: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
+      U3 - Arrays - favThings keepPlaying: Faça qualquer outra melhoria que você quiser!
+        (Clique para ver as instruções completas)
+      U3 - Arrays - favThings template: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
+      U3 - Arrays - favThings template_2018: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
+      U3 - Arrays - globalVariableIndex: Dê a seus elementos de interface do usuário,
+        identificadores descritivos e significativos. (Clique para ver as instruções
+        completas)
       U3 - Arrays - indexPractice: Mostre o conteúdo da lista na tela em ordem numérica.
         (Clique aqui para ver todas as instruções)
+      U3 - Arrays - insertingItems: Insira itens em uma matriz para formar uma frase
+        completa. (Clique para ver as instruções completas)
+      U3 - Arrays - insertionErrors: Execute cada comando que referencia os índices
+        que estão fora dos limites e observe os resultados. (Clique para ver as instruções
+        completas)
+      U3 - Arrays - introIndex: Exiba o primeiro e o último elemento na matriz. Exiba
+        o número 5 da matriz. (Clique para ver as instruções completas)
+      U3 - Arrays - length: Use list.length para determinar o comprimento de cada
+        vetor. (Clique para ver as instruções completas)
+      U3 - Arrays - lengthMinus1: Use list.length - 1 para registrar o último item
+        do vetor para o console. (Clique para ver as instruções completas)
+      U3 - Arrays - remove: Remova itens de uma matriz para formar uma frase completa.
+        (Clique para ver as instruções completas)
+      U3 - Arrays - stringsInArrays: Escreva uma frase, palavra por palavra, adicionando
+        sequências de caracteres em uma matriz. (Clique para ver as instruções completas)
+      U3 - Canvas - 200dots: Adicione um loop ao seu programa que desenha 200 pontos
+        na sua tela. (Clique para ver as instruções completas)
+      U3 - Canvas - One Dot sprayPaint: Escreva um código que redesenha sua imagem
+        usando um ponto cujas posições x e y usam margens X e Y com um pequeno valor
+        aleatório adicionado. (Clique para ver as instruções completas)
+      U3 - Canvas - appendToArray: Crie uma matriz para armazenar cada parâmetro de
+        evento. Acrescente cada parâmetro de evento nesta matriz dentro de seu manipulador
+        de eventos. (Clique para ver as instruções completas)
+      U3 - Canvas - changeToMouseMove: Altere seu programa para que pontos sejam desenhados
+        no local do mouse de acordo que o usuário move o mouse sobre a tela. (Clique
+        para ver as instruções completas)
+      U3 - Canvas - clickToAdd: Altere seu programa para que os pontos sejam adicionados
+        à tela quando o usuário clicar nela. (Clique para ver as instruções completas)
+      U3 - Canvas - delete: Crie um botão que exclui o desenho, limpando a tela e
+        removendo todos os valores armazenados. (Clique para ver as instruções completas)
+      U3 - Canvas - draw at click point: Altere seu programa para que pontos sejam
+        desenhados no local do clique do mouse. (Clique para ver as instruções completas)
       U3 - Canvas - freePlay: Estenda a funcionalidade de um dos efeitos, ou crie
         um novo de sua preferência. (Clique para ver todas as instruções)
+      U3 - Canvas - introCanvas: Adicione uma tela ao seu aplicativo e configure ela
+        para ser a tela ativa. Em seguida, adicione um grande ponto em sua sua tela.
+        (Clique para ver as instruções completas)
+      U3 - Canvas - movementFunction fix Orig: Modifique o manipulador de eventos
+        do botão "Original" para que considere o movimento do mouse. (Clique para
+        ver as instruções completas)
+      U3 - Canvas - movementFunction: Escreva uma função que usa o movimento do mouse
+        como entrada e gere uma largura de linha como saída. (Clique para ver as instruções
+        completas)
       U3 - Canvas - redrawOriginal: Escreva uma função que processa seu vetor, redesenhando
         os pontos da forma que eles aparecem originalmente (Clique aqui para ver todas
         as instruções)
+      U3 - Canvas - redrawRandom: Defina um botão e manipulador de eventos para a
+        função aleatória. (Clique para ver as instruções completas)
+      U3 - Canvas - redrawRandom2: Escreva uma função que processa sua matriz, redesenhando
+        cada ponto com um tamanho aleatório. (Clique para ver as instruções completas)
+      U3 - Canvas - shiftKey: Adicione uma declaração "se" para seu manipulador de
+        eventos para que pontos só sejam desenhados quando a tecla shift for pressionada.
+        (Clique para ver as instruções completas)
+      U3 - Canvas - sketch: Escreva código que redesenha sua imagem usando um efeito
+        de esboço. (Clique para ver as instruções completas)
+      U3 - Canvas - sprayPaint: Atualize o código de tinta spray para que ele redesenhe
+        sua imagem usando múltiplos pontos aleatórios em vez de usar uma repetição
+        aninhada. (Clique para ver as instruções completas)
+      U3 - Canvas - transparentDots: Mude as cores de seus pontos para que eles tenham
+        um traço totalmente transparente e preenchimento parcialmente transparente.
+        (Clique para ver as instruções completas)
+      U3 - Canvas - usingOffsetXY: Adicione um comando de console.log dentro da função
+        do manipulador de eventos. Use-o para exibir o parâmetro do evento. Clique
+        na tela para ver o conteúdo do parâmetro de evento (clique para ver as instruções
+        completas)
+      U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens de 'console.log'
+        para associar com o botão correto. (Clique para ver as instruções completas.)
+      U3 - Design Mode - Layers and Delete: Conserte o formato do jogo bullseye. (Clique
+        para ver as instruções completas)
+      U3 - Design Mode - Multi Screens 2: Fazer uma app com 2 telas que pode alternar
+        entre uma tela preta e uma tela branca com botões. (Clique para ver instruções
+        detalhadas.)
+      U3 - Design Mode - Multi Screens: Faça um app com 2 telas com uma tela preta
+        e uma tela branca. (Clique para ver instruções detalhadas)
+      U3 - Design Mode - WTF Console Log: Adicione 3 mensagens de console.log e os
+        teste. (Clique para ver as instruções completas.)
+      U3 - Design Mode -Recreate Beyond Buttons: Recrie o jogo a partir do "Jogo do
+        Caçador" com uma tela de boas vindas e uma tela de fim de jogo. (Clique para
+        ver as instruções completas).
+      U3 - Design Mode 1: Adicione um grande botão vermelho na sua tela usando o Modo
+        de Design. (Clique para ver as instruções completas)
+      U3 - Dice - If: Mostre imagens diferentes para o número aleatório gerado. (Clique
+        para ver as instruções completas)
+      U3 - High Low - Dropdown: Adicione um menu de opções para o palpite em vez de
+        promptNum (clique para ver as instruções completas)
       U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
         ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
         errados. (Clique para ver todas as instruções)
+      U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e pressionar
+        tecla para ver como eles são diferentes de apertar tecla. (Clique para ver
+        as instruções completas)
       U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for
         pressionada (Clique aqui para ver todas as instruções)
+      U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que
+        o programa execute até que role um 6. (Clique para ver as instruções completas)
+      U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os
+        valores que rolaram antes um 6. (Clique para ver as instruções completas)"
+      U3 - Loops - Typing in Console: Use o console para verificar o valor final de
+        num. (Clique para ver as instruções completas)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -4265,7 +4997,24 @@ pt-BR:
       U3 - Sprites and Mod - Wrap Many Squares: Faça isso
       U3 - Sprites and Mod - X and Y Prop: Faça isso
       U3 - Sprites and Mod - two sprites: Faça isso
+      U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário
+        em variáveis (clique para ver as instruções completas)
       U3 - images - bee free play: Faça isso
+      U3 Variables consolelog: Use o bloco de escrita para exibir o valor de tamanho
+      U3 Variables flower example: Mude o valor de petalSize múltiplas vezes. Como
+        isto muda o seu desenho?
+      U3 Variables gray square: Mude o valor de petalSize múltiplas vezes. Como isto
+        muda o seu desenho?
+      U3 Variables make a square: Altere o valor de tamanho várias vezes. Como muda
+        seu desenho?
+      U3 Variables randomize your square: Mude o valor de petalSize múltiplas vezes.
+        Como isto muda o seu desenho?
+      U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
+      U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para
+        o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de
+        Design (clique para ver as instruções completas).
+      U3-Design Mode-Image: Recrie o "Jogo do Caçador" da última lição usando o Modo
+        Design. (Clique para ver as instruções completas).
       U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -4273,6 +5022,12 @@ pt-BR:
         o manipulador de eventos ao botão correto. (Curiosamente, o programa
         incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
+      U313 drag Two Buttons: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
+      U313 eventsDetails: Execute um programa com dois botões que possuem o mesmo
+        id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
+        funcionar sem receber uma mensagem de aviso.
       U3L03 Creating Procedures 1: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif
@@ -4445,6 +5200,14 @@ pt-BR:
         é válido,\nmas não faz o que você quer que ele faça.\r\n\r\nEsse programa
         tem dois erros.\nUm erro de sintaxe (complicado) e um erro lógico.  Encontre-os,
         conserte-os e faça\no programa funcionar como esperado."
+      U3L13 - Debugging 1: Analise o programa verificando que suas identidades estão
+        sendo referenciadas corretamente. (Clique para ver as instruções completas)
+      U3L13 - Debugging 2: Analise o programa ordenando corretamente seus botões de
+        comandos e manipuladores de eventos. (Clique para ver as instruções completas)
+      U3L13 - Debugging 3: Analise o programa corrigindo o erro lógico dentro do programa.
+        (Clique para ver as instruções completas)
+      U3L13 - Project: Crie seu app com várias telas (clique para ver as instruções
+        completas).
       U3L13 - Turtle Driver Project: |-
         Desafio: crie uma "tartaruga motorista"
         com pelo menos três botões na tela para mover a tartaruga para a frente e
@@ -4463,6 +5226,9 @@ pt-BR:
         o código que você precisa para começar.
       U3L14 - User Input Division calculator: Escreva um programa que atue como uma
         calculadora simples. (clique aqui para ver todas as instruções)
+      U3L16 - challenge say hi app: Escreva uma saudação para o usuário quando eles
+        clicarem em 'entrar' no texto de entrada, usando o evento 'mudança'. (Clique
+        para ver as instruções completas)
       U3L16 - hideAndShow: |-
         Introdução de textInput, getText e write.  Primeiro,
         execute o código inicial várias vezes. Tente alterar o que é escrito na
@@ -4482,6 +5248,10 @@ pt-BR:
         a um manipulador de eventos. Fornecemos um código inicial similar\nao resultado
         do último nível, então você pode copiar o código do último nível\naqui se
         você preferir. "
+      U3L16 - intro getText: Adicione um manipulador de eventos para o botão Submeter
+        para que quando o botão é clicado, ele irá exibir o nome digitado da caixa
+        de texto no console.  Use getText para obter o valor da caixa de texto. (Clique
+        para ver as instruções completas)
       U3L16 - nameAgeTemplate: |-
         Introdução de textInput, getText
         e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
@@ -4494,6 +5264,8 @@ pt-BR:
         na tela o que o usuário digitou na caixa de texto.
       U3L16 - newEventTypes: Experimente tipos de eventos diferentes e selecione qual
         deles você acha melhor. (Clique aqui para ver todas as instruções)
+      U3L16 - outputWithTextArea: Mostre uma mensagem na 'textArea' (clique para ver
+        as instruções completas)
       U3L16 - setPosition to move button: |-
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
@@ -4565,6 +5337,9 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      U3L25 - drag out key event: Crie um manipulador de eventos para responder aos
+        eventos de apertar tecla e exibir event.key no console. Aperte as teclas do
+        teclado para ver o que acontece. (Clique para ver as instruções completas)
       U3L25 - play sound when up key: Modifique o código para que o som só seja tocado
         quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       U3L2_Turtle3by3Grid: |-
@@ -4587,9 +5362,31 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
+      U4 - Objects - eventParameter: Acione ambos os eventos do teclado e do mouse
+        e examine os objetos de evento exibidos no console. Por que um objeto seria
+        a melhor maneira de armazenar esta informação? (Clique para ver as instruções
+        completas)
+      U4 - Objects - eventParameter_2018: Acione ambos os eventos do teclado e do
+        mouse e examine os objetos de evento exibidos no console. Por que um objeto
+        seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
+        completas)
+      U4 Model App: Adicione um grande botão vermelho na sua tela usando o Modo de
+        Design. (Clique para ver as instruções completas)
+      U4 Model App_2018: Adicione um grande botão vermelho na sua tela usando o Modo
+        de Design. (Clique para ver as instruções completas)
+      U4 Model Design 1: Adicione um grande botão vermelho na sua tela usando o Modo
+        de Design. (Clique para ver as instruções completas)
+      U4 Model Design 1_2018: Adicione um grande botão vermelho na sua tela usando
+        o Modo de Design. (Clique para ver as instruções completas)
       U4 vigenere cipher 2: Instruções
       U4L02 - Objects - Template1: Modelo
       U4L02 - Objects - Template1_2018: Modelo
+      U4L02 - Objects - createObject: 'Crie um objeto pelo menos 5 valores incluindo
+        pelo menos um string e um número. (Clique para ver as instruções completas) '
+      U4L02 - Objects - eventParameter: Acione ambos os eventos do teclado e do mouse
+        e examine os objetos de evento exibidos no console. Por que um objeto seria
+        a melhor maneira de armazenar esta informação? (Clique para ver as instruções
+        completas)
       U5 if-else-if movie example: Adicione uma condição senão-se com o objetivo de
         dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
@@ -4662,7 +5459,10 @@ pt-BR:
         Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \r\n\r\nSe
         repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses
         blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
+      aEfreeplay: Atividade Livre!
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
+      allthethings_ttscsp: Analise o programa corrigindo o erro lógico dentro do programa.
+        (Clique para ver as instruções completas)
       artistFunctionsVideo1: Siga as instruções para fazer sua própria função.
       artistLoopsK1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque
         com o nível e desenhe algo divertido.
@@ -5195,6 +5995,8 @@ pt-BR:
         cada seta. Pegue todo o tesouro! '
       courseB_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops2: Uso dois blocos de movimento diferentes para chegar até
         a noz!
@@ -5322,10 +6124,14 @@ pt-BR:
       courseB_starWars_prog9_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseC_PlayLab_events1: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2018: Faça Jorge o Cachorro (ator 1) dizer "Olá."
+      courseC_PlayLab_events1_2019: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events2: |-
         Você pode fazer o cachorro Jorge (personagem 1) dizer alguma coisa, e
         depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
       courseC_PlayLab_events2_2018: |-
+        Você pode fazer o cachorro Jorge (personagem 1) dizer alguma coisa, e
+        depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
+      courseC_PlayLab_events2_2019: |-
         Você pode fazer o cachorro Jorge (personagem 1) dizer alguma coisa, e
         depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
       courseC_PlayLab_events3: |-
@@ -5334,20 +6140,31 @@ pt-BR:
       courseC_PlayLab_events3_2018: |-
         Você consegue escrever um programa para fazer Jorge
         (personagem 1) se mover em direção à gata Olívia?
+      courseC_PlayLab_events3_2019: |-
+        Você consegue escrever um programa para fazer Jorge
+        (personagem 1) se mover em direção à gata Olívia?
       courseC_PlayLab_events4: "Você consegue escrever um programa que faça \nJorge
         (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer \"Olá\" quando
         Jorge\na alcançar?"
       courseC_PlayLab_events4_2018: "Você consegue escrever um programa que faça \nJorge
         (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer \"Olá\" quando
         Jorge\na alcançar?"
+      courseC_PlayLab_events4_2019: "Você consegue escrever um programa que faça \nJorge
+        (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer \"Olá\" quando
+        Jorge\na alcançar?"
       courseC_PlayLab_events5: Você pode escrever um programa para fazer Octavia o
         polvo, dizer "olá" quando clicarem nela?
       courseC_PlayLab_events5_2018: Você pode escrever um programa para fazer Octavia
+        o polvo, dizer "olá" quando clicarem nela?
+      courseC_PlayLab_events5_2019: Você pode escrever um programa para fazer Octavia
         o polvo, dizer "olá" quando clicarem nela?
       courseC_PlayLab_events6: Agora escreva um programa que faça Valfredo o Penguin
         se mover usando as teclas com as setas para cima / para baixo / à esquerda
         / à direita, para atingir todos os alvos!
       courseC_PlayLab_events6_2018: Agora escreva um programa que faça Valfredo o
+        Penguin se mover usando as teclas com as setas para cima / para baixo / à
+        esquerda / à direita, para atingir todos os alvos!
+      courseC_PlayLab_events6_2019: Agora escreva um programa que faça Valfredo o
         Penguin se mover usando as teclas com as setas para cima / para baixo / à
         esquerda / à direita, para atingir todos os alvos!
       courseC_PlayLab_events7: O bloco `repetir para sempre` permite você executar
@@ -5356,10 +6173,16 @@ pt-BR:
       courseC_PlayLab_events7_2018: O bloco `repetir para sempre` permite você executar
         um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro
         (personagem  2) 400 pixels para cima e para baixo, para sempre.
+      courseC_PlayLab_events7_2019: O bloco `repetir para sempre` permite você executar
+        um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro
+        (personagem  2) 400 pixels para cima e para baixo, para sempre.
       courseC_PlayLab_eventsFP: Crie sua própria estória. Quando terminar, clique
         em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias
         nas dicas.
       courseC_PlayLab_eventsFP_2018: Crie sua própria estória. Quando terminar, clique
+        em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias
+        nas dicas.
+      courseC_PlayLab_eventsFP_2019: Crie sua própria estória. Quando terminar, clique
         em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias
         nas dicas.
       courseC_artist_loops3a: Agora adicione um morcego!
@@ -5466,23 +6289,33 @@ pt-BR:
       courseC_harvester_loops1: Use laços para pegar todas as abóboras.
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops1_2018: Use laços para pegar todas as abóboras.
+      courseC_harvester_loops1_2019: Use laços para pegar todas as abóboras.
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
+      courseC_harvester_loops3_2019: Colete todas as abóboras.
       courseC_harvester_loops4: Colete todo os milhos e as abóboras.
       courseC_harvester_loops4_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops4_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6: Colete todo os milhos e as abóboras.
       courseC_harvester_loops6_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops8: "**Desafio:** coletar todo o milho e as abóboras."
       courseC_harvester_loops8_2018: "**Desafio:** coletar todo o milho e as abóboras."
+      courseC_harvester_loops8_2019: "**Desafio:** coletar todo o milho e as abóboras."
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops_forVid: Recolha todo o milho, a alface e todos as abóboras.
       courseC_maze_debugging1: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging10: |-
@@ -5668,6 +6501,18 @@ pt-BR:
       courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals10_2019: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals7: Use o bloco `se/senão` para coletar o nectar das
+        flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2018: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_2019: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
+      courseD_bee_conditionals7_predict2_2019: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel.
@@ -5801,9 +6646,39 @@ pt-BR:
       courseD_farmer_condLoops_challenge2_2018: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_2019: Colete tudo para completar o nível.
       courseD_farmer_condLoops_challenge2_clone: Colete tudo para completar o nível.
+      courseD_farmer_conditionals2: Mova para o buraco e preencha-o com seis pás de
+        terra, usando o bloco `preencher`.
+      courseD_farmer_conditionals3: Use o menor número de blocos possível para resolver
+        este enigma.
+      courseD_farmer_conditionals5: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_conditionals8: 'Desafio: Preencha todos estes buracos usando
+        o menor número de blocos possível. '
+      courseD_farmer_while2: Mova para o buraco e preencha-o com seis pás de terra,
+        usando o bloco `preencher`.
+      courseD_farmer_while2_2018: Mova para o buraco e preencha-o com seis pás de
+        terra, usando o bloco `preencher`.
+      courseD_farmer_while2_2019: Mova para o buraco e preencha-o com seis pás de
+        terra, usando o bloco `preencher`.
+      courseD_farmer_while3: Use o menor número de blocos possível para resolver este
+        enigma.
+      courseD_farmer_while3_2018: Use o menor número de blocos possível para resolver
+        este enigma.
+      courseD_farmer_while3_2019: Use o menor número de blocos possível para resolver
+        este enigma.
+      courseD_farmer_while5: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_while5_2018: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_while5_2019: 'Ajude-me a remover toda esta areia. '
+      courseD_farmer_while8: 'Desafio: Preencha todos estes buracos usando o menor
+        número de blocos possível. '
+      courseD_farmer_while8_2018: 'Desafio: Preencha todos estes buracos usando o
+        menor número de blocos possível. '
+      courseD_farmer_while8_2019: 'Desafio: Preencha todos estes buracos usando o
+        menor número de blocos possível. '
       courseD_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseD_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
@@ -5875,6 +6750,8 @@ pt-BR:
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
       courseE_artist_concept1_2019: 'Recrie esta imagem. '
@@ -5898,6 +6775,12 @@ pt-BR:
         aninhado. "
       courseE_bee_concept1_2019: "Colete todo o néctar de cada flor.\nUse um laço
         aninhado. "
+      courseE_bee_concept3: Colete todo o néctar usando o menor número possível de
+        blocos.
+      courseE_bee_concept3_2018: Colete todo o néctar usando o menor número possível
+        de blocos.
+      courseE_bee_concept3_2019: Colete todo o néctar usando o menor número possível
+        de blocos.
       courseE_bee_concept5: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2018: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_concept5_2019: Ajude a abelha a coletar todo o nectar das flores.
@@ -5984,6 +6867,10 @@ pt-BR:
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals7_predict2: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
+      courseF_bee_conditionals7_predict2_2018: Use o bloco `se/senão` para coletar
+        o nectar das flores e fazer mel na colmeia.
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
         possíveis.
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de
@@ -6400,6 +7287,8 @@ pt-BR:
       grade3_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_bee_conditionals_quantum4: Use o bloco `se/senão` para coletar o nectar
+        das flores e fazer mel na colmeia.
       grade3_maze_Loop1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível!
         \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade
@@ -6429,6 +7318,7 @@ pt-BR:
       grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora. Mova-me
         ao longo do terreno. Se houver um monte de terra, remova-o, e se houver um
         buraco, preencha-o. Dica: use o menu de opções no bloco "se".'
+      grade3_robotFarmer_ConditionalsIntro_5: 'Ajude-me a remover toda esta areia. '
       grade3_robotFarmer_ConditionalsIntro_6: Remova todas as pilhas de terra usando
         o menor número de blocos possível. As novas opções de menu no bloco "enquanto"
         mostram se eu estou em uma pilha de terra ou em um buraco.
@@ -6560,6 +7450,8 @@ pt-BR:
         para coletar todo o néctar."
       grade4_bee_nestedLoops0: Use um laço para coletar todo o néctar.
       grade4_bee_nestedLoops1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
+      grade4_bee_nestedLoops2a: Colete todo o néctar usando o menor número possível
+        de blocos.
       grade4_bee_nestedLoops3: |-
         Colete todo o néctar criando
         um laço aninhado.
@@ -6608,6 +7500,7 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade4_playLab_proj_example1: instruções
       grade4_playlab_freeplay: "É hora da atividade livre! Divirta-se\ncom todos os
         blocos da sua caixa de ferramentas. "
       grade4_playlab_test: "Use a seta para a direita para atirar tortas.\r\n\r\nEm\nnosso
@@ -6638,6 +7531,8 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade4_review_bee3: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
+      grade4_scaffolded_project1: É incrível o quanto você aprendeu! Vamos juntar
+        tudo para fazer um jogo, passo a passo.
       grade5_artist_binary1: "Binário é uma forma de representar informações\nusando
         apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
         número 0) e \"ligado\" (representada pelo número 1).  \r\n\r\nFoi fornecida\numa
@@ -6884,6 +7779,7 @@ pt-BR:
         rápido.
       gradek_artist_loopsPre: Este é um novo tipo de quebra-cabeça chamado "Artista".
         Brinque com o nível e desenhe algo divertido.
+      group test: Faça um jogo
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
       level 'grade3_Loops_10: "Que abelha trabalhadora!\r\n\r\nAjude a abelha a coletar
         todo o\nnéctar e produzir todo o mel com o menor número de blocos possível."
@@ -6912,7 +7808,13 @@ pt-BR:
         Colete o néctar de cada flor e produza mel
         em cada colmeia usando o menor número possível de blocos.
       level grade3_Loops_2: Desta vez, use um laço para juntar todo o néctar.
+      love_spring_1: Vamos celebrar a Primavera. Nós colocamos algumas sementes no
+        chão para preparar para a estação das flores. Você consegue cobrir todas elas,
+        para que os pássaros não as comam?
       marina_gameLab_play: Clone este nível e faça seus próprios blocos!
+      mike3bit: Vamos começar com você com a imagem 4x2 que Maddie estava criando,
+        más deixamos de fora alguns pixels. Termine a imagem descobrindo quais estão
+        faltando e os codifique.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.

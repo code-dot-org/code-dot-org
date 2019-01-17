@@ -962,7 +962,7 @@ uk:
             'Farmer: While Loops':
               name: 'Фермерка - цикли "поки"'
         csd3-2017:
-          description_short: "Програмування"
+          description_short: Програмування
           stages:
             Velocity:
               name: Швидкість
@@ -1722,3 +1722,20 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+        andrea-test:
+          stages:
+            'null':
+              name: 'нічого'
+        dance-extras-gallery:
+          title: Продовжуємо танцювати
+          description: Рухайся далі однієї години з розширеними проектними ідеями.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Закладання основ
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
+            Binary Bracelets:
+              name: Двійкові браслети
+        gamelab:
+          title: Ігрова лабораторія

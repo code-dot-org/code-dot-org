@@ -320,10 +320,22 @@ ca:
         options:
           EFFECT:
             '"none"': Cap
-            '"disco"': Requadres
-            '"rainbow"': Colors
+            '"circles"': Túnel
             '"diamonds"': Diamants
-            "['disco', 'color_cycle', 'rainbow', 'diamonds','snowflakes','splatter','swirl','spiral'][randomInt(0,7)]": "(Aleatori)"
+            '"disco_ball"': Bola de discoteca
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"rainbow"': Colors
+            '"text"': Títol de la cançó
+            '"sparkles"': Guspires
+            '"disco"': Requadres
+            '"stars"': Estrelles
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"default"': Llum
+            '"neon"': Neó
+            '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
         text: definir l'efecte de fons {EFFECT} {PALETTE}
         options:
@@ -381,9 +393,14 @@ ca:
         options:
           EFFECT:
             '"none"': Cap
+            '"confetti"': Confeti
+            '"hearts_red"': Cors
+            '"music_notes"': Notes de música
+            '"pineapples"': Pinyes
+            '"smiling_poop"': Caca
             '"rain"': Pluja
+            '"floating_rainbows"': Arc de Sant Martí
             '"raining_tacos"': Tacs
-            "['spotlight', 'rain', 'raining_tacos'][randomInt(0,2)]": "(Aleatori)"
       Dancelab_setForegroundEffectExtended:
         text: definir l'efecte de fons {EFFECT}
         options:
@@ -654,7 +671,19 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
-      Mikelab_createNewSprite2:
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": part superior
@@ -666,12 +695,35 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
-      Mikelab_getProp:
+      Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"rotation"': rotació
+            '"direction"': direcció del moviment
+      Mikelab_ifDanceIs:
+        text: |-
+          si {SPRITE} està fent {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Clown: Pallasso
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Roll: Rodar per terra
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
       Mikelab_randomColor:
         text: color aleatori
       Mikelab_setBG:
@@ -689,6 +741,18 @@ ca:
           CORNER:
             '"right"': dret
             '"left"': esquerra
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": part superior
+            "{x: 200, y: 300}": part inferior
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: 200, y: 200}": centre
+            "{x: 100, y: 100}": part superior esquerra
+            "{x: 300, y: 100}": part superior dreta
+            "{x: 100, y: 300}": part inferior esquerra
+            "{x: 300, y: 300}": part inferior dreta
       Mikelab_whenKeyPressed:
         text: quan la {KEY} és premuda
         options:
@@ -734,20 +798,108 @@ ca:
           PROPERTY:
             '"scale"': mida
             '"direction"': direcció del moviment
+      binary_move:
+        options:
+          DIR:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+      binary_whenKey:
+        text: quan la {KEY} és premuda
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
       craft_ifPath:
+        text: |-
+          si camí {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": endavant
+            "'right'": a la dreta
+            "'left'": a l'esquerra
       craft_ifStandingOn:
+        text: |-
+          si es queda dret a {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": corall blau
+            "'redCoralBlock'": corall vermell
             "'sand'": sorra
+            "'wool_blue'": aigües profundes
             "'planksOak'": tauló de roure
+            "'seaLantern'": llanterna de mar
       craft_ifStandingOnLimit:
+        text: |-
+          si es queda dret a {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sorra
+            "'darkPrismarine'": prismarina fosca
+            "'seaLantern'": llanterna de mar
       craft_moveForward:
         text: avança
+      craft_placeBlock:
+        text: posar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': roure clivellat
+            '"strippedDarkOak"': roure fosc clivellat
+            '"stoneBricks"': maons de pedra
+            '"mossyStoneBricks"': maons de pedra amb molsa
+            '"crackedStoneBricks"': maons de pedra esquerdats
+            '"decorativeStoneBricks"': maons de pedra decoratius
+            '"blueCoralBlock"': bloc de corall blau
+            '"pinkCoralBlock"': bloc de corall rosa
+            '"magentaCoralBlock"': bloc de corall magenta
+            '"redCoralBlock"': bloc de corall vermell
+            '"yellowCoralBlock"': bloc de corall groc
+            '"blueDeadCoralBlock"': bloc de corall mort blau
+            '"pinkDeadCoralBlock"': bloc de corall mort rosa
+            '"magentaDeadCoralBlock"': bloc de corall mort magenta
+            '"readDeadCoralBlock"': bloc de corall mort vermell
+            '"yellowDeadCoralBlock"': bloc de corall mort groc
+            '"prismarine"': prismarina
+            '"darkPrismarine"': prismarina fosca
+            '"seaLantern"': llanterna de mar
+            '"packedIce"': bloc de gel
+            '"blueIce"': gel blau
+            '"blackConcrete"': formigó negre
+            '"seaGrass"': herba de mar
+            '"kelp"': algues
+            '"polishedGranite"': granit polit
+      craft_placePrismarine:
+        text: posar la prismarina
       craft_placeTorch:
         text: posa una torxa
+      craft_repeatUntilConduit:
+        text: |-
+          repetir fins acabar el conducte
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repetir fins que estigui complert
+          {STATEMENT}
+      craft_spawnEntity:
+        text: fer néixer {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': Bacallà
+            '"dolphin"': Dofí
+            '"salmon"': Salmó
+            '"seaTurtle"': Tortuga de mar
+            '"squid"': Calamar
+            '"tropicalFish"': Peixos tropicals
+      craft_turn:
+        text: girar {DIR}
+        options:
+          DIR:
+            right: dreta ↻
+            left: esquerra ↺
