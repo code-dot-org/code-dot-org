@@ -68,7 +68,10 @@ export default class DiscountCodeSchoolChoice extends Component {
        nces: this.state.schoolId
      }
    }).done(data => {
-     this.props.onSchoolConfirmed(data.full_discount);
+     this.props.onSchoolConfirmed({
+       schoolId: this.state.schoolId,
+       fullDiscount: data.full_discount
+     });
      this.setState({
        confirming: false,
        confirmed: true,
