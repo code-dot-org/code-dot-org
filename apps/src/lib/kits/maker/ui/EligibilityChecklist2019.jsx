@@ -23,6 +23,7 @@ export default class EligibilityChecklist2019 extends React.Component {
   };
 
   state = {
+    schoolId: null,
     schoolEligible: null,
     statusYear: Status.UNKNOWN,
     yearChoice: null, // stores the teaching-year choice until submitted
@@ -48,13 +49,15 @@ export default class EligibilityChecklist2019 extends React.Component {
     if (props.hasConfirmedSchool || props.adminSetStatus) {
       this.state = {
         ...this.state,
+        schoolId: props.schoolId,
         schoolEligible: !!props.getsFullDiscount
       };
     }
   }
 
-  handleSchoolConfirmed = (fullDiscount) => {
+  handleSchoolConfirmed = ({schoolId, fullDiscount}) => {
     this.setState({
+      schoolId: schoolId,
       schoolEligible: !!fullDiscount
     });
   };
@@ -87,7 +90,7 @@ export default class EligibilityChecklist2019 extends React.Component {
           onSchoolConfirmed={this.handleSchoolConfirmed}
         />
         {this.state.schoolEligible === false && !this.props.adminSetStatus &&
-          <UnsafeRenderedMarkdown markdown={schoolIsNotEligibleMd}/>
+          <UnsafeRenderedMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)}/>
         }
         {this.state.schoolEligible === true && !this.props.adminSetStatus &&
           <div>
@@ -161,10 +164,10 @@ Adafruit has made available a 10% off educator discount that this kit is eligibl
 Just use the code \`ADAEDU\` at checkout.
 `;
 
-const schoolIsNotEligibleMd = `
+const schoolIsNotEligibleMd = (ncesId) => `
 Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
 your school has fewer than 40% of students that are eligible for free/reduced-price lunches
-([source](TODO)).
+([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).
 However, you are still eligible for a discount! Adafruit has made available a 10% off educator
 discount that this kit is eligible for. Just use the code \`ADAEDU\` at checkout.
 
