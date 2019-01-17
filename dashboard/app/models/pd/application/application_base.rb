@@ -390,6 +390,10 @@ module Pd::Application
       end
     end
 
+    def update_lock_change_log(user)
+      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
+    end
+
     # Record when the status changes and who changed it
     # Ideally we'd implement this as an after_save action, but since we want the current
     # user to be included, this needs to be explicitly passed in in the controller
@@ -402,17 +406,6 @@ module Pd::Application
       }
 
       update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
-    end
-
-    def update_lock_change_log(user)
-      lock_entry = {
-        title: "Application is #{locked? ? 'locked' : 'unlocked'}",
-        changing_user_id: user.try(:id),
-        changing_user_name: user.try(:name) || user.try(:email),
-        time: Time.zone.now
-      }
-
-      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(lock_entry).to_json)
     end
   end
 end
