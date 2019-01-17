@@ -463,21 +463,6 @@ module Api::V1::Pd
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
-    test 'update does not append to timestamp log if application lock is not changed by workshop admin' do
-      sign_in @program_manager
-      @csp_facilitator_application.update(status_timestamp_change_log: '[]', locked_at: nil)
-      @csp_facilitator_application.reload
-
-      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
-      assert_equal false, @csp_facilitator_application.locked?
-
-      # Changing application from unlocked to locked
-      post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: true}}
-      @csp_facilitator_application.reload
-
-      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
-    end
-
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
