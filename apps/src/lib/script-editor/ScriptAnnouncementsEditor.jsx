@@ -45,7 +45,7 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
       Type
       <div>
         <select
-          className="uitest-type"
+          className="uitest-announcement-type"
           value={announcement.type}
           onChange={event => onChange(index, 'type', event.target.value)}
         >
@@ -59,7 +59,7 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
       Visibility
       <div>
         <select
-          className="uitest-visibility"
+          className="uitest-announcement-visibility"
           value={announcement.visibility}
           onChange={event => onChange(index, 'visibility', event.target.value)}
         >

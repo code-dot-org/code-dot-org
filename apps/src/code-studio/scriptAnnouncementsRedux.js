@@ -23,7 +23,7 @@ export const announcementShape = PropTypes.shape({
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
-  visibility: PropTypes.string, /* Teacher-only, Student-only, Teacher and student */
+  visibility: PropTypes.oneOf(Object.values(VisibilityType)),
 });
 
 export default function scriptAnnouncements(state=[], action) {
