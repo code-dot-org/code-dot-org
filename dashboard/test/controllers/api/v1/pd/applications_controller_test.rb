@@ -409,7 +409,7 @@ module Api::V1::Pd
       @csp_facilitator_application.reload
 
       assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
-      assert_equal false, @csp_facilitator_application.locked?
+      refute @csp_facilitator_application.locked?
 
       # Changing application from unlocked to locked
       post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: true}}
@@ -439,7 +439,7 @@ module Api::V1::Pd
       @csp_facilitator_application.reload
 
       assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
-      assert_equal true, @csp_facilitator_application.locked?
+      assert @csp_facilitator_application.locked?
 
       # Changing application from locked to unlocked
       post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: false}}
