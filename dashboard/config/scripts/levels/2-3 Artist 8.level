@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\nThere are many different ways to solve this puzzle.",
+    "long_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\nThere are many different ways to solve this puzzle.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

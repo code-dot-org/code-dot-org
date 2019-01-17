@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use the `repeat` block to get me to the pig!",
+    "long_instructions": "Use the `repeat` block to get me to the pig!",
     "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },

@@ -35,7 +35,7 @@
     "step_speed": "5",
     "nectar_goal": "4",
     "instructions": "You will need **one** `Move South` block and **one** `Move West` block.",
-    "markdown_instructions": "You will need **one** <xml><block type=\"maze_moveWest\"></block></xml> block and **one** <xml><block type=\"maze_moveNorth\"></block></xml> block to finish this puzzle!",
+    "long_instructions": "You will need **one** <xml><block type=\"maze_moveWest\"></block></xml> block and **one** <xml><block type=\"maze_moveNorth\"></block></xml> block to finish this puzzle!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you get stuck, try writing the steps on paper and looking for repeating patterns.\",\"hint_id\":\"courseA_harvester_loops6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/631481ef772b8b6caf3e2cee06dbaa8b/courseA_harvester_loops6.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"This is the path you should take to pick all the corn.\",\"hint_id\":\"courseA_harvester_loops6_b\",\"hint_type\":\"general\",\"hint_path\":\"[[6,4],[1,4],[1,1]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec2591fa348d939b7e068bdd7b6bf0df/courseA_harvester_loops6.mp3\"}]",
     "parent_level_id": 11959,
     "ideal": "7",

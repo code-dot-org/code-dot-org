@@ -29,7 +29,7 @@
     "instructions": "Try on a longer path.",
     "instructions_important": "true",
     "ideal": "25",
-    "markdown_instructions": "Great!  Try your functions out on a longer path.",
+    "long_instructions": "Great!  Try your functions out on a longer path.",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",

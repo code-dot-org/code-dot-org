@@ -11,7 +11,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Your first variable\r\n\r\nThe `var` command **creates a new variable**. You only need to use it once with each variable you create.\r\n\r\n# Do This\r\n\r\n* Create a new variable with a **name of your choosing**, as shown in the starter code.",
+    "long_instructions": "# Your first variable\r\n\r\nThe `var` command **creates a new variable**. You only need to use it once with each variable you create.\r\n\r\n# Do This\r\n\r\n* Create a new variable with a **name of your choosing**, as shown in the starter code.",
     "start_blocks": "var size;\r\n// create a variable of your own on the line below",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -21,7 +21,7 @@
     "step_mode": "1",
     "nectar_goal": "45",
     "flower_type": "redWithNectar",
-    "markdown_instructions": "You've got this!  \r\n\r\nWhat should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\n",
+    "long_instructions": "You've got this!  \r\n\r\nWhat should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

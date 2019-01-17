@@ -35,7 +35,7 @@
     "step_speed": "5",
     "nectar_goal": "1",
     "instructions": "Try it yourself!",
-    "markdown_instructions": "You have to move in two directions to get to the corn! Help the harvester pick the right direction.",
+    "long_instructions": "You have to move in two directions to get to the corn! Help the harvester pick the right direction.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try solving the puzzle in 2 parts, one part before the corner and one part after the corner.\",\"hint_id\":\"courseA_harvester_seq7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f70cf86168da618911454c5f843efea/courseA_harvester_seq7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Having trouble? This is the path the harvester should take.\",\"hint_id\":\"courseA_harvester_seq7_b\",\"hint_type\":\"general\",\"hint_path\":\"[[2,3],[4,3],[4,4]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5603dd48d9d63e2f858d7182d3fc806/courseA_harvester_seq7.mp3\"}]",
     "parent_level_id": 11164,
     "ideal": "5",

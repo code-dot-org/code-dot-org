@@ -12,7 +12,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "Here is *some* **markdown**"
+    "long_instructions": "Here is *some* **markdown**"
   },
   "published": true,
   "notes": "",

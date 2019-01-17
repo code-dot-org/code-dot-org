@@ -21,7 +21,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "Use a Multiplication Block to complete this code.",
+    "long_instructions": "Use a Multiplication Block to complete this code.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "disable_examples": "false"

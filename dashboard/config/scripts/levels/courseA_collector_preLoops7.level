@@ -31,7 +31,7 @@
     "min_collected": "3",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block:\r\n  <xml><block type=\"collector_collect\"/></xml>",
+    "long_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block:\r\n  <xml><block type=\"collector_collect\"/></xml>",
     "tts_instructions_override": "Get all three piles! Move Laurel to the treasure, then use get treasure to pick it up.",
     "tts_markdown_instructions_override": "Get all three piles! Move Laurel to the treasure, then use get treasure to pick it up.",
     "shape_shift": "false",

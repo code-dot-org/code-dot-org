@@ -16,7 +16,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
-    "markdown_instructions": "*\"Be persistent and you will figure this out.\"*\r\n\r\nFix the error(s) to collect all of the treasure.",
+    "long_instructions": "*\"Be persistent and you will figure this out.\"*\r\n\r\nFix the error(s) to collect all of the treasure.",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

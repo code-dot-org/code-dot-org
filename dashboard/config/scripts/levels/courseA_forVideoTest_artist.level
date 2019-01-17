@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "Repeat loops work for Artist, too!",
+    "long_instructions": "Repeat loops work for Artist, too!",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/6502bc59737a861d230d871c92de4808-image-1477108259646.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",

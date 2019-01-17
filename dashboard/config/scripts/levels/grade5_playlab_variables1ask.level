@@ -33,7 +33,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"arrows_move_actor\",\"callout_text\":\"Use the arrows to move the actor\",\"element_id\":\"#soft-buttons\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom right\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This time, when you press 'run', you will see a 'prompt' asking you for a number. This number will be stored in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how this program is written!",
+    "long_instructions": "This time, when you press 'run', you will see a 'prompt' asking you for a number. This number will be stored in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how this program is written!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

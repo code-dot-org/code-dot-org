@@ -10,7 +10,7 @@
     "href": "pixelation/pixelation.html",
     "skip_dialog": true,
     "instructions": "Make something awesome and share it with your classmates! You can copy and paste the value of a pixel to use it repeatedly.",
-    "markdown_instructions": "# 3-Bit Color\r\n\r\nYou have one last chance to experiment and get creative with the pixelation widget. Make something awesome and share it with your classmates!\r\n\r\n* *Hint:* You can copy and paste the value of a pixel to use it repeatedly.",
+    "long_instructions": "# 3-Bit Color\r\n\r\nYou have one last chance to experiment and get creative with the pixelation widget. Make something awesome and share it with your classmates!\r\n\r\n* *Hint:* You can copy and paste the value of a pixel to use it repeatedly.",
     "instructions_important": "false",
     "hex": "false"
   },

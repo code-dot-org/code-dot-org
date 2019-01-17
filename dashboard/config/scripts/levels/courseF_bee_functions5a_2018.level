@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "18",
-    "markdown_instructions": "Now, build `move and check` so that it takes the bee to the cloud whenever there is a path to the right, then use it to solve this puzzle!",
+    "long_instructions": "Now, build `move and check` so that it takes the bee to the cloud whenever there is a path to the right, then use it to solve this puzzle!",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

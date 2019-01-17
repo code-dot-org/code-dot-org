@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
+    "long_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

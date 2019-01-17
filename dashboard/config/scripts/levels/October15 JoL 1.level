@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Program the artist to design a face for your jack-o-lantern!\r\n\r\n",
+    "long_instructions": "Program the artist to design a face for your jack-o-lantern!\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "step_speed": "-5",

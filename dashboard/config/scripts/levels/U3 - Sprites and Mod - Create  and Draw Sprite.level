@@ -35,7 +35,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "instructions": "Do This",
-    "markdown_instructions": "# Sprites\r\n\r\n# Do This\r\n* Create spirte\r\n* Change the name of your sprite\r\n* call drawsprites in draw loop",
+    "long_instructions": "# Sprites\r\n\r\n# Do This\r\n* Create spirte\r\n* Change the name of your sprite\r\n* call drawsprites in draw loop",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

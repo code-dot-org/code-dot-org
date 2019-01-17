@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Your code should look like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"maze_moveSouth\\\">\\n        <next>\\n          <block type=\\\"maze_moveWest\\\">\\n            <next>\\n              <block type=\\\"maze_moveWest\\\"/>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\\n\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/301e08a6f8097357169fd2910f3bb0a6/courseA_maze_ramp3b_2018.mp3\"}]",
-    "markdown_instructions": "There's an extra block at the end of this code!  \r\n\r\nDrag it back to the toolbox to throw it away.",
+    "long_instructions": "There's an extra block at the end of this code!  \r\n\r\nDrag it back to the toolbox to throw it away.",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

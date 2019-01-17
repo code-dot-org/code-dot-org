@@ -29,7 +29,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "Use a `repeat` loop to move and then get the nectar and make honey!",
+    "long_instructions": "Use a `repeat` loop to move and then get the nectar and make honey!",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "disable_examples": "false",

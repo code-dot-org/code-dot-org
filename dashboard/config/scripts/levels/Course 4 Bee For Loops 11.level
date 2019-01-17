@@ -21,7 +21,7 @@
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "markdown_instructions": "What's wrong with this loop? See if you can fix it and make the bee collect all the nectar.",
+    "long_instructions": "What's wrong with this loop? See if you can fix it and make the bee collect all the nectar.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

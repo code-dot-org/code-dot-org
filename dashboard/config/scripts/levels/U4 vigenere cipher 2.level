@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "instructions": "Instructions",
-    "markdown_instructions": "# Simple Markdown?",
+    "long_instructions": "# Simple Markdown?",
     "skip_dialog": true,
     "href": "vigenere/vigenere.html"
   },

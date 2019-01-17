@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "You cannot fit much text in an actor's speech bubble, so sometimes you need to make the actor say something more than once.  \r\n\r\nWe have provided some starter questions and variables for you. Join them together to make a fun story that takes more than one speech bubble to tell.",
+    "long_instructions": "You cannot fit much text in an actor's speech bubble, so sometimes you need to make the actor say something more than once.  \r\n\r\nWe have provided some starter questions and variables for you. Join them together to make a fun story that takes more than one speech bubble to tell.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

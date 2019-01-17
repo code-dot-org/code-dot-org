@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Write a function `striped-flag` that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "long_instructions": "Write a function `striped-flag` that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
     "disable_examples": "false",
     "examples_required": "true"
   }

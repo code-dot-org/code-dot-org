@@ -29,7 +29,7 @@
       "rightButton",
       "upButton"
     ],
-    "markdown_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. \r\n\r\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
+    "long_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. \r\n\r\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

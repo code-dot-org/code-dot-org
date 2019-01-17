@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Saving Text Input in Variables\r\n\r\nOften we want to save the information we pull in from the user for later use in our program. The best way to do this is to save it in a variable.\r\n\r\n# Do This:\r\n\r\n* **Create two variables inside your event handler** to store the **age** and **name** of the user.\r\n* **Use `getText()` to update the values** stored in each of these variables.\r\n* **Change your `console.log` statements to use your variable instead of `getText`**.\r\n\r\n![](https://images.code.org/ca45dcb01ae2d1956ed2f87efeda0264-image-1445976691215.11.13 PM.png)",
+    "long_instructions": "# Saving Text Input in Variables\r\n\r\nOften we want to save the information we pull in from the user for later use in our program. The best way to do this is to save it in a variable.\r\n\r\n# Do This:\r\n\r\n* **Create two variables inside your event handler** to store the **age** and **name** of the user.\r\n* **Use `getText()` to update the values** stored in each of these variables.\r\n* **Change your `console.log` statements to use your variable instead of `getText`**.\r\n\r\n![](https://images.code.org/ca45dcb01ae2d1956ed2f87efeda0264-image-1445976691215.11.13 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

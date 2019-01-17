@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Free Play",
-    "markdown_instructions": "**Freeplay:** Now it's up to you! Can you challenge yourself to collect all of the diamonds in this level? ",
+    "long_instructions": "**Freeplay:** Now it's up to you! Can you challenge yourself to collect all of the diamonds in this level? ",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[6,9]",

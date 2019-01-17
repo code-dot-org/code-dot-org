@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "honey_goal": "0",
-    "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 5` function to get 5 nectars at a time.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 5` function to get 5 nectars at a time.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "true",

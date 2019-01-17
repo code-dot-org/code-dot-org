@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "ideal": "9",
-    "markdown_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
+    "long_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",

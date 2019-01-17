@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "disable_sharing": "false",
     "impressive": "false",
-    "markdown_instructions": "Draw the right half of this image so that the design is symmetrical. \r\nThe triangles are equilateral and have sides that are 50 pixels long.",
+    "long_instructions": "Draw the right half of this image so that the design is symmetrical. \r\nThe triangles are equilateral and have sides that are 50 pixels long.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

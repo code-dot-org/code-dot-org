@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "20",
-    "markdown_instructions": "Did you know that you can call a function from *inside* another function?  \r\n\r\nUse your `check nectar or honey` function inside the new `move and check` function to help the bee turn, go get what's under the cloud, then back-up and turn back around!",
+    "long_instructions": "Did you know that you can call a function from *inside* another function?  \r\n\r\nUse your `check nectar or honey` function inside the new `move and check` function to help the bee turn, go get what's under the cloud, then back-up and turn back around!",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

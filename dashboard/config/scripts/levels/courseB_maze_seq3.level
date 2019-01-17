@@ -32,7 +32,7 @@
     "disable_if_else_editing": "false",
     "tts_instructions_override": "Fix the code to get me to the pig!",
     "shape_shift": "false",
-    "markdown_instructions": "*\"Fix the code to get me to the pig!\"*",
+    "long_instructions": "*\"Fix the code to get me to the pig!\"*",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 3,
     "instructions": "\"Fix the code to get me to the pig!\"",

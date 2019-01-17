@@ -80,7 +80,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nAll the stars loop, but you can still only catch the red star.\r\n\r\n# Do This\r\n* Use code from the `moveRedStar()` function to make a `moveStar(color)` function that can move any star.\r\n* Use code from the `checkRedStar()` function to make a `checkStar(color)` function that works for any star.\r\n* Test your code by calling `checkStar(\"red\")` and `checkStar(\"blue\")` inside your event block.",
+    "long_instructions": "# Star Chaser\r\n\r\nAll the stars loop, but you can still only catch the red star.\r\n\r\n# Do This\r\n* Use code from the `moveRedStar()` function to make a `moveStar(color)` function that can move any star.\r\n* Use code from the `checkRedStar()` function to make a `checkStar(color)` function that works for any star.\r\n* Test your code by calling `checkStar(\"red\")` and `checkStar(\"blue\")` inside your event block.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

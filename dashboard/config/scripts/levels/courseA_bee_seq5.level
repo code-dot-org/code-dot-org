@@ -35,7 +35,7 @@
     "step_speed": "1",
     "nectar_goal": "1",
     "instructions": "Try it yourself!",
-    "markdown_instructions": "You have to move in two directions to get to the flower! Help the bee pick the right direction.",
+    "long_instructions": "You have to move in two directions to get to the flower! Help the bee pick the right direction.",
     "authored_hints": "[]",
     "parent_level_id": 11164,
     "ideal": "5",

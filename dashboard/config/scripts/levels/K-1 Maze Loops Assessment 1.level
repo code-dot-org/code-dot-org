@@ -13,7 +13,7 @@
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "4",
-    "markdown_instructions": "Look at all we've learned!   \r\nUse a `repeat` loop to get me to the pig!",
+    "long_instructions": "Look at all we've learned!   \r\nUse a `repeat` loop to get me to the pig!",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

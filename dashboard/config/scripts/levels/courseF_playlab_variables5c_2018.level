@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Let's combine the `ask` block with an `if/else` statement to have some fun!\r\n\r\nPirate Pegleg is going to ask you a question.  Drag a copy of the `answer` variable into the conditional for the `if` statement to check whether or not you entered the correct color.",
+    "long_instructions": "Let's combine the `ask` block with an `if/else` statement to have some fun!\r\n\r\nPirate Pegleg is going to ask you a question.  Drag a copy of the `answer` variable into the conditional for the `if` statement to check whether or not you entered the correct color.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

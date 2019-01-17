@@ -22,7 +22,7 @@
     "ideal": "38",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \r\n\r\nThe square and triangle have 100 pixel sides.  \r\nThe hexagon sides are 75 pixels long. ",
+    "long_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \r\n\r\nThe square and triangle have 100 pixel sides.  \r\nThe hexagon sides are 75 pixels long. ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

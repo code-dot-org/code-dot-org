@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "*\"Keep up the good work! Help me collect all of the treasure.\"*",
-    "markdown_instructions": "*\"Keep up the good work! Help me collect all of the treasure.\"*",
+    "long_instructions": "*\"Keep up the good work! Help me collect all of the treasure.\"*",
     "callout_json": "[]",
     "ideal": "8",
     "instructions_important": "false",

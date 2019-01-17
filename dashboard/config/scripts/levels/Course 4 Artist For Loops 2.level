@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10.\\\r\n\\\r\n\\\r\n**NOTE:** Make sure you look at the code *before* you hit \"Run\".",
+    "long_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10.\\\r\n\\\r\n\\\r\n**NOTE:** Make sure you look at the code *before* you hit \"Run\".",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

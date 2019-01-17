@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "How many times do you need to loop this to draw a half circle?",
+    "long_instructions": "How many times do you need to loop this to draw a half circle?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

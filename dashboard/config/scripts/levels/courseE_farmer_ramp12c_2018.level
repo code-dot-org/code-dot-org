@@ -33,7 +33,7 @@
     "ideal": "5",
     "step_speed": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce.\",\"hint_id\":\"courseE_farmer_ramp12b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0371e0ec48f4cded8f429a06ca8ecbdc/courseE_farmer_ramp12c.mp3\"}]",
-    "markdown_instructions": "The lettuce is now only at the end of the path.  \r\nTravel down the path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
+    "long_instructions": "The lettuce is now only at the end of the path.  \r\nTravel down the path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2018",

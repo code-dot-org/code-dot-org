@@ -15,7 +15,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
+    "long_instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

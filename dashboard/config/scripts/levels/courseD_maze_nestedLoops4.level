@@ -13,7 +13,7 @@
     "start_direction": "2",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,3,4,1,2,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,4,4,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
-    "markdown_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
+    "long_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

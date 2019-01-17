@@ -20,7 +20,7 @@
     "step_mode": 1,
     "nectar_goal": "42",
     "flower_type": "redWithNectar",
-    "markdown_instructions": "Take a look at each piece of the `for loop` that you have just created.  Can you figure out which numbers you need to double to solve this puzzle? Why does it work?",
+    "long_instructions": "Take a look at each piece of the `for loop` that you have just created.  Can you figure out which numbers you need to double to solve this puzzle? Why does it work?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -24,7 +24,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"frozen_snowflake_branch\",\r\n  \"callout_text\": \"Use the \\\"create a snowflake branch\\\" function\",\r\n  \"element_id\": \"#create_branch_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
+    "long_instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

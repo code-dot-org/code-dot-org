@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "In the rest of this stage, we will use multiple `ask` blocks and multiple `if/else` statements to create a game that **you** control!\r\n\r\nStart by setting the \"codename\" variable to a word that you can remember.  Then, use an `ask` block to get a codename from the users.  You will need an `if/else` block to see if the codename entered matches the codename that you have set.",
+    "long_instructions": "In the rest of this stage, we will use multiple `ask` blocks and multiple `if/else` statements to create a game that **you** control!\r\n\r\nStart by setting the \"codename\" variable to a word that you can remember.  Then, use an `ask` block to get a codename from the users.  You will need an `if/else` block to see if the codename entered matches the codename that you have set.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

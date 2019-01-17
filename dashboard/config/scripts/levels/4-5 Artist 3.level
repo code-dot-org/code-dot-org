@@ -16,7 +16,7 @@
     "ideal": "6",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This rectangular flower bed has a perimeter of 600.  \r\nThe long side has a length of 200. \r\n\r\nDraw the rectangle using as few blocks as possible.",
+    "long_instructions": "This rectangular flower bed has a perimeter of 600.  \r\nThe long side has a length of 200. \r\n\r\nDraw the rectangle using as few blocks as possible.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

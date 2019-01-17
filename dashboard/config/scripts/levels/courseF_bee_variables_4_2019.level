@@ -43,7 +43,7 @@
     "parent_level_id": 13412,
     "top_level_procedure_autopopulate": "false",
     "honey_goal": "6",
-    "markdown_instructions": "\"Un-BEE-lievable!\"\r\n\r\nEdit the code to make it work for this puzzle.",
+    "long_instructions": "\"Un-BEE-lievable!\"\r\n\r\nEdit the code to make it work for this puzzle.",
     "show_type_hints": "false",
     "contained_level_names": null,
     "preload_asset_list": null

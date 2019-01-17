@@ -33,7 +33,7 @@
     "ideal": "5",
     "step_speed": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can nest your `while` loop inside of a `repeat` loop to make your code shorter.\",\"hint_id\":\"courseE_farmer_ramp11b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/38154a048d5d9aa5b25f20d77bf4b970/courseE_farmer_ramp11b.mp3\"}]",
-    "markdown_instructions": "Let's try that again, but with more piles!",
+    "long_instructions": "Let's try that again, but with more piles!",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2018",

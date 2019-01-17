@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "ideal": "11",
-    "markdown_instructions": "Now we need to `move forward` `counter` times, then `get nectar` `counter` times.  Can you use two `repeat` loops to solve this challenge?",
+    "long_instructions": "Now we need to `move forward` `counter` times, then `get nectar` `counter` times.  Can you use two `repeat` loops to solve this challenge?",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "hint_prompt_attempts_threshold": 16,

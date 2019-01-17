@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-3,0,0,-3,0,-3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "15",
-    "markdown_instructions": "**Assessment:** Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
+    "long_instructions": "**Assessment:** Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

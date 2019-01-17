@@ -29,7 +29,7 @@
     "step_mode": "1",
     "ideal": "5",
     "step_speed": "2",
-    "markdown_instructions": "Now, use the `repeat until` loop to do the same thing without specifying how many times to move forward and turn.",
+    "long_instructions": "Now, use the `repeat until` loop to do the same thing without specifying how many times to move forward and turn.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `until pig` loop will help you keep going until you succeed!\",\"hint_id\":\"courseD_maze_until2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1bdf1bb6718624475b19d283436ccfe9/courseD_maze_until2.mp3\"}]",
     "contained_level_names": null
   },

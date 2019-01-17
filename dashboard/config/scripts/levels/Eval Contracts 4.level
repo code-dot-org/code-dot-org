@@ -22,7 +22,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "The `scale` function returns an image that is either larger or smaller than the input image. Try scaling this circle by a factor of 10. How is the returned image different than if you'd just made a circle of that size in the first place?",
+    "long_instructions": "The `scale` function returns an image that is either larger or smaller than the input image. Try scaling this circle by a factor of 10. How is the returned image different than if you'd just made a circle of that size in the first place?",
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false"

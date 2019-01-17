@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Still playing?  \r\n\r\nHere is a blank canvas where you can create whatever you want!",
+    "long_instructions": "Still playing?  \r\n\r\nHere is a blank canvas where you can create whatever you want!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 3,

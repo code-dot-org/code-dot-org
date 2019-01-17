@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The Design Recipe for `wide-rect` already has a contract and one example. Can you write a second example and then complete the definition? The `wide-rect` function should produce a rectangle of given color that is twice as wide as it is high.",
+    "long_instructions": "The Design Recipe for `wide-rect` already has a contract and one example. Can you write a second example and then complete the definition? The `wide-rect` function should produce a rectangle of given color that is twice as wide as it is high.",
     "examples_required": "true",
     "never_autoplay_video": "false"
   }

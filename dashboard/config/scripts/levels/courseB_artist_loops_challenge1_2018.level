@@ -35,7 +35,7 @@
     "ideal": "0",
     "instructions_important": "false",
     "images": "[\r\n\r\n]\r\n\r\n",
-    "markdown_instructions": "*\"It's time to toss the dice! Can you help me draw these?\"*",
+    "long_instructions": "*\"It's time to toss the dice! Can you help me draw these?\"*",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

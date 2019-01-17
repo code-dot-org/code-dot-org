@@ -24,7 +24,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"frozen_circle_function_with_parameter_circle\",\r\n  \"callout_text\": \"Use the `create a circle` block and change the size.\",\r\n  \"element_id\": \"#create_circle_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now the `create a circle` block can make circles of different sizes!  \r\n  \r\nUse the new function to create a small circle of size **5** and a larger circle of size **10**.",
+    "long_instructions": "Now the `create a circle` block can make circles of different sizes!  \r\n  \r\nUse the new function to create a small circle of size **5** and a larger circle of size **10**.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

@@ -29,7 +29,7 @@
     "instructions": "Use everything that you've learned so far to solve this puzzle!",
     "instructions_important": "true",
     "ideal": "19",
-    "markdown_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
+    "long_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",

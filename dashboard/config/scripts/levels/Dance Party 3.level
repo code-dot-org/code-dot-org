@@ -48,7 +48,7 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14101,
-    "markdown_instructions": "Create a new sprite called `alien2`.  \r\n\r\nMake it do a different dance move when it's clicked.  ",
+    "long_instructions": "Create a new sprite called `alien2`.  \r\n\r\nMake it do a different dance move when it's clicked.  ",
     "project_template_level_name": "Dance Party 2",
     "show_type_hints": "true",
     "instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",

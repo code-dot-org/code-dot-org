@@ -15,7 +15,7 @@
     "instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "ideal": "0",
     "embed": "false",
-    "markdown_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \r\n\r\nCan you make something like this pinwheel?",
+    "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \r\n\r\nCan you make something like this pinwheel?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

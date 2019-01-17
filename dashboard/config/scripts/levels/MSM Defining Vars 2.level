@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called `my-shape` and put the code for a 50 pixel solid green triangle inside.",
+    "long_instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called `my-shape` and put the code for a 50 pixel solid green triangle inside.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

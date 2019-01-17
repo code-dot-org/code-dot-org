@@ -32,7 +32,7 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "**Challenge:** Now there's honey to deal with too! \r\n\r\nRewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
+    "long_instructions": "**Challenge:** Now there's honey to deal with too! \r\n\r\nRewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0.\",\r\n  \"hint_id\": \"Course_4_Bee_Params_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",

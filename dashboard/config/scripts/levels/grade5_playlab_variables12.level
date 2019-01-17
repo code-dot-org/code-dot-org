@@ -32,7 +32,7 @@
     ],
     "disable_sharing": "false",
     "protaganist_sprite_index": "0",
-    "markdown_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\r\n\r\n**NOTE:** You don't need to make any changes to the program",
+    "long_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\r\n\r\n**NOTE:** You don't need to make any changes to the program",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

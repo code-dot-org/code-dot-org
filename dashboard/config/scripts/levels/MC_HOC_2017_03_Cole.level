@@ -44,7 +44,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "The Woods",
-    "markdown_instructions": "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \r\n   \r\nCode the Agent to open the gate. ",
+    "long_instructions": "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \r\n   \r\nCode the Agent to open the gate. ",
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,9]",

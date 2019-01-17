@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now we're going to add a variable into the middle of Pegleg's sentence using more than one `create text with` block. \r\n\r\nHere is how you link `create text with` blocks together to form longer sentences:\r\n\r\n![](https://images.code.org/1c9bdc9e73d60b5ed053c3c4e9e1dcd4-image-1476993588379.gif)",
+    "long_instructions": "Now we're going to add a variable into the middle of Pegleg's sentence using more than one `create text with` block. \r\n\r\nHere is how you link `create text with` blocks together to form longer sentences:\r\n\r\n![](https://images.code.org/1c9bdc9e73d60b5ed053c3c4e9e1dcd4-image-1476993588379.gif)",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

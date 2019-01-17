@@ -21,7 +21,7 @@
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
     "level_verification_timeout": "30000",
     "embed": "false",
-    "markdown_instructions": "Code like this can be made even shorter using loops!  \r\n\r\nNow get the Agent to the pressure plate using a `repeat` loop to help him move forward.",
+    "long_instructions": "Code like this can be made even shorter using loops!  \r\n\r\nNow get the Agent to the pressure plate using a `repeat` loop to help him move forward.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

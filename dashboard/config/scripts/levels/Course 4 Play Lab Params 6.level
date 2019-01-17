@@ -28,7 +28,7 @@
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Add another parameter called `speed` to the `patrol` function. Try using a `set speed` block with the new `speed` parameter to help Penguin get both flags before the other sprites even get one.",
+    "long_instructions": "Add another parameter called `speed` to the `patrol` function. Try using a `set speed` block with the new `speed` parameter to help Penguin get both flags before the other sprites even get one.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

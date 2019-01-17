@@ -15,7 +15,7 @@
     "instructions": "**Challenge:** Create this image using only the blocks provided.",
     "ideal": "14",
     "embed": "false",
-    "markdown_instructions": "**Challenge:** Create this image using the limited blocks provided. \r\n\r\n- Each triangle has sides of **50 pixels**  \r\n- To draw a diamond, you will need to alternate between turning **60 degrees and 120 degrees**.",
+    "long_instructions": "**Challenge:** Create this image using the limited blocks provided. \r\n\r\n- Each triangle has sides of **50 pixels**  \r\n- To draw a diamond, you will need to alternate between turning **60 degrees and 120 degrees**.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

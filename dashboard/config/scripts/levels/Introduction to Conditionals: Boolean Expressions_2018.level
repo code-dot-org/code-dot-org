@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "video_key": "csp_applab_conditionals_1",
-    "markdown_instructions": "### Points to pay attention to:\r\n\r\n1. What's a *Boolean Expression?*\r\n2. Why is it called a \"Boolean\"?\r\n3. Is this a legal expression?  `10 > 25`?",
+    "long_instructions": "### Points to pay attention to:\r\n\r\n1. What's a *Boolean Expression?*\r\n2. Why is it called a \"Boolean\"?\r\n3. Is this a legal expression?  `10 > 25`?",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,

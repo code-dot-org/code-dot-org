@@ -30,7 +30,7 @@
     "instructions_important": "false",
     "ideal": "4",
     "video_key": "loop_while",
-    "markdown_instructions": "*\"I don't know how much dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using a `while` loop.",
+    "long_instructions": "*\"I don't know how much dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using a `while` loop.",
     "authored_hints": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

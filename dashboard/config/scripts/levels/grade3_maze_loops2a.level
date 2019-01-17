@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "ideal": "5",
     "step_speed": "3",
-    "markdown_instructions": "*\"Zombie hungry!\"*\r\n\r\nGet the zombie to the sunflower using the fewest number of blocks possible.",
+    "long_instructions": "*\"Zombie hungry!\"*\r\n\r\nGet the zombie to the sunflower using the fewest number of blocks possible.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

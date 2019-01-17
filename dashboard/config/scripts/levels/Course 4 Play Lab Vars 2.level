@@ -32,7 +32,7 @@
     "protaganist_sprite_index": "2",
     "disable_sharing": "false",
     "video_key": "C4_variables_playlab",
-    "markdown_instructions": "The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
+    "long_instructions": "The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

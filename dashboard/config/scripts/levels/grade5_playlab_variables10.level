@@ -29,7 +29,7 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "video_key": "C4_function_parameters",
-    "markdown_instructions": "Edit the the `patrol` function to add an `actor` parameter, so that we can call it for each of the actors on the screen. Remember, the actors correspond to numbers 1, 2, and 3.",
+    "long_instructions": "Edit the the `patrol` function to add an `actor` parameter, so that we can call it for each of the actors on the screen. Remember, the actors correspond to numbers 1, 2, and 3.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

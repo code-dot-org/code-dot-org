@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
+    "long_instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

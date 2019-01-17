@@ -40,7 +40,7 @@
     "custom_game_type": "Rocket Height",
     "disable_examples": "false",
     "input_output_table": "[[1,15],[2,45],[3,95],[4,165]]",
-    "markdown_instructions": "Let's write a `rocket-height` function with simple acceleration. Write a function that ensures the rocket is at 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and 165 at 4 seconds.",
+    "long_instructions": "Let's write a `rocket-height` function with simple acceleration. Write a function that ensures the rocket is at 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and 165 at 4 seconds.",
     "never_autoplay_video": "false",
     "examples_required": "true",
     "maze_data": null

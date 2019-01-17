@@ -21,7 +21,7 @@
     "definition_collapse": "false",
     "free_play": "false",
     "instructions": "Test instructions",
-    "markdown_instructions": "Other test instructions",
+    "long_instructions": "Other test instructions",
     "disable_examples": "false"
   }
 }]]></config>

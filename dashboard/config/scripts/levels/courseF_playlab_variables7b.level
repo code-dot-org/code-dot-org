@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Time to make your own project!  \r\n\r\nCreate some questions and weave the answers together into your very own story.\r\n\r\nIf you need ideas, click the hints icon.",
+    "long_instructions": "Time to make your own project!  \r\n\r\nCreate some questions and weave the answers together into your very own story.\r\n\r\nIf you need ideas, click the hints icon.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
