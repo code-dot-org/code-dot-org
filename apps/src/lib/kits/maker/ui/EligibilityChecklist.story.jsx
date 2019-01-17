@@ -74,6 +74,38 @@ export default storybook => {
         )
       },
       {
+        name: '2019: Year choice failure',
+        description: 'When you are not planning to teach this or next year',
+        story: () => (
+          <div style={{margin: '2em'}}>
+            <EligibilityChecklist2019
+              {...defaultProps}
+              schoolId="1234"
+              schoolName="Code.org Junior Academy"
+              hasConfirmedSchool={true}
+              getsFullDiscount={true}
+              unit6Intention="no"
+            />
+          </div>
+        )
+      },
+      {
+        name: '2019: Year choice success',
+        description: 'When you are planning to teach this or next year',
+        story: () => (
+          <div style={{margin: '2em'}}>
+            <EligibilityChecklist2019
+              {...defaultProps}
+              schoolId="1234"
+              schoolName="Code.org Junior Academy"
+              hasConfirmedSchool={true}
+              getsFullDiscount={true}
+              unit6Intention="yes1819"
+            />
+          </div>
+        )
+      },
+      {
         name: 'Failed Checklist',
         description: 'EligbilityChecklist where one of first list items failed',
         story: () => (

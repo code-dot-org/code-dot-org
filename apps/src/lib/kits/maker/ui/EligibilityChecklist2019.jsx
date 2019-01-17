@@ -1,9 +1,11 @@
 import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import DiscountCodeSchoolChoice from "./DiscountCodeSchoolChoice";
+import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 import Unit6ValidationStep from "./Unit6ValidationStep";
+import EligibilityConfirmDialog from "./EligibilityConfirmDialog";
 
 export default class EligibilityChecklist2019 extends React.Component {
   static propTypes = {
@@ -63,6 +65,14 @@ export default class EligibilityChecklist2019 extends React.Component {
     });
   };
 
+  confirmEligibility = () => this.setState({confirming: true});
+
+  handleCancelDialog = () => this.setState({confirming: false});
+
+  handleSuccessDialog = (discountCode, expiration) => {
+    this.setState({discountCode, expiration});
+  };
+
   render() {
     return (
       <div>
@@ -104,6 +114,26 @@ export default class EligibilityChecklist2019 extends React.Component {
               onSubmit={this.handleUnit6Submitted}
             />
           </div>
+        }
+        {this.state.statusYear === Status.SUCCEEDED &&
+          <div>
+            <div>
+              <strong>
+                You meet all the requirements for a fully subsidized classroom kit. Click the “Get Code” button to get your code.
+              </strong>
+            </div>
+            <Button
+              color={Button.ButtonColor.orange}
+              text={i18n.getCode()}
+              onClick={this.confirmEligibility}
+            />
+          </div>
+        }
+        {this.state.confirming &&
+          <EligibilityConfirmDialog
+            onCancel={this.handleCancelDialog}
+            onSuccess={this.handleSuccessDialog}
+          />
         }
       </div>
     );
