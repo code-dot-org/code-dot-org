@@ -2780,7 +2780,7 @@ tr:
             Test stage with bubbles:
               name: Baloncuklar ile Sahne Testi
         csd3-2017:
-          description_short: "Programlama"
+          description_short: Programlama
           stages:
             Booleans and Conditionals:
               name: Mantıksal değerler ve koşullar
@@ -7474,3 +7474,5 @@ tr:
               name: İkilik Bileklikler
         csp-mid-survey:
           description_audience: CSP Öğrencileri
+        gamelab:
+          title: Oyun Laboratuvarı

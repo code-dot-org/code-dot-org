@@ -219,6 +219,13 @@ pt-BR:
         o néctar das flores usando o menor número possível de blocos."
       2-3 Bee Conditionals 3: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar
         todo o néctar e produzir mel usando o menor número possível de blocos.  "
+      2-3 Bee Conditionals 5: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       2-3 Bee Conditionals Assessment 1: "**Avaliação:** Colete todo o néctar. \nTenha
         cuidado para não coletar néctar das flores roxas que não o tiverem."
       2-3 Bee Debugging 1: |-
@@ -287,6 +294,10 @@ pt-BR:
       2-3 Maze 12 - One Move Block: "Pegue o porco! Mas, desta vez, você só pode usar
         um bloco `mover para frente`. \n\nAh, olhe com cuidado - você está vendo mais
         algum bloco que poderia te ajudar?"
+      2-3 Maze 12: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       2-3 Maze 13: Leve-me até o porco! Você só pode usar um bloco `mover para frente`
         desta vez
       2-3 Maze 15: |-
@@ -507,6 +518,87 @@ pt-BR:
 
         * passo um
         * passo dois
+      AWS link: "# Utilize esta ferramenta para coisas"
+      AlgPD DR Free Play: Usando um problema de palavra de seu currículo existente
+        ou de um outro local, complete a Receita de Projeto e uma função do programa.
+        Usar um formulário de Receita de Projeto de sua pasta de trabalho ou baixar
+        uma cópia [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
+      Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      AllTheThings Applab - Turtle move with button: "# Por favor faça o login para
+        testar os níveis do applab (Por padrão, os níveis do applab só funcionam se
+        autenticado. Normalmente, pedimos que faça o login, mas é apenas obrigatório
+        para um script completo e seria chato fazer para o script todasascoisas\n#
+        Sua Primeira Aplicação Interativa!\n<img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png'
+        style='float: right; width: 250px'>Um novo grupo de comandos foi adicionado
+        à caixa de ferramentas chamado **Controles de UI** (Controles da Interface
+        de Usuário) que são comandos que permitem interagir com o(a), e responder
+        ao(à), usuário(a) da sua aplicação. Por questão de simplicidade, começaremos
+        com apenas dois comandos: \n* `onEvent` que lhe permite executar a função
+        em resposta à algum evento ocorrido (como o clique de um botão)\n* `button`
+        que coloca um botão na tela\n\n# Faça Isto\nVocê irá replicar a pequena aplicação,
+        mostrada abaixo, que faz a tartaruga se mover com o clique de um botão. Você
+        irá fazer três coisas:\n* Adicionar um `button`\n* Adicionar um bloco `onEvent`\n*
+        Adicionar `moveForward` dentro do bloco da função onEvent\n\nVeja aqui o que
+        você deve fazer - pode assistir quantas vezes precisar para conseguir completar
+        a atividade.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\"
+        style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      App Lab test: <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
+        target="_blank">Projeto Inovação</a>
+      AppLab Intro 1 - Add Button: "# Começando - Adicionar um botão\n\nVocê vai precisar
+        de um botão na sua tela principal para ir para sua nova tela. Você pode fazer
+        um novo botão de duas maneiras. \n\n1. Se você gosta do estilo do botão de
+        \"Cães\" você pode fazer uma cópia do mesmo. Clique no botão e clique em \"Duplicar\".
+        \\t! [a] (https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        AM.png)\n\n2. Você também pode fazer um novo botão do zero arrastando-o da
+        caixa de ferramentas de Projeto. \\t! [a] (https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        AM.png)\n\n3. Clique e arraste para mover seu novo botão onde você quiser.\n\n4.
+        Uma vez que você tenha um novo botão atribua um nome claro para identificá-lo,
+        \"botãoGato\". Você também pode alterar o seu texto para ler \"Gatos\"!. \\t!
+        [a] (https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png)\n    \n5. Há muitas outras maneiras que você pode alterar a aparência
+        do seu botão. Experimente o menu completo de opções.\n\n6. Assim que estiver
+        pronto, execute seu aplicativo para certificar-se que o botão aparece. Clique
+        em \"Finalizar\" para continuar a aprender como fazer o seu botão funcionar
+        de verdade."
+      AppLab Intro 1 - Template: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 1 - Try App: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 2 - Edit place1 2: |-
+        Pense em como você deseja que sua aventura continue nessa tela. Adicione então algum texto para contar sua história!
+
+        1. Use o seletor de tela para escolher a tela que acabou de criar ([Mostre-me onde] (# triggercallout = selector))
+        2. Arraste uma nova "área de texto" para a sua tela para adicioná-la. ([Mostre-me onde] (# triggercallout = textArea))
+        3. Arraste o canto inferior direito da sua área de texto para alterar seu tamanho.
+        4. Altere o texto para informar ao usuário o que acontece nessa tela. Então mude a cor de seu texto se você quiser!
+
+        Clique em "Executar" e depois "Concluir" para seguir em frente.
+
+        ![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif) Clique para ver um GIF destes passos
+      AppLab Intro 2 - Template: |-
+        # Primeiros passos - Experimente este aplicativo
+
+        Antes de criar seu próprio aplicativo - Escolha Sua Própria Aventura -, pratique usando o AppLab criando um aplicativo sobre uma visita a um pet shop. Para começar, clique em "Executar" e navegue até a tela "Cães". Uma vez que você fez isto, clique em "Finalizar" para seguir em frente.
+      AppLab Intro 2 - add more buttons 2: |-
+        Hora de adicionar um segundo botão e escrever o código para que ele funcione.
+
+        1. Arraste um segundo botão para o seu "startScreen" e dê um "id" claro de entender
+        2. Altere o texto e a cor do seu botão
+        3. No Modo de Código, arraste um segundo bloco `onEvent ()` e arraste um `setScreen ()` dentro dele
+        4. Defina os "id" s dos seus blocos `onEvent ()` e `setScreen ()` para o botão e telas que você adicionou
+
+        Se tudo funcionou, você deve ter agora um segundo botão que muda a tela. "Execute" seu aplicativo e clique em "Concluir" se funcionar.
+
+        ![expandable](https://images.code.org/33d1a6d2dcc81ed8ecd0966d2f0682ca-image-1505770427380.gif) Clique para ver um GIF de todas as etapas
+      AppLab Intro 2 - finish and share: |-
+        Parabéns ao terminar a sua hora de código! Você pode compartilhar seu trabalho com os amigos! Clique em "Compartilhar" para obter um link ou até mesmo mandar uma mensagem para eles.
+
+        Você pode continuar trabalhando em seu projeto aqui. Sempre que seus amigos vão para o link que você compartilhou que vai ter a versão mais recente que você fez. Quão longe você vai construir sua aventura?
       AppLab Intro 4 - Change Two Buttons: |-
         <div style="float:right">
         \t<img src="https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png" style="height:150px">
@@ -1195,6 +1287,13 @@ pt-BR:
         chegar à ovelha.
       Overworld Move to Sheep_2019: Adicione um segundo comando "andar à frente" para
         chegar à ovelha.
+      PS copy 2-3 Bee Conditionals 5: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       PS fr prediction q1: 'O que *você* acha que vai acontecer? '
       Play Lab Rocket 3: |-
         Excelente! Agora, você consegue atualizar essa função para
@@ -1980,6 +2079,10 @@ pt-BR:
         a ação 24 vezes, em vez de 8.
       grade2_PuppyLoops_10: "Meu professor diz que eu devo terminar o que\ncomecei!\r\n\r\nAjude-me
         a terminar meu cata-vento. Você consegue descobrir o que há de errado?"
+      grade2_PuppyLoops_2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade2_PuppyLoops_4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
@@ -1994,6 +2097,10 @@ pt-BR:
       grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
+      grade2_puppy_loops2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade2_puppy_loops4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
@@ -2044,6 +2151,13 @@ pt-BR:
         para não coletar néctar das flores roxas que não o tiverem."
       grade3_Conditionals_2: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na coletar
         todo o néctar e produzir mel usando o menor número possível de blocos.  "
+      grade3_Conditionals_3: |-
+        Estas flores roxas mágicas mudam!
+
+        Cada vez que você tentar o quebra-cabeça, as flores roxas podem ter 1 néctar ou nenhuma... mas você não saberá o número até que você execute o código!
+
+        Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
+        Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       grade3_Conditionals_8: "O que será que tem por aí!\r\n\r\nAjude-me\na voar pelo
         jardim e coletar o néctar apenas das flores que têm\nnéctar para oferecer. "
       grade3_Debugging_1: |-
@@ -2082,6 +2196,10 @@ pt-BR:
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível!
         \r\n\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade
         de códigos que você precisa."
+      grade3_maze_nestedLoops2: |-
+        De repente, aparece um bloco mágico!  Com o bloco de 'Repetir', você pode fazer loop código repetidamente.
+
+        você consegue chegar ao porco, criando um loop que usa apenas um bloco 'Avançar' dentro 'Repetir'?
       grade3_maze_nestedLoops3: Leve-me até o porco! Você só pode usar um bloco `mover
         para frente` desta vez
       grade3_maze_nestedLoops4: |-

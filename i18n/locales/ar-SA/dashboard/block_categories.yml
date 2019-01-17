@@ -15,9 +15,9 @@ ar:
       Boolean: قيمة منطقية
       Conditionals: الجمل الشرطية
       Events: الأحداث
-      Games/Score: ألعاب/نقاط
+      Games/Score: ألعاب/نقطة
       Comments: تعليقات
-      Category: قسم
+      Category: فئة
       Prebuilt: معدّة مسبقاً
       Text: النص
       Comment: تعليق
@@ -35,7 +35,7 @@ ar:
       Dancers: الراقصون
       Groups: المجموعات
       Brush: فرشاة
-      Movement: تحرك
+      Movement: حركة
       Booleans: القيم المنطقية
       Functional: الدوال
       While Events: التكرار بواسطة (while)
@@ -43,7 +43,7 @@ ar:
       test: اختبار
       test2: تجربة2
       Name: الاسم
-      NEW BLOCKS: قطع جديدة
+      NEW BLOCKS: كتل برمجية جديدة
       'Functions ': 'الدوال '
-      Game/Score: لعبة/نقاط
+      Game/Score: لعبة/نقطة
       Function: دالة

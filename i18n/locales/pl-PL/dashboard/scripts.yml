@@ -1966,7 +1966,7 @@ pl:
             Lesson 2,3:
               name: Lekcja 2,3
         csd3-2017:
-          description_short: "Programowanie"
+          description_short: Programowanie
           stages:
             Booleans and Conditionals:
               name: Wyrażenia boolowskie i warunkowe
@@ -4316,3 +4316,5 @@ pl:
               name: Patrząc w przyszłość
             Binary Bracelets:
               name: Binarne bransoletki
+        gamelab:
+          title: Laboratorium Gier (Game Lab)

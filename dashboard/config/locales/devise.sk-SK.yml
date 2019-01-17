@@ -19,17 +19,17 @@ sk:
       unconfirmed: Skôr než budete pokračovať, musíte potvrdiť svoj účet.
     mailer:
       confirmation_instructions:
-        subject: Inštrukcie o potvrdení konta na Code.org
+        subject: Inštrukcie na potvrdenie konta na Code.org
       reset_password_instructions:
-        subject: Inštrukcie o obnovení hesla na Code.org
+        subject: Inštrukcie na obnovenie hesla na Code.org
       unlock_instructions:
         subject: Pokyny k odomknuntiu
     omniauth_callbacks:
-      failure: Nemohli sme overiť %{kind} z dôvodu "%{reason}".
+      failure: Nemohli sme ťa overiť z %{kind} z dôvodu "%{reason}".
       success: Úspešné overenie z účtu %{kind}.
     passwords:
       no_token: Na stránku, ktorá obnovuje heslo, je možné vstúpiť len cez odkaz,
-        ktorý sme poslali e-mailom. Prosím presvedčte sa, či je URL adresa v plnom
+        ktorý sme poslali e-mailom. Prosím, presvedčte sa, či je URL adresa v plnom
         tvare a správna.
       send_instructions: O niekoľko minúť obdržíte e-mail s pokynmi, ako si obnoviť
         heslo.
@@ -65,27 +65,27 @@ sk:
       already_confirmed: bol úspešne potvrdený, prosím, skúste sa prihlásiť
       confirmation_period_expired: musí byť potvrdený do %{period}, prosím, požiadajte
         o nový
-      expired: vypršala, požiadaj novú
+      expired: vypršal, požiadaj o nový
       not_found: nenájdené
       not_locked: nebol uzamknutý
       not_saved:
-        one: '1 chyba zabránila %{resource} uložiť:'
-        other: "%{count} chýb zabránilo %{resource} uložiť:"
+        one: '1 chyba zabránila uloženiu tohoto %{resource}:'
+        other: "%{count} chýb zabránilo uloženiu tohoto %{resource}:"
     invitations:
       send_instructions: 'Pozvanie bolo odoslané na e-mail: %{email}.'
-      invitation_token_invalid: Zadaný kód pozvánky je neplatný!
+      invitation_token_invalid: Zadaný pozývací token je neplatný!
       updated: Vaše heslo bolo úspešne nastavené. Ste prihlásený.
       no_invitations_remaining: Nezostávajú žiadne pozvánky
       invitation_removed: Vaše pozvanie bolo odstránené.
       new:
         header: Odoslať pozvánku
-        submit_button: Odoslať pozvanie
+        submit_button: Odoslať pozvánku
       edit:
         header: Nastavte si heslo
         submit_button: Nastaviť heslo
     mailer:
       invitation_instructions:
-        subject: Inštrukcie k pozvánku
+        subject: Inštrukcie k pozvánke
         hello: Ahoj %{email}
         someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
           uvedený odkaz.
