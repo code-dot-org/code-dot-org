@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Add one block to this code to create a parallelogram. ",
+    "short_instructions": "Add one block to this code to create a parallelogram. ",
     "x": "120",
     "y": "150",
     "start_direction": "90",

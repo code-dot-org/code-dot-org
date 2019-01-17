@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This spaceship needs a window!\r\n\r\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "short_instructions": "This spaceship needs a window!\r\n\r\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
     "x": "150",
     "y": "150",
     "start_direction": "90",

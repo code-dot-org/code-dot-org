@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment: Why does this square end up being 75 pixels too small on each side?  \r\n\r\nWhere does the code go wrong?",
+    "short_instructions": "Assessment: Why does this square end up being 75 pixels too small on each side?  \r\n\r\nWhere does the code go wrong?",
     "x": "100",
     "y": "300",
     "start_direction": "90",

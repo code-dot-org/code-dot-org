@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Now, let's make a function called \"jump to upper right\" that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.",
+    "short_instructions": "Now, let's make a function called \"jump to upper right\" that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.",
     "ideal": "21",
     "embed": "false",
     "long_instructions": "Now, let's make a function called `jump to upper right` that moves the artist to the upper-right of the octagon that you just drew so we can finish this pattern.  \r\n<br/>\r\n*Hint:  To get yourself to the upper-right corner, try jumping in a pattern that makes just 3/8 of the octagon.*  ",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Time to head back to land. Help me put down stones so I don't fall in!",
+    "short_instructions": "Time to head back to land. Help me put down stones so I don't fall in!",
     "x": "25",
     "y": "200",
     "start_direction": "90",

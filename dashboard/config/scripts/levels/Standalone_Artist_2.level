@@ -6,7 +6,7 @@
   "user_id": 20,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.",
+    "short_instructions": "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.",
     "x": "125",
     "y": "200",
     "is_k1": "false",

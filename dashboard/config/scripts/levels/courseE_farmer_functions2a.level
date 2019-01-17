@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
+    "short_instructions": "We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
     "instructions_important": "true",
     "ideal": "11",
     "long_instructions": "*\"I feel so functional!\"*\r\n\r\nWe're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",

@@ -68,7 +68,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use turnTo() and moveTo() to help draw a smiley face. (Click to see full instructions)",
+    "short_instructions": "Use turnTo() and moveTo() to help draw a smiley face. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.9",

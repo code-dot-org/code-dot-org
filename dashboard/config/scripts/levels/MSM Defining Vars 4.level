@@ -14,7 +14,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "Edit your my-shape variable so that it draws 75 pixel solid red stars.",
+    "short_instructions": "Edit your my-shape variable so that it draws 75 pixel solid red stars.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

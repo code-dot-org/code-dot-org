@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "artist",
-    "instructions": "Now, recreate the algorithm from the last level and create a pentagon with sides of length 150.",
+    "short_instructions": "Now, recreate the algorithm from the last level and create a pentagon with sides of length 150.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Can you change the **increment** in one of the loops so that the race is a tie?",
+    "short_instructions": "Can you change the **increment** in one of the loops so that the race is a tie?",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",

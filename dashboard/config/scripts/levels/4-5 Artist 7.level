@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This right triangle has angles of 30, 60, and 90 degrees. The slanted side's length (length of the hypotenuse) is 200 pixels. Complete the drawing.",
+    "short_instructions": "This right triangle has angles of 30, 60, and 90 degrees. The slanted side's length (length of the hypotenuse) is 200 pixels. Complete the drawing.",
     "x": "50",
     "y": "250",
     "start_direction": "90",

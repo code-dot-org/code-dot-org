@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[3,6]",
-    "instructions": "Get the player to the shovel.",
+    "short_instructions": "Get the player to the shovel.",
     "long_instructions": "Oh no, the bridge is out! \r\n\r\nCode the Agent to rebuild the bridge using the <xml>  <block type=\"craft_placeBlock\">\r\n    <title name=\"TYPE\">       </title>\r\n  </block></xml> block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
     "place_block_options": [
       "sand",

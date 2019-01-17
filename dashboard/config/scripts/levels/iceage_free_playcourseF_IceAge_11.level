@@ -18,7 +18,7 @@
     "projectile_collisions": "true",
     "sprites_hidden_to_start": "true",
     "free_play": "true",
-    "instructions": "Time to create your own game or story! ",
+    "short_instructions": "Time to create your own game or story! ",
     "callout_json": "[]",
     "maze": "[[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",

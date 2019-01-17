@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge:** Collect all of the pumpkins using the method from the last puzzle. ",
+    "short_instructions": "**Challenge:** Collect all of the pumpkins using the method from the last puzzle. ",
     "instructions_important": "false",
     "ideal": "16",
     "long_instructions": "**Challenge:** Not all corners are marked in this maze, that means that you will need to use your navigation code more than once to get where you need to go.  \r\n\r\nCan you figure out what you need to do?",

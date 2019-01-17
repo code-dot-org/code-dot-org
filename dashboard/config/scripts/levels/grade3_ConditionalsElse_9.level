@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \r\n",
+    "short_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \r\n",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

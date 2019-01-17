@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle using as few blocks as possible.",
+    "short_instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle using as few blocks as possible.",
     "x": "100",
     "y": "250",
     "start_direction": "90",

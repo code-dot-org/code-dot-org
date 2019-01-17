@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Picture time!  Use what you have learned to draw a picture of what you think the Artist saw on stage.",
+    "short_instructions": "Picture time!  Use what you have learned to draw a picture of what you think the Artist saw on stage.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

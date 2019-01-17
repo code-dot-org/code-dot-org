@@ -38,7 +38,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "\"Go get the scrap metal, BB-8!\"",
+    "short_instructions": "\"Go get the scrap metal, BB-8!\"",
     "long_instructions": "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_\"Go get the scrap metal, BB-8!\"_\r\n\r\nWatch out for walls and crates. Scrap metal looks like this: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)",
     "ideal": "4",
     "tts_markdown_instructions_override": "Watch out for walls and crates. Scrap metal looks like this:",

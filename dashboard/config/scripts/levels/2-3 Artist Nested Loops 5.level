@@ -14,7 +14,7 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "Fill in this building's windows using a nested loop. \r\n\r\nThe windows are 20 pixels long and 20 pixels apart.",
+    "short_instructions": "Fill in this building's windows using a nested loop. \r\n\r\nThe windows are 20 pixels long and 20 pixels apart.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

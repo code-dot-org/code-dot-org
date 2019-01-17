@@ -34,7 +34,7 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "5",
     "nectar_goal": "1",
-    "instructions": "Try it yourself!",
+    "short_instructions": "Try it yourself!",
     "long_instructions": "Try it yourself!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, try saying the steps out loud. It could help you figure out the right path.\",\"hint_id\":\"courseA_harvester_seq6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5b92ff8e0e688e2b526efb9e9623cf62/courseA_harvester_seq6.mp3\"}]",
     "parent_level_id": 11163,

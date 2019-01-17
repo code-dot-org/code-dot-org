@@ -167,7 +167,7 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Keys - Image Scroller Template",
-    "instructions": "Add image URLs to your image array. Test out the add button. Style your image scroller. (Click to see full instructions)"
+    "short_instructions": "Add image URLs to your image array. Test out the add button. Style your image scroller. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

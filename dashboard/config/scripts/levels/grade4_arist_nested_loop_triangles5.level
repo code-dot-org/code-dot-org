@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a sun by nesting the starter code in another loop.\r\n\r\nTo get this cool design with a hollow center, you'll need to jump forward by the length of the triangle before turning.",
+    "short_instructions": "Create a sun by nesting the starter code in another loop.\r\n\r\nTo get this cool design with a hollow center, you'll need to jump forward by the length of the triangle before turning.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "x": "175",

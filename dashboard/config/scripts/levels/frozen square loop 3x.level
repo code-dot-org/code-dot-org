@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.",
+    "short_instructions": "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.",
     "x": "200",
     "y": "200",
     "start_direction": "180",

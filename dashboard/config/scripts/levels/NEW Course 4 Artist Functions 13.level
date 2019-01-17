@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a star shape using the `draw a line of squares` function?  ",
+    "short_instructions": "Can you draw a star shape using the `draw a line of squares` function?  ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

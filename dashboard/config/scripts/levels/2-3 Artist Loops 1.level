@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you make a hexagon with sides that are 100 pixels long to finish the cell? Remember, that means that you will only need to turn 60 degrees!",
+    "short_instructions": "Can you make a hexagon with sides that are 100 pixels long to finish the cell? Remember, that means that you will only need to turn 60 degrees!",
     "x": "150",
     "y": "100",
     "start_direction": "90",

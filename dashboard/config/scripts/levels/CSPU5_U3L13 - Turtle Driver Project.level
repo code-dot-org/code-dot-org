@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a \"turtle driver\" that includes buttons to move the turtle forward and turn it left and right. (Click to see full instructions)",
+    "short_instructions": "Create a \"turtle driver\" that includes buttons to move the turtle forward and turn it left and right. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

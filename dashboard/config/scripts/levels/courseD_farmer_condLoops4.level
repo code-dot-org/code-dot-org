@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.",
+    "short_instructions": "Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.",
     "step_speed": "2",
     "ideal": "5",
     "long_instructions": "*\"Gosh! Now the lettuce is growing in clusters!\"*  \r\n\r\nThe harvester wants to pick everything from her lettuce garden. Each plant will now have more than one head of lettuce on it, so the farmer will need to keep picking while there is still lettuce growing.  \r\n\r\n##### (Remember: This garden only has lettuce!)",

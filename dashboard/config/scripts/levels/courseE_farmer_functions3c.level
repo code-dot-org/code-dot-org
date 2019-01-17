@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.",
+    "short_instructions": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.",
     "instructions_important": "true",
     "ideal": "17",
     "long_instructions": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.  \r\n\r\nDon't forget to add the little **function call** blocks to use the function in your program when you're done.",

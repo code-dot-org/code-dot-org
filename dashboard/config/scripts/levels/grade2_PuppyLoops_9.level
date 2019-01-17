@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Looks like the C in code is drawn backwards!\r\n\r\nCan you make it look like a C again?",
+    "short_instructions": "Looks like the C in code is drawn backwards!\r\n\r\nCan you make it look like a C again?",
     "x": "55",
     "y": "150",
     "start_direction": "90",

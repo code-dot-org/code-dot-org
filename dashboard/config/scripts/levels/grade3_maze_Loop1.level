@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "pvz",
-    "instructions": "Assessment:  Get me to the sunflower using only 5 blocks! ",
+    "short_instructions": "Assessment:  Get me to the sunflower using only 5 blocks! ",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

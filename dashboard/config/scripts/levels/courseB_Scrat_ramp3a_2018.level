@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,3,4,0,0],[0,4,2,1,1,4,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",

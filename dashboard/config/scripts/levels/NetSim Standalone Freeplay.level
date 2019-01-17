@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this configuration, most of the options are turned on, and you can play with them. Have fun!",
+    "short_instructions": "In this configuration, most of the options are turned on, and you can play with them. Have fun!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

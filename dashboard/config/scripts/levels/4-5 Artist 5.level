@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "What can we replace \"???\" with to make sure that the zombie completes this drawing using the loop provided?",
+    "short_instructions": "What can we replace \"???\" with to make sure that the zombie completes this drawing using the loop provided?",
     "x": "200",
     "y": "200",
     "start_direction": "90",

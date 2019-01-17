@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
+    "short_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Now, let's make a function called \"jump to upper right\" that moves the artist to the top-right of the octagon that you just drew so we can finish this pattern.",
+    "short_instructions": "Now, let's make a function called \"jump to upper right\" that moves the artist to the top-right of the octagon that you just drew so we can finish this pattern.",
     "ideal": "21",
     "embed": "false",
     "long_instructions": "Now, let's make a function called `jump to upper right` that moves the artist to the top-right of the octagon that you just drew so we can finish this pattern.  ",

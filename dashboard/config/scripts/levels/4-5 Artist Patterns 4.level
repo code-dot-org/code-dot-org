@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
     "free_play": "false",
-    "instructions": "This diamond has 50 pixel sides and angles of 120 and 60 degrees. Use a loop to draw it.",
+    "short_instructions": "This diamond has 50 pixel sides and angles of 120 and 60 degrees. Use a loop to draw it.",
     "ideal": "6",
     "embed": "false",
     "long_instructions": "This diamond has 50 pixel sides and angles of 120 and 60 degrees. \r\n\r\nUse a loop to draw it.",

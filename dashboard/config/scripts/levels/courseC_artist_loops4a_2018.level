@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Try jumping forward by 75 pixels.",
+    "short_instructions": "Try jumping forward by 75 pixels.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

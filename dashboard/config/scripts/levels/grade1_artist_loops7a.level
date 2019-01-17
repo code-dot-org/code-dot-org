@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
+    "short_instructions": "**Challenge:**  Lovely! Let's take a walk around the garden.",
     "x": "50",
     "y": "200",
     "start_direction": "90",

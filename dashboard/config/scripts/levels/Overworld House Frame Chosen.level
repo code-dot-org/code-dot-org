@@ -28,7 +28,7 @@
     "disable_examples": "false",
     "player_start_direction": "0",
     "special_level_type": "houseBuild",
-    "instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
+    "short_instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
     "is_daytime": "true",
     "available_blocks": [
       "planksBirch",

@@ -167,7 +167,7 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Arrays - favThings Template",
-    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
+    "short_instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
     "encrypted_examples": "nU5ZBmISYMCtPZSntFE3cPjHKyjK41u/d5qa1SokNjTovI79y2G6xkcT5Ub/\n5Uwr\n"
   }
 }]]></config>

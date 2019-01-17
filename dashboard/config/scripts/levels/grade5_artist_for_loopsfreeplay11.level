@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n\r\nNeed a hint? Click here.",
+    "short_instructions": "Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n\r\nNeed a hint? Click here.",
     "x": "30",
     "y": "50",
     "start_direction": "345",

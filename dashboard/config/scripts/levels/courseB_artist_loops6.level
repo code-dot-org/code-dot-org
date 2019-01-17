@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Climb the vine and see where it goes?",
+    "short_instructions": "Climb the vine and see where it goes?",
     "x": "375",
     "y": "375",
     "start_direction": "270",

@@ -169,7 +169,7 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Arrays - favThings template_2018",
-    "instructions": "Add image URLs to your array. Replace the text area with an image and setText with setImageURL. Then test your app! (Click to see full instructions)",
+    "short_instructions": "Add image URLs to your array. Replace the text area with an image and setText with setImageURL. Then test your app! (Click to see full instructions)",
     "encrypted_examples": "a/4DPMM3je+nmsN7LO2x12OKyc5BQ9cnw18k9gSBOi1mBrAAu/XDmP/DMqX+\nX6nf\n",
     "parent_level_id": 6919,
     "name_suffix": "_2018",

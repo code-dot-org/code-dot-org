@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write a function f that takes a parameter x and returns x - 10. Test your function using f(15).",
+    "short_instructions": "Write a function f that takes a parameter x and returns x - 10. Test your function using f(15).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

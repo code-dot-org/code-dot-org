@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you figure out how to re-create this drawing with a single loop?",
+    "short_instructions": "Can you figure out how to re-create this drawing with a single loop?",
     "x": "200",
     "y": "200",
     "start_direction": "90",

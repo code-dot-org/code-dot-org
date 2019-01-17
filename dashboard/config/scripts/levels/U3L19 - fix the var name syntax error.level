@@ -44,7 +44,7 @@
     "encrypted_examples": [
 
     ],
-    "instructions": "Fix the error and get it to print the value of both variables (Click to see full instructions)"
+    "short_instructions": "Fix the error and get it to print the value of both variables (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

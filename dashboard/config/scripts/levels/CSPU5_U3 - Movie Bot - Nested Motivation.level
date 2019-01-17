@@ -165,7 +165,7 @@
     "debugger_disabled": "true",
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
-    "instructions": "Add a separate set of if statements to check for a \"?\" in the input. (Click to see full instructions)",
+    "short_instructions": "Add a separate set of if statements to check for a \"?\" in the input. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "83x5EXopjqV0IWawBa10nGFcFhazSOR4CYWWPCrikii5SfqRe1KowPLvY33R\n0sf+\n",
     "contained_level_names": null

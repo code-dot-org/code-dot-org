@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's put a nice hill in the back.",
+    "short_instructions": "Let's put a nice hill in the back.",
     "x": "25",
     "y": "200",
     "start_direction": "90",

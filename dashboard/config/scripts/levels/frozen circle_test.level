@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Can you figure out what **\"???\"** should become to draw a circle?",
+    "short_instructions": "Can you figure out what **\"???\"** should become to draw a circle?",
     "x": "200",
     "y": "150",
     "start_direction": "90",

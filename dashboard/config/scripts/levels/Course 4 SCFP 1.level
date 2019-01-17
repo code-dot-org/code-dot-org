@@ -6,7 +6,7 @@
   "user_id": 24,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a function with parameters that allows the artist to jump backward and forward by x pixels, and also up and down by y pixels (using positive and negative numbers).",
+    "short_instructions": "Create a function with parameters that allows the artist to jump backward and forward by x pixels, and also up and down by y pixels (using positive and negative numbers).",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

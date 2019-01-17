@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This code for the cat's whiskers is wrong. \r\n\r\nFix this code to draw whiskers that are all the same length.",
+    "short_instructions": "This code for the cat's whiskers is wrong. \r\n\r\nFix this code to draw whiskers that are all the same length.",
     "x": "230",
     "y": "230",
     "start_direction": "90",

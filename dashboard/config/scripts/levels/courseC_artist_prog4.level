@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish Starla's rocket so she can chase her pet.",
+    "short_instructions": "Finish Starla's rocket so she can chase her pet.",
     "x": "150",
     "y": "150",
     "start_direction": "90",

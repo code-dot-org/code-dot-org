@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
+    "short_instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish drawing the last set of windows on the school so that everyone in class can see outside. The sides of each square window pane are 25 pixels long. ",
+    "short_instructions": "Finish drawing the last set of windows on the school so that everyone in class can see outside. The sides of each square window pane are 25 pixels long. ",
     "x": "290",
     "y": "200",
     "start_direction": "90",

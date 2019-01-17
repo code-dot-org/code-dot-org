@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Can you figure out how to...",
+    "short_instructions": "Can you figure out how to...",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

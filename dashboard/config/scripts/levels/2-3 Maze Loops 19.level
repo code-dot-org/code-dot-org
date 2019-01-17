@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Let's take this to another level! \r\nUse loops to get me to the sunflower with the fewest loops possible.",
+    "short_instructions": "Let's take this to another level! \r\nUse loops to get me to the sunflower with the fewest loops possible.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

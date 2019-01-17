@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "\"Follow this path to get me to the pig!\"",
+    "short_instructions": "\"Follow this path to get me to the pig!\"",
     "start_direction": "0",
     "step_mode": "0",
     "is_k1": "false",

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "What happens if you remove the \"Repeat 3\" from this algorithm, keeping the \"move\" and \"turn\" blocks in the for loop? In this spiraling triangle, each side is 20 pixels longer than the last.",
+    "short_instructions": "What happens if you remove the \"Repeat 3\" from this algorithm, keeping the \"move\" and \"turn\" blocks in the for loop? In this spiraling triangle, each side is 20 pixels longer than the last.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

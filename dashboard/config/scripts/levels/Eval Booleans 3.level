@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "The string-length function returns the number of characters in a string (including spaces!) - make this code evaluate to true.",
+    "short_instructions": "The string-length function returns the number of characters in a string (including spaces!) - make this code evaluate to true.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

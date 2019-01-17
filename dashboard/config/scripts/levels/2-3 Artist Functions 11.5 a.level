@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
+    "short_instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
     "x": "200",
     "y": "200",
     "start_direction": "90",

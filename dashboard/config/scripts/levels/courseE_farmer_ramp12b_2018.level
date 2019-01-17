@@ -29,7 +29,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "While there is lettuce, pick lettuce!",
+    "short_instructions": "While there is lettuce, pick lettuce!",
     "ideal": "5",
     "step_speed": "2",
     "authored_hints": "[]",

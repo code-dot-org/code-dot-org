@@ -48,7 +48,7 @@
     "is_agent_level": "true",
     "agent_start_position": "[5,9]",
     "place_block_options": "[\"bedrock\", \"bricks\", \"cactus\", \"clay\", \"clayHardened\", \"cobblestone\", \"deadBush\", \"dirt\", \"dirtCoarse\", \"doorIron\", \"farmlandWet\", \"glass\", \"glowstone\", \"grass\", \"grassPath\", \"gravel\", \"ice\", \"lava\", \"netherBrick\", \"netherrack\", \"oreCoal\", \"oreDiamond\", \"oreEmerald\", \"oreGold\", \"oreIron\", \"oreLapis\", \"oreRedstone\",\"sand\", \"sandstone\", \"snow\", \"snowyGrass\", \"stone\", \"tnt\", \"topSnow\", \"logAcacia\", \"logBirch\", \"logJungle\", \"logOak\", \"logSpruce\", \"planksAcacia\", \"planksBirch\", \"planksJungle\", \"planksOak\", \"planksSpruce\"]",
-    "instructions": "Create a function to help you finish this minecart.",
+    "short_instructions": "Create a function to help you finish this minecart.",
     "long_instructions": "Use the functions to clear a path for the mine cart, and walk into the Nether Portal.",
     "level_verification_timeout": "0",
     "songs": "[\"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\"]",

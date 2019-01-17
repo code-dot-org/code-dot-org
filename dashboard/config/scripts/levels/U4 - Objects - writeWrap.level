@@ -167,7 +167,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Use the wrap function to prevent currentIndex from leaving the bounds of your array. (Click to see full instructions)"
+    "short_instructions": "Use the wrap function to prevent currentIndex from leaving the bounds of your array. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

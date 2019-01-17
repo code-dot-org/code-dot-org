@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Can you figure out how to make a picture like this?",
+    "short_instructions": "Can you figure out how to make a picture like this?",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

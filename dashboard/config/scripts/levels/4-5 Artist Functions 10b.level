@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the 'draw a snowflake' function to create different size flakes.  Hint: the first snowflake is 25 in length and each snowflake is twice the size of the one before.",
+    "short_instructions": "Use the 'draw a snowflake' function to create different size flakes.  Hint: the first snowflake is 25 in length and each snowflake is twice the size of the one before.",
     "x": "75",
     "y": "75",
     "start_direction": "0",

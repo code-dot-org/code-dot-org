@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "false",
-    "instructions": "Develop, document, and test a protocol that allows you to use Internet Simulator to relay a message. See the worksheet for more detailed instructions.  ",
+    "short_instructions": "Develop, document, and test a protocol that allows you to use Internet Simulator to relay a message. See the worksheet for more detailed instructions.  ",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",

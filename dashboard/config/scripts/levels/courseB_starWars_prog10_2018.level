@@ -38,7 +38,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Help BB-8 gather the glowing scrap metal",
+    "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "ideal": "9",
     "authored_hints": "[]",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Can you get it all?\"_",

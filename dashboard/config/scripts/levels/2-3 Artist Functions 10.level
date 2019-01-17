@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
+    "short_instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you figure out how to use all of the things you've learned to create this image?\r\n\r\nNeed a hint? Click here.",
+    "short_instructions": "Can you figure out how to use all of the things you've learned to create this image?\r\n\r\nNeed a hint? Click here.",
     "x": "200",
     "y": "170",
     "start_direction": "90",

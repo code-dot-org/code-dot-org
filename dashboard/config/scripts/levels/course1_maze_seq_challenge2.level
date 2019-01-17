@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,2,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,1,4,4,1,1,0],[0,0,1,1,3,4,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
+    "short_instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

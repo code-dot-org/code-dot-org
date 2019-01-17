@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,8]",
-    "instructions": "Program the Agent to clear the player's path.",
+    "short_instructions": "Program the Agent to clear the player's path.",
     "long_instructions": "Use functions to help the Agent destroy the giant blocks of dirt that are blocking the player's path to the pressure plate.",
     "place_block_options": "[\"bedrock\", \"bricks\", \"clay\" , \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]",
     "level_verification_timeout": "0",

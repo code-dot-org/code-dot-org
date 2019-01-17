@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Hi, I’m Anna of Arendelle! Let’s use a repeat block to create a rectangle. This one is  200 pixels long and 100 pixels tall. All of the corners are 90 degree angles.",
+    "short_instructions": "Hi, I’m Anna of Arendelle! Let’s use a repeat block to create a rectangle. This one is  200 pixels long and 100 pixels tall. All of the corners are 90 degree angles.",
     "x": "100",
     "y": "150",
     "start_direction": "90",

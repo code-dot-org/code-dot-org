@@ -48,7 +48,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "instructions": "Draw a square to the front and to the right of the starting location. (Click to show full instructions)",
+    "short_instructions": "Draw a square to the front and to the right of the starting location. (Click to show full instructions)",
     "callout_json": "[]",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
     "show_turtle_before_run": "true",

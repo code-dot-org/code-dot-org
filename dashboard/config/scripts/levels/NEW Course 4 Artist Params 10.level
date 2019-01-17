@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a `draw a hexagon` function block with a length parameter. This hexagon has sides that are 100 pixels in length. ",
+    "short_instructions": "Create a `draw a hexagon` function block with a length parameter. This hexagon has sides that are 100 pixels in length. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -24,7 +24,7 @@
     "timeout_failure_tick": "600",
     "success_condition": "function successCondition() {\r\n\t      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;\r\n\t    }",
     "failure_condition": "function failureCondition() {\r\n\t      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;\r\n\t    }",
-    "instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
+    "short_instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
     "callout_json": "[{\"localization_key\":\"playlab_add_score\",\"callout_text\":null,\"element_id\":\"[block-id='3']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",

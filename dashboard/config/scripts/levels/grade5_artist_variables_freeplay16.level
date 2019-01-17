@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "true",
-    "instructions": "Still playing?  Here is a blank canvas where you can create whatever you want!",
+    "short_instructions": "Still playing?  Here is a blank canvas where you can create whatever you want!",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

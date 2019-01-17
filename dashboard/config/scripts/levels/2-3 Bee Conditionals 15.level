@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
+    "short_instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "2",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Can you make a new snowflake by repeating this code **5** times and turning **72** degrees between each set?",
+    "short_instructions": "Can you make a new snowflake by repeating this code **5** times and turning **72** degrees between each set?",
     "x": "200",
     "y": "200",
     "start_direction": "180",

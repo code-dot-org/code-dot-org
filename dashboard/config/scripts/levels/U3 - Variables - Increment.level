@@ -87,7 +87,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Use the console.log debugging technique to see what is happening in this example. Add another variable and increment its value. (Click to see full instructions)"
+    "short_instructions": "Use the console.log debugging technique to see what is happening in this example. Add another variable and increment its value. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

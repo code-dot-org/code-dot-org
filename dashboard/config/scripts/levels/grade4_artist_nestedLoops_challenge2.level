@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now for a challenge!  Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!",
+    "short_instructions": "Now for a challenge!  Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

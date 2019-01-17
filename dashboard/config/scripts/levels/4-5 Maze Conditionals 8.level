@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
+    "short_instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

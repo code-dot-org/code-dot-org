@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?",
+    "short_instructions": "Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?",
     "x": "200",
     "y": "200",
     "start_direction": "180",

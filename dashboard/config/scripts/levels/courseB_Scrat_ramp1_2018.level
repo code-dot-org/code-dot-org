@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,4,4,4,0,0],[0,0,4,4,4,4,0,0],[0,0,4,4,2,3,0,0],[0,0,4,4,4,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
+    "short_instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",

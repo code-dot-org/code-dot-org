@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  ",
+    "short_instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  ",
     "x": "200",
     "y": "200",
     "start_direction": "90",

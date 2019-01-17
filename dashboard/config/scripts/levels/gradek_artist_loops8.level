@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Challenge: The stairs down to the dock are broken.  Help me fix them.",
+    "short_instructions": "Challenge: The stairs down to the dock are broken.  Help me fix them.",
     "x": "60",
     "y": "85",
     "start_direction": "90",

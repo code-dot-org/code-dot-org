@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Draw the right half of this image so that the design is symmetrical. The triangles are equilateral and have sides that are 50 pixels long.",
+    "short_instructions": "Draw the right half of this image so that the design is symmetrical. The triangles are equilateral and have sides that are 50 pixels long.",
     "x": "200",
     "y": "275",
     "start_direction": "0",

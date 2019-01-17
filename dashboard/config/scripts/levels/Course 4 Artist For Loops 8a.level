@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
+    "short_instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -18,7 +18,7 @@
     "projectile_collisions": "true",
     "sprites_hidden_to_start": "false",
     "free_play": "true",
-    "instructions": "Time to create your own game or story! ",
+    "short_instructions": "Time to create your own game or story! ",
     "callout_json": "[]",
     "maze": "[[{\"tileType\":0},{\"tileType\":16,\"sprite\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",

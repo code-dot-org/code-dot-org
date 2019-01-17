@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Here’s some code that can draw any regular polygon. There’s a new variable called sides that is set to 4. Can you use the sides variable (along with the math block) to turn the right amount regardless of how many sides there are in the polygon?\r\n\r\nClick here to go back to the hint!",
+    "short_instructions": "Here’s some code that can draw any regular polygon. There’s a new variable called sides that is set to 4. Can you use the sides variable (along with the math block) to turn the right amount regardless of how many sides there are in the polygon?\r\n\r\nClick here to go back to the hint!",
     "x": "125",
     "y": "275",
     "start_direction": "90",

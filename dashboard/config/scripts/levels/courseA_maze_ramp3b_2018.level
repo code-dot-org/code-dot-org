@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,2,4,0,0],[0,4,3,1,1,4,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
+    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Play with the blocks in the toolbox to see what they do!",
+    "short_instructions": "Play with the blocks in the toolbox to see what they do!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

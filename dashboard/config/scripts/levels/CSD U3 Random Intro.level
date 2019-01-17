@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "What do you think this code will do when it is run? Make a prediction, then run this code 5 - 10 times, recording the output each time. Share your results with your neighbor.",
+    "short_instructions": "What do you think this code will do when it is run? Make a prediction, then run this code 5 - 10 times, recording the output each time. Share your results with your neighbor.",
     "start_blocks": "// Run this program a few times\r\n// and record the output\r\nconsole.log(randomNumber(0,10));",
     "is_k1": "false",
     "skip_instructions_popup": "false",

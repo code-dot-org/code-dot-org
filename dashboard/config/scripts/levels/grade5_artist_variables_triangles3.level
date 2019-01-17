@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Drag a number block to both the `set length` block and the `repeat _ times` block to draw a set of 50 pixel triangles. ",
+    "short_instructions": "Drag a number block to both the `set length` block and the `repeat _ times` block to draw a set of 50 pixel triangles. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

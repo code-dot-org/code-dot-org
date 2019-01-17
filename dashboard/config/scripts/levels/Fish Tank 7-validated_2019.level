@@ -48,7 +48,7 @@
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
     "project_template_level_name": "Fish Tank Template_2019",
-    "instructions": "Use some new blocks from the toolbox to make your fish tank special!",
+    "short_instructions": "Use some new blocks from the toolbox to make your fish tank special!",
     "include_shared_functions": "false",
     "block_pool": "gamelab",
     "name_suffix": "_2019",

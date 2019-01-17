@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Play with the loops and angles.",
+    "short_instructions": "Play with the loops and angles.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

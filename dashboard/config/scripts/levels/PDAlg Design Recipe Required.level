@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Complete the Design Recipe for the \"eggs\" function, making sure to create and test your examples.",
+    "short_instructions": "Complete the Design Recipe for the \"eggs\" function, making sure to create and test your examples.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

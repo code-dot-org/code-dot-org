@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Let's add some pizazz!",
+    "short_instructions": "Let's add some pizazz!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

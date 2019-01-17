@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's draw this robot's head! Can you make a square with sides that are 100 pixels?",
+    "short_instructions": "Let's draw this robot's head! Can you make a square with sides that are 100 pixels?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Create a function for a single square.",
+    "short_instructions": "Create a function for a single square.",
     "embed": "false",
     "long_instructions": "*\"Functions easy!\"*\r\n\r\nWe are going to build up to something fancy!  Start by creating a function for this square.",
     "disable_param_editing": "true",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
+    "short_instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
     "x": "25",
     "y": "100",
     "start_direction": "90",

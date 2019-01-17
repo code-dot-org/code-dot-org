@@ -44,7 +44,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Do This",
+    "short_instructions": "Do This",
     "long_instructions": "# Predict\r\n\r\nWhat do you think this code will do?\r\n",
     "start_blocks": "var sprite1 = createSprite(100,200);\r\n\r\nfunction draw(){\r\n  drawSprites();\r\n}",
     "show_debug_watch": "true",

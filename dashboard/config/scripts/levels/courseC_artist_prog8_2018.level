@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "One more tag.  This is a triangle for Pi.\r\n(Each side is 150 pixels)",
+    "short_instructions": "One more tag.  This is a triangle for Pi.\r\n(Each side is 150 pixels)",
     "x": "125",
     "y": "260",
     "start_direction": "90",

@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[4,4,0,0,0,0,0,0],[4,2,1,1,1,1,1,0],[4,4,4,0,0,0,1,0],[4,4,0,3,0,0,1,0],[4,0,0,1,0,0,1,0],[4,4,0,1,0,0,1,0],[0,4,0,1,1,1,1,0],[0,4,4,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
+    "short_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

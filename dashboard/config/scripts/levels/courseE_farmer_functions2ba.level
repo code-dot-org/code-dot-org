@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.",
+    "short_instructions": "Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.",
     "instructions_important": "true",
     "ideal": "13",
     "long_instructions": "*\"I feel so functional!\"*\r\n\r\nDid you notice that there was repeated code in the last puzzle?  It doesn't work to put it all inside of a loop, but we **can** use functions.  \r\n\r\nFor this puzzle, we have moved the repeated code into a function called `corn and pumpkin`. Now, all you need to do is put the small `corn and pumpkin` **function call block** into the code where you need it.\r\n\r\n___\r\n##### Each sprout will either grow *one* corn or nothing.",

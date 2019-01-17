@@ -41,7 +41,7 @@
       "readRecords": null,
       "console.log": null
     },
-    "instructions": "Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)",
+    "short_instructions": "Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)",
     "fail_on_lint_errors": "false",
     "parent_level_id": 4107,
     "name_suffix": "_2018",

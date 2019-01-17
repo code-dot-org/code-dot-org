@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "You are on your own now! Try out any of the functions you used in this stage or try this new function that will automatically give your image a beautiful background color! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
+    "short_instructions": "You are on your own now! Try out any of the functions you used in this stage or try this new function that will automatically give your image a beautiful background color! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
     "x": "200",
     "y": "200",
     "start_direction": "90",

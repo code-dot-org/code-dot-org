@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit \"draw a spiral edge\" to use \"length\" and \"sides\" parameters, then recreate these shapes.",
+    "short_instructions": "Edit \"draw a spiral edge\" to use \"length\" and \"sides\" parameters, then recreate these shapes.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",

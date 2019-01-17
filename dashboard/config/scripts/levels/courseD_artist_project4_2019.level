@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Time to layer those shapes!",
+    "short_instructions": "Time to layer those shapes!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

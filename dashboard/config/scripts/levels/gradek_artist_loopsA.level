@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Help me build steps to watch the ship sail away.",
+    "short_instructions": "Help me build steps to watch the ship sail away.",
     "x": "75",
     "y": "350",
     "start_direction": "90",

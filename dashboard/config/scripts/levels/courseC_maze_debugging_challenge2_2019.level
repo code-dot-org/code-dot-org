@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,3,1,1,1,1,0,0],[0,1,1,1,0,1,1,0],[0,0,1,1,1,0,1,0],[0,1,0,1,1,1,1,0],[0,1,1,0,1,1,1,0],[0,1,1,1,0,1,2,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Help Scrat reach the acorn with only four `turn` commands.",
+    "short_instructions": "Help Scrat reach the acorn with only four `turn` commands.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",

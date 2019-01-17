@@ -11,7 +11,7 @@
       "snapRadius": 2
     },
     "ball_direction": "4.0369465598628835",
-    "instructions": "Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
+    "short_instructions": "Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[32,0,0,0,0,0,0,0],[0,0,0,0,0,0,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0]]",
     "instructions_important": "false",
     "is_k1": "false",

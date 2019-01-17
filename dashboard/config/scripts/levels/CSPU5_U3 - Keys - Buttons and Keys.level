@@ -169,7 +169,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Keys - Template",
-    "instructions": "Have the program respond the same way for both clicking images on the screen and hitting the up and down keys on the keyboard. (Click to see full instructions)",
+    "short_instructions": "Have the program respond the same way for both clicking images on the screen and hitting the up and down keys on the keyboard. (Click to see full instructions)",
     "encrypted_examples": "3iXLrDx5yeiYsAlYqo1JbytWHs66ns8DiIpry8T80hwjh6Pddq/F9DmhKX9I\ngwH1\n",
     "contained_level_names": null
   },

@@ -38,7 +38,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Help BB-8 gather the glowing scrap metal",
+    "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "ideal": "13",
     "authored_hints": "[]",
     "tts_markdown_instructions_override": "Help BB-8 gather the glowing scrap metal",

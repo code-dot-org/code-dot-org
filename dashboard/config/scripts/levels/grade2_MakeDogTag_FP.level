@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: What shape will you make the tag for your pet?",
+    "short_instructions": "Freeplay: What shape will you make the tag for your pet?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

@@ -59,7 +59,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
+    "short_instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
     "start_blocks": "button(\"btn1\",\"Go Forth!\");\r\nonEvent(\"id\",\"click\",function(){\r\n  moveForward();\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",

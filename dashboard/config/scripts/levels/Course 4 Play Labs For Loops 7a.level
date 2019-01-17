@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
-    "instructions": "Now we're getting somewhere!  What if we start counting how many times we can click The Wizard before Dog gets to 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's clicked the variable \"clicked\" increases by one. You can ignore \"increment\" for now.\r\n\r\nDog will start counting when you click \"Run\".",
+    "short_instructions": "Now we're getting somewhere!  What if we start counting how many times we can click The Wizard before Dog gets to 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's clicked the variable \"clicked\" increases by one. You can ignore \"increment\" for now.\r\n\r\nDog will start counting when you click \"Run\".",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",

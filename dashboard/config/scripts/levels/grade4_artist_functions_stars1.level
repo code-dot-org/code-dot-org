@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "Now that you can draw a star, try drawing four stars!",
+    "short_instructions": "Now that you can draw a star, try drawing four stars!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function!\",\"hint_id\":\"grade4_artist_functions_stars1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ad24244882c8766e05843cefd9a0ad5/grade4_artist_functions_stars1.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",

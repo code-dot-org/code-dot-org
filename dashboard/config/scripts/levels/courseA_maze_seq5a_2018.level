@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,2,4,4,0,0],[0,4,4,1,4,4,0,0],[0,4,4,1,4,4,0,0],[0,4,3,1,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "What can you add to the end of this code to get the bird to the pig?",
+    "short_instructions": "What can you add to the end of this code to get the bird to the pig?",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

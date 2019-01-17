@@ -151,7 +151,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\r\n\r\n"
+    "short_instructions": "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\r\n\r\n"
   }
 }]]></config>
   <blocks/>

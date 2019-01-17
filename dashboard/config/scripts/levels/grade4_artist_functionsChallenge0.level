@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "**Challenge:** Create as many functions as you think you need to make this drawing of 50 pixel squares.",
+    "short_instructions": "**Challenge:** Create as many functions as you think you need to make this drawing of 50 pixel squares.",
     "ideal": "0",
     "embed": "false",
     "long_instructions": "**Challenge:** Create as many functions as you think you need to make this drawing of 50 pixel squares.",

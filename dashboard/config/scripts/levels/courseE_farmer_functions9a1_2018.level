@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Is your function still helpful?",
+    "short_instructions": "Is your function still helpful?",
     "instructions_important": "false",
     "ideal": "16",
     "long_instructions": "*This puzzle is a-MAZE-ing!**\r\n\r\nIs your function still helpful for this puzzle?",

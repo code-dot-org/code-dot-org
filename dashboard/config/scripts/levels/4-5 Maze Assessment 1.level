@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "pvz",
-    "instructions": "Assessment: Get to the sunflower using as few blocks as possible.",
+    "short_instructions": "Assessment: Get to the sunflower using as few blocks as possible.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

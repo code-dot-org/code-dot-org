@@ -44,7 +44,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Now let's get things moving! Use event handlers and actions to make your hero move.\r\n\r\nWe've added these blocks to your tool box to help you.\r\n",
+    "short_instructions": "Now let's get things moving! Use event handlers and actions to make your hero move.\r\n\r\nWe've added these blocks to your tool box to help you.\r\n",
     "instructions_important": "false",
     "contained_level_names": null
   },

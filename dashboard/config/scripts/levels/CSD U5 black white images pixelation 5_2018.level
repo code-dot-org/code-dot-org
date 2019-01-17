@@ -12,7 +12,7 @@
     "hex": "false",
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
-    "instructions": "Draw anything you like",
+    "short_instructions": "Draw anything you like",
     "hide_encoding_controls": "true",
     "v1_hide_sliders": "false",
     "parent_level_id": 8783,

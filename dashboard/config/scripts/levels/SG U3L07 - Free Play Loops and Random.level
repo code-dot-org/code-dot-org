@@ -129,7 +129,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Free Play! Use what you learned from loops and random to make your own little scene. Have fun.",
+    "short_instructions": "Free Play! Use what you learned from loops and random to make your own little scene. Have fun.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

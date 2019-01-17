@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Experiment with the `for` loop and play with the `counter` variable.",
+    "short_instructions": "Experiment with the `for` loop and play with the `counter` variable.",
     "x": "175",
     "y": "225",
     "start_direction": "90",

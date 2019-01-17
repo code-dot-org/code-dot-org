@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Here's everything you need to create your own winter wonderland!",
+    "short_instructions": "Here's everything you need to create your own winter wonderland!",
     "x": "200",
     "y": "200",
     "start_direction": "180",

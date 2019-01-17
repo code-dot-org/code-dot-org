@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Draw something awesome! Play with the pen width to see how different your drawings look!",
+    "short_instructions": "Freeplay: Draw something awesome! Play with the pen width to see how different your drawings look!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",

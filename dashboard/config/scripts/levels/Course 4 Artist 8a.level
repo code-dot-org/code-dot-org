@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!",
+    "short_instructions": "Remember this shape?  Now we're going to let you build it without giving you any blocks to start!",
     "level_num": "custom",
     "x": "200",
     "y": "200",

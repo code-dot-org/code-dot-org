@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "How many times (???) should the `repeat` block run the code inside to make a square?",
+    "short_instructions": "How many times (???) should the `repeat` block run the code inside to make a square?",
     "x": "150",
     "y": "150",
     "start_direction": "90",

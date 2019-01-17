@@ -53,7 +53,7 @@
     "long_instructions": "Create a new sprite called `alien2`.\r\n\r\nWhen the new sprite is clicked, it should do something.",
     "project_template_level_name": "Dance Party 2_simple",
     "show_type_hints": "true",
-    "instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
+    "short_instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
     "block_pool": "gamelab",

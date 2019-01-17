@@ -22,7 +22,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add an if statement so that the app changes screens when the count reaches -5. (Click to see full instructions)",
+    "short_instructions": "Add an if statement so that the app changes screens when the count reaches -5. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

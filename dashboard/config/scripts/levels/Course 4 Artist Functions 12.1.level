@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Let's create a function called \"draw an octagon 20\" that draws an octagon where each side is 20 pixels long.",
+    "short_instructions": "Let's create a function called \"draw an octagon 20\" that draws an octagon where each side is 20 pixels long.",
     "ideal": "11",
     "embed": "false",
     "long_instructions": "Let's create a function called `draw an octagon 20` that draws an octagon where each side is 20 pixels long.",

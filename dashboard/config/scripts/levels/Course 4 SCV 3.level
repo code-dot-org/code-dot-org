@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Now for a game of tag!  Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly 10 points to win!\r\nBut be careful, when Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks necessary to make this game work the way it's been explained.  How will you get Dog to move in all directions using the arrow keys?  How will you add points when Dog tags Cat or Penguin?  How will you subtract points when Cat and Penguin touch?",
+    "short_instructions": "Now for a game of tag!  Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly 10 points to win!\r\nBut be careful, when Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks necessary to make this game work the way it's been explained.  How will you get Dog to move in all directions using the arrow keys?  How will you add points when Dog tags Cat or Penguin?  How will you subtract points when Cat and Penguin touch?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

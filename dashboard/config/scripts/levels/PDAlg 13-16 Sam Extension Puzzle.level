@@ -14,7 +14,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Add a second parameter to \"onscreen?\" for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
+    "short_instructions": "Add a second parameter to \"onscreen?\" for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

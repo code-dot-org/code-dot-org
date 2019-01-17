@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write a function called half that takes a number x and returns half that number. Once you've written the function, use it to calculate half(21)",
+    "short_instructions": "Write a function called half that takes a number x and returns half that number. Once you've written the function, use it to calculate half(21)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

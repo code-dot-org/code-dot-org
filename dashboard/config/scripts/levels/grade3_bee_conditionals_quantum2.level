@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  \r\n",
+    "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  \r\n",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

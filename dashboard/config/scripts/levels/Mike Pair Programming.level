@@ -6,7 +6,7 @@
   "user_id": 221,
   "properties": {
     "video_key": "C1_pair_programming",
-    "instructions": "Here are the instructions",
+    "short_instructions": "Here are the instructions",
     "skip_dialog": true,
     "skip_sound": true,
     "long_instructions": "Here are markdown instructions"

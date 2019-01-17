@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment: Finish drawing the last tooth. It is 25 pixels wide and 25 pixels tall.",
+    "short_instructions": "Assessment: Finish drawing the last tooth. It is 25 pixels wide and 25 pixels tall.",
     "x": "250",
     "y": "250",
     "start_direction": "90",

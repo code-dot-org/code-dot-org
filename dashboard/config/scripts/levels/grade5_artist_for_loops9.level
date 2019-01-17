@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's put it all together!  Using your knowledge of `for` loops and the `counter` variable, create this drawing where each shape has two more sides than the last.  Make sure that each side is 10 times as long as the number of sides in the polygon.\r\n\r\nVery little of the code has been provided for you.",
+    "short_instructions": "Let's put it all together!  Using your knowledge of `for` loops and the `counter` variable, create this drawing where each shape has two more sides than the last.  Make sure that each side is 10 times as long as the number of sides in the polygon.\r\n\r\nVery little of the code has been provided for you.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

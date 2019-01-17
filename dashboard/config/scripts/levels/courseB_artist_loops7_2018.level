@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
     "x": "50",
     "y": "200",
     "start_direction": "90",

@@ -12,7 +12,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)",
+    "short_instructions": "Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)",
     "start_blocks": "onEvent(\"screen1\", \"click\", function(event){\r\n  console.log(event);\r\n});\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log(event);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",

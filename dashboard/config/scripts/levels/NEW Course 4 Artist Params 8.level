@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
+    "short_instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "16",

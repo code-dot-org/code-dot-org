@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Assessment: Use a loop to draw the equilateral triangle. Each side is 300 pixels.",
+    "short_instructions": "Assessment: Use a loop to draw the equilateral triangle. Each side is 300 pixels.",
     "x": "50",
     "y": "350",
     "start_direction": "90",

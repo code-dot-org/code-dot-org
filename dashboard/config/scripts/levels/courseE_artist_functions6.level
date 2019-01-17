@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Make this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
+    "short_instructions": "Make this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

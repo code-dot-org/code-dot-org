@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "We are going to start you with some code (in grey) to make one diamond. \r\n\r\nLoop the grey code to create a fun pattern!",
+    "short_instructions": "We are going to start you with some code (in grey) to make one diamond. \r\n\r\nLoop the grey code to create a fun pattern!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

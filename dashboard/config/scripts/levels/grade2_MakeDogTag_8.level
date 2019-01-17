@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Now let's connect a bunch of V's together in a loop.",
+    "short_instructions": "Now let's connect a bunch of V's together in a loop.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

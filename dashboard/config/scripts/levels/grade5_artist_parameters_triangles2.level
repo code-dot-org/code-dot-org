@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "This drawing can be easily created using a new type of function that includes a parameter. The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
+    "short_instructions": "This drawing can be easily created using a new type of function that includes a parameter. The sides of each triangle are 25 pixels larger than the last.  The first triangle has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

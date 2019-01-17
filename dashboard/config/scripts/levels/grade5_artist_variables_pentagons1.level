@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this pattern of pentagons with 100 pixel sides by setting the right value for `length` and dropping the `length` variable into all of the the correct places. \r\n\r\nSee how you only have to set the value for `length` once, and the code uses the right value everywhere?",
+    "short_instructions": "Draw this pattern of pentagons with 100 pixel sides by setting the right value for `length` and dropping the `length` variable into all of the the correct places. \r\n\r\nSee how you only have to set the value for `length` once, and the code uses the right value everywhere?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

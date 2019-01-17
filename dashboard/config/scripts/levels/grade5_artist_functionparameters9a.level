@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish off the `draw a spiral edge` function to also ask for a minimum length for the center of the spiral.",
+    "short_instructions": "Finish off the `draw a spiral edge` function to also ask for a minimum length for the center of the spiral.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",

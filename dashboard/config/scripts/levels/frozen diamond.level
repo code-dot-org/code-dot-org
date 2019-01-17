@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
+    "short_instructions": "Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
     "x": "120",
     "y": "150",
     "start_direction": "90",

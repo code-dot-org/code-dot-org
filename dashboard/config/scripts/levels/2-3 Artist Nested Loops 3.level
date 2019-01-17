@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "You'll need to loop the triangle 12 times to draw this pattern. \r\n\r\nDivide the number of degrees in a circle (360) by the number of shapes you're drawing (12) to figure out how far to turn after each shape.",
+    "short_instructions": "You'll need to loop the triangle 12 times to draw this pattern. \r\n\r\nDivide the number of degrees in a circle (360) by the number of shapes you're drawing (12) to figure out how far to turn after each shape.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

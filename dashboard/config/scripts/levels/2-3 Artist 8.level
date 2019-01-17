@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall. There are many different ways to solve this puzzle, so have some fun!",
+    "short_instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall. There are many different ways to solve this puzzle, so have some fun!",
     "x": "100",
     "y": "250",
     "start_direction": "90",

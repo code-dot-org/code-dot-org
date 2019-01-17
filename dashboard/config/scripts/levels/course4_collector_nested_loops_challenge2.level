@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
+    "short_instructions": "Help the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "long_instructions": "*\"Let's hunt for treasure - using loops!\"* \r\n\r\nHelp the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "callout_json": "[]",
     "ideal": "11",

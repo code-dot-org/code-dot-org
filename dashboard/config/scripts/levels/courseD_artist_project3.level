@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Let's spin that line of shapes around!",
+    "short_instructions": "Let's spin that line of shapes around!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 42,
   "properties": {
-    "instructions": "Instructions",
+    "short_instructions": "Instructions",
     "long_instructions": "# Simple Markdown?",
     "skip_dialog": true,
     "href": "vigenere/vigenere.html"

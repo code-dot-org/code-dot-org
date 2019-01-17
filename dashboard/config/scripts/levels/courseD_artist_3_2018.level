@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Nest all of the code inside of another `repeat` loop and run it a total of **6** times. ",
+    "short_instructions": "Nest all of the code inside of another `repeat` loop and run it a total of **6** times. ",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

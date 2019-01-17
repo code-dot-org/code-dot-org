@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.",
+    "short_instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

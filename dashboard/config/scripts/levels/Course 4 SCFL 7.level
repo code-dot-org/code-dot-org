@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "The artist wants to catch some waves! Can you figure out how to re-create this drawing?",
+    "short_instructions": "The artist wants to catch some waves! Can you figure out how to re-create this drawing?",
     "x": "275",
     "y": "120",
     "start_direction": "90",

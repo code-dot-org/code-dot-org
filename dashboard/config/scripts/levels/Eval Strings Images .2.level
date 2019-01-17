@@ -7,7 +7,7 @@
   "properties": {
     "skin": "eval",
     "use_contract_editor": "true",
-    "instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
+    "short_instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

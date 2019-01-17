@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the function from the last puzzle to draw this series of shapes.  ",
+    "short_instructions": "Use the function from the last puzzle to draw this series of shapes.  ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

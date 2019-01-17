@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
+    "short_instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
     "step_speed": "2",
     "ideal": "8",
     "long_instructions": "*\"What a bountiful crop!\"*\r\n\r\nThis field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?",

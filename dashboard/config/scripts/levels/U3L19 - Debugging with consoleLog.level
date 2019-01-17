@@ -88,7 +88,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Add console.log() statements to find out the value of a and b after the first reassignment statement a = b; (Click to see full instructions)"
+    "short_instructions": "Add console.log() statements to find out the value of a and b after the first reassignment statement a = b; (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

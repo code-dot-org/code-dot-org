@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free play, draw something cool with nested loops.",
+    "short_instructions": "Free play, draw something cool with nested loops.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

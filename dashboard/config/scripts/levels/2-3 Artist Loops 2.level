@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Now use a repeat block to make the cell a shell.",
+    "short_instructions": "Now use a repeat block to make the cell a shell.",
     "x": "150",
     "y": "100",
     "start_direction": "90",

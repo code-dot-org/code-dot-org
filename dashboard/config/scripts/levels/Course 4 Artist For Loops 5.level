@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Good job on the last puzzle! Let's use that \"counter\" variable block again to draw this cool picture. ",
+    "short_instructions": "Good job on the last puzzle! Let's use that \"counter\" variable block again to draw this cool picture. ",
     "x": "200",
     "y": "125",
     "start_direction": "90",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Add a tiny shape to the end of your line!",
+    "short_instructions": "Add a tiny shape to the end of your line!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Give the stop sign a border by making an octagon with 100 pixels sides. \r\n\r\n",
+    "short_instructions": "Give the stop sign a border by making an octagon with 100 pixels sides. \r\n\r\n",
     "x": "150",
     "y": "100",
     "start_direction": "90",

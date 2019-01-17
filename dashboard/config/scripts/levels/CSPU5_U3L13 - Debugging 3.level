@@ -19,7 +19,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
+    "short_instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
     "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"button2\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",

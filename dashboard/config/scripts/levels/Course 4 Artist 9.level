@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. \r\n",
+    "short_instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. \r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

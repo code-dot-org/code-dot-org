@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish this kite",
+    "short_instructions": "Finish this kite",
     "x": "225",
     "y": "175",
     "start_direction": "90",

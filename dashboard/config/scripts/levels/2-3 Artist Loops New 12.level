@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a diamond with sides of 100 pixels. ",
+    "short_instructions": "Draw a diamond with sides of 100 pixels. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

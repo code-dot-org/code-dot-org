@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "ReadRecords with specific criteria \r\nfind the length of an array\r\n",
+    "short_instructions": "ReadRecords with specific criteria \r\nfind the length of an array\r\n",
     "long_instructions": "ReadRecords with specific criteria \r\nfind the length of an array\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",

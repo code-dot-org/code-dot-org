@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Now take your shape and draw two or three in a row!",
+    "short_instructions": "Now take your shape and draw two or three in a row!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

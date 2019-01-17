@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 225,
   "properties": {
-    "instructions": "Here are your instructions for this free response.  ",
+    "short_instructions": "Here are your instructions for this free response.  ",
     "submittable": "false",
     "title": "Here is a title",
     "allow_user_uploads": "false",

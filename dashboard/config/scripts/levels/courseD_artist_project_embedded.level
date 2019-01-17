@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "true",
-    "instructions": "Here's what you will soon be making!",
+    "short_instructions": "Here's what you will soon be making!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

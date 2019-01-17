@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
+    "short_instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
     "x": "200",
     "y": "255",
     "start_direction": "90",

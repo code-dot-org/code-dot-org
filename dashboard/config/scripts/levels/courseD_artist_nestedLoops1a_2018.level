@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now loop the triangle 6 times. ",
+    "short_instructions": "Now loop the triangle 6 times. ",
     "x": "200",
     "y": "200",
     "start_direction": "90",

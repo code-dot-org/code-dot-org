@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Instead of using \"move forward by 150,\" the \"move\" block is now referencing a variable called \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "short_instructions": "Instead of using \"move forward by 150,\" the \"move\" block is now referencing a variable called \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",

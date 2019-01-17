@@ -14,7 +14,7 @@
     "free_play": "false",
     "start_direction": "90",
     "ideal": "9",
-    "instructions": "How many times do you need to loop this diamond to draw the flower?",
+    "short_instructions": "How many times do you need to loop this diamond to draw the flower?",
     "embed": "false",
     "long_instructions": "How many times do you need to loop this diamond to draw the flower?\r\n\r\n",
     "disable_param_editing": "true",

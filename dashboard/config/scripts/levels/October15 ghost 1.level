@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Give the ghost eyes, using the \"draw a circle\" function.",
+    "short_instructions": "Give the ghost eyes, using the \"draw a circle\" function.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",

@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[3,6]",
-    "instructions": "Get the player to the shovel.",
+    "short_instructions": "Get the player to the shovel.",
     "long_instructions": "Oh no, the bridge is out!\r\n\r\nHelp the Agent rebuild the bridge so that the player can get to the **shovel**.",
     "place_block_options": "[\"sand\", \"planksAcacia\", \"planksBirch\", \"planksOak\", \"planksSpruce\"]",
     "level_verification_timeout": "0",

@@ -14,7 +14,7 @@
     "skip_sound": true,
     "title": "Setting dancer properties",
     "long_instructions": "What do you predict will be different about the dancers created by the program in the workspace below? Look for a new block of code.\r\n<xml><block type=\"Dancelab_setProp\"><title name=\"SPRITE\">???</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>",
-    "instructions": "What do you predict will be different about the dancers created by the program in the workspace below? Look for a new block of code."
+    "short_instructions": "What do you predict will be different about the dancers created by the program in the workspace below? Look for a new block of code."
   },
   "published": true,
   "notes": "",

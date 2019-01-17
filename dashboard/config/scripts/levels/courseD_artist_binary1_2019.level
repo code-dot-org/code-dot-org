@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
+    "short_instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
     "embed": "false",
     "disable_sharing": "false",
     "long_instructions": "We've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.\r\n\r\nUse the blocks below to have the artist draw \"01010101\" in binary in the first row.",
