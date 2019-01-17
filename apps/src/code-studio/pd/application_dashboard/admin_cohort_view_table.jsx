@@ -25,6 +25,12 @@ const styles = {
   },
   notesCell: {
     maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
