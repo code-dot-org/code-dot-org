@@ -53,9 +53,12 @@ class School < ActiveRecord::Base
     end.compact.join(' ')
   end
 
-  # Determines if this is a high-needs school.
+  # Determines if this is a high-needs school for the purpose of distributing Maker Toolkit
+  # discount codes - this is not a definition we apply broadly.
   # @return [Boolean] True if high-needs, false otherwise.
-  def high_needs?
+  def maker_high_needs?
+    # As of January 2019, "high-needs" is defined as having >= 40% of the student population
+    # eligible for free-and-reduced lunch programs.
     stats = school_stats_by_year.order(school_year: :desc).first
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
