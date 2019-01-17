@@ -60,7 +60,7 @@ class School < ActiveRecord::Base
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f > 0.5
+    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.4
   end
 
   # Public school ids from NCES are always 12 digits, possibly with
