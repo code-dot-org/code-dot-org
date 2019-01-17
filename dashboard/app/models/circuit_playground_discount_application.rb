@@ -126,12 +126,12 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       user_school: {
         id: user_school.try(:id),
         name: user_school.try(:name),
-        high_needs: user_school.try(:high_needs?),
+        high_needs: user_school.try(:maker_high_needs?),
       },
       application_school: {
         id: application_school.try(:id),
         name: application_school.try(:name),
-        high_needs: application_school.try(:high_needs?),
+        high_needs: application_school.try(:maker_high_needs?),
       },
       unit_6_intention: application.try(:unit_6_intention),
       full_discount: application.try(:full_discount),

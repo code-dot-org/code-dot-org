@@ -34,7 +34,7 @@ class SchoolTest < ActiveSupport::TestCase
 
   test 'high needs false when no stats data' do
     school = create :school
-    refute school.high_needs?
+    refute school.maker_high_needs?
   end
 
   test 'high needs false when null students total' do
@@ -46,7 +46,7 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    refute school.high_needs?
+    refute school.maker_high_needs?
   end
 
   test 'high needs false when null frl eligible total' do
@@ -59,7 +59,7 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    refute school.high_needs?
+    refute school.maker_high_needs?
   end
 
   test 'high needs false when null frl eligible below 40 percent of students' do
@@ -73,7 +73,7 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    refute school.high_needs?
+    refute school.maker_high_needs?
   end
 
   test 'high needs true when null frl eligible equal to 40 percent of students' do
@@ -87,7 +87,7 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert school.high_needs?
+    assert school.maker_high_needs?
   end
 
   test 'high needs true when null frl eligible above 40 percent of students' do
@@ -101,7 +101,7 @@ class SchoolTest < ActiveSupport::TestCase
       }
     )
     school.save!
-    assert school.high_needs?
+    assert school.maker_high_needs?
   end
 
   test 'normalize_school_id works for short ids without leading zeros' do
