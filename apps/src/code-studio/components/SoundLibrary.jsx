@@ -4,7 +4,6 @@ import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
 import Sounds from '../../Sounds';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
-import experiments from "@cdo/apps/util/experiments";
 
 const SOUND_CATEGORIES = {
   category_animals: 'Animals',
@@ -95,8 +94,8 @@ export default class SoundLibrary extends React.Component {
   onClickChoose = () => {
     firehoseClient.putRecord(
       {
-        study: 'sound-dialog-1',
-        study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
+        study: 'sound-dialog-2',
+        study_group: 'library-tab',
         event: 'choose-library-sound',
         data_json: this.state.selectedSound.sourceUrl
       },

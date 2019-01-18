@@ -26,10 +26,19 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "short_instructions": "markdown? **yes** _no_"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-16 20:19:12 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
