@@ -354,13 +354,15 @@ class Course < ApplicationRecord
   def redirect_to_course_url(user)
     # Only redirect students.
     return nil unless user && user.student?
-    # No redirect unless user is allowed to view this course version and they are not assigned to the course.
-    return nil unless can_view_version?(user) && !user.assigned_course?(self)
+    # No redirect unless user is allowed to view this course version, they are not assigned to the course,
+    # and it is versioned.
+    return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year
 
     # Redirect user to the latest assigned course in this course family,
     # if one exists and it is newer than the current course.
     latest_assigned_version = Course.latest_assigned_version(family_name, user)
-    return nil unless latest_assigned_version.present? && latest_assigned_version.version_year > version_year
+    latest_assigned_version_year = latest_assigned_version&.version_year
+    return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
     latest_assigned_version.link
   end
 
