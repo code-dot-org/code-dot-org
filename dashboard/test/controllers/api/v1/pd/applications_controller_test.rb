@@ -4,6 +4,8 @@ module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
     include Pd::Application::ActiveApplicationModels
 
+    self.use_transactional_test_case = true
+
     freeze_time
 
     setup_all do
