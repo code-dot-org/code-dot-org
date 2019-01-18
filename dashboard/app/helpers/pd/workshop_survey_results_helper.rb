@@ -1,3 +1,5 @@
+require 'honeybadger/ruby'
+
 module Pd::WorkshopSurveyResultsHelper
   LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
     :how_much_learned,
@@ -431,13 +433,46 @@ module Pd::WorkshopSurveyResultsHelper
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0
 
         total_answer_for_this_workshop_sum = histogram_for_this_workshop.map do |k, v|
-          question[:option_map][k] * v
+          option = question[:option_map][k]
+
+          if option.nil?
+            # special case for cases where in the scale we changed the value
+            option = question[:option_map].select {|k1, _| k1.start_with? k.to_s}.values.first
+          end
+
+          if option
+            option * v
+          else
+            puts "missing key is #{k}, class #{k.class}"
+            puts "selection - #{question[:option_map].select {|k1, _| k1.start_with? k.to_s}}"
+
+            Honeybadger.notify(
+              error_class: "Unknown option for question during survey result aggregation",
+              error_message: "Unknown option #{k} for question #{question[:text]} found during survey result aggregation, acceptable responses are #{question[:option_map]}"
+            )
+            0
+          end
         end.reduce(:+) || 0
 
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
         total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
-        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map {|k, v| question[:option_map][k] * v}.reduce(:+) || 0
+        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map do |k, v|
+          option = question[:option_map][k]
+
+          if option.nil?
+            # special case for cases where in the scale we changed the value
+            option = question[:option_map].select {|k1, _| k1.start_with? k.to_s}.values.first
+          end
+
+          if option
+            option * v
+          else
+
+            0
+          end
+        end.reduce(:+) || 0
+
         facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
       end
 
