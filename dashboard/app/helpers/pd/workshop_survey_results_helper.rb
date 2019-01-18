@@ -443,9 +443,6 @@ module Pd::WorkshopSurveyResultsHelper
           if option
             option * v
           else
-            puts "missing key is #{k}, class #{k.class}"
-            puts "selection - #{question[:option_map].select {|k1, _| k1.start_with? k.to_s}}"
-
             Honeybadger.notify(
               error_class: "Unknown option for question during survey result aggregation",
               error_message: "Unknown option #{k} for question #{question[:text]} found during survey result aggregation, acceptable responses are #{question[:option_map]}"
