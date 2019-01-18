@@ -4,6 +4,8 @@ module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
     include Pd::Application::ActiveApplicationModels
 
+    self.use_transactional_test_case = true
+
     freeze_time
 
     setup_all do
@@ -51,9 +53,6 @@ module Api::V1::Pd
           )
         )
       )
-
-      @summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      @fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
@@ -333,13 +332,15 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if fit workshop is changed' do
+      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
       @csp_facilitator_application.reload
 
       assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
 
-      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: @fit_workshop.id, status: @csp_facilitator_application.status}}
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, status: @csp_facilitator_application.status}}
       @csp_facilitator_application.reload
 
       assert_equal [
@@ -353,13 +354,15 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
+      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
       @csp_facilitator_application.reload
 
       assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
 
-      post :update, params: {id: @csp_facilitator_application.id, application: {pd_workshop_id: @summer_workshop.id, status: @csp_facilitator_application.status}}
+      post :update, params: {id: @csp_facilitator_application.id, application: {pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
       @csp_facilitator_application.reload
 
       assert_equal [
@@ -373,13 +376,16 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
+      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
       @csp_facilitator_application.reload
 
       assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
 
-      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: @fit_workshop.id, pd_workshop_id: @summer_workshop.id, status: @csp_facilitator_application.status}}
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
       @csp_facilitator_application.reload
 
       expected_log = [
@@ -398,7 +404,7 @@ module Api::V1::Pd
 
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
 
-      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: @fit_workshop.id, pd_workshop_id: @summer_workshop.id, status: @csp_facilitator_application.status}}
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
 
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end

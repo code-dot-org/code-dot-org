@@ -522,13 +522,13 @@ describe('The Exporter,', function () {
           'my-app/App.js',
           'my-app/CustomAsset.js',
           'my-app/DataWarning.js',
+          'my-app/README.txt',
           'my-app/app.json',
           'my-app/appassets/',
           'my-app/appassets/icon.png',
           'my-app/appassets/splash.png',
           'my-app/appassets/warning.png',
           'my-app/assets/',
-          'my-app/assets/README.txt',
           'my-app/assets/applab-api.j',
           'my-app/assets/applab/',
           'my-app/assets/applab/applab.css',
@@ -547,6 +547,7 @@ describe('The Exporter,', function () {
           'my-app/assets/jquery-1.12.1.min.j',
           'my-app/assets/style.css',
           'my-app/assets/zoo.mp3',
+          'my-app/metro.config.js',
           'my-app/package.json',
           'my-app/packagedFiles.js',
         ]);
@@ -658,7 +659,7 @@ describe('The Exporter,', function () {
       });
 
       it("should contain a README.txt file", function () {
-        assert.property(zipFiles, 'my-app/assets/README.txt');
+        assert.property(zipFiles, 'my-app/README.txt');
       });
 
       it("should contain the asset files used by the project", function () {

@@ -1,4 +1,4 @@
-class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
+class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   attributes(
     :id,
     :type,
