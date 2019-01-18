@@ -42,7 +42,7 @@ Scenario: Listen to TTS Audio in CSF contained level
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
   And I wait for the page to fully load
 
-  # note: we expect audio for csd instructions
+  # note: we expect audio for csf instructions
   Then I wait until element ".inline-audio" is visible
   Then I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
