@@ -429,10 +429,10 @@ class ScriptTest < ActiveSupport::TestCase
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
     create :course_script, course: csp_2017, script: csp1_2017, position: 1
     csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
     create :course_script, course: csp_2018, script: csp1_2018, position: 1
     section = create :section, course: csp_2018
     section.students << student
