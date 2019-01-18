@@ -30,7 +30,7 @@ And, many of these test-takers were female or minority students.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
+<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
 
 <br>
 
