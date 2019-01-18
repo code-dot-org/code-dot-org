@@ -628,7 +628,6 @@ class TopInstructions extends React.Component {
               </div>
             }
           </div>
-
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}

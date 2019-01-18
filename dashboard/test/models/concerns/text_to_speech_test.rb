@@ -72,7 +72,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
 
   test 'tts_long_instructions_text for contained levels' do
     contained_level_freeresponse = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {
-      markdown_instructions: "This is contained"
+      long_instructions: "This is contained"
     }
     outer_level = create :level, name: 'level 1', type: 'Blockly'
     outer_level.contained_level_names = [contained_level_freeresponse.name]
