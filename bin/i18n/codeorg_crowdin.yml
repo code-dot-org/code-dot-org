@@ -31,10 +31,9 @@ files: [
   #
   # hourofcode content is handled by the hourofcode-specific sync
   # dsls content is temporarily disabled until it can be refactored
-  # authord hints, instructions, and markdown instructions should be redacted
-  #   rather than uploading the source directly
   "ignore" : [
     "/source/hourofcode/**",
+    "/source/dashboard/dsls.yml",
   ],
 
   #
@@ -54,13 +53,6 @@ files: [
     "/source/blockly-mooc/gamelab.json",
     "/source/blockly-mooc/netsim.json",
     "/source/blockly-mooc/weblab.json"
-  ],
-  "update_option" : "update_as_unapproved"
- }, {
-  "source" : "/source/**/*.md",
-  "translation" : "/%language%/**/%original_file_name%",
-  "ignore" : [
-    "/source/hourofcode/**",
   ],
   "update_option" : "update_as_unapproved"
  }

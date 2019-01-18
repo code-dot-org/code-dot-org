@@ -554,6 +554,7 @@ describe('entry tests', () => {
     'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
