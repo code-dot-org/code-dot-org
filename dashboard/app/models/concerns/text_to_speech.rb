@@ -171,8 +171,7 @@ module TextToSpeech
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      # If there are contained levels, use that text in TTS
-      tts_short_instructions_override || tts_for_contained_level || short_instructions || try(:localized_short_instructions) || ""
+      tts_short_instructions_override || short_instructions || try(:localized_short_instructions) || ""
     else
       TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end
