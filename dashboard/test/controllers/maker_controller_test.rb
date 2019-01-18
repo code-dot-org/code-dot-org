@@ -122,8 +122,47 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
+  test "apply: fails if user doesn't have an application" do
+    sign_in @teacher
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :not_found
+  end
+
+  test "apply: fails if school doesn't meet eligibility requirements" do
+    sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: false # This should be true before submitting a unit 6 intention
+
+    CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
+    CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
+
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :forbidden
+  end
+
+  test "apply: fails if teacher doesn't meet eligibility requirements" do
+    sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
+
+    # These should be true before submitting a unit 6 intention
+    CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(false)
+    CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(false)
+
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :forbidden
+  end
+
   test "apply: fails if nonsense unit_6_intention provided" do
     sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
     CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
@@ -133,23 +172,14 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
-  test "apply: fails if application already exists" do
+  test "apply: updates the application with the intention" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'unsure')
+    application = create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
-    post :apply, params: {unit_6_intention: 'no'}
-    assert_response :forbidden
-  end
-
-  test "apply: fails if teacher doesn't meet eligibility requirements" do
-    sign_in @teacher
-
-    post :apply, params: {unit_6_intention: 'no'}
-    assert_response :forbidden
-  end
-
-  test "apply: creates a new CircuitPlaygroundDiscountApplication" do
-    sign_in @teacher
+    assert_nil application.unit_6_intention
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
     CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
@@ -157,8 +187,8 @@ class MakerControllerTest < ActionController::TestCase
     post :apply, params: {unit_6_intention: 'no'}
     assert_response :success
 
-    application = CircuitPlaygroundDiscountApplication.find_by_user_id(@teacher.id)
-    assert application
+    application.reload
+    assert_equal 'no', application.unit_6_intention
   end
 
   test "schoolchoice: fails if no school id provided" do
@@ -177,36 +207,26 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
-  test "schoolchoice: fails if user doesnt have application" do
+  test "schoolchoice: fails if user already has an application with a selected school" do
     sign_in @teacher
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :not_found
-  end
-
-  test "schoolchoice: fails if user not teaching unit 6" do
-    sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'unsure')
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
     post :schoolchoice, params: {nces: @school.id}
     assert_response :forbidden
   end
 
-  test "schoolchoice: fails if already confirmed school" do
+  test "schoolchoice: Creates an application" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', school_id: @school.id)
 
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :forbidden
-  end
-
-  test "schoolchoice: succeeds if user is teaching unit 6" do
-    sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718')
-
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :success
-    expected = {"full_discount" => false}
-    assert_equal expected, JSON.parse(@response.body)
+    assert_creates CircuitPlaygroundDiscountApplication do
+      post :schoolchoice, params: {nces: @school.id}
+      assert_response :success
+      expected = {"full_discount" => false}
+      assert_equal expected, JSON.parse(@response.body)
+    end
   end
 
   test "complete: fails if not given a signature" do
@@ -227,12 +247,14 @@ class MakerControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # no intention to teach unit 6
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'no')
+    application = create :circuit_playground_discount_application,
+      user_id: @teacher.id,
+      unit_6_intention: 'no'
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
     # intend to teach unit 6, but has not confirmed school
-    application.update!(unit_6_intention: 'yes1718')
+    application.update!(unit_6_intention: 'yes1819')
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
@@ -245,18 +267,12 @@ class MakerControllerTest < ActionController::TestCase
   test "complete: returns a new code" do
     sign_in @teacher
 
-    expiration = Time.now + 30.days
-    CircuitPlaygroundDiscountApplication.create!(
-      user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
-      school_id: @school.id,
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      unit_6_intention: 'yes1819',
       full_discount: true
-    )
-    code = CircuitPlaygroundDiscountCode.create!(
-      code: 'FAKE100_asdf123',
-      full_discount: true,
-      expiration: expiration
-    )
+    code = create :circuit_playground_discount_code
 
     post :complete, params: {signature: "My name"}
     assert_response :success
@@ -271,11 +287,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :success
     sign_out @admin
 
-    CircuitPlaygroundDiscountCode.create!(
-      code: 'FAKE100_asdf123',
-      full_discount: true,
-      expiration: Time.now + 30.days
-    )
+    create :circuit_playground_discount_code
 
     sign_in @teacher
     post :complete, params: {signature: "My name"}
@@ -301,12 +313,11 @@ class MakerControllerTest < ActionController::TestCase
   test "application_status: works for user with in progress application" do
     sign_in @admin
 
-    CircuitPlaygroundDiscountApplication.create!(
+    create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
+      unit_6_intention: 'yes1819',
       school_id: @school.id,
       full_discount: true
-    )
 
     get :application_status, params: {user: @teacher.id}
     assert_response :success
@@ -358,10 +369,9 @@ class MakerControllerTest < ActionController::TestCase
 
     # Application in which user has answered question about unit6 intentions, but
     # has not yet confirmed school
-    CircuitPlaygroundDiscountApplication.create!(
+    create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
-    )
+      unit_6_intention: 'yes1819'
     post :override, params: {user: @teacher.id, full_discount: true}
     assert_response :success
     expected = {
@@ -378,7 +388,7 @@ class MakerControllerTest < ActionController::TestCase
           "name" => nil,
           "high_needs" => nil,
         },
-        "unit_6_intention" => "yes1718",
+        "unit_6_intention" => "yes1819",
         "full_discount" => true,
         "admin_set_status" => true,
         "discount_code" => nil,

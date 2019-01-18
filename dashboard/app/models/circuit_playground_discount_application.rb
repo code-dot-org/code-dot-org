@@ -24,6 +24,7 @@
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
   belongs_to :circuit_playground_discount_code
+  belongs_to :school
 
   enum unit_6_intention: {
     no: 1,
@@ -80,7 +81,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     # we have a school id associated with the user
     school_id = application.try(:school_id) || user.try(:school_info).try(:school_id)
 
-    status = {
+    {
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
@@ -92,19 +93,10 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
       expiration: application.try(:circuit_playground_discount_code).try(:expiration),
-      admin_set_status: application.try(:admin_set_status) || false
+      admin_set_status: application.try(:admin_set_status) || false,
+      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_progress_eligible: student_progress_eligible?(user)
     }
-
-    if application
-      # We won't let you create an application without meeting our eligibility requirements
-      # so no need to check them again if we find an existing application
-      status.merge({is_pd_eligible: true, is_progress_eligible: true})
-    else
-      status.merge(
-        is_pd_eligible: studio_person_pd_eligible?(user),
-        is_progress_eligible: student_progress_eligible?(user)
-      )
-    end
   end
 
   # Provides admin with information about the application status of a user's
