@@ -414,14 +414,25 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.redirect_to_script_url(student)
   end
 
+  test 'returns nil if latest assigned script is an older version than the current script' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    section = create :section, script: csp1_2017
+    section.students << student
+
+    assert_nil csp1_2018.redirect_to_script_url(student)
+  end
+
   test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     create :course_script, course: csp_2017, script: csp1_2017, position: 1
     csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
     create :course_script, course: csp_2018, script: csp1_2018, position: 1
     section = create :section, course: csp_2018
     section.students << student
