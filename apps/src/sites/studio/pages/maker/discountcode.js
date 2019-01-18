@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
+import EligibilityChecklist2019 from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist2019';
 import DiscountAdminOverride from '@cdo/apps/lib/kits/maker/ui/DiscountAdminOverride';
 import { Status } from '@cdo/apps/lib/ui/ValidationStep';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -16,7 +16,7 @@ $(document).ready(() => {
         <DiscountAdminOverride/>
       }
       {!is_admin &&
-        <EligibilityChecklist
+        <EligibilityChecklist2019
           statusPD={application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED}
           statusStudentCount={application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED}
           unit6Intention={application.unit_6_intention}
@@ -27,8 +27,10 @@ $(document).ready(() => {
           initialDiscountCode={application.discount_code}
           initialExpiration={application.expiration}
           adminSetStatus={application.admin_set_status}
+          currentlyDistributingDiscountCodes
         />
       }
+      {/* TODO: Associate currentDistributingDiscountCode with a flag or user permission */}
     </div>
     , document.getElementById('discountcode')
   );
