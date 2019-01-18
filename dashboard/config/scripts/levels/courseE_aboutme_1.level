@@ -18,7 +18,7 @@
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
     "show_type_hints": "true",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "hide_custom_blocks": true,
     "embed": "false",
     "instructions_important": "false",
@@ -49,13 +49,37 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:13:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:14:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:17:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:28:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:27:26 +0000\",\"changed\":[\"block_pools\",\"helper_libraries\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:29:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:50:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:55:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:39:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:47:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:55:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:00:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:02:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:04:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:05:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:08:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:12:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:19:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:26:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:37:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:38:38 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:52:35 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 18:26:13 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 23:39:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:13:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:14:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:17:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:28:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:27:26 +0000\",\"changed\":[\"block_pools\",\"helper_libraries\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:29:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:50:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:55:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:39:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:47:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:55:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:00:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:02:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:04:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:05:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:08:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:12:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:19:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:26:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:37:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:38:38 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:52:35 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 18:26:13 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 23:39:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-15 20:53:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="gamelab_setup">
+          <next>
+            <block type="gamelab_createNewSprite">
+              <title name="NAME">ritchie</title>
+              <title name="COSTUME">"bear"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <title name="LOCATION">{"x":200,"y":200}</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_console.log">
+              <value name="MESSAGE">
+                <block type="text">
+                  <title name="TEXT">Hello, world!</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -175,30 +199,6 @@
             </block>
           </statement>
         </block>
-        <block type="gamelab_setup">
-          <next>
-            <block type="gamelab_createNewSprite">
-              <title name="NAME">dude1</title>
-              <title name="COSTUME">"green monster"</title>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker">
-                  <title name="LOCATION">{"x":67,"y":198}</title>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_createNewSprite">
-                  <title name="NAME">dude2</title>
-                  <title name="COSTUME">"hippo"</title>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <title name="LOCATION">{"x":335,"y":209}</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -220,253 +220,6 @@
               </value>
             </block>
           </statement>
-        </block>
-        <block type="when_run">
-          <next>
-            <block type="gamelab_console.log">
-              <value name="MESSAGE">
-                <block type="text">
-                  <title name="TEXT">Welcome to Text Input Event World!</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_whenKey">
-          <title name="KEY">"space"</title>
-          <next>
-            <block type="gamelab_comment">
-              <title name="COMMENT">#Simulate console input. Pressing space simulates clicking text input area in console.</title>
-              <next>
-                <block type="variables_set">
-                  <title name="VAR">input</title>
-                  <value name="VALUE">
-                    <block type="aalab_prompt">
-                      <value name="MESSAGE">
-                        <block type="text">
-                          <title name="TEXT">Simulate user text input. Try these commands: ["dude1 dance", "dude2 spin right", "everybody stop", "dude1 crab", "dude2 green", "world red"]:</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_console.log">
-                      <value name="MESSAGE">
-                        <block type="text_join_simple" inputcount="2">
-                          <value name="ADD0">
-                            <block type="text">
-                              <title name="TEXT">User entered: </title>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="variables_get">
-                              <title name="VAR">input</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_comment">
-                          <title name="COMMENT">#Imagine each if-expression below as a "user enters X" event block, with the string param and the code within being student-defined.</title>
-                          <next>
-                            <block type="controls_if">
-                              <mutation elseif="5"/>
-                              <value name="IF0">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">dude1 dance</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO0">
-                                <block type="gamelab_addBehaviorSimple">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude1</title>
-                                    </block>
-                                  </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
-                                      <mutation/>
-                                      <title name="VAR">jittering</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_addBehaviorSimple">
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">dude1</title>
-                                        </block>
-                                      </value>
-                                      <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get">
-                                          <mutation/>
-                                          <title name="VAR">wandering</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                              <value name="IF1">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">dude2 spin right</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO1">
-                                <block type="gamelab_addBehaviorSimple">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude2</title>
-                                    </block>
-                                  </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
-                                      <mutation/>
-                                      <title name="VAR">spinning right</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                              <value name="IF2">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">everybody stop</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO2">
-                                <block type="gamelab_removeAllBehaviors">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude1</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_removeAllBehaviors">
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <title name="VAR">dude2</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                              <value name="IF3">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">dude1 crab</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO3">
-                                <block type="gamelab_setAnimation">
-                                  <title name="ANIMATION">"crab"</title>
-                                  <value name="THIS">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude1</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                              <value name="IF4">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">dude2 green</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO4">
-                                <block type="gamelab_setTint">
-                                  <value name="THIS">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">dude2</title>
-                                    </block>
-                                  </value>
-                                  <value name="COLOR">
-                                    <block type="colour_picker">
-                                      <title name="COLOUR">#33cc00</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                              <value name="IF5">
-                                <block type="logic_compare">
-                                  <title name="OP">EQ</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">input</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="text">
-                                      <title name="TEXT">world red</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO5">
-                                <block type="gamelab_setBackground">
-                                  <value name="COLOR">
-                                    <block type="colour_picker">
-                                      <title name="COLOUR">#ff0000</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
