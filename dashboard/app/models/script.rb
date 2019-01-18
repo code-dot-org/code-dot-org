@@ -451,11 +451,14 @@ class Script < ActiveRecord::Base
     return true unless user.student?
 
     # A student can view the script version if...
-    # it is the latest stable version, they are assigned to it, or they have progress in it.
-    latest_script_version = Script.latest_stable_version(family_name, locale: locale)
+    # 1) it is the latest stable version in English, 2) it is the latest stable version in their locale,
+    # 3) they are assigned to it, 4) or they have progress in it.
+    return true if Script.latest_stable_version(family_name) == self
+
+    latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     has_progress = user.scripts.include?(self)
 
-    latest_script_version == self || user.assigned_script?(self) || has_progress
+    latest_stable_version_in_locale == self || user.assigned_script?(self) || has_progress
   end
 
   # @param family_name [String] The family name for a script family.
