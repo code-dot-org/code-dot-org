@@ -1,11 +1,19 @@
 import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
+import color from "@cdo/apps/util/color";
 import DiscountCodeSchoolChoice from "./DiscountCodeSchoolChoice";
 import Button from "@cdo/apps/templates/Button";
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 import Unit6ValidationStep from "./Unit6ValidationStep";
 import EligibilityConfirmDialog from "./EligibilityConfirmDialog";
+import DiscountCodeInstructions from './DiscountCodeInstructions';
+
+const styles = {
+  main: {
+    color: color.charcoal
+  }
+};
 
 export default class EligibilityChecklist2019 extends React.Component {
   static propTypes = {
@@ -27,9 +35,10 @@ export default class EligibilityChecklist2019 extends React.Component {
     schoolEligible: null,
     statusYear: Status.UNKNOWN,
     yearChoice: null, // stores the teaching-year choice until submitted
-    // submitting: false,
-    // confirming: false,
-    // discountCode: null
+    submitting: false,
+    confirming: false,
+    discountCode: null,
+    expiration: null,
   };
 
   constructor(props) {
@@ -53,6 +62,12 @@ export default class EligibilityChecklist2019 extends React.Component {
         schoolEligible: !!props.getsFullDiscount
       };
     }
+
+    this.state = {
+      ...this.state,
+      discountCode: props.initialDiscountCode,
+      expiration: props.initialExpiration,
+    };
   }
 
   handleSchoolConfirmed = ({schoolId, fullDiscount}) => {
@@ -77,6 +92,26 @@ export default class EligibilityChecklist2019 extends React.Component {
   };
 
   render() {
+    if (this.state.discountCode) {
+      return (
+        <DiscountCodeInstructions
+          discountCode={this.state.discountCode}
+          expiration={this.state.expiration}
+        />
+      );
+    }
+
+    if (!this.props.currentlyDistributingDiscountCodes) {
+      return (
+        <div style={styles.main}>
+          <h2>Discount codes are no longer available</h2>
+          <p>
+            Sorry, we are no longer distributing Adafruit discount codes at this time.
+          </p>
+        </div>
+      );
+    }
+
     return (
       <div>
         <h1>{discountPageHeader}</h1>
