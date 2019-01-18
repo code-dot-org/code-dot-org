@@ -360,7 +360,7 @@ class Course < ApplicationRecord
     # Redirect user to the latest assigned course in this course family,
     # if one exists and it is newer than the current course.
     latest_assigned_version = Course.latest_assigned_version(family_name, user)
-    return nil if latest_assigned_version.nil? || latest_assigned_version.version_year < version_year
+    return nil unless latest_assigned_version.present? && latest_assigned_version.version_year > version_year
     latest_assigned_version.link
   end
 

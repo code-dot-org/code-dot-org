@@ -429,13 +429,17 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
   def redirect_to_script_url(user, locale: nil)
+    # Only redirect students.
+    return nil unless user && user.student?
     # No redirect unless user is allowed to view this script version and they are not already assigned to this script
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
 
-    # Redirect user to the latest assigned script in this family, if one exists.
-    script = Script.latest_assigned_version(family_name, user)
-    script&.link
+    # Redirect user to the latest assigned script in this family,
+    # if one exists and it is newer than the current script.
+    latest_assigned_version = Script.latest_assigned_version(family_name, user)
+    return nil unless latest_assigned_version.present? && latest_assigned_version.version_year > version_year
+    latest_assigned_version.link
   end
 
   def link
