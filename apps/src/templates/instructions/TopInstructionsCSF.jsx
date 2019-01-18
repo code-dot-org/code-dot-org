@@ -624,7 +624,7 @@ class TopInstructions extends React.Component {
             </div>
             {showAudioControls &&
               <div style={styles.audioControls}>
-                <InlineAudio src={ttsUrl} style={audioStyle}/>
+                <InlineAudio src={this.props.ttsLongInstructionsUrl} style={audioStyle}/>
               </div>
             }
           </div>
