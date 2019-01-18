@@ -172,7 +172,7 @@ class RegionalPartnerSearch extends Component {
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
-          <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
+          <div style={styles.noState}>Please enter a valid 5 digit ZIP code.</div>
         )}
 
         {this.state.loading && (
