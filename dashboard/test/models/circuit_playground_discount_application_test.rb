@@ -15,10 +15,14 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1718')
-    assert application.eligible_unit_6_intention?
+    refute application.eligible_unit_6_intention?
     application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1819')
+    assert application.eligible_unit_6_intention?
+    application.destroy
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1920')
     assert application.eligible_unit_6_intention?
     application.destroy
 
@@ -112,8 +116,8 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       gets_full_discount: nil,
       discount_code: nil,
       expiration: nil,
-      is_pd_eligible: true,
-      is_progress_eligible: true,
+      is_pd_eligible: false,
+      is_progress_eligible: false,
       admin_set_status: false,
     }
     assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
@@ -132,8 +136,8 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       gets_full_discount: true,
       discount_code: nil,
       expiration: nil,
-      is_pd_eligible: true,
-      is_progress_eligible: true,
+      is_pd_eligible: false,
+      is_progress_eligible: false,
       admin_set_status: true,
     }
     assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
