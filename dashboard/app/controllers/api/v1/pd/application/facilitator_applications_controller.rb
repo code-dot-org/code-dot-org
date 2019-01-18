@@ -13,7 +13,6 @@ module Api::V1::Pd::Application
 
     def on_successful_create
       @application.queue_email :confirmation, deliver_now: true
-      @application.update_status_timestamp_change_log(current_user)
     end
   end
 end
