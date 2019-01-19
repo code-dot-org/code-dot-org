@@ -493,7 +493,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'notify honeybadger if new entries are not created' do
     PeerReview.stubs(:create_for_submission)
     Honeybadger.stubs(:notify)
-    Honeybadger.expects(:notify).never
+    Honeybadger.expects(:notify).once
 
     track_progress @level_source.id
 
