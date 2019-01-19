@@ -196,7 +196,7 @@ class ScriptOverviewHeader extends Component {
           <Notification
             type={NotificationType.warning}
             notice=""
-            details={i18n.redirectScriptVersionWarningDetails()}
+            details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={this.onDismissRedirectWarning}
