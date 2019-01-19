@@ -17,6 +17,7 @@ import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import dismissVersionRedirect from '@cdo/apps/util/dismissVersionRedirect';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -63,6 +64,7 @@ class ScriptOverview extends React.Component {
   }
 
   onCloseRedirectDialog = () => {
+    dismissVersionRedirect.onDismissRedirectDialog(this.props.scriptName);
     this.setState({
       showRedirectDialog: false,
     });
@@ -108,7 +110,7 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
-            {redirectScriptUrl &&
+            {redirectScriptUrl && !dismissVersionRedirect.dismissedRedirectDialog(scriptName) &&
               <RedirectDialog
                 isOpen={this.state.showRedirectDialog}
                 details={i18n.assignedToNewerVersion()}
