@@ -55,11 +55,28 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
   def self.user_pd_eligible?(user)
-    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
-
-    return true if user.cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
+    return true if user_pd_eligible_as_teacher?(user)
     return true if user.courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
     return false
+  end
+
+  private_class_method def self.user_pd_eligible_as_teacher?(user)
+    Pd::Attendance.
+      joins(:workshop).
+      where(
+        pd_attendances: {
+          teacher_id: user.id
+        },
+        pd_workshops: {
+          course: Pd::Workshop::COURSE_CSD,
+          subject: [
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+            Pd::Workshop::SUBJECT_TEACHER_CON
+          ]
+        }
+      ).
+      where("pd_workshops.started_at > '2018-05-01'").
+      exists?
   end
 
   # Looks to see if any of the users associated with this studio_person_id are eligibile
