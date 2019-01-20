@@ -47,35 +47,86 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     assert_equal 'unsure', app1.unit_6_intention
   end
 
-  test 'studio_person_pd_eligible? returns true if attended a CSD TeacherCon' do
+  test 'studio_person_pd_eligible? returns true if attended a CSD TeacherCon this year' do
     teacher = create :teacher
-    @csd_cohort.teachers << teacher
-    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(teacher)
+    create :pd_attendance,
+      teacher: teacher,
+      workshop: create(:pd_workshop,
+        course: Pd::Workshop::COURSE_CSD,
+        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+        started_at: DateTime.parse('2018-05-02')
+      )
+
+    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
+  end
+
+  test 'studio_person_pd_eligible? returns true if attended a CSD Summer Workshop this year' do
+    teacher = create :teacher
+    create :pd_attendance,
+      teacher: teacher,
+      workshop: create(:pd_workshop,
+        course: Pd::Workshop::COURSE_CSD,
+        subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+        started_at: DateTime.parse('2018-05-02')
+      )
+
+    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
   end
 
   test 'studio_person_pd_eligible? returns false if a member of other cohorts, not CSD' do
     teacher = create :teacher
-    @other_cohort.teachers << teacher
-    assert_equal false, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(teacher)
+    create :pd_attendance,
+      teacher: teacher,
+      workshop: create(:pd_workshop,
+        course: Pd::Workshop::COURSE_CSP,
+        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+        started_at: DateTime.parse('2018-05-02')
+      )
+
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
   end
 
-  test 'studio_person_pd_eligible? returns true if a CSD facilitator' do
-    course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSD
-    user = course_facilitator.facilitator
-    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user)
+  test 'studio_person_pd_eligible? returns false if teacher attended an older event' do
+    teacher = create :teacher
+    create :pd_attendance,
+      teacher: teacher,
+      workshop: create(:pd_workshop,
+        course: Pd::Workshop::COURSE_CSD,
+        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+        started_at: DateTime.parse('2017-05-02')
+      )
+
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
   end
 
-  test 'studio_person_pd_eligible? returns false if a non-CSD facilitator' do
-    course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSP
-    user = course_facilitator.facilitator
-    assert_equal false, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user)
+  test 'studio_person_pd_eligible? returns true if user is on the eligible facilitator list' do
+    facilitator = create :facilitator
+    DCDO.stubs(:get).
+      with('facilitator_ids_eligible_for_maker_discount', []).
+      returns([facilitator.id])
+    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(facilitator)
+  end
+
+  test 'studio_person_pd_eligible? returns false if user is not on the facilitator list' do
+    facilitator = create :facilitator
+    DCDO.stubs(:get).
+      with('facilitator_ids_eligible_for_maker_discount', []).
+      returns([])
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(facilitator)
   end
 
   test 'studio_person_pd_eligible? returns true if studio_person_id associated User is eligible' do
     user1 = create :teacher
     user2 = create :teacher, studio_person_id: user1.studio_person_id
 
-    @csd_cohort.teachers << user1
+    create :pd_attendance,
+      teacher: user1,
+      workshop: create(:pd_workshop,
+        course: Pd::Workshop::COURSE_CSD,
+        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+        started_at: DateTime.parse('2018-05-02')
+      )
+
     assert_equal true, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user1)
     assert_equal false, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user2)
 
