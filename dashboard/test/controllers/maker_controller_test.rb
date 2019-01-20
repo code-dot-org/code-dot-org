@@ -230,6 +230,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: fails if not given a signature" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
     assert_raises ActionController::ParameterMissing do
@@ -238,12 +239,14 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: fails if user doesnt have application" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
     post :complete, params: {signature: "My Name"}
     assert_response :not_found
   end
 
   test "complete: fails if application not in the right state" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
     # no intention to teach unit 6
@@ -265,6 +268,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: returns a new code" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
     create :circuit_playground_discount_application,
@@ -281,6 +285,8 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: works after admin override" do
+    DCDO.stubs(:get).with('facilitator_ids_eligible_for_maker_discount', []).returns([])
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @admin
 
     post :override, params: {user: @teacher.id, full_discount: true}
