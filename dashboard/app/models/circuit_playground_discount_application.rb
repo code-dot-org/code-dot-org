@@ -53,11 +53,9 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     where(user_id: associated_user_ids).first
   end
 
-  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
   def self.user_pd_eligible?(user)
-    return true if user_pd_eligible_as_teacher?(user)
-    return true if user.courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
-    return false
+    user_pd_eligible_as_teacher?(user) || user_pd_eligible_as_facilitator?(user)
   end
 
   private_class_method def self.user_pd_eligible_as_teacher?(user)
@@ -77,6 +75,13 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       ).
       where("pd_workshops.started_at > '2018-05-01'").
       exists?
+  end
+
+  private_class_method def self.user_pd_eligible_as_facilitator?(user)
+    # We've got a specific list of facilitators eligible for the discount this year.
+    # Storing it in DCDO since this is a temporary list and not necessarily worth its
+    # own Rails model.
+    DCDO.get('facilitator_ids_eligible_for_maker_discount', []).include? user.id
   end
 
   # Looks to see if any of the users associated with this studio_person_id are eligibile
