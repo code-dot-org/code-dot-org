@@ -41,7 +41,7 @@ class CompletionButton extends Component {
       return <div/>;
     }
 
-    if (this.props.isSubmittable) {
+    if (this.props.isSubmittable || this.props.isSubmitted) {
       if (this.props.isSubmitted) {
         id = 'unsubmitButton';
         contents = msg.unsubmit();
