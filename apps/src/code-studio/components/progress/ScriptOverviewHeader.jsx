@@ -76,6 +76,7 @@ class ScriptOverviewHeader extends Component {
       version_title: PropTypes.string.isRequired,
     })).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
   };
 
   componentDidMount() {
@@ -149,9 +150,10 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
+      courseName,
     } = this.props;
 
-
+    const displayVersionWarning = showRedirectWarning && !dismissVersionRedirect.dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -174,14 +176,14 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        {(showRedirectWarning && !dismissVersionRedirect.dismissedRedirectWarning(scriptName)) &&
+        {displayVersionWarning &&
           <Notification
             type={NotificationType.warning}
             notice=""
             details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
-            onDismiss={() => dismissVersionRedirect.onDismissRedirectWarning(scriptName)}
+            onDismiss={() => dismissVersionRedirect.onDismissRedirectWarning(courseName || scriptName)}
           />
         }
         {versionWarningDetails &&
