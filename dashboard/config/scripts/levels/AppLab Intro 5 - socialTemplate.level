@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Add a button to the screen for scrolling to the next image. Give it a good icon, like a right arrow. In the next level you'll make it work.\r\n\r\n**How:** Use Design Mode to drag in a button. The icon library has many different arrows to choose from. Don't forget you can search for them.\r\n\r\n**Show Me:** ",
+    "long_instructions": "**Goal:** Add a button to the screen for scrolling to the next image. Give it a good icon, like a right arrow. In the next level you'll make it work.\r\n\r\n**How:** Use Design Mode to drag in a button. The icon library has many different arrows to choose from. Don't forget you can search for them.\r\n\r\n**Show Me:** ",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

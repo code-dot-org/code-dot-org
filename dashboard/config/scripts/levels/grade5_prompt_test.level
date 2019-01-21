@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
+    "short_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,7 +44,7 @@
     "examples_required": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "markdown_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
+    "long_instructions": "Variables aren't always numbers. What if you wanted to store a word or text? Experiment with the new `ask` block.",
     "first_sprite_index": "0",
     "contained_level_names": null
   },

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "String and Substring: Assessment 3",
-    "markdown_instructions": "What is the output of this code segment?\n\n\tvar sentence = \"This sentence contains five words?\";\n\tvar spaceIndex = sentence.indexOf(\" \");\n\tvar smallerSentence = sentence.substring(spaceIndex + 1, sentence.length);\n\tconsole.log(smallerSentence);\n\n<br/>\n",
+    "long_instructions": "What is the output of this code segment?\n\n\tvar sentence = \"This sentence contains five words?\";\n\tvar spaceIndex = sentence.indexOf(\" \");\n\tvar smallerSentence = sentence.substring(spaceIndex + 1, sentence.length);\n\tconsole.log(smallerSentence);\n\n<br/>\n",
     "skip_dialog": true,
     "skip_sound": true
   },

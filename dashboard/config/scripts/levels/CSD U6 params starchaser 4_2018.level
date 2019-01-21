@@ -185,7 +185,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nNow make it work for all the stars\r\n\r\n# Do This\r\n* Create a `checkStars()` functions that uses a `for` loop to check every star in the star array.\r\n* Test your code by calling the `checkStars()` function inside the event block.",
+    "long_instructions": "# Star Chaser\r\n\r\nNow make it work for all the stars\r\n\r\n# Do This\r\n* Create a `checkStars()` functions that uses a `for` loop to check every star in the star array.\r\n* Test your code by calling the `checkStars()` function inside the event block.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

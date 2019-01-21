@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "How many degrees are in a circle?  Fill in the repeat block with that number to create a circle of colors.",
+    "short_instructions": "How many degrees are in a circle?  Fill in the repeat block with that number to create a circle of colors.",
     "x": "200",
     "y": "200",
     "start_direction": "0",
@@ -22,7 +22,7 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"repeat_full_circle\",\"callout_text\":\"Enter in the number of times the zombie has to move to make a full circle\",\"element_id\":\"#repeat_block_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
-    "markdown_instructions": "How many degrees are in a circle?  \r\nFill in the repeat block with that number to create a circle of colors.",
+    "long_instructions": "How many degrees are in a circle?  \r\nFill in the repeat block with that number to create a circle of colors.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

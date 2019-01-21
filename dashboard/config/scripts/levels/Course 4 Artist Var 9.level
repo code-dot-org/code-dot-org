@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's the algorithm to draw a triangle, modify it so it uses the \"sides\" variable instead. Replace the number 3 with the \"sides\" variable. Hint: remember to use the \"set sides to\" block.",
+    "short_instructions": "Here's the algorithm to draw a triangle, modify it so it uses the \"sides\" variable instead. Replace the number 3 with the \"sides\" variable. Hint: remember to use the \"set sides to\" block.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

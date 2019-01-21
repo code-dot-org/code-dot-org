@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "These blocks don't work. What's the pattern?",
+    "short_instructions": "These blocks don't work. What's the pattern?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

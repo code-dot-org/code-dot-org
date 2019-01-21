@@ -33,7 +33,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "See all angles of Stevie and Jorge",
+    "short_instructions": "See all angles of Stevie and Jorge",
     "soft_buttons": [
       "rightButton"
     ],

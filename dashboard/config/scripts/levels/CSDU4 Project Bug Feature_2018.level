@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Improving and Iterating\r\n\r\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\r\n\r\n# Do This\r\n\r\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\r\n\r\n* Add a comment to the top of your program describing the feature or bug fix you are implementing\r\n* Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\r\n* When done, move your sticky to the **Done** column, pick a new one, and start the process over.",
+    "long_instructions": "# Improving and Iterating\r\n\r\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\r\n\r\n# Do This\r\n\r\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\r\n\r\n* Add a comment to the top of your program describing the feature or bug fix you are implementing\r\n* Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\r\n* When done, move your sticky to the **Done** column, pick a new one, and start the process over.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
