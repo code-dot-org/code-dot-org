@@ -8,8 +8,8 @@ sk:
         title: Algoritmické myslenie
         desc: Stačia papiere a fixky na to, aby sa študenti naučili štyri kroky algoritmického myslenia. Po krátkom úvode sa študenti rozdelia do skupín, v ktorých budú pre ostatných študentov vytvárať návod ako nakresliť konkrétnu príšerku (zo zoznamu vopred vybraných príšeriek). Celú úlohu si tímy musia najprv rozložiť, následne analyzovať všetky príšerky zo zoznamu, predstaviť si rôzne detaily príšeriek a potom použiť všetky tieto informácie pri vytvorení algoritmu (inštrukcií) pre iný tím, ktorý má nakresliť konkrétnu príšerku. Tímy si navzájom vymenia návody a pokúsia sa nakresliť príšerku podľa uvedeného návodu. Je kresba podobná tomu, čo si pôvodný tím vybral?
       Unplug3:
-        title: Programovanie na milimetrovom papieri
-        desc: '"Naprogramovaním" jeden druhého tak, aby kreslili obrázky, študenti začnú chápať, o čom skutočne programovanie je. Hodina začne tým, že študenti si budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na milimetrovom papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
+        title: Programovanie na štvorčekový papier
+        desc: '"Naprogramovaním" jeden druhého tak, aby kreslili obrázky, študenti začnú chápať, o čom skutočne programovanie je. Hodina začne tým, že študenti si budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na štvorčekovom papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
       Unplug4:
         title: Algoritmy
         desc: Táto lekcia pokrýva algoritmy. Pomocou tangramov a štvorčekového papiera vám prvá úloha ukáže, aké dôležité je definovať každú inštrukciu jasne a jednoznačne. Následne trieda preskúma, koľkými možnými spôsobmi môžeme zložiť papier do obdĺžnika a porovná počet zložení potrebný v jednotlivých postupoch.
@@ -62,7 +62,7 @@ sk:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia, ako bezpečne surfovať po internete.
       GraphPaperProgramming:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       PaperPlanes:
         title: 'Algoritmus z reálneho života: Papierové lietadielka'
@@ -180,7 +180,7 @@ sk:
         title: Binárne náramky
         desc: Študenti vytvoria náramky ako binárne znázornenia prvého písmena ich krstného mena. Študenti sa naučia, že údaje môžu byť reprezentované a uložené viac ako jedným spôosobom.
       courseD_unplugged_graphPaperProgramming:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       courseD_unplugged_relayProgramming:
         title: Štafetové programovanie
@@ -245,10 +245,10 @@ sk:
         title: Veľká udalosť
         desc: Študenti sa oboznámia s úvodným konceptom programovania udalostí, ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo je práve stlačené.
       GraphPaperProgramming_2018:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivity bez počítača
@@ -304,13 +304,13 @@ sk:
         title: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
-        title: Programovanie na milimetrovom papieri
+        title: Programovanie na štvorčekový papier
         desc: Študenti napíšu algoritmus (sadu inštrukcií) použitím sady preddefinovaných príkazov, aby mohli ich spolužiaci pomocou týchto pokynov reprodukovať obrázok.
       RelayProgramming_2018_2019:
         title: Štafetové programovanie
         desc: Táto aktivita začne krátkym školením o hľadaní a opravovaní chýb a o potrebe vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Aktivity bez počítača
+        title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť Občanom v digitálnom svete.
       BinaryImages_2019:
         title: Binárne obrázky

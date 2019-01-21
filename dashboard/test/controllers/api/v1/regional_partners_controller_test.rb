@@ -290,4 +290,12 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal "no_state", JSON.parse(@response.body)['error']
   end
+
+  test 'find no regional partner summer workshops for non-existent ZIP code' do
+    Geocoder.expects(:search).returns([])
+
+    get :find, zip_code: 11111
+    assert_response :success
+    assert_equal "no_state", JSON.parse(@response.body)['error']
+  end
 end

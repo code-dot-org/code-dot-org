@@ -1846,7 +1846,7 @@ zh-TW:
               name: 不插電活動 - 條件判斷帶迴圈
         csd3-2017:
           title: CSD 單元 3 -互動式遊戲和動畫
-          description_short: "Game Lab 編程環境介紹"
+          description_short: Game Lab 編程環境介紹
           stages:
             Complex Conditionals:
               name: 複合條件判斷
@@ -3818,3 +3818,5 @@ zh-TW:
               name: '迴圈：學習迴圈'
             Binary Bracelets:
               name: 二進制手環
+        gamelab:
+          title: Game Lab

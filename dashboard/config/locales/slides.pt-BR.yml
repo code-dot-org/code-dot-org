@@ -3614,6 +3614,45 @@ pt-BR:
           Mas a única coisa que faz de um computador inteligente, ou útil, é você.
           Quando você aprende a programar você consegue definir o problema que você
           quer resolver, e escrever o software que torna estas ideias realidade.
+    hoc_dance_warmup:
+      1:
+        text: 'Hora do Código | Festa da Dança: Aquecimento'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11: 
+      12: 
+      13: 
+    hoc_dance_events:
+      1:
+        text: 'Hora do Código | Festa da Dança: Eventos'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+    hoc_dance_properties:
+      1:
+        text: 'Hora do Código | Festa da Dança: Propriedades'
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
     mc_2018_intro:
       1: 
       2: 
@@ -3627,3 +3666,15 @@ pt-BR:
       9: 
       10: 
       11: 
+    mc_2018_closing:
+      1: 
+      2:
+        text: 'Squid: Parabéns!'
+      3:
+        text: 'Netty: Você conseguiu! Parabéns!'
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 

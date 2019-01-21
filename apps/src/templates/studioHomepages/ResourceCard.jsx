@@ -12,6 +12,9 @@ const styles = {
     width: 310,
     background: color.teal,
   },
+  cardSmall: {
+    width: "100%"
+  },
   cardAllowWrap: {
     position: 'relative',
   },
@@ -29,6 +32,10 @@ const styles = {
     display: 'inline',
     boxSizing: 'border-box',
   },
+  titleSmall: {
+    width: "100%",
+    boxSizing: 'border-box'
+  },
   titleNoWrap: {
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
@@ -44,6 +51,10 @@ const styles = {
     height: 140,
     marginBottom: 5,
     overflowY: 'auto',
+  },
+  descriptionSmall: {
+    width: "100%",
+    boxSizing: 'border-box'
   },
   button: {
     marginLeft: 20,
@@ -69,6 +80,7 @@ class ResourceCard extends Component {
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
+    responsiveSize: PropTypes.string.isRequired,
     allowWrap: PropTypes.bool,
     allowDangerouslySetInnerHtml: PropTypes.bool,
     linkId: PropTypes.string,
@@ -86,12 +98,20 @@ class ResourceCard extends Component {
       allowDangerouslySetInnerHtml,
       linkId,
       linkClass,
+      responsiveSize,
     } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    let buttonStyles = [styles.button];
-    let cardStyles = [styles.card, localeStyle];
-    let titleStyles = [styles.title, styles.text, localeStyle];
-    let descriptionStyles = [styles.text, styles.description, localeStyle];
+
+    const buttonStyles = [styles.button];
+    const cardStyles = [styles.card, localeStyle];
+    const titleStyles = [styles.title, styles.text, localeStyle];
+    const descriptionStyles = [styles.text, styles.description, localeStyle];
+
+    if (['sm', 'xs'].includes(responsiveSize)) {
+      cardStyles.push(styles.cardSmall);
+      titleStyles.push(styles.titleSmall);
+      descriptionStyles.push(styles.descriptionSmall);
+    }
 
     if (allowWrap) {
       buttonStyles.push(styles.buttonAllowWrap);
@@ -133,4 +153,5 @@ class ResourceCard extends Component {
 
 export default connect(state => ({
   isRtl: state.isRtl,
+  responsiveSize: state.responsive.responsiveSize,
 }))(Radium(ResourceCard));

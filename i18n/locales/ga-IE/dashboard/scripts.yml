@@ -883,7 +883,7 @@ ga:
             'Farmer: While Loops':
               name: 'Feirmeoir: Lúba "Chomh fada is"'
         csd3-2017:
-          description_short: "Códáil"
+          description_short: Códáil
           stages:
             Velocity:
               name: Treoluas
@@ -1634,3 +1634,5 @@ ga:
               name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
             Binary Bracelets:
               name: Bráisléid Dhénártha
+        gamelab:
+          title: An tSaotharlann Cluichíochta

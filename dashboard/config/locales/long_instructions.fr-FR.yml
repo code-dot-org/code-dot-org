@@ -77,6 +77,10 @@ fr:
         a hexagon`, but it's still giving us squares!  \r\n\r\nCan\nyou modify the
         `draw a hexagon` function to draw a hexagon with 50 pixel sides?\n\r\n\r\nDraw
         the image using the new function!"
+      2-3 Artist Functions 11.5 a: |-
+        Voici cette même fonction ˋdessiner un hexagone`.
+
+        Que se passe-t-il si tu fais boucler le programme principal **6** fois en tournant de **60** degrés à chaque boucle ?
       2-3 Artist Functions 11.5: Voici cette même fonction « dessiner un hexagone ».
         Que se passe-t-il si tu mets seulement 60 degrés à chaque fois que tu boucles ?
       2-3 Artist Functions 11: "We've renamed the `draw a square`\nfunction to `draw
@@ -211,8 +215,15 @@ fr:
       2-3 Bee Functions 4: La fonction «Déplacer et obtenir le nectar» déplace l'abeille,
         recueille le nectar et renvoie l'abeille là où elle a commencé. Utilise la
         fonction pour récolter tout le nectar.
+      2-3 Bee Functions Assessment 1: "**Évaluation :** Utilise les fonctions données
+        pour recueillir le nectar de chaque fleur."
+      2-3 Bee Functions Assessment 2: "**Évaluation :** Crée une fonction pour tourner,
+        avancer et fabriquer du miel 3 fois, puis faire retourner l’abeille au point
+        de départ et la retourner."
       2-3 Bee Loops 1: 'Chaque fleur contient une unité de nectar. Récolte le nectar
         de chacune des fleurs. '
+      2-3 Bee Loops 13: "**Évaluation :** Recueille tout le nectar en utilisant le
+        moins de blocs possible."
       2-3 Bee Loops 3A: Peux-tu utiliser une boucle pour recueillir tout ce nectar
         ?
       2-3 Bee Loops 3B: Maintenant, utilise le nouveau bloc «Répéter» pour recueillir
@@ -228,6 +239,8 @@ fr:
       2-3 Bee Loops 8: Ces fleurs pourpres ont une quantité inconnue de nectar. Utilise
         une boucle «Tant que nectar» pour recueillir tout le nectar. Cette boucle
         s'exécutera tant que la condition est vraie, dans ce cas «Nectar > 0».
+      2-3 Bee Loops Assessment 1: "**Évaluation :** Utilise une boucle `tant que`
+        pour recueillir tout le nectar de ces fleurs."
       2-3 Maze 1: "Can you help me catch the naughty\npig? \r\n\r\nStack a couple
         of `move forward` blocks below the `when run`\nblock and press \"Run\". "
       2-3 Maze 12 - One Move Block: "Get the mean pig! But this\ntime, you can only
@@ -236,6 +249,8 @@ fr:
       2-3 Maze 12: "Suddenly, a magical block appears!  With\nthe `repeat` block,
         you can loop code over and over.\\\r\n\\\r\nCan you get to\nthe pig by creating
         a loop that uses only one `move forward` block inside\nof a `repeat`?"
+      2-3 Maze 13: Amène-moi au cochon ! Tu ne peux utiliser qu’un seul bloc ˋavancer
+        plus` cette fois-ci
       2-3 Maze 15: Utilise deux boucles « Répéter » pour aller au cochon avec le plus
         petit nombre de blocs possible.
       2-3 Maze Loops 18: |-
@@ -243,6 +258,8 @@ fr:
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       2-3 Maze Loops 19: "Let's take this to another level!\n\r\n\r\nUse loops to
         get me to the sunflower with the fewest loops possible."
+      2-3 Maze Loops Assessment 1: "**Évaluation :** Amène-moi au tournesol en n’utilisant
+        que 5 blocs ! "
       4-5 Artist 1: "Help me finish drawing my box. (Each line\nis 300 pixels long)
         \r\n\r\n"
       4-5 Artist 10: Appuie sur « Exécuter » pour tester le code. Ensuite, répète-le
@@ -271,6 +288,8 @@ fr:
         line."
       4-5 Artist 9: "Draw the right half of this image so that\nthe design is symmetrical.
         \r\nThe triangles are equilateral and have sides\nthat are 50 pixels long."
+      4-5 Artist Assessment 1: "**Évaluation :** Utilise une boucle pour dessiner
+        le triangle équilatéral. Chaque côté fait 300 pixels."
       4-5 Artist Free Draw 1: Dessin libre !  Dessine tout ce qui t’inspire.
       4-5 Artist Patterns 1: Peux-tu dessiner ce carré à l'aide d'une boucle ? Chaque
         côté mesure 20 pixels de long.
@@ -345,6 +364,7 @@ fr:
       4-5 Bee Debugging 1: Ces blocs-là me gênent vraiment. Peux-tu les réparer ?
       4-5 Bee Debugging 6: La fleur pourpre a une quantité inconnue de nectar. Répare
         les blocs pour obtenir tout le nectar de la fleur.
+      4-5 Bee Debugging Assessment 1: "**Évaluation :** Corrige le code."
       4-5 Bee Nested Loops 2: "Collect all of the nectar from\neach flower. \r\n\r\nUse
         a nested loop. "
       4-5 Bee Nested Loops 4: Recueille tout le nectar de chaque fleur et fabrique
@@ -354,6 +374,8 @@ fr:
       4-5 Maze 7: "Get the zombie to the sunflower quickly!  \r\n\r\nCan\nyou solve
         the puzzle in fewer than 11 blocks?"
       4-5 Maze 9: Crée une boucle avec le bloc « Répéter jusqu’à ».
+      4-5 Maze Assessment 1: "**Évaluation :** Va au tournesol en utilisant le moins
+        de blocs possible."
       4-5 Maze Conditionals 1: Utilise le bloc « Répéter jusqu'à » pour amener le
         zombie au tournesol.
       4-5 Maze Conditionals 10: "Peux tu rajouter juste 3 blocs pour aider le zombie
@@ -401,6 +423,8 @@ fr:
       4-5 Nested Loops 8: 'Boucle ce dessin 6 fois. De combien dois-tu tourner chaque
         fois que tu fais une boucle ? (Indice : combien fait 360 divisé par 6?)'
       4-5 Nested Loops 9: Dessine les dents dans la bouche de l'alligator !
+      4-5 Nested Loops Assessment 1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       4-5 While Loops 1: Déplace-moi vers le trou et remplis-le avec deux pelletées
         de terre, en utilisant le bloc «Remplir».
       4-5 While Loops 2: Déplace-moi vers le tas de terre et enlève-le en 5 coups
@@ -11958,6 +11982,8 @@ fr:
       grade3_Conditionals_10: 'Recueille le nectar et fabrique du miel. Indice : que
         se passe-t-il si tu utilises l’instruction conditionnelle «Si nectar» sur
         une fleur rouge ? Peux-tu terminer ceci avec une boucle ?'
+      grade3_Conditionals_11 BAD: "**Évaluation :** Utilise une boucle `tant que`
+        pour recueillir tout le nectar de ces fleurs."
       grade3_Conditionals_11: "Let's put everything together!\r\n\r\nUse\nwhat you've
         learned to help me collect nectar only from flowers that have\nit, using as
         few blocks as possible.  \r\n\r\nDon't forget to make honey\nat the end."
@@ -12000,14 +12026,20 @@ fr:
         Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour
         voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du
         nectar.
+      grade3_maze_Loop1: "**Évaluation :** Amène-moi au tournesol en n’utilisant que
+        5 blocs ! "
       grade3_maze_loops2: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       grade3_maze_nestedLoops2: "Suddenly, a magical block appears!  With\nthe `repeat`
         block, you can loop code over and over.\\\r\n\\\r\nCan you get to\nthe pig
         by creating a loop that uses only one `move forward` block inside\nof a `repeat`?"
+      grade3_maze_nestedLoops3: Amène-moi au cochon ! Tu ne peux utiliser qu’un seul
+        bloc ˋavancer plus` cette fois-ci
       grade3_maze_nestedLoops4: Utilise deux boucles « Répéter » pour aller au cochon
         avec le plus petit nombre de blocs possible.
+      grade4_arist_nested_loop_circles1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       grade4_arist_nested_loop_flags1: Insère le code fourni dans une boucle pour
         créer un moulin à vent.
       grade4_arist_nested_loop_polygons1: 'Boucle ce dessin 10 fois. De combien dois-tu
@@ -12060,6 +12092,8 @@ fr:
         to use trial and error. You are not expected to\nget it perfect the first
         time.\r\n\r\nThe repeated shape is almost identical\nto the one from the last
         puzzle, except that the length used in the first\nloop is a little smaller. "
+      grade4_artist_nested_loop_circles1: "**Évaluation :** Utilise une boucle imbriquée
+        pour terminer le dessin."
       grade4_artist_nested_loop_flags1: Insère le code fourni dans une boucle pour
         créer un moulin à vent.
       grade4_artist_nested_loop_polygons1: 'Boucle ce dessin 10 fois. De combien dois-tu
@@ -12119,6 +12153,10 @@ fr:
         Veille également à utiliser une boucle pour obtenir un compte de bloc idéal.
       grade4_bee_nestedLoops4: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
+      grade4_bee_nestedLoops_assess: |-
+        **Évaluation :** Recueille tout le nectar et fabrique tout le miel en utilisant des boucles.
+
+        **Indice :** *Il y a plusieurs solutions possibles !*
       grade4_frozen_freeplay: Tu es officiellement devenu un artiste maître ! Crée
         un merveilleux paysage hivernal.
       grade4_frozen_functions0: Un cercle est une forme spéciale. Peux-tu trouver

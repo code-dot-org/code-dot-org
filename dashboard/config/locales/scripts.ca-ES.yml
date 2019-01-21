@@ -1222,6 +1222,13 @@ ca:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquàtiques
+          title: 'Minecraft: Viatge aquàtic'
+          description_short: Minecraft torna amb una activitat del tot nova de l'Hora
+            del Codi!
         dance--draft:
           stages:
             Dance Party:

@@ -12,8 +12,8 @@ sk:
       draw square: nakresli štvorec
       jump to controller top left: prejsť na ovládači doľava hore
       jump to middle: skoč do stredu
-      draw a button: nakresliť gombík
-      draw cord: nakresliť kábel
+      draw a button: nakresli gombík
+      draw cord: nakresli kábel
       draw R pad: nakresliť R podložku
       draw left leg: nakresli ľavú nohu
       draw right leg: nakresli pravú nohu
@@ -26,7 +26,7 @@ sk:
       draw O: nakresli O
       draw D: nakresli D
       draw E: nakresli E
-      draw ear stems: nakresliť uši
+      draw ear stems: nakresli uši
       big gear: veľké koleso
       small gear: malé koleso
       draw a hexagon: nakresli šesťuholník
@@ -67,7 +67,7 @@ sk:
       draw a star: nakresli hviezdu
       game has been won: hra bola vyhraná
       draw: nakresli
-      draw bit: nakresliť bit
+      draw bit: nakresli bit
       draw a polygon: nakresli mnohouholník
       draw a shape: nakresli tvar
       get 2 and make 2: získaj 2 a vyrob 2
@@ -121,24 +121,22 @@ sk:
       draw a spiral shape: nakresli špirálu
       get 3 nectar: získať 3 nektáre
       get many nectar: získať veľa nektáru
-      get nectar make honey: získať nektár a spraviť med
+      get nectar make honey: získaj nektár a vyrob med
       draw an octagon: nakresli osemuholník
       draw octagons: nakresli osemuholníky
       shift down: posuň dole
       level_up: level_hore
-      score_points: skóre_bodov
+      score_points: skóruj_body
       set score: nastav skóre
       draw a line of hexagons: nakresli rad šesťuholníkov
       shift down/forward: posuň dole/dopredu
       shift down/backward: posuň dole/dozadu
-      get nectar: 'získať nektár
-
-'
-      make honey up and over: spraviť a vyklopiť med
-      setActors: nastaviťHercov
-      popCharacter: vytvoriťPostavu
+      get nectar: získaj nektár
+      make honey up and over: vyrob med vpravo hore
+      setActors: nastavPostavy
+      popCharacter: vytvorPostavu
       patrol left right: hliadkuj vľavo a vpravo
-      empty function: vyprázdni funkciu
+      empty function: prázdna funkcia
       check guess: skontroluj odhad
       Jump: Skoč
       test: test
@@ -155,7 +153,7 @@ sk:
       diamond: diamant
       window: okno
       n-sided shape: n-stranný tvar
-      draw a loop: nakresliť slučku
+      draw a loop: nakresli cyklus
       draw spiral circle: nakresli špirálu
       draw roof: nakresli strechu
       draw rectangle: nakresli obdĺžnik
@@ -207,7 +205,7 @@ sk:
       '"simple" solution': '"jednoduché" riešenie'
       potential solution: možné riešenie
       my design: môj dizajn
-      get 3 nectar or honey: získať 3 nektáre alebo med
+      get 3 nectar or honey: získaj 3 nektáre alebo med
       move and collect: posuň sa a pozbieraj
       check nectar or honey: skontroluj nektár alebo med
       row of nectar: rad nektárov
@@ -270,7 +268,7 @@ sk:
       collect stairs: pozbieraj schody
       collect: zbieraj
       move and increment: posunúť a zvýšiť
-      do something3: spraviť niečo3
+      do something3: urob niečo 3
       Robin Fly: Robin Vyletí
       Robot Jump: Robot Vyskočí
       Center Dragon: Vycentrovať Draka

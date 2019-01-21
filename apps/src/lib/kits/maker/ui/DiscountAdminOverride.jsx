@@ -233,17 +233,6 @@ export default class DiscountAdminOverride extends Component {
                 />
                 Teacher should receive 100% discount code (kit price would become $0)
               </label>
-              <label>
-                <input
-                  style={styles.radio}
-                  type="radio"
-                  name="discountAmount"
-                  value="partial"
-                  checked={this.state.overrideValue === "partial"}
-                  onChange={this.handleOverrideChange}
-                />
-                Teacher should receive partial discount code (kit price would become $97.50)
-              </label>
             </div>
             <Button
               color={Button.ButtonColor.orange}

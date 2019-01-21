@@ -1,5 +1,5 @@
 class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
-  attributes :id, :name, :group, :workshops
+  attributes :id, :name, :group, :workshops, :has_csf
 
   def workshops
     object.try do |partner|

@@ -96,6 +96,10 @@ module Pd::Application
       fit_workshop.try(&:date_and_location_name)
     end
 
+    def log_fit_workshop_change(user)
+      update_status_timestamp_change_log(user, "Fit Workshop: #{fit_workshop_id ? fit_workshop_date_and_location : 'Unassigned'}")
+    end
+
     def registered_fit_workshop?
       # inspect the cached fit_workshop.enrollments rather than querying the DB
       fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id

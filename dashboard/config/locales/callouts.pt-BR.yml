@@ -516,6 +516,8 @@ pt-BR:
         aE3_1: Apenas alguns desses estão disponíveis
       aE6_callout:
         aE6_1: Apenas 1 bloco de mover pra frente e 1 bloco de virar
+      behaviors 5_callout:
+        behaviors_edit: Adicione código para esse comportamento.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
@@ -599,6 +601,12 @@ pt-BR:
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
+          você vai usá-lo?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
+          você vai usá-lo?
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
@@ -615,6 +623,18 @@ pt-BR:
       courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Use o botão de passo para ir passo-a-passo através
           do programa. Isso vai te ajudar a encontrar o bug!
+      courseB_maze_seq3_callout:
+        courseB_maze_seq3_1: Os blocos cinzentos são feitos de pedra e não podem ser
+          jogados fora.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: Os blocos cinzentos são feitos de pedra e não podem ser
+          jogados fora.
+      courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
+          a direção.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
+          a direção.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comece utilizando este bloco para levar o
           artista ao centro da tela.
@@ -657,6 +677,9 @@ pt-BR:
         courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Estes blocos estão bloqueados e não podem ser apagados!
+      courseC_maze_debugging9_2019_callout:
+        courseC_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
+          em seu espaço de trabalho.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_maze_programming1_callout:
@@ -914,6 +937,9 @@ pt-BR:
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa
           de ferramentas para jogá-los fora.
+      express_maze_debugging9_2019_callout:
+        express_maze_debugging9_2019_1: Arraste os blocos da caixa de ferramentas
+          em seu espaço de trabalho.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo"
           e mude o tamanho.
@@ -987,6 +1013,9 @@ pt-BR:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       frozen square snowflake_test_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      grade1_artist_loops2_callout:
+        grade1_artist_loops2_1: Há apenas um desses blocos na caixa de ferramentas.  Como
+          você vai usá-lo?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Esses blocos cinza são feitos de pedras! Isso significa
           que eles não podem ser jogados no lixo.

@@ -1375,7 +1375,7 @@ ru:
             'Maze: Nested Loops':
               name: 'Лабиринт: вложенные циклы'
         csd3-2017:
-          description_short: "Программирование"
+          description_short: Программирование
           stages:
             Velocity:
               name: Скорость
@@ -2657,3 +2657,5 @@ ru:
               name: Циклы в исполнителе Художник
             Binary Bracelets:
               name: Двоичные браслеты
+        gamelab:
+          title: Игровая лаборатория

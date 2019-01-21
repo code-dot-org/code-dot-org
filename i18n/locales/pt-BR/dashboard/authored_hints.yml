@@ -4106,6 +4106,7 @@ pt-BR:
         allHallows2017_c: 'Jordyn says: "Você não pode para agora! Continue tentando!"'
         allHallows2017_d: 'Josh fala: "Você precisa desenhar suas habilidades com código para completar esse quebra-cabeça!"'
         allHallows2017_e: 'Dani diz: "Eu não sou bom em trocadilhos. Tente usar um bloco de repetição!"'
+        allHallows2017_b: 'Baker diz: "O giz de cera Chicago só funciona na *linha verde*"'
         allHallows2017_f: 'Amy diz: "Você consegue fazer isso! Pense fora da caixa"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Não consegue descobrir onde colocar o laço? Tente escrever o código passo-a-passo e procure um padrão.
@@ -4127,6 +4128,8 @@ pt-BR:
         artistLoopsK8_a: Tente rodar o código para ver onde há um bug.
       artistLoopsK9_authored_hint:
         artistLoopsK9_a: Este desafio usa QUATRO laços, um após o outro!
+      artistLoopsKA_authored_hint:
+        artistLoopsKA_a: O bloco de pulo te permite andar para frente sem desenhar uma linha.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deve haver 3 blocos dentro de seu loop para resolver este enigma.
       behaviors 1_authored_hint:
@@ -4146,8 +4149,10 @@ pt-BR:
         behavior hint: "Tente editar os comportamentos!\n*Qual valor controla a velocidade de cada sprite?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas tentam ler seu código.
+        courseC_maze_programming4_b: Adicione um comentário onde você muda a direção - o que teria acontecido se você tivesse virado para o outro lado?
       comment_intro_maze_2018_2019_authored_hint:
         courseC_maze_programming4_a: Comentários também são úteis quando outras pessoas tentam ler seu código.
+        courseC_maze_programming4_b: Adicione um comentário onde você muda a direção - o que teria acontecido se você tivesse virado para o outro lado?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           Você pode usar laços como esse para criar as paredes e o teto. Tente repetir blocos diferentes.
@@ -4177,6 +4182,21 @@ pt-BR:
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       course1_collector_loops_challenge3_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          Comece fazendo um loop com os comandos 'move sul' e 'obter tesouro'.
+
+          <xml>
+          <block type="maze_moveSouth"/><next>
+          <block type="collector_collect"/></next>
+          </xml>
+        courseB_collector_loops_challenge1_a: |
+          O padrão norte é um pouquinho diferente do que o padrão sul.
+
+          <xml>
+          <block type="collector_collect"/><next>
+          <block type="maze_moveNorth"/></next>next>
+          </xml>
+        courseB_collector_loops_challenge1_c: "Mova a Leste duas vezes entre cada caminho.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nVocê pode fazer isso com apenas 14 blocos. Clique para mais uma dica e ver uma solução.\n"
         courseB_collector_loops_challenge1_d: |-
           Tente isso!
 
@@ -4241,6 +4261,7 @@ pt-BR:
       course1_maze_debugging_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Alguns caminhos levarão a TNT, se você se mover para muito longe.
       course1_maze_debugging_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: Você não precisa adicionar ou remover blocos para solucionar esse desafio.
         courseB_maze_seq_challenge2_b: Reorganize os blocos e tome o caminho do meio.
       course1_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Tente contar os espaços com o seu dedo. Lembre-se de não contar o espaço onde você inicia!
@@ -4279,6 +4300,33 @@ pt-BR:
           </block>
           </next>
           </block></xml>
+      course2_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Comece fazendo um laço aninhado para criar quatro octágonos. Vire 45 graus para fazer o octágono. Pule e em seguida vire 90 graus após cada um.
+        courseD_artist_nestedLoops_challenge1_b: Adicione código para desenhar um triângulo dentro de seu laço aninhado. Use voltas de 120 graus em seu triângulo.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Use um laço aninhado:
+          - Repita 8 vezes
+          - desenhe um octágono
+          - desenhe um triângulo
+          - pule 50 pixels à frente
+          - vire à direita em 90 graus
+      course2_artist_prog_challenge1_authored_hint:
+        courseC_artist_prog_challenge1_a: 'O retângulo tem 200 pixels de largura e 100 pixels de altura. '
+      course2_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: |-
+          Você consegue encontrar um caminho que alcance cada flor e favo de mel sem acertar nenhuma árvore? O melhor caminho é uma espiral.
+
+          **Você pode resolver isto sem nunca virar à esquerda**
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: Você pode usar o comando 'coletar' frequentemente para coletar o tesouro extra.
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: Você pode usar o comando 'coletar' frequentemente para coletar o tesouro extra.
+      course2_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Nem pense em tentar isto sem laços!
+        courseC_harvester_loops_challenge1_b: Você pode repetir 'mover à frente' e 'colher milho' quantas vezes for necessário e, então, 'virar à direita' em cada canto.
+      course2_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_c: |-
+          Se você chegou até aqui, você só precisa 'virar à esquerda' e então 'mover à frente' algumas vezes. Não desista!
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Se você me mandar para trás, tenha muito cuidado para que eu vire para o lado correto!*"
         courseC_maze_programming_challenge2_b: A solução mais curta usa apenas 5 blocos, porém, ela usa o bloco `repetir`!
@@ -4401,6 +4449,7 @@ pt-BR:
           </block>
           </xml>
       course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Comece focando em coletar DUAS gemas de cada uma das primeiras duas pilhas.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse estes blocos.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           Aqui está a solução completa para esse quebra-cabeças.
 
@@ -4446,8 +4495,19 @@ pt-BR:
           </next>
           </block>
           </xml>
+      course3_farmer_condLoops_challenge1_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: O botão `STEP` pode ser útil nesse desafio.
+      course3_farmer_condLoops_challenge2_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: A quantidade de cada vegetal em cada espaço pode variar. Use o laço de repetição `while` para esse caso.
       course3_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Esquerda ou direita? Esta escolha cabe a você!
+        courseC_maze_debugging_challenge1_b: O caminho do Scrat é no formato de um retângulo! Ele precisa virar para o mesmo lado toda vez!
+        courseC_maze_debugging_challenge1_c: Se você está ficando preso, você sempre pode começar de novo ou remover todo o código e descobrir seu próprio caminho!
+      course3_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_a: Um jeito de resolver isto é adicionar mais passos à frente entre as voltas.
+        courseC_maze_debugging_challenge2_b: Se você está ficando preso, você sempre pode começar de novo ou remover todo o código e descobrir seu próprio caminho!
+        courseC_maze_debugging_challenge2_c: |-
+          Há dois caminhos diferentes que você pode seguir usando 'mover à frente' e apenas quatro voltas. Se você descobrir um jeito de usar o bloco 'repetir', pode haver ainda mais!
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_e: |-
           Aqui está a solução.
@@ -4604,6 +4664,10 @@ pt-BR:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       course4_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_b: |-
+          Veja quanto milho está disponível para colheita em cada espaço. Consegue ver o padrão do contador? O padrão 'comprimento' pode ser usado para definir o valor máximo do 'laço for'.
+
+          Não se esqueça de mover o fazendeiro de volta ao caminho principal após a colheita!
         courseF_bee_fwp_challenge1_d: |-
           Dentro do `Laço Enquanto` você quer `mover para frente` e então `pegar o nectar`**Counter times**. Depois do `laço enquanto` você ´pode `mover para trás` *Length Times*.
 
@@ -5601,11 +5665,18 @@ pt-BR:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Tente usar o botão de passo para entender onde as coisas deram errado.
         courseB_collector_loops4_b: Para mudar o quão longe vai Laurel, mude o número de vezes que o laço executa.
+      courseB_collector_loops5_authored_hint:
+        courseB_collector_loops5_a: Use mais de uma repetição para finalizar o trabalho.
+      courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_a: Use mais de uma repetição para finalizar o trabalho.
+      courseB_collector_loops6_authored_hint:
+        courseB_collector_loops6_d: Se você estiver confuso, tente quebrar esse quebra-cabeça em 3 partes.
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_c: |-
           Você vai querer usar três laços `repetir` <xml><block type="controls_repeat_simplified">
           <title name="TIMES">???</title>
           </block></xml> para resolver este desafio.
+        courseB_collector_loops6_d: Se você estiver confuso, tente quebrar esse quebra-cabeça em 3 partes.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Se você está tendo dificuldades com o desafio, tente desenhá-lo no papel para ajudá-lo a entender.
         courseB_collector_loops7_b: Você precisará de 3 laços de repetição para resolver esse desafio, e não se esqueça do tesouro extra no final!
@@ -5746,15 +5817,24 @@ pt-BR:
         courseB_collector_loops_challenge2_a: Se algo der errado, não tenha medo de começar do início. Não desista!
       courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: Se algo der errado, não tenha medo de começar do início. Não desista!
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: Se algo der errado, tente depurar. Não desista!
+      courseB_collector_loops_challenge2a_2018_authored_hint:
+        courseB_collector_loops_challenge2a_a: Se algo der errado, tente depurar. Não desista!
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: "Você precisa usar apenas um bloco ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) para resolver isto."
         courseA_collector_loops_challenge2_a: |-
           Você pode se mover de volta pelo caminho uma segunda vez antes de se mover ao sul.
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_b: Não tenha medo de executar o seu código e ver o que acontece!
+        courseB_iceage_loops4_c: Esse é o caminho que Scrat deve seguir.
       courseB_iceage_loops6_authored_hint:
         courseB_iceage_loops6_a: Seu código final terá **três** blocos de movimento.
         courseB_iceage_loops6_b: Você só precisa adicionar mais **um** laço!
+      courseB_iceage_loops8_authored_hint:
+        courseB_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
       courseB_iceage_loops9_authored_hint:
         courseB_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
       courseB_maze_seq10_authored_hint:
@@ -5781,8 +5861,10 @@ pt-BR:
       courseB_maze_seq7_2018_authored_hint:
         courseB_maze_seq7_a: Adicione 1 bloco para mover Scrat até a noz.
       courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_a: Tente addicionar um bloco de cada vez, até você solucionar o enigma.
         courseB_maze_seq8_b: Existem duas maneiras de resolver este quebra-cabeças!
       courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_a: Tente addicionar um bloco de cada vez, até você solucionar o enigma.
         courseB_maze_seq8_b: Existem duas maneiras de resolver este quebra-cabeças!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: Tente escrever todos os passos em um pedaço de papel.
@@ -5794,6 +5876,32 @@ pt-BR:
         courseB_maze_seqCold_a: Preso? Tente traçar o caminho do pássaro com o seu dedo.
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: Se você estiver tendo problemas, tente escrever os passos em um pedaço de papel primeiro.
+      courseB_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: Você não precisa adicionar ou remover blocos para solucionar esse desafio.
+      courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: Você não precisa adicionar ou remover blocos para solucionar esse desafio.
+      courseB_playlab_events4_authored_hint:
+        courseB_playlab_events4_a: |-
+          Este é o evento que controla a seta para a esquerda:
+
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">esquerda</title>
+          </block>
+          </xml>
+      courseB_playlab_events4_2018_authored_hint:
+        courseB_playlab_events4_a: |-
+          Este é o evento que controla a seta para a esquerda:
+
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">esquerda</title>
+          </block>
+          </xml>
+      courseB_playlab_events5_authored_hint:
+        courseB_playlab_events5_a: "Este é o bloco de evento que controla a seta para a direita: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">direita</title>\n  </block>\n  </xml>"
+      courseB_playlab_events5_2018_authored_hint:
+        courseB_playlab_events5_a: "Este é o bloco de evento que controla a seta para a direita: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">direita</title>\n  </block>\n  </xml>"
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_b: |-
           Este é o bloco que você precisa para reproduzir um som.
@@ -5803,6 +5911,10 @@ pt-BR:
           Este é o bloco que você precisa para fazer o cavaleiro desaparecer: 
 
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+      courseB_starWars_prog1_authored_hint:
+        courseB_starWars_prog1_a: Tente adicionar um bloco por vez, então clique em "Run" para ver o que acontece.
+      courseB_starWars_prog1_2018_authored_hint:
+        courseB_starWars_prog1_a: Tente adicionar um bloco por vez, então clique em "Run" para ver o que acontece.
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 'Se você usar o bloco para me fazer `avançar por 100 pixels`, eu desenharei uma linha automaticamente.'
         courseC_artist_prog2_b: Você está tendo problemas para virar a esquina? Use o bloco 'virar à direita 90 graus'.
@@ -5824,6 +5936,8 @@ pt-BR:
         courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_artist_prog7_2019_authored_hint:
         courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog_challenge1-doghouse_authored_hint:
+        courseC_artist_prog7_a: Use ângulos de 60 graus para fazer o telhado.
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_collector_prog2_2018_authored_hint:
@@ -5898,9 +6012,47 @@ pt-BR:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente' para conseguir ir do topo de um quadrado para o lugar onde você vai começar o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados por 20 pixels entre si, qual distância você precisa saltar?"
       courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente' para conseguir ir do topo de um quadrado para o lugar onde você vai começar o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados por 20 pixels entre si, qual distância você precisa saltar?"
+      courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals2_2018_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals3_2018_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals4_2018_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals4_2019_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals5_2018_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals5_2019_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals6_2018_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals6_2019_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
+      courseD_bee_conditionals7_2019_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
       courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Precisa de ajuda para começar? Assista o vídeo!
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
       courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
@@ -6172,10 +6324,20 @@ pt-BR:
           </xml>
       courseD_debugging_3_authored_hint:
         courseD_debugging_3_b: Tente simplificar o código usando laços de repetição aninhados.
+      courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: Não tenha medo de executar o seu código e ver o que acontece!
+        courseD_iceage_loops4_c: Esse é o caminho que Scrat deve seguir.
+      courseD_iceage_loops4_2019_authored_hint:
+        courseD_iceage_loops4_a: Não tenha medo de executar o seu código e ver o que acontece!
+        courseD_iceage_loops4_c: Esse é o caminho que Scrat deve seguir.
       courseD_iceage_loops6_authored_hint:
         courseD_iceage_loops6_b: Você só precisa adicionar mais **um** laço!
       courseD_iceage_loops6_2019_authored_hint:
         courseD_iceage_loops6_b: Você só precisa adicionar mais **um** laço!
+      courseD_iceage_loops8_authored_hint:
+        courseD_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
+      courseD_iceage_loops8_2019_authored_hint:
+        courseD_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
       courseD_iceage_loops9_authored_hint:
         courseD_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
       courseD_iceage_loops9_2019_authored_hint:
@@ -9067,6 +9229,8 @@ pt-BR:
         gradek_artist_loops7_a: Tente rodar o código para ver o que foi escrito para você.
         gradek_artist_loops7_b: Como você colocaria o código dado a você em um laço?
         gradek_artist_loops7_c: "O que esse código faz?\nO que ele deveria fazer?\nO que isso te diz?"
+      gradek_artist_loops9_authored_hint:
+        artistLoopsKA_a: O bloco de pulo te permite andar para frente sem desenhar uma linha.
       iceage_hello1_authored_hint:
         iceage_hello1_a: Você precisa apenas de adicionar um bloco para resolver este enigma. Arraste o bloco `dizer` da barra de ferramentas e conecte-o ao bloco de evento `quando executar` que já está na área de trabalho. Depois, digite "Olá!" dentro dele.
       iceage_hello1_2018_authored_hint:
