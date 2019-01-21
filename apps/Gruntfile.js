@@ -493,10 +493,14 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
+    'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
     'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
