@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?",
+    "short_instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -17,7 +17,7 @@
     "slider_speed": "0.7",
     "video_key": "C2_artist_loops",
     "embed": "false",
-    "markdown_instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?",
+    "long_instructions": "Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

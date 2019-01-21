@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "This is just like a \"for\" loop. Complete the loop to draw 4 squares that grow from 80, 100, 120, to 140 pixels. ",
+    "short_instructions": "This is just like a \"for\" loop. Complete the loop to draw 4 squares that grow from 80, 100, 120, to 140 pixels. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

@@ -25,8 +25,8 @@
     "disable_examples": "false",
     "start_direction": "0",
     "step_mode": "0",
-    "instructions": "The `workspace` is where you will create all of your programs. Can you guess what this program does? Press the “Run” button to find out.",
-    "markdown_instructions": "The `workspace` is where you will create all of your programs. Find the workspace, then see what the program does.",
+    "short_instructions": "The `workspace` is where you will create all of your programs. Can you guess what this program does? Press the “Run” button to find out.",
+    "long_instructions": "The `workspace` is where you will create all of your programs. Find the workspace, then see what the program does.",
     "contained_level_names": null
   },
   "published": true,

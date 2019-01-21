@@ -38,7 +38,7 @@
     "encrypted_examples": [
 
     ],
-    "markdown_instructions": "So how can we use this?  We can use it to compose a bunch of things we want to store at once.  In Data we call this a “record”.  Let’s look at how we create records….new level:\r\n\r\nJust drag out createRecord and play with it (non-project level) — not triggered by a button. \r\n\r\nCreateRecord should populate with a default JSON object (which you can set in level builder when defining params for the blocks in the palette.)  Have it be the string version of of JSON object.\r\nJust Hit run several times.\r\nView Data.\r\nInvestigate problems.\r\n\r\n\r\n"
+    "long_instructions": "So how can we use this?  We can use it to compose a bunch of things we want to store at once.  In Data we call this a “record”.  Let’s look at how we create records….new level:\r\n\r\nJust drag out createRecord and play with it (non-project level) — not triggered by a button. \r\n\r\nCreateRecord should populate with a default JSON object (which you can set in level builder when defining params for the blocks in the palette.)  Have it be the string version of of JSON object.\r\nJust Hit run several times.\r\nView Data.\r\nInvestigate problems.\r\n\r\n\r\n"
   }
 }]]></config>
   <blocks/>

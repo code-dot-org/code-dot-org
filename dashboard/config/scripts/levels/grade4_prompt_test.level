@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This is a test play lab level.",
+    "short_instructions": "This is a test play lab level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

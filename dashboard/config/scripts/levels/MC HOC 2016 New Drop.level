@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "In Minecraft, sheep drop wool. Place the `drop` block in `when used`, then walk over and use the sheep to drop an item.",
+    "short_instructions": "In Minecraft, sheep drop wool. Place the `drop` block in `when used`, then walk over and use the sheep to drop an item.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
