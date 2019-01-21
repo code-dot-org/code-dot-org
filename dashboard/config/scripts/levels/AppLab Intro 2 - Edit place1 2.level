@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Think about how you want your adventure to continue on this screen. Then add some text to tell your story!\r\n\r\n1. Use the screen selector to choose the screen you just made ([Show me where](#triggercallout=selector))\r\n2. Drag a new \"text area\" onto your screen to add it. ([Show me where](#triggercallout=textArea))\r\n3. Drag the bottom right corner of your text area to change its size.\r\n4. Change the text to tell your user what happens on this screen. Then change the color of your text if you want!\r\n\r\nClick \"Run\" and then \"Finish\" to move on.\r\n\r\n![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif) Click to see a GIF of these steps",
+    "long_instructions": "Think about how you want your adventure to continue on this screen. Then add some text to tell your story!\r\n\r\n1. Use the screen selector to choose the screen you just made ([Show me where](#triggercallout=selector))\r\n2. Drag a new \"text area\" onto your screen to add it. ([Show me where](#triggercallout=textArea))\r\n3. Drag the bottom right corner of your text area to change its size.\r\n4. Change the text to tell your user what happens on this screen. Then change the color of your text if you want!\r\n\r\nClick \"Run\" and then \"Finish\" to move on.\r\n\r\n![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif) Click to see a GIF of these steps",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

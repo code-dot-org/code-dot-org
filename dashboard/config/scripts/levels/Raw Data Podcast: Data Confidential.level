@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "## Raw Data Podcast: Data Confidential <i class=\"fa fa-volume-up\" aria-hidden=\"true\"></i>\r\n\r\nRaw Data is a podcast from the Stanford Cyber Initiative that explores the uses and impact of data. This episode explores some of the practical implications and needs for having access to secure communication online. \r\n\r\nCheck out the Episode via the link below: ",
+    "long_instructions": "## Raw Data Podcast: Data Confidential <i class=\"fa fa-volume-up\" aria-hidden=\"true\"></i>\r\n\r\nRaw Data is a podcast from the Stanford Cyber Initiative that explores the uses and impact of data. This episode explores some of the practical implications and needs for having access to secure communication online. \r\n\r\nCheck out the Episode via the link below: ",
     "instructions_important": "false",
     "link_title": "Raw Data: Data Confidential",
     "url": "https://soundcloud.com/rawdatapodcast/data-confidential"

@@ -21,7 +21,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# The Counter Pattern\r\n\r\nIn this program, the draw loop is used to make the sprites move across the screen.\r\n\r\n# Do This\r\n\r\n* Run the code and discuss with your partner how you think it works.",
+    "long_instructions": "# The Counter Pattern\r\n\r\nIn this program, the draw loop is used to make the sprites move across the screen.\r\n\r\n# Do This\r\n\r\n* Run the code and discuss with your partner how you think it works.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

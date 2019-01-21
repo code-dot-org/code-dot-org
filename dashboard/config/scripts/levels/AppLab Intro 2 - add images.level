@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "You now know everything you need to make a simple Choose Your Own Adventure app, but you can add so much more! If you want to add images to your screen it's easy!\r\n\r\n1. In another tab in your browser go online and find an image you want to use\r\n2. Right click the image and save its URL (usually \"Copy link address\" or \"Copy image URL\")\r\n3. Back in App Lab go to Design Mode\r\n4. Drag an \"image\" element onto your screen\r\n5. Paste the URL you copied into the \"image\" property\r\n\r\n\"Run\" your app once to test it. Then hit \"Finish\" to move to learn to add sounds.\r\n\r\n![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif) Click to see GIF of all steps",
+    "long_instructions": "You now know everything you need to make a simple Choose Your Own Adventure app, but you can add so much more! If you want to add images to your screen it's easy!\r\n\r\n1. In another tab in your browser go online and find an image you want to use\r\n2. Right click the image and save its URL (usually \"Copy link address\" or \"Copy image URL\")\r\n3. Back in App Lab go to Design Mode\r\n4. Drag an \"image\" element onto your screen\r\n5. Paste the URL you copied into the \"image\" property\r\n\r\n\"Run\" your app once to test it. Then hit \"Finish\" to move to learn to add sounds.\r\n\r\n![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif) Click to see GIF of all steps",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

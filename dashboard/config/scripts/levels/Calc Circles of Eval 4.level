@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "calc",
-    "instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
+    "short_instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,7 +15,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
+    "long_instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

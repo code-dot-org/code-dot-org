@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Using the Buzzer\r\n\r\nYou can use the buzzer in a lot of different ways, but right now we're just going to use the `buzzer.frequency()`.\r\n\r\n# Do this\r\n* Pull out a `buzzer.frequency()` block from the toolbox and play around with it. You'll notice it has two parameters, what happens when you change either, or both of those?\r\n* Run the program and enjoy the music of your Circuit Playground.",
+    "long_instructions": "# Using the Buzzer\r\n\r\nYou can use the buzzer in a lot of different ways, but right now we're just going to use the `buzzer.frequency()`.\r\n\r\n# Do this\r\n* Pull out a `buzzer.frequency()` block from the toolbox and play around with it. You'll notice it has two parameters, what happens when you change either, or both of those?\r\n* Run the program and enjoy the music of your Circuit Playground.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
