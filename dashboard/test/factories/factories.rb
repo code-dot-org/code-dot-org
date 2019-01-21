@@ -1184,6 +1184,12 @@ FactoryGirl.define do
     user {create :teacher}
   end
 
+  factory :circuit_playground_discount_code do
+    sequence(:code) {|n| "FAKE#{n}_asdf123"}
+    full_discount true
+    expiration {Time.now + 30.days}
+  end
+
   factory :seeded_s3_object do
     bucket "Bucket containing object"
     key "Object Key"

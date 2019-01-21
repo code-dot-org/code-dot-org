@@ -31,6 +31,9 @@ const styles = {
   noPartner: {
     marginTop: 20
   },
+  bold: {
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
   workshop: {
     marginBottom: 20
   }
@@ -151,12 +154,25 @@ class RegionalPartnerSearch extends Component {
           </form>
         )}
 
+        {/* Special message for NYC DOE teachers. */}
+        {partnerInfo && partnerInfo.name === "Mouse" && (
+          <div>
+            <h3 style={styles.bold}>NYC Department of Education teachers:</h3>
+            We will share a more specific option for NYC DOE teachers in February. The details are still being finalized. If you're a NYC DOE teacher, please complete
+            {' '}
+            <a href="https://goo.gl/forms/MEz3KmikwgPvIk332" target="_blank">this very short form</a>
+            {' '}
+            and we'll alert you when details are available.
+            <h3 style={styles.bold}>For all other teachers:</h3>
+          </div>
+        )}
+
         {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
-          <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
+          <div style={styles.noState}>Please enter a valid 5 digit ZIP code.</div>
         )}
 
         {this.state.loading && (
@@ -165,8 +181,8 @@ class RegionalPartnerSearch extends Component {
 
         {this.state.error === WorkshopSearchErrors.no_partner && (
           <div style={styles.noPartner}>
-            <p>We do not yet have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
-            <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
+            <p>We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
+            <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.</p>
             <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,
@@ -174,10 +190,9 @@ class RegionalPartnerSearch extends Component {
               <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
-            <p>Applications will open soon.</p>
-            <a href={studio("/pd/regional_partner_contact/new")}>
+            <a href={studio("/pd/application/teacher")}>
               <button>
-                Notify me when I can apply
+                Start application
               </button>
             </a>
           </div>
@@ -185,7 +200,7 @@ class RegionalPartnerSearch extends Component {
 
         {partnerInfo && (
           <div>
-            <div>{partnerInfo.name}</div>
+            <div style={styles.bold}>{partnerInfo.name}</div>
             {partnerInfo.contact_name && (
               <div>{partnerInfo.contact_name}</div>
             )}

@@ -19,6 +19,7 @@ module Pd::Application
       mail(
         to: @application.user.email,
         from: from(@application),
+        cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"
       )
     end
@@ -29,6 +30,7 @@ module Pd::Application
       mail(
         to: @application.user.email,
         from: from(@application),
+        cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"
       )
     end
