@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click here to see the hints again.",
+    "short_instructions": "Click here to see the hints again.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\" width=\"250px\"/>\r\n\r\n**Challenge Level:** Use what you've learned in this stage and others to figure out how to make the drawing above.  ",
+    "long_instructions": "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\" width=\"250px\"/>\r\n\r\n**Challenge Level:** Use what you've learned in this stage and others to figure out how to make the drawing above.  ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

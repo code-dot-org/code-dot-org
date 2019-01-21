@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Programming Efficiency: Getting Started",
-    "markdown_instructions": "Efficiency means different things depending upon the activity. What does it mean to be efficient in these activities?\n\n* Doing homework\n* Packing a bag \n* Getting from one place to another \n* Doing household chores \n* Driving a car \n* Managing a budget \n\n\n",
+    "long_instructions": "Efficiency means different things depending upon the activity. What does it mean to be efficient in these activities?\n\n* Doing homework\n* Packing a bag \n* Getting from one place to another \n* Doing household chores \n* Driving a car \n* Managing a budget \n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

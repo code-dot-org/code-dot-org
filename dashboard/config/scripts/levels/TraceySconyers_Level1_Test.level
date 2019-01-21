@@ -38,7 +38,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "### This is a test\r\n* this is only a test\r\n- thank goodness I've been practicing markdown in Big Data\r\n",
+    "long_instructions": "### This is a test\r\n* this is only a test\r\n- thank goodness I've been practicing markdown in Big Data\r\n",
     "preload_asset_list": null
   },
   "published": true,

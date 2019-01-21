@@ -48,7 +48,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45 PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Using the Draw Loop\r\n\r\nNow it's your turn to do some work with the draw loop. Remember that the code inside the draw loop is run by Game Lab over and over again.\r\n\r\n# Do This\r\n\r\n* Add code to this program so that your drawing has orange circles being drawn, too.\r\n* Move on when your program looks like the picture to the right.",
+    "long_instructions": "<img src=\"https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45 PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Using the Draw Loop\r\n\r\nNow it's your turn to do some work with the draw loop. Remember that the code inside the draw loop is run by Game Lab over and over again.\r\n\r\n# Do This\r\n\r\n* Add code to this program so that your drawing has orange circles being drawn, too.\r\n* Move on when your program looks like the picture to the right.",
     "encrypted_examples": "rU0c9eZ0HeXmR24WLgLAOIEsCJp6R24IbKWcHZHGL/7SIQTbZFkpl9zMsPMn\npwU9ljBjLdXqtjTexCXIsSkc2g==\n",
     "contained_level_names": null
   },

@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Define Your Functions\r\n\r\nDefine all of your functions at the bottom of the program, under the comment `// Create your functions here`.\r\n\r\nRight now we're only worrying about writing the function _definitions_, the part which looks like:\r\n\r\n```\r\nfunction myFunction() {\r\n\t// Things my function does\r\n}\r\n```",
+    "long_instructions": "# Define Your Functions\r\n\r\nDefine all of your functions at the bottom of the program, under the comment `// Create your functions here`.\r\n\r\nRight now we're only worrying about writing the function _definitions_, the part which looks like:\r\n\r\n```\r\nfunction myFunction() {\r\n\t// Things my function does\r\n}\r\n```",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

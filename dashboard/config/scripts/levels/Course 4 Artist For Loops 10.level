@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play Time! Have fun drawing whatever you like with the blocks you have learned how to use",
+    "short_instructions": "Free Play Time! Have fun drawing whatever you like with the blocks you have learned how to use",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "Free Play Time! Have fun drawing whatever you like with the blocks you have learned how to use.",
+    "long_instructions": "Free Play Time! Have fun drawing whatever you like with the blocks you have learned how to use.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

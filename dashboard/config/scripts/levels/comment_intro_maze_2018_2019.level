@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,1,3,4,0,0,0],[0,0,1,0,0,0,0,0],[0,0,2,0,0,0,0,0],[0,0,4,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Use the new `comment` block to leave yourself quick reminders.",
+    "short_instructions": "Use the new `comment` block to leave yourself quick reminders.",
     "start_direction": "0",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Comments are also helpful when other people try to read your code.\",\"hint_id\":\"courseC_maze_programming4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/94e837bb4793a4a925f124b537583365/comment_intro_maze_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Add a comment when you change directions- what would have happened if you turned the other way?\",\"hint_id\":\"courseC_maze_programming4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cf7908b894161204d072f084a9476039/comment_intro_maze_2018.mp3\"}]",
-    "markdown_instructions": "*\"I'm confused. Help me remember how to solve this maze.\"*  \r\n\r\n---\r\n\r\nTo pass this puzzle, solve the maze and use the new <xml><block type=\"comment\">\r\n    <title name=\"TEXT\"> </title>\r\n  </block></xml> block to leave yourself quick reminders. They can help you remember what you were doing and why!   \r\n  \r\n\r\nComments are only used for **you**, they don't affect the play area.",
+    "long_instructions": "*\"I'm confused. Help me remember how to solve this maze.\"*  \r\n\r\n---\r\n\r\nTo pass this puzzle, solve the maze and use the new <xml><block type=\"comment\">\r\n    <title name=\"TEXT\"> </title>\r\n  </block></xml> block to leave yourself quick reminders. They can help you remember what you were doing and why!   \r\n  \r\n\r\nComments are only used for **you**, they don't affect the play area.",
     "callout_json": "[]",
     "instructions_important": "true",
     "hide_share_and_remix": "false",

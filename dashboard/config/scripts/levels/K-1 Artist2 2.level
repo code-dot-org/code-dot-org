@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Jump and draw a square next to the house.",
+    "short_instructions": "Jump and draw a square next to the house.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "start_direction": "270",

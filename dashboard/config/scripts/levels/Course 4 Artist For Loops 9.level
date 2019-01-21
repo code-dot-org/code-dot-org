@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time.",
+    "short_instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time.\r\n\r\n",
+    "long_instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time.\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

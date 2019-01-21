@@ -34,8 +34,8 @@
     "x": "125",
     "y": "125",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/5c9963cdd9864023dbb48a1f2aeb6ae9=levelbuilder/28309.png",
-    "instructions": "Use loops to draw this staircase.",
-    "markdown_instructions": "Loops sure make writing code easier!\r\n\r\nUse loops to draw this staircase.\r\n- Each stairstep is 50 pixels long and 50 pixels tall\r\n- You will need to turn 90 degrees in each direction",
+    "short_instructions": "Use loops to draw this staircase.",
+    "long_instructions": "Loops sure make writing code easier!\r\n\r\nUse loops to draw this staircase.\r\n- Each stairstep is 50 pixels long and 50 pixels tall\r\n- You will need to turn 90 degrees in each direction",
     "ideal": "7",
     "hint_prompt_attempts_threshold": 13,
     "contained_level_names": null

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "What do you think will happen when you run this code? What will happen when you press the left and right buttons?",
+    "long_instructions": "What do you think will happen when you run this code? What will happen when you press the left and right buttons?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

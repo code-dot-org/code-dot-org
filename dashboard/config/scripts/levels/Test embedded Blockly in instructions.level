@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "As a block element, we should be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n  <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.",
+    "short_instructions": "As a block element, we should be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n  <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Functions with Parameters: Getting Started",
-    "markdown_instructions": "In previous lessons, you used parameterized functions. \n\n* In what situations are parameterized functions useful? \n* What problems do parameterized functions solve?\n",
+    "long_instructions": "In previous lessons, you used parameterized functions. \n\n* In what situations are parameterized functions useful? \n* What problems do parameterized functions solve?\n",
     "skip_dialog": true,
     "skip_sound": true
   },
