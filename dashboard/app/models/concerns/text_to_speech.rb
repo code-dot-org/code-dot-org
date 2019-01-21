@@ -198,11 +198,15 @@ module TextToSpeech
     # For multi questions, create a string for TTS of the markdown, question, and answers
     if contained.long_instructions.nil?
       combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
-      contained.properties["questions"].each do |question|
-        combined_text += question["text"] + "\n"
+      if contained.properties["questions"]
+        contained.properties["questions"].each do |question|
+          combined_text += question["text"] + "\n"
+        end
       end
-      contained.properties["answers"].each do |answer|
-        combined_text += answer["text"] + "\n"
+      if contained.properties["answers"]
+        contained.properties["answers"].each do |answer|
+          combined_text += answer["text"] + "\n"
+        end
       end
       combined_text
     else
