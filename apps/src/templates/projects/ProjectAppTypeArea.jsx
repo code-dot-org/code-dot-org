@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectCardRow from './ProjectCardRow';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -12,11 +12,6 @@ import i18n from "@cdo/locale";
 const styles = {
   grid: {
     width: styleConstants['content-width']
-  },
-  card: {
-    display: "inline-block",
-    paddingTop: 10,
-    paddingBottom: 20
   },
   labHeading: {
     textAlign: "left",
@@ -33,11 +28,6 @@ const styles = {
     marginTop: 35,
     cursor: 'pointer',
     fontFamily: '"Gotham 5r", sans-serif'
-  },
-  cardGrid: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
   },
   viewMoreButtons: {
     float: "right",
@@ -108,25 +98,18 @@ class ProjectAppTypeArea extends React.Component {
   };
 
   renderProjectCardList(projectList, max) {
-    let filteredList;
+    let filteredList = [];
     if (projectList) {
       filteredList = this.props.hideWithoutThumbnails ?
       projectList.filter(project => project.projectData.thumbnailUrl !== null) : projectList;
     }
-    const { galleryType } = this.props;
-    return  (
-      <div style={styles.cardGrid}>
-        {
-          filteredList && filteredList.slice(0,max).map(project => (
-            <div key={project.projectData.channel} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))
-        }
-      </div>
+    filteredList = filteredList.slice(0, max).map(project => project.projectData);
+
+    return (
+      <ProjectCardRow
+        projects={filteredList}
+        galleryType={this.props.galleryType}
+      />
     );
   }
 

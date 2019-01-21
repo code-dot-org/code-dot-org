@@ -23,7 +23,8 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    height: 18
+    height: 18,
+    boxSizing: 'content-box'
   },
   titleLink: {
     color: color.charcoal
@@ -58,10 +59,13 @@ const styles = {
     alignItems: 'center',
     overflow: 'hidden'
   },
+  fullThumbnail: {
+    height: 214,
+  },
   image:{
     flexShrink: 0,
-    minWidth: '100%',
-    minHeight: '100%'
+    width: '100%',
+    weight: '100%'
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
@@ -72,6 +76,7 @@ export default class ProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
+    showFullThumbnail: PropTypes.bool,
   };
 
   getLastModifiedTimestamp(timestamp) {
@@ -94,10 +99,15 @@ export default class ProjectCard extends React.Component {
     const isPublicGallery = currentGallery === 'public';
     const url = isPersonalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
 
+    const thumbnailStyle = styles.thumbnail;
+    if (this.props.showFullThumbnail) {
+      Object.assign(thumbnailStyle, styles.fullThumbnail);
+    }
+
     return (
       <div className="project_card">
         <div style={styles.card}>
-          <div style={styles.thumbnail} >
+          <div style={thumbnailStyle} >
             <a
               href={url}
               style={{width: '100%'}}
@@ -135,7 +145,7 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </span>
-          {isPublicGallery && (
+          {isPublicGallery && projectData.publishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
@@ -147,7 +157,7 @@ export default class ProjectCard extends React.Component {
               </time>
             </div>
           )}
-          {isPersonalGallery && (
+          {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <time
