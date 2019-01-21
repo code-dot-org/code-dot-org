@@ -33,6 +33,22 @@ describe('CompletionButton', () => {
     expect(button.text()).to.equal('Unsubmit');
   });
 
+  // It is possible for users to get into a state where the level is submitted
+  // but not submittable. Make sure we show the Unsubmit button in this case.
+  it('non-project level, is not submittable, but is submitted', () => {
+    const completionButton = mount(
+      <CompletionButton
+        isProjectLevel={false}
+        isSubmittable={false}
+        isSubmitted={true}
+      />
+    );
+    const button = completionButton.find('button');
+    expect(button).to.have.length(1);
+    expect(button.props().id).to.equal('unsubmitButton');
+    expect(button.text()).to.equal('Unsubmit');
+  });
+
   it('non-project level, cant submit', () => {
     const completionButton = mount(
       <CompletionButton

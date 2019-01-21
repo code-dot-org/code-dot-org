@@ -2,7 +2,6 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
-import experiments from "@cdo/apps/util/experiments";
 
 /**
  * A hidden file input providing upload functionality with event hooks.
@@ -32,8 +31,8 @@ export default class HiddenUploader extends React.Component {
         if (audioFileName) {
           firehoseClient.putRecord(
             {
-              study: 'sound-dialog-1',
-              study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
+              study: 'sound-dialog-2',
+              study_group: 'library-file',
               event: 'upload-file',
               data_json: audioFileName,
             },

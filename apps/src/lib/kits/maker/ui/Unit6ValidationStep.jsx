@@ -87,8 +87,8 @@ export default class Unit6ValidationStep extends Component {
               </strong>
               {[
                 ['no', i18n.eligibilityYearNo()],
-                ['yes1718', i18n.eligibilityYearYes1718()],
                 ['yes1819', i18n.eligibilityYearYes1819()],
+                ['yes1920', i18n.eligibilityYearYes1920()],
                 ['yesAfter', i18n.eligibilityYearAfter()],
                 ['unsure', i18n.eligibilityYearUnknown()],
               ].map(([value, description]) =>
