@@ -110,15 +110,15 @@ class ScriptLevelsController < ApplicationController
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
-      canonical_path << "?#{request.query_string}" unless request.query_string.empty?
-      redirect_to canonical_path, status: :moved_permanently
-      return
-    end
-
     # Attempt to redirect user to the proper script overview page if we think they ended up on the wrong level.
     if redirect_script = redirect_script(@script_level, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
+    end
+
+    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
+      canonical_path << "?#{request.query_string}" unless request.query_string.empty?
+      redirect_to canonical_path, status: :moved_permanently
       return
     end
 
