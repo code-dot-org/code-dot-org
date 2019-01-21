@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "anna",
-    "instructions": "You've officially become a master artist! Create a winter wonderland.",
+    "short_instructions": "You've officially become a master artist! Create a winter wonderland.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

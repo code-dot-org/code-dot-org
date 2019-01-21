@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "\"Hi, I'm an artist. You can write code to make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
+    "short_instructions": "\"Hi, I'm an artist. You can write code to make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
+    "long_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

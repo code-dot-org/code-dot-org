@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Using a Variable's Value\r\n\r\nThis program creates a variable called `size`. You will need to **assign it a value**. It will then be used to set the size of a square on the screen.\r\n\r\n# Do This\r\n\r\n* **Assign the variable `size` a value** and run the program to see how its value is used\r\n* **Change the value** and rerun the program to see how it affects the output of your program.",
+    "long_instructions": "# Using a Variable's Value\r\n\r\nThis program creates a variable called `size`. You will need to **assign it a value**. It will then be used to set the size of a square on the screen.\r\n\r\n# Do This\r\n\r\n* **Assign the variable `size` a value** and run the program to see how its value is used\r\n* **Change the value** and rerun the program to see how it affects the output of your program.",
     "start_blocks": "var size;\r\n//Assign the value of size below\r\n\r\nrect(200, 200, size, size);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -38,7 +38,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Predict: What will get displayed in the console?",
+    "short_instructions": "Predict: What will get displayed in the console?",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the stem of this flower with two lines!",
+    "short_instructions": "Draw the stem of this flower with two lines!",
     "x": "200",
     "y": "300",
     "start_direction": "0",

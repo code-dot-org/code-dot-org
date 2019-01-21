@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4],[4,4,1,1,1,2,4,4],[4,4,1,4,4,1,4,4],[4,4,3,1,1,1,4,4],[4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4]]",
     "skin": "birds",
-    "instructions": "Get the bird to the pig.",
+    "short_instructions": "Get the bird to the pig.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -28,7 +28,7 @@
     "disable_examples": "false",
     "authored_hints": "[]",
     "callout_json": "[]",
-    "markdown_instructions": "Get the bird to the pig.",
+    "long_instructions": "Get the bird to the pig.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

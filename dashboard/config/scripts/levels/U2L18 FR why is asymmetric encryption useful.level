@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Asymmetric Encryption - why is it useful?",
-    "markdown_instructions": "* In symmetric encryption the same key is used to encrypt and decrypt a message.\n* In **a**symmetric encryption different keys are used to encrypt and decrypt.\n\n#### Give at least one reason (more are welcome) why **a**symmetric encryption is useful?\n",
+    "long_instructions": "* In symmetric encryption the same key is used to encrypt and decrypt a message.\n* In **a**symmetric encryption different keys are used to encrypt and decrypt.\n\n#### Give at least one reason (more are welcome) why **a**symmetric encryption is useful?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

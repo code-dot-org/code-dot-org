@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "bee",
-    "instructions": "Get four nectar to make four honey!",
+    "short_instructions": "Get four nectar to make four honey!",
     "step_mode": 1,
     "is_k1": "true",
     "start_direction": "2",

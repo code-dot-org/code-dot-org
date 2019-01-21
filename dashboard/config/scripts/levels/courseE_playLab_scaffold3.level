@@ -35,10 +35,10 @@
     "disable_sharing": "true",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Add two or more additional actors to your game and make them move.",
+    "short_instructions": "Add two or more additional actors to your game and make them move.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Let's add some more characters to your game!\r\n\r\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
+    "long_instructions": "Let's add some more characters to your game!\r\n\r\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
     "failure_message_override": "You must add two or more new actors to your game and program them to move.",
     "soft_buttons": [
       "leftButton",

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a similar function red shape with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
+    "short_instructions": "Here's a similar function red shape with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "min_workspace_height": "2000",
@@ -26,7 +26,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a similar function `red shape` with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
+    "long_instructions": "Here's a similar function `red shape` with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
     "examples_required": "true"
   }
 }]]></config>

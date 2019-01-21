@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Use the Design Recipe to create a function starburst. When given a number of points and an outer radius, starburst returns a yellow radial star with given points, and an inner radius that is half the outer radius.",
+    "short_instructions": "Use the Design Recipe to create a function starburst. When given a number of points and an outer radius, starburst returns a yellow radial star with given points, and an inner radius that is half the outer radius.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "min_workspace_height": "1500",
@@ -25,7 +25,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use the Design Recipe to create a function `starburst`. When given a number of points and an outer radius, `starburst` returns a yellow radial star with given points, and an inner radius that is half the outer radius.",
+    "long_instructions": "Use the Design Recipe to create a function `starburst`. When given a number of points and an outer radius, `starburst` returns a yellow radial star with given points, and an inner radius that is half the outer radius.",
     "examples_required": "true"
   }
 }]]></config>

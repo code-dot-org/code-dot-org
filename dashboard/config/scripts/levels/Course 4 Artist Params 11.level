@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "How about a function called \"pinwheel\" that takes three parameters - \"sides,\" \"length\" and \"repeat.\" You can calculate how much to turn after each shape using the same math you used to figure out the turns for a shape of \"sides\". Can you recreate this picture? Here's a tip each shape is 100 pixel's in length.",
+    "short_instructions": "How about a function called \"pinwheel\" that takes three parameters - \"sides,\" \"length\" and \"repeat.\" You can calculate how much to turn after each shape using the same math you used to figure out the turns for a shape of \"sides\". Can you recreate this picture? Here's a tip each shape is 100 pixel's in length.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Facilitation Reflection\r\n\r\n## TLOs\r\n\r\nYou have seen 3 Model TLOs (taught by facilitators) and 2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?\r\n\r\n* What are facilitators doing during lessons?\r\n* What are facilitators doing during debriefs?\r\n* How much time is split between time when facilitators are talking and time when teachers are doing? \r\n",
+    "long_instructions": "# Facilitation Reflection\r\n\r\n## TLOs\r\n\r\nYou have seen 3 Model TLOs (taught by facilitators) and 2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?\r\n\r\n* What are facilitators doing during lessons?\r\n* What are facilitators doing during debriefs?\r\n* How much time is split between time when facilitators are talking and time when teachers are doing? \r\n",
     "instructions_important": "false",
     "display_name": "Facilitation Reflection",
     "allow_user_uploads": "false",

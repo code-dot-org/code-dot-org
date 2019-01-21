@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by an Evaluation Block in code. Change the Evaluation Block to match the expression.",
+    "short_instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by an Evaluation Block in code. Change the Evaluation Block to match the expression.",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

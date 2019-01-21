@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw and Jump to make the dashed line",
+    "short_instructions": "Draw and Jump to make the dashed line",
     "x": "40",
     "start_direction": "90",
     "is_k1": "true",

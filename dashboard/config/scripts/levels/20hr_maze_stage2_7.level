@@ -7,7 +7,7 @@
   "properties": {
     "skin": "birds",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0]]",
-    "instructions": "Try to get me to the green intruder using only three blocks.",
+    "short_instructions": "Try to get me to the green intruder using only three blocks.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
