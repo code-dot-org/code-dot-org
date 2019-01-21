@@ -371,7 +371,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
-  test "show: redirect to latest stable script version in family for logged out user" do
+  test "show: redirect to latest stable script version in family for logged out user if one exists" do
     courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
     Script.stubs(:latest_stable_version).returns(courseg_2018)
 
@@ -388,7 +388,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to '/s/courseg-2018?redirect_warning=true'
   end
 
-  test "show: redirect to latest stable script version in family for student" do
+  test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
     courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
