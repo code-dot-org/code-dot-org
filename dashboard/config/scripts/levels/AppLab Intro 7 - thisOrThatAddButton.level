@@ -27,7 +27,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add a second button to the screen that says \"Right!\" with an `\"id\"` of `\"rightButton\"`.\r\n\r\n**How:** In Design Mode drag in a new button. Position and resize it. Then set its `\"id\"`, `\"text\"`, `\"background color\"`, and `\"font size\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add a second button to the screen that says \"Right!\" with an `\"id\"` of `\"rightButton\"`.\r\n\r\n**How:** In Design Mode drag in a new button. Position and resize it. Then set its `\"id\"`, `\"text\"`, `\"background color\"`, and `\"font size\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

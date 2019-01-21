@@ -7,7 +7,7 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":2,\"range\":4},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":-5,\"range\":-4},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1,\"value\":2,\"range\":3},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-2,\"range\":-1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}]]",
-    "instructions": "Fill all of the holes and remove all of the piles.",
+    "short_instructions": "Fill all of the holes and remove all of the piles.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -30,7 +30,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each hole or pile is located one space **backward** from the end of the path.\",\"hint_id\":\"courseD_farmer_while_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44f65ef437cd0363ca118ed888eaa904/courseD_farmer_while_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you use a `while` loop, you can tell the farmer to remove a pile or fill a hole, even if one isn't there. That means you can program her to remove any dirt or fill any hole, no matter where she is.\",\"hint_id\":\"courseD_farmer_while_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4941ed0513033f45b936522dff9d8a93/courseD_farmer_while_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops.\",\"hint_id\":\"courseD_farmer_conditionals8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/63d753bc69863993bef4b12d0375669b/courseD_farmer_while_challenge1.mp3\"}]",
     "instructions_important": "false",
     "ideal": "10",
-    "markdown_instructions": "Fill all of the holes and remove all of the piles.",
+    "long_instructions": "Fill all of the holes and remove all of the piles.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "step_speed": "1",

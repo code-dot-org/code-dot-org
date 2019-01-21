@@ -24,7 +24,7 @@
     "coordinate_grid_background": "false",
     "free_play": "false",
     "disable_sharing": "false",
-    "instructions": "Let's try that again, but with less help. What do you need to edit this time to make the actors patrol?",
+    "short_instructions": "Let's try that again, but with less help. What do you need to edit this time to make the actors patrol?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

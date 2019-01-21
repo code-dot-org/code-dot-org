@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish Starla's rocket so she can chase her pet.",
+    "short_instructions": "Finish Starla's rocket so she can chase her pet.",
     "x": "150",
     "y": "150",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\r\n\r\nFinish Starla's rocket so she can chase her pet.  \r\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
+    "long_instructions": "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\r\n\r\nFinish Starla's rocket so she can chase her pet.  \r\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

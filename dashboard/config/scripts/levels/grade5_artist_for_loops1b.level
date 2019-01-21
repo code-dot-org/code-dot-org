@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Experiment with the `for` loop and play with the `counter` variable.",
+    "short_instructions": "Experiment with the `for` loop and play with the `counter` variable.",
     "x": "175",
     "y": "225",
     "start_direction": "90",
@@ -21,7 +21,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \r\n\r\nDrag out a few blocks and see what happens.  \r\n\r\n<br/><br/>\r\n",
+    "long_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \r\n\r\nDrag out a few blocks and see what happens.  \r\n\r\n<br/><br/>\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

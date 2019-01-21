@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's put both elements inside a loop.",
+    "short_instructions": "Let's put both elements inside a loop.",
     "x": "175",
     "y": "175",
     "start_direction": "90",

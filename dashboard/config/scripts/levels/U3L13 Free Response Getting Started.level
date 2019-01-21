@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Buttons on the Screen - Getting Started",
-    "markdown_instructions": "Give three examples of familiar applications that respond to you, the user. \n\nFor each, describe the actions (means of input) you use to \"talk to the program.\" \n\nIf directed by your teacher, work with a partner to sketch a mock-up of an app with multiple means of input.\n\n\n",
+    "long_instructions": "Give three examples of familiar applications that respond to you, the user. \n\nFor each, describe the actions (means of input) you use to \"talk to the program.\" \n\nIf directed by your teacher, work with a partner to sketch a mock-up of an app with multiple means of input.\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

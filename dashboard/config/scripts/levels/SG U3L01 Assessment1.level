@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Free Response: Interpreting Instructions",
-    "markdown_instructions": "Consider the algorithm you designed for today’s activity. Identify two instances where there may be multiple ways to interpret your instructions and suggest improvements that could be made to improve their clarity.\r\n",
+    "long_instructions": "Consider the algorithm you designed for today’s activity. Identify two instances where there may be multiple ways to interpret your instructions and suggest improvements that could be made to improve their clarity.\r\n",
     "encrypted_solution": "WwmskccmXAngEj6LDQIFCT3Xjeo4qW9aG0JVvG8uebYuf6Xjp2WrriYm0dAN\nwk3kkAsMBXpSYvHXxZiJgwhLH5hNmrHfZ3oZikmkQLqBhrAfHiNPaWitlcn+\nADPuVcecX9Bqdp1zxOsT5UjcYomlhj4DVVye/Aunwz725FMSMF7pdps2HOTF\nxOOTl1M/wccIwx25lWwpXexghte2kgLTLLahz+4Dx+2q7hPSh8b6oko/bV+9\nps1+IpjzzAjEwQk467dU6XwkCWM15yF6K7tCKv1Ai4BWeGw+ifzzPG3cLgnk\nwCrXv7lgHos6YfKDfmgK/FVV4IEoj8AdiwIK/mOazmGCh0KE31zJc0WjPIPZ\nRvrsWkyD6Sx/gz8pY8BoLcti+CztsixXpHMCGysUY68VEC3OEZqRGE1/cc8m\njmTkwgKT4PPTfDeoYTxYFcnqTq8i\n",
     "skip_dialog": true,
     "skip_sound": true,

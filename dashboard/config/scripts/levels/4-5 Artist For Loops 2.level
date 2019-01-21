@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This is a \"for\" block. Instead of typing 1,2,3... 10, the \"for\" block can repeat the blocks inside it and count the numbers for you. Place the number 10 into the \"to\" section of the \"for\" block.",
+    "short_instructions": "This is a \"for\" block. Instead of typing 1,2,3... 10, the \"for\" block can repeat the blocks inside it and count the numbers for you. Place the number 10 into the \"to\" section of the \"for\" block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

@@ -14,6 +14,7 @@ import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
 import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
+import exportExpoMetroConfigJs from '../templates/export/expo/metro.config.exported_js';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import exportExpoWarningPng from '../templates/export/expo/warning.png';
@@ -98,6 +99,7 @@ export default {
       zip.file(appName + "/App.js", appJs);
       zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
       zip.file(appName + "/DataWarning.js", exportExpoDataWarningJs);
+      zip.file(appName + "/metro.config.js", exportExpoMetroConfigJs);
     }
     // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + "index.html", html);
@@ -133,7 +135,7 @@ export default {
         ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/gamelab-api.j" : "gamelab-api.js"),
               gamelabApiText);
-          zip.file(appName + "/gamelab.css", cssText);
+          zip.file(appName + "/" + (expoMode ? "assets/" : "") + "gamelab.css", cssText);
           zip.file(appName + "/" + (expoMode ? "assets/p5.j" : "p5.js"), p5Text);
           zip.file(appName + "/" + (expoMode ? "assets/p5.play.j" : "p5.play.js"),
               p5playText);

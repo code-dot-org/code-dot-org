@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "**What do you think?**\r\n\r\nWhen you run this code, what will it do?",
+    "long_instructions": "**What do you think?**\r\n\r\nWhen you run this code, what will it do?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

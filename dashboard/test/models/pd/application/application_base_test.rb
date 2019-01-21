@@ -302,5 +302,40 @@ module Pd::Application
         application.sanitize_status_timestamp_change_log
       )
     end
+
+    test 'formatted_partner_contact_email' do
+      application = create :pd_facilitator1920_application
+
+      partner = create :regional_partner, contact: nil
+      contact = create :teacher
+
+      # no partner
+      assert_nil application.formatted_partner_contact_email
+
+      # partner w no contact info
+      application.regional_partner = partner
+      assert_nil application.formatted_partner_contact_email
+
+      # name only? still nil
+      partner.contact_name = 'We Teach Code'
+      assert_nil application.formatted_partner_contact_email
+
+      # email only? still nil
+      partner.contact_name = nil
+      assert_nil application.formatted_partner_contact_email
+
+      # old contact field
+      partner.contact = contact
+      assert_equal "#{contact.name} <#{contact.email}>", application.formatted_partner_contact_email
+
+      # program manager but no contact_name or contact_email
+      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
+      assert_equal "#{program_manager.name} <#{program_manager.email}>", application.formatted_partner_contact_email
+
+      # name and email
+      partner.contact_name = 'We Teach Code'
+      partner.contact_email = 'we_teach_code@ex.net'
+      assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
+    end
   end
 end
