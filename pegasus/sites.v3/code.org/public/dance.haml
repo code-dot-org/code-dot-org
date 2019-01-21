@@ -3,6 +3,10 @@ title: Dance
 theme: responsive
 ---
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/code.org/public/dance.js')}
+
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
 =view :dance_tutorial_section
@@ -18,7 +22,7 @@ theme: responsive
 =view :dance_sponsor_logo
 
 %h2.dance-responsive-padding.add-margintop-between-sections= I18n.t(:hoc2018_dance_featured_student_creations_title)
-=view :student_dance_projects
+#student_dance_projects
 
 %h2.dance-responsive-padding= I18n.t(:hoc2018_dance_videos_section_heading)
 .thumbnail-wrapper
