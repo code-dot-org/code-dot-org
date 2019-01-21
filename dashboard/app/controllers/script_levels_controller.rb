@@ -116,6 +116,12 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # Attempt to redirect user to the proper script overview page if we think they ended up on the wrong level.
+    if redirect_script = redirect_script(@script_level, request.locale)
+      redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
+    end
+
     load_user
     return if performed?
     load_section
@@ -419,5 +425,24 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def redirect_script(level, locale)
+    # Return nil if level is nil level does not belong to a script.
+    return nil if !level || level.script.nil?
+
+    # Return nil we know the user can view the script version requested.
+    script = level.script
+    return nil if script.can_view_version?(current_user, locale: locale)
+
+    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
+    # none are assigned.
+    redirect_script = Script.latest_assigned_version(script.family_name, current_user)
+    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
+
+    # Do not redirect if we are already on the correct script.
+    return nil if redirect_script == script
+
+    redirect_script
   end
 end
