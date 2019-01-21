@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+#
+#
+
+require 'sequel'
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/only_one'
+require 'cdo/properties'
+require src_dir 'database'
+
+PEGASUS_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
+STORAGE_APPS = PEGASUS_DB[:storage_apps]
+
+# This default number of lines of code is from 2019-1-21.
+DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
+
+def main
+  project_count = 0
+  # Get the current amount
+  STORAGE_APPS.each do |row|
+    puts row
+    if row[:standalone] == true
+      project_count += 1
+    end
+  end
+
+  puts project_count
+
+  if project_count == 0
+    project_count = DEFAULT_NUMBER_OF_PROJECTS
+  end
+
+  # round number down to closest million
+  project_count = (project_count / 1_000_000).floor * 1_000_000
+
+  puts project_count
+
+  # check if number is bigger than previous count
+  existing_project_count = Properties.get(:metrics)['project_count']
+  project_count = [project_count, existing_project_count].max
+
+  # save value for use
+  time = DateTime.now
+  Properties.set :metrics, {
+    created_at:               time,
+    created_on:               time.to_date,
+    petition_signatures:      Properties.get(:metrics)['petition_signatures'],
+    lines_of_code:            Properties.get(:metrics)['lines_of_code'],
+    project_count:            project_count,
+  }
+end
+
+main
