@@ -371,6 +371,42 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
+  test "show: redirect to latest stable script version in family for logged out user" do
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_stable_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+  end
+
+  test "show: redirect to latest stable script version in family for student" do
+    sign_in @student
+
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_assigned_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+  end
+
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
