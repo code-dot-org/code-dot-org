@@ -61,17 +61,17 @@ When /^I switch to code mode$/ do
 end
 
 And /^I wait to see Applab design mode$/ do
-  wait = Selenium::WebDriver::Wait.new(open_timeout: 10)
+  wait = Selenium::WebDriver::Wait.new(timeout: 10)
   wait.until {@browser.execute_script("return $('#designWorkspace').css('display') == 'block';")}
 end
 
 And /^I wait to see Applab data mode$/ do
-  wait = Selenium::WebDriver::Wait.new(open_timeout: 10)
+  wait = Selenium::WebDriver::Wait.new(timeout: 10)
   wait.until {@browser.execute_script("return $('#dataWorkspaceWrapper').css('display') == 'block';")}
 end
 
 And /^I wait to see Applab code mode$/ do
-  wait = Selenium::WebDriver::Wait.new(open_timeout: 30)
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until {@browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';")}
 end
 

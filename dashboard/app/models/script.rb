@@ -429,13 +429,21 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
   def redirect_to_script_url(user, locale: nil)
+    # Only redirect students.
+    return nil unless user && user.student?
     # No redirect unless user is allowed to view this script version and they are not already assigned to this script
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
+    # No redirect if script or its course are not versioned.
+    current_version_year = version_year || course&.version_year
+    return nil unless current_version_year.present?
 
-    # Redirect user to the latest assigned script in this family, if one exists.
-    script = Script.latest_assigned_version(family_name, user)
-    script&.link
+    # Redirect user to the latest assigned script in this family,
+    # if one exists and it is newer than the current script.
+    latest_assigned_version = Script.latest_assigned_version(family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.course&.version_year
+    return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
+    latest_assigned_version.link
   end
 
   def link
@@ -451,11 +459,14 @@ class Script < ActiveRecord::Base
     return true unless user.student?
 
     # A student can view the script version if...
-    # it is the latest stable version, they are assigned to it, or they have progress in it.
-    latest_script_version = Script.latest_stable_version(family_name, locale: locale)
+    # 1) it is the latest stable version in English, 2) it is the latest stable version in their locale,
+    # 3) they are assigned to it, 4) or they have progress in it.
+    return true if Script.latest_stable_version(family_name) == self
+
+    latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     has_progress = user.scripts.include?(self)
 
-    latest_script_version == self || user.assigned_script?(self) || has_progress
+    latest_stable_version_in_locale == self || user.assigned_script?(self) || has_progress
   end
 
   # @param family_name [String] The family name for a script family.
