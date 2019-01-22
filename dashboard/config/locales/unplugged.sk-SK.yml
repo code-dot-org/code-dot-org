@@ -242,6 +242,7 @@ sk:
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma
           bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
+        title: Cykly bez počítača
         desc: V tejto lekcii sa naučíš niečo o cykloch!
       courseB_unplugged_MRF:
         title: Aktivity bez počítača
@@ -430,6 +431,7 @@ sk:
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       courseA_unplugged_loops_2018:
+        title: Cykly bez počítača
         desc: V tejto lekcii sa naučíš niečo o cykloch!
       BigEvent_2018:
         title: Veľká udalosť

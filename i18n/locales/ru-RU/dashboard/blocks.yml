@@ -326,20 +326,25 @@ ru:
       Dancelab_setBackground:
         text: задать цвет фона {COLOR}
       Dancelab_setBackgroundEffect:
-        text: задать фоновый эффект {EFFECT}
+        text: задать фоновый эффект {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Нет
             '"circles"': Туннель
+            '"color_cycle"': Цвета
             '"diamonds"': Ромбы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
+            '"swirl"': Гипноз
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
-            '"rainbow"': Цвета
+            '"splatter"': Брызги краски
+            '"rainbow"': Радуга
             '"snowflakes"': Снег
             '"text"': Название песни
+            '"galaxy"': Космос
             '"sparkles"': Блестки
+            '"spiral"': Спираль
             '"disco"': Квадраты
             '"stars"': Звезды
           PALETTE:
@@ -357,16 +362,20 @@ ru:
             '"none"': Нет
             '"rand"': "(Случайный)"
             '"circles"': Туннель
+            '"color_cycle"': Цвета
             '"diamonds"': Ромбы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
+            '"swirl"': Гипноз
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
             '"splatter"': Брызги краски
-            '"rainbow"': Цвета
+            '"rainbow"': Радуга
             '"snowflakes"': Снег
             '"text"': Название песни
+            '"galaxy"': Космос
             '"sparkles"': Блестки
+            '"spiral"': Спираль
             '"disco"': Квадраты
             '"stars"': Звезды
           PALETTE:
@@ -412,6 +421,7 @@ ru:
         options:
           EFFECT:
             '"none"': Нет
+            '"bubbles"': Пузыри
             '"confetti"': Конфетти
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
@@ -419,6 +429,7 @@ ru:
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
+            '"smile_face"': Смайлик
             '"raining_tacos"': Тако
       Dancelab_setForegroundEffectExtended:
         text: задать эффект переднего плана {EFFECT}
@@ -426,6 +437,7 @@ ru:
           EFFECT:
             '"none"': Нет
             '"rand"': "(Случайный)"
+            '"bubbles"': Пузыри
             '"confetti"': Конфетти
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
@@ -433,6 +445,7 @@ ru:
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
+            '"smile_face"': Смайлик
             '"raining_tacos"': Тако
       Dancelab_setProp:
         text: 'установить {SPRITE} {PROPERTY} на {VAL} '

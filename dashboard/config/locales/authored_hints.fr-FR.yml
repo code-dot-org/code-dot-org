@@ -4160,6 +4160,29 @@ fr:
 
 
           ![Image des blocs de solution](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a: Si tu as du mal, essaie d’abord d’écrire les étapes sur
+          une feuille de papier.
+      K2.0 sequence 3_authored_hint:
+        K2.0_sequence_3_a: Si tu as du mal, essaie de trouver le bon chemin puis enlève
+          le bloc qui ne correspond pas.
+      K2.0 sequence 6_authored_hint:
+        K2.0_sequence_6_a: Il y a 1 bloc que tu dois ajouter pour faire avancer l’oiseau
+          vers le cochon.
+        K2.0_sequence_6_b: Si tu ne trouves pas quoi faire, essaie de dessiner le
+          casse-tête sur du papier et trace un chemin avec ton doigt pour voir dans
+          quelle direction te déplacer.
+      K2.0 sequence 7_authored_hint:
+        K2.0_sequence_7_a: Si tu es bloqué, essaie de dessiner l’image sur du papier
+          pour voir comment l’oiseau devrait se déplacer.
+      K2.0 sequence 8_authored_hint:
+        K2.0_sequence_8_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a: Si tu as du mal, essaie d’abord d’écrire les étapes sur
+          une feuille de papier.
+      K2.0 sequence FP_authored_hint:
+        K2.0_sequence_FP_a: Si le chemin ne semble pas clair, trace du doigt un chemin
+          de l’oiseau au cochon.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Essaie de faire construire des ponts à l'Agent afin
           qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !
@@ -4901,6 +4924,14 @@ fr:
           suivant !
         courseA_artist_loops_challenge2_c: Tu auras besoin de BEAUCOUP de blocs dans
           ta boucle pour ce problème.
+      course1_artist_loops_challenge4_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Les blocs comme ceux-ci : <xml>  <block
+          type="simple_move_up_right"/></xml> déplaceront ton artiste en diagonale
+          !'
+        courseB_artist_loops_challenge1_b: Quand tu finis un des dés, `saute` vers
+          le suivant !
+        courseB_artist_loops_challenge1_c: 'Tu devras te ˋdéplacer` ou ˋsauter` au-dessus
+          des mêmes lignes deux fois. '
       course1_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
@@ -4976,15 +5007,72 @@ fr:
           des blocs pour résoudre ce problème.
         courseB_maze_seq_challenge2_b: Réorganise les blocs et emprunte le chemin
           du milieu.
+      course1_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Essaie de compter les cases avec ton doigt.
+          N’oublie pas de ne pas compter la case de départ !
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers l’ouest pour
           commencer.
       course1_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
+          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
+          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
+          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
+          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Enfin, fais apparaitre Wendel le Sorcier
           quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
+      course1_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "Tu peux faire chanter un oiseau.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Tu peux faire biper un robot.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Tu peux faire grogner un monstre mécontent.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       course2_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Commece par créer une boucle imbriquée
           pour créer quatre octogones. Tourne de 45 degrés pour faire l’octogone.
@@ -5056,6 +5144,9 @@ fr:
           que je suis tourné du bon côté !*"
         courseC_maze_programming_challenge2_b: La solution la plus courte n’utilise
           que 5 blocs, mais elle utilise le bloc ˋrépéter` !
+      course2_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Essaie de compter les cases avec ton doigt.
+          N’oublie pas de ne pas compter la case de départ !
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers l’ouest pour
           commencer.
@@ -5849,6 +5940,8 @@ fr:
         courseA_harvester_loops4_b: Combien d’épis de maïs y a-t-il ? Combien de fois
           ton code se répète-t-il ?
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: 'Si tu es bloqué, essaie de résoudre le casse-tête
+          en 2 parties : une partie avant le coin et une autre après le coin.'
         courseA_harvester_loops5_b: |-
           Ton code final devra avoir **une** boucle `répéter`  <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
@@ -5881,6 +5974,8 @@ fr:
           </block></xml> l’une après l’autre !
         courseA_harvester_loops7_b: Utilise deux boucles pour suivre ce chemin.
       courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: Sépare ce casse-tête en trois parties différentes.
+          Une partie pour le premier coin, une pour le deuxième coin et une pour finir.
         courseA_harvester_loops9_b: N’aie pas peur d’exécuter ton code après chaque
           partie pour voir ce qui se passe !
         courseA_harvester_loops9_c: Suis ce chemin pour récolter tout le maïs.
@@ -5897,6 +5992,14 @@ fr:
           <xml>
           <block type="maze_moveEast"/>
           </xml>
+      courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_a: Tu es bloqué ? Essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+        courseA_harvester_seq10_b: Tu devras `avancer vers l’Est` puis ˋavancer vers
+          le Nord`. Fais cela deux fois. N’oublie pas aussi de ramasser tout le maïs
+          !
+        courseA_harvester_seq10_c: Essaie de suivre ce chemin pour récolter tout le
+          maïs.
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: |-
           Utilise ce bloc pour récolter le maïs quand le moissonneur l’atteint.
@@ -5907,11 +6010,15 @@ fr:
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: N’oublie pas d’utiliser <xml><block type="harvester_corn"/></xml>
           pour ramasser le maïs !
+        courseA_harvester_seq2_b: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
       courseA_harvester_seq3_authored_hint:
         courseA_harvester_seq3_a: |-
           As-tu pensé à utiliser ce bloc ?
 
           <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Dis les étapes à voix haute et vois si cela t’aide
+          à trouver la réponse.
       courseA_harvester_seq4_authored_hint:
         courseA_harvester_seq4_a: Combien de cases y a-t-il entre le moissonneur et
           le maïs ? Combien de blocs sont déjà dans l’espace de travail ?
@@ -5922,15 +6029,32 @@ fr:
       courseA_harvester_seq5_authored_hint:
         courseA_harvester_seq5_a: Quel bloc déplace le moissonneur dans le mauvais
           sens ?
+        courseA_harvester_seq5_b: Tu dois enlever un bloc.
+        courseA_harvester_seq5_c: |-
+          Jette ce bloc à la poubelle !
+
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: Si tu es bloqué, essaie de dire les étapes à voix
+          haute. Cela pourrait t’aider à trouver le bon chemin.
       courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: Essaie de résoudre ce casse-tête en 2 parties, une
+          avant le coin et l’autre après le coin.
         courseA_harvester_seq7_b: Des problèmes ? Voici le chemin que le moissonneur
           devrait emprunter.
+      courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: Tu devrais terminer avec **4** blocs de mouvement
+          et **2** blocs de récolte.
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Exécute le code plusieurs fois pour voir ce qui
           se passe. Où le moissonneur s’arrête-t-il ?
+        courseA_harvester_seq9_b: N’oublie pas de récolter tout le maïs ! Tu auras
+          besoin de **3** blocs ˋrécolte maïs`.
+        courseA_harvester_seq9_c: Tu devrais suivre ce chemin pour récolter tout le
+          maïs.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5945,10 +6069,10 @@ fr:
           </block>
           </xml>
       courseA_maze_ramp2a_2018_authored_hint:
-        '1': Snap both `East` blocks to the bottom of the `when run` block.
+        '1': Connecte les deux blocs ˋEst` au bas du bloc ˋquand l’exécution commence`.
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5967,7 +6091,7 @@ fr:
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5986,7 +6110,7 @@ fr:
           </xml>
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6005,7 +6129,7 @@ fr:
           </xml>
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6019,28 +6143,518 @@ fr:
           </next>
           </block>
           </xml>
+      courseA_maze_seq1_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si tu as du mal à faire bouger l’oiseau, assure-toi que des blocs sont connectés à <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          L’oiseau devra se déplacer vers l’Ouest 3 fois pour arriver au cochon. Utilise ce bloc :
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10_authored_hint:
+        courseA_maze_seq10_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+        courseA_maze_seq10_b: Tu devras aller dans 3 directions pour résoudre ce casse-tête.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+        courseA_maze_seq10_b: Tu devras aller dans 3 directions différentes pour résoudre
+          ce casse-tête.
+      courseA_maze_seq13_authored_hint:
+        courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un
+          chemin de l’oiseau au cochon.
+        courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
+          des blocs et d’exécuter le code pour voir ce qui se passe.
+        courseA_maze_seq13_c: |-
+          Ces blocs <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: Si le chemin ne semble pas clair, trace du doigt un
+          chemin de l’oiseau au cochon.
+        courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
+          des blocs et d’exécuter le code pour voir ce qui se passe.
+        courseA_maze_seq13_c: |-
+          Ces blocs <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si tu as du mal à faire bouger l’oiseau, assure-toi que des blocs sont connectés à <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          L’oiseau devra se déplacer vers l’Ouest 3 fois pour arriver au cochon. Utilise ce bloc :
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2_authored_hint:
+        courseA_maze_seq2_a: Il manque 1 bloc à ce programme. Peux-tu trouver lequel
+          ?
+        courseA_maze_seq2_b: Essaie d’abord d’exécuter le code pour voir où l’oiseau
+          termine. Où aller à partir de là ?
+      courseA_maze_seq2_2018_authored_hint:
+        courseA_maze_seq2_a: Il manque 1 bloc à ce programme. Peux-tu trouver lequel
+          ?
+        courseA_maze_seq2_b: Essaie d’abord d’exécuter le code pour voir où l’oiseau
+          termine. Où aller à partir de là ?
+      courseA_maze_seq3_authored_hint:
+        courseA_maze_seq3_a: Un des blocs déplace l’oiseau dans la mauvaise direction.
+          Peux-tu trouver lequel et le remplacer par le bon bloc ?
+        courseA_maze_seq3_b: Essaie d’utilise le bouton « Étape » pour trouver où
+          le programme tourne mal. Est-ce à la première étape ? À la deuxième ?
+        courseA_maze_seq3_c: Ce bloc <xml><block type="maze_moveNorth"/></xml> semble
+          ne pas déplacer l’oiseau vers la bonne direction. Peux-tu le remplacer par
+          un bloc différent ?
+      courseA_maze_seq3_2018_authored_hint:
+        courseA_maze_seq3_a: Un des blocs déplace l’oiseau dans la mauvaise direction.
+          Peux-tu trouver lequel et le remplacer par le bon bloc ?
+        courseA_maze_seq3_b: Essaie d’utilise le bouton « Étape » pour trouver où
+          le programme tourne mal. Est-ce à la première étape ? À la deuxième ?
+        courseA_maze_seq3_c: Ce bloc <xml><block type="maze_moveNorth"/></xml> semble
+          ne pas déplacer l’oiseau vers la bonne direction. Peux-tu le remplacer par
+          un bloc différent ?
+      courseA_maze_seq4_authored_hint:
+        courseA_maze_seq4_a: Si tu as du mal, essaie de trouver le bon chemin puis
+          enlève le bloc qui ne correspond pas.
+        courseA_maze_seq4_b: Essaie d’exécuter le code tel quel. Est-ce que quelque
+          chose tourne mal ? Quel bloc peux-tu enlever ? Comment peux-tu le corriger
+          ?
+      courseA_maze_seq4_2018_authored_hint:
+        courseA_maze_seq4_a: Si tu as du mal, essaie de trouver le bon chemin puis
+          enlève le bloc qui ne correspond pas.
+        courseA_maze_seq4_b: Essaie d’exécuter le code tel quel. Est-ce que quelque
+          chose tourne mal ? Quel bloc peux-tu enlever ? Comment peux-tu le corriger
+          ?
+      courseA_maze_seq4a_authored_hint:
+        courseA_maze_seq4_a: Si tu as du mal, essaie de tracer du doigt le bon chemin.
+          Quels mouvements fait ton doigt ?
+      courseA_maze_seq5_authored_hint:
+        courseA_maze_seq5_a: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
+        courseA_maze_seq5_b: Tu auras besoin de 2 blocs dirigés vers 2 directions.
       courseA_maze_seq5_2018_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
+        '1': Essaie d’écrire les étapes sur du papier pour trouver une solution !
         '2': |-
-          You will need to use this block:
+          Tu devras utiliser ce bloc :
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse.
+      courseA_maze_seq6_authored_hint:
+        courseA_maze_seq6_a: Ton code final devrait avoir 3 blocs de mouvement.
+        courseA_maze_seq6_b: 'Si tu es bloqué, essaie de résoudre le casse-tête en
+          2 parties : une partie avant le coin et une autre après le coin.'
+      courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: Ton code final devrait avoir 3 blocs de mouvement.
+        courseA_maze_seq6_b: 'Si tu es bloqué, essaie de résoudre le casse-tête en
+          2 parties : une partie avant le coin et une autre après le coin.'
+      courseA_maze_seq7_authored_hint:
+        courseA_maze_seq7_a: Il y a 1 bloc que tu dois ajouter pour faire avancer
+          l’oiseau vers le cochon.
+        courseA_maze_seq7_b: Si tu ne trouves pas quoi faire, essaie de dessiner le
+          casse-tête sur du papier et trace un chemin avec ton doigt pour voir dans
+          quelle direction te déplacer.
+      courseA_maze_seq7_2018_authored_hint:
+        courseA_maze_seq7_a: Il y a 1 bloc que tu dois ajouter pour faire avancer
+          l’oiseau vers le cochon.
+        courseA_maze_seq7_b: Si tu ne trouves pas quoi faire, essaie de dessiner le
+          casse-tête sur du papier et trace un chemin avec ton doigt pour voir dans
+          quelle direction te déplacer.
+      courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: Si tu es bloqué, essaie de dessiner l’image sur du papier
+          pour voir comment l’oiseau devrait se déplacer.
+      courseA_maze_seq8_2018_authored_hint:
+        courseA_maze_seq8_a: Si tu es bloqué, essaie de dessiner l’image sur du papier
+          pour voir comment l’oiseau devrait se déplacer.
+      courseA_maze_seq9_authored_hint:
+        courseA_maze_seq9_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
+        courseA_maze_seq9_b: Si tu n’es pas sûr de ce que tu dois faire, essaie d’appuyer
+          sur « Recommencer » et d’exécuter le code pour voir ce qui tourne mal.
+        courseA_maze_seq9_c: Tu devras te déplacer dans 3 directions pour résoudre
+          ce casse-tête.
+      courseA_maze_seq9_2018_authored_hint:
+        courseA_maze_seq9_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
+        courseA_maze_seq9_b: Si tu n’es pas sûr de ce que tu dois faire, essaie d’appuyer
+          sur « Recommencer » et d’exécuter le code pour voir ce qui tourne mal.
+        courseA_maze_seq9_c: Tu devras te déplacer dans 3 directions pour résoudre
+          ce casse-tête.
+      courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: Il y a deux solutions à ce casse-tête.
+      courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Il y a deux solutions à ce casse-tête.
+      courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: Essaie de compter les cases avec ton doigt.
+          N’oublie pas de ne pas compter la case de départ !
+      courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: Essaie de compter les cases avec ton doigt.
+          N’oublie pas de ne pas compter la case de départ !
+      courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Cherche le bloc qui fait dire quelque chose au
+          chien.
+        courseA_playLab_events2_b: |-
+          Voici le code dont tu as besoin pour résoudre ce casse-tête :
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Cherche le bloc qui fait dire quelque chose au
+          chien.
+        courseA_playLab_events2_b: |-
+          Voici le code dont tu as besoin pour résoudre ce casse-tête :
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3_authored_hint:
+        courseA_playLab_events3_a: |-
+          Fais glisser ce bloc  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la touche directionnelle
+          gauche pour déplacer Jorge vers le drapeau une fois que tu as écrit ton
+          programme. Quand le drapeau devient vert, tu as terminé !
+      courseA_playLab_events3_2018_authored_hint:
+        courseA_playLab_events3_a: |-
+          Fais glisser ce bloc  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la touche directionnelle
+          gauche pour déplacer Jorge vers le drapeau une fois que tu as écrit ton
+          programme. Quand le drapeau devient vert, tu as terminé !
+      courseA_playLab_events4_authored_hint:
+        courseA_playLab_events4_a: |-
+          Voici le bloc événement dont tu auras besoin pour déplacer Jorge vers la droite :
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Voici le code dont tu auras besoin pour résoudre ce casse-tête :
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
+      courseA_playLab_events4_2018_authored_hint:
+        courseA_playLab_events4_a: |-
+          Voici le bloc événement dont tu auras besoin pour déplacer Jorge vers la droite :
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Voici le code dont tu auras besoin pour résoudre ce casse-tête :
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
+      courseA_playLab_events5_authored_hint:
+        courseA_playLab_events5_a: |-
+          Voici les blocs événements que tu devras utiliser pour déplacer Jorge vers le haut et vers le bas :
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          et
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          Savais-tu que tu peux changer la touche de la flèche en cliquant sur l’image dans le bloc et en choisissant une nouvelle touche ?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: |-
+          Voici les blocs événements que tu devras utiliser pour déplacer Jorge vers le haut et vers le bas :
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          et
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          Savais-tu que tu peux changer la touche de la flèche en cliquant sur l’image dans le bloc et en choisissant une nouvelle touche ?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6_authored_hint:
+        courseA_playLab_events6_a: |-
+          Voici le bloc événement que tu devras utiliser pour que Jorge fasse quelque chose quand on lui clique dessus :
+
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Voici le bloc que tu devras utiliser pour modifier le fond :
+
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Voici le bloc que tu devras utiliser pour jouer un son aléatoire :
+
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
+      courseA_playLab_events6_2018_authored_hint:
+        courseA_playLab_events6_a: |-
+          Voici le bloc événement que tu devras utiliser pour que Jorge fasse quelque chose quand on lui clique dessus :
+
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Voici le bloc que tu devras utiliser pour modifier le fond :
+
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Voici le bloc que tu devras utiliser pour jouer un son aléatoire :
+
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
+      courseA_playLab_events7_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseA_playLab_events7_2018_authored_hint:
+        courseA_playLab_events7_a: |-
+          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
+          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
+          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
+          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
+          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Enfin, fais apparaître Wendel le sorcier
+          quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
+          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
+          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
+          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
+          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Enfin, fais apparaître Wendel le sorcier
+          quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1a_authored_hint:
+        courseA_playlab_events_challenge1_a: "Tu peux faire chanter un oiseau.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Tu peux faire biper un robot.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: |-
+          Tu peux faire grogner un monstre mécontent.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "Tu peux faire chanter un oiseau.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Tu peux faire biper un robot.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Tu peux faire grogner un monstre mécontent.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
+        courseA_playlab_events_challenge2_a: "Tu peux faire chanter un oiseau.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Tu peux faire biper un robot.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Tu peux faire grogner un monstre mécontent.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
+          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
+          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
+          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
+          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Enfin, fais apparaitre Wendel le Sorcier
           quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
+        '1': Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont
+          connectés, puis appuie de nouveau sur « Exécuter ».
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
           try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6056,7 +6670,7 @@ fr:
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6075,7 +6689,7 @@ fr:
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6094,7 +6708,7 @@ fr:
           </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6113,7 +6727,7 @@ fr:
           </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Ton code devrait ressembler à ceci :
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6130,15 +6744,129 @@ fr:
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Si tu veux que la boucle se répète plus de 4 fois,
           tu peux changer le nombre en haut du bloc.
+        courseB_artist_loops2_b: Essaie d’abord d’exécuter le code pour voir où l’artiste
+          finit.
       courseB_artist_loops2_2018_authored_hint:
         courseB_artist_loops2_a: Si tu veux que la boucle se répète plus de 4 fois,
           tu peux changer le nombre en haut du bloc.
+        courseB_artist_loops2_b: Essaie d’abord d’exécuter le code pour voir où l’artiste
+          finit.
+      courseB_artist_loops3_authored_hint:
+        courseB_artist_loops3_a: N’oublie pas d’utiliser une boucle `répéter` pour
+          un meilleur code !
+        courseB_artist_loops3_b: L’artiste devra se déplacer vers le Sud pour dessiner
+          cette ligne.
+      courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_a: |-
+          N’oublie pas d’utiliser une boucle `répéter` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> pour un meilleur code !
+        courseB_artist_loops3_b: L’artiste devra se déplacer vers le Sud pour dessiner
+          cette ligne.
+      courseB_artist_loops4_authored_hint:
+        courseB_artist_loops4_a: Le bloc de saut te permet d’avancer sans dessiner
+          une ligne.
+        courseB_artist_loops4_b: Tu devras ajouter un bloc à l’intérieur de la boucle
+          répéter pour résoudre ce casse-tête.
+        courseB_artist_loops4_c: N’oublie pas de modifier le nombre de fois que la
+          boucle se répète.
+      courseB_artist_loops4_2018_authored_hint:
+        courseB_artist_loops4_a: Le bloc de saut te permet d’avancer sans dessiner
+          une ligne.
+        courseB_artist_loops4_b: Tu devras ajouter un bloc à l’intérieur de la boucle
+          répéter pour résoudre ce casse-tête.
+        courseB_artist_loops4_c: N’oublie pas de modifier le nombre de fois que la
+          boucle se répète.
+      courseB_artist_loops5_authored_hint:
+        courseB_artist_loops5_a: Fais glisser une boucle ˋrépéter`, puis mets les
+          autres blocs à l’intérieur. Combien de fois dois-tu répéter ?
+      courseB_artist_loops5_2018_authored_hint:
+        courseB_artist_loops5_a: |-
+          Fais glisser une boucle ˋrépéter` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>, puis mets les autres blocs à l’intérieur. Combien de fois dois-tu répéter ?
+      courseB_artist_loops6_authored_hint:
+        courseB_artist_loops6_b: Essaie d’écrire les déplacements sur un bout de papier
+          et vois ce qui se répète.
+      courseB_artist_loops6_2018_authored_hint:
+        courseB_artist_loops6_b: Essaie d’écrire les déplacements sur un bout de papier
+          et vois ce qui se répète.
+      courseB_artist_loops7_authored_hint:
+        courseB_artist_loops7_a: Ce problème utilise **4** boucles, l’une après l’autre
+          !
+        courseB_artist_loops7_b: |-
+          Remarque que chaque boucle fait un motif en escalier qui va dans une direction différente.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: "Les boucles devraient faire ceci :\n- Boucle 1\n
+          \ - Droite\n  - Bas\n  \n- Boucle 2\n  - Droite\n  - Haut\n\n- Boucle 3\n
+          \ - Gauche\n  - Haut\n\n- Boucle 4\n  - Gauche\n  - Bas"
+      courseB_artist_loops7_2018_authored_hint:
+        courseB_artist_loops7_a: Ce problème utilise **4** boucles, l’une après l’autre
+          !
+        courseB_artist_loops7_b: |-
+          Remarque que chaque boucle fait un motif en escalier qui va dans une direction différente.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: "Les boucles devraient faire ceci :\n- Boucle 1\n
+          \ - Droite\n  - Bas\n  \n- Boucle 2\n  - Droite\n  - Haut\n\n- Boucle 3\n
+          \ - Gauche\n  - Haut\n\n- Boucle 4\n  - Gauche\n  - Bas"
+      courseB_artist_loops8_authored_hint:
+        courseB_artist_loops8_a: Combien de fois dois-tu répéter le motif pour créer
+          l’échelle ?
+        courseB_artist_loops8_b: Essaie d’exécuter le code donné pour voir ce qu’il
+          fait.
+      courseB_artist_loops8_2018_authored_hint:
+        courseB_artist_loops8_a: Combien de fois dois-tu répéter le motif pour créer
+          l’échelle ?
+        courseB_artist_loops8_b: Essaie d’exécuter le code donné pour voir ce qu’il
+          fait.
       courseB_artist_loops9_authored_hint:
+        courseB_artist_loops9_a: N’oublie pas que les blocs de saut permettent de
+          te déplacer sans tracer de ligne.
+        courseB_artist_loops9_b: Tu devras utiliser le bloc O pour résoudre ce casse-tête.
         courseB_artist_loops9_c: Tu ne trouves pas où mettre la boucle ? Essaie d’écrire
           le code étape par étape et cherche un motif.
       courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_a: N’oublie pas que les blocs de saut permettent de
+          te déplacer sans tracer de ligne.
+        courseB_artist_loops9_b: Tu devras utiliser le bloc O pour résoudre ce casse-tête.
         courseB_artist_loops9_c: Tu ne trouves pas où mettre la boucle ? Essaie d’écrire
           le code étape par étape et cherche un motif.
+      courseB_artist_loops_challenge1_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Les blocs comme ceux-ci : <xml>  <block
+          type="simple_move_up_right"/></xml> déplaceront ton artiste en diagonale
+          !'
+        courseB_artist_loops_challenge1_b: Quand tu finis un des dés, `saute` vers
+          le suivant !
+        courseB_artist_loops_challenge1_c: 'Tu devras te ˋdéplacer` ou ˋsauter` au-dessus
+          des mêmes lignes deux fois. '
+      courseB_artist_loops_challenge1_2018_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Les blocs comme ceux-ci : <xml>  <block
+          type="simple_move_up_right"/></xml> déplaceront ton artiste en diagonale
+          !'
+        courseB_artist_loops_challenge1_b: Quand tu finis un des dés, `saute` vers
+          le suivant !
+        courseB_artist_loops_challenge1_c: 'Tu devras te ˋdéplacer` ou ˋsauter` au-dessus
+          des mêmes lignes deux fois. '
+      courseB_artist_loops_challenge2_authored_hint:
+        courseB_artist_loops_challenge2_a: Le code pour dessiner un X t’es déjà donné.
+          Tout ce que tu as besoin de faire est répéter le X et ˋsauter` vers l’endroit
+          suivant.
+        courseB_artist_loops_challenge2_b: Tu peux utiliser les blocs ˋsauter` pour
+          te déplacer vers d’autres cases sans dessiner.
+      courseB_artist_loops_challenge2_2018_authored_hint:
+        courseB_artist_loops_challenge2_a: Le code pour dessiner un X t’es déjà donné.
+          Tout ce que tu as besoin de faire est répéter le X et ˋsauter` vers l’endroit
+          suivant.
+        courseB_artist_loops_challenge2_b: Tu peux utiliser les blocs ˋsauter` pour
+          te déplacer vers d’autres cases sans dessiner.
+      courseB_collector_loops1_authored_hint:
+        courseB_collector_loops1_a: Le bloc <xml><block type="collector_collect_simplified"/></xml>
+          permet de ramasser le trésor quand tu te tiens dessus.
+      courseB_collector_loops1_2018_authored_hint:
+        courseB_collector_loops1_a: Le bloc <xml><block type="collector_collect_simplified"/></xml>
+          permet de ramasser le trésor quand tu te tiens dessus.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
           un trésor.
@@ -6233,6 +6961,11 @@ fr:
           </xml>
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Il y a deux façons de résoudre ce casse-tête !
+      courseB_maze_seqCold_authored_hint:
+        courseB_maze_seqCold_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
+      courseB_maze_seqOld_authored_hint:
+        courseB_maze_seqOld_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_b: Essayez de vous déplacer vers le Ouest pour
           commencer.
@@ -8969,11 +9702,46 @@ fr:
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: Si tu veux que la boucle se répète plus de 4 fois,
           tu peux changer le nombre en haut du bloc.
+      grade1_artist_loops2_authored_hint:
+        grade1_artist_loops2_a: N’oublie pas d’utiliser une boucle `répéter` pour
+          un meilleur code !
+      grade1_artist_loops4_authored_hint:
+        grade1_artist_loops4_a: Fais glisser une boucle ˋrépéter`, puis mets les autres
+          blocs à l’intérieur. Combien de fois dois-tu répéter ?
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: Ce problème utilise QUATRE boucles, l’une après l’autre
           !
+        grade1_artist_loops6_c: "Les boucles devraient faire ceci :\n- Boucle 1\n
+          \ - Droite\n  - Bas\n  \n- Boucle 2\n  - Droite\n  - Haut\n\n- Boucle 3\n
+          \ - Gauche\n  - Haut\n\n- Boucle 4\n  - Gauche\n  - Bas"
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: Ce problème utilise QUATRE boucles, l’une après l’autre !
+        artistLoopsK9_c: "Les boucles devraient faire ceci :\n- Boucle 1\n  - Droite\n
+          \ - Bas\n  \n- Boucle 2\n  - Droite\n  - Haut\n\n- Boucle 3\n  - Gauche\n
+          \ - Haut\n\n- Boucle 4\n  - Gauche\n  - Bas"
+      grade1_artist_loops7b_authored_hint:
+        grade1_artist_loops7b_a: Combien de fois dois-tu répéter le motif pour créer
+          l’échelle ?
+      grade1_maze_sequence10_authored_hint:
+        grade1_maze_sequence10_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+      grade1_maze_sequence6_authored_hint:
+        K2.0_sequence_6_a: Il y a 1 bloc que tu dois ajouter pour faire avancer l’oiseau
+          vers le cochon.
+      grade1_maze_sequence8_authored_hint:
+        grade1_maze_sequence8_a: Bloqué ? Essaie de tracer du doigt le chemin de l’oiseau.
+      grade1_maze_sequence9_authored_hint:
+        grade1_maze_sequence9_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+      grade1_maze_sequenceA_authored_hint:
+        grade1_maze_sequence10_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+      grade1_maze_sequenceB_authored_hint:
+        grade1_maze_sequenceB_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
+      grade1_maze_sequenceC_authored_hint:
+        grade1_maze_sequenceC_a: Si tu as du mal, essaie d’abord d’écrire les étapes
+          sur une feuille de papier.
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Il y a deux façons de résoudre ce casse-tête !
       grade2_MakeDogTag_1_authored_hint:
@@ -9288,6 +10056,9 @@ fr:
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assure-toi que le nombre pour ˋvitesse_chien`
           est plus grand que ˋvitesse_chat`.
+      gradeK_sequence_4_authored_hint:
+        gradeK_sequence_4_a: Essaie d’écrire les étapes sur du papier pour trouver
+          une solution !
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: Si tu ne peux pas trouver la réponse tout de suite,
           essaie d’utiliser une feuille de papier pour comprendre de quelles flèches

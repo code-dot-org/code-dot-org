@@ -290,18 +290,23 @@ de:
       Dancelab_setBackground:
         text: Hintergrundfarbe einstellen {COLOR}
       Dancelab_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {EFFECT}
+        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Keiner
             '"circles"': Tunnel
+            '"color_cycle"': Farben
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laser-Tanzfläche
-            '"rainbow"': Farben
+            '"splatter"': Farbspritzer
+            '"rainbow"': Regenbogen
+            '"snowflakes"': Schnee
             '"text"': Song-Titel
+            '"galaxy"': Leerzeichen
             '"sparkles"': Funkeln
+            '"spiral"': Spirale
             '"disco"': Quadrate
             '"stars"': Sterne
           PALETTE:
@@ -317,14 +322,18 @@ de:
             '"none"': Keiner
             '"rand"': "(zufällig)"
             '"circles"': Tunnel
+            '"color_cycle"': Farben
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laser-Tanzfläche
             '"splatter"': Farbspritzer
-            '"rainbow"': Farben
+            '"rainbow"': Regenbogen
+            '"snowflakes"': Schnee
             '"text"': Song-Titel
+            '"galaxy"': Leerzeichen
             '"sparkles"': Funkeln
+            '"spiral"': Spirale
             '"disco"': Quadrate
             '"stars"': Sterne
           PALETTE:
@@ -368,6 +377,7 @@ de:
         options:
           EFFECT:
             '"none"': Keiner
+            '"bubbles"': Blasen
             '"confetti"': Konfetti
             '"hearts_red"': Herzen
             '"music_notes"': Musiknoten
@@ -375,12 +385,14 @@ de:
             '"smiling_poop"': Kacke
             '"rain"': Regen
             '"floating_rainbows"': Regenbogen
+            '"smile_face"': Smiley
       Dancelab_setForegroundEffectExtended:
         text: Vordergrundeffekt einstellen {EFFECT}
         options:
           EFFECT:
             '"none"': Keiner
             '"rand"': "(zufällig)"
+            '"bubbles"': Blasen
             '"confetti"': Konfetti
             '"hearts_red"': Herzen
             '"music_notes"': Musiknoten
@@ -388,6 +400,7 @@ de:
             '"smiling_poop"': Kacke
             '"rain"': Regen
             '"floating_rainbows"': Regenbogen
+            '"smile_face"': Smiley
       Dancelab_setProp:
         text: 'stellen Sie {SPRITE} {PROPERTY} auf {VAL} '
         options:

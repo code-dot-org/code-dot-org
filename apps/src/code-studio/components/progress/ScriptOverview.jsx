@@ -17,6 +17,7 @@ import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { onDismissRedirectDialog, dismissedRedirectDialog } from '@cdo/apps/util/dismissVersionRedirect';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -36,6 +37,7 @@ class ScriptOverview extends React.Component {
       version_title: PropTypes.string.isRequired,
       can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
+    courseName: PropTypes.string,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -64,6 +66,9 @@ class ScriptOverview extends React.Component {
   }
 
   onCloseRedirectDialog = () => {
+    const {courseName, scriptName} = this.props;
+    // Use course name if available, and script name if not.
+    onDismissRedirectDialog(courseName || scriptName);
     this.setState({
       showRedirectDialog: false,
     });
@@ -93,7 +98,10 @@ class ScriptOverview extends React.Component {
       versions,
       hiddenStageState,
       selectedSectionId,
+      courseName,
     } = this.props;
+
+    const displayRedirectDialog = redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
@@ -109,7 +117,7 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
-            {redirectScriptUrl &&
+            {displayRedirectDialog &&
               <RedirectDialog
                 isOpen={this.state.showRedirectDialog}
                 details={i18n.assignedToNewerVersion()}
@@ -124,6 +132,7 @@ class ScriptOverview extends React.Component {
               showRedirectWarning={showRedirectWarning}
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
+              courseName={courseName}
             />
             {!professionalLearningCourse && viewAs === ViewType.Teacher &&
                 (scriptHasLockableStages || scriptAllowsHiddenStages) &&
