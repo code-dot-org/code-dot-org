@@ -1166,7 +1166,7 @@ is:
       GLJr_Behavior_6: Prófum öðruvísi hegðun - láttu hundinn hlaupa upp og köttinn hlaupa til hægri.
       GLJr_Forever_1: Skrifaðu á vinnublaðið það sem þú heldur að hundurinn muni gera þegar þú smellir á "Keyra."
       GLJr_Forever_2: Nú eru komnir nýir kubbar! Prófaðu hvernig þeir virka. Skrifaðu á vinnublaðið hvaða kubba þú prófaðir og hvað þeir gera.
-      GLJr_Forever_5: Nú höfum við tvo kvika! Notaðu lykkju til að láta hundinn vera órólegan og kötturinn ráfa um
+      GLJr_Forever_5: Nú höfum við tvær verur! Notaðu lykkju til að láta hundinn vera órólegan og köttinn ráfa um
       Geometric Pattern: 'Hugmynd að verkefni: Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!'
       Geometric Sun: 'Hugmynd að verkefni: Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!'
       Geometric Sun_2018: 'Hugmynd að verkefni: Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!'
@@ -1315,7 +1315,7 @@ is:
       K2.0 sequence 6: Finndu hvað vantar og bættu svo við kubbum til að koma mér til svínsins!
       K2.0 sequence 9: 'Farðu í kringum TNT sprengiefnið til að ná svíninu! '
       K2.0 sequence pre: Prófaðu þessa kubba og reyndu að koma mér til svínsins!
-      KIKI GLJ Test Response: "Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að flugvélin muni gera þegar þú smellir á \"Keyra\"?\\r\n"
+      KIKI GLJ Test Response: 'Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að flugvélin muni gera þegar þú smellir á "Keyra"?  '
       KTest2: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna annars verður fjaðrafok!
       Kiki_StarWars_Test_3: texti
       Kiki_StarWars_Test_4: texti
@@ -3234,7 +3234,7 @@ is:
       grade3_maze_nestedLoops2: Getur þú komist til svínsins með því að búa til lykkju með aðeins einum `færa áfram` kubbi innan í `endurtaka`?
       grade3_maze_nestedLoops3: Komdu mér til svínsins! Í þetta sinn mátt þú aðeins nota einn "færa áfram" kubb
       grade3_maze_nestedLoops4: Notaðu tvær `endurtaka` lykkjur til að ná svíninu með sem fæstum kubbum!
-      grade3_robotFarmer_ConditionalsIntro_1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      grade3_robotFarmer_ConditionalsIntro_1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*\n\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       grade3_robotFarmer_ConditionalsIntro_10: Ég er að vinna seint og það er orðið svo dimmt að ég sé ekki hve stórir haugarnir eru. Nú hef ég ekki alla valkostina sem voru á "meðan" kubbnum. Láttu mig færast eftir túninu og ef það er haugur, þá fjarlægja hann
       grade3_robotFarmer_ConditionalsIntro_11: 'Það er enn dimmt úti. Láttu mig færast eftir túninu. Ef það er haugur á að fjarlægja hann og ef það er hola á að fylla hana. Vísbending: Notaðu valkosti í fellilistanum á "ef" kubbnum.'
       grade3_robotFarmer_ConditionalsIntro_4: |-

@@ -263,7 +263,7 @@
       Dancelab_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Dancelab_setBackgroundEffect:
-        text: velg bakgrunnseffekt {EFFECT}
+        text: velg bakgrunnseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ingen
@@ -274,10 +274,11 @@
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserdansegulv
-            '"splatter"': Bobler
+            '"splatter"': Rosa splætt
             '"rainbow"': Regnbue
             '"snowflakes"': Snø
             '"text"': Sangtittel
+            '"galaxy"': Verdensrom
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrater
@@ -361,6 +362,7 @@
             '"smiling_poop"': Bæsj
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
@@ -377,6 +379,7 @@
             '"smiling_poop"': Bæsj
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"raining_tacos"': Taco
       Dancelab_setProp:
