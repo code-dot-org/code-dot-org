@@ -1,9 +1,9 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "createNewSprite",
+    "func": "createNewSpriteAdvanced",
     "inline": false,
-    "blockText": "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
+    "blockText": "make a new sprite called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
     "color": [
       355,
       ".7",
@@ -12,8 +12,8 @@
     "args": [
       {
         "name": "NAME",
-        "assignment": true,
-        "customInput": "spritePicker"
+        "type": "String",
+        "field": true
       },
       {
         "name": "COSTUME",
