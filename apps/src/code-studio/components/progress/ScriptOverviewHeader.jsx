@@ -77,6 +77,7 @@ class ScriptOverviewHeader extends Component {
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired,
       version_title: PropTypes.string.isRequired,
+      can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
   };
@@ -169,14 +170,14 @@ class ScriptOverviewHeader extends Component {
       showHiddenUnitWarning,
     } = this.props;
 
-
-
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
       versionWarningDetails = i18n.wrongUnitVersionWarningDetails();
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
+
+    const filteredVersions = versions.filter(version => version.can_view_version);
 
     return (
       <div>
@@ -233,7 +234,7 @@ class ScriptOverviewHeader extends Component {
                 <span className="betatext">{betaTitle}</span>
                 }
               </h1>
-              {versions.length > 1 &&
+              {filteredVersions.length > 1 &&
                 <span style={styles.versionWrapper}>
                   <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
                   <select
@@ -242,7 +243,7 @@ class ScriptOverviewHeader extends Component {
                     style={styles.versionDropdown}
                     id="version-selector"
                   >
-                    {versions.map(version => (
+                    {filteredVersions.map(version => (
                       <option key={version.name} value={version.name}>
                         {version.version_year}
                       </option>

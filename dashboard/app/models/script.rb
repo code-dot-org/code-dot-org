@@ -454,19 +454,22 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the script.
   def can_view_version?(user, locale: nil)
-    return nil unless user
+    latest_stable_version = Script.latest_stable_version(family_name)
+    latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
+    is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
+
+    # Logged out users can see the latest script version in English and in their locale.
+    return is_latest if user.nil?
+
     # Restrictions only apply to students.
     return true unless user.student?
 
     # A student can view the script version if...
     # 1) it is the latest stable version in English, 2) it is the latest stable version in their locale,
     # 3) they are assigned to it, 4) or they have progress in it.
-    return true if Script.latest_stable_version(family_name) == self
-
-    latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     has_progress = user.scripts.include?(self)
 
-    latest_stable_version_in_locale == self || user.assigned_script?(self) || has_progress
+    is_latest || user.assigned_script?(self) || has_progress
   end
 
   # @param family_name [String] The family name for a script family.
@@ -483,7 +486,7 @@ class Script < ActiveRecord::Base
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
     supported_stable_scripts = script_versions.select do |script|
-      is_supported = script.supported_locales&.include?(locale) || locale.start_with?('en')
+      is_supported = script.supported_locales&.include?(locale) || locale&.start_with?('en')
       if version_year
         script.is_stable && is_supported && script.version_year == version_year
       else
@@ -1191,7 +1194,7 @@ class Script < ActiveRecord::Base
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
-      versions: summarize_versions,
+      versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
     }
@@ -1267,12 +1270,12 @@ class Script < ActiveRecord::Base
 
   # Returns an array of objects showing the name and version year for all scripts
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
     Script.
       where(family_name: family_name).
-      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
+      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
