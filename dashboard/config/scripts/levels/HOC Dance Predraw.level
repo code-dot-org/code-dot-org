@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
     "use_default_sprites": "false",
-    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "markdown_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "parent_level_id": 14510,
     "custom_setup_code": "preload();setup();drawSprites();",
     "block_pool": "Dancelab",

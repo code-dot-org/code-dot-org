@@ -59,7 +59,7 @@
       },
       "buzzer.frequency": null
     },
-    "long_instructions": "Do a thing!",
+    "markdown_instructions": "Do a thing!",
     "contained_level_names": null
   },
   "published": true,

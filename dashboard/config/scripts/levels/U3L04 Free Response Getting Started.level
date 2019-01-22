@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Creating Procedures Part 2: Getting Started",
-    "long_instructions": "Define the term \"abstraction.\" \n\nWhy is abstraction an important concept in computer science?\n",
+    "markdown_instructions": "Define the term \"abstraction.\" \n\nWhy is abstraction an important concept in computer science?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

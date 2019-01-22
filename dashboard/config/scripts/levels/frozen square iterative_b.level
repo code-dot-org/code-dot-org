@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "short_instructions": "Add four more blocks of code to finish the square.",
+    "instructions": "Add four more blocks of code to finish the square.",
     "x": "150",
     "y": "150",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"frozen_create_square\",\"callout_text\":\"Attach more blocks here to create a square\",\"element_id\":\"#add_more_blocks_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "long_instructions": "*\"It looks like we're halfway to making a square!\"* \r\n\r\n&nbsp;\r\n\r\nAdd four more blocks of code to finish the shape.",
+    "markdown_instructions": "*\"It looks like we're halfway to making a square!\"* \r\n\r\n&nbsp;\r\n\r\nAdd four more blocks of code to finish the shape.",
     "never_autoplay_video": "true",
     "contract_highlight": "false",
     "contract_collapse": "false",

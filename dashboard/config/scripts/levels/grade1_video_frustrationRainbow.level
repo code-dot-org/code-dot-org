@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "video_key": "playlab_repeat_forever",
-    "short_instructions": "This video describes the rainbow of frustration and introduces persistence.",
+    "instructions": "This video describes the rainbow of frustration and introduces persistence.",
     "skip_dialog": true,
     "skip_sound": true
   },

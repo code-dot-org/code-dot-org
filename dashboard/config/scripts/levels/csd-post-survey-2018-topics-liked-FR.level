@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Please provide any other feedback you have about the units of this course.",
+    "markdown_instructions": "Please provide any other feedback you have about the units of this course.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
