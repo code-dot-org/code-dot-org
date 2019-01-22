@@ -53,7 +53,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/fccef5d23434917c0a22361cb6e69666-image-1477679738105.gif\" style=\"float:right\">\r\n\r\n# Updating Fish\r\n\r\nThe same thing you did on the last level will help your fish look more like they are swimming. Update your scene to make the fish look like they don't swim in a perfectly straight line. \r\n\r\n# Do This\r\nYour goal is to finish the underwater scene so all three sprites are fish like the example on the right. \r\n\r\n* Use a small random rotation to **make your fish wiggle**.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/fccef5d23434917c0a22361cb6e69666-image-1477679738105.gif\" style=\"float:right\">\r\n\r\n# Updating Fish\r\n\r\nThe same thing you did on the last level will help your fish look more like they are swimming. Update your scene to make the fish look like they don't swim in a perfectly straight line. \r\n\r\n# Do This\r\nYour goal is to finish the underwater scene so all three sprites are fish like the example on the right. \r\n\r\n* Use a small random rotation to **make your fish wiggle**.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

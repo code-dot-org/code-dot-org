@@ -11,7 +11,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "instructions": "Must... get... to sunflower.",
+    "short_instructions": "Must... get... to sunflower.",
     "ideal": "9",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",

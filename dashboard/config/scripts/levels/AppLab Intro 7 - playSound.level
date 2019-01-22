@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52 AM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** This sound board is almost done! Run it to see how it works. Then add an image, text, and sound to the last button.\r\n\r\n**How:** \r\n* Add an `onEvent()` to the program and set the \"id\" to `\"button4\"`. Drag a `playSound()` into the `onEvent()` and choose a sound from the library. \r\n* Add a `setProperty()` (outside your `onEvent()`) to change the button's `\"image\"` property. Choose an image using the third dropdown.\r\n* Add one more `setProperty()` to change the button's `\"text\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52 AM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** This sound board is almost done! Run it to see how it works. Then add an image, text, and sound to the last button.\r\n\r\n**How:** \r\n* Add an `onEvent()` to the program and set the \"id\" to `\"button4\"`. Drag a `playSound()` into the `onEvent()` and choose a sound from the library. \r\n* Add a `setProperty()` (outside your `onEvent()`) to change the button's `\"image\"` property. Choose an image using the third dropdown.\r\n* Add one more `setProperty()` to change the button's `\"text\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

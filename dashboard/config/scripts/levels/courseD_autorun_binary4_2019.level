@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
+    "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
     "embed": "false",
     "disable_sharing": "false",
     "contract_highlight": "false",

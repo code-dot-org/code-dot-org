@@ -12,7 +12,7 @@
     "score": "true",
     "free_play": "true",
     "scale": "{\"snapRadius\":2}",
-    "instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones.",
+    "short_instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

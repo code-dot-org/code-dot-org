@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Below there are functions you've written, and more for you to play with. Draw something awesome! Play with the pen width to see how different your drawings look!",
+    "short_instructions": "Freeplay: Below there are functions you've written, and more for you to play with. Draw something awesome! Play with the pen width to see how different your drawings look!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look!",
+    "long_instructions": "**Freeplay:** Below there are functions you've written, and more for you to play with. Play with the pen width to see how different your drawings look!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

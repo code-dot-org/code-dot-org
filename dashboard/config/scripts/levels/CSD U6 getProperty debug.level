@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Debug\r\n\r\nThis program should change the background color, text color, and text of the button \"click_me\" when it is clicked, but nothing seems to be working. Fix the code so that the program works as expected.",
+    "long_instructions": "# Debug\r\n\r\nThis program should change the background color, text color, and text of the button \"click_me\" when it is clicked, but nothing seems to be working. Fix the code so that the program works as expected.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"click_me\", \"click\", function(event) {\r\n  var text_color = getProperty(\"text_color_input\", \"text\");\r\n  var bg = getProperty(\"background_color_input\", \"text\");\r\n  var text = getProperty(\"button_text_input\", \"text\");\r\n  setProperty(\"click_me\", \"text-color\", text_color);\r\n  setProperty(\"background_color_input\", \"background\", background);\r\n  setProperty(\"click_me\", \"text\", \"text\");\r\n});\r\n",

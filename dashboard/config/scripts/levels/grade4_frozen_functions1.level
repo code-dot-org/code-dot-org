@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the new “draw a circle” function to create 10 overlapping circles. Don't forget to jump forward between circles.",
+    "short_instructions": "Use the new “draw a circle” function to create 10 overlapping circles. Don't forget to jump forward between circles.",
     "x": "80",
     "y": "150",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "video_key": "frozen_functions",
-    "markdown_instructions": "Use the new “dreate a circle” `function` to create 10 overlapping circles. Don't forget to `jump` forward between circles.",
+    "long_instructions": "Use the new “dreate a circle” `function` to create 10 overlapping circles. Don't forget to `jump` forward between circles.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

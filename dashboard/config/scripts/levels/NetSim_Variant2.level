@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "false",
-    "instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "short_instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",
@@ -48,7 +48,7 @@
     "lock_chunk_size_control": "false",
     "default_chunk_size_bits": "8",
     "video_key": "csp_internetsimulator_2",
-    "markdown_instructions": "## NetSim: Variant 2\r\n\r\nStudents connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "long_instructions": "## NetSim: Variant 2\r\n\r\nStudents connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_log_browser_button": "false",
     "broadcast_mode": "false",
     "connected_routers": "false",

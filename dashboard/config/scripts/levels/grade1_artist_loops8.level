@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
     "x": "375",
     "y": "250",
     "start_direction": "270",

@@ -108,7 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
-    "markdown_instructions": "# Board Output\r\n\r\nIf you haven't already, use some of the output elements on the board to communicate useful information to the user.",
+    "long_instructions": "# Board Output\r\n\r\nIf you haven't already, use some of the output elements on the board to communicate useful information to the user.",
     "contained_level_names": null
   },
   "published": true,

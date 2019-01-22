@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "String and Substring: Assessment 1",
-    "markdown_instructions": "What is the output of this code segment?\n\n\tvar str = \"Hello World\";\n\tvar worldIndex = str.indexOf(\"World\");\n\tconsole.log(worldIndex);\n\n<br/>\n",
+    "long_instructions": "What is the output of this code segment?\n\n\tvar str = \"Hello World\";\n\tvar worldIndex = str.indexOf(\"World\");\n\tconsole.log(worldIndex);\n\n<br/>\n",
     "skip_dialog": true,
     "skip_sound": true
   },

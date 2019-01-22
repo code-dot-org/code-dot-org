@@ -84,7 +84,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Pulse\r\n\r\nMake lights pulse\r\n\r\n",
+    "long_instructions": "# Pulse\r\n\r\nMake lights pulse\r\n\r\n",
     "start_blocks": "colorLeds[1].color(\"red\");\r\ncolorLed[1].blink();",
     "contained_level_names": null
   },

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the \"for\" block so that it counts 0, 20, 40, 60, 80... 200.",
+    "short_instructions": "Complete the \"for\" block so that it counts 0, 20, 40, 60, 80... 200.",
     "x": "125",
     "y": "300",
     "start_direction": "90",

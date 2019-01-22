@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
+    "short_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.\r\n\r\n",
+    "long_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

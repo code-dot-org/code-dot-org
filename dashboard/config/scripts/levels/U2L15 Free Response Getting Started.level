@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Security and Hacking: Getting Started",
-    "markdown_instructions": "Why do you think Internet hacking becomes \"really big news\" when it occurs?\n",
+    "long_instructions": "Why do you think Internet hacking becomes \"really big news\" when it occurs?\n",
     "encrypted_solution": "6vNK5foh/ht3GGevm5IpfRWuKkTvE6o9vUmhYDoIT3q/cnNXammWxG6K4S/N\n5Ky2C+8+Fem7CSt22iWf4WIvzQ==\n",
     "skip_dialog": true,
     "skip_sound": true

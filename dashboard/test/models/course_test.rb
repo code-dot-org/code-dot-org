@@ -298,6 +298,15 @@ class CourseTest < ActiveSupport::TestCase
       section.students << student
       assert_equal csp_2018.link, @csp_2017.redirect_to_course_url(student)
     end
+
+    test 'returns nil if latest assigned course is an older version than the current course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      section = create :section, course: @csp_2017
+      student = create :student
+      section.students << student
+      assert_nil csp_2018.redirect_to_course_url(student)
+    end
   end
 
   class CanViewVersion < ActiveSupport::TestCase

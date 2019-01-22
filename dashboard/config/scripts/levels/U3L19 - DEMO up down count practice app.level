@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "instructions": "Try out the demo app (Click to see full instructions)",
+    "short_instructions": "Try out the demo app (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -55,7 +55,7 @@
     "encrypted_examples": [
 
     ],
-    "markdown_instructions": "# All the basics you need\r\n\r\nWe're going to use this very simple app to demonstrate the basics of concepts involved in making the clicker game.  Yes, it's a dumb \"game\", but it has all the pieces of a more sophisticated game.\r\n\r\nThis app demontrates a few new concepts.  We'll step through each one, one at a time, explaining how each thing works.  Along the way, we'll also encounter some common challenges, and learn how to solve them.\r\n\r\n# Do This\r\n* Click the up arrow until something happens\r\n* Start over\r\n* Click the down arrow until something happens\r\n* Start over\r\n\r\nOnce you think you've seen all the behavior click Finish to see the first part of how this is done.\r\n\r\n",
+    "long_instructions": "# All the basics you need\r\n\r\nWe're going to use this very simple app to demonstrate the basics of concepts involved in making the clicker game.  Yes, it's a dumb \"game\", but it has all the pieces of a more sophisticated game.\r\n\r\nThis app demontrates a few new concepts.  We'll step through each one, one at a time, explaining how each thing works.  Along the way, we'll also encounter some common challenges, and learn how to solve them.\r\n\r\n# Do This\r\n* Click the up arrow until something happens\r\n* Start over\r\n* Click the down arrow until something happens\r\n* Start over\r\n\r\nOnce you think you've seen all the behavior click Finish to see the first part of how this is done.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
