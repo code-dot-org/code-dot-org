@@ -496,7 +496,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
-    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
     'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
@@ -510,6 +509,8 @@ describe('entry tests', () => {
   };
 
   var professionalDevelopmentEntries = {
+    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+
     'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
