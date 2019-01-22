@@ -4166,9 +4166,9 @@ is:
       Dance Party 1-validated_2019: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       Dance Party 1-validated_simple: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       Dance Party 1: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! Hvað heldur þú að muni gerast þegar þú smellir á hana?"
-      Dance Party 2 Validated: Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðar. Geturðu breytt hegðuninni í `byrjar` kubbnum til að láta hana snúast í hringi?
-      Dance Party 2: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðar. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
-      Dance Party 2_2019: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðar. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
+      Dance Party 2 Validated: Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. Geturðu breytt hegðuninni í `byrjar` kubbnum til að láta hana snúast í hringi?
+      Dance Party 2: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
+      Dance Party 2_2019: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
       Dance Party 2_simple: "Geimveran getur aðeins hreyft sig til hægri og vinstri.\n\nBreyttu hegðuninni innan í kubbnum <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> svo geimveran geti snúið sér.  "
       Dance Party 3 - Validated: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
       Dance Party 3: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
@@ -4177,9 +4177,9 @@ is:
         Búðu til nýja veru sem heitir `alien2`.
 
         Þegar þú smellir á hana ætti hún að gera eitthvað.
-      Dance Party 4 Validated: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimdansflokkur!"
-      Dance Party 4: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimdansflokkur!"
-      Dance Party 4_2019: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimdansflokkur!"
+      Dance Party 4 Validated: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
+      Dance Party 4: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
+      Dance Party 4_2019: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
       Dance Party 4_simple: "Búðu til þriðju veruna sem heitir `alien3`. \n\nHafðu allar geimverurnar í beinni röð. Þetta er danspartý úr geimnum!"
       Dance Party 5 - Validated: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
       Dance Party 5: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
@@ -4215,13 +4215,13 @@ is:
       Dance_Party_01: |-
         *Nú skulum við halda danspartý!
 
-        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
+        Dragðu `búa til nýtt`kubb inn á vinnusvæðið og settu hann inn í `uppstilling` kubbinn til þess að búa til þinn fyrsta dansara.
 
         **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
       Dance_Party_01_low: |-
         *Nú skulum við halda danspartý!
 
-        Dragðu `make a new`kubb inn á vinnusvæðið og settu hann inn í `setup` kubbinn til þess að búa til þinn fyrsta dansara.
+        Dragðu `búa til nýtt`kubb inn á vinnusvæðið og settu hann inn í `uppstilling` kubbinn til þess að búa til þinn fyrsta dansara.
 
         **Þú getur líka smellt á ljósaperuna vinstra megin ef þig vantar meiri upplýsingar eða fleiri áskoranir.*
       Dance_Party_02: |-
@@ -4232,7 +4232,7 @@ is:
         **Taktar** eru notaðir til talningar í tónlist. Í þessari æfingu er einn taktur 4 slög.
       Dance_Party_03: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
       Dance_Party_04: |-
-        *Þessi dans þarfnast smá glampa!*
+        *Þennan dans vantar smá íburð!*
 
         Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       Dance_Party_05: |-
@@ -4246,7 +4246,7 @@ is:
       Dance_Party_08: |-
         Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans.
 
-        Þú getur látið dansara virðast vera í meiri fjarlægð með því að gefa þeim minni stærð (_size_). Getur þú látið báða aukadansarana hafa sömu stærð?
+        Þú getur látið dansara virðast vera í meiri fjarlægð með því að minnka stærð (_size_) þeirra. Getur þú látið báða aukadansarana hafa sömu stærð?
       Dance_Party_09: |-
         Dansarar hafa eiginleikann "litur" (tint) sem getur litað þá. Prófaðu að breyta lit eins dansarans.
         * Liturinn sem þú velur mun blandast eigin lit dansarans.
@@ -4260,9 +4260,9 @@ is:
         </block></xml>
 
         Þetta forrit notar styrkleika bassans (lágu hljóðanna) til að stjórna hæð eins dansara. Getur þú látið hinn dansarann líka breytast með tónlistinni?
-      Dance_Party_11.5_test: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"all ducks\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
+      Dance_Party_11.5_test: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"allt endur\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
       Dance_Party_11: "Með kubbnum <xml><block type=\"Dancelab_whenKey\"></block></xml> getur þú keyrt kóða þegar ýtt er á upp örina. \n\nÞú gætir skipt um hreyfingu, breytt eiginleikum dansara eða bara gert einhverja hreyfingu. Notaðu ímyndunaraflið og fylgstu með nýjum kubbum!"
-      Dance_Party_11_5: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"all ducks\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
+      Dance_Party_11_5: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"allt endur\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
       Dance_Party_11b: |-
         Nú höfum við danskeppni! Kötturinn "dabbar" þegar þú ýtir á vinstri örina. Láttu Vélmennið "droppa" einu sinni þegar þú ýtir á hægri örina og "klappa" einu sinni þegar þú ýtir á upp-örina.
 
@@ -4270,10 +4270,10 @@ is:
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
       Dance_Party_3: "*Nú erum við að dansa!* \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
       Dance_Party_4: |-
-        *Þessi dans þarfnast smá glampa!*
+        *Þennan dans vantar meira skraut!*
 
-        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
-      Dance_Party_8: Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans. Þú getur látið dansara virðast vera í meiri fjarlægð með því að gefa þeim minni stærð (_size_). Getur þú látið aukadansarana vera jafnstóra?
+        Leitaðu eftir nýjum kubb í verkfærakassanum þínum sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
+      Dance_Party_8: Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans. Þú getur látið dansara virðast vera í meiri fjarlægð með því að minnka stærð (_size_) þeirra. Getur þú látið aukadansarana vera jafnstóra?
       Dance_Party_extras_battle: |-
         # Danshópar
 
@@ -4289,7 +4289,7 @@ is:
 
         Þessi dans notar líka skilyrðiskubb (_conditional_) til að stjórna því hvenær `hvern 0,25 takt` kubburinn getur breytt dansinum. Prófaðu að breyta tölunum í skilyrðiskubbnum til að sjá hvaða áhrif það hefur á dansinn.
 
-        * Gerðu tilraunir með aðra nótulengdir (svo sem 0,5 fyrir hálfnótu eða 0,125 fyrir áttundapartsnótu).
+        * Gerðu tilraunir með aðrar nótulengdir (svo sem 0,5 fyrir hálfnótu eða 0,125 fyrir áttundapartsnótu).
         * Bættu við einhverjum `eftir takt` atvikum.
         * Notaðu "sekúndur" í stað "takta" og reyndu að tímasetja dansana þannig.
       Dance_Party_extras_layout: |-
@@ -4303,7 +4303,7 @@ is:
       Dance_Party_extras_on_beat: |-
         # Bassa-, mið- og háir tónar
 
-        Þessi dans notar "toppa" sem atvik til að keyra kóða þegar hinir ýmsu hlutar tónlistarinnar hljóma hátt. Prófaðu mismunandi lög til að sjá hvernig þau breyta dansinum.
+        Þessi dans notar "toppa" sem atvik til að keyra kóða þegar hinir ýmsu hlutar tónlistarinnar hljóma sterkt. Prófaðu mismunandi lög til að sjá hvernig þau breyta dansinum.
       Dance_Party_extras_speed: |-
         # Hraðar, hægar
 
@@ -4347,16 +4347,16 @@ is:
         <i>Spilaðu leikinn og náðu að ljúka borði 3 til að fara í næstu þraut. </i>
       Formative versus Summative Assessment: 'Eftirfarandi tengill vísar í skilgreiningar á og dæmi um matsaðferðir, bæði mótandi símat og lokamat:'
       GLJr_Behavior_8: Kötturinn og hundurinn eru svo glaðir að hittast að þeir vilja skella sér í danspartý. Fjarlægðu þá hegðun sem þeir hafa þegar þeir snerta aðrar verur og bættu við "danspartý" hegðuninni svo þeir geti haldið upp á þetta!
-      GLJr_Forever_5: Nú höfum við tvo kvika! Notaðu lykkju til að láta hundinn vera órólegan og kötturinn ráfa um
+      GLJr_Forever_5: Nú höfum við tvær verur! Notaðu lykkju til að láta hundinn vera órólegan og köttinn ráfa um
       GLJr_Forever_8: Kötturinn og hundurinn eru svo glaðir að hittast að þeir vilja skella sér í danspartý. Ef verurnar tvær snertast láttu þá báðar keyra "danspartý" kubbinn.
       Geometric Pattern: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2018: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       Geometric Sun_2019: "**Hugmynd að verkefni:** Búðu til mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og skipulags!"
       HOC Dance 3_draft: |-
-        *Þessi dans þarfnast smá glampa!*
+        *Þennan dans vantar meira skraut!*
 
-        Leitaðu eftir nýjum kubb í verkfærakassanum þín sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
+        Leitaðu eftir nýjum kubb í verkfærakassanum þínum sem bætir við bakgrunnshrifum aftan við dansarann. Fylgstu með bakgrunninum breytast í takt við tónlistina!
       HOC Dance 4_draft: |-
         Notaðu annan nýjan kubb til að láta dansarann skipta um hreyfingu **eftir hverja 2 takta**!
 
@@ -4365,7 +4365,7 @@ is:
         *Við þurfum fleiri dansara!*
 
         Búðu til aukadansara sem heitir `backup_dancer1` sem á að dansa við köttinn.
-      HOC Dance 6_draft: Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans. Þú getur látið dansara virðast vera í meiri fjarlægð með því að gefa þeim minni stærð (_size_). Getur þú látið aukadansarana vera jafnstóra?
+      HOC Dance 6_draft: Hver dansari hefur nokkra eiginleika (_properties_) sem stjórna útliti dansarans. Þú getur látið dansara virðast vera í meiri fjarlægð með því að minnka stærð (_size_) þeirra. Getur þú látið aukadansarana vera jafnstóra?
       HOC Dance 9_draft: "Með kubbnum <xml><block type=\"Dancelab_whenKey\"></block></xml> getur þú keyrt kóða þegar ýtt er á upp örina. \n\nÞú gætir skipt um hreyfingu, breytt eiginleikum dansara eða bara gert einhverja hreyfingu. Notaðu ímyndunaraflið og fylgstu með nýjum kubbum!"
       HOC Dance Freeplay: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
       HOC Dance Freeplay_draft: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
@@ -4373,9 +4373,9 @@ is:
       HOC Dance up arrow: Nú stjórnum við! Notaðu `þegar upp ör` og nýja "hreyfa einu sinni" kubbinn til að láta köttinn gera eina danshreyfingu í hvert skipti sem þú ýtir á upp örina.
       Harvesting: "Ó nei, ég týndi kortinu og man ekki hvað ég setti niður! Hver sproti gæti orðið að **maís** ![mynd af maís](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **baunum** ![mynd af baunum](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n eða **graskeri** ![mynd af graskeri](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n. Getur þú skrifað kóða til að taka upp allar afurðirnar óháð tegund?"
       Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
-      InspirationalArtwork: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
-      InspirationalArtwork_2018: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
-      InspirationalArtwork_2019: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\\r\n\\r\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\\r\n"
+      InspirationalArtwork: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\n\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug."
+      InspirationalArtwork_2018: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\n\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug."
+      InspirationalArtwork_2019: "Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\n\nEf þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug."
       K-1 Bee Loops 2: Notaðu `endurtaka` lykkju til að hreyfast og sæktu svo blómasafann og búðu til hunang!
       K-1 Bee Loops 3: Notaðu þrjár `endurtaka` lykkjur til að sækja blómasafann og búa til hunang!
       K-1 Bee Loops 4: Notaðu `endurtaka` lykkjur til að sækja blómasafann, búa til hunang og hreyfast!
@@ -4391,7 +4391,7 @@ is:
       K-1 Maze Loops 7: "Komdu mér til svínsins! \\r\nGættu þess að nota `endurtaka` lykkjur."
       K-1 Maze Loops 8: Notaðu `endurtaka` lykkjur til að koma mér til svínsins.
       K-1 Maze Loops Assessment 1: "Sjáðu hvað við höfum lært mikið! \\r\nNotaðu `endurtaka` lykkju til að koma mér til svínsins!"
-      KIKI GLJ Test Response: "Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að flugvélin muni gera þegar þú smellir á \"Keyra\"?\\r\n"
+      KIKI GLJ Test Response: 'Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að flugvélin muni gera þegar þú smellir á "Keyra"?  '
       LaurelDebugging4Video1: |-
         Þetta er Laurel ævintýrahetja!\r
         \r
@@ -4421,7 +4421,7 @@ is:
       NEW Course 4 Artist Params 10: "Búðu til fallkubbinn `teikna sexhyrning` með stika fyrir lengd. \\r\n\\r\nÞessi sexhyrningur hefur hliðar sem eru 100 díla langar."
       NEW Course 4 Artist Params 11: "Getur þú fundið út hvernig á að teikna þetta form? \\r\n\\r\nBreyttu fallinu svo að það noti stikann `hliðar`."
       NEW Course 4 Artist Params 12: "Getur þú lokið við þessa teikningu? \\r\n\\r\nHliðar allra formanna eru 100 dílar á lengd."
-      NEW Course 4 Artist Params 13: "Breytum þessu `teikna fjölhliðung` falli. \\r\n\\r\nÞað er þegar með stikann `hliðar`. Nú skulum við bæta við stikanum `lengd`. \\r\n\\r\n<br/>\\r\nUmmál hvers forms er 200 dílar. Manstu jöfnuna sem lætur form halda sömu stærð þó að fjöldi hliða breytist?"
+      NEW Course 4 Artist Params 13: "Breytum þessu `teikna fjölhliðung` falli.\n\nÞað er þegar með stikann `hliðar`. Nú skulum við bæta við stikanum `lengd`.\n\nUmmál hvers forms er 200 dílar. Manstu jöfnuna sem lætur form halda sömu stærð þó að fjöldi hliða breytist?"
       NEW Course 4 Artist Params 14: "Breyttu `teikna spíral` svo það noti stikana `lengd` og `hliðar`, og endurgerðu svo þessi form.\\r\n\\r\n-\nMinnsta hliðarlengd ferningsins er 5 dílar.\\r\n- Minnsta hliðarlengd þríhyrningsins er 10 dílar.\\r\n- Minnsta hliðarlengd sexhyrningsins er 2 dílar.\\r\n- Allar lengjast upp í 100 dílar.  "
       NEW Course 4 Artist Params 15: "**Frjáls æfing:** Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!"
       NEW Course 4 Artist Params 2: Búðu til `teikna þríhyrning` fall frá grunni. Það á að teikna þríhyrning með 50 díla hliðar.
@@ -4445,7 +4445,7 @@ is:
       NEW Course 4 Bee For Loops 5 5: Skilurðu nú hvernig `frá` lykkja er notuð? Hjálpum nú býflugunni að sækja afganginn af blómasafanum.
       NEW Course 4 Bee For Loops 5: Þú getur líka látið lykkju telja niður. Prófaðu að safna þessum blómasafa með því að telja niður frá 5 til 1 um 1.
       NEW Course 4 Bee For Loops 6: "Síðasta talan í `frá` lykkjunni er kölluð `auki` (enska: increment). Í hverri umferð lykkjunnar breytist innihald teljarans um aukann. \\r\n\\r\nPrófaðu að safna úr þessum blómum með aukanum 2."
-      NEW Course 4 Bee For Loops 7: "Nú skulum við nota reikningskubb með breytunni `teljari`! Hvernig getur þú notað teljarann til að fara í gegnum garðinn með sem allra fæstum kubbum? \\r\n\\r\nHvað þarftu að gera til að safna 3, 6, 9, 12, 15 af blómasafa í þetta sinn? Svarið felst í breytunni `teljari`!\\r\n\\r\n<br/>\\r\nMundu: Ef lykkjan telur upp á við, er aukanum bætt við breytuna `teljari` í hverri umferð lykkjunnar.\\r\n\\r\n"
+      NEW Course 4 Bee For Loops 7: "Nú skulum við nota reikningskubb með breytunni `teljari`! Hvernig getur þú notað teljarann til að fara í gegnum garðinn með sem allra fæstum kubbum?\n\nHvað þarftu að gera til að safna 3, 6, 9, 12, 15 af blómasafa í þetta sinn? Svarið felst í breytunni `teljari`!\n\n\n\nMundu: Ef lykkjan telur upp á við, er aukanum bætt við breytuna `teljari` í hverri umferð lykkjunnar.\n\n"
       NEW Course 4 Bee For Loops 95: Skoðaðu hvern þátt í `frá` lykkjunni sem þú varst að búa til. Geturðu séð hvaða tölur þarf að tvöfalda til að leysa þrautina? Hvers vegna virkar það?
       NEW Course 4 Play Lab Params 11: "Frjáls tími! Leiktu þér með kubbana í verkfærakassanum.  \n<br/>\n\n<h5>\n<details>\n\n<summary>\n\n<b>Vantar þig hugmyndir?</b>\n\n</summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n \\t<li><strong>Klukk</strong>\n- Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til þeir rekast á. </li>\n <li><strong>Flugnaspaði</strong>\n- Láttu leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir að smella á kvikann áður en hann hverfur. </li>\n<li><strong>Besta ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi, og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur stig, smellur á annan TAPAR stigi! </li>\n</ul>\n\\t</h5>\n\n\n</details>\n</h5>\n"
       NEW Course 4 Play Labs For Loops 8a: "**Áskorun:** Hvernig mundir þú nota `frá` lykkjuna til að byrja efst og fara niður á botn, láta hverja persónu segja númer sitt og hverfa svo af skjánum? "
@@ -5547,17 +5547,23 @@ is:
       courseC_maze_programming_challenge2: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_maze_programming_challenge2_2018: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_maze_programming_challenge2_2019: Stundum er fleiri en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
-      courseC_starWars_loops1: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
-      courseC_starWars_loops1_2018: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
-      courseC_starWars_loops1_2019: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"\nstyle=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \\r\nGættu þín á veggjum og kössum!  \\r\n"
+      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Farðu og náðu í brotamálminn, BB-8!\"_ \n\nNotaðu fimm eins kubba til að ná brotamálminum. Brotamálmur glóir svona: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
       courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
-      courseD_Frozen_nested1: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_Frozen_nested2: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_Frozen_nested1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég er Elsa frá Arendelle. Hjálpaðu mér að teikna.”_\n\nTeiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.\n<hr/>\n\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum: \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png) \n\n \n \nEða abstrakt form eins og eitt af þessum:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
+      courseD_Frozen_nested2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Nú skulum við teikna fleiri en eitt.”_\n\nTeiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.\n\n- Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\n- Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\n\n<hr/>\n\nRöðin gæti orðið bein eins og þessi:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nEða að formin gætu færst til eins og eitt af þessum:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Gerum þetta að snjókorni.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \n\nÞú getur teiknað alls konar flott snjókorn!\n<hr/>\nSkoðaðu þessi dæmi með fjölhliðungum:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_Frozen_nested4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Hvað gerist ef við teiknum snjókorn yfir hvert annað?\"_\n\nPrófaðu að leggja tvö mismunandi löguð snjókorn saman annað ofan á hitt og snúa því síðara aðeins? Prófaðu það og sjáðu hvað kemur út! "
       courseD_Frozen_nested5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?"_  '
@@ -5574,8 +5580,8 @@ is:
         Hér er dæmi þar sem Elsa snýr 6 sinnum:
 
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
-      courseD_artist_6_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
-      courseD_artist_6_2018_2019: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Skautaðu nú í krákustíg.\"_\n\n<br/>\n\n**Hugmynd:** Prófaðu að skipta 150 díla löngu línunni í 6 stuttar línur sem hver er **24** dílar\n\n- Snúðu um **45** gráður vinstri og hægri til skiptis eftir hverja stutta línu til að mynda krákustíginn\n- Hvar þarftu að setja nýjan `endurtaka` kubb til að þetta sé hægt?\n- Hversu oft þarftu að endurtaka 2-línu mynstrið til að fá 6 línur alls?"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Skautaðu nú í krákustíg.\"_\n\n<br/>\n\n**Hugmynd:** Prófaðu að skipta 150 díla löngu línunni í 6 stuttar línur sem hver er **24** dílar\n\n- Snúðu um **45** gráður vinstri og hægri til skiptis eftir hverja stutta línu til að mynda krákustíginn\n- Hvar þarftu að setja nýjan `endurtaka` kubb til að þetta sé hægt?\n- Hversu oft þarftu að endurtaka 2-línu mynstrið til að fá 6 línur alls?"
       courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Snúum nú við og förum sömu leið til baka.\"_\n\nSnúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \n\n- Afgangurinn af þessu borði verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \n\n<hr/>\n\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_8_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Snúum og búum til snjókorn."_
@@ -5638,38 +5644,38 @@ is:
         - *Átthyrningarnir* eru gerðir með **45 gráðu** snúningum.\r
         - *Þríhyrningarnir* eru gerðir með **120 gráðu** snúningum.
       courseD_artist_nestedLoops_challenge2: |-
-        Getur þú fundið leið til að búa til svona mynd?\r
-        \r
-        - Fyrsta innri lykkjan á að búa til átthyrning.\r
-        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        Þessi kóði er ekki alveg í lagi. Getur þú lagað hann svo teikni rétta mynd á vinnusvæðinu?
+
+        - Fyrsta innri lykkjan á að búa til átthyrning.
+        - Önnur innri lykkjan á að búa til sexhyrning.
         - Þriðja innri lykkjan á að búa til ferning.
       courseD_artist_nestedLoops_challenge2_2018: |-
-        Getur þú fundið leið til að búa til svona mynd?\r
-        \r
-        - Fyrsta innri lykkjan á að búa til átthyrning.\r
-        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        Þessi kóði er ekki alveg í lagi. Getur þú lagað hann svo teikni rétta mynd á vinnusvæðinu?
+
+        - Fyrsta innri lykkjan á að búa til átthyrning.
+        - Önnur innri lykkjan á að búa til sexhyrning.
         - Þriðja innri lykkjan á að búa til ferning.
       courseD_artist_nestedLoops_challenge2_2019: |-
-        Getur þú fundið leið til að búa til svona mynd?\r
-        \r
-        - Fyrsta innri lykkjan á að búa til átthyrning.\r
-        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        Þessi kóði er ekki alveg í lagi. Getur þú lagað hann svo teikni rétta mynd á vinnusvæðinu?
+
+        - Fyrsta innri lykkjan á að búa til átthyrning.
+        - Önnur innri lykkjan á að búa til sexhyrning.
         - Þriðja innri lykkjan á að búa til ferning.
-      courseD_artist_project1: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1_2018: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1_2019: "Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \\r\n<hr/>\\r\n\\r\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:  \\r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \\r\n\\r\n  \\r\n  \\r\nEða abstrakt form eins og eitt af þessum:  \\r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1a: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
-      courseD_artist_project1a_2018: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
-      courseD_artist_project1a_2019: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \\r\n\\r\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \\r\n(Seinna sérðu hvers vegna.)"
-      courseD_artist_project2: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_artist_project2_2018: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_artist_project2_2019: "Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \\r\n\\r\n-\nEf þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\\r\n-\nEf þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\\r\n\\r\n<hr/>\\r\n\\r\nRöðin gæti orðið bein eins og þessi:\\r\n\\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\\r\n<br/>  <br/>\\r\n\\r\n\\r\nEða að formin gætu færst til eins og eitt af þessum: \\r\n\\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég er Elsa frá Arendelle. Hjálpaðu mér að teikna.”_\n\nTeiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.\n<hr/>\n\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum: \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png) \n\n \n \nEða abstrakt form eins og eitt af þessum:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
+      courseD_artist_project1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég er Elsa frá Arendelle. Hjálpaðu mér að teikna.”_\n\nTeiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.\n<hr/>\n\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)\n\n\n\nEða jafnvel abstrakt form eins og eitt af þessum:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hæ, ég er Elsa frá Arendelle. Hjálpaðu mér að teikna.”_\n\nTeiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.\n<hr/>\n\nÞú getur prófað að búa til fjölhliðung eins og einn af þessum:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)\n\n\n\nEða jafnvel abstrakt form eins og eitt af þessum:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Í þetta sinn skulum við skauta í krákustíg.\"_\n\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Í þetta sinn skulum við skauta í krákustíg.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Prófum eitthvað nýtt. Í þetta sinn skulum við skauta í krákustíg.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nTeiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.\n(Seinna sérðu hvers vegna.)"
+      courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Nú skulum við teikna fleiri en eitt.”_\n\nTeiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.\n\n- Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\n- Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\n\n<hr/>\n\nRöðin gæti orðið bein eins og þessi:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nEða að formin gætu færst til eins og eitt af þessum:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Nú skulum við teikna fleiri en eitt.”_\n\nTeiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.\n\n- Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\n- Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\n\n<hr/>\n\nRöðin gæti orðið bein eins og þessi:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nEða að formin gætu færst til eins og eitt af þessum:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Nú skulum við teikna fleiri en eitt.”_\n\nTeiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.\n\n- Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\n- Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\n\n<hr/>\n\nRöðin gæti orðið bein eins og þessi:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nEða að formin gætu færst til eins og eitt af þessum:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Snúum nú við og förum sömu leið til baka.\"_\n\nSnúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \n\n- Afgangurinn af þessu borði verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \n\n<hr/>\n\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Snúum nú við og förum sömu leið til baka.\"_\n\nSnúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \n\n- Afgangurinn af þessu borði verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \n\n<hr/>\n\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Snúum nú við og förum sömu leið til baka.\"_\n\nSnúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \n\n- Afgangurinn af þessu borði verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \n\n<hr/>\n\nHér er dæmi um tröppur sem nota 76 gráðu snúning:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
-      courseD_artist_project3: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2018: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2019: "Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \\r\n\\r\nÞú getur teiknað alls konar flott snjókorn!\\r\n<hr/>\\r\nSkoðaðu þessi dæmi með fjölhliðungum:  \\r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\\r\n\\r\nMeð abstrakt formum gæti snjókorn litið meira svona út:  \\r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Breytum þessu nú í snjókorn.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir.\n\nÞú getur teiknað alls konar flott snjókorn!\n\n---\n\nSkoðaðu þessi dæmi með fjölhliðungum:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Breytum þessu nú í snjókorn.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir.\n\nÞú getur teiknað alls konar flott snjókorn!\n\n---\n\nSkoðaðu þessi dæmi með fjölhliðungum:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Breytum þessu nú í snjókorn.\"_\n\nLáttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir.\n\nÞú getur teiknað alls konar flott snjókorn!\n\n---\n\nSkoðaðu þessi dæmi með fjölhliðungum:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nMeð abstrakt formum gæti snjókorn litið meira svona út:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Snúum og búum til snjókorn."_
 
@@ -5707,17 +5713,17 @@ is:
       courseD_artist_project4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Hvað gerist ef við teiknum snjókorn yfir hvert annað?\"_\n\nPrófaðu að leggja tvö mismunandi löguð snjókorn saman annað ofan á hitt og snúa því síðara aðeins? Prófaðu það og sjáðu hvað kemur út! "
       courseD_artist_project4_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Hvað gerist ef við teiknum snjókorn yfir hvert annað?\"_\n\nPrófaðu að leggja tvö mismunandi löguð snjókorn saman annað ofan á hitt og snúa því síðara aðeins? Prófaðu það og sjáðu hvað kemur út! "
       courseD_artist_project5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?"_  '
-      courseD_artist_project5_2018: 'Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?'
-      courseD_artist_project5_2019: 'Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?'
+      courseD_artist_project5_2018: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?"'
+      courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Virkjaðu sköpunargáfuna með formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?"'
       courseD_artist_project_embedded: Þetta er það sem þú ert að fara að búa til!
       courseD_artist_ramp11: |-
         Fínt!  Nú skulum við búa til ferning með listamanninum!   Kubbarnir eru svolítið öðruvísi en hugmyndin sú sama.\r
         <hr/>\r
         Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseD_artist_ramp12: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning innan í ferningi.\r
-        <hr/>\r
-        Hver hlið er 200 dílar. Þú þarft að snúa um 90 gráður til að búa til ferninginn og 120 gráður fyrir þríhyrninginn.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning innan í ferningi.
+        ___
+        ##### Hver hlið er 200 dílar. Þú þarft að snúa um 90 gráður til að búa til ferninginn og 120 gráður fyrir þríhyrninginn.
       courseD_bee_conditionals1: |-
         *"Þetta ský er fyrir mér!"\r
         \r
@@ -5734,9 +5740,9 @@ is:
         *"Þetta ský er fyrir mér!"\r
         \r
         Athugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er.
-      courseD_bee_conditionals7_predict2: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
-      courseD_bee_conditionals7_predict2_2018: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
-      courseD_bee_conditionals7_predict2_2019: "Stundum hylur ský blóm en stundum hylur það býkúpu!\\r\n\\r\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
+      courseD_bee_conditionals7_predict2: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
+      courseD_bee_conditionals7_predict2_2018: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
+      courseD_bee_conditionals7_predict2_2019: "Stundum hylur ský blóm en stundum hylur það býkúpu!\n\nNotaðu `ef/annars` kubb til að safna blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema *ein* býkúpa eða *eitt* blóm undir hverju skýi."
       courseD_bee_conditionals_challenge1: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge1_2018: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
       courseD_bee_conditionals_challenge1_2019: Safnaðu öllum blómasafanum eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
@@ -5747,6 +5753,8 @@ is:
       courseD_bee_debugging_challenge1: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_debugging_challenge1_2018: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_debugging_challenge1a: |-
+        *"Bzz bzz! Ég kann að ná í blómasafa, hjálpaðu mér nú að búa til hunang!"*
+
         Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_debugging_challenge2: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       courseD_bee_nestedLoops2: Nú áttu að hjálpa býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
@@ -5854,24 +5862,24 @@ is:
         \r
         Lagaðu villu/r til að safna öllum fjársjóðnum.
       courseD_collector_debugging5: |-
-        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
-        \r
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*
+
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging5_2018: |-
-        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
-        \r
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*
+
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging5a: |-
-        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
-        \r
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*
+
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging5a_2018: |-
-        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
-        \r
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*
+
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging5a_2019: |-
-        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*\r
-        \r
+        **Áskorun:**"Þessi þraut gerir mig hringlaða!"*
+
         Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að finna lausn á þessari þraut.
       courseD_collector_debugging6: "**Áskorun:** Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að laga villur og safna öllum fjársjóðnum."
       courseD_collector_debugging6_2018: "**Áskorun:** Allar skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína til að laga villur og safna öllum fjársjóðnum."
@@ -5922,8 +5930,8 @@ is:
       courseD_collector_nested_loops_challenge2: "*\"Við skulum leita að fjársjóði - með lykkjum!\"* \n\nHjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4."
       courseD_collector_nested_loops_challenge2_2018: "*\"Við skulum leita að fjársjóði - með lykkjum!\"* \n\nHjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4."
       courseD_collector_nested_loops_challenge2_2019: "*\"Við skulum leita að fjársjóði - með lykkjum!\"* \n\nHjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4."
-      courseD_collector_nested_loops_challenge2a: "Við skulum leita að fjársjóði\n- með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3."
-      courseD_collector_ramp10: "Láttu Laurel ferðast um þennan reit og safna fjársjóðum sem hún finnur.\\r\n"
+      courseD_collector_nested_loops_challenge2a: "*\"Við skulum leita að fjársjóði - með lykkjum!!\"* \n\nHjálpaðu Laurel að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4."
+      courseD_collector_ramp10: Láttu Laurel ferðast um þennan reit og safna fjársjóðum sem hún finnur.
       courseD_collector_ramp8: |
         Þessi þraut er mjög lík þeirri síðustu en nú er það Laurel ævintýrahetja!\r
         <hr/>\r
@@ -5954,23 +5962,23 @@ is:
       courseD_farmer_condLoops9_predict1: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9_predict1_2018: Safnaðu öllum maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops9_predict1_2019: Safnaðu öllum maís og káli og taktu svo graskerið.
-      courseD_farmer_condLoops_challenge1: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
-      courseD_farmer_condLoops_challenge1_2018: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
-      courseD_farmer_condLoops_challenge1_2019: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
-      courseD_farmer_condLoops_challenge2: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
-      courseD_farmer_condLoops_challenge2_2018: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
-      courseD_farmer_condLoops_challenge2_2019: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
+      courseD_farmer_condLoops_challenge1: "Graskerin sýna hvar þú ættir að `snúa til hægri`. Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni.\n\n**Hver falin planta hefur bara 1 af maís eða káli.**"
+      courseD_farmer_condLoops_challenge1_2018: "Graskerin sýna hvar þú ættir að `snúa til hægri`. Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni.\n\n**Hver falin planta hefur bara 1 af maís eða káli.**"
+      courseD_farmer_condLoops_challenge1_2019: "Graskerin sýna hvar þú ættir að `snúa til hægri`. Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni.\n\n**Hver falin planta hefur bara 1 af maís eða káli.**"
+      courseD_farmer_condLoops_challenge2: "*\"Þetta er mjög fjölbreytt grænt völundarhús!\"*\n\nSnúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
+      courseD_farmer_condLoops_challenge2_2018: "*\"Þetta er mjög fjölbreytt grænt völundarhús!\"*\n\nSnúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
+      courseD_farmer_condLoops_challenge2_2019: "*\"Þetta er mjög fjölbreytt grænt völundarhús!\"*\n\nSnúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
       courseD_farmer_condLoops_challenge2_clone: Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum.
-      courseD_farmer_conditionals1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      courseD_farmer_conditionals1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*\n\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_conditionals4: |-
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
         \r
         Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
       courseD_farmer_until_challenge2: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
       courseD_farmer_until_challenge2_2018: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
-      courseD_farmer_while1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
-      courseD_farmer_while1_2018: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
-      courseD_farmer_while1_2019: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      courseD_farmer_while1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*\n\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      courseD_farmer_while1_2018: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*\n\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
+      courseD_farmer_while1_2019: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*\n\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_while4: |-
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
         \r
@@ -6034,10 +6042,9 @@ is:
       courseD_maze_ramp3: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\\r\n\\r\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \\r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       courseD_maze_ramp3_2018: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\\r\n\\r\nÞað er einn aukakubbur sem mun láta fuglinn hrapa. \\r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
       courseD_maze_ramp3_2019: |-
-        *"Þetta svín ýfir á mér fjaðrirnar."*\r
-        \r
-        Það er einn aukakubbur sem mun láta fuglinn hrapa. \r
-        Hentu kubbnum með því að draga hann aftur í verkfærakassann.
+        Hjálpaðu fuglinum að komast til svínsins. Nú er einn blár `færa áfram` kubbur í viðbót.
+
+        Hentu aukakubbnum með því að draga hann frá hinum kubbunum og aftur í verkfærakassann.
       courseD_maze_ramp4: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp4_2018: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp4_2019: "*\"Færðu mig eftir slóðinni að kjánalega svíninu.\"*\\r\n\\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
@@ -6057,8 +6064,8 @@ is:
       courseD_maze_ramp5a_2018: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp5a_2019: Taktu eftir röð kubbanna og reyndu að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp6: |-
-        *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"*\r
-        \r
+        *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég orðið reiður!"*
+
         Þegar þú hefur marga eins kubba í röð, geturðu í staðinn sett bara einn þeirra í `endurtaka` lykkju. Þetta gerir það sama en með minni kóða!
       courseD_maze_ramp7: "*\"Nú er ég sko reiður!\"* \\r\n\\r\n\\r\nNotaðu það sem þú hefur lært til að koma fuglinum til svínsins!"
       courseD_maze_until10: Hjálpaðu uppvakningum að komast til sólblómsins.
@@ -6112,8 +6119,8 @@ is:
       courseD_scrat_ramp1_2018: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_scrat_ramp2: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
       courseD_scrat_ramp2_2018: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
-      courseD_scrat_ramp3: "Það er einn aukakubbur sem mun setja Skrat út af sporinu. \\r\nHentu honum með því að losa hann og draga hann aftur í verkfærakassann."
-      courseD_scrat_ramp3_2018: "Það er einn aukakubbur sem mun setja Skrat út af sporinu. \\r\nHentu honum með því að losa hann og draga hann aftur í verkfærakassann."
+      courseD_scrat_ramp3: "Það er einn aukakubbur sem mun setja Skrat út af sporinu.\nHentu honum með því að losa hann og draga hann aftur í verkfærakassann."
+      courseD_scrat_ramp3_2018: "Það er einn aukakubbur sem mun setja Skrat út af sporinu.\nHentu honum með því að losa hann og draga hann aftur í verkfærakassann."
       courseD_scrat_ramp4: Forðastu sprungna ísinn til að Skrat sé öruggur!
       courseD_scrat_ramp4_2018: Forðastu sprungna ísinn til að Skrat sé öruggur!
       courseD_scrat_ramp5: Forðastu sprungna ísinn!
@@ -6126,31 +6133,25 @@ is:
       courseD_scrat_ramp8_2018: "**Áskorun:** Notaðu það sem þú hefur lært til að koma Skrat til akarnsins!"
       courseE_artist_concept_challenge1: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
-        width="200px"/>\r
-        \r
-        Hér er áskorun!  \r
-        \r
-        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\r
-        \r
-        Endurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. 
+        width="200px"/>
+
+        Hér er áskorun!
+
+        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.
       courseE_artist_concept_challenge1_2018: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
-        width="200px"/>\r
-        \r
-        Hér er áskorun!  \r
-        \r
-        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\r
-        \r
-        Endurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. 
+        width="200px"/>
+
+        Hér er áskorun!
+
+        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.
       courseE_artist_concept_challenge1_2019: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
-        width="200px"/>\r
-        \r
-        Hér er áskorun!  \r
-        \r
-        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\r
-        \r
-        Endurtekna formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð í fyrstu lykkjunni er aðeins styttri. 
+        width="200px"/>
+
+        Hér er áskorun!
+
+        Þessi hönnun notar aðeins kubba sem þú hefur þegar séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.
       courseE_artist_concept_challenge2: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_concept_challenge2_2018: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
       courseE_artist_concept_challenge2_2019: Búðu til fimm hjóllaga mynstur með kóðanum fyrir neðan.
@@ -6183,12 +6184,12 @@ is:
         <title name="YPOS">???</title>
         </block></xml>
       courseE_artist_ramp10: |-
-        Veistu að þú getur sett lykkjur innan í aðrar lykkjur til að gera þær öflugri?  Það er kallað að búa til "faldaða lykkju".\r
-        \r
-        <hr/>\r
-        \r
-        Dragðu kóðann fyrir síðasta þríhyrninginn inn í nýja lykkju til að snúa honum og búa til snjókorn!\r
-        \r
+        Veistu að þú getur sett lykkjur innan í aðrar lykkjur til að gera þær öflugri?  Það er kallað að búa til "faldaða lykkju".
+
+        ___
+
+        Dragðu kóðann fyrir síðasta þríhyrninginn inn í nýja lykkju til að snúa honum og búa til snjókorn!
+
         *(Þú þarft að snúa honum 6 sinnum um 60 gráður til að fá þetta mynstur.)*
       courseE_artist_ramp11: |-
         Fínt!  Nú skulum við búa til ferning með listamanninum!   Kubbarnir eru svolítið öðruvísi en hugmyndin sú sama.\r
@@ -6199,46 +6200,54 @@ is:
         <hr/>\r
         Hver hlið er 200 dílar. Þú þarft að snúa um 90 gráður til að búa til ferninginn og 120 gráður fyrir þríhyrninginn.
       courseE_artist_ramp8: |-
-        Fínt!  Nú skulum við búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.\r
-        <hr/>\r
-        Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
+        Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.
+
+        ___
+        ##### Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseE_artist_ramp8_2: |-
-        Fínt!  Nú skulum við búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.\r
-        <hr/>\r
-        Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
+        Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.
+
+        ___
+        ##### Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseE_artist_ramp8_2018: |-
-        Fínt!  Nú skulum við búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.\r
-        <hr/>\r
-        Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
+        Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.
+
+        ___
+        ##### Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseE_artist_ramp8_2_2018: |-
-        Fínt!  Nú skulum við búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.\r
-        <hr/>\r
-        Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
+        Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.
+
+        ___
+        ##### Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseE_artist_ramp9: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseE_artist_ramp9_2: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseE_artist_ramp9_2018: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseE_artist_ramp9_2_2018: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseE_bee_functions2: "Föll eru kubbar sem saman leysa ákveðið verkefni.\\r\n\\r\nNotaðu fallið `sækja 2 blómasafa` til að safna safanum úr hverju blómi."
       courseE_bee_functions2_2018: "Föll eru kubbar sem saman leysa ákveðið verkefni.\\r\n\\r\nNotaðu fallið `sækja 2 blómasafa` til að safna safanum úr hverju blómi."
       courseE_bee_functions3: Útbúðu fallið "sækja 5" og notaðu það í þessari þraut.
       courseE_bee_functions3_2018: Útbúðu fallið "sækja 5" og notaðu það í þessari þraut.
       courseE_bee_functions_challenge1: Þú þarft að leysa þessa þraut á eigin spýtur. Hún gæti leynt á sér!
       courseE_bee_functions_challenge1_2018: Þú þarft að leysa þessa þraut á eigin spýtur. Hún gæti leynt á sér!
-      courseE_bee_ramp14: "Sama aðferðin virkar með blómasafa og hunangi! \\r\n\\r\nSjáðu öll þessi ský. Bak við sum á að búa til hunang, en bak við önnur safna blómasafa. Notaðu kubbinn `ef við blóm / annars` til að safna blómasafa á meðan einhver safi er, **annars** búa til hunang. \\r\n\\r\n\\r\n\\r\n"
-      courseE_bee_ramp14_2018: "Sama aðferðin virkar með blómasafa og hunangi! \\r\n\\r\nSjáðu öll þessi ský. Bak við sum á að búa til hunang, en bak við önnur safna blómasafa. Notaðu kubbinn `ef við blóm / annars` til að safna blómasafa á meðan einhver safi er, **annars** búa til hunang. \\r\n\\r\n\\r\n\\r\n"
-      courseE_bee_ramp17: "Þetta er síðasta þraut stigsins. Notaðu það sem þú hefur lært til að safna öllum blómasafanum og búa til allt hunangið. \\r\n\\r\nÞú þarft að nota alla kubbana í verkfærakassanum til að ljúka þessu!"
+      courseE_bee_ramp14: "Sama aðferðin virkar með blómasafa og hunangi!\n\nSjáðu öll þessi ský. Bak við sum á að búa til hunang, en bak við önnur safna blómasafa. \nHjálpaðu býflugunni að fylgja slóðinni og leysa þrautina.\n\n\n\n"
+      courseE_bee_ramp14_2018: "Sama aðferðin virkar með blómasafa og hunangi!\n\nSjáðu öll þessi ský. Bak við sum á að búa til hunang, en bak við önnur safna blómasafa. \nHjálpaðu býflugunni að fylgja slóðinni og leysa þrautina.\n\n\n\n"
+      courseE_bee_ramp17: 'Þetta er síðasta þraut stigsins. Notaðu það sem þú hefur lært til að safna öllum blómasafanum og búa til allt hunangið.  '
       courseE_collector_ramp10: "Farðu sömu slóð og áður en safnaðu nú öllum fjársjóðum sem finnast.\\r\n"
       courseE_collector_ramp8: |
         Þessi þraut er mjög lík þeirri síðustu en nú er það Laurel ævintýrahetja!\r
@@ -6250,16 +6259,16 @@ is:
       courseE_farmer_concept4: Nú skulum við fara dýpra! Allur kóðinn er faldaður í annarri lykkju, en við þurfum að koma listamanninum aftur á sama stað til að teikna næstu línu. Hvaða kóða vantar í endann á ytri lykkjunni til að teikna alla grindina?
       courseE_farmer_functions4b: Notaðu nýja fallið til að leysa þessa þraut.
       courseE_farmer_functions4b_2018: Notaðu nýja fallið til að leysa þessa þraut.
-      courseE_farmer_predict1: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_predict1_2018: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp11a: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp11a_2018: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp11a_2019: "Ó nei! Kálhausarnir vaxa svo þétt að bóndinn veit ekki hvað þeir eru margir! \\r\n\\r\n<hr/>\\r\n\\r\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp12: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp12_2018: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp12_forswap: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp12_forswap_2018: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
-      courseE_farmer_ramp12_forswap_2019: "Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\\r\n\\r\n\\r\n\\r\n"
+      courseE_farmer_predict1: "Hjálpaðu bóndanum að fara eftir slóðinni og finna allt kálið \n\nÍ þessari þraut vex kál við endann á hverri slóð. Ef það er slóð framundan getur bóndinn haldið áfram að færa sig fram. Annars verður hún að tína allt kálið og snúa svo til að halda sér á slóðinni.\n\n\n\n"
+      courseE_farmer_predict1_2018: "Hjálpaðu bóndanum að fara eftir slóðinni og finna allt kálið \n\nÍ þessari þraut vex kál við endann á hverri slóð. Ef það er slóð framundan getur bóndinn haldið áfram að færa sig fram. Annars verður hún að tína allt kálið og snúa svo til að halda sér á slóðinni.\n\n\n\n"
+      courseE_farmer_ramp11a: "Ó nei! Þessai haugur er svo stór að það er erfitt að sjá hve mikil mold er í honum. \n\n___\n\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er haugur`. Notaðu hann til að fjarlægja mold á meðan einhver mold er eftir! "
+      courseE_farmer_ramp11a_2018: "Ó nei! Þessai haugur er svo stór að það er erfitt að sjá hve mikil mold er í honum. \n\n___\n\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er haugur`. Notaðu hann til að fjarlægja mold á meðan einhver mold er eftir! "
+      courseE_farmer_ramp11a_2019: "Ó nei! Þessai haugur er svo stór að það er erfitt að sjá hve mikil mold er í honum. \n\n___\n\nVið höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er haugur`. Notaðu hann til að fjarlægja mold á meðan einhver mold er eftir! "
+      courseE_farmer_ramp12: Tíndu allt kálið.
+      courseE_farmer_ramp12_2018: Tíndu allt kálið.
+      courseE_farmer_ramp12_forswap: Tíndu allt kálið.
+      courseE_farmer_ramp12_forswap_2018: Tíndu allt kálið.
+      courseE_farmer_ramp12_forswap_2019: Tíndu allt kálið.
       courseE_farmer_ramp12a: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp12a_2018: "Nú er bóndinn að rækta meira en bara kál!  \\r\n\\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á meðan það er kál, en **annars** taka upp maís á meðan það er maís.\n\\r\n\\r\n\\r\n\\r\n"
       courseE_farmer_ramp13: "Hamingjan!  Sjáðu alla þessa sprota. Sumir munu verða að maís og aðrir að káli.  Notaðu `ef við maís / annars` kubbinn til að taka upp maís á meðan það er maís, en **annars** taka upp kál á meðan það er kál. \\r\n\\r\n\\r\n\\r\n"
@@ -6451,13 +6460,15 @@ is:
         <hr/>\r
         Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
       courseF_artist_ramp9: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseF_artist_ramp9_2018: |-
-        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
-        <hr/>\r
-        Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+        Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.
+
+        ___
+        ##### Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
       courseF_artist_variables_challenge1: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       courseF_artist_variables_challenge1_2018: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       courseF_artist_variables_challenge1_2019: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
