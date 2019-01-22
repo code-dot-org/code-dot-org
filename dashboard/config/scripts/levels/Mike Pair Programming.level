@@ -6,10 +6,10 @@
   "user_id": 221,
   "properties": {
     "video_key": "C1_pair_programming",
-    "short_instructions": "Here are the instructions",
+    "instructions": "Here are the instructions",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "Here are markdown instructions"
+    "markdown_instructions": "Here are markdown instructions"
   },
   "published": true,
   "notes": "This is a level about using pair programming",
