@@ -116,6 +116,10 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # If user is allowed to see level but is assigned to a newer version of the level's script,
+    # we will show a dialog for the user to choose whether they want to go to the newer version.
+    @redirect_script_url = @script_level.script&.redirect_to_script_url(current_user, locale: request.locale)
+
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
