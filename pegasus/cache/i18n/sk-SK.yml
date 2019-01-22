@@ -319,7 +319,7 @@ sk-SK:
   studiobar_teacher_body: Predstavte Code.org vašej triede
   studiobar_frozen_title: Hodina Kódu
   studiobar_frozen_body: Vytvor zázračnú zimnú krajinu s Annou a Elsou
-  studiobar_donate_title: Darovať
+  studiobar_donate_title: Prispejte
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
   studiobar_shop_title: Obchod
   studiobar_shop_body: Prelom stereotypy. Nos s hrdosťou naše logo.
@@ -444,7 +444,7 @@ sk-SK:
   homepage_header_codestudio: Viac ako 25 miliónov projektov vytvorených na code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
-  homepage_donors_donate: Darovať
+  homepage_donors_donate: Prispejte
   homepage_below_hero_announcement_text: Dbáme o Vaše súkromie a preto aktualizujeme
     naše Zásady ochrany osobných údajov s platnosťou od 25. mája.
   homepage_below_hero_announcement_link_text: Zistiť viac
@@ -506,9 +506,9 @@ sk-SK:
     | Vek 6-106 rokov
   starwars_platform_text: Moderné prehliadače, smartfóny, tablety
   mc_name: Minecraft Hodina Kódu
-  mc_longdescription: Použi bloky kódov, aby si vzal Steva alebo Alexa na dobrodružstvo
+  mc_longdescription: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo
     po svete Minecraftu.
-  mc_shortdescription: Použi bloky kódov, aby si vzal Steva alebo Alexa na dobrodružstvo
+  mc_shortdescription: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo
     po svete Minecraftu.
   mc_gradelevel: Vek 6-106
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
@@ -525,8 +525,8 @@ sk-SK:
   minecraft_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   minecraft_designer_button: Spustiť
-  minecraft_adventurer_description: Použi kód, aby si zobral Alexa alebo Steva na
-    cestu za dobrodružstvom.
+  minecraft_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na cestu
+    za dobrodružstvom.
   minecraft_adventurer_button: Spustiť
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
@@ -804,9 +804,9 @@ sk-SK:
     <a href="/professional-development-workshops">Nájdi jeden v tvojom okolí!</a>
   dashboard_middle_courses: 20 hodinové kurzy pre druhý stupeň ZŠ
   dashboard_middle_courses_desc: Naše kurikulum pre druhý stupeň ZŠ využíva informatiku
-    a programovanie v kontexte druhostupňovej matematicky a vedných predmetov - ako
+    a programovanie v kontexte druhostupňovej matematiky a vedných predmetov - ako
     nástroj na výučbu matematických a vedeckých konceptov. Pre registráciu na školenie
-    pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a> s code.org.
+    pre učiteľov sa uchádzajte <a href="/educate/districts">o partnerstvo</a> s code.org.
   dashboard_high_courses: Celoročné kurzy pre stredné školy
   dashboard_high_courses_desc: Náš program pre stredné školy umožňuje školským obvodom
     ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
@@ -1209,6 +1209,7 @@ sk-SK:
   coursed-2017_name: Kurz D (2017)
   coursee-2017_name: Kurz E (2017)
   coursef-2017_name: Kurz F (2017)
+  coursea-2018_name: Kurz A (2018)
   coursed-2018_name: Kurz D (2018)
   accelerated_name: Zrýchlený kurz
   express_name: Zrýchlený kurz
@@ -1662,7 +1663,7 @@ sk-SK:
   lynda_beyond_name: Online kurzy programovania
   edx_beyond_name: Kurz Harvard CS50
   coursera_beyond_name: Kurz Stanford CS 101
-  teachingtree_beyond_name: Univerzitné online kurzy
+  teachingtree_beyond_name: Univerzitné kurzy online
   w3schools_beyond_name: Nauč sa HTML
   codeavengers_beyond_name: Nauč sa nakódiť webstránky
   arduino_beyond_name: Arduino so Sparkfun
@@ -1957,6 +1958,7 @@ sk-SK:
     Alebo sa posuň ešte ďalej a program napíš v texte.
   applab_tile_start_tutorial: Spustiť
   applab_tile_teacher_guide: Zobraziť príručku pre učiteľa
+  aquatic_name: Minecraft Vodné Dobrodužstvo
   account_sign_up_email_opt_in: Môžeme Vám zasielať emailom aktualizácie o lekciách,
     možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne
     raz za mesiac)
@@ -2010,7 +2012,7 @@ sk-SK:
   hoc2018_mc_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   hoc2018_mc_adventurer_title: Minecraft Objavovateľ
-  hoc2018_mc_adventurer_description: Použi kód, aby si zobral Alexa alebo Steva na
+  hoc2018_mc_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na
     cestu za dobrodružstvom.
   hoc2018_mc_start: Spustiť
   hoc2018_mc_no_internet: Nemáš internet?
