@@ -10,7 +10,7 @@ import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptA
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import dismissVersionRedirect from '@cdo/apps/util/dismissVersionRedirect';
+import { dismissedRedirectWarning, onDismissRedirectWarning } from '@cdo/apps/util/dismissVersionRedirect';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -153,7 +153,7 @@ class ScriptOverviewHeader extends Component {
       courseName,
     } = this.props;
 
-    const displayVersionWarning = showRedirectWarning && !dismissVersionRedirect.dismissedRedirectWarning(courseName || scriptName);
+    const displayVersionWarning = showRedirectWarning && !dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -183,7 +183,7 @@ class ScriptOverviewHeader extends Component {
             details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
-            onDismiss={() => dismissVersionRedirect.onDismissRedirectWarning(courseName || scriptName)}
+            onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
           />
         }
         {versionWarningDetails &&
