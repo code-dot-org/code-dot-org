@@ -40,7 +40,7 @@ module Pd::Application
       unless @application.regional_partner
         return false
       end
-      if @application.course == 'csf' && PARTNERS_WITHOUT_CSF.include?(@application.regional_partner.id)
+      if @application.course == 'csf' && !@application.regional_partner.has_csf
         return false
       end
       true
