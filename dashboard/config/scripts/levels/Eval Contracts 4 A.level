@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "The \"scale\" function returns an image that is scaled either larger or smaller than the input image. Try scaling this circle by a factor of 10 - how is the resulting image different than if you'd just made a circle of that size in the first place?",
+    "short_instructions": "The \"scale\" function returns an image that is scaled either larger or smaller than the input image. Try scaling this circle by a factor of 10 - how is the resulting image different than if you'd just made a circle of that size in the first place?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

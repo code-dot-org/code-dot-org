@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** The right button stops all sound\r\n\r\n**How:** Add an `onEvent()` for the right button and use the `stopSound()` block inside it.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)",
+    "long_instructions": "**Goal:** The right button stops all sound\r\n\r\n**How:** Add an `onEvent()` for the right button and use the `stopSound()` block inside it.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

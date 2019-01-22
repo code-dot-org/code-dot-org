@@ -34,7 +34,7 @@
     "shape_shift": "false",
     "flower_type": "purpleNectarHidden",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "# Making A Function\r\n1. Do this thing",
+    "long_instructions": "# Making A Function\r\n1. Do this thing",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L08 - Under the sea.gif",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"How might you get the bird to the pig?\",\"hint_id\":\"\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/617a709d8b28003f33972b5290a3081e/farmer-test-lb.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Pointing 123\",\"hint_id\":\"hint_2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/308e79c489dcad9cf524f9f9d5196b79/farmer-test-lb.mp3\"}]",
     "toolbox": "<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"></block><block type=\"controls_repeat\"><title name=\"TIMES\">5</title></block><block type=\"maze_untilBlocked\"></block><block type=\"maze_if\"><title name=\"DIR\">isPathForward</title></block></xml>",

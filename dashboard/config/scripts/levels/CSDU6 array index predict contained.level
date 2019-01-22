@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Predict\r\n\r\nThe code below will display four things on the screen.  What do you think they will be?",
+    "long_instructions": "# Predict\r\n\r\nThe code below will display four things on the screen.  What do you think they will be?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

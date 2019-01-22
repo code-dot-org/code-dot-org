@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Final Touches\r\n\r\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\r\n\r\n# Do This\r\n\r\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback.",
+    "long_instructions": "# Smart Bike - Final Touches\r\n\r\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\r\n\r\n# Do This\r\n\r\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",

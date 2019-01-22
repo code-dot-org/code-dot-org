@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment: Use a nested loop to complete the design.",
+    "short_instructions": "Assessment: Use a nested loop to complete the design.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Assessment:** Use a nested loop to complete the design.",
+    "long_instructions": "**Assessment:** Use a nested loop to complete the design.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "contained_level_names": null

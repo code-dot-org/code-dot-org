@@ -18,7 +18,7 @@
     "nectar_goal": "0",
     "flower_type": "redWithNectar",
     "ideal": "15",
-    "instructions": "No rules. No clues. Just the challenge!",
+    "short_instructions": "No rules. No clues. Just the challenge!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "honey_goal": "0",
@@ -33,7 +33,7 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "step_speed": "1",
-    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "long_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
     "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":3},{\"tileType\":1,\"featureType\":1,\"value\":11,\"range\":11},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":15,\"range\":16},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":12,\"range\":12},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":6,\"range\":6},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":6,\"range\":9},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":10,\"range\":11},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":26,\"range\":27},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":20,\"range\":21},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":4,\"range\":5},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":19,\"range\":19},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":3,\"range\":5},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}]]"
   },
   "published": true,

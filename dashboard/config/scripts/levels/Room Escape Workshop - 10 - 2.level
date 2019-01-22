@@ -54,7 +54,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Door Open\r\n\r\n<img src=\"https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOpen the door if they have the key!\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for clicking on the door\r\n* Add an `if` statement inside the `onEvent` to check if the key position has moved to the bottom of the screen\r\n\t* Add an if statement\r\n    * In the if statement add the `==`\r\n    * On one side of the `==` put the x position you move the key to when it is clicked\r\n    * On the other side add the `getXPosition()` block - The ID for that should be the ID of your key!\r\n* Inside the `if` statement use `showElement` to show the hidden outdoors image if they got the key",
+    "long_instructions": "# Door Open\r\n\r\n<img src=\"https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOpen the door if they have the key!\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for clicking on the door\r\n* Add an `if` statement inside the `onEvent` to check if the key position has moved to the bottom of the screen\r\n\t* Add an if statement\r\n    * In the if statement add the `==`\r\n    * On one side of the `==` put the x position you move the key to when it is clicked\r\n    * On the other side add the `getXPosition()` block - The ID for that should be the ID of your key!\r\n* Inside the `if` statement use `showElement` to show the hidden outdoors image if they got the key",
     "contained_level_names": null
   },
   "published": true,

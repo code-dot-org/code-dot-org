@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write a function called food-critic, which takes in the name of a food and produces a String that says how you feel about that food. For example, (food-critic “pizza”) might evaluate to “delicious”, but (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two foods to review, but you can you write more if you like!  Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!",
+    "short_instructions": "Write a function called food-critic, which takes in the name of a food and produces a String that says how you feel about that food. For example, (food-critic “pizza”) might evaluate to “delicious”, but (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two foods to review, but you can you write more if you like!  Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

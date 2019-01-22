@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
+    "short_instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
     "x": "25",
     "y": "100",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**OOPS!**  \r\n\r\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \r\n\r\nAren't you glad you're using a variable?",
+    "long_instructions": "**OOPS!**  \r\n\r\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \r\n\r\nAren't you glad you're using a variable?",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

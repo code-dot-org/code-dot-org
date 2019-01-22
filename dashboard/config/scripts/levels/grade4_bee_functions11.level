@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Solve this function by creating a function to turn, move forward and make all of the honey, then return the bee to where it started and turn back.",
+    "short_instructions": "Solve this function by creating a function to turn, move forward and make all of the honey, then return the bee to where it started and turn back.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
