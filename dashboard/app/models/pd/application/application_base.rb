@@ -369,7 +369,11 @@ module Pd::Application
 
     # displays the iso8601 date (yyyy-mm-dd)
     def date_accepted
-      accepted_at.try {|datetime| datetime.to_date.iso8601}
+      accepted_at&.to_date&.iso8601
+    end
+
+    def date_applied
+      created_at.to_date.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols
