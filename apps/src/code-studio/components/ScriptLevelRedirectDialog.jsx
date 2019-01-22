@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import i18n from '@cdo/locale';
-import dismissVersionRedirect from '@cdo/apps/util/dismissVersionRedirect';
+import { onDismissRedirectDialog, dismissedRedirectDialog } from '@cdo/apps/util/dismissVersionRedirect';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 
 export default class ScriptLevelRedirectDialog extends React.Component {
@@ -17,7 +17,7 @@ export default class ScriptLevelRedirectDialog extends React.Component {
   onCloseRedirectDialog = () => {
     const {courseName, scriptName} = this.props;
     // Use course name if available, and script name if not.
-    dismissVersionRedirect.onDismissRedirectDialog(courseName || scriptName);
+    onDismissRedirectDialog(courseName || scriptName);
     this.setState({
       isOpen: false,
     });
@@ -27,7 +27,7 @@ export default class ScriptLevelRedirectDialog extends React.Component {
     const {redirectUrl, courseName, scriptName} = this.props;
 
     // Only render redirect dialog if isOpen and user hasn't already dismissed the dialog for this course or script.
-    const displayRedirectDialog = this.state.isOpen && !dismissVersionRedirect.dismissedRedirectDialog(courseName || scriptName);
+    const displayRedirectDialog = this.state.isOpen && !dismissedRedirectDialog(courseName || scriptName);
 
     return (
       <RedirectDialog
