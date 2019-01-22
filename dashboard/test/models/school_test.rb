@@ -104,6 +104,19 @@ class SchoolTest < ActiveSupport::TestCase
     assert_equal(true, school.high_needs?)
   end
 
+  test 'urm school stats missing counts' do
+    school = create :school
+    stats_by_year =
+      school.school_stats_by_year << SchoolStatsByYear.new(
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 4,
+        student_bl_count: 2, 
+      )
+    school.save!
+    assert_equal(50.0,stats_by_year.first.urm_percent)
+  end
+
   test 'normalize_school_id works for short ids without leading zeros' do
     normalized_id = School.normalize_school_id("123456")
     assert_equal "123456", normalized_id
