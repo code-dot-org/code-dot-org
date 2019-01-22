@@ -169,8 +169,18 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
-function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+function clickedOn(group, event) {
+  var spriteGroup = group();
+  for(var i = 0; i < spriteGroup.length; i++) {
+    var sprite = helperGetSpriteFromArray(spriteGroup, i);
+    touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  }
+}
+
+function helperGetSpriteFromArray(spriteGroup, i) {
+	return function() {
+    	return spriteGroup[i];
+    };
 }
 
 function spriteDestroyed(sprite, event) {
