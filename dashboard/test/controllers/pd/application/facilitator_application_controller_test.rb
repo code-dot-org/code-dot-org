@@ -65,5 +65,16 @@ module Pd::Application
       assert_response :success
       assert_select 'p', /As a reminder, your application is not yet matched to a Code.org Regional Partner/
     end
+
+    test 'submitted page displays no regional partner if it is unsupported' do
+      regional_partner = create :regional_partner
+      regional_partner.update(has_csf: false)
+
+      application = create FACILITATOR_APPLICATION_FACTORY, course: 'csf', regional_partner: regional_partner
+      sign_in application.user
+      get :new
+      assert_response :success
+      assert_select 'p', /As a reminder, your application is not yet matched to a Code.org Regional Partner/
+    end
   end
 end

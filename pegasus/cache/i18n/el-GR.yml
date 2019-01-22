@@ -40,6 +40,7 @@ el-GR:
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
     μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
+  og_title_soon: Η Ώρα του Κώδικα έρχεται
   og_title_here: Η Ώρα του Κώδικα είναι εδώ!
   og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να μελετήσει την
     Πληροφορική. Αλλάζει τα πάντα.
@@ -368,6 +369,9 @@ el-GR:
     Sheryl, COO του Facebook"
   homepage_hero_text_satya: "&ldquo;Η Πληροφορική μπορεί να ξεκλειδώσει τις καλύτερες
     ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Η επιστήμη της Πληροφορικής ενδυναμώνει τους μαθητές να δημιουργήσουν τον κόσμο του αύριο.&rdquo;
+    Satya, Διευθύνων Σύμβουλος της Microsoft
   homepage_hero_text_bosh: "&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
     την πορεία της ζωής σας.&rdquo; Κρις Μπος"
   homepage_hero_text_student1: "&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
@@ -388,6 +392,8 @@ el-GR:
   homepage_hero_text_stat_loc: "#loc γραμμές κώδικα γραμμένες από μαθητές"
   homepage_hero_text_stat_students: "#student_count λογαριασμοί μαθητών στο Code Studio"
   homepage_hero_text_stat_served: 'Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν'
+  homepage_hero_hoc_is_coming: Η Ώρα του Κώδικα έρχεται
+  homepage_hero_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
   homepage_slot_text_teacher: πίνακας Δασκάλου
@@ -409,6 +415,7 @@ el-GR:
   homepage_action_text_signpetition: 'Υπογράψτε την συλλογή υπογραφών
 
 '
+  homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
   homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
@@ -428,6 +435,7 @@ el-GR:
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
+  homepage_slot_text_link_about_hoc: Σχετικά με την Ώρα του Κώδικα
   homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
@@ -451,6 +459,7 @@ el-GR:
   homepage_slot_text_link_buy: Εμπλακείτε
   homepage_slot_text_link_donate: Κάντε μια δωρεά
   homepage_slot_text_link_shop: Μπλουζάκια, καπέλα, & περισσότερα
+  homepage_slot_text_link_administrators: Φέρτε το CS στο σχολείο σας
   homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
@@ -529,11 +538,13 @@ el-GR:
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   mc_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες
     6+
+  minecraft_agent: Ταξίδι του Ήρωα του Minecraft
   minecraft_designer: Σχεδιαστής Minecraft
   minecraft_adventurer: Ζήστε μια περιπέτεια στο Minecraft
   minecraft_tutorials: Μαθήματα Minecraft από την Ώρα του Κώδικα
   minecraft_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
     Ηλικίες 2+
+  minecraft_start_tutorial: Ξεκινήστε οδηγείες
   minecraft_agent_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
     μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   minecraft_agent_button: Έναρξη
@@ -547,6 +558,21 @@ el-GR:
   minecraft_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
     Minecraft.
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Εγγραφείτε</a>
+    για την ελεύθερη ώρα Κωδικόυ Minecraft εργαστηρίο, σε καταστήματα της Microsoft
+    σε Αυστραλία, Καναδά, Πουέρτο Ρίκο ή τις ΗΠΑ. Μάθετε πώς η κωδικοποίηση είναι
+    για όλους και συνδυάζει τη δημιουργικότητα, την επίλυση προβλημάτων και τόνους
+    διασκέδασης."
+  minecraft_continue_learning: 'Πληροφορική για όλους: Πέρα από μια ώρα κωδικού στο
+    Κατάστημα της Microsoft'
+  minecraft_continue_learning_description: Δεν απαιτείται εμπειρία πληροφορικής! Βοηθήστε
+    να εξασφαλίσουμε οτι όλη η νεολαία μπορεί να μάθει την πολύτιμη δεξιότητα μέσω
+    της εκπαίδευσης στην Πληροφορική. Ελάτε στο Κατάστημα της Microsoft να συμμετάσχετε
+    σε μια ελεύθερη σειρά τριών, μονόωρων εργαστηρίων, όπου θα ζήσετε κωδικοποίηση
+    σε ένα διασκεδαστικό και χωρίς άγχος περιβάλλον, να εξοικειωθείτε με τις έννοιες
+    κλειδιά στην επιστήμη υπολογιστωών, και ετοιμαστείτε να οδηγήσετε μια ώρα κωδικοποίησης
+    στην τάξη σας ή την Κοινότητά σας. Το έχετε! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Εγγραφείτε σήμερα</a>.
   sports_page_title: Τα Αθλήματα της Ώρας του Κώδικα
   sports_og_title: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
   sports_og_description: Πρωταθλητές και Ολυμπιονίκες σας συνιστούμε να δοκιμάσετε
@@ -1944,6 +1970,7 @@ el-GR:
     | Ηλικίες 2+
   hoc2018_mc_aquatic_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα,
     με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_hero_title: Ταξίδι του Ήρωα του Minecraft
   hoc2018_mc_hero_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
     μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   hoc2018_mc_designer_title: Σχεδιαστής Minecraft

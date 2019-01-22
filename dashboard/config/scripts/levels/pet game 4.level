@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "short_instructions": "When your pet gets to their toy, they get excited! Use the \"when touches\" block to detect when your pet gets to their toy.\r\n\r\nWhen that happens, use the \"remove behavior\" block to make them stop walking, and the \"add behavior\" block to make them have a dance party!",
+    "instructions": "When your pet gets to their toy, they get excited! Use the \"when touches\" block to detect when your pet gets to their toy.\r\n\r\nWhen that happens, use the \"remove behavior\" block to make them stop walking, and the \"add behavior\" block to make them have a dance party!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

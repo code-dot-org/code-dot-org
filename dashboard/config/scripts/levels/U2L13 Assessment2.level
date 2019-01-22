@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Assessment: Question 2",
-    "long_instructions": "What makes one encryption better than another?\n",
+    "markdown_instructions": "What makes one encryption better than another?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

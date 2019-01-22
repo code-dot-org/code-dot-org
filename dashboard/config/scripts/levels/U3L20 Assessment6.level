@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Conditional Basics Question 6",
-    "long_instructions": "When using an \"if\" statement, what line of code is executed if the condition is false?\n",
+    "markdown_instructions": "When using an \"if\" statement, what line of code is executed if the condition is false?\n",
     "skip_dialog": true,
     "skip_sound": true
   },
