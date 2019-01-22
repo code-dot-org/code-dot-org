@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "short_instructions": "Build a function that will create this star.",
+    "instructions": "Build a function that will create this star.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -39,7 +39,7 @@
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "long_instructions": "Build a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
+    "markdown_instructions": "Build a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
     "show_type_hints": "false",
     "contained_level_names": null,
     "preload_asset_list": null
