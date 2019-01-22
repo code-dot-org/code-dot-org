@@ -368,15 +368,19 @@ class Course < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user)
-    return nil unless user
+  def can_view_version?(user = nil)
+    latest_course_version = Course.latest_version(family_name)
+    is_latest = latest_course_version == self
+
+    # Logged out users can only see the latest course version.
+    return is_latest if user.nil?
+
     # Restrictions only apply to students.
     return true unless user.student?
 
     # A student can view the course version if...
     # it is the latest, they are assigned to it, or they have progress in it.
-    latest_course_version = Course.latest_version(family_name)
-    latest_course_version == self || user.section_courses.include?(self) || has_progress?(user)
+    is_latest || user.section_courses.include?(self) || has_progress?(user)
   end
 
   # @param family_name [String] The family name for a course family.
