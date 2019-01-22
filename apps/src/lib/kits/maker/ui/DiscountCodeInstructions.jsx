@@ -1,7 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import viewCart from "@cdo/static/maker/viewCart_19.png";
-import addToCart from "@cdo/static/maker/addToCart_19.png";
-import enterDiscountCode from "@cdo/static/maker/enterDiscountCode_19.png";
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
 
 const styles = {
@@ -50,24 +47,24 @@ export default class DiscountCodeInstructions extends Component {
             1) Go to <a href="https://www.adafruit.com/product/3399">https://www.adafruit.com/product/3399</a>
           {" "}and add the kit to your cart.
           </div>
-          <a href={addToCart}>
-            <img style={styles.image} src={addToCart}/>
+          <a href="https://images.code.org/maker/addToCart_19.png">
+            <img style={styles.image} src="https://images.code.org/maker/addToCart_19.png"/>
           </a>
         </div>
         <div style={styles.step}>
           <div>
             2) Go to your cart.
           </div>
-          <a href={viewCart}>
-            <img style={styles.image} src={viewCart}/>
+          <a href="https://images.code.org/maker/viewCart_19.png">
+            <img style={styles.image} src="https://images.code.org/maker/viewCart_19.png"/>
           </a>
         </div>
         <div style={styles.step}>
           <div>
             3) Put in your discount code ({this.props.discountCode}) and hit "Apply".
           </div>
-          <a href={enterDiscountCode}>
-            <img style={styles.image} src={enterDiscountCode}/>
+          <a href="https://images.code.org/maker/enterDiscountCode_19.png">
+            <img style={styles.image} src="https://images.code.org/maker/enterDiscountCode_19.png"/>
           </a>
         </div>
         <div style={styles.step}>
