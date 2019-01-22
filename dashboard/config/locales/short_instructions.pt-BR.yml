@@ -1056,6 +1056,10 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      Applab allthethings onRecordEvent: Por favor, faça o login para testar os níveis
+        do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
+        Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
+        para um script inteiro e seria chato de fazer para o script todasascoisas).
       Applab test: Você pode enviar este nível. Apenas para testes!
       Artist - Nested Loops 1: |-
         Complete o código para desenhar esses triângulos. O
@@ -1952,6 +1956,32 @@ pt-BR:
         da função do manipulador de eventos. Use-o para exibir o parâmetro do evento.
         Clique na tela para ver o conteúdo do parâmetro de evento (clique para ver
         as instruções completas)
+      CSPU5_U3 - Conditional Basics - 6: Adicione um "definirTexto" após a declaração
+        "se" para a frase "Não. Tente de novo." (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Combine AND OR Simple: Escreva uma declaração "se"
+        que usa "E" e "OU" para exibir "Durma!" se é fim de semana e o usuário é um
+        adolescente. (Clique para ver as instruções completas.
+      CSPU5_U3 - Conditionals - Combine AND OR Simple_2018: Escreva uma declaração
+        "se" que usa "E" e "OU" para exibir "Durma!" se é fim de semana e o usuário
+        é um adolescente. (Clique para ver as instruções completas.
+      CSPU5_U3 - Conditionals - Combine AND OR and NOT: Escreva uma instrução "se"
+        que usa "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim de
+        semana e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
+      CSPU5_U3 - Conditionals - Combine AND OR and NOT_2018: Escreva uma instrução
+        "se" que usa "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim
+        de semana e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
+      CSPU5_U3 - Conditionals - Simple AND: Escreva uma instrução "se" que usa "E"
+        para exibir "Você é um adolescente..." se o usuário insere uma idade entre
+        13 e 19. (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Simple AND_2018: Escreva uma instrução "se" que usa
+        "E" para exibir "Você é um adolescente..." se o usuário insere uma idade entre
+        13 e 19. (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Simple OR: Escrever uma instrução "se" que usa "OU"
+        para exibir "É o fim de semana!" se o usuário insere um dia de fim de semana
+        no prompt. (Clique para ver as instruções completas)
+      CSPU5_U3 - Conditionals - Simple OR_2018: Escrever uma instrução "se" que usa
+        "OU" para exibir "É o fim de semana!" se o usuário insere um dia de fim de
+        semana no prompt. (Clique para ver as instruções completas)
       CSPU5_U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens
         de 'console.log' para associar com o botão correto. (Clique para ver as instruções
         completas.)
@@ -1971,8 +2001,20 @@ pt-BR:
         o Modo de Design. (Clique para ver as instruções completas)
       CSPU5_U3 - Design Mode 1_2018: Adicione um grande botão vermelho na sua tela
         usando o Modo de Design. (Clique para ver as instruções completas)
+      CSPU5_U3 - Dice - Dropdown and Score: Adicione o palpite e pontuação para o
+        jogo de dados (clique para ver as instruções completas)
+      CSPU5_U3 - Dice - Dropdown with Strings: Adicione um menu suspenso para o nível
+        de dificuldade que mostre o nível de dificuldade no console. (Clique para
+        ver as instruções completas)
       CSPU5_U3 - Dice - If: Mostre imagens diferentes para o número aleatório gerado.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Dice - Nested: Use declarações "se" para fazer o marcador diferente
+        para níveis de jogos diferentes. (Clique para ver as instruções completas)
+      CSPU5_U3 - High Low - Debug: Analise a ordem das condicionais para que avise
+        o usuário quando o palpite está próximo. (Clique para ver as instruções completas)
+      CSPU5_U3 - High Low - Debug_2018: Analise a ordem das condicionais para que
+        avise o usuário quando o palpite está próximo. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - High Low - Dropdown: Adicione um menu de opções para o palpite em
         vez de promptNum (clique para ver as instruções completas)
       CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
@@ -1981,6 +2023,35 @@ pt-BR:
       CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
         de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
         que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - High Low - Else: 'Adicione uma instrução "senão" para que o programa
+        informe aos usuários quando eles estão certos e quando eles estão errados.
+        (Clique para ver as instruções completas)  '
+      CSPU5_U3 - High Low - If: Adicione código dentro da declaração "se" que indica
+        o usuário adivinhou o número secreto. (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Add Image URLs: Adicione URLs de imagem para seu vetor. Substitua
+        a área de texto com uma imagem e "setText" com "setImageURL". Em seguida,
+        teste seu aplicativo! (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Add Image URLs_2018: Adicione URLs de imagem para seu vetor.
+        Substitua a área de texto com uma imagem e "setText" com "setImageURL". Em
+        seguida, teste seu aplicativo! (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Buttons and Keys: Faça com que o programa responda da mesma
+        maneira tanto para clicar em imagens na tela quanto para apertar as teclas
+        para cima e para baixo no teclado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Buttons and Keys_2018: Faça com que o programa responda da
+        mesma maneira tanto para clicar em imagens na tela quanto para apertar as
+        teclas para cima e para baixo no teclado. (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Demo App: Brinque com a barra de rolar imagem. Pressione as
+        setas para a esquerda e para a direita para avançar pelas imagens.
+      CSPU5_U3 - Keys - Demo App_2018: Brinque com a barra de rolar imagem. Pressione
+        as setas para a esquerda e para a direita para avançar pelas imagens.
+      CSPU5_U3 - Keys - Final Image Scroller: Atualize o scroller de imagem para responder
+        a botões e a digitar de teclas. (Clique para ver as instruções completas)
+      CSPU5_U3 - Keys - Functions: Escreva funções facaSetaParaCima e facaSetaParaBaixo
+        e chame as funções ao invés de duplicar o código. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Keys - Functions_2018: Escreva funções facaSetaParaCima e facaSetaParaBaixo
+        e chame as funções ao invés de duplicar o código. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e
         pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique
         para ver as instruções completas)
@@ -1991,6 +2062,40 @@ pt-BR:
         for pressionada (Clique aqui para ver todas as instruções)
       CSPU5_U3 - Keys - Multiple Keys_2018: Toque um som diferente quando a seta para
         baixo for pressionada (Clique aqui para ver todas as instruções)
+      CSPU5_U3 - Loops -  Complex Condition: Altere a expressão booleana para o laço
+        while de forma que ele irá parar quando ambos dados forem maiores que ou iguais
+        a 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018: Altere a expressão booleana para
+        o laço while de forma que ele irá parar quando ambos dados forem maiores que
+        ou iguais a 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 1: Altere a condição para o laço while para checar se a variável
+        num é menor do que 90. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 10: Escreva um programa que simule a rolagem de 2 dados.
+        Role os dados repetidamente até a soma dos dados ser 7 ou 11.
+      CSPU5_U3 - Loops - 10_2018: Escreva um programa que simule a rolagem de 2 dados.
+        Role os dados repetidamente até a soma dos dados ser 7 ou 11.
+      CSPU5_U3 - Loops - 11: Conserte a condição para que continue rolando o dado
+        enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente. (Clique
+        para ver as instruções completas)
+      CSPU5_U3 - Loops - 11_2018: Conserte a condição para que continue rolando o
+        dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 12: Altere o código para que imprima a string "Oi" 5 vezes.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 12_2018: Altere o código para que imprima a string "Oi" 5
+        vezes. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito
+        e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Loops - 14_2018: Altere a condição do laço para evitar o laço infinito
+        e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique
+        para ver as instruções completas)
+      CSPU5_U3 - Loops - 15_2018: Conte o número de vezes que a soma dos dados é 12.
+        (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 1_2018: Altere a condição para o laço while para checar se
+        a variável num é menor do que 90. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para
         que o programa execute até que role um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto"
@@ -3633,6 +3738,9 @@ pt-BR:
       HOC 2018 Level_6: Navegue no gelo para chegar até o salmão.
       HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
       HOC 2018 Level_9b: Use os corais como pontos passagem para alcançar o tesouro.
+      Hannah DataVis Test: Altere a expressão booleana para o laço while de forma
+        que ele irá parar quando ambos dados forem maiores que ou iguais a 5. (Clique
+        para ver as instruções completas)
       HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
       Infinity_catch: |-
         Você pode fazer Elsa ("personagem 2") alcançar
@@ -4583,6 +4691,10 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      Project - Final Image Scroller: Atualize o scroller de imagem para responder
+        a botões e a digitar de teclas. (Clique para ver as instruções completas)
+      Project - Final Image Scroller_2018: Atualize o scroller de imagem para responder
+        a botões e a digitar de teclas. (Clique para ver as instruções completas)
       Project - Finish your canvas app: Estenda a funcionalidade de um dos efeitos,
         ou crie um novo de sua preferência. (Clique para ver todas as instruções)
       Project - Your Own Multi Screen App: Crie seu app com várias telas (clique para
@@ -4937,6 +5049,20 @@ pt-BR:
         do manipulador de eventos. Use-o para exibir o parâmetro do evento. Clique
         na tela para ver o conteúdo do parâmetro de evento (clique para ver as instruções
         completas)
+      U3 - Conditional Basics - 6: Adicione um "definirTexto" após a declaração "se"
+        para a frase "Não. Tente de novo." (Clique para ver as instruções completas)
+      U3 - Conditionals - Combine AND OR Simple: Escreva uma declaração "se" que usa
+        "E" e "OU" para exibir "Durma!" se é fim de semana e o usuário é um adolescente.
+        (Clique para ver as instruções completas.
+      U3 - Conditionals - Combine AND OR and NOT: Escreva uma instrução "se" que usa
+        "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim de semana
+        e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
+      U3 - Conditionals - Simple AND: Escreva uma instrução "se" que usa "E" para
+        exibir "Você é um adolescente..." se o usuário insere uma idade entre 13 e
+        19. (Clique para ver as instruções completas)
+      U3 - Conditionals - Simple OR: Escrever uma instrução "se" que usa "OU" para
+        exibir "É o fim de semana!" se o usuário insere um dia de fim de semana no
+        prompt. (Clique para ver as instruções completas)
       U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens de 'console.log'
         para associar com o botão correto. (Clique para ver as instruções completas.)
       U3 - Design Mode - Layers and Delete: Conserte o formato do jogo bullseye. (Clique
@@ -4953,18 +5079,62 @@ pt-BR:
         ver as instruções completas).
       U3 - Design Mode 1: Adicione um grande botão vermelho na sua tela usando o Modo
         de Design. (Clique para ver as instruções completas)
+      U3 - Dice - Dropdown and Score: Adicione o palpite e pontuação para o jogo de
+        dados (clique para ver as instruções completas)
+      U3 - Dice - Dropdown with Strings: Adicione um menu suspenso para o nível de
+        dificuldade que mostre o nível de dificuldade no console. (Clique para ver
+        as instruções completas)
       U3 - Dice - If: Mostre imagens diferentes para o número aleatório gerado. (Clique
         para ver as instruções completas)
+      U3 - Dice - Nested: Use declarações "se" para fazer o marcador diferente para
+        níveis de jogos diferentes. (Clique para ver as instruções completas)
+      U3 - High Low - Debug: Analise a ordem das condicionais para que avise o usuário
+        quando o palpite está próximo. (Clique para ver as instruções completas)
       U3 - High Low - Dropdown: Adicione um menu de opções para o palpite em vez de
         promptNum (clique para ver as instruções completas)
       U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
         ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
         errados. (Clique para ver todas as instruções)
+      U3 - High Low - Else: 'Adicione uma instrução "senão" para que o programa informe
+        aos usuários quando eles estão certos e quando eles estão errados. (Clique
+        para ver as instruções completas)  '
+      U3 - High Low - If: Adicione código dentro da declaração "se" que indica o usuário
+        adivinhou o número secreto. (Clique para ver as instruções completas)
+      U3 - Keys - Add Image URLs: Adicione URLs de imagem para seu vetor. Substitua
+        a área de texto com uma imagem e "setText" com "setImageURL". Em seguida,
+        teste seu aplicativo! (Clique para ver as instruções completas)
+      U3 - Keys - Buttons and Keys: Faça com que o programa responda da mesma maneira
+        tanto para clicar em imagens na tela quanto para apertar as teclas para cima
+        e para baixo no teclado. (Clique para ver as instruções completas)
+      U3 - Keys - Demo App: Brinque com a barra de rolar imagem. Pressione as setas
+        para a esquerda e para a direita para avançar pelas imagens.
+      U3 - Keys - Final Image Scroller: Atualize o scroller de imagem para responder
+        a botões e a digitar de teclas. (Clique para ver as instruções completas)
+      U3 - Keys - Functions: Escreva funções facaSetaParaCima e facaSetaParaBaixo
+        e chame as funções ao invés de duplicar o código. (Clique para ver as instruções
+        completas)
       U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e pressionar
         tecla para ver como eles são diferentes de apertar tecla. (Clique para ver
         as instruções completas)
       U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for
         pressionada (Clique aqui para ver todas as instruções)
+      U3 - Loops -  Complex Condition: Altere a expressão booleana para o laço while
+        de forma que ele irá parar quando ambos dados forem maiores que ou iguais
+        a 5. (Clique para ver as instruções completas)
+      U3 - Loops - 1: Altere a condição para o laço while para checar se a variável
+        num é menor do que 90. (Clique para ver as instruções completas)
+      U3 - Loops - 10: Escreva um programa que simule a rolagem de 2 dados. Role os
+        dados repetidamente até a soma dos dados ser 7 ou 11.
+      U3 - Loops - 11: Conserte a condição para que continue rolando o dado enquanto
+        o valor não for um 2 ou um 3 ao invés de rolar infinitamente. (Clique para
+        ver as instruções completas)
+      U3 - Loops - 12: Altere o código para que imprima a string "Oi" 5 vezes. (Clique
+        para ver as instruções completas)
+      U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito e pare
+        a contagem quando o contador passar de 30. (Clique para ver as instruções
+        completas)
+      U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique
+        para ver as instruções completas)
       U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que
         o programa execute até que role um 6. (Clique para ver as instruções completas)
       U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os
@@ -5337,6 +5507,8 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      U3L24 Nested Conditionals Bugs 3: Conserte os erros que ainda existem neste
+        programa. Prove que o programa funciona corretamente.
       U3L25 - drag out key event: Crie um manipulador de eventos para responder aos
         eventos de apertar tecla e exibir event.key no console. Aperte as teclas do
         teclado para ver o que acontece. (Clique para ver as instruções completas)
@@ -5460,6 +5632,18 @@ pt-BR:
         repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses
         blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
       aEfreeplay: Atividade Livre!
+      allthethings data blocks test: Por favor, faça o login para testar os níveis
+        do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
+        Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
+        para um script inteiro e seria chato de fazer para o script todasascoisas).
+      allthethings design mode elements: Por favor, faça o login para testar os níveis
+        do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
+        Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
+        para um script inteiro e seria chato de fazer para o script todasascoisas).
+      allthethings level dataTables: Por favor, faça o login para testar os níveis
+        do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
+        Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
+        para um script inteiro e seria chato de fazer para o script todasascoisas).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
       allthethings_ttscsp: Analise o programa corrigindo o erro lógico dentro do programa.
         (Clique para ver as instruções completas)
