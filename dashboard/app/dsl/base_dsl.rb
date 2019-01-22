@@ -32,7 +32,7 @@ class BaseDSL
     object = new
     object.name(name) if name.present?
     object.instance_eval(str.to_ascii, filename)
-    [object.parse_output, object.i18n_hash]
+    [object.parse_output.tap {|out| out[:md5] = Digest::MD5.hexdigest(str)}, object.i18n_hash]
   end
 
   # override in subclass
