@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "long_instructions": "**What do you think?** \r\n\r\nThis giraffe is called Geraldine.  \r\n\r\nWhen you click on her, what will she do?",
+    "markdown_instructions": "**What do you think?** \r\n\r\nThis giraffe is called Geraldine.  \r\n\r\nWhen you click on her, what will she do?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "short_instructions": "What do you think will happen when you click on the alien?  ",
+    "instructions": "What do you think will happen when you click on the alien?  ",
     "parent_level_id": 14385,
     "name_suffix": "_simple"
   },

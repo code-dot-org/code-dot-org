@@ -48,9 +48,9 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14099,
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\r\n* Create two bell sprites, and make the aliens do a different dance move for each\r\n* Make the aliens do a new dance move whenever they touch each other",
+    "markdown_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\r\n* Create two bell sprites, and make the aliens do a different dance move for each\r\n* Make the aliens do a new dance move whenever they touch each other",
     "show_type_hints": "true",
-    "short_instructions": "Now create your own alien disco!",
+    "instructions": "Now create your own alien disco!",
     "include_shared_functions": "true",
     "block_pool": "gamelab",
     "block_pools": [
