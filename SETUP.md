@@ -16,7 +16,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      yarn --version  # --> 1.6.0
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
-1. `gem install bundler`
+1. `gem install bundler 1.17`
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.) 
