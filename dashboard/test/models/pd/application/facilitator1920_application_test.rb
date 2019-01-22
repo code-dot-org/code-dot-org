@@ -168,14 +168,6 @@ module Pd::Application
         "Expected header and row to have the same number of columns"
     end
 
-    test 'to_cohort_csv' do
-      optional_columns = {registered_workshop: true, accepted_teachercon: false}
-      assert (header = Facilitator1920Application.cohort_csv_header(optional_columns))
-      assert (row = @application.to_cohort_csv_row(optional_columns))
-      assert_equal CSV.parse(header).length, CSV.parse(row).length,
-        "Expected header and row to have the same number of columns"
-    end
-
     test 'locking an application with fit_workshop_id automatically enrolls user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"

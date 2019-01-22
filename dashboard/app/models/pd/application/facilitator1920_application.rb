@@ -181,43 +181,6 @@ module Pd::Application
       end
     end
 
-    def self.cohort_csv_header(optional_columns)
-      columns = [
-        'Date Accepted',
-        'Name',
-        'School District',
-        'School Name',
-        'Email',
-        'Status',
-        'Assigned Workshop'
-      ]
-      if optional_columns[:registered_workshop]
-        columns.push 'Registered Workshop'
-      end
-      if optional_columns[:accepted_teachercon]
-        columns.push 'Accepted Teachercon'
-      end
-
-      columns.push(
-        'General Notes',
-        'Notes 2',
-        'Notes 3',
-        'Notes 4',
-        'Notes 5',
-        'Question 1 Support Teachers',
-        'Question 2 Student Access',
-        'Question 3 Receive Feedback',
-        'Question 4 Give Feedback',
-        'Question 5 Redirect Conversation',
-        'Question 6 Time Commitment',
-        'Question 7 Regional Needs'
-      )
-
-      CSV.generate do |csv|
-        csv << columns
-      end
-    end
-
     # @override
     def to_csv_row(course)
       columns_to_exclude = Pd::Application::Facilitator1920Application.columns_to_remove(course)
@@ -230,51 +193,6 @@ module Pd::Application
           row.push(full_answers[k] || try(k) || "")
         end
         csv << row
-      end
-    end
-
-    def to_cohort_csv_row(optional_columns)
-      columns = [
-        date_accepted,
-        applicant_name,
-        district_name,
-        school_name,
-        user.email,
-        status,
-        fit_workshop_date_and_location
-      ]
-      if optional_columns[:registered_workshop]
-        if workshop.try(:local_summer?)
-          columns.push(registered_workshop? ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
-      if optional_columns[:accepted_teachercon]
-        if workshop.try(:teachercon?)
-          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
-
-      columns.push(
-        notes,
-        notes_2,
-        notes_3,
-        notes_4,
-        notes_5,
-        question_1,
-        question_2,
-        question_3,
-        question_4,
-        question_5,
-        question_6,
-        question_7
-      )
-
-      CSV.generate do |csv|
-        csv << columns
       end
     end
 
