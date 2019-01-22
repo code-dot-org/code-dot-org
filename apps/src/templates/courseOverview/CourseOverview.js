@@ -10,7 +10,12 @@ import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
-import dismissVersionRedirect from '@cdo/apps/util/dismissVersionRedirect';
+import {
+  onDismissRedirectDialog,
+  dismissedRedirectDialog,
+  onDismissRedirectWarning,
+  dismissedRedirectWarning
+} from '@cdo/apps/util/dismissVersionRedirect';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
@@ -107,7 +112,7 @@ export default class CourseOverview extends Component {
   };
 
   onCloseRedirectDialog = () => {
-    dismissVersionRedirect.onDismissRedirectDialog(this.props.name);
+    onDismissRedirectDialog(this.props.name);
     this.setState({
       showRedirectDialog: false,
     });
@@ -147,7 +152,7 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
-        {redirectToCourseUrl && !dismissVersionRedirect.dismissedRedirectDialog(name) &&
+        {redirectToCourseUrl && !dismissedRedirectDialog(name) &&
           <RedirectDialog
             isOpen={this.state.showRedirectDialog}
             details={i18n.assignedToNewerVersion()}
@@ -156,13 +161,13 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         }
-        {(showRedirectWarning && !dismissVersionRedirect.dismissedRedirectWarning(name)) &&
+        {(showRedirectWarning && !dismissedRedirectWarning(name)) &&
           <Notification
             type={NotificationType.warning}
             notice=""
             details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
-            onDismiss={() => dismissVersionRedirect.onDismissRedirectWarning(name)}
+            onDismiss={() => onDismissRedirectWarning(name)}
           />
         }
         {showVersionWarning &&
