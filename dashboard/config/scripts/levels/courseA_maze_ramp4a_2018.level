@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,4,2,1,1,4,0,0],[0,4,4,4,3,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "short_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
+    "instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your code should look like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"maze_moveEast\\\">\\n        <next>\\n          <block type=\\\"maze_moveEast\\\">\\n            <next>\\n              <block type=\\\"maze_moveSouth\\\"/>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/301e08a6f8097357169fd2910f3bb0a6/courseA_maze_ramp4a_2018.mp3\"}]",
-    "long_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
+    "markdown_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

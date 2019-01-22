@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "short_instructions": "Create your own \"Chaser App\". (Click to see full instructions)",
+    "instructions": "Create your own \"Chaser App\". (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

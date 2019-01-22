@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
     "embed": "false",
-    "short_instructions": "You can add lots more things for your pet to interact with! Play around with the \"set sprite\" block and make more stuff anywhere you want it!",
+    "instructions": "You can add lots more things for your pet to interact with! Play around with the \"set sprite\" block and make more stuff anywhere you want it!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

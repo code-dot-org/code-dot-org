@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "short_instructions": "Finish the code to create this drawing.",
+    "instructions": "Finish the code to create this drawing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

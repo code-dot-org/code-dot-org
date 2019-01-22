@@ -6,7 +6,7 @@
   "user_id": 5,
   "properties": {
     "skin": "birds",
-    "short_instructions": "Can you get the bird to the pig?",
+    "instructions": "Can you get the bird to the pig?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

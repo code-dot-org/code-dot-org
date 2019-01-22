@@ -343,6 +343,10 @@ sl:
               name: Labirint
             Minecraft:
               name: Minecraft
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Osnove Računalništva
         ECSPD2:
           stages:
             0: |-

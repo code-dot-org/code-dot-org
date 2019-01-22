@@ -93,7 +93,7 @@
   "turnRightTooltip": "Otočí maliara vpravo o zadaný uhol.",
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
-  "widthTooltip": "Zmení šírku pera.",
+  "widthTooltip": "Zmení hrúbku pera.",
   "withSize": "veľkosti",
   "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
 }
