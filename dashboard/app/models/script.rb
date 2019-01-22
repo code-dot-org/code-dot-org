@@ -458,18 +458,16 @@ class Script < ActiveRecord::Base
     latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
 
-    # Logged out users can see the latest script version in English and in their locale.
-    return is_latest if user.nil?
+    # All users can see the latest script version in English and in their locale.
+    return true if is_latest
 
-    # Restrictions only apply to students.
+    # Restrictions only apply to students and logged out users.
+    return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if...
-    # 1) it is the latest stable version in English, 2) it is the latest stable version in their locale,
-    # 3) they are assigned to it, 4) or they have progress in it.
+    # A student can view the script version if they are assigned to it or they have progress in it.
     has_progress = user.scripts.include?(self)
-
-    is_latest || user.assigned_script?(self) || has_progress
+    user.assigned_script?(self) || has_progress
   end
 
   # @param family_name [String] The family name for a script family.
