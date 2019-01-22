@@ -169,11 +169,12 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
-function clickedOn(group, event) {
+function clickedOn(condition, group, event) {
   var spriteGroup = group();
+  var typeOfClick = condition === "when" ? mouseIsOver : mousePressedOver;
   for(var i = 0; i < spriteGroup.length; i++) {
     var sprite = helperGetSpriteFromArray(spriteGroup, i);
-    touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+    touchEvents.push({type: typeOfClick, event: event, sprite: sprite});
   }
 }
 
@@ -386,11 +387,21 @@ function draw() {
     // Run touch events
     for (i = 0; i < touchEvents.length; i++) {
       eventType = touchEvents[i].type;
+      /*
+      if(eventType === mousePressedOver) {
+      	eventType = mouseIsOver;
+      }
+      */
       event = touchEvents[i].event;
+      console.log(event);
       param = touchEvents[i].sprite ?
         touchEvents[i].sprite() :
         touchEvents[i].param;
-      if (param && eventType(param)) {
+      // Just for experimentation, I'm breaking mouseIsOver for this to work
+      if(param && eventType === mouseIsOver && eventType(param) && mouseWentDown("leftButton")) {
+        event();
+      }
+      else if(param && eventType(param) && eventType !== mouseIsOver) {
         event();
       }
     }
