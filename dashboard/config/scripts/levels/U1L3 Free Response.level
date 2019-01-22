@@ -7,7 +7,7 @@
   "properties": {
     "title": "Reflection: Sending Complex Messages",
     "placeholder": "Enter your reflection here",
-    "markdown_instructions": "How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?",
+    "long_instructions": "How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -28,7 +28,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# LED and Buzzer Controller\r\n\r\nThis program operates the LED and the buzzer, but it has some problems.\r\n\r\n# Do This\r\n* Read the program to understand how it is supposed to work.\r\n* Find and correct the bugs so that the program works properly.",
+    "long_instructions": "# LED and Buzzer Controller\r\n\r\nThis program operates the LED and the buzzer, but it has some problems.\r\n\r\n# Do This\r\n* Read the program to understand how it is supposed to work.\r\n* Find and correct the bugs so that the program works properly.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

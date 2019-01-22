@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Time to add a second button and write the code to make it work.\r\n\r\n1. Drag a second button onto your \"startScreen\" and give it a clear \"id\"\r\n2. Change the text and color of your button\r\n3. In Code Mode drag in a second `onEvent()` block and drag a `setScreen()` inside of it\r\n4. Set the \"id\"s of your `onEvent()` and `setScreen()` blocks to the button and screens you added\r\n\r\nIf everything worked you should now have a second button that changes the screen. \"Run\" your app and hit \"Finish\" if it worked.\r\n\r\n![expandable](https://images.code.org/33d1a6d2dcc81ed8ecd0966d2f0682ca-image-1505770427380.gif) Click to see a GIF of all steps",
+    "long_instructions": "Time to add a second button and write the code to make it work.\r\n\r\n1. Drag a second button onto your \"startScreen\" and give it a clear \"id\"\r\n2. Change the text and color of your button\r\n3. In Code Mode drag in a second `onEvent()` block and drag a `setScreen()` inside of it\r\n4. Set the \"id\"s of your `onEvent()` and `setScreen()` blocks to the button and screens you added\r\n\r\nIf everything worked you should now have a second button that changes the screen. \"Run\" your app and hit \"Finish\" if it worked.\r\n\r\n![expandable](https://images.code.org/33d1a6d2dcc81ed8ecd0966d2f0682ca-image-1505770427380.gif) Click to see a GIF of all steps",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

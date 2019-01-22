@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "Respond to this prompt or to another as directed by your teacher.\r\n\r\nShakespeare’s complete works have approximately 3.5 million characters.  Which is bigger in file size: Shakespeare’s complete works stored in plain ASCII text or a 4 minute song on mp3?  How much bigger?",
+    "long_instructions": "Respond to this prompt or to another as directed by your teacher.\r\n\r\nShakespeare’s complete works have approximately 3.5 million characters.  Which is bigger in file size: Shakespeare’s complete works stored in plain ASCII text or a 4 minute song on mp3?  How much bigger?",
     "submittable": "false",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",

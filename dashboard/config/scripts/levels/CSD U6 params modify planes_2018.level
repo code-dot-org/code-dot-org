@@ -80,7 +80,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "# Multi-plane Controller\r\n\r\nThis program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create a new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.\r\n\r\n_Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_",
+    "short_instructions": "# Multi-plane Controller\r\n\r\nThis program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create a new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.\r\n\r\n_Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  if (getChecked(\"red\")) {\r\n    //move the red plane\r\n    moveRed();\r\n  }\r\n  if (getChecked(\"green\")) {\r\n    //move the green plane\r\n  }\r\n  if (getChecked(\"blue\")) {\r\n    // move the blue plane\r\n  }\r\n});\r\nfunction moveRed() {\r\n  setProperty(\"redPlane\", \"x\", accelerometer.getOrientation(\"roll\") + getProperty(\"redPlane\", \"x\"));\r\n  setProperty(\"redPlane\", \"y\", accelerometer.getOrientation(\"pitch\") + getProperty(\"redPlane\", \"y\"));\r\n}",

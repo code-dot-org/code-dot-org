@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Add one block to this code to create a parallelogram. ",
+    "short_instructions": "Add one block to this code to create a parallelogram. ",
     "x": "120",
     "y": "150",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "callout_json": "[]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Add one block to this code to create a parallelogram.  \r\n\r\nThis one should have **60 degree** and **120 degree** angles instead of 90 degree angles.",
+    "long_instructions": "Add one block to this code to create a parallelogram.  \r\n\r\nThis one should have **60 degree** and **120 degree** angles instead of 90 degree angles.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

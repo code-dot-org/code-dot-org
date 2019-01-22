@@ -7,7 +7,7 @@
   "properties": {
     "link_title": "Creative Commons",
     "url": "http://creativecommons.org",
-    "markdown_instructions": "# Creative Commons\r\n\r\nHead to the Creative Commons website to learn more about CC licensing models."
+    "long_instructions": "# Creative Commons\r\n\r\nHead to the Creative Commons website to learn more about CC licensing models."
   },
   "published": true,
   "notes": "",

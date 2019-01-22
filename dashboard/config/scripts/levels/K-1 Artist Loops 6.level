@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "This one needs two loops: one to go up the stairs and one to go down.",
+    "short_instructions": "This one needs two loops: one to go up the stairs and one to go down.",
     "x": "50",
     "y": "300",
     "start_direction": "90",

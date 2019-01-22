@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Game Screen Design\r\n\r\nWe've also added a \"game\" screen where the game will be played. It just needs a couple of tweaks.\r\n\r\n# Do This\r\n\r\nSwitch to the \"game\" screen and, using your planning guide, fix this screen by changing the color of the two emoji images.\r\n\r\nFeel free to add any other design tweaks that you'd like.",
+    "long_instructions": "# Game Screen Design\r\n\r\nWe've also added a \"game\" screen where the game will be played. It just needs a couple of tweaks.\r\n\r\n# Do This\r\n\r\nSwitch to the \"game\" screen and, using your planning guide, fix this screen by changing the color of the two emoji images.\r\n\r\nFeel free to add any other design tweaks that you'd like.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

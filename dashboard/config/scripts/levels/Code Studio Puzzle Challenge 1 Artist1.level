@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Draw the line. It is 200 pixels long. ",
+    "short_instructions": "Draw the line. It is 200 pixels long. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

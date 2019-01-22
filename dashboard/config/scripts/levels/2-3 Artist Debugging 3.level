@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "My boat has a hole! \r\n\r\nWhat do you need to fix to make the ends meet?",
+    "short_instructions": "My boat has a hole! \r\n\r\nWhat do you need to fix to make the ends meet?",
     "x": "230",
     "y": "225",
     "start_direction": "270",
@@ -19,7 +19,7 @@
     "disable_variable_editing": "false",
     "permitted_errors": "0",
     "embed": "false",
-    "markdown_instructions": "My boat has a hole! \r\n\r\nWhat do you need to fix to make the ends meet?",
+    "long_instructions": "My boat has a hole! \r\n\r\nWhat do you need to fix to make the ends meet?",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
