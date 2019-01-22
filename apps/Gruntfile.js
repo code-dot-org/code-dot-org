@@ -451,6 +451,7 @@ describe('entry tests', () => {
     'levels/textMatch':                    './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                       './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':               './src/sites/studio/pages/levels/_external_link.js',
+    'levels/show':                         './src/sites/studio/pages/levels/show.js',
     'projects/index':                      './src/sites/studio/pages/projects/index.js',
     'projects/public':                     './src/sites/studio/pages/projects/public.js',
     'projects/featured':                   './src/sites/studio/pages/projects/featured.js',
