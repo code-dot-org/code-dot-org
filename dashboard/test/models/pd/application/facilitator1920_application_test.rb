@@ -176,55 +176,13 @@ module Pd::Application
         "Expected header and row to have the same number of columns"
     end
 
-    test 'locking an application with fit_workshop_id automatically enrolls user' do
+    test 'locking an application with fit_workshop_id does not automatically enroll user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
-      assert_creates(Pd::Enrollment) do
+      refute_creates(Pd::Enrollment) do
         @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
-      assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      first_workshop = @fit_workshop
-      second_workshop = create :pd_workshop, :fit
-
-      @application.fit_workshop_id = first_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.fit_workshop_id = second_workshop.id
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
-      @application.fit_workshop_id = @fit_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.status = "waitlisted"
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-
-      @application.unlock!
-      @application.status = "accepted"
-
-      assert_creates(Pd::Enrollment) do
-        @application.lock!
-      end
-
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'assign_default_workshop! saves the default workshop' do

@@ -31,7 +31,7 @@ class ResourceCardResponsiveContainer extends Component {
   };
 
   render() {
-    const colCount = ({xl: 3, lg: 3, md: 2, xs: 1})[this.props.responsiveSize];
+    const colCount = ({lg: 3, md: 2, sm: 1, xs: 1})[this.props.responsiveSize];
 
     return (
       <div>

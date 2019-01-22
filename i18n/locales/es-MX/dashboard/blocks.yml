@@ -326,7 +326,7 @@ es-MX:
       Dancelab_setBackground:
         text: establecer color de fondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: establecer efecto de fondo {EFFECT}
+        text: establecer efecto de fondo {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ninguna
@@ -334,13 +334,14 @@ es-MX:
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
-            '"swirl"': Hipnótico
+            '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile de láser
-            '"splatter"': Burbujas
-            '"rainbow"': Colores
+            '"splatter"': Salpicaduras de pintura
+            '"rainbow"': Arco iris
             '"snowflakes"': Nieve
             '"text"': Título de la canción
+            '"galaxy"': Espacio
             '"sparkles"': Chispas
             '"spiral"': Espiral
             '"disco"': Cuadrados
@@ -361,13 +362,14 @@ es-MX:
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
-            '"swirl"': Hipnótico
+            '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile de láser
             '"splatter"': Salpicaduras de pintura
-            '"rainbow"': Colores
+            '"rainbow"': Arco iris
             '"snowflakes"': Nieve
             '"text"': Título de la canción
+            '"galaxy"': Espacio
             '"sparkles"': Chispas
             '"spiral"': Espiral
             '"disco"': Cuadrados
@@ -421,6 +423,7 @@ es-MX:
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arco iris
+            '"smile_face"': Cara sonriente
             '"spotlight"': Destacado
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
@@ -437,6 +440,7 @@ es-MX:
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arco iris
+            '"smile_face"': Cara sonriente
             '"spotlight"': Destacado
             '"raining_tacos"': Tacos
       Dancelab_setProp:

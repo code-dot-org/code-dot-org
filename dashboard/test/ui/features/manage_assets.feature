@@ -1,7 +1,7 @@
 @no_mobile
 Feature: Manage Assets
 
-  Scenario: With the experiment flag on, the manage assets dialog contains the option to record audio.
+  Scenario: The manage assets dialog contains the option to record audio.
     Given I am a student
     And I start a new Game Lab project
     And I wait for the page to fully load

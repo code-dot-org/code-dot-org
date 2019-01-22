@@ -992,19 +992,91 @@ sk:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          ak cesta {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": vpredu
+            "'right'": do prava
+            "'left'": do ľava
       craft_ifStandingOn:
+        text: |-
+          ak stojíš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": modrý koral
+            "'redCoralBlock'": červený koral
             "'sand'": piesok
+            "'wool_blue'": hlboká voda
             "'planksOak'": dubové dosky
+            "'seaLantern'": morský lampáš
       craft_ifStandingOnLimit:
+        text: |-
+          ak stojíš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": piesok
+            "'darkPrismarine'": tmavý prismarín
+            "'seaLantern'": morský lampáš
       craft_moveForward:
         text: posuň sa dopredu
+      craft_placeBlock:
+        text: polož {blockType}
+        options:
+          blockType:
+            '"strippedOak"': pruhovaný dub
+            '"strippedDarkOak"': pruhovaný tmavý dub
+            '"stoneBricks"': kamenné tehly
+            '"mossyStoneBricks"': machové kamenné tehly
+            '"crackedStoneBricks"': prasknuté kamenné tehly
+            '"decorativeStoneBricks"': dekoratívne kamenné tehly
+            '"blueCoralBlock"': modrý koralový blok
+            '"pinkCoralBlock"': ružový koralový blok
+            '"magentaCoralBlock"': fialový koralový blok
+            '"redCoralBlock"': červený koralový blok
+            '"yellowCoralBlock"': žltý koralový blok
+            '"blueDeadCoralBlock"': modrý mŕtvy koralový blok
+            '"pinkDeadCoralBlock"': ružový mŕtvy koralový blok
+            '"magentaDeadCoralBlock"': fialový mŕtvy koralový blok
+            '"readDeadCoralBlock"': červený mŕtvy koralový blok
+            '"yellowDeadCoralBlock"': žltý mŕtvy koralový blok
+            '"prismarine"': prismarín
+            '"darkPrismarine"': tmavý prismarín
+            '"seaLantern"': morský lampáš
+            '"packedIce"': balený ľad
+            '"blueIce"': modrý ľad
+            '"blackConcrete"': čierny betón
+            '"seaGrass"': morská tráva
+            '"kelp"': chaluha
+            '"polishedGranite"': vybrúsený granit
+      craft_placePrismarine:
+        text: umiestni prismarín
       craft_placeTorch:
         text: umiestni fakľu
+      craft_repeatUntilConduit:
+        text: |-
+          opakuj až kým nedokončíš kanál
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          opakuj až do cieľa
+          {STATEMENT}
+      craft_spawnEntity:
+        text: vytvor {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': treska
+            '"dolphin"': delfín
+            '"salmon"': losos
+            '"seaTurtle"': morská korytnačka
+            '"squid"': kalamár
+            '"tropicalFish"': tropická ryba
+      craft_turn:
+        text: otoč sa {DIR}
+        options:
+          DIR:
+            right: vpravo
+            left: vľavo
