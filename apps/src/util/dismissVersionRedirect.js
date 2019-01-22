@@ -1,25 +1,23 @@
-const dismissVersionRedirect = module.exports;
-
 // A session variable storing a comma-delimited list of course/script names for which:
 // ...the user has already dismissed the version redirect warning.
 const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
 // ...the user has already dismissed the version redirect dialog (<RedirectDialog/> component).
 const DISMISSED_REDIRECT_DIALOGS_SESSION_KEY = 'dismissedRedirectDialogs';
 
-dismissVersionRedirect.dismissedRedirect = function (sessionKey, name) {
+export const dismissedRedirect = (sessionKey, name) => {
   const dismissedRedirects = sessionStorage.getItem(sessionKey);
-  return (dismissedRedirects || '').includes(name);
+  return (dismissedRedirects || '').split(',').includes(name);
 };
 
-dismissVersionRedirect.dismissedRedirectWarning = function (name) {
-  return this.dismissedRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
+export const dismissedRedirectWarning = (name) => {
+  return dismissedRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
 };
 
-dismissVersionRedirect.dismissedRedirectDialog = function (name) {
-  return this.dismissedRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
+export const dismissedRedirectDialog = (name) => {
+  return dismissedRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
 };
 
-dismissVersionRedirect.onDismissRedirect = function (sessionKey, name) {
+export const onDismissRedirect = (sessionKey, name) => {
   let dismissedRedirects = sessionStorage.getItem(sessionKey);
   if (dismissedRedirects) {
     dismissedRedirects += `,${name}`;
@@ -29,10 +27,10 @@ dismissVersionRedirect.onDismissRedirect = function (sessionKey, name) {
   sessionStorage.setItem(sessionKey, dismissedRedirects);
 };
 
-dismissVersionRedirect.onDismissRedirectWarning = function (name) {
-  return this.onDismissRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
+export const onDismissRedirectWarning = (name) => {
+  return onDismissRedirect(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, name);
 };
 
-dismissVersionRedirect.onDismissRedirectDialog = function (name) {
-  return this.onDismissRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
+export const onDismissRedirectDialog = (name) => {
+  return onDismissRedirect(DISMISSED_REDIRECT_DIALOGS_SESSION_KEY, name);
 };
