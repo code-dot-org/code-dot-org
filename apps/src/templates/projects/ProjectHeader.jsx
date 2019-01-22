@@ -4,18 +4,22 @@ import i18n from "@cdo/locale";
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
+
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
+    projectCount: PropTypes.number,
   };
 
   render() {
+
     return (
       <div>
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading()}
+          subHeadingText={this.props.projectCount + ' million'}
+          // subHeadingText={i18n.projectsSubHeading()}
         />
         <StartNewProject
           canViewFullList
