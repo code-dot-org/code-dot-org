@@ -34,6 +34,7 @@ class ScriptOverview extends React.Component {
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired,
       version_title: PropTypes.string.isRequired,
+      can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
 
     // redux provided
