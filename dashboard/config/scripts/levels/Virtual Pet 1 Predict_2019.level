@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "long_instructions": "**Make a prediction:** This is Geraldine, your new pet giraffe.\r\n\r\nWhat do you think will happen if you press \"▶ Run\" and then click on her?\r\n",
+    "markdown_instructions": "**Make a prediction:** This is Geraldine, your new pet giraffe.\r\n\r\nWhat do you think will happen if you press \"▶ Run\" and then click on her?\r\n",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "short_instructions": "What do you think will happen when you click on the alien?  ",
+    "instructions": "What do you think will happen when you click on the alien?  ",
     "parent_level_id": 14385,
     "name_suffix": "_2019"
   },

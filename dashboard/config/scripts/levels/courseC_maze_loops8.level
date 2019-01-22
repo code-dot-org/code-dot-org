@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "birds",
-    "short_instructions": "Challenge: Combine ideas from the last few puzzles to complete this level.",
+    "instructions": "Challenge: Combine ideas from the last few puzzles to complete this level.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "step_speed": "2",
     "tts_instructions_override": "Challenge puzzle! Combine ideas from the last few puzzles to complete this.",
-    "long_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
+    "markdown_instructions": "**Challenge:** Combine ideas from the last few puzzles to complete this level.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

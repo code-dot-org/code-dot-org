@@ -48,9 +48,9 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14161,
-    "long_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "markdown_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "show_type_hints": "true",
-    "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "include_shared_functions": "true",
     "block_pool": "gamelab",
     "block_pools": [

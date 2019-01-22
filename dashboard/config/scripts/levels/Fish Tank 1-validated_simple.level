@@ -45,7 +45,7 @@
     "hide_custom_blocks": "true",
     "custom_helper_library": "function turning(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation +=6;\r\n  };\r\n  behavior.name = 'turning';\r\n  return behavior;\r\n}\r\n",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"turning\",\r\n    \"blockText\": \"turning\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
-    "long_instructions": "**What do you think?**: When you run this code, what will it do?",
+    "markdown_instructions": "**What do you think?**: When you run this code, what will it do?",
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
     "parent_level_id": 14341,
