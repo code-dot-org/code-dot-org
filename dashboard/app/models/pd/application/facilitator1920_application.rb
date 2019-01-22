@@ -190,7 +190,7 @@ module Pd::Application
           if columns_to_exclude&.include? k.to_sym
             next
           end
-          row.push(full_answers[k] || try(k) || "")
+          row.push(full_answers[k] || try(k) || all_scores[k])
         end
         csv << row
       end
