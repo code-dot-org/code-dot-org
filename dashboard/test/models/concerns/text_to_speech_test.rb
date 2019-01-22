@@ -4,11 +4,11 @@ class TextToSpeechTest < ActiveSupport::TestCase
   setup do
     @level_without_instructions = Level.create
     @level_with_instructions = Level.create(
-      {instructions: 'regular instructions'}
+      {short_instructions: 'regular instructions'}
     )
     @level_with_instructions_override = Level.create(
       {
-        instructions: 'regular instructions',
+        short_instructions: 'regular instructions',
         tts_short_instructions_override: 'override'
       }
     )
