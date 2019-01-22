@@ -257,7 +257,7 @@ class Course < ApplicationRecord
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
-      versions: summarize_versions
+      versions: summarize_versions(user)
     }
   end
 
@@ -276,11 +276,11 @@ class Course < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
     Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title, can_view_version: c.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
