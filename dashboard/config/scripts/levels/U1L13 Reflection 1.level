@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Text Compression",
-    "long_instructions": "What made compressing text hard to do?",
+    "markdown_instructions": "What made compressing text hard to do?",
     "skip_dialog": true,
     "skip_sound": true
   },

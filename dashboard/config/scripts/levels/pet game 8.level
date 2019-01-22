@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
     "embed": "false",
-    "short_instructions": "Your pet now has two toys! Use the \"when clicked\" block to get them to move to the toy you click on",
+    "instructions": "Your pet now has two toys! Use the \"when clicked\" block to get them to move to the toy you click on",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -35,7 +35,7 @@
     "if_block_options": "[\"water\", \"lava\", \"\"]",
     "player_start_direction": "0",
     "special_level_type": "freeplay",
-    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
     "video_key": "mc_congrats_no_share",
     "contained_level_names": null,
     "preload_asset_list": null

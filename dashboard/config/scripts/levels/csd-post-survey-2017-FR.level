@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Anything else you'd like to say about your experience in the course?",
+    "markdown_instructions": "Anything else you'd like to say about your experience in the course?",
     "instructions_important": "false",
     "placeholder": "Write whatever you like here.  Your responses will be anonymous.",
     "allow_user_uploads": "false",

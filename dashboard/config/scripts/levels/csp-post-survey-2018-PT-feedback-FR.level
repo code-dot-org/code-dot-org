@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Any other feedback about the AP Exam or Performance Tasks?",
+    "markdown_instructions": "Any other feedback about the AP Exam or Performance Tasks?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
