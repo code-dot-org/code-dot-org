@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "short_instructions": "Use the new `create a circle` function to create 10 overlapping circles. Don't forget to jump forward by 25 pixels between circles!",
+    "instructions": "Use the new `create a circle` function to create 10 overlapping circles. Don't forget to jump forward by 25 pixels between circles!",
     "x": "80",
     "y": "150",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "video_key": "frozen_functions",
-    "long_instructions": "We've moved the code from the last puzzle into a function!  \r\n  \r\nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!",
+    "markdown_instructions": "We've moved the code from the last puzzle into a function!  \r\n  \r\nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!",
     "never_autoplay_video": "true",
     "contract_highlight": "false",
     "contract_collapse": "false",

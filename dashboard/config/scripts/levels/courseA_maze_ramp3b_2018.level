@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,2,4,0,0],[0,4,3,1,1,4,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
+    "instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Your code should look like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"maze_moveSouth\\\">\\n        <next>\\n          <block type=\\\"maze_moveWest\\\">\\n            <next>\\n              <block type=\\\"maze_moveWest\\\"/>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\\n\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/301e08a6f8097357169fd2910f3bb0a6/courseA_maze_ramp3b_2018.mp3\"}]",
-    "long_instructions": "There's an extra block at the end of this code!  \r\n\r\nDrag it back to the toolbox to throw it away.",
+    "markdown_instructions": "There's an extra block at the end of this code!  \r\n\r\nDrag it back to the toolbox to throw it away.",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

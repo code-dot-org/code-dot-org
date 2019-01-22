@@ -144,11 +144,11 @@ module Pd::Application
     end
 
     def formatted_teacher_email
-      "#{teacher_full_name} <#{user.email}>"
+      "\"#{teacher_full_name}\" <#{user.email}>"
     end
 
     def formatted_principal_email
-      "#{principal_greeting} <#{principal_email}>"
+      "\"#{principal_greeting}\" <#{principal_email}>"
     end
 
     def effective_regional_partner_name
