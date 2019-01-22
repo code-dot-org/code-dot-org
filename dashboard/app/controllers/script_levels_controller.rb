@@ -432,11 +432,12 @@ class ScriptLevelsController < ApplicationController
   end
 
   def redirect_script(level, locale)
-    # Return nil if level is nil level does not belong to a script.
-    return nil if !level || level.script.nil?
+    script = level&.script
 
-    # Return nil we know the user can view the script version requested.
-    script = level.script
+    # Return nil if level does not belong to a script.
+    return nil unless script
+
+    # Return nil if we know the user can view the script version requested.
     return nil if script.can_view_version?(current_user, locale: locale)
 
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
