@@ -148,29 +148,35 @@ module Pd::Application
       FILTERED_LABELS[course]
     end
 
+    # Filter out extraneous answers based on selected program (course)
+    def self.columns_to_remove(course)
+      if course == 'csf'
+        [] # list of keys
+      elsif course == 'csd'
+        []
+      else
+        []
+      end
+    end
+
+    def self.csv_filtered_labels(course)
+      labels = {}
+      labels_to_remove = Pd::Application::Facilitator1920Application.columns_to_remove(course)
+
+      CSV_LABELS.keys.each do |k|
+        unless labels_to_remove.include? k.to_sym
+          labels[k] = CSV_LABELS[k]
+        end
+      end
+      labels
+    end
+
     # @override
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
-        columns.push(
-          'Status',
-          'Locked',
-          'General Notes',
-          'Notes 2',
-          'Notes 3',
-          'Notes 4',
-          'Notes 5',
-          'Question 1 Support Teachers',
-          'Question 2 Student Access',
-          'Question 3 Receive Feedback',
-          'Question 4 Give Feedback',
-          'Question 5 Redirect Conversation',
-          'Question 6 Time Commitment',
-          'Question 7 Regional Needs',
-          'Regional Partner'
-        )
+        columns = csv_filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         csv << columns
       end
     end
@@ -213,27 +219,16 @@ module Pd::Application
     end
 
     # @override
-    def to_csv_row(user)
-      answers = full_answers
+    def to_csv_row(course)
+      columns_to_exclude = Pd::Application::Facilitator1920Application.columns_to_remove(course)
       CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push(
-          status,
-          locked?,
-          notes,
-          notes_2,
-          notes_3,
-          notes_4,
-          notes_5,
-          question_1,
-          question_2,
-          question_3,
-          question_4,
-          question_5,
-          question_6,
-          question_7,
-          regional_partner_name
-        )
+        row = []
+        CSV_LABELS.keys.each do |k|
+          if columns_to_exclude&.include? k.to_sym
+            next
+          end
+          row.push(full_answers[k] || try(k) || "")
+        end
         csv << row
       end
     end
