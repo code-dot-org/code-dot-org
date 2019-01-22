@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the green intruder using only three blocks.",
+    "short_instructions": "Get me to the green intruder using only three blocks.",
     "start_direction": "1",
     "step_mode": 1
   }

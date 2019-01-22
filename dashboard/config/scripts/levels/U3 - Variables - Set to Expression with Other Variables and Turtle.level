@@ -153,8 +153,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Turtle Level for Expressions with variables",
-    "instructions": "(click to see full instructions)"
+    "long_instructions": "# Turtle Level for Expressions with variables",
+    "short_instructions": "(click to see full instructions)"
   }
 }]]></config>
   <blocks/>

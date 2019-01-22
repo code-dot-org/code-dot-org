@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "Now the chickens look weird moving the same way. Games use random moves to make things look real. Make the chickens `turn random`.",
+    "short_instructions": "Now the chickens look weird moving the same way. Games use random moves to make things look real. Make the chickens `turn random`.",
     "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"turnRandom\") >= 1 || verificationAPI.getRepeatCommandExecutedCount(\"turnRandom\") >= 1;\r\n    }",
     "level_verification_timeout": "7000",
     "failure_message_override": "If the chickens are all moving in the same direction, use `turn random` to make the chickens turn randomly left or right.",

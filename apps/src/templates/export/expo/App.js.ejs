@@ -1,6 +1,5 @@
 import React from 'react';
-import { AppLoading } from 'expo';
-import { AsyncStorage, Platform, StyleSheet, View, WebView } from 'react-native';
+import { Platform, StyleSheet, View, WebView } from 'react-native';
 
 import CustomAsset from './CustomAsset';
 import DataWarning from './DataWarning';
@@ -81,10 +80,13 @@ export default class App extends React.Component {
   webViewContainerStyle() {
     const scale = this.webViewScale();
 
-    return {
-      height: App.APP_HEIGHT * scale,
-      width: App.APP_WIDTH * scale,
-    };
+    return [
+      styles.webViewContainer,
+      {
+        height: App.APP_HEIGHT * scale,
+        width: App.APP_WIDTH * scale,
+      }
+    ];
   }
 
   render() {
@@ -96,15 +98,9 @@ export default class App extends React.Component {
       );
     }
 
-    if (!indexUri) {
-      return (
-        <AppLoading />
-      );
-    }
-
     return (
       <View onLayout={this.onLayout} style={styles.container}>
-        {height && <View style={this.webViewContainerStyle()}>
+        {height && indexUri && <View style={this.webViewContainerStyle()}>
           <WebView
             originWhitelist={['*']}
             allowFileAccess
@@ -135,7 +131,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   webView: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     flex: 1,
+  },
+  webViewContainer: {
+    backgroundColor: 'black',
   }
 });

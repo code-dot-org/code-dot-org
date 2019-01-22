@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "project_template_level_name": "CSD U2 Project Template",
     "hide_share_and_remix": "true",
-    "markdown_instructions": "# Add HTML\r\n\r\nNext, you should add the HTML to your pages.\r\n\r\n# Do This\r\n* For each of the new pages that you've created, add HTML to make the page you sketched in your project guide.\r\n* You may also add more HTML to the pages you've already created.\r\n"
+    "long_instructions": "# Add HTML\r\n\r\nNext, you should add the HTML to your pages.\r\n\r\n# Do This\r\n* For each of the new pages that you've created, add HTML to make the page you sketched in your project guide.\r\n* You may also add more HTML to the pages you've already created.\r\n"
   },
   "published": true,
   "notes": "",
