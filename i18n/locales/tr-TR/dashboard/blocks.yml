@@ -303,17 +303,22 @@ tr:
       Dancelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Dancelab_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} olarak ayarla
+        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
             '"circles"': Tünel
+            '"color_cycle"': Renkler
             '"diamonds"': Karolar
             '"disco_ball"': Disko Topu
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
-            '"rainbow"': Renkler
+            '"splatter"': Boya Lekesi
+            '"rainbow"': Gökkuşağı
+            '"snowflakes"': Kar
             '"text"': Şarkı Adı
+            '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"disco"': Kareler
             '"stars"': Yıldızlar
@@ -330,13 +335,17 @@ tr:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
             '"circles"': Tünel
+            '"color_cycle"': Renkler
             '"diamonds"': Karolar
             '"disco_ball"': Disko Topu
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
             '"splatter"': Boya Lekesi
-            '"rainbow"': Renkler
+            '"rainbow"': Gökkuşağı
+            '"snowflakes"': Kar
             '"text"': Şarkı Adı
+            '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"disco"': Kareler
             '"stars"': Yıldızlar
@@ -381,6 +390,7 @@ tr:
         options:
           EFFECT:
             '"none"': Hiçbiri
+            '"bubbles"': Baloncuklar
             '"confetti"': Konfeti
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
@@ -388,6 +398,7 @@ tr:
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
+            '"smile_face"': Gülen Yüz
             '"raining_tacos"': Tacolar
       Dancelab_setForegroundEffectExtended:
         text: ön plan efektini {EFFECT} olarak ayarla
@@ -395,6 +406,7 @@ tr:
           EFFECT:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
+            '"bubbles"': Baloncuklar
             '"confetti"': Konfeti
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
@@ -402,6 +414,7 @@ tr:
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
+            '"smile_face"': Gülen Yüz
             '"raining_tacos"': Tacolar
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
