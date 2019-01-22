@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "short_instructions": "Pets love toys! Use a second \"make sprite\" block to give your pet a toy, then use the \"move towards\" behavior to make your pet run to their new toy.",
+    "instructions": "Pets love toys! Use a second \"make sprite\" block to give your pet a toy, then use the \"move towards\" behavior to make your pet run to their new toy.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

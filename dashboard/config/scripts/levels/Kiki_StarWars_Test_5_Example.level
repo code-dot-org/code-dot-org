@@ -45,7 +45,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "short_instructions": "Text",
+    "instructions": "Text",
     "failure_message_override": "Game over!",
     "contained_level_names": null
   },

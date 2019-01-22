@@ -386,11 +386,11 @@ module Pd::Application
       return nil unless regional_partner&.contact_email_with_backup.present?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
-        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>"
+        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
       elsif regional_partner.program_managers&.first.present?
-        "#{regional_partner.program_managers.first.name} <#{regional_partner.program_managers.first.email}>"
+        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
       elsif regional_partner.contact&.email.present?
-        "#{regional_partner.contact.name} <#{regional_partner.contact.email}>"
+        "\"#{regional_partner.contact.name}\" <#{regional_partner.contact.email}>"
       end
     end
 

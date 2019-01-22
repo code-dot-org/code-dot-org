@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "short_instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.",
+    "instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"frozen_snowflake_branch\",\"callout_text\":\"Use the \\\"create a snowflake branch\\\" block\",\"element_id\":\"#create_branch_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "long_instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
+    "markdown_instructions": "Try using the `create a snowflake branch` block to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

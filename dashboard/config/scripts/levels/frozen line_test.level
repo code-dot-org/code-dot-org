@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "short_instructions": "Help Elsa draw a line that is 100 pixels long.",
+    "instructions": "Help Elsa draw a line that is 100 pixels long.",
     "x": "150",
     "y": "200",
     "start_direction": "90",
@@ -44,7 +44,7 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "discard_background": "false",
-    "long_instructions": "*\"Hi! I'm Elsa of Arendelle. Help me create a line.\"*  \r\n&nbsp;\r\n\r\nConnect the <xml>\r\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\r\n    </block></xml> to the <xml>\r\n    <block type=\"when_run\"/></xml> block to help Elsa draw a line that is 100 pixels long.",
+    "markdown_instructions": "*\"Hi! I'm Elsa of Arendelle. Help me create a line.\"*  \r\n&nbsp;\r\n\r\nConnect the <xml>\r\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\r\n    </block></xml> to the <xml>\r\n    <block type=\"when_run\"/></xml> block to help Elsa draw a line that is 100 pixels long.",
     "contained_level_names": null
   },
   "published": true,

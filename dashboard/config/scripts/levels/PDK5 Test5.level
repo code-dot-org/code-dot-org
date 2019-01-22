@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Big Test",
-    "long_instructions": "## What did you think about things?\n\nWhat are your thoughts?\n",
+    "markdown_instructions": "## What did you think about things?\n\nWhat are your thoughts?\n",
     "skip_dialog": true,
     "skip_sound": true
   },
