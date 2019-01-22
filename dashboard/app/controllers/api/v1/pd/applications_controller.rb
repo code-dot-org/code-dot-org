@@ -114,14 +114,8 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          if [:csd_teachers, :csp_teachers].include? role.to_sym
-            csv_text = get_csv_text applications, role
-            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-          else
-            optional_columns = get_optional_columns(regional_partner_value)
-            csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
-            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-          end
+          csv_text = get_csv_text applications, role
+          send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
         end
       end
     end
