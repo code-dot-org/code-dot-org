@@ -111,10 +111,10 @@ class SchoolTest < ActiveSupport::TestCase
         school_id: school.id,
         school_year: '1998-1999',
         students_total: 4,
-        student_bl_count: 2, 
+        student_bl_count: 2
       )
     school.save!
-    assert_equal(50.0,stats_by_year.first.urm_percent)
+    assert_equal(50.0, stats_by_year.first.urm_percent)
   end
 
   test 'normalize_school_id works for short ids without leading zeros' do
