@@ -51,13 +51,13 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.short_instructions.maze_2_2', locale: default_locale), options[:level]['short_instructions']
 
     reset_view_options
 
     I18n.locale = new_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.short_instructions.maze_2_2', locale: new_locale), options[:level]['short_instructions']
   end
 
   test "custom level displays english instruction" do
@@ -66,7 +66,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal @level.short_instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['short_instructions']
   end
 
   test "custom level displays localized instruction if exists" do
@@ -75,13 +75,13 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     @level = Level.find_by_name 'frozen line'
     options = blockly_options
-    assert_equal I18n.t("data.short_instructions.#{@level.name}", locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t("data.short_instructions.#{@level.name}", locale: new_locale), options[:level]['short_instructions']
 
     reset_view_options
 
     @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
-    assert_equal @level.short_instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['short_instructions']
   end
 
   test "get video choices" do
