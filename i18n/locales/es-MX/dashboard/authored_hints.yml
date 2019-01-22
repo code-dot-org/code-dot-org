@@ -11457,12 +11457,16 @@ es-MX:
         courseE_farmer_functions2ba_a: '¡Utilizar el bloque verde ''obtener todas las calabazas'' para asegurarse de conseguir todas las calabazas!'
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Intenta usar un ciclo "mientras haya camino por delante" para llegar a donde necesitas.
+      courseE_farmer_functions3b_authored_hint:
+        courseE_farmer_functions1a_a: Las declaraciones anidadas `if` y `if / else` podrían ayudarte mucho aquí.
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: '¿Qué secuencia se repite a menudo en este programa? ¿Puedes arrastrar estos bloques a la función?'
         courseE_farmer_functions3c_b: No olvides llamar a tu función en el programa principal siempre que quites los bloques.
       courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: Tendrás que utilizar la función de 'pick along path' tres veces para resolver este acertijo.
         coursee_farmer_functions3c1_2018_b: Qué código necesitas agregar para llegar a las esquinas?
       courseE_farmer_functions3c1_2019_authored_hint:
+        coursee_farmer_functions3c1_2018_a: Tendrás que utilizar la función de 'pick along path' tres veces para resolver este acertijo.
         coursee_farmer_functions3c1_2018_b: Qué código necesitas agregar para llegar a las esquinas?
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Arrastra todo el código fuera de tu ciclo 'repetir' y en la función 'ir a buscar calabazas'.
@@ -11485,13 +11489,17 @@ es-MX:
         courseE_farmer_functions5c_b: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas.'
       courseE_farmer_functions6c_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
+        courseE_farmer_functions6c_b: '¿Ayudaría un bloque ''if/else'' a comprobar si hay lechugas en un espacio?'
         courseE_farmer_functions6c_c: '¡No olvides seguir buscando maiz!'
       courseE_farmer_functions6c_2018_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
+        courseE_farmer_functions6c_b: '¿Ayudaría un bloque ''if/else'' a comprobar si hay lechugas en un espacio?'
         courseE_farmer_functions6c_c: '¡No olvides seguir buscando maiz!'
       courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Cree tu función en la sección de 'functions' en la caja de herramientas.
         courseE_farmer_functions7a1_2018_b: No olvides usar tu función cuando hayas terminado de crearla!
       courseE_farmer_functions7a1_2019_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Cree tu función en la sección de 'functions' en la caja de herramientas.
         courseE_farmer_functions7a1_2018_b: No olvides usar tu función cuando hayas terminado de crearla!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: '¡No necesitas una función aquí, pero puedes hacer una si te ayuda!'
