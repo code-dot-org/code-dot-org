@@ -163,6 +163,7 @@ class ScriptOverviewHeader extends Component {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
 
+    // Only display viewable versions in script version dropdown.
     const filteredVersions = versions.filter(version => version.can_view_version);
 
     return (
