@@ -45,6 +45,11 @@ const styles = {
     padding: '5px 10px'
   },
 
+  wrapper: {
+    marginLeft: '3px',
+    marginRight: '3px'
+  },
+
   button: {
     cursor: 'pointer',
     'float': 'left',
@@ -57,12 +62,10 @@ const styles = {
 
   volumeButton: {
     borderRadius: "4px 0px 0px 4px",
-    marginLeft: '3px',
   },
 
   playPauseButton: {
     borderRadius: "0px 4px 4px 0px",
-    marginRight: '3px',
   },
 
   buttonImg: {
@@ -182,7 +185,7 @@ class InlineAudio extends React.Component {
       return (
         <div
           className="inline-audio"
-          style={this.props.style && this.props.style.wrapper}
+          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
         >
