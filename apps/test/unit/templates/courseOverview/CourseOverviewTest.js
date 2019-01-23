@@ -121,10 +121,10 @@ describe('CourseOverview', () => {
       utils.navigateToHref.restore();
     });
 
-    it('appears when two versions are present', () => {
+    it('appears when two versions are present and viewable', () => {
       const versions = [
-        {name: 'csp', version_year: '2017'},
-        {name: 'csp-2018', version_year: '2018'},
+        {name: 'csp', version_year: '2017', version_title: 'csp 2017', can_view_version: true},
+        {name: 'csp-2018', version_year: '2018', version_title: 'csp 2018', can_view_version: true},
       ];
       const wrapper = shallow(
         <CourseOverview
@@ -143,9 +143,10 @@ describe('CourseOverview', () => {
       expect(utils.navigateToHref).to.have.been.calledOnce;
     });
 
-    it('does not appear when only one version is present', () => {
+    it('does not appear when only one version is viewable', () => {
       const versions = [
-        {name: 'csp', version_year: '2017'},
+        {name: 'csp', version_year: '2017', version_title: 'csp 2017', can_view_version: false},
+        {name: 'csp-2018', version_year: '2018', version_title: 'csp 2018', can_view_version: true},
       ];
       const wrapper = shallow(
         <CourseOverview

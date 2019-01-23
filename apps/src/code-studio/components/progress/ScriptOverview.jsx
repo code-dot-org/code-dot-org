@@ -15,7 +15,7 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
-import ScriptOverviewHeader from './ScriptOverviewHeader';
+import ScriptOverviewHeader, { scriptVersionShape } from './ScriptOverviewHeader';
 import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import { onDismissRedirectDialog, dismissedRedirectDialog } from '@cdo/apps/util/dismissVersionRedirect';
 
@@ -31,11 +31,7 @@ class ScriptOverview extends React.Component {
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired,
-      version_title: PropTypes.string.isRequired,
-    })).isRequired,
+    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     courseName: PropTypes.string,
 
     // redux provided
