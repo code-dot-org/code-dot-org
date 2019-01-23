@@ -26,11 +26,11 @@ export default class Releases extends LabeledFormComponent {
         <h4>Section 3: Releases</h4>
         <FormGroup>
           <ControlLabel>
-            Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/1APmVaRhMaRf76Vo7qjkuVy5cjFJyBN4td9DGf1Y6T-s/edit?ts=5beb5ac2">photo release.</a>
           </ControlLabel>
           {this.singleCheckboxFor("photoRelease")}
           <ControlLabel>
-            Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit?ts=5bfdaf7b">liability waiver.</a>
           </ControlLabel>
           {this.singleCheckboxFor("liabilityWaiver")}
         </FormGroup>
@@ -61,7 +61,7 @@ export default class Releases extends LabeledFormComponent {
           <p>
             We're excited you're planning to join us this summer! You will receive
             more information about travel approximately six weeks before the FiT
-            Weekend. In the meantime, please <strong>do not</strong> book your flight,
+            Workshop. In the meantime, please <strong>do not</strong> book your flight,
             and make sure to contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any questions. We look
             forward to meeting you this summer!
           </p>
