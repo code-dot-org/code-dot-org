@@ -213,6 +213,7 @@ Dashboard::Application.routes.draw do
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
+  get 'pools', to: 'pools#index', as: 'pools'
   resources :blocks, constraints: {id: /[^\/]+/}
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
