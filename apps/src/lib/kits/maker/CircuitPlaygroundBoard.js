@@ -257,12 +257,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   createLed(pin) {
+    pin = this.mappedPin(pin);
     const newLed = new Led({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newLed);
     return newLed;
   }
 
   createButton(pin) {
+    pin = this.mappedPin(pin);
     const newButton = new Button({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
