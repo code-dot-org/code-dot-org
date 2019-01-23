@@ -212,12 +212,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: './node_modules/gif.js/dist',
-          src: ['gif.worker.js'],
-          dest: 'build/package/js/dance/'
-        },
-        {
-          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen
@@ -457,6 +451,7 @@ describe('entry tests', () => {
     'levels/textMatch':                    './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                       './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':               './src/sites/studio/pages/levels/_external_link.js',
+    'levels/show':                         './src/sites/studio/pages/levels/show.js',
     'projects/index':                      './src/sites/studio/pages/projects/index.js',
     'projects/public':                     './src/sites/studio/pages/projects/public.js',
     'projects/featured':                   './src/sites/studio/pages/projects/featured.js',
@@ -497,28 +492,25 @@ describe('entry tests', () => {
     'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
   };
 
-  var otherEntries = {
-    essential: './src/sites/studio/pages/essential.js',
-    plc: './src/sites/studio/pages/plc.js',
-
-    // Build embedVideo.js in its own step (skipping factor-bundle) so that
-    // we don't have to include the large code-studio-common file in the
-    // embedded video page, keeping it fairly lightweight.
-    // (I wonder how much more we could slim it down by removing jQuery!)
-    // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
-
-    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amount of stuff we need when loading blocks
-    // in an iframe.
-    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
-
-    // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
-
-    // common entry points for pegasus js
+  var pegasusEntries = {
+    // code.org
+    'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
+    'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
+    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
     'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
+
+    // hourofcode.com
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+  };
+
+  var professionalDevelopmentEntries = {
+    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
@@ -539,11 +531,30 @@ describe('entry tests', () => {
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
     'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
+  };
+
+  var otherEntries = {
+    essential: './src/sites/studio/pages/essential.js',
+    plc: './src/sites/studio/pages/plc.js',
+
+    // Build embedVideo.js in its own step (skipping factor-bundle) so that
+    // we don't have to include the large code-studio-common file in the
+    // embedded video page, keeping it fairly lightweight.
+    // (I wonder how much more we could slim it down by removing jQuery!)
+    // @see embed.html.haml
+    embedVideo: './src/sites/studio/pages/embedVideo.js',
+
+    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
+    // in a bundle to minimize the amount of stuff we need when loading blocks
+    // in an iframe.
+    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
+
+    // tutorialExplorer for code.org/learn 2016 edition.
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
+
 
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
-    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
@@ -554,13 +565,8 @@ describe('entry tests', () => {
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
-    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
-
     'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
-    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
@@ -579,6 +585,8 @@ describe('entry tests', () => {
           appsEntries,
           codeStudioEntries,
           internalEntries,
+          pegasusEntries,
+          professionalDevelopmentEntries,
           otherEntries
         ),
         function (val) {

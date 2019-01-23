@@ -382,6 +382,18 @@ module Pd::Application
       {}
     end
 
+    def formatted_partner_contact_email
+      return nil unless regional_partner&.contact_email_with_backup.present?
+
+      if regional_partner.contact_name.present? && regional_partner.contact_email.present?
+        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
+      elsif regional_partner.program_managers&.first.present?
+        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
+      elsif regional_partner.contact&.email.present?
+        "\"#{regional_partner.contact.name}\" <#{regional_partner.contact.email}>"
+      end
+    end
+
     def sanitize_status_timestamp_change_log
       if status_timestamp_change_log
         JSON.parse(status_timestamp_change_log).map(&:symbolize_keys)
@@ -390,12 +402,16 @@ module Pd::Application
       end
     end
 
+    def update_lock_change_log(user)
+      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
+    end
+
     # Record when the status changes and who changed it
     # Ideally we'd implement this as an after_save action, but since we want the current
     # user to be included, this needs to be explicitly passed in in the controller
-    def update_status_timestamp_change_log(user)
+    def update_status_timestamp_change_log(user, title = status)
       log_entry = {
-        title: status,
+        title: title,
         changing_user_id: user.try(:id),
         changing_user_name: user.try(:name) || user.try(:email),
         time: Time.zone.now

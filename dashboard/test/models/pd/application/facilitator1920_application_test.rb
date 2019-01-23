@@ -176,55 +176,13 @@ module Pd::Application
         "Expected header and row to have the same number of columns"
     end
 
-    test 'locking an application with fit_workshop_id automatically enrolls user' do
+    test 'locking an application with fit_workshop_id does not automatically enroll user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
-      assert_creates(Pd::Enrollment) do
+      refute_creates(Pd::Enrollment) do
         @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
-      assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      first_workshop = @fit_workshop
-      second_workshop = create :pd_workshop, :fit
-
-      @application.fit_workshop_id = first_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.fit_workshop_id = second_workshop.id
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
-      @application.fit_workshop_id = @fit_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.status = "waitlisted"
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-
-      @application.unlock!
-      @application.status = "accepted"
-
-      assert_creates(Pd::Enrollment) do
-        @application.lock!
-      end
-
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'assign_default_workshop! saves the default workshop' do
@@ -412,6 +370,42 @@ module Pd::Application
           program_commitment_score: "5 / 5"
         }, @application.all_scores
       )
+    end
+
+    test 'clear out extraneous csd and csp answers for a csf application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csf, :with_csd_csp_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csf', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csd application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csd, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csd', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      refute application_hash.key? :csp_training_requirement
+    end
+
+    test 'clear out extraneous csf answers for a csp application' do
+      application_hash = build :pd_facilitator1920_application_hash_common, :csp, :with_csf_specific_fields
+
+      application = create :pd_facilitator1920_application, course: 'csp', form_data_hash: application_hash
+
+      application_hash = application.sanitize_form_data_hash
+
+      assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
+      assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
+      assert application_hash.key? :csp_training_requirement
     end
   end
 end

@@ -45,11 +45,11 @@ Passing an AP Exam can help you <strong>skip introductory courses</strong> so yo
 Steps <strong>YOU</strong> can take today:
 <br>
 <br>
-1. Talk to your school's AP Coordinator. 
+1. Talk to your school's AP coordinator. 
 <br>
 2. Ask about sign up deadlines and financial assistance options in your district.
 <br>
-3. Sign up!
+3. Register to take the exam (Or find out your school's deadline today!)
 
 </div>
 
@@ -63,7 +63,7 @@ Passing an AP Exam can help you **complete your college's general education requ
 
 ## Worried you won't pass?
 
-That's fine! **You don't need to report your test scores** to the colleges you apply to. And, even just preparing for and taking the exam will help you build the skills you'll need throughout college.
+That's fine! **You don't need to report your test scores** to the colleges you apply to. Research shows that <a href="https://files.eric.ed.gov/fulltext/ED519365.pdf", target=_"blank">students who take an AP exam are more likely to graduate college</a>, even if they don't pass!
 
 ## Be a part of history
 

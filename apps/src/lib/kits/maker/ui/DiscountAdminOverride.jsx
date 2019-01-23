@@ -201,56 +201,47 @@ export default class DiscountAdminOverride extends Component {
             </table>
             <h2>Admin Options</h2>
             <div>Current code:{' '}
-              {this.state.discountCode &&
-                `${this.state.discountCode} (${this.state.fullDiscount ? 'FULL' : 'PARTIAL'})`
-              }
+              {this.state.discountCode}
             </div>
             <div>Current override: {this.state.adminOverride}</div>
-            <h4>Option 1: Link teacher account with other accounts</h4>
-            <div>
-              If teacher meets the eligibity requirements but is simply using a
-               different email address for their account than what we have on file,
-               please go to the <a href="https://studio.code.org/admin/studio_person">
-               Studio Person ID admin page </a> to link this acccount
-               to the account associated with the email address we have on file.
-            </div>
-            <h4>Option 2: Give teacher a discount code</h4>
-            <div>
-              If the teacher has already received their code and it was for the incorrect amount,
-              email <a href="mailto:adaaccounts@adafruit.com"> adaaccounts@adafruit.com </a>
-              so they can disable that code first. We should not be doing this override if the
-              teacher has already used the incorrect code to purchase a kit.
-            </div>
-            <div style={styles.radioContainer}>
-              <label>
-                <input
-                  style={styles.radio}
-                  type="radio"
-                  name="discountAmount"
-                  value="full"
-                  checked={this.state.overrideValue === "full"}
-                  onChange={this.handleOverrideChange}
+            {(!this.state.discountCode && this.state.adminOverride === 'None') &&
+              <div>
+                <h4>Option 1: Link teacher account with other accounts</h4>
+                <div>
+                  If teacher meets the eligibity requirements but is simply using a
+                  different email address for their account than what we have on file,
+                  please go to the <a href="https://studio.code.org/admin/studio_person">
+                  Studio Person ID admin page </a> to link this acccount
+                  to the account associated with the email address we have on file.
+                </div>
+                <h4>Option 2: Give teacher a discount code</h4>
+                <div>
+                  If the teacher has already received their code and it was for the incorrect amount,
+                  email <a href="mailto:adaaccounts@adafruit.com"> adaaccounts@adafruit.com </a>
+                  so they can disable that code first. We should not be doing this override if the
+                  teacher has already used the incorrect code to purchase a kit.
+                </div>
+                <div style={styles.radioContainer}>
+                  <label>
+                    <input
+                      style={styles.radio}
+                      type="radio"
+                      name="discountAmount"
+                      value="full"
+                      checked={this.state.overrideValue === "full"}
+                      onChange={this.handleOverrideChange}
+                    />
+                    Teacher should receive 100% discount code (kit price would become $0)
+                  </label>
+                </div>
+                <Button
+                  color={Button.ButtonColor.orange}
+                  text={this.state.submitting ? i18n.submitting() : i18n.submit()}
+                  onClick={this.handleDiscountCodeOverride}
+                  disabled={this.state.submitting || !this.state.overrideValue}
                 />
-                Teacher should receive 100% discount code (kit price would become $0)
-              </label>
-              <label>
-                <input
-                  style={styles.radio}
-                  type="radio"
-                  name="discountAmount"
-                  value="partial"
-                  checked={this.state.overrideValue === "partial"}
-                  onChange={this.handleOverrideChange}
-                />
-                Teacher should receive partial discount code (kit price would become $97.50)
-              </label>
-            </div>
-            <Button
-              color={Button.ButtonColor.orange}
-              text={this.state.submitting ? i18n.submitting() : i18n.submit()}
-              onClick={this.handleDiscountCodeOverride}
-              disabled={this.state.submitting || !this.state.overrideValue}
-            />
+              </div>
+            }
           </div>
         }
       </div>

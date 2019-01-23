@@ -110,6 +110,17 @@ class ScriptLevelsController < ApplicationController
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
 
+    can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
+    if can_view_version
+      # If user is allowed to see level but is assigned to a newer version of the level's script,
+      # we will show a dialog for the user to choose whether they want to go to the newer version.
+      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+    elsif redirect_script = redirect_script(@script_level&.script, request.locale)
+      # Redirect user to the proper script overview page if we think they ended up on the wrong level.
+      redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
+    end
+
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
@@ -419,5 +430,19 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def redirect_script(script, locale)
+    return nil unless script
+
+    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
+    # none are assigned.
+    redirect_script = Script.latest_assigned_version(script.family_name, current_user)
+    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
+
+    # Do not redirect if we are already on the correct script.
+    return nil if redirect_script == script
+
+    redirect_script
   end
 end

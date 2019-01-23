@@ -183,7 +183,37 @@ module TextToSpeech
   end
 
   def tts_long_instructions_text
-    tts_long_instructions_override || TextToSpeech.sanitize(long_instructions || "")
+    # Instructions in contained levels are used as TTS instead of the instructions of the containing level
+    tts_long_instructions_override || TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+  end
+
+  def tts_for_contained_level
+    all_instructions = []
+
+    contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
+    all_instructions.empty? ? nil : all_instructions * "\n"
+  end
+
+  def contained_level_text(contained)
+    # For multi questions, create a string for TTS of the markdown, question, and answers
+    if contained.long_instructions.nil?
+      combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
+      if contained.properties["questions"]
+        contained.properties["questions"].each do |question|
+          combined_text += question["text"] + "\n"
+        end
+      end
+      if contained.properties["answers"]
+        contained.properties["answers"].each do |answer|
+          combined_text += answer["text"] + "\n"
+        end
+      end
+      combined_text
+    else
+      #For free response, create a string for TTS of the instructions
+      contained.long_instructions
+
+    end
   end
 
   def tts_should_update_long_instructions?
