@@ -134,6 +134,27 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user2)
   end
 
+  test 'studio_person_pd_eligible? returns true if studio_person_id associated User is approved facilitator' do
+    user1 = create :teacher
+    user2 = create :teacher, studio_person_id: user1.studio_person_id
+
+    DCDO.stubs(:get).
+      with('facilitator_ids_eligible_for_maker_discount', []).
+      returns([user1.id])
+
+    assert_equal true, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user1)
+    assert_equal false, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user2)
+
+    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user1)
+    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user2)
+  end
+
+  test 'studio_person_pd_eligible? just checks the one user if they have no studio_person_id' do
+    student = create :student
+    CircuitPlaygroundDiscountApplication.expects(:user_pd_eligible?).with(student).once
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(student)
+  end
+
   test 'application_status for unstarted application' do
     teacher = create :teacher
 
