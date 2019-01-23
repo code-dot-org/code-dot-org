@@ -269,6 +269,20 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`pinMode(pin, modeConstant)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
+        const xPins = ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"];
+        const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
+        const arg2 = 1023;
+
+        for (let i = 0; i < xPins.length; i++) {
+          board.pinMode(xPins[i], arg2);
+          expect(playground.pinMode).to.have.been.calledWith(classicPins[i], arg2);
+        }
+
+      });
+    });
+
+    it('forwards the call to firmata with the modified CPX value', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
