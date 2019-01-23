@@ -49,7 +49,7 @@ class MakerController < ApplicationController
       script_data: {
         application: application_status,
         is_admin: current_user.admin?,
-        currently_distributing_discount_codes: DCDO.get('currently_distributing_discount_codes', false)
+        currently_distributing_discount_codes: true
       }
     }
   end
@@ -101,8 +101,6 @@ class MakerController < ApplicationController
   # Called when eligible teacher clicks "Get Code."
   # Assigns a discount code and sends it back.
   def complete
-    return head :forbidden unless DCDO.get('currently_distributing_discount_codes', false)
-
     signature = params.require(:signature)
 
     # Must have started an application, and have said they were teaching unit 6, and confirmed their school

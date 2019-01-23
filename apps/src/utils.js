@@ -375,7 +375,6 @@ export function trySetLocalStorage(item, value) {
   } catch (e) {
     return false;
   }
-
 }
 
 export function tryGetSessionStorage(key, defaultValue) {
