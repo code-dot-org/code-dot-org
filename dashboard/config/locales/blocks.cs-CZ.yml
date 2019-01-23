@@ -340,10 +340,11 @@ cs:
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový taneční parket
-            '"splatter"': Bubliny
-            '"rainbow"': Barvy
+            '"splatter"': Barevný stříkanec
+            '"rainbow"': Duha
             '"snowflakes"': Sníh
             '"text"': Název skladby
+            '"galaxy"': Vesmír
             '"sparkles"': Lesky
             '"spiral"': Spirála
             '"disco"': Čtverce
@@ -368,9 +369,10 @@ cs:
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový taneční parket
             '"splatter"': Barevný stříkanec
-            '"rainbow"': Barvy
+            '"rainbow"': Duha
             '"snowflakes"': Sníh
             '"text"': Název skladby
+            '"galaxy"': Vesmír
             '"sparkles"': Lesky
             '"spiral"': Spirála
             '"disco"': Čtverce

@@ -334,7 +334,7 @@ fr:
       Dancelab_setBackground:
         text: définir la couleur de fond {COLOR}
       Dancelab_setBackgroundEffect:
-        text: définir l’effet de fond {EFFECT}
+        text: définir l’effet de fond {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Aucun
@@ -346,9 +346,10 @@ fr:
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
-            '"rainbow"': Couleurs
+            '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
             '"text"': Titre de la chanson
+            '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
@@ -376,9 +377,10 @@ fr:
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
-            '"rainbow"': Couleurs
+            '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
             '"text"': Titre de la chanson
+            '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés

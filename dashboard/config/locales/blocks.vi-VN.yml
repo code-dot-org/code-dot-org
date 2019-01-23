@@ -307,18 +307,24 @@ vi:
       Dancelab_setBackground:
         text: thiết lập màu nền {COLOR}
       Dancelab_setBackgroundEffect:
-        text: thiết lập hiệu ứng nền {EFFECT}
+        text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Không có
             '"circles"': Đường hầm
+            '"color_cycle"': Màu sắc
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
+            '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
             '"lasers"': Sàn nhảy laze
-            '"rainbow"': Màu sắc
+            '"splatter"': Tiếng lộp độp của sơn
+            '"rainbow"': Cầu vồng
+            '"snowflakes"': Tuyết
             '"text"': Tiêu đề bài hát
+            '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
+            '"spiral"': Xoắn ốc
             '"disco"': Hình vuông
             '"stars"': Sao
           PALETTE:
@@ -335,14 +341,19 @@ vi:
             '"none"': Không có
             '"rand"': "(Ngẫu nhiên)"
             '"circles"': Đường hầm
+            '"color_cycle"': Màu sắc
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
+            '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
             '"lasers"': Sàn nhảy laze
             '"splatter"': Tiếng lộp độp của sơn
-            '"rainbow"': Màu sắc
+            '"rainbow"': Cầu vồng
+            '"snowflakes"': Tuyết
             '"text"': Tiêu đề bài hát
+            '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
+            '"spiral"': Xoắn ốc
             '"disco"': Hình vuông
             '"stars"': Sao
           PALETTE:
@@ -387,6 +398,7 @@ vi:
         options:
           EFFECT:
             '"none"': Không có
+            '"bubbles"': Bong bóng
             '"confetti"': Hoa giấy
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
@@ -394,6 +406,7 @@ vi:
             '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
+            '"smile_face"': Mặt cười
             '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: thiết lập hiệu ứng tiền cảnh {EFFECT}
@@ -401,6 +414,7 @@ vi:
           EFFECT:
             '"none"': Không có
             '"rand"': "(Ngẫu nhiên)"
+            '"bubbles"': Bong bóng
             '"confetti"': Hoa giấy
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
@@ -408,6 +422,7 @@ vi:
             '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
+            '"smile_face"': Mặt cười
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'thiết lập {PROPERTY} {SPRITE} thành {VAL} '

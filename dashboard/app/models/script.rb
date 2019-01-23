@@ -685,8 +685,15 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  private def hoc_tts_level?
+    [
+      Script::APPLAB_INTRO,
+      Script::DANCE_PARTY_NAME
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
   end
 
   def hint_prompt_enabled?
