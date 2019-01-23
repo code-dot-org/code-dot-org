@@ -52,7 +52,7 @@ $(document).ready(function () {
       <Router basename={baseUrl}>
         <Route
           path="/"
-          component={props => <TeacherDashboard {...props} sectionId={section.id} section={section} studioUrlPrefix=""/>}
+          component={props => <TeacherDashboard {...props} studioUrlPrefix=""/>}
         />
       </Router>
     </Provider>,
