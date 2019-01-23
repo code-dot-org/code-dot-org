@@ -23,12 +23,8 @@ def main
     end
   end
 
-  puts project_count
-
   # round number down to closest million
   project_count = (project_count / 1_000_000).floor * 1_000_000
-
-  puts project_count
 
   if project_count == 0
     project_count = DEFAULT_NUMBER_OF_PROJECTS
@@ -40,8 +36,6 @@ def main
     existing_project_count = DEFAULT_NUMBER_OF_PROJECTS
   end
   project_count = [project_count, existing_project_count].max
-
-  puts project_count
 
   # save value for use
   time = DateTime.now
