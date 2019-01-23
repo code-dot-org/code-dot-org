@@ -13,6 +13,9 @@ import experiments from '@cdo/apps/util/experiments';
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
 
+const xPins = ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"];
+const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
+
 describe('CircuitPlaygroundBoard', () => {
   let board, playground;
 
@@ -279,14 +282,10 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('forwards the call to firmata with the modified CPX value', () => {
       return board.connect().then(() => {
-        const xPins = ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"];
-        const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
+        const pin = xPins[0];
         const arg2 = 1023;
-
-        for (let i = 0; i < xPins.length; i++) {
-          board.pinMode(xPins[i], arg2);
-          expect(playground.pinMode).to.have.been.calledWith(classicPins[i], arg2);
-        }
+        board.pinMode(pin, arg2);
+        expect(playground.pinMode).to.have.been.calledWith(classicPins[0], arg2);
       });
     });
   });
@@ -300,6 +299,15 @@ describe('CircuitPlaygroundBoard', () => {
         expect(playground.digitalWrite).to.have.been.calledWith(pin, arg2);
       });
     });
+
+    it('forwards the call to firmata with the modified CPX value', () => {
+      return board.connect().then(() => {
+          const pin = xPins[1];
+          const arg2 = 1023;
+          board.digitalWrite(pin, arg2);
+          expect(playground.digitalWrite).to.have.been.calledWith(classicPins[1], arg2);
+        });
+    });
   });
 
   describe(`digitalRead(pin, callback)`, () => {
@@ -309,6 +317,15 @@ describe('CircuitPlaygroundBoard', () => {
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
         expect(playground.digitalRead).to.have.been.calledWith(pin, arg2);
+      });
+    });
+
+    it('forwards the call to firmata with the modified CPX value', () => {
+      return board.connect().then(() => {
+        const pin = xPins[2];
+        const arg2 = () => {};
+        board.digitalRead(pin, arg2);
+        expect(playground.digitalRead).to.have.been.calledWith(classicPins[2], arg2);
       });
     });
   });
@@ -322,6 +339,15 @@ describe('CircuitPlaygroundBoard', () => {
         expect(playground.analogWrite).to.have.been.calledWith(pin, arg2);
       });
     });
+
+    it('forwards the call to firmata with the modified CPX value', () => {
+      return board.connect().then(() => {
+        const pin = xPins[3];
+        const arg2 = 1023;
+        board.analogWrite(pin, arg2);
+        expect(playground.analogWrite).to.have.been.calledWith(classicPins[3], arg2);
+      });
+    });
   });
 
   describe(`analogRead(pin, callback)`, () => {
@@ -331,6 +357,15 @@ describe('CircuitPlaygroundBoard', () => {
         const arg2 = () => {};
         board.analogRead(pin, arg2);
         expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
+      });
+    });
+
+    it('forwards the call to firmata with the modified CPX value', () => {
+      return board.connect().then(() => {
+        const pin = xPins[4];
+        const arg2 = () => {};
+        board.analogRead(pin, arg2);
+        expect(playground.analogRead).to.have.been.calledWith(classicPins[4], arg2);
       });
     });
   });
@@ -392,6 +427,14 @@ describe('CircuitPlaygroundBoard', () => {
             expect(newButton.pullup).to.be.false;
           });
       });
+    });
+  });
+
+  describe(`mappedPin(pin)`, () => {
+    it(`returns the Classic pin value of the provided Express pin value`, () =>{
+      for (let i = 0; i < xPins.length; i++) {
+        expect(board.mappedPin(xPins[i])).to.equal(classicPins[i]);
+      }
     });
   });
 });
