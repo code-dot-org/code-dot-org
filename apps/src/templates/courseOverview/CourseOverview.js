@@ -70,6 +70,7 @@ export default class CourseOverview extends Component {
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired,
+      version_title: PropTypes.string.isRequired,
       can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
     showVersionWarning: PropTypes.bool,
