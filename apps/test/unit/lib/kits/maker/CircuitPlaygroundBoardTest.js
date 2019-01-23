@@ -398,6 +398,14 @@ describe('CircuitPlaygroundBoard', () => {
         expect(newLed).to.be.an.instanceOf(Led);
       });
     });
+
+    it('uses the express pin value to make an LED controller with the classic pin value', () => {
+      return board.connect().then(() => {
+        const pin = xPins[5];
+        const newLed = board.createLed(pin);
+        expect(newLed.pin).to.equal(classicPins[5]);
+      });
+    });
   });
 
   describe(`createButton(pin)`, () => {
@@ -406,6 +414,14 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 13;
         const newButton = board.createButton(pin);
         expect(newButton).to.be.an.instanceOf(five.Button);
+      });
+    });
+
+    it('uses the express pin value to make a button controller with the classic pin value', () => {
+      return board.connect().then(() => {
+        const pin = xPins[6];
+        const newLed = board.createButton(pin);
+        expect(newLed.pin).to.equal(classicPins[6]);
       });
     });
 
