@@ -4,6 +4,7 @@ import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -88,7 +89,12 @@ class InlineAudio extends React.Component {
     textToSpeechEnabled: PropTypes.bool,
     src: PropTypes.string,
     message: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+
+    // Provided by redux
+    // To Log TTS usage
+    puzzleNumber: PropTypes.number,
+    userId: PropTypes.number
   };
 
   state = {
@@ -169,6 +175,19 @@ class InlineAudio extends React.Component {
   playAudio() {
     this.getAudioElement().play();
     this.setState({ playing: true });
+    firehoseClient.putRecord(
+      {
+        study: 'tts-play',
+        study_group: 'v1',
+        event: 'play',
+        data_string: this.props.src,
+        data_json: JSON.stringify({
+          userId: this.props.userId,
+          puzzleNumber: this.props.puzzleNumber,
+          src: this.props.src
+        }),
+      }
+    );
   }
 
   pauseAudio() {
@@ -221,5 +240,7 @@ export default connect(function propsFromStore(state) {
     assetUrl: state.pageConstants.assetUrl,
     textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
+    userId: state.pageConstants.userId,
+    puzzleNumber: state.pageConstants.puzzleNumber
   };
 })(StatelessInlineAudio);
