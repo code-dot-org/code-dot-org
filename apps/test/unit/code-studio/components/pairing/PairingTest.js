@@ -1,38 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
 import assert from 'assert';
 import sinon from 'sinon';
+import {mount} from 'enzyme';
+import {expect} from '../../../../util/configuredChai';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
 describe('Pairing component', function () {
-  var div;
   var component;
   var server;
 
-  function render(ajaxUrl) {
-    component = ReactDOM.render(React.createElement(Pairing, {source: ajaxUrl}), div);
-  }
-
-  function numberOfStudents() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length;
-  }
-
-  function numberOfSelectedStudents() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length;
-  }
-
-  function sectionSelect() {
-    return TestUtils.findRenderedDOMComponentWithTag(component, 'select');
-  }
-
-  function addPartnersButtonRendered() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'addPartners').length;
-  }
-
-  function addPartnersButton() {
-    return TestUtils.findRenderedDOMComponentWithClass(component, 'addPartners');
+  function createDomElement(ajaxUrl) {
+    component = mount(React.createElement(Pairing, {source: ajaxUrl}));
   }
 
   function setupFakeAjax(url, response) {
@@ -60,59 +39,51 @@ describe('Pairing component', function () {
     };
 
     beforeEach(function () {
-      div = document.createElement("div");
-
       setupFakeAjax(ajaxUrl, ajaxState);
-
-      render(ajaxUrl);
+      createDomElement(ajaxUrl);
+      component.update();
       server.respond();
     });
 
     afterEach(function () {
       teardownFakeAjax();
-
-      if (div) {
-        ReactDOM.unmountComponentAtNode(div);
-        component = null;
-      }
+      component = null;
     });
 
     it('should render a section dropdown', function () {
-      assert(sectionSelect());
+      expect(component.find('select').length).to.equal(1);
     });
 
     it('should not render a list of students', function () {
-      assert.equal(0, numberOfStudents());
+      expect(component.find('.student').length).to.equal(0);
     });
 
     it('should change the section and render a list of students when a section with students is selected', function () {
       // choose first section
-      TestUtils.Simulate.change(sectionSelect(), {target: {value: "1"}});
-      assert.equal("1", sectionSelect().value);
-      assert.equal(2, numberOfStudents());
+      component.find('select').simulate('change', {target: {value: '1'}});
+      expect(component.find('select').props().value).to.equal(1);
+      expect(component.find('.student').length).to.equal(2);
 
       // choose second section
-      TestUtils.Simulate.change(sectionSelect(), {target: {value: "15"}});
-      assert.equal("15", sectionSelect().value);
-      assert.equal(0, numberOfStudents());
+      component.find('select').simulate('change', {target: {value: '15'}});
+      expect(component.find('select').props().value).to.equal(15);
+      expect(component.find('.student').length).to.equal(0);
     });
   });
 
   describe('before ajax response is received', function () {
     beforeEach(function () {
-      div = document.createElement("div");
-      component = ReactDOM.render(React.createElement(Pairing, {}), div);
+      component = mount(React.createElement(Pairing, {}));
+      component.update();
     });
 
     afterEach(function () {
-      if (div) {
-        ReactDOM.unmountComponentAtNode(div);
-        component = null;
-      }
+      component = null;
     });
 
     it('should not render a section dropdown', function () {
-      assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+      expect(component.find('.stop').length).to.equal(0);
+      expect(component.find('select').length).to.equal(0);
     });
   });
 
@@ -124,76 +95,69 @@ describe('Pairing component', function () {
     };
 
     beforeEach(function () {
-      div = document.createElement("div");
-
       setupFakeAjax(ajaxUrl, ajaxState);
-
-      render(ajaxUrl);
+      createDomElement(ajaxUrl);
+      component.update();
       server.respond();
     });
 
     afterEach(function () {
       teardownFakeAjax();
-
-      if (div) {
-        ReactDOM.unmountComponentAtNode(div);
-        component = null;
-      }
+      component = null;
     });
 
     it('should not render a section dropdown', function () {
-      assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+      expect(component.find('select').length).to.equal(0);
     });
 
-
     it('should render a list of students', function () {
-      assert.equal(2, numberOfStudents());
-      assert.equal(0, numberOfSelectedStudents());
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(0);
     });
 
     it('should select a student when clicking on it', function () {
-      assert.equal(2, numberOfStudents());
-      assert.equal(0, numberOfSelectedStudents());
-      assert(!addPartnersButtonRendered());
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(0);
+      expect(component.find('.addPartners').length).to.equal(0);
 
       // click on first student to select
-      TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
-      assert.equal(2, numberOfStudents());
-      assert.equal(1, numberOfSelectedStudents());
-      assert(addPartnersButtonRendered());
+      component.find('.student').first().simulate('click');
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(1);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on second student to select
-      TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
-      assert.equal(2, numberOfStudents());
-      assert.equal(2, numberOfSelectedStudents());
-      assert(addPartnersButtonRendered());
+      component.find('.student').last().simulate('click');
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(2);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on second student again to unselect
-      TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
-      assert.equal(2, numberOfStudents());
-      assert.equal(1, numberOfSelectedStudents());
-      assert(addPartnersButtonRendered());
+      component.find('.student').last().simulate('click');
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(1);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on first student again to unselect
-      TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
-      assert.equal(2, numberOfStudents());
-      assert.equal(0, numberOfSelectedStudents());
-      assert(!addPartnersButtonRendered());
+      component.find('.student').first().simulate('click');
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(0);
+      expect(component.find('.addPartners').length).to.equal(0);
     });
 
     it('should let you select a student and add them as a partner', function () {
-      assert.equal(2, numberOfStudents());
-      assert.equal(0, numberOfSelectedStudents());
-      assert(!addPartnersButtonRendered());
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(0);
+      expect(component.find('.addPartners').length).to.equal(0);
 
       // click on first student to select
-      TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
-      assert.equal(2, numberOfStudents());
-      assert.equal(1, numberOfSelectedStudents());
-      assert(addPartnersButtonRendered());
+      component.find('.student').first().simulate('click');
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(1);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on Add Partner to confirm
-      TestUtils.Simulate.click(addPartnersButton());
+      component.find('.addPartners').first().simulate('click');
 
       // verify that the right data is sent to the server
       let data = server.requests[server.requests.length - 1].requestBody;
@@ -216,39 +180,33 @@ describe('Pairing component', function () {
     };
 
     beforeEach(function () {
-      div = document.createElement("div");
-
       setupFakeAjax(ajaxUrl, ajaxState);
-
-      render(ajaxUrl);
+      createDomElement(ajaxUrl);
+      component.update();
       server.respond();
     });
 
     afterEach(function () {
       teardownFakeAjax();
-
-      if (div) {
-        ReactDOM.unmountComponentAtNode(div);
-        component = null;
-      }
+      component = null;
     });
 
     it('should not render a section dropdown', function () {
-      assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+      expect(component.find('select').length).to.equal(0);
+      expect(component.find('Pairing').length).to.equal(1);
     });
 
     it('should render a list of students', function () {
-      assert.equal(3, numberOfStudents());
+      expect(component.find('.student').length).to.equal(3);
     });
 
     it('should remove all students and go back to selection mode when clicking Stop', function () {
-      assert.equal(3, numberOfStudents());
+      expect(component.find('.student').length).to.equal(3);
 
       // click on stop button
-      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(component, 'stop'));
-
-      assert.equal(0, numberOfStudents());
-      assert(TestUtils.findRenderedDOMComponentWithTag(component, 'select'));
+      component.find('.stop').simulate('click');
+      expect(component.find('.student').length).to.equal(0);
+      expect(component.find('select').length).to.equal(1);
     });
   });
 });
