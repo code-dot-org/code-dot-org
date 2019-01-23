@@ -69,7 +69,9 @@ export default class CourseOverview extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired
+      version_year: PropTypes.string.isRequired,
+      version_title: PropTypes.string.isRequired,
+      can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
@@ -150,6 +152,9 @@ export default class CourseOverview extends Component {
     const showNotification = viewAs === ViewType.Teacher && isTeacher &&
       !isVerifiedTeacher && hasVerifiedResources;
 
+    // Only display viewable versions in course version dropdown.
+    const filteredVersions = versions.filter(version => version.can_view_version);
+
     return (
       <div style={mainStyle}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) &&
@@ -181,7 +186,7 @@ export default class CourseOverview extends Component {
         }
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {versions.length > 1 &&
+          {filteredVersions.length > 1 &&
             <span style={styles.versionWrapper}>
               <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
               <select
@@ -190,7 +195,7 @@ export default class CourseOverview extends Component {
                 style={styles.versionDropdown}
                 id="version-selector"
               >
-                {versions.map(version => (
+                {filteredVersions.map(version => (
                   <option key={version.name} value={version.name}>
                     {version.version_title}
                   </option>
