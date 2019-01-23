@@ -465,9 +465,11 @@ class Script < ActiveRecord::Base
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they are assigned to it or they have progress in it.
+    # A student can view the script version if they have progress in it or are assigned to it.
     has_progress = user.scripts.include?(self)
-    user.assigned_script?(self) || has_progress
+    return true if has_progress
+
+    user.assigned_script?(self)
   end
 
   # @param family_name [String] The family name for a script family.
