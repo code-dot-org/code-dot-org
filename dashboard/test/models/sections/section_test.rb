@@ -380,7 +380,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'somecourse'
+    course = create :course, name: 'somecourse', family_name: 'coursefam'
     section = create :section, script: nil, course: course
 
     expected = {
@@ -400,7 +400,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: nil, name: nil},
+      script: {id: nil, name: nil, course_family_name: course.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -432,7 +432,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: script.id, name: script.name},
+      script: {id: script.id, name: script.name, course_family_name: script.course&.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -445,7 +445,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :course, name: 'somecourse'
+    course = create :course, name: 'somecourse', family_name: 'coursefam'
     # If this were a real section, it would actually have a script that is part of
     # the provided course
     section = create :section, script: script, course: course
@@ -467,7 +467,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: script.id, name: script.name},
+      script: {id: script.id, name: script.name, course_family_name: course.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -497,7 +497,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: nil, name: nil},
+      script: {id: nil, name: nil, course_family_name: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
