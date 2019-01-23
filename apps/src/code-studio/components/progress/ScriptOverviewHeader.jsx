@@ -43,6 +43,13 @@ const styles = {
   },
 };
 
+export const scriptVersionShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  version_year: PropTypes.string.isRequired,
+  version_title: PropTypes.string.isRequired,
+  can_view_version: PropTypes.bool.isRequired,
+});
+
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -70,12 +77,7 @@ class ScriptOverviewHeader extends Component {
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired,
-      version_title: PropTypes.string.isRequired,
-      can_view_version: PropTypes.bool.isRequired,
-    })).isRequired,
+    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
   };
