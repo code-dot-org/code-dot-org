@@ -36,6 +36,8 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var spriteGroups = {};
+var thisSprite;
+var otherSprite;
 
 
 function initialize(setupHandler) {
@@ -178,9 +180,9 @@ function clickedOn(condition, group, event) {
   }
 }
 
-function helperGetSpriteFromArray(spriteGroup, i) {
+function helperGetSpriteFromArray(spriteGroup, index) {
 	return function() {
-    	return spriteGroup[i];
+    	return spriteGroup[index];
     };
 }
 
@@ -188,9 +190,35 @@ function spriteDestroyed(sprite, event) {
   inputEvents.push({type: isDestroyed, event: event, param: sprite});
 }
 
+function whenTouching(condition, groupA, groupB, event) {
+  var spriteGroupA = groupA();
+  var spriteGroupB = groupB();
+  var isWhen = condition === "when" ? true : false;
+  var a, b; //individual sprites from each group
+  if(isWhen) {
+  	for(i = 0; i < spriteGroupA.length; i++) {
+      a = helperGetSpriteFromArray(spriteGroupA, i);
+      for(j = 0; j < spriteGroupB.length; j++) {
+      	b = helperGetSpriteFromArray(spriteGroupB, j);
+        collisionEvents.push({a: a, b: b, event: event});
+      }
+    }
+  } else {
+  	for(i = 0; i < spriteGroupA.length; i++) {
+      a = helperGetSpriteFromArray(spriteGroupA, i);
+      for(j = 0; j < spriteGroupB.length; j++) {
+      	b = helperGetSpriteFromArray(spriteGroupB, j);
+        collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+      }
+    }
+  }
+}
+
+/*
 function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
+*/
 
 function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
@@ -393,10 +421,10 @@ function draw() {
       }
       */
       event = touchEvents[i].event;
-      console.log(event);
       param = touchEvents[i].sprite ?
         touchEvents[i].sprite() :
         touchEvents[i].param;
+      thisSprite = param;
       // Just for experimentation, I'm breaking mouseIsOver for this to work
       if(param && eventType === mouseIsOver && eventType(param) && mouseWentDown("leftButton")) {
         event();
@@ -409,7 +437,9 @@ function draw() {
     var createCollisionHandler = function (collisionEvent) {
       return function (sprite1, sprite2) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
+          thisSprite = sprite1;
+          otherSprite = sprite2;
+          collisionEvent.event(thisSprite, otherSprite);
         }
       };
     };
