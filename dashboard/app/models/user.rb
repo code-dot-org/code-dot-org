@@ -349,6 +349,10 @@ class User < ActiveRecord::Base
     (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
       where(username: identifier).first ||
       find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
