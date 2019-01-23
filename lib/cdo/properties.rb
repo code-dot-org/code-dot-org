@@ -67,11 +67,6 @@ end
 
 # Puts project count into format of XX million for display
 def round_project_count_to_million(project_count)
-  # check if number is bigger than previous count
-  existing_project_count = Properties.get(:metrics)['project_count'] || 0
-  project_count = [project_count, existing_project_count, DEFAULT_NUMBER_OF_PROJECTS].max
-
-  # round number down and format to XX million
   project_count = (project_count / 1_000_000).floor
   return project_count
 end
