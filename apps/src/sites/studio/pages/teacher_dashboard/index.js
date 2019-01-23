@@ -10,6 +10,7 @@ import manageStudents, {
   convertStudentServerData,
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import teacherSections, {setSections, selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -20,9 +21,13 @@ const section = scriptData.section;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
-  registerReducers({sectionData, manageStudents, stats});
+  registerReducers({teacherSections, sectionData, manageStudents, stats});
   const store = getStore();
+  // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
+  store.dispatch(setSections([section]));
+
+  store.dispatch(selectSection(section.id));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(asyncSetCompletedLevelCount(section.id));
 
