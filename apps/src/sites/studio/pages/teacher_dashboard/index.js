@@ -10,10 +10,8 @@ import manageStudents, {
   convertStudentServerData,
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {
-  asyncLoadSectionData
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -22,25 +20,22 @@ const section = scriptData.section;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
-  registerReducers({teacherSections, manageStudents, sectionData});
+  registerReducers({sectionData, manageStudents, stats});
   const store = getStore();
-  store.dispatch(setLoginType(section.login_type));
-  store.dispatch(asyncLoadSectionData(section.id));
   store.dispatch(setSection(section));
+  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(asyncSetCompletedLevelCount(section.id));
 
   // Show share column by default for CSD and CSP courses,
   // or any script in either course.
   const courseFamiliesToShowShareColumn = ["csd", "csp"];
-
-  if (courseFamiliesToShowShareColumn.includes(section.script.family_name)) {
+  if (courseFamiliesToShowShareColumn.includes(section.script.course_family_name)) {
     store.dispatch(toggleSharingColumn());
   }
 
-  const dataUrl = `/dashboardapi/sections/${section.id}/students`;
-
   $.ajax({
     method: 'GET',
-    url: dataUrl,
+    url: `/dashboardapi/sections/${section.id}/students`,
     dataType: 'json'
    }).done(studentData => {
     const convertedStudentData = convertStudentServerData(studentData, section.login_type, section.id);

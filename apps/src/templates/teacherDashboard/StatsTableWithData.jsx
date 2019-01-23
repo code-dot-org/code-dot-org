@@ -1,56 +1,45 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StatsTable from './StatsTable';
+import {LoadingStatus} from '@cdo/apps/redux/sectionDataRedux';
+import {getStudentsCompletedLevelCount} from './statsRedux';
 
 class StatsTableWithData extends Component {
   static propTypes = {
-    sectionId: PropTypes.number,
+    // Props provided by redux.
+    section: PropTypes.object,
+    sectionLoadingStatus: PropTypes.string,
+    studentsCompletedLevelCount: PropTypes.object,
   };
-
-  state = {
-    studentsCompletedLevelCount: {},
-    section: {},
-    isLoading: true
-  };
-
-  componentDidMount() {
-    const completedLevelsUrl = `/dashboardapi/sections/${this.props.sectionId}/students/completed_levels_count`;
-    $.ajax({
-      url: completedLevelsUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(studentsCompletedLevelCount => {
-      this.setState({studentsCompletedLevelCount: studentsCompletedLevelCount});
-    });
-
-    const sectionUrl = `/api/v1/sections/${this.props.sectionId}`;
-    $.ajax({
-      url: sectionUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(section => {
-      this.setState({
-        section: section,
-        isLoading: false
-      });
-    });
-  }
 
   render() {
+    const {section, sectionLoadingStatus, studentsCompletedLevelCount} = this.props;
+
     return (
       <div>
-        {this.state.isLoading &&
+        {(!sectionLoadingStatus || sectionLoadingStatus === LoadingStatus.IN_PROGRESS) &&
           <Spinner/>
         }
-        {!this.state.isLoading &&
+        {sectionLoadingStatus === LoadingStatus.SUCCESS &&
           <StatsTable
-            section={this.state.section}
-            studentsCompletedLevelCount={this.state.studentsCompletedLevelCount}
+            section={section}
+            studentsCompletedLevelCount={studentsCompletedLevelCount}
           />
+        }
+        {sectionLoadingStatus === LoadingStatus.FAIL &&
+          <div>{i18n.statsTableFailure()}</div>
         }
       </div>
     );
   }
 }
 
-export default StatsTableWithData;
+export const UnconnectedStatsTableWithData = StatsTableWithData;
+
+export default connect(state => ({
+  section: state.sectionData.section,
+  sectionLoadingStatus: state.sectionData.loadingStatus,
+  studentsCompletedLevelCount: getStudentsCompletedLevelCount(state, state.sectionData.section.id),
+}))(StatsTableWithData);
