@@ -84,7 +84,7 @@ var baseConfig = {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
+      {test: /\.ejs$/, loader: 'compile-ejs-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,
