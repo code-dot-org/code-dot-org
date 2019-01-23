@@ -3,12 +3,51 @@ ko:
   data:
     function_names:
       x: x
+      details: 세부 사항
+      draw eyebrow: 눈썹 그리기
+      draw pupil: 눈동자 그리기
       draw a circle: 원 그리기
+      draw a car: 자동차 그리기
+      draw_rect: 사각형 그리기
+      draw square: 사각형 그리기
+      jump to middle: 가운데로 점프하기
+      draw a button: 버튼 그리기
+      draw cord: 줄 그리기
+      draw left leg: 왼쪽 다리 그리기
+      draw right leg: 왼쪽 다리 그리기
+      draw body and arms: 몸과 팔 그리기
+      draw a head: 머리 그리기
+      draw head: 머리 그리기
+      draw arms: 팔 그리기
+      draw O: O 그리기
+      draw D: D 그리기
+      draw E: E 그리기
       draw a hexagon: 6각형 그리기
       draw a flower: 꽃 그리기
       draw a square: 사각형 그리기
       draw a snowflake: 해바라기 그리기
+      draw 3 hexagons: 6각형 3개 그리기
+      draw 4 hexagons: 6각형 4개 그리기
+      draw 5 hexagons: 6각형 5개 그리기
+      get 2 nectar: 꽃꿀 2개 구하기
+      collect purple nectar: 보라색 꽃꿀 구하기
+      get 5: 5개 구하기
+      move and get nectar: 이동해서 꽃꿀을 구하기
+      move and get 4: 이동해서 4개를 구하기
+      get 7 nectar make 7 honey: 꽃꿀을 7개 구해서 꿀 7개를 만들기
+      get 7 make 7: 7개 구해서 7개 만들기
+      get 7: 7개 구하기
+      move and get 3: 이동하여 3개 구하기
       draw a tree: 나무 그리기
+      draw triangle: 삼각형 그리기
+      draw circle: 원 그리기
+      graph: 그래프
+      draw waves: 웨이브 그리기
+      draw a wave: 웨이브 그리기
+      draw a small triangle: 작은 삼각형 그리기
+      draw a medium triangle: 삼각형 그리기
+      draw a large triangle: 큰 삼각형 그리기
+      draw a big triangle: 큰 삼각형 그리기
       draw a triangle: 삼각형 그리기
       draw a house: 집 그리기
       draw a star: 별 그리기

@@ -4177,3 +4177,7 @@ it:
               name: Uno Sguardo Avanti
             Binary Bracelets:
               name: Braccialetti Binari
+            'End of Course Project: Play Lab':
+              name: 'Progetto di fine corso: Laboratorio'
+        gamelab:
+          title: Sviluppo Giochi

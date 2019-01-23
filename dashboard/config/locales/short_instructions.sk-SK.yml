@@ -223,13 +223,13 @@ sk:
         Pomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov.
       2-3 Bee Conditionals 3: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med.
         Použiť slučku.
-      2-3 Bee Conditionals 4: Pomôž mi zozbierať všetok nektár z kvetov a urobiť celý
-        med.
-      2-3 Bee Conditionals 5: Fialové kvety môžu mať buď 1 alebo 0 nektáru, ale nevieš,
-        ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú. Skontrolujte,
-        či nektár je rovný 1 pomocou bloku "if".
-      2-3 Bee Conditionals 6: Skontroluj tento kvet s blokom "if" či je dostupný nejaký
-        nektár.
+      2-3 Bee Conditionals 4: Pomôž mi pozbierať všetok nektár z kvetov a vyrobiť
+        všetok med.
+      2-3 Bee Conditionals 5: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
+      2-3 Bee Conditionals 6: Skontroluj tento kvet s blokom "ak", či sa v ňom nachádza
+        nejaký nektár.
       2-3 Bee Conditionals 7: Zozbieraj nektár z každého kvetu, ak nejaký má.
       2-3 Bee Conditionals 8: Toto pole má červené a fialové kvety. Červené kvety
         majú známe množstvo nektáru ale nektár fialových je neznámy. Zozbieraj všetok
@@ -916,16 +916,28 @@ sk:
         cesty k fakli.
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
-      Infinity_finale: Vytvorte čo len chcete a zdieľajte to!
-      Infinity_move_collide: Hiro je "herec 1".  Posuň ho vpravo k Baymaxovi tak,
-        aby sa prehral zvuk, sa dotknú.
-      Infinity_move_directions: Baymax je "herec 2".  Pridaj bloky "Posuň sa" a potom
-        s použitím šípok posuň Baymaxa tak, aby sa dotkol ostatných dvoch postavičiek.
-      Infinity_move_right: Hiro je "herec 1".  Použi blok "Posuň sa" tak, aby sa Hiro
-        posunul vpravo a dotkol sa Baymaxa.
-      Infinity_repeat: Použi blok "Opakuj neustále" tak, aby sa Anna posunula hore
-        a dole o 400 pixelov.
+      Infinity_catch: Dokážeš Elsou ("postava 2") hýbať šípkami tak, aby s Annou udržala
+        krok?
+      Infinity_finale: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      Infinity_move_collide: Hiro je "postava 1".  Posuň ho vpravo k Baymaxovi a prehraj
+        zvuk, keď sa dotknú.
+      Infinity_move_directions: Baymax je "postava 2".  Do programu pridaj bloky "Posuň
+        postavu" a potom pomocou šípok pohni Baymaxom a dotkni sa ďalších dvoch postáv.
+      Infinity_move_right: Hiro je "postava 1".  Použi blok "Posuň sa" tak, aby sa
+        Hiro posunul vpravo a dotkol sa Baymaxa.
+      Infinity_repeat: Použi blok "opakuj donekonečna" tak, aby Anna chodila hore-dole
+        vždy o 400 pixelov.
+      Infinity_say: Nechaj Annu povedať "Ahoj" pomocou bloku "Povedz".
+      Infinity_shoot: Baymax je "postava 2". Naprogramuj ho tak, aby hodil na Hira
+        raketu.
+      Infinity_shoot_directions: Hiro je "postava 3". Nechaj Hira hodiť predmet na
+        každú zo 4 postáv. Po každom hode počkaj 1 sekundu.
+      Infinity_test: Toto je Infinity test.
       Infinity_touch_faster: Dotknite sa aj ďaľších vločiek!
+      Infinity_touch_four: Posúvaj Annou hore, dole, doľava a doprava a dotkni sa
+        každej vločky.
+      Infinity_touch_score: Pridaj Anne bod vždy, keď sa dotkne vločky. Potom klikni
+        na "Spustiť" a posuň Annu ku každej snehovej vločke.
       K-1 Artist 1 Assessment 1: Nakreslite krátku čiaru hore a dlhú čiaru doprava!
       K-1 Artist Loops 1: Nakreslite túto čiaru posunutím sa na Východ 4 krát.
       K-1 Artist Loops 2: A teraz nakresli tú istú čiaru použitím cyklu.
@@ -956,15 +968,15 @@ sk:
       MC HOC 2016 Level 2-2: Kurča je zmrazené. Umiestni bloky 'posuň sa' a 'otoč
         sa' do časti 'pri vytvorení', aby sa pohlo.
       MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách
-        kurčatá kráčajú stále. Použi cyklus ''nekonečne opakuj'', aby si udržal kurčatá
+        kurčatá kráčajú stále. Použi cyklus ''nekonečne vykonaj'', aby si udržal kurčatá
         v pohybe.  '
       MC HOC 2016 Level 4: Teraz sa ale všetky kurčatá hýbu rovnako a vyzerá to čudne.
         Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá vykonať pohyb
-        'náhodne sa otoč'.
+        'otoč sa náhodne'.
       MC HOC 2016 Level 5: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku
         'posuň sa o krok dopredu' v cykle 'nekonečne vykonaj'.
       MC HOC 2016 Level 6: Teraz vytvoríš zombíkov. Použi blok 'vytvor' pre vytvorenie
-        3 zombíkov, keď príde noc. Naprogramuj ich tak, aby sa hýbali smerom k tebe.
+        3 zombíkov, keď je noc. Naprogramuj ich tak, aby sa hýbali smerom k tebe.
         Preži do rána.
       MC HOC 2016 Level 8: Cesta k tvojej ovci je zatarasená kamennou stenou. Našťastie
         je tu Creeper. Creeper exploduje po tom, čo sa ho dotkneš. Nechaj ho explodovať
@@ -973,7 +985,7 @@ sk:
         v časti 'pri použití', potom odíď ďalej a použi ovcu na to, aby vyprodukovala
         vlnu.
       MC HOC 2016 New Spawn: Teraz môžeš vyplniť svet tak, ako chceš! Umiestni bloky
-        'vytvoriť' pod blok 'pri spustení', čím vytvoríš predmety na začiatku hry.
+        'vytvor' pod blok 'pri spustení', čím vytvoríš predmety na začiatku hry.
       MC HOC 2016 New Walk: Poďme preskúmať náš svet! Pohybuj sa pomocou šípok a stlačením
         medzerníka alebo kliknutím na herný plán pre použitie predmetov. Použi dvere
         na vstup do domu.
@@ -1075,9 +1087,9 @@ sk:
       New Basketball Project: Vytvor si svoj vlastný basketbalový zápas! Môžeš zmeniť
         pravidlá ako len chceš. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj
         zápas mohli zahrať aj kamaráti na svojich mobiloch.
-      New Gumball Project: Vytvorte čo len chcete a zdieľajte to!
-      New Ice Age Project: Vytvorte čo len chcete a zdieľajte to!
-      New Infinity Project: Vytvorte čo len chcete a zdieľajte to!
+      New Gumball Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Ice Age Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       New Sports Project: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky
         pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť",
@@ -1127,14 +1139,15 @@ sk:
         dostal ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
-      Overworld Place Wall: Každý dom začína stenou. Postav prvú časť domu tak, že
-        použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
-      Overworld Place Wall_2018: Každý dom začína stenou. Postav prvú časť domu tak,
-        že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa
-        cyklu.
-      Overworld Place Wall_2019: Každý dom začína stenou. Postav prvú časť domu tak,
-        že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa
-        cyklu.
+      Overworld Place Wall: Každý dom začína so stenou. Postav prvú časť domu tak,
+        že použiješ príkazy "umiestni" a "posuň sa dopredu" v nekonečne opakovanom
+        cykle.
+      Overworld Place Wall_2018: Každý dom začína so stenou. Postav prvú časť domu
+        tak, že použiješ príkazy "umiestni" a "posuň sa dopredu" v nekonečne opakovanom
+        cykle.
+      Overworld Place Wall_2019: Každý dom začína so stenou. Postav prvú časť domu
+        tak, že použiješ príkazy "umiestni" a "posuň sa dopredu" v nekonečne opakovanom
+        cykle.
       Overworld Plant Crops: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch
         stranách vody, aby si neskôr nebol hladný.
       Overworld Plant Crops_2018: Je dobré plánovať veci dopredu. Zasaď plodiny na
@@ -1149,16 +1162,16 @@ sk:
       Overworld Powered Minecart_2019: Skvelá práca! Zhromaždil si veľa zdrojov a
         postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho
         domu.
-      Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz “strihaj“ na
+      Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz “ostrihaj“ na
         to, aby si z oviec zozbieral vlnu.
-      Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz “strihaj“
+      Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz “ostrihaj“
         na to, aby si z oviec zozbieral vlnu.
-      Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz “strihaj“
+      Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz “ostrihaj“
         na to, aby si z oviec zozbieral vlnu.
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
-      PS copy 2-3 Bee Conditionals 5: Fialové kvety môžu mať buď 1 alebo 0 nektáru,
-        ale nevieš, ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho
-        nemajú. Skontrolujte, či nektár je rovný 1 pomocou bloku "if".
+      PS copy 2-3 Bee Conditionals 5: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu
         zázrakov.
       Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý
@@ -1630,11 +1643,11 @@ sk:
         nektár z fialových kvetov, ak ho nemajú.'
       grade3_Conditionals_2: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med.
         Použiť slučku.
-      grade3_Conditionals_3: Fialové kvety môžu mať buď 1 alebo 0 nektáru, ale nevieš,
-        ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú. Skontrolujte,
-        či nektár je rovný 1 pomocou bloku "if".
-      grade3_Conditionals_4: Skontroluj tento kvet s blokom "if" či je dostupný nejaký
-        nektár.
+      grade3_Conditionals_3: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
+      grade3_Conditionals_4: Skontroluj tento kvet s blokom "ak", či sa v ňom nachádza
+        nejaký nektár.
       grade3_Conditionals_5: Zozbieraj nektár z každého kvetu, ak nejaký má.
       grade3_Conditionals_6: Toto pole má červené a fialové kvety. Červené kvety majú
         známe množstvo nektáru ale nektár fialových je neznámy. Zozbieraj všetok nektár.
@@ -1642,8 +1655,8 @@ sk:
       grade3_Conditionals_8: Zbieraj nektár, kde kvety majú nektár.
       grade3_Conditionals_9: Pomôž mi nájsť všetok nektár s použitím, čo najmenšieho
         počtu blokov!
-      grade3_Conditionals_TeacherIDo: Skontroluj tento kvet s blokom "if" či je dostupný
-        nejaký nektár.
+      grade3_Conditionals_TeacherIDo: Skontroluj tento kvet s blokom "ak", či sa v
+        ňom nachádza nejaký nektár.
       grade3_Debugging_1: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
         nektár a urobil celý med.
       grade3_Debugging_5: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok

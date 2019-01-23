@@ -10347,3 +10347,5 @@ tr:
               name: İkilik Bileklikler
         csp-mid-survey:
           description_audience: CSP Öğrencileri
+        gamelab:
+          title: Oyun Laboratuvarı

@@ -4939,7 +4939,12 @@ vi:
             Artist:
               name: Họa sĩ
         aquatic:
+          stages:
+            Aquatic:
+              name: Minecraft
           title: Minecraft Chuyến thám hiểm đại dương
+          description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới
+            cho Giờ Lập trình!
         dance--draft:
           stages:
             Dance Party:
@@ -5052,3 +5057,5 @@ vi:
               name: Nhìn về phía trước
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
+        gamelab:
+          title: Kho Trò chơi

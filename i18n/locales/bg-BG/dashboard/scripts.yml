@@ -1441,7 +1441,7 @@ bg:
             'Farmer: While Loops':
               name: 'Фермер - цикли "докато"'
         csd3-2017:
-          description_short: "Програмиране"
+          description_short: Програмиране
           stages:
             Velocity:
               name: Скорост
@@ -2225,3 +2225,5 @@ bg:
               name: 'Реални алгоритми: Хартиени самолети'
             Binary Bracelets:
               name: Двоични гривни
+        gamelab:
+          title: Играта лаборатория

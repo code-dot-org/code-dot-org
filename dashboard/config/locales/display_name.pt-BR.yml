@@ -33,6 +33,7 @@ pt-BR:
       AppLab Intro 4 - Video Welcome: Bem-vindo à Hora do Código
       AppLab Intro 4 - Video designMode: Espiada do Modo de Design
       AppLab Intro 4 - Video onEvent: Usando o onEvent
+      AppLab Intro 4 - Video setProperty: Iniciando
       AppLab Intro 4 - Video share thisThat: Compartilhando seu trabalho
       AppLab Intro 4 - Video share your work: Compartilhando seu trabalho
       AppLab Intro 4 - Video share: Compartilhando seu trabalho
@@ -64,6 +65,7 @@ pt-BR:
       AppLab Intro 6 - Change Screen Color: Mudar cor da tela
       AppLab Intro 6 - Change Text 2: Alterar texto
       AppLab Intro 6 - Full Text: Dois botões
+      AppLab Intro 6 - Video welcome: Iniciando
       AppLab Intro 6 - animalSoundBoard: Usando o playSound
       AppLab Intro 6 - blankApp: Usando o playSound
       AppLab Intro 6 - onEvent intro: Faça os botões funcionarem
@@ -259,6 +261,8 @@ pt-BR:
       CSD U3 Watchers Map_2018: Depurando com Observadores
       CSD U3 acceleration map: Revisão de Velocidade e o Padrão Contador
       CSD U3 acceleration map_2018: Revisão de Velocidade e o Padrão Contador
+      CSD U3 challenge face: 'Desafio: rosto'
+      CSD U3 challenge face_2018: 'Desafio: rosto'
       CSD U3 challenge new shape: 'Desafio: Forma das Formas'
       CSD U3 challenge new shape_2018: 'Desafio: Forma das Formas'
       CSD U3 collisions build isTouching: Detecção de Colisão
@@ -272,6 +276,8 @@ pt-BR:
       CSD U3 functions map: funções
       CSD U3 functions review: Revisão sobre Funções
       CSD U3 functions review_2018: Revisão sobre Funções
+      CSD U3 interactions map: Revisão de interações de Sprite
+      CSD U3 interactions map_2018: Revisão de interações de Sprite
       CSD U3 istouching map: Revisão de Detecção de colisão
       CSD U3 istouching map_2018: Revisão de Detecção de colisão
       CSD U3 naming map: Nomeando Variáveis
@@ -280,6 +286,14 @@ pt-BR:
       CSD U3 picture_2018: 'Desafio: Desenhar uma Imagem'
       CSD U3 platform challenge: Melhore seu Jogo
       CSD U3 platform challenge_2018: Melhore seu Jogo
+      CSD U3 platform sample1: Amostra de Jogo de plataforma
+      CSD U3 platform sample1_2018: Amostra de Jogo de plataforma
+      CSD U3 platform sample3: Coelho Saltador
+      CSD U3 platform sample3_2018: Coelho Saltador
+      CSD U3 plotting shapes map: Imprimindo Formas no Jogo do Laboratório
+      CSD U3 plotting shapes map_2018: Imprimindo Formas no Jogo do Laboratório
+      CSD U3 rect: Introdução ao Jogo do Laboratório
+      CSD U3 rect_2018: Introdução ao Jogo do Laboratório
       CSD U3 shape size map: Formas e Parâmetros
       CSD U3 shape size map_2018: Formas e Parâmetros
       CSD U3 velocity map: Velocidade de Sprite
@@ -306,10 +320,18 @@ pt-BR:
       CSD U3L20 TFMD_2018: Visão geral da aula
       CSD U3L21 TFMD_2018: Visão geral da aula
       CSD U3L22 TFMD_2018: Visão geral da aula
+      CSD U4 - Design Mode Project: 'Projeto do Aplicativo: Design da Tela'
+      CSD U4 - Design Mode Project_2018: 'Projeto do Aplicativo: Design da Tela'
       CSD U4 Change Screen Map: Mudando Telas
       CSD U4 Change Screen Map_2018: Mudando Telas
+      CSD U4 Design Elements Map: Modo de Design de Elementos
+      CSD U4 Design Elements Map_2018: Modo de Design de Elementos
+      CSD U4 Design Mode Map: Introdução ao Modo Design
+      CSD U4 Design Mode Map_2018: Introdução ao Modo Design
       CSD U4 Importing Screens Map: Importando Telas
       CSD U4 Importing Screens Map_2018: Importando Telas
+      CSD U4 Mult Screen Map: Aplicativos Multiplas Telas
+      CSD U4 Mult Screen Map_2018: Aplicativos Multiplas Telas
       CSD U4 User Input Map: Respondendo a Entradas de Usuário
       CSD U4 User Input Map_2018: Respondendo a Entradas de Usuário
       CSD U4L01 SFLP_2018: Visão geral da aula
@@ -414,6 +436,10 @@ pt-BR:
       CSD U6 hardware software video_2018: Hardware e Software
       CSD U6 light pattern challenge: Show de Luz Melhorado
       CSD U6 light pattern challenge_2018: Show de Luz Melhorado
+      CSD U6 params starchaser challenge 1: Starchaser - Adicionar Vidas
+      CSD U6 params starchaser challenge 1_2018: Starchaser - Adicionar Vidas
+      CSD U6 params starchaser challenge 2: Starchaser - Resetar o Jogador
+      CSD U6 params starchaser challenge 2_2018: Starchaser - Resetar o Jogador
       CSD U6 sensor experiment embedded: Experimento com Sensor
       CSD U6 sensor experiment embedded_2018: Experimento com Sensor
       CSD U6 tugowar conditional map: Atualizador de Condicionais
@@ -487,10 +513,29 @@ pt-BR:
       'CSD: Sprites in Game Lab_2018': 'Vídeo: Introdução a Sprites'
       CSDU4 Design Mode Video: Introdução ao Modo Design
       CSDU4 Design Mode Video_2018: Introdução ao Modo Design
+      CSDU4 Project Bug Feature: 'Projeto do Aplicativo: Problemas e Recursos'
+      CSDU4 Project Bug Feature_2018: 'Projeto do Aplicativo: Problemas e Recursos'
+      CSDU4 Project Events: 'Projeto do Aplicativo: Vinculando Telas'
+      CSDU4 Project Events_2018: 'Projeto do Aplicativo: Vinculando Telas'
+      CSDU4 Project Functionality: 'Projeto do Aplicativo: Adicionando Funcionalidade'
+      CSDU4 Project Import: 'Projeto do Aplicativo: Tela de Importação'
+      CSDU4 Project Import_2018: 'Projeto do Aplicativo: Tela de Importação'
+      CSDU6 - UI and Inputs - event type testing: Teste de Evento
+      CSDU6 - UI and Inputs - getNumber: pegarNúmero
+      CSDU6 - board event challenge: Placa de Som
+      CSDU6 - board event challenge_2018: Placa de Som
+      CSDU6 - button tug o war challenge: 'Desafio: Cabo de Guerra'
+      CSDU6 - ch 1 exemplar LEDs: Exemplo de Cores de LED
+      CSDU6 - ch 1 project template: 'Desafio: Obter Loopy'
+      CSDU6 - sensor love tester demo: Demo de testador de amor
       CSDU6 - sensors challenge: 'Desafio: Entendendo os sensores'
       CSDU6 - sensors experiment: Experimento com Sensor
+      CSDU6 - timed loop challenge: 'Desafio: Obter Loopy'
       CSDU6 buzzer 2d arrays: Vetores 2D
       CSDU6 buzzer 2d arrays_2018: Vetores 2D
+      CSDU6 buzzer.stop: Parando a Música
+      CSDU6 buzzer.stop_2018: Parando a Música
+      CSDU6 challenge play songs: Música Bot
       CSP CreateL01 SFLP: Visão geral da aula
       CSP CreateL02 SFLP_2018: Visão geral da aula
       CSP CreateL03 SFLP: Visão geral da aula
@@ -564,6 +609,10 @@ pt-BR:
       CSP U5L16 SFLP: Visão geral da aula
       CSP U5L17 SFLP: Visão geral da aula
       CSP U5L18 SFLP: Visão geral da aula
+      CSPU5_U3L15 full clicker app: Crie Seu Próprio Jogo Clicker
+      CSPU5_U3L15 full clicker app_2018: Crie Seu Próprio Jogo Clicker
+      CSS U2 Body Map: O elemento do corpo
+      CSS U2 Body Map_2018: O elemento do corpo
       CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprite
       CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprite
       CourseEF_video_MakeSprite: Como fazer um Sprite
@@ -576,14 +625,34 @@ pt-BR:
       Dance_Party_extras_on_beat: Grave, médio e agudo
       Dance_Party_extras_speed: Acelerar, retardar
       Dance_Party_extras_visible: Onde eles foram?
+      Geometric Sun_2018: Sol Geométrico
+      Geometric Sun_2019: Sol Geométrico
+      Images, Pixels, and RGB_2018: Imagens, Pixels e RGB
       InspirationalArtwork_2018: Inspiração!
       InspirationalArtwork_2019: Inspiração!
+      'Internet Simulator: Broadcast_2018': 'Simulador de Internet: Broadcast'
+      'Internet Simulator: DNS_2018': 'Simulador de Internet: DNS'
+      'Internet Simulator: Packets_2018': 'Simulador de Internet: Pacotes'
       'Internet Simulator: Routers_2018': 'Simulador de Internet: Rotas'
       'Internet Simulator: Sending Binary Messages_2018': 'Simulador de Internet:
         Enviando Mensagens Binárias'
       'Internet Simulator: Sending Numbers_2018': 'Simulador de Internet: Enviando
         Números'
       'Internet Simulator: Sending Text_2018': 'Simulador de Internet: Enviando Texto'
+      Intro to Web Lab - Part 1: 'Vídeo: Introdução para o Laboratório Web - Parte
+        1'
+      Intro to Web Lab - Part 1_2018: 'Vídeo: Introdução para o Laboratório Web -
+        Parte 1'
+      Intro to Web Lab - Part 2: 'Vídeo: Introdução ao Web Lab - Parte 2'
+      Intro to Web Lab - Part 2_2018: 'Vídeo: Introdução ao Web Lab - Parte 2'
+      Introduction to Variables - Part 1_2018: Introdução a Variáveis
+      Kiki_StarWars_Test: Protótipo do Projeto Star Wars
+      Kiki_StarWars_Test_2: Protótipo do Projeto Star Wars
+      Kiki_StarWars_Test_3: Protótipo do Projeto Star Wars
+      Kiki_StarWars_Test_4: Protótipo do Projeto Star Wars
+      Kiki_StarWars_Test_5: Protótipo do Projeto Star Wars
+      Kiki_StarWars_Test_5_Example: Protótipo do Projeto Star Wars
+      MC Agent Freeplay: Gratuito
       MC_HOC_2017_02_Cole: A Fazenda
       MC_HOC_2017_02_Cole_2019: A Fazenda
       MC_HOC_2017_02_Kiki: A Fazenda
@@ -608,8 +677,13 @@ pt-BR:
       MC_HOC_2017_10_RYAN2: A Caverna
       MC_HOC_2017_11_Cole: O Lago Congelado
       MC_HOC_2017_11_Kiki: O Lago Congelado
+      MC_HOC_2017_13_Cole: Gratuito
       MC_HOC_2017_FP10x10: Atividade livre
       MC_HOC_2017_FP10x10_RE: Atividade livre
+      MC_HOC_2017_FP20x20: Gratuito
+      MC_HOC_2017_FP20x20_2019: Gratuito
+      Making Music_2018: Fazendo Música
+      New Minecraft Hero Project: Gratuito
       PS - test - pixelation: Widget de pixelização em preto e branco
       SG U3L07 More Subgoals: Documentação
       Text Compression_2018: Compressão de texto
@@ -633,5 +707,6 @@ pt-BR:
       csp4dlp-assessment: Avaliação
       csp5dlp-assessment: Avaliação
       expresslink: Curso Expresso
+      harvey_pixelation: Componente para Pixel
       maker workshop final: 'Desafio: Explorar!'
       okToDelete: Testador

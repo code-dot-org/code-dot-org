@@ -1013,7 +1013,7 @@ de:
             'Farmer: While Loops':
               name: 'Bauer: Solange-Schleifen'
         csd3-2017:
-          description_short: "Programmierung"
+          description_short: Programmierung
           stages:
             Functions:
               name: Funktionen
@@ -1756,3 +1756,5 @@ de:
               name: 'Alltagsalgorithmen: Papierflieger'
             Binary Bracelets:
               name: Binäre Armbänder
+        gamelab:
+          title: Spielelabor

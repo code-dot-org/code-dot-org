@@ -962,7 +962,7 @@ uk:
             'Farmer: While Loops':
               name: 'Фермерка - цикли "поки"'
         csd3-2017:
-          description_short: "Програмування"
+          description_short: Програмування
           stages:
             Velocity:
               name: Швидкість
@@ -1737,3 +1737,5 @@ uk:
               name: 'Життєві алгоритми: Паперові літачки'
             Binary Bracelets:
               name: Двійкові браслети
+        gamelab:
+          title: Ігрова лабораторія

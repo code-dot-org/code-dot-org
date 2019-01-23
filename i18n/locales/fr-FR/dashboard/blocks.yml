@@ -334,7 +334,7 @@ fr:
       Dancelab_setBackground:
         text: définir la couleur de fond {COLOR}
       Dancelab_setBackgroundEffect:
-        text: définir l’effet de fond {EFFECT}
+        text: définir l’effet de fond {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Aucun
@@ -346,9 +346,10 @@ fr:
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
-            '"rainbow"': Couleurs
+            '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
             '"text"': Titre de la chanson
+            '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
@@ -376,9 +377,10 @@ fr:
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
-            '"rainbow"': Couleurs
+            '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
             '"text"': Titre de la chanson
+            '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
@@ -652,7 +654,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
       gamelab_clickedOn:
-        text: lorsque {SPRITE} est cliqué
+        text: quand on clique sur {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
       gamelab_debugSprite:
@@ -1093,7 +1095,7 @@ fr:
             "{x: 100, y: 300}": vers le bas à gauche
             "{x: 300, y: 300}": vers le haut à droite
       Mikelab_whenClickedOn:
-        text: lorsque {SPRITE} est cliqué
+        text: quand on clique sur {SPRITE}
       Mikelab_whenKeyPressed:
         text: En appuyant sur {KEY}
         options:

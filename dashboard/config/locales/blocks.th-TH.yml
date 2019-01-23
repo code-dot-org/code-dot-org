@@ -144,7 +144,7 @@ th:
             measures: ห้องดนตรี
             seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
-        text: 'ทุก {UNIT} '
+        text: 'ทุก [หน่วย][0] '
         options:
           UNIT:
             '"verse"': ท่อนร้อง
@@ -167,7 +167,7 @@ th:
             '"y"': อยู่ที่แกน Y
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "{UNIT} ล่วงผ่าน"
+        text: "[หน่วย][0] ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -324,18 +324,24 @@ th:
       Dancelab_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Dancelab_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT}
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': ไม่มี
             '"circles"': อุโมงค์
+            '"color_cycle"': สี
             '"diamonds"': เพชร
             '"disco_ball"': บอลดิสโก้
+            '"swirl"': มนต์สะกด
             '"kaleidoscope"': ภาพลานตา
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
-            '"rainbow"': สี
+            '"splatter"': สาดสี
+            '"rainbow"': สายรุ้ง
+            '"snowflakes"': หิมะ
             '"text"': ชื่อเพลง
+            '"galaxy"': พื้นที่
             '"sparkles"': ประกาย
+            '"spiral"': วงก้นหอย
             '"disco"': สี่เหลี่ยมจัตุรัส
             '"stars"': ดาว
           PALETTE:
@@ -353,14 +359,19 @@ th:
             '"none"': ไม่มี
             '"rand"': "(สุ่ม)"
             '"circles"': อุโมงค์
+            '"color_cycle"': สี
             '"diamonds"': เพชร
             '"disco_ball"': บอลดิสโก้
+            '"swirl"': มนต์สะกด
             '"kaleidoscope"': ภาพลานตา
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
             '"splatter"': สาดสี
-            '"rainbow"': สี
+            '"rainbow"': สายรุ้ง
+            '"snowflakes"': หิมะ
             '"text"': ชื่อเพลง
+            '"galaxy"': พื้นที่
             '"sparkles"': ประกาย
+            '"spiral"': วงก้นหอย
             '"disco"': สี่เหลี่ยมจัตุรัส
             '"stars"': ดาว
           PALETTE:
@@ -406,6 +417,7 @@ th:
         options:
           EFFECT:
             '"none"': ไม่มี
+            '"bubbles"': ฟองสบู่
             '"confetti"': กระดาษสี
             '"hearts_red"': หัวใจ
             '"music_notes"': โน๊ตดนตรี
@@ -413,6 +425,7 @@ th:
             '"smiling_poop"': อุนจิ
             '"rain"': ฝน
             '"floating_rainbows"': สายรุ้ง
+            '"smile_face"': หน้ายิ้ม
             '"raining_tacos"': ทาโก้
       Dancelab_setForegroundEffectExtended:
         text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
@@ -420,6 +433,7 @@ th:
           EFFECT:
             '"none"': ไม่มี
             '"rand"': "(สุ่ม)"
+            '"bubbles"': ฟองสบู่
             '"confetti"': กระดาษสี
             '"hearts_red"': หัวใจ
             '"music_notes"': โน๊ตดนตรี
@@ -427,6 +441,7 @@ th:
             '"smiling_poop"': อุนจิ
             '"rain"': ฝน
             '"floating_rainbows"': สายรุ้ง
+            '"smile_face"': หน้ายิ้ม
             '"raining_tacos"': ทาโก้
       Dancelab_setProp:
         text: 'กำหนด {SPRITE} {PROPERTY} เป็น {VAL} '
@@ -937,7 +952,7 @@ th:
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
-        text: วาง {blockType}
+        text: วาง [blockType][0]
         options:
           blockType:
             '"strippedOak"': ชิ้นไม้โอ็ค

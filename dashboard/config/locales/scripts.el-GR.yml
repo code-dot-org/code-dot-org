@@ -1633,3 +1633,5 @@ el:
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
+        gamelab:
+          title: Game Lab

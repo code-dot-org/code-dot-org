@@ -453,7 +453,7 @@ bn:
             Bounce:
               name: বল লাফানো
         csd3-2017:
-          description_short: "প্রোগ্রামিং"
+          description_short: প্রোগ্রামিং
           stages:
             Functions:
               name: ফাংশনগুলি
