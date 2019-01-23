@@ -22,10 +22,10 @@ export default class TravelPlans extends LabeledFormComponent {
     addressCity: "City",
     addressState: "State",
     addressZip: "Zip",
-    howTraveling: "Code.org provides a round trip flight for every FiT Weekend attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to the event. If you choose not to fly, and live at least 25 miles from the event location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the event location. How will you travel to the FiT Weekend?",
-    needHotel: "Code.org provides a hotel room for every FiT Weekend attendee. Attendees will not be required to share a room. Would you like a hotel room at the FiT Weekend?",
+    howTraveling: "Code.org provides a round trip flight for every FiT Workshop attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to the event. If you choose not to fly, and live at least 25 miles from the event location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the event location. How will you travel to the FiT Workshop?",
+    needHotel: "Code.org provides a hotel room for every FiT Workshop attendee. Attendees will not be required to share a room. Would you like a hotel room at the FiT Workshop?",
     needAda: "Do you require an ADA accessible hotel room?",
-    explainAda: "Please explain your specific accommodation needs."
+    needDisabilitySupport: "Do you have a disability and/or require accommodation in order to fully participate in our event? If so, please select yes, and you will be contacted by someone from our staff to discuss your specific needs."
   };
 
   static associatedFields = Object.keys(TravelPlans.labels).concat([
@@ -63,16 +63,12 @@ export default class TravelPlans extends LabeledFormComponent {
       );
     }
 
-    if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
+    if (data.dietaryNeeds && (data.dietaryNeeds.includes('Food Allergy') || data.dietaryNeeds.includes('Other'))) {
       requiredFields.push('dietaryNeedsDetails');
     }
 
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
-
-      if (data.needAda === 'Yes') {
-        requiredFields.push("explainAda");
-      }
     }
 
     return requiredFields;
@@ -98,7 +94,7 @@ export default class TravelPlans extends LabeledFormComponent {
           {this.checkBoxesFor("dietaryNeeds")}
           {
             this.props.data.dietaryNeeds &&
-            this.props.data.dietaryNeeds.includes('Food Allergy') &&
+            (this.props.data.dietaryNeeds.includes('Food Allergy') || this.props.data.dietaryNeeds.includes('Other')) &&
             this.largeInputFor("dietaryNeedsDetails")
           }
         </FormGroup>
@@ -126,7 +122,7 @@ export default class TravelPlans extends LabeledFormComponent {
 
         <FormGroup>
           {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
-            'I will carpool with another FiT Weekend attendee (Please note who)': 'carpooling_with_attendee'
+            'I will carpool with another FiT Workshop attendee (Please note who)': 'carpooling_with_attendee'
           })}
           {this.radioButtonsFor("needHotel")}
           {
@@ -135,9 +131,9 @@ export default class TravelPlans extends LabeledFormComponent {
           }
           {
             this.props.data.needHotel === 'Yes' &&
-            this.props.data.needAda === 'Yes' &&
-            this.largeInputFor("explainAda")
+            this.props.data.needAda === 'Yes'
           }
+          {this.radioButtonsFor("needDisabilitySupport")}
         </FormGroup>
       </FormGroup>
     );
@@ -154,11 +150,8 @@ export default class TravelPlans extends LabeledFormComponent {
     if (data.needHotel !== 'Yes') {
       changes.needAda = undefined;
     }
-    if (changes.needAda !== 'Yes') {
-      changes.explainAda = undefined;
-    }
 
-    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy')) {
+    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy') && !data.dietaryNeeds.includes('Other')) {
       changes.dietaryNeedsDetails = undefined;
     }
 
