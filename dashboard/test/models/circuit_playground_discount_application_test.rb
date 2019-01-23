@@ -149,6 +149,12 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user2)
   end
 
+  test 'studio_person_pd_eligible? just checks the one user if they have no studio_person_id' do
+    student = create :student
+    CircuitPlaygroundDiscountApplication.expects(:user_pd_eligible?).with(student).once
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(student)
+  end
+
   test 'application_status for unstarted application' do
     teacher = create :teacher
 
