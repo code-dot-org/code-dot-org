@@ -536,7 +536,7 @@ class SectionTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 
     def create_script_with_levels(name, level_type)
-      script = create :script, name: name
+      script = Script.find_by_name(name) || create(:script, name: name)
       stage = create :stage, script: script
       # 5 non-programming levels
       5.times do
@@ -557,8 +557,8 @@ class SectionTest < ActiveSupport::TestCase
     # @param {number} num_programming_levels
     # @param {number} num_non_programming_levels
     def simulate_student_progress(script, student, num_programming_levels, num_non_programing_levels)
-      progress_levels = script.levels.select {|level| level.is_a?(Unplugged)}.first(num_non_programing_levels) +
-        script.levels.select {|level| !level.is_a?(Unplugged)}.first(num_programming_levels)
+      progress_levels = script.levels.select {|level| level.is_a?(Unplugged)}.last(num_non_programing_levels) +
+        script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
 
       progress_levels.each do |level|
         create :user_level, level: level, user: student, script: script
@@ -566,8 +566,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     setup_all do
-      @csd2 = create_script_with_levels('csd2-2017', :weblab)
-      @csd3 = create_script_with_levels('csd3-2017', :gamelab)
+      @csd2 = create_script_with_levels('csd2-2018', :weblab)
+      @csd3 = create_script_with_levels('csd3-2018', :gamelab)
     end
 
     test 'returns true when all conditions met' do
