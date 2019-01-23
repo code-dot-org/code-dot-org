@@ -363,7 +363,7 @@ pl:
       Dancelab_setBackground:
         text: ustaw kolor tła {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT}
+        text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Żaden
@@ -375,10 +375,11 @@ pl:
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
-            '"splatter"': Bąbelki
+            '"splatter"': Plamy farby
             '"rainbow"': Tęcza
             '"snowflakes"': Śnieg
             '"text"': Tytuły piosenek
+            '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
             '"disco"': Kwadraty
@@ -411,6 +412,7 @@ pl:
             '"rainbow"': Tęcza
             '"snowflakes"': Śnieg
             '"text"': Tytuły piosenek
+            '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
             '"disco"': Kwadraty

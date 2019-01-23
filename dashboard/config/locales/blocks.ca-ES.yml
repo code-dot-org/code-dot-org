@@ -316,18 +316,23 @@ ca:
       Dancelab_setBackground:
         text: definir el color de fons {COLOR}
       Dancelab_setBackgroundEffect:
-        text: definir l'efecte de fons {EFFECT}
+        text: definir l'efecte de fons {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Cap
             '"circles"': Túnel
             '"diamonds"': Diamants
             '"disco_ball"': Bola de discoteca
+            '"swirl"': Hipnosi
             '"kaleidoscope"': Calidoscopi
             '"lasers"': Zona de ball amb làser
-            '"rainbow"': Colors
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Arc de Sant Martí
+            '"snowflakes"': Neu
             '"text"': Títol de la cançó
+            '"galaxy"': Espai
             '"sparkles"': Guspires
+            '"spiral"': Espiral
             '"disco"': Requadres
             '"stars"': Estrelles
           PALETTE:
@@ -345,12 +350,16 @@ ca:
             '"circles"': Túnel
             '"diamonds"': Diamants
             '"disco_ball"': Bola de discoteca
+            '"swirl"': Hipnosi
             '"kaleidoscope"': Calidoscopi
             '"lasers"': Zona de ball amb làser
             '"splatter"': Esquitxades de pintura
-            '"rainbow"': Colors
+            '"rainbow"': Arc de Sant Martí
+            '"snowflakes"': Neu
             '"text"': Títol de la cançó
+            '"galaxy"': Espai
             '"sparkles"': Guspires
+            '"spiral"': Espiral
             '"disco"': Requadres
             '"stars"': Estrelles
           PALETTE:
@@ -393,6 +402,7 @@ ca:
         options:
           EFFECT:
             '"none"': Cap
+            '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts_red"': Cors
             '"music_notes"': Notes de música
@@ -400,6 +410,7 @@ ca:
             '"smiling_poop"': Caca
             '"rain"': Pluja
             '"floating_rainbows"': Arc de Sant Martí
+            '"smile_face"': Cara somrient
             '"raining_tacos"': Tacs
       Dancelab_setForegroundEffectExtended:
         text: definir l'efecte de fons {EFFECT}
@@ -407,6 +418,7 @@ ca:
           EFFECT:
             '"none"': Cap
             '"rand"': "(Aleatori)"
+            '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts_red"': Cors
             '"music_notes"': Notes de música
@@ -414,6 +426,7 @@ ca:
             '"smiling_poop"': Caca
             '"rain"': Pluja
             '"floating_rainbows"': Arc de Sant Martí
+            '"smile_face"': Cara somrient
             '"raining_tacos"': Tacs
       Dancelab_setProp:
         text: 'configurar {SPRITE} {PROPERTY} a {VAL} '

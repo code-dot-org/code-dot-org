@@ -120,25 +120,6 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/applications/teachercon_cohort
-    def teachercon_cohort
-      applications = Pd::Application::WorkshopAutoenrolledApplication.teachercon_cohort(@applications)
-
-      serialized_applications = prefetch_and_serialize(
-        applications,
-        serializer: TcFitCohortViewSerializer,
-        scope: {view: 'teachercon'}
-      )
-
-      serialized_tc_registrations = Pd::Teachercon1819Registration.
-        where(pd_application_id: nil).
-        includes(user: {school_info: {school: :school_district}}).map do |registration|
-        TcFitCohortViewTeacherconRegistrationSerializer.new(registration, scope: {view: 'teachercon'}).attributes
-      end
-
-      render json: serialized_applications + serialized_tc_registrations
-    end
-
     # GET /api/v1/pd/applications/fit_cohort
     def fit_cohort
       serialized_fit_cohort = Pd::Application::Facilitator1819Application.fit_cohort(@applications).map do |application|
@@ -189,7 +170,14 @@ module Api::V1::Pd
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
           # only current facilitator applications can be locked/unlocked
           if @application.application_type == FACILITATOR_APPLICATION
-            application_admin_params[:locked] ? @application.lock! : @application.unlock!
+            # explicitly convert locked variable to boolean in case it is passed into this function as string
+            locked_param = ActiveModel::Type::Boolean.new.cast(application_admin_params[:locked])
+
+            if locked_param != @application.locked?
+              lock_changed = true
+            end
+
+            locked_param ? @application.lock! : @application.unlock!
           end
         end
 
@@ -203,6 +191,7 @@ module Api::V1::Pd
       @application.update_status_timestamp_change_log(current_user) if status_changed
       @application.log_fit_workshop_change(current_user) if fit_workshop_changed
       @application.log_summer_workshop_change(current_user) if summer_workshop_changed
+      @application.update_lock_change_log(current_user) if lock_changed
 
       render json: @application, serializer: ApplicationSerializer
     end

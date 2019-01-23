@@ -35,7 +35,7 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 * No previous experience needed - just bring your curiosity!
 * One-day, no cost workshops designed for elementary classroom teachers, librarians, and tech-ed specialists.
-* Experience our pedagogical approach to teaching CS, design your own implementation plan, and collaborate with local eductators. Plus, you get classroom supplies and some pretty sweet swag!
+* Experience our pedagogical approach to teaching CS, design your own implementation plan, and collaborate with local educators. Plus, you get classroom supplies and some pretty sweet swag!
 
 [<button style="margin-left:20px">Find a local K-5 workshop</button>](/professional-development-workshops)
 <br/>
