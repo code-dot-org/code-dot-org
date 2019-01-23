@@ -490,8 +490,9 @@ class Script < ActiveRecord::Base
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
+    locale_str = locale&.to_s
     supported_stable_scripts = script_versions.select do |script|
-      is_supported = script.supported_locales&.include?(locale) || locale&.start_with?('en')
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
         script.is_stable && is_supported && script.version_year == version_year
       else
