@@ -4,16 +4,14 @@ import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
-import {summarizedSectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    section: summarizedSectionShape.isRequired,
     studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {section, studioUrlPrefix} = this.props;
+    const {studioUrlPrefix} = this.props;
 
     return (
       <div>
@@ -29,13 +27,12 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/manage_students"
-            component={props => <ManageStudentsTable  {...props} studioUrlPrefix={studioUrlPrefix}/>
+            component={props => <ManageStudentsTable {...props} studioUrlPrefix={studioUrlPrefix}/>
             }
           />
-          {/* TODO: (madelynkasula) refactor SectionProjectsListWithData to use section from redux */}
           <Route
             path="/projects"
-            component={props => <SectionProjectsListWithData {...props} sectionId={section.id} studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => <SectionProjectsListWithData {...props} studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/text_responses"
