@@ -9,7 +9,7 @@ class BlocksControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    get :index
+    get :index, params: {pool: 'aalab'}
     assert_response :success
   end
 end
