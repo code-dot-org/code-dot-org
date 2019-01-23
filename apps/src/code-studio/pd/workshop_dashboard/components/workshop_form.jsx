@@ -418,7 +418,7 @@ export class WorkshopForm extends React.Component {
     return (
       <FormGroup>
         <ControlLabel>
-          Workshop Type Optionsssssssssssssss&nbsp;
+          Workshop Type Options&nbsp;
           {isCsf &&
             <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
           }
@@ -507,7 +507,7 @@ export class WorkshopForm extends React.Component {
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.cource].map((subject, i) => {
+      const options = Subjects[this.state.course].map((subject, i) => {
         return (<option key={i} value={subject}>{subject}</option>);
       });
       const placeHolder = this.state.subject ? null : <option />;
