@@ -65,6 +65,17 @@ def fetch_metrics
   }
 end
 
+# Puts project count into format of XX million for display
+def round_project_count_to_million(project_count)
+  # check if number is bigger than previous count
+  existing_project_count = Properties.get(:metrics)['project_count'] || 0
+  project_count = [project_count, existing_project_count, DEFAULT_NUMBER_OF_PROJECTS].max
+
+  # round number down and format to XX million
+  project_count = (project_count / 1_000_000).floor
+  return project_count
+end
+
 def fetch_hoc_metrics
   # Include stale default values as of 2017-06-21 so we never show 0. These
   # would be used, for example, if the DB is unavailable or the cron failed to
