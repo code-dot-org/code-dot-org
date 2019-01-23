@@ -429,6 +429,8 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
   def redirect_to_script_url(user, locale: nil)
+    # No redirect unless script belongs to a family.
+    return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
     # No redirect unless user is allowed to view this script version and they are not already assigned to this script
@@ -454,6 +456,9 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the script.
   def can_view_version?(user, locale: nil)
+    # Users can view any course not in a family.
+    return true unless family_name
+
     latest_stable_version = Script.latest_stable_version(family_name)
     latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
