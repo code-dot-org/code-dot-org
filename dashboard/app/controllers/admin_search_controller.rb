@@ -24,10 +24,14 @@ class AdminSearchController < ApplicationController
       users = users.where(hashed_email: hashed_email)
     end
     if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
-      teachers = User.
-        where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
-        where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
-        all
+      teachers = User
+      if params[:teacherNameFilter].present?
+        teachers = teachers.where("name LIKE ?", "%#{params[:teacherNameFilter]}%")
+      end
+      if params[:teacherEmailFilter].present?
+        teachers = teachers.where("email LIKE ?", "%#{params[:teacherEmailFilter]}%")
+      end
+      teachers = teachers.all
       if teachers.count > 1
         flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
       end
