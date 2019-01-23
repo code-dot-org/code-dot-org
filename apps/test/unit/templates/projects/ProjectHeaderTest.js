@@ -14,8 +14,8 @@ describe('ProjectHeader', () => {
     const wrapper = mount(
         <Provider store={store}>
           <ProjectHeader
-            canViewAdvancedTools= {true}
-            projectCount= {10}
+            canViewAdvancedTools={true}
+            projectCount={10}
           />
         </Provider>,
     );

@@ -26,16 +26,9 @@ def main
   # round number down to closest million
   project_count = (project_count / 1_000_000).floor * 1_000_000
 
-  if project_count == 0
-    project_count = DEFAULT_NUMBER_OF_PROJECTS
-  end
-
   # check if number is bigger than previous count
-  existing_project_count = Properties.get(:metrics)['project_count']
-  if existing_project_count.nil?
-    existing_project_count = DEFAULT_NUMBER_OF_PROJECTS
-  end
-  project_count = [project_count, existing_project_count].max
+  existing_project_count = Properties.get(:metrics)['project_count'] || 0
+  project_count = [project_count, existing_project_count, DEFAULT_NUMBER_OF_PROJECTS].max
 
   # save value for use
   time = DateTime.now
