@@ -43,6 +43,13 @@ const styles = {
   },
 };
 
+export const scriptVersionShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  version_year: PropTypes.string.isRequired,
+  version_title: PropTypes.string.isRequired,
+  can_view_version: PropTypes.bool.isRequired,
+});
+
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -70,11 +77,7 @@ class ScriptOverviewHeader extends Component {
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired,
-      version_title: PropTypes.string.isRequired,
-    })).isRequired,
+    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
   };
@@ -162,6 +165,9 @@ class ScriptOverviewHeader extends Component {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
 
+    // Only display viewable versions in script version dropdown.
+    const filteredVersions = versions.filter(version => version.can_view_version);
+
     return (
       <div>
         {plcHeaderProps &&
@@ -217,7 +223,7 @@ class ScriptOverviewHeader extends Component {
                 <span className="betatext">{betaTitle}</span>
                 }
               </h1>
-              {versions.length > 1 &&
+              {filteredVersions.length > 1 &&
                 <span style={styles.versionWrapper}>
                   <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
                   <select
@@ -226,7 +232,7 @@ class ScriptOverviewHeader extends Component {
                     style={styles.versionDropdown}
                     id="version-selector"
                   >
-                    {versions.map(version => (
+                    {filteredVersions.map(version => (
                       <option key={version.name} value={version.name}>
                         {version.version_year}
                       </option>

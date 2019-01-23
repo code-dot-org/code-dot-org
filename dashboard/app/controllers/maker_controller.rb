@@ -121,6 +121,7 @@ class MakerController < ApplicationController
   def application_status
     return head :forbidden unless current_user.admin?
     user = User.from_identifier(params.require(:user))
+    return head :not_found unless user
 
     render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
   end
