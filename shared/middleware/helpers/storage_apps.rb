@@ -210,7 +210,7 @@ class StorageApps
     _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
+    return false unless row
 
     row[:skip_content_moderation]
   end
