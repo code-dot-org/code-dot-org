@@ -229,6 +229,34 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   pinMode(pin, modeConstant) {
+    switch (pin) {
+      case "A0":
+        pin = 12;
+        break;
+      case "A1":
+        pin = 6;
+        break;
+      case "A2":
+        pin = 9;
+        break;
+      case "A3":
+        pin = 10;
+        break;
+      case "A4":
+        pin = 3;
+        break;
+      case "A5":
+        pin = 2;
+        break;
+      case "A6":
+        pin = 0;
+        break;
+      case "A7":
+        pin = 1;
+        break;
+      default:
+        break;
+    }
     this.fiveBoard_.pinMode(pin, modeConstant);
   }
 
