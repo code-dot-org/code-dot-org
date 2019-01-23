@@ -277,7 +277,6 @@ describe('CircuitPlaygroundBoard', () => {
         board.pinMode(pin, arg2);
         expect(playground.pinMode).to.have.been.calledWith(pin, arg2);
       });
-
     });
 
     it('forwards the call to firmata with the modified CPX value', () => {
