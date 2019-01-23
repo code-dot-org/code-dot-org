@@ -429,6 +429,8 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
   def redirect_to_script_url(user, locale: nil)
+    # No redirect unless script belongs to a family.
+    return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
     # No redirect unless user is allowed to view this script version and they are not already assigned to this script
@@ -454,6 +456,9 @@ class Script < ActiveRecord::Base
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the script.
   def can_view_version?(user, locale: nil)
+    # Users can view any course not in a family.
+    return true unless family_name
+
     latest_stable_version = Script.latest_stable_version(family_name)
     latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
@@ -465,9 +470,11 @@ class Script < ActiveRecord::Base
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they are assigned to it or they have progress in it.
+    # A student can view the script version if they have progress in it or are assigned to it.
     has_progress = user.scripts.include?(self)
-    user.assigned_script?(self) || has_progress
+    return true if has_progress
+
+    user.assigned_script?(self)
   end
 
   # @param family_name [String] The family name for a script family.
@@ -483,8 +490,9 @@ class Script < ActiveRecord::Base
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
+    locale_str = locale&.to_s
     supported_stable_scripts = script_versions.select do |script|
-      is_supported = script.supported_locales&.include?(locale) || locale&.start_with?('en')
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
         script.is_stable && is_supported && script.version_year == version_year
       else
