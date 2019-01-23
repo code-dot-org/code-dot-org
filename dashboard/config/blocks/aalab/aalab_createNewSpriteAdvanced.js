@@ -10,6 +10,7 @@ function createNewSpriteAdvanced(name, costume, location) {
   newSprite.name = name;
   if(!spriteGroups.hasOwnProperty(name)) {
   	spriteGroups[name] = new Group();
+    spriteGroups[name].name = name;
   }
-  spriteGroups[name].push(newSprite);
+  spriteGroups[name].add(newSprite);
 }
