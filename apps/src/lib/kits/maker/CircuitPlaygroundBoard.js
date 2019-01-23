@@ -29,6 +29,10 @@ process.hrtime = require('browser-process-hrtime');
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
 
+/** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
+const pinMapping = {"A0": 12, "A1": 6, "A2": 9, "A3": 10, "A4": 3, "A5": 2, "A6": 0, "A7": 1};
+
+
 /**
  * Controller interface for an Adafruit Circuit Playground board using
  * Circuit Playground Firmata firmware.
@@ -228,35 +232,28 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         .then(() => forEachLedInSequence(led => led.off(), 80));
   }
 
+  mappedPin(pin) {
+    return pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
+  }
+
   pinMode(pin, modeConstant) {
-    const pinMapping = {
-      "A0": 12,
-      "A1": 6,
-      "A2": 9,
-      "A3": 10,
-      "A4": 3,
-      "A5": 2,
-      "A6": 0,
-      "A7": 1
-    };
-    pin = pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
-    this.fiveBoard_.pinMode(pin, modeConstant);
+    this.fiveBoard_.pinMode(this.mappedPin(pin), modeConstant);
   }
 
   digitalWrite(pin, value) {
-    this.fiveBoard_.digitalWrite(pin, value);
+    this.fiveBoard_.digitalWrite(this.mappedPin(pin), value);
   }
 
   digitalRead(pin, callback) {
-    this.fiveBoard_.digitalRead(pin, callback);
+    this.fiveBoard_.digitalRead(this.mappedPin(pin), callback);
   }
 
   analogWrite(pin, value) {
-    this.fiveBoard_.analogWrite(pin, value);
+    this.fiveBoard_.analogWrite(this.mappedPin(pin), value);
   }
 
   analogRead(pin, callback) {
-    this.fiveBoard_.analogRead(pin, callback);
+    this.fiveBoard_.analogRead(this.mappedPin(pin), callback);
   }
 
   createLed(pin) {
