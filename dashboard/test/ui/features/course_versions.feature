@@ -65,9 +65,10 @@ Scenario: Version warning announcement on course and unit overview pages
 Scenario: Versions warning announcement on script overview page
   When I am on "http://studio.code.org/s/coursea-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
+  Given I am assigned to script "coursea-2017"
   When I am on "http://studio.code.org/s/coursea-2017/next"
   And I wait until current URL contains "/s/coursea-2017/stage/1/puzzle/1"
 
