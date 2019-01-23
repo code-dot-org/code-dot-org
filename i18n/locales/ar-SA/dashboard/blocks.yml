@@ -349,6 +349,7 @@ ar:
             '"rainbow"': ألوان
             '"snowflakes"': ثلج
             '"text"': أسماء الأغاني
+            '"galaxy"': الفضاء
             '"sparkles"': بريق
             '"spiral"': حلزوني
             '"disco"': مربعات
@@ -378,6 +379,7 @@ ar:
             '"rainbow"': ألوان
             '"snowflakes"': ثلج
             '"text"': أسماء الأغاني
+            '"galaxy"': الفضاء
             '"sparkles"': بريق
             '"spiral"': حلزوني
             '"disco"': مربعات
@@ -425,6 +427,7 @@ ar:
         options:
           EFFECT:
             '"none"': لا شيء
+            '"bubbles"': فقاعات
             '"confetti"': قصاصات من الورق
             '"hearts_red"': قلوب
             '"music_notes"': نوتات موسيقية
@@ -432,6 +435,7 @@ ar:
             '"smiling_poop"': مؤخرة السفينة
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
+            '"smile_face"': وجه مبتسم
             '"raining_tacos"': شطائر التاكو
       Dancelab_setForegroundEffectExtended:
         text: عيّن التأثيرات الأمامية {EFFECT}
@@ -439,6 +443,7 @@ ar:
           EFFECT:
             '"none"': لا شيء
             '"rand"': "(عشوائي)"
+            '"bubbles"': فقاعات
             '"confetti"': قصاصات من الورق
             '"hearts_red"': قلوب
             '"music_notes"': نوتات موسيقية
@@ -446,6 +451,7 @@ ar:
             '"smiling_poop"': مؤخرة السفينة
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
+            '"smile_face"': وجه مبتسم
             '"raining_tacos"': شطائر التاكو
       Dancelab_setProp:
         text: 'قم بتعيين {SPRITE} {PROPERTY} إلى {VAL} '
@@ -604,8 +610,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       gamelab_debugSprite:
         options:
@@ -620,8 +626,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
       gamelab_jumpTo:
@@ -662,8 +668,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
       gamelab_setSizes:
@@ -679,16 +685,16 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
       gamelab_turn:
@@ -725,8 +731,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_createNewSprite:
         options:
@@ -747,8 +753,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
         options:
@@ -761,8 +767,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
         options:
@@ -785,8 +791,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupRemoveAllBehaviors:
         options:
@@ -807,8 +813,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupSetTint:
         options:
@@ -843,8 +849,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_showScoreboard:
         options:
@@ -906,15 +912,15 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       aalab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
+            '"x"': الموضع س
+            '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
       binary_move:

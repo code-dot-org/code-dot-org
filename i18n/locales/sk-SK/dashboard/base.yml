@@ -631,7 +631,7 @@ sk:
       body: "Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami."
     minecraft:
       title: "Minecraft"
-      body: "Preskúmajte Minecraft svet prostredníctvom kódu."
+      body: "Preskúmaj Minecraft svet prostredníctvom kódu."
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
@@ -1053,7 +1053,7 @@ sk:
         other: "Iné:"
       workshop_course:
         csf_af: 'Základy informatiky (kurzy A-F)'
-        csf_express: 'Základy informatiky (rýchlokurz)'
+        csf_express: 'Základy informatiky (zrýchlený kurz)'
         csd: 'Objavujeme informatiku'
         csp: 'Princípy Informatiky'
       email_opt_in:

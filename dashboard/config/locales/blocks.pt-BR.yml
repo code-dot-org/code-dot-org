@@ -98,6 +98,7 @@ pt-BR:
             '"UNICORN"': todos os unicórnios
           MOVE:
             '"rand"': "(Aleatório)"
+            MOVES.XBend: Dobrar
             MOVES.Roll: Rolar
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
@@ -108,11 +109,16 @@ pt-BR:
             MOVES.Floss: Dança do fio dental
             MOVES.Fresh: Novo
             MOVES.Clown: Palhaço
+            MOVES.XHeadHips: Cabeça + Quadris
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
+            MOVES.XKnee: Joelho
             MOVES.XKneel: Ajoelhar
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Alcance
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
+            MOVES.XArmsUp: Esticar
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -123,6 +129,7 @@ pt-BR:
         options:
           MOVE:
             '"rand"': "(Aleatório)"
+            MOVES.XBend: Dobrar
             MOVES.Roll: Rolar
             MOVES.XClapSide: Bater palmas
             MOVES.ClapHigh: Bater palmas
@@ -133,11 +140,16 @@ pt-BR:
             MOVES.Floss: Dança do fio dental
             MOVES.Fresh: Novo
             MOVES.Clown: Palhaço
+            MOVES.XHeadHips: Cabeça + Quadris
             MOVES.XHop: Pular
             MOVES.XHighKick: Pontapé
+            MOVES.XKnee: Joelho
             MOVES.XKneel: Ajoelhar
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Alcance
             MOVES.XSlide: Deslizar
             MOVES.Kick: Estrela
+            MOVES.XArmsUp: Esticar
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
           DIR:
@@ -451,6 +463,7 @@ pt-BR:
             '"smiling_poop"': Cocô
             '"rain"': Chuva
             '"floating_rainbows"': Arco-íris
+            '"smile_face"': Sorrisos
             '"spotlight"': Olofote
             '"color_lights"': Luzes de palco
             '"raining_tacos"': Tacos
@@ -469,6 +482,7 @@ pt-BR:
             '"smiling_poop"': Cocô
             '"rain"': Chuva
             '"floating_rainbows"': Arco-íris
+            '"smile_face"': Sorrisos
             '"spotlight"': Olofote
             '"color_lights"': Luzes de palco
             '"raining_tacos"': Tacos
@@ -1297,7 +1311,11 @@ pt-BR:
           VAL:
             '0': desligado
             '1': ligado
+            '"toggle"': alternar
+      binary_goToHome:
+        text: pular para o canto superior esquerdo
       binary_move:
+        text: mover {DIR}
         options:
           DIR:
             '"up"': para cima

@@ -10,10 +10,7 @@ import { announcementShape, VisibilityType } from '@cdo/apps/code-studio/scriptA
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-
-// A session variable storing a comma-delimited list of course/script names for which
-// the user has already dismissed the version redirect warning.
-const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';
+import { dismissedRedirectWarning, onDismissRedirectWarning } from '@cdo/apps/util/dismissVersionRedirect';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -79,6 +76,7 @@ class ScriptOverviewHeader extends Component {
       version_title: PropTypes.string.isRequired,
     })).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
   };
 
   componentDidMount() {
@@ -138,21 +136,6 @@ class ScriptOverviewHeader extends Component {
     return currentAnnouncements;
   };
 
-    dismissedRedirectWarning = () => {
-      const dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
-      return (dismissedRedirectWarnings || '').includes(this.props.scriptName);
-    };
-
-    onDismissRedirectWarning = () => {
-      let dismissedRedirectWarnings = sessionStorage.getItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY);
-      if (dismissedRedirectWarnings) {
-        dismissedRedirectWarnings += `,${this.props.scriptName}`;
-      } else {
-        dismissedRedirectWarnings = this.props.scriptName;
-      }
-      sessionStorage.setItem(DISMISSED_REDIRECT_WARNINGS_SESSION_KEY, dismissedRedirectWarnings);
-    };
-
   render() {
     const {
       plcHeaderProps,
@@ -167,9 +150,10 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
+      courseName,
     } = this.props;
 
-
+    const displayVersionWarning = showRedirectWarning && !dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -192,14 +176,14 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        {(showRedirectWarning && !this.dismissedRedirectWarning()) &&
+        {displayVersionWarning &&
           <Notification
             type={NotificationType.warning}
             notice=""
             details={i18n.redirectCourseVersionWarningDetails()}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
-            onDismiss={this.onDismissRedirectWarning}
+            onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
           />
         }
         {versionWarningDetails &&

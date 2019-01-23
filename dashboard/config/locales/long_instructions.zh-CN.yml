@@ -8192,6 +8192,10 @@ zh-CN:
         运行"。
 
 '
+      courseA_maze_ramp3b_2018: |-
+        在这个代码的末尾有一个多余的代码块!
+
+        把它拖回工具箱来删除它。
       courseA_maze_ramp4_2018: "*\"沿着这条路带我去找那只笨猪。\"*\r\n\r\n躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
       courseA_maze_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018: "*\"沿着这条路，让我到猪那里！\"*\r\n\r\n躲开TNT炸药。"
@@ -8235,6 +8239,7 @@ zh-CN:
       courseA_playLab_events4_2018: 现在，添加另一个模块，来让乔治在右方向键按下时，向右移动。
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events7_2018: "*任意发挥:* 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?"
       courseA_playlab_events_challenge1: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\r\n\r\n在这个关卡中,
         请务必点击提示！这些提示将帮助你逐步完成此项目!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challenge1_2018: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\r\n\r\n在这个关卡中,
@@ -8256,6 +8261,10 @@ zh-CN:
         运行"。
 
 '
+      courseB_Scrat_ramp3b_2018: |-
+        在这个代码的末尾有一个多余的代码块!
+
+        把它拖回工具箱来删除它。
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018: 试试自己完成它！
       courseB_artist_loops10: "运用你已经学到的知识来画一幅你认为艺术家在回到家的时会看到的画。\r\n\r\n___\r\n###点子\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
@@ -8323,6 +8332,7 @@ zh-CN:
         骑士时间！到达龙来完成这关。
 
         添加一个事件，当点击左箭头时，让骑士移向龙。
+      courseB_playlab_events5_2018: "现在添加一个事件, 当你按下右方向键时, 让骑士逃离那个龙。  \n\n将骑士向右移动通过这一关。"
       courseB_playlab_events6: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events6_2018: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events7: "当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！\n\r\n\r\n当它们碰撞时，播放一个声音，让它感觉起来像真的一样。\r\n\r\n浏览所有的目标，然后撞上龙来通过这关。"

@@ -13595,6 +13595,7 @@ zh-CN:
       courseA_maze_ramp2a_2018: "将<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
       courseA_maze_ramp3_2018: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将它从其它模块上移除，并拖回工具箱来扔掉。"
       courseA_maze_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
+      courseA_maze_ramp3b_2018: "在这个代码的末尾有一个多余的代码块!\n\n把它拖回工具箱来删除它。"
       courseA_maze_ramp4_2018: "*\"沿着这条路带我去找那只笨猪。\"*\\r\n\\r\n躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
       courseA_maze_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018: |-
@@ -13702,6 +13703,7 @@ zh-CN:
       courseA_playLab_events4_2018: 现在，添加另一个模块，来让乔治在右方向键按下时，向右移动。
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events7_2018: "*任意发挥:* 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?"
       courseA_playlab_events_challenge1: |-
         点击奥丽芙将使罗宾出现！
         你能编写代码来显示其余的人物吗？\r
@@ -13751,6 +13753,10 @@ zh-CN:
       courseB_Scrat_ramp1_2018: "让斯奎特到达橡子，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
       courseB_Scrat_ramp2_2018: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶ 运行\"。\n"
       courseB_Scrat_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
+      courseB_Scrat_ramp3b_2018: |-
+        在这个代码的末尾有一个多余的代码块!
+
+        把它拖回工具箱来删除它。
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018: 试试自己完成它！
       courseB_artist_loops10: |-
@@ -13838,6 +13844,7 @@ zh-CN:
         骑士时间！到达龙来完成这关。
 
         添加一个事件，当点击左箭头时，让骑士移向龙。
+      courseB_playlab_events5_2018: "现在添加一个事件, 当你按下右方向键时, 让骑士逃离那个龙。  \n\n将骑士向右移动通过这一关。"
       courseB_playlab_events6: |-
         帮助你的骑士得到所有的旗帜！\r
         \r

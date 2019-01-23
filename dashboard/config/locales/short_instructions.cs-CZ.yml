@@ -283,7 +283,7 @@ cs:
       2-3 Bee Loops 4: |-
         Jaká pilná včela!
 
-        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+        Pomoz včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       2-3 Bee Loops 4A: |-
         Kolik smyček potřebuješ v této hádance?
 
@@ -346,6 +346,7 @@ cs:
         co nejmenšího počtu bloků?
       2-3 Maze Loops 21: Dostaň mě ke slunečnici!
       2-3 Maze Loops Assessment 1: 'Hodnocení: Dostaň mě ke slunečnici s jen 5 bloky! '
+      2-3 Maze sq1: To prase mi pije krev. Pomoz mi ho najít!
       2-3 Maze sq10: Dostaň mě k prasátku! Jaké bloky mám opakovat?
       2-3 Maze sq10v2: Dostaň mě k prasátku! Jaké bloky mám opakovat?
       2-3 Maze sq2: Najdi cestu a veď mě k tomu pošetilému prasátku. Vyhni se TNT,
@@ -369,10 +370,15 @@ cs:
       2-3 maze sq15: Dokážeš se dostat ke slunečnici s použitím pouze pěti bloků?
       2-3 maze sq16: Dobře, to je podobné, jen mírně odlišné. Zvládneš to vyřešit
         jen s 5-ti bloky?
+      2-3: Fialové květiny mohou mít 0 nebo 1 nektar. Buď opatrný  abys nesbíral nektar
+        z květin, které jej nemají.
       2-3level1: Pomoz ptáku chytit zlobivé prasátko pohybem vpřed
       20hr_farmer_stage9_1: Ahoj! Já jsem farmář. Pomůžeš mi zarovnat pole na mojí
         farmě, aby bylo vše připraveno pro sazeničky? Přesuň mne ke hromádce hlíny
         a použij blok "odstranit".
+      20hr_farmer_stage9_10: Už pracuji pozdě, takže je venku tma a nedokážu říct,
+        jak velké hromádky jsou. Nemám teď ani všechny možnosti, které jsem u bloku
+        "dokud" míval. Posouvej mě po poli a pokud narazím na hromádku, odstraň ji.
       20hr_farmer_stage9_11: 'Venku je pořád tma. Posouvej mě po poli. Pokud narazím
         na hromádku, odstraň ji a pokud na díru, vyplň ji. Tip: použij rozbalovací
         menu možností bloku "pokud".'
@@ -394,10 +400,14 @@ cs:
         počtu bloků.
       20hr_farmer_stage9_9: 'Pošli mě odstranit všechny tyto hromádky hlíny. Snaž
         se použít co nejméně bloků. Tip: zkus použít blok "dokud".'
+      20hr_maze_stage2_1: Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik
+        bloků "posunout vpřed" a stiskni tlačítko "Spustit", abys mě tam dostal.
       20hr_maze_stage2_10: Dobře, zkus nový blok "opakovat do" - bude se opakovat,
         dokud nechytím to otravné prase.
       20hr_maze_stage2_11: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento
         úkol za použití pouze 4 bloků?
+      20hr_maze_stage2_12: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k
+        té slunečnici... Dostaneš mě tam za použití jen 5 bloků?
       20hr_maze_stage2_13: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš
         to vyřešit jen s 5-ti bloky?
       20hr_maze_stage2_14: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se
@@ -579,6 +589,8 @@ cs:
       4-5 Bee Conditionals - FC Test: Včela chce právě teď jen nektar. Ne všechny
         objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá
         květ. Pokud ano, můžeš získat nektar.
+      4-5 Bee Conditionals 1 (copy 1): Včele nelze říct, zda je to květina nebo plástev.
+        Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
       4-5 Bee Conditionals 1: Včele nelze říct, zda je to květina nebo plástev. Sbírej
         nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
       4-5 Bee Conditionals 2 (copy 1): Včela chce teď právě jen nektar. Pamatuj si,
@@ -588,12 +600,18 @@ cs:
         můžeš získat nektar.
       4-5 Bee Conditionals 3: Teď včela chce jen dělat med. Zkontroluj med pouze na
         plástvích.
+      4-5 Bee Conditionals 4 (copy 1): Neznámý objekt je květina nebo plástev. Použij
+        if/else bloku ke sbírání nektaru, pokud je to květina, jinak dělej med (protože
+        je to plástev).
       4-5 Bee Conditionals 4: Neznámý objekt je květina nebo plástev. Použij if/else
         bloku ke sbírání nektaru, pokud je to květina, jinak dělej med (protože je
         to plástev).
       4-5 Bee Conditionals 5: Může být květ nebo plástve pod těmito mraky. Použij
         if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože
         je to plástev).
+      4-5 Bee Conditionals 6 (copy 1): Tento Fialový květ může mít buď 3, 2 nebo 1
+        nektar. Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření
+        if, else-if, else bloku. Dokonči řešení pro sběr neznámé množství nektaru.
       4-5 Bee Conditionals 6: Tento Fialový květ může mít buď 3, 2 nebo 1 nektar.
         Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if,
         else bloku. Dokonči řešení pro sběr neznámé množství nektaru.
@@ -786,6 +804,10 @@ cs:
       C3-Farmer While Loops Assessment 1: Existuje mnoho děr a hromad.  Pomoz mi vyplnit
         a odstranit je aby země plochá.
       CDEF_debugging_flappy2: Proč tato hra nefunguje?
+      CSD Hackathon Pt 1: "(Klikni pro zobrazení úplných instrukcí)"
+      CSD Hackathon Pt 2: "(Klikni pro zobrazení úplných instrukcí)"
+      CSD Hackathon Week 1: "(Klikni pro zobrazení úplných instrukcí)"
+      CSD Hackathon Week 2: "(Klikni pro zobrazení úplných instrukcí)"
       CSD U5 black white images pixelation 2: Namaluj usměváka (klikni sem pro zobrazení
         obrázku)
       CSD U5 black white images pixelation 2_2018: Namaluj usměváka (klikni sem pro
@@ -1865,6 +1887,8 @@ cs:
         tím, že umístíte bloky do vody.
       MC_HOC_2017_Ryan_05: Zničte tyto kaktusy, aby se mohl hráč dostat do cíle.
       MC_HOC_Kiki_02: Přesuňte agenta na nášlapnou desku.
+      Middle School Hackathon Pt 1: "(Klikni pro zobrazení úplných instrukcí)"
+      Middle School Hackathon Pt 2: "(Klikni pro zobrazení úplných instrukcí)"
       Mike Test Bee Conditionals 1: Včele nelze říct, zda je to květina nebo plástev.
         Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
       NEW Course 4 Artist Functions 1: Umíš nakreslit čtverec na délku 100 pixelů
@@ -2189,6 +2213,8 @@ cs:
       U2 frequency caesar: Pokyny
       U2 frequency random sub: Pokyny
       U2 vigenere cipher: Pokyny
+      U3 - Variables - Set to Expression with Other Variables and Turtle: "(Klikni
+        pro zobrazení úplných instrukcí)"
       U3L07 - introSquare: Použijte smyčku k nakreslení čtverce. Pak přidejte další
         smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím
         zobrazíte plné pokyny)
@@ -2227,6 +2253,8 @@ cs:
         umístění. (Klepnutím zobrazíte podrobné pokyny)
       U3L2_TurtleSquare_right_2018: Nakreslete čtverec dopředu a vpravo od počátečního
         umístění. (Klepnutím zobrazíte podrobné pokyny)
+      U4 - Charts - Line Chart Template: To je šablona.
+      U4 - Charts - Line Chart Template_2018: To je šablona.
       U4 vigenere cipher 2: Pokyny
       U4L02 - Objects - Template1: Předloha
       U4L02 - Objects - Template1_2018: Předloha
@@ -2395,8 +2423,16 @@ cs:
       courseA_artist_loops7_forVideo: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_collector_loops_challenge2: 'Získejte všechen poklad! '
       courseA_forVideoTest_artist: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_harvester_seq12: Posbírej všechnu kukuřici.
+      courseA_maze_ramp5_2018: Vyhni se TNT!
+      courseA_maze_ramp5a_2018: Dostaň mne k prasátku!
+      courseA_maze_seq1: Dostaň mne k prasátku!
+      courseA_maze_seq12: 'Dostaň to prase! '
+      courseA_maze_seq12_2018: 'Dostaň to prase! '
+      courseA_maze_seq1_2018: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq2_2018: Změň kód, abys mne dostal k prasátku!
+      courseB_Scrat_ramp5a_2018: Dostaň mne k prasátku!
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul
@@ -2432,6 +2468,9 @@ cs:
         žaludu! '
       courseC_maze_loops_challenge1a_2019: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
+      courseC_maze_programming5: Vyhni se TNT!
+      courseC_maze_programming5_2018: Vyhni se TNT!
+      courseC_maze_programming5_2019: Vyhni se TNT!
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
@@ -2489,7 +2528,7 @@ cs:
         sesbíral všechen nektar a udělal všechen med.
       courseD_bee_debugging6: 'Výzva: Oprav chyby, abys sesbíral všechen nektar a
         vyrobil všechen med.'
-      courseD_bee_nestedLoops3: Sesbírat všechen nektar z každého květu. Použij vnořené
+      courseD_bee_nestedLoops3: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
       courseD_bee_nestedLoops5: 'Sesbírej všechen nektar z každého květu a udělej
         med na každé plástvi. Použij vnořené cykly. '
@@ -2538,17 +2577,21 @@ cs:
       courseD_maze_nestedLoops6: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6_2018: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6_2019: Dostaň mě ke slunečnici!
+      courseD_maze_ramp5: Vyhni se TNT!
+      courseD_maze_ramp5_2018: Vyhni se TNT!
+      courseD_maze_ramp5_2019: Vyhni se TNT!
+      courseD_maze_ramp7: Dostaň mne k prasátku!
       courseE_artist_functions1: 'Nazdar. Já jsem zombie umělec. Mám rád kreslení!
         Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů
         než strana čtverce.'
       courseE_artist_functions1_2018: 'Nazdar. Já jsem zombie umělec. Mám rád kreslení!
         Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů
         než strana čtverce.'
-      courseE_bee_concept1: Sesbírat všechen nektar z každého květu. Použij vnořené
+      courseE_bee_concept1: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
-      courseE_bee_concept1_2018: Sesbírat všechen nektar z každého květu. Použij vnořené
+      courseE_bee_concept1_2018: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
-      courseE_bee_concept1_2019: Sesbírat všechen nektar z každého květu. Použij vnořené
+      courseE_bee_concept1_2019: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
       courseE_bee_functions1: Sesbírejte všechen nektar z každého květu.
       courseE_bee_functions1_2018: Sesbírejte všechen nektar z každého květu.
@@ -2567,6 +2610,9 @@ cs:
         blok kódu do jiného cyklu, ale umělec se musí dostat zpět na místo další řádky.
         Který z těchto bloků kódu můžeš umístit na konec vnějšího cyklu, aby nakreslil
         celou mřížku?
+      courseE_maze_ramp5: Vyhni se TNT!
+      courseE_maze_ramp5_2018: Vyhni se TNT!
+      courseE_multi_maze_ramp5: Vyhni se TNT!
       courseF_artist_for7: Udělej tři malé změny do kódu z poslední úrovni, abys to
         dosáhl!
       courseF_artist_for7_2018: Udělej tři malé změny do kódu z poslední úrovni, abys
@@ -2605,6 +2651,8 @@ cs:
       courseF_bee_functions4_2018: Funkce "posunout a dostat nektar" otočí včelu,
         sbírá nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen
         nektar.
+      courseF_maze_ramp5: Vyhni se TNT!
+      courseF_maze_ramp5_2018: Vyhni se TNT!
       flappy_1: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit". Klikej
         nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
       flappy_11: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled a všechna
@@ -2646,10 +2694,10 @@ cs:
       flappy_8_2018: Obraz můžeš nastavit kdykoliv, ne jen na začátku hry. Vyzkoušej
         nastavení NÁHODNÉ scény, když dojde k jiným událostem, například, když mine
         překážku.
-      flappy_9: Zamíchat věci nahoru při nárazu na překážku a namísto ukončení hry
-        zkuste nastavit skóre zpět na 0.
-      flappy_9_2018: Zamíchat věci nahoru při nárazu na překážku a namísto ukončení
-        hry zkuste nastavit skóre zpět na 0.
+      flappy_9: Aby se to ještě zkomplikovalo, když Flappy vrazí do překážky nebo
+        do země, zkus místo ukončení hry nastavit skóre na 0.
+      flappy_9_2018: Aby se to ještě zkomplikovalo, když Flappy vrazí do překážky
+        nebo do země, zkus místo ukončení hry nastavit skóre na 0.
       frozen circle function in circle: Vytvořme 20 překrývajících se kružnic tak,
         že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter: "Tady máš blok \"vytvoř kružnici\", \nkterý
@@ -2722,7 +2770,7 @@ cs:
       grade2_MakeDogTag_3: Pomoz mi dokončit domeček pro tuto kočičku.
       grade2_MakeDogTag_4: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
-      grade2_MakeDogTag_6: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
+      grade2_MakeDogTag_6: 'Výzva: Přídeš na to, jak nakreslit obrys?'
       grade2_MakeDogTag_8: Teď spojme v cyklu dohromady několik V.
       grade2_MakeDogTag_9: Tentokrát to nakreslíme 24 krát. Do tohoto kódu přidej
         30 stupňů doleva a dej všechno do bloku opakování.
@@ -2816,7 +2864,7 @@ cs:
       grade3_Loops_10: |-
         Jaká pilná včela!
 
-        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+        Pomoz včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       grade3_Loops_11: |-
         Tvar této cesty je jiný než těch ostatních.
 
@@ -2857,6 +2905,10 @@ cs:
       grade3_maze_nestedLoops3: Dostaň mne k prasátku s pomocí jen dvou bloků.
       grade3_maze_nestedLoops4: V této hádance ti dva cykly `opakuj` pomohou dostat
         se k prasátku pomocí co nejméně bloků!
+      grade3_robotFarmer_ConditionalsIntro_10: Už pracuji pozdě, takže je venku tma
+        a nedokážu říct, jak velké hromádky jsou. Nemám teď ani všechny možnosti,
+        které jsem u bloku "dokud" míval. Posouvej mě po poli a pokud narazím na hromádku,
+        odstraň ji.
       grade3_robotFarmer_ConditionalsIntro_11: 'Venku je pořád tma. Posouvej mě po
         poli. Pokud narazím na hromádku, odstraň ji a pokud na díru, vyplň ji. Tip:
         použij rozbalovací menu možností bloku "pokud".'
@@ -2866,6 +2918,10 @@ cs:
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Pomoz mi vyplnit všechny
         tyto díry pěti lopatami hlíny. Tip: můžeš vložit blok "opakovat" dovnitř bloku
         "dokud".'
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: Už pracuji pozdě, takže je
+        venku tma a nedokážu říct, jak velké hromádky jsou. Nemám teď ani všechny
+        možnosti, které jsem u bloku "dokud" míval. Posouvej mě po poli a pokud narazím
+        na hromádku, odstraň ji.
       grade4_arist_nested_loop_circles1: Použij vnořené cykly k dokončení návrhu.
       grade4_arist_nested_loop_flags1: Zacykluj daný kód k vytvoření větrného mlýnu.
       grade4_arist_nested_loop_polygons1: 'Zacykluj 10 krát tento návrh. Kolikrát
@@ -2958,7 +3014,7 @@ cs:
       grade4_bee_functions4: Funkce "posunout a dostat nektar" otočí včelu, sbírá
         nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
       grade4_bee_nestedLoops0: Použij cyklus sesbírat všechen nektar.
-      grade4_bee_nestedLoops1: Sesbírat všechen nektar z každého květu. Použij vnořené
+      grade4_bee_nestedLoops1: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
       grade4_bee_nestedLoops3: Sesbírat všechen nektar vytvořením vnořeného cyklu.
       grade4_bee_nestedLoops4: 'Sesbírej všechen nektar z každého květu a udělej med
@@ -3024,7 +3080,7 @@ cs:
       grade4_review_bee3: |-
         Jaká pilná včela!
 
-        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+        Pomoz včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       grade5_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
@@ -3225,7 +3281,7 @@ cs:
       level 'grade3_Loops_10: |-
         Jaká pilná včela!
 
-        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+        Pomoz včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       level 'grade3_Loops_11: |-
         Tvar této cesty je jiný než těch ostatních.
 
