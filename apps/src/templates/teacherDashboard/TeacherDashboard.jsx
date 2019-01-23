@@ -21,7 +21,7 @@ export default class TeacherDashboard extends Component {
         <Switch>
           <Route
             path="/stats"
-            component={props => <StatsTableWithData {...props} sectionId={section.id}/>}
+            component={props => <StatsTableWithData/>}
           />
           <Route
             path="/progress"
@@ -32,6 +32,7 @@ export default class TeacherDashboard extends Component {
             component={props => <ManageStudentsTable  {...props} studioUrlPrefix={studioUrlPrefix}/>
             }
           />
+          {/* TODO: (madelynkasula) refactor SectionProjectsListWithData to use section from redux */}
           <Route
             path="/projects"
             component={props => <SectionProjectsListWithData {...props} sectionId={section.id} studioUrlPrefix={studioUrlPrefix}/>}
