@@ -160,7 +160,7 @@ class ScriptsController < ApplicationController
   end
 
   def redirect_script(script, locale)
-    # Return nil if course is nil or we know the user can view the version requested.
+    # Return nil if script is nil or we know the user can view the version requested.
     return nil if !script || script.can_view_version?(current_user, locale: locale)
 
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if

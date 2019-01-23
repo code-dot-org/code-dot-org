@@ -322,6 +322,11 @@ class CourseTest < ActiveSupport::TestCase
       assert @csp_2017.can_view_version?(create(:teacher))
     end
 
+    test 'nil user can only view latest version in course family' do
+      assert @csp_2018.can_view_version?(nil)
+      refute @csp_2017.can_view_version?(nil)
+    end
+
     test 'student can view version if it is the latest version in course family' do
       assert @csp_2018.can_view_version?(@student)
       refute @csp_2017.can_view_version?(@student)
