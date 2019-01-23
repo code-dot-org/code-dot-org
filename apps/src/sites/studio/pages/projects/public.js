@@ -28,7 +28,7 @@ $(document).ready(() => {
         <div>
           <HeaderBanner
             headingText={i18n.projects()}
-            subHeadingText={i18n.projectsSubHeading()}
+            subHeadingText={i18n.projectsSubHeading(projectsData.projectCount)}
             short
           />
           <StartNewProject
