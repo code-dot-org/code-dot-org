@@ -87,7 +87,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   # Looks to see if any of the users associated with this studio_person_id are eligibile
   # for our circuit playground discount
   def self.studio_person_pd_eligible?(user)
-    User.where(studio_person_id: user.studio_person_id).any? {|associated_user| user_pd_eligible?(associated_user)}
+    accounts = user.studio_person_id.nil? ? [user] : User.where(studio_person_id: user.studio_person_id)
+    accounts.any? {|associated_user| user_pd_eligible?(associated_user)}
   end
 
   # @return {boolean} true if we have at least one section that meets our eligibility
