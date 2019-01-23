@@ -26,11 +26,11 @@ export default class Releases extends LabeledFormComponent {
         <h4>Section 3: Releases</h4>
         <FormGroup>
           <ControlLabel>
-            Please read this <a target="_blank" href="https://docs.google.com/document/d/1APmVaRhMaRf76Vo7qjkuVy5cjFJyBN4td9DGf1Y6T-s/edit?ts=5beb5ac2">photo release.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/1zke9hlGbI1XbSzwQ1rNZofXuXaOboJuTFPW2Z_XOA1w/edit">photo release.</a>
           </ControlLabel>
           {this.singleCheckboxFor("photoRelease")}
           <ControlLabel>
-            Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit?ts=5bfdaf7b">liability waiver.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
           </ControlLabel>
           {this.singleCheckboxFor("liabilityWaiver")}
         </FormGroup>

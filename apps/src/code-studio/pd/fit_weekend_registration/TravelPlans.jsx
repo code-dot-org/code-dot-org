@@ -129,10 +129,6 @@ export default class TravelPlans extends LabeledFormComponent {
             this.props.data.needHotel === 'Yes' &&
             this.radioButtonsFor("needAda")
           }
-          {
-            this.props.data.needHotel === 'Yes' &&
-            this.props.data.needAda === 'Yes'
-          }
           {this.radioButtonsFor("needDisabilitySupport")}
         </FormGroup>
       </FormGroup>
