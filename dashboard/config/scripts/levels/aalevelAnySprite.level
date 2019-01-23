@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-10-25 21:12:55 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:19 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:45 +0000\",\"changed\":[\"block_pools\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:57:34 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:58:52 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 17:39:14 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:43:01 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:44:54 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:32 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:47:39 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:56:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:57:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:57:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 20:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 19:02:41 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 21:40:06 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:18 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:51 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:38:33 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 20:59:53 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 03:30:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 04:52:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:09:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:12:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:12:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:14:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 18:53:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 20:30:58 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"disable_param_editing\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 00:37:24 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 00:38:42 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:11:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:12:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:22:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:36:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:38:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:39:31 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:39:49 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:46:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 16:32:34 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-01-23 17:22:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 17:23:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:25:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:27:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:40:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:40:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:41:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:43:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:48:58 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:58:19 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-10-25 21:12:55 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:19 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-25 21:13:45 +0000\",\"changed\":[\"block_pools\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:57:34 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-26 18:58:52 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 17:39:14 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:43:01 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:44:54 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:45:32 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:47:39 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:56:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-10-29 19:57:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 19:57:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-29 20:22:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 19:02:41 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-04 21:40:06 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:18 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:35:51 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 19:38:33 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-14 20:59:53 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 03:30:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2018-12-20 04:52:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:09:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:12:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:12:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 03:14:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 18:53:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-22 20:30:58 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"disable_param_editing\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 00:37:24 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 00:38:42 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:11:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:12:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:22:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:36:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:38:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:39:31 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:39:49 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 01:46:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 16:32:34 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-01-23 17:22:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 17:23:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:25:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:27:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:40:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:40:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:41:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:43:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:48:58 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 19:58:19 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 20:03:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 20:04:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 20:18:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 20:42:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-23 20:46:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -80,36 +80,213 @@
                     </block>
                   </value>
                   <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">5</title>
-                        </block>
+                    <block type="aalab_createNewSpriteAdvanced">
+                      <title name="NAME">bear</title>
+                      <title name="COSTUME">"bear"</title>
+                      <value name="LOCATION">
+                        <block type="gamelab_randomLocation"/>
                       </value>
-                      <statement name="DO">
-                        <block type="aalab_createNewSpriteAdvanced">
-                          <title name="NAME">bear</title>
-                          <title name="COSTUME">"bear"</title>
-                          <value name="LOCATION">
-                            <block type="gamelab_randomLocation"/>
-                          </value>
-                        </block>
-                      </statement>
                       <next>
                         <block type="gamelab_showTitleScreen">
                           <value name="TITLE">
                             <block type="text">
-                              <title name="TEXT">Click the bunny.</title>
+                              <title name="TEXT">Click bear.</title>
                             </block>
                           </value>
                           <value name="SUBTITLE">
                             <block type="text">
-                              <title name="TEXT">Or click any bear.</title>
+                              <title name="TEXT">Or use arrows.</title>
                             </block>
                           </value>
                         </block>
                       </next>
                     </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whileKey">
+          <title name="KEY">"down"</title>
+          <statement name="DO">
+            <block type="aalab_changeGroupPropBy">
+              <title name="PROPERTY">"y"</title>
+              <value name="GROUP">
+                <block type="aalab_getSpritesByName">
+                  <title name="NAME">bunny</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">-10</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whileKey">
+          <title name="KEY">"up"</title>
+          <statement name="DO">
+            <block type="aalab_changeGroupPropBy">
+              <title name="PROPERTY">"y"</title>
+              <value name="GROUP">
+                <block type="aalab_getSpritesByName">
+                  <title name="NAME">bunny</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whileKey">
+          <title name="KEY">"left"</title>
+          <statement name="DO">
+            <block type="aalab_changeGroupPropBy">
+              <title name="PROPERTY">"x"</title>
+              <value name="GROUP">
+                <block type="aalab_getSpritesByName">
+                  <title name="NAME">bunny</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">-10</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whileKey">
+          <title name="KEY">"right"</title>
+          <statement name="DO">
+            <block type="aalab_changeGroupPropBy">
+              <title name="PROPERTY">"x"</title>
+              <value name="GROUP">
+                <block type="aalab_getSpritesByName">
+                  <title name="NAME">bunny</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="aalab_whenTouching">
+          <title name="CONDITION">"while"</title>
+          <value name="SPRITE1">
+            <block type="aalab_getSpritesByName">
+              <title name="NAME">bear</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="aalab_getSpritesByName">
+              <title name="NAME">bunny</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"rotation"</title>
+              <value name="SPRITE">
+                <block type="aalab_getThisSprite">
+                  <title name="CHOICE">"this"</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">-20</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">20</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_changePropBy">
+                  <title name="PROPERTY">"rotation"</title>
+                  <value name="SPRITE">
+                    <block type="aalab_getThisSprite">
+                      <title name="CHOICE">"other"</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-20</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">20</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="aalab_whenTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="aalab_getSpritesByName">
+              <title name="NAME">bunny</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="aalab_getSpritesByName">
+              <title name="NAME">carrot</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="aalab_getThisSprite">
+                  <title name="CHOICE">"other"</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="aalab_clickedOn">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE">
+            <block type="aalab_getSpritesByName">
+              <title name="NAME">bear</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_comment">
+              <title name="COMMENT"># Try changing when to while and hold mouse button down on bear.</title>
+              <next>
+                <block type="gamelab_changePropBy">
+                  <title name="PROPERTY">"scale"</title>
+                  <value name="SPRITE">
+                    <block type="aalab_getThisSprite">
+                      <title name="CHOICE">"this"</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_number">
+                      <title name="NUM">10</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_hideTitleScreen"/>
                   </next>
                 </block>
               </next>
@@ -235,51 +412,6 @@
             </block>
           </statement>
         </block>
-        <block type="gamelab_changePropBy">
-          <title name="PROPERTY">"scale"</title>
-          <value name="VAL">
-            <block type="math_number">
-              <title name="NUM">10</title>
-            </block>
-          </value>
-        </block>
-        <block type="aalab_clickedOn">
-          <title name="CONDITION">"while"</title>
-          <value name="SPRITE">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bear</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_setAnimation">
-              <title name="ANIMATION">"orange monster"</title>
-              <value name="THIS">
-                <block type="aalab_getThisSprite">
-                  <title name="CHOICE">"this"</title>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_hideTitleScreen">
-                  <next>
-                    <block type="gamelab_addBehaviorSimple">
-                      <value name="SPRITE">
-                        <block type="aalab_getThisSprite">
-                          <title name="CHOICE">"this"</title>
-                        </block>
-                      </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get">
-                          <mutation/>
-                          <title name="VAR">wandering</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -324,67 +456,6 @@
             </block>
           </statement>
         </block>
-        <block type="aalab_whenTouching">
-          <title name="CONDITION">"while"</title>
-          <value name="SPRITE1">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bear</title>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bunny</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_changePropBy">
-              <title name="PROPERTY">"rotation"</title>
-              <value name="SPRITE">
-                <block type="aalab_getThisSprite">
-                  <title name="CHOICE">"this"</title>
-                </block>
-              </value>
-              <value name="VAL">
-                <block type="math_random_int">
-                  <value name="FROM">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <value name="TO">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_changePropBy">
-                  <title name="PROPERTY">"rotation"</title>
-                  <value name="SPRITE">
-                    <block type="aalab_getThisSprite">
-                      <title name="CHOICE">"other"</title>
-                    </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">1</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">100</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -407,28 +478,6 @@
             </block>
           </statement>
         </block>
-        <block type="aalab_whenTouching">
-          <title name="CONDITION">"when"</title>
-          <value name="SPRITE1">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bunny</title>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">carrot</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_destroy">
-              <value name="THIS">
-                <block type="aalab_getThisSprite">
-                  <title name="CHOICE">"other"</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -450,41 +499,6 @@
               </value>
             </block>
           </statement>
-        </block>
-        <block type="aalab_clickedOn">
-          <title name="CONDITION">"when"</title>
-          <value name="SPRITE">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bunny</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_hideTitleScreen">
-              <next>
-                <block type="gamelab_addBehaviorSimple">
-                  <value name="SPRITE">
-                    <block type="aalab_getThisSprite">
-                      <title name="CHOICE">"this"</title>
-                    </block>
-                  </value>
-                  <value name="BEHAVIOR">
-                    <block type="gamelab_behavior_get">
-                      <mutation/>
-                      <title name="VAR">wandering</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="aalab_clickedOn">
-          <title name="CONDITION">"when"</title>
-          <value name="SPRITE">
-            <block type="aalab_getSpritesByName">
-              <title name="NAME">bear</title>
-            </block>
-          </value>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
