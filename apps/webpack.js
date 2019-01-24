@@ -41,7 +41,6 @@ var baseConfig = {
   module: {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
-      {test: /\.json$/, loader: 'json-loader'},
       {test: /\.ejs$/, loader: 'compile-ejs-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
