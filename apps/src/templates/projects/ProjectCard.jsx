@@ -158,7 +158,7 @@ export default class ProjectCard extends React.Component {
               </time>
             </div>
           )}
-          {isPersonalGallery && isDetailView && projectData.updatedAt && (
+          {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <time
