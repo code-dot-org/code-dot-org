@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Entrypoint script for running unit tests within a docker container.
-# Start the container using docker-compose with the unit-tests-compose.yml file in the project root.
-# (See comments at top of file for how to use docker-compose.)
+# Script for running unit tests within a docker container.
+# In most cases, you will not run this script directly, but instead
+# use docker-compose to run using the unit-tests-compose.yml file in this directory. See instructions in that file.
 
 set -xe
 
