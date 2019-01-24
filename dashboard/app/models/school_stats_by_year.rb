@@ -99,7 +99,7 @@ class SchoolStatsByYear < ActiveRecord::Base
   end
 
   def urm_percent
-    percent_of_students(student_am_count + student_hi_count + student_bl_count + student_hp_count)
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
   end
 
   # returns what percent "count" is of the total student enrollment

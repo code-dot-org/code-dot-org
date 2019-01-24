@@ -324,18 +324,24 @@ ko:
       Dancelab_setBackground:
         text: 배경색 {COLOR} 설정
       Dancelab_setBackgroundEffect:
-        text: 배경 효과 {EFFECT} 설정
+        text: 배경 효과 {EFFECT} {PALETTE} 설정
         options:
           EFFECT:
             '"none"': 없음
             '"circles"': 터널
+            '"color_cycle"': 색상
             '"diamonds"': 다이아몬드
             '"disco_ball"': 디스코 볼
+            '"swirl"': 최면
             '"kaleidoscope"': 만화경
             '"lasers"': 레이저 댄스 플로어
-            '"rainbow"': 색상
+            '"splatter"': 페인트 튀기기
+            '"rainbow"': 무지개
+            '"snowflakes"': 눈
             '"text"': 음악 제목
+            '"galaxy"': 우주
             '"sparkles"': 반짝이
+            '"spiral"': 나선
             '"disco"': 사각형
             '"stars"': 별
           PALETTE:
@@ -353,14 +359,19 @@ ko:
             '"none"': 없음
             '"rand"': "(임의)"
             '"circles"': 터널
+            '"color_cycle"': 색상
             '"diamonds"': 다이아몬드
             '"disco_ball"': 디스코 볼
+            '"swirl"': 최면
             '"kaleidoscope"': 만화경
             '"lasers"': 레이저 댄스 플로어
             '"splatter"': 페인트 튀기기
-            '"rainbow"': 색상
+            '"rainbow"': 무지개
+            '"snowflakes"': 눈
             '"text"': 음악 제목
+            '"galaxy"': 우주
             '"sparkles"': 반짝이
+            '"spiral"': 나선
             '"disco"': 사각형
             '"stars"': 별
           PALETTE:
@@ -406,6 +417,7 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
+            '"bubbles"': 거품
             '"confetti"': 색종이
             '"hearts_red"': 하트
             '"music_notes"': 음표
@@ -413,6 +425,7 @@ ko:
             '"smiling_poop"': 똥
             '"rain"': 비
             '"floating_rainbows"': 무지개
+            '"smile_face"': 웃는 얼굴
             '"raining_tacos"': 타코
       Dancelab_setForegroundEffectExtended:
         text: 전경 효과 {EFFECT} 설정
@@ -420,6 +433,7 @@ ko:
           EFFECT:
             '"none"': 없음
             '"rand"': "(임의)"
+            '"bubbles"': 거품
             '"confetti"': 색종이
             '"hearts_red"': 하트
             '"music_notes"': 음표
@@ -427,6 +441,7 @@ ko:
             '"smiling_poop"': 똥
             '"rain"': 비
             '"floating_rainbows"': 무지개
+            '"smile_face"': 웃는 얼굴
             '"raining_tacos"': 타코
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "

@@ -999,6 +999,10 @@ pt-BR:
               name: Problemas difíceis - o problema do vendedor ambulante
             Algorithms Detour - How Routers Learn:
               name: Como os roteadores aprendem
+            Algorithms Detour - Minimum Spanning Tree:
+              name: Algoritmos de Desvio - Árvore Geradora Mínima
+            Algorithms Detour - Shortest Path:
+              name: Algoritmos de Desvio - Caminho mais curto
             Alice and Bob and Asymmetric Keys:
               name: Chaves assimétricas - copos e feijão
             Cracking the Code:
@@ -1141,6 +1145,8 @@ pt-BR:
               name: Vídeo independente
             Curriculum Reference:
               name: Currículo de referência
+            Sprite Lab:
+              name: Laboratório de Sprite
             Dance Lab:
               name: Tapete de Dança
         algebraPD2b:
@@ -1148,6 +1154,8 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Best Practices for Teaching Computer Science:
+              name: Melhores Práticas para o Ensino de Ciência da Computação
             Booleans:
               name: Booleanos
             Course Overview:
@@ -1174,8 +1182,12 @@ pt-BR:
           stages:
             App Lab:
               name: Laboratório de Aplicativo
+            Broadcast Lesson:
+              name: Lição de Transmissão
             Internet Simulator:
               name: Simulador de internet
+            Pixelation Widget:
+              name: Componente para Pixel
             Text Compression Lesson:
               name: Aula de compressão de texto
             Text Compression Widget:
@@ -1184,6 +1196,8 @@ pt-BR:
               name: Bem-vindo!
         K5-OnlinePD:
           stages:
+            Best Practices for Teaching Computer Science:
+              name: Melhores Práticas para o Ensino de Ciência da Computação
             Computer Science Fundamentals:
               name: Fundamentos de Ciência da Computação
             Getting Started:
@@ -1220,16 +1234,28 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
               name: Bem-vindo!
             Wrap-up:
               name: Resumo
+        equityPD:
+          stages:
+            Necessary Background:
+              name: Fundo necessário
         algebraPD2:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Lesson Prep:
+              name: Preparação da lição
             Teacher Dashboard:
               name: Painel de controle do professor
+            Teaching with Puzzles:
+              name: Ensinando com Quebra-Cabeças
+            Teaching with the Design Recipe:
+              name: Ensinando com a receita de design
             The Design Recipe:
               name: A receita de design
             Welcome!:
@@ -1254,6 +1280,8 @@ pt-BR:
           stages:
             Code.org Equity PD:
               name: Code.org igualdade PD
+            Necessary Background:
+              name: Fundo necessário
         science-PD2:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1312,6 +1340,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
               name: Bem-vindo!
             Wrap-up:
@@ -1332,6 +1362,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
               name: Bem-vindo!
             Wrap-up:
@@ -1372,9 +1404,19 @@ pt-BR:
               name: Composição
             The Big Event:
               name: O grande evento
+        vigenere:
+          description: Use o Componente Cifra de Vigenère para explorar encriptação
+            e decriptação de mensagens usando uma Cifra de Vigenère.
+          description_short: Use o Componente Cifra de Vigenère para explorar encriptação
+            e decriptação de mensagens usando uma Cifra de Vigenère.
+          stages:
+            Vigenere:
+              name: Vigenère
         algebraPD3a:
           title: Ciência da computação em álgebra PD
           stages:
+            Lesson Prep:
+              name: Preparação da lição
             Updates - The Big Game and Projects:
               name: Atualizações - O grande jogo e projetos
             Updates - The Design Recipe:
@@ -1387,18 +1429,35 @@ pt-BR:
               name: Prepare-se com seus módulos
             Welcome Back!:
               name: Bem-vindo(a) de volta!
+        frequency_analysis:
+          description_short: Use o Componente Análise de Frequência para analisar
+            frequências de letras em um texto comparado com frequências esperadas.
+            Quebre Cifras de Troca e Substituição.
+          stages:
+            Frequency Analysis:
+              name: Análise de Freqüência
         ECSPD3-Unit2:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 2:
+              name: Introdução à Unidade 2
+            Lesson Overviews:
+              name: Visão geral da lição
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
               name: Unidade 2 Desafio
         ECSPD3-Unit3:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 3:
+              name: Introdução à Unidade 3
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
@@ -1407,8 +1466,12 @@ pt-BR:
               name: Unidade 3 Dia-a-Dia
         ECSPD3-Unit4:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 4:
+              name: Introdução à Unidade 4
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
@@ -1421,6 +1484,8 @@ pt-BR:
               name: Complete o Desafio
             Getting Started:
               name: Iniciando
+            Introduction to the Unit 5 Challenge:
+              name: Introdução ao desafio da Unidade 5
             Share out and Submit:
               name: Compartilhar e submeter
             Unit 5 Overview:
@@ -1465,12 +1530,26 @@ pt-BR:
               name: Encontrar tendências com visualizações
             Good and Bad Data Visualizations:
               name: Visualização de Dados Bons e Ruins
+            How is Data Collected?:
+              name: Como os dados são coletados?
             Import, Export, and Visualize Data:
               name: Importar, Exportar e Visualizar Dados
             Interpreting Data Visualizations:
               name: Interpretando Visualização de Dados
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
             Permanent Data Storage and Clicker Completion:
               name: Armazenamento permanente de dados e conclusão do Clicker
+            Privacy in a Digital World:
+              name: Privacidade em um Mundo Digital
+            Privacy vs Utility:
+              name: Privacidade x Utilidade
+            Rapid Research - Data Innovations:
+              name: Pesquisa rápida - inovações de dados
+            Reading Records:
+              name: Registros de Leitura
             Search Terms:
               name: Termos de pesquisa
             Unique IDs, Delete and Update Records:
@@ -1532,10 +1611,20 @@ pt-BR:
               name: Circuitos Básicos
             Blinky Lights:
               name: Luzes piscantes
+            Making Music:
+              name: Fazendo Música
         Special Fun:
           description_audience: 10-18 anos de idade
+          stages:
+            Halloween 2015:
+              name: Halloween 2015
         SpecialSeries:
           description_audience: 10-18 anos de idade
+          stages:
+            Spring 2016:
+              name: Primavera 2016
+            Halloween 2015:
+              name: Halloween 2015
         iceage:
           title: Laboratório da Era do Gelo
           description: Crie uma história ou faça um jogo com o Laboratório da Era
@@ -1549,12 +1638,26 @@ pt-BR:
           stages:
             Challenge Overview:
               name: Visão geral do desafio
+            Chunk 1 Overview:
+              name: Pedaço 1 Visão Geral
+            Chunk 2 Overview:
+              name: Pedaço 2
+            Chunk 3 Overview:
+              name: Pedaço 3
+            Chunk 4 Overview:
+              name: Pedaço 4
+            Chunk 5 Overview:
+              name: Pedaço 5 Visão Geral
             Complete the Challenge:
               name: Complete o Desafio
             Getting Started:
               name: Iniciando
+            Practice Performance Task:
+              name: Tarefa de desempenho prático
             Share out and Submit:
               name: Compartilhar e submeter
+            Unit 3 Overview:
+              name: Visão geral da unidade 3
         cspunit3temp:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -1581,6 +1684,22 @@ pt-BR:
               name: Processando Listas
             While Loops:
               name: Laços enquanto
+        CSP-Unit3-Support:
+          stages:
+            Chunk 1 Overview:
+              name: Pedaço 1 Visão Geral
+            Chunk 2 Overview:
+              name: Pedaço 2
+            Chunk 3 Overview:
+              name: Pedaço 3
+            Chunk 4 Overview:
+              name: Pedaço 4
+            Chunk 5 Overview:
+              name: Pedaço 5 Visão Geral
+            Practice Performance Task:
+              name: Tarefa de desempenho prático
+            Unit 3 Overview:
+              name: Visão geral da unidade 3
         gumball:
           title: Laboratório do Gumball
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
@@ -1625,6 +1744,8 @@ pt-BR:
               name: Compartilhar e submeter
         ScienceP3OLPT3:
           stages:
+            Assessing Computer Models:
+              name: Avaliando Modelos de Computador
             Welcome!:
               name: Bem-vindo!
             Wrap-Up:
@@ -1646,6 +1767,16 @@ pt-BR:
               name: Encontrar tendências com visualizações
             Good and Bad Data Visualizations:
               name: Visualização de Dados Bons e Ruins
+            Identifying People with Data:
+              name: Identificando pessoas com dados
+            Intro to Data:
+              name: Introdução aos dados
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
+            Rapid Research - Data Innovations:
+              name: Pesquisa rápida - inovações de dados
+            The Cost of Free:
+              name: O custo do livre
             What is Big Data?:
               name: O que é Big Data?
         CSPPD3-Unit4:
@@ -1656,12 +1787,32 @@ pt-BR:
               name: Complete o Desafio
             Getting Started:
               name: Iniciando
+            Practice Performance Tasks:
+              name: Praticar tarefas de desempenho
             Share out and Submit:
               name: Compartilhar e submeter
+            Unit 4 Overview:
+              name: Revisão da Unidade 4
         cspunit6draft:
           stages:
             Creating Javascript Objects:
               name: Criando objetos Javascript
+            Deleting Records:
+              name: Excluindo Registros
+            Final Project:
+              name: Projeto final
+            Importing and Exporting Data:
+              name: Importando e Exportando Dados
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
+            Reading Records:
+              name: Registros de Leitura
+            Sample Apps:
+              name: Apps de exemplo
+            Updating Records:
+              name: Atualizando Registros
+            Visualizing Data:
+              name: Visualizando dados
         CSPPD3-Unit5:
           stages:
             Challenge Overview:
@@ -1675,9 +1826,27 @@ pt-BR:
             Unit 5 Overview:
               name: Visão geral da unidade 5
         cspunit6:
+          description_short: Aprenda a coletar e usar dados em aplicativos do App
+            Lab.
           stages:
             Creating Javascript Objects:
               name: Criando objetos Javascript
+            Deleting Records:
+              name: Excluindo Registros
+            Final Project:
+              name: Projeto final
+            Importing and Exporting Data:
+              name: Importando e Exportando Dados
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
+            Reading Records:
+              name: Registros de Leitura
+            Sample Apps:
+              name: Apps de exemplo
+            Updating Records:
+              name: Atualizando Registros
+            Visualizing Data:
+              name: Visualizando dados
         AlgebraA:
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
@@ -1749,6 +1918,10 @@ pt-BR:
           stages:
             Getting Started:
               name: Iniciando
+            Planning For the Future:
+              name: Planejamento para o futuro
+            Sharing Student Work:
+              name: Compartilhando o trabalho do estudante
         csp1-2017:
           stages:
             Binary Numbers:
@@ -1791,6 +1964,8 @@ pt-BR:
               name: Criando tabelas de resumo
             Discover a Data Story:
               name: Descubra uma história de dados
+            Encode a Complex Thing:
+              name: Codifique uma Coisa Complexa
             Encoding B&W Images:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
@@ -1801,6 +1976,8 @@ pt-BR:
               name: Visualização de Dados Bons e Ruins
             Lossy Compression and File Formats:
               name: Compressão com perdas e formatos de arquivo
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
             Text Compression:
               name: Compressão de texto
             Post-Course Survey:
@@ -1837,12 +2014,20 @@ pt-BR:
               name: Pesquisa Pós-Curso
         csp4-2017:
           stages:
+            Alice and Bob and Asymmetric Keys:
+              name: Alice e Bob e chaves assimétricas
             Cracking the Code:
               name: Quebrando o Código
+            Identifying People with Data:
+              name: Identificando pessoas com dados
             Practice PT - Cybersecurity Innovations:
               name: Prática PT - Inovações de segurança cibernética
+            Rapid Research - Data Innovations:
+              name: Pesquisa rápida - inovações de dados
             Simple Encryption:
               name: Criptografia simples
+            The Cost of Free:
+              name: O custo do livre
             What is Big Data?:
               name: O que é Big Data?
             Unit 4 Chapter 1 Assessment:
@@ -1895,17 +2080,45 @@ pt-BR:
               name: Usando Variáveis em Apps
             While Loops:
               name: Laços enquanto
+            Edited lessons ABOVE this line:
+              name: Lições Editadas ACIMA DA LINHA
+            Make Your Own Multi-Screen App:
+              name: Faça seu próprio aplicativo Multi-Screen
+            Unit 3 Chapter 1 Assessment 3:
+              name: Unidade 3 Capítulo 1 Avaliação 3
             If statements:
               name: Instrução if
+            Unit 3 Assessment 3:
+              name: Unidade 3 - Avaliação 3
+            Unit 3 Assessment 4:
+              name: Unidade 3 - Avaliação 4
+            Possibly use later:
+              name: Possivelmente usar mais tarde
+            Multi-Screen Apps:
+              name: Aplicativos Multiplas Telas
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         CSDU3-Draft:
           description_short: Programação
           stages:
+            Booleans and Conditionals:
+              name: Booleanos e Condicionais
             Collision Detection:
               name: Detecção de Colisão
             Collisions:
               name: Colisões
+            Complex Conditionals:
+              name: Condicionais Complexos
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
+            Conditionals and Keyboard Input:
+              name: Condicionais e Entrada por Teclado
+            Draw Loop and Randomization:
+              name: Laço de Desenho e Randomização
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
@@ -1941,6 +2154,9 @@ pt-BR:
               name: O que esperar
         TEMP CSD Unit 3:
           description_short: Programação
+          stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
         CSF_Secret_Sample:
           description_audience: 8-18 anos de idade
         ECSPD1:
@@ -1985,6 +2201,12 @@ pt-BR:
               name: Usando modelos na sala de aula
             What to Expect:
               name: O que esperar
+        cspoptional:
+          stages:
+            Algorithms Detour - Minimum Spanning Tree:
+              name: Algoritmos de Desvio - Árvore Geradora Mínima
+            Algorithms Detour - Shortest Path:
+              name: Algoritmos de Desvio - Caminho mais curto
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -2097,22 +2319,34 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
               name: Bem-vindo!
             Wrap-up:
               name: Resumo
         ecs-unit2:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 2:
+              name: Introdução à Unidade 2
+            Lesson Overviews:
+              name: Visão geral da lição
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
               name: Unidade 2 Desafio
         ecs-unit3:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 3:
+              name: Introdução à Unidade 3
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
@@ -2121,8 +2355,12 @@ pt-BR:
               name: Unidade 3 Dia-a-Dia
         ecs-unit4:
           stages:
+            Close & Next Steps:
+              name: Fechar e próximos passos
             Getting Started:
               name: Iniciando
+            Intro to Unit 4:
+              name: Introdução à Unidade 4
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
@@ -2135,6 +2373,8 @@ pt-BR:
               name: Complete o Desafio
             Getting Started:
               name: Iniciando
+            Introduction to the Unit 5 Challenge:
+              name: Introdução ao desafio da Unidade 5
             Share out and Submit:
               name: Compartilhar e submeter
             Unit 5 Overview:
@@ -2143,6 +2383,8 @@ pt-BR:
               name: Lições da unidade 5
             Unit 5 Challenge:
               name: Unidade 5 Desafio
+            Close & Next Steps:
+              name: Fechar e próximos passos
         ecs-unit6:
           stages:
             Alternative Ideas for Unit 6:
@@ -2157,6 +2399,8 @@ pt-BR:
               name: Visão geral da unidade 6
             Unit 6 lessons:
               name: Lições da unidade 6
+            Close & Next Steps:
+              name: Fechar e próximos passos
         grade3:
           stages:
             " Bee: Conditionals":
@@ -2172,12 +2416,26 @@ pt-BR:
         csd3-2017:
           description_short: Programação
           stages:
+            Booleans and Conditionals:
+              name: Booleanos e Condicionais
+            Complex Conditionals:
+              name: Condicionais Complexos
+            Conditionals and Keyboard Input:
+              name: Condicionais e Entrada por Teclado
+            Draw Loop and Randomization:
+              name: Laço de Desenho e Randomização
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
             Variables and Animation:
               name: Variáveis e Animação
             Velocity:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
@@ -2223,8 +2481,14 @@ pt-BR:
         algebrapdnext:
           description: Ensine álgebra com programação funcional
           stages:
+            Lesson Prep:
+              name: Preparação da lição
             Teacher Dashboard:
               name: Painel de controle do professor
+            Teaching with Puzzles:
+              name: Ensinando com Quebra-Cabeças
+            Teaching with the Design Recipe:
+              name: Ensinando com a receita de design
             The Design Recipe:
               name: A receita de design
             Welcome!:
@@ -2245,6 +2509,8 @@ pt-BR:
           stages:
             Unit 2 Overview:
               name: Visão geral da unidade 2
+            Unit 3 Overview:
+              name: Visão geral da unidade 3
             Unit 5 Overview:
               name: Visão geral da unidade 5
         basketball:
@@ -2452,6 +2718,16 @@ pt-BR:
               name: Bem-vindo(a) de volta!
             Prep With Your Modules:
               name: Prepare-se com seus módulos
+        csp3-support:
+          stages:
+            Unit 3 Overview:
+              name: Visão geral da unidade 3
+        csp4-support:
+          stages:
+            Unit 3 Overview:
+              name: Visão geral da unidade 3
+            Unit 4 Overview:
+              name: Revisão da Unidade 4
         sciencepd4:
           stages:
             Welcome!:
@@ -2493,9 +2769,27 @@ pt-BR:
             Unit 5 Overview:
               name: Visão geral da unidade 5
         csppostap-2017:
+          description_short: Aprenda a coletar e usar dados em aplicativos do App
+            Lab.
           stages:
             Creating Javascript Objects:
               name: Criando objetos Javascript
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
+            Reading Records:
+              name: Registros de Leitura
+            Deleting Records:
+              name: Excluindo Registros
+            Updating Records:
+              name: Atualizando Registros
+            Importing and Exporting Data:
+              name: Importando e Exportando Dados
+            Visualizing Data:
+              name: Visualizando dados
+            Sample Apps:
+              name: Apps de exemplo
+            Final Project:
+              name: Projeto final
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csd6-draft:
@@ -2506,6 +2800,8 @@ pt-BR:
               name: Listas
             For Loops:
               name: Laços para
+            Making Music:
+              name: Fazendo Música
             Functions with Parameters:
               name: Funções com Parâmetros
         workshop-gamelab:
@@ -2516,6 +2812,8 @@ pt-BR:
               name: Sprite
             Input:
               name: Entrada
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
         coursed-ramp:
           stages:
             Introduction:
@@ -2534,34 +2832,62 @@ pt-BR:
               name: Listas
             For Loops:
               name: Laços para
+            Making Music:
+              name: Fazendo Música
             Functions with Parameters:
               name: Funções com Parâmetros
+            Making Music_:
+              name: Fazendo Música
             Functions with Parameters_:
               name: Funções com Parâmetros
         csd3-draft:
           stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
             Variables:
               name: variáveis
             Sprites:
               name: Sprite
+            Booleans and Conditionals:
+              name: Booleanos e Condicionais
             Conditionals:
               name: Condições
+            Complex Conditionals:
+              name: Condicionais Complexos
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
             Velocity:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
               name: funções
         csd3-old:
           stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+            Draw Loop and Randomization:
+              name: Laço de Desenho e Randomização
             Variables and Animation:
               name: Variáveis e Animação
+            Booleans and Conditionals:
+              name: Booleanos e Condicionais
+            Conditionals and Keyboard Input:
+              name: Condicionais e Entrada por Teclado
+            Complex Conditionals:
+              name: Condicionais Complexos
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
             Velocity:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
@@ -2580,16 +2906,24 @@ pt-BR:
               name: Processando
         csd3-chapters:
           stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
             Variables:
               name: variáveis
             Sprites:
               name: Sprite
+            Booleans and Conditionals:
+              name: Booleanos e Condicionais
             Conditionals:
               name: Condições
+            'Project: Interactive Card':
+              name: 'Projeto: Cartão Interativo'
             Velocity:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
@@ -2602,6 +2936,10 @@ pt-BR:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+        fmscsd3preview:
+          stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
         csd2-old:
           stages:
             Peer Review:
@@ -3036,6 +3374,8 @@ pt-BR:
               name: Laços para
         csd3-1819draft:
           stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
             Variables:
               name: variáveis
             Sprites:
@@ -3046,6 +3386,8 @@ pt-BR:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
@@ -3054,6 +3396,8 @@ pt-BR:
         csd3-2018:
           description_short: Programação
           stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
             Variables:
               name: variáveis
             Sprites:
@@ -3064,6 +3408,8 @@ pt-BR:
               name: Velocidade
             Collision Detection:
               name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
             Collisions:
               name: Colisões
             Functions:
@@ -3325,6 +3671,8 @@ pt-BR:
               name: Pulseiras binárias
         csd6-2018:
           stages:
+            Making Music:
+              name: Fazendo Música
             Functions with Parameters:
               name: Funções com Parâmetros
         coursee-2018:
@@ -3429,6 +3777,8 @@ pt-BR:
               name: Verifique suas suposições
             Good and Bad Data Visualizations:
               name: Visualização de Dados Bons e Ruins
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
             Discover a Data Story:
               name: Descubra uma história de dados
             Cleaning Data:
@@ -3467,6 +3817,12 @@ pt-BR:
           stages:
             What is Big Data?:
               name: O que é Big Data?
+            Rapid Research - Data Innovations:
+              name: Pesquisa rápida - inovações de dados
+            Identifying People with Data:
+              name: Identificando pessoas com dados
+            The Cost of Free:
+              name: O custo do livre
             Simple Encryption:
               name: Criptografia simples
             Unit 4 Chapter 1 Assessment:
@@ -3496,15 +3852,35 @@ pt-BR:
             'Practice PT: Create':
               name: Tarefa para prática - Crie
         csppostap-2018:
+          description_short: Aprenda a coletar e usar dados em aplicativos do App
+            Lab.
           stages:
             Creating Javascript Objects:
               name: Criando objetos Javascript
+            Permanent Data Storage:
+              name: Armazenamento permanente de dados
+            Reading Records:
+              name: Registros de Leitura
+            Deleting Records:
+              name: Excluindo Registros
+            Updating Records:
+              name: Atualizando Registros
+            Importing and Exporting Data:
+              name: Importando e Exportando Dados
+            Visualizing Data:
+              name: Visualizando dados
+            Sample Apps:
+              name: Apps de exemplo
+            Final Project:
+              name: Projeto final
             Finding Trends with Visualizations:
               name: Encontrar tendências com visualizações
             Check Your Assumptions:
               name: Verifique suas suposições
             Good and Bad Data Visualizations:
               name: Visualização de Dados Bons e Ruins
+            Making Data Visualizations:
+              name: Desenvolvendo Visualização de Dados
             Discover a Data Story:
               name: Descubra uma história de dados
             Cleaning Data:
