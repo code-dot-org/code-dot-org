@@ -4,7 +4,7 @@
 - limited_gallery = local_assigns[:limited_gallery]
 - projects_data = {}
 - projects_data[:limitedGallery] = limited_gallery
-- projects_data[:projectCount] = round_project_count_to_million[fetch_metrics['project_count']]
+- projects_data[:projectCount] = fetch_rounded_project_count_to_million
 
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)

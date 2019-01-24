@@ -65,10 +65,10 @@ def fetch_metrics
   }
 end
 
+# Fetches project count from metrics and
 # Puts project count into format of XX million for display
-def round_project_count_to_million(project_count)
-  project_count = (project_count / 1_000_000).floor
-  return project_count
+def fetch_rounded_project_count_to_million
+  (fetch_metrics['project_count'] / 1_000_000).floor
 end
 
 def fetch_hoc_metrics
