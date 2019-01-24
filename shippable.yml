@@ -10,6 +10,10 @@ build:
     image_name: wintercdo/code-dot-org
     image_tag: 0.7
     pull: true
+  cache: true
+  cache_dir_list:
+    - /home/circleci/.rbenv
+    - $SHIPPABLE_BUILD_DIR/apps/node_modules
   ci:
     - echo $SHIPPABLE_BUILD_DIR
     - pwd
