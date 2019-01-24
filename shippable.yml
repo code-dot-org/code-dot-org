@@ -11,6 +11,7 @@ build:
     image_name: wintercdo/code-dot-org
     image_tag: 0.7
     pull: true
-    env: FOO=bar
   ci:
-    - /entrypoint.sh docker/unit_tests.sh
+    - echo $SHIPPABLE_BUILD_DIR
+    - pwd
+    #- /entrypoint.sh docker/unit_tests.sh
