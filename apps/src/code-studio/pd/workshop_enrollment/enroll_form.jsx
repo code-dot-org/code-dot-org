@@ -9,12 +9,14 @@ import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
+import {WorkshopPropType} from './enrollmentConstants';
 
 const OTHER = "Other";
 const NOT_TEACHING = "I'm not teaching this year";
 const EXPLAIN = "(Please Explain):";
 
 const CSF = "CS Fundamentals";
+const DEEP_DIVE = "Deep Dive";
 
 const VALIDATION_STATE_ERROR = "error";
 
@@ -51,13 +53,31 @@ const GRADES_TEACHING = [
   "Grade 9-12"
 ];
 
+const CSF_COURSES = [
+  "Course A",
+  "Course B",
+  "Course C",
+  "Course D",
+  "Course E",
+  "Course F",
+  "Express",
+  "Other"
+];
+
+const ATTENDED_CSF_COURSES = [
+  "Yes, I attended a CS Fundamentals Intro workshop this academic year.",
+  "Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.",
+  "Nope, I have never attended a CS Fundamentals workshop."
+];
+
 export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
     first_name: PropTypes.string,
     email: PropTypes.string,
-    onSubmissionComplete: PropTypes.func
+    onSubmissionComplete: PropTypes.func,
+    workshop: WorkshopPropType
   };
 
   constructor(props) {
@@ -93,6 +113,11 @@ export default class EnrollForm extends React.Component {
   handleTeachingOtherChange = (input) => {
     this.setState({explain_teaching_other: input});
   };
+
+  handleCourseOtherChange = (input) => {
+    this.setState({explain_course_other: input});
+  };
+
 
   handleClickRegister = () => {
     if (this.validateRequiredFields()) {
@@ -218,6 +243,15 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
+
+    const csfCourses = CSF_COURSES.concat([
+      {
+        answerText: `${OTHER} ${EXPLAIN}`,
+        inputValue: this.state.explain_course_other,
+        onInputChange: this.handleCourseOtherChange
+      }
+    ]);
+
     return (
       <form id="enroll-form">
         <p>
@@ -308,6 +342,34 @@ export default class EnrollForm extends React.Component {
               type="check"
             />
           </FormGroup>
+        }
+        {this.props.workshop.course === CSF && this.props.workshop.subject === DEEP_DIVE && <FormGroup>
+          <ButtonList
+            id="courses_teaching_more"
+            key="courses_teaching_more"
+            answers={csfCourses}
+            groupName="courses_teaching_more"
+            label="Which CS Fundamentals course(s), if any, do you plan to use more of in the next 12 months? Check all that apply."
+            onChange={this.handleChange}
+            selectedItems={this.state.courses_teaching_more}
+            validationState={this.state.errors.hasOwnProperty("courses_teaching_more") ? VALIDATION_STATE_ERROR : null}
+            errorText={this.state.errors.courses_teaching_more}
+            type="check"
+          />
+          <ButtonList
+            id="attended_csf_intro_workshop"
+            key="attended_csf_intro_workshop"
+            answers={ATTENDED_CSF_COURSES}
+            groupName="attended_csf_intro_workshop"
+            label="Have you attended a CS Fundamentals Intro Workshop before?"
+            onChange={this.handleChange}
+            selectedItems={this.state.attended_csf_intro_workshop}
+            validationState={this.state.errors.hasOwnProperty("attended_csf_intro_workshop") ? VALIDATION_STATE_ERROR : null}
+            errorText={this.state.errors.attended_csf_intro_workshop}
+            type="radio"
+            required={true}
+          />
+        </FormGroup>
         }
         <p>
           Code.org works closely with local Regional Partners and Code.org facilitators
