@@ -24,7 +24,7 @@ Tens of thousands of schools have made commitments to add computer science to th
 The options above are almost entirely free, courtesy of Code.org. There are also great [options offered by other organizations](https://code.org/educate/3rdparty). 
 
 **Are you interested in teaching computer science?**  
-Teachers don't need a technical background to get started. Code.org offers hands-on [workshops](https://code.org/educate/professional-learning) across the country that can help existing teachers learn CS and how to teach it. The majority of teachers who attend rank it the “best professional development ever”.
+Teachers don't need a technical background to get started. Code.org offers hands-on [workshops](https://code.org/educate/professional-learning) across the country that can help existing teachers learn CS and how to teach it. The majority of teachers who attend rank it the “best professional development ever”. There are scholarships available for teachers in many areas to attend these high quality workshops at no cost. 
 
 **Put our school on the map**  
 Whether we are expanding our existing computer science offering, or starting a brand new program, we should participate in the growing movement to add computer science to the school day. [Please put our school on the map](https://code.org/yourschool).
