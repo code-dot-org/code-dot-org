@@ -29,6 +29,12 @@ Run all docker-compose commands from this directory.
 
 2. Setup your locals.yml file as normal, minus the fields for Google OAuth.
 
+3. Add these lines to your .bashrc or .bash_profile to set the FIXUID and FIXGID env variables automatically:
+    ```
+    export FIXUID=$(id -u)
+    export FIXGID=$(id -g)
+    ```
+
 ## Usage
 
 Run the server:

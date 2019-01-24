@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# script is for local iteration on running the circle tests inside a docker container outside of circle.
-# Start a docker container with a mounted volume with something like:
-# docker run -it -v $(pwd)/docker_mount:/home/circleci/docker_mount wjordan/code-dot-org:0.5 bash
-# Get the code-dot-org repo into the container, either by cloning, or via the mounted directory.
-# Copy this script into the root of the code-dot-org directory, cd into that directory, check out a feature branch, and run this script.
+# Script for running unit tests within a docker container.
+# In most cases, you will not run this script directly, but instead
+# use docker-compose to run using the ui-tests-compose.yml file in this directory. See instructions in that file.
 
 set -xe
 
