@@ -10568,8 +10568,8 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: ''
-        pre-express-2018-2019:
-          title: Pre-reader Express (2018)
+        pre-express-2019:
+          title: Pre-reader Express (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
