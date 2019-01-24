@@ -52,6 +52,7 @@ class ScreenProperties extends React.Component {
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
+          elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
         <DefaultScreenButtonPropertyRow
