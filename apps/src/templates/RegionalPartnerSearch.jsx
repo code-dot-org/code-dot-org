@@ -237,33 +237,35 @@ class RegionalPartnerSearch extends Component {
               <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
             )}
 
-            {partnerInfo.cost_scholarship_information && (
-              <div>
-                <h3>Cost and scholarship information:</h3>
-                <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
-              </div>
-            )}
+            <div className="professional_learning_information" id={`id-${partnerInfo.id}`}>
+              {partnerInfo.cost_scholarship_information && (
+                <div>
+                  <h3>Cost and scholarship information:</h3>
+                  <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
+                </div>
+              )}
 
-            {partnerInfo.additional_program_information && (
-              <div>
-                <h3>Additional program information:</h3>
-                <UnsafeRenderedMarkdown markdown={partnerInfo.additional_program_information}/>
-              </div>
-            )}
+              {partnerInfo.additional_program_information && (
+                <div>
+                  <h3>Additional program information:</h3>
+                  <UnsafeRenderedMarkdown markdown={partnerInfo.additional_program_information}/>
+                </div>
+              )}
+            </div>
 
             {appState === WorkshopApplicationStates.now_closed && (
               <div>Applications are now closed.</div>
             )}
 
             {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
-              <a href={studio("/pd/application/teacher")}>
+              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
                 <button>Start application</button>
               </a>
             )}
 
             {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
-              <a href={partnerInfo.link_to_partner_application} target="_blank">
-                <button>Apply on partner’s site</button>
+              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={partnerInfo.link_to_partner_application} target="_blank">
+                <button>Apply on partner's site</button>
               </a>
             )}
 
