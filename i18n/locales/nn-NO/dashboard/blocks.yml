@@ -319,7 +319,7 @@ nn:
       Dancelab_setBackground:
         text: vel bakgrunnsfarge {COLOR}
       Dancelab_setBackgroundEffect:
-        text: vel bakgrunnseffekt {EFFECT}
+        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ingen
@@ -330,7 +330,7 @@ nn:
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserdansegulv
-            '"splatter"': Bobler
+            '"splatter"': Rosa splætt
             '"rainbow"': Regnboge
             '"snowflakes"': Snø
             '"text"': Sangtittel
@@ -346,7 +346,7 @@ nn:
             '"vintage"': Retro
             '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
-        text: vel bakgrunnseffekt {EFFECT}
+        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ingen
@@ -358,7 +358,7 @@ nn:
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserdansegulv
-            '"splatter"': Bobler
+            '"splatter"': Rosa splætt
             '"rainbow"': Regnboge
             '"snowflakes"': Snø
             '"text"': Sangtittel
@@ -417,6 +417,7 @@ nn:
             '"smiling_poop"': Bæsj
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
@@ -433,6 +434,7 @@ nn:
             '"smiling_poop"': Bæsj
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
             '"spotlight"': Spotlight
             '"raining_tacos"': Taco
       Dancelab_setProp:

@@ -17,7 +17,7 @@ style_min: true
 
 # Why should you take the AP CS Principles Exam?
 
-You're more prepared than you think. In 2017, 73% of students passed the AP CS Principles Exam.
+You're more prepared than you think. Over 70% of students pass the AP CS Principles Exam.
 
 [/col-50]
 
@@ -63,7 +63,7 @@ Passing an AP Exam can help you **complete your college's general education requ
 
 ## Worried you won't pass?
 
-That's fine! **You don't need to report your test scores** to the colleges you apply to. And, even just preparing for and taking the exam will help you build the skills you'll need throughout college.
+That's fine! **You don't need to report your test scores** to the colleges you apply to. Research shows that <a href="https://files.eric.ed.gov/fulltext/ED519365.pdf", target=_"blank">students who take an AP exam are more likely to graduate college</a>, even if they don't pass!
 
 ## Be a part of history
 

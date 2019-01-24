@@ -81,7 +81,7 @@
   "pathAhead": "chemin devant",
   "pathLeft": "si chemin à gauche",
   "pathRight": "si chemin à droite",
-  "pick": "choisis",
+  "pick": "récolte",
   "pilePresent": "Il y a une pile",
   "plant": "plante",
   "plantInNonSoilError": "Je peux seulement planter quelque chose dans un sol vide.",

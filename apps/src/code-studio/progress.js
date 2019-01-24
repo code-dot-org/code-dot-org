@@ -150,6 +150,7 @@ progress.renderCourseProgress = function (scriptData) {
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={scriptData.versions}
+        courseName={scriptData.course_name}
       />
     </Provider>,
     mountPoint
