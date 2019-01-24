@@ -408,7 +408,7 @@ module Pd::Application
     end
 
     def application_url
-      CDO.studio_url("/pd/application_dashboard/#{course}_facilitators/#{id}")
+      CDO.studio_url("/pd/application_dashboard/#{course}_facilitators/#{id}", CDO.default_scheme)
     end
 
     # override
