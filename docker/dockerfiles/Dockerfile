@@ -45,22 +45,6 @@ RUN apt-get update && \
 		  libreadline-dev \
 		  python python-dev
 
-# install ruby
-# RUN wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz && \
-#     tar -xzvf ruby-2.5.0.tar.gz && \
-#     rm ruby-2.5.0.tar.gz && \
-#     cd ruby-2.5.0 && \
-#     ./configure && \
-#     make -j"$(nproc)" && \
-#     make install && \
-#     cd .. && \
-#     rm -r ruby-2.5.0
-
-# install bundler
-# RUN gem install bundler && \
-#     mkdir -p /usr/local/bundle && \
-#     chown -R circleci /usr/local/bundle
-
 # install node
 RUN wget https://nodejs.org/dist/v8.4.0/node-v8.4.0.tar.gz && \
     tar -xzvf node-v8.4.0.tar.gz && \
@@ -125,7 +109,6 @@ RUN mv /usr/bin/gnu_parallel /usr/bin/parallel
 RUN apt-get install -y rbenv
 
 # install https://github.com/boxboat/fixuid
-
 RUN USER=circleci && \
     GROUP=circleci && \
     curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.4-linux-amd64.tar.gz | tar -C /usr/local/bin -xzf - && \
