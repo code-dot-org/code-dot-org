@@ -27,6 +27,7 @@ bundle install --verbose
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
+set +x
 echo "
 netsim_redis_groups:
 - master: redis://ui-tests-redis:6379
@@ -53,6 +54,8 @@ dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
 " >> locals.yml
+echo "Wrote secrets from env vars into locals.yml."
+set -x
 
 # name: rake install
 RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"

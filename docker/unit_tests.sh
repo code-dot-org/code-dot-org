@@ -20,6 +20,7 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 bundle install --verbose
 
 # set up locals.yml
+set +x
 echo "
 bundler_use_sudo: false
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
@@ -39,6 +40,8 @@ dashboard_enable_pegasus: true
 dashboard_workers: 5
 skip_seed_all: true
 " >> locals.yml
+echo "Wrote secrets from env vars into locals.yml."
+set -x
 
 # name: rake install
 RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
