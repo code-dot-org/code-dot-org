@@ -467,7 +467,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if student is assigned to script' do
-    script = create :script, name: 'my-script'
+    script = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
     student.expects(:assigned_script?).returns(true)
 
