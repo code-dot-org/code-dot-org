@@ -1478,6 +1478,7 @@ FactoryGirl.define do
       liability_waiver "Yes"
       live_far_away "Yes"
       need_hotel "No"
+      need_disability_support "No"
       photo_release "Yes"
     end
 
