@@ -242,17 +242,16 @@ module Pd::Application
 
     # Override in derived class to provide headers
     # @param course [String] course name used to choose fields, since they differ between courses
-    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Override in derived class to provide the relevant csv data
-    # @param user [User] requesting user - used to handle field visibility differences
+    # @param course [String] course name used to choose fields, since they differ between courses
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
-    def to_csv_row(user)
+    def to_csv_row(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
