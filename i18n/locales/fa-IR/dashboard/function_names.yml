@@ -2,7 +2,18 @@ fa:
   data:
     function_names:
       x: طول (x)
+      details: جزئیات
+      draw eyebrow: کشیدن ابرو
       draw a circle: یک دایره بکشید
+      draw a car: یک ماشین بکش
+      jump to middle: به وسط بپر
+      draw a button: یک دکمه بکش
+      draw left leg: پای چپ را بکش
+      draw right leg: پای راست را بکش
+      draw body and arms: بدن و دست ها را بکش
+      draw a head: یک سر را بکش
+      draw head: سر را بکش
+      draw arms: دست ها را بکش
       draw a hexagon: یک شش ضلعی بکش
       draw a flower: یک گل نقاشی بکن
       draw a square: یک مربع بکشید

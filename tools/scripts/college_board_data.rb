@@ -125,7 +125,7 @@ SPECS = [
     }
   },
   {
-    years: [2017],
+    years: [2017, 2018],
     tests: {
       csa: {
         All: %w(K12 K26 K33 K40 K75),
@@ -201,7 +201,7 @@ def get_url(year, state)
     return "http://media.collegeboard.com/digitalServices/misc/ap/#{state}-summary-#{year}.xlsx"
   end
 
-  if [2016, 2017].include? year
+  if [2016, 2017, 2018].include? year
     state = 'District of Columbia' if state == 'DC'
     state.tr!(' ', '-')
     state.downcase!
@@ -375,7 +375,7 @@ def main
   if download == 'Y'
     if period == 'ALL'
       get_xlss
-    elsif (2007..2017).cover? period.to_i
+    elsif (2007..2018).cover? period.to_i
       get_xlss(period.to_i)
     else
       puts 'NOTHING DOWNLOADED'

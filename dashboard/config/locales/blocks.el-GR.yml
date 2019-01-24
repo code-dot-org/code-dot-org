@@ -309,18 +309,24 @@ el:
       Dancelab_setBackground:
         text: ορισμός χρώματος φόντου {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ορισμός εφέ φόντου {EFFECT}
+        text: ορισμός εφέ φόντου {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Κανένα
             '"circles"': Σήραγγα
+            '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
             '"disco_ball"': Ντισκομπάλα
+            '"swirl"': Ύπνωση
             '"kaleidoscope"': Καλειδοσκόπιο
             '"lasers"': Πίστα χορού λέιζερ
-            '"rainbow"': Χρώματα
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"rainbow"': Ουράνιο τόξο
+            '"snowflakes"': Χιόνι
             '"text"': Τίτλος τραγουδιού
+            '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
             '"stars"': Αστέρια
           PALETTE:
@@ -338,14 +344,19 @@ el:
             '"none"': Κανένα
             '"rand"': "(Τυχαίο)"
             '"circles"': Σήραγγα
+            '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
             '"disco_ball"': Ντισκομπάλα
+            '"swirl"': Ύπνωση
             '"kaleidoscope"': Καλειδοσκόπιο
             '"lasers"': Πίστα χορού λέιζερ
             '"splatter"': Πιτσιλιές χρωμάτων
-            '"rainbow"': Χρώματα
+            '"rainbow"': Ουράνιο τόξο
+            '"snowflakes"': Χιόνι
             '"text"': Τίτλος τραγουδιού
+            '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
             '"stars"': Αστέρια
           PALETTE:
@@ -391,6 +402,7 @@ el:
         options:
           EFFECT:
             '"none"': Κανένα
+            '"bubbles"': Μπουρμπουλήθρες
             '"confetti"': Κομφετί
             '"hearts_red"': Καρδιές
             '"music_notes"': Νότες μουσικής
@@ -398,6 +410,7 @@ el:
             '"smiling_poop"': Κακάκια
             '"rain"': Βροχή
             '"floating_rainbows"': Ουράνιο τόξο
+            '"smile_face"': Χαμογελαστή φατσούλα
             '"raining_tacos"': Τάκο
       Dancelab_setForegroundEffectExtended:
         text: ορισμός εφέ προσκηνίου {EFFECT}
@@ -405,6 +418,7 @@ el:
           EFFECT:
             '"none"': Κανένα
             '"rand"': "(Τυχαίο)"
+            '"bubbles"': Μπουρμπουλήθρες
             '"confetti"': Κομφετί
             '"hearts_red"': Καρδιές
             '"music_notes"': Νότες μουσικής
@@ -412,6 +426,7 @@ el:
             '"smiling_poop"': Κακάκια
             '"rain"': Βροχή
             '"floating_rainbows"': Ουράνιο τόξο
+            '"smile_face"': Χαμογελαστή φατσούλα
             '"raining_tacos"': Τάκο
       Dancelab_setProp:
         text: 'ορισμός {SPRITE} {PROPERTY} σε {VAL} '

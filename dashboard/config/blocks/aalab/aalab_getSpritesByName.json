@@ -1,0 +1,20 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getSpritesByName",
+    "blockText": "any sprite named {NAME}",
+    "returnType": "Sprite",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "NAME",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}
