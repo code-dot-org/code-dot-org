@@ -257,7 +257,7 @@ class Course < ApplicationRecord
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
-      versions: summarize_versions
+      versions: summarize_versions(user)
     }
   end
 
@@ -276,11 +276,11 @@ class Course < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
     Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title, can_view_version: c.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
@@ -368,15 +368,19 @@ class Course < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user)
-    return nil unless user
-    # Restrictions only apply to students.
+  def can_view_version?(user = nil)
+    latest_course_version = Course.latest_version(family_name)
+    is_latest = latest_course_version == self
+
+    # All users can see the latest course version.
+    return true if is_latest
+
+    # Restrictions only apply to students and logged out users.
+    return false if user.nil?
     return true unless user.student?
 
-    # A student can view the course version if...
-    # it is the latest, they are assigned to it, or they have progress in it.
-    latest_course_version = Course.latest_version(family_name)
-    latest_course_version == self || user.section_courses.include?(self) || has_progress?(user)
+    # A student can view the course version if they are assigned to it or they have progress in it.
+    user.section_courses.include?(self) || has_progress?(user)
   end
 
   # @param family_name [String] The family name for a course family.
