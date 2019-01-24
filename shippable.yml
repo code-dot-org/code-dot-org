@@ -13,7 +13,6 @@ build:
     image_tag: 0.7
     pull: true
     env: FOO=bar
-    options: "-e HOME=/root"
+    options: "--entrypoint /entrypoint.sh"
   ci:
     - docker/unit_tests.sh
-  
