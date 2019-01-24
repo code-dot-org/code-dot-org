@@ -67,7 +67,7 @@ $(document).ready(function () {
       <Router basename={baseUrl}>
         <Route
           path="/"
-          component={props => <TeacherDashboard {...props} studioUrlPrefix=""/>}
+          component={props => <TeacherDashboard {...props} studioUrlPrefix={scriptData.studioUrlPrefix}/>}
         />
       </Router>
     </Provider>,
