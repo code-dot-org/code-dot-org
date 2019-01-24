@@ -24,6 +24,7 @@ class Pd::FitWeekendRegistrationBaseTest < ActiveSupport::TestCase
       "Form data liveFarAway",
       "Form data howTraveling",
       "Form data needHotel",
+      "Form data needDisabilitySupport",
       "Form data photoRelease",
       "Form data liabilityWaiver",
       "Form data agreeShareContact",
