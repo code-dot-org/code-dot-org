@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190111004745) do
+ActiveRecord::Schema.define(version: 20190124225754) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1632,13 +1632,15 @@ ActiveRecord::Schema.define(version: 20190111004745) do
 
   create_table "workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.string   "program_type",              null: false
-    t.string   "location",     limit: 1000
-    t.string   "instructions", limit: 1000
+    t.string   "program_type",                null: false
+    t.string   "location",       limit: 1000
+    t.string   "instructions",   limit: 1000
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "phase"
+    t.integer  "pd_workshop_id"
     t.index ["name"], name: "index_workshops_on_name", using: :btree
+    t.index ["pd_workshop_id"], name: "index_workshops_on_pd_workshop_id", using: :btree
     t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
 
@@ -1684,4 +1686,5 @@ ActiveRecord::Schema.define(version: 20190111004745) do
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
+  add_foreign_key "workshops", "pd_workshops"
 end
