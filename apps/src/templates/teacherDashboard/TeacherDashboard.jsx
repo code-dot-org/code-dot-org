@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 
@@ -23,7 +24,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/progress"
-            component={props => <div>Progress content goes here!</div>}
+            component={props => <SectionProgress/>}
           />
           <Route
             path="/manage_students"
