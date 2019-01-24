@@ -14,6 +14,7 @@ import teacherSections, {setSections, selectSection} from '@cdo/apps/templates/t
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import sectionAssessments, {asyncLoadAssessments} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection, {loadValidScripts} from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -24,7 +25,7 @@ const section = scriptData.section;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
-  registerReducers({teacherSections, sectionData, manageStudents, sectionProgress, scriptSelection, stats, textResponses});
+  registerReducers({teacherSections, sectionData, manageStudents, sectionProgress, scriptSelection, stats, textResponses, sectionAssessments});
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
@@ -58,6 +59,7 @@ $(document).ready(function () {
     store.dispatch(loadValidScripts(section, validScripts));
     const scriptId = store.getState().scriptSelection.scriptId;
     store.dispatch(asyncLoadTextResponses(section.id, scriptId));
+    store.dispatch(asyncLoadAssessments(section.id, scriptId));
   });
 
   ReactDOM.render(
