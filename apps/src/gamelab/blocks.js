@@ -32,7 +32,7 @@ const limitedColours = [
   // some "tertiary" colors
   '#ff8800', // ORANGE
   '#8800ff', // PURPLE
-  '#0088ff', // LIGHT BLUE
+  '#00ff88', // LIME
 ];
 
 const customInputTypes = {
