@@ -13,6 +13,8 @@ import manageStudents, {
 import teacherSections, {setSections, selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, {loadValidScripts} from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -21,7 +23,7 @@ const section = scriptData.section;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
-  registerReducers({teacherSections, sectionData, manageStudents, stats});
+  registerReducers({teacherSections, sectionData, manageStudents, sectionProgress, scriptSelection, stats});
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
@@ -45,6 +47,14 @@ $(document).ready(function () {
    }).done(studentData => {
     const convertedStudentData = convertStudentServerData(studentData, section.login_type, section.id);
     store.dispatch(setStudents(convertedStudentData));
+  });
+
+  $.ajax({
+    method: 'GET',
+    url: '/dashboardapi/sections/valid_scripts',
+    dataType: 'json'
+  }).done(validScripts => {
+    store.dispatch(loadValidScripts(section, validScripts));
   });
 
   ReactDOM.render(
