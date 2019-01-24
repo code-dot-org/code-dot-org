@@ -143,7 +143,7 @@ export default class EligibilityChecklist extends React.Component {
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
             >
-              <UnsafeRenderedMarkdown markdown={eligibilityReqPDFail('faketeacheremailTODO@example.com')}/>
+              <UnsafeRenderedMarkdown markdown={eligibilityReqPDFail}/>
             </ValidationStep>
             <ValidationStep
               stepName={i18n.eligibilityReqStudentCount()}
@@ -218,9 +218,9 @@ If you believe the data that we have on your school is inaccurate, please email 
 lunch data from your school.
 `;
 
-const eligibilityReqPDFail = (teacherEmail) => `
-We did not find the email address associated with this account (\`${teacherEmail}\`) under the list of
-people who meet this requirement.
+const eligibilityReqPDFail = `
+We did not find the email address associated with this account under the list of people who meet
+this requirement.
 If you think this is incorrect, please email us at [teacher@code.org](mailto:teacher@code.org).
 `;
 

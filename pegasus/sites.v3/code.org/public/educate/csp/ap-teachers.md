@@ -11,11 +11,11 @@ style_min: true
 
 <img src="/images/csp-hof-2.png" width="100%"/>
 
-Did you know that girls and students of color are less likely to take the AP exam? Even if they are enrolled in the course, many of these students won’t get credit for their work at the college level because they don’t take the exam. Female students account for only 27% of all students taking AP Computer Science exams and underrepresented minorities make up just 20%. 
+AP CS Principles is all about changing the face of computer science. With an explicit emphasis on broadening participation by girls and students of color, the course has done just that with <a href="https://reports.collegeboard.org/ap-program-results/ap-computer-science-expansion", target=_"blank">record setting growth</a> since its lauch in 2017!
 
-Teachers and parents are key to motivating students to try the exam. Join the 350+ teachers at schools in our [AP CS Principles Hall of Fame](/educate/csp/hall-of-fame) who have helped lead record-breaking change in computer science by encouraging girls and underrepresented minorities in their classrooms.
+But did you know that girls and students of color are less likely to take the AP exam? Even if they are enrolled in the course, many of these students won’t get credit for their work at the college level because they don’t take the exam. Female students account for only 27% of all students taking AP Computer Science exams and underrepresented minorities make up just 20%. 
 
-Taking the exam can save your students money in college credits, help in applications, and, even if they don't pass, preparing for and taking the exam may even help to set students up for success in higher education. [Students who take the AP Exam are more likely to graduate from college](https://files.eric.ed.gov/fulltext/ED519365.pdf) than their counterparts who don’t — whether or not they pass.
+**That's where YOU come in.** Teachers and parents are key to motivating students to try the exam. Join the 350+ teachers at schools in our [AP CS Principles Hall of Fame](/educate/csp/hall-of-fame) who have helped lead record-breaking change in computer science by encouraging girls and underrepresented minorities in their classrooms.
 
 # So, how can you get your students to sign up?
 
@@ -35,23 +35,24 @@ Consider trying one of these techniques from our Hall of Fame teachers to encour
 
 <div style="clear: both;"></div>
 
-## 2. Send home this flyer 
+## 2. Send individual emails or encourage students in your class 1:1 to take the exam 
+
+This can be especially valuable with the girls or underrepresented minorities in your class. They are less likely to be given personal encouragement by teachers and parents, and your support can really boost their confidence. 
+
+## 3. Send home this flyer 
 
 Or tell your students to <a href="https://code.org/educate/csp/ap-students", target=_"blank">check out this website</a>.
 
 <a href="https://code.org/files/ap-student-flyer.pdf", target=_"blank"><img src="/images/ap-student-flyer.png" width="25%"/></a>
 
-## 3. Give students extra credit for taking the exam
-
-Recognize their hard work by offering a few bonus points. They'll thank you for it!
-
 ## 4. Encourage students to spread the word
 
 Have some of your students already signed up? Encourage them to tell other students in the class that they are taking the exam and inspire their friends (on social media or in the class).
 
-## 5. Send individual emails or encourage students in your class 1:1 to take the exam 
+## 5. Give them the facts
 
-This can be especially valuable with the girls or underrepresented minorities in your class. They are less likely to be given personal encouragement by teachers and parents, and your support can really boost their confidence. 
+Taking the exam can save your students money in college credits, help in applications, and <a href="https://files.eric.ed.gov/fulltext/ED519365.pdf", target=_"blank">students who take the AP Exam are more likely to graduate from college</a> than their counterparts who don’t — whether or not they pass.
+
 
 # Do your students need help paying for the exam?
 
