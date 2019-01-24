@@ -15,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Elements in Arrays\r\n\r\nSo far you’ve just been using the elements of arrays. Now, you're going to change what these elements are.\r\n\r\nIn the code below there's an array called `notes`, which is filled with notes the buzzer can play. Every time the left button is pressed, the buzzer plays one of these notes randomly. However, all of the notes in the `notes` array are the same.\r\n\r\n# Do this\r\n\r\n* Change the elements of `notes` so that each one is a different note.",
+    "long_instructions": "# Changing Elements in Arrays\r\n\r\nSo far you’ve just been using the elements of arrays. Now, you're going to change what these elements are.\r\n\r\nIn the code below there's an array called `notes`, which is filled with notes the buzzer can play. Every time the left button is pressed, the buzzer plays one of these notes randomly. However, all of the notes in the `notes` array are the same.\r\n\r\n# Do this\r\n\r\n* Change the elements of `notes` so that each one is a different note.",
     "instructions_important": "false",
     "start_blocks": "var notes = [\"C#4\", \"C#4\", \"C#4\"];\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  var i = randomNumber(0, 2);\r\n  buzzer.note(notes[i], 100);\r\n});\r\n",
     "is_k1": "false",

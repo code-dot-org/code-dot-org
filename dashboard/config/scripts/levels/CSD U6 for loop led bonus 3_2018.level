@@ -112,7 +112,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Challenge: Music\r\n\r\nUse what you learned in the Making Music lesson to make the board play music when the lights change.\r\n\r\n# Do This\r\n\r\nCreate some arrays of notes for different songs and add code to your event handlers to play your music.",
+    "long_instructions": "# Challenge: Music\r\n\r\nUse what you learned in the Making Music lesson to make the board play music when the lights change.\r\n\r\n# Do This\r\n\r\nCreate some arrays of notes for different songs and add code to your event handlers to play your music.",
     "project_template_level_name": "CSD U6 for loop led template_2018",
     "palette_category_at_start": "functions",
     "display_name": "Challenge: Music",

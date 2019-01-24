@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png\" style=\"height:150px;\">\r\n</div>\r\n\r\n**Goal:** Make the text bigger and blue \r\n\r\n**How:**  Give `\"label1\"` a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>",
+    "long_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png\" style=\"height:150px;\">\r\n</div>\r\n\r\n**Goal:** Make the text bigger and blue \r\n\r\n**How:**  Give `\"label1\"` a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

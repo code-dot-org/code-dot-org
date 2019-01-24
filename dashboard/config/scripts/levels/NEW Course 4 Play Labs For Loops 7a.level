@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,16,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Using what you learned so far, can you have Dinosaur take a step forward every time Penguin counts?",
+    "short_instructions": "Using what you learned so far, can you have Dinosaur take a step forward every time Penguin counts?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

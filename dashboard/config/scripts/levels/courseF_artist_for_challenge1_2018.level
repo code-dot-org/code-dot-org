@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you figure out how to re-create this drawing?",
+    "short_instructions": "Can you figure out how to re-create this drawing?",
     "x": "175",
     "y": "175",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you figure out how to re-create this drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>",
+    "long_instructions": "Can you figure out how to re-create this drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

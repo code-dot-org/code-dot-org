@@ -32,7 +32,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Add a right arrow to the screen for switching the next image. In the next level you'll make it work.\r\n\r\n**How:** Use Design Mode to drag in an `\"image\"` element. The icon library has many different arrows to choose from. \r\n\r\n**Show Me:** ![expandable](https://images.code.org/066245e52135c038502620a19f961667-image-1507570682956.gif)",
+    "long_instructions": "**Goal:** Add a right arrow to the screen for switching the next image. In the next level you'll make it work.\r\n\r\n**How:** Use Design Mode to drag in an `\"image\"` element. The icon library has many different arrows to choose from. \r\n\r\n**Show Me:** ![expandable](https://images.code.org/066245e52135c038502620a19f961667-image-1507570682956.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

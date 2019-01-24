@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "We can also set variables by using other variables. Let's say you have a brother who is two years younger than you - can you set a new variable \"brother-age\" using your \"age\" variable?",
+    "short_instructions": "We can also set variables by using other variables. Let's say you have a brother who is two years younger than you - can you set a new variable \"brother-age\" using your \"age\" variable?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

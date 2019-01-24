@@ -20,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Design Mode is Back!\r\n\r\nNow that you have Design Mode back, you can add some elements of your own. The motorcycle should be able to move up and down right now, but what about left and right?\r\n\r\n# Do This\r\n\r\nAdd two more buttons in design move for left and right, then program those buttons to move the motorcycle when clicked.",
+    "long_instructions": "# Design Mode is Back!\r\n\r\nNow that you have Design Mode back, you can add some elements of your own. The motorcycle should be able to move up and down right now, but what about left and right?\r\n\r\n# Do This\r\n\r\nAdd two more buttons in design move for left and right, then program those buttons to move the motorcycle when clicked.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

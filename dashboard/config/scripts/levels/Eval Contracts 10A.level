@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Alright let's complete this puzzle with a Green Square that is 175 pixels in size.",
+    "short_instructions": "Alright let's complete this puzzle with a Green Square that is 175 pixels in size.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

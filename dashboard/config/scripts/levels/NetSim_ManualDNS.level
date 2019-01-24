@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
+    "short_instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",

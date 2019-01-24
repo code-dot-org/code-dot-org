@@ -12,7 +12,7 @@
     "goal": "{}",
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
-    "instructions": "Next, try changing the scene by attaching another block to the \"when run\" block.",
+    "short_instructions": "Next, try changing the scene by attaching another block to the \"when run\" block.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

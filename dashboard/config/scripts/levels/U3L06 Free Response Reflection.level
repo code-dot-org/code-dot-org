@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Free Response Reflection",
-    "markdown_instructions": "Respond to your teacher's prompt in the space below.\n",
+    "long_instructions": "Respond to your teacher's prompt in the space below.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

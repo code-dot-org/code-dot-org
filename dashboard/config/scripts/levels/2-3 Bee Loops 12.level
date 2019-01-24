@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use while loops to collect all of the nectar from the flowers in this field.",
+    "short_instructions": "Use while loops to collect all of the nectar from the flowers in this field.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

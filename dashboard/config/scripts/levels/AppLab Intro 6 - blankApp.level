@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** This is a completely blank App Lab App. Build whatever you want from scratch!?\r\n\r\n**How:** You're in control here. You decide what you want to make!",
+    "long_instructions": "**Goal:** This is a completely blank App Lab App. Build whatever you want from scratch!?\r\n\r\n**How:** You're in control here. You decide what you want to make!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
