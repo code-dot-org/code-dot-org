@@ -414,6 +414,17 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.redirect_to_script_url(student)
   end
 
+  test 'returns nil if latest assigned script is an older version than the current script' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    section = create :section, script: csp1_2017
+    section.students << student
+
+    assert_nil csp1_2018.redirect_to_script_url(student)
+  end
+
   test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
@@ -446,20 +457,21 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.can_view_version?(teacher)
   end
 
-  test 'can_view_version? is true if script is latest stable version in student locale' do
-    script = create :script, name: 'my-script'
-    Script.stubs(:latest_stable_version).returns(script)
+  test 'can_view_version? is true if script is latest stable version in student locale or in English' do
+    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
+    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
     student = create :student
 
-    script.can_view_version?(student)
+    assert latest_in_english.can_view_version?(student, locale: 'it-it')
+    assert latest_in_locale.can_view_version?(student, locale: 'it-it')
   end
 
   test 'can_view_version? is true if student is assigned to script' do
-    script = create :script, name: 'my-script'
+    script = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
     student.expects(:assigned_script?).returns(true)
 
-    script.can_view_version?(student)
+    assert script.can_view_version?(student)
   end
 
   test 'can_view_version? is true if student has progress in script' do
@@ -467,7 +479,7 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     student.scripts << script
 
-    script.can_view_version?(student)
+    assert script.can_view_version?(student)
   end
 
   test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
