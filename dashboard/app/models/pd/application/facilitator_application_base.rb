@@ -407,6 +407,10 @@ module Pd::Application
       self.auto_assigned_fit_enrollment_id = nil
     end
 
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_facilitators/#{id}")
+    end
+
     # override
     def enroll_user
       super

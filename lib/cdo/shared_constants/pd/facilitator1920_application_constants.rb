@@ -243,7 +243,7 @@ module Pd
       fit_workshop_date_and_location: 'Assigned FiT Workshop',
       friendly_registered_fit_workshop: 'Registered FiT Workshop?',
       regional_partner_name: 'Regional Partner',
-      application_link: 'Link to Application',
+      application_url: 'Link to Application',
       institution_type: 'What type of institution do you work for?',
       current_employer: 'Current employer',
       job_title:  'What is your job title?',
