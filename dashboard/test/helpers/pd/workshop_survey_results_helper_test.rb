@@ -794,7 +794,126 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       facilitators: @workshop.facilitators.map {|f| [f.id, f.name]}.to_h
     }
 
-    generate_facilitator_averages(existing_summary)
+    facilitator_summaries = {
+      @workshop.facilitators.first.id => {
+        'Day 1' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 10,
+              'Quite a bit' => 9,
+              'Some' => 8,
+              'A little bit' => 7,
+              'Almost nothing' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 5,
+                'Often' => 4,
+                'Sometimes' => 3
+              },
+              'Facilitator Person 2' => {
+                'Sometimes' => 10,
+                'Once in a while' => 9,
+                'Almost never' => 8
+              }
+            }
+          }
+        },
+        'Day 2' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 5,
+              'Quite a bit' => 6,
+              'Some' => 9,
+              'A little bit' => 2,
+              'Almost nothing' => 3
+            },
+            'iFeel133' => {
+              'Fantastic' => 10,
+              'Pretty good' => 5,
+              'So-so' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 10,
+                'Often' => 6,
+                'Sometimes' => 5
+              },
+              'Facilitator Person 2' => {
+                'Often' => 1,
+                'Sometimes' => 10,
+                'Once in a while' => 20,
+                'Almost never' => 15
+              }
+            }
+          }
+        }
+      },
+      @workshop.facilitators.second.id => {
+        'Day 1' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 10,
+              'Quite a bit' => 9,
+              'Some' => 8,
+              'A little bit' => 7,
+              'Almost nothing' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 5,
+                'Often' => 4,
+                'Sometimes' => 3
+              },
+              'Facilitator Person 2' => {
+                'Sometimes' => 10,
+                'Once in a while' => 9,
+                'Almost never' => 8
+              }
+            }
+          }
+        },
+        'Day 2' => {
+          general: {
+            'overallHow' => {
+              'A tremendous amount' => 5,
+              'Quite a bit' => 6,
+              'Some' => 9,
+              'A little bit' => 2,
+              'Almost nothing' => 3
+            },
+            'iFeel133' => {
+              'Fantastic' => 10,
+              'Pretty good' => 5,
+              'So-so' => 1
+            }
+          },
+          facilitator: {
+            'howOften56' => {
+              'Facilitator Person 1' => {
+                'All the time' => 10,
+                'Often' => 6,
+                'Sometimes' => 5
+              },
+              'Facilitator Person 2' => {
+                'Often' => 1,
+                'Sometimes' => 10,
+                'Once in a while' => 20,
+                'Almost never' => 15
+              }
+            }
+          }
+        }
+      }
+    }
+
+    generate_facilitator_averages(existing_summary, facilitator_summaries)
 
     assert_equal(
       {

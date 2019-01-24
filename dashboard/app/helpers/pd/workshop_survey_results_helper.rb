@@ -208,6 +208,11 @@ module Pd::WorkshopSurveyResultsHelper
 
     summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops
 
+    facilitator_summaries = {}
+    workshop.facilitators.each do |facilitator|
+      facilitator_summaries[facilitator.id] = generate_workshops_survey_summary(related_workshops.facilitated_by(facilitator), question)
+    end
+
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
     if should_only_show_current_user?
@@ -216,7 +221,7 @@ module Pd::WorkshopSurveyResultsHelper
 
     # The facilitator averages get generated entirely from data in the summary for each
     # facilitator (or just the logged in user)
-    generate_facilitator_averages(summary)
+    generate_facilitator_averages(summary, facilitator_summaries)
 
     # We also need counts for how many responses each facilitator got. Its easier to
     # recompute this than infer from the summary
@@ -384,7 +389,7 @@ module Pd::WorkshopSurveyResultsHelper
 
   # Take the existing survey summary and generate averages for each question as well as
   # the three averages for each category of question
-  def generate_facilitator_averages(summary)
+  def generate_facilitator_averages(summary, facilitator_summaries)
     facilitators = summary[:facilitators].values
 
     # The workshop summary has questions broken down by general vs. facilitator and by each
@@ -412,7 +417,9 @@ module Pd::WorkshopSurveyResultsHelper
 
       next if question.nil?
 
-      facilitators.each do |facilitator|
+      summary[:facilitators].each do |facilitator_id, facilitator|
+        flattened_all_my_workshop_histograms = reduce_summary(facilitator_summaries[facilitator_id].values.flat_map(&:values).select {|x| x.is_a? Hash})
+
         # For each facilitator, get the histogram that applies to them. If its facilitator
         # specific, we need to go one level deeper in the hash to get the question
         # histogram. Do the same thing for both this_workshop and all_my_workshops.
@@ -513,7 +520,7 @@ module Pd::WorkshopSurveyResultsHelper
   def find_related_workshops(workshop)
     workshops =
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-        Pd::Workshop.where(id: workshop.id)
+        Pd::Workshop.left_outer_joins(:facilitators).where(users: {id: workshop.facilitators.map(&:id)}).distinct.where(course: workshop.course)
       elsif current_user.permission?(UserPermission::PROGRAM_MANAGER)
         Pd::Workshop.where(regional_partner: current_user.regional_partners, course: workshop.course)
       elsif current_user.permission?(UserPermission::WORKSHOP_ORGANIZER)
