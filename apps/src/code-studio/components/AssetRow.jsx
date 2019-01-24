@@ -19,8 +19,9 @@ export default class AssetRow extends React.Component {
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
 
-    //temporary prop to differentiate choosing images and sounds
-    imagePicker: PropTypes.bool
+    // For logging purposes
+    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
+    elementId: PropTypes.string
   };
 
   state = {
@@ -39,7 +40,12 @@ export default class AssetRow extends React.Component {
         study_group: this.props.onChoose && typeof this.props.onChoose === 'function' ? 'choose-assets' : 'manage-assets',
         event: 'initiate',
         project_id: this.props.projectId,
-        data_string: this.props.name
+        data_json: JSON.stringify(
+          {
+            assetName: this.props.name,
+            elementId: this.props.elementId
+          }
+        )
       }
     );
   };
