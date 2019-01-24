@@ -151,11 +151,11 @@ module Pd::Application
     # Filter out extraneous answers based on selected program (course)
     def self.columns_to_remove(course)
       if course == 'csf'
-        [] # list of keys
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csd', 'csp')}
       elsif course == 'csd'
-        []
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csf', 'csp')}
       else
-        []
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csf', 'csd_training')}
       end
     end
 
