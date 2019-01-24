@@ -151,18 +151,17 @@ module Pd::Application
     test 'to_csv_row method' do
       @application.update!(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
-      csv_row = @application.to_csv_row(nil)
+      csv_row = @application.to_csv_row(@application.course)
       csv_answers = csv_row.split(',')
-      assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-13]
-      assert_equal 'false', csv_answers[-14]
-      assert_equal 'accepted', csv_answers[-15]
+      assert_equal @regional_partner.name, csv_answers[36]
+      assert_equal 'notes', csv_answers[15]
+      assert_equal 'accepted', csv_answers[2]
     end
 
     test 'csv_header and row return same number of columns' do
       mock_user = mock
 
-      header = Facilitator1920Application.csv_header('csp', mock_user)
+      header = Facilitator1920Application.csv_header('csp')
       row = @application.to_csv_row(mock_user)
       assert_equal CSV.parse(header).length, CSV.parse(row).length,
         "Expected header and row to have the same number of columns"

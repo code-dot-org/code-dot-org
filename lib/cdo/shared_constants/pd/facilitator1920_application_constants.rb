@@ -302,7 +302,7 @@ module Pd
       ),
       why_interested: 'Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the impact you hope to make.',
       anything_else: 'Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
-      how_heard: PAGE_LABELS[:section_1_about_you][:how_heard],
+      how_heard: 'How did you hear about this opportunity?',
       question_1: "Interview #{INTERVIEW_QUESTIONS[:question_1]}",
       question_2: "Interview #{INTERVIEW_QUESTIONS[:question_2]}",
       question_3: "Interview #{INTERVIEW_QUESTIONS[:question_3]}",
