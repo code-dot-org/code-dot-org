@@ -4,6 +4,7 @@ import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 
 export default class TeacherDashboard extends Component {
@@ -37,7 +38,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/text_responses"
-            component={props => <div>Text responses content goes here!</div>}
+            component={props => <TextResponses/>}
           />
           <Route
             path="/assessments"
