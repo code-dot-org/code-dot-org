@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Let's set up this game so the Dog can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the enemy (the Cat) vanish. If the score is ever less than 0, make the player (the Dog) vanish. Click \"Finish\" when the game works like you'd like it to.",
+    "short_instructions": "Let's set up this game so the Dog can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the enemy (the Cat) vanish. If the score is ever less than 0, make the player (the Dog) vanish. Click \"Finish\" when the game works like you'd like it to.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

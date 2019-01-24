@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator, you can view the decimal representations of the binary you are sending.",
+    "short_instructions": "In this version of the simulator, you can view the decimal representations of the binary you are sending.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",

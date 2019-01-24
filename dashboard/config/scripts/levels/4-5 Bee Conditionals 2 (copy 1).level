@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee only wants nectar right now. Remember, not all objects are flowers, so check to gather nectar only at flowers.",
+    "short_instructions": "The bee only wants nectar right now. Remember, not all objects are flowers, so check to gather nectar only at flowers.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

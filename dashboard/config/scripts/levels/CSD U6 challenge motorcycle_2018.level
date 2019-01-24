@@ -20,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge\r\n\r\nUse this program to experiment some more with getting and setting properties. Some ideas you might try include:\r\n\r\n* Use the toggle switch to change the motorcycle's movement to go up and down.\r\n* Use a dropdown with color names to change the motorcycle's color\r\n* Make the buzzer or LED turn on when the motorcycle reaches the top or bottom of the screen.\r\n",
+    "long_instructions": "# Challenge\r\n\r\nUse this program to experiment some more with getting and setting properties. Some ideas you might try include:\r\n\r\n* Use the toggle switch to change the motorcycle's movement to go up and down.\r\n* Use a dropdown with color names to change the motorcycle's color\r\n* Make the buzzer or LED turn on when the motorcycle reaches the top or bottom of the screen.\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

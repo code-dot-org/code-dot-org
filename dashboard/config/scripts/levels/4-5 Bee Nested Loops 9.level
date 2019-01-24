@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Collect all of the nectar from these flowers by nesting a while loop inside a repeat.",
+    "short_instructions": "Collect all of the nectar from these flowers by nesting a while loop inside a repeat.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

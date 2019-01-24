@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "This function is fine, but it isn't used properly.",
+    "short_instructions": "This function is fine, but it isn't used properly.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

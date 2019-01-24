@@ -183,7 +183,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Color\r\n\r\nIf you look back at the example for this app, you should notice that not only do the emojis change when you click a button, but their color changes as well.\r\n\r\n# Do This\r\n\r\nIn each of the event handlers, set the \"icon-color\" property of \"face\". Pick a warm color for happy and a cool color for sad.",
+    "long_instructions": "# Changing Color\r\n\r\nIf you look back at the example for this app, you should notice that not only do the emojis change when you click a button, but their color changes as well.\r\n\r\n# Do This\r\n\r\nIn each of the event handlers, set the \"icon-color\" property of \"face\". Pick a warm color for happy and a cool color for sad.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

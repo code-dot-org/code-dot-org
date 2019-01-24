@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "That looked pretty cool, but now I'd like to draw each shape next to the last one. This time each side is 20 pixels. Use a jump block to jump forward 40 pixels after each shape. ",
+    "short_instructions": "That looked pretty cool, but now I'd like to draw each shape next to the last one. This time each side is 20 pixels. Use a jump block to jump forward 40 pixels after each shape. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "That looked pretty cool, but now I'd like to draw each shape next to the last one. This time each side is 20 pixels. Use a jump block to jump forward 40 pixels after each shape.",
+    "long_instructions": "That looked pretty cool, but now I'd like to draw each shape next to the last one. This time each side is 20 pixels. Use a jump block to jump forward 40 pixels after each shape.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

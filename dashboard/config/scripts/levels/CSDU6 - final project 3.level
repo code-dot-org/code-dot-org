@@ -108,7 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
-    "markdown_instructions": "# Board Input Events\r\n\r\nNow you can add the events which will take input from the board. Again, feel free to just use `console.log()` statements at this point to ensure that your events are working.",
+    "long_instructions": "# Board Input Events\r\n\r\nNow you can add the events which will take input from the board. Again, feel free to just use `console.log()` statements at this point to ensure that your events are working.",
     "contained_level_names": null
   },
   "published": true,

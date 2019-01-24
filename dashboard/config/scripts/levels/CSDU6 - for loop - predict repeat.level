@@ -86,7 +86,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Condition Practice\r\n\r\nChange the condition of the for loop so that the word message prints 6 times.",
+    "long_instructions": "# For Loop - Condition Practice\r\n\r\nChange the condition of the for loop so that the word message prints 6 times.",
     "start_blocks": "for (var i = 0; i < 0; i++) {\r\n  console.log(\"message\");\r\n}",
     "disable_if_else_editing": "false",
     "contained_level_names": [

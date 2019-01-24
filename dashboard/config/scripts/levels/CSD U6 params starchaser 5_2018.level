@@ -185,7 +185,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nNow you can add extra stars, and your functions will work with them, too.\r\n\r\n# Do This\r\n* In design mode, copy one of the stars, and change its name and color to \"yellow\".\r\n* Add a new element, \"yellow\", to your star array.\r\n* Test the game with your new star.",
+    "long_instructions": "# Star Chaser\r\n\r\nNow you can add extra stars, and your functions will work with them, too.\r\n\r\n# Do This\r\n* In design mode, copy one of the stars, and change its name and color to \"yellow\".\r\n* Add a new element, \"yellow\", to your star array.\r\n* Test the game with your new star.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
