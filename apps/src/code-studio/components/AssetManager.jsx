@@ -143,6 +143,16 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
+    firehoseClient.putRecord(
+      {
+        study: 'delete-asset',
+        study_group: this.props.assetChosen && typeof this.props.assetChosen === 'function' ? 'choose-assets' : 'manage-assets',
+        event: 'confirm',
+        project_id: this.props.projectId,
+        data_string: name
+      }
+    );
+
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + name + '" successfully deleted!'
@@ -223,6 +233,7 @@ export default class AssetManager extends React.Component {
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
             soundPlayer={this.props.soundPlayer}
             imagePicker={this.props.imagePicker}
+            projectId={this.props.projectId}
           />
         );
       }.bind(this));
