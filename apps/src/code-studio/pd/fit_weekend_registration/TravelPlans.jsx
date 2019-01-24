@@ -17,7 +17,7 @@ export default class TravelPlans extends LabeledFormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
-    dietaryNeedsDetails: "Please provide details about your food allergy.",
+    dietaryNeedsDetails: "Please provide details about your dietary needs.",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
