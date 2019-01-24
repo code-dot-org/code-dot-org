@@ -481,6 +481,10 @@ module Pd::Application
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
     end
 
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}", CDO.default_scheme)
+    end
+
     def principal_email
       sanitize_form_data_hash[:principal_email]
     end
