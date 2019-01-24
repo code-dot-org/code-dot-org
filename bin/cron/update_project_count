@@ -31,7 +31,7 @@ def main
     command = ARGV[0]
     stdout, stderr, status = Open3.capture3(command)
     exitstatus = status.exitstatus
-    Honeybadger.notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
+    Honeybadger.notify_command_error "cronjob #{command} - storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}", exitstatus, stdout, stderr
   end
 
   # save value for use
