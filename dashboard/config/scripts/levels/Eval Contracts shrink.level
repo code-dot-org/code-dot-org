@@ -14,7 +14,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "Can you complete this image using the \"shrink\" function block? The radius is 20. "
+    "short_instructions": "Can you complete this image using the \"shrink\" function block? The radius is 20. "
   }
 }]]></config>
   <blocks>

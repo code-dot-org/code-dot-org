@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Replace the `???` in the `length` parameter input block. The pentagon has 100 pixel sides. ",
+    "short_instructions": "Replace the `???` in the `length` parameter input block. The pentagon has 100 pixel sides. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,7 +22,7 @@
     "disable_sharing": "false",
     "ideal": "10",
     "slider_speed": ".5",
-    "markdown_instructions": "Replace the `???` in the `length` parameter input block. \r\n\r\nThe pentagon has 100 pixel sides.",
+    "long_instructions": "Replace the `???` in the `length` parameter input block. \r\n\r\nThe pentagon has 100 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

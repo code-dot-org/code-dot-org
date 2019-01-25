@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "markdown_instructions": "Why are you doing this class?  Give at least two reasons.",
+    "long_instructions": "Why are you doing this class?  Give at least two reasons.",
     "skip_dialog": true,
     "skip_sound": true
   },

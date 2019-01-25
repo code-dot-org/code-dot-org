@@ -145,7 +145,7 @@
       "PS fr prediction q1"
     ],
     "embed": "false",
-    "instructions": "Here are some instructions. ",
+    "short_instructions": "Here are some instructions. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

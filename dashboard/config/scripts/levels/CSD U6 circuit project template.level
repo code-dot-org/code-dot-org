@@ -123,7 +123,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Prototyping Circuit Project Template",
+    "long_instructions": "# Prototyping Circuit Project Template",
     "text_mode_at_start": "true",
     "contained_level_names": null
   },

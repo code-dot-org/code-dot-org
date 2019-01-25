@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Buzzer Duration\r\n\r\nAs you've noticed, `buzzer.frequency()` has two parameters: frequency and duration. Both of these take a number as input.\r\n\r\n* Frequency changes how the buzzer sounds. The bigger the number you give it, the higher the buzzer's sound will be.\r\n\r\n* Duration determines how long the buzzer is going to play a sound for in milliseconds.\r\n\r\nFor right now we're going to focus on duration, the second parameter.\r\n\r\n\r\n# Do this\r\nTry out a few things with duration:\r\n\r\n* Change the duration of the buzzer to something longer than 100.\r\n* Try setting the duration to 0, what happens?\r\n\r\nRun the program multiple times to see what happens before you move on.",
+    "long_instructions": "# Buzzer Duration\r\n\r\nAs you've noticed, `buzzer.frequency()` has two parameters: frequency and duration. Both of these take a number as input.\r\n\r\n* Frequency changes how the buzzer sounds. The bigger the number you give it, the higher the buzzer's sound will be.\r\n\r\n* Duration determines how long the buzzer is going to play a sound for in milliseconds.\r\n\r\nFor right now we're going to focus on duration, the second parameter.\r\n\r\n\r\n# Do this\r\nTry out a few things with duration:\r\n\r\n* Change the duration of the buzzer to something longer than 100.\r\n* Try setting the duration to 0, what happens?\r\n\r\nRun the program multiple times to see what happens before you move on.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

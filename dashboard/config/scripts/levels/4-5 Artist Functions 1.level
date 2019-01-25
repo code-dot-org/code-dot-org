@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Use a repeat loop to draw this triangle.",
+    "short_instructions": "Use a repeat loop to draw this triangle.",
     "x": "175",
     "y": "200",
     "start_direction": "90",

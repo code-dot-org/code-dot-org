@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Here's all of your code to choose a card - try adding some other fun features!",
+    "short_instructions": "Here's all of your code to choose a card - try adding some other fun features!",
     "contained_level_names": null
   },
   "published": true,
