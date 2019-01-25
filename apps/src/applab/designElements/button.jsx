@@ -103,6 +103,7 @@ class ButtonProperties extends React.Component {
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')}
+          elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
         <BooleanPropertyRow

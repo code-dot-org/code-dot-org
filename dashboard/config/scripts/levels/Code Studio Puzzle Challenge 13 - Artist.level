@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "This is just like a \"for\" loop. Complete the code to draw six lines that grow from 50, 60, 70, 80, 90, to 100 pixels long. ",
+    "short_instructions": "This is just like a \"for\" loop. Complete the code to draw six lines that grow from 50, 60, 70, 80, 90, to 100 pixels long. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

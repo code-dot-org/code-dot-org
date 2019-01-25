@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "While Loops and Counting: Wrap Up",
-    "markdown_instructions": "***Describe another game that depends upon random numbers.*** List three statistics that might be interesting to collect from 10,000 plays of that game?\n",
+    "long_instructions": "***Describe another game that depends upon random numbers.*** List three statistics that might be interesting to collect from 10,000 plays of that game?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both.",
+    "short_instructions": " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

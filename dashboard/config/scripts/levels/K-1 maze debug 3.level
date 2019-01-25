@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,2,1,1,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Something is not quite right. REMOVE blocks to get me to the pig!",
+    "short_instructions": "Something is not quite right. REMOVE blocks to get me to the pig!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",

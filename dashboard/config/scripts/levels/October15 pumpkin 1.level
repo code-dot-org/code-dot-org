@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish this jack-o-lantern by drawing the eyes and nose in any style you would like.",
+    "short_instructions": "Finish this jack-o-lantern by drawing the eyes and nose in any style you would like.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Finish this jack-o-lantern by drawing the eyes and nose in any style you would like.\r\n\r\n",
+    "long_instructions": "Finish this jack-o-lantern by drawing the eyes and nose in any style you would like.\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false"
   }

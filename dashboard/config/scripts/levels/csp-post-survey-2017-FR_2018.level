@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "Final thoughts about the course or your experience.",
+    "long_instructions": "Final thoughts about the course or your experience.",
     "instructions_important": "false",
     "placeholder": "Write whatever you like here.  Your responses will be anonymous.",
     "allow_user_uploads": "false",
