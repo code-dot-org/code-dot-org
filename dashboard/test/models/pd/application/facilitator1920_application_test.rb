@@ -267,7 +267,6 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      skip "update when 1920 fit registration is implemented"
       included = [
         create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
         create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Conditional Basics Question 8",
-    "markdown_instructions": "What is the result of a Boolean expression?\n\n\n",
+    "long_instructions": "What is the result of a Boolean expression?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

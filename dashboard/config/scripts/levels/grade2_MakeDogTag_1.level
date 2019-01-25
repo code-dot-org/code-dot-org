@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
+    "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "x": "150",
     "y": "150",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "*\"Let's make a cage for my pet monster!\"*\r\n\r\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \r\n(Each line is 100 pixels long)",
+    "long_instructions": "*\"Let's make a cage for my pet monster!\"*\r\n\r\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \r\n(Each line is 100 pixels long)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

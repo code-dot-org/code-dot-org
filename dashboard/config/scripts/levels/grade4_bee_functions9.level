@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Create a function that collects all of the nectar from each flower.",
+    "short_instructions": "Create a function that collects all of the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -34,7 +34,7 @@
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions_important": "false",
-    "markdown_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
+    "long_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will only need to collect nectar... but this time, you will need to use a `while` loop instead of a `repeat` loop.\",\"hint_id\":\"grade4_bee_functions9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a38d48e752cd24dfcdf51af36e524eef/grade4_bee_functions9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `while nectar > 0` to make sure you get all of the nectar.\",\"hint_id\":\"grade4_bee_functions9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e199cb5c1b9142108ca0b252e6c569dd/grade4_bee_functions9.mp3\"}]",
     "contained_level_names": null
   },

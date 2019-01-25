@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,2,0],[0,3,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "\"Get me to the pig as quickly as possible!\"",
+    "short_instructions": "\"Get me to the pig as quickly as possible!\"",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The best solution uses two `move forward` commands and one loop.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e886950bed94d7a223ff52008f8bd18/grade2_puppy_loops5.mp3\"}]",
-    "markdown_instructions": "*\"Get me to the pig as quickly as possible!\"*",
+    "long_instructions": "*\"Get me to the pig as quickly as possible!\"*",
     "contained_level_names": null
   },
   "published": true,

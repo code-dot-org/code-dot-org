@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "What can you loop 4 times to draw these stairs?",
+    "short_instructions": "What can you loop 4 times to draw these stairs?",
     "x": "300",
     "y": "100",
     "start_direction": "270",
