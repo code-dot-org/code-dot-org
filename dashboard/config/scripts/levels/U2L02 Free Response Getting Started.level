@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "The Need for Addressing: Getting Started",
-    "markdown_instructions": "Have you ever played the game of Battleship? \n\nWhat rules did you follow? \n\nDid you have a strategy for winning?\n",
+    "long_instructions": "Have you ever played the game of Battleship? \n\nWhat rules did you follow? \n\nDid you have a strategy for winning?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

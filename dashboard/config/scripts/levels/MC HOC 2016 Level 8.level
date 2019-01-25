@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "The path to your sheep is blocked by a stone wall. Luckily there is a Creeper here. Creepers explode after you touch them. Get the Creeper to explode the wall so you can reach your sheep!",
+    "short_instructions": "The path to your sheep is blocked by a stone wall. Luckily there is a Creeper here. Creepers explode after you touch them. Get the Creeper to explode the wall so you can reach your sheep!",
     "level_verification_timeout": "40000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "use_player": "true",

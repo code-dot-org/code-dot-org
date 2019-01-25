@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Jorge wants to be scratched behind the ears!  Can you make it so that when you click Jorge he is happy?",
+    "short_instructions": "Jorge wants to be scratched behind the ears!  Can you make it so that when you click Jorge he is happy?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -36,7 +36,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "markdown_instructions": "Jorge wants to be scratched behind the ears!\r\n\r\nCan you make it so that when you click Jorge he is happy?\r\n\r\n![](https://images.code.org/04fb37990455b215e0f20884363092d0-image-1467988943134.gif)",
+    "long_instructions": "Jorge wants to be scratched behind the ears!\r\n\r\nCan you make it so that when you click Jorge he is happy?\r\n\r\n![](https://images.code.org/04fb37990455b215e0f20884363092d0-image-1467988943134.gif)",
     "timeout_failure_tick": "150",
     "contained_level_names": null
   },

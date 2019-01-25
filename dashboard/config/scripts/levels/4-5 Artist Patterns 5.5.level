@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "How many times do you need to repeat this block to draw the full grid of diamonds?",
+    "short_instructions": "How many times do you need to repeat this block to draw the full grid of diamonds?",
     "ideal": "15",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

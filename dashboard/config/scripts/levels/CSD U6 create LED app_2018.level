@@ -156,7 +156,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make Your App - The Screen\r\n\r\nNow, you and your partner can make your own app using the LED.  Discuss with your partner what kind of app you want to make.\r\n\r\n# Do This\r\n\r\n* Discuss with your partner what screen elements you will need in your app.  Do you want...\r\n  * Buttons?\r\n  * Images?\r\n  * Text?\r\n* In Design Mode, add the elements, making sure you give each a meaningful ID.",
+    "long_instructions": "# Make Your App - The Screen\r\n\r\nNow, you and your partner can make your own app using the LED.  Discuss with your partner what kind of app you want to make.\r\n\r\n# Do This\r\n\r\n* Discuss with your partner what screen elements you will need in your app.  Do you want...\r\n  * Buttons?\r\n  * Images?\r\n  * Text?\r\n* In Design Mode, add the elements, making sure you give each a meaningful ID.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

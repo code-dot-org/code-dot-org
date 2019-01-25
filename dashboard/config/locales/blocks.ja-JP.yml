@@ -324,18 +324,24 @@ ja:
       Dancelab_setBackground:
         text: 背景色を {COLOR} にセット
       Dancelab_setBackgroundEffect:
-        text: 背景エフェクトを {EFFECT} にセット
+        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
           EFFECT:
             '"none"': 設定なし
             '"circles"': トンネル
+            '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
-            '"rainbow"': 色
+            '"splatter"': 塗料のしぶき
+            '"rainbow"': 虹
+            '"snowflakes"': 雪
             '"text"': 曲名
+            '"galaxy"': 宇宙
             '"sparkles"': きらめき
+            '"spiral"': スパイラル
             '"disco"': 正方形
             '"stars"': 星
           PALETTE:
@@ -353,14 +359,19 @@ ja:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"circles"': トンネル
+            '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
             '"splatter"': 塗料のしぶき
-            '"rainbow"': 色
+            '"rainbow"': 虹
+            '"snowflakes"': 雪
             '"text"': 曲名
+            '"galaxy"': 宇宙
             '"sparkles"': きらめき
+            '"spiral"': スパイラル
             '"disco"': 正方形
             '"stars"': 星
           PALETTE:
@@ -406,6 +417,7 @@ ja:
         options:
           EFFECT:
             '"none"': 設定なし
+            '"bubbles"': 泡
             '"confetti"': 紙吹雪
             '"hearts_red"': ハート
             '"music_notes"': 音符
@@ -413,6 +425,7 @@ ja:
             '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
+            '"smile_face"': スマイル
             '"raining_tacos"': タコス
       Dancelab_setForegroundEffectExtended:
         text: 前景エフェクトを {EFFECT} にセット
@@ -420,6 +433,7 @@ ja:
           EFFECT:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
+            '"bubbles"': 泡
             '"confetti"': 紙吹雪
             '"hearts_red"': ハート
             '"music_notes"': 音符
@@ -427,6 +441,7 @@ ja:
             '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
+            '"smile_face"': スマイル
             '"raining_tacos"': タコス
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "

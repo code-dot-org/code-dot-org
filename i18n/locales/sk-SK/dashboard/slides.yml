@@ -104,7 +104,7 @@ sk:
         text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dokiaľ" môžeme vložiť viaceré bloky, ktoré sa budú všetky opakovať.'
     if:
       1:
-        text: "Ahoj ja som Bill! Poďme sa nauči%t niečo o \"ak\" -podmienkach. Prostredníctvom podmienok sa počítač vie rozhodovať."
+        text: "Ahoj ja som Bill! Poďme sa naučiť niečo o podmienkach \"ak\". Prostredníctvom podmienok sa počítač vie rozhodovať."
       2:
         text: "Príkaz \"If\" (\"ak\") používaš každý deň. Predtým, než ideš von každé ráno, hovoríš si, \"ak\" vonku  prší , musím si obliecť bundu."
       3:
@@ -380,7 +380,7 @@ sk:
       2:
         text: "Počas nasledujúcej hodiny sa budeš učiť základy informatiky programovaním Alex alebo Steva, ktorých budeš pohybovať po simulovanom kuse sveta Minecraftu."
       3:
-        text: "Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame kód v Javascripte."
+        text: "Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý na písanie programu používa vizuálne bloky. V pozadí v podstate vytvárame kód v Javascripte."
       4:
         text: "Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty na to, aby sme sfunkčnili Minecraft."
       5:
@@ -394,7 +394,7 @@ sk:
       9:
         text: "Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a potom klikneme Spustiť, čo sa stane? Alexa sa pohne vpred o jedno pole."
       10:
-        text: "A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme do nášho programu pridať ďalší blok. Vyberiem si blok turnRight(); a potiahnem ho pod môj blok moveForward(); až kým sa nezobrazí táto oranžová čiara. Potom blok pustím a oba bloky sa spoja dohromady. Keď znova stlačím \"Spustiť\", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora nadol."
+        text: "A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme do nášho programu pridať ďalší blok. Vyberiem si blok OtočSaVpravo(); a potiahnem ho pod môj blok PosuňSaDopredu(); až kým sa nezobrazí táto oranžová čiara. Potom blok pustím a oba bloky sa spoja dohromady. Keď znova stlačím \"Spustiť\", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora nadol."
       11:
         text: "Ak by si niekedy chcel odstrániť blok, tak ho iba presuň z pracovnej plochy späť do panela nástrojov."
       12:
@@ -405,13 +405,13 @@ sk:
       2:
         text: "Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvá v jaskyniach a objavovanie nových vecí. Keďže nie som programátorka, som nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím trocha kódovať."
       3:
-        text: "Predošlý level využíval množstvo blokov moveForward();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz moveForward(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
+        text: "Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
       4:
         text: "Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame cykly aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie cykly sú mocná časť programovania."
       5:
         text: "Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho."
       6:
-        text: "Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyrikrát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Veľa zábavy."
+        text: "Aby sme postavili stenu nášho domu, môžeme buď povedať Alex PosuňSaDopredu(); a umiestni dosky štyrikrát, alebo jej môžeme povedať PosuňSaDopredu(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Veľa zábavy!"
     mc_if_statements:
       1:
         text: "Teraz sa naučíme o príkaze \"ak\". Príkazy \"ak\" patria k základným programovacím príkazom. Pomáhajú robiť počítaču rozhodnutia."
@@ -509,7 +509,7 @@ sk:
       3:
         text: "Ale čo sa stane, keď predmet alebo postavu použiješ? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháš, kravy utekajú preč, keď do nich udrieš a strašidlá vybuchujú, keď sa k ním priblížiš. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
       4:
-        text: "Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postava alebo keď začne hra. V ďaľších leveloch budeš mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavy, alebo \"po použití\", keď postavu použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\""
+        text: "Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postava alebo keď začne hra. V ďalších leveloch budeš mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavy, alebo \"po použití\", keď postavu použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\""
     mc_2016_spawn:
       1:
         text: "V hrách, vytvárame postavy príkazom \"vytvor postavu\". V tomto leveli poďme vytvárať zombíkov po západe slnka. Použijeme pre to blok \"keď príde noc\"."

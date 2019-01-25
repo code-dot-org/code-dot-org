@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Blocks placed inside the new `onEvent()` block will only run when you `\"click\"` the `\"bigButton\"`. Add code so the button will make the screen's `\"background-color\"` turn `\"green\"`. Remember to use double-quotes `\"` for colors. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/bbb452fdee5c546894a4f2025024ace3-image-1505882181893.gif)",
+    "long_instructions": "Blocks placed inside the new `onEvent()` block will only run when you `\"click\"` the `\"bigButton\"`. Add code so the button will make the screen's `\"background-color\"` turn `\"green\"`. Remember to use double-quotes `\"` for colors. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/bbb452fdee5c546894a4f2025024ace3-image-1505882181893.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

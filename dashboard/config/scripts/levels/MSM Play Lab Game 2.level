@@ -26,7 +26,7 @@
     "sprites_hidden_to_start": "false",
     "use_contract_editor": "true",
     "coordinate_grid_background": "false",
-    "instructions": "Variables can also be used to control the speed of players in a game. Set the player speed and the enemy speed and see how the movement changes. Speed can be between 2 and 12.",
+    "short_instructions": "Variables can also be used to control the speed of players in a game. Set the player speed and the enemy speed and see how the movement changes. Speed can be between 2 and 12.",
     "ideal": "99",
     "timeout_failure_tick": "100",
     "first_sprite_index": "2",

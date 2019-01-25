@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play: Try making some drawings of your own using \"for loops\". We've added a few useful variables for you as well.",
+    "short_instructions": "Free Play: Try making some drawings of your own using \"for loops\". We've added a few useful variables for you as well.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Try making some drawings of your own using `for loops`. We've added a few useful variables for you as well.",
+    "long_instructions": "**Free Play:** Try making some drawings of your own using `for loops`. We've added a few useful variables for you as well.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
+    "short_instructions": "Create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
+    "long_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

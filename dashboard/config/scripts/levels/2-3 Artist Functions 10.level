@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
+    "short_instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "slider_speed": "0.8",
     "min_workspace_height": "1500",
     "embed": "false",
-    "markdown_instructions": "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \r\n\r\nUse them to draw the inside of a machine!",
+    "long_instructions": "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \r\n\r\nUse them to draw the inside of a machine!",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

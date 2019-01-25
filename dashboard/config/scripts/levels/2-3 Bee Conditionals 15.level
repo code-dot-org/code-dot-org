@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
+    "short_instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "2",
@@ -16,7 +16,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
     "ideal": "8",
-    "markdown_instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
+    "long_instructions": "This stair step pattern should look familiar.  \r\n\r\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

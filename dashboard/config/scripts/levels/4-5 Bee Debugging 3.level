@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "Find the errors and fix them.",
+    "short_instructions": "Find the errors and fix them.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

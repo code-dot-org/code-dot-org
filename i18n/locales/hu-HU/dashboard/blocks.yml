@@ -313,18 +313,24 @@ hu:
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
-        text: háttéreffekt beállítása {EFFECT}
+        text: háttéreffekt beállítása {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Egyik sem
             '"circles"': Alagút
+            '"color_cycle"': Színek
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
+            '"swirl"': Hipnó
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
-            '"rainbow"': Színek
+            '"splatter"': Festékfröccsenés
+            '"rainbow"': Szivárvány
+            '"snowflakes"': Hó
             '"text"': Dalcím
+            '"galaxy"': Világűr
             '"sparkles"': Ragyogás
+            '"spiral"': Spirál
             '"disco"': Négyzetek
             '"stars"': Csillagok
           PALETTE:
@@ -341,14 +347,19 @@ hu:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
             '"circles"': Alagút
+            '"color_cycle"': Színek
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
+            '"swirl"': Hipnó
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
-            '"rainbow"': Színek
+            '"rainbow"': Szivárvány
+            '"snowflakes"': Hó
             '"text"': Dalcím
+            '"galaxy"': Világűr
             '"sparkles"': Ragyogás
+            '"spiral"': Spirál
             '"disco"': Négyzetek
             '"stars"': Csillagok
           PALETTE:
@@ -393,6 +404,7 @@ hu:
         options:
           EFFECT:
             '"none"': Egyik sem
+            '"bubbles"': Buborékok
             '"confetti"': Konfetti
             '"hearts_red"': Szívek
             '"music_notes"': Hangjegyek
@@ -407,6 +419,7 @@ hu:
           EFFECT:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
+            '"bubbles"': Buborékok
             '"confetti"': Konfetti
             '"hearts_red"': Szívek
             '"music_notes"': Hangjegyek

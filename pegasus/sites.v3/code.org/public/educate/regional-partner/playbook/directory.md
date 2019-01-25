@@ -2,6 +2,7 @@
 title: Regional Partner Directory
 nav: regional_partner_playbook_nav
 ---
+<meta name=“robots” content=“noindex”>
 
 # Regional Partner Network
 

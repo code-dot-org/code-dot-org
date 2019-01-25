@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use setPositon to moveButton",
+    "short_instructions": "Use setPositon to moveButton",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

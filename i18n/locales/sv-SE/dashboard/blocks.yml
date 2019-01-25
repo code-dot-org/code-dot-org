@@ -317,17 +317,21 @@ sv:
       Dancelab_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Dancelab_setBackgroundEffect:
-        text: täll in bakgrundseffekt {EFFECT}
+        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ingen
             '"circles"': Tunnel
+            '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserdansgolv
-            '"rainbow"': Färger
+            '"splatter"': Färgstänk
+            '"rainbow"': Regnbåge
+            '"snowflakes"': Snö
             '"text"': Låttitel
+            '"galaxy"': Mellanslag
             '"sparkles"': Gnistror
             '"disco"': Fyrkanter
             '"stars"': Stjärnor
@@ -344,13 +348,16 @@ sv:
             '"none"': Ingen
             '"rand"': "(Slumpad)"
             '"circles"': Tunnel
+            '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserdansgolv
             '"splatter"': Färgstänk
-            '"rainbow"': Färger
+            '"rainbow"': Regnbåge
+            '"snowflakes"': Snö
             '"text"': Låttitel
+            '"galaxy"': Mellanslag
             '"sparkles"': Gnistror
             '"disco"': Fyrkanter
             '"stars"': Stjärnor
@@ -395,6 +402,7 @@ sv:
         options:
           EFFECT:
             '"none"': Ingen
+            '"bubbles"': Bubblor
             '"confetti"': Konfetti
             '"hearts_red"': Hjärtan
             '"music_notes"': Musiknoter
@@ -402,12 +410,14 @@ sv:
             '"smiling_poop"': Bajs
             '"rain"': Regn
             '"floating_rainbows"': Regnbåge
+            '"smile_face"': Smiley
       Dancelab_setForegroundEffectExtended:
         text: ställ in förgrundseffekt {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Slumpad)"
+            '"bubbles"': Bubblor
             '"confetti"': Konfetti
             '"hearts_red"': Hjärtan
             '"music_notes"': Musiknoter
@@ -415,6 +425,7 @@ sv:
             '"smiling_poop"': Bajs
             '"rain"': Regn
             '"floating_rainbows"': Regnbåge
+            '"smile_face"': Smiley
       Dancelab_setProp:
         text: 'Ställ in {SPRITE} {PROPERTY} till {VAL} '
         options:
