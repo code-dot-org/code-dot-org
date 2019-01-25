@@ -138,8 +138,8 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/applications/fit_cohort
     def fit_cohort
-      serialized_fit_cohort = Pd::Application::Facilitator1819Application.fit_cohort(@applications).map do |application|
-        TcFitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
+      serialized_fit_cohort = FACILITATOR_APPLICATION_CLASS.fit_cohort(@applications).map do |application|
+        FitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
       end
 
       render json: serialized_fit_cohort
