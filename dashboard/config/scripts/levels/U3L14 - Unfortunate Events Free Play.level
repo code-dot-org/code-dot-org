@@ -45,7 +45,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Follow the \"Unfortunate Events\" Worksheet and enter your code here to experiment.  We've pre-loaded the code you need to start.",
+    "short_instructions": "Follow the \"Unfortunate Events\" Worksheet and enter your code here to experiment.  We've pre-loaded the code you need to start.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

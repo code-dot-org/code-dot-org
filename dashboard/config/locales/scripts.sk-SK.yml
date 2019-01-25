@@ -58,7 +58,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Spelling Bee:
-              name: Hláskovanie
+              name: Včela Hláskovanie
             'Studio: Create a Story':
               name: 'Play Lab: Vytvor príbeh'
             The Big Event:
@@ -221,6 +221,8 @@ sk:
               name: 'Umelec: Premenné'
             'Bee: For Loops':
               name: 'Včela: Cykly "pre"'
+            'Bee: Functions with Parameters':
+              name: 'Včela: Funkcie s parametrami'
             Maze and Bee:
               name: Bludisko a včela
         Course4pre:
@@ -249,6 +251,10 @@ sk:
               name: Binárny
             For Loops:
               name: Cykly For
+            Functions and Functions with Parameters:
+              name: Funkcie a funkcie s parametrami
+            Intro:
+              name: Úvod
             Variables:
               name: Premenné
         algebra:
@@ -264,10 +270,18 @@ sk:
               name: Infinity
         algebrademo:
           stages:
+            Defining Variables:
+              name: Definovanie premenných
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
+            Making Pictures:
+              name: Vytváranie obrázkov
             The Design Recipe:
               name: Vytvor recept
         K5PD:
           stages:
+            Next Steps:
+              name: Ďalšie kroky
             Teacher Dashboard:
               name: Nástenka učiteľa
         netsim:
@@ -364,10 +378,52 @@ sk:
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
+        CodeStudioPuzzleChallenge:
+          stages:
+            Puzzles:
+              name: Úlohy
+        Tutorial Video - Code Studio Puzzle Challenge:
+          stages:
+            Puzzles:
+              name: Úlohy
+        cspunit1:
+          stages:
+            Binary Numbers:
+              name: Binárne čísla
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
+            Sending Binary Messages with the Internet Simulator:
+              name: Posielanie binárnych správ s internetovým simulátorom
+            Sending Bits in the Real World:
+              name: Posielanie bitov v reálnom svete
+            Sending Complex Messages:
+              name: Posielanie komplexných správ
+            Sending Formatted Text:
+              name: Posielanie naformátovaného textu
+            Sending Numbers:
+              name: Posielanie čísiel
         algebraPD:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             Teacher Dashboard:
               name: Nástenka učiteľa
+        algPDmiami:
+          stages:
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
+            Your Game - Animation:
+              name: Tvoja hra - Animácie
+        sciencePD:
+          stages:
+            What to Expect:
+              name: Čo očakávať
+        rbo-reference:
+          stages:
+            reference:
+              name: referencie
         cspunit3:
           stages:
             Creating Functions:
@@ -376,28 +432,60 @@ sk:
               name: Podmieňovacie cykly "Kým"
         algebraPD3:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
+            Next Steps:
+              name: Ďalšie kroky
             Teacher Dashboard:
               name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             Teacher Dashboard:
               name: Nástenka učiteľa
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             Teacher Dashboard:
               name: Nástenka učiteľa
+        sciencePD-NexTech:
+          stages:
+            What to Expect:
+              name: Čo očakávať
+        sciencePD-iZone:
+          stages:
+            What to Expect:
+              name: Čo očakávať
         sciencePD2:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        sciencePD3:
+          stages:
+            Welcome Back!:
+              name: Vitajte späť!
         cspunit2:
           stages:
             The Internet:
               name: Internet
         algebraPD2a:
           stages:
+            Defining Variables:
+              name: Definovanie premenných
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             The Design Recipe:
               name: Vytvor recept
         allthethings:
@@ -406,10 +494,16 @@ sk:
               name: App Lab
             Artist:
               name: Umelec
+            Bee:
+              name: Včela
             Bounce:
               name: Bounce
+            Farmer:
+              name: Farmár
             Flappy:
               name: Flappy
+            Free Response:
+              name: Voľná odpoveď
             Gamelab:
               name: Game Lab
             Jigsaw:
@@ -422,6 +516,14 @@ sk:
               name: Web Lab
         algebraPD2b:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Defining Variables:
+              name: Definovanie premenných
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
+            Next Steps:
+              name: Ďalšie kroky
             Teacher Dashboard:
               name: Nástenka učiteľa
         cspfacilitator:
@@ -430,10 +532,18 @@ sk:
               name: App Lab
             Internet Simulator:
               name: Simulátor Internetu
+            Welcome!:
+              name: Vitajte!
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
               name: Základy informatiky
+            Getting Started:
+              name: Začíname
+            Next Steps:
+              name: Ďalšie kroky
+            Planning:
+              name: Plánovanie
         ECSPD2:
           stages:
             0: |-
@@ -442,6 +552,8 @@ sk:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Vitajte!
             Wrap-up:
               name: Zhrnutie
         algebraPD2:
@@ -450,16 +562,30 @@ sk:
               name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
+            Welcome!:
+              name: Vitajte!
         sciencePD2b:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         science-PD2:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        Equity-OnlinePD:
+          stages:
+            Getting Started:
+              name: Začíname
+            Next Steps:
+              name: Ďalšie kroky
         sciencePD2b-iZone:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         ECSPD2-iZone:
@@ -470,6 +596,8 @@ sk:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Vitajte!
             Wrap-up:
               name: Zhrnutie
         ECSPD2-NexTech:
@@ -480,8 +608,14 @@ sk:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Začíname
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -502,14 +636,72 @@ sk:
               name: Písanie pesničiek
             The Big Event:
               name: Veľká udalosť
+        sciencePD3_pre1:
+          stages:
+            Welcome Back!:
+              name: Vitajte späť!
+        ECSPD3-Unit2:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 2:
+              name: Úvod do lekcie 2
+            Lesson Overviews:
+              name: Prehľad lekcií
+        ECSPD3-Unit3:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 3:
+              name: Úvod do lekcie 3
+        ECSPD3-Unit4:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 4:
+              name: Úvod do lekcie 4
+        ECSPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Začíname
+        ECSPD3-Unit6:
+          stages:
+            Getting Started:
+              name: Začíname
         ScienceP3OLPT2:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        algebraPD3b:
+          stages:
+            Getting Started:
+              name: Začíname
+        CSPPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Začíname
+            Unit 2 Overview:
+              name: Lekcia 2 - Prehľad
         Special Fun:
           description_audience: Vek 10-18
+          stages:
+            Halloween 2015:
+              name: Halloween 2015
         SpecialSeries:
           description_audience: Vek 10-18
+          stages:
+            Spring 2016:
+              name: Jar 2016
+            Halloween 2015:
+              name: Halloween 2015
         iceage:
           title: Play Lab Doba ľadová
           description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
@@ -517,10 +709,20 @@ sk:
           stages:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
+        CSPPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Začíname
+            Unit 3 Overview:
+              name: Lekcia 3 - Prehľad
         cspunit3temp:
           stages:
             While Loops:
               name: Podmieňovacie cykly "Kým"
+        CSP-Unit3-Support:
+          stages:
+            Unit 3 Overview:
+              name: Lekcia 3 - Prehľad
         gumball:
           title: Gumball Play Lab
           description: Vytvor príbeh alebo hru s Gumball Play Labom!
@@ -534,27 +736,80 @@ sk:
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
+          stages:
+            Hour of Code 2015:
+              name: Hodina Kódu 2015
         starwarsblocks:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
+          stages:
+            Hour of Code 2015:
+              name: Hodina Kódu 2015
         mc:
           title: Minecraft Hodina Kódu
           description: Použi bloky kódu, aby si vzal Steva alebo Alexa na dobrodužstvo
             svetom Minecraftu
           description_short: Preskúmaj svet Minecraftu prostredníctvom kódu.
+          stages:
+            Hour of Code 2015:
+              name: Hodina Kódu 2015
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        CSPPD3-Unit4:
+          stages:
+            Chapter 1 Overview:
+              name: Kapitola 1 - Prehľad
+            Chapter 2 Overview:
+              name: Kapitola 2 - Prehľad
+            Getting Started:
+              name: Začíname
+            Unit 4 Overview:
+              name: Lekcia 4 - Prehľad
+        cspunit6draft:
+          stages:
+            Deleting Records:
+              name: Vymazanie záznamov
+            Final Project:
+              name: Finálny projekt
+        CSPPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Začíname
+        cspunit6:
+          stages:
+            Deleting Records:
+              name: Vymazanie záznamov
+            Final Project:
+              name: Finálny projekt
         algebraPD1:
           stages:
+            Course Overview:
+              name: Prehľad kurzu
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             Teacher Dashboard:
               name: Nástenka učiteľa
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: Začíname
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Binárne čísla
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
+            Sending Binary Messages with the Internet Simulator:
+              name: Posielanie binárnych správ s internetovým simulátorom
+            Sending Numbers:
+              name: Posielanie čísiel
             The Internet:
               name: Internet
             Post-Course Survey:
@@ -581,24 +836,48 @@ sk:
           stages:
             While Loops:
               name: Podmieňovacie cykly "Kým"
+            If statements:
+              name: Podmienky ak
             Post-Course Survey:
               name: Hodnotenie kurzu
         CSDU3-Draft:
           stages:
             Functions:
               name: Funkcie
+        2016_sciencePD_phase1:
+          stages:
+            What to Expect:
+              name: Čo očakávať
         CSF_Secret_Sample:
           description_audience: Vek 8-18
+        ECSPD1:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
         algebraFacilitator:
           stages:
+            Evaluation Blocks:
+              name: Vyhodnocovanie blokov
             Teacher Dashboard:
               name: Nástenka učiteľa
+        sciencePD1:
+          stages:
+            What to Expect:
+              name: Čo očakávať
+        cspunit1-support:
+          stages:
+            Chapter Overviews:
+              name: Prehľady kapitol
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
         allthehiddenthings:
           stages:
             Game Lab:
               name: Game Lab
         CSDU2-Draft:
           stages:
+            Classes:
+              name: Triedy
             Peer Review:
               name: Recenzia
         MikeTest:
@@ -621,10 +900,14 @@ sk:
               name: 'Skladačka: Nauč sa presúvať bloky'
             Loops:
               name: Cykly
+            Loops Unplugged:
+              name: Cykly bez počítača
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
         grade4:
           stages:
+            'Bee: Functions (Course 3)':
+              name: 'Včela: Funkcie (Kurz 3)'
             Digital Citizenship:
               name: Digitálne Občianstvo
             'New Artist: Functions':
@@ -641,6 +924,8 @@ sk:
               name: 'Skladačka: Nauč sa presúvať bloky'
             Loops:
               name: Cykly
+            Loops Unplugged:
+              name: Cykly bez počítača
             Unspotted Bugs:
               name: Nenájdené chyby
         grade5:
@@ -651,6 +936,8 @@ sk:
               name: 'Umelec: Premenné'
             'Bee: For Loops':
               name: 'Včela: Cykly "pre"'
+            'Bee: Functions with Parameters':
+              name: 'Včela: Funkcie s parametrami'
             Digital Citizenship:
               name: Digitálne Občianstvo
         ecs-unit1:
@@ -661,10 +948,52 @@ sk:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
+            Welcome!:
+              name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+        ecs-unit2:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 2:
+              name: Úvod do lekcie 2
+            Lesson Overviews:
+              name: Prehľad lekcií
+        ecs-unit3:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 3:
+              name: Úvod do lekcie 3
+        ecs-unit4:
+          stages:
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+            Getting Started:
+              name: Začíname
+            Intro to Unit 4:
+              name: Úvod do lekcie 4
+        ecs-unit5:
+          stages:
+            Getting Started:
+              name: Začíname
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
+        ecs-unit6:
+          stages:
+            Getting Started:
+              name: Začíname
+            Close & Next Steps:
+              name: Zatvoriť & ďalšie kroky
         grade3:
           stages:
+            " Bee: Conditionals":
+              name: " Včela: Podmienky"
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             Bee Debugging:
@@ -723,6 +1052,14 @@ sk:
               name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
+            Welcome!:
+              name: Vitajte!
+        csp-online-test:
+          stages:
+            Unit 2 Overview:
+              name: Lekcia 2 - Prehľad
+            Unit 3 Overview:
+              name: Lekcia 3 - Prehľad
         basketball:
           title: Vyber si tím a priprav basketbalový zápas
           description_short: Vyber si tím a priprav basketbalový zápas
@@ -749,10 +1086,16 @@ sk:
               name: Play Lab
         csd2-2017:
           stages:
+            Classes:
+              name: Triedy
             Peer Review:
               name: Recenzia
             Lists:
               name: Zoznamy
+        csp2-support:
+          stages:
+            Unit 2 Overview:
+              name: Lekcia 2 - Prehľad
         minecraft:
           title: Hodina kódu Minecraft dizajnér
           description_short: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú
@@ -832,6 +1175,8 @@ sk:
               name: Digitálne Občianstvo
             Functions in Artist:
               name: Funkcie s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Internet:
@@ -879,32 +1224,62 @@ sk:
               name: Športy
         2016_sciencePD-phase2b:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         2016_sciencePD_phase2b:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        sciencepd3-2016:
+          stages:
+            Welcome Back!:
+              name: Vitajte späť!
+        csp3-support:
+          stages:
+            Unit 3 Overview:
+              name: Lekcia 3 - Prehľad
+        csp4-support:
+          stages:
+            Unit 3 Overview:
+              name: Lekcia 3 - Prehľad
+            Unit 4 Overview:
+              name: Lekcia 4 - Prehľad
         sciencepd4:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         science-pd-ol-pt-5:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         csf2harvey:
           stages:
             Functions in Artist:
               name: Funkcie s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Binary:
               name: Binárny
         sciencepd5:
           stages:
+            Welcome!:
+              name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
         csppostap-2017:
           stages:
+            Deleting Records:
+              name: Vymazanie záznamov
+            Final Project:
+              name: Finálny projekt
             Post-Course Survey:
               name: Hodnotenie kurzu
         csd6-draft:
@@ -976,6 +1351,8 @@ sk:
               name: Play Lab Doba ľadová
         csd2-old:
           stages:
+            Classes:
+              name: Triedy
             Peer Review:
               name: Recenzia
         artist-and-bb8:
@@ -1005,6 +1382,7 @@ sk:
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
           title: Kurz A
           assignment_family_title: Kurz A
+          description_audience: 'Vek: 4-7'
           description_short: Predstavenie informatiky pre predškolákov.
         courseb-2017:
           stages:
@@ -1129,6 +1507,8 @@ sk:
                 Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky.
                 Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie
                 jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
+            Functions in Bee:
+              name: Funkcie Včela
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Present Your Project:
@@ -1213,6 +1593,8 @@ sk:
                 Umelec či Play Lab. Nakoniec, študenti dostanú priesto rprezentovať
                 svoje práce rovesníkom alebo ich zdielať s blízkymi. Príručku kurzu
                 pre všetkých päť úrovní procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursef/15/).
+            Functions in Bee:
+              name: Funkcie Včela
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
@@ -1223,6 +1605,14 @@ sk:
           assignment_family_title: Kurz F
           description_short: Nauč sa všetky koncepty v kurze Základy informatiky a
             vytvor vlastné umelecké diela, príbeh alebo hru.
+        csdnovice:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        cspnovice:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
         express-2017:
           stages:
             Introduction:
@@ -1251,6 +1641,8 @@ sk:
               name: Zábavné opakovanie
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Nested Loops Project in Frozen:
@@ -1268,7 +1660,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Spelling Bee:
-              name: Hláskovanie
+              name: Včela Hláskovanie
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1296,6 +1688,8 @@ sk:
               name: Podmienky
             Functions in Artist:
               name: Funkcie s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Internet:
@@ -1352,6 +1746,8 @@ sk:
               name: Udalosti v Bounce
             Variables in Artist:
               name: Premenné s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Building a Foundation:
@@ -1370,6 +1766,8 @@ sk:
               name: Vnorené cykly s Frozen
             Conditionals:
               name: Podmienky
+            Functions in Bee:
+              name: Funkcie Včela
             Functions in Artist:
               name: Funkcie s Umelcom
             Build a Play Lab Game:
@@ -1396,6 +1794,8 @@ sk:
               name: Zábavné opakovanie
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
         csp3-staging:
@@ -1455,6 +1855,8 @@ sk:
               name: Podmienky
             Functions in Artist:
               name: Funkcie s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             Internet:
@@ -1481,6 +1883,8 @@ sk:
               name: Zábavné opakovanie
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
         csd6-old:
@@ -1510,8 +1914,10 @@ sk:
             Lists:
               name: Zoznamy
         coursea-2018:
+          title: Kurz A (2018)
           assignment_family_title: Kurz A
           description_short: Predstavenie informatiky pre predškolákov.
+          description_audience: 'Vek: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: Nenájdené chyby
@@ -1555,6 +1961,8 @@ sk:
               name: Udalosti v Bounce
             Variables in Artist:
               name: Premenné s Umelcom
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
             Programming in Collector:
@@ -1797,6 +2205,8 @@ sk:
                 Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
+            Functions in Bee:
+              name: Funkcie Včela
             Functions with Parameters in Artist:
               name: Funkcie s parametrami s Umelcom
               description_student: Priprav si svoje programovacie prsty. V tejto hre
@@ -1845,6 +2255,14 @@ sk:
               name: Mimozemská Tanečná Párty
         csp1-2018:
           stages:
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
+            Sending Binary Messages with the Internet Simulator:
+              name: Posielanie binárnych správ s internetovým simulátorom
+            Binary Numbers:
+              name: Binárne čísla
+            Sending Numbers:
+              name: Posielanie čísiel
             The Internet:
               name: Internet
         csp3-2018:
@@ -1859,10 +2277,32 @@ sk:
           stages:
             While Loops:
               name: Podmieňovacie cykly "Kým"
+        csppostap-2018:
+          stages:
+            Deleting Records:
+              name: Vymazanie záznamov
+            Final Project:
+              name: Finálny projekt
         spritelab:
           stages:
             Alien Dance Party - Input:
               name: Mimozemská Tanečná Párty - Vstup
+        csd-novice-18:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        csd-apprentice-18:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        csp-novice-18:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        csp-apprentice-18:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1872,7 +2312,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Spelling Bee:
-              name: Hláskovanie
+              name: Včela Hláskovanie
             Move It, Move It:
               name: Posuň, Posuň
             Your Digital Footprint:
@@ -1921,6 +2361,7 @@ sk:
             Artist:
               name: Umelec
         aquatic:
+          title: Minecraft Vodné Dobrodužstvo
           description_short: Pomocou kreativity, schopnosti riešiť problémy a sily
             kódu objav a vybuduj podvodný svet!
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu,

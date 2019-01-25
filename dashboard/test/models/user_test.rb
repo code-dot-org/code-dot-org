@@ -29,6 +29,30 @@ class UserTest < ActiveSupport::TestCase
     @student = create :student
   end
 
+  test 'from_identifier finds user by id' do
+    student = create :student
+    assert_equal student, User.from_identifier(student.id.to_s)
+  end
+
+  test 'from_identifier finds user by username' do
+    student = create :student
+    assert_equal student, User.from_identifier(student.username)
+  end
+
+  test 'from_identifier finds user by email' do
+    teacher = create :teacher
+    assert_equal teacher, User.from_identifier(teacher.email)
+  end
+
+  test 'from_identifier finds user by hashed_email' do
+    student = create :student, email: 'fakestudentemail@example.com'
+    assert_equal student, User.from_identifier('fakestudentemail@example.com')
+  end
+
+  test 'from_identifier returns nil when id exceeds allowed integer size' do
+    assert_nil User.from_identifier('3423423423')
+  end
+
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "Anything else you’d like your teacher to know?",
+    "long_instructions": "Anything else you’d like your teacher to know?",
     "instructions_important": "false",
     "placeholder": "Write anything you'd like here. Your responses will be anonymous.",
     "allow_user_uploads": "false",

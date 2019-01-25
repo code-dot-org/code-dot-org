@@ -11,21 +11,17 @@ Translations for the tutorial progression are done on Crowdin and translations f
 
 1. [Click here](https://amara.org/en/auth/login/?next=/) to create an Amara account.
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin.
-1. From the [main project page](https://crowdin.com/project/codeorg), select your language.
-1. Note your language code in the URL, you'll need this for later. If it's a 4 letter code like "zh-TW" note that the code you'll use later will be in the format "zhTW".
-
-<img src="/images/fit-500/translate-find-code.jpg" style="max-width: 100%;"> 
 
 ## Translating the tutorial progression
-The following links all lead directly to the Spanish tutorial. Replace the "es" in the URL with the language code you got earlier. Your translations will be updated on the site at the end of each week. You can watch this [demo video](/files/crowdin.swf) for how to use Crowdin.
+When you click on the following links you will first be asked to select your language.
 
-1. [Minecraft title](https://crowdin.com/translate/codeorg/63/enus-es#q=aquatic+title)
-1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/551/enus-es#q=%22HOC+2018%22) and [here](https://crowdin.com/translate/codeorg/318/enus-es#q=%22HOC+2018%22)
-1. [Tutorial blocks](https://crowdin.com/translate/codeorg/639/enus-es#q=craft_)
-1. [Tutorial hints](https://crowdin.com/translate/codeorg/552/enus-es#q=%22HOC+2018%22)
-1. [Strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/all/enus-es#q=hoc2018_mc)
-1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2018)
-1. [Video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=mc_2018) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
+1. [Minecraft title](https://crowdin.com/translate/codeorg/63/enus-#q=aquatic+title)
+1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/551/enus-#q=%22HOC+2018%22) and [here](https://crowdin.com/translate/codeorg/318/enus-#q=%22HOC+2018%22)
+1. [Tutorial blocks](https://crowdin.com/translate/codeorg/639/enus-#q=craft_)
+1. [Tutorial hints](https://crowdin.com/translate/codeorg/552/enus-#q=%22HOC+2018%22)
+1. [Strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/all/enus-#q=hoc2018_mc)
+1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-#q=mc_2018)
+1. [Video notes](https://crowdin.com/translate/codeorg/46/enus-#q=mc_2018) - These notes are basically a copy of the video captions. They are shown on the second tab, alongside screenshots from the video. These are intended for slow internet users. Since it is very close to the captions, we suggest completing the translation for the video captions on Amara (see below) and then reusing those translations here.
 
 ## Translating the video captions
 

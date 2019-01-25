@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "Transfer your favicon to a partner across a network in which the larger a packet grows, the more likely it is to be dropped.",
+    "short_instructions": "Transfer your favicon to a partner across a network in which the larger a packet grows, the more likely it is to be dropped.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

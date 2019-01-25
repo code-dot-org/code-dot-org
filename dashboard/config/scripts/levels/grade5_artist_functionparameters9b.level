@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you figure out how to make this drawing using the function that you just created?",
+    "short_instructions": "Can you figure out how to make this drawing using the function that you just created?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you figure out how to make this drawing using the function that you just created?\r\n\r\n- The red spiral goes from 50 to 200 pixels\r\n- The blue spiral goes from 25 to 125 pixels\r\n- The green spiral goes from 100 to 300 pixels\r\n",
+    "long_instructions": "Can you figure out how to make this drawing using the function that you just created?\r\n\r\n- The red spiral goes from 50 to 200 pixels\r\n- The blue spiral goes from 25 to 125 pixels\r\n- The green spiral goes from 100 to 300 pixels\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

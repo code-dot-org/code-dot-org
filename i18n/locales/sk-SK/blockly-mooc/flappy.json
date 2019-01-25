@@ -128,6 +128,6 @@
   "whenEnterObstacle": "keď obíde prekážku",
   "whenEnterObstacleTooltip": "Vykonať akcie uvedené nižšie, keď sa Flappy dostane k prekážke.",
   "whenRunButtonClick": "keď začne hra",
-  "whenRunButtonClickTooltip": "Vykonať akcie uvedené nižšie, keď hra začne.",
+  "whenRunButtonClickTooltip": "Po začatí hry vykonať akcie uvedené nižšie.",
   "yes": "Áno"
 }

@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Loops let you do whatever is inside over and over again!",
+    "short_instructions": "Loops let you do whatever is inside over and over again!",
     "ideal": "4",
     "callout_json": "[]",
     "instructions_important": "false",

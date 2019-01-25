@@ -324,18 +324,24 @@ zh-TW:
       Dancelab_setBackground:
         text: 設定背景顏色 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 設定背景效果 {EFFECT}
+        text: 設定背景效果 {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': 無
             '"circles"': 隧道
+            '"color_cycle"': 顏色
             '"diamonds"': 方塊
             '"disco_ball"': 迪斯科球
+            '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
-            '"rainbow"': 顏色
+            '"splatter"': 油漆飛濺
+            '"rainbow"': 彩虹
+            '"snowflakes"': 雪
             '"text"': 歌曲標題
+            '"galaxy"': 空間
             '"sparkles"': 火花
+            '"spiral"': 螺旋
             '"disco"': 正方形
             '"stars"': 星星
           PALETTE:
@@ -353,14 +359,19 @@ zh-TW:
             '"none"': 無
             '"rand"': "（隨機）"
             '"circles"': 隧道
+            '"color_cycle"': 顏色
             '"diamonds"': 方塊
             '"disco_ball"': 迪斯科球
+            '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
             '"splatter"': 油漆飛濺
-            '"rainbow"': 顏色
+            '"rainbow"': 彩虹
+            '"snowflakes"': 雪
             '"text"': 歌曲標題
+            '"galaxy"': 空間
             '"sparkles"': 火花
+            '"spiral"': 螺旋
             '"disco"': 正方形
             '"stars"': 星星
           PALETTE:
@@ -406,6 +417,7 @@ zh-TW:
         options:
           EFFECT:
             '"none"': 無
+            '"bubbles"': 氣泡
             '"confetti"': 紙屑
             '"hearts_red"': 心形
             '"music_notes"': 音樂音符
@@ -420,6 +432,7 @@ zh-TW:
           EFFECT:
             '"none"': 無
             '"rand"': "（隨機）"
+            '"bubbles"': 氣泡
             '"confetti"': 紙屑
             '"hearts_red"': 心形
             '"music_notes"': 音樂音符

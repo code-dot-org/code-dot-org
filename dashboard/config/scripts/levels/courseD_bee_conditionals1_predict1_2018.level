@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -33,7 +33,7 @@
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":2,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "step_speed": "1",
-    "markdown_instructions": "*\"This cloud is blocking my view!\"*\r\n\r\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "long_instructions": "*\"This cloud is blocking my view!\"*\r\n\r\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.\",\"hint_id\":\"courseD_bee_conditionals1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2fa133d5811266aa334c7ac41b040f18/courseD_bee_conditionals1.mp3\"}]",
     "instructions_important": "false",
     "contained_level_names": [

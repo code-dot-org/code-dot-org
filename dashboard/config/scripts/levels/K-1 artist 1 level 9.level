@@ -6,7 +6,7 @@
   "user_id": 14,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this using three lines",
+    "short_instructions": "Draw this using three lines",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "free_play": "false",

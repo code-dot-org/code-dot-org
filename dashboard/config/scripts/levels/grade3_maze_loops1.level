@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "ideal": "9",
     "step_speed": "3",
-    "markdown_instructions": "*\"Must...eat...sunflower!\"*\r\n\r\nGet the zombie to the sunflower.",
+    "long_instructions": "*\"Must...eat...sunflower!\"*\r\n\r\nGet the zombie to the sunflower.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to find errors.\",\"hint_id\":\"grade3_maze_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f21d2acb307da3eea310786017a7dbc7/grade3_maze_loops1.mp3\"}]",
     "instructions_important": "false",
-    "instructions": "Get the zombie to the sunflower.",
+    "short_instructions": "Get the zombie to the sunflower.",
     "contained_level_names": null
   },
   "published": true,

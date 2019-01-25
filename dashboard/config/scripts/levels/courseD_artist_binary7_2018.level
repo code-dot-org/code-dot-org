@@ -18,7 +18,7 @@
     "free_play": "false",
     "impressive": "false",
     "embed": "false",
-    "instructions": "What is the shortest binary string that you can repeat to draw this image?",
+    "short_instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "disable_sharing": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
