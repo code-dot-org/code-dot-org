@@ -187,10 +187,7 @@ module Pd::Application
       assert_equal @regional_partner.name, csv_answers[36]
       assert_equal 'notes', csv_answers[15]
       assert_equal 'accepted', csv_answers[2]
-      assert_equal(
-        "https://test-studio.code.org/pd/application_dashboard/#{@application.course}_facilitators/#{@application.id}",
-        csv_answers[37]
-      )
+      assert csv_answers[37].include?("/pd/application_dashboard/#{@application.course}_facilitators/#{@application.id}")
     end
 
     test 'csv_header and row return same number of columns' do
