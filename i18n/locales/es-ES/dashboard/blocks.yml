@@ -304,7 +304,7 @@ es:
       Dancelab_setBackground:
         text: establecer color de fondo {COLOR}
       Dancelab_setBackgroundEffect:
-        text: stablecer efecto de fondo {EFFECT}
+        text: stablecer efecto de fondo {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Ninguno
@@ -315,10 +315,11 @@ es:
             '"swirl"': Hipnótico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
-            '"splatter"': Burbujas
-            '"rainbow"': Colores
+            '"splatter"': Salpicaduras de pintura
+            '"rainbow"': Arcoíris
             '"snowflakes"': Nieve
             '"text"': Título de la canción
+            '"galaxy"': Espacio
             '"sparkles"': Brillos
             '"spiral"': Espiral
             '"disco"': Cuadrados
@@ -343,9 +344,10 @@ es:
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
-            '"rainbow"': Colores
+            '"rainbow"': Arcoíris
             '"snowflakes"': Nieve
             '"text"': Título de la canción
+            '"galaxy"': Espacio
             '"sparkles"': Brillos
             '"spiral"': Espiral
             '"disco"': Cuadrados
@@ -399,6 +401,7 @@ es:
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arcoíris
+            '"smile_face"': Emoticono
             '"spotlight"': Destacado
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
@@ -415,6 +418,7 @@ es:
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arcoíris
+            '"smile_face"': Emoticono
             '"spotlight"': Destacado
             '"raining_tacos"': Tacos
       Dancelab_setProp:

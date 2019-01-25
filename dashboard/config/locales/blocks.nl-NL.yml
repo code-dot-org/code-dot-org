@@ -299,18 +299,23 @@ nl:
       Dancelab_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Dancelab_setBackgroundEffect:
-        text: stel {EFFECT} in als achtergrondeffect
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
           EFFECT:
             '"none"': Geen
             '"circles"': Tunnel
+            '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
             '"disco_ball"': Discobal
             '"kaleidoscope"': Caleidoscoop
             '"lasers"': Laser-dansvloer
-            '"rainbow"': Kleuren
+            '"splatter"': Verfspetters
+            '"rainbow"': Regenboog
+            '"snowflakes"': Sneeuw
             '"text"': Titel van het lied
+            '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
             '"disco"': Vierkanten
             '"stars"': Sterren
           PALETTE:
@@ -326,14 +331,18 @@ nl:
             '"none"': Geen
             '"rand"': "(Willekeurig)"
             '"circles"': Tunnel
+            '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
             '"disco_ball"': Discobal
             '"kaleidoscope"': Caleidoscoop
             '"lasers"': Laser-dansvloer
             '"splatter"': Verfspetters
-            '"rainbow"': Kleuren
+            '"rainbow"': Regenboog
+            '"snowflakes"': Sneeuw
             '"text"': Titel van het lied
+            '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
             '"disco"': Vierkanten
             '"stars"': Sterren
           PALETTE:
@@ -377,12 +386,14 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
+            '"bubbles"': Bubbels
             '"hearts_red"': Hartjes
             '"music_notes"': Muzieknoten
             '"pineapples"': Ananassen
             '"smiling_poop"': Poep
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
+            '"smile_face"': Smiley
             '"raining_tacos"': Taco‘s
       Dancelab_setForegroundEffectExtended:
         text: stel {EFFECT} in als voorgrondeffect
@@ -390,12 +401,14 @@ nl:
           EFFECT:
             '"none"': Geen
             '"rand"': "(Willekeurig)"
+            '"bubbles"': Bubbels
             '"hearts_red"': Hartjes
             '"music_notes"': Muzieknoten
             '"pineapples"': Ananassen
             '"smiling_poop"': Poep
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
+            '"smile_face"': Smiley
             '"raining_tacos"': Taco‘s
       Dancelab_setProp:
         text: 'stel {SPRITE} {PROPERTY} in op {VAL} '

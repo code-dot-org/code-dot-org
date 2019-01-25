@@ -60,10 +60,10 @@ describe('Unit6ValidationStep', () => {
       <Unit6ValidationStep
         {...defaultProps}
         stepStatus={Status.SUCCEEDED}
-        initialChoice="yes1718"
+        initialChoice="yes1819"
       />
     );
-    assert.equal(wrapper.find('input [value="yes1718"]').props().checked, true);
+    assert.equal(wrapper.find('input [value="yes1819"]').props().checked, true);
     assert.equal(wrapper.find('Button').length, 0);
   });
 });
