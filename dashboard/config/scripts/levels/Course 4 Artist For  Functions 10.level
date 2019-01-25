@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's Step it up a little, can you draw a Star shape using the \"Draw a Square Line\" function? Good luck!",
+    "short_instructions": "Let's Step it up a little, can you draw a Star shape using the \"Draw a Square Line\" function? Good luck!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

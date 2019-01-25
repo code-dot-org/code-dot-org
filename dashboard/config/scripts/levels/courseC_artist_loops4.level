@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "The zombie has found an empty farm!  Can you help him bring it to life by stamping animal stickers every 100 pixels around the border?",
+    "short_instructions": "The zombie has found an empty farm!  Can you help him bring it to life by stamping animal stickers every 100 pixels around the border?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

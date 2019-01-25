@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game, take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation Tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab.",
+    "long_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game, take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation Tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab.",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

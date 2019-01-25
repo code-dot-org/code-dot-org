@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them? Instead of moving forward by a set amount, try moving forward (100 / counter) pixels.",
+    "short_instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them? Instead of moving forward by a set amount, try moving forward (100 / counter) pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them? Instead of moving forward by a set amount, try moving forward (100 / counter) pixels.",
+    "long_instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them? Instead of moving forward by a set amount, try moving forward (100 / counter) pixels.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

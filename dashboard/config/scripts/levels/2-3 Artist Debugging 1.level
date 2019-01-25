@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This hat should only be 50 pixels wide.  Can you fix it?",
+    "short_instructions": "This hat should only be 50 pixels wide.  Can you fix it?",
     "x": "140",
     "y": "225",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "permitted_errors": "0",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "This hat should only be 50 pixels wide. \r\nCan you fix it?\r\n\r\n<br/>\r\n",
+    "long_instructions": "This hat should only be 50 pixels wide. \r\nCan you fix it?\r\n\r\n<br/>\r\n",
     "examples_required": "false",
     "disable_examples": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"2-3_Artist_Debugging_1_a\",\r\n  \"callout_text\": \"Artist doesn't have a \\\"Step\\\" button, but you can drag the slider left to watch your program run more carefully.\",\r\n  \"element_id\": \"#fastClipPath\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",

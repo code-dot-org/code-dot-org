@@ -33,7 +33,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Share your app with someone, or just send it to yourself! Then keep building it out!\r\n\r\n**How:** Click \"Share\" to find lots of ways to share your app. Here's some ideas to try\r\n\r\n* Add a button that takes you back from `\"screen2\"` to `\"screen1\"`\r\n* Add more screens with more images\r\n* Add more types of reaction buttons that users can click",
+    "long_instructions": "**Goal:** Share your app with someone, or just send it to yourself! Then keep building it out!\r\n\r\n**How:** Click \"Share\" to find lots of ways to share your app. Here's some ideas to try\r\n\r\n* Add a button that takes you back from `\"screen2\"` to `\"screen1\"`\r\n* Add more screens with more images\r\n* Add more types of reaction buttons that users can click",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

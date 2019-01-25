@@ -7,7 +7,7 @@
   "properties": {
     "skin": "birds",
     "maze": "[[2,1,1,1,0,0,0,0],[0,1,1,1,0,0,0,0],[1,1,1,1,0,0,0,0],[0,0,0,1,1,1,1,1],[0,0,0,0,1,1,1,1],[0,0,0,0,1,1,1,0],[0,0,0,0,1,1,1,3],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Now do it right!",
+    "short_instructions": "Now do it right!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

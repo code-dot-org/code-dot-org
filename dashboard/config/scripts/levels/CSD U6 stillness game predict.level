@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 568,
   "properties": {
-    "markdown_instructions": "# Accelerometer Events\r\n\r\nLook at the code below with a partner. What do you think it's going to do? Give it a guess, then run the code to find out!\r\n",
+    "long_instructions": "# Accelerometer Events\r\n\r\nLook at the code below with a partner. What do you think it's going to do? Give it a guess, then run the code to find out!\r\n",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

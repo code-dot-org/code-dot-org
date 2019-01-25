@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Here's the same game but most of the code is hidden. We've added a new function called `score_points.`\r\n\r\nAdd a new parameter called `points` to the `player_score` function. \r\n\r\nThe `score_points` function should be able to both add and remove points from `player_score` depending on which actor is hit.\r\nChanging the score by 1 will add a point, while changing the score by -1 will subtract a point.\r\n\r\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle. ",
+    "short_instructions": "Here's the same game but most of the code is hidden. We've added a new function called `score_points.`\r\n\r\nAdd a new parameter called `points` to the `player_score` function. \r\n\r\nThe `score_points` function should be able to both add and remove points from `player_score` depending on which actor is hit.\r\nChanging the score by 1 will add a point, while changing the score by -1 will subtract a point.\r\n\r\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's the same game but most of the code is hidden. We've added a new function called `score_points.`\r\n<br/>\r\n<hr>\r\n<br/>\r\n<h4>\r\nAdd a new parameter called `points` to the `player_score` function. \r\n<br/>\r\nThe `score_points` function should be able to both add and remove points from `player_score` depending on which actor is hit.<br>\r\nChanging the score by 1 will add a point, while changing the score by -1 will subtract a point.\r\n</h4>\r\n<br/>\r\n<hr>\r\n*Note:  When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle.*",
+    "long_instructions": "Here's the same game but most of the code is hidden. We've added a new function called `score_points.`\r\n<br/>\r\n<hr>\r\n<br/>\r\n<h4>\r\nAdd a new parameter called `points` to the `player_score` function. \r\n<br/>\r\nThe `score_points` function should be able to both add and remove points from `player_score` depending on which actor is hit.<br>\r\nChanging the score by 1 will add a point, while changing the score by -1 will subtract a point.\r\n</h4>\r\n<br/>\r\n<hr>\r\n*Note:  When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle.*",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

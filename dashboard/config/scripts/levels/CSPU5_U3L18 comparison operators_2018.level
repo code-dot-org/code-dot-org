@@ -49,7 +49,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
+    "short_instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "rlr2N1FltblrUta/+SMU2NxO1/qB3rtsfxXN7aluiWuVC8xrNKhXQPYrnfWi\nHyBW\n",
     "instructions_important": "false",

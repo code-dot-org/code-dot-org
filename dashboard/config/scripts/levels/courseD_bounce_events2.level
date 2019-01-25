@@ -14,7 +14,7 @@
       "leftButton",
       "rightButton"
     ],
-    "instructions": "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets.",
+    "short_instructions": "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,8],[0,0,0,0,0,0,0,0]]",
     "instructions_important": "false",
     "is_k1": "false",

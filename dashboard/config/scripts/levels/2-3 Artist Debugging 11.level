@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "My snowflake is falling apart!\r\n\r\nCan you figure out what's going wrong?",
+    "short_instructions": "My snowflake is falling apart!\r\n\r\nCan you figure out what's going wrong?",
     "x": "225",
     "y": "200",
     "start_direction": "0",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "disable_sharing": "false",
     "impressive": "false",
-    "markdown_instructions": "My snowflake is falling apart!\r\n\r\nCan you figure out what's going wrong?",
+    "long_instructions": "My snowflake is falling apart!\r\n\r\nCan you figure out what's going wrong?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

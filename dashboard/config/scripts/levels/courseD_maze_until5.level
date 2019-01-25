@@ -7,8 +7,8 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,1,0,0]]",
-    "instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
-    "markdown_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
+    "short_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
+    "long_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
