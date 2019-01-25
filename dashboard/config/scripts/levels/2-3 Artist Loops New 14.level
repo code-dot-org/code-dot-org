@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Play around with the code for the diamond and see what other patterns you can make. Try changing how many degrees you turn and how many times you loop.",
+    "short_instructions": "Play around with the code for the diamond and see what other patterns you can make. Try changing how many degrees you turn and how many times you loop.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -15,7 +15,7 @@
     "free_play": "true",
     "slider_speed": "0.8",
     "embed": "false",
-    "markdown_instructions": "Play around with the code for the diamond and see what other patterns you can make. \r\n\r\nTry changing how many degrees you turn and how many times you loop.",
+    "long_instructions": "Play around with the code for the diamond and see what other patterns you can make. \r\n\r\nTry changing how many degrees you turn and how many times you loop.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

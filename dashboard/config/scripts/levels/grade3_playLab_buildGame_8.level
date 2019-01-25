@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Add the second part of the code to choose a suit, copying what you made for a Red card.",
+    "short_instructions": "Add the second part of the code to choose a suit, copying what you made for a Red card.",
     "contained_level_names": null
   },
   "published": true,

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
+    "short_instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,7 +15,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
+    "long_instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

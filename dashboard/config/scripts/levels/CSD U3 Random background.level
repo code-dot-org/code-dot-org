@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Background\r\n\r\nSometimes you'll want to fill the entire screen with a color.  For that, you can use `background`.  It covers everything on the screen with the color you choose.\r\n\r\n# Do This\r\n\r\n* Run the code to see `background` work.\r\n* Change the background from yellow to orange.\r\n\r\n*Challenge: There is a purple square that is covered up by the background.  Can you change the order of the code so you can see both the purple and blue squares?*",
+    "long_instructions": "# Background\r\n\r\nSometimes you'll want to fill the entire screen with a color.  For that, you can use `background`.  It covers everything on the screen with the color you choose.\r\n\r\n# Do This\r\n\r\n* Run the code to see `background` work.\r\n* Change the background from yellow to orange.\r\n\r\n*Challenge: There is a purple square that is covered up by the background.  Can you change the order of the code so you can see both the purple and blue squares?*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_blocks": "fill(\"purple\");\r\nrect(50,50, 100,100);\r\nbackground(\"yellow\");\r\nfill(\"blue\");\r\nrect(250,250, 100, 100);",

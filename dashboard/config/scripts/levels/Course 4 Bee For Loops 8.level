@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "6",
     "ideal": "14",
-    "instructions": "Can you use the loop variable to control movement and nectar collection?",
+    "short_instructions": "Can you use the loop variable to control movement and nectar collection?",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
   }

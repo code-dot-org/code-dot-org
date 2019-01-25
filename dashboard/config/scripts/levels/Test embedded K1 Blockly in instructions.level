@@ -34,8 +34,8 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "5",
     "nectar_goal": "1",
-    "instructions": "Use three `move west` blocks and one `pick corn` block to solve this puzzle.",
-    "markdown_instructions": "Use <xml><block type=\"maze_moveWest\"/></xml> **three** times to get the harvester to the corn! Don't forget to use <xml><block type=\"harvester_corn\"/></xml> to pick the corn!",
+    "short_instructions": "Use three `move west` blocks and one `pick corn` block to solve this puzzle.",
+    "long_instructions": "Use <xml><block type=\"maze_moveWest\"/></xml> **three** times to get the harvester to the corn! Don't forget to use <xml><block type=\"harvester_corn\"/></xml> to pick the corn!",
     "authored_hints": "[]",
     "ideal": "5",
     "contained_level_names": null

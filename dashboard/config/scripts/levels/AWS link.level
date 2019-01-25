@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 766,
   "properties": {
-    "markdown_instructions": "# Use this tool for stuff",
+    "long_instructions": "# Use this tool for stuff",
     "instructions_important": "false",
     "link_title": "Amazon Chime",
     "url": "http://chime.aws"

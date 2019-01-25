@@ -83,7 +83,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use this App Lab area to improve your clicker game.  You should start by copy/pasting the code from your old game here.  We're showing a more full set of blocks in the toolbox - some of the things you might not have used yet.  Feel free to explore then and experiment if you want to.  Everything else you need should be shown.  Have fun!",
+    "short_instructions": "Use this App Lab area to improve your clicker game.  You should start by copy/pasting the code from your old game here.  We're showing a more full set of blocks in the toolbox - some of the things you might not have used yet.  Feel free to explore then and experiment if you want to.  Everything else you need should be shown.  Have fun!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

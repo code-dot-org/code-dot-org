@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "ideal": "9",
-    "markdown_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
+    "long_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
@@ -36,7 +36,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "instructions": "Can you figure out the pattern that you need to solve this puzzle?",
+    "short_instructions": "Can you figure out the pattern that you need to solve this puzzle?",
     "contained_level_names": null
   },
   "published": true,

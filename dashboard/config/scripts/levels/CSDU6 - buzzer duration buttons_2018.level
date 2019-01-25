@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Buzzer and the Buttons\r\n\r\nThis program should use the buttons to play long and short buzzes.\r\n\r\n# Do this\r\n* Change the duration parameter of `buzzer.frequency` to make the left button play a long buzz, and the right button play a short buzz.",
+    "long_instructions": "# Buzzer and the Buttons\r\n\r\nThis program should use the buttons to play long and short buzzes.\r\n\r\n# Do this\r\n* Change the duration parameter of `buzzer.frequency` to make the left button play a long buzz, and the right button play a short buzz.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

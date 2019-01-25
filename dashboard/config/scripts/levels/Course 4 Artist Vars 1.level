@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 100 pixels long on each side.",
+    "short_instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 100 pixels long on each side.",
     "x": "150",
     "y": "225",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 100 pixels long on each side.\r\n\r\n<br/>\r\n",
+    "long_instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 100 pixels long on each side.\r\n\r\n<br/>\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "instructions_important": "true",

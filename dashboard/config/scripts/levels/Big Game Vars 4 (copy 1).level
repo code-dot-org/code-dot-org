@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Awesome, now you can update the variables for your Player, Target, and Danger. Feel free to play with all of the variables at this point to make your game look like you'd like it to. Click 'finish' when you're done.",
+    "short_instructions": "Awesome, now you can update the variables for your Player, Target, and Danger. Feel free to play with all of the variables at this point to make your game look like you'd like it to. Click 'finish' when you're done.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
