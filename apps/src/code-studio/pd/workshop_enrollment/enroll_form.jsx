@@ -5,11 +5,13 @@ import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
-import {ButtonList} from '../form_components/ButtonList.jsx';
+import ButtonList from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import QuestionsTable from '../form_components/QuestionsTable';
+import isEmail from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {WorkshopPropType} from './enrollmentConstants';
+
 
 const OTHER = "Other";
 const NOT_TEACHING = "I'm not teaching this year";
@@ -53,16 +55,15 @@ const GRADES_TEACHING = [
   "Grade 9-12"
 ];
 
-const CSF_COURSES = [
-  "Course A",
-  "Course B",
-  "Course C",
-  "Course D",
-  "Course E",
-  "Course F",
-  "Express",
-  "Other"
-];
+const CSF_COURSES = {
+  "Course A" : "courseA",
+  "Course B" : "courseB",
+  "Course C" : "courseC",
+  "Course D" : "courseD",
+  "Course E" : "courseE",
+  "Course F" : "courseF",
+  "Express" : "express"
+};
 
 const ATTENDED_CSF_COURSES = [
   "Yes, I attended a CS Fundamentals Intro workshop this academic year.",
@@ -231,6 +232,12 @@ export default class EnrollForm extends React.Component {
         <p>This workshop is intended for teachers for Grades K-5.</p>
       </div>
     );
+    const coursesPlannedLabel = (
+      <div>
+      Which CS Fundamentals course(s), if any, do you plan to <strong>use more of</strong> in the next 12 months? Check all that apply.
+      </div>
+    );
+
     const gradesTeaching = GRADES_TEACHING.concat([
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
@@ -244,7 +251,7 @@ export default class EnrollForm extends React.Component {
       }
     ]);
 
-    const csfCourses = CSF_COURSES.concat([
+    const csfCourses = Object.keys(CSF_COURSES).map(key => key).concat([
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_course_other,
@@ -344,12 +351,28 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         }
         {this.props.workshop.course === CSF && this.props.workshop.subject === DEEP_DIVE && <FormGroup>
+          <QuestionsTable
+            id="lessons_taught"
+            key="lessons_taught"
+            label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
+            options={[
+              "a few lessons",
+              "most lessons",
+              "all lessons"
+            ]}
+            questions={Object.keys(CSF_COURSES).map(key =>
+              (
+                {label: key,
+                name: CSF_COURSES[key],
+            }))}
+            type="check"
+          />
           <ButtonList
             id="courses_teaching_more"
             key="courses_teaching_more"
             answers={csfCourses}
             groupName="courses_teaching_more"
-            label="Which CS Fundamentals course(s), if any, do you plan to use more of in the next 12 months? Check all that apply."
+            label={coursesPlannedLabel}
             onChange={this.handleChange}
             selectedItems={this.state.courses_teaching_more}
             validationState={this.state.errors.hasOwnProperty("courses_teaching_more") ? VALIDATION_STATE_ERROR : null}
