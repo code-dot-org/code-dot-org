@@ -26,7 +26,7 @@ DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 
 def main
   # Get the current amount
-  project_count = PEGASUS_REPORTING_DB_READER["SELECT COUNT(standalone) FROM storage_apps WHERE standalone = 1"].first.first[1]
+  project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
 
   # check if number is bigger than previous count
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
