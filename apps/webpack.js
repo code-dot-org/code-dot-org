@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes -
@@ -257,7 +256,6 @@ function create(options) {
         //   // and we haven't been using them.
         //   sourceMap: false
         // }),
-        new UnminifiedWebpackPlugin(),
       ]
     );
   }
