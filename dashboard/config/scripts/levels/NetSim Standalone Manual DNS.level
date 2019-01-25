@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
+    "short_instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",
@@ -52,7 +52,7 @@
     "show_log_browser_button": "true",
     "broadcast_mode": "false",
     "connected_routers": "true",
-    "markdown_instructions": "# Introduction to DNS\r\n\r\nIn this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other. From the DNS tab in the left column, one person can take over as DNS.\r\n\r\nYour teacher will hand out more specific instructions for this activity.",
+    "long_instructions": "# Introduction to DNS\r\n\r\nIn this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other. From the DNS tab in the left column, one person can take over as DNS.\r\n\r\nYour teacher will hand out more specific instructions for this activity.",
     "address_format": "4.4"
   }
 }]]></config>

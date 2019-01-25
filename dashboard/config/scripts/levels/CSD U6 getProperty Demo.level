@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Updating Properties\r\n\r\nHere's an example of an app that uses both `getProperty` and `setProperty` to update elements on the screen. Read through the code, and then test it out by filling out the input fields and clicking \"Save\"\r\n\r\n_Note: you don't need to change any code here, but read through the provided code to see how it works._",
+    "long_instructions": "# Updating Properties\r\n\r\nHere's an example of an app that uses both `getProperty` and `setProperty` to update elements on the screen. Read through the code, and then test it out by filling out the input fields and clicking \"Save\"\r\n\r\n_Note: you don't need to change any code here, but read through the provided code to see how it works._",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"save_button\", \"click\", function(event) {\r\n  var name = getProperty(\"name_input\", \"value\");\r\n  var color = getProperty(\"color_input\", \"value\");\r\n  var newsletter = getProperty(\"newsletter_input\", \"checked\");\r\n  \r\n  setProperty(\"name_output\", \"text\", name);\r\n  setProperty(\"color_output\", \"background-color\", color);\r\n  if (newsletter) {\r\n    setProperty(\"newsletter_output\", \"text\", \"I am on the newsletter\");\r\n  } else {\r\n    setProperty(\"newsletter_output\", \"text\", \"I am NOT on the newsletter\");\r\n  }\r\n});",

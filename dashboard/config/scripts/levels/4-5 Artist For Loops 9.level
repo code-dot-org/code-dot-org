@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "These circles are size 5, 10, 15, 20, 25, 30, and 35. Draw the circles using a \"for\" block.",
+    "short_instructions": "These circles are size 5, 10, 15, 20, 25, 30, and 35. Draw the circles using a \"for\" block.",
     "x": "185",
     "y": "25",
     "start_direction": "90",

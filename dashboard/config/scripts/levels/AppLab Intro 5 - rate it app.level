@@ -32,7 +32,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/74c675e72f33fa368057d7b783e50e31-image-1507568235560.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Complete this simple profile. Set the user name. Choose a main image. When you click the heart it should switch to a filled in heart icon and turn red.\r\n\r\n**How:** You'll need to use the `\"image\"` property.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/217e10ec9ac91037b80b963fab299a60-image-1507568801064.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/74c675e72f33fa368057d7b783e50e31-image-1507568235560.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Complete this simple profile. Set the user name. Choose a main image. When you click the heart it should switch to a filled in heart icon and turn red.\r\n\r\n**How:** You'll need to use the `\"image\"` property.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/217e10ec9ac91037b80b963fab299a60-image-1507568801064.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -6,7 +6,7 @@
   "user_id": 20,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.",
+    "short_instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.",
     "x": "200",
     "y": "200",
     "is_k1": "false",
@@ -17,7 +17,7 @@
     "ideal": "8",
     "disable_param_editing": "true",
     "embed": "false",
-    "markdown_instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.\r\n\r\n",
+    "long_instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.\r\n\r\n",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

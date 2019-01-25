@@ -15,7 +15,7 @@
     ],
     "use_flag_goal": "true",
     "theme": "soccer",
-    "instructions": "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag.",
+    "short_instructions": "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0]]",
     "contained_level_names": null
   },

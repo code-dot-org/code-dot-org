@@ -12,7 +12,7 @@
     "score": "true",
     "free_play": "true",
     "scale": "{\"snapRadius\":2}",
-    "instructions": "Create your own Flappy game! ",
+    "short_instructions": "Create your own Flappy game! ",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -34,7 +34,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "default_flap": "NORMAL",
-    "markdown_instructions": "Create your own Flappy game! \r\n\r\nYou can change the visuals and the rules...even the gravity! \r\nWhen you're done, click \"Finish\" to share with friends on their phones.",
+    "long_instructions": "Create your own Flappy game! \r\n\r\nYou can change the visuals and the rules...even the gravity! \r\nWhen you're done, click \"Finish\" to share with friends on their phones.",
     "project_template_level_name": "courseC_flappy_events_template",
     "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null

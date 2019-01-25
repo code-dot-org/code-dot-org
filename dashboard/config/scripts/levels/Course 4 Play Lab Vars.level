@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Alright, one last thing for this game - let's set it up so the player can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the emeny vanish. If the score is every less than 0, make the player vanish.",
+    "short_instructions": "Alright, one last thing for this game - let's set it up so the player can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the emeny vanish. If the score is every less than 0, make the player vanish.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

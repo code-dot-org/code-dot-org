@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "What other topics are you interested in learning about in the future?",
+    "long_instructions": "What other topics are you interested in learning about in the future?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

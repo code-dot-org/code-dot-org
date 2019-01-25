@@ -7,8 +7,8 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,0,0,0,4,0,0,0],[0,1,1,1,1,1,1,3],[0,1,0,0,1,0,0,0],[0,1,1,1,1,0,0,0],[0,1,0,0,0,1,1,1],[0,1,0,0,0,1,0,1],[0,1,1,1,1,1,1,2],[0,0,0,0,0,4,0,0]]",
-    "instructions": "Help the zombie get to the sunflower.",
-    "markdown_instructions": "Help the zombie get to the sunflower.",
+    "short_instructions": "Help the zombie get to the sunflower.",
+    "long_instructions": "Help the zombie get to the sunflower.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
