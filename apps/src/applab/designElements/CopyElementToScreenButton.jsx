@@ -15,7 +15,7 @@ const styles = {
   },
   menu: {
     maxHeight: '200px',
-    overflowY: 'scroll',
+    overflowY: 'auto',
   },
 };
 
