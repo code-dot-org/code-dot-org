@@ -146,6 +146,7 @@ module ProjectsList
         ).
         exclude(published_at: nil).
         order(Sequel.desc(:published_at)).limit(8).all
+      project_featured_project_user_combo_data.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
