@@ -195,7 +195,11 @@ export default class EnrollForm extends React.Component {
       describe_role: this.state.describe_role,
       grades_teaching: this.gradesTeaching(),
       explain_teaching_other: this.state.explain_teaching_other,
-      explain_not_teaching: this.state.explain_not_teaching
+      explain_not_teaching: this.state.explain_not_teaching,
+      csf_course_experience: this.state.csf_course_experience,
+      csf_courses_planned: this.state.csf_courses_planned,
+      explain_csf_course_other: this.state.explain_csf_course_other,
+      attended_csf_intro_workshop: this.state.attended_csf_intro_workshop,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -254,7 +258,7 @@ export default class EnrollForm extends React.Component {
     const csfCourses = Object.keys(CSF_COURSES).map(key => key).concat([
       {
         answerText: `${OTHER} ${EXPLAIN}`,
-        inputValue: this.state.explain_course_other,
+        inputValue: this.state.explain_csf_course_other,
         onInputChange: this.handleCourseOtherChange
       }
     ]);
@@ -352,8 +356,8 @@ export default class EnrollForm extends React.Component {
         }
         {this.props.workshop.course === CSF && this.props.workshop.subject === DEEP_DIVE && <FormGroup>
           <QuestionsTable
-            id="lessons_taught"
-            key="lessons_taught"
+            id="csf_course_experience"
+            key="csf_course_experience"
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
             options={[
               "a few lessons",
@@ -368,15 +372,15 @@ export default class EnrollForm extends React.Component {
             type="check"
           />
           <ButtonList
-            id="courses_teaching_more"
-            key="courses_teaching_more"
+            id="csf_courses_planned"
+            key="csf_courses_planned"
             answers={csfCourses}
-            groupName="courses_teaching_more"
+            groupName="csf_courses_planned"
             label={coursesPlannedLabel}
             onChange={this.handleChange}
-            selectedItems={this.state.courses_teaching_more}
-            validationState={this.state.errors.hasOwnProperty("courses_teaching_more") ? VALIDATION_STATE_ERROR : null}
-            errorText={this.state.errors.courses_teaching_more}
+            selectedItems={this.state.csf_courses_planned}
+            validationState={this.state.errors.hasOwnProperty("csf_courses_planned") ? VALIDATION_STATE_ERROR : null}
+            errorText={this.state.errors.csf_courses_planned}
             type="check"
           />
           <ButtonList
