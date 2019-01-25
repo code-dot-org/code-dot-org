@@ -148,6 +148,37 @@ module Pd::Application
       end
     end
 
+    test 'columns_to_remove' do
+      ['csf', 'csd', 'csp'].each do |course|
+        columns = Facilitator1920Application.columns_to_remove(course)
+        columns.each do |k|
+          if course == 'csf'
+            refute k.to_s.starts_with?('csf')
+          elsif course == 'csd'
+            refute k.to_s.starts_with?("#{course}_training")
+          else
+            refute k.to_s.starts_with?('csd_csp', "#{course}_training")
+          end
+        end
+      end
+    end
+
+    test 'csv_filtered_labels' do
+      csv_filtered_labels_csf = Facilitator1920Application.csv_filtered_labels('csf')
+      assert csv_filtered_labels_csf.include? :csf_good_standing_requirement
+      refute csv_filtered_labels_csf.include? :csd_csp_good_standing_requirement
+
+      csv_filtered_labels_csd = Facilitator1920Application.csv_filtered_labels('csd')
+      assert csv_filtered_labels_csd.include? :csd_csp_good_standing_requirement
+      refute csv_filtered_labels_csd.include? :csp_training
+      refute csv_filtered_labels_csd.include? :csf_good_standing_requirement
+
+      csv_filtered_labels_csp = Facilitator1920Application.csv_filtered_labels('csp')
+      assert csv_filtered_labels_csp.include? :csd_csp_good_standing_requirement
+      refute csv_filtered_labels_csp.include? :csd_training
+      refute csv_filtered_labels_csp.include? :csf_good_standing_requirement
+    end
+
     test 'to_csv_row method' do
       @application.update!(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
@@ -156,18 +187,21 @@ module Pd::Application
       assert_equal @regional_partner.name, csv_answers[36]
       assert_equal 'notes', csv_answers[15]
       assert_equal 'accepted', csv_answers[2]
+      assert_equal(
+        "https://test-studio.code.org/pd/application_dashboard/#{@application.course}_facilitators/#{@application.id}",
+        csv_answers[37]
+      )
     end
 
     test 'csv_header and row return same number of columns' do
-      mock_user = mock
-
-      header = Facilitator1920Application.csv_header('csp')
-      row = @application.to_csv_row(mock_user)
+      course = 'csp'
+      header = Facilitator1920Application.csv_header(course)
+      row = @application.to_csv_row(course)
       assert_equal CSV.parse(header).length, CSV.parse(row).length,
         "Expected header and row to have the same number of columns"
     end
 
-    test 'locking an application with fit_workshop_id does not automatically enroll user' do
+    test 'locking an accepted application with fit_workshop_id does not automatically enroll user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
