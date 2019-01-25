@@ -98,6 +98,8 @@ export default class QuestionsTable extends React.Component {
     };
 
     return (
+      <FormGroup>
+      <ControlLabel>{this.props.label}</ControlLabel>
       <Table striped bordered>
         <thead>
           <tr>
@@ -127,6 +129,7 @@ export default class QuestionsTable extends React.Component {
           )}
         </tbody>
       </Table>
+      </FormGroup>
     );
   }
 }
@@ -137,7 +140,8 @@ QuestionsTable.propTypes = {
   labelSpan: PropTypes.number,
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  questions: PropTypes.arrayOf(questionPropType).isRequired
+  questions: PropTypes.arrayOf(questionPropType).isRequired,
+  label: PropTypes.string
 };
 
 QuestionsTable.defaultProps = {
