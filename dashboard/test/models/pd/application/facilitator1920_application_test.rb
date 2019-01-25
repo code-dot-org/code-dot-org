@@ -169,7 +169,7 @@ module Pd::Application
     end
 
     test 'to_cohort_csv' do
-      optional_columns = {registered_workshop: true, accepted_teachercon: false}
+      optional_columns = {registered_workshop: true}
       assert (header = Facilitator1920Application.cohort_csv_header(optional_columns))
       assert (row = @application.to_cohort_csv_row(optional_columns))
       assert_equal CSV.parse(header).length, CSV.parse(row).length,

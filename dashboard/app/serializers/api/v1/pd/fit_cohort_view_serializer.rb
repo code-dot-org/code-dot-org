@@ -9,7 +9,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
-    :accepted_teachercon,
     :assigned_fit,
     :registered_fit,
     :accepted_fit,
@@ -36,14 +35,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
 
   def registered_workshop
     object.try(:registered_workshop?)
-  end
-
-  def teachercon_assigned_at_registration
-    tc_registration.try(:teachercon_city)
-  end
-
-  def accepted_teachercon
-    tc_registration.try(:accepted_seat_simplified)
   end
 
   def assigned_fit
@@ -79,15 +70,7 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def form_data
-    if @scope[:view] == 'teachercon'
-      if object.is_a? Pd::Teachercon1819Registration
-        object.form_data_hash
-      else
-        object.try(:pd_teachercon1819_registration).try(:form_data_hash)
-      end
-    else # fit
-      object.try(:pd_fit_weekend1819_registration).try(:form_data_hash)
-    end
+    object.try(:pd_fit_weekend1819_registration).try(:form_data_hash)
   end
 
   private

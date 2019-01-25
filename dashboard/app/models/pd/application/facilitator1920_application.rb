@@ -188,9 +188,6 @@ module Pd::Application
       if optional_columns[:registered_workshop]
         columns.push 'Registered Workshop'
       end
-      if optional_columns[:accepted_teachercon]
-        columns.push 'Accepted Teachercon'
-      end
 
       columns.push(
         'General Notes',
@@ -251,13 +248,6 @@ module Pd::Application
       if optional_columns[:registered_workshop]
         if workshop.try(:local_summer?)
           columns.push(registered_workshop? ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
-      if optional_columns[:accepted_teachercon]
-        if workshop.try(:teachercon?)
-          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
         else
           columns.push nil
         end
