@@ -25,9 +25,19 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
 # This default number of lines of code is from 2019-1-21.
 DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 
+NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
+
 def main
   # Get the current amount
   project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
+
+  # check if number is bigger than previous count
+  existing_project_count = Properties.get(:metrics)['project_count'] || 0
+  if (project_count - existing_project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE
+    # Log Honeybadger error that the project count somehow went down
+    error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
+    raise error_message
+  end
 
   # save value for use
   time = DateTime.now
@@ -38,14 +48,6 @@ def main
     lines_of_code:            Properties.get(:metrics)['lines_of_code'],
     project_count:            project_count,
   }
-
-  # check if number is bigger than previous count
-  existing_project_count = Properties.get(:metrics)['project_count'] || 0
-  if existing_project_count > project_count
-    # Log Honeybadger error that the project count somehow went down
-    error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
-    raise error_message
-  end
 end
 
 main
