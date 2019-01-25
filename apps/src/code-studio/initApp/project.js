@@ -1380,7 +1380,7 @@ function fetchSource(channelData, callback, version, sourcesApi) {
           animations: ''
         };
       }
-      currentSourceVersionId = jqXHR.getResponseHeader('S3-Version-Id');
+      currentSourceVersionId = jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
       unpackSources(data);
       callback();
     });

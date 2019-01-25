@@ -57,7 +57,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Mini-Project.  The Quick Double-Click game.  In this simple game an object (an image) moves around, or pops up randomly on the screen, as the user clicks it.  The goal of our game will be to try to double-click the object before it moves.  Part of the challenge (and fun) here is creating this app from scratch.  You can look back at your previous work for examples, but it's fun to create something from scratch, too.  Try it!  For more details see the Activity guide for this lesson.",
+    "short_instructions": "Mini-Project.  The Quick Double-Click game.  In this simple game an object (an image) moves around, or pops up randomly on the screen, as the user clicks it.  The goal of our game will be to try to double-click the object before it moves.  Part of the challenge (and fun) here is creating this app from scratch.  You can look back at your previous work for examples, but it's fun to create something from scratch, too.  Try it!  For more details see the Activity guide for this lesson.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

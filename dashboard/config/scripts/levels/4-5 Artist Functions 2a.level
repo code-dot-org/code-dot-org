@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Now put these blocks into a new function called \"draw a small triangle\" and call on it.",
+    "short_instructions": "Now put these blocks into a new function called \"draw a small triangle\" and call on it.",
     "x": "175",
     "y": "200",
     "start_direction": "90",

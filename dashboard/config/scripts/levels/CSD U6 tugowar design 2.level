@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Designing the Win Screen\r\n\r\nThe final screen in this program shows who won. It's totally blank right now.\r\n\r\n# Do This\r\n\r\nSwitch to \"win\" and design it based on your project guide. Make sure to pay close attention to the ID of each element. Once you've added the required elements, feel free to add any other design tweaks that you'd like.",
+    "long_instructions": "# Designing the Win Screen\r\n\r\nThe final screen in this program shows who won. It's totally blank right now.\r\n\r\n# Do This\r\n\r\nSwitch to \"win\" and design it based on your project guide. Make sure to pay close attention to the ID of each element. Once you've added the required elements, feel free to add any other design tweaks that you'd like.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

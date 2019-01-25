@@ -17,9 +17,11 @@ export default class AssetRow extends React.Component {
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
+    projectId: PropTypes.string,
 
-    //temporary prop to differentiate choosing images and sounds
-    imagePicker: PropTypes.bool
+    // For logging purposes
+    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
+    elementId: PropTypes.string
   };
 
   state = {
@@ -32,6 +34,20 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
+    firehoseClient.putRecord(
+      {
+        study: 'delete-asset',
+        study_group: this.props.onChoose && typeof this.props.onChoose === 'function' ? 'choose-assets' : 'manage-assets',
+        event: 'initiate',
+        project_id: this.props.projectId,
+        data_json: JSON.stringify(
+          {
+            assetName: this.props.name,
+            elementId: this.props.elementId
+          }
+        )
+      }
+    );
   };
 
   /**

@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Now, get Jorge to move right when the `right` button is clicked.",
+    "short_instructions": "Now, get Jorge to move right when the `right` button is clicked.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +47,7 @@
     "timeout_failure_tick": "0",
     "callout_json": "[]",
     "project_template_level_name": "gradek_playlab_events5c_template",
-    "markdown_instructions": "Now, get Jorge to move right when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png) button is clicked.",
+    "long_instructions": "Now, get Jorge to move right when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png) button is clicked.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)\",\"hint_id\":\"gradek_playlab_events3c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321ffeed9aa0b3f8cf96ac440e650672/gradek_playlab_events3c.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the block you should connect to the `when right` event:\\n\\n![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)\",\"hint_id\":\"gradek_playlab_events3c_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be92fc2b8339b9e5650d9fe356b36ce0/gradek_playlab_events3c.mp3\"}]",
     "contained_level_names": null
   },

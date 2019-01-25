@@ -45,7 +45,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"jitter\",\r\n    \"blockText\": \"{SPRITE} jitter\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"wander\",\r\n    \"blockText\": \"{SPRITE} wander\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  }\r\n]\r\n",
     "hide_custom_blocks": "true",
     "parent_level_id": 11951,
-    "markdown_instructions": "Let's try some more movement blocks - make the dog run up and make the cat run right.",
+    "long_instructions": "Let's try some more movement blocks - make the dog run up and make the cat run right.",
     "show_type_hints": "false",
     "block_pool": "gamelab",
     "contained_level_names": null

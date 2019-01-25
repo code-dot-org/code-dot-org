@@ -165,6 +165,7 @@ module Api::V1::Pd
       {
         id: @regional_partner.id,
         name: @regional_partner.name,
+        has_csf: nil,
         group: @regional_partner.group,
         workshops: [{
           id: @program_manager_csd_workshop.id,
@@ -191,6 +192,7 @@ module Api::V1::Pd
         id: @regional_partner.id,
         name: @regional_partner.name,
         group: @regional_partner.group,
+        has_csf: nil,
         workshops: [{
           id: @program_manager_csd_workshop.id,
           dates: 'March 15-19, 2018',
@@ -208,6 +210,7 @@ module Api::V1::Pd
         id: @regional_partner.id,
         name: @regional_partner.name,
         group: @regional_partner.group,
+        has_csf: nil,
         workshops: []
       }
     end

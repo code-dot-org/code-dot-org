@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you solve this by adding only one block?",
+    "short_instructions": "Can you solve this by adding only one block?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you solve this by adding only one block?",
+    "long_instructions": "Can you solve this by adding only one block?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

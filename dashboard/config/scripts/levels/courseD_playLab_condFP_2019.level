@@ -44,7 +44,7 @@
       "upButton"
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_playLab_condFP_1\",\r\n  \"callout_text\": \"we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "instructions": "Now, build your own game to show off to your friends!",
+    "short_instructions": "Now, build your own game to show off to your friends!",
     "parent_level_id": 11900,
     "name_suffix": "_2019",
     "disable_procedure_autopopulate": "false",
@@ -53,7 +53,7 @@
     "disable_if_else_editing": "true",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "markdown_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n  - Have the pirate and ninja work together to get points from the octopus\r\n  - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n  - Have each character disappear when touched by the ninja\r\n  - Invent your own game!",
+    "long_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n  - Have the pirate and ninja work together to get points from the octopus\r\n  - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n  - Have each character disappear when touched by the ninja\r\n  - Invent your own game!",
     "include_shared_functions": "false",
     "authored_hints": "[]",
     "default_num_example_blocks": "false",

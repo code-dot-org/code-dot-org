@@ -33,14 +33,25 @@ export default class CustomAsset {
           // Ignore this because it throws if the dir already exists on Android
         }
       }
-      ({ md5 } = await FileSystem.downloadAsync(this.asset.uri, localUri, {
+      if (this.asset.localUri) {
+        await FileSystem.copyAsync({
+          from: this.asset.localUri,
+          to: localUri,
+        });
+        ({ md5 } = await FileSystem.getInfoAsync(localUri, {
           cache: true,
           md5: true,
-      }));
+        }));
+      } else {
+        ({ md5 } = await FileSystem.downloadAsync(this.asset.uri, localUri, {
+            cache: true,
+            md5: true,
+        }));
+      }
       if (md5 !== this.asset.hash) {
         throw new Error(
           `Downloaded file for asset '${this.fileName} ` +
-            `Located at ${this.asset.localUri} ` +
+            `Located at ${localUri} ` +
             `failed MD5 integrity check`
         );
       }

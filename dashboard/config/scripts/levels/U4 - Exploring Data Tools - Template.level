@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use createRecord to add the song object as a record to a table. (Click to see full instructions)",
+    "short_instructions": "Use createRecord to add the song object as a record to a table. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

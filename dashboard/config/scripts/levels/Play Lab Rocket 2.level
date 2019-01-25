@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  var SECONDS_TO_RUN = Studio.customLogic.SECONDS_TO_RUN;\r\n  var targetHeight = SECONDS_TO_RUN * 15;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(SECONDS_TO_RUN + 1) === targetHeight + 15;\r\n}",
     "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > Studio.customLogic.SECONDS_TO_RUN;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "We've started the Design Recipe for rocket-height using the contract and examples you just wrote. Complete the function definition for rocket-height and run your animation.",
+    "short_instructions": "We've started the Design Recipe for rocket-height using the contract and examples you just wrote. Complete the function definition for rocket-height and run your animation.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,7 @@
     "disable_examples": "false",
     "video_key": "alg_8_design_recipe",
     "examples_required": "true",
-    "markdown_instructions": "We've started the Design Recipe for `rocket-height` using the contract and examples you just wrote. Complete the function definition for `rocket-height` and run your animation.",
+    "long_instructions": "We've started the Design Recipe for `rocket-height` using the contract and examples you just wrote. Complete the function definition for `rocket-height` and run your animation.",
     "never_autoplay_video": "false",
     "maze_data": null
   }
