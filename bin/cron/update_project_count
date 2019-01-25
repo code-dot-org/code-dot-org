@@ -9,8 +9,18 @@ require 'cdo/properties'
 require src_dir 'database'
 require 'cdo/honeybadger'
 
-PEGASUS_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
-STORAGE_APPS = PEGASUS_DB[:storage_apps]
+# Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+# to override the timeout for a specific session or query.
+MAX_EXECUTION_TIME = 1_200_000
+MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
+
+# Connection to read from Pegasus reporting database.
+PEGASUS_REPORTING_DB_READER = sequel_connect(
+  CDO.pegasus_reporting_db_reader,
+  CDO.pegasus_reporting_db_reader,
+  query_timeout: MAX_EXECUTION_TIME_SEC
+)
+STORAGE_APPS = PEGASUS_REPORTING_DB_READER[:storage_apps]
 
 # This default number of lines of code is from 2019-1-21.
 DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
@@ -28,11 +38,11 @@ def main
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
   if existing_project_count > project_count
     # Log Honeybadger error that the project count somehow went down
-    command = ARGV[0]
-    stdout, stderr, status = Open3.capture3(command)
-    exitstatus = status.exitstatus
-    error_message = "cronjob #{command} - storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
-    Honeybadger.notify_command_error error_message, exitstatus, stdout, stderr
+    error_message = [
+      "cronjob: update_project_count:",
+      "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
+    ].join("\n")
+    Honeybadger.notify_command_error error_message, 0, nil, nil
   end
 
   # save value for use
