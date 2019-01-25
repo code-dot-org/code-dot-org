@@ -64,10 +64,6 @@ class Level < ActiveRecord::Base
     long_instructions
   )
 
-  def self.permitted_params
-    super.concat(['short_instructions', 'long_instructions'])
-  end
-
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
