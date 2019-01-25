@@ -20,19 +20,13 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
   CDO.pegasus_reporting_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
-STORAGE_APPS = PEGASUS_REPORTING_DB_READER[:storage_apps]
 
 # This default number of lines of code is from 2019-1-21.
 DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 
 def main
-  project_count = 0
   # Get the current amount
-  STORAGE_APPS.each do |row|
-    if row[:standalone] == true
-      project_count += 1
-    end
-  end
+  project_count = PEGASUS_REPORTING_DB_READER["SELECT COUNT(standalone) FROM storage_apps WHERE standalone = 1"].first.first[1]
 
   # check if number is bigger than previous count
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
