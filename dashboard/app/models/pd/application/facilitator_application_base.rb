@@ -96,6 +96,10 @@ module Pd::Application
       fit_workshop.try(&:date_and_location_name)
     end
 
+    def assigned_workshop_date_and_location
+      Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
     def log_fit_workshop_change(user)
       update_status_timestamp_change_log(user, "Fit Workshop: #{fit_workshop_id ? fit_workshop_date_and_location : 'Unassigned'}")
     end
@@ -103,6 +107,14 @@ module Pd::Application
     def registered_fit_workshop?
       # inspect the cached fit_workshop.enrollments rather than querying the DB
       fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id
+    end
+
+    def friendly_registered_workshop(workshop_id = pd_workshop_id)
+      Pd::Enrollment.find_by(user: user, workshop: workshop_id) ? 'Yes' : 'No'
+    end
+
+    def friendly_registered_fit_workshop
+      friendly_registered_workshop(fit_workshop_id)
     end
 
     def self.options
@@ -393,6 +405,10 @@ module Pd::Application
 
       Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
       self.auto_assigned_fit_enrollment_id = nil
+    end
+
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_facilitators/#{id}", CDO.default_scheme)
     end
 
     # override
