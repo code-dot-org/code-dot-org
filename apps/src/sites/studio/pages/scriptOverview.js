@@ -30,7 +30,7 @@ function initPage() {
     registerReducers({scriptAnnouncements: scriptAnnouncementReducer});
     scriptData.script_announcements.forEach(announcement =>
       store.dispatch(addAnnouncement(announcement.notice, announcement.details,
-        announcement.link, announcement.type))
+        announcement.link, announcement.type, announcement.visibility))
     );
   }
 
