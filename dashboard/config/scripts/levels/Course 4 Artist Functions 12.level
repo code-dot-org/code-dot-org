@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop square function to draw a line",
+    "short_instructions": "Loop square function to draw a line",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

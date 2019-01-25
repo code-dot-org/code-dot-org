@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Try using nested loops to complete this drawing.",
+    "short_instructions": "Try using nested loops to complete this drawing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -25,8 +25,8 @@
     "disable_examples": "false",
     "start_direction": "3",
     "step_mode": "0",
-    "instructions": "Drag a block from the toolbox into the workspace. Connect it to the other blocks.",
-    "markdown_instructions": "The `toolbox` is where blocks are stored. You can drag them into the `workspace` to create programs.",
+    "short_instructions": "Drag a block from the toolbox into the workspace. Connect it to the other blocks.",
+    "long_instructions": "The `toolbox` is where blocks are stored. You can drag them into the `workspace` to create programs.",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Connect a \\\"move forward\\\" block to the bottom of the program.\",\r\n  \"hint_id\": \"hint_1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },

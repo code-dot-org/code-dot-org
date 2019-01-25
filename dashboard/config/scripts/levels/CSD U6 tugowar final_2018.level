@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make It Your Own\r\n\r\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\r\n\r\n# Do This\r\n\r\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\r\n\r\n* Change the look and layout of the screens\r\n* Use the buzzer or the led to show when one of the buttons has been clicked\r\n* Set the \"icon-color\" property of \"winner_image\" to the winning color\r\n* Make the emojis start out sad, change to meh halfway, and end up happy\r\n* Use a variable and conditionals to make sure that players can only move their emojis when the \"game\" screen is showing",
+    "long_instructions": "# Make It Your Own\r\n\r\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\r\n\r\n# Do This\r\n\r\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\r\n\r\n* Change the look and layout of the screens\r\n* Use the buzzer or the led to show when one of the buttons has been clicked\r\n* Set the \"icon-color\" property of \"winner_image\" to the winning color\r\n* Make the emojis start out sad, change to meh halfway, and end up happy\r\n* Use a variable and conditionals to make sure that players can only move their emojis when the \"game\" screen is showing",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw and Jump to make the dashed path to the treasure X",
+    "short_instructions": "Draw and Jump to make the dashed path to the treasure X",
     "x": "100",
     "y": "300",
     "start_direction": "90",

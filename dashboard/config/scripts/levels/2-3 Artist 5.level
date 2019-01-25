@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Replace this code with a \"repeat times\" block to draw the same house using only 3 blocks.",
+    "short_instructions": "Replace this code with a \"repeat times\" block to draw the same house using only 3 blocks.",
     "x": 250,
     "y": 250,
     "start_direction": 90

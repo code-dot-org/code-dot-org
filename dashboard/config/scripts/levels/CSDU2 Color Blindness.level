@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Color Blindness Filter\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Color Blindness Filter\r\n\r\n\r\n\r\n",
     "link_title": "Color Blindness Filter",
     "url": "http://colorfilter.wickline.org/"
   },

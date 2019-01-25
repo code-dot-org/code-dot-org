@@ -48,8 +48,8 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[3,6]",
-    "instructions": "Get the player to the orange square.",
-    "markdown_instructions": "It's time for the player to leave the Secret Grove and continue the adventure, but the bridge is out! \r\n\r\nHelp the Agent rebuild the bridge, then move to the wooden plank so that the player can get to the orange square.",
+    "short_instructions": "Get the player to the orange square.",
+    "long_instructions": "It's time for the player to leave the Secret Grove and continue the adventure, but the bridge is out! \r\n\r\nHelp the Agent rebuild the bridge, then move to the wooden plank so that the player can get to the orange square.",
     "place_block_options": "[\"sand\", \"planksAcacia\", \"planksBirch\", \"planksOak\", \"planksSpruce\"]",
     "contained_level_names": null
   },

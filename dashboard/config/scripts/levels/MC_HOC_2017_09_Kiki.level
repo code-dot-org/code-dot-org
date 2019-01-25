@@ -48,8 +48,8 @@
     "agent_start_direction": "1",
     "is_agent_level": "true",
     "agent_start_position": "[1,9]",
-    "instructions": "Program the Agent to clear the player's path and get to the pressure plate.",
-    "markdown_instructions": "This starting code cannot be removed.\r\n\r\nAdd commands to the `create trail` function so that the program in the workspace will get the Agent to the pressure plate. ",
+    "short_instructions": "Program the Agent to clear the player's path and get to the pressure plate.",
+    "long_instructions": "This starting code cannot be removed.\r\n\r\nAdd commands to the `create trail` function so that the program in the workspace will get the Agent to the pressure plate. ",
     "place_block_options": "[\"wool\", \"bedrock\", \"bricks\", \"clay\" , \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]",
     "contained_level_names": null
   },

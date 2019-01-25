@@ -13,7 +13,7 @@
     "player_start_position": "[3, 7]",
     "player_start_direction": "1",
     "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getInventoryAmount(\"planksBirch\") === 1 &&\r\n        verificationAPI.getInventoryAmount(\"planksSpruce\") === 1 &&\r\n      verificationAPI.getInventoryAmount(\"planksOak\") === 1;\r\n    }\r\n",
-    "instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
+    "short_instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Thursday Unit Reflection\r\n\r\n## Unit 1 and Unit 2 Connections\r\n\r\nWhat connections or hooks into unit 1 that can be used to motivate early lessons in unit 2?\r\n",
+    "long_instructions": "# Thursday Unit Reflection\r\n\r\n## Unit 1 and Unit 2 Connections\r\n\r\nWhat connections or hooks into unit 1 that can be used to motivate early lessons in unit 2?\r\n",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

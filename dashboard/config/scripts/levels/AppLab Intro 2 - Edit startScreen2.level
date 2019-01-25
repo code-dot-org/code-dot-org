@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Nice work! Time to start filling in your story.\r\n\r\n1. Click the story text on this screen. ([Show me where](#triggercallout=storyText))\r\n2. Fill in your story ([Show me where](#triggercallout=editStoryText))\r\n3. Explore the different properties you can change in the menu. Personalize this screen's look! ([Show me where](#triggercallout=changeTextColor))\r\n\r\nHit \"Run\" once to make everything looks good. Then hit \"Finish\" to move on!",
+    "long_instructions": "Nice work! Time to start filling in your story.\r\n\r\n1. Click the story text on this screen. ([Show me where](#triggercallout=storyText))\r\n2. Fill in your story ([Show me where](#triggercallout=editStoryText))\r\n3. Explore the different properties you can change in the menu. Personalize this screen's look! ([Show me where](#triggercallout=changeTextColor))\r\n\r\nHit \"Run\" once to make everything looks good. Then hit \"Finish\" to move on!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

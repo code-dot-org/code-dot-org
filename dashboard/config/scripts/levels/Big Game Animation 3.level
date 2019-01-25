@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "The update-danger function should work just like update-target, except that the danger should move from the right side over towards the left. Complete update-danger to make the danger fly across the screen.",
+    "short_instructions": "The update-danger function should work just like update-target, except that the danger should move from the right side over towards the left. Complete update-danger to make the danger fly across the screen.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +39,7 @@
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
     "disable_examples": "false",
-    "markdown_instructions": "The `update-danger` function should work just like `update-target`, except that the danger should move from the right side over towards the left.\r\n\r\nComplete `update-danger` to make the danger fly across the screen.",
+    "long_instructions": "The `update-danger` function should work just like `update-target`, except that the danger should move from the right side over towards the left.\r\n\r\nComplete `update-danger` to make the danger fly across the screen.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "maze_data": null

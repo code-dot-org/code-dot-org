@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,4,0],[0,0,0,1,4,1,0,0],[0,0,4,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Can you replace the previous answer with a loop by using a \"repeat times\" block?",
+    "short_instructions": "Can you replace the previous answer with a loop by using a \"repeat times\" block?",
     "start_direction": "1",
     "step_mode": 1
   }
