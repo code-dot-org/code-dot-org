@@ -140,6 +140,7 @@ def main
   petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
 
   time = DateTime.now
+  # Pull current project_count to keep that current value
   Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,
