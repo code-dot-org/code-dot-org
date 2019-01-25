@@ -148,7 +148,7 @@ module Pd::Application
       FILTERED_LABELS[course]
     end
 
-    # Filter out extraneous answers based on selected program (course)
+    # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
       if course == 'csf'
         CSV_LABELS.keys.select {|k| k.to_s.start_with?('csd', 'csp')}
@@ -187,10 +187,9 @@ module Pd::Application
       CSV.generate do |csv|
         row = []
         CSV_LABELS.keys.each do |k|
-          if columns_to_exclude&.include? k.to_sym
-            next
+          unless columns_to_exclude.include? k.to_sym
+            row.push(full_answers[k] || try(k) || all_scores[k])
           end
-          row.push(full_answers[k] || try(k) || all_scores[k])
         end
         csv << row
       end

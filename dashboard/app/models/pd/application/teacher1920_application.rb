@@ -370,7 +370,7 @@ module Pd::Application
       FILTERED_LABELS[course]
     end
 
-    # Filter out extraneous answers based on selected program (course)
+    # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
       if course == 'csd'
         {
