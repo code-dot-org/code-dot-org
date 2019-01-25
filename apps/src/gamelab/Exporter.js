@@ -293,7 +293,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: project.getCurrentName(),
-      sdkVersion: '32.0.0',
+      sdkVersion: '31.0.0',
     });
 
     // Important that index.html comes first:
