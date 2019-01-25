@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 #
+# This script analyzes the number of standalone projects we have in our database and
+# saves that value to the properties-metrics.
 #
+# The script includes an alert which will trigger a honeybadger error if the project
+# count decreases by more than 10 thousand projects.
 
 require 'sequel'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
@@ -28,18 +32,17 @@ DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
 
 def main
-  # Get the current amount
+  # Get the current amount of projects.
   project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
 
-  # check if number is bigger than previous count
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
   if (existing_project_count - project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE
-    # Log Honeybadger error that the project count somehow went down
+    # Raise error if the project count somehow went down by more than set threshold.
     error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
     raise error_message
   end
 
-  # save value for use
+  # Pull current petition_signatures and lines_of_code to keep those current values
   time = DateTime.now
   Properties.set :metrics, {
     created_at:               time,
