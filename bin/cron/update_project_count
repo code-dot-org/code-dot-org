@@ -7,6 +7,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/only_one'
 require 'cdo/properties'
 require src_dir 'database'
+require_relative '../../deployment.rb'
 require 'cdo/honeybadger'
 
 # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
@@ -28,17 +29,6 @@ def main
   # Get the current amount
   project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
 
-  # check if number is bigger than previous count
-  existing_project_count = Properties.get(:metrics)['project_count'] || 0
-  if existing_project_count > project_count
-    # Log Honeybadger error that the project count somehow went down
-    error_message = [
-      "cronjob: update_project_count:",
-      "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
-    ].join("\n")
-    Honeybadger.notify_command_error error_message, 0, nil, nil
-  end
-
   # save value for use
   time = DateTime.now
   Properties.set :metrics, {
@@ -48,6 +38,14 @@ def main
     lines_of_code:            Properties.get(:metrics)['lines_of_code'],
     project_count:            project_count,
   }
+
+  # check if number is bigger than previous count
+  existing_project_count = Properties.get(:metrics)['project_count'] || 0
+  if existing_project_count > project_count
+    # Log Honeybadger error that the project count somehow went down
+    error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
+    raise error_message
+  end
 end
 
 main
