@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Movement with Properties\r\n\r\nEarlier we used `setProperty` to change the x and y position of elements on the screen, but we could only move them to either a single specific location, or a random location. By using `getProperty` to find out an element's current position, we can use the **counter pattern** from Unit 3 to update that position.\r\n\r\n# Do This\r\n\r\n* Read the program and discuss with your partner how the left button makes the motorcycle go up.\r\n* Using the working left button as an example, program the right button to make the motorcycle go down.",
+    "long_instructions": "# Movement with Properties\r\n\r\nEarlier we used `setProperty` to change the x and y position of elements on the screen, but we could only move them to either a single specific location, or a random location. By using `getProperty` to find out an element's current position, we can use the **counter pattern** from Unit 3 to update that position.\r\n\r\n# Do This\r\n\r\n* Read the program and discuss with your partner how the left button makes the motorcycle go up.\r\n* Using the working left button as an example, program the right button to make the motorcycle go down.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

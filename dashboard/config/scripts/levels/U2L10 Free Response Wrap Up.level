@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "DNS in the Real World: Wrap Up",
-    "markdown_instructions": "Complete this sentence.\n\nI learned three things today about DNS: ______(1)______ , ______(2)______ , and ______(3)______. \n\nHowever, the most important thing I learned is ______(4)______.\n",
+    "long_instructions": "Complete this sentence.\n\nI learned three things today about DNS: ______(1)______ , ______(2)______ , and ______(3)______. \n\nHowever, the most important thing I learned is ______(4)______.\n",
     "encrypted_solution": "BSrVfgqvxXey/aav8x8XwvKWbnHkm9G8vUJNOJ5auGjwca70sdYkSLZpXxFQ\nCcukV+sITnBiRwpl68J8Rd1+e1kVQZKhzxunxhOaPpdvsmk=\n",
     "skip_dialog": true,
     "skip_sound": true

@@ -7,7 +7,7 @@
   "properties": {
     "title": "Biggest Challenges",
     "height": "200",
-    "markdown_instructions": "What are your biggest challenges to implementing Code.org's curriculum in your classroom?\n",
+    "long_instructions": "What are your biggest challenges to implementing Code.org's curriculum in your classroom?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

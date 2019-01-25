@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "For this activity, connect to a router with the others in your group. The Internet Simulator now provides a place for you to put the To and From addresses, so you don't have to type out the bits manually.\r\n\r\n",
+    "short_instructions": "For this activity, connect to a router with the others in your group. The Internet Simulator now provides a place for you to put the To and From addresses, so you don't have to type out the bits manually.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

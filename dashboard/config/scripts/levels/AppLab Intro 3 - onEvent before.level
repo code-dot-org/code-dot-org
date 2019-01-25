@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Set the screen's `\"background-color\"` to `\"orange\"`. Then add code inside the `onEvent()` so the button will set the screen's `\"background-color\"` to `\"pink\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/6c338185d7fe959daed2465c4f91fb55-image-1505888600472.gif)",
+    "long_instructions": "Set the screen's `\"background-color\"` to `\"orange\"`. Then add code inside the `onEvent()` so the button will set the screen's `\"background-color\"` to `\"pink\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/6c338185d7fe959daed2465c4f91fb55-image-1505888600472.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

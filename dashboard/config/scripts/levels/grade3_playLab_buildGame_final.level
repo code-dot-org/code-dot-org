@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Final stage for playlab conditionals level (could hide entire function so that students just work with point scoring)",
+    "short_instructions": "Final stage for playlab conditionals level (could hide entire function so that students just work with point scoring)",
     "contained_level_names": null
   },
   "published": true,

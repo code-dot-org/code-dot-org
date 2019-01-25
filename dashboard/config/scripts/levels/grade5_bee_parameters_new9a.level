@@ -34,7 +34,7 @@
     "step_speed": "1",
     "honey_goal": "0",
     "instructions_important": "false",
-    "markdown_instructions": "Use your new function to solve this spiral.",
+    "long_instructions": "Use your new function to solve this spiral.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"A `for` loop can help you with this stair step pattern, too!\",\"hint_id\":\"grade5_bee_parameters_new9a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/237aacf25ee42a7e97928379361f2282/grade5_bee_parameters_new9a.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"For each stair, you'll need to call the function once, turn right, call the function again, then turn left.\",\"hint_id\":\"grade5_bee_parameters_new9a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc5b7be74aec85feb50007abfdec4592/grade5_bee_parameters_new9a.mp3\"}]",
     "contained_level_names": null
   },

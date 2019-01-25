@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "You've seen now how a variable can be used to set the height of an actor's jump. How else could  you use a variable?\r\n\r\nLet's build a game! First we'll need a score. Try setting the 'points' variable to give yourself 10 free points!",
+    "short_instructions": "You've seen now how a variable can be used to set the height of an actor's jump. How else could  you use a variable?\r\n\r\nLet's build a game! First we'll need a score. Try setting the 'points' variable to give yourself 10 free points!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

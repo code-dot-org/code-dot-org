@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "More Variables Wrap Up",
-    "markdown_instructions": "Revisit and examine the Clicker Game Enhancement list from Lesson 18 - Controlling Memory and Program Flow. \n\nWhat enhancements do you now have the knowledge and skills - related to variables and conditionals - necessary to implement?\n\n\n",
+    "long_instructions": "Revisit and examine the Clicker Game Enhancement list from Lesson 18 - Controlling Memory and Program Flow. \n\nWhat enhancements do you now have the knowledge and skills - related to variables and conditionals - necessary to implement?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

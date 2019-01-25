@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Controlling Visibility\r\n\r\nEarlier in this lesson, when we were proposing ways to simplify the quiz app, we mentioned that it was possible to show or hide design elements with code. App Lab has two functions that let you control the visibility of an element:\r\n\r\n* `hideElement()` makes the specified element invisible\r\n* `showElement()` makes the specified element visible\r\n\r\n# Do This\r\n\r\nThe provided app has an image and two buttons.\r\n\r\n* Attach an event handler to the \"Hide\" button that hides the image when clicked\r\n* Attach an event handler to the \"Show\" button that shows the image when clicked",
+    "long_instructions": "# Controlling Visibility\r\n\r\nEarlier in this lesson, when we were proposing ways to simplify the quiz app, we mentioned that it was possible to show or hide design elements with code. App Lab has two functions that let you control the visibility of an element:\r\n\r\n* `hideElement()` makes the specified element invisible\r\n* `showElement()` makes the specified element visible\r\n\r\n# Do This\r\n\r\nThe provided app has an image and two buttons.\r\n\r\n* Attach an event handler to the \"Hide\" button that hides the image when clicked\r\n* Attach an event handler to the \"Show\" button that shows the image when clicked",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

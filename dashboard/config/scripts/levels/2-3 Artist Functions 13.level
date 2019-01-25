@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "We've provided you with four functions. Use them any way you like inside of one or more loops to make pictures that you can share with your friends. Press run to see an example.",
+    "short_instructions": "We've provided you with four functions. Use them any way you like inside of one or more loops to make pictures that you can share with your friends. Press run to see an example.",
     "x": "200",
     "y": "200",
     "start_direction": "0",

@@ -33,7 +33,7 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "authored_hints": "[]",
-    "instructions": "Press Run to see a snowflake design.",
+    "short_instructions": "Press Run to see a snowflake design.",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },

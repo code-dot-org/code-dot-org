@@ -13,7 +13,7 @@
       "upButton"
     ],
     "embed": "true",
-    "instructions": "Let’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja up and down - try to catch the unicorn and avoid the dragon! When you think you've figured out how the game works, click \"Finish\"",
+    "short_instructions": "Let’s begin by exploring a simple videogame, and then figuring out how it works. You can use the arrow keys to move the ninja up and down - try to catch the unicorn and avoid the dragon! When you think you've figured out how the game works, click \"Finish\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
