@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "There are 13 different card values in a deck of cards, so we'll need to have 13 options. Under the empty `when run` block, add a line that sets the placeholder \"i\" to a random integer between 1 and 13.",
+    "short_instructions": "There are 13 different card values in a deck of cards, so we'll need to have 13 options. Under the empty `when run` block, add a line that sets the placeholder \"i\" to a random integer between 1 and 13.",
     "contained_level_names": null
   },
   "published": true,

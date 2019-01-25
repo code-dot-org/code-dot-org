@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "If this is going to be a real Choose Your Own Adventure, you're need to add some more choices! Start by adding a screen for the second choice your player could make.\r\n\r\n1. Use the screen selector to add a new screen. Give it a clear \"id\".\r\n2. Set the \"background color\" of your screen\r\n3. Add a \"Text Area\" to your screen describing what happens on it.\r\n\r\nClick \"Run\" then \"Finish\" to move on. You'll add another button and write the code to make it work.\r\n\r\n![expandable](https://images.code.org/f1c83578a245d832c94c78aeba6ef317-image-1505768404048.gif) Click to see a GIF of all steps",
+    "long_instructions": "If this is going to be a real Choose Your Own Adventure, you're need to add some more choices! Start by adding a screen for the second choice your player could make.\r\n\r\n1. Use the screen selector to add a new screen. Give it a clear \"id\".\r\n2. Set the \"background color\" of your screen\r\n3. Add a \"Text Area\" to your screen describing what happens on it.\r\n\r\nClick \"Run\" then \"Finish\" to move on. You'll add another button and write the code to make it work.\r\n\r\n![expandable](https://images.code.org/f1c83578a245d832c94c78aeba6ef317-image-1505768404048.gif) Click to see a GIF of all steps",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

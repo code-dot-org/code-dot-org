@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# colorLEDs\r\n\r\nThis program uses the colorLEDs array, which lets you control the color LEDs in your Circuit Playground.\r\n\r\nWhat do you think this code will do?  Write your prediction in the box below, then run the code to see what happens.",
+    "long_instructions": "# colorLEDs\r\n\r\nThis program uses the colorLEDs array, which lets you control the color LEDs in your Circuit Playground.\r\n\r\nWhat do you think this code will do?  Write your prediction in the box below, then run the code to see what happens.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

@@ -21,9 +21,9 @@
     "definition_collapse": "false",
     "free_play": "true",
     "coordinate_grid_background": "false",
-    "instructions": "Free Play: Try out some creations of your own using Booleans.",
+    "short_instructions": "Free Play: Try out some creations of your own using Booleans.",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: Try out some creations of your own using Booleans.",
+    "long_instructions": "Free Play: Try out some creations of your own using Booleans.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

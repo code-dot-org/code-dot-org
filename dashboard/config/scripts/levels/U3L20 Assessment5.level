@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Conditional Basics Question 5",
-    "markdown_instructions": "How do you decide when to use an \"if\" statement or \"if-else\" statement?\n",
+    "long_instructions": "How do you decide when to use an \"if\" statement or \"if-else\" statement?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

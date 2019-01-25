@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play! Try using a for loop to draw a growing shape pattern of your own design.",
+    "short_instructions": "Free Play! Try using a for loop to draw a growing shape pattern of your own design.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,7 +20,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "markdown_instructions": "Free Play! Try using a for loop to draw a growing shape pattern of your own design.",
+    "long_instructions": "Free Play! Try using a for loop to draw a growing shape pattern of your own design.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Preventing Animations from Looping\r\n\r\nBy default your animations keep replaying in a loop. You can have your animation only play once by clicking this button below your animation.\r\n\r\n# Do This\r\n\r\n* Set both the animations in your project to non-looping.\r\n* Run the program and confirm your sprite only takes 1 step when it changes directions",
+    "long_instructions": "# Preventing Animations from Looping\r\n\r\nBy default your animations keep replaying in a loop. You can have your animation only play once by clicking this button below your animation.\r\n\r\n# Do This\r\n\r\n* Set both the animations in your project to non-looping.\r\n* Run the program and confirm your sprite only takes 1 step when it changes directions",
     "submittable": "false",
     "start_blocks": "var hero = createSprite(200,200);\r\nhero.setAnimation(\"pinkAlien_walking1\");\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  userInput();\r\n  drawSprites();\r\n}\r\n\r\nfunction userInput(){\r\n  if(keyDown(\"left\")){\r\n    hero.x = hero.x - 3;\r\n  }\r\n  if(keyDown(\"right\")){\r\n    hero.x = hero.x + 3;\r\n  }\r\n}",
     "is_k1": "false",

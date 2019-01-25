@@ -26,7 +26,7 @@ export default class Releases extends LabeledFormComponent {
         <h4>Section 3: Releases</h4>
         <FormGroup>
           <ControlLabel>
-            Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/1zke9hlGbI1XbSzwQ1rNZofXuXaOboJuTFPW2Z_XOA1w/edit">photo release.</a>
           </ControlLabel>
           {this.singleCheckboxFor("photoRelease")}
           <ControlLabel>
@@ -61,7 +61,7 @@ export default class Releases extends LabeledFormComponent {
           <p>
             We're excited you're planning to join us this summer! You will receive
             more information about travel approximately six weeks before the FiT
-            Weekend. In the meantime, please <strong>do not</strong> book your flight,
+            Workshop. In the meantime, please <strong>do not</strong> book your flight,
             and make sure to contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any questions. We look
             forward to meeting you this summer!
           </p>

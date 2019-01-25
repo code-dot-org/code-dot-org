@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "In the Variables toolbox you'll see several variables that define how your game characters look, move, and interact",
+    "short_instructions": "In the Variables toolbox you'll see several variables that define how your game characters look, move, and interact",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

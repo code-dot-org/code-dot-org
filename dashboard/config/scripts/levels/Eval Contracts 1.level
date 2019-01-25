@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Use the \"star\" function to produce a red star with a 60 pixel radius",
+    "short_instructions": "Use the \"star\" function to produce a red star with a 60 pixel radius",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

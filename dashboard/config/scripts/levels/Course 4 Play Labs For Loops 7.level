@@ -21,7 +21,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "free_play": "false",
-    "instructions": "Could you use a for loop to help me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?",
+    "short_instructions": "Could you use a for loop to help me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?",
     "ideal": "9"
   }
 }]]></config>

@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Teacher I Do: Show students how they can use loops and conditionals to plant and harvest 2 rows of crops.",
+    "short_instructions": "Teacher I Do: Show students how they can use loops and conditionals to plant and harvest 2 rows of crops.",
     "step_speed": "2",
     "ideal": "22",
     "contained_level_names": null

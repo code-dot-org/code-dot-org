@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.",
+    "short_instructions": "There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

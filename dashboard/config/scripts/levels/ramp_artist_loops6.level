@@ -34,8 +34,8 @@
     "x": "50",
     "y": "50",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/f1c6cf30f3e36ad45a67d9bbe23dcb09=levelbuilder/28312.png",
-    "instructions": "Edit your loop to draw this staircase.",
-    "markdown_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\r\n\r\nFix this loop to complete the puzzle.",
+    "short_instructions": "Edit your loop to draw this staircase.",
+    "long_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\r\n\r\nFix this loop to complete the puzzle.",
     "ideal": "7",
     "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null

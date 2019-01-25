@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
+    "short_instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
     "x": "150",
     "y": "150",
     "start_direction": "90",
@@ -25,7 +25,7 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "video_key": "frozen_loops",
-    "markdown_instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
+    "long_instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

@@ -56,18 +56,20 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
         'Halal',
         'Gluten Free',
         'Food Allergy',
+        'Other'
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
       howTraveling: [
         'I will drive by myself',
-        'I will carpool with another FiT Weekend attendee (Please note who)',
+        'I will carpool with another FiT Workshop attendee (Please note who)',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
       needAda: YES_OR_NO,
+      needDisabilitySupport: YES_OR_NO,
       photoRelease: [YES],
       liabilityWaiver: [YES],
     }.freeze
@@ -88,6 +90,7 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
       :live_far_away,
       :how_traveling,
       :need_hotel,
+      :need_disability_support,
       :photo_release,
       :liability_waiver,
       :agree_share_contact,
@@ -116,7 +119,7 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
       ]
     end
 
-    if hash[:dietary_needs].try(:include?, 'Food Allergy')
+    if hash[:dietary_needs].try(:include?, 'Food Allergy') || hash[:dietary_needs].try(:include?, 'Other')
       requireds.concat [
         :dietary_needs_details
       ]
