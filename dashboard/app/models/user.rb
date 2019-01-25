@@ -349,6 +349,10 @@ class User < ActiveRecord::Base
     (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
       where(username: identifier).first ||
       find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
@@ -1820,6 +1824,18 @@ class User < ActiveRecord::Base
 
       if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
         PeerReview.create_for_submission(user_level, level_source_id)
+
+        # See if there are created peer reviews, if not, raise to honey badger
+        unless PeerReview.where(
+          submitter_id: user_level.user_id,
+          level: user_level.level,
+          level_source_id: level_source_id
+        ).size >= 2
+          Honeybadger.notify(
+            error_class: "Failed to create peer review objects for submission",
+            error_message: "Failed to create peer reviews for user_level #{user_level.id}"
+          )
+        end
       end
     end
 

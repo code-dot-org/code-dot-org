@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 568,
   "properties": {
-    "markdown_instructions": "# Playing Notes from an Array\r\n\r\nYou may have noticed that when you ran the code from the last bubble, it didn't sound any different than the bubble before it. Why do you think that is?",
+    "long_instructions": "# Playing Notes from an Array\r\n\r\nYou may have noticed that when you ran the code from the last bubble, it didn't sound any different than the bubble before it. Why do you think that is?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

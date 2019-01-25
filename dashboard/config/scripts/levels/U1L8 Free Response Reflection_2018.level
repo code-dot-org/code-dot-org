@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Sending Numbers ",
-    "markdown_instructions": "<strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>\r\n\r\nWhat problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\r\n",
+    "long_instructions": "<strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>\r\n\r\nWhat problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 1920,

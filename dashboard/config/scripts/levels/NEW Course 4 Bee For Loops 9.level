@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,0,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,15,0,0,0,0,0],[0,0,0,12,0,0,0,0],[0,0,0,0,9,0,0,0],[0,0,0,0,0,6,0,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "If your loop is counting down, the increment is subtracted from your counter variable each loop. What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
+    "short_instructions": "If your loop is counting down, the increment is subtracted from your counter variable each loop. What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "12",

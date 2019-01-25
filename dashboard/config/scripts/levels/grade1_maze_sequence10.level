@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "birds",
-    "instructions": "Move me around the TNT to get to the pig.",
+    "short_instructions": "Move me around the TNT to get to the pig.",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",

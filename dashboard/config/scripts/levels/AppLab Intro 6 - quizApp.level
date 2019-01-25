@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Build out three questions in this Quiz App. You can always make more questions by duplicating screens. Then send it to a friend!\r\n\r\n**How:** Run the app first and try clicked all the buttons to see how it works. Then from Design Mode you can change the default text for the questions and buttons. In Code mode create response text for when the user clicks the different buttons. Customize the colors or add images if you want too!",
+    "long_instructions": "**Goal:** Build out three questions in this Quiz App. You can always make more questions by duplicating screens. Then send it to a friend!\r\n\r\n**How:** Run the app first and try clicked all the buttons to see how it works. Then from Design Mode you can change the default text for the questions and buttons. In Code mode create response text for when the user clicks the different buttons. Customize the colors or add images if you want too!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

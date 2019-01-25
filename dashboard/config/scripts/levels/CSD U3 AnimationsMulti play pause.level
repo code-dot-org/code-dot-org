@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Play and Pause\r\n\r\nYou can use the `sprite.play` and `sprite.pause` commands to play and pause a sprite's animation. If the animation is already playing or paused, using these commands twice in a row has no effect.  There's one important exception, however, which is that **play will restart a non-looping animation if it has finished**. We're going to look at some cool behavior this lets us create.\r\n\r\n# Do This\r\n\r\n* Use the `sprite.play` command after each of your `setAnimation` commands. This will restart the walk animations as long as the keys are pressed.",
+    "long_instructions": "# Play and Pause\r\n\r\nYou can use the `sprite.play` and `sprite.pause` commands to play and pause a sprite's animation. If the animation is already playing or paused, using these commands twice in a row has no effect.  There's one important exception, however, which is that **play will restart a non-looping animation if it has finished**. We're going to look at some cool behavior this lets us create.\r\n\r\n# Do This\r\n\r\n* Use the `sprite.play` command after each of your `setAnimation` commands. This will restart the walk animations as long as the keys are pressed.",
     "submittable": "false",
     "start_blocks": "var hero = createSprite(200,200);\r\nhero.setAnimation(\"pinkAlien_walking1\");\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  userInput();\r\n  drawSprites();\r\n}\r\n\r\nfunction userInput(){\r\n  if(keyDown(\"left\")){\r\n    hero.x = hero.x - 3;\r\n  }\r\n  if(keyDown(\"right\")){\r\n    hero.x = hero.x + 3;\r\n  }\r\n}",
     "is_k1": "false",

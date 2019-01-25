@@ -8,7 +8,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const scriptData = getScriptData('discountcode');
-  let { application, is_admin } = scriptData;
+  let { application, is_admin, currently_distributing_discount_codes } = scriptData;
 
   ReactDOM.render(
     <div>
@@ -27,6 +27,7 @@ $(document).ready(() => {
           initialDiscountCode={application.discount_code}
           initialExpiration={application.expiration}
           adminSetStatus={application.admin_set_status}
+          currentlyDistributingDiscountCodes={currently_distributing_discount_codes}
         />
       }
     </div>

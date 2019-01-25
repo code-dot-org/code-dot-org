@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,4,3,1,2,4,0,0],[0,4,4,4,4,4,0,0],[0,4,4,4,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Get the bird to the pig!",
+    "short_instructions": "Get the bird to the pig!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your code should look like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"maze_moveWest\\\">\\n        <next>\\n          <block type=\\\"maze_moveWest\\\">\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/301e08a6f8097357169fd2910f3bb0a6/courseA_maze_ramp5a_2018.mp3\"}]",
-    "markdown_instructions": "Try this one all by yourself!",
+    "long_instructions": "Try this one all by yourself!",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

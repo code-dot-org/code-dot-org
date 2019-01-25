@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Rebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
+    "short_instructions": "Rebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "7",
     "slider_speed": ".7",
     "embed": "false",
-    "markdown_instructions": "Time to make something snazzy! \r\n\r\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
+    "long_instructions": "Time to make something snazzy! \r\n\r\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

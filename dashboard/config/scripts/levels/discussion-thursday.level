@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 4: Discussion-Based\r\n\r\nYou have now seen a couple discussion-based (purple) sessions. Some specific examples include the Getting Buy-In (Wednesday), and Recruiting Students (Thursday) sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n",
+    "long_instructions": "# Day 4: Discussion-Based\r\n\r\nYou have now seen a couple discussion-based (purple) sessions. Some specific examples include the Getting Buy-In (Wednesday), and Recruiting Students (Thursday) sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n",
     "parent_level_id": 14308
   },
   "published": true,
