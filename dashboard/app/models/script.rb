@@ -697,7 +697,8 @@ class Script < ActiveRecord::Base
   private def hoc_tts_level?
     [
       Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME
+      Script::DANCE_PARTY_NAME,
+      Script::DANCE_PARTY_EXTRAS_NAME
     ].include?(name)
   end
 

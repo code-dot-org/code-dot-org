@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 3: Getting Buy In\r\n\r\nIn the Getting Buy-In session this morning you talked about building community and dealing with barriers to growing your CS education community locally. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)\r\n\r\n* What were common barriers teachers in your region shared?\r\n* What things did you see today that you want to check in on throughout the year?\r\n",
+    "long_instructions": "# Day 3: Getting Buy In\r\n\r\nIn the Getting Buy-In session this morning you talked about building community and dealing with barriers to growing your CS education community locally. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)\r\n\r\n* What were common barriers teachers in your region shared?\r\n* What things did you see today that you want to check in on throughout the year?\r\n",
     "parent_level_id": 14288
   },
   "published": true,

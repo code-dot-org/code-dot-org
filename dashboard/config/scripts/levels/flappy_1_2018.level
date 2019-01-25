@@ -12,7 +12,7 @@
     "app_specific_fail_error": "Your code looks good - it will flap with each click. But you need to click many times to flap to the target.",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.avatarY <= 40;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        return Flappy.avatarY > Flappy.MAZE_HEIGHT;\r\n\t      }",
-    "instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target.",
+    "short_instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target.",
     "video_key": "flappy_intro",
     "embed": "false",
     "is_k1": "false",

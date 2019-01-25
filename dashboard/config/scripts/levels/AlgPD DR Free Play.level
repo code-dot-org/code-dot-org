@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Create a function based on your own word problem.",
+    "short_instructions": "Create a function based on your own word problem.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "scrollbars": "false",
@@ -26,7 +26,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Using a word problem from your existing curriculum or elswhere, complete the Design Recipe and program a function. Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').",
+    "long_instructions": "Using a word problem from your existing curriculum or elswhere, complete the Design Recipe and program a function. Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').",
     "examples_required": "false"
   }
 }]]></config>

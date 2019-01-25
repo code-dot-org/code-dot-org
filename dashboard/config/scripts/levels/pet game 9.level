@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "instructions": "Your pet has been so good, they deserve a treat. Use the \"add behavior\" block to make the bone draggable, then drag it to your pet.",
+    "short_instructions": "Your pet has been so good, they deserve a treat. Use the \"add behavior\" block to make the bone draggable, then drag it to your pet.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

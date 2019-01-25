@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "### use goal labels to structure your solution.\r\n\r\nThe turtle should draw a square moving clockwise.\r\n\r\nDrag out \"move turtle\" subgoal label into the workspace.",
+    "long_instructions": "### use goal labels to structure your solution.\r\n\r\nThe turtle should draw a square moving clockwise.\r\n\r\nDrag out \"move turtle\" subgoal label into the workspace.",
     "instructions_important": "false",
     "start_blocks": "// add goals below",
     "is_k1": "false",

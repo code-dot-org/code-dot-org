@@ -44,7 +44,7 @@
     "examples_required": "false",
     "wall_map_collisions": "true",
     "block_moving_into_walls": "false",
-    "instructions": "instructions",
+    "short_instructions": "instructions",
     "first_sprite_index": "1",
     "contained_level_names": null
   },

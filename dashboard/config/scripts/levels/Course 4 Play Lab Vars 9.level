@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \r\n\r\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \r\n\r\nHint: scroll down to see all the commands in the workspace.",
+    "short_instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \r\n\r\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \r\n\r\nHint: scroll down to see all the commands in the workspace.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -32,7 +32,7 @@
     "scrollbars": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \r\n\r\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \r\n\r\n*Hint: scroll down to see all the commands in the workspace.*",
+    "long_instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \r\n\r\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \r\n\r\n*Hint: scroll down to see all the commands in the workspace.*",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

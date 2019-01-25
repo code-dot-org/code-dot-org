@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
+    "short_instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "16",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The code for this triangle function is broken. \r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
+    "long_instructions": "The code for this triangle function is broken. \r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "examples_required": "false",
     "video_key": "C4_function_parameters",
     "never_autoplay_video": "false",

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 150, 75, 25?",
+    "short_instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 150, 75, 25?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
+    "long_instructions": "The code for this triangle function is broken.\r\n\r\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

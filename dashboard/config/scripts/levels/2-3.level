@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Purple flowers may have either 1 or 0 nectar. Be careful not to collect nectar from a purple flower if it doesn't have any.",
+    "short_instructions": "Purple flowers may have either 1 or 0 nectar. Be careful not to collect nectar from a purple flower if it doesn't have any.",
     "start_direction": "3",
     "step_mode": 1,
     "nectar_goal": 2,

@@ -72,9 +72,9 @@
       "planksSpruce"
     ],
     "level_verification_timeout": "0",
-    "markdown_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
+    "long_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
     "special_level_type": "freeplay",
-    "instructions": "**Freeplay:**  Time to explore on your own!",
+    "short_instructions": "**Freeplay:**  Time to explore on your own!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try having the Agent build some minecart tracks so you can explore the world!\",\"hint_id\":\"MC_HOC_2017_13_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/648eff05e8f153fb2ad23824320070b4/MC Agent Freeplay.mp3\"}]",
     "top_level_procedure_autopopulate": "true",
     "contained_level_names": null

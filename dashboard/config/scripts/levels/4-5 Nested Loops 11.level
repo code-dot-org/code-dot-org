@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw these 10 squares of this sidewalk using a nested loop? Each square is 30 pixels.",
+    "short_instructions": "Can you draw these 10 squares of this sidewalk using a nested loop? Each square is 30 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw these 10 squares of this sidewalk using a nested loop? \r\n\r\nEach square is 30 pixels.",
+    "long_instructions": "Can you draw these 10 squares of this sidewalk using a nested loop? \r\n\r\nEach square is 30 pixels.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 5,

@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Help finish this flashlight app. The \"On\" button already turns the screen white. Run the app and try it out. Then write code so the \"Off\" button makes the screen black again.\r\n\r\n**How:** Add code inside the empty `onEvent()` that sets the `\"background-color\"` of the screen to `\"black\"` and `\"text-color\"` of the label to `\"white\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Help finish this flashlight app. The \"On\" button already turns the screen white. Run the app and try it out. Then write code so the \"Off\" button makes the screen black again.\r\n\r\n**How:** Add code inside the empty `onEvent()` that sets the `\"background-color\"` of the screen to `\"black\"` and `\"text-color\"` of the label to `\"white\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

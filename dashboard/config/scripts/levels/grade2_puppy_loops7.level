@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "birds",
-    "instructions": "\"Get me to the pig!\"\r\n\r\nUse what you learned in other puzzles!",
+    "short_instructions": "\"Get me to the pig!\"\r\n\r\nUse what you learned in other puzzles!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "step_speed": "1",
-    "markdown_instructions": "*\"Get me to the pig!\"*\r\n\r\nUse what you learned in other puzzles!",
+    "long_instructions": "*\"Get me to the pig!\"*\r\n\r\nUse what you learned in other puzzles!",
     "contained_level_names": null
   },
   "published": true,

@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
+    "short_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +39,7 @@
     "min_workspace_height": "1500",
     "video_key": "alg_12_biggame_variables",
     "disable_examples": "false",
-    "markdown_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
+    "long_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "maze_data": null

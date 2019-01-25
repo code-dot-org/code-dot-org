@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "This staircase has longer steps.",
+    "short_instructions": "This staircase has longer steps.",
     "x": "50",
     "y": "300",
     "start_direction": "90",
