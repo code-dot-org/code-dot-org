@@ -20,8 +20,33 @@ class ManageStudentsLoginInfo extends Component {
     studioUrlPrefix: PropTypes.string,
   };
 
+  joinSectionUrl = (loginType) => {
+    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture) {
+      // TODO: serve from dashboard?
+      return `${window.location.origin}/join`;
+    } else if (loginType === SectionLoginType.email) {
+      const {studioUrlPrefix, sectionCode} = this.props;
+      return `http:${studioUrlPrefix}/join/${sectionCode}`;
+    }
+  };
+
+  sectionSignInUrl = () => {
+    const {studioUrlPrefix, sectionCode} = this.props;
+    return `http:${studioUrlPrefix}/sections/${sectionCode}`;
+  };
+
+  printSignInCardsUrl = () => {
+    // TODO: serve from dashboard?
+    return `/teacher-dashboard#/sections/${this.props.sectionId}/print_signin_cards`;
+  };
+
+  studentPrivacyUrl = () => {
+    // TODO: serve from dashboard?
+    return "/privacy/student-privacy";
+  };
+
   render() {
-    const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
+    const {loginType, sectionId, sectionCode} = this.props;
     return (
       <div style={styles.explanation}>
         <h2>Login information</h2>
@@ -32,18 +57,18 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               {i18n.joinSectionExplanation()}
-              <a target="_blank" href={`${window.location.origin}/join`}>
-                {`${window.location.origin}/join`}
+              <a target="_blank" href={this.joinSectionUrl(loginType)}>
+                {this.joinSectionUrl(loginType)}
               </a>
             </p>
             <p>
               {i18n.sectionSignInInfo()}
-              <a target="_blank" href={`http:${studioUrlPrefix}/sections/${sectionCode}`}>
-                {`http:${studioUrlPrefix}/sections/${sectionCode}`}
+              <a target="_blank" href={this.sectionSignInUrl()}>
+                {this.sectionSignInUrl()}
               </a>
             </p>
             <p>
-              <a target="_blank" href={`/teacher-dashboard#/sections/${sectionId}/print_signin_cards`}>
+              <a target="_blank" href={this.printSignInCardsUrl()}>
                 {i18n.printLoginCardExplanation()}
               </a>
             </p>
@@ -53,8 +78,8 @@ class ManageStudentsLoginInfo extends Component {
           <div>
             <p>
               {i18n.joinSectionAsk()}
-              <a target="_blank" href={`http:${studioUrlPrefix}/join/${sectionCode}`}>
-                {`http:${studioUrlPrefix}/join/${sectionCode}`}
+              <a target="_blank" href={this.joinSectionUrl(loginType)}>
+                {this.joinSectionUrl(loginType)}
               </a>
             </p>
           </div>
@@ -66,8 +91,8 @@ class ManageStudentsLoginInfo extends Component {
         />
         <h2>Privacy</h2>
         <p>
-          <a id="uitest-privacy-link" target="_blank" href={"/privacy/student-privacy"}>
-          {i18n.privacyDocExplanation()}
+          <a id="uitest-privacy-link" target="_blank" href={this.studentPrivacyUrl()}>
+            {i18n.privacyDocExplanation()}
           </a>
         </p>
       </div>
