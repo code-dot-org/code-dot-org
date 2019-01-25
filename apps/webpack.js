@@ -245,21 +245,6 @@ function create(options) {
     failOnError: !watch
   });
 
-  if (minify) {
-    config.plugins = config.plugins.concat(
-      [
-        // new webpack.optimize.UglifyJsPlugin({
-        //   compressor: {
-        //     warnings: false
-        //   },
-        //   // Don't generate source maps for our minified code, as these are expensive
-        //   // and we haven't been using them.
-        //   sourceMap: false
-        // }),
-      ]
-    );
-  }
-
   if (watch) {
     config.plugins = config.plugins.concat(
       new LiveReloadPlugin({
