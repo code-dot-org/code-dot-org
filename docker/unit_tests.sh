@@ -19,7 +19,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 if $(git rev-parse --is-shallow-repository); then
     git remote set-branches --add origin staging test production
     git remote show origin
-    git fetch --depth 1 origin staging test production
+    mispipe "git fetch --depth 50 origin staging test production" ts
     git branch -a
 fi
 

@@ -2,9 +2,16 @@ kind: pipeline
 name: default
 
 clone:
-  depth: 1
+  disable: true
 
 steps:
+steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone --depth=50 --branch=$DRONE_BRANCH https://github.com/code-dot-org/code-dot-org.git
+  - git checkout $DRONE_COMMIT
+
 - name: testing
   image: wintercdo/code-dot-org:0.7
   when:
@@ -21,13 +28,6 @@ steps:
       from_secret: AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY:
       from_secret: AWS_SECRET_ACCESS_KEY
-#  volumes:
-#  - name: mysql
-#    path: /var/lib/mysql
-#  - name: rbenv
-#    path: /home/circleci/.rbenv
-#  - name: yarncache
-#    path: /home/circleci/.cache
   commands:
     - pwd
     - whoami
@@ -36,11 +36,3 @@ steps:
     - ls -alh
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
-
-#volumes:
-#- name: mysql
-#  temp: {}
-#- name: rbenv
-#  temp: {}
-#- name: yarncache
-#  temp: {}
