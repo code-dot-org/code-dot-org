@@ -23,5 +23,8 @@ steps:
       from_secret: AWS_SECRET_ACCESS_KEY
   commands:
     - pwd
-    - ls
+    - whoami
+    - id -u
+    - id -g
+    - ls -alh
     - /entrypoint.sh docker/unit_tests.sh
