@@ -23,6 +23,9 @@ if $(git rev-parse --is-shallow-repository); then
     git branch -a
 fi
 
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+git --no-pager diff --name-only $current_branch $(git merge-base $current_branch origin/staging)
+
 mysql -V
 
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
