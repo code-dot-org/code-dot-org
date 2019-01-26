@@ -1,4 +1,6 @@
 class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
+  include Pd::Application::ActiveApplicationModels
+
   attributes(
     :id,
     :type,
@@ -46,11 +48,11 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def fit_assigned_at_registration
-    object.try(:pd_fit_weekend1819_registration).try(:fit_city)
+    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:fit_city)
   end
 
   def accepted_fit
-    object.try(:pd_fit_weekend1819_registration).try(:accepted_seat_simplified)
+    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:accepted_seat_simplified)
   end
 
   def role
@@ -70,13 +72,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def form_data
-    object.try(:pd_fit_weekend1819_registration).try(:form_data_hash)
-  end
-
-  private
-
-  def tc_registration
-    # object is either an application (with possibly a linked TC registration), or itself a TC registration
-    object.try(:pd_teachercon1819_registration) || object
+    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:form_data_hash)
   end
 end
