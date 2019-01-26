@@ -1,0 +1,8 @@
+kind: pipeline
+name: default
+
+steps:
+- name: testing
+  image: wintercdo/code-dot-org:0.7
+  commands:
+    - pwd
