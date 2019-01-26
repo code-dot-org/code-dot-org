@@ -27,4 +27,5 @@ steps:
     - id -u
     - id -g
     - ls -alh
+    - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
