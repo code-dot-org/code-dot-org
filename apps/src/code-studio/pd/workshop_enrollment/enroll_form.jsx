@@ -8,7 +8,7 @@ import Select from "react-select";
 import ButtonList from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
-import isEmail from '@cdo/apps/util/formatValidation';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {WorkshopPropType} from './enrollmentConstants';
 
@@ -115,8 +115,16 @@ export default class EnrollForm extends React.Component {
     this.setState({explain_teaching_other: input});
   };
 
-  handleCourseOtherChange = (input) => {
-    this.setState({explain_course_other: input});
+  handleCsfCourseOtherChange = (input) => {
+    this.setState({explain_csf_course_other: input});
+  };
+
+  handleCourseExperienceChange = (input) => {
+    if (this.state.csf_course_experience) {
+      this.setState({csf_course_experience: [this.state.csf_course_experience, input]});
+    } else {
+      this.setState({csf_course_experience: [input] });
+    }
   };
 
 
@@ -259,7 +267,7 @@ export default class EnrollForm extends React.Component {
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_csf_course_other,
-        onInputChange: this.handleCourseOtherChange
+        onInputChange: this.handleCsfCourseOtherChange
       }
     ]);
 
@@ -359,6 +367,7 @@ export default class EnrollForm extends React.Component {
             id="csf_course_experience"
             key="csf_course_experience"
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
+            onChange={this.handleCourseExperienceChange}
             options={[
               "a few lessons",
               "most lessons",
@@ -369,7 +378,7 @@ export default class EnrollForm extends React.Component {
                 {label: key,
                 name: CSF_COURSES[key],
             }))}
-            type="check"
+            selectedItems={this.state.csf_course_experience}
           />
           <ButtonList
             id="csf_courses_planned"
@@ -436,6 +445,10 @@ export default class EnrollForm extends React.Component {
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role');
       requiredFields.push('grades_teaching');
+    }
+
+    if (this.props.workshop.subject === DEEP_DIVE) {
+      requiredFields.push('attended_csf_intro_workshop');
     }
 
     const missingRequiredFields = requiredFields.filter(f => {
