@@ -206,6 +206,7 @@
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "completionStatus": "Completion Status",
   "concept": "Concept",
+  "confirmDeleteExplanation": "Deleting this file will remove it everywhere in your project",
   "confirming": "Confirming...",
   "confirmSchool": "Confirm School",
   "congratsCertificateHeading": "You Earned a Certificate of Completion",
