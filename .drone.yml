@@ -9,7 +9,7 @@ steps:
 - name: clone
   image: docker:git
   commands:
-  - git clone --depth=50 --branch=$DRONE_BRANCH https://github.com/code-dot-org/code-dot-org.git
+  - git clone --depth=50 --branch=$DRONE_BRANCH $DRONE_REPO_LINK
   - git checkout $DRONE_COMMIT
 
 - name: testing
