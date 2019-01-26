@@ -162,7 +162,6 @@ module Pd::Application
     def self.csv_filtered_labels(course)
       labels = {}
       labels_to_remove = Pd::Application::Facilitator1920Application.columns_to_remove(course)
-
       CSV_LABELS.keys.each do |k|
         unless labels_to_remove.include? k.to_sym
           labels[k] = CSV_LABELS[k]
