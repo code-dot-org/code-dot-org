@@ -2,17 +2,9 @@ kind: pipeline
 name: default
 
 clone:
-  disable: true
+  depth: 50
 
 steps:
-steps:
-- name: clone
-  image: docker:git
-  commands:
-  - git clone --depth=50 --branch=$DRONE_BRANCH $DRONE_REPO_LINK
-  - cd $DRONE_REPO_NAME
-  - git checkout $DRONE_COMMIT -b $DRONE_BRANCH
-
 - name: testing
   image: wintercdo/code-dot-org:0.7
   when:
