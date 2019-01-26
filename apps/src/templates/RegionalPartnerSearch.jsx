@@ -184,6 +184,16 @@ class RegionalPartnerSearch extends Component {
             <p>We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.</p>
             <p>
+              <span style={styles.bold}>Arkansas Teachers: </span>
+              Code.org does not have a Regional Partner in Arkansas, and we are unable to offer you a space in this program this year.  There are many great opportunities for
+              {' '}
+              <span style={styles.bold}>state-provided professional development </span>
+              for computer science in Arkansas in
+              {' '}
+              <a href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit" target="_blank">this document</a>
+              .
+            </p>
+            <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,
               {' '}

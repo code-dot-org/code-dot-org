@@ -1,43 +1,48 @@
 #!/usr/bin/env ruby
 #
+# This script analyzes the number of standalone projects we have in our database and
+# saves that value.
 #
+# The script includes an alert which will trigger an error if the project
+# count decreases by more than 10 thousand projects.
 
 require 'sequel'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/only_one'
 require 'cdo/properties'
 require src_dir 'database'
+require_relative '../../deployment.rb'
+require 'cdo/honeybadger'
 
-PEGASUS_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
-STORAGE_APPS = PEGASUS_DB[:storage_apps]
+# Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+# to override the timeout for a specific session or query.
+MAX_EXECUTION_TIME = 1_200_000
+MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
+
+# Connection to read from Pegasus reporting database.
+PEGASUS_REPORTING_DB_READER = sequel_connect(
+  CDO.pegasus_reporting_db_reader,
+  CDO.pegasus_reporting_db_reader,
+  query_timeout: MAX_EXECUTION_TIME_SEC
+)
 
 # This default number of lines of code is from 2019-1-21.
 DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 
+NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
+
 def main
-  project_count = 0
-  # Get the current amount
-  STORAGE_APPS.each do |row|
-    if row[:standalone] == true
-      project_count += 1
-    end
+  # Get the current amount of projects.
+  project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
+
+  existing_project_count = Properties.get(:metrics)['project_count'] || 0
+  if (existing_project_count - project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE
+    # Raise error if the project count somehow went down by more than set threshold.
+    error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
+    raise error_message
   end
 
-  # round number down to closest million
-  project_count = (project_count / 1_000_000).floor * 1_000_000
-
-  if project_count == 0
-    project_count = DEFAULT_NUMBER_OF_PROJECTS
-  end
-
-  # check if number is bigger than previous count
-  existing_project_count = Properties.get(:metrics)['project_count']
-  if existing_project_count.nil?
-    existing_project_count = DEFAULT_NUMBER_OF_PROJECTS
-  end
-  project_count = [project_count, existing_project_count].max
-
-  # save value for use
+  # Pull current petition_signatures and lines_of_code to keep those current values.
   time = DateTime.now
   Properties.set :metrics, {
     created_at:               time,
