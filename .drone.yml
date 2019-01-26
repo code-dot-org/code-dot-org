@@ -1,8 +1,21 @@
 kind: pipeline
 name: default
 
+clone:
+  depth: 1
+
 steps:
 - name: testing
   image: wintercdo/code-dot-org:0.7
+  when:
+    branch:
+    - drone
   commands:
     - pwd
+    - env
+    - ls
+    - whoami
+    - id -u
+    - id -g
+    - echo "drone!"
+    - curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
