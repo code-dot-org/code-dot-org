@@ -329,14 +329,6 @@ module Pd::Application
       Teacher1920Application.find_by(user: user)
     end
 
-    def date_applied
-      created_at.to_date.iso8601
-    end
-
-    def date_accepted
-      accepted_at&.to_date&.iso8601
-    end
-
     def assigned_workshop
       Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
     end
@@ -378,7 +370,7 @@ module Pd::Application
       FILTERED_LABELS[course]
     end
 
-    # Filter out extraneous answers based on selected program (course)
+    # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
       if course == 'csd'
         {

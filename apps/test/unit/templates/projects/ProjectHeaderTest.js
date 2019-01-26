@@ -4,9 +4,11 @@ import {assert} from '../../../util/configuredChai';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {Provider} from "react-redux";
-import {getStore} from "@cdo/apps/redux";
+import {stubRedux, restoreRedux, getStore} from "@cdo/apps/redux";
 
 describe('ProjectHeader', () => {
+  beforeEach(stubRedux);
+  afterEach(restoreRedux);
 
   const store = getStore();
 
@@ -14,8 +16,8 @@ describe('ProjectHeader', () => {
     const wrapper = mount(
         <Provider store={store}>
           <ProjectHeader
-            canViewAdvancedTools= {true}
-            projectCount= {10}
+            canViewAdvancedTools={true}
+            projectCount={10}
           />
         </Provider>,
     );

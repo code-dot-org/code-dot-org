@@ -65,6 +65,14 @@ def fetch_metrics
   }
 end
 
+def fetch_project_count
+  current_project_count = fetch_metrics['project_count']
+  {
+    'total_projects' => current_project_count,
+    'rounded_down_millions' => (current_project_count / 1_000_000).floor
+  }
+end
+
 def fetch_hoc_metrics
   # Include stale default values as of 2017-06-21 so we never show 0. These
   # would be used, for example, if the DB is unavailable or the cron failed to
