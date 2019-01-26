@@ -7,7 +7,6 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
-    projectCount: PropTypes.number,
   };
 
   render() {
@@ -16,7 +15,7 @@ export default class ProjectHeader extends React.Component {
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading({project_count: this.props.projectCount})}
+          subHeadingText={i18n.projectsSubHeading()}
         />
         <StartNewProject
           canViewFullList
