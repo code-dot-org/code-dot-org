@@ -53,6 +53,8 @@ skip_seed_all: true
 echo "Wrote secrets from env vars into locals.yml."
 set -x
 
+cat locals.yml
+
 # name: rake install
 RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
 
