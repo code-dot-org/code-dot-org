@@ -21,6 +21,13 @@ steps:
       from_secret: AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY:
       from_secret: AWS_SECRET_ACCESS_KEY
+  volumes:
+  - name: mysql
+    path: /var/lib/mysql
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  - name: yarncache
+    path: /home/circleci/.cache
   commands:
     - pwd
     - whoami
@@ -29,3 +36,11 @@ steps:
     - ls -alh
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
+
+volumes:
+- name: mysql
+  temp: {}
+- name: rbenv
+  temp: {}
+- name: yarncache
+  temp: {}
