@@ -10,12 +10,18 @@ steps:
   when:
     branch:
     - drone
+  environment:
+    CLOUDFRONT_KEY_PAIR_ID:
+      from_secret: CLOUDFRONT_KEY_PAIR_ID
+    CLOUDFRONT_PRIVATE_KEY:
+      from_secret: CLOUDFRONT_PRIVATE_KEY
+    PROPERTIES_ENCRYPTION_KEY:
+      from_secret: PROPERTIES_ENCRYPTION_KEY
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
   commands:
     - pwd
-    - env
     - ls
-    - whoami
-    - id -u
-    - id -g
-    - echo "drone!"
-    - curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    - /entrypoint.sh docker/unit_tests.sh
