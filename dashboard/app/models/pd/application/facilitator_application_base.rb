@@ -462,21 +462,6 @@ module Pd::Application
       end
     end
 
-    # Assigns the default FiT workshop, if one is not yet assigned
-    def assign_default_fit_workshop!
-      return if fit_workshop_id
-      update! fit_workshop_id: find_default_fit_workshop.try(:id)
-    end
-
-    def find_default_fit_workshop
-      return unless regional_partner
-
-      find_fit_workshop(
-        course: workshop_course,
-        city: find_default_fit_teachercon[:city]
-      )
-    end
-
     # override
     def self.prefetch_associated_models(applications)
       # also prefetch fit workshops
