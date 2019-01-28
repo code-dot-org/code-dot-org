@@ -72,6 +72,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def form_data
-    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:form_data_hash)
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:form_data_hash)
   end
 end
