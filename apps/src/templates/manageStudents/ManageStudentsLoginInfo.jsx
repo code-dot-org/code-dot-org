@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   explanation: {
@@ -15,34 +16,26 @@ class ManageStudentsLoginInfo extends Component {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     loginType: PropTypes.string,
-    // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string,
   };
 
   joinSectionUrl = (loginType) => {
     if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture) {
-      // TODO: serve from dashboard?
-      return `${window.location.origin}/join`;
+      return pegasus('/join');
     } else if (loginType === SectionLoginType.email) {
-      const {studioUrlPrefix, sectionCode} = this.props;
-      return `http:${studioUrlPrefix}/join/${sectionCode}`;
+      return studio(`/join/${this.props.sectionCode}`);
     }
   };
 
   sectionSignInUrl = () => {
-    const {studioUrlPrefix, sectionCode} = this.props;
-    return `http:${studioUrlPrefix}/sections/${sectionCode}`;
+    return studio(`/sections/${this.props.sectionCode}`);
   };
 
   printSignInCardsUrl = () => {
-    // TODO: serve from dashboard?
-    return `/teacher-dashboard#/sections/${this.props.sectionId}/print_signin_cards`;
+    return pegasus(`/teacher-dashboard#/sections/${this.props.sectionId}/print_signin_cards`);
   };
 
   studentPrivacyUrl = () => {
-    // TODO: serve from dashboard?
-    return "/privacy/student-privacy";
+    return pegasus('/privacy/student-privacy');
   };
 
   render() {
