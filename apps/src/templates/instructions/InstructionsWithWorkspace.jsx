@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 import TopInstructions from './TopInstructions';

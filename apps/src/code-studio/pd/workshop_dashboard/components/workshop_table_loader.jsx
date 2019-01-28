@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import _ from 'lodash';
+
 /**
  * Loader for table displaying workshop summaries based on a supplied query.
  * It requires exactly one child component that expects workshops in its props.
@@ -6,9 +9,9 @@
  * It optionally handles deleting workshops.
  */
 
-import $ from 'jquery';
-import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../../components/spinner';
 

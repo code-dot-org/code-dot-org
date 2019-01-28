@@ -1,7 +1,9 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';

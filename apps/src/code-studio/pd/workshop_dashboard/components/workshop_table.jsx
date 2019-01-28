@@ -1,9 +1,12 @@
+import _, { orderBy } from 'lodash';
+
 /**
  * Table displaying workshop summaries based on a supplied workshop query result.
  */
 
-import _, {orderBy} from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';

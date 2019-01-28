@@ -1,7 +1,10 @@
-/** @file controls below an animation thumbnail */
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import color from "../../util/color";
+
+/** @file controls below an animation thumbnail */
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import SpeedSlider from '../../templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';

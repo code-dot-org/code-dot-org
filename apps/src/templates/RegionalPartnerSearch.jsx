@@ -1,9 +1,10 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {WorkshopApplicationStates, WorkshopSearchErrors} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import * as color from "../util/color";
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
 

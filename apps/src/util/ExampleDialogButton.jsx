@@ -1,5 +1,7 @@
 /** @file Dialog utility for React Storybook stories */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 /**
  * Takes a Dialog-like component as a child.

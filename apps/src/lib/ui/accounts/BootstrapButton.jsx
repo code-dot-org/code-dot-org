@@ -5,7 +5,9 @@
  * This component will be removed upon redesigning the "Edit Account" UI.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 const styles = {
   button: {

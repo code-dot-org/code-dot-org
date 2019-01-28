@@ -1,5 +1,7 @@
 /** @file Crosshair and guides over visualization */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 import { isPointInBounds } from '../applab/gridUtils';
 

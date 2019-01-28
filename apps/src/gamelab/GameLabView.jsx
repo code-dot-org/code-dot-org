@@ -1,8 +1,11 @@
-/** @file Top-level view for GameLab */
-/* global dashboard */
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import React, {PropTypes} from 'react';
+
+/** @file Top-level view for GameLab */
+/* global dashboard */
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';

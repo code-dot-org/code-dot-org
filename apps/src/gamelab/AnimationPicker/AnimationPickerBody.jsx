@@ -1,5 +1,8 @@
+import React from 'react';
+
 /** Body of the animation picker dialog */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import color from "../../util/color";
 import {AnimationCategories} from '../constants';

@@ -1,5 +1,7 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 export default class GeneratedCode extends React.Component {
   static propTypes = {

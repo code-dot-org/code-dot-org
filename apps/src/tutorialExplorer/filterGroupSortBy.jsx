@@ -1,7 +1,9 @@
 /* SortBy: The sort order of tutorials.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsSortByOptions } from './util';
 import i18n from '@cdo/tutorialExplorer/locale';

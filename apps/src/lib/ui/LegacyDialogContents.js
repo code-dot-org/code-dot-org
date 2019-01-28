@@ -3,7 +3,9 @@
  * create LegacyDialogs. LegacyDialog expects a semi-specific format.
  */
 
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 

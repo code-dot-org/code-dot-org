@@ -1,7 +1,9 @@
 /**
  * New workshop enrollment page
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';

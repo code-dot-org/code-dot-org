@@ -1,6 +1,9 @@
-/** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+
+/** @file Input fields specific to the cryptography widget */
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';

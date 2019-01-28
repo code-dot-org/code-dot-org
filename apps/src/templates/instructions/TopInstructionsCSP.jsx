@@ -1,7 +1,8 @@
 
 import $ from 'jquery';
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';

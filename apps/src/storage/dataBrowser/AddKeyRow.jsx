@@ -1,9 +1,12 @@
-/** @overview Component for adding a key/value pair row. */
-
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
+
+/** @overview Component for adding a key/value pair row. */
+
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 

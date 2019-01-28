@@ -1,8 +1,11 @@
+import FirebaseStorage from '../firebaseStorage';
+
 /** @overview Component for editing a key/value pair row. */
 
-import FirebaseStorage from '../firebaseStorage';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';

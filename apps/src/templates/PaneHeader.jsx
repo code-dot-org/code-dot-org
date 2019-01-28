@@ -1,10 +1,13 @@
+import React from 'react';
+
 /**
  * A collection of components for displaying the purple header used in a few
  * places in our apps. The parent component is a PaneHeader that can be toggled
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
@@ -137,16 +140,16 @@ export const PaneSection = Radium(class extends React.Component {
 export const PaneButton = Radium(function (props) {
   const divStyle = {
     ...styles.headerButton,
-    ...(props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
-    ...props.isMinecraft && styles.headerButtonMinecraft,
-    ...props.isPressed && styles.headerButtonPressed,
-    ...!props.headerHasFocus && styles.headerButtonUnfocused,
+    ...(props.isRtl !== !!props.leftJustified && styles.headerButtonRtl),
+    ...(props.isMinecraft && styles.headerButtonMinecraft),
+    ...(props.isPressed && styles.headerButtonPressed),
+    ...(!props.headerHasFocus && styles.headerButtonUnfocused),
     ...props.style
   };
 
   let iconStyle = {
     ...styles.headerButtonIcon,
-    ...props.isRtl && styles.headerButtonIconRtl,
+    ...(props.isRtl && styles.headerButtonIconRtl),
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;

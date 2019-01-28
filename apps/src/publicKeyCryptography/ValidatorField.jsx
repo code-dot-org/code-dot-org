@@ -1,6 +1,8 @@
 /** @file Non-editable integer field that checks its value against an expected
  *        value and communicates a correct match or a failure. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import color from "../util/color";
 import IntegerField from './IntegerField';
 

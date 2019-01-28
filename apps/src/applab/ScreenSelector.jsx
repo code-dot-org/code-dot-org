@@ -1,5 +1,8 @@
+import React from 'react';
+
 /** @file Dropdown for selecting design mode screens */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import color from "../util/color";
 import commonStyles from '../commonStyles';

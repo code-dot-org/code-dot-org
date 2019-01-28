@@ -1,5 +1,7 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
 import classNames from 'classnames';
 import {LINE_HEIGHT} from './style';

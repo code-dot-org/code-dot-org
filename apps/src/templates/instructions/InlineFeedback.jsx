@@ -1,6 +1,9 @@
-/* eslint-disable react/no-danger */
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
+/* eslint-disable react/no-danger */
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
 import { convertXmlToBlockly } from './utils';

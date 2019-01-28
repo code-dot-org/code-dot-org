@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
 import color from "../../util/color";
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
 

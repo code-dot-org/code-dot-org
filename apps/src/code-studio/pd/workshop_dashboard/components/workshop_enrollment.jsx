@@ -1,7 +1,9 @@
 /**
  * Displays nicely-formatted session time for a workshop.
 */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import _ from 'lodash';
 import {Tabs, Tab} from 'react-bootstrap';
 import {enrollmentShape} from "../types";

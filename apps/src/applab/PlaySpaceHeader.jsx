@@ -1,6 +1,8 @@
 /** @file Row of controls above the visualization. */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';

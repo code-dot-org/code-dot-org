@@ -1,13 +1,16 @@
+import React from 'react';
+import {connect} from 'react-redux';
+import $ from 'jquery';
+
+import i18n from '@cdo/locale';
+
 /**
  * A React component for our JavaScript debugger UI. Returns a connected component
  * so this can only be used in cases where we have a redux store.
  */
 
-import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
-import $ from 'jquery';
+import PropTypes from 'prop-types';
 
-import i18n from '@cdo/locale';
 import Radium from 'radium';
 import dom from '../../../dom';
 import commonStyles from '../../../commonStyles';

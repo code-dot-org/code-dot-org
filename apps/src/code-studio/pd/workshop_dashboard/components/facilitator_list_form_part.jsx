@@ -2,7 +2,9 @@
  * Dynamic list of facilitator select controls for creating & editing workshops.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 
 const MAX_FACILITATORS = 10;
