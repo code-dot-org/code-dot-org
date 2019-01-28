@@ -636,24 +636,6 @@ module Pd::Application
       assert_equal workshop_1, application_2.get_first_selected_workshop
     end
 
-    test 'assign_default_workshop! saves the default workshop' do
-      application = create :pd_teacher1819_application
-      workshop = create :pd_workshop
-      application.expects(:find_default_workshop).returns(workshop)
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      workshop = create :pd_workshop
-      application = create :pd_teacher1819_application, pd_workshop_id: workshop.id
-      application.expects(:find_default_workshop).never
-
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
-    end
-
     test 'can_see_locked_status?' do
       teacher = create :teacher
       g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
