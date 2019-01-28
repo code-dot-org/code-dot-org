@@ -131,16 +131,6 @@ class UserTest < ActiveSupport::TestCase
     assert_not_nil user.school_info_id
   end
 
-  test 'update_school_info info does not update information for another user' do
-    user_to_update = create :teacher, school_info: create(:school_info)
-    user_not_to_update = create :teacher, school_info: create(:school_info_us_other)
-    new_school_info = create :school_info
-
-    user_to_update.update_school_info(new_school_info)
-    refute_equal user_not_to_update.school_info, new_school_info
-    assert_not_nil user_not_to_update.school_info_id
-  end
-
   test 'single user experiment is enabled' do
     experiment = create(:single_user_experiment, min_user_id: @user.id)
     assert_equal [experiment[:name]], @user.get_active_experiment_names

@@ -296,7 +296,7 @@ class User < ActiveRecord::Base
     student? || deduplicate_school_info(school_info_attr, self)
   end
 
-  # takes a new school info objected collected somewhere (e.g., PD enrollment) and compares to
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
   # a user's current school information.
   # overwrites if:
   # new school info object has a NCES school ID associated with it
