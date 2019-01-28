@@ -154,9 +154,9 @@ module Pd
 
     INTERVIEW_QUESTIONS = {
       question_1: clean_multiline(
-        'Question 1: Code.org’s programs are designed for teachers of all backgrounds, especially teachers with
+        "Question 1: Code.org's programs are designed for teachers of all backgrounds, especially teachers with
         little to no experience with computer science. What are two strategies you would use to engage and support
-        these teachers in your workshops?'
+        these teachers in your workshops?"
       ),
 
       question_2: clean_multiline(
@@ -174,12 +174,12 @@ module Pd
       ),
 
       question_4: clean_multiline(
-        'Question 4: Imagine that you are preparing to co-lead an upcoming workshop. You suggest to your
+        "Question 4: Imagine that you are preparing to co-lead an upcoming workshop. You suggest to your
         co-facilitator, whom you have not worked with, that you meet the week before to talk through the
-        agenda for the day, decide which portions you’ll each lead, and discuss any questions or concerns
+        agenda for the day, decide which portions you'll each lead, and discuss any questions or concerns
         you each have regarding the material. Your co-facilitator declines to meet and instead sends you an
         email with the agenda items they will lead. How would you respond in the moment? What are the next
-        steps you would take? How do you prefer to give feedback to a colleague?'
+        steps you would take? How do you prefer to give feedback to a colleague?"
       ),
 
       question_5: clean_multiline(
@@ -204,5 +204,112 @@ module Pd
         willing to hold office hours? Other requirements?'
       )
     }.freeze
+
+    CSV_LABELS = {
+      date_applied: 'Date Applied',
+      date_accepted: 'Date Accepted',
+      status: 'Status',
+      locked?: 'Locked',
+      meets_criteria: 'Meets Minimum Requirements?',
+      teaching_experience_score: 'Teaching Experience Score',
+      leadership_score: 'Leadership Score',
+      champion_for_cs_score: 'Champion for CS Score',
+      equity_score: 'Equity Score',
+      growth_minded_score: 'Growth Minded Score',
+      content_knowledge_score: 'Content Knowledge Score',
+      program_commitment_score: 'Program Commitment Score',
+      application_score: 'Application Total Score',
+      interview_score: 'Interview Total Score',
+      total_score: 'Grand Total Score',
+      notes: "General Notes",
+      notes_2: "Notes 2",
+      notes_3: "Notes 3",
+      notes_4: "Notes 4",
+      notes_5: "Notes 5",
+      title: "Title",
+      first_name: "First Name",
+      last_name: "Last Name",
+      account_email: "Account Email",
+      alternate_email: "Alternate Email",
+      phone: "Home or Cell Phone",
+      address: "Home Address",
+      city: "City",
+      state: "State",
+      zip_code: "Zip Code",
+      gender_identity: "Gender Identity",
+      race: "Race",
+      assigned_workshop_date_and_location: 'Assigned Summer Workshop',
+      friendly_registered_workshop: 'Registered Summer Workshop?',
+      fit_workshop_date_and_location: 'Assigned FiT Workshop',
+      friendly_registered_fit_workshop: 'Registered FiT Workshop?',
+      regional_partner_name: 'Regional Partner',
+      application_url: 'Link to Application',
+      institution_type: 'What type of institution do you work for?',
+      current_employer: 'Current employer',
+      job_title:  'What is your job title?',
+      program: 'Program',
+      code_org_facilitator: 'Are you currently (or have you been) a Code.org facilitator?',
+      code_org_facilitator_years: 'In which years did you work as a Code.org facilitator?',
+      code_org_facilitator_programs: 'Please check the Code.org programs you currently facilitate, or have facilitated in the past:',
+      teaching_experience: 'Do you have experience as a classroom teacher?',
+      have_led_adults: 'Have you led learning experiences for adults?',
+      csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (May 17 - 19, 2019)?',
+      csf_workshop_requirement: 'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
+      csf_community_requirement: 'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
+      csd_csp_no_partner_summer_workshop: clean_multiline(
+        '[Not asked of everyone] The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+        If a nearby region is interested in considering your application, we will share those workshop dates with you.'
+      ),
+      csd_csp_partner_but_no_summer_workshop: clean_multiline(
+        '[Not asked of everyone] The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+        However, summer workshop dates have not yet been finalized for your region. We will coordinate with
+        you once workshop dates and locations are known.'
+      ),
+      csd_csp_partner_with_summer_workshop: clean_multiline(
+        '[Not asked of everyone] The program requires attending one 5-day summer workshop hosted by your assigned Regional Partner.
+        Can you commit to attending one 5-day summer workshop hosted by your assigned Regional Partner?'
+      ),
+      csd_csp_which_summer_workshop: '[Not asked of everyone] Your Regional Partner is hosting summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend.',
+      csd_csp_fit_weekend_requirement: 'Can you commit to attending one 3-day 2019 Facilitator-in-Training Event (during the week of July 22 - 26 or August 5 - 9)? ',
+      csd_csp_which_fit_weekend: 'Please indicate which FiT Workshop you are able to attend.',
+      csd_csp_workshop_requirement: 'Can you commit to leading 2019-20 academic year workshops hosted by your assigned Regional Partner (generally four days across the academic year)?',
+      csd_training_requirement: 'Can you commit to attending one 2- or 3-day training in the spring of 2020 to prepare to co-lead five-day summer workshops?',
+      csp_training_requirement: 'Can you commit to attending two 2- or 3-day trainings in the spring of 2020 to prepare to co-lead five-day summer workshops?',
+      csd_csp_lead_summer_workshop_requirement: 'Can you commit to leading a 5-day summer workshop in the summer of 2020 hosted by your assigned Regional Partner?',
+      csd_csp_deeper_learning_requirement: 'Can you commit to engaging in the Deeper Learning Program, a series of written reflections and peer reviews for each unit of the curriculum throughout the year?',
+      development_and_preparation_requirement: 'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?',
+      csd_csp_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+      csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+      currently_involved_in_cs_education: 'How are you currently involved in CS education?',
+      grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Check all that apply.',
+      experience_teaching_this_course: 'Do you have experience teaching the full {{CS Program}} curriculum to students?',
+      plan_on_teaching: 'Do you plan on teaching this course in the 2019-20 school year?',
+      csd_csp_completed_pd: "Have you participated as a teacher in Code.org's full Professional Learning Program for {{CS Program}}?",
+      csf_previous_workshop: 'Have you attended a Code.org CS Fundamentals workshop?',
+      facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays.',
+      why_should_all_have_access: clean_multiline(
+        "Code.org's Professional Learning Programs are open to all teachers, regardless of their experience with CS education.
+        Why do you think Code.org believes that all teachers should have access to the opportunity to teach CS?"
+      ),
+      skills_areas_to_improve: clean_multiline(
+        "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated a workshop). Include a brief description of the workshop/lesson
+        topic and audience (one or two sentences). Then describe two strengths you demonstrated, as well as two facilitation skills you would like to improve.",
+      ),
+      inquiry_based_learning: clean_multiline(
+        "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops. Please briefly define  inquiry-based
+        learning as you understand it (one or two sentences). Then, if you have led an inquiry-based activity for students, provide a concrete
+        example of an inquiry-based lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.'",
+      ),
+      why_interested: 'Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the impact you hope to make.',
+      anything_else: 'Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
+      how_heard: 'How did you hear about this opportunity?',
+      question_1: "Interview #{INTERVIEW_QUESTIONS[:question_1]}",
+      question_2: "Interview #{INTERVIEW_QUESTIONS[:question_2]}",
+      question_3: "Interview #{INTERVIEW_QUESTIONS[:question_3]}",
+      question_4: "Interview #{INTERVIEW_QUESTIONS[:question_4]}",
+      question_5: "Interview #{INTERVIEW_QUESTIONS[:question_5]}",
+      question_6: "Interview #{INTERVIEW_QUESTIONS[:question_6]}",
+      question_7: "Interview #{INTERVIEW_QUESTIONS[:question_7]}"
+    }
   end
 end
