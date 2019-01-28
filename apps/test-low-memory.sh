@@ -19,7 +19,7 @@ if [ -n "$CIRCLECI" ]; then
   echo "#                                                                 #"
   echo "###################################################################"
 
-  SHELL=/bin/bash parallel -j 4 --joblog - ::: "npm run lint" \
+  SHELL=/bin/bash parallel -j 2 --joblog - ::: "npm run lint" \
   "(PORT=9876 $GRUNT_CMD unitTest && /tmp/codecov.sh -cF unit) > log/unitTest.log" \
   "(PORT=9877 $GRUNT_CMD storybookTest && /tmp/codecov.sh -cF storybook) > log/storybookTest.log" \
   "(PORT=9878 $GRUNT_CMD scratchTest && /tmp/codecov.sh -cF scratch) > log/scratchTest.log" \
