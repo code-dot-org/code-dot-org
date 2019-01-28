@@ -56,13 +56,13 @@ end
 def fetch_metrics
   # Include stale default values as of 2017-06-21 (project count from 2019-1-20) so we never show 0. These
   # would be used, for example, if the DB is unavailable.
-  Properties.get(:metrics) || {
+  {
     'created_at' => '2017-06-21T14:46:25+00:00',
     'created_on' => 'created_on"=>"2017-06-21',
     'petition_signatures' => 1_774_817,
     'lines_of_code' => 21_238_497_830,
     'project_count' => 35_000_000
-  }
+  }.merge(Properties.get(:metrics))
 end
 
 def fetch_project_count
