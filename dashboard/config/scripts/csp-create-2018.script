@@ -6,6 +6,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now’s the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school’s registration deadline and sign up today. Click to learn more about six great reasons why you should.", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}]
 family_name 'csp-create'
 version_year '2018'
 is_stable true
