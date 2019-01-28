@@ -40,6 +40,10 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
+    serialized_attrs %w(
+      auto_assigned_enrollment_id
+    )
+
     # @override
     def year
       YEAR_18_19
