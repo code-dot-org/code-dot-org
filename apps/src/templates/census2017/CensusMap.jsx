@@ -1,6 +1,9 @@
-/* global google */
 import $ from 'jquery';
-import React, { PropTypes, Component } from 'react';
+
+/* global google */
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class CensusMapInfoWindow extends Component {

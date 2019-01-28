@@ -1,6 +1,9 @@
-/** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+
+/** @file Centered animated Modulo Clock component for the Crypto widget levels */
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements

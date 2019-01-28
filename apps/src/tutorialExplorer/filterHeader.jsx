@@ -2,7 +2,9 @@
  * count of tutorials, and maybe show/hide buttons.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import BackButton from './backButton';
 import FilterGroupHeaderSelection from './filterGroupHeaderSelection';
 import { getResponsiveValue } from './responsive';

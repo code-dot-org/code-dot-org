@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
 import DatePicker from '../workshop_dashboard/components/date_picker';

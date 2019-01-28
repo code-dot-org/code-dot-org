@@ -1,7 +1,9 @@
 /**
  * Application Cohort View
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import Spinner from '../components/spinner';
 import {
   Row,

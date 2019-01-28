@@ -3,7 +3,9 @@
 /**
  * Main landing page and router for the workshop dashboard.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import {

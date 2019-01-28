@@ -3,7 +3,9 @@
  * Route: /reports
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
 import WorkshopSummaryReport from './workshop_summary_report';

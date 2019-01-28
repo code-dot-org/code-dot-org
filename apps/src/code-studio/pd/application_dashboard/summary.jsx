@@ -2,7 +2,9 @@
  * Application Dashboard summary view.
  * Route: /summary
  */
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import {Row, Col} from 'react-bootstrap';

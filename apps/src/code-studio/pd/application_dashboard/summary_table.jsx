@@ -1,7 +1,9 @@
 /**
  * Table displaying a summary of application statuses
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
 import {StatusColors, ApplicationStatuses} from './constants';

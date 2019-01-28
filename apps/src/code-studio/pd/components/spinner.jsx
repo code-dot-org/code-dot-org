@@ -2,7 +2,9 @@
  * Loading spinner.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class Spinner extends React.Component {

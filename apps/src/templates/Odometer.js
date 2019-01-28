@@ -1,5 +1,6 @@
 import { Motion, spring } from 'react-motion';
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 const styles = {
   slot: {

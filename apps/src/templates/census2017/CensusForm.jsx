@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import _ from 'lodash';

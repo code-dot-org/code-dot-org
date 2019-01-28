@@ -1,5 +1,7 @@
 /** @file Vertical scrolling list of animation sequences */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import { connect } from 'react-redux';
 import color from "../../util/color";
 import * as shapes from '../shapes';

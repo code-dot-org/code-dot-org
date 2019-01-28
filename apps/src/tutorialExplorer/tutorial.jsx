@@ -1,7 +1,9 @@
 /* A single tutorial shown in TutorialExplorer.  Displays a thumbnail image, name, and some extra information.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
 import { getResponsiveValue } from './responsive';

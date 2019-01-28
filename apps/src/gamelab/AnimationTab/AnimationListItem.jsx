@@ -1,5 +1,8 @@
+import React from 'react';
+
 /** A single list item representing an animation. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from "../../util/color";

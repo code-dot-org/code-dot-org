@@ -1,7 +1,9 @@
 /**
  * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 export default class ConfirmationDialog extends React.Component {

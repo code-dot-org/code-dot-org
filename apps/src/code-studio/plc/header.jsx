@@ -2,7 +2,9 @@
   Header used by PLC, has navigation breadcrumb
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import color from "../../util/color";
 
 const breadcrumbStyle = {

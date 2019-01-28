@@ -1,6 +1,9 @@
-/** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+
+/** @file Root component for Modulo Clock widget */
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import color from "../util/color";
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';

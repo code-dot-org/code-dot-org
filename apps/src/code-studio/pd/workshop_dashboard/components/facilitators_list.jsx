@@ -1,7 +1,9 @@
 /**
  * List of facilitators for display in the workshop summary.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 export default class FacilitatorsList extends React.Component {
   static propTypes = {

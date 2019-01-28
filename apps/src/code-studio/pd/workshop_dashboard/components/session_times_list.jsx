@@ -1,7 +1,9 @@
 /**
  * Displays a list of nicely-formatted session times for a workshop.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import SessionTime from './session_time';
 
 export default class SessionTimesList extends React.Component {

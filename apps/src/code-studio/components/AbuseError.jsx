@@ -1,5 +1,7 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 /**
  * A component containing some text/links for projects that have had abuse

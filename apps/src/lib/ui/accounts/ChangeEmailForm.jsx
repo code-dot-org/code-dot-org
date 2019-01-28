@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import {Field} from '../SystemDialog/SystemDialog';
 import {pegasus} from "../../util/urlHelpers";

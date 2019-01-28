@@ -1,5 +1,7 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 

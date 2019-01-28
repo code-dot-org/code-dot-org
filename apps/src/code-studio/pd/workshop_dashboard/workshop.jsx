@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import _ from 'lodash';
+
 /**
  * Workshop view / edit. Displays and optionally edits details for a workshop.
  * Routes:
@@ -5,9 +8,9 @@
  *   /Workshops/:workshopId/edit
  */
 
-import $ from 'jquery';
-import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import {

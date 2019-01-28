@@ -1,16 +1,19 @@
+import AddTableListRow from './AddTableListRow';
+import { DataView } from '../constants';
+import EditLink from './EditLink';
+import EditTableListRow from './EditTableListRow';
+import FirebaseStorage from '../firebaseStorage';
+
 /**
  * @overview Component containing a link to edit key/value pairs, a list of
  * existing data tables with controls to edit/delete, and a control to add
  * a new data table.
  */
 
-import AddTableListRow from './AddTableListRow';
-import { DataView } from '../constants';
-import EditLink from './EditLink';
-import EditTableListRow from './EditTableListRow';
-import FirebaseStorage from '../firebaseStorage';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import msg from '@cdo/locale';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';

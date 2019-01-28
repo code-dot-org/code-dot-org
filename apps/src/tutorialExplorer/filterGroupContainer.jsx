@@ -2,7 +2,9 @@
  * The choices themselves should be passed in as children.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import { getResponsiveValue } from './responsive';
 
 const styles = {

@@ -1,5 +1,7 @@
 /** @file Non-editable positive integer field in the cryptography widget */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 
 export default function IntegerField(props) {
   const style = Object.assign({

@@ -2,7 +2,9 @@
  * A button that opens our StageLockDialog component, using our redesigned button.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import { connect } from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
