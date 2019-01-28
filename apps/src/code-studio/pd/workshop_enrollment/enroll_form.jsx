@@ -121,12 +121,11 @@ export default class EnrollForm extends React.Component {
 
   handleCourseExperienceChange = (input) => {
     if (this.state.csf_course_experience) {
-      this.setState({csf_course_experience: [this.state.csf_course_experience, input]});
+      this.setState({csf_course_experience: this.state.csf_course_experience.concat([input])});
     } else {
       this.setState({csf_course_experience: [input] });
     }
   };
-
 
   handleClickRegister = () => {
     if (this.validateRequiredFields()) {
