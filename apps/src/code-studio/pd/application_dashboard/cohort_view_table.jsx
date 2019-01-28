@@ -197,16 +197,6 @@ export class CohortViewTable extends React.Component {
       }
     });
 
-    if ([WorkshopTypes["teachercon"], WorkshopTypes["both"]].includes(this.workshopType)) {
-      columns.push({
-        property: 'accepted_teachercon',
-        header: {
-          label: 'Accepted Teachercon',
-          transforms: [sortable]
-        }
-      });
-    }
-
     if ([WorkshopTypes["local_summer"], WorkshopTypes["both"]].includes(this.workshopType)) {
       columns.push({
         property: 'registered_workshop',
