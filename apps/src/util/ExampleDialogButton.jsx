@@ -1,6 +1,5 @@
 /** @file Dialog utility for React Storybook stories */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
 /**

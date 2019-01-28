@@ -9,7 +9,6 @@ import $ from 'jquery';
 // if UiTips goes away.
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';

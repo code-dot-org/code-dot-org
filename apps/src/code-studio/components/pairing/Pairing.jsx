@@ -3,7 +3,6 @@ import $ from 'jquery';
 /* global $ */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import SectionSelector from './SectionSelector.jsx';
 import StudentSelector from './StudentSelector.jsx';

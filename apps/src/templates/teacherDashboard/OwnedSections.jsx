@@ -1,7 +1,6 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';

@@ -2,7 +2,6 @@ import $ from 'jquery';
 
 /** @file Hidden file input with interface for handling uploads. */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
 

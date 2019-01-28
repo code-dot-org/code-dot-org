@@ -1,6 +1,5 @@
 /** @file The Eve character from the cryptography widget */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import color from "../util/color";
 import CharacterPanel from './CharacterPanel';

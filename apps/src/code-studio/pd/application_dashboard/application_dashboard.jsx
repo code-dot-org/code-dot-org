@@ -2,7 +2,6 @@
  * Main landing page and router for the application dashboard.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';

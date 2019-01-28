@@ -1,6 +1,5 @@
 /* eslint-disable react/no-is-mounted */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 

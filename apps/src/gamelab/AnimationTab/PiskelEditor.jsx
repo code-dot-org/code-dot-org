@@ -2,7 +2,6 @@
 // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
 /* global PISKEL_DEVELOPMENT_MODE */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';

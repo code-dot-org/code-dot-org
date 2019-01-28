@@ -1,6 +1,5 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
 import classNames from 'classnames';

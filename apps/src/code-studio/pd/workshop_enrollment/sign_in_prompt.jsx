@@ -2,7 +2,6 @@
  * Info box prompting user to sign in on workshop enrollment page
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
 export default class SignInPrompt extends React.Component {

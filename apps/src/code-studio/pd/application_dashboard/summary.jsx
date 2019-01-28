@@ -3,7 +3,6 @@
  * Route: /summary
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';

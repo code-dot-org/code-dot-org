@@ -2,7 +2,6 @@
  * @overview React for the End-of-Stage Experience
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import color from "../../util/color";
 import msg from '@cdo/locale';

@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 /** @file Top-level view for GameLab */
 /* global dashboard */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';

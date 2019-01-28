@@ -2,7 +2,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { getResponsiveValue } from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';

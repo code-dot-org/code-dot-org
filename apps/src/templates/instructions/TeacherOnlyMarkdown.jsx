@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import marked from 'marked';

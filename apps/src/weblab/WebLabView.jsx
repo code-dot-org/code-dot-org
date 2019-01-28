@@ -1,6 +1,5 @@
 /** @file Top-level view for WebLab */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';

@@ -2,7 +2,6 @@
  * Displays nicely-formatted session time for a workshop.
 */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import moment from 'moment';
 import {

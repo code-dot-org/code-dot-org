@@ -3,7 +3,6 @@
  * Displays navigation breadcrumbs.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {Breadcrumb} from 'react-bootstrap';
 

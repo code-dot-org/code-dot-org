@@ -1,6 +1,5 @@
 /** @file The Bob character panel from the crypto widget */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';

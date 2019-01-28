@@ -2,7 +2,6 @@
  * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 

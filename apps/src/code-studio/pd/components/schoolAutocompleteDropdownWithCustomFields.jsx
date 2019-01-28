@@ -3,7 +3,6 @@
  * custom fields if school not found
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';

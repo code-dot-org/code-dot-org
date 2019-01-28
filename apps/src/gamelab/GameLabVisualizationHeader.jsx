@@ -1,6 +1,5 @@
 /** @file Row of controls above the visualization. */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';

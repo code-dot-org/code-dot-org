@@ -1,7 +1,6 @@
 /** @file Row of controls above the visualization. */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
 import {ApplabInterfaceMode} from './constants';

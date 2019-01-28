@@ -1,6 +1,5 @@
 /** @file Root component for Public Key Cryptography widget */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import CharacterPanel from './CharacterPanel';
 import EqualColumns from './EqualColumns';

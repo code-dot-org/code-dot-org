@@ -10,7 +10,6 @@ import _ from 'lodash';
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Spinner from '../../components/spinner';

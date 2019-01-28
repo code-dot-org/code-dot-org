@@ -2,7 +2,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString, DoNotShow } from './util';

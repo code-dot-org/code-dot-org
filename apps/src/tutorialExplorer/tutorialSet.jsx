@@ -2,7 +2,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';

@@ -1,6 +1,5 @@
 /** @file controls below a dialog to delete animations */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import Dialog, {Body, Buttons, Cancel, Confirm} from '../../templates/Dialog';
 
