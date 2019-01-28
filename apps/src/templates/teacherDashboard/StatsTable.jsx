@@ -4,6 +4,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import orderBy from 'lodash/orderBy';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   table: {
@@ -35,11 +36,13 @@ class StatsTable extends Component {
 
   nameFormatter = (name, {rowData}) => {
     const sectionId = this.props.section.id;
+    const sectionUrlForStudent = pegasus(`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`);
+
     return (
       <a
         className="uitest-name-cell"
         style={tableLayoutStyles.link}
-        href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`}
+        href={sectionUrlForStudent}
         target="_blank"
       >
         {name}
