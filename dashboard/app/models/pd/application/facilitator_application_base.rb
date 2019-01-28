@@ -414,7 +414,29 @@ module Pd::Application
 
     # override
     def enroll_user
-      super
+      return unless pd_workshop_id
+
+      enrollment = Pd::Enrollment.where(
+        pd_workshop_id: pd_workshop_id,
+        email: user.email
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        destroy_autoenrollment
+        self.auto_assigned_enrollment_id = enrollment.id
+      end
+
       return unless fit_workshop_id
 
       enrollment = Pd::Enrollment.where(
