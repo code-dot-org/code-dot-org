@@ -225,6 +225,7 @@ class Notification extends Component {
     if (!this.state.open) {
       return null;
     }
+
     return (
       <div className="announcement-notification">
         <div style={[styles.colors[type], mainStyle]}>
@@ -255,7 +256,7 @@ class Notification extends Component {
               </div>
             </div>
             <div style={desktop ? null : styles.buttonsMobile}>
-              {buttonText && (
+              {buttonText && buttonLink && (
                 <Button
                   href={buttonLink}
                   color={Button.ButtonColor.gray}
