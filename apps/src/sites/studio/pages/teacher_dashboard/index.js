@@ -56,21 +56,26 @@ $(document).ready(function () {
     url: '/dashboardapi/sections/valid_scripts',
     dataType: 'json'
   }).done(validScripts => {
-    store.dispatch(loadValidScripts(section, validScripts));
-    const scriptId = store.getState().scriptSelection.scriptId;
-    store.dispatch(asyncLoadTextResponses(section.id, scriptId));
-    store.dispatch(asyncLoadAssessments(section.id, scriptId));
+    store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+      const scriptId = store.getState().scriptSelection.scriptId;
+      store.dispatch(asyncLoadTextResponses(section.id, scriptId));
+      store.dispatch(asyncLoadAssessments(section.id, scriptId));
+
+      renderTeacherDashboard();
+    });
   });
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => <TeacherDashboard {...props} studioUrlPrefix=""/>}
-        />
-      </Router>
-    </Provider>,
-    document.getElementById('teacher-dashboard')
-  );
+  const renderTeacherDashboard = () => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <Router basename={baseUrl}>
+          <Route
+            path="/"
+            component={props => <TeacherDashboard {...props} studioUrlPrefix=""/>}
+          />
+        </Router>
+      </Provider>,
+      document.getElementById('teacher-dashboard')
+    );
+  };
 });
