@@ -476,6 +476,7 @@ describe('entry tests', () => {
 
   var internalEntries = {
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'blocks/index':                  './src/sites/studio/pages/blocks/index.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
