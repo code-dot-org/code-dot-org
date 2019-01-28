@@ -36,7 +36,7 @@
 
 module Pd::Application
   class TeacherApplicationBase < ApplicationBase
-    include Pd::Application::PdWorkshopHelper
+    include PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
@@ -637,9 +637,8 @@ module Pd::Application
       Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
     end
 
-    # override
     def self.prefetch_associated_models(applications)
-      super(applications)
+      prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
 
       # also prefetch schools
       prefetch_schools applications.map(&:school_id).uniq.compact
