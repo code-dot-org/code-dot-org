@@ -1,13 +1,10 @@
-import React from 'react';
-
 /**
  * HeightResizer
  * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize
  * which handles any movement.
  */
-
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';

@@ -1,6 +1,5 @@
-import _ from 'lodash';
-
 /** @file Input fields specific to the cryptography widget */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';

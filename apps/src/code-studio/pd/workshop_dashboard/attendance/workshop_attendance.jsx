@@ -1,11 +1,9 @@
-import $ from 'jquery';
-
 /**
  * Display and edit attendance for a workshop.
  * It has a tab for each session which lists all enrolled teachers and their status.
  * Route: /workshops/:workshopId/attendance(/:sessionIndex)
  */
-
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';

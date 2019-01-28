@@ -1,13 +1,10 @@
-import React from 'react';
-
 /**
  * A collection of components for displaying the purple header used in a few
  * places in our apps. The parent component is a PaneHeader that can be toggled
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
-
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
