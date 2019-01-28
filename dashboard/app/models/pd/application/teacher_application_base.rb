@@ -35,7 +35,8 @@
 #
 
 module Pd::Application
-  class TeacherApplicationBase < WorkshopAutoenrolledApplication
+  class TeacherApplicationBase < ApplicationBase
+    include Pd::Application::PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
