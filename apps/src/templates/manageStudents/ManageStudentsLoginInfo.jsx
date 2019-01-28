@@ -18,7 +18,7 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.string,
   };
 
-  prependBaseUrl = (url) => {
+  prependUrlOrigin = (url) => {
     if (url.startsWith('//')) {
       return `http:${url}`;
     } else {
@@ -37,14 +37,14 @@ class ManageStudentsLoginInfo extends Component {
 
     // This URL is displayed as a raw URL to the user, so it needs to include origin (not just a relative path)
     // if it doesn't already.
-    return this.prependBaseUrl(path);
+    return this.prependUrlOrigin(path);
   };
 
   sectionSignInUrl = () => {
     const path = studio(`/sections/${this.props.sectionCode}`);
     // This URL is displayed as a raw URL to the user, so it needs to include origin (not just a relative path)
     // if it doesn't already.
-    return this.prependBaseUrl(path);
+    return this.prependUrlOrigin(path);
   };
 
   printSignInCardsUrl = () => {
