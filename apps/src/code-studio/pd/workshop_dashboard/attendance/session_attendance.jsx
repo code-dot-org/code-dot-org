@@ -2,7 +2,6 @@
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';

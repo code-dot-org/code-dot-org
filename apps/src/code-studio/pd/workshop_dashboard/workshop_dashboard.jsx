@@ -4,7 +4,6 @@
  * Main landing page and router for the workshop dashboard.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';

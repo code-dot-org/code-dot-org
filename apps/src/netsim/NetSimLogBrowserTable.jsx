@@ -1,6 +1,5 @@
 /** @file Table of log rows displayed in the log browser */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';

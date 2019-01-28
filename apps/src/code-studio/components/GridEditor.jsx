@@ -4,7 +4,6 @@
  * Supports both Bee and Farmer skins.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
 import {cells, utils as mazeUtils} from '@code-dot-org/maze';

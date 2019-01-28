@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import color from "../util/color";
 

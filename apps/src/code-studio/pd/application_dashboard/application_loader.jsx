@@ -5,7 +5,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import Spinner from '../components/spinner';
 import $ from 'jquery';

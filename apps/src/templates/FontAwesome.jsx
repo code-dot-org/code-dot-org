@@ -1,7 +1,6 @@
 /** @file font-awesome helper component. */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import _ from 'lodash';
 

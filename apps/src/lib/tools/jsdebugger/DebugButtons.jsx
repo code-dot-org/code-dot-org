@@ -3,7 +3,6 @@
  * interpreter/debugger are doing. i.e. step in/out/over code and pause/continue
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';

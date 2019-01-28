@@ -4,7 +4,6 @@
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';

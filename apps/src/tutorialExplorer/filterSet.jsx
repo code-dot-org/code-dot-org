@@ -2,7 +2,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';

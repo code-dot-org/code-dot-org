@@ -2,7 +2,6 @@
  * Displays a list of nicely-formatted session times for a workshop.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import SessionTime from './session_time';
 

@@ -1,6 +1,5 @@
 /** @file Top-level view for App Lab */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import ImportProjectDialog from './ImportProjectDialog';

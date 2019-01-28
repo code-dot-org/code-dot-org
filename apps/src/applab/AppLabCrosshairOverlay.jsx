@@ -1,7 +1,6 @@
 /** @file App Lab-specific Crosshair Overlay */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import { draggedElementDropPoint } from './gridUtils';

@@ -3,7 +3,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import BackButton from './backButton';
 import FilterGroupHeaderSelection from './filterGroupHeaderSelection';

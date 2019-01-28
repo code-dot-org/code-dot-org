@@ -4,7 +4,6 @@
  * @see @code-dot-org/maze/src/cell
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { tiles } from '@code-dot-org/maze';
 

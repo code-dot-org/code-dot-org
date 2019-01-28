@@ -1,6 +1,5 @@
 /** Animation or Frame thumbnail */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import _ from 'lodash';
 import color from "../../util/color";

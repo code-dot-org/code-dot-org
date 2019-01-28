@@ -5,7 +5,6 @@ import _, { orderBy } from 'lodash';
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';

@@ -2,7 +2,6 @@
  * Form to create a workshop enrollment
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import $ from 'jquery';
 import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';

@@ -2,7 +2,6 @@
  * Dynamic list of session inputs for creating and editing workshops.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import moment from 'moment';
 import {Row, Col} from 'react-bootstrap';

@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 /** Workshop Survey page. Displays survey results. ...*/
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {
   Button,

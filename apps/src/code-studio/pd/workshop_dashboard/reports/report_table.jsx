@@ -2,7 +2,6 @@
  * Report Table
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';

@@ -1,7 +1,6 @@
 /** @file SVG Visualization Overlay */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import debounce from 'lodash/debounce';

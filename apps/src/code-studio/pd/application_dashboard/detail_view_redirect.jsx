@@ -6,7 +6,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import ApplicationLoader from './application_loader';
 

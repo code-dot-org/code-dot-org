@@ -2,7 +2,6 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
 import { TutorialsSortByOptions } from './util';

@@ -3,7 +3,6 @@
  * Wrap a component in this to listen for page visibility.
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 
 export default class VisibilitySensor extends React.Component {

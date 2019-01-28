@@ -2,7 +2,6 @@
  * Table displaying a summary of application statuses
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
