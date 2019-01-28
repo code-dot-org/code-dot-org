@@ -41,6 +41,7 @@ module Pd::Application
     include SchoolInfoDeduplicator
 
     serialized_attrs %w(
+      pd_workshop_id
       scholarship_status
     )
 

@@ -44,11 +44,6 @@ module Pd::Application
 
     CACHE_TTL = 30.seconds.freeze
 
-    serialized_attrs %w(
-      pd_workshop_id
-      auto_assigned_enrollment_id
-    )
-
     has_one :pd_teachercon1819_registration,
       class_name: 'Pd::Teachercon1819Registration',
       foreign_key: 'pd_application_id'

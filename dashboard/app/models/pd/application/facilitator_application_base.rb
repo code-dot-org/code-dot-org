@@ -39,6 +39,7 @@ module Pd::Application
     include Pd::FacilitatorCommonApplicationConstants
 
     serialized_attrs %w(
+      pd_workshop_id
       fit_workshop_id
       auto_assigned_fit_enrollment_id
       question_1
