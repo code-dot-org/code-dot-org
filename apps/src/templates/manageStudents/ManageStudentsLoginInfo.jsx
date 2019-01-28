@@ -18,16 +18,33 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.string,
   };
 
-  joinSectionUrl = (loginType) => {
-    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture) {
-      return pegasus('/join');
-    } else if (loginType === SectionLoginType.email) {
-      return studio(`/join/${this.props.sectionCode}`);
+  prependBaseUrl = (url) => {
+    if (url.startsWith('//')) {
+      return `http:${url}`;
+    } else {
+      return window.location.origin + url;
     }
   };
 
+  joinSectionUrl = (loginType) => {
+    let path = '';
+
+    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture) {
+      path = pegasus('/join');
+    } else if (loginType === SectionLoginType.email) {
+      path = studio(`/join/${this.props.sectionCode}`);
+    }
+
+    // This URL is displayed as a raw URL to the user, so it needs to include origin (not just a relative path)
+    // if it doesn't already.
+    return this.prependBaseUrl(path);
+  };
+
   sectionSignInUrl = () => {
-    return studio(`/sections/${this.props.sectionCode}`);
+    const path = studio(`/sections/${this.props.sectionCode}`);
+    // This URL is displayed as a raw URL to the user, so it needs to include origin (not just a relative path)
+    // if it doesn't already.
+    return this.prependBaseUrl(path);
   };
 
   printSignInCardsUrl = () => {
