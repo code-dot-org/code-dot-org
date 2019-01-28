@@ -70,6 +70,7 @@ class Pd::Enrollment < ActiveRecord::Base
   serialized_attrs %w(
     role
     grades_teaching
+    attended_csf_intro_workshop
   )
 
   def self.for_user(user)
