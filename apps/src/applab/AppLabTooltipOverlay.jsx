@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 /** @file App Lab-specific Tooltip Overlay */
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';

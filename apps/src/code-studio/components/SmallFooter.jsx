@@ -1,7 +1,5 @@
-import $ from 'jquery';
-
 /* eslint-disable react/no-danger */
-
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';

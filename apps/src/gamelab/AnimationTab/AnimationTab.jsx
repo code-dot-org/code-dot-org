@@ -1,8 +1,6 @@
-import React from 'react';
-
 /** @file Root of the animation editor interface mode for GameLab */
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from "../../util/color";

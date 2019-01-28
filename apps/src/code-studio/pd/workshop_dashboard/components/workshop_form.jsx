@@ -1,11 +1,9 @@
-import $ from 'jquery';
-
 /* global google */
 
 /**
  * Form for creating / editing workshop details.
  */
-
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';

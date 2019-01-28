@@ -1,6 +1,5 @@
-import React, { Component, Children } from 'react';
-
 /** @file Pop-over menu component.  Combine with react-portal to use. */
+import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 
 import Radium from 'radium';

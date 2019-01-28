@@ -1,9 +1,7 @@
-import _, { orderBy } from 'lodash';
-
 /**
  * Table displaying workshop summaries based on a supplied workshop query result.
  */
-
+import _, { orderBy } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, sort} from 'reactabular';

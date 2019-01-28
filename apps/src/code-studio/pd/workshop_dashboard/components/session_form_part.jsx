@@ -1,10 +1,8 @@
-import _ from 'lodash';
-
 /**
  * Individual Session input for creating and editing workshops.
  * Sets date, startTime, and endTime for the session.
  */
-
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
