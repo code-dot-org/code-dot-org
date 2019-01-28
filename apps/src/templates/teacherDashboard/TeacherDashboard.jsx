@@ -3,15 +3,17 @@ import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
+import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import {summarizedSectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
+    section: summarizedSectionShape.isRequired,
     studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {sectionId, studioUrlPrefix} = this.props;
+    const {section, studioUrlPrefix} = this.props;
 
     return (
       <div>
@@ -27,11 +29,13 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/manage_students"
-            component={props => <div>Manage Students content goes here!</div>}
+            component={props => <ManageStudentsTable  {...props} studioUrlPrefix={studioUrlPrefix}/>
+            }
           />
+          {/* TODO: (madelynkasula) refactor SectionProjectsListWithData to use section from redux */}
           <Route
             path="/projects"
-            component={props => <SectionProjectsListWithData {...props} sectionId={sectionId} studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => <SectionProjectsListWithData {...props} sectionId={section.id} studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/text_responses"

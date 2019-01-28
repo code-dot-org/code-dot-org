@@ -31,6 +31,7 @@ export default class ProjectCardRow extends React.Component {
     projects: PropTypes.arrayOf(projectProp).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
+    isDetailView: PropTypes.bool,
   };
 
   render() {
@@ -42,6 +43,7 @@ export default class ProjectCardRow extends React.Component {
               projectData={project}
               showFullThumbnail={this.props.showFullThumbnail}
               currentGallery={this.props.galleryType}
+              isDetailView={this.props.isDetailView}
             />
           </div>
         ))}
