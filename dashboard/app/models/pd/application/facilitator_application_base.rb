@@ -36,7 +36,7 @@
 
 module Pd::Application
   class FacilitatorApplicationBase < ApplicationBase
-    include Pd::Application::PdWorkshopHelper
+    include PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
 
     serialized_attrs %w(
@@ -462,7 +462,6 @@ module Pd::Application
       end
     end
 
-    # override
     def self.prefetch_associated_models(applications)
       # also prefetch fit workshops
       prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact
