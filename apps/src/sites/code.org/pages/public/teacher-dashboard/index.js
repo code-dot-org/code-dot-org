@@ -419,7 +419,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section, scriptData.studiourlprefix));
+        $scope.section.$promise.then(section => renderSectionTable(section));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',

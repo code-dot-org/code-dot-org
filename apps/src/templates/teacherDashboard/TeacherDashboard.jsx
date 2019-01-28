@@ -30,8 +30,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/manage_students"
-            component={props => <ManageStudentsTable studioUrlPrefix={studioUrlPrefix}/>
-            }
+            component={props => <ManageStudentsTable/>}
           />
           <Route
             path="/projects"
