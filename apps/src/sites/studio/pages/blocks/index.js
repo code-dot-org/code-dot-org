@@ -31,9 +31,9 @@ function renderBlock(element) {
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(element, blocksDom, {
     noScrolling: true,
-    inline: true,
+    inline: false,
   });
-  shrinkBlockSpaceContainer(blockSpace, false);
+  shrinkBlockSpaceContainer(blockSpace, true);
 }
 
 $(document).ready(() => {
@@ -44,9 +44,8 @@ $(document).ready(() => {
   Blockly.typeHints = true;
   Blockly.Css.inject(document);
 
-  var divs = document.getElementsByClassName('blockly-container');
-  for (var i = 0; i < divs.length; i++) {
-    var element = divs[i];
-    renderBlock(element);
+  const divs = document.getElementsByClassName('blockly-container');
+  for (let i = 0; i < divs.length; i++) {
+    renderBlock(divs[i]);
   }
 });
