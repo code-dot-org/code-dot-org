@@ -1,7 +1,5 @@
 :ruby
   teacher_dashboard_data = {}
-  # TODO: (madelynkasula) remove studioUrlPrefix when teacher dashboard is fully served from dashboard
-  teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url
   teacher_dashboard_data[:section] = @section
 
 %script{src: minifiable_asset_path('js/teacher_dashboard/index.js'), data: {dashboard: teacher_dashboard_data.to_json}}

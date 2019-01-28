@@ -5,8 +5,6 @@ import SectionProjectsList from './SectionProjectsList';
 
 class SectionProjectsListWithData extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string,
-
     // Props provided by redux.
     sectionId: PropTypes.number,
   };
@@ -31,7 +29,6 @@ class SectionProjectsListWithData extends Component {
   }
 
   render() {
-    const {studioUrlPrefix} = this.props;
     const {projectsData} = this.state;
 
     return (
@@ -42,7 +39,6 @@ class SectionProjectsListWithData extends Component {
         {!this.state.isLoading &&
           <SectionProjectsList
             projectsData={projectsData}
-            studioUrlPrefix={studioUrlPrefix}
             showProjectThumbnails={true}
           />
         }

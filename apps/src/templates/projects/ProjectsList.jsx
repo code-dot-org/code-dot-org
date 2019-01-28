@@ -6,6 +6,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {PROJECT_TYPE_MAP} from './projectConstants';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -68,9 +69,6 @@ const thumbnailFormatter = (thumbnailUrl) => {
 class ProjectsList extends React.Component {
   static propTypes = {
     projectsData: PropTypes.array.isRequired,
-    // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
   };
 
@@ -122,7 +120,7 @@ class ProjectsList extends React.Component {
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
-    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
+    const url = studio(`/projects/${type}/${channel}/view`);
     return <a href={url} style={tableLayoutStyles.link} target="_blank">{name}</a>;
   };
 

@@ -38,8 +38,6 @@ function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
 
-  const studioUrlPrefix = scriptData.studiourlprefix;
-
   $.ajax({
     method: 'GET',
     url: dataUrl,
@@ -48,7 +46,6 @@ function renderSectionProjects(sectionId) {
     ReactDOM.render(
       <SectionProjectsList
         projectsData={projectsData}
-        studioUrlPrefix={studioUrlPrefix}
         showProjectThumbnails={true}
       />,
       element);
