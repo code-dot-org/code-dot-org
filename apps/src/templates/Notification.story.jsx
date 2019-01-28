@@ -162,7 +162,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Announcement - with button',
+        name: 'Announcement',
         description: `Notification box that displays when there is an announcement`,
         story: () => (
           <Notification
@@ -172,16 +172,6 @@ export default storybook => {
             buttonLink="/"
             newWindow={true}
             analyticId="sample_announcement"
-          />
-        )
-      },
-      {
-        name: 'Announcement - no button',
-        description: `Notification box that displays when there is an announcement but with no button to learn more because no link`,
-        story: () => (
-          <Notification
-            type="bullhorn"
-            {...announcement}
           />
         )
       },
