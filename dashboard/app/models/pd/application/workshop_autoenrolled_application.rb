@@ -44,10 +44,6 @@ module Pd::Application
 
     CACHE_TTL = 30.seconds.freeze
 
-    has_one :pd_teachercon1819_registration,
-      class_name: 'Pd::Teachercon1819Registration',
-      foreign_key: 'pd_application_id'
-
     before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
     def destroy_autoenrollment
       return unless auto_assigned_enrollment_id
