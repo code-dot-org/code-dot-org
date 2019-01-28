@@ -44,14 +44,6 @@ module Pd::Application
 
     CACHE_TTL = 30.seconds.freeze
 
-    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
-    def destroy_autoenrollment
-      return unless auto_assigned_enrollment_id
-
-      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
-      self.auto_assigned_enrollment_id = nil
-    end
-
     def workshop
       return nil unless pd_workshop_id
 
