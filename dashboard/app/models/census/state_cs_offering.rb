@@ -35,6 +35,7 @@ class Census::StateCsOffering < ApplicationRecord
     KY
     LA
     MA
+    MD
     MI
     MO
     MS
@@ -104,6 +105,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['State_School_ID']
     when 'MA'
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MD'
+      row_hash['STATE SCHOOL ID:']
     when 'MO'
       row_hash['STATE_SCHOOL_ID']
     when 'MS'
@@ -299,6 +302,23 @@ class Census::StateCsOffering < ApplicationRecord
     10155
     10156
     10158
+  ).freeze
+
+  MD_COURSE_CODES = %w(
+    10157
+    10152
+    10007
+    10155
+    10153
+    10199
+    10011
+    10171
+    10154
+    10156
+    10012
+    10175
+    10159
+    10205
   ).freeze
 
   MI_COURSE_CODES = %w(
@@ -595,6 +615,8 @@ class Census::StateCsOffering < ApplicationRecord
         row_hash['Total Enrollment'] != '*' &&
         row_hash['Total Enrollment'].to_i > 0
       end
+    when 'MD'
+      MD_COURSE_CODES.select {|course| course == row_hash['SCED_CD']}
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'MO'
