@@ -608,7 +608,29 @@ describe('entry tests', () => {
           'qtip2': 'var $',
         }
       ],
-      plugins: [
+      mode: minify ? 'production' : 'development',
+      optimization: {
+        splitChunks: {
+          cacheGroups: {
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: (chunk) => {
+                return _.keys(appsEntries).includes(chunk.name);
+              }
+            },
+            'code-studio-common': {
+              name: 'code-studio-common',
+              minChunks: 2,
+              chunks: (chunk) => {
+                const chunkNames = _.keys(codeStudioEntries); // .concat(_.keys(appsEntries))
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 10
+            },
+          }
+        }
+
         // new webpack.optimize.CommonsChunkPlugin({
         //   name: 'common',
         //   chunks: _.keys(appsEntries),
@@ -629,6 +651,8 @@ describe('entry tests', () => {
         //     'code-studio-common',
         //   ]
         // }),
+      },
+      plugins: [
         ...(process.env.ANALYZE_BUNDLE ? [
           new BundleAnalyzerPlugin({
             analyzerMode: 'static',
