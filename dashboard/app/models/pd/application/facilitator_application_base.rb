@@ -35,7 +35,8 @@
 #
 
 module Pd::Application
-  class FacilitatorApplicationBase < WorkshopAutoenrolledApplication
+  class FacilitatorApplicationBase < ApplicationBase
+    include Pd::Application::PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
 
     serialized_attrs %w(
