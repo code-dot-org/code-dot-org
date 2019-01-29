@@ -10,34 +10,14 @@ steps:
   depends_on: [ clone ]
   commands:
     - sudo chown -R circleci:circleci .
-
     - docker/git_shallow_fetch.sh
 
-- name: unit-tests
+- name: install-and-build
   image: wintercdo/code-dot-org:0.7
   depends_on: [ git-shallow-fetch ]
-  environment:
-    CLOUDFRONT_KEY_PAIR_ID:
-      from_secret: CLOUDFRONT_KEY_PAIR_ID
-    CLOUDFRONT_PRIVATE_KEY:
-      from_secret: CLOUDFRONT_PRIVATE_KEY
-    PROPERTIES_ENCRYPTION_KEY:
-      from_secret: PROPERTIES_ENCRYPTION_KEY
-    AWS_ACCESS_KEY_ID:
-      from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-      from_secret: AWS_SECRET_ACCESS_KEY
-  commands:
-    - pwd
-    - whoami
-    - id -u
-    - id -g
-    - ls -alh
-    - /entrypoint.sh docker/unit_tests.sh
-
-- name: ui-tests
-  image: wintercdo/code-dot-org:0.7
-  depends_on: [ git-shallow-fetch ]
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
   environment:
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -58,6 +38,30 @@ steps:
     SAUCE_ACCESS_KEY:
       from_secret: SAUCE_ACCESS_KEY
   commands:
+    - docker/install_and_build.sh
+
+- name: unit-tests
+  image: wintercdo/code-dot-org:0.7
+  depends_on: [ install-and-build ]
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  commands:
+    - pwd
+    - whoami
+    - id -u
+    - id -g
+    - ls -alh
+    - find /home/circleci/.rbenv
+    - /entrypoint.sh docker/unit_tests.sh
+
+- name: ui-tests
+  image: wintercdo/code-dot-org:0.7
+  depends_on: [ install-and-build ]
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  commands:
     - pwd
     - whoami
     - id -u
@@ -65,6 +69,10 @@ steps:
     - ls -alh
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/ui_tests.sh
+
+volumes:
+- name: rbenv
+  temp: {}  
 
 trigger:
   branch:
