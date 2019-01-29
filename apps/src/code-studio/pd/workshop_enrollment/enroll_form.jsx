@@ -56,13 +56,13 @@ const GRADES_TEACHING = [
 ];
 
 const CSF_COURSES = {
-  "Course A" : "courseA",
-  "Course B" : "courseB",
-  "Course C" : "courseC",
-  "Course D" : "courseD",
-  "Course E" : "courseE",
-  "Course F" : "courseF",
-  "Express" : "express"
+  "courseA" : "Course A",
+  "courseB" : "Course B",
+  "courseC" : "Course C",
+  "courseD" : "Course D",
+  "courseE" : "Course E",
+  "courseF" : "Course F",
+  "express" : "Express"
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -119,14 +119,14 @@ export default class EnrollForm extends React.Component {
     this.setState({explain_csf_course_other: input});
   };
 
-  handleCourseExperienceChange = (input) => {
+  handleCsfCourseExperienceChange = (input) => {
     let exp;
     if (this.state.csf_course_experience) {
       exp = this.state.csf_course_experience;
     } else {
       exp = {};
     }
-    Object.keys(input).map( key => exp[key] = input[key]);
+    Object.keys(input).map( key => exp[CSF_COURSES[key]] = input[key]);
     this.setState({csf_course_experience: exp});
   };
 
@@ -285,7 +285,7 @@ export default class EnrollForm extends React.Component {
       }
     ]);
 
-    const csfCourses = Object.keys(CSF_COURSES).map(key => key).concat([
+    const csfCourses = Object.keys(CSF_COURSES).map(key => CSF_COURSES[key]).concat([
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_csf_course_other,
@@ -389,7 +389,7 @@ export default class EnrollForm extends React.Component {
             id="csf_course_experience"
             key="csf_course_experience"
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
-            onChange={this.handleCourseExperienceChange}
+            onChange={this.handleCsfCourseExperienceChange}
             data = {this.state.csf_course_experience_data}
             options={[
               "a few lessons",
@@ -398,8 +398,8 @@ export default class EnrollForm extends React.Component {
             ]}
             questions={Object.keys(CSF_COURSES).map(key =>
               (
-                {label: key,
-                name: CSF_COURSES[key],
+                {label: CSF_COURSES[key],
+                name: key,
             }))}
             selectedItems={this.state.csf_course_experience}
           />
