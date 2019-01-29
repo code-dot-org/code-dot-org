@@ -407,12 +407,16 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
       binary_move:
         options:
           DIR:
