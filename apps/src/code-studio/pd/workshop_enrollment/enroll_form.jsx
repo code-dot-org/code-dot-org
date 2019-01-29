@@ -229,7 +229,6 @@ export default class EnrollForm extends React.Component {
       csf_courses_planned: this.csfCoursesPlanned(),
       explain_csf_course_other: this.state.explain_csf_course_other,
       attended_csf_intro_workshop: ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
-      csf_course_experience_data: this.state.csf_course_experience_data,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -271,7 +270,6 @@ export default class EnrollForm extends React.Component {
       Which CS Fundamentals course(s), if any, do you plan to <strong>use more of</strong> in the next 12 months? Check all that apply.
       </div>
     );
-
     const gradesTeaching = GRADES_TEACHING.concat([
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
@@ -284,7 +282,6 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
-
     const csfCourses = Object.keys(CSF_COURSES).map(key => CSF_COURSES[key]).concat([
       {
         answerText: `${OTHER} ${EXPLAIN}`,
@@ -390,7 +387,6 @@ export default class EnrollForm extends React.Component {
             key="csf_course_experience"
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
             onChange={this.handleCsfCourseExperienceChange}
-            data = {this.state.csf_course_experience_data}
             options={[
               "a few lessons",
               "most lessons",
