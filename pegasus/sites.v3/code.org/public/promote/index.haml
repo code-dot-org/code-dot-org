@@ -33,7 +33,6 @@ theme: responsive
       = view :stats_mobile
 
     %h1 Code.org’s impact in schools
-
     #impact-section.section.clear.desktop-feature
       %h2 Teachers and Code.org are having an impact
       = view :stats_impact_carousel
@@ -45,6 +44,8 @@ theme: responsive
       = view :interactive_map, use_url: true
 
     %h1 Advocate for computer science locally
+    #advocate-locally.section.clear
+      = view :stats_advocate_locally
 
   %div{:id=>'universal_content'}
     %h1 Tell the world!
