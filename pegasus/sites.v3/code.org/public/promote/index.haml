@@ -21,9 +21,18 @@ theme: responsive
 %link{:href=>"/css/interactive-map.css", :rel=>"stylesheet"}
 
 #promote-page
-  %h1 Promote Computer Science
-
   %div{:id=>'us_content'}
+    %h1 Share these stats
+
+    #stats-section.section.clear.desktop-feature
+      %h2 What’s wrong with this picture?
+      = view :stats_carousel
+
+    #stats-section-mobile.section.clear.mobile-feature
+      %h2 Computer Science Education Stats
+      = view :stats_mobile
+
+    %h1 Code.org’s impact in schools
 
     #petition-section.section.clear
       = view :petition
@@ -31,25 +40,12 @@ theme: responsive
     #interactive-map.section.clear
       = view :interactive_map, use_url: true
 
-    #stats-section.section.clear.desktop-feature
-      %h2 What’s wrong with this picture? Share these stats
-      = view :stats_carousel
-
-    #stats-section-mobile.section.clear.mobile-feature
-      %h2 Computer Science Education Stats
-      = view :stats_mobile
-
-    #tools-section.section.clear
-      %h2 Tools to help you advocate locally
-      = view :promote_tools, state:nil, section_name: 'local_tools'
-
-    #resources-section.section.clear
-      %h2 Policy development resources
-      = view :promote_tools, state:nil, section_name: 'policy_resources'
+    %h1 Advocate for computer science locally
 
   %div{:id=>'universal_content'}
+    %h1 Tell the world!
     #youtube-section.section.clear
-      %h2 Tell the world! Share the Code.org video
+      %h2 Share the Code.org video
       = view :youtube_videos
 
     #quotes-section.section.clear
