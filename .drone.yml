@@ -10,7 +10,7 @@ steps:
   depends_on: [ clone ]
   commands:
     - sudo chown -R circleci:circleci .
-    - docker/git_shallow_fetch.sh
+    - /entrypoint.sh docker/git_shallow_fetch.sh
 
 - name: install-and-build
   image: wintercdo/code-dot-org:0.7
