@@ -427,12 +427,11 @@ module Pd::Application
       #   - save a reference to it in properties
       #   - delete the previous auto-created enrollment if it exists
       if enrollment.new_record?
-        enrollment.update(
+        enrollment.update!(
           user: user,
           school_info: user.school_info,
           full_name: user.name
         )
-        enrollment.save!
 
         destroy_autoenrollment
         self.auto_assigned_enrollment_id = enrollment.id
@@ -450,12 +449,11 @@ module Pd::Application
       #   - save a reference to it in properties
       #   - delete the previous auto-created enrollment if it exists
       if enrollment.new_record?
-        enrollment.update(
+        enrollment.update!(
           user: user,
           school_info: user.school_info,
           full_name: user.name
         )
-        enrollment.save!
 
         destroy_fit_autoenrollment
         self.auto_assigned_fit_enrollment_id = enrollment.id

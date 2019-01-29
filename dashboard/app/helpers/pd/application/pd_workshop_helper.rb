@@ -32,15 +32,15 @@ module Pd::Application
 
       def registered_workshop?
         # inspect the cached workshop.enrollments rather than querying the DB
-        workshop&.enrollments&.any? {|e| e.user_id == user.id} if pd_workshop_id
+        workshop&.enrollments&.any? {|e| e.user_id == user.id}
       end
 
       # Attempts to fetch a value from the Rails cache, executing the supplied block
       # when the specified key doesn't exist or has expired
       # @param key [String] cache key
-      # @yieldreturn [Object] the raw, uncached, object.
+      # @yield [Object] the raw, uncached, object.
       #   Note, when this is run, the result will be stored in the cache
-      def cache_fetch(key, &block)
+      def cache_fetch(key)
         Rails.cache.fetch(key, expires_in: CACHE_TTL) do
           yield
         end
