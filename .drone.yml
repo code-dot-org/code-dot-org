@@ -8,18 +8,12 @@ steps:
 - name: git-shallow-fetch
   image: wintercdo/code-dot-org:0.7
   depends_on: [ clone ]
-  when:
-    branch:
-    - drone
   commands:
     - docker/git_shallow_fetch.sh
 
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   depends_on: [ git-shallow-fetch ]
-  when:
-    branch:
-    - drone
   environment:
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -43,9 +37,6 @@ steps:
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
   depends_on: [ git-shallow-fetch ]
-  when:
-    branch:
-    - drone
   environment:
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -73,3 +64,9 @@ steps:
     - ls -alh
     - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/ui_tests.sh
+
+trigger:
+  branch:
+  - drone
+  event:
+  - pull_request
