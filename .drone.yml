@@ -38,7 +38,7 @@ steps:
     SAUCE_ACCESS_KEY:
       from_secret: SAUCE_ACCESS_KEY
   commands:
-    - docker/install_and_build.sh
+    - /entrypoint.sh docker/install_and_build.sh
 
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
