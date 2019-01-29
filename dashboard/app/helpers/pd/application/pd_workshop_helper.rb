@@ -25,11 +25,6 @@ module Pd::Application
         update_status_timestamp_change_log(user, "Summer Workshop: #{pd_workshop_id ? workshop_date_and_location : 'Unassigned'}")
       end
 
-      def workshop_course
-        return Pd::Workshop::COURSE_CSD if course == 'csd'
-        return Pd::Workshop::COURSE_CSP if course == 'csp'
-      end
-
       def registered_workshop?
         # inspect the cached workshop.enrollments rather than querying the DB
         workshop&.enrollments&.any? {|e| e.user_id == user.id}
