@@ -994,6 +994,19 @@ module Pd::Application
       refute application.save
     end
 
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1920_application, pd_workshop_id: workshop.id
+      # Workshops, Sessions, Enrollments, Schools, School districts
+      assert_queries 5 do
+        Teacher1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
+    end
+
     private
 
     def assert_status_log(expected, application)

@@ -8,7 +8,6 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @workshop = create :pd_workshop
-      # @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
       @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
 
       @application_no_workshop = create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: nil
@@ -72,7 +71,7 @@ module Pd::Application
     end
 
     test 'workshop cache prefetch' do
-      # Workshops, Sessions, Enrollments,
+      # Workshops, Sessions, Enrollments
       assert_queries 3 do
         TEACHER_APPLICATION_CLASS.prefetch_workshops([@application.pd_workshop_id])
       end

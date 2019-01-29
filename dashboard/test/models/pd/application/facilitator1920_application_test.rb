@@ -399,5 +399,19 @@ module Pd::Application
       assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
       assert application_hash.key? :csp_training_requirement
     end
+
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
+      # Workshops, Sessions, Enrollments
+      assert_queries 3 do
+        Facilitator1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
+    end
   end
 end
