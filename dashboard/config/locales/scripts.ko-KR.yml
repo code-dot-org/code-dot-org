@@ -1696,3 +1696,27 @@ ko:
               name: 2진 팔찌
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: '실시간 알고리즘: 씨앗 심기'
+            Going Places Safely:
+              name: 안전하게 자리잡기
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: 빨리 빨리 움직이자!
+            Your Digital Footprint:
+              name: 디지털 개인정보 흔적
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: 빨리 빨리 움직이자!
+            Your Digital Footprint:
+              name: 디지털 개인정보 흔적
+            Spelling Bee:
+              name: 말하는 꿀벌
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: '실시간 알고리즘: 씨앗 심기'

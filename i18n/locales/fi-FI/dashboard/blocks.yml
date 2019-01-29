@@ -181,7 +181,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_getTime:
-        text: "[UNIT][0] kulunut"
+        text: "{UNIT} kulunut"
         options:
           UNIT:
             '"measures"': tahdit
@@ -969,15 +969,16 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"costume"': asu
-            '"direction"': liikkeen suunta
-            '"tint"': sävy
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
       binary_move:
         options:
           DIR:

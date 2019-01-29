@@ -277,3 +277,17 @@ fi:
       PaperPlanes_2019:
         title: 'Tosielämän algoritmit: paperilentokoneet'
         desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme, esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
+      PlantASeed_2019:
+        title: 'Tosielämän algoritmit: kylvä siemen'
+        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä, käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+      UnplugHappyMaps_2019:
+        title: Iloiset kartat
+        desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja (sarja ohjeita).
+      GoingPlacesSafely_2019:
+        title: Menossa turvallisesti
+        desc: Internet on voimakas, mutta joskus vaarallinenkin paikka. Opettajat neuvovat kuinka pysyä turvassa internettiä selaillessa.
+      MoveItMoveIt_2019:
+        title: Liikuta, liikuta
+      DigitalFootprint_2019:
+        title: Digitaalinen jalanjälkesi
+        desc: Opettajat kertovat oppilailleen, että omien tietojensa lisääminen verkkoon luo digitaalisen jalanjäljen tai "polun" jolla on seurauksensa.

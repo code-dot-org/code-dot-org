@@ -406,12 +406,16 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
       binary_move:
         options:
           DIR:

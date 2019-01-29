@@ -324,12 +324,16 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       binary_move:
         options:
           DIR:

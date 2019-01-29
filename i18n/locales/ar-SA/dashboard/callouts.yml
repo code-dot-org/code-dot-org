@@ -151,6 +151,8 @@ ar:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
+      Ryan_Demo_callout:
+        dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟
       Underground Avoiding Lava_2018_callout:

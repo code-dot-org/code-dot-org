@@ -511,10 +511,16 @@
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Dette tallet angir hvor mange av disse blokkene du
           kan bruke i denne oppgaven.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Dette tallet angir hvor mange av disse blokkene du
+          kan bruke i denne oppgaven.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk
           kan bli brukt i det endelige svaret.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk
+          kan bli brukt i det endelige svaret.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk
           kan bli brukt i det endelige svaret.
       courseA_artist_loops7_forVideo_callout:
@@ -526,16 +532,25 @@
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje
           når du vil?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje
+          når du vil?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
           helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
           helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
+          helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene
           du kan bruke i denne oppgaven.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene
+          du kan bruke i denne oppgaven.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene
           du kan bruke i denne oppgaven.
       courseA_collector_preLoops1_callout:
@@ -558,6 +573,9 @@
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
           blokker for å fullføre oppgavene.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
           blokker for å fullføre oppgavene.
@@ -570,6 +588,8 @@
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom
@@ -587,9 +607,13 @@
         courseA_playlab_events4_callout1: Dette er et rop
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Dette er et rop
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Dette er et rop
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Klikk her for å endre retningen på hendelses-pilen.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Klikk her for å endre retningen på hendelses-pilen.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Klikk her for å endre retningen på hendelses-pilen.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
@@ -597,13 +621,22 @@
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
           at du ikke vet hvilken lyd du får før du hører den!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
+          at du ikke vet hvilken lyd du får før du hører den!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
           på "Kjør" for å starte programmet.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
           vil du bruke den?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
+          vil du bruke den?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
           vil du bruke den?
       courseB_artist_loops5_callout:
@@ -615,9 +648,14 @@
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
           helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
+          helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Klikk på lyspæren når du trenger hjelp!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Klikk på lyspæren når du trenger hjelp!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Klikk på lyspæren når du trenger hjelp!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom
@@ -632,6 +670,8 @@
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Bruk den grønne nedtrekksmenyen for å endre retning.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Bruk den grønne nedtrekksmenyen for å endre retning.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Bruk den grønne nedtrekksmenyen for å endre retning.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp
