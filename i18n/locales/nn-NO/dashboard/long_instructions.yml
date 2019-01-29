@@ -650,6 +650,13 @@ nn:
       Overworld Move to Sheep_2018: Legg til endå ei "gå framover"-blokk for å nå fram til sauen.
       Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå fram til sauen.
       PS copy 2-3 Bee Conditionals 5: "Desse magiske lilla blomane endrar seg!\n\nKvar gong du køyrer koden kan blomane enten ha 1 nektar eller ingen... Men du veit ikkje talet på nektar før du køyrer koden! \n\nPass på så du ikkje samlar nektar fra blomar som ikkje har noko. \nDu må først sjekke om nektaren er lik 1 ved å bruke \"dersom nektar\"-blokka."
+      Ryan_Demo: |-
+        Nå må vi få elgen til å danse!
+
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny&#95;dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
+
+
+        **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       Testing Quantum Farmer: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak med jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka ti å fylle holet til det er heilt jamnt?  "
       Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
       Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
@@ -683,18 +690,27 @@ nn:
         **Frileik: ** Dette er Laurel, eventyreren! Flytt på henne og få så mykje skattar du kan.\r 
         \r
         Dra blokker inn i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element for å bli ferdig med dette nivået.
+      courseA_collector_loops1_2019: |-
+        **Frileik: ** Dette er Laurel, eventyreren! Flytt på henne og få så mykje skattar du kan.\r 
+        \r
+        Dra blokker inn i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element for å bli ferdig med dette nivået.
       courseA_collector_preLoops1: "Dette er eventyraren Laurel! \\r\n\\r\nTrykk \"Køyr\" for å sjå ho gå opp til skatten og ta den."
       courseA_maze_seq6_2018: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
+      courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få meg bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
       courseB_artist_loops7: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops7_2018: "**Utfordring:** Det er en skjult hage! La oss går rundt."
+      courseB_artist_loops7_2019: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2018: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
+      courseB_artist_loops_challenge2_2019: La oss spele eit spel! Teikn så mange X'ar som du kan! Klarar du tre på rad?
       courseB_collector_loops1: |-
         **Frileik: ** Dette er Laurel, eventyreren! Flytt på henne og få så mykje skattar du kan.\r 
         \r
         Dra blokker inn i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element for å bli ferdig med dette nivået.
       courseB_collector_loops1_2018: "**Frileik: ** Dette er Laurel, eventyreren! Flytt på henne og få så mykje skattar du kan.\\r \n\\r\nDra blokker inn i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops1_2019: "**Frileik: ** Dette er Laurel, eventyreren! Flytt på henne og få så mykje skattar du kan.\\r \n\\r\nDra blokker inn i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element for å bli ferdig med dette nivået."
       courseB_maze_seq9_challenge1: "*Kor har den grisen gøymd seg no?*"
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
