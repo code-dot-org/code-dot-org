@@ -25,38 +25,6 @@ mysql -V
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
-mispipe "bundle install --verbose" ts
-
-# set up locals.yml
-set +x
-echo "
-bundler_use_sudo: false
-properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
-cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
-cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
-ignore_eyes_mismatches: true
-disable_all_eyes_running: true
-use_my_apps: true
-use_my_shared_js: true
-build_blockly_core: true
-build_shared_js: true
-build_dashboard: true
-build_pegasus: true
-build_apps: true
-localize_apps: true
-dashboard_enable_pegasus: true
-dashboard_workers: 5
-skip_seed_all: true
-" >> locals.yml
-echo "Wrote secrets from env vars into locals.yml."
-set -x
-
-# name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
-
-# name: rake build
-RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
-
 # unit tests
 bundle exec rake circle:run_tests --trace
 
