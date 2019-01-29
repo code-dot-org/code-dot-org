@@ -7,6 +7,7 @@ clone:
 steps:
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
+  depends_on: [ clone ]
   when:
     branch:
     - drone
@@ -32,6 +33,7 @@ steps:
 
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
+  depends_on: [ clone ]
   when:
     branch:
     - drone
