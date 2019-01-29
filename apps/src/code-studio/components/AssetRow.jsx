@@ -3,6 +3,15 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
+import color from "@cdo/apps/util/color";
+
+const styles = {
+  deleteWarning: {
+    paddingLeft: '34px',
+    textAlign: 'left',
+    color: color.red
+  }
+};
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -114,6 +123,9 @@ export default class AssetRow extends React.Component {
               Delete File
             </button>
             <button onClick={this.cancelDelete}>Cancel</button>
+            <div style={styles.deleteWarning}>
+              {i18n.confirmDeleteExplanation()}
+            </div>
             {this.state.actionText}
           </td>
         );

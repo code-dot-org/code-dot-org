@@ -77,6 +77,7 @@ export default class ProjectCard extends React.Component {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
+    isDetailView: PropTypes.bool,
   };
 
   getLastModifiedTimestamp(timestamp) {
@@ -93,7 +94,7 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const { projectData, currentGallery } = this.props;
+    const { projectData, currentGallery, isDetailView } = this.props;
     const { type, channel } = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
@@ -145,7 +146,7 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </span>
-          {isPublicGallery && projectData.publishedAt && (
+          {isPublicGallery && isDetailView && projectData.publishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
