@@ -936,6 +936,7 @@ bs:
       Play Lab Rocket 2: Započeli smo Recept za Dizajn za visinu rakete koristeći ugovor i primjere koje si upravo napisao/la. Dovrši definiciju funkcije za visinu rakete i pokreni svoju animaciju.
       Play Lab Rocket 3: Odlično. Možeš li sada ažurirati tu funkciju tako da se naša raketa kreće brzo? Pobrini se da su izjave svrhe, primjeri, i definicija funkcije ažurirani da bi se raketa lansirala pri 40 metara u sekundi.
       Ryan Test Locked Blocks: Evo funkcija pod nazivom "izvidnica". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
+      Ryan_Demo: Učini da Los započne novi pokret svako 4 takta!
       SpecialFrozenLevel: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
       Standalone_Artist_1: Dobrodošao u Umjetnik! Kao prvo, hajde da pokušamo napraviti jednostavan kvadrat koristeći blok za skretanje u desno i blok za kretanje naprijed. Svaka stranica bi trebala biti 100 piksela duga.
       Standalone_Artist_2: Nacrtaj ovaj dijamant sa stepenima od 120 i 60 stupnjeva te stranicama dugačkim 150 piksela.
