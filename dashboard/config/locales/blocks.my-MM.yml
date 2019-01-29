@@ -163,6 +163,14 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       craft_ifPath:
         options:
           DIR:

@@ -269,10 +269,16 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': saiz
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
       binary_move:
         options:
           DIR:

@@ -1297,3 +1297,27 @@ lv:
               name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
             Binary Bracelets:
               name: Binārās aproces
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Spelling Bee:
+              name: Burtošanas bite
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'

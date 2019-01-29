@@ -490,3 +490,22 @@ gl:
         desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
           ao facer avións de papel. Esta lección tamén presenta a informática de forma
           xeral, e como os algoritmos teñen un papel esencial.
+      PlantASeed_2019:
+        title: 'Algoritmos da Vida Real: Planta unha Semente'
+        desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
+          usando o acto de plantar unha semente como exemplo. Tamén se concentra no
+          cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
+      UnplugHappyMaps_2019:
+        title: Mapas Felices
+        desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
+          mover un personaxe a través dun labirinto usando un único comando.
+      GoingPlacesSafely_2019:
+        title: Ir a Sitios en modo Seguro
+        desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
+          como navegar en seguranza pola Internet.
+      MoveItMoveIt_2019:
+        title: Creando camiños
+      DigitalFootprint_2019:
+        title: A túa pegada dixital
+        desc: Os profesores informan aos alumnos de que colocar informacións persoais
+          online crea unha pegada dixital ou un "rastro" que ten consecuencias.

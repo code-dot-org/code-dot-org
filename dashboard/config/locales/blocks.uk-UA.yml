@@ -799,14 +799,16 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-            '"tint"': відтінок
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
       binary_move:
         options:
           DIR:

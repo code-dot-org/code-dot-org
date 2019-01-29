@@ -119,6 +119,8 @@ ca:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Ryan_Demo_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?
       Underground Avoiding Lava_2018_callout:
