@@ -165,6 +165,8 @@ cs:
         grid: K zobrazení mřížky klikněte zde.
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: K zobrazení mřížky klikněte zde.
+      Ryan_Demo_callout:
+        dance_callout_02: Přidej do svého programu tento blok!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel k posunu dopředu?
       Underground Avoiding Lava_2018_callout:
