@@ -251,7 +251,7 @@
     "MATH_POWER_SYMBOL": "^",
     "MATH_RANDOM_FLOAT_HELPURL": "",
     "MATH_RANDOM_FLOAT_TITLE_RANDOM": "véletlen tört",
-    "MATH_RANDOM_FLOAT_TOOLTIP": "Véletlen tört értéket ad vissza a [0.0 ; 1.0[ intervallumon.",
+    "MATH_RANDOM_FLOAT_TOOLTIP": "Véletlen tört érték 0.0 és 1.0 között.",
     "MATH_RANDOM_INT_HELPURL": "",
     "MATH_RANDOM_INT_TITLE": "véletlen egész szám %1 és %2 között",
     "MATH_RANDOM_INT_TOOLTIP": "Véletlen egész szám a megadott zárt intervallumon belül.",
