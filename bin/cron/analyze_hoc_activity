@@ -140,13 +140,11 @@ def main
   petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
 
   time = DateTime.now
-  # Pull current project_count to keep that current value.
   Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,
     petition_signatures:      petition_signatures,
     lines_of_code:            lines_of_code,
-    project_count:            Properties.get(:metrics)['project_count'],
   }
 
   total_females = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
