@@ -4,6 +4,8 @@ module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
     include Pd::Application::ActiveApplicationModels
 
+    self.use_transactional_test_case = true
+
     freeze_time
 
     setup_all do
@@ -39,7 +41,7 @@ module Api::V1::Pd
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
       @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      @csp_facilitator_application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
+      @csp_facilitator_application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp', regional_partner: @regional_partner
 
       @serializing_teacher = create(:teacher,
         email: 'minerva@hogwarts.edu',
@@ -298,7 +300,7 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
-    test 'update appends to the status changed log if status is changed' do
+    test 'update appends to the timestamp log if status is changed' do
       sign_in @program_manager
 
       assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
@@ -316,7 +318,7 @@ module Api::V1::Pd
       ], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
     end
 
-    test 'update does not append to the status changed log if status is unchanged' do
+    test 'update does not append to the timestamp log if status is unchanged' do
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
       @csd_teacher_application_with_partner.reload
@@ -327,6 +329,144 @@ module Api::V1::Pd
       @csd_teacher_application_with_partner.reload
 
       assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+    end
+
+    test 'update appends to the timestamp log if fit workshop is changed' do
+      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
+      sign_in @program_manager
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]')
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, status: @csp_facilitator_application.status}}
+      @csp_facilitator_application.reload
+
+      assert_equal [
+        {
+          title: "Fit Workshop: #{@csp_facilitator_application.fit_workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ], @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
+    test 'update appends to the timestamp log if summer workshop is changed' do
+      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
+      sign_in @program_manager
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]')
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
+      @csp_facilitator_application.reload
+
+      assert_equal [
+        {
+          title: "Summer Workshop: #{@csp_facilitator_application.workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ], @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
+    test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
+      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+
+      sign_in @program_manager
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]')
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
+      @csp_facilitator_application.reload
+
+      expected_log = [
+        {
+          title: "Fit Workshop: #{@csp_facilitator_application.fit_workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }, {
+          title: "Summer Workshop: #{@csp_facilitator_application.workshop_date_and_location}",
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ]
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csp_facilitator_application.id, application: {fit_workshop_id: fit_workshop.id, pd_workshop_id: summer_workshop.id, status: @csp_facilitator_application.status}}
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
+    test 'update appends to timestamp log if workshop admin changes application from unlocked to locked' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]', locked_at: nil)
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+      refute @csp_facilitator_application.locked?
+
+      # Changing application from unlocked to locked
+      post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: true}}
+      @csp_facilitator_application.reload
+
+      expected_log = [
+        {
+          title: 'Application is locked',
+          changing_user_id: @workshop_admin.id,
+          changing_user_name: @workshop_admin.name,
+          time: Time.zone.now
+        }
+      ]
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      # Setting application to locked again
+      post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: true}}
+      @csp_facilitator_application.reload
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
+    test 'update appends to timestamp log if workshop admin changes application from locked to unlocked' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status_timestamp_change_log: '[]', locked_at: Time.zone.now)
+      @csp_facilitator_application.reload
+
+      assert_equal [], @csp_facilitator_application.sanitize_status_timestamp_change_log
+      assert @csp_facilitator_application.locked?
+
+      # Changing application from locked to unlocked
+      post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: false}}
+      @csp_facilitator_application.reload
+
+      expected_log = [
+        {
+          title: 'Application is unlocked',
+          changing_user_id: @workshop_admin.id,
+          changing_user_name: @workshop_admin.name,
+          time: Time.zone.now
+        }
+      ]
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+
+      # Setting application to unlocked again
+      post :update, params: {id: @csp_facilitator_application.id, application: {status: @csp_facilitator_application.status, locked: false}}
+      @csp_facilitator_application.reload
+
+      assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
     test 'workshop admins can lock and unlock applications' do
@@ -435,38 +575,6 @@ module Api::V1::Pd
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
       refute response_csv.first.include?(column)
-    end
-
-    test 'csv download for csf facilitator returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csf_availability
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.any? {|x| response_csv.first.exclude?(x)}
-    end
-
-    test 'csv download for csp facilitator returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Pd::Facilitator1920ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csf_availability
-      ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'cohort view returns applications that are accepted and withdrawn' do
@@ -771,7 +879,7 @@ module Api::V1::Pd
         "Meets scholarship requirements?",
         "Scholarship teacher?",
         "Bonus Points",
-        "Notes",
+        "General Notes",
         "Notes 2",
         "Notes 3",
         "Notes 4",
@@ -791,6 +899,7 @@ module Api::V1::Pd
         "Assigned Workshop",
         "Registered for workshop?",
         "Regional Partner",
+        "Link to Application",
         "Home or cell phone",
         "Home address",
         "City",
@@ -885,21 +994,119 @@ module Api::V1::Pd
       response_csv = CSV.parse @response.body
 
       expected_headers = [
+        'Date Applied',
         'Date Accepted',
-        'Name',
-        'School District',
-        'School Name',
-        'Email',
         'Status',
-        'Assigned Workshop',
-        'Notes',
-        'Notes 2',
-        'Notes 3',
-        'Notes 4',
-        'Notes 5'
+        'Locked',
+        'Meets Minimum Requirements?',
+        'Teaching Experience Score',
+        'Leadership Score',
+        'Champion for CS Score',
+        'Equity Score',
+        'Growth Minded Score',
+        'Content Knowledge Score',
+        'Program Commitment Score',
+        'Application Total Score',
+        'Interview Total Score',
+        'Grand Total Score',
+        "General Notes",
+        "Notes 2",
+        "Notes 3",
+        "Notes 4",
+        "Notes 5",
+        "Title",
+        "First Name",
+        "Last Name",
+        "Account Email",
+        "Alternate Email",
+        "Home or Cell Phone",
+        "Home Address",
+        "City",
+        "State",
+        "Zip Code",
+        "Gender Identity",
+        "Race",
+        'Assigned Summer Workshop',
+        'Registered Summer Workshop?',
+        'Assigned FiT Workshop',
+        'Registered FiT Workshop?',
+        'Regional Partner',
+        'Link to Application',
+        'What type of institution do you work for?',
+        'Current employer',
+        'What is your job title?',
+        'Program',
+        'Are you currently (or have you been) a Code.org facilitator?',
+        'In which years did you work as a Code.org facilitator?',
+        'Please check the Code.org programs you currently facilitate, or have facilitated in the past:',
+        'Do you have experience as a classroom teacher?',
+        'Have you led learning experiences for adults?',
+        'Can you commit to attending the 2019 Facilitator Summit (May 17 - 19, 2019)?',
+        'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
+        'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
+        'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?',
+        'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+        'How are you currently involved in CS education?',
+        'If you do have classroom teaching experience, what grade levels have you taught? Check all that apply.',
+        'Do you have experience teaching the full {{CS Program}} curriculum to students?',
+        'Do you plan on teaching this course in the 2019-20 school year?',
+        'Have you attended a Code.org CS Fundamentals workshop?',
+        'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays.',
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Code.org's Professional Learning Programs are open to all teachers, regardless of their experience with CS education.
+          Why do you think Code.org believes that all teachers should have access to the opportunity to teach CS?"
+        ),
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated a workshop). Include a brief description of the workshop/lesson
+          topic and audience (one or two sentences). Then describe two strengths you demonstrated, as well as two facilitation skills you would like to improve.",
+        ),
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops. Please briefly define  inquiry-based
+          learning as you understand it (one or two sentences). Then, if you have led an inquiry-based activity for students, provide a concrete
+          example of an inquiry-based lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.'",
+        ),
+        'Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the impact you hope to make.',
+        'Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
+        'How did you hear about this opportunity?',
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_1]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_2]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_3]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_4]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_5]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_6]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_7]}"
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
+    end
+
+    test 'fit_cohort' do
+      fit_workshop = create :pd_workshop, :fit
+
+      # create some applications to be included in fit_cohort
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :waitlisted
+
+      #create some applications that won't be included in fit_cohort
+      # not locked
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
+
+      # not accepted or waitlisted
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id
+
+      # no workshop
+      create FACILITATOR_APPLICATION_FACTORY
+
+      sign_in @workshop_admin
+
+      get :fit_cohort
+      assert_response :success
+
+      result = JSON.parse response.body
+      actual_applications = result.map {|a| a["id"]}
+      expected_applications = FACILITATOR_APPLICATION_CLASS.fit_cohort.map(&:id)
+
+      assert_equal expected_applications, actual_applications
     end
 
     test 'search finds applications by email for workshop admins' do

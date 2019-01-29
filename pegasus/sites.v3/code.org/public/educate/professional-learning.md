@@ -35,7 +35,7 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 * No previous experience needed - just bring your curiosity!
 * One-day, no cost workshops designed for elementary classroom teachers, librarians, and tech-ed specialists.
-* Experience our pedagogical approach to teaching CS, design your own implementation plan, and collaborate with local eductators. Plus, you get classroom supplies and some pretty sweet swag!
+* Experience our pedagogical approach to teaching CS, design your own implementation plan, and collaborate with local educators. Plus, you get classroom supplies and some pretty sweet swag!
 
 [<button style="margin-left:20px">Find a local K-5 workshop</button>](/professional-development-workshops)
 <br/>
@@ -72,5 +72,11 @@ The majority of our workshop attendees rank it the **best professional developme
 <br>
 
 <img src="/images/k5pdcropped.jpg" width="100%"/>
+
+## Become a Code.org facilitator
+
+Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's courses.
+
+Interested in helping to bring professional learning opportunities to your community? [Learn more about becoming a Code.org facilitator.](/educate/professional-learning/facilitator)
 
 <%= view :answerdash %>

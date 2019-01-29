@@ -3,6 +3,10 @@ title: Computer Science Curriculum for Grades 6-12
 theme: responsive
 ---
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/code.org/public/student/middle-high.js')}
+
 %link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
 = view 'mobilecheck.js'
 
@@ -23,7 +27,9 @@ Learn the fundamentals of Computer Science with drag & drop blocks. Create your 
   
 %h2 Learn JavaScript, HTML, and CSS
 
-= view :tools_boxes
+#educate-resources-grid
+
+%div{style: "clear: both"}
 
 %hr
 

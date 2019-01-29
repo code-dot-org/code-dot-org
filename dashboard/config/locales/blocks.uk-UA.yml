@@ -270,7 +270,9 @@ uk:
       Dancelab_setBackground:
         text: встановити колір тла {COLOR}
       Dancelab_setBackgroundEffect:
-        text: встановити ефект тла {EFFECT}
+        text: |-
+          встановити ефект тла
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"color_cycle"': Кольори
@@ -283,6 +285,9 @@ uk:
             '"spiral"': Спіраль
             '"disco"': Квадрати
       Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          встановити ефект тла
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"rand"': "(Випадковий)"

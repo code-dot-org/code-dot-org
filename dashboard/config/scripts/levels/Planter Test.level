@@ -27,7 +27,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help me plant my fields!",
+    "short_instructions": "Help me plant my fields!",
     "contained_level_names": null
   },
   "published": true,

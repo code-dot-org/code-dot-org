@@ -2,6 +2,10 @@ class BlocksController < ApplicationController
   before_action :require_levelbuilder_mode, except: :index
   load_and_authorize_resource find_by: :name
 
+  def index
+    @blocks = Block.load_and_cache_by_pool(params[:pool])
+  end
+
   def new
     @block.pool = params[:pool]
     render 'edit'

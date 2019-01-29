@@ -303,17 +303,22 @@ tr:
       Dancelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Dancelab_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} olarak ayarla
+        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
             '"circles"': Tünel
+            '"color_cycle"': Renkler
             '"diamonds"': Karolar
             '"disco_ball"': Disko Topu
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
-            '"rainbow"': Renkler
+            '"splatter"': Boya Lekesi
+            '"rainbow"': Gökkuşağı
+            '"snowflakes"': Kar
             '"text"': Şarkı Adı
+            '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"disco"': Kareler
             '"stars"': Yıldızlar
@@ -330,13 +335,17 @@ tr:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
             '"circles"': Tünel
+            '"color_cycle"': Renkler
             '"diamonds"': Karolar
             '"disco_ball"': Disko Topu
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
             '"splatter"': Boya Lekesi
-            '"rainbow"': Renkler
+            '"rainbow"': Gökkuşağı
+            '"snowflakes"': Kar
             '"text"': Şarkı Adı
+            '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"disco"': Kareler
             '"stars"': Yıldızlar
@@ -381,6 +390,7 @@ tr:
         options:
           EFFECT:
             '"none"': Hiçbiri
+            '"bubbles"': Baloncuklar
             '"confetti"': Konfeti
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
@@ -388,6 +398,7 @@ tr:
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
+            '"smile_face"': Gülen Yüz
             '"raining_tacos"': Tacolar
       Dancelab_setForegroundEffectExtended:
         text: ön plan efektini {EFFECT} olarak ayarla
@@ -395,6 +406,7 @@ tr:
           EFFECT:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
+            '"bubbles"': Baloncuklar
             '"confetti"': Konfeti
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
@@ -402,6 +414,7 @@ tr:
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
+            '"smile_face"': Gülen Yüz
             '"raining_tacos"': Tacolar
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
@@ -591,10 +604,26 @@ tr:
             '"left"': sol
       gamelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
       gamelab_randColor:
         text: rastgele renk
       gamelab_randomColor:
         text: rastgele renk
+      gamelab_randomLocation:
+        text: rastgele konum
       gamelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       gamelab_setPosition:
@@ -629,6 +658,13 @@ tr:
             '"height"': Yükseklik
       gamelab_setup:
         text: kurulum
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -650,6 +686,8 @@ tr:
           DIRECTION:
             '"right"': sağ
             '"left"': sol
+      gamelab_whenDownArrow:
+        text: aşağı ok basıldığında
       gamelab_whenKey:
         text: "{KEY} basıldığında"
         options:
@@ -659,6 +697,10 @@ tr:
             '"left"': sol
             '"right"': sağ
             '"space"': uzay
+      gamelab_whenLeftArrow:
+        text: sol ok basıldığında
+      gamelab_whenMouseClicked:
+        text: fare tıklandığında
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -833,6 +875,8 @@ tr:
             '"a"': A
             '"s"': G
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: fare tıklandığında
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -848,6 +892,8 @@ tr:
         text: sağa dön
       Vector_positionCenter:
         text: merkez
+      Vector_randomLocation:
+        text: rastgele konum
       aalab_changeGroupPropBy:
         options:
           PROPERTY:

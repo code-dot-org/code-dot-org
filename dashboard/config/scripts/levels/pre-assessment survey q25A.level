@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 340,
   "properties": {
-    "markdown_instructions": "If yes, what computer science course(s) had you taken before your current computer science  class? ",
+    "long_instructions": "If yes, what computer science course(s) had you taken before your current computer science  class? ",
     "submittable": "false",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",

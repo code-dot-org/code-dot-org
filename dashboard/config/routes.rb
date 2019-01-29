@@ -213,7 +213,10 @@ Dashboard::Application.routes.draw do
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
-  resources :blocks, constraints: {id: /[^\/]+/}
+  get 'pools', to: 'pools#index', as: 'pools'
+  scope 'pools/:pool' do
+    resources :blocks, constraints: {id: /[^\/]+/}
+  end
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
@@ -442,7 +445,6 @@ Dashboard::Application.routes.draw do
           get :quick_view
           get :cohort_view
           get :search
-          get :teachercon_cohort
           get :fit_cohort
         end
       end

@@ -826,7 +826,7 @@ pt:
             'Farmer: While Loops':
               name: 'Fazendeira: Laços Enquanto'
         csd3-2017:
-          description_short: "Programação"
+          description_short: Programação
           stages:
             Functions:
               name: Funções

@@ -77,7 +77,7 @@ module Pd::Application
         'Native Hawaiian or other Pacific Islander',
         'American Indian/Alaska Native',
         OTHER,
-        'Prefer not to say'
+        'Prefer not to answer'
       ],
 
       course_hours_per_year: [
@@ -242,17 +242,16 @@ module Pd::Application
 
     # Override in derived class to provide headers
     # @param course [String] course name used to choose fields, since they differ between courses
-    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Override in derived class to provide the relevant csv data
-    # @param user [User] requesting user - used to handle field visibility differences
+    # @param course [String] course name used to choose fields, since they differ between courses
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
-    def to_csv_row(user)
+    def to_csv_row(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
@@ -369,7 +368,11 @@ module Pd::Application
 
     # displays the iso8601 date (yyyy-mm-dd)
     def date_accepted
-      accepted_at.try {|datetime| datetime.to_date.iso8601}
+      accepted_at&.to_date&.iso8601
+    end
+
+    def date_applied
+      created_at.to_date.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols
@@ -382,6 +385,18 @@ module Pd::Application
       {}
     end
 
+    def formatted_partner_contact_email
+      return nil unless regional_partner&.contact_email_with_backup.present?
+
+      if regional_partner.contact_name.present? && regional_partner.contact_email.present?
+        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
+      elsif regional_partner.program_managers&.first.present?
+        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
+      elsif regional_partner.contact&.email.present?
+        "\"#{regional_partner.contact.name}\" <#{regional_partner.contact.email}>"
+      end
+    end
+
     def sanitize_status_timestamp_change_log
       if status_timestamp_change_log
         JSON.parse(status_timestamp_change_log).map(&:symbolize_keys)
@@ -390,12 +405,16 @@ module Pd::Application
       end
     end
 
+    def update_lock_change_log(user)
+      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
+    end
+
     # Record when the status changes and who changed it
     # Ideally we'd implement this as an after_save action, but since we want the current
     # user to be included, this needs to be explicitly passed in in the controller
-    def update_status_timestamp_change_log(user)
+    def update_status_timestamp_change_log(user, title = status)
       log_entry = {
-        title: status,
+        title: title,
         changing_user_id: user.try(:id),
         changing_user_name: user.try(:name) || user.try(:email),
         time: Time.zone.now

@@ -4,6 +4,7 @@ import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -45,6 +46,11 @@ const styles = {
     padding: '5px 10px'
   },
 
+  wrapper: {
+    marginLeft: '3px',
+    marginRight: '3px'
+  },
+
   button: {
     cursor: 'pointer',
     'float': 'left',
@@ -57,12 +63,10 @@ const styles = {
 
   volumeButton: {
     borderRadius: "4px 0px 0px 4px",
-    marginLeft: '3px',
   },
 
   playPauseButton: {
     borderRadius: "0px 4px 4px 0px",
-    marginRight: '3px',
   },
 
   buttonImg: {
@@ -85,7 +89,12 @@ class InlineAudio extends React.Component {
     textToSpeechEnabled: PropTypes.bool,
     src: PropTypes.string,
     message: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+
+    // Provided by redux
+    // To Log TTS usage
+    puzzleNumber: PropTypes.number,
+    userId: PropTypes.number
   };
 
   state = {
@@ -166,6 +175,19 @@ class InlineAudio extends React.Component {
   playAudio() {
     this.getAudioElement().play();
     this.setState({ playing: true });
+    firehoseClient.putRecord(
+      {
+        study: 'tts-play',
+        study_group: 'v1',
+        event: 'play',
+        data_string: this.props.src,
+        data_json: JSON.stringify({
+          userId: this.props.userId,
+          puzzleNumber: this.props.puzzleNumber,
+          src: this.props.src
+        }),
+      }
+    );
   }
 
   pauseAudio() {
@@ -182,7 +204,7 @@ class InlineAudio extends React.Component {
       return (
         <div
           className="inline-audio"
-          style={this.props.style && this.props.style.wrapper}
+          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
         >
@@ -218,5 +240,7 @@ export default connect(function propsFromStore(state) {
     assetUrl: state.pageConstants.assetUrl,
     textToSpeechEnabled: state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
+    userId: state.pageConstants.userId,
+    puzzleNumber: state.pageConstants.puzzleNumber
   };
 })(StatelessInlineAudio);

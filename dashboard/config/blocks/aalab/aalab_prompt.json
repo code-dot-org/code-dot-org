@@ -1,0 +1,13 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "prompt",
+    "blockText": "ask question {MESSAGE}",
+    "returnType": "String",
+    "args": [
+      {
+        "name": "MESSAGE"
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "String and Substring: Getting Started",
-    "markdown_instructions": "Think about interactions you have experienced in conversations.\n\nHow do you know when someone you're talking to is engaged in the conversation? \n\nWhat do they say that indicates that they are paying attention?\n\n\n",
+    "long_instructions": "Think about interactions you have experienced in conversations.\n\nHow do you know when someone you're talking to is engaged in the conversation? \n\nWhat do they say that indicates that they are paying attention?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

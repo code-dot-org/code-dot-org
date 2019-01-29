@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Fill in the \"length\" parameter to draw these shapes by replacing the \"???\" with the right numbers. The square and triangle have 100 pixels sides while each side of the hexagon is 75 pixels long.",
+    "short_instructions": "Fill in the \"length\" parameter to draw these shapes by replacing the \"???\" with the right numbers. The square and triangle have 100 pixels sides while each side of the hexagon is 75 pixels long.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "ideal": "38",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \r\n\r\nThe square and triangle have 100 pixel sides.  \r\nThe hexagon sides are 75 pixels long. ",
+    "long_instructions": "Fill in the `length` parameter to draw these shapes by replacing the `???` with the right numbers.  \r\n\r\nThe square and triangle have 100 pixel sides.  \r\nThe hexagon sides are 75 pixels long. ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -1619,3 +1619,5 @@ th:
               name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
+        gamelab:
+          title: เกมแล๊บ (Game Lab)

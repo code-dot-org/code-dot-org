@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Put on a Light Show\r\n\r\nThis app lets you put on a light show with the LED.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* What does this line of code do: `setProperty(\"screen\", \"background-color\", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?\r\n\r\nOnce you have answered the question, run the code and click the buttons to see what happens.",
+    "long_instructions": "# Put on a Light Show\r\n\r\nThis app lets you put on a light show with the LED.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* What does this line of code do: `setProperty(\"screen\", \"background-color\", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?\r\n\r\nOnce you have answered the question, run the code and click the buttons to see what happens.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

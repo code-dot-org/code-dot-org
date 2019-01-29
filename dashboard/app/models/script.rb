@@ -421,15 +421,103 @@ class Script < ActiveRecord::Base
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
   def self.get_script_family_redirect(family_name, version_year: nil)
-    scripts =
-      Script.
-        where(family_name: family_name).
-        all.
-        select(&:is_stable).
-        sort_by(&:version_year)
-    scripts.select! {|s| s.version_year == version_year} if version_year
-    script_name = scripts.last.try(:name)
+    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
+  end
+
+  # @param user [User]
+  # @param locale [String] User or request locale. Optional.
+  # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
+  def redirect_to_script_url(user, locale: nil)
+    # No redirect unless script belongs to a family.
+    return nil unless family_name
+    # Only redirect students.
+    return nil unless user && user.student?
+    # No redirect unless user is allowed to view this script version and they are not already assigned to this script
+    # or the course it belongs to.
+    return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
+    # No redirect if script or its course are not versioned.
+    current_version_year = version_year || course&.version_year
+    return nil unless current_version_year.present?
+
+    # Redirect user to the latest assigned script in this family,
+    # if one exists and it is newer than the current script.
+    latest_assigned_version = Script.latest_assigned_version(family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.course&.version_year
+    return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
+    latest_assigned_version.link
+  end
+
+  def link
+    Rails.application.routes.url_helpers.script_path(self)
+  end
+
+  # @param user [User]
+  # @param locale [String] User or request locale. Optional.
+  # @return [Boolean] Whether the user can view the script.
+  def can_view_version?(user, locale: nil)
+    # Users can view any course not in a family.
+    return true unless family_name
+
+    latest_stable_version = Script.latest_stable_version(family_name)
+    latest_stable_version_in_locale = Script.latest_stable_version(family_name, locale: locale)
+    is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
+
+    # All users can see the latest script version in English and in their locale.
+    return true if is_latest
+
+    # Restrictions only apply to students and logged out users.
+    return false if user.nil?
+    return true unless user.student?
+
+    # A student can view the script version if they have progress in it or are assigned to it.
+    has_progress = user.scripts.include?(self)
+    return true if has_progress
+
+    user.assigned_script?(self)
+  end
+
+  # @param family_name [String] The family name for a script family.
+  # @param version_year [String] Version year to return. Optional.
+  # @param locale [String] User or request locale. Optional.
+  # @return [Script|nil] Returns the latest version in a script family.
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
+    return nil unless family_name.present?
+
+    script_versions = Script.
+      where(family_name: family_name).
+      order("properties -> '$.version_year' DESC")
+
+    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
+    # Match on version year if one is supplied.
+    locale_str = locale&.to_s
+    supported_stable_scripts = script_versions.select do |script|
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
+      if version_year
+        script.is_stable && is_supported && script.version_year == version_year
+      else
+        script.is_stable && is_supported
+      end
+    end
+
+    supported_stable_scripts&.first
+  end
+
+  # @param family_name [String] The family name for a script family.
+  # @param user [User]
+  # @return [Script|nil] Returns the latest version in a family that the user is assigned to.
+  def self.latest_assigned_version(family_name, user)
+    return nil unless family_name && user
+    assigned_script_ids = user.section_scripts.pluck(:id)
+
+    Script.
+      # select only scripts assigned to this user.
+      where(id: assigned_script_ids).
+      # select only scripts in the same family.
+      where(family_name: family_name).
+      # order by version year descending.
+      order("properties -> '$.version_year' DESC")&.
+      first
   end
 
   def text_response_levels
@@ -606,8 +694,18 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  private def hoc_tts_level?
+    [
+      Script::APPLAB_INTRO,
+      Script::DANCE_PARTY_NAME,
+      Script::DANCE_PARTY_EXTRAS_NAME,
+      Script::ARTIST_NAME,
+      Script::SPORTS_NAME
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME || name == Script::APPLAB_INTRO
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
   end
 
   def hint_prompt_enabled?
@@ -1112,7 +1210,7 @@ class Script < ActiveRecord::Base
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
-      versions: summarize_versions,
+      versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
     }
@@ -1188,12 +1286,12 @@ class Script < ActiveRecord::Base
 
   # Returns an array of objects showing the name and version year for all scripts
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
     Script.
       where(family_name: family_name).
-      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
+      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end

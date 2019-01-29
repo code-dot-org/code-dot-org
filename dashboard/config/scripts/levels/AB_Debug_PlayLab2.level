@@ -50,7 +50,7 @@
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/f0edbce5b48b58d9b3c33505f9d0ae1a=levelbuilder/38509.png",
     "timeout_failure_tick": "255",
-    "instructions": "Why doesn't this game do anything?\r\n\r\nCan you find any \"hidden\" bugs?  Some are easier than others.",
+    "short_instructions": "Why doesn't this game do anything?\r\n\r\nCan you find any \"hidden\" bugs?  Some are easier than others.",
     "contained_level_names": null
   },
   "published": true,

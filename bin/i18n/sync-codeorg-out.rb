@@ -46,22 +46,21 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    Dir.glob("i18n/locales/redacted/**/*.json").each do |redacted_path|
-      source_path = redacted_path.sub("redacted", "source")
-      translated_path = redacted_path.sub("redacted", locale)
+    Dir.glob("i18n/locales/original/**/*.json").each do |original_path|
+      translated_path = original_path.sub("original", locale)
 
       plugin = nil
-      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.json'
+      if original_path == 'i18n/locales/original/dashboard/blocks.json'
         plugin = 'blockfield'
       end
 
       # Dashboard i18n data has locale-specific keys as per Rails requirements,
       # which will prevent restoration from working correctly unless accounted
       # for
-      if source_path.start_with? 'i18n/locales/source/dashboard'
-        restore_with_locale_key(source_path, translated_path, translated_path, plugin)
+      if original_path.start_with? 'i18n/locales/original/dashboard'
+        restore_with_locale_key(original_path, translated_path, translated_path, plugin)
       else
-        restore(source_path, translated_path, translated_path, plugin)
+        restore(original_path, translated_path, translated_path, plugin)
       end
     end
   end

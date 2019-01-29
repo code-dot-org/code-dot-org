@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Sending Bits:Getting Started",
-    "markdown_instructions": "Do 0 bits weigh less than 1 bits?\n",
+    "long_instructions": "Do 0 bits weigh less than 1 bits?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,56 +1,30 @@
 import React, {Component, PropTypes} from 'react';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {connect} from 'react-redux';
 import StatsTable from './StatsTable';
+import {getStudentsCompletedLevelCount} from './statsRedux';
 
 class StatsTableWithData extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
+    // Props provided by redux.
+    section: PropTypes.object,
+    studentsCompletedLevelCount: PropTypes.object,
   };
-
-  state = {
-    studentsCompletedLevelCount: {},
-    section: {},
-    isLoading: true
-  };
-
-  componentDidMount() {
-    const completedLevelsUrl = `/dashboardapi/sections/${this.props.sectionId}/students/completed_levels_count`;
-    $.ajax({
-      url: completedLevelsUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(studentsCompletedLevelCount => {
-      this.setState({studentsCompletedLevelCount: studentsCompletedLevelCount});
-    });
-
-    const sectionUrl = `/api/v1/sections/${this.props.sectionId}`;
-    $.ajax({
-      url: sectionUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(section => {
-      this.setState({
-        section: section,
-        isLoading: false
-      });
-    });
-  }
 
   render() {
+    const {section, studentsCompletedLevelCount} = this.props;
+
     return (
-      <div>
-        {this.state.isLoading &&
-          <Spinner/>
-        }
-        {!this.state.isLoading &&
-          <StatsTable
-            section={this.state.section}
-            studentsCompletedLevelCount={this.state.studentsCompletedLevelCount}
-          />
-        }
-      </div>
+      <StatsTable
+        section={section}
+        studentsCompletedLevelCount={studentsCompletedLevelCount}
+      />
     );
   }
 }
 
-export default StatsTableWithData;
+export const UnconnectedStatsTableWithData = StatsTableWithData;
+
+export default connect(state => ({
+  section: state.sectionData.section,
+  studentsCompletedLevelCount: getStudentsCompletedLevelCount(state, state.sectionData.section.id),
+}))(StatsTableWithData);

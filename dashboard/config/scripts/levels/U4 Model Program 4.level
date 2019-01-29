@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Screens On Click\r\n\r\nThe `setScreen` block will change your app to whichever screen you specify. If you place a `setScreen` block _inside_ an `onEvent` block, you can program your buttons to change to the correct screen.\r\n\r\n# Do This\r\n\r\nUsing the `onEvent` block that you've created, make your program change to the \"search\" screen when the \"home_search_btn\" is clicked.\r\n\r\n* **Drag out a `setScreen` block** an put it inside the `onEvent` block.\r\n* **Select \"search\"** from the `setScreen` dropdown.\r\n* **Run your app** and test the \"home_search_btn\" button.",
+    "long_instructions": "# Changing Screens On Click\r\n\r\nThe `setScreen` block will change your app to whichever screen you specify. If you place a `setScreen` block _inside_ an `onEvent` block, you can program your buttons to change to the correct screen.\r\n\r\n# Do This\r\n\r\nUsing the `onEvent` block that you've created, make your program change to the \"search\" screen when the \"home_search_btn\" is clicked.\r\n\r\n* **Drag out a `setScreen` block** an put it inside the `onEvent` block.\r\n* **Select \"search\"** from the `setScreen` dropdown.\r\n* **Run your app** and test the \"home_search_btn\" button.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
