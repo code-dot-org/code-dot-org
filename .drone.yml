@@ -10,6 +10,7 @@ steps:
   depends_on: [ clone ]
   commands:
     - sudo chown -R circleci:circleci .
+
     - docker/git_shallow_fetch.sh
 
 - name: unit-tests
@@ -68,5 +69,3 @@ steps:
 trigger:
   branch:
   - drone
-  event:
-  - pull_request
