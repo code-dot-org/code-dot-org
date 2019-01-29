@@ -9,6 +9,7 @@ steps:
   image: wintercdo/code-dot-org:0.7
   depends_on: [ clone ]
   commands:
+    - sudo chown -R circleci:circleci .
     - docker/git_shallow_fetch.sh
 
 - name: unit-tests
@@ -31,7 +32,6 @@ steps:
     - id -u
     - id -g
     - ls -alh
-    - sudo chown -R circleci:circleci .
     - /entrypoint.sh docker/unit_tests.sh
 
 - name: ui-tests
