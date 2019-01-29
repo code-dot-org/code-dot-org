@@ -25,6 +25,19 @@ ________________
 ## Announcements
 - [New Process to secure substitute CS Discoveries and CS Principles Facilitators](#subfac)
 - [Updated CS Discoveries/Principles Facilitator Travel Policy](#docs)
+- [Preparing for Facilitator Interviews](#interviews)
+
+________________
+
+<a id="interviews"></a>
+### Interviewing Facilitators 
+
+Keep these three important things on your radar as you prepare for upcoming facilitator interviews. Watch this [very quick recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000) for more details, and read below for the highlights.
+
+1.  **Interview Scheduling:** 
+All Group 1 - 3 Regional Partners are responsible for scheduling interviews with their candidates during the interview period of Feb. 11 - March 1. Interviews should be booked for 30 minutes, and should include a video chat (e.g., Google hangout, Zoom, etc.) if they’re not hosted in-person. However, we recommend you block an hour on your calendar for prepare and review. Remember that many candidates are teachers who have limited availability during the school day, so please be prepared to host interviews in the late-afternoon or early evening.
+2.  **Interview Support:** All Group 1 - 3 Regional Partners are responsible for hosting interviews on their own, without the support of a Code.org-contracted co-interviewer. This means that Regional Partners will need to plan ahead to make sure they are able to conduct the interview while taking notes in the application dashboard.
+3.  **Interview Questions and Process:** We will cover the interview process and required interview questions in detail during the February Regional Partner Summit.
 
 ________________
 
