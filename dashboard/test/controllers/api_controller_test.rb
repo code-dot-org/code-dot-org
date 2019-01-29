@@ -8,11 +8,6 @@ class ApiControllerTest < ActionController::TestCase
   setup_all do
     @teacher = create(:teacher)
 
-    # make them an authorized_Teacher
-    cohort = create(:cohort)
-    cohort.teachers << @teacher
-    cohort.save!
-
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
@@ -751,7 +746,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
