@@ -1080,6 +1080,13 @@ zh-TW:
         \r
         這下面的迴圈將會運作幾次呢？
       Room Escape Workshop - free play: "# 你做到了！\\r\n\\r\n你成功逃出房間了！現在我們來自訂它。\\r\n\\r\n你可以：\\r\n\\r\n*\n添加更多的房間\\r\n* 在房間裡添加更多能和使用者互動的物品。\\r\n*\n為房間加上更多的裝飾"
+      Ryan_Demo: |-
+        讓這隻麋鹿跳舞！
+
+        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+
+
+        **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Standalone_Artist_1: "歡迎使用小藝術家！首先，讓我們試試建立一個簡單的正方形，用的是「轉向-右方」積木和「移動-向前」積木。\n每邊長度應該是 100 像素。\\r\n\\r\n"
       Standalone_Artist_2: "畫出這個菱形，它的角度分別是 120 和 60 度，邊長則是 150 像素。\\r\n\\r\n"
       Standalone_Artist_3: "你能畫出這個六邊形嗎？它的每個邊長 100 像素，每個角度 60 度。\\r\n\\r\n"
@@ -1379,6 +1386,15 @@ zh-TW:
         <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
         width="300"/>\r
 
+      courseA_artist_loops10_2019: |-
+        <div style="color: #7665a0;
+        font-size: 1.6em; line-height: 1.4em;" >\r
+        是時候回到地面上了。幫幫我放上一些石頭，讓我不會掉下去！<br/><br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
+        width="300"/>\r
+
       courseA_artist_loops11: |-
         <div style="color: #7665a0;
         font-size: 1.6em; line-height: 1.4em;" >\r
@@ -1389,6 +1405,15 @@ zh-TW:
         width="300"/>\r
 
       courseA_artist_loops11_2018: |-
+        <div style="color: #7665a0;
+        font-size: 1.6em; line-height: 1.4em;" >\r
+        幫我建些階梯，我想看著船航行到遠方。<br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif"
+        width="300"/>\r
+
+      courseA_artist_loops11_2019: |-
         <div style="color: #7665a0;
         font-size: 1.6em; line-height: 1.4em;" >\r
         幫我建些階梯，我想看著船航行到遠方。<br/>\r
@@ -1413,6 +1438,14 @@ zh-TW:
         <img
         src="https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif"
         width="300"/>
+      courseA_artist_loops8_2019: |-
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        我們需要一個梯子到船上。<br/>\r
+        </div>\r
+        <img
+        src="https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif"
+        width="300"/>
       courseA_collector_loops1: |-
         這是冒險家 Laurel！\r
         \r
@@ -1421,13 +1454,19 @@ zh-TW:
         這是冒險家 Laurel！\r
         \r
         讓她四處移動，並盡可能獲得最多的寶石。
+      courseA_collector_loops1_2019: |-
+        這是冒險家 Laurel！\r
+        \r
+        讓她四處移動，並盡可能獲得最多的寶石。
       courseA_collector_loops2: |-
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
         收集 3 堆寶石以完成這個關卡。
       courseA_collector_loops2_2018: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\r\n\\r\n收集 3 堆寶石以完成這個關卡。"
+      courseA_collector_loops2_2019: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\r\n\\r\n收集 3 堆寶石以完成這個關卡。"
       courseA_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
+      courseA_collector_loops3_2019: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_preLoops7: |-
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
@@ -1451,6 +1490,7 @@ zh-TW:
         width="200px"/>\r
 
       courseA_maze_seq11_2018: "移動以讓鳥抓到猪。\\r\n\\r\n<img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"\nwidth=\"200px\"/>\\r\n"
+      courseA_maze_seq11_2019: "移動以讓鳥抓到猪。\\r\n\\r\n<img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"\nwidth=\"200px\"/>\\r\n"
       courseA_maze_seq12: |-
         抓到那頭豬！\r
         \r
@@ -1458,7 +1498,9 @@ zh-TW:
         width="200px"/>\r
 
       courseA_maze_seq12_2018: "抓到那頭豬！\\r\n\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\r\n"
+      courseA_maze_seq12_2019: "抓到那頭豬！\\r\n\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\r\n"
       courseA_maze_seq1_2018: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
+      courseA_maze_seq1_2019: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
       courseA_maze_seq3: |-
         *「修正這個程式，好讓我抓到這頭豬！」*\r
         \r
@@ -1485,6 +1527,7 @@ zh-TW:
         <img src="https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif"
         width="200px"/>
       courseA_maze_seq6_2018: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
+      courseA_maze_seq6_2019: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq7: |-
         想一想少了什麼，然後添加一些積木讓鳥抓到這頭豬！\r
         \r
@@ -1501,6 +1544,7 @@ zh-TW:
         <img src="https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif"
         width="200px"/>
       courseA_maze_seq8_2018: 完成這個關卡，讓鳥抓到這頭豬！
+      courseA_maze_seq8_2019: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq9: |-
         **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！\r
         \r
@@ -1513,6 +1557,7 @@ zh-TW:
         width="200px"/>
       courseA_maze_seq_challenge1: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2018: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
+      courseA_maze_seq_challenge1_2019: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseB_artist_loops10: |-
         你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\r
         \r
@@ -1589,17 +1634,59 @@ zh-TW:
         </tr>\r
         </table>\r
 
+      courseB_artist_loops10_2019: |-
+        你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\r
+        \r
+        <hr/>\r
+        <h3>Ideas</h3>\r
+        <table>\r
+        <tr>\r
+        <td>\r
+        <img
+        src="https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif"
+        width="150"/><br/>\r
+        <h4>一隻唱歌的蝸牛</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif"
+        width="150"/><br/>\r
+        <h4>一座大城市</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif"
+        width="150"/><br/>\r
+        <h4>A Concert</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif"
+        width="150"/><br/>\r
+        <h4>一個生日蛋糕</h4><br/><br/>\r
+        </td>\r
+        \r
+        </tr>\r
+        </table>\r
+
       courseB_artist_loops6: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2018: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
+      courseB_artist_loops6_2019: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops7: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
       courseB_artist_loops7_2018: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
+      courseB_artist_loops7_2019: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
       courseB_artist_loops_challenge2: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_artist_loops_challenge2_2018: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
+      courseB_artist_loops_challenge2_2019: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_collector_loops1: |-
         這是冒險家 Laurel！\r
         \r
         讓她四處移動，並盡可能獲得最多的寶石。
       courseB_collector_loops1_2018: "這是冒險家 Laurel！\\r\n\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
+      courseB_collector_loops1_2019: "這是冒險家 Laurel！\\r\n\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
       courseB_collector_loops2: |-
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
@@ -1608,14 +1695,23 @@ zh-TW:
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
         收集 4 堆寶石以完成這個關卡。
+      courseB_collector_loops2_2019: |-
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
+        \r
+        收集 4 堆寶石以完成這個關卡。
       courseB_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
+      courseB_collector_loops3_2019: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_predict1: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops_challenge2a: |-
         *快拿到那些寶石！*
 
         幫 Laurel 拿到至少 **5** 塊寶石才能過關。
       courseB_collector_loops_challenge2a_2018: |-
+        *快拿到那些寶石！*
+
+        幫 Laurel 拿到至少 **5** 塊寶石才能過關。
+      courseB_collector_loops_challenge2a_2019: |-
         *快拿到那些寶石！*
 
         幫 Laurel 拿到至少 **5** 塊寶石才能過關。
