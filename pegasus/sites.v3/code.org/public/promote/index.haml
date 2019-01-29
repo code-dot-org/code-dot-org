@@ -22,20 +22,22 @@ theme: responsive
 
 #promote-page
   %div{:id=>'us_content'}
-    %h1 Share these stats
 
+    %h1 Computer Science Education Stats
     #stats-section.section.clear.desktop-feature
-      %h2 What’s wrong with this picture?
       = view :stats_carousel
 
     #stats-section-mobile.section.clear.mobile-feature
-      %h2 Computer Science Education Stats
       = view :stats_mobile
 
     %h1 Code.org’s impact in schools
     #impact-section.section.clear.desktop-feature
       %h2 Teachers and Code.org are having an impact
       = view :stats_impact_carousel
+
+    #impact-section-mobile.section.clear.mobile-feature
+      %h2 Teachers and Code.org are having an impact
+      = view :stats_impact_carousel_mobile
 
     #petition-section.section.clear
       = view :petition
