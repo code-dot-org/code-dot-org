@@ -380,6 +380,13 @@ sv:
       Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Overworld Move to Sheep_2018: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
       Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att komma till fåret.
+      Ryan_Demo: |-
+        Låt oss få denna älg att dansa!
+
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+
+
+        **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Testing Quantum Farmer: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
       beeDebugVideo1: Samla all nektar.
       course4_artist_fwp_challenge1: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
