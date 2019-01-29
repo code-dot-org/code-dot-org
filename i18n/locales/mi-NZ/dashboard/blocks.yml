@@ -332,10 +332,16 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': rahinga
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
       binary_move:
         options:
           DIR:
