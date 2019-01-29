@@ -7,6 +7,7 @@
 set -xe
 
 export CI=true
+export CIRCLECI=true
 export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
