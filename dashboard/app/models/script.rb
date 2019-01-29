@@ -698,7 +698,9 @@ class Script < ActiveRecord::Base
     [
       Script::APPLAB_INTRO,
       Script::DANCE_PARTY_NAME,
-      Script::DANCE_PARTY_EXTRAS_NAME
+      Script::DANCE_PARTY_EXTRAS_NAME,
+      Script::ARTIST_NAME,
+      Script::SPORTS_NAME
     ].include?(name)
   end
 
