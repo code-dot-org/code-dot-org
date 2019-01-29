@@ -17,15 +17,6 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-# circle.rake has logic which depends on these branches existing. If we're doing a shallow clone, e.g.
-# in a CI environment, then they don't exist by default.
-if $(git rev-parse --is-shallow-repository); then
-    git remote set-branches --add origin staging test production
-    git remote show origin
-    mispipe "git fetch --depth 50 origin staging test production" ts
-    git branch -a
-fi
-
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 git --no-pager diff --name-only $current_branch $(git merge-base $current_branch origin/staging)
 

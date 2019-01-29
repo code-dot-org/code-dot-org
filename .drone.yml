@@ -5,9 +5,18 @@ clone:
   depth: 50
 
 steps:
-- name: unit-tests
+- name: git-shallow-fetch
   image: wintercdo/code-dot-org:0.7
   depends_on: [ clone ]
+  when:
+    branch:
+    - drone
+  commands:
+    - docker/git_shallow_fetch.sh
+
+- name: unit-tests
+  image: wintercdo/code-dot-org:0.7
+  depends_on: [ git-shallow-fetch ]
   when:
     branch:
     - drone
@@ -33,7 +42,7 @@ steps:
 
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
-  depends_on: [ clone ]
+  depends_on: [ git-shallow-fetch ]
   when:
     branch:
     - drone
