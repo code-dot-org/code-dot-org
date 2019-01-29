@@ -3985,3 +3985,143 @@ ro:
           title: Laborator de jocuri
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
+        coursea-2019:
+          description_short: O introducere în informatică pentru preșcolari.
+          stages:
+            'Debugging: Unspotted Bugs':
+              description_student: '[șir gol]'
+            'Persistence & Frustration: Stevie and the Big Project':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+              description_student: '[șir gol]'
+            Sequencing in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Programming: Happy Maps':
+              description_student: '[șir gol]'
+            Programming in Maze:
+              description_student: '[șir gol]'
+            Programming in Harvester:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
+              description_student: '[șir gol]'
+            'Loops: Happy Loops':
+              description_student: '[șir gol]'
+            Loops in Harvester:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Collector:
+              description_student: '[șir gol]'
+            Loops in Artist:
+              description_student: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+            Events in Play Lab:
+              description_student: '[șir gol]'
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sequencing with Scrat:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Programming: My Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Ice Age:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Copyright and Creativity:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming with Rey and BB-8:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: My Loopy Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Ice Age:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Collector:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Play Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        pre-express-2019:
+          stages:
+            'Debugging: Unspotted Bugs':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Persistence & Frustration: Stevie and the Big Project':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sequencing with Scrat:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Programming: My Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Ice Age:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Copyright and Creativity:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming with Rey and BB-8:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: My Loopy Robotic Friends':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Ice Age:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Collector:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Play Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Spelling Bee:
+              name: Albina de Ortografie
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
