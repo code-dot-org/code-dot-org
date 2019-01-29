@@ -71,6 +71,8 @@ class Pd::Enrollment < ActiveRecord::Base
     role
     grades_teaching
     attended_csf_intro_workshop
+    csf_course_experience
+    csf_courses_planned
   )
 
   def self.for_user(user)

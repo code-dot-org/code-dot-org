@@ -65,11 +65,11 @@ const CSF_COURSES = {
   "Express" : "express"
 };
 
-const ATTENDED_CSF_COURSES = [
-  "Yes, I attended a CS Fundamentals Intro workshop this academic year.",
-  "Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.",
-  "Nope, I have never attended a CS Fundamentals workshop."
-];
+const ATTENDED_CSF_COURSES_OPTIONS = {
+  "Yes, I attended a CS Fundamentals Intro workshop this academic year." : "Yes, this year",
+  "Yes, I attended a CS Fundamentals Intro workshop in a previous academic year." : "Yes, prior year",
+  "Nope, I have never attended a CS Fundamentals workshop." : "No"
+};
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -120,11 +120,14 @@ export default class EnrollForm extends React.Component {
   };
 
   handleCourseExperienceChange = (input) => {
+    let exp;
     if (this.state.csf_course_experience) {
-      this.setState({csf_course_experience: this.state.csf_course_experience.concat([input])});
+      exp = this.state.csf_course_experience;
     } else {
-      this.setState({csf_course_experience: [input] });
+      exp = {};
     }
+    Object.keys(input).map( key => exp[key] = input[key]);
+    this.setState({csf_course_experience: exp});
   };
 
   handleClickRegister = () => {
@@ -144,6 +147,25 @@ export default class EnrollForm extends React.Component {
       roleWithDescription = this.state.role;
     }
     return roleWithDescription;
+  }
+
+  csfCoursesPlanned() {
+    if (!this.state.csf_courses_planned) {
+      return null;
+    }
+    const processedCourses = [];
+    this.state.csf_courses_planned.forEach((g) => {
+      if (g === `${OTHER} ${EXPLAIN}`) {
+        if (this.state.explain_csf_course_other) {
+          processedCourses.push(`${OTHER}: ${this.state.explain_csf_course_other}`);
+        } else {
+          processedCourses.push(OTHER);
+        }
+      } else {
+        processedCourses.push(g);
+      }
+    });
+    return processedCourses;
   }
 
   gradesTeaching() {
@@ -204,9 +226,10 @@ export default class EnrollForm extends React.Component {
       explain_teaching_other: this.state.explain_teaching_other,
       explain_not_teaching: this.state.explain_not_teaching,
       csf_course_experience: this.state.csf_course_experience,
-      csf_courses_planned: this.state.csf_courses_planned,
+      csf_courses_planned: this.csfCoursesPlanned(),
       explain_csf_course_other: this.state.explain_csf_course_other,
-      attended_csf_intro_workshop: this.state.attended_csf_intro_workshop,
+      attended_csf_intro_workshop: ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
+      csf_course_experience_data: this.state.csf_course_experience_data,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -367,6 +390,7 @@ export default class EnrollForm extends React.Component {
             key="csf_course_experience"
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
             onChange={this.handleCourseExperienceChange}
+            data = {this.state.csf_course_experience_data}
             options={[
               "a few lessons",
               "most lessons",
@@ -394,7 +418,7 @@ export default class EnrollForm extends React.Component {
           <ButtonList
             id="attended_csf_intro_workshop"
             key="attended_csf_intro_workshop"
-            answers={ATTENDED_CSF_COURSES}
+            answers={Object.keys(ATTENDED_CSF_COURSES_OPTIONS).map( key => key)}
             groupName="attended_csf_intro_workshop"
             label="Have you attended a CS Fundamentals Intro Workshop before?"
             onChange={this.handleChange}
