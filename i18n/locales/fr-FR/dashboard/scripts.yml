@@ -2755,3 +2755,33 @@ fr:
               name: Bracelets binaires
         gamelab:
           title: Labo des jeux
+        coursea-2019:
+          description_short: Une introduction à l’informatique pour les primo-lecteurs.
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algorithmes du monde réel: Planter une graine'
+              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+            Going Places Safely:
+              name: Se déplacer en toute sécurité
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Bouge, Bouge
+            Your Digital Footprint:
+              name: Ton empreinte numérique
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Bouge, Bouge
+            Your Digital Footprint:
+              name: Ton empreinte numérique
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+            Spelling Bee:
+              name: Concours d'orthographe
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algorithmes du monde réel: Planter une graine'
