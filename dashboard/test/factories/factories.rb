@@ -842,47 +842,6 @@ FactoryGirl.define do
     script
   end
 
-  factory :cohorts_district do
-    cohort
-    district
-    max_teachers 5
-  end
-
-  factory :cohort do
-    name 'Test Cohort'
-  end
-
-  factory :district do
-    sequence(:name) {|n| "District #{n}"}
-    location 'Panem'
-    contact {create(:district_contact)}
-  end
-
-  factory :workshop do
-    sequence(:name) {|n| "My Workshop #{n}"}
-    program_type '1'
-    location 'Somewhere, USA'
-    instructions 'Test workshop instructions.'
-    facilitators {[create(:facilitator)]}
-    cohorts {[create(:cohort)]}
-    after :create do |workshop, _|
-      create_list :segment, 1, workshop: workshop
-    end
-  end
-
-  factory :segment do
-    workshop
-    start DateTime.now.utc
-    send(:end, DateTime.now.utc + 1.day)
-  end
-
-  factory :attendance, class: WorkshopAttendance do
-    segment
-    teacher {create :teacher}
-
-    status 'present'
-  end
-
   factory :peer_review do
     submitter {create :teacher}
     from_instructor false
