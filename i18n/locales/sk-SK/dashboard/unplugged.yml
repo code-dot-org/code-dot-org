@@ -347,3 +347,23 @@ sk:
       PaperPlanes_2019:
         title: 'Algoritmus z reálneho života: Papierové lietadielka'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom živote, konkrétne vytvorením papierového lietadieľka. Takisto sa zameriava na širšie súvislosti informatiky a ako v nich algoritmy hrajú podstatnú úlohu.
+      PlantASeed_2019:
+        title: 'Algoritmy z reálneho života: Zasaď semienko'
+        desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame algoritmy v každodennom živote. Takisto sa zameriava na širšie súvislosti informatiky a dôležitú rolu algoritmov.
+      UnplugHappyMaps_2019:
+        title: Veselé mapy
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
+      GoingPlacesSafely_2019:
+        title: Bezpečné premiestňovanie
+        desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia, ako bezpečne surfovať po internete.
+      courseA_unplugged_loops_2019:
+        title: Cykly bez počítača
+        desc: V tejto lekcii sa naučíš niečo o cykloch!
+      MoveItMoveIt_2019:
+        title: Posuň, Posuň
+      DigitalFootprint_2019:
+        title: Tvoja digitálna stopa
+        desc: Učitelia predstavia študentom myšlienku, že ak dávajú o sebe informácie "online", vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje následky.
+      courseB_unplugged_CnC_2019:
+        title: Je super tvoriť a hrať férovo
+        desc: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania a potrebe férovosti pri kreatívnej tvorbe.
