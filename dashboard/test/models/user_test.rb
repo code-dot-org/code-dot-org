@@ -105,14 +105,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_school_info with specific school overwrites user school info' do
-    user = create :teacher, school_info: create(:school_info)
+    user = create :teacher, :with_school_info
     new_school_info = create :school_info
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
   end
 
-  test 'update_school_info with custom school does nothing when the user already a specific school' do
+  test 'update_school_info with custom school does nothing when the user already has a specific school' do
     original_school_info = create :school_info
     user = create :teacher, school_info: original_school_info
     new_school_info = create :school_info_us_other
@@ -128,6 +128,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
     assert_not_nil user.school_info_id
   end
 
