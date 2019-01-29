@@ -1452,3 +1452,27 @@ ar:
               name: 'خوارزميات من واقع الحياة : طائرات ورقية'
             Binary Bracelets:
               name: أساور الثنائية
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: حركها , حركها
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: حركها , حركها
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            Spelling Bee:
+              name: مسابقة التهجئة
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'

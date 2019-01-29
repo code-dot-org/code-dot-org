@@ -2236,3 +2236,34 @@ nn:
               name: Binær armbånd
         gamelab:
           title: Spel-lab
+        coursea-2019:
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Spelling Bee:
+              name: Stavekonkurranse
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'

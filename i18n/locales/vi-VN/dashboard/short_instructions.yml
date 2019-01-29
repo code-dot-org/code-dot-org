@@ -489,6 +489,7 @@ vi:
       Overworld Shear Sheep_2019: Đã đến lúc xén lông cừu rồi! Hãy sử dụng lệnh "shear" để thu thập lông của cả hai con cừu.
       PDK5 Functions 2: "Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là \"vẽ hình vuông\".\nBạn có thể dùng hàm \"vẽ hình vuông\" để tạo ra chiếc kính không? Các hình vuông các nhau 75 điểm ảnh."
       PS copy 2-3 Bee Conditionals 5: "Hãy cẩn thận không thu thập phấn hoa từ một bông hoa tím nếu nó không có phấn. Trước tiên, bạn phải kiểm tra nếu phấn hoa bằng 1 sử dụng khối lệnh \"nếu phấn hoa/mật hoa\"."
+      Ryan_Demo: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
       SpecialFrozenLevel: Bạn đã chính thức trở thành một nghệ sĩ bậc thầy! Tạo một Xứ sở thần tiên vào mùa đông.
       Standalone_Artist_8: Đây là chức năng được gọi là "Vẽ tạo hình" mà chúng tôi đã lập trình để vẽ hình lục giác. Sau đó được chạy mã để xem nó hoạt động như thế nào. Bạn có thể vẽ được hình vuông, hình tam giác hay hình bát giác bằng chương trình này không?
       Standalone_Artist_9: Tiến lên và tạo ra bất cứ hình ảnh nào bạn muốn! Bạn còn thậm chí có khả năng tạo ra bất cứ sản phẩm mình muốn!

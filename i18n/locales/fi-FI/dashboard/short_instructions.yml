@@ -608,6 +608,7 @@ fi:
       Quantum Bee: Violeteilla kukilla on joko 1 tai 0 mettä, mutta sitä ei voi tietää! Varo, ettet kerää mettä violetista kukasta, jos sillä ei ole mettä. Tarkista, että meden määrä on 1 käyttämällä 'jos-palikkaa.
       Ryan - 4-5 Bee Conditionals 2: Mehiläinen haluaa mettä juuri nyt. Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
       Ryan - Bee Conditionals: Mehiläinen haluaa mettä juuri nyt. Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
+      Ryan_Demo: Laita hirvi aloittamaan uusi tanssiliike neljän tahdin jälkeen!
       SpecialFrozenLevel: Olet nyt virallisesti mestaritaiteilija! Luo talven ihmemaa.
       Testing Quantum Farmer: "Vau, katsohan!\\r\n\\r\nEn tiedä, kuinka monta multalapiollista tähän kuoppaan tarvitaan.\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa, kunnes maa on tasainen?  "
       The Vigenere Cipher Widget: Ohjeet

@@ -427,3 +427,24 @@ lv:
         desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
           šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
           kopējo ainu un kādu lomu tajā spēlē algoritmi.
+      PlantASeed_2019:
+        title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+        desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
+          sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz lielāku
+          priekšstatu par datorzinātnēm kā kopumu.
+      UnplugHappyMaps_2019:
+        title: Laimīgās kartes
+        desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
+          tēlu labirintā, lietojot vienu komandu.
+      GoingPlacesSafely_2019:
+        title: Nokļūst galamērķos droši
+        desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina,
+          kā būt drošiem, kamēr lieto internetu.
+      courseA_unplugged_loops_2019:
+        desc: Šajā nodarbībā Tu mācīsies par cilpām!
+      MoveItMoveIt_2019:
+        title: Ej, ej
+      DigitalFootprint_2019:
+        title: Tavs digitālais nospiedums
+        desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam
+          tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.

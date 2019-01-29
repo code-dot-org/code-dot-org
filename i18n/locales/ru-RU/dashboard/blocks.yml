@@ -1025,15 +1025,16 @@ ru:
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
             '"direction"': направление движения
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"costume"': костюм
-            '"direction"': направление движения
-            '"tint"': оттенок
+          CONDITION:
+            '"when"': когда
+            '"while"': пока
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': когда
+            '"while"': пока
       binary_drawPixelHere:
         options:
           VAL:

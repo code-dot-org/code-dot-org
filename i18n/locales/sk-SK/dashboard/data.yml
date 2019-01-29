@@ -184,6 +184,7 @@ sk:
         studio_c2_5: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
         studio_c2_6: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
         studio_c2_7: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
+        studio_c2_8: Dokážeš to spraviť tak, aby Waddles povedal "Au!" a prehral zvuk "úderu" ak narazí do dinosaura? Umožni mu pohybovať sa pomocou šípok aby si to zvládol.
         studio_c2_9: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
         studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
@@ -196,6 +197,7 @@ sk:
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
         studio_c3_game_3: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
+        studio_c3_game_4: Dokážeš to spraviť tak, aby Waddles povedal "Au!" a prehral zvuk "úderu" ak narazí do dinosaura? Umožni mu pohybovať sa pomocou šípok aby si to zvládol.
         studio_c3_game_5: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
         studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
@@ -386,6 +388,7 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
@@ -452,7 +455,9 @@ sk:
         CSF_skinOverview_Harvester: Kombajn
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Cykly s BB-8
         CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_harvester_loops_K1: Cykly so zberateľom
         CSF_scrat_loops_K1: Cykly v Dobe ľadovej
         CSF_scrat_loops_CF: Cykly v Dobe ľadovej
         CSF_if_allskins: Blok "Ak"

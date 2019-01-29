@@ -1745,3 +1745,31 @@ et:
               name: Binaarsed käevõrud
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Spelling Bee:
+              name: Sõnamesilane
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'

@@ -404,6 +404,13 @@ ja:
       Overworld Move to Sheep: 羊に近づくには"前進"コマンドを追加します。
       Overworld Move to Sheep_2018: 羊に近づくには"前進"コマンドを追加します。
       Overworld Move to Sheep_2019: 羊に近づくには"前進"コマンドを追加します。
+      Ryan_Demo: |-
+        このムースを踊らせてみましょう！
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">フロス</title><title name="DIR">-1</title></block></xml> ブロックをワークスペースにドラッグしてひっぱってきてください。これを<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> ブロックの下につなげてください。ダンサーは4小節後に新しい動きを始めるはずです。
+
+
+        ** 小節**は音楽の中で時間の長さを数えるのに使う単位です。このチュートリアルでは、1小節は4拍になります。
       Standalone_Artist_5.5: "「くりかえし」ブロックをつかって、ダイヤモンドが かんたんに書けるようにしてあります。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いていたらダメだよ。\n\n"
       Testing Quantum Farmer: "すごく大きい穴を見つけてびっくりしました。シャベル何杯分の土が必要かわかりません。穴が他の地面と同じくらいに平になるまで穴を埋めるプログラムをあなたは作れますか？ヒント：「以下の間繰り返し（while loop）」を今回は使ってみてください。"
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
@@ -415,8 +422,13 @@ ja:
         ## ボートまではしごが必要です。
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## ボートまではしごが必要です。
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_bee_seq4: 自分でやってみよう！
       courseA_harvester_seq6: 自分でやってみよう！
+      courseA_harvester_seq6_2019: 自分でやってみよう！
       courseD_bee_nestedLoops5: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "

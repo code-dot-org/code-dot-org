@@ -943,14 +943,16 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': souřadnice X
-            '"y"': souřadnice Y
-            '"direction"': směr pohybu
-            '"tint"': odstín
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
       binary_move:
         options:
           DIR:
