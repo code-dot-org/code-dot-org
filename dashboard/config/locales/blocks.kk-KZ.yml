@@ -300,10 +300,16 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': шама
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       binary_move:
         options:
           DIR:
