@@ -111,3 +111,12 @@
   opacity: 0.8;
   color: #BCC2C6;
 }
+
+.whitebox {
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #888;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}

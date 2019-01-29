@@ -1,7 +1,7 @@
 %script{:src=>"/js/petition.js"}
 %link{:href=>"/css/petition.css", :rel=>"stylesheet"}
 
-.greybox
+.whitebox
   #form
     #petition_message=I18n.t :petition_message
     #petition_sign_message=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)

@@ -4,10 +4,10 @@
 - require 'state_abbr'
 
 - advocacy_variation ||= false
-- fill_color = advocacy_variation ? '#0094a3' : '#3E484F'
-- stroke_color = advocacy_variation ? 'white' : '#7A7A7A'
-- hover_color = advocacy_variation ? '#59cad3' : '#59cad3'
-- click_color = advocacy_variation ? '#ffa400' : '#0094a3'
+- fill_color = '#0094a3'
+- stroke_color = 'white'
+- hover_color = '#59cad3'
+- click_color =  '#ffa400'
 
 #state-list.phone-feature
   - if advocacy_variation
@@ -27,7 +27,7 @@
   %h1.tablet-feature Choose a State
 
 #map.tablet-feature
-#infobox.greybox.col-33
+#infobox.whitebox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
 
