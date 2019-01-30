@@ -7476,3 +7476,93 @@ tr:
           description_audience: CSP Öğrencileri
         gamelab:
           title: Oyun Laboratuvarı
+        coursea-2019:
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_audience: 'Yaş: 4-7'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+              description_teacher: 'Bu ders hata ayıklama (debugging) adımları için öğrencilere rehberlik edecek. Öğrenciler mantrayı öğrenecekler: "Ne oldu? Ne olması bekleniyordu? Sana ne anlatıyor?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+              description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler. Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki durumlara çevirmektir.\\r\n"
+            'Programming: Happy Maps':
+              name: 'Programlama: Mutlu Haritalar'
+              description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve yazma deneyim kazanmalarına yardımcı olacaktır.
+            Programming in Maze:
+              name: Labirentte Programlama
+              description_teacher: Bu çevrimiçi bulmacalar dizisinde, öğrenciler algoritmalar, hata ayıklama ve genel bilgisayar okuryazarlığı konularında bilgi edinecekler. Angry Birds oyunundan karakterler içeren öğrenciler kuşu duvarlara veya TNT'ye çarpmadan domuza sokmak için ardışık algoritmalar geliştirecekler. Problem çözme ve eleştirel düşünme ile ek uygulama için bu aşamada hata ayıklama bulmacaları da karıştırılmıştır.
+            Going Places Safely:
+              name: Biryerlere Güvenle Gitmek
+              description_teacher: '[r common-sense-media] ile işbirliği içinde bu ders, öğrencilerin birçok web sitesinin özel bilgi talep ettiklerini öğrenmelerine yardımcı olur ve bu tür talepleri sorumlu bir şekilde nasıl ele alacağını tartışır. Öğrenciler ayrıca çevrimiçi heyecan verici mekanlara gidebileceklerini keşfettiler ancak güvenli kalabilmek için bazı kurallara uymak zorundalar.'
+            'Loops: Happy Loops':
+              name: 'Döngüler: Mutlu Döngüler'
+              description_teacher: Döngüler programlamada çok yardımcı ve güçlü birer araçtır. Döngülerin nasıl yardımcı olduğu anlamaları için öğrenciler, sıradan problemleri çözmek için en kolay yolu bulmaları gerekecek.
+            Loops in Collector:
+              name: Toplayıcıda Döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri
+        courseb-2019:
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_audience: 'Yaş: 5-8'
+          stages:
+            Move It, Move It:
+              name: Çabuk, Çabuk Taşı
+            Your Digital Footprint:
+              name: Dijital İziniz
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Collector:
+              name: Toplayıcıda Döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+        pre-express-2019:
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+            Move It, Move It:
+              name: Çabuk, Çabuk Taşı
+            Your Digital Footprint:
+              name: Dijital İziniz
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Collector:
+              name: Toplayıcıda Döngüler
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+            Spelling Bee:
+              name: Heceleme Yarışması
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'

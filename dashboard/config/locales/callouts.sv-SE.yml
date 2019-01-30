@@ -210,6 +210,8 @@ sv:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
+      Ryan_Demo_callout:
+        dance_callout_02: Lägg till detta block till ditt program!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
           till ett kommando för att gå framåt?

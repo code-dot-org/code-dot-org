@@ -1253,6 +1253,7 @@ ja:
         1 かどうかは、「もし」ブロックを使って確認しましょう。
       Ryan - 4-5 Bee Conditionals 2: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
       Ryan - Bee Conditionals: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
+      Ryan_Demo: 4小節後にムースが新しい動きを始めるようにしましょう！
       SpecialFrozenLevel: あなたは もう、マスター アーティストよ！じゆうにブロックをつかって、冬のワンダーランドをつくってね。
       Standalone_Artist_1: アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
         ピクセルの長さだよ。
@@ -1365,13 +1366,16 @@ ja:
       course4_artist_variables_challenge2: あなたは、このようなパターンの作りかたを、すべて学びました。そんなに難しくないから、どうすれば良いか、考えてみよう。
       courseA_artist_loops7: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_artist_loops7_2018: "「リピート」ループを使用して、水を波立たせることができます。"
+      courseA_artist_loops7_2019: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_artist_loops7_forVideo: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_bee_seq4: 自分でやってみよう！
       courseA_bee_seq5: 自分でやってみよう！
       courseA_collector_loops_challenge2: '宝を全部ゲットしよう！ '
       courseA_forVideoTest_artist: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_harvester_seq6: 自分でやってみよう！
+      courseA_harvester_seq6_2019: 自分でやってみよう！
       courseA_harvester_seq7: 自分でやってみよう！
+      courseA_harvester_seq7_2019: 自分でやってみよう！
       courseA_maze_seq2: プログラムで、ぼくがブタさんのところに、いけるようにして！
       courseA_maze_seq2_2018: プログラムで、ぼくがブタさんのところに、いけるようにして！
       courseA_maze_seq3: プログラムで、ぼくがブタさんのところに、いけるようにして！
@@ -1380,6 +1384,7 @@ ja:
       courseA_maze_seq4_2018: ブタさんのところに、いけるように、いらないブロックを けしてください。
       courseA_maze_seq_challenge1: なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに つれていって！
       courseA_maze_seq_challenge1_2018: なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに つれていって！
+      courseA_maze_seq_challenge1_2019: なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに つれていって！
       courseB_maze_seq1: ブロックをつかって、ぼくをブタさんのところに、つれていってください。
       courseC_artist_prog5: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2018: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
