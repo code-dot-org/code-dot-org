@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Let's do one more example before writing the function definition - this time draw a solid red rectangle with a height of 75 pixels.",
+    "short_instructions": "Let's do one more example before writing the function definition - this time draw a solid red rectangle with a height of 75 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

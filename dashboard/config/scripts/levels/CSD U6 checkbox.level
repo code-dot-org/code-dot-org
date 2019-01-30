@@ -25,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Predict Level",
+    "long_instructions": "Predict Level",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"interval\", \"change\", function(event) {\r\n  updateLED();\r\n});\r\nonEvent(\"LED_on\", \"change\", function(event) {\r\n  updateLED();\r\n});\r\nonEvent(\"frequency\", \"change\", function(event) {\r\n  \r\n});\r\nonEvent(\"buzzer_on\", \"change\", function(event) {\r\n  \r\n});\r\n\r\nfunction updateLED() {\r\n  var LED_on = getProperty(\"LED_on\" , \"checked\");\r\n  var interval = getProperty(\"interval\", \"value\");\r\n  if (LED_on) {\r\n    led.blink(interval);\r\n  } else {\r\n    led.off();\r\n  }\r\n}\r\n",

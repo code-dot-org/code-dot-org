@@ -58,7 +58,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2019, 4, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -148,138 +148,50 @@ module Pd::Application
       FILTERED_LABELS[course]
     end
 
+    # List of columns to be filtered out based on selected program (course)
+    def self.columns_to_remove(course)
+      if course == 'csf'
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csd', 'csp')}
+      elsif course == 'csd'
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csf', 'csp')}
+      else
+        CSV_LABELS.keys.select {|k| k.to_s.start_with?('csf', 'csd_training')}
+      end
+    end
+
+    def self.csv_filtered_labels(course)
+      labels = {}
+      labels_to_remove = Pd::Application::Facilitator1920Application.columns_to_remove(course)
+
+      CSV_LABELS.keys.each do |k|
+        unless labels_to_remove.include? k.to_sym
+          labels[k] = CSV_LABELS[k]
+        end
+      end
+      labels
+    end
+
     # @override
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
-        columns.push(
-          'Status',
-          'Locked',
-          'General Notes',
-          'Notes 2',
-          'Notes 3',
-          'Notes 4',
-          'Notes 5',
-          'Question 1 Support Teachers',
-          'Question 2 Student Access',
-          'Question 3 Receive Feedback',
-          'Question 4 Give Feedback',
-          'Question 5 Redirect Conversation',
-          'Question 6 Time Commitment',
-          'Question 7 Regional Needs',
-          'Regional Partner'
-        )
-        csv << columns
-      end
-    end
-
-    def self.cohort_csv_header(optional_columns)
-      columns = [
-        'Date Accepted',
-        'Name',
-        'School District',
-        'School Name',
-        'Email',
-        'Status',
-        'Assigned Workshop'
-      ]
-      if optional_columns[:registered_workshop]
-        columns.push 'Registered Workshop'
-      end
-      if optional_columns[:accepted_teachercon]
-        columns.push 'Accepted Teachercon'
-      end
-
-      columns.push(
-        'General Notes',
-        'Notes 2',
-        'Notes 3',
-        'Notes 4',
-        'Notes 5',
-        'Question 1 Support Teachers',
-        'Question 2 Student Access',
-        'Question 3 Receive Feedback',
-        'Question 4 Give Feedback',
-        'Question 5 Redirect Conversation',
-        'Question 6 Time Commitment',
-        'Question 7 Regional Needs'
-      )
-
-      CSV.generate do |csv|
+        columns = csv_filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         csv << columns
       end
     end
 
     # @override
-    def to_csv_row(user)
-      answers = full_answers
+    def to_csv_row(course)
+      columns_to_exclude = Pd::Application::Facilitator1920Application.columns_to_remove(course)
       CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push(
-          status,
-          locked?,
-          notes,
-          notes_2,
-          notes_3,
-          notes_4,
-          notes_5,
-          question_1,
-          question_2,
-          question_3,
-          question_4,
-          question_5,
-          question_6,
-          question_7,
-          regional_partner_name
-        )
+        row = []
+        CSV_LABELS.keys.each do |k|
+          unless columns_to_exclude.include? k.to_sym
+            row.push(full_answers[k] || try(k) || all_scores[k])
+          end
+        end
         csv << row
-      end
-    end
-
-    def to_cohort_csv_row(optional_columns)
-      columns = [
-        date_accepted,
-        applicant_name,
-        district_name,
-        school_name,
-        user.email,
-        status,
-        fit_workshop_date_and_location
-      ]
-      if optional_columns[:registered_workshop]
-        if workshop.try(:local_summer?)
-          columns.push(registered_workshop? ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
-      if optional_columns[:accepted_teachercon]
-        if workshop.try(:teachercon?)
-          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
-
-      columns.push(
-        notes,
-        notes_2,
-        notes_3,
-        notes_4,
-        notes_5,
-        question_1,
-        question_2,
-        question_3,
-        question_4,
-        question_5,
-        question_6,
-        question_7
-      )
-
-      CSV.generate do |csv|
-        csv << columns
       end
     end
 

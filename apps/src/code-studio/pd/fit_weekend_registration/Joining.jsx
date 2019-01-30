@@ -12,7 +12,7 @@ export default class Joining extends LabeledFormComponent {
     lastName: "Last name",
     email: "Email",
     phone: "Phone number",
-    ableToAttend: "Are you able to attend your assigned FiT Weekend?"
+    ableToAttend: "Are you able to attend your assigned FiT Workshop?"
   };
 
   static associatedFields = Object.keys(Joining.labels);
@@ -52,7 +52,7 @@ export default class Joining extends LabeledFormComponent {
 
         <FormGroup>
           <ControlLabel>
-            Your assigned Facilitator-in-Training (FiT) Weekend is:
+            Your assigned Facilitator-in-Training (FiT) Workshop is:
             <br />
             <strong>
               FiT {this.props.city}, {this.props.date}
@@ -61,7 +61,7 @@ export default class Joining extends LabeledFormComponent {
           {this.radioButtonsFor("ableToAttend")}
           {this.props.data.ableToAttend === "No" &&
             <p>
-              If you're unable to attend your assigned FiT Weekend, please
+              If you're unable to attend your assigned FiT Workshop, please
               contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> as
               soon as possible so we can assist you.
             </p>

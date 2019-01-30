@@ -1,6 +1,8 @@
 %h1= 'Blocks'
+= link_to "Back to Pools", pools_path
+%br/
 = link_to 'Create a New Block', new_block_path
 %h2= 'Edit an existing block'
 %ul
-  - Block.order(:name).all.each do |b|
-    %li= link_to b.name, edit_block_path(id: b.name)
+  - @blocks.each do |b|
+    %li= link_to b[:name], edit_block_path(id: b[:name])

@@ -67,7 +67,7 @@ module Pd::Application
     def update_user_school_info!
       if school_id || user.school_info.try(&:school).nil?
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_column(:school_info_id, school_info.id)
+        user.update_school_info(school_info)
       end
     end
 
@@ -479,6 +479,10 @@ module Pd::Application
 
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}", CDO.default_scheme)
     end
 
     def principal_email

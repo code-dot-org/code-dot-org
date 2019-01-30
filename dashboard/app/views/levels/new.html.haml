@@ -18,7 +18,7 @@
     =link_to 'Build a Dance Lab Level', new_level_path(type: 'Dancelab')
     %ul
       %li
-        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path}.
+        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path(pool: 'Dancelab')}.
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
 

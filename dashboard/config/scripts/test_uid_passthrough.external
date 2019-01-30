@@ -2,7 +2,7 @@ name 'test-uid-passthrough'
 title 'test user id passthrough'
 description 'testing to see if i can get the user id to passthrough via a markdown level'
 markdown <<MARKDOWN
-# Counseling Scenario Session
+# AP Counseling Scenario Session
 
 ## “AP is not for Me”
 For this session we'll use a tool called "Teacher Moments", which has been developed by our partners at MIT. In this specific Teacher Moments called “AP is not for Me”, you will practice counseling a student around taking the CSP AP exam. The conversation was designed utilizing interviews with CS teachers and their experiences talking with students about the AP exam.

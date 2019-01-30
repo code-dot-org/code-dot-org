@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Blinker Controls\r\n\r\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\r\n\r\n# Do This\r\n\r\n* Add event handlers to blink the left turn signal when the left button is pressed.\r\n* Add event handlers to blink the right turn signal when the right button is pressed.\r\n* Test your code!\r\n\r\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._",
+    "long_instructions": "# Smart Bike - Blinker Controls\r\n\r\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\r\n\r\n# Do This\r\n\r\n* Add event handlers to blink the left turn signal when the left button is pressed.\r\n* Add event handlers to blink the right turn signal when the right button is pressed.\r\n* Test your code!\r\n\r\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

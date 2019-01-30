@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.",
+    "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.",
     "parent_level_id": 14507,
     "validation_code": "if(getTime(\"measures\") > 8){\r\n  validationProps.status = 3;\r\n  sprites.forEach(function(sprite) {\r\n    if (sprite.tint != undefined) validationProps.status = 0;\r\n  });\r\n  levelSuccess(validationProps.status);\r\n}",
     "block_pool": "Dancelab",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1,\"value\":-2,\"range\":-2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-4}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":-1,\"range\":-4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1}]]",
-    "instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
+    "short_instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

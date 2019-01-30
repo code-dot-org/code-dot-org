@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "APIs and Function Parameters Wrap Up",
-    "markdown_instructions": "List 3 interesting functions you discovered in the AppLab API. \n\nSelect one of them and describe how you think you might want to use it in a future programming project.\n",
+    "long_instructions": "List 3 interesting functions you discovered in the AppLab API. \n\nSelect one of them and describe how you think you might want to use it in a future programming project.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -7,8 +7,8 @@
   "properties": {
     "skin": "bee",
     "serialized_maze": "[[{\"tileType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":\"\",\"cloudType\":\"\"},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Now try it in Bee!",
-    "markdown_instructions": "*\"I can't BEE-lieve how full this field is!\"*\r\n\r\nLook very carefully at this puzzle to see if you can use what you learned to solve it.",
+    "short_instructions": "Now try it in Bee!",
+    "long_instructions": "*\"I can't BEE-lieve how full this field is!\"*\r\n\r\nLook very carefully at this puzzle to see if you can use what you learned to solve it.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

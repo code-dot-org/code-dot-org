@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Create loops to get to the pig using less blocks.",
+    "short_instructions": "Create loops to get to the pig using less blocks.",
     "start_direction": "1",
     "step_mode": 1
   }
