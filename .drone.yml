@@ -7,7 +7,6 @@ clone:
 steps:
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
-  depends_on: [ install-and-build ]
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -61,7 +60,6 @@ clone:
 steps:
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
-  depends_on: [ install-and-build ]
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
