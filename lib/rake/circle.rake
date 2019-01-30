@@ -22,11 +22,11 @@ RUN_ALL_TESTS_TAG = 'test all'.freeze
 # Only run apps tests on container 0
 RUN_APPS_TESTS_TAG = 'test apps'.freeze
 
-# Don't run any UI or Eyes tests.
-SKIP_UI_TESTS_TAG = 'skip ui'.freeze
+# DEPRECATED - Temporarily default to skip UI tests unless explicitly requested in the commit message.
+# SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
-# Run UI or Eyes tests.
-RUN_UI_TESTS_TAG = 'run ui'.freeze
+# Run UI and Eyes tests.
+TEST_UI_TAG = 'test ui'.freeze
 
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
@@ -87,8 +87,8 @@ namespace :circle do
 
     # We used to default to running UI tests in every CircleCI build, but that contributes to high usage of
     # donated SauceLabs resources.  We now default to NOT run UI Tests unless explicitly requested in the commit message.
-    unless CircleUtils.tagged?(RUN_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' does not contain [#{RUN_UI_TESTS_TAG}], skipping UI tests for this run."
+    unless CircleUtils.tagged?(TEST_UI_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' does not contain [#{TEST_UI_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -161,8 +161,10 @@ namespace :circle do
       next
     end
 
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    # We used to default to running UI tests in every CircleCI build, but that contributes to high usage of
+    # donated SauceLabs resources.  We now default to NOT run UI Tests unless explicitly requested in the commit message.
+    unless CircleUtils.tagged?(TEST_UI_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' does not contain [#{TEST_UI_TAG}], skipping UI tests for this run."
       next
     end
 
@@ -173,8 +175,10 @@ namespace :circle do
 
   desc 'Rebuild dashboard assets with updated locals.yml settings before running UI tests'
   task :recompile_assets do
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+    # We used to default to running UI tests in every CircleCI build, but that contributes to high usage of
+    # donated SauceLabs resources.  We now default to NOT run UI Tests unless explicitly requested in the commit message.
+    unless CircleUtils.tagged?(TEST_UI_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' does not contain [#{TEST_UI_TAG}], skipping UI tests for this run."
       next
     end
 
