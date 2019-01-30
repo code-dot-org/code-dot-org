@@ -46,7 +46,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.props.onDelete(pendingDeleteId);
   }
 
-  csfCourseExperience(csf_course_experience) {
+  formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
       return NA;
     }
@@ -88,7 +88,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.school}</td>
           {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : NA}</td>}
           {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching.join(', ') : NA}</td>}
-          {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{this.csfCourseExperience(enrollment.csf_course_experience)}</td>}
+          {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{this.formatCsfCourseExperience(enrollment.csf_course_experience)}</td>}
           {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{enrollment.csf_courses_planned ? enrollment.csf_courses_planned.join(', ') : NA}</td>}
           {this.props.workshopCourse === CSF && this.props.workshopSubject === DEEP_DIVE && <td>{enrollment.attended_csf_intro_workshop}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
