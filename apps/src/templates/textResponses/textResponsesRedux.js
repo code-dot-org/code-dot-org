@@ -28,7 +28,7 @@ export const setTextResponses = (scriptId, responseData) => ({ type: SET_TEXT_RE
 export const startLoadingResponses = () => ({ type: START_LOADING_TEXT_RESPONSES });
 export const finishLoadingResponses = () => ({ type: FINISH_LOADING_TEXT_RESPONSES });
 
-export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
+export const asyncLoadTextResponses = (sectionId, scriptId, onComplete = () => {}) => {
   return (dispatch, getState) => {
     const state = getState().textResponses;
 
