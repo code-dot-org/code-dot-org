@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Changing text with setText()\r\n\r\nYou actually saw `setText()` briefly in the last lesson - it's a function that allows you to change the text of a design element with code.\r\n\r\n# Do This\r\n\r\nUsing the provided `onEvent()` block\r\n\r\n* Add a `setText()` block in the event handler\r\n* From the dropdown in the `setText()` block, select \"title\"\r\n* Make up a new title for the app and place it in the second parameter of the `setText()` block\r\n* Run it and test the button",
+    "long_instructions": "# Changing text with setText()\r\n\r\nYou actually saw `setText()` briefly in the last lesson - it's a function that allows you to change the text of a design element with code.\r\n\r\n# Do This\r\n\r\nUsing the provided `onEvent()` block\r\n\r\n* Add a `setText()` block in the event handler\r\n* From the dropdown in the `setText()` block, select \"title\"\r\n* Make up a new title for the app and place it in the second parameter of the `setText()` block\r\n* Run it and test the button",
     "instructions_important": "false",
     "start_blocks": "onEvent(\"clickMe\", \"click\", function(event) {\r\n  // Change the title text\r\n  \r\n});",
     "is_k1": "false",

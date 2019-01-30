@@ -13,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "instructions": "Pets need to learn to stop, too! Use the \"when clicked\" block to teach your pet to stop wandering after you click on them.",
+    "short_instructions": "Pets need to learn to stop, too! Use the \"when clicked\" block to teach your pet to stop wandering after you click on them.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

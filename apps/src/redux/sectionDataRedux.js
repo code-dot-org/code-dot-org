@@ -1,5 +1,4 @@
 import { PropTypes } from 'react';
-import $ from 'jquery';
 
 /**
  * Reducer for section data in teacher dashboard.
@@ -7,38 +6,25 @@ import $ from 'jquery';
  * if they need to respond to a section changing.
  */
 
- /**
-  * Shape for the section
-  * The section we get directly from angular right now. This gives us a
-  * different shape than some other places we use sections. For now, I'm just
-  * going to document the parts of section that we use here
-  */
- export const sectionDataPropType = PropTypes.shape({
+/**
+ * Shape for the section
+ * The section we get directly from angular right now. This gives us a
+ * different shape than some other places we use sections. For now, I'm just
+ * going to document the parts of section that we use here
+ */
+export const sectionDataPropType = PropTypes.shape({
+ id: PropTypes.number.isRequired,
+ script: PropTypes.object,
+ students: PropTypes.arrayOf(PropTypes.shape({
    id: PropTypes.number.isRequired,
-   script: PropTypes.object,
-   students: PropTypes.arrayOf(PropTypes.shape({
-     id: PropTypes.number.isRequired,
-     name: PropTypes.string.isRequired,
-   })).isRequired
- });
-
- /**
-  * Status for loading section data from server.
-  */
-  export const LoadingStatus = {
-    IN_PROGRESS: "inProgress",
-    SUCCESS: "success",
-    FAIL: "fail",
-  };
+   name: PropTypes.string.isRequired,
+ })).isRequired
+});
 
 /**
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
-export const CLEAR_SECTION_DATA = 'sectionData/CLEAR_SECTION_DATA';
-export const START_LOADING_SECTION = 'sectionData/START_LOADING_SECTION';
-export const LOAD_SECTION_SUCCESS = 'sectionData/LOAD_SECTION_SUCCESS';
-export const LOAD_SECTION_FAIL = 'sectionData/LOAD_SECTION_FAIL';
 
 /**
  * Action creators
@@ -61,7 +47,6 @@ export const setSection = (section) => {
  */
 const initialState = {
   section: {},
-  loadingStatus: null,
 };
 
 /**
@@ -78,31 +63,6 @@ export default function sectionData(state=initialState, action) {
     };
   }
 
-  if (action.type === CLEAR_SECTION_DATA) {
-    return initialState;
-  }
-
-  if (action.type === START_LOADING_SECTION) {
-    return {
-      ...state,
-      loadingStatus: LoadingStatus.IN_PROGRESS,
-    };
-  }
-
-  if (action.type === LOAD_SECTION_SUCCESS) {
-    return {
-      ...state,
-      loadingStatus: LoadingStatus.SUCCESS,
-    };
-  }
-
-  if (action.type === LOAD_SECTION_FAIL) {
-    return {
-      ...state,
-      loadingStatus: LoadingStatus.FAIL,
-    };
-  }
-
   return state;
 }
 
@@ -115,24 +75,4 @@ export const getTotalStudentCount = (state) => {
 
 export const getStudentList = (state) => {
   return state.sectionData.section.students;
-};
-
-/**
- * Helper functions
- */
-export const asyncSetSection = (sectionId) => (dispatch) => {
-  // Clear any existing section data and begin loading.
-  dispatch({ type: CLEAR_SECTION_DATA });
-  dispatch({ type: START_LOADING_SECTION });
-
-  $.ajax({
-    url: `/api/v1/sections/${sectionId}`,
-    method: 'GET',
-    dataType: 'json'
-  }).done(section => {
-    dispatch(setSection(section));
-    dispatch({ type: LOAD_SECTION_SUCCESS });
-  }).fail((jqXhr, status) => {
-    dispatch({ type: LOAD_SECTION_FAIL });
-  });
 };

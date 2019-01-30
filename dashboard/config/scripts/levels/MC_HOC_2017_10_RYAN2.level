@@ -48,8 +48,8 @@
     "is_agent_level": "true",
     "agent_start_position": "[1,1]",
     "place_block_options": "[\"oreCoal\", \"doorIron\", \"glass\", \"glowstone\", \"oreIron\",  \"oreRedstone\", \"rails\", \"railsRedstoneTorch\", \"redstoneWire\", \"pistonDown\", \"pistonLeft\", \"pistonRight\", \"pistonUp\", \"pressurePlateUp\"]",
-    "instructions": "Create a function to help you finish this minecart.",
-    "markdown_instructions": "Try building functions from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.",
+    "short_instructions": "Create a function to help you finish this minecart.",
+    "long_instructions": "Try building functions from the beginning that will make it easier for the Agent to finish this minecart and get the player to the orange square.",
     "level_verification_timeout": "0",
     "contained_level_names": null
   },

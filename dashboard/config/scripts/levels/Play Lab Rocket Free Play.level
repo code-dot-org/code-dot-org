@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Free Play: Experiment with your rocket-height function to make the rocket fly in different ways. Click \"Finish\" when you are done.",
+    "short_instructions": "Free Play: Experiment with your rocket-height function to make the rocket fly in different ways. Click \"Finish\" when you are done.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +39,7 @@
     "definition_collapse": "false",
     "custom_game_type": "Rocket Height",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: Experiment with your `rocket-height` function to make the rocket fly in different ways. Click \"Finish\" when you are done.",
+    "long_instructions": "Free Play: Experiment with your `rocket-height` function to make the rocket fly in different ways. Click \"Finish\" when you are done.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

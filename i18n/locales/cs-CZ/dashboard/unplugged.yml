@@ -277,3 +277,17 @@ cs:
       PaperPlanes_2019:
         title: 'Algoritmy ze života: Papírová letadla'
         desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      PlantASeed_2019:
+        title: 'Algoritmy ze života: Zasadit semínko'
+        desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      UnplugHappyMaps_2019:
+        title: Šťastné mapy
+        desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
+      GoingPlacesSafely_2019:
+        title: Cestování bezpečně
+        desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak zůstat v bezpečí při procházení Internetu.
+      MoveItMoveIt_2019:
+        title: Pohyb, pohyb
+      DigitalFootprint_2019:
+        title: Tvé digitální stopy
+        desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.

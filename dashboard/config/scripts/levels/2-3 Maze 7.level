@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,4,0],[0,0,0,0,1,1,1,0],[0,0,0,4,1,0,1,0],[0,0,2,1,1,0,3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Guide me to the green evilness! (Watch out for TNT)",
+    "short_instructions": "Guide me to the green evilness! (Watch out for TNT)",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

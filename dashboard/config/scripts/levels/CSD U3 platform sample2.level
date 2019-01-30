@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "true",
-    "markdown_instructions": "# Plane Jumper\r\n\r\nHere's another example of a platform jumper, but it has a few more features.  You can use it to get ideas to improve your own game.  For example, there is a coin sprite that gives the player an extra life.\r\n\r\nChoose one or more of the following changes and add them to your game.\r\n* Choose new animations for your player, platform, and items.\r\n* Make it impossible for your player to go off the left or right of the screen.\r\n* Add a different type of item for the player to collect or avoid.\r\n* Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\r\n\r\n",
+    "long_instructions": "# Plane Jumper\r\n\r\nHere's another example of a platform jumper, but it has a few more features.  You can use it to get ideas to improve your own game.  For example, there is a coin sprite that gives the player an extra life.\r\n\r\nChoose one or more of the following changes and add them to your game.\r\n* Choose new animations for your player, platform, and items.\r\n* Make it impossible for your player to go off the left or right of the screen.\r\n* Add a different type of item for the player to collect or avoid.\r\n* Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

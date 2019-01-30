@@ -213,9 +213,15 @@ hu:
         4-5_Maze_6_a: |-
           Próbáld követni az utat az ujjaddal!
           Ez a legrövidebb út, amit találhatsz?
+      4-5 Nested Loops 7_authored_hint:
+        4-5_Nested_Loops_7_a: A minta tízszer ismétlődik, és összesen 360 fokot fordul.
+          **360/10=?**
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet
           között, hogy elkészüljön a design.
+      Course 4 Artist 6_authored_hint:
+        Course_4_Artist_6_a: Itt van három háromszög egy körben egyenlően elforgatva...
+          mennyi 360-ban a 3?
       Dance short test 2_authored_hint:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -676,7 +682,29 @@ hu:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -695,6 +723,25 @@ hu:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -732,7 +779,45 @@ hu:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -767,7 +852,29 @@ hu:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -775,7 +882,14 @@ hu:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -796,7 +910,42 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -834,6 +983,25 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -853,7 +1021,42 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -984,6 +1187,9 @@ hu:
         2-3_Bee_Loops_4A_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.
+      grade4_arist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: A minta tízszer ismétlődik, és összesen 360 fokot fordul.
+          **360/10=?**
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
           hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
@@ -995,6 +1201,9 @@ hu:
           - függvényt használni
           - előrehaladni 100 + 75 pixelt
           - függvényt használni
+      grade4_artist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: A minta tízszer ismétlődik, és összesen 360 fokot fordul.
+          **360/10=?**
       grade4_bee_functions8_authored_hint:
         2-3_Bee_Functions_8_b: |-
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.

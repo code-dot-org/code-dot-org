@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Now, draw the same line using a loop.",
+    "short_instructions": "Now, draw the same line using a loop.",
     "x": "100",
     "y": "200",
     "start_direction": "90",

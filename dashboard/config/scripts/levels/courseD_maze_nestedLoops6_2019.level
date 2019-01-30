@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get the zombie to the sunflower using only the blocks available.",
+    "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "*\"Must eat sunflower!\"*\r\n\r\nGet the zombie to the sunflower using only the blocks available.",
+    "long_instructions": "*\"Must eat sunflower!\"*\r\n\r\nGet the zombie to the sunflower using only the blocks available.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are stuck, try writing out the code out on paper without loops first and look for patterns.\",\"hint_id\":\"courseD_maze_nestedLoops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a504f8bd02af09a1a25b6dd03716966/courseD_maze_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Nesting `repeat` loops can help decrease the number of blocks used.\",\"hint_id\":\"courseD_maze_nestedLoops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd62d80b6bf7b68b9c84e3f04402057c/courseD_maze_nestedLoops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It will take two sets of nested `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseD_maze_nestedLoops6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc0fc9f058c019c99fbda24b8e009d40/courseD_maze_nestedLoops6.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

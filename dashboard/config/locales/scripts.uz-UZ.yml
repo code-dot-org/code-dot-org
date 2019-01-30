@@ -349,3 +349,7 @@ uz:
           stages:
             'null':
               name: nol
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: Bilimdon Ari

@@ -154,7 +154,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir [RANGE][0]
+        text: obtenir {RANGE}
         options:
           RANGE:
             '"low"': grave
@@ -1148,16 +1148,20 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
-            '"costume"': costume
-            '"direction"': direction du mouvement
-            '"rotation"': rotation ou direction
-            '"tint"': nuance
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': ceci
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
       binary_drawPixelHere:
         options:
           VAL:

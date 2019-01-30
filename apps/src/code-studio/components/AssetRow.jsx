@@ -3,6 +3,15 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
+import color from "@cdo/apps/util/color";
+
+const styles = {
+  deleteWarning: {
+    paddingLeft: '34px',
+    textAlign: 'left',
+    color: color.red
+  }
+};
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -17,9 +26,11 @@ export default class AssetRow extends React.Component {
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
+    projectId: PropTypes.string,
 
-    //temporary prop to differentiate choosing images and sounds
-    imagePicker: PropTypes.bool
+    // For logging purposes
+    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
+    elementId: PropTypes.string
   };
 
   state = {
@@ -32,6 +43,20 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
+    firehoseClient.putRecord(
+      {
+        study: 'delete-asset',
+        study_group: this.props.onChoose && typeof this.props.onChoose === 'function' ? 'choose-assets' : 'manage-assets',
+        event: 'initiate',
+        project_id: this.props.projectId,
+        data_json: JSON.stringify(
+          {
+            assetName: this.props.name,
+            elementId: this.props.elementId
+          }
+        )
+      }
+    );
   };
 
   /**
@@ -98,6 +123,9 @@ export default class AssetRow extends React.Component {
               Delete File
             </button>
             <button onClick={this.cancelDelete}>Cancel</button>
+            <div style={styles.deleteWarning}>
+              {i18n.confirmDeleteExplanation()}
+            </div>
             {this.state.actionText}
           </td>
         );
