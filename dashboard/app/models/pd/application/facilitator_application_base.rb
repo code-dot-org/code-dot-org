@@ -407,6 +407,7 @@ module Pd::Application
 
       Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
       self.auto_assigned_fit_enrollment_id = nil
+      save
     end
 
     def application_url
@@ -430,11 +431,13 @@ module Pd::Application
         enrollment.update!(
           user: user,
           school_info: user.school_info,
-          full_name: user.name
+          first_name: first_name,
+          last_name: last_name
         )
 
         destroy_fit_autoenrollment
         self.auto_assigned_fit_enrollment_id = enrollment.id
+        save
       end
     end
 
