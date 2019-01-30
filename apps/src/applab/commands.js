@@ -740,6 +740,7 @@ applabCommands.textInput = function (opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
+  elementUtils.setDefaultBorderStyles(newInput, true);
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };

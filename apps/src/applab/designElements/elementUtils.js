@@ -182,15 +182,16 @@ export function getDefaultScreenId() {
   return getId(getScreens()[0]);
 }
 
-export function setDefaultBorderStyles(element) {
+export function setDefaultBorderStyles(element, isTextInput=false) {
   if (element.style.borderStyle === '') {
     element.style.borderStyle = 'solid';
   }
   if (element.style.borderWidth === '') {
-    element.style.borderWidth = '0px';
+    element.style.borderWidth = isTextInput ? '1px' : '0px';
   }
   if (element.style.borderColor === '') {
-    element.style.borderColor = color.black;
+    element.style.borderColor =
+      isTextInput ? color.text_input_default_border_color : color.black;
   }
   if (element.style.borderRadius === '') {
     element.style.borderRadius = '0px';

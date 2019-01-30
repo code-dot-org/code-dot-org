@@ -111,7 +111,10 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.LABEL] = {
