@@ -16,6 +16,7 @@ import reducer, {
   cancelEditingSection,
   finishEditingSection,
   editSectionLoginType,
+  asyncSetSections,
   asyncLoadSectionData,
   assignmentId,
   assignmentNames,
@@ -853,6 +854,65 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
       return expect(promise).to.be.fulfilled.then(() => {
         expect(state().sections[sectionId].loginType).to.equal('word');
+      });
+    });
+  });
+
+  describe('asyncSetSections', () => {
+    let server;
+
+    function successResponse(response = []) {
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify(response)
+      ];
+    }
+
+    const failureResponse = [500, {}, 'CustomErrorBody'];
+
+    function state() {
+      return getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+    });
+
+    afterEach(function () {
+      server.restore();
+    });
+
+    it('immediately sets asyncLoadComplete to false', () => {
+      store.dispatch(asyncSetSections());
+      expect(state().asyncLoadComplete).to.be.false;
+    });
+
+    it('sets sections from server response', () => {
+      const promise = store.dispatch(asyncSetSections());
+      expect(state().sections).to.deep.equal({});
+
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().sections)).to.have.length(sections.length);
+        expect(state().asyncLoadComplete).to.be.true;
+      });
+    });
+
+    it('sets asyncLoadComplete to true on failure', () => {
+      console.error.reset(); // Already stubbed in tests
+      const promise = store.dispatch(asyncSetSections());
+      expect(state().sections).to.deep.equal({});
+
+      server.respondWith('GET', '/dashboardapi/sections', failureResponse);
+      server.respond();
+
+      return promise.then(() => {}, () => {
+          expect(state().sections).to.deep.equal({});
+          expect(state().asyncLoadComplete).to.be.true;
       });
     });
   });
