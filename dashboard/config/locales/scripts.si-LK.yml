@@ -1526,3 +1526,27 @@ si:
               name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
             Binary Bracelets:
               name: ද්විමය වළලු
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+            Going Places Safely:
+              name: තැන්වලට සුරක්ෂිතව යාම
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: එය ගෙන යන්න, ගෙන යන්න
+            Your Digital Footprint:
+              name: ඔබේ ඩිජිටල් පා සටහන
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: එය ගෙන යන්න, ගෙන යන්න
+            Your Digital Footprint:
+              name: ඔබේ ඩිජිටල් පා සටහන
+            Spelling Bee:
+              name: අක්ෂර වින්‍යාස බඹරා
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'

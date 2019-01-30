@@ -627,10 +627,16 @@ ga:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Is éard atá san uimhir seo ná an líon blocanna den
           chineál seo is féidir leat a úsáid sa dúshlán seo.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Is éard atá san uimhir seo ná an líon blocanna den
+          chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
           amháin den chineál seo a úsáid i do réiteach.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
+          amháin den chineál seo a úsáid i do réiteach.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
           amháin den chineál seo a úsáid i do réiteach.
       courseA_artist_loops7_forVideo_callout:
@@ -642,6 +648,9 @@ ga:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: An bhfuil a fhios agat gur féidir leat tarraingt
           anuas ar líne atá ann aon uair is gá?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: An bhfuil a fhios agat gur féidir leat tarraingt
+          anuas ar líne atá ann aon uair is gá?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
           Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
@@ -650,10 +659,17 @@ ga:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
           Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
           déanaí sa chéim seo.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
           den chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
+          den chineál seo is féidir leat a úsáid sa dúshlán seo.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
           den chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_collector_preLoops1_callout:
@@ -681,6 +697,9 @@ ga:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
           blocanna breise a chuideoidh leat na dúshláin a chríochnú.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
           blocanna breise a chuideoidh leat na dúshláin a chríochnú.
@@ -695,6 +714,8 @@ ga:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
@@ -712,9 +733,13 @@ ga:
         courseA_playlab_events4_callout1: Is tagrán é seo
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Is tagrán é seo
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Is tagrán é seo
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
@@ -724,13 +749,23 @@ ga:
         courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
           a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go
           gcloisfidh tú é!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
+          a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go
+          gcloisfidh tú é!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
           Cén chaoi a n-úsáidfidh tú é?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
+          Cén chaoi a n-úsáidfidh tú é?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
           Cén chaoi a n-úsáidfidh tú é?
       courseB_artist_loops5_callout:
@@ -744,9 +779,15 @@ ga:
         courseB_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
           Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
           déanaí sa chéim seo.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
@@ -763,6 +804,8 @@ ga:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Treoraigh an t-aisteoir don bhratach seo chun
@@ -1496,6 +1539,9 @@ ga:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Seo an chaoi a socraíonn tú luach na hathróige.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.
       coursef_maze_ramp3_callout:

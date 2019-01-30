@@ -902,14 +902,19 @@ fil:
       course4_bee_fwp_challenge1: Gumamit ng isang `for loop` sa isang function para kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length` na parameter.
       courseA_collector_preLoops1: "Ito si Laurel ang Manggagalugad! \\r\n\\r\nPindutin ang \"Run\" para makita siyang maglakad sa mga kayaman para kunin ito."
       courseA_maze_seq6_2018: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
+      courseA_maze_seq6_2019: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
       courseA_maze_seq8_2018: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
+      courseA_maze_seq8_2019: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseB_artist_loops7: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
       courseB_artist_loops7_2018: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
+      courseB_artist_loops7_2019: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
       courseB_artist_loops_challenge2: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_artist_loops_challenge2_2018: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_artist_loops_challenge2_2019: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_collector_loops3_predict1: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
       courseB_collector_prog3: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
       courseB_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_iceage_loops11_forVideo: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_maze_seq9_challenge1: "*Nasaan na nagtago ang baboy ngayon?*"
       courseB_playlab_events6: |-
@@ -917,6 +922,10 @@ fil:
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
       courseB_playlab_events6_2018: |-
+        Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
+        \r
+        Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
+      courseB_playlab_events6_2019: |-
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.

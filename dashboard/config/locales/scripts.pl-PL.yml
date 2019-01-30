@@ -4364,3 +4364,44 @@ pl:
               name: Binarne bransoletki
         gamelab:
           title: Laboratorium Gier (Game Lab)
+        coursea-2019:
+          description_audience: W wieku 4-7
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugowanie: Nie wykryte błędy'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algorytmy z życia wzięte: sadź nasiona'
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Going Places Safely:
+              name: Bezpiecznie dotrzeć na miejsce
+            'Loops: Happy Loops':
+              name: 'Pętle: Szczęśliwe pętle'
+        courseb-2019:
+          description_audience: W wieku 5-8
+          stages:
+            Move It, Move It:
+              name: Przenieść go, przenieść go
+            Your Digital Footprint:
+              name: Twój cyfrowy ślad
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+        pre-express-2019:
+          description_audience: W wieku 4-8
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugowanie: Nie wykryte błędy'
+            Move It, Move It:
+              name: Przenieść go, przenieść go
+            Your Digital Footprint:
+              name: Twój cyfrowy ślad
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+            Spelling Bee:
+              name: Literująca Pszczółka
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugowanie: Nie wykryte błędy'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algorytmy z życia wzięte: sadź nasiona'

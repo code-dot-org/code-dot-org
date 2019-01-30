@@ -1961,3 +1961,27 @@ nl:
               name: Binaire armbanden
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'
+            Going Places Safely:
+              name: Veilig Reizen
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: verplaats het, verplaats het
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: verplaats het, verplaats het
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            Spelling Bee:
+              name: Spellingswedstrijd
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmen in het echte leven: Plant een zaadje'

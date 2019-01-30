@@ -1028,6 +1028,7 @@ sv:
       Ryan - 4-5 Bee Conditionals 2: Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma så kan du samla nektar.
       Ryan - Bee Conditionals: Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma så kan du samla nektar.
       Ryan Test Locked Blocks: Här är en funktion som kallas "patrol." Redigera den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
+      Ryan_Demo: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
       SpecialFrozenLevel: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
       Standalone_Artist_1: Välkommen till Artist! Först och främst, låt oss försöka göra en enkel kvadrat med 'sväng höger' block och 'gå framåt' block. Varje sida ska vara 100 bildpunkter lång.
       Standalone_Artist_2: Rita denna diamant med 120 och 60 graders vinklar och 150 pixlar långa sidor.
@@ -1117,6 +1118,7 @@ sv:
       course4_artist_fwp_challenge1: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
       courseA_maze_seq12: 'Fånga den där grisen! '
       courseA_maze_seq12_2018: 'Fånga den där grisen! '
+      courseA_maze_seq12_2019: 'Fånga den där grisen! '
       courseA_maze_seq2: Ändra koden för att få mig till grisen!
       courseA_maze_seq2_2018: Ändra koden för att få mig till grisen!
       courseC_PlayLab_events3: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?

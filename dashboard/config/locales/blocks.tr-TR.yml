@@ -902,14 +902,20 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
-            '"direction"': hareket yönü
-            '"tint"': renk tonu
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': diğer
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
       binary_move:
         options:
           DIR:

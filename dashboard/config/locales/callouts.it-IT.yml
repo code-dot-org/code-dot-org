@@ -437,6 +437,8 @@ it:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      Ryan_Demo_callout:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Modifica questa funzione per impedire a Sam di andare
           via dal lato giusto
@@ -529,10 +531,16 @@ it:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
           usare in questo esercizio.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
+          usare in questo esercizio.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
           di blocchi può essere usato nella risposta finale.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
+          di blocchi può essere usato nella risposta finale.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo
           di blocchi può essere usato nella risposta finale.
       courseA_artist_loops7_forVideo_callout:
@@ -542,6 +550,8 @@ it:
         courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -550,10 +560,17 @@ it:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
+          puoi usare in questo esercizio.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
       courseA_collector_preLoops1_callout:
@@ -581,12 +598,17 @@ it:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
+          dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo
@@ -604,10 +626,15 @@ it:
         courseA_playlab_events4_callout1: Questa è una chiamata
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Questa è una chiamata
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Questa è una chiamata
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
           freccia.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
+          freccia.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento
           freccia.
       courseA_playLab_events6_callout:
@@ -616,13 +643,22 @@ it:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
           quindi non saprai quale suono verrà riprodotto ogni volta!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale",
+          quindi non saprai quale suono verrà riprodotto ogni volta!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
+          premi "Esegui" per far partire il programma.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
           attrezzi. Come lo userai?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
+          attrezzi. Come lo userai?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
           attrezzi. Come lo userai?
       courseB_artist_loops5_callout:
@@ -636,9 +672,15 @@ it:
         courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
@@ -655,6 +697,8 @@ it:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
@@ -1136,6 +1180,9 @@ it:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Questo è come imposti il valore della tua variabile.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
+          "Esegui" per far partire il tuo programma.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
           "Esegui" per far partire il tuo programma.
       frozen circle function with parameter_callout:

@@ -626,17 +626,25 @@ uk:
         courseA_artist_loops4_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops4_2019_authored_hint:
+        courseA_artist_loops4_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_b: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_b: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
+      courseA_artist_loops5_2019_authored_hint:
         courseA_artist_loops5_b: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює.
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_a: Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює.
+      courseA_artist_loops6_2019_authored_hint:
+        courseA_artist_loops6_a: Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
@@ -644,21 +652,47 @@ uk:
         courseA_artist_loops9_a: Додайте ще один блок до коду, який ви надішлете, щоб намалювати решту сходів.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Додайте ще один блок до коду, який ви надішлете, щоб намалювати решту сходів.
+      courseA_artist_loops9_2019_authored_hint:
+        courseA_artist_loops9_a: Додайте ще один блок до коду, який ви надішлете, щоб намалювати решту сходів.
       courseA_artist_loops_challenge2a_authored_hint:
         courseA_artist_loops_challenge2_c: Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку.
       courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_c: Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку.
+      courseA_artist_loops_challenge2a_2019_authored_hint:
         courseA_artist_loops_challenge2_c: Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.
       courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Якщо у вас виникли проблеми з виявленням цієї головоломки, спробуйте написати рухами на папірці та шукати малюнок.
       courseA_collector_loops8_2018_authored_hint:
         courseA_collector_loops8_a: Якщо у вас виникли проблеми з виявленням цієї головоломки, спробуйте написати рухами на папірці та шукати малюнок.
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: Якщо у вас виникли проблеми з виявленням цієї головоломки, спробуйте написати рухами на папірці та шукати малюнок.
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_b: Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!
+      courseA_harvester_loops9_2019_authored_hint:
+        courseA_harvester_loops9_b: Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -677,6 +711,25 @@ uk:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -714,7 +767,45 @@ uk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -751,13 +842,33 @@ uk:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.
       courseA_maze_seq10_2018_authored_hint:
         courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.
+      courseA_maze_seq10_2019_authored_hint:
+        courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться.
       courseA_maze_seq5_2018_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
@@ -765,15 +876,28 @@ uk:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Існує два рішення цієї загадки.
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Шукай блок, який змушує собаку щось сказати.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -792,7 +916,42 @@ uk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -830,7 +989,45 @@ uk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -865,17 +1062,41 @@ uk:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseB_artist_loops2_2018_authored_hint:
+        courseB_artist_loops2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
+      courseB_artist_loops2_2019_authored_hint:
         courseB_artist_loops2_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_c: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_c: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
+      courseB_artist_loops9_2019_authored_hint:
+        courseB_artist_loops9_c: Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.
       courseB_iceage_loops2_authored_hint:
         courseB_iceage_loops2_b: Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.
+      courseB_iceage_loops2_2019_authored_hint:
+        courseB_iceage_loops2_b: Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.
       courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_b: Не бійся запускати свій код і подивитися, що станеться!
+      courseB_iceage_loops4_2019_authored_hint:
         courseB_iceage_loops4_b: Не бійся запускати свій код і подивитися, що станеться!
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: Якщо ви застрягли, спробуйте розібрати шлях на папері.
@@ -883,13 +1104,20 @@ uk:
       courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: Якщо ви застрягли, спробуйте розібрати шлях на папері.
         courseB_maze_seq5_b: Є 2 способи вирішити цю загадку!
+      courseB_maze_seq5_2019_authored_hint:
+        courseB_maze_seq5_a: Якщо ви застрягли, спробуйте розібрати шлях на папері.
+        courseB_maze_seq5_b: Є 2 способи вирішити цю загадку!
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq5_c: Існує два способи вирішити цю загадку!
       courseB_maze_seq6_2018_authored_hint:
         courseB_maze_seq5_c: Існує два способи вирішити цю загадку!
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq5_c: Існує два способи вирішити цю загадку!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: Додати 1 блок, щоб перемістити птаха до свині.
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: Додати 1 блок, щоб перемістити Scrat до жолудя.
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_a: Додати 1 блок, щоб перемістити Scrat до жолудя.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Існує два способи вирішити цю загадку!
@@ -899,19 +1127,28 @@ uk:
       courseB_maze_seq9_2018_authored_hint:
         courseB_maze_seq9_c: Існує два способи вирішити цю загадку!
         courseB_maze_seq9_d: Застряг? Спробуй цей шлях!
+      courseB_maze_seq9_2019_authored_hint:
+        courseB_maze_seq9_c: Існує два способи вирішити цю загадку!
+        courseB_maze_seq9_d: Застряг? Спробуй цей шлях!
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
       courseB_maze_seq_challenge1_2018_authored_hint:
         courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
+      courseB_maze_seq_challenge1_2019_authored_hint:
+        courseB_maze_seq_challenge1_a: Найкращий шлях може не працювати на цей раз.
       courseB_playlab_events6_authored_hint:
         courseB_playlab_events6_c: Отримати всі прапори, щоб пройти!
       courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_c: Отримати всі прапори, щоб пройти!
+      courseB_playlab_events6_2019_authored_hint:
+        courseB_playlab_events6_c: Отримати всі прапори, щоб пройти!
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.
       courseC_PlayLab_events5_authored_hint:
         courseC_PlayLab_events5_b: Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!
@@ -1671,6 +1908,8 @@ uk:
         courseF_maze_ramp7_b: Не забудьте скористатися кнопкою "Крок", щоб пройти через блок по блоках і шукати помилки.
         courseF_maze_ramp7_c: Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще.
       coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!
+      coursea_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_b: Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.

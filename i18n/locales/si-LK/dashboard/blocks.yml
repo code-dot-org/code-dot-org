@@ -300,10 +300,16 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
+          CONDITION:
+            '"when"': විට
+            '"while"': while
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
       binary_move:
         options:
           DIR:

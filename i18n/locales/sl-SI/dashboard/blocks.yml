@@ -374,12 +374,16 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       binary_move:
         options:
           DIR:

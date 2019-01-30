@@ -4181,3 +4181,153 @@ it:
               name: 'Progetto di fine corso: Laboratorio'
         gamelab:
           title: Sviluppo Giochi
+        coursea-2019:
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description_short: Un'introduzione all'informatica per bambini che non leggono
+            ancora.
+          description_audience: 'Età: da 4 a 7 anni'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: Correzione Errori (Debugging)
+              description_teacher: 'Questa lezione guiderà gli studenti attraverso
+                le fasi di ricerca degli errori (debugging).  Gli studenti impareranno
+                il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
+                cosa ti suggerisce?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi della Vita Reale: Piantare un Seme'
+              description_teacher: In questa lezione, gli studenti metteranno in relazione
+                il concetto di algoritmo con le attività di ogni giorno, nella vita
+                reale, piantando un vero seme. L'obiettivo è quello di iniziare a
+                costruire le competenze per tradurre le situazioni del mondo reale
+                in algoritmi e viceversa.
+            'Programming: Happy Maps':
+              name: 'Programmazione: Mappe Felici'
+              description_teacher: Il passaggio da algoritmo a programmazione può
+                essere più immediato se gli studenti capiscono la differenza tra pianificare
+                una sequenza e codificare tale sequenza in un linguaggio opportuno.
+                Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
+                e scrivendo del codice costituito da semplici simboli.
+            Programming in Maze:
+              name: Programmazione nel Labirinto
+              description_teacher: In questa serie di esercizi online, gli studenti
+                svilupperanno la comprensione degli algoritmi, la correzione degli
+                errori (debugging) e i primi principi generali dell'informatica. Utilizzando
+                i personaggi del gioco Angry Birds, gli studenti svilupperanno algoritmi
+                sequenziali per far arrivare l'uccellino fino al maialino senza sbattere
+                contro i muri o esplodere sulla dinamite (TNT). Alcuni esercizi di
+                ricerca degli errori sono stati mescolati in questa lezione per far
+                pratica con la risoluzione dei problemi (problem solving) e nello
+                sviluppo del pensiero critico (critical thinking).
+            Going Places Safely:
+              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              description_teacher: In collaborazione con Common-Sense-Media, questa
+                lezione aiuta gli studenti a imparare che molti siti Web richiedono
+                informazioni private e spiega come gestire responsabilmente tali richieste.
+                Gli studenti scoprono anche che possono raggiungere luoghi interessanti
+                online, ma devono seguire alcune regole per essere al sicuro.
+            'Loops: Happy Loops':
+              name: 'Cicli: Cicli Felici'
+              description_teacher: I cicli sono uno strumento molto utile e potente
+                nella programmazione. Per capire quanto utili possono essere, gli
+                studenti dovranno essere condotti a desiderare un modo più semplice
+                per risolvere problemi banali.
+            Loops in Harvester:
+              name: Cicli con la Contadina
+            Loops in Collector:
+              name: Cicli con la Collezionista
+              description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
+                in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
+                cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
+            Loops in Artist:
+              name: Cicli con l'Artista
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
+            'Events: The Big Event':
+              name: Eventi
+              description_teacher: Gli eventi sono un ottimo strumento per aggiungere
+                variazioni ad un algoritmo già scritto. A volte si desidera che il
+                proprio programma risponda all'utente esattamente quando l'utente
+                ne ha bisogno. Gli eventi servono proprio a questo.
+            Events in Play Lab:
+              name: 'Laboratorio: Eventi'
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
+            Ocean Scene with Loops:
+              name: Al mare con i Cicli
+        courseb-2019:
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description_short: Introduzione all'informatica per alunni che devono imparare
+            a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
+          description_audience: Da 5 a 8 anni
+          stages:
+            Move It, Move It:
+              name: Muovilo, muovilo
+            Sequencing with Scrat:
+              name: Sequenze di istruzioni con Scrat
+            Your Digital Footprint:
+              name: La tua Impronta Digitale
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            Copyright and Creativity:
+              name: Diritti d'Autore e Creatività
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
+            Loops in Ice Age:
+              name: Cicli con l'Era Glaciale
+            Loops in Collector:
+              name: Cicli con la Collezionista
+            Loops in Artist:
+              name: Cicli con l'Artista
+            'Events: The Big Event':
+              name: Eventi
+            Events in Play Lab:
+              name: 'Laboratorio: Eventi'
+        pre-express-2019:
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: Correzione Errori (Debugging)
+            Move It, Move It:
+              name: Muovilo, muovilo
+            Sequencing with Scrat:
+              name: Sequenze di istruzioni con Scrat
+            Your Digital Footprint:
+              name: La tua Impronta Digitale
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            Copyright and Creativity:
+              name: Diritti d'Autore e Creatività
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
+            Loops in Ice Age:
+              name: Cicli con l'Era Glaciale
+            Loops in Collector:
+              name: Cicli con la Collezionista
+            Loops in Artist:
+              name: Cicli con l'Artista
+            'Events: The Big Event':
+              name: Eventi
+            Events in Play Lab:
+              name: 'Laboratorio: Eventi'
+            Spelling Bee:
+              name: Ape Sapiente
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: Correzione Errori (Debugging)
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi della Vita Reale: Piantare un Seme'
