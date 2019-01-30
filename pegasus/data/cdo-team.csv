@@ -63,7 +63,6 @@ Mark Barrett,Product Designer,,"Mark designs delightful and intuitive user exper
 Mary Barnes,Data Analyst,,"Mary helps teams across Code.org make sense of how data informs the mission of the organization. She has previous experience creating teacher professional development programs at the University of Washington and as a museum educator. Embodying the ethos that ‘anybody can learn,’ she is currently studying Computer Science.",team 
 Megan Godwin,Director of People Ops,,"Megan manages administration, recruiting, hiring, onboarding, HR and employee development for the Code.org team. With a background in both startups and sales management, Megan is passionate about growing, supporting, and developing a successful team. ",team
 Megan Hochstatter,Program Manager,,"Megan is the K-5 Program Manager on the Education Team where she supports the CS Fundamentals facilitator community. A lifelong learner, and curious by nature, Megan is devoted to empowering educators and students today so that they can shape the future.",team
-Mehal Shah,Software Engineer,,"Mehal is a software engineer who enjoys building big systems that help people learn. In his spare time, he enjoys hiking, photography, and competitive puzzle solving.",team
 Mike Harvey,Curriculum Writer,https://www.linkedin.com/in/mikeharvey-cs/,"Before joining Code.org, Mike taught elementary and middle school computer science classes in a district outside of Portland, Maine. His students discovered an excitement for technology through lessons in robotics, game design, 3d printing, and physical computing. He also facilitated professional development for CS Fundamentals and CS Discoveries. At Code.org, Mike works with the education team to develop curriculum for elementary students.",team
 Min Yoo,Director of Marketing & Development,,"Min oversees marketing, communications, and fundraising at Code.org. A computer science major who has spent over 25 years in roles spanning product management, marketing, and business development, she is an ardent believer in the foundational nature of computer science and the need for equitable access.",team
 Nimisha Ghosh Roy,Outreach Program Manager,,"Nimisha is a project manager and educator with experience in teaching youth and adults in formal and informal environments, curriculum development with an equity lens, cross cultural communication and developing collaborative partnerships. She is a Seattle-native and is active in the local Indian dance/performing arts community.",team
@@ -183,6 +182,7 @@ Mary Pelfrey,,,Events Manager,extended_inactive
 Matt Bauer,,,Curriculum Writer,extended_active
 Matt Oshry,,,24/7 Inc.,extended_inactive
 Megan Sullivan,,,Curriculum Team Intern,extended_inactive
+Mehal Shah,,,Software Engineer,extended_inactive 
 Mei'Lani Eyre,,,Curriculum Team Intern,extended_inactive
 Melissa Glenn,,http://www.linkedin.com/in/melissadglenn,Executive Assistant,extended_inactive
 Melissa Jones,,https://www.linkedin.com/in/openclssrm,Community Development Manager,extended_inactive
@@ -333,4 +333,42 @@ Stephanie Zircher,Nextech,,"Committee Co-Chair <br/>
 Slack: @stephaniezircher",rpadvisory
 Emily Meyer,"Science City at Union Station
 ",,Slack: @EmpiricalEmily,rpadvisory
-,,,,summitdirectory
+Amanda Jelsema,West Virginia University,,Email: amanda.jelsema@mail.wvu.edu,rpsummit
+Amy Carrell Werst,"Center for STEM Education, The University of Texas at Austin",,Email: amy.werst@utexas.edu,rpsummit
+Angi Rowley,Illinois Math and Science Academy,,Email: arowley@imsa.edu,rpsummit
+Carol Yarbrough,A+ College Ready,,Email: carol@aplusala.org,rpsummit
+Catherine Anderson,McNeese State University,,Email: canderson@mcneese.edu,rpsummit
+Cheryl Lydon,Puget Sound Educational Service District,,Email: clydon@psesd.org,rpsummit
+Chris Thompson,"Georgia Tech Center for Education Integrating Science, Mathematics, and Computing",,Email: chris.thompson@ceismc.gatech.edu,rpsummit
+Dave Chun,Sacramento County Office of Education,,Email: dchun@scoe.net,rpsummit
+Dawn Guest-Johnson,Los Angeles Unified School District,,Email: dmg0923@lausd.net,rpsummit
+Denissa Andrade,STEMworks,,Email: denissa@medb.org,rpsummit
+Donna Kestek,George Fox University,,Email: dkestek@georgefox.edu,rpsummit
+Erin Paulsen,Utah STEM Action Center,,Email: erinpaulsen@utah.gov,rpsummit
+Heather Lageman,Maryland Codes,,Email: heather.lageman@gmail.com,rpsummit
+Hilary Dito,Contra Costa County Office of Education,,Email: hdito@cccoe.k12.ca.us,rpsummit
+Jason Judd,Educate Maine and Maine Mathematics and Science Alliance,,Email: jason@educatemaine.org,rpsummit
+Jenna Garcia,Nextech,,Email: jenna@nextech.org,rpsummit
+Jennifer Caprile,Idaho Digital Learning Academy,,Email: jennifer.caprile@idla.k12.id.us,rpsummit
+Jennifer Fribush,Vermont Computer Science Alliance,,Email: jfribush@neoti.org,rpsummit
+Jessie Barrett,University of Rhode Island,,Email: jwbarrett@uri.edu,rpsummit
+Justin Sewell,Silicon Valley Education Foundation,,Email: justin@svefoundation.org,rpsummit
+Kathy Surd,West Shore ESD,,Email: ksurd@wsesd.org,rpsummit
+Kelly Gaier Evans,Battelle Education,,Email: gaierk@battelle.org,rpsummit
+Kimberly Clark,Technology & Innovation in Education,,Email: kclark@tie.net,rpsummit
+Laura Nickerson,UNH STEM Teachers' Collaborative,,Email: laura.nickerson@unh.edu,rpsummit
+Manda Tong,STEMworks,,Email: manda.tong@medb.org,rpsummit
+Mark Archon,Fresno County Superintendent of Schools,,Email: marchon@fcoe.org,rpsummit
+Marlena Hebern,Fresno County Superintendent of Schools,,Email: mhebern@fcoe.org,rpsummit
+McKalyn Danner,Oklahoma Public School Resource Center (OPSRC),,Email: mckalyn.danner@opsrc.net,rpsummit
+Mike Leffin,Riverside County Office of Education,,Email: mleffin@rcoe.us,rpsummit
+Monique Rice,Kentucky Science and Technology Corporation,,Email: mrice@kstc.com,rpsummit
+Querube Della Cella Lyons,Lumity,,Email: qdellacella@lumity.org,rpsummit
+Sam Morris,The Friday Institute,,Email: srmorri3@ncsu.edu,rpsummit
+Samantha Dahlby,New Bohemian Innovation Collaborative,,Email: samantha@newbo.co,rpsummit
+Sara Frey,Delaware County Intermediate Unit,,Email: sfrey@dciu.org,rpsummit
+Shelly Hollis,Mississippi State University,,Email: shelly.hollis@rcu.msstate.edu,rpsummit
+Stephanie Zircher,Nextech,,Email: stephanie@nextech.org,rpsummit
+Susan Troutman,Rice University,,Email: troutman@rice.edu,rpsummit
+Tina Granato,mindSpark Learning,,Email: tina@mymindsparklearning.org,rpsummit
+Troy Suarez,Tampa Bay STEM Network,,Email: troy.suarez@sdhc.k12.fl.us,rpsummit
