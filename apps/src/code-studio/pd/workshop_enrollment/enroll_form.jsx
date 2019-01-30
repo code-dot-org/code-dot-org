@@ -5,12 +5,11 @@ import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
-import ButtonList from '../form_components/ButtonList.jsx';
+import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
-
 
 const OTHER = "Other";
 const NOT_TEACHING = "I'm not teaching this year";
