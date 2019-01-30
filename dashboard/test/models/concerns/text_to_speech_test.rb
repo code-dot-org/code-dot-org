@@ -102,4 +102,11 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal "This is contained\nThis is also contained\n", outer_level_with_multiple_contained_levels.tts_long_instructions_text
     assert_equal "Contained\nQuestion text\nanswer 1\nanswer 2\nanswer 3\n", outer_level_with_contained_multi_level.tts_long_instructions_text
   end
+
+  test 'tts_long_instructions displays instructions on markdown levels' do
+    markdown_level = create :level, name: 'level', type: 'Blockly', properties: {
+      markdown: "This is instructional text"
+    }
+    assert_equal "This is instructional text\n", markdown_level.tts_long_instructions_text
+  end
 end

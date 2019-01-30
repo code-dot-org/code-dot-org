@@ -184,7 +184,7 @@ module TextToSpeech
 
   def tts_long_instructions_text
     # Instructions in contained levels are used as TTS instead of the instructions of the containing level
-    tts_long_instructions_override || TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+    tts_long_instructions_override || TextToSpeech.sanitize(tts_for_contained_level || long_instructions || tts_for_markdown_levels || "")
   end
 
   def tts_for_contained_level
@@ -192,6 +192,10 @@ module TextToSpeech
 
     contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
     all_instructions.empty? ? nil : all_instructions * "\n"
+  end
+
+  def tts_for_markdown_levels
+    properties["markdown"].nil? ? nil : properties["markdown"]
   end
 
   def contained_level_text(contained)
