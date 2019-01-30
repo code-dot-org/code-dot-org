@@ -1,13 +1,16 @@
 require 'test_helper'
-require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
-  class WorkshopAutoenrolledApplicationTest < ActiveSupport::TestCase
+  class PdWorkshopHelperTest < ActionView::TestCase
+    include PdWorkshopHelper
+    include ActiveApplicationModels
+
     self.use_transactional_test_case = true
     setup_all do
       @workshop = create :pd_workshop
-      @application = create :pd_workshop_autoenrolled_application, pd_workshop_id: @workshop.id
-      @application_no_workshop = create :pd_workshop_autoenrolled_application, pd_workshop_id: nil
+      @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
+
+      @application_no_workshop = create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: nil
       @user = @application.user
     end
     setup do
@@ -38,7 +41,7 @@ module Pd::Application
 
     test 'registered_workshop? handles deleted workshops gracefully' do
       deleted_workshop = create :pd_workshop
-      application = create :pd_workshop_autoenrolled_application, pd_workshop_id: deleted_workshop.id
+      application = create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: deleted_workshop.id
       create :pd_enrollment, workshop: deleted_workshop, user: application.user
       deleted_workshop.destroy
       refute application.registered_workshop?
@@ -68,9 +71,9 @@ module Pd::Application
     end
 
     test 'workshop cache prefetch' do
-      # Workshops, Sessions, Enrollments,
+      # Workshops, Sessions, Enrollments
       assert_queries 3 do
-        WorkshopAutoenrolledApplication.prefetch_associated_models([@application])
+        TEACHER_APPLICATION_CLASS.prefetch_workshops([@application.pd_workshop_id])
       end
 
       assert_queries 0 do
@@ -79,7 +82,7 @@ module Pd::Application
     end
 
     test 'cache expires in 30 seconds' do
-      WorkshopAutoenrolledApplication.prefetch_associated_models([@application])
+      TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
 
       Timecop.travel(30.seconds) do
         assert_queries 3 do
@@ -91,12 +94,12 @@ module Pd::Application
     test 'prefetch scales without additional queries' do
       workshops = create_list :pd_workshop, 10
       applications = 10.times.map do |i|
-        create :pd_workshop_autoenrolled_application, pd_workshop_id: workshops[i].id
+        create FACILITATOR_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
       end
 
       # 10 applications, still only 3 queries
       assert_queries 3 do
-        WorkshopAutoenrolledApplication.prefetch_associated_models(applications)
+        FACILITATOR_APPLICATION_CLASS.prefetch_associated_models(applications)
       end
 
       assert_queries 0 do
