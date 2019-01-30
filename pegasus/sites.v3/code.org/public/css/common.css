@@ -471,16 +471,19 @@ button {
   margin: 15px 0 0 20px;
 }
 
-/* Stats carousel */
-#stats-carousel {
+/* Stats carousels */
+#stats-carousel,
+#stats-impact-carousel{
   width: 100%;
   margin: 0;
   position: relative;
   background: #fff;
 }
-#stats-carousel .slides {
+#stats-carousel .slides,
+#stats-impact-carousel .slides {
 }
-#stats-carousel .slide {
+#stats-carousel .slide,
+#stats-impact-carousel .slide {
   display: block;
   position: relative;
   float: left;
@@ -488,29 +491,37 @@ button {
   margin: 0;
   padding: 0 60px 10px 60px;
 }
-#stats-carousel .slide-img {
+#stats-carousel .slide-img,
+#stats-impact-carousel .slide-img {
   width: 100%;
 }
-#stats-carousel .slide img {
+#stats-carousel .slide img,
+#stats-impact-carousel .slide img {
   width: 100%;
   height: 100%;
   display: block;
 }
 #stats-carousel .slide-prev,
-#stats-carousel .slide-next {
+#stats-carousel .slide-next,
+#stats-impact-carousel .slide-prev,
+#stats-impact-carousel .slide-next{
   position: absolute;
   top: 0;
   width: 40px;
   height: 100%;
   background-color: #f7f7f7;
 }
-#stats-carousel .slide-prev {
+#stats-carousel .slide-prev,
+#stats-impact-carousel .slide-prev,{
   left: 0;
 }
-#stats-carousel .slide-next {
+#stats-carousel .slide-next,
+#stats-impact-carousel .slide-next{
   right: 0;
 }
-#stats-carousel-wrapper .pagination {
+
+#stats-carousel-wrapper .pagination,
+#stats-impact-carousel-wrapper .pagination {
   display: block;
   text-align: center;
   margin: 10px 0 0 0;
