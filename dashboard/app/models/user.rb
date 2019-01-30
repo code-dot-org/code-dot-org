@@ -296,6 +296,18 @@ class User < ActiveRecord::Base
     student? || deduplicate_school_info(school_info_attr, self)
   end
 
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
+  # a user's current school information.
+  # overwrites if:
+  # new school info object has a NCES school ID associated with it
+  # old school info object doesn't have a NCES school ID associated with it
+  # @param new_school_info a school_info object to compare to the user current school information.
+  def update_school_info(new_school_info)
+    if school_info.try(&:school).nil? || new_school_info.try(&:school)
+      update_column(:school_info_id, new_school_info.id)
+    end
+  end
+
   # Not deployed to everyone, so we don't require this for anybody, yet
   def school_info_optional?
     true # update if/when A/B test is done and accepted
