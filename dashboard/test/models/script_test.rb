@@ -475,11 +475,23 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if student has progress in script' do
-    script = create :script, name: 'my-script'
+    script = create :script, name: 'my-script', family_name: 'script-fam'
     student = create :student
     student.scripts << script
 
     assert script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student has progress in course script belongs to' do
+    course = create :course, family_name: 'script-fam'
+    script1 = create :script, name: 'script1', family_name: 'script-fam'
+    create :course_script, course: course, script: script1, position: 1
+    script2 = create :script, name: 'script2', family_name: 'script-fam'
+    create :course_script, course: course, script: script2, position: 2
+    student = create :student
+    student.scripts << script1
+
+    assert script2.can_view_version?(student)
   end
 
   test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
