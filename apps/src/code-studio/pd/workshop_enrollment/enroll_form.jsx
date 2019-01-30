@@ -10,7 +10,6 @@ import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
-import {WorkshopPropType} from './enrollmentConstants';
 
 
 const OTHER = "Other";
@@ -78,7 +77,7 @@ export default class EnrollForm extends React.Component {
     first_name: PropTypes.string,
     email: PropTypes.string,
     onSubmissionComplete: PropTypes.func,
-    workshop: WorkshopPropType
+    workshop_subject: PropTypes.string
   };
 
   constructor(props) {
@@ -151,7 +150,7 @@ export default class EnrollForm extends React.Component {
 
   csfCoursesPlanned() {
     if (!this.state.csf_courses_planned) {
-      return null;
+      return undefined;
     }
     const processedCourses = [];
     this.state.csf_courses_planned.forEach((g) => {
@@ -381,7 +380,7 @@ export default class EnrollForm extends React.Component {
             />
           </FormGroup>
         }
-        {this.props.workshop.course === CSF && this.props.workshop.subject === DEEP_DIVE && <FormGroup>
+        {this.props.workshop_course === CSF && this.props.workshop_subject === DEEP_DIVE && <FormGroup>
           <QuestionsTable
             id="csf_course_experience"
             key="csf_course_experience"
@@ -464,10 +463,9 @@ export default class EnrollForm extends React.Component {
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role');
       requiredFields.push('grades_teaching');
-    }
-
-    if (this.props.workshop.subject === DEEP_DIVE) {
-      requiredFields.push('attended_csf_intro_workshop');
+      if (this.props.workshop_subject === DEEP_DIVE) {
+        requiredFields.push('attended_csf_intro_workshop');
+      }
     }
 
     const missingRequiredFields = requiredFields.filter(f => {
