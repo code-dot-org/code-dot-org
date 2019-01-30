@@ -11,7 +11,17 @@ export default storybook => {
         story: () => (
           <DiscountCodeInstructions
             discountCode="123abc"
-            expiration="2018-12-31T00:00:00.000Z"
+            expiration="2034-12-31T00:00:00.000Z"
+          />
+        )
+      },
+      {
+        name: 'Expired Discount',
+        description: 'Discount Code Instructions when code is expired',
+        story: () => (
+          <DiscountCodeInstructions
+            discountCode="123abc"
+            expiration="2017-12-31T00:00:00.000Z"
           />
         )
       }
