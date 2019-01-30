@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   inputBox: {
@@ -33,15 +32,13 @@ class ManageStudentNameCell extends Component {
 
   render() {
     const {id, sectionId, name, username, email, editedValue} = this.props;
-    const sectionUrlForStudent = pegasus(`/teacher-dashboard#/sections/${sectionId}/student/${id}`);
-
     return (
       <div>
         {!this.props.isEditing &&
           <div>
             <a
               style={tableLayoutStyles.link}
-              href={sectionUrlForStudent}
+              href={`/teacher-dashboard#/sections/${sectionId}/student/${id}`}
               target="_blank"
             >
               {name}

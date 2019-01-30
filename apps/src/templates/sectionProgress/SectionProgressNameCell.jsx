@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import {progressStyles} from "./multiGridConstants";
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class SectionProgressNameCell extends Component {
   static propTypes = {
@@ -12,12 +11,10 @@ export default class SectionProgressNameCell extends Component {
 
   render() {
     const {name, studentId, sectionId, scriptId} = this.props;
-    const sectionScriptUrlForStudent = pegasus(`/teacher-dashboard#/sections/${sectionId}/student/${studentId}/script/${scriptId}`);
-
     return (
       <div style={progressStyles.nameCell}>
         <a
-          href={sectionScriptUrlForStudent}
+          href={`/teacher-dashboard#/sections/${sectionId}/student/${studentId}/script/${scriptId}`}
           style={progressStyles.link}
         >
           {name}

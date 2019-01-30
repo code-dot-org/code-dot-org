@@ -8,15 +8,10 @@ import _ from 'lodash';
  * just return the relative url.
  * @param {string} relativeUrl - should start with a
  *   leading slash.
- * @param {boolean} includeOrigin - include request origin
- *   even if we are already on pegasus.
  */
-export function pegasus(relativeUrl, includeOrigin = false) {
+export function pegasus(relativeUrl) {
   if (window.dashboard && window.dashboard.CODE_ORG_URL) {
     return window.dashboard.CODE_ORG_URL + relativeUrl;
-  }
-  if (includeOrigin) {
-    return window.location.origin + relativeUrl;
   }
   return relativeUrl;
 }
@@ -29,15 +24,10 @@ export function pegasus(relativeUrl, includeOrigin = false) {
  * just return the relative url.
  * @param {string} relativeUrl - should start with a
  *   leading slash.
- * @param {boolean} includeOrigin - include request origin
- *   even if we are already on dashboard.
  */
-export function studio(relativeUrl, includeOrigin = false) {
+export function studio(relativeUrl) {
   if (window.pegasus && window.pegasus.STUDIO_URL) {
     return window.pegasus.STUDIO_URL + relativeUrl;
-  }
-  if (includeOrigin) {
-    return window.location.origin + relativeUrl;
   }
   return relativeUrl;
 }

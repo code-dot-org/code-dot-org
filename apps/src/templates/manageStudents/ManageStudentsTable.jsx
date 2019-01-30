@@ -112,6 +112,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string,
     // Provided by redux
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
@@ -556,6 +557,7 @@ class ManageStudentsTable extends Component {
           sectionId={sectionId}
           loginType={loginType}
           sectionCode={this.props.sectionCode}
+          studioUrlPrefix={this.props.studioUrlPrefix}
         />
       </div>
     );

@@ -38,6 +38,8 @@ function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
 
+  const studioUrlPrefix = scriptData.studiourlprefix;
+
   $.ajax({
     method: 'GET',
     url: dataUrl,
@@ -46,6 +48,7 @@ function renderSectionProjects(sectionId) {
     ReactDOM.render(
       <SectionProjectsList
         projectsData={projectsData}
+        studioUrlPrefix={studioUrlPrefix}
         showProjectThumbnails={true}
       />,
       element);
@@ -416,7 +419,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section));
+        $scope.section.$promise.then(section => renderSectionTable(section, scriptData.studiourlprefix));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',

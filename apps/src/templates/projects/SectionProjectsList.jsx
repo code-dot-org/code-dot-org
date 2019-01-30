@@ -19,6 +19,9 @@ const styles = {
 class SectionProjectsList extends Component {
   static propTypes = {
     projectsData: PropTypes.array.isRequired,
+    // The prefix for the code studio url in the current environment,
+    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+    studioUrlPrefix: PropTypes.string.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
   };
 
@@ -73,6 +76,7 @@ class SectionProjectsList extends Component {
         </div>
         <ProjectsList
           projectsData={filteredProjectsData}
+          studioUrlPrefix={this.props.studioUrlPrefix}
           showProjectThumbnails={this.props.showProjectThumbnails}
         />
       </div>
