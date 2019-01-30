@@ -1,6 +1,20 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
+
+const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    marginBottom: 10,
+  },
+  dropdown: {
+    marginLeft: 10,
+    marginBottom: 0,
+  },
+};
 
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
@@ -19,13 +33,16 @@ class SelectSectionDropdown extends React.Component {
     const {sections, selectedSectionId} = this.props;
 
     return (
-      <select onChange={this.onChange} value={selectedSectionId}>
-        {Object.keys(sections).map(id => (
-          <option key={id} value={id}>
-            {sections[id].name}
-          </option>
-        ))}
-      </select>
+      <div style={styles.container}>
+        <span>{i18n.switchSection()}</span>
+        <select onChange={this.onChange} value={selectedSectionId} style={styles.dropdown}>
+          {Object.keys(sections).map(id => (
+            <option key={id} value={id}>
+              {sections[id].name}
+            </option>
+          ))}
+        </select>
+      </div>
     );
   }
 }
