@@ -200,25 +200,6 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
-export const asyncSetSections = () => (dispatch) => {
-  dispatch({type: ASYNC_LOAD_BEGIN});
-
-  return new Promise((resolve, reject) => {
-    $.ajax({
-      method: 'GET',
-      url: '/dashboardapi/sections',
-      dataType: 'json'
-    }).success(sections => {
-      dispatch(setSections(sections));
-      dispatch({type: ASYNC_LOAD_END});
-      resolve();
-    }).fail(err => {
-      dispatch({type: ASYNC_LOAD_END});
-      reject(new Error(err.message));
-    });
-  });
-};
-
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
