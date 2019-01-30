@@ -78,6 +78,23 @@ class TextInputProperties extends React.Component {
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
+        <PropertyRow
+          desc={'border width (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderWidth, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
+        />
+        <ColorPickerPropertyRow
+          desc={'border color'}
+          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          handleChange={this.props.handleChange.bind(this, 'borderColor')}
+        />
+        <PropertyRow
+          desc={'border radius (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderRadius, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -168,11 +185,15 @@ export default {
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
+    elementUtils.setDefaultBorderStyles(element, true);
 
     return element;
   },
 
   onDeserialize: function (element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, true);
+
     $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running
