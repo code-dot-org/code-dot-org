@@ -402,12 +402,20 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': iba
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
       binary_move:
         options:
           DIR:

@@ -21,8 +21,7 @@ export default storybook => {
                 school_name: 'Hogwarts',
                 email: 'nurse@hogwarts.edu',
                 notified: 'Yes',
-                assigned_workshop: 'TeacherCon Chicago',
-                accepted_teachercon: 'Yes'
+                assigned_workshop: 'Chicago Summer Workshop 6/1'
               },
               {
                 id: 2,
@@ -32,8 +31,7 @@ export default storybook => {
                 school_name: 'Hogwarts',
                 email: 'short@hogwarts.edu',
                 notified: 'Yes',
-                assigned_workshop: 'TeacherCon Chicago',
-                accepted_teachercon: 'No'
+                assigned_workshop: 'Chicago Summer Workshop 6/1'
               }
             ]}
             viewType="teacher"
@@ -48,7 +46,7 @@ export default storybook => {
                 workshop_type: WorkshopTypes.local_summer
               },{
                 id: 2,
-                workshop_type: WorkshopTypes.teachercon
+                workshop_type: WorkshopTypes.local_summer
               }
             ]}
           />
@@ -97,7 +95,7 @@ export default storybook => {
                 workshop_type: WorkshopTypes.local_summer
               },{
                 id: 2,
-                workshop_type: WorkshopTypes.teachercon
+                workshop_type: WorkshopTypes.local_summer
               }
             ]}
           />

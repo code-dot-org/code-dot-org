@@ -302,9 +302,8 @@ module Api::V1::Pd
       ].join
     end
 
-    # TODO: remove remaining teachercon references
     def get_optional_columns(_regional_partner_value)
-      {accepted_teachercon: false, registered_workshop: false}
+      {registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})

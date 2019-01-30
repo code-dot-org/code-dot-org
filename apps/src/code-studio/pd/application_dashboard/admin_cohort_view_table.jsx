@@ -145,18 +145,6 @@ export default class AdminCohortViewTable extends React.Component {
           format: this.formatBoolean
         }
       }, {
-        property: 'teachercon_assigned_at_registration',
-        header: {
-          label: 'Teachercon Assigned at Registration',
-          transforms: [sortable]
-        }
-      }, {
-        property: 'accepted_teachercon',
-        header: {
-          label: 'Accepted Teachercon',
-          transforms: [sortable]
-        }
-      }, {
         property: 'assigned_fit',
         header: {
           label: 'Assigned FiT',

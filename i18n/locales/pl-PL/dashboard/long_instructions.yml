@@ -525,6 +525,12 @@ pl:
       Overworld Shear Sheep_2018: Czas strzyżenia owiec! Użyj polecenia `shear`, aby zebrać wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby zebrać wełnę z obu owiec.
       PS copy 2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\\r\n\\r\nZa każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1 nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\\r\n\\r\nBądź ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\\r\nMusisz sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if nectar`."
+      Ryan_Demo: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Testing Quantum Farmer: "Wow, popatrz! \\r \\r Nie wiem, ile szufelek śmieci potrzebuje ten otwór.  \\r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\" aż wypełni ten otwór do poziomu ziemi?  "
       beeDebugVideo1: Zbierz cały nektar.
       course1_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
@@ -558,6 +564,7 @@ pl:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś zupełnie inny)
       courseA_collector_loops_challenge1: '*"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_collector_loops_challenge1_2018: '*"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
+      courseA_collector_loops_challenge1_2019: '*"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_playlab_events_challenge1: |-
         *"Gdzie ukrywają się moi przyjaciele? W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!"*\r
         \r
@@ -576,22 +583,39 @@ pl:
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challenge1_2019: |-
+        *"Gdzie ukrywają się moi przyjaciele? W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!"*\r
+        \r
+        Klikając na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę postaci?\r
+        \r
+        W tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi pomogą Ci zrobić ten projekt krok po kroku!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
+      courseB_artist_loops6_2019: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_artist_loops_challenge2_2018: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
+      courseB_artist_loops_challenge2_2019: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_collector_prog3: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_maze_seq3: '*"Napraw kod, aby doprowadzić mnie do świnki!"*'
       courseB_maze_seq9_challenge1: "*Gdzie ukrywa się teraz świnia?*"
       courseB_playlab_events_challenge1: "Czas na Wielki Wyścig Zwierząt! Zrób aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\\r\n\\r\nKto będzie biegł szybciej?\\r\n"
       courseB_playlab_events_challenge1_2018: "Czas na Wielki Wyścig Zwierząt! Zrób aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\\r\n\\r\nKto będzie biegł szybciej?\\r\n"
+      courseB_playlab_events_challenge1_2019: "Czas na Wielki Wyścig Zwierząt! Zrób aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\\r\n\\r\nKto będzie biegł szybciej?\\r\n"
       courseB_playlab_events_challenge2: |-
         Zrób tak, aby zwierzęta po kliknięciu na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć do gry/\r
         Możesz również dodać dźwięk oraz punktację aby stworzyć grę Animal Tag!\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_playlab_events_challenge2_2018: |-
+        Zrób tak, aby zwierzęta po kliknięciu na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć do gry/\r
+        Możesz również dodać dźwięk oraz punktację aby stworzyć grę Animal Tag!\r
+        \r
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
         Zrób tak, aby zwierzęta po kliknięciu na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć do gry/\r
         Możesz również dodać dźwięk oraz punktację aby stworzyć grę Animal Tag!\r
         \r

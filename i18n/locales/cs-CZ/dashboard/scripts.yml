@@ -1587,3 +1587,27 @@ cs:
               name: 'Algoritmy ze života: Papírová letadla'
             Binary Bracelets:
               name: Binární náramky
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmy ze života: Zasadit semínko'
+            Going Places Safely:
+              name: Cestování bezpečně
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Pohyb, pohyb
+            Your Digital Footprint:
+              name: Tvé digitální stopy
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Pohyb, pohyb
+            Your Digital Footprint:
+              name: Tvé digitální stopy
+            Spelling Bee:
+              name: Hláskovací včelka
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmy ze života: Zasadit semínko'
