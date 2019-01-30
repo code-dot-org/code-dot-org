@@ -23,14 +23,6 @@ steps:
       from_secret: AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY:
       from_secret: AWS_SECRET_ACCESS_KEY
-    APPLITOOLS_KEY:
-      from_secret: APPLITOOLS_KEY
-    FIREBASE_NAME:
-      from_secret: FIREBASE_NAME
-    SAUCE_USERNAME:
-      from_secret: SAUCE_USERNAME
-    SAUCE_ACCESS_KEY:
-      from_secret: SAUCE_ACCESS_KEY
   commands:
     - pwd
     - whoami
@@ -56,6 +48,12 @@ name: ui
 
 clone:
   depth: 50
+
+services:
+- name: ui-tests-redis
+  image: redis
+  ports:
+  - 6379
 
 steps:
 - name: ui-tests

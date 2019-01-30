@@ -9,9 +9,6 @@ set -xe
 mispipe "echo 'Starting timestamp'" ts
 
 export CI=true
-export CIRCLECI=true
-export CIRCLE_TEST_REPORTS=/home/circleci/project/test_reports
-export CIRCLE_ARTIFACTS=/home/circleci/project/artifacts
 export RAILS_ENV=test
 export RACK_ENV=test
 export DISABLE_SPRING=1
