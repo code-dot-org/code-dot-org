@@ -426,7 +426,7 @@ module Pd::Application
       assert application.auto_assigned_fit_enrollment_id
     end
 
-    test 'enroll_user deletes previous enrollment' do
+    test 'enroll_user for a different workshop deletes previous enrollment' do
       original_fit_workshop = create :pd_workshop, :fit
       new_fit_workshop = create :pd_workshop, :fit
       application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
