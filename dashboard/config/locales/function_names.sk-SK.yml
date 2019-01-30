@@ -225,6 +225,7 @@ sk:
       draw line of triangles: nakresli rad trojuholníkov
       draw a window: nakresli okno
       stop_everything: zastav_všetko
+      lose: prehrať
       draw a plane of squares: nakresli rovinu so štvorcami
       draw hexagon: nakresli šesťuholník
       draw line of hexagons: nakresli rad šesťuholníkov

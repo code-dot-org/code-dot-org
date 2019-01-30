@@ -2975,6 +2975,12 @@
         mc_3_b: 'Dersom du trenger å forandre på hvilken vei du står, bruk en ''snu''-blokk.'
       Quantum Bee - Ryan_authored_hint:
         test_hint: Dette er et test hint.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          ** Hvordan runder jeg dette nivået? **
+          * Danseren må bytte til en ny posisjon etter 4 takter.
+
+          * Nivået ender etter 7 takter.*
       Underground If Statements_authored_hint:
         mc_12_a: Du finner redstone i blokkene med røde merker på.
       Underground If Statements_2018_authored_hint:
@@ -2993,6 +2999,8 @@
       aE4_authored_hint:
         aE4_b: "Ikke glem å flytte tegneren ned før du begynner med en ny rad!\n\nFor å flytte tegneren ned og få ham til å se mot høyre igjen:\n- Snu 90 grader (for å få tegneren til å se nedover).\n- Hopp 20 piksler (for å komme til ny rad).\n- Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen)."
         aE4_d: Dersom koden din blir altfor forvirrende, kan du alltid klikke "Start på nytt" og prøve igjen!
+      allthethings_ttscsf contained_authored_hint:
+        courseE_farmer_ramp12a: Gå gjerne tilbake til den forrige oppgave hvis du trenger en påminnelse om hvordan man skal plukke vekster bare hvis det finnes noe å plukke.
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Sitter du fast? Prøv å kjøre koden for å se hvilken blokk som ikke stemmer.
       artistLoopsKB_authored_hint:
@@ -3038,6 +3046,9 @@
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Hvis noe går galt kan du forsøke å endre tallene i hver løkke.
         courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang.
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: Hvis noe går galt kan du forsøke å endre tallene i hver løkke.
+        courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang.
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_a: Du kan flytte tilbake over veien enda en gang før du går sydover.
       courseA_maze_ramp2_2018_authored_hint:
@@ -3056,9 +3067,44 @@
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3096,7 +3142,45 @@
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -3131,7 +3215,29 @@
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -3139,11 +3245,18 @@
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -3162,7 +3275,42 @@
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3200,7 +3348,45 @@
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -3235,6 +3421,22 @@
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2_authored_hint:
         courseB_collector_loops_challenge2_a: Hvis noe går galt, ikke vær redd for å starte på nytt. Ikke gi opp!
       courseB_collector_loops_challenge2_2018_authored_hint:
@@ -3248,9 +3450,13 @@
         courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
+      courseB_maze_seq1_2019_authored_hint:
+        courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Det er to måter å løse denne oppgaven!
       courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_b: Det er to måter å løse denne oppgaven!
+      courseB_maze_seq8_2019_authored_hint:
         courseB_maze_seq8_b: Det er to måter å løse denne oppgaven!
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken, vil jeg tegne en linje."*'

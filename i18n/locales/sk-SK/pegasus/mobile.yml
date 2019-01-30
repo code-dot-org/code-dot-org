@@ -925,6 +925,7 @@
   coursee-2017_name: Kurz E (2017)
   coursef-2017_name: Kurz F (2017)
   coursea-2018_name: Kurz A (2018)
+  coursec-2018_name: Kurz C (2018)
   coursed-2018_name: Kurz D (2018)
   accelerated_name: "Zrýchlený kurz"
   express_name: "Zrýchlený kurz"
@@ -1156,16 +1157,19 @@
   course4_shortdescription_congrats: "Ste pripravení ísť ďalej? Študenti preniknú hlbšie do témy programovania predstavenej v predchádzajúcich kurzoch s cieľom nájsť flexibilné riešenie zložitejších problémov. Do konca tohto kurzu študenti vytvoria interaktívne príbehy a hry, ktoré môžu zdieľať s kýmkoľvek. Doporučené pre druhý stupeň ZŠ."
   coursea_shortdescription_congrats: "Predstavenie informatiky pre predškolákov."
   courseb_shortdescription_congrats: "Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)"
+  coursec_shortdescription_congrats: "Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry."
   coursed_shortdescription_congrats: "Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami."
   coursee_shortdescription_congrats: "Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami."
   coursef_shortdescription_congrats: "Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru."
   coursea-2017_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  coursec-2017_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
   coursed-2017_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
   coursee-2017_shortdescription_congrats: Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami.
   coursef-2017_shortdescription_congrats: Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru.
   coursea-2018_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
   courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  coursec-2018_shortdescription_congrats: Nauč sa základy informatiky a vytvor si vlastné umenie, príbehy a hry.
   coursed-2018_shortdescription_congrats: Rýchlo pokryte pojmy z kurzu C, potom pokračujte ďalej s algoritmami, vnorenými cyklami, podmienkami a ďalšími konceptami.
   coursee-2018_shortdescription_congrats: Rýchlo pokryjeme koncepty z kurzov C & D a budeme pokračovať s funkciami.
   coursef-2018_shortdescription_congrats: Nauč sa všetky koncepty v kurze Základy informatiky a vytvor vlastné umelecké diela, príbeh alebo hru.

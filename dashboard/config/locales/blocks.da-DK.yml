@@ -480,12 +480,16 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
+          CONDITION:
+            '"when"': når
+            '"while"': mens
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': mens
       binary_move:
         options:
           DIR:

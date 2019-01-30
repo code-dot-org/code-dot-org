@@ -416,6 +416,8 @@ ru:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
           свой цветок. Вам вовсе не нужно проверять для этого соты.
+      Ryan_Demo_callout:
+        dance_callout_02: Добавьте этот блок в вашу программу!
       SG U3L08 how to add comments_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       SGU3L2A Introducing Subgoals_callout:
@@ -491,10 +493,16 @@ ru:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
           использовать в этой задаче.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
+          использовать в этой задаче.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Это число означает, что только один вид блоков может
           быть использован в итоговом ответе.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Это число означает, что только один вид блоков может
+          быть использован в итоговом ответе.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Это число означает, что только один вид блоков может
           быть использован в итоговом ответе.
       courseA_artist_loops7_forVideo_callout:
@@ -506,10 +514,16 @@ ru:
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
           можете использовать в этой задаче.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
+          можете использовать в этой задаче.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
           можете использовать в этой задаче.
       courseA_collector_preLoops2_callout:
@@ -539,10 +553,16 @@ ru:
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: После соединения всех блоков нажми "Выполнить",
           чтобы запустить свою программу.
+      courseB_Scrat_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: После соединения всех блоков нажми "Выполнить",
+          чтобы запустить свою программу.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
       courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
+      courseB_collector_loops1_2019_callout:
         courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
       courseC_collector_prog1_callout:
