@@ -843,6 +843,8 @@ en:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      Ryan_Demo_callout:
+        dance_callout_02: Add this block to your program!
       SG Add Subgoals practice_callout: {}
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -975,9 +977,13 @@ en:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
@@ -985,13 +991,19 @@ en:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: {}
       courseA_collector_preLoops1_callout:
@@ -1009,21 +1021,29 @@ en:
       courseA_forVideoTest_artist_callout: {}
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3a_2019_callout: {}
       courseA_maze_ramp3b_2018_callout: {}
+      courseA_maze_ramp3b_2019_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseA_maze_ramp4a_2018_callout: {}
+      courseA_maze_ramp4a_2019_callout: {}
       courseA_maze_ramp5_2018_callout: {}
       courseA_maze_ramp5a_2018_callout: {}
+      courseA_maze_ramp5a_2019_callout: {}
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
@@ -1036,42 +1056,64 @@ en:
       courseA_maze_seq4a_callout: {}
       courseA_playLab_events2_callout: {}
       courseA_playLab_events2_2018_callout: {}
+      courseA_playLab_events2_2019_callout: {}
       courseA_playLab_events3_callout: {}
       courseA_playLab_events3_2018_callout: {}
+      courseA_playLab_events3_2019_callout: {}
       courseA_playLab_events4_callout:
         courseA_playlab_events4_callout1: This is a callout
       courseA_playLab_events4_2018_callout:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2019_callout:
         courseA_playlab_events4_callout1: This is a callout
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events5_2018_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+      courseA_playLab_events5_2019_callout:
+        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseB_Scrat_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseB_Scrat_ramp2_2018_callout: {}
+      courseB_Scrat_ramp2_2019_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3a_2019_callout: {}
       courseB_Scrat_ramp3b_2018_callout: {}
+      courseB_Scrat_ramp3b_2019_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
+      courseB_Scrat_ramp4a_2019_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
+      courseB_Scrat_ramp5a_2019_callout: {}
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops3_2018_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops3_2019_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
       courseB_artist_loops5_2018_callout: {}
+      courseB_artist_loops5_2019_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
@@ -1083,9 +1125,12 @@ en:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
       courseB_maze_seq7_callout: {}
       courseB_maze_seq7_2018_callout: {}
+      courseB_maze_seq7_2019_callout: {}
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
@@ -1389,6 +1434,8 @@ en:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_aboutme_4_callout:
+        courseE_aboutme_4_callout_1: Press here to draw a sprite!
       courseE_artist_concept_challenge2_callout: {}
       courseE_artist_concept_challenge2_2018_callout: {}
       courseE_artist_concept_challenge2_2019_callout: {}
@@ -1843,6 +1890,8 @@ en:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
