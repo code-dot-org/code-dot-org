@@ -58,7 +58,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2019, 2, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2019, 4, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
