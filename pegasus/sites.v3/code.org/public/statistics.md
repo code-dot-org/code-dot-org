@@ -40,11 +40,11 @@ Two-thirds of computing jobs are outside the tech sector, which is why we need t
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1073278358870507520" target="_blank"><img src="/images/statistics/fit-250/experienced-teachers.png"></a>
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
 
 <br>
 
-It's never too late to start teaching CS!
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science. 
 
 </div>
 
@@ -178,6 +178,16 @@ We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computi
 <br>
 
 Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
+
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1073278358870507520" target="_blank"><img src="/images/statistics/fit-250/experienced-teachers.png"></a>
+
+<br>
+
+It's never too late to start teaching CS!
 
 </div>
 

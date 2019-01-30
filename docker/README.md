@@ -21,19 +21,18 @@ Run all docker-compose commands from this directory.
 
 ## One-time setup
 
-1. This recreates most of the SETUP.md instructions, and will probably take a long time:
+1. Add these lines to your .bashrc or .bash_profile to set the FIXUID and FIXGID env variables automatically. Then `source` your .bashrc/.bash_profile.
+    ```
+    export FIXUID=$(id -u)
+    export FIXGID=$(id -g)
+    ```
+2. This recreates most of the SETUP.md instructions, and will probably take a long time:
 
     ```
     docker-compose -f setup-compose.yml up
     ```
 
-2. Setup your locals.yml file as normal, minus the fields for Google OAuth.
-
-3. Add these lines to your .bashrc or .bash_profile to set the FIXUID and FIXGID env variables automatically:
-    ```
-    export FIXUID=$(id -u)
-    export FIXGID=$(id -g)
-    ```
+3. Setup your locals.yml file as normal, minus the fields for Google OAuth.
 
 ## Usage
 

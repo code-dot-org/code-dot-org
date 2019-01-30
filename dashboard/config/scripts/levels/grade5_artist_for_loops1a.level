@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!",
+    "short_instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!",
     "x": "175",
     "y": "225",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!\r\n\r\n",
+    "long_instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

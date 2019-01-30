@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Write the turnAround() function and use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif",
+    "short_instructions": "Write the turnAround() function and use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

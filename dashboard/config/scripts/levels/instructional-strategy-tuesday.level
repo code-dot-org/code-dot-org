@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 2: Instructional Strategies\r\n\r\nName two Instructional Strategies (from the Curriculum Guide) you saw modeled in the 5 Model Lesson or TLOs you’ve seen in the past couple of days?\r\n\r\n* When were they successful?\r\n* What were characteristics of situations where there was room for improvement?\r\n",
+    "long_instructions": "# Day 2: Instructional Strategies\r\n\r\nName two Instructional Strategies (from the Curriculum Guide) you saw modeled in the 5 Model Lesson or TLOs you’ve seen in the past couple of days?\r\n\r\n* When were they successful?\r\n* What were characteristics of situations where there was room for improvement?\r\n",
     "parent_level_id": 14285
   },
   "published": true,

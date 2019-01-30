@@ -25,8 +25,8 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "That’s it!  Now we’re ready to try to solve a few puzzles. ",
-    "markdown_instructions": "That’s it!  Now we’re ready to try to solve a few puzzles.",
+    "short_instructions": "That’s it!  Now we’re ready to try to solve a few puzzles. ",
+    "long_instructions": "That’s it!  Now we’re ready to try to solve a few puzzles.",
     "ideal": "4",
     "contained_level_names": null
   },

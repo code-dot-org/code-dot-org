@@ -40,8 +40,8 @@
     "disable_sharing": "false",
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/d4bab7c700b8bd0126475e5c528a90fd=levelbuilder/34782.png",
-    "instructions": "Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. ",
-    "markdown_instructions": "Kiki the Soccer Girl wants to make sure her friends are loved on Valentine's Day! Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. \r\n\r\n---\r\nClick \"Run\" and play the game to find out how many friends she has to send love to in order to win!",
+    "short_instructions": "Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. ",
+    "long_instructions": "Kiki the Soccer Girl wants to make sure her friends are loved on Valentine's Day! Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. \r\n\r\n---\r\nClick \"Run\" and play the game to find out how many friends she has to send love to in order to win!",
     "soft_buttons": [
       "leftButton",
       "rightButton"

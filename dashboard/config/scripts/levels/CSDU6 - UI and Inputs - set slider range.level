@@ -75,7 +75,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 color slider template",
-    "markdown_instructions": "# Set Slider Range\r\n\r\nSliders represent a range of numbers. In order to set that range you need to set the minimum value and maximum value for each slider. Do you remember what the range of values is you can give for each value in a RGB color?",
+    "long_instructions": "# Set Slider Range\r\n\r\nSliders represent a range of numbers. In order to set that range you need to set the minimum value and maximum value for each slider. Do you remember what the range of values is you can give for each value in a RGB color?",
     "contained_level_names": null
   },
   "published": true,

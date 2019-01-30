@@ -1801,3 +1801,27 @@ hu:
               name: 'Hétköznapi algoritmusok: Papírrepülők'
             Binary Bracelets:
               name: Bináris karkötők
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Valós algoritmusok: Ültess el egy magot!'
+            Going Places Safely:
+              name: Biztonságos utazás
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Mozgás, mozgás
+            Your Digital Footprint:
+              name: A digitális lábnyomod
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Mozgás, mozgás
+            Your Digital Footprint:
+              name: A digitális lábnyomod
+            Spelling Bee:
+              name: Betüző méh
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Valós algoritmusok: Ültess el egy magot!'

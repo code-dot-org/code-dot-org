@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "This is a test Infinity level.",
+    "short_instructions": "This is a test Infinity level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

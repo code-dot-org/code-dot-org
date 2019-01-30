@@ -128,7 +128,7 @@
     "edit_code": true,
     "encrypted_examples": "G87Ov+q2DpOvJcidB8/EgAIy0HsTmZac3DeRHyVz6+o5rorQJyIUjMni1csq\nSW4w\n",
     "embed": "false",
-    "markdown_instructions": "Code a solution to the highway lines problem.  Your solution should use functions to reduce clutter and improve readability of your solution.\r\n\r\n![](https://images.code.org/23a714face9925e1eb8dfe3c133eb22d-image-1441815998620.png)",
+    "long_instructions": "Code a solution to the highway lines problem.  Your solution should use functions to reduce clutter and improve readability of your solution.\r\n\r\n![](https://images.code.org/23a714face9925e1eb8dfe3c133eb22d-image-1441815998620.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

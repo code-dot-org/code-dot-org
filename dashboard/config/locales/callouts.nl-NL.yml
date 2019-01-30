@@ -350,6 +350,8 @@ nl:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
+      Ryan_Demo_callout:
+        dance_callout_02: Voeg dit blok toe aan je programma!
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan
           en uit te voeren
@@ -396,10 +398,15 @@ nl:
         courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Dit is een toelichting
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
           te veranderen.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
+          te veranderen.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
           te veranderen.
       courseB_maze_seq3_callout:

@@ -478,6 +478,12 @@ bs:
       Play Lab Rocket 3: Odlično. Možeš li sada ažurirati tu funkciju tako da se naša
         raketa kreće brzo? Pobrini se da su izjave svrhe, primjeri, i definicija funkcije
         ažurirani da bi se raketa lansirala pri 40 metara u sekundi.
+      Ryan_Demo: |-
+        Hajde da pokrenemo ovog losa!
+
+        Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
+
+        **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
       Testing Quantum Farmer: 'Wow, pronašao sam stvarno duboku rupu! Ne znam koliko
         će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava
         sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti "dok" petlju ovaj

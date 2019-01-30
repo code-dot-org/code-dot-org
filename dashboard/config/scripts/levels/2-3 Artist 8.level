@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall. There are many different ways to solve this puzzle, so have some fun!",
+    "short_instructions": "Complete the rooms for each of the animals by splitting the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide and 100 pixels tall. There are many different ways to solve this puzzle, so have some fun!",
     "x": "100",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\nThere are many different ways to solve this puzzle.",
+    "long_instructions": "Time to build a barn!\r\n\r\nMake the rooms for each animal by splitting the barn into 2 equal-sized squares. \r\n\r\nHint: The rectangle is 200 pixels wide and 100 pixels tall.\r\n\r\nThere are many different ways to solve this puzzle.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

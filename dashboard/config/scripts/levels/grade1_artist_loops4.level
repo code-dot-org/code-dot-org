@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Time to fix the stairs!  Repeat this pattern five times so the artist can reach the top of the bushes.",
+    "short_instructions": "Time to fix the stairs!  Repeat this pattern five times so the artist can reach the top of the bushes.",
     "x": "75",
     "y": "325",
     "start_direction": "90",

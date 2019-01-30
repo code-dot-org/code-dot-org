@@ -4979,3 +4979,27 @@ id:
               name: Gelang biner
         gamelab:
           title: Laboratorium Game
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+            Going Places Safely:
+              name: Pergi ke tempat-tempat dengan aman
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Gerakkan itu, Gerakkan itu
+            Your Digital Footprint:
+              name: Digital Footprint Kamu
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Gerakkan itu, Gerakkan itu
+            Your Digital Footprint:
+              name: Digital Footprint Kamu
+            Spelling Bee:
+              name: Spelling Bee
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'

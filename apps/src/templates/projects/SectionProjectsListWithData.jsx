@@ -4,7 +4,7 @@ import SectionProjectsList from './SectionProjectsList';
 
 class SectionProjectsListWithData extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
+    sectionId: PropTypes.number,
     studioUrlPrefix: PropTypes.string
   };
 

@@ -8,7 +8,7 @@
     "video_key": "C1_maze_debugging",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions": "Here's how to use the \"Step\" button."
+    "short_instructions": "Here's how to use the \"Step\" button."
   },
   "published": true,
   "notes": "",

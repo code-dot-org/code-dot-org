@@ -209,6 +209,8 @@ fi:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
+      Ryan_Demo_callout:
+        dance_callout_02: Lisää tämä blokki ohjelmaasi!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö
           etenemiskomennon?

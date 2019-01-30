@@ -376,32 +376,60 @@ ga:
         a bhailiú!
       courseA_harvester_loops10: Cabhraigh leis an mbuainteoir na cúig dhias arbhair
         a bhailiú!
+      courseA_harvester_loops10_2019: Cabhraigh leis an mbuainteoir na cúig dhias
+        arbhair a bhailiú!
       courseA_harvester_loops11: 'Bain triail as ceann amháin eile as do stuaim féin! '
+      courseA_harvester_loops11_2019: 'Bain triail as ceann amháin eile as do stuaim
+        féin! '
+      courseA_harvester_loops1_2019: Cabhraigh leis an mbuainteoir an t-arbhar go
+        léir a bhailiú!
       courseA_harvester_loops3: An féidir leat an t-arbhar go léir a bhaint gan ach
         **bloc amháin** `téigh ar aghaidh` a úsáid?
+      courseA_harvester_loops3_2019: An féidir leat an t-arbhar go léir a bhaint gan
+        ach **bloc amháin** `téigh ar aghaidh` a úsáid?
       courseA_harvester_loops7: 'Bain triail as! '
+      courseA_harvester_loops7_2019: 'Bain triail as! '
       courseA_harvester_seq11: Déan é as do stuaim féin! Bailigh an t-arbhar go léir.
+      courseA_harvester_seq11_2019: Déan é as do stuaim féin! Bailigh an t-arbhar
+        go léir.
       courseA_harvester_seq6: Bain triail as!
+      courseA_harvester_seq6_2019: Bain triail as!
       courseA_harvester_seq9: Cuir dhá bhloc leis chun an dúshlán a chríochnú!
+      courseA_harvester_seq9_2019: Cuir dhá bhloc leis chun an dúshlán a chríochnú!
       courseA_maze_seq5_2018: Bain triail as.
+      courseA_maze_seq5_2019: Bain triail as.
       courseA_maze_seq6_2018: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
         leis an éan an mhuc a shroicheadh!
+      courseA_maze_seq6_2019: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
+        leis an éan an mhuc a shroicheadh!
       courseA_maze_seq8_2018: Réitigh an dúshlán seo agus cabhraigh leis an éan an
+        mhuc a shroicheadh!
+      courseA_maze_seq8_2019: Réitigh an dúshlán seo agus cabhraigh leis an éan an
         mhuc a shroicheadh!
       courseB_artist_loops7: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis thart."
       courseB_artist_loops7_2018: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis
         thart."
+      courseB_artist_loops7_2019: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis
+        thart."
       courseB_iceage_loops10: Cabhraigh le Scrat an dearcán a fháil!
+      courseB_iceage_loops10_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops11: Cabhraigh le Scrat an dearcán a fháil!
+      courseB_iceage_loops11_2019: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops11_forVideo: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops12: Faigh an dearcán cibé slí is féidir leat!
+      courseB_iceage_loops12_2019: Faigh an dearcán cibé slí is féidir leat!
       courseB_iceage_loops5: An féidir leat lúb amháin eile a chur leis an gcód chun
         an dearcán a fháil?
       courseB_iceage_loops6: An féidir leat lúb a chur leis an gcód chun an dearcán
         a fháil?
+      courseB_iceage_loops6_2019: An féidir leat lúb a chur leis an gcód chun an dearcán
+        a fháil?
       courseB_iceage_loops8: 'An féidir leat an cód seo a dheisiú? '
+      courseB_iceage_loops8_2019: 'An féidir leat an cód seo a dheisiú? '
       courseB_iceage_loops9: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat lúba
         a úsáid chun cabhrú le Scrat é a fháil?
+      courseB_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
+        lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseB_maze_seq3: '*"Deisigh an cód agus treoraigh go dtí an mhuc mé!"*'
       courseB_maze_seq9_challenge1: "*Cá bhfuil an mhuc sin ina folach anois?*"
       courseC_artist_prog_challenge2: "*Cabhraigh liom na línte buí a phéinteáil ar

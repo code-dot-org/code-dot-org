@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Give the ghost eyes, using the \"draw a circle\" function.",
+    "short_instructions": "Give the ghost eyes, using the \"draw a circle\" function.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Give the ghost eyes, using the `draw a circle` function.\r\n\r\n",
+    "long_instructions": "Give the ghost eyes, using the `draw a circle` function.\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "step_speed": "-5"

@@ -19,13 +19,13 @@ social:
   }
 </style>
 
-# Nominate a Teacher for Computer Science Professional Learning
+# Nominate a Teacher for a Computer Science Scholarship
 
 <img src="/images/teacherandstudents.jpg" class="responsive" width="100%">
 
 <br>
 
-Do you know a teacher who loves learning? Our workshops will prepare teachers – even with no prior experience – to teach CS, to open opportunity for students. Code.org has prepared almost 100,000 teachers to teach our courses, and the teachers give the program rave reviews.
+Do you know a teacher who loves learning? [Our workshops](https://code.org/educate/professional-learning) will prepare teachers – even with no prior experience – to teach CS, to open opportunity for students. Code.org has prepared almost 100,000 educators to teach our courses, and they give our program rave reviews.
 
 <br>
 
@@ -34,13 +34,13 @@ Do you know a teacher who loves learning? Our workshops will prepare teachers �
 
 <br>
 
-The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
+The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Thanks to our generous [donors](https://code.org/about/donors), eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
 
 (Note: Scholarship availability varies by region. Outside the US, the teacher prep course is online. All the classroom resources are <strong>completely free of charge</strong>.)
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1475" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <br>
 
@@ -55,4 +55,4 @@ The [Code.org course pathway](https://code.org/educate) ranges from kindergarten
 
 <br>
 
-<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletters, and the teacher’s email will not be shared</strong>.</i>
+<p style="text-align:center"><i>Note: Any information you provide about the teacher you nominate will not be used for any purpose other than to notify the teacher about this opportunity, and to inform the local Code.org Regional Partner that this teacher was recommended for a scholarship. <strong>Neither the teacher nor you will be added to any newsletter lists, and the teacher’s email address will not be shared</strong>.</i>

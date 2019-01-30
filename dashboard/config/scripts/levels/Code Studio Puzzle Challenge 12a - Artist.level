@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "The code provided draws one triangle. Add to it to draw triangles in a hexagon pattern.",
+    "short_instructions": "The code provided draws one triangle. Add to it to draw triangles in a hexagon pattern.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".8",

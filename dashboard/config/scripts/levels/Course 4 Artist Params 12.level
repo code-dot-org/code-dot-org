@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use your \"pinwheel\" function to draw each of these shapes. The side length for each image is 50.",
+    "short_instructions": "Use your \"pinwheel\" function to draw each of these shapes. The side length for each image is 50.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

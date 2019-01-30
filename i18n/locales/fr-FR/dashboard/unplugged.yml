@@ -347,3 +347,23 @@ fr:
       PaperPlanes_2019:
         title: 'Algorithmes du monde réel: Avions en papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, plus précisément en faisant des avions en papier. Cette leçon se concentre également sur l'informatique en général et la façon dont les algorithmes jouent un rôle essentiel.
+      PlantASeed_2019:
+        title: 'Algorithmes du monde réel: Planter une graine'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, en utilisant comme exemple l’action de planter une graine. Elle se concentre également sur la vue d’ensemble de l'informatique et la façon dont les algorithmes jouent un rôle essentiel.
+      UnplugHappyMaps_2019:
+        title: Cartes Joyeuses
+        desc: Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+      GoingPlacesSafely_2019:
+        title: Se déplacer en toute sécurité
+        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants présentent comment rester en sécurité en naviguant sur Internet.
+      courseA_unplugged_loops_2019:
+        title: Boucles débranchées
+        desc: Dans cette leçon, tu découvriras les boucles!
+      MoveItMoveIt_2019:
+        title: Bouge, Bouge
+      DigitalFootprint_2019:
+        title: Ton empreinte numérique
+        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne des informations personnelles crée une empreinte numérique ou une « trace » qui a des conséquences.
+      courseB_unplugged_CnC_2019:
+        title: C'est bien de créer et de jouer équitablement
+        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre le processus créatif de partage et d'inspiration. Parallèlement à cela vient la promotion de l'expression créative et le besoin d'être juste avec le travail créatif.

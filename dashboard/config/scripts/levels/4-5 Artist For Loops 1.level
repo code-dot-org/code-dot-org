@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Put the numbers 1 through 10 into the width blocks and run the code.",
+    "short_instructions": "Put the numbers 1 through 10 into the width blocks and run the code.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

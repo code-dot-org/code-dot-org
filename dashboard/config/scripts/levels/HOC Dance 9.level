@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. You might change the dance move, change a dancer's properties, or try out the new <xml>  <block type=\"Dancelab_doMoveLR\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"MOVE\">MOVES.Clown</title>\r\n    <title name=\"DIR\">-1</title>\r\n  </block></xml> block to do a quick move. Just be creative!",
+    "long_instructions": "The <xml><block type=\"Dancelab_whenKey\"></block></xml> block lets you run code when the up arrow is pressed. You might change the dance move, change a dancer's properties, or try out the new <xml>  <block type=\"Dancelab_doMoveLR\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"MOVE\">MOVES.Clown</title>\r\n    <title name=\"DIR\">-1</title>\r\n  </block></xml> block to do a quick move. Just be creative!",
     "parent_level_id": 14602,
     "validation_code": "if (getTime(\"measures\") > 8){\r\n  // Always succeed\r\n  levelSuccess(0);\r\n}",
     "block_pool": "Dancelab",
