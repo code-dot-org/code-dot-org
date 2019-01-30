@@ -8788,3 +8788,110 @@ zh-CN:
           description_audience: 计算机科学原理学生
         gamelab:
           title: 游戏实验室
+        coursea-2019:
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍
+          description_audience: '年龄：4-7'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: '调试: 没有错误'
+              description_teacher: '这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”'
+            'Real-life Algorithms: Plant a Seed':
+              name: '真实算法： 播种一颗种子'
+              description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\\r\n"
+            'Programming: Happy Maps':
+              name: '编程: 快乐地图'
+              description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
+            Programming in Maze:
+              name: 迷宫编程
+              description_teacher: 在这一系列的在线难题中，学生们会建立对算法的理解，调试程序，和一般的计算机素养。来自愤怒的小鸟游戏的角色，会让学生们开发序列算法来让小鸟在不碰到墙或TNT炸药的情况下抓住猪。调试难题也会混合在在一些关卡中，来增加解决问题和批判性性思维的练习。
+            Going Places Safely:
+              name: 去安全的地方
+              description_teacher: 通过与[r 常识媒体] 合作，本课程帮助学生学习到许多网站会要求 提供私人信息，并讨论如何负责任的处理这类请求。学生们也会发现，它们可以去网上令人兴奋的地方，但也需要遵循一定的规则来保证安全。
+            'Loops: Happy Loops':
+              name: '循环: 快乐循环'
+              description_teacher: 循环是编程中非常有用而又强大的工具。为了理解循环的用处，学生们需要被驱动去用简单的方法来解决单调的问题。
+            Loops in Harvester:
+              name: 收割者中的循环
+            Loops in Collector:
+              name: 收集器中的循环
+              description_teacher: 基于"快乐循环"中重复指令的概念，这个阶段会让学生用循环来在Code.org上更有效的收集宝藏。
+            Loops in Artist:
+              name: 艺术家里的循环
+              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
+            'Events: The Big Event':
+              name: '事件: 大事件'
+              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
+            Events in Play Lab:
+              name: 游戏实验室中的事件
+              description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
+            Ocean Scene with Loops:
+              name: 艺术家里的循环
+        courseb-2019:
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
+          description_audience: '年龄： 5-8'
+          stages:
+            Move It, Move It:
+              name: 移动它，移动它！
+            Sequencing with Scrat:
+              name: 斯奎特和序列
+            Your Digital Footprint:
+              name: 你的数字足迹
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            Copyright and Creativity:
+              name: 版权和创造力
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Loops in Collector:
+              name: 收集器中的循环
+            Loops in Artist:
+              name: 艺术家里的循环
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            Events in Play Lab:
+              name: 游戏实验室中的事件
+        pre-express-2019:
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'
+          description_audience: '年龄： 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: '调试: 没有错误'
+            Move It, Move It:
+              name: 移动它，移动它！
+            Sequencing with Scrat:
+              name: 斯奎特和序列
+            Your Digital Footprint:
+              name: 你的数字足迹
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            Copyright and Creativity:
+              name: 版权和创造力
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Loops in Collector:
+              name: 收集器中的循环
+            Loops in Artist:
+              name: 艺术家里的循环
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            Events in Play Lab:
+              name: 游戏实验室中的事件
+            Spelling Bee:
+              name: 拼字比赛
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: '调试: 没有错误'
+            'Real-life Algorithms: Plant a Seed':
+              name: '真实算法： 播种一颗种子'

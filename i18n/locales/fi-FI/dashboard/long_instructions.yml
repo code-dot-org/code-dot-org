@@ -343,6 +343,13 @@ fi:
       Overworld Move to Sheep: Lisää toinen "liiku eteenpäin" -komento, jotta pääset lampaiden luo.
       Overworld Move to Sheep_2018: Lisää toinen "liiku eteenpäin" -komento, jotta pääset lampaiden luo.
       Overworld Move to Sheep_2019: Lisää toinen "liiku eteenpäin" -komento, jotta pääset lampaiden luo.
+      Ryan_Demo: |-
+        Pistetään hirvi tanssimaan!
+
+        Raahaa <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokki työtilaan. Yhdistä ne <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokin alla. Tanssijasi pitäisi aloittaa uusi liike neljännen tahdin jälkeen
+
+
+        ** Tahdeilla ** voidaan laskea aika musiikissa. Tässä opetusohjelmassa tahti on neljä lyöntiä.
       Testing Quantum Farmer: "Vau, katsohan!\\r\n\\r\nEn tiedä, kuinka monta multalapiollista tähän kuoppaan tarvitaan.\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa, kunnes maa on tasainen?  "
       course4_artist_fwp_challenge1: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
       courseD_bee_nestedLoops5: 'Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. '

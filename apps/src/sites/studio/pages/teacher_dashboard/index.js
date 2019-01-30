@@ -13,6 +13,10 @@ import manageStudents, {
 import teacherSections, {setSections, selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats, {asyncSetCompletedLevelCount} from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import sectionAssessments, {asyncLoadAssessments} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, {loadValidScripts} from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -21,7 +25,7 @@ const section = scriptData.section;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
-  registerReducers({teacherSections, sectionData, manageStudents, stats});
+  registerReducers({teacherSections, sectionData, manageStudents, sectionProgress, scriptSelection, stats, textResponses, sectionAssessments});
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
@@ -47,15 +51,31 @@ $(document).ready(function () {
     store.dispatch(setStudents(convertedStudentData));
   });
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => <TeacherDashboard {...props} sectionId={section.id} section={section} studioUrlPrefix=""/>}
-        />
-      </Router>
-    </Provider>,
-    document.getElementById('teacher-dashboard')
-  );
+  $.ajax({
+    method: 'GET',
+    url: '/dashboardapi/sections/valid_scripts',
+    dataType: 'json'
+  }).done(validScripts => {
+    store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+      const scriptId = store.getState().scriptSelection.scriptId;
+      store.dispatch(asyncLoadTextResponses(section.id, scriptId));
+      store.dispatch(asyncLoadAssessments(section.id, scriptId));
+
+      renderTeacherDashboard();
+    });
+  });
+
+  const renderTeacherDashboard = () => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <Router basename={baseUrl}>
+          <Route
+            path="/"
+            component={props => <TeacherDashboard {...props} studioUrlPrefix=""/>}
+          />
+        </Router>
+      </Provider>,
+      document.getElementById('teacher-dashboard')
+    );
+  };
 });

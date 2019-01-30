@@ -102,6 +102,13 @@ level 'Virtual Pet Freeplay_2019'
 stage 'Private and Personal Information', flex_category: 'csf_e_2'
 level 'courseE_unplugged_privateInformation_2019'
 
+stage 'About Me', flex_category: 'csf_e_2'
+level 'courseE_aboutme_1'
+level 'courseE_aboutme_2'
+level 'courseE_aboutme_3'
+level 'courseE_aboutme_4'
+level 'courseE_aboutme_freeplay'
+
 stage 'Nested Loops in Bee', flex_category: 'csf_e_2'
 level 'courseD_bee_nestedLoops1a_2019'
 level 'courseD_bee_nestedLoops1_2019'

@@ -138,7 +138,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg [RANGE][0]
+        text: krijg {RANGE}
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -173,6 +173,9 @@ nl:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+          OP:
+            '">"': ">"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} ga naar {LOCATION}"
         options:
@@ -322,8 +325,9 @@ nl:
             '"rave"': Zwart-wit
             '"cool"': Blauw
             '"default"': Licht
+            '"neon"': Neon
             '"tropical"': Tropisch
-            '"warm"': Rood
+            '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
         text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
@@ -349,8 +353,9 @@ nl:
             '"rave"': Zwart-wit
             '"cool"': Blauw
             '"default"': Licht
+            '"neon"': Neon
             '"tropical"': Tropisch
-            '"warm"': Rood
+            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -526,8 +531,27 @@ nl:
             '"down"': omlaag
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"s"': s
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: als {RANGE} piek
       gamelab_changeColor:
@@ -623,6 +647,9 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+          OP:
+            '"="': "="
+            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
@@ -637,6 +664,10 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -652,6 +683,10 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -835,13 +870,16 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
       binary_move:
         options:
           DIR:
@@ -858,6 +896,10 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           als pad {DIR}
@@ -869,7 +911,7 @@ nl:
             "'left'": naar links
       craft_ifStandingOn:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -881,7 +923,7 @@ nl:
             "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
-          als staande op [TYPE][0]
+          als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
@@ -941,7 +983,7 @@ nl:
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
       craft_turn:
-        text: draai [DIR][0]
+        text: draai {DIR}
         options:
           DIR:
             right: rechtsom ↻

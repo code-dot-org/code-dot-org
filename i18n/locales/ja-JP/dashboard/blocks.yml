@@ -899,14 +899,16 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       binary_move:
         options:
           DIR:

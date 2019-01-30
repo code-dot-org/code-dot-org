@@ -34,13 +34,13 @@ Do you know a teacher who loves learning? [Our workshops](https://code.org/educa
 
 <br>
 
-The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
+The [Code.org course pathway](https://code.org/educate) ranges from kindergarten through high school, so you can nominate any teacher for a scholarship to participate in this wonderful program. Thanks to our generous [donors](https://code.org/about/donors), eligible teachers can receive full scholarships and <strong>all</strong> teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
 
 (Note: Scholarship availability varies by region. Outside the US, the teacher prep course is online. All the classroom resources are <strong>completely free of charge</strong>.)
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1475" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-FU7doQIwK__wdB0pESmx8Jfbhoh0EMLrMT21TE8i5Em8hw/viewform?embedded=true" width="100%" height="1645" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <br>
 

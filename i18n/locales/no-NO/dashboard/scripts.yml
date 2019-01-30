@@ -1646,3 +1646,27 @@
               name: Binær armbånd
         gamelab:
           title: Spill-lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Virkelige algoritmer: Plante et frø'
+            Going Places Safely:
+              name: Trygg reise
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotavtrykk
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotavtrykk
+            Spelling Bee:
+              name: Stavekonkurranse
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Virkelige algoritmer: Plante et frø'

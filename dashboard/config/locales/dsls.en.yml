@@ -4212,6 +4212,7 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD U1 End of Unit Test: {}
         CSD Unit 1 Post Project Assessment 2018: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
@@ -12571,6 +12572,51 @@ en:
         Not sure what this is: Not sure what this is
         Web Development: Web Development
         'Yes': 'Yes'
+      csd-post-survey-2019-I like cs:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-I like cs class:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-I want more cs:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-able to learn cs:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2019-comfort in cs class:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csd-post-survey-q26:
         A few classes: A few classes
         About half the class sessions: About half the class sessions

@@ -183,6 +183,7 @@ fr:
       4-5 Artist Patterns 1: |-
         Peux-tu dessiner ce carré à l'aide d'une boucle ? Chaque côté mesure 20 pixels de long.
       4-5 Artist Patterns 10: "This code draws two rows of hexagons\n- loop the whole thing 4 times to draw the whole honeycomb. \\r\n\\r\nYou'll\nneed to jump back 120 pixels in your outermost loop to make sure the artist\ndoesn't draw off the screen."
+      4-5 Artist Patterns 11: Combien de fois dois-tu boucler ceci pour dessiner un demi-cercle ?
       4-5 Artist Patterns 12: "Si tu copies cette boucle et tourne à gauche plutôt qu'à droite, que se passe-t-il ? Peux-tu répéter cela pour dessiner cette vague ?"
       4-5 Artist Patterns 13: "Maintenant nous allons boucler tout cela quatre fois pour créer ce cadre photo. Attention aux coins - tu ne peux simplement pas tourner à 90 degrés ! Si boucler un virage de 3 degrés 60 fois donne un demi cercle, lequel de ces blocs de code fera un quart de cercle pour les coins ?"
       4-5 Artist Patterns 2: "If you place your square loop\ninside another loop, we call that a nested loop. \\r\n\\r\nWhat do you need\nto add as an outer loop to make sure all 15 squares line up next to each other?"
@@ -242,6 +243,12 @@ fr:
       4-5 While Loops 2: Déplace-moi vers le tas de terre et enlève-le en 5 coups de pelle, en utilisant le bloc «Supprimer».
       4-5 While Loops 3: "Déplace-moi vers le tas et enlève-le entièrement, ensuite va vers le trou et remplis-le entièrement.  Indice :  essaie d’utiliser le moins de blocs possible."
       4-5 While Loops 4: "Wow, j'ai trouvé un trou vraiment profond ! Je ne sais pas combien de pelletées de terre il faudra pour le remplir.  Peux-tu écrire un programme qui le remplira jusqu’à ce que le sol soit nivelé ?  Indice :  essaie d'utiliser la boucle «Tant que» cette fois."
+      AWS applab: |-
+        # Fait ceci maintenant
+
+        * étape une
+        * étape deux
+      AWS link: "# Utilise cet outil pour des trucs"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': "<img\nalign=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n            # Task 1: Make a 3x5 letter 'A'\\r\n            Start\nby trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation\nwidget. \\r\n          \\r\n            The image is intially setup with the\n*incorrect* dimensions. Your first task is to set the second byte to the 8-bit\nbinary code for 5: 0000 0101. Then you can start entering pixel data to make\nthe A.\\r\n            "
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': "#\nPixelation: Task 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Directions:**\\r\nWe start you out with\nthe 4x4 image Maddie created in the video.\\r\n\\r\nYour task is to fill a 4x4\ngrid with colors using *12-bits per pixel*. The result should look something\nlike (but not exactly) the image shown at right.  \\r\n\\r\nHere are the requirements:\\r\n\\r\n\n* Row 1 - fill with shades of red. \\r\n * Row 2 - shades of green. \\r\n *\nRow 3 - shades of blue. \\r\n * Row 4 - shades of gray.\\r\n"
       AppLab Intro 1 - Add Button: "# Getting Started - Add\na button\\r\n\\r\nYou'll need a button on your home screen to go to your new\nscreen. You can make a new button in two ways. \\r\n\\r\n1. If you like the\nstyle of the \"Dogs\" button you can make a copy of it. Click the button and\nthen click \"Duplicate\".\\r\n\\r\n\\t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10\nAM.png)\\r\n\\r\n2. You can also make a new button from scratch by dragging\nit in from the Design Toolbox.\\r\n\\r\n\\t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09\nAM.png)\\r\n\\r\n3. Click and drag to move your new button where you want it.\\r\n\\r\n3.\nOnce you have a new button give it a clear name, \"catButton\". You can also\nchange its text to read \"Cats!\".\\r\n\\r\n\\t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14\nAM.png)\\r\n    \\r\n4. There's lots of other ways you can change the look\nof your button. Experiment with the full menu of options.\\r\n\\r\n5. Once you're\ndone run your app to make sure your button appears. Then click \"Finish\"\nto move on to learn how to make your button actually work."
@@ -9195,6 +9202,13 @@ fr:
       Room Escape Workshop - 9-2: "# Click Key\\r\n\\r\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00\nPM.png\" style=\"width:170px;float:right\">\\r\n\\r\nOnce a user clicks the\nkey you will want to show they are holding it. You can do this by moving the\nkey to the bottom corner of the room. \\r\n\\r\n# Do This\\r\n\\r\n* Add an `onEvent`\nblock for when the user clicks the key. \\r\n* Inside the `onEvent` block:\\r\n\\t*\nUse `setPosition` to move the key to the bottom corner of the screen"
       Room Escape Workshop - 9: "# Click Key\\r\n\\r\n<img src=\"https://images.code.org/349cff555af4337118791d84acf1a5b2-image-1490371172781.59.08\nAM.png\" style=\"width:200px;float:right\">\\r\n\\r\nOnce a user clicks the\nkey you will want to show they are holding it. You can do this by adding a\nkey at the bottom corner of the room. \\r\n\\r\n# Do This\\r\n\\r\n* Add a key\nimage at the bottom right corner of the room\\r\n* Set the key to hidden in\nDesign Mode"
       Room Escape Workshop - free play: "# You've done it!\\r\n\\r\nYou\nmade a room escape! Now its time to customize it. \\r\n\\r\nConsider:\\r\n\\r\n*\nAdding more rooms\\r\n* Adding more things users can interact with in the rooms\\r\n*\nAdd more style to the rooms"
+      Ryan_Demo: |-
+        Faisons danser cet orignal !
+
+        Faites glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectez-le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Votre danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+
+
+        **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
       SG Add Subgoals practice: |-
         # Now you try adding subgoals!\\r
         \\r
@@ -10999,6 +11013,7 @@ fr:
         * Don't worry
         about the exact size as long as the green ellipse is entirely inside the orange
         one.
+      allthethings_ttscsf contained: "Help the farmer walk the path\nto find all of the lettuce\\r\n\\r\nIn this puzzle, lettuce is growing at the\nend of every path.  If there is a path in front of her, the farmer can keep\nmoving forward.  Otherwise, she needs to pick all of the lettuce, then turn\nto stay on the path. \\r\n\\r\n\\r\n\\r\n"
       artistLoopsK2: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\\r
@@ -11323,12 +11338,22 @@ fr:
         Help me put down stones so I don't fall in!\\r
         \\r
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## Time to head back to land.
+        Help me put down stones so I don't fall in!\\r
+        \\r
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Help me build steps to watch
         the ship sail away.\\r
         \\r
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2018: |-
+        ## Help me build steps to watch
+        the ship sail away.\\r
+        \\r
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
         ## Help me build steps to watch
         the ship sail away.\\r
         \\r
@@ -11355,6 +11380,17 @@ fr:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        The artist saw something funny
+        in the distance.  Draw what you think he saw.\\r
+        \\r
+        ___\\r
+        ### Ideas\\r
+        \\r
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\r
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\r
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\r
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         Help the artist draw this line
         two times forward.\\r
@@ -11365,12 +11401,22 @@ fr:
         two times forward.\\r
         \\r
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Help the artist draw this line
+        two times forward.\\r
+        \\r
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: |-
         Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\\r
         \\r
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018: |-
+        Our artist is trying to draw a
+        line five times, but can't get it right. Can you help?\\r
+        \\r
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
         Our artist is trying to draw a
         line five times, but can't get it right. Can you help?\\r
         \\r
@@ -11387,12 +11433,23 @@ fr:
         five times!\\r
         \\r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
+        five times!\\r
+        \\r
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ## Draw a line seven steps long.
         This will become our horizon.\\r
         \\r
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
+        ## Draw a line seven steps long.
+        This will become our horizon.\\r
+        \\r
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
         ## Draw a line seven steps long.
         This will become our horizon.\\r
         \\r
@@ -11407,6 +11464,11 @@ fr:
         back.\\r
         \\r
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Let's put a nice hill in the
+        back.\\r
+        \\r
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="3-10">???</title></block></xml> loop to add waves
@@ -11414,6 +11476,12 @@ fr:
         \\r
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
+        ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
+        to the water.\\r
+        \\r
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2019: |-
         ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="3-10">???</title></block></xml> loop to add waves
         to the water.\\r
@@ -11435,12 +11503,22 @@ fr:
         boat.\\r
         \\r
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## We need a ladder up to the
+        boat.\\r
+        \\r
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9: |-
         ##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\\r
         \\r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018: |-
+        ##**Challenge:** The stairs down
+        to the dock are broken.  Help me fix them.\\r
+        \\r
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
         ##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\\r
         \\r
@@ -11467,6 +11545,17 @@ fr:
         ideas:\\r
         \\r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        You can use a loop to
+        draw many lines in a row.\\r
+        \\r
+        Can you draw a house? Make it look just the
+        way you like it!  Try looking for patterns that repeat!\\r
+        \\r
+        Here are some
+        ideas:\\r
+        \\r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2: |-
         **Tweet!**\\r
         \\r
@@ -11481,7 +11570,15 @@ fr:
         at least one item to pass this level.
       courseA_collector_loops12: "Eureka!  Get as much treasure\nas you can!  \\r\n(You do not have to get it all.)"
       courseA_collector_loops12_2018: "Eureka!  Get as much treasure\nas you can!  \\r\n(You do not have to get it all.)"
+      courseA_collector_loops12_2019: "Eureka!  Get as much treasure\nas you can!  \\r\n(You do not have to get it all.)"
       courseA_collector_loops1_2018: |-
+        **Free Play:** This is Laurel
+        the Adventurer! Move her around and get as much treasure as you can.\\r
+        \\r
+        Drag
+        blocks into the workspace and try to figure out how to get treasure.  Get
+        at least one item to pass this level.
+      courseA_collector_loops1_2019: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\\r
         \\r
@@ -11493,6 +11590,7 @@ fr:
         Laurel to each piece of treasure, then use this block:\\r
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: "Get all three piles! Move\nLaurel to each piece of treasure, then use this block:\\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: "Get all three piles! Move\nLaurel to each piece of treasure, then use this block:\\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\\r\n\\r\nPress \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2: "Great!  Now you get to add\ncode yourself!  \\r\n\\r\nSnap a ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\nblock to the bottom of the program and click \"Run\"!"
       courseA_collector_preLoops7: |-
@@ -11517,11 +11615,13 @@ fr:
         \\r
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018: "Time for a shorter puzzle!  Move\none way, then another to get the bird to the pig.\\\\r\n\\\\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
+      courseA_maze_seq11_2019: "Time for a shorter puzzle!  Move\none way, then another to get the bird to the pig.\\\\r\n\\\\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
       courseA_maze_seq12: |-
         Get that pig!\\r
         \\r
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: "Get that pig!\\\\r\n\\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+      courseA_maze_seq12_2019: "Get that pig!\\\\r\n\\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq3: |-
         *"Fix the code to get me to the pig!"*\\r
         \\r
@@ -11592,6 +11692,19 @@ fr:
         in the workspace.\\r
         \\r
         Get Jorge to the flag to finish this level!
+      courseA_playLab_events3_2019: |-
+        Help Jorge the Dog get moving
+        by connecting the <xml><block type="studio_move">\\r
+            <title name="SPRITE">1</title>\\r
+            <title
+        name="DIR">8</title>\\r
+          </block></xml> block to the <xml><block type="studio_whenArrow">\\r
+            <title
+        name="VALUE">left</title>\\r
+          </block></xml> event block that is already
+        in the workspace.\\r
+        \\r
+        Get Jorge to the flag to finish this level!
       courseA_playlab_events_challenge1: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\\r
@@ -11606,6 +11719,19 @@ fr:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge1_2018: |-
+        *"Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat!"*\\r
+        \\r
+        Clicking
+        Olive will make Robin appear! Can you write code to show the rest of the characters
+        too?\\r
+        \\r
+        In this puzzle, make sure to click for hints! The hints will help
+        you do this project step-by-step!\\r
+        \\r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      courseA_playlab_events_challenge1_2019: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\\r
         \\r
@@ -11658,6 +11784,20 @@ fr:
         \\r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challenge2_2019: |-
+        *"Let's have a party!
+        Give my friends something to do when you click or tap them."*\\r
+        \\r
+        What
+        will the animals say? What else will happen?\\r
+        \\r
+        \\r
+        \\r
+        In this puzzle,
+        make sure to click for hints! The hints will give you fun things to try!\\r
+        \\r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseA_playlab_events_challengeClone: |-
         Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
@@ -11694,6 +11834,18 @@ fr:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2019: |-
+        Use what you have learned to
+        draw a picture of what you think the artist saw when he got home.\\r
+        \\r
+        ___\\r
+        ###
+        Ideas\\r
+        \\r
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\r
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\r
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\r
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_collector_loops1: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\\r
@@ -11702,6 +11854,7 @@ fr:
         blocks into the workspace and try to figure out how to get treasure.  Get
         at least one item to pass this level.
       courseB_collector_loops1_2018: "**Free Play:** This is Laurel\nthe Adventurer! Move her around and get as much treasure as you can.\\r\n\\r\nDrag\nblocks into the workspace and try to figure out how to get treasure.  Get\nat least one item to pass this level."
+      courseB_collector_loops1_2019: "**Free Play:** This is Laurel\nthe Adventurer! Move her around and get as much treasure as you can.\\r\n\\r\nDrag\nblocks into the workspace and try to figure out how to get treasure.  Get\nat least one item to pass this level."
       courseB_collector_loops2: |-
         Move Laurel to the treasure,
         then use the<xml><block type="collector_collect"/></xml>block to pick it
@@ -11716,10 +11869,19 @@ fr:
         \\r
         \\r
         Get all four piles to pass this level.
+      courseB_collector_loops2_2019: |-
+        Move Laurel to the treasure,
+        then use the<xml><block type="collector_collect"/></xml>block to pick it
+        up.\\r
+        \\r
+        \\r
+        Get all four piles to pass this level.
       courseB_playLab_events1: "This game is called \"Play Lab\".  \\r\n\\r\nSee\nif you can figure out what each block does."
       courseB_playLab_events1_2018: "This game is called \"Play Lab\".  \\r\n\\r\nSee\nif you can figure out what each block does."
+      courseB_playLab_events1_2019: "This game is called \"Play Lab\".  \\r\n\\r\nSee\nif you can figure out what each block does."
       courseB_playlab_events_challenge1: "It's time for the\nGreat Animal Race! Make the animals move down when you press `▼`. \\r\n\\r\nWho\nwill run the fastest?\\r\n"
       courseB_playlab_events_challenge1_2018: "It's time for the\nGreat Animal Race! Make the animals move down when you press `▼`. \\r\n\\r\nWho\nwill run the fastest?\\r\n"
+      courseB_playlab_events_challenge1_2019: "It's time for the\nGreat Animal Race! Make the animals move down when you press `▼`. \\r\n\\r\nWho\nwill run the fastest?\\r\n"
       courseB_playlab_events_challenge2: |-
         Let's make the animals
         disappear when you click on them! Try playing with the dog now, then help
@@ -11729,6 +11891,14 @@ fr:
         \\r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_playlab_events_challenge2_2018: |-
+        Let's make the animals
+        disappear when you click on them! Try playing with the dog now, then help
+        the other animals join in the fun.\\r
+        You can also add sounds and score points
+        to create a game of Animal Tag!\\r
+        \\r
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
         Let's make the animals
         disappear when you click on them! Try playing with the dog now, then help
         the other animals join in the fun.\\r
@@ -11748,12 +11918,23 @@ fr:
         \\r
         Watch out for walls and crates. Scrap
         metal looks like this: [picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog1_2019: |-
+        [Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Go
+        get the scrap metal, BB-8"_\\r
+        \\r
+        Watch out for walls and crates. Scrap
+        metal looks like this: [picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\\r
         \\r
         **Challenge**: Gather all the scrap metal.
       courseB_starWars_prog8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\\r
+        \\r
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog8_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\\r
         \\r
