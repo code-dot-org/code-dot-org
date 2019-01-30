@@ -32,9 +32,7 @@ const teacherDashboardLinks = [
 export default class TeacherDashboardNavigation extends Component {
   render() {
     return (
-      <NavigationBar
-        links = {teacherDashboardLinks}
-      />
+      <NavigationBar links={teacherDashboardLinks}/>
     );
   }
 }

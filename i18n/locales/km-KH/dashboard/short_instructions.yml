@@ -540,6 +540,12 @@ km:
         To
         do this, you'll need to add events to help the knight move up, down, left,
         and right.
+      courseB_playlab_events6_2019: |-
+        Help your knight get all of the flags!\\r
+        \\r
+        To
+        do this, you'll need to add events to help the knight move up, down, left,
+        and right.
       courseC_PlayLab_events8: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."
       courseC_PlayLab_events8_2018: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."
       courseC_PlayLab_events8_2019: "Can you have Waddles (actor 1) play a\n\"hit\" sound and say \"Ouch!\" if he runs into Chomp? \\r\nWhen you're done,\nplay the game to make that happen."

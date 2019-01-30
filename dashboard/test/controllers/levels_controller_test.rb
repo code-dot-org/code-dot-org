@@ -85,7 +85,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze'
         },
         game_id: game.id,
@@ -108,7 +108,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           step_mode: 1,
           type: 'Maze'
         },
@@ -131,7 +131,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze',
           is_k1: true
         },
@@ -154,7 +154,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           step_mode: 1,
           type: 'Maze',
           is_k1: false
@@ -178,7 +178,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze'
         },
         game_id: game.id,
@@ -199,7 +199,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Karel'
         },
         game_id: game.id,
@@ -224,7 +224,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Karel'
         },
         game_id: game.id,
@@ -476,7 +476,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -495,7 +495,7 @@ class LevelsControllerTest < ActionController::TestCase
       level: {
         skin: Maze.skins.last,
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -543,7 +543,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -582,7 +582,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Karel'
       },
       game_id: game.id,

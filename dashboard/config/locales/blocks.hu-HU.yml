@@ -882,14 +882,16 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"direction"': mozgás iránya
-            '"tint"': árnyalat
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
       binary_move:
         options:
           DIR:

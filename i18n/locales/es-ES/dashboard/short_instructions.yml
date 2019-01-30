@@ -1110,6 +1110,7 @@ es:
       Ryan - Bee Conditionals: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
       Ryan Test Locked Blocks: Aquí hay una función denominada "patrulla". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.
       RyanTest3: '¡Este nivel tiene activado el cambio de forma! Actualiza para ver diferentes variantes.'
+      Ryan_Demo: '¡Haz que el alce inicie un movimiento nuevo después de 4 compases!'
       SG U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea simplemente usando punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos sean transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
       SG U3L07 - introSquare: "Usa un bucle para dibujar un cuadrado. A continuación, agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna cantidad. \n(Haz clic para ver instrucciones completas)"
       SG U3L07 - loopsWithRandom: Aumenta el número de iteraciones para completar la pantalla con blanco. (Haz clic para ver instrucciones completas)
@@ -1246,6 +1247,7 @@ es:
       courseA_maze_seq2_2018: Cambie el código para traerme al cerdo!
       courseB_starWars_prog1: '"Ve a tomar el pedazo de metal, BB-8"'
       courseB_starWars_prog1_2018: '"Ve a tomar el pedazo de metal, BB-8"'
+      courseB_starWars_prog1_2019: '"Ve a tomar el pedazo de metal, BB-8"'
       courseC_PlayLab_events3: '¿Puedes escribir un programa para hacer que el perro se mueva hasta el gato?'
       courseC_PlayLab_events3_2018: '¿Puedes escribir un programa para hacer que el perro se mueva hasta el gato?'
       courseC_PlayLab_events3_2019: '¿Puedes escribir un programa para hacer que el perro se mueva hasta el gato?'

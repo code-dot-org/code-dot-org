@@ -461,10 +461,16 @@ ka:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
           შეგიძლიათ ამ თავსატეხში.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
           გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
+          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
           გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_artist_loops7_forVideo_callout:
@@ -476,10 +482,16 @@ ka:
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
           არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
           შეგიძლიათ ამ თავსატეხში.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
           შეგიძლიათ ამ თავსატეხში.
       courseA_collector_preLoops2_callout:
@@ -501,6 +513,8 @@ ka:
         courseA_maze_seq1_1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
           მთელი პროგრამა. ეს დაგეხმარებათ შეცდომის პოვნაში!
@@ -511,9 +525,13 @@ ka:
         courseA_playlab_events4_callout1: ეს ტექსტური ბუშტია
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: ეს ტექსტური ბუშტია
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: ეს ტექსტური ბუშტია
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება.
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: ეს რიცხვი იმას ნიშნავს, რომ ინსტრუმენტების პანელში
@@ -524,9 +542,14 @@ ka:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
           არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
@@ -544,6 +567,9 @@ ka:
         courseB_playlab_events6_a: გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
           შეცვალოთ მიმართულებები.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
+          შეცვალოთ მიმართულებები.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
           შეცვალოთ მიმართულებები.
       courseC19_playLab_EOC3_callout:

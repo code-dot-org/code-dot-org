@@ -1161,6 +1161,7 @@ pl:
       Ryan - 4-5 Bee Conditionals 2: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan - Bee Conditionals: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan Test Locked Blocks: "Mamy tu funkcję, która nosi nazwę \"patrol\" (patrol).\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli w dół."
+      Ryan_Demo: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       SG U3L03 Draw a T using turnAround: Narysuj kształt plusa korzystając z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       SG U3L06 Challenge 2 purple square: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       SG U3L06 Challenge 5 overlapping circles: 'Ten obraz jest stworzony tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
@@ -1313,31 +1314,41 @@ pl:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś zupełnie inny)
       courseA_artist_loops10: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2018: Pomóż mi położyć kamienie niżej, a nie spadnę!
+      courseA_artist_loops10_2019: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops12: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
       courseA_artist_loops12_2018: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
+      courseA_artist_loops12_2019: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
       courseA_artist_loops7: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2018: Użyj pętli `repeat` aby dodać fale na wodzie.
+      courseA_artist_loops7_2019: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_forVideo: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
+      courseA_artist_loops9_2019: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops_challenge3: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
+      courseA_collector_loops7_2019: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2018: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
+      courseA_collector_loops_challenge2kp_2019: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
       courseA_collector_preLoops4: Dasz radę rozwiązać tą zagadkę?
       courseA_forVideoTest_artist: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_maze_ramp5a_2018: Doprowadź ptaka do świnki!
+      courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
       courseA_maze_seq2_2018: Zmień kod, aby doprowadzić mnie do świnki!
       courseB_Scrat_ramp5a_2018: Doprowadź ptaka do świnki!
+      courseB_Scrat_ramp5a_2019: Doprowadź ptaka do świnki!
       courseB_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_artist_loops_challenge2_2018: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
+      courseB_artist_loops_challenge2_2019: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_collector_prog3: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_maze_seq9_challenge1: "*Gdzie ukrywa się teraz świnia?*"
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
+      courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
       courseC19_playLab_EOC5: Teraz poświęć trochę czasu, żeby upewnić się, że gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
       courseC_PlayLab_events3: Czy możesz napisać program, który sprawia, że Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że Jorge (postać 1) idzie w kierunku Kota Oliwek?

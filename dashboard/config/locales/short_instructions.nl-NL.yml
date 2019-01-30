@@ -1677,6 +1677,7 @@ nl:
 '
       FoodFight: Dit is één voorbeeld van een spel dat je kan maken in Play Lab.
       FoodFight_2018: Dit is één voorbeeld van een spel dat je kan maken in Play Lab.
+      Frequency Analysis: Test
       Function intro Ryan: Gebruik de 'brug bouwen'-functie twee keer om een pad naar
         de fakkel te maken.
       Function intro Ryan_2019: Gebruik de 'brug bouwen'-functie twee keer om een
@@ -2350,6 +2351,7 @@ nl:
         Niet alles is een bloem, dus kijk onder ELKE WOLK of daar een bloem is verstopt. Zo ja, verzamel dan de nectar.
       Ryan Test Locked Blocks: Hier is een functie genaamd "patrol". Bewerk hem om
         de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.
+      Ryan_Demo: Zorg dat de eland een nieuwe move start na 4 maten!
       SG Add Subgoals practice: Teken zo efficiënt mogelijk een 3x3 rooster voor en
         rechts van de schildpad. De schildpad zou op zijn beginpositie moeten eindigen,
         kijkende in dezelfde richting als in het begin. (Klik voor volledige instructies)
@@ -2470,9 +2472,11 @@ nl:
       Total Artist Clone Me: 'Vrij spelen: hier zijn de functies die je hebt geschreven,
         en ook nog wat extra om mee te spelen. Teken iets geweldigs! Speel met de
         pen breedte en kijk wat je daarmee kan doen!'
+      U2 Vigenere: Test
       U2 frequency caesar: Instructies
       U2 frequency random sub: Instructies
       U2 vigenere cipher: Instructies
+      U2L14 frequency random: Test
       U3 - Arrays - indexPractice: Schrijf de inhoud van de array naar het scherm
         in numerieke volgorde. (Klik hier om de volledige instructies te zien)
       U3 - Design Mode 1: Voeg een grote rode knop toe aan je scherm met behulp van
@@ -2669,6 +2673,7 @@ nl:
       Underground Mining Coal_2019: De kostbaarste grondstoffen vind je onder de grond,
         maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken
         steenkool.
+      Vigenere: Test
       aE7: "Wat gebeurt er als je een andere herhaling maakt zoals deze, maar links
         draait in plaats van rechts? \r \n\r\nKan je dit allemaal herhalen om deze
         golf te tekenen?"
@@ -2909,24 +2914,33 @@ nl:
         het verwijder het en vervang het door iets totaal anders)
       courseA_artist_loops10: Help me stenen neer te zetten zodat ik niet val!
       courseA_artist_loops10_2018: Help me stenen neer te zetten zodat ik niet val!
+      courseA_artist_loops10_2019: Help me stenen neer te zetten zodat ik niet val!
       courseA_artist_loops11: Help me een trapje te bouwen om het schip te zien weg
         zeilen.
       courseA_artist_loops11_2018: Help me een trapje te bouwen om het schip te zien
+        weg zeilen.
+      courseA_artist_loops11_2019: Help me een trapje te bouwen om het schip te zien
         weg zeilen.
       courseA_artist_loops12: De artiest zag iets grappigs in de verte. Teken wat
         je denkt dat hij zag.
       courseA_artist_loops12_2018: De artiest zag iets grappigs in de verte. Teken
         wat je denkt dat hij zag.
+      courseA_artist_loops12_2019: De artiest zag iets grappigs in de verte. Teken
+        wat je denkt dat hij zag.
       courseA_artist_loops3: Teken vijfmaal een voorwaartse lijn.
       courseA_artist_loops3_2018: Teken vijfmaal een voorwaartse lijn.
+      courseA_artist_loops3_2019: Teken vijfmaal een voorwaartse lijn.
       courseA_artist_loops7: Gebruik de 'herhaal` lus om golven aan het water toe
         te voegen.
       courseA_artist_loops7_2018: Gebruik de 'herhaal` lus om golven aan het water
+        toe te voegen.
+      courseA_artist_loops7_2019: Gebruik de 'herhaal` lus om golven aan het water
         toe te voegen.
       courseA_artist_loops7_forVideo: Gebruik de 'herhaal` lus om golven aan het water
         toe te voegen.
       courseA_artist_loops9: 'Uitdaging: Herstel de trappen.'
       courseA_artist_loops9_2018: 'Uitdaging: Herstel de trappen.'
+      courseA_artist_loops9_2019: 'Uitdaging: Herstel de trappen.'
       courseA_artist_loops_challenge2: |-
         "Kan je me helpen twee vogelhuisjes
         te maken?"
@@ -2941,35 +2955,57 @@ nl:
       courseA_collector_loops10_2018: |-
         Help Laurel alle schatten te verzamelen
         op zijn pad.
+      courseA_collector_loops10_2019: |-
+        Help Laurel alle schatten te verzamelen
+        op zijn pad.
       courseA_collector_loops11: Help Laurel om alle schatten uit deze grot te verzamelen.
       courseA_collector_loops11_2018: Help Laurel om alle schatten uit deze grot te
+        verzamelen.
+      courseA_collector_loops11_2019: Help Laurel om alle schatten uit deze grot te
         verzamelen.
       courseA_collector_loops12: Eureka! Verzamel zoveel schatten als je maar kan!
       courseA_collector_loops12_2018: Eureka! Verzamel zoveel schatten als je maar
         kan!
+      courseA_collector_loops12_2019: Eureka! Verzamel zoveel schatten als je maar
+        kan!
       courseA_collector_loops1_2018: |-
+        Beweeg Laurel rond en verzamel zoveel schatten
+        als je maar kan!
+      courseA_collector_loops1_2019: |-
         Beweeg Laurel rond en verzamel zoveel schatten
         als je maar kan!
       courseA_collector_loops2: Verzamel alle drie de stapels om dit level te voltooien.
       courseA_collector_loops2_2018: Verzamel alle drie de stapels om dit level te
         voltooien.
+      courseA_collector_loops2_2019: Verzamel alle drie de stapels om dit level te
+        voltooien.
       courseA_collector_loops4: Herstel Laurel's pad om al deze schatten te verzamelen.
       courseA_collector_loops4_2018: Herstel Laurel's pad om al deze schatten te verzamelen.
+      courseA_collector_loops4_2019: Herstel Laurel's pad om al deze schatten te verzamelen.
       courseA_collector_loops5: Gebruik wat je geleerd hebt om alle schatten te verzamelen.
       courseA_collector_loops5_2018: Gebruik wat je geleerd hebt om alle schatten
         te verzamelen.
+      courseA_collector_loops5_2019: Gebruik wat je geleerd hebt om alle schatten
+        te verzamelen.
       courseA_collector_loops6: Voeg blokken toe aan deze code om alle schatten verzamelen.
       courseA_collector_loops6_2018: Voeg blokken toe aan deze code om alle schatten
+        verzamelen.
+      courseA_collector_loops6_2019: Voeg blokken toe aan deze code om alle schatten
         verzamelen.
       courseA_collector_loops7: Wat zou je aan deze code toevoegen om alle schatten
         te verzamelen?
       courseA_collector_loops7_2018: Wat zou je aan deze code toevoegen om alle schatten
         te verzamelen?
+      courseA_collector_loops7_2019: Wat zou je aan deze code toevoegen om alle schatten
+        te verzamelen?
       courseA_collector_loops8: Schrijf code om alle schatten te verzamelen.
       courseA_collector_loops8_2018: Schrijf code om alle schatten te verzamelen.
+      courseA_collector_loops8_2019: Schrijf code om alle schatten te verzamelen.
       courseA_collector_loops9: "**Uitdaging:** De schat bevindt zich over de afstand
         van de hele trap! Schrijf code om Laurel alles te laten grijpen."
       courseA_collector_loops9_2018: "**Uitdaging:** De schat bevindt zich over de
+        afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
+      courseA_collector_loops9_2019: "**Uitdaging:** De schat bevindt zich over de
         afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
       courseA_collector_loops_challenge1: |-
         *"Kan je me helpen enkele fouten
@@ -2977,11 +3013,17 @@ nl:
       courseA_collector_loops_challenge1_2018: |-
         *"Kan je me helpen enkele fouten
         te vinden? Ik weet welke richting ik uit moet, maar ik ben niet zeker hoeveel stappen ik moet nemen."*
+      courseA_collector_loops_challenge1_2019: |-
+        *"Kan je me helpen enkele fouten
+        te vinden? Ik weet welke richting ik uit moet, maar ik ben niet zeker hoeveel stappen ik moet nemen."*
       courseA_collector_loops_challenge2: 'Verzamel alle schatten! '
       courseA_collector_loops_challenge2kp: |-
         Verzamel ten minste *3* stukken
         van de schat om dit level te voltooien.
       courseA_collector_loops_challenge2kp_2018: |-
+        Verzamel ten minste *3* stukken
+        van de schat om dit level te voltooien.
+      courseA_collector_loops_challenge2kp_2019: |-
         Verzamel ten minste *3* stukken
         van de schat om dit level te voltooien.
       courseA_collector_preLoops1: "Dit is Laurel de avonturier! \n\nKlik op\n\"Run\"
@@ -2998,8 +3040,10 @@ nl:
         toe te voegen.
       courseA_maze_seq12: 'Grijp dat varken! '
       courseA_maze_seq12_2018: 'Grijp dat varken! '
+      courseA_maze_seq12_2019: 'Grijp dat varken! '
       courseA_maze_seq13: Grijp het varken zoals je maar wil!
       courseA_maze_seq13_2018: Grijp het varken zoals je maar wil!
+      courseA_maze_seq13_2019: Grijp het varken zoals je maar wil!
       courseA_maze_seq2: Pas de code aan om me naar het varken te brengen!
       courseA_maze_seq2_2018: Pas de code aan om me naar het varken te brengen!
       courseA_maze_seq3: Repareer de code om de vogel naar het varken te krijgen!
@@ -3014,6 +3058,7 @@ nl:
         tot aan het varken te krijgen!
       courseA_maze_seq8: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq8_2018: Los dit niveau op en krijg de vogel naar het varken!
+      courseA_maze_seq8_2019: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq9: Debug dit level door blokken toe te voegen om de vogel naar
         het varken te krijgen!
       courseA_maze_seq9_2018: Debug dit level door blokken toe te voegen om de vogel
@@ -3022,21 +3067,31 @@ nl:
         naar het varken te krijgen!
       courseA_maze_seq_challenge1_2018: Er is iets fout hier. Repareer de code om
         de vogel naar het varken te krijgen!
+      courseA_maze_seq_challenge1_2019: Er is iets fout hier. Repareer de code om
+        de vogel naar het varken te krijgen!
       courseA_maze_seq_challenge2: Volg het pad, en leid me naar het varken. Vermeid
         TNT of de veren zullen eraf vliegen!
       courseA_maze_seq_challenge2_2018: Volg het pad, en leid me naar het varken.
+        Vermeid TNT of de veren zullen eraf vliegen!
+      courseA_maze_seq_challenge2_2019: Volg het pad, en leid me naar het varken.
         Vermeid TNT of de veren zullen eraf vliegen!
       courseA_playLab_events3: Verbind de `beweeg link` blok aan het `wanneer link`
         evenement dat zich reeds op je werkruimte bevindt.
       courseA_playLab_events3_2018: Verbind de `beweeg link` blok aan het `wanneer
         link` evenement dat zich reeds op je werkruimte bevindt.
+      courseA_playLab_events3_2019: Verbind de `beweeg link` blok aan het `wanneer
+        link` evenement dat zich reeds op je werkruimte bevindt.
       courseA_playlab_events_challenge1: '"Waar verstoppen mijn vrienden zich? Kan
         je code schrijven om m''n overblijvende vrienden tevoorschijn te toveren?"'
       courseA_playlab_events_challenge1_2018: '"Waar verstoppen mijn vrienden zich?
         Kan je code schrijven om m''n overblijvende vrienden tevoorschijn te toveren?"'
+      courseA_playlab_events_challenge1_2019: '"Waar verstoppen mijn vrienden zich?
+        Kan je code schrijven om m''n overblijvende vrienden tevoorschijn te toveren?"'
       courseA_playlab_events_challenge2: '"Laten we feesten! Geef mijn vrienden iets
         te doen wanneer je op hen klikt of tapt."'
       courseA_playlab_events_challenge2_2018: '"Laten we feesten! Geef mijn vrienden
+        iets te doen wanneer je op hen klikt of tapt."'
+      courseA_playlab_events_challenge2_2019: '"Laten we feesten! Geef mijn vrienden
         iets te doen wanneer je op hen klikt of tapt."'
       courseA_playlab_events_challengeClone: |-
         Waar verstoppen mijn vrienden zich?
@@ -3049,71 +3104,109 @@ nl:
       courseB_artist_loops2_2018: |-
         De Artiest is aan het proberen om een lijn **6** keer te tekenen, maar het lukt hem niet zo goed.
         Kan jij hem helpen?
+      courseB_artist_loops2_2019: |-
+        De Artiest is aan het proberen om een lijn **6** keer te tekenen, maar het lukt hem niet zo goed.
+        Kan jij hem helpen?
       courseB_artist_loops3: Help de artiest 7 keer een lijn te tekenen om een tuinmuur
         te maken.
       courseB_artist_loops3_2018: Help de artiest 7 keer een lijn te tekenen om een
+        tuinmuur te maken.
+      courseB_artist_loops3_2019: Help de artiest 7 keer een lijn te tekenen om een
         tuinmuur te maken.
       courseB_artist_loops5: Tijd om de tredes te repareren! Herhaal dit patroon **5**
         keer zodat de artiest de top van de struiken kan bereiken.
       courseB_artist_loops5_2018: Tijd om de tredes te repareren! Herhaal dit patroon
         **5** keer zodat de artiest de top van de struiken kan bereiken.
+      courseB_artist_loops5_2019: Tijd om de tredes te repareren! Herhaal dit patroon
+        **5** keer zodat de artiest de top van de struiken kan bereiken.
       courseB_artist_loops6: Klim over de wijnstokken. Waar leidt het naartoe?
       courseB_artist_loops6_2018: Klim over de wijnstokken. Waar leidt het naartoe?
+      courseB_artist_loops6_2019: Klim over de wijnstokken. Waar leidt het naartoe?
       courseB_artist_loops7: |-
         **Uitdaging:** Dit is een verborgen tuin!
         Laten we rondwandelen.
       courseB_artist_loops7_2018: |-
         **Uitdaging:** Dit is een verborgen tuin!
         Laten we rondwandelen.
+      courseB_artist_loops7_2019: |-
+        **Uitdaging:** Dit is een verborgen tuin!
+        Laten we rondwandelen.
       courseB_artist_loops8: Tijd om naar huis te gaan. Can je de ladder repareren
         gebruik makende van slechts één blok om de artiest naar beneden te krijgen?
       courseB_artist_loops8_2018: Tijd om naar huis te gaan. Can je de ladder repareren
+        gebruik makende van slechts één blok om de artiest naar beneden te krijgen?
+      courseB_artist_loops8_2019: Tijd om naar huis te gaan. Can je de ladder repareren
         gebruik makende van slechts één blok om de artiest naar beneden te krijgen?
       courseB_artist_loops_challenge1: '"Tijd om met de dobbelstenen te gooien! Kan
         je me helpen ze te tekenen?"'
       courseB_artist_loops_challenge1_2018: '"Tijd om met de dobbelstenen te gooien!
         Kan je me helpen ze te tekenen?"'
+      courseB_artist_loops_challenge1_2019: '"Tijd om met de dobbelstenen te gooien!
+        Kan je me helpen ze te tekenen?"'
       courseB_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk
         X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_artist_loops_challenge2_2018: Laten we een spel spelen! Teken zoveel
+        mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_artist_loops_challenge2_2019: Laten we een spel spelen! Teken zoveel
         mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_collector_loops1: Dit is Laurel de Avonturier! Kan je haar rond bewegen
         en de schatten verzamelen?
       courseB_collector_loops10: Help Laurel om alle schatten uit deze grot te verzamelen.
       courseB_collector_loops10_2018: Help Laurel om alle schatten uit deze grot te
         verzamelen.
+      courseB_collector_loops10_2019: Help Laurel om alle schatten uit deze grot te
+        verzamelen.
       courseB_collector_loops11: Eureka! Verzamel zoveel schatten als je maar kan!
       courseB_collector_loops11_2018: Eureka! Verzamel zoveel schatten als je maar
         kan!
+      courseB_collector_loops11_2019: Eureka! Verzamel zoveel schatten als je maar
+        kan!
       courseB_collector_loops1_2018: Dit is Laurel de Avonturier! Kan je haar rond
+        bewegen en de schatten verzamelen?
+      courseB_collector_loops1_2019: Dit is Laurel de Avonturier! Kan je haar rond
         bewegen en de schatten verzamelen?
       courseB_collector_loops2: Verzamel alle 4 stapels om dit niveau te voltooien.
       courseB_collector_loops2_2018: Verzamel alle 4 stapels om dit niveau te voltooien.
+      courseB_collector_loops2_2019: Verzamel alle 4 stapels om dit niveau te voltooien.
       courseB_collector_loops3: Hoe kan Laurel alle 5 stapels schatten verzamelen,
         gebruik makende van slechts één `E -->` blok?
       courseB_collector_loops3_2018: Hoe kan Laurel alle 5 stapels schatten verzamelen,
         gebruik makende van slechts één `E -->` blok?
+      courseB_collector_loops3_2019: Hoe kan Laurel alle 5 stapels schatten verzamelen,
+        gebruik makende van slechts één `E -->` blok?
       courseB_collector_loops4: Herstel Laurel's pad om alle schatten te verzamelen!
       courseB_collector_loops4_2018: Herstel Laurel's pad om alle schatten te verzamelen!
+      courseB_collector_loops4_2019: Herstel Laurel's pad om alle schatten te verzamelen!
       courseB_collector_loops5: 'Voeg de code van de vorige puzzel toe om alle schatten
         te verzamelen. '
       courseB_collector_loops5_2018: 'Voeg de code van de vorige puzzel toe om alle
         schatten te verzamelen. '
+      courseB_collector_loops5_2019: 'Voeg de code van de vorige puzzel toe om alle
+        schatten te verzamelen. '
       courseB_collector_loops6: Verzin wat code om Laurel alle schatten te laten verzamelen!
       courseB_collector_loops6_2018: Verzin wat code om Laurel alle schatten te laten
         verzamelen!
+      courseB_collector_loops6_2019: Verzin wat code om Laurel alle schatten te laten
+        verzamelen!
       courseB_collector_loops7: Schrijf de code om alle schatten te verzamelen.
       courseB_collector_loops7_2018: Schrijf de code om alle schatten te verzamelen.
+      courseB_collector_loops7_2019: Schrijf de code om alle schatten te verzamelen.
       courseB_collector_loops8: "**Uitdaging:** De schat bevindt zich over de afstand
         van de hele trap! Schrijf code om Laurel alles te laten grijpen."
       courseB_collector_loops8_2018: "**Uitdaging:** De schat bevindt zich over de
         afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
+      courseB_collector_loops8_2019: "**Uitdaging:** De schat bevindt zich over de
+        afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
       courseB_collector_loops9: '*"Help me om de schat te krijgen uit deze diepe vallei."*'
       courseB_collector_loops9_2018: '*"Help me om de schat te krijgen uit deze diepe
+        vallei."*'
+      courseB_collector_loops9_2019: '*"Help me om de schat te krijgen uit deze diepe
         vallei."*'
       courseB_collector_loops_challenge1: 'Je krijgt deze keer een beperkt aantal
         blokken. Verzamel alle schatten! '
       courseB_collector_loops_challenge1_2018: 'Je krijgt deze keer een beperkt aantal
+        blokken. Verzamel alle schatten! '
+      courseB_collector_loops_challenge1_2019: 'Je krijgt deze keer een beperkt aantal
         blokken. Verzamel alle schatten! '
       courseB_collector_loops_challenge2: |-
         Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.
@@ -3129,6 +3222,7 @@ nl:
         doen! \r\n\r\nKrijg de vogel tot bij het varken om dit niveau te voltooien."
       courseB_maze_seq12: Grijp het varken zoals je maar wil!
       courseB_maze_seq12_2018: Grijp het varken zoals je maar wil!
+      courseB_maze_seq12_2019: Grijp het varken zoals je maar wil!
       courseB_maze_seq2: '*"Een bug! Repareer de code om dat varken te grijpen."*'
       courseB_maze_seq7: Zoek uit wat er mist en voeg dan blokken toe om de vogel
         tot aan het varken te krijgen!
@@ -3144,16 +3238,24 @@ nl:
         Vind je een pad voordat je blokken op zijn?
       courseB_maze_seq_challenge1_2018: Je kan slechts 4 keer bewegen in elke richting.
         Vind je een pad voordat je blokken op zijn?
+      courseB_maze_seq_challenge1_2019: Je kan slechts 4 keer bewegen in elke richting.
+        Vind je een pad voordat je blokken op zijn?
       courseB_maze_seq_challenge2: Debug dit level. Dit zijn de correct blokken, maar
         ze staan in de verkeerde volgorde!
       courseB_maze_seq_challenge2_2018: Debug dit level. Dit zijn de correct blokken,
         maar ze staan in de verkeerde volgorde!
+      courseB_maze_seq_challenge2_2019: Debug dit level. Dit zijn de correct blokken,
+        maar ze staan in de verkeerde volgorde!
       courseB_playLab_events1: Kan je uitvinden wat ieder blok doet?
       courseB_playLab_events1_2018: Kan je uitvinden wat ieder blok doet?
+      courseB_playLab_events1_2019: Kan je uitvinden wat ieder blok doet?
       courseB_playlab_events_challenge1: Het is tijd voor de Grote Dieren Race! Laat
         de dieren naar beneden bewegen wanneer je op '▼' duxt. Wie zal het snelste
         lopen?
       courseB_playlab_events_challenge1_2018: Het is tijd voor de Grote Dieren Race!
+        Laat de dieren naar beneden bewegen wanneer je op '▼' duxt. Wie zal het snelste
+        lopen?
+      courseB_playlab_events_challenge1_2019: Het is tijd voor de Grote Dieren Race!
         Laat de dieren naar beneden bewegen wanneer je op '▼' duxt. Wie zal het snelste
         lopen?
       courseB_playlab_events_challenge2: "Laten we dieren laten verdwijnen wanneer
@@ -3164,6 +3266,10 @@ nl:
         we op hen klikken! Probeer eerst met de hond te spelen.\nLaat vervolgens de
         andere dieren in de pret delen.\r\nJe kan ook geluiden toevoegen en punten
         winnen. Maak een spelletje Dieren Tikkertje!"
+      courseB_playlab_events_challenge2_2019: "Laten we dieren laten verdwijnen wanneer
+        we op hen klikken! Probeer eerst met de hond te spelen.\nLaat vervolgens de
+        andere dieren in de pret delen.\r\nJe kan ook geluiden toevoegen en punten
+        winnen. Maak een spelletje Dieren Tikkertje!"
       courseB_playlab_events_challenge2_embed: Hier is jouw voltooide spel!
       courseB_playlab_events_challenge2_template: Laten we de dieren laten laten verdwijnen
         wanneer je op hen klikt! Je kan ook geluiden toevoegen en punten scoren. Maak
@@ -3171,29 +3277,44 @@ nl:
       courseB_playlab_events_challenge2_template_2018: Laten we de dieren laten laten
         verdwijnen wanneer je op hen klikt! Je kan ook geluiden toevoegen en punten
         scoren. Maak een leuk spelletje Dieren Tikkertje!
+      courseB_playlab_events_challenge2_template_2019: Laten we de dieren laten laten
+        verdwijnen wanneer je op hen klikt! Je kan ook geluiden toevoegen en punten
+        scoren. Maak een leuk spelletje Dieren Tikkertje!
       courseB_starWars_prog1: '"Verzamel schroot, BB-8!"'
       courseB_starWars_prog10: Help BB-8 het gloeiende schoot verzamelen
       courseB_starWars_prog10_2018: Help BB-8 het gloeiende schoot verzamelen
+      courseB_starWars_prog10_2019: Help BB-8 het gloeiende schoot verzamelen
       courseB_starWars_prog11: Help BB-8 het gloeiende schoot verzamelen
       courseB_starWars_prog11_2018: Help BB-8 het gloeiende schoot verzamelen
+      courseB_starWars_prog11_2019: Help BB-8 het gloeiende schoot verzamelen
       courseB_starWars_prog1_2018: '"Verzamel schroot, BB-8!"'
+      courseB_starWars_prog1_2019: '"Verzamel schroot, BB-8!"'
       courseB_starWars_prog2: Verzamel alle metaal.
       courseB_starWars_prog2_2018: Verzamel alle metaal.
+      courseB_starWars_prog2_2019: Verzamel alle metaal.
       courseB_starWars_prog3: Ga al het schroot halen
       courseB_starWars_prog3_2018: Ga al het schroot halen
+      courseB_starWars_prog3_2019: Ga al het schroot halen
       courseB_starWars_prog4: Ga al het schroot halen
       courseB_starWars_prog4_2018: Ga al het schroot halen
+      courseB_starWars_prog4_2019: Ga al het schroot halen
       courseB_starWars_prog5: Ge het schroot halen
       courseB_starWars_prog5_2018: Ge het schroot halen
+      courseB_starWars_prog5_2019: Ge het schroot halen
       courseB_starWars_prog6: Ga al het schroot halen
       courseB_starWars_prog6_2018: Ga al het schroot halen
+      courseB_starWars_prog6_2019: Ga al het schroot halen
       courseB_starWars_prog7: Ga het halen!
       courseB_starWars_prog7_2018: Ga het halen!
+      courseB_starWars_prog7_2019: Ga het halen!
       courseB_starWars_prog8: "**Uitdaging:** Help BB-8 al het gloeiende schoot verzamelen"
       courseB_starWars_prog8_2018: "**Uitdaging:** Help BB-8 al het gloeiende schoot
         verzamelen"
+      courseB_starWars_prog8_2019: "**Uitdaging:** Help BB-8 al het gloeiende schoot
+        verzamelen"
       courseB_starWars_prog9: Help BB-8 het gloeiende schoot verzamelen
       courseB_starWars_prog9_2018: Help BB-8 het gloeiende schoot verzamelen
+      courseB_starWars_prog9_2019: Help BB-8 het gloeiende schoot verzamelen
       courseC_PlayLab_events3: Kan je een programma schrijven om Jorge (speler 1)
         voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_events3_2018: Kan je een programma schrijven om Jorge (speler

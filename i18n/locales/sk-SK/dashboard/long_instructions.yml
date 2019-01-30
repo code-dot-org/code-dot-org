@@ -408,6 +408,13 @@ sk:
       Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
       Overworld Move to Sheep_2018: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
+      Ryan_Demo: |-
+        Roztancujme tohto soba!
+
+        Presuň blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> na pracovnú plochu. Napoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takty"</title></block></xml>. Tvoj tanečník by mal predviesť nový krok po štyroch taktoch.
+
+
+        **Takty** sa v hudbe používajú na počítanie času. V tomto cvičení sa takt skladá zo štyroch dôb.
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
       courseC_collector_prog7: "**Výzva:** *\"Čo sa tu deje?\"*\n\nAj keď tieto bloky usporiadame do správneho poradia, stále nám bude niešo chýbať. \nVyuži bloky z panela nástrojov na to, aby si pozbieral všetky poklady."

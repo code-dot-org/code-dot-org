@@ -1218,10 +1218,18 @@ es-MX:
       PS copy 2-3 Bee Conditionals 5: "¡Estas flores púrpuras son mágicas y cambian!\n\nCada que intenta jugar, las flores púrpura pueden tener 1 néctar o nada en absoluto... pero no sabrá el número hasta que ejecute el código! \n\nTen cuidado de no intentar recoger néctar de una flor morada sin nectar. \ndebe comprobar primero si el néctar es igual a 1 usando el bloque ' si néctar '."
       Pixelation - Lesson 15 - Complete 3-bit color: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
+      Ryan_Demo: |-
+        ¡Vamos a bailar!
+
+        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> en el espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. El bailarín debería comenzar un nuevo movimiento después de la cuarta medida.
+
+
+        Las **Medidas** se utilizan para contar el tiempo en la música. En este tutorial, una medida son cuatro tiempos.
       Testing Quantum Farmer: "¡Wow, encontré un agujero realmente profundo! no sé cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
       Underground If Statements: Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar roca sobre la lava que descubras.
       Underground If Statements_2018: Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar roca sobre la lava que descubras.
       Underground If Statements_2019: Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar roca sobre la lava que descubras.
+      allthethings_ttscsf contained: "Ayuda al agricultor a recorrer el camino para encontrar todas las lechugas\\r\n\\r\nEn este rompecabezas, las lechugas están creciendo al final de cada camino. Si hay un camino frente a ellas, la agricultora puede seguir hacia adelante. De lo contrario, necesita recoger todas las lechugas, luego girarse para continuar en el camino. \\r\n\\r\n\\r\n\\r\n \n"
       conditionals_forvideo_harvester: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       course1_artist_loops_challenge2: '¡Vamos a jugar un juego!! Dibuja tantas X como tú puedas! ¿Puedes obtener 3 en una fila?'
       course1_artist_loops_challenge3: |-
@@ -1308,12 +1316,21 @@ es-MX:
         ## Es hora de regresar a la tierra. ¡Ayúdame a poner piedras para no caer! \ r 
         \ r 
         ! [expandable] (https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## Es hora de regresar a la tierra. ¡Ayúdame a poner piedras para no caer! \ r 
+        \ r 
+        ! [expandable] (https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Ayúdame a construir pasos para ver cómo navega el barco. \ r 
         \ r 
         ! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
 
       courseA_artist_loops11_2018: |-
+        ## Ayúdame a construir pasos para ver cómo navega el barco. \ r 
+        \ r 
+        ! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+
+      courseA_artist_loops11_2019: |-
         ## Ayúdame a construir pasos para ver cómo navega el barco. \ r 
         \ r 
         ! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -1338,6 +1355,16 @@ es-MX:
         ! [] (https: //images.code .org / 126edbb030b78586c620fea11bd9c867-image-1497998152966.gif) \ r 
         ! [] (https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif) \ r 
         ! [] (https://images.code.org /55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        El artista vio algo gracioso en la distancia.  Dibuja lo que crees que vio. \ r 
+        \ r 
+        ___ \ r 
+        ### Ideas \ r 
+        \ r 
+        ! [] (https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif) \ r 
+        ! [] (https: //images.code .org / 126edbb030b78586c620fea11bd9c867-image-1497998152966.gif) \ r 
+        ! [] (https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif) \ r 
+        ! [] (https://images.code.org /55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         Ayuda al artista a dibujar esta línea dos veces hacia adelante.\r
         \r 
@@ -1346,11 +1373,19 @@ es-MX:
         Ayuda al artista a dibujar esta línea dos veces hacia adelante.\r
         \r 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Ayuda al artista a dibujar esta línea dos veces hacia adelante.\r
+        \r 
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: |-
         Nuestro artista está tratando de trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?\r 
         \r 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018: |-
+        Nuestro artista está tratando de trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?\r 
+        \r 
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
         Nuestro artista está tratando de trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?\r 
         \r 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
@@ -1364,11 +1399,20 @@ es-MX:
         name="TIMES" config="2-6">5</title></block></xml> para dibujar esta línea cinco veces!\r
         \r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Ahora, ¡utiliza un bucle <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> para dibujar esta línea cinco veces!\r
+        \r
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ## Dibuja una línea de siete pasos de largo. Este será nuestro horizonte.\r
         \r
         ! [expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
+        ## Dibuja una línea de siete pasos de largo. Este será nuestro horizonte.\r
+        \r
+        ! [expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
         ## Dibuja una línea de siete pasos de largo. Este será nuestro horizonte.\r
         \r
         ! [expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
@@ -1380,12 +1424,21 @@ es-MX:
         ## Pongamos una colina bonita en la parte posterior.\r
         \r
         ! [expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Pongamos una colina bonita en la parte posterior.\r
+        \r
+        ! [expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Use el <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         ciclo para agregar olas al agua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
+        ## Use el <xml><block
+        type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        ciclo para agregar olas al agua.
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2019: |-
         ## Use el <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         ciclo para agregar olas al agua.
@@ -1403,11 +1456,19 @@ es-MX:
         ## Necesitamos una escalera hasta el bote.\r
         \r
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## Necesitamos una escalera hasta el bote.\r
+        \r
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9: |-
         ## ** Desafío: ** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlas.\r
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018: |-
+        ## ** Desafío: ** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlos .\r
+        \r
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
         ## ** Desafío: ** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlos .\r
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
@@ -1427,6 +1488,14 @@ es-MX:
         Aquí hay algunas ideas:\r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        Puede usar un loop para dibujar muchas líneas seguidas.\r
+        \r
+        ¿Puedes dibujar una casa ? ¡Haz que se vea como a ti te gusta! Intenta buscar patrones que se repiten!\r
+        \r
+        Aquí hay algunas ideas:\r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2: |-
         **Tweet!**\r
         \r
@@ -1436,6 +1505,10 @@ es-MX:
         \r
         Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
       courseA_artist_loops_challenge2a_2018: |-
+        *"¡Ayúdame a preparar el campamento!"*\r
+        \r
+        Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
+      courseA_artist_loops_challenge2a_2019: |-
         *"¡Ayúdame a preparar el campamento!"*\r
         \r
         Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
@@ -1465,7 +1538,12 @@ es-MX:
         Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
       courseA_collector_loops12: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
       courseA_collector_loops12_2018: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
+      courseA_collector_loops12_2019: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
       courseA_collector_loops1_2018: |-
+        **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
+        \r
+        Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
+      courseA_collector_loops1_2019: |-
         **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
         \r
         Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
@@ -1473,10 +1551,13 @@ es-MX:
         ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: "¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\\r\n  <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: "¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseA_collector_loops3_2018: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
+      courseA_collector_loops3_2019: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseA_collector_loops_challenge1: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
       courseA_collector_loops_challenge1_2018: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
+      courseA_collector_loops_challenge1_2019: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
       courseA_collector_preLoops1: "¡Esta es Laurel la Aventurera!\n\\r\n\\r\nPresiona el botón \"Ejecutar\" para verla caminar hasta el tesoro y tomarlo."
       courseA_collector_preLoops2: "¡Estupendo! ¡Ahora puedes agregar el código tú mismo!  \\r\n\\r\nColoque un ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) bloque en la parte inferior del programa y haga clic en \"Ejecutar\"!"
       courseA_collector_preLoops3: "Para agarrar el tesoro, ¡encaje dos! [](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)\n bloques y uno ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\n bloque en la parte inferior del programa y haga clic en \"Ejecutar\"!"
@@ -1487,18 +1568,32 @@ es-MX:
       courseA_harvester_forVideo: '¿Puedes recoger todo el maíz utilizando únicamente ** un ** bloque ´mover´?'
       courseA_harvester_loops1: '¡Ayuda a la cosechadora recoger el maíz!'
       courseA_harvester_loops10: '¡Ayuda a la cosechadora a recoger todo el maíz!'
+      courseA_harvester_loops10_2019: '¡Ayuda a la cosechadora a recoger todo el maíz!'
       courseA_harvester_loops11: '¡Intenta uno más por tu cuenta! '
+      courseA_harvester_loops11_2019: '¡Intenta uno más por tu cuenta! '
+      courseA_harvester_loops1_2019: '¡Ayuda a la cosechadora recoger el maíz!'
       courseA_harvester_loops2: '¡La cosechadora necesta recoger todo el maiz! ¿Ves algún patrón?'
+      courseA_harvester_loops2_2019: '¡La cosechadora necesta recoger todo el maiz! ¿Ves algún patrón?'
       courseA_harvester_loops3: '¿Puedes recoger todo el maíz utilizando únicamente ** un ** bloque ´mover´?'
+      courseA_harvester_loops3_2019: '¿Puedes recoger todo el maíz utilizando únicamente ** un ** bloque ´mover´?'
       courseA_harvester_loops4: |-
         *"¡Necesito ayudar a encontrar lo que está mal!"*\r
         \r
         ¿Puedes ayudar a la cosechadora a encontrar el bug en su codigo?
+      courseA_harvester_loops4_2019: |-
+        *"¡Necesito ayudar a encontrar lo que está mal!"*\r
+        \r
+        ¿Puedes ayudar a la cosechadora a encontrar el bug en su codigo?
       courseA_harvester_loops5: '¡Compruébalo tú mismo! ¿Puedes recoger el maíz al final?'
+      courseA_harvester_loops5_2019: '¡Compruébalo tú mismo! ¿Puedes recoger el maíz al final?'
       courseA_harvester_loops5a: '¡Mira todo este maiz! ¿Puedes recogerlo todo tu mismo?'
+      courseA_harvester_loops5a_2019: '¡Mira todo este maiz! ¿Puedes recogerlo todo tu mismo?'
       courseA_harvester_loops5b: '¿Puedes cambiar tu código para que la cosechadora pueda recoger el maíz?'
+      courseA_harvester_loops5b_2019: '¿Puedes cambiar tu código para que la cosechadora pueda recoger el maíz?'
       courseA_harvester_loops6: '¡Necesitarás **un** bloque <xml><block type="maze_moveWest"></block></xml> y **un** bloque <xml><block type="maze_moveNorth"></block></xml> para finalizar tu rompecabezas!'
+      courseA_harvester_loops6_2019: '¡Necesitarás **un** bloque <xml><block type="maze_moveWest"></block></xml> y **un** bloque <xml><block type="maze_moveNorth"></block></xml> para finalizar tu rompecabezas!'
       courseA_harvester_loops7: '¡Inténtalo! '
+      courseA_harvester_loops7_2019: '¡Inténtalo! '
       courseA_harvester_loops8: |-
         Este es el mismo rompecabezas, ¡pero ahora debes repetir **tres** veces en lugar de dos! Usa este bloque:\r
         \r
@@ -1506,47 +1601,69 @@ es-MX:
             <title name="TIMES" config="2-10">3</title>\r
           </block></xml>
       courseA_harvester_loops9: '¿Puedes descifrar cómo recoger *todo* este maiz?'
+      courseA_harvester_loops9_2019: '¿Puedes descifrar cómo recoger *todo* este maiz?'
       courseA_harvester_seq1: '¡Ayuda a la cosechadra a recoger el trozo de maiz!'
       courseA_harvester_seq10: '¡La cosechadora necesta recoger todo el maiz! ¿Ves algún patrón?'
+      courseA_harvester_seq10_2019: '¡La cosechadora necesta recoger todo el maiz! ¿Ves algún patrón?'
       courseA_harvester_seq11: '¡Inténtalo! Recoge el maíz.'
+      courseA_harvester_seq11_2019: '¡Inténtalo! Recoge el maíz.'
       courseA_harvester_seq12: "*¡Gracias por ayudarme!* \\r\n\\r\nRecoger todo el maiz."
+      courseA_harvester_seq12_2019: "*¡Gracias por ayudarme!* \\r\n\\r\nRecoger todo el maiz."
       courseA_harvester_seq13: '¡Ayuda a la cosechadora a recoger **un** maiz!'
+      courseA_harvester_seq13_2019: '¡Ayuda a la cosechadora a recoger **un** maiz!'
+      courseA_harvester_seq1_2019: '¡Ayuda a la cosechadra a recoger el trozo de maiz!'
       courseA_harvester_seq2: '¡Usa <xml><block type="maze_moveWest"/></xml> **tres** veces para llevar a la cosechadora al maiz! '
+      courseA_harvester_seq2_2019: '¡Usa <xml><block type="maze_moveWest"/></xml> **tres** veces para llevar a la cosechadora al maiz! '
       courseA_harvester_seq3: '¡Usa <xml><block type="maze_moveNorth"/></xml> **tres** veces para llevar a la cosechadora al maiz! No te olvides de recoger el maiz al final.'
+      courseA_harvester_seq3_2019: '¡Usa <xml><block type="maze_moveNorth"/></xml> **tres** veces para llevar a la cosechadora al maiz! No te olvides de recoger el maiz al final.'
       courseA_harvester_seq4: Agrega *un* bloque para ayudar a la cosechadora a recoger el maiz.
+      courseA_harvester_seq4_2019: Agrega *un* bloque para ayudar a la cosechadora a recoger el maiz.
       courseA_harvester_seq5: '¿Puedes descifrar lo que está mal con este código? ¡Ayuda a la cosechadora a recoger el maiz!'
+      courseA_harvester_seq5_2019: '¿Puedes descifrar lo que está mal con este código? ¡Ayuda a la cosechadora a recoger el maiz!'
       courseA_harvester_seq6: Inténtalo tú mismo!
+      courseA_harvester_seq6_2019: Inténtalo tú mismo!
       courseA_harvester_seq7: '¡Tienes que moverte en dos direcciones para obtener el maiz! Ayuda a la cosechadora a escoger la dirección correcta.'
+      courseA_harvester_seq7_2019: '¡Tienes que moverte en dos direcciones para obtener el maiz! Ayuda a la cosechadora a escoger la dirección correcta.'
       courseA_harvester_seq8: '¡Ahora la cosechadora necesita recoger maíz dos veces!'
+      courseA_harvester_seq8_2019: '¡Ahora la cosechadora necesita recoger maíz dos veces!'
       courseA_harvester_seq9: '¡Agrega dos bloques para terminar este rompecabezas!'
+      courseA_harvester_seq9_2019: '¡Agrega dos bloques para terminar este rompecabezas!'
       courseA_maze_ramp2_2018: '¡Junta ambosbloques <xml><block type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
+      courseA_maze_ramp2_2019: '¡Junta ambosbloques <xml><block type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp2a_2018: '¡Junta ambosbloques <xml><block type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp3_2018: "*\"Este cerdo esta erizando mis plumas.\"*\\r\n\\r\nHay un bloque adicional que va a hacer que el pájaro choque.  \\r\nEliminalo removiéndolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
       courseA_maze_ramp3a_2018: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
+      courseA_maze_ramp3a_2019: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp4_2018: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \\r\n\\r\n¡Evita el TNT o volarán plumas!"
       courseA_maze_ramp4a_2018: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
+      courseA_maze_ramp4a_2019: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseA_maze_ramp5_2018: |-
         *"¡Sigue este camino para llevarme hasta el cerdo!"*\r
         \r
         Evita el TNT.
       courseA_maze_ramp5a_2018: '¡Intenta con este tu mismo!'
+      courseA_maze_ramp5a_2019: '¡Intenta con este tu mismo!'
       courseA_maze_seq1: '*"¡Juega con estos bloques e intenta llevarme al cerdo malo!"*'
       courseA_maze_seq10: |-
         **Desafío:** ¡Ve al rededor de TNT para llevar al pájaro hasta el cerdo!\r
         \r
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq10_2018: "**Desafío:** ¡Evita el TNT para llevar al pájaro hasta el cerdo!"
+      courseA_maze_seq10_2019: "**Desafío:** ¡Evita el TNT para llevar al pájaro hasta el cerdo!"
       courseA_maze_seq11: |-
         ¡Es tiempo de un rompecabezas más corto!  Muévete en una dirección, luego otra para llevar al pájaro hasta el cerdo.\r
         \r
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018: "¡Es el momento de un rompecabezas más corto! Muévete en una dirección, luego otra para llevar al pájaro hasta el cerdo.\\r\n"
+      courseA_maze_seq11_2019: "¡Es el momento de un rompecabezas más corto! Muévete en una dirección, luego otra para llevar al pájaro hasta el cerdo.\\r\n"
       courseA_maze_seq12: |-
         ¡Atrapa al cerdo!\r
         \r
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: '¡Atrapa a ese cerdo!'
+      courseA_maze_seq12_2019: '¡Atrapa a ese cerdo!'
       courseA_maze_seq1_2018: '*"¡Juega con estos bloques e intenta llevarme al cerdo malo!"*'
+      courseA_maze_seq1_2019: '*"¡Juega con estos bloques e intenta llevarme al cerdo malo!"*'
       courseA_maze_seq2: |-
         *"¡Un bug! Arrega el código para llevarme al cerdo."*\r
         \r
@@ -1572,7 +1689,12 @@ es-MX:
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Dale una oportunidad a este.
+      courseA_maze_seq5_2019: Dale una oportunidad a este.
       courseA_maze_seq5a_2018: |-
+        *"¡Aquí cerdito, cerdito!"*\r
+        \r
+        ¿Qué puedes agregar al final de este código para llevar al pájaro hasta el cerdo?
+      courseA_maze_seq5a_2019: |-
         *"¡Aquí cerdito, cerdito!"*\r
         \r
         ¿Qué puedes agregar al final de este código para llevar al pájaro hasta el cerdo?
@@ -1581,6 +1703,7 @@ es-MX:
         \r
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: '¡Muéveme en una dirección, luego en otra para llevarme el cerdo!'
+      courseA_maze_seq6_2019: '¡Muéveme en una dirección, luego en otra para llevarme el cerdo!'
       courseA_maze_seq7: |-
         ¡Descifra qué falta y luego agrega bloques para llevar al pájaro hasta el cerdo!\r
         \r
@@ -1594,6 +1717,7 @@ es-MX:
         \r
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: '¡Resuelve este nivel y lleva el pájaro al cerdo!'
+      courseA_maze_seq8_2019: '¡Resuelve este nivel y lleva el pájaro al cerdo!'
       courseA_maze_seq9: |-
         ** Desafío: ** Depura este nivel agregando bloques para llevar al pájaro al cerdo.\r
         \r
@@ -1604,6 +1728,7 @@ es-MX:
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1: Depura este nivel. Elimina los bloques adicionales y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
       courseA_maze_seq_challenge1_2018: Depura este nivel. Elimina los bloques adicionales y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
+      courseA_maze_seq_challenge1_2019: Depura este nivel. Elimina los bloques adicionales y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
       courseA_playLab_events3: |-
         Ayuda a Jorge el perro a moverse conectando el <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
@@ -1626,10 +1751,23 @@ es-MX:
           </block></xml> evento bloque que ya está en el área de trabajo.\r
         \r
         ¡Lleva a Jorge a la bandera para terminar este nivel!
+      courseA_playLab_events3_2019: |-
+        Ayuda a Jorge el perro a moverse conectando el <xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> bloque a la <xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">izquierdo</title>\r
+          </block></xml> evento bloque que ya está en el área de trabajo.\r
+        \r
+        ¡Lleva a Jorge a la bandera para terminar este nivel!
       courseA_playLab_events4: Ahora, haga que Jorge se mueva hacia la derecha cuando se haga click en la flecha derecha.
       courseA_playLab_events4_2018: Ahora, haga que Jorge se mueva hacia la derecha cuando haga clic en el botón de flecha hacia la derecha.
+      courseA_playLab_events4_2019: Ahora, haga que Jorge se mueva hacia la derecha cuando haga clic en el botón de flecha hacia la derecha.
       courseA_playLab_events5: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2018: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha arriba y flecha abajo.
+      courseA_playLab_events5_2019: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha arriba y flecha abajo.
       courseA_playlab_events_challenge1: |-
         Al hacer clic en Olive
          aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
@@ -1639,6 +1777,14 @@ es-MX:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge1_2018: |-
+        Al hacer clic en Olive
+         aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
+        \r
+        En este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos te ayudarán a hacer este proyecto paso a paso!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      courseA_playlab_events_challenge1_2019: |-
         Al hacer clic en Olive
          aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
         \r
@@ -1668,6 +1814,13 @@ es-MX:
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challenge2_2019: |-
+        Dé a cada uno algo que hacer cuando haga clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?\r
+        \r
+        En este rompecabezas , hacer asegúrese de hacer clic para consejos . ¡Los consejos te darán cosas divertidas para probar!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseA_playlab_events_challengeClone: |-
         ¿Dónde se esconden mis amigos? En este juego, al hacer click en mí, ¡se mostrará a mi amigo Olive, el gato! Al hacer clic en Olive aparecerá Robin. ¿Puedes escribir código para mostrar al resto de mis amigos también?\r
         \r
@@ -1677,10 +1830,15 @@ es-MX:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseB_Scrat_ramp1_2018: Para llevar a Scrat hasta la bellota, encaja el bloque <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block type="when_run"/></xml>, luego presiona ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      courseB_Scrat_ramp1_2019: Para llevar a Scrat hasta la bellota, encaja el bloque <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block type="when_run"/></xml>, luego presiona ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       courseB_Scrat_ramp2_2018: Encaja ambos bloques <xml><block type="maze_moveEast"/></xml> al fondo del bloque <xml><block type="when_run"/></xml> para terminar tu código, luego haz click en ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp2_2019: Encaja ambos bloques <xml><block type="maze_moveEast"/></xml> al fondo del bloque <xml><block type="when_run"/></xml> para terminar tu código, luego haz click en ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseB_Scrat_ramp3a_2018: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
+      courseB_Scrat_ramp3a_2019: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseB_Scrat_ramp4a_2018: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
+      courseB_Scrat_ramp4a_2019: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseB_Scrat_ramp5a_2018: '¡Intenta con este tu mismo!'
+      courseB_Scrat_ramp5a_2019: '¡Intenta con este tu mismo!'
       courseB_artist_loops10: |-
         Usa lo que has aprendido para hacer un dibujo de lo que crees que vió el artista cuando llegó a casa.\r
         \r
@@ -1701,17 +1859,31 @@ es-MX:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2019: |-
+        Usa lo que has aprendido para hacer un dibujo de lo que crees que vió el artista cuando llegó a casa.\r
+        \r
+        ___\r
+        ### Ideas\r
+        \r
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops7: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
       courseB_artist_loops7_2018: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
+      courseB_artist_loops7_2019: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
       courseB_artist_loops_challenge1: '*"Es momento de lanzar el dado! ¿Puedes ayudarme a dibujar estos?"*'
       courseB_artist_loops_challenge1_2018: '*"Es momento de lanzar el dado! ¿Puedes ayudarme a dibujar estos?"*'
+      courseB_artist_loops_challenge1_2019: '*"Es momento de lanzar el dado! ¿Puedes ayudarme a dibujar estos?"*'
       courseB_artist_loops_challenge2: Dibuja tantas X como puedas. ¿Puedes obtener 3 en una fila?
       courseB_artist_loops_challenge2_2018: Dibuja tantas X como puedas. ¿Puedes obtener 3 en una fila?
+      courseB_artist_loops_challenge2_2019: Dibuja tantas X como puedas. ¿Puedes obtener 3 en una fila?
       courseB_collector_loops1: |-
         **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
         \r
         Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
       courseB_collector_loops1_2018: "**** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\\r\n\\r\nArrastra\n bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel."
+      courseB_collector_loops1_2019: "**** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\\r\n\\r\nArrastra\n bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel."
       courseB_collector_loops2: |-
         Mueve a Laurel al tesoro, luego usa el bloque <xml><block type="collector_collect"/></xml>para recogerlo.\r
         \r
@@ -1722,8 +1894,14 @@ es-MX:
         \r
         \r
         Get all four piles to pass this level.
+      courseB_collector_loops2_2019: |-
+        Mueve a Laurel al tesoro, luego usa el bloque <xml><block type="collector_collect"/></xml>para recogerlo.\r
+        \r
+        \r
+        Get all four piles to pass this level.
       courseB_collector_loops3: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseB_collector_loops3_2018: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
+      courseB_collector_loops3_2019: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseB_collector_loops3_predict1: '¿Cómo puede Laurel recoger las cinco pilas de oro usando solo un bloque `E ->`?'
       courseB_collector_loops_challenge2a: |-
         *"¡Vamos a buscar el tesoro!"*\r
@@ -1733,34 +1911,57 @@ es-MX:
         *"¡Vamos a buscar el tesoro!"*\r
         \r
         Ayuda a Laurel obtener al menos **5** partes del tesoro para finalizar este rompecabezas.
+      courseB_collector_loops_challenge2a_2019: |-
+        *"¡Vamos a buscar el tesoro!"*\r
+        \r
+        Ayuda a Laurel obtener al menos **5** partes del tesoro para finalizar este rompecabezas.
       courseB_collector_prog3: '¿Cómo puede Laurel recoger las cinco pilas de oro usando solo un bloque `E ->`?'
       courseB_iceage_loops1: '¡Ayuda a Scrat sobre el hielo resbaladizo para llegar a la bellota!'
       courseB_iceage_loops10: "¡Ayuda a Scrat a llegar a la\n bellota!"
+      courseB_iceage_loops10_2019: "¡Ayuda a Scrat a llegar a la\n bellota!"
       courseB_iceage_loops11: '¡Ayuda a Scrat a llegar a la bellota!'
+      courseB_iceage_loops11_2019: '¡Ayuda a Scrat a llegar a la bellota!'
       courseB_iceage_loops11_forVideo: '¡Ayuda a Scrat a llegar a la bellota!'
       courseB_iceage_loops12: '¡Llega a la bellota de cualquier forma que puedas!'
+      courseB_iceage_loops12_2019: '¡Llega a la bellota de cualquier forma que puedas!'
+      courseB_iceage_loops1_2019: '¡Ayuda a Scrat sobre el hielo resbaladizo para llegar a la bellota!'
       courseB_iceage_loops2: '¡Usa ambos bloques <xml><block type="maze_moveWest"/></xml> and <xml><block type="maze_moveSouth"/></xml> para llegar a la bellota!'
+      courseB_iceage_loops2_2019: '¡Usa ambos bloques <xml><block type="maze_moveWest"/></xml> and <xml><block type="maze_moveSouth"/></xml> para llegar a la bellota!'
       courseB_iceage_loops3: '¿Puedes llegar a la bellota con sólo un bloque <xml><block type="maze_moveWest"/></xml>? ¡Inténtalo usando un bucle!'
+      courseB_iceage_loops3_2019: '¿Puedes llegar a la bellota con sólo un bloque <xml><block type="maze_moveWest"/></xml>? ¡Inténtalo usando un bucle!'
       courseB_iceage_loops4: Añade un bloque más para que Scrat llegue hasta la bellota!
+      courseB_iceage_loops4_2019: Añade un bloque más para que Scrat llegue hasta la bellota!
       courseB_iceage_loops5: '¿Puedes agrear un bucle más para alcanzar la bellota?'
       courseB_iceage_loops6: '¿Puedes agrear un bucle para alcanzar la bellota?'
+      courseB_iceage_loops6_2019: '¿Puedes agrear un bucle para alcanzar la bellota?'
       courseB_iceage_loops7: 'Scrat realmente quiere esa bellota! '
+      courseB_iceage_loops7_2019: 'Scrat realmente quiere esa bellota! '
       courseB_iceage_loops8: "\n¿Puedes arreglar este código? "
+      courseB_iceage_loops8_2019: "\n¿Puedes arreglar este código? "
       courseB_iceage_loops9: La bellota está muy lejos! ¿Puedes utilizar los bucles para ayudar a Scrat a alcanzarla?
+      courseB_iceage_loops9_2019: La bellota está muy lejos! ¿Puedes utilizar los bucles para ayudar a Scrat a alcanzarla?
       courseB_maze_seq3: '*"¡Arregle el código para llevarme al cerdo!"*'
       courseB_maze_seq3_2018: '*"¡Arregla el código para llevarme a la bellota!"*'
       courseB_maze_seq9: "**Desafío:** Muévete alrededor del TNT para llevar al pájaro hasta el cerdo."
       courseB_maze_seq9_2018: "**Desafíoa:** Muévete alrededor del hielo quebrado para llevar a Scrat a la bellota."
+      courseB_maze_seq9_2019: "**Desafíoa:** Muévete alrededor del hielo quebrado para llevar a Scrat a la bellota."
       courseB_maze_seq9_challenge1: "*¿dónde se está escondiendo el cerdo ahora?*"
       courseB_maze_seqCold: "**Desafío:** ¡Depura este nivel agregando bloques para llevar al pájaro hasta el cerdo!"
       courseB_maze_seq_challenge1: Sólo tienes cuatro de cada bloque de movimiento. ¿Puedes encontrar una ruta antes que se te acaben los bloques?
       courseB_maze_seq_challenge1_2018: Sólo tienes cuatro de cada bloque de movimiento. ¿Puedes encontrar una ruta antes que se te acaben los bloques?
+      courseB_maze_seq_challenge1_2019: Sólo tienes cuatro de cada bloque de movimiento. ¿Puedes encontrar una ruta antes que se te acaben los bloques?
       courseB_playLab_events1: "Este juego se llama \"Play Lab\".  \\r\n\\r\nVe si puedes descifrar que hace cada bloque."
       courseB_playLab_events1_2018: "Este juego se llama \"Play Lab\".  \\r\n\\r\nVe si puedes descifrar que hace cada bloque."
+      courseB_playLab_events1_2019: "Este juego se llama \"Play Lab\".  \\r\n\\r\nVe si puedes descifrar que hace cada bloque."
       courseB_playlab_events3: Utiliza un evento para hacer que Daisy, la Dragón, cambie a un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) cuando hagas click en ella.
       courseB_playlab_events3_2018: Utiliza un evento para hacer que Daisy, la Dragón, cambie a un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) cuando hagas click en ella.
+      courseB_playlab_events3_2019: Utiliza un evento para hacer que Daisy, la Dragón, cambie a un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) cuando hagas click en ella.
       courseB_playlab_events4: "¡Tempo de Caballeros!  \\r\n\\r\nAgrega un evento para que el caballero vaya hacia el dragón cuando se haga click en la flecha izquierda."
       courseB_playlab_events4_2018: |-
+        ¡Tempo de Caballeros!  \r
+        \r
+        Agrega un evento para que el caballero vaya hacia el dragón cuando se haga click en la flecha izquierda.
+      courseB_playlab_events4_2019: |-
         ¡Tempo de Caballeros!  \r
         \r
         Agrega un evento para que el caballero vaya hacia el dragón cuando se haga click en la flecha izquierda.
@@ -1772,10 +1973,16 @@ es-MX:
         ¡Ayuda a tu caballero a obtener todas las banderas!\r
         \r
         Para hacerlo, necesitarás agregar eventos para ayudar al cabellro a moverse hacia arriba, abajo, izquierda y derecha.
+      courseB_playlab_events6_2019: |-
+        ¡Ayuda a tu caballero a obtener todas las banderas!\r
+        \r
+        Para hacerlo, necesitarás agregar eventos para ayudar al cabellro a moverse hacia arriba, abajo, izquierda y derecha.
       courseB_playlab_events7: "¡Haz que el juego sea divertido haciendo que el caballero se desvanezca cuando corre hacia el dragón en su camino a obtener las banderas! \\r\n\\r\nAgrega un sonido cuando choquen para hacerlo más real.\\r\n\\r\nVisita todos los objetivos, luego corre hacia el dragón para pasar de nivel."
       courseB_playlab_events7_2018: "¡Haz que el juego sea divertido haciendo que el caballero se desvanezca cuando corre hacia el dragón en su camino a obtener las banderas! \\r\n\\r\nAgrega un sonido cuando choquen para hacerlo más real.\\r\n\\r\nVisita todos los objetivos, luego corre hacia el dragón para pasar de nivel."
+      courseB_playlab_events7_2019: "¡Haz que el juego sea divertido haciendo que el caballero se desvanezca cuando corre hacia el dragón en su camino a obtener las banderas! \\r\n\\r\nAgrega un sonido cuando choquen para hacerlo más real.\\r\n\\r\nVisita todos los objetivos, luego corre hacia el dragón para pasar de nivel."
       courseB_playlab_events_challenge1: "¡Es momento para la Gran Carrera Aninmal! Haz que los animales se muevan hacia abajo cuando presiones `▼`. \\r\n\\r\n¿uién será el más feloz?"
       courseB_playlab_events_challenge1_2018: "¡Es momento para la Gran Carrera Aninmal! Haz que los animales se muevan hacia abajo cuando presiones `▼`. \\r\n\\r\n¿uién será el más feloz?"
+      courseB_playlab_events_challenge1_2019: "¡Es momento para la Gran Carrera Aninmal! Haz que los animales se muevan hacia abajo cuando presiones `▼`. \\r\n\\r\n¿uién será el más feloz?"
       courseB_playlab_events_challenge2: |-
         Vamos a hacer que los animales desparezcan cuando hagas click en ellos.\r
         Intenta jugar con el perro ahora,luego ayuda a los otros animales a unirse a la diversión. Puedes también agregara sonidos y puntajes para crear un juego de Animal Tag!\r
@@ -1786,30 +1993,47 @@ es-MX:
         Intenta jugar con el perro ahora,luego ayuda a los otros animales a unirse a la diversión. Puedes también agregara sonidos y puntajes para crear un juego de Animal Tag!\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
+        Vamos a hacer que los animales desparezcan cuando hagas click en ellos.\r
+        Intenta jugar con el perro ahora,luego ayuda a los otros animales a unirse a la diversión. Puedes también agregara sonidos y puntajes para crear un juego de Animal Tag!\r
+        \r
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_\r
         \r
         Cuidado con las muralla y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
       courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
+      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Continúa!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Continúa!"_'
+      courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Continúa!"_'
       courseB_starWars_prog1_2018: |-
+        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_\r
+        \r
+        Cuidado con las muralla y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog1_2019: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_\r
         \r
         Cuidado con las muralla y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog2: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtén todo el metal."_'
       courseB_starWars_prog2_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtén todo el metal."_'
+      courseB_starWars_prog2_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtén todo el metal."_'
       courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Coontinúa, BB-8!"_'
       courseB_starWars_prog3_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Coontinúa, BB-8!"_'
+      courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Coontinúa, BB-8!"_'
       courseB_starWars_prog4: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtenlo, BB-8!"_'
       courseB_starWars_prog4_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtenlo, BB-8!"_'
+      courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Obtenlo, BB-8!"_'
       courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
       courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
+      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes obtenerlos todos?"_'
       courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
       courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
       courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Ve a buscarlo!"_'
       courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Ve a buscarlo!"_'
+      courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Ve a buscarlo!"_'
       courseB_starWars_prog8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_\r
         \r
@@ -1818,8 +2042,13 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_\r
         \r
         **Desafío**: Reúne toda la chatarra.
+      courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_\r
+        \r
+        **Desafío**: Reúne toda la chatarra.
       courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
       courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
       courseC19_playLab_EOC1: |-
         ¡Es sorprendente cuánto has aprendido! Vamos a hacer un juego paso a paso.\r
         \r
@@ -4664,6 +4893,7 @@ es-MX:
       course_playlab_variables2: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
       course_playlab_variables3: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
       coursea_maze_ramp1_2018: Para llevar al pájaro hasta el cerdo, encaja el bloque <xml><block type="maze_moveEast"/></xml> a la parte inferior del bloque <xml><block type="when_run"/></xml> , ¡luego presiona![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      coursea_maze_ramp1_2019: Para llevar al pájaro hasta el cerdo, encaja el bloque <xml><block type="maze_moveEast"/></xml> a la parte inferior del bloque <xml><block type="when_run"/></xml> , ¡luego presiona![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       coursef_maze_ramp3_2018: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       frozen circle function in circle: Ahora crearemos 20 círculos superpuestos, girando 18 grados entre cada círculo.

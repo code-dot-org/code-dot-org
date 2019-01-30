@@ -925,10 +925,20 @@ pt-BR:
       CSPU5_U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 15_2018: Conte o número de vezes que a soma dos dados é 12. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 1_2018: Altere a condição para o laço while para checar se a variável num é menor do que 90. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 2: Tente criar um laço infinito usando !=, > e <. (Clique para ver todas as instruções)
+      CSPU5_U3 - Loops - 2_2018: Tente criar um laço infinito usando !=, > e <. (Clique para ver todas as instruções)
       CSPU5_U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 4: Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 4_2018: Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Add 5_2018: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Counting Times_2018: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops And Arrays - Divid by 2_2018: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário em variáveis (clique para ver as instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable_2018: Salve a idade e o nome do usuário em variáveis (clique para ver as instruções completas)
       CSPU5_U3-Design Mode-ID and Event Handler: Adicione um manipulador de eventos para o botão usando o link "Inserir e Visualizar" na aba de Eventos de Modo de Design (clique para ver as instruções completas).
@@ -1453,6 +1463,15 @@ pt-BR:
       Crack Random Substitution_2018: Instruções
       Crack a Caesar Cipher: Instruções
       Crack a Caesar Cipher_2018: Instruções
+      D_Frozen_nested5: Brinque com os flocos de neve!
+      D_Frozen_nested6: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      D_Frozen_nested7: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      D_Frozen_nested8: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      D_Frozen_nested9: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
       Dance Party 1-validated: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party 1-validated_2019: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party 1-validated_simple: 'O que acha que vai acontecer quando você clicar no alienígena?  '
@@ -1736,11 +1755,13 @@ pt-BR:
       K2.0 sequence 2: Altere o código para me levar até o porco!
       K2.0 sequence 3: Descubra o que está faltando e então REMOVA blocos para me levar até o porco!
       K2.0 sequence 4: Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida, mova outro para me levar até o porco.
+      K2.0 sequence 4a: Tente este quebra-cabeça de novo do início!
       K2.0 sequence 5: Mova-me por um caminho, e então por outro para me levar até o porco!
       K2.0 sequence 6: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
       K2.0 sequence 7: Resolva este nível e me leve até o porco!
       K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
+      K2.0 sequence FP: Agora descubra como pegar o porco da maneira que puder!
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá com o avião quando você clicar "Executar"?  '
       KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
@@ -1848,6 +1869,8 @@ pt-BR:
       MikeStarHard: Desenhe isto.
       MikeStarNested: Desenhe isto.
       MikeTest1: Quem sabe o que você deve fazer?!?!
+      MikeTest2: Desenhe alguma coisa!
+      MikeTest3: Construa Algo
       NEW Course 4 Artist Functions 1: "Você consegue desenhar um quadrado com\n100 pixels de comprimento usando um laço?"
       NEW Course 4 Artist Functions 10.1: "Use as funções dos desafios\nanteriores para desenhar esse padrão."
       NEW Course 4 Artist Functions 10: "Clique em \"editar\" para preencher\nos blocos na definição da função para fazer um quadrado de 40 pixels."
@@ -2008,11 +2031,13 @@ pt-BR:
       Project - Your Own Multi Screen App_2018: Crie seu app com várias telas (clique para ver as instruções completas).
       Quantum Bee: "As flores roxas podem ter 1 ou 0 néctar,\nmas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa\nque não tenha néctar algum. Verifique se o néctar é igual a 1 usando\no bloco se."
       Ram Spritelab Validation Test: Pressione a seta para cima
+      Rocket Height Course A: Siga a receita de design para criar uma função foguete-altura.
       Ryan - 4-5 Bee Conditionals 2: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
       Ryan - Bee Conditionals: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
       Ryan Doily Step 2: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos graus se obter 360 depois de 20 iterações?
       Ryan Doily Step 3: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos graus se obter 360 depois de 20 iterações?
       Ryan Test Locked Blocks: "Aqui temos uma função chamada \"patrulhe\".\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
+      Ryan_Demo: Faça o alce iniciar um novo movimento após quatro compassos!
       SG Add Subgoals practice: "Desenhe uma grade 3x3 acima e à direita da\ntartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:\nEsse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o\ne ajustando-o.  Você também deve considerar usar lápis e papel para esboçar\nsuas ideias."
       SG U3L03 Define and use turnAround: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
       SG U3L03 Draw a T using turnAround: "Agora a função \"virar\" é \nfornecida no código. Use a função virar() para desenhar um T conforme\ndescrito."
@@ -2148,9 +2173,13 @@ pt-BR:
       U3 - Loops - 12: Altere o código para que imprima a string "Oi" 5 vezes. (Clique para ver as instruções completas)
       U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito e pare a contagem quando o contador passar de 30. (Clique para ver as instruções completas)
       U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique para ver as instruções completas)
+      U3 - Loops - 2: Tente criar um laço infinito usando !=, > e <. (Clique para ver todas as instruções)
       U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
       U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)"
       U3 - Loops - Typing in Console: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
+      U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique para ver as instruções completas)
+      U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece em um vetor. (Clique para ver as instruções completas)
+      U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique para ver as instruções completas)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -2278,6 +2307,10 @@ pt-BR:
       U3L2_TurtleSquare_right_2018: "Desenhe um quadrado usando apenas avance\ne vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA\nda posição inicial."
       U4 - Objects - eventParameter: Acione ambos os eventos do teclado e do mouse e examine os objetos de evento exibidos no console. Por que um objeto seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções completas)
       U4 - Objects - eventParameter_2018: Acione ambos os eventos do teclado e do mouse e examine os objetos de evento exibidos no console. Por que um objeto seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções completas)
+      U4 - ReadRecords - Contacts App 2: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
+      U4 - ReadRecords - Contacts App 2_2018: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
+      U4 - ReadRecords - Contacts App 4: Crie um botão "Deletar". (Clique para ver todas as instruções)
+      U4 - ReadRecords - Contacts App 4_2018: Crie um botão "Deletar". (Clique para ver todas as instruções)
       U4 Model App: Adicione um grande botão vermelho na sua tela usando o Modo de Design. (Clique para ver as instruções completas)
       U4 Model App_2018: Adicione um grande botão vermelho na sua tela usando o Modo de Design. (Clique para ver as instruções completas)
       U4 Model Design 1: Adicione um grande botão vermelho na sua tela usando o Modo de Design. (Clique para ver as instruções completas)
@@ -2313,6 +2346,7 @@ pt-BR:
       'Widget: Black and White Pixelation': Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
       'Widget: Black and White Pixelation_2018': Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
+      aE6: 'Quantas vezes você precisa repetir isto para desenhar metade de um círculo? '
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       aE8: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
       aEfreeplay: Atividade Livre!
@@ -2323,8 +2357,12 @@ pt-BR:
       allthethings_ttscsp: Analise o programa corrigindo o erro lógico dentro do programa. (Clique para ver as instruções completas)
       artistFunctionsVideo1: Siga as instruções para fazer sua própria função.
       artistLoopsK1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      artistLoopsK2: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
+      artistLoopsK2gradek_artist_loops3: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       beeDebugVideo1: Use um laço "repita" para coletar todo o néctar.
       behavior bash mary: Clone este nível e faça seus próprios blocos!
+      behaviors 1: Faça uma predição!
+      behaviors 4: Faça uma predição!
       behaviors clone me 2: Clone este nível e faça seus próprios blocos!
       behaviors clone me Ram: Clone este nível e faça seus próprios blocos!
       behaviors clone me joshl: Clone este nível e faça seus próprios blocos!
@@ -2377,13 +2415,21 @@ pt-BR:
       collectorSkinVideo1: Colete todas as quatro pilhas para passar esse nível.
       collectorSkinVideo2: Colete uma pilha de ouro para passar deste nível.
       conditionals_forvideo_playlab: Marque quantos pontos você conseguir!
+      course1_artist_loops_challenge1: |-
+        Você pode usar uma repetição para desenhar muitos traços em uma linha.
+
+        Você pode desenhar uma casa? Fazer parecer do jeito que você gosta! Tente procurar por padrões que se repetem!
       course1_artist_loops_challenge3: '"Você pode me ajudar a fazer duas casas de pássaros?"'
       course1_artist_loops_challenge4: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       course1_collector_loops_challenge1: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
       course1_collector_loops_challenge2: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
       course1_collector_loops_challenge3: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
       course1_collector_loops_challenge4: Vamos pegar o tesouro! Ajuda-me em cada linha, em seguida, voltar para iniciar a próxima linha. Você consegue achar um padrão?
+      course1_maze_debugging_challenge1: Analise esse nível. Remova os blocos extras e adicione os blocos faltando. Leve o pássaro até o porco!
       course1_maze_debugging_challenge2: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course1_maze_seq_challenge1: '"Desenhe o caminho e me leve até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!"'
+      course1_playlab_events_challenge1: '"Onde meus amigos estão se escondendo? Você pode escrever um código para mostrá-los?"'
+      course1_playlab_events_challenge2: '"Vamos fazer uma festa! Dê aos meus amigos algo para fazer quando você clique ou toque neles."'
       course2_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma imagem como esta?
       course2_artist_nestedLoops_challenge2: Você consegue descobrir como fazer uma imagem como esta?
       course2_bee_conditionals_challenge1: Colete todo o néctar ou faça todo o mel.
@@ -2426,18 +2472,28 @@ pt-BR:
       courseA_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops10: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops10_2018: Me ajude a colocar pedras para que eu não caia!
+      courseA_artist_loops10_2019: Me ajude a colocar pedras para que eu não caia!
       courseA_artist_loops1_2018: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      courseA_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops2: Ajude o artista a desenhar esta linha duas vezes mais rápido.
       courseA_artist_loops2_2018: Ajude o artista a desenhar esta linha duas vezes mais rápido.
+      courseA_artist_loops2_2019: Ajude o artista a desenhar esta linha duas vezes mais rápido.
       courseA_artist_loops3: Desenhe uma linha para frente cinco vezes.
       courseA_artist_loops3_2018: Desenhe uma linha para frente cinco vezes.
+      courseA_artist_loops3_2019: Desenhe uma linha para frente cinco vezes.
+      courseA_artist_loops4: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
+      courseA_artist_loops4_2018: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
+      courseA_artist_loops4_2019: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       courseA_artist_loops9: 'Desafio: Conserte as escadas.'
       courseA_artist_loops9_2018: 'Desafio: Conserte as escadas.'
+      courseA_artist_loops9_2019: 'Desafio: Conserte as escadas.'
       courseA_artist_loops_challenge1: Você pode desenhar uma casa? Faça com que ela seja do jeito que você gosta!
       courseA_artist_loops_challenge1_2018: Você pode desenhar uma casa? Faça com que ela seja do jeito que você gosta!
+      courseA_artist_loops_challenge1_2019: Você pode desenhar uma casa? Faça com que ela seja do jeito que você gosta!
       courseA_artist_loops_challenge2: '"Você pode me ajudar a fazer duas casas de pássaros?"'
       courseA_artist_loops_challenge2a: '*"Me ajude a montar estas três tendas!"*'
       courseA_artist_loops_challenge2a_2018: '*"Me ajude a montar estas três tendas!"*'
+      courseA_artist_loops_challenge2a_2019: '*"Me ajude a montar estas três tendas!"*'
       courseA_bee_seq1: Brinque com estes blocos para ajudar a abelha a pegar *um* néctar.
       courseA_bee_seq10: Tente sozinho! Pegue todo o néctar.
       courseA_bee_seq11: Pegue todo o néctar.
@@ -2455,30 +2511,43 @@ pt-BR:
       courseA_collector_loops1: Mova Laurel ao redor e pegue quanto tesouro puder!
       courseA_collector_loops10: Ajude Laurel a pegar todo o tesouro ao longo deste caminho.
       courseA_collector_loops10_2018: Ajude Laurel a pegar todo o tesouro ao longo deste caminho.
+      courseA_collector_loops10_2019: Ajude Laurel a pegar todo o tesouro ao longo deste caminho.
       courseA_collector_loops11: Ajude Laurel a pegar todos os tesouros dessa caverna.
       courseA_collector_loops11_2018: Ajude Laurel a pegar todos os tesouros dessa caverna.
+      courseA_collector_loops11_2019: Ajude Laurel a pegar todos os tesouros dessa caverna.
       courseA_collector_loops12: '*Eureka! Pegue quanto tesouro você puder!*'
       courseA_collector_loops12_2018: '*Eureka! Pegue quanto tesouro você puder!*'
+      courseA_collector_loops12_2019: '*Eureka! Pegue quanto tesouro você puder!*'
       courseA_collector_loops1_2018: Mova Laurel ao redor e pegue quanto tesouro puder!
+      courseA_collector_loops1_2019: Mova Laurel ao redor e pegue quanto tesouro puder!
       courseA_collector_loops2: Pegue todas as três pilhas para passar esse nível.
       courseA_collector_loops2_2018: Pegue todas as três pilhas para passar esse nível.
+      courseA_collector_loops2_2019: Pegue todas as três pilhas para passar esse nível.
       courseA_collector_loops4: Corrija o caminho de Laurel para pegar todos estes tesouros.
       courseA_collector_loops4_2018: Corrija o caminho de Laurel para pegar todos estes tesouros.
+      courseA_collector_loops4_2019: Corrija o caminho de Laurel para pegar todos estes tesouros.
       courseA_collector_loops5: Use o que você aprendeu para pegar todo o tesouro.
       courseA_collector_loops5_2018: Use o que você aprendeu para pegar todo o tesouro.
+      courseA_collector_loops5_2019: Use o que você aprendeu para pegar todo o tesouro.
       courseA_collector_loops6: Adicione blocos a este código para pegar todo o tesouro.
       courseA_collector_loops6_2018: Adicione blocos a este código para pegar todo o tesouro.
+      courseA_collector_loops6_2019: Adicione blocos a este código para pegar todo o tesouro.
       courseA_collector_loops7: O que você deve adicionar a este código para pegar todo o tesouro?
       courseA_collector_loops7_2018: O que você deve adicionar a este código para pegar todo o tesouro?
+      courseA_collector_loops7_2019: O que você deve adicionar a este código para pegar todo o tesouro?
       courseA_collector_loops8: Escreva o código para pegar todo este tesouro.
       courseA_collector_loops8_2018: Escreva o código para pegar todo este tesouro.
+      courseA_collector_loops8_2019: Escreva o código para pegar todo este tesouro.
       courseA_collector_loops9: "**Desafio:** O tesouro vai até o topo das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseA_collector_loops9_2018: "**Desafio:** O tesouro vai até o topo das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
+      courseA_collector_loops9_2019: "**Desafio:** O tesouro vai até o topo das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseA_collector_loops_challenge1: '*"Você pode me ajudar a identificar alguns bugs?"*'
       courseA_collector_loops_challenge1_2018: '*"Você pode me ajudar a identificar alguns bugs?"*'
+      courseA_collector_loops_challenge1_2019: '*"Você pode me ajudar a identificar alguns bugs?"*'
       courseA_collector_loops_challenge2: 'Pegar todos os tesouros! '
       courseA_collector_loops_challenge2kp: Colete pelo menos **3** peças do tesouro para passar este nível.
       courseA_collector_loops_challenge2kp_2018: Colete pelo menos **3** peças do tesouro para passar este nível.
+      courseA_collector_loops_challenge2kp_2019: Colete pelo menos **3** peças do tesouro para passar este nível.
       courseA_collector_preLoops1: "Esta é Laurel, a Aventureira!\n\nPressione \"Run\" para vê-la andar até o tesouro e pegá-lo"
       courseA_collector_preLoops2: "Ótimo! Agora você pode adicionar o código você mesmo! \n\nEncaixe um bloco `pegar tesouro` na parte inferior do programa e clique em \"Executar \"."
       courseA_collector_preLoops3: Encaixe dois blocos `E -->` e um bloco `pegar tesouro` na parte inferior do programa, depois clique em "Executar".
@@ -2489,48 +2558,83 @@ pt-BR:
       courseA_harvester_forVideo: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops10: Ajude a colheitadeira a pegar todas as cinco espigas de milho!
+      courseA_harvester_loops10_2019: Ajude a colheitadeira a pegar todas as cinco espigas de milho!
       courseA_harvester_loops11: 'Tente mais um por sua conta! '
+      courseA_harvester_loops11_2019: 'Tente mais um por sua conta! '
+      courseA_harvester_loops1_2019: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops2: Certifique-se de pegar todo o milho!
+      courseA_harvester_loops2_2019: Certifique-se de pegar todo o milho!
       courseA_harvester_loops3: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
+      courseA_harvester_loops3_2019: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
       courseA_harvester_loops4: Você pode ajudar a colheitadeira a encontrar o bug no seu código?
+      courseA_harvester_loops4_2019: Você pode ajudar a colheitadeira a encontrar o bug no seu código?
       courseA_harvester_loops5: Tente você mesmo! Você consegue pegar o milho que está no final também?
+      courseA_harvester_loops5_2019: Tente você mesmo! Você consegue pegar o milho que está no final também?
       courseA_harvester_loops5a: Olha todo este milho! Você consegue pegar tudo sozinho?
+      courseA_harvester_loops5a_2019: Olha todo este milho! Você consegue pegar tudo sozinho?
       courseA_harvester_loops5b: Você consegue modificar seu código para fazer a colheitadeira pegar todo o milho?
+      courseA_harvester_loops5b_2019: Você consegue modificar seu código para fazer a colheitadeira pegar todo o milho?
       courseA_harvester_loops6: Você precisará de **um** bloco `Mover para o Sul` e **um** bloco `Mover para o Oeste`.
+      courseA_harvester_loops6_2019: Você precisará de **um** bloco `Mover para o Sul` e **um** bloco `Mover para o Oeste`.
       courseA_harvester_loops7: 'Tente você mesmo! '
+      courseA_harvester_loops7_2019: 'Tente você mesmo! '
       courseA_harvester_loops8: Este é o mesmo enigma, mas agora você tem que repetir **três** vezes!
       courseA_harvester_loops9: Você consegue descobrir como pegar todo o milho?
+      courseA_harvester_loops9_2019: Você consegue descobrir como pegar todo o milho?
       courseA_harvester_seq1: Brinque com estes blocos para ajudar a colheitadeira a pegar parte do milho.
       courseA_harvester_seq10: Certifique-se de pegar todo o milho!
+      courseA_harvester_seq10_2019: Certifique-se de pegar todo o milho!
       courseA_harvester_seq11: Tente você mesmo! Pegue todo o milho.
+      courseA_harvester_seq11_2019: Tente você mesmo! Pegue todo o milho.
       courseA_harvester_seq12: Pegue todo o milho.
+      courseA_harvester_seq12_2019: Pegue todo o milho.
       courseA_harvester_seq13: Brinque com estes blocos para ajudar a colheitadeira a pegar o milho.
+      courseA_harvester_seq13_2019: Brinque com estes blocos para ajudar a colheitadeira a pegar o milho.
+      courseA_harvester_seq1_2019: Brinque com estes blocos para ajudar a colheitadeira a pegar parte do milho.
       courseA_harvester_seq2: Use três blocos 'mover para oeste' e um bloco 'pegar o milho' para resolver este enigma.
+      courseA_harvester_seq2_2019: Use três blocos 'mover para oeste' e um bloco 'pegar o milho' para resolver este enigma.
       courseA_harvester_seq3: Use três blocos 'Mover Para o Norte' e um bloco 'Pegar o Milho'.
+      courseA_harvester_seq3_2019: Use três blocos 'Mover Para o Norte' e um bloco 'Pegar o Milho'.
       courseA_harvester_seq4: Adicione um bloco para ajudar a colheitadeira a pegar todo o milho.
+      courseA_harvester_seq4_2019: Adicione um bloco para ajudar a colheitadeira a pegar todo o milho.
       courseA_harvester_seq5: Encontrar o erro e o corrija!
+      courseA_harvester_seq5_2019: Encontrar o erro e o corrija!
       courseA_harvester_seq6: Tente você mesmo!
+      courseA_harvester_seq6_2019: Tente você mesmo!
       courseA_harvester_seq7: Tente você mesmo!
+      courseA_harvester_seq7_2019: Tente você mesmo!
       courseA_harvester_seq8: Agora a colheitadeira precisa pegar o milho duas vezes!
+      courseA_harvester_seq8_2019: Agora a colheitadeira precisa pegar o milho duas vezes!
       courseA_harvester_seq9: Adicione dois blocos para terminar este enigma!
+      courseA_harvester_seq9_2019: Adicione dois blocos para terminar este enigma!
       courseA_maze_ramp2_2018: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
+      courseA_maze_ramp2_2019: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp2a_2018: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp3a_2018: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
+      courseA_maze_ramp3a_2019: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
       courseA_maze_ramp3b_2018: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "Executar".
+      courseA_maze_ramp3b_2019: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "Executar".
       courseA_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseA_maze_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
+      courseA_maze_ramp4a_2019: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
       courseA_maze_ramp5_2018: Desvie da TNT.
       courseA_maze_ramp5a_2018: Leve o pássaro até o porco!
+      courseA_maze_ramp5a_2019: Leve o pássaro até o porco!
       courseA_maze_seq1: Leve o pássaro até o porco mau!
       courseA_maze_seq10: 'Desafio: Dê a volta na TNT para levar o pássaro até o porco! '
       courseA_maze_seq10_2018: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
+      courseA_maze_seq10_2019: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
       courseA_maze_seq11: Mova-me por um caminho, e então por outro para levar o pássaro até o porco.
       courseA_maze_seq11_2018: Mova-me por um caminho, e então por outro para levar o pássaro até o porco.
+      courseA_maze_seq11_2019: Mova-me por um caminho, e então por outro para levar o pássaro até o porco.
       courseA_maze_seq12: 'Pegue aquele porco! '
       courseA_maze_seq12_2018: 'Pegue aquele porco! '
+      courseA_maze_seq12_2019: 'Pegue aquele porco! '
       courseA_maze_seq13: Pegue aquele porco da maneira que você conseguir!
       courseA_maze_seq13_2018: Pegue aquele porco da maneira que você conseguir!
+      courseA_maze_seq13_2019: Pegue aquele porco da maneira que você conseguir!
       courseA_maze_seq1_2018: Leve o pássaro até o porco mau!
+      courseA_maze_seq1_2019: Leve o pássaro até o porco mau!
       courseA_maze_seq2: Altere o código para me levar até o porco!
       courseA_maze_seq2_2018: Altere o código para me levar até o porco!
       courseA_maze_seq3: Corrija o código para levar o pássaro até o porco!
@@ -2539,124 +2643,193 @@ pt-BR:
       courseA_maze_seq4_2018: REMOVA um bloco para levar o pássaro até o porco!
       courseA_maze_seq4a: Leve o pássaro até o porco usando o menor número de blocos possíveis.
       courseA_maze_seq5_2018: Dê uma chance a este.
+      courseA_maze_seq5_2019: Dê uma chance a este.
       courseA_maze_seq5a_2018: O que você pode adicionar ao final deste código para levar o pássaro até o porco?
+      courseA_maze_seq5a_2019: O que você pode adicionar ao final deste código para levar o pássaro até o porco?
       courseA_maze_seq6: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
       courseA_maze_seq6_2018: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
+      courseA_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
       courseA_maze_seq7: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseA_maze_seq7_2018: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseA_maze_seq8: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq8_2018: Resolva este nível e leve o pássaro até o porco!
+      courseA_maze_seq8_2019: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq9: Analise este nível adicionando blocos para levar o pássaro até o porco!
       courseA_maze_seq9_2018: Analise este nível adicionando blocos para levar o pássaro até o porco!
       courseA_maze_seq_challenge1: Alguma coisa está errada aqui. Ajude a corrigir o código para levar o pássaro até o porco!
       courseA_maze_seq_challenge1_2018: Alguma coisa está errada aqui. Ajude a corrigir o código para levar o pássaro até o porco!
+      courseA_maze_seq_challenge1_2019: Alguma coisa está errada aqui. Ajude a corrigir o código para levar o pássaro até o porco!
       courseA_maze_seq_challenge2: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
       courseA_maze_seq_challenge2_2018: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
+      courseA_maze_seq_challenge2_2019: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
       courseA_playLab_events3: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2018: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
+      courseA_playLab_events3_2019: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events4: Adicione blocos para mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events4_2018: Adicione outro bloco de evento para fazer Jorge mover para a direita quando o botão `direito` é clicado.
+      courseA_playLab_events4_2019: Adicione outro bloco de evento para fazer Jorge mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events7_2018: "*Jogo Livre*: Adicione o que você quiser neste jogo."
+      courseA_playLab_events7_2019: "*Jogo Livre*: Adicione o que você quiser neste jogo."
       courseA_playlab_events_challenge1: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
       courseA_playlab_events_challenge1_2018: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
+      courseA_playlab_events_challenge1_2019: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
       courseA_playlab_events_challenge2: Dê a todo mundo algo para fazer quando você clicar neles.
       courseA_playlab_events_challenge2_2018: Dê a todo mundo algo para fazer quando você clicar neles.
+      courseA_playlab_events_challenge2_2019: Dê a todo mundo algo para fazer quando você clicar neles.
       courseA_playlab_events_challengeClone: Onde meus amigos estão se escondendo? Você consegue escrever um código para mostrá-los?
       courseA_toMakeLoopsVideo_Collector: Loops te deixam executar o que está dentro deles diversas vezes!
       courseB_Scrat_ramp1_2018: Para este enigma, junte os blocos e pressione "▶ Executar"!
+      courseB_Scrat_ramp1_2019: Para este enigma, junte os blocos e pressione "▶ Executar"!
       courseB_Scrat_ramp2_2018: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "▶ Executar".
+      courseB_Scrat_ramp2_2019: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "▶ Executar".
       courseB_Scrat_ramp3a_2018: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
+      courseB_Scrat_ramp3a_2019: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
       courseB_Scrat_ramp3b_2018: "Arraste o bloco extra de volta para a caixa de ferramentas para removê-lo.\n\n"
+      courseB_Scrat_ramp3b_2019: "Arraste o bloco extra de volta para a caixa de ferramentas para removê-lo.\n\n"
       courseB_Scrat_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
+      courseB_Scrat_ramp4a_2019: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
       courseB_Scrat_ramp5a_2018: Leve o pássaro até o porco!
+      courseB_Scrat_ramp5a_2019: Leve o pássaro até o porco!
       courseB_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops1_2018: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      courseB_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops2: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
       courseB_artist_loops2_2018: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
+      courseB_artist_loops2_2019: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
       courseB_artist_loops5: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops5_2018: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
+      courseB_artist_loops5_2019: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops6: Escale a videira e veja onde ela vai?
       courseB_artist_loops6_2018: Escale a videira e veja onde ela vai?
+      courseB_artist_loops6_2019: Escale a videira e veja onde ela vai?
       courseB_artist_loops8: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
       courseB_artist_loops8_2018: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
+      courseB_artist_loops8_2019: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
       courseB_artist_loops_challenge1: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       courseB_artist_loops_challenge1_2018: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
+      courseB_artist_loops_challenge1_2019: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       courseB_collector_loops1: Esta é a Laurel a aventureira!  Você consegue movê-la por aí e pegar o tesouro?
       courseB_collector_loops10: Ajude Laurel a pegar todos os tesouros dessa caverna.
       courseB_collector_loops10_2018: Ajude Laurel a pegar todos os tesouros dessa caverna.
+      courseB_collector_loops10_2019: Ajude Laurel a pegar todos os tesouros dessa caverna.
       courseB_collector_loops11: Eureka! Pegue quanto tesouro você puder!
       courseB_collector_loops11_2018: Eureka! Pegue quanto tesouro você puder!
+      courseB_collector_loops11_2019: Eureka! Pegue quanto tesouro você puder!
       courseB_collector_loops1_2018: Pegue pelo menos uma peça do tesouro sem cometer erros para passar!
+      courseB_collector_loops1_2019: Pegue pelo menos uma peça do tesouro sem cometer erros para passar!
       courseB_collector_loops2: Pegue todas as quatro pilhas para passar esse nível.
       courseB_collector_loops2_2018: Pegue todas as quatro pilhas para passar esse nível.
+      courseB_collector_loops2_2019: Pegue todas as quatro pilhas para passar esse nível.
       courseB_collector_loops3: Como Laurel pode pegar todas as cinco pilhas de tesouro usando apenas um bloco `E -->`?
       courseB_collector_loops3_2018: Como Laurel pode pegar todas as cinco pilhas de tesouro usando apenas um bloco `E -->`?
+      courseB_collector_loops3_2019: Como Laurel pode pegar todas as cinco pilhas de tesouro usando apenas um bloco `E -->`?
       courseB_collector_loops4: Corrija o caminho de Laurel para pegar todos estes tesouros!
       courseB_collector_loops4_2018: Corrija o caminho de Laurel para pegar todos estes tesouros!
+      courseB_collector_loops4_2019: Corrija o caminho de Laurel para pegar todos estes tesouros!
       courseB_collector_loops5: 'Incremente o código do último desafio para pegar todo o tesouro. '
       courseB_collector_loops5_2018: 'Incremente o código do último desafio para pegar todo o tesouro. '
+      courseB_collector_loops5_2019: 'Incremente o código do último desafio para pegar todo o tesouro. '
       courseB_collector_loops6: Descubra uma maneira de codificar para ajudar Laurel a pegar todo o tesouro!
       courseB_collector_loops6_2018: Descubra uma maneira de codificar para ajudar Laurel a pegar todo o tesouro!
+      courseB_collector_loops6_2019: Descubra uma maneira de codificar para ajudar Laurel a pegar todo o tesouro!
       courseB_collector_loops7: Escreva o código para pegar todo este tesouro.
       courseB_collector_loops7_2018: Escreva o código para pegar todo este tesouro.
+      courseB_collector_loops7_2019: Escreva o código para pegar todo este tesouro.
       courseB_collector_loops8: "**Desafio:** O tesouro vai até o final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseB_collector_loops8_2018: "**Desafio:** O tesouro vai até o final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
+      courseB_collector_loops8_2019: "**Desafio:** O tesouro vai até o final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseB_collector_loops9: '*"Me ajude a pegar o tesouro deste vale profundo."*'
       courseB_collector_loops9_2018: '*"Me ajude a pegar o tesouro deste vale profundo."*'
+      courseB_collector_loops9_2019: '*"Me ajude a pegar o tesouro deste vale profundo."*'
       courseB_collector_loops_challenge1: 'Desta vez você tem blocos limitados. Pegue todos os tesouros! '
       courseB_collector_loops_challenge1_2018: 'Desta vez você tem blocos limitados. Pegue todos os tesouros! '
+      courseB_collector_loops_challenge1_2019: 'Desta vez você tem blocos limitados. Pegue todos os tesouros! '
       courseB_collector_loops_challenge2: Vamos pegar o tesouro! Ajuda-me em cada linha, em seguida, voltar para iniciar a próxima linha. Você consegue achar um padrão?
       courseB_collector_loops_challenge2_2018: Vamos pegar o tesouro! Ajuda-me em cada linha, em seguida, voltar para iniciar a próxima linha. Você consegue achar um padrão?
       courseB_collector_loops_challenge2a: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
       courseB_collector_loops_challenge2a_2018: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
+      courseB_collector_loops_challenge2a_2019: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
       courseB_collector_loops_challenge`: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
+      courseB_collector_prog2: Quatro pilhas de ouro! Colete todas elas.
       courseB_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops10_2019: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops11: Ajude Scrat a chegar até a noz!
+      courseB_iceage_loops11_2019: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops11_forVideo: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12: Pegue a noz da maneira que você conseguir!
+      courseB_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
+      courseB_iceage_loops1_2019: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops2: Uso dois blocos de movimento diferentes para chegar até a noz!
+      courseB_iceage_loops2_2019: Uso dois blocos de movimento diferentes para chegar até a noz!
       courseB_iceage_loops3: Você consegue pegar a noz com apenas um bloco `W`?
+      courseB_iceage_loops3_2019: Você consegue pegar a noz com apenas um bloco `W`?
       courseB_iceage_loops4: Adicione mais um bloco para levar Scrat até a noz!
+      courseB_iceage_loops4_2019: Adicione mais um bloco para levar Scrat até a noz!
       courseB_iceage_loops5: Você consegue adicionar mais um laço para chegar até a noz?
       courseB_iceage_loops6: Você consegue adicionar um laço para chegar até a noz?
+      courseB_iceage_loops6_2019: Você consegue adicionar um laço para chegar até a noz?
       courseB_iceage_loops7: 'Scrat realmente quer aquela noz! '
+      courseB_iceage_loops7_2019: 'Scrat realmente quer aquela noz! '
       courseB_iceage_loops8: 'Você consegue corrigir este código? '
+      courseB_iceage_loops8_2019: 'Você consegue corrigir este código? '
       courseB_iceage_loops9: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
+      courseB_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para ajudar o Scrat a chegar lá?
       courseB_maze_seq1: "Brinque com estes blocos para ver o que eles fazem o pássaro fazer! \n\nLeve o pássaro até o porco para completar este nível."
+      courseB_maze_seq10: Corrija os erros para levar o pássaro até o porco.
       courseB_maze_seq10_2018: Corrija os erros para levar Scrat até a noz.
+      courseB_maze_seq10_2019: Corrija os erros para levar Scrat até a noz.
+      courseB_maze_seq11: É com você! Leve o pássaro até o porco.
       courseB_maze_seq11_2018: É com você!  Leve o Scrat até a noz.
+      courseB_maze_seq11_2019: É com você!  Leve o Scrat até a noz.
       courseB_maze_seq12: Agora, pegue o porco da maneira que você conseguir!
       courseB_maze_seq12_2018: Agora, pegue a noz da maneira que você conseguir!
+      courseB_maze_seq12_2019: Agora, pegue a noz da maneira que você conseguir!
       courseB_maze_seq1_2018: "Brinque com estes blocos para ver o que eles fazem Scrat fazer! \n\nLeve Scrat até a noz para completar este nível."
+      courseB_maze_seq1_2019: "Brinque com estes blocos para ver o que eles fazem Scrat fazer! \n\nLeve Scrat até a noz para completar este nível."
       courseB_maze_seq2: '*Um erro! "Conserte o código para me levar até o porco!"*'
       courseB_maze_seq2_2018: Um erro! Conserte o código para levar Scrat até a noz!
       courseB_maze_seq3: '"Conserte o código para me levar até o porco!"'
+      courseB_maze_seq4: Adicione 2 blocos para levar o pássaro até o porco.
       courseB_maze_seq4_2018: Use **2** blocos de movimento para levar Scrat até a noz.
+      courseB_maze_seq4_2019: Use **2** blocos de movimento para levar Scrat até a noz.
+      courseB_maze_seq5: Agora tente este quebra-cabeça do início!
       courseB_maze_seq5_2018: Este enigma é um pouco complicado!
+      courseB_maze_seq5_2019: Este enigma é um pouco complicado!
       courseB_maze_seq6: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
       courseB_maze_seq6_2018: Mova-me por um caminho, e então por outro para levar Scrat até a noz!
+      courseB_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar Scrat até a noz!
       courseB_maze_seq7: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseB_maze_seq7_2018: Descubra o que está faltando e então adicione blocos para levar Scrat até a noz!
+      courseB_maze_seq7_2019: Descubra o que está faltando e então adicione blocos para levar Scrat até a noz!
       courseB_maze_seq8_2018: Sua vez! O que você precisa fazer para levar Scrat até a noz?
+      courseB_maze_seq8_2019: Sua vez! O que você precisa fazer para levar Scrat até a noz?
       courseB_maze_seq9: 'Desafio: Dê a volta na TNT para levar o pássaro até o porco.'
       courseB_maze_seq9_2018: 'Desafio: Mova-se ao redor do gelo quebrado para levar Scrat até a noz.'
+      courseB_maze_seq9_2019: 'Desafio: Mova-se ao redor do gelo quebrado para levar Scrat até a noz.'
       courseB_maze_seqCold: 'Desafio: Analise este nível adicionando blocos para levar o pássaro até o porco!'
       courseB_maze_seqOld: 'Dê a volta na TNT para levar o pássaro até o porco! '
       courseB_maze_seq_challenge1: Você consegue achar um caminho antes de ficar sem blocos?
       courseB_maze_seq_challenge1_2018: Você consegue achar um caminho antes de ficar sem blocos?
+      courseB_maze_seq_challenge1_2019: Você consegue achar um caminho antes de ficar sem blocos?
       courseB_maze_seq_challenge2: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
       courseB_maze_seq_challenge2_2018: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      courseB_maze_seq_challenge2_2019: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
       courseB_playLab_events1: Veja se você pode descobrir o que cada bloco faz.
       courseB_playLab_events1_2018: Veja se você pode descobrir o que cada bloco faz.
+      courseB_playLab_events1_2019: Veja se você pode descobrir o que cada bloco faz.
       courseB_playlab_events2: Ajude Daisy o Dragão a dizer alguma coisa quando você clicar em "Executar".
       courseB_playlab_events2_2018: Ajude Daisy o Dragão a dizer alguma coisa quando você clicar em "Executar".
+      courseB_playlab_events2_2019: Ajude Daisy o Dragão a dizer alguma coisa quando você clicar em "Executar".
       courseB_playlab_events3: Use um evento para fazer Daisy o Dragão mudar para um humor aleatório quando você clicar nela.
       courseB_playlab_events3_2018: Use um evento para fazer Daisy o Dragão mudar para um humor aleatório quando você clicar nela.
+      courseB_playlab_events3_2019: Use um evento para fazer Daisy o Dragão mudar para um humor aleatório quando você clicar nela.
       courseB_playlab_events4: Hora do Cavaleiro! Adicione um evento para que o cavaleiro se mova em direção ao dragão quando a seta esquerda for clicada.
       courseB_playlab_events4_2018: Pegue o dragão para finalizar este nível!
+      courseB_playlab_events4_2019: Pegue o dragão para finalizar este nível!
       courseB_playlab_events5: Agora adicione um evento para que o cavaleiro fuja do dragão quando você pressionar a seta para a direita.
       courseB_playlab_events5_2018: Adicione um evento para que o cavaleiro fuja do dragão quando você pressionar a seta para a direita.
+      courseB_playlab_events5_2019: Adicione um evento para que o cavaleiro fuja do dragão quando você pressionar a seta para a direita.
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -2665,40 +2838,60 @@ pt-BR:
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
         Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
+      courseB_playlab_events6_2019: |-
+        Ajude o seu cavaleiro a pegar todas as bandeiras!
+
+        Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
       courseB_playlab_events7: Torne deste jogo mais divertido, fazendo com que o cavaleiro desapareça quando ele correr até o dragão para pegar as bandeiras! Execute um som quando eles colidirem para parecer mais real.
       courseB_playlab_events7_2018: "1) Faça com que o cavaleiro desapareça quando ele corre até o dragão.\n2) Execute um som quando eles colidirem para que pareça mais real.  "
+      courseB_playlab_events7_2019: "1) Faça com que o cavaleiro desapareça quando ele corre até o dragão.\n2) Execute um som quando eles colidirem para que pareça mais real.  "
       courseB_playlab_eventsFP_2018: "**Jogo Livre:** Use sua imaginação. O que você pode fazer para deixar este jogo mais divertido?"
+      courseB_playlab_eventsFP_2019: "**Jogo Livre:** Use sua imaginação. O que você pode fazer para deixar este jogo mais divertido?"
       courseB_playlab_eventsToolbox: Termine executando um som e fazendo com que o cavaleiro desapareça quando ele correr para o dragão!
       courseB_playlab_events_challenge1: 'Faça os animais se moverem para baixo quando você pressionar ▼. '
       courseB_playlab_events_challenge1_2018: 'Faça os animais se moverem para baixo quando você pressionar ▼. '
+      courseB_playlab_events_challenge1_2019: 'Faça os animais se moverem para baixo quando você pressionar ▼. '
       courseB_playlab_events_challenge2: Faça todos os animais desaparecerem quando você clicar neles.
       courseB_playlab_events_challenge2_2018: Faça todos os animais desaparecerem quando você clicar neles.
+      courseB_playlab_events_challenge2_2019: Faça todos os animais desaparecerem quando você clicar neles.
       courseB_playlab_events_challenge2_embed: Aqui está seu jogo finalizado!
       courseB_playlab_events_challenge2_template: Vamos fazer os animais desaparecerem quando você clicar neles! Você também pode adicionar sons e marcar pontos para criar um divertido jogo de marcação de animais!
       courseB_playlab_events_challenge2_template_2018: Vamos fazer os animais desaparecerem quando você clicar neles! Você também pode adicionar sons e marcar pontos para criar um divertido jogo de marcação de animais!
+      courseB_playlab_events_challenge2_template_2019: Vamos fazer os animais desaparecerem quando você clicar neles! Você também pode adicionar sons e marcar pontos para criar um divertido jogo de marcação de animais!
       courseB_scrat_forVideo: Pegue a noz!
       courseB_starWars_prog1: '"Pegue o pedaço de metal, BB-8!"'
       courseB_starWars_prog10: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog10_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
+      courseB_starWars_prog10_2019: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog11: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog11_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
+      courseB_starWars_prog11_2019: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog1_2018: '"Pegue o pedaço de metal, BB-8!"'
+      courseB_starWars_prog1_2019: '"Pegue o pedaço de metal, BB-8!"'
       courseB_starWars_prog2: Pegue todo o metal.
       courseB_starWars_prog2_2018: Pegue todo o metal.
+      courseB_starWars_prog2_2019: Pegue todo o metal.
       courseB_starWars_prog3: Pegue todos os pedaços de metal
       courseB_starWars_prog3_2018: Pegue todos os pedaços de metal
+      courseB_starWars_prog3_2019: Pegue todos os pedaços de metal
       courseB_starWars_prog4: Pegue todos os pedaços de metal
       courseB_starWars_prog4_2018: Pegue todos os pedaços de metal
+      courseB_starWars_prog4_2019: Pegue todos os pedaços de metal
       courseB_starWars_prog5: Pegue o pedaço de metal
       courseB_starWars_prog5_2018: Pegue o pedaço de metal
+      courseB_starWars_prog5_2019: Pegue o pedaço de metal
       courseB_starWars_prog6: Pegue todos os pedaços de metal
       courseB_starWars_prog6_2018: Pegue todos os pedaços de metal
+      courseB_starWars_prog6_2019: Pegue todos os pedaços de metal
       courseB_starWars_prog7: Vai pegar!
       courseB_starWars_prog7_2018: Vai pegar!
+      courseB_starWars_prog7_2019: Vai pegar!
       courseB_starWars_prog8: "**Desafio:** Ajude BB-8 a recolher os pedaços de metais brilhantes"
       courseB_starWars_prog8_2018: "**Desafio:** Ajude BB-8 a recolher os pedaços de metais brilhantes"
+      courseB_starWars_prog8_2019: "**Desafio:** Ajude BB-8 a recolher os pedaços de metais brilhantes"
       courseB_starWars_prog9: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog9_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
+      courseB_starWars_prog9_2019: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseC_PlayLab_events1: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2018: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2019: Faça Jorge o Cachorro (ator 1) dizer "Olá."
@@ -2879,6 +3072,24 @@ pt-BR:
       courseC_starWars_loops5: Faça o BB-8 pegar todos os pedaços de metal o mais rápido possível!
       courseC_starWars_loops5_2018: Faça o BB-8 pegar todos os pedaços de metal o mais rápido possível!
       courseC_starWars_loops5_2019: Faça o BB-8 pegar todos os pedaços de metal o mais rápido possível!
+      courseD_Frozen_nested5: Brinque com os flocos de neve!
+      courseD_Frozen_nested6: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      courseD_Frozen_nested7: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      courseD_Frozen_nested8: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      courseD_Frozen_nested9: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
+      courseD_artist_5_2018: Brinque com os flocos de neve!
+      courseD_artist_5_2018_2019: Brinque com os flocos de neve!
+      courseD_artist_7_2018: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      courseD_artist_8_2018: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      courseD_artist_9_2018: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
       courseD_artist_binary1: "Binário é uma forma de representar informações\nusando apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo número 0) e \"ligado\" (representada pelo número 1).  \\r\n\\r\nFoi fornecida\numa grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em binário na primeira fileira?"
       courseD_artist_binary1_2018: "Binário é uma forma de representar informações\nusando apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo número 0) e \"ligado\" (representada pelo número 1).  \\r\n\\r\nFoi fornecida\numa grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em binário na primeira fileira?"
       courseD_artist_binary1_2019: "Binário é uma forma de representar informações\nusando apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo número 0) e \"ligado\" (representada pelo número 1).  \\r\n\\r\nFoi fornecida\numa grade de \"pixels\" pela qual você pode andar e criar\ndesigns virando em certos quadrados. Você consegue fazer o artista desenhar\n\"01010101\" em binário na primeira fileira?"
@@ -2911,6 +3122,10 @@ pt-BR:
 
         Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binary_challenge0: Tente usar laços aninhados para completar este desenho.
+      courseD_artist_embed_frozen: Pressione Executar para ver o desenho de um floco de neve!
+      courseD_artist_embed_frozen2: Pressione Executar para ver o desenho de um floco de neve.
+      courseD_artist_functions4: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+      courseD_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma imagem como esta?
       courseD_artist_nestedLoops_challenge1_2018: Você consegue descobrir como fazer uma imagem como esta?
@@ -2918,6 +3133,33 @@ pt-BR:
       courseD_artist_nestedLoops_challenge2: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2019: Conserte o código para fazer esta pintura!
+      courseD_artist_project1a: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      courseD_artist_project1a_2018: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      courseD_artist_project1a_2019: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      courseD_artist_project2a: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      courseD_artist_project2a_2018: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      courseD_artist_project2a_2019: Agora, vire 180 graus e desenhe o modelo da escada novamente!
+      courseD_artist_project3a: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      courseD_artist_project3a_2018: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      courseD_artist_project3a_2019: Gire essa forma cerca de 5 ou 6 vezes em um círculo.
+      courseD_artist_project4a: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
+      courseD_artist_project4a_2018: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
+      courseD_artist_project4a_2019: |-
+        Tente brincar com o que você criou. Desenhe o que quiser!
+        - O que acontece se você usar dois ângulos diferentes no seu modelo de degrau de escada?
+        - O que acontece se você fazer o seu modelo de diamante mais longo ou mais curto?
+        - Que aparência tem dois flocos de neve desenhados um em cima do outro?
+      courseD_artist_project5: Brinque com os flocos de neve!
+      courseD_artist_project5_2018: Brinque com os flocos de neve!
+      courseD_artist_project5_2019: Brinque com os flocos de neve!
       courseD_artist_ramp12: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseD_autorun_binary4_2019: "Você consegue desenhar este padrão repetindo\napenas três dígitos binários? (0 e 1)?"
       courseD_autorun_binary6_2019: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
@@ -3085,6 +3327,8 @@ pt-BR:
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
+      courseD_scrat_ramp5: Evite o gelo com rachadura.
+      courseD_scrat_ramp5_2018: Evite o gelo com rachadura.
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
       courseD_scrat_ramp7_2018: Ajude Scrat a chegar até a noz!
       courseE_artist_concept1: 'Recrie esta imagem. '
@@ -3095,6 +3339,13 @@ pt-BR:
       courseE_artist_concept4_2019: Recrie este desenho.
       courseE_artist_functions1: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       courseE_artist_functions1_2018: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
+      courseE_artist_functions3_2018: Construa uma função que irá criar esta estrela.
+      courseE_artist_functions3_2019: Construa uma função que irá criar esta estrela.
+      courseE_artist_functions4: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+      courseE_artist_functions4_2018: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+      courseE_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseE_artist_functions5_2018: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
       courseE_artist_ramp12: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
@@ -3127,6 +3378,10 @@ pt-BR:
       courseE_farmer_functions2b: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2018: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2019: Ajude a colheitadeira a pegar os milhos e as abóboras.
+      courseE_farmer_functions8: "**Desafio:** Resolva este quebra-cabeça com a menor quantidade possível de blocos."
+      courseE_farmer_functions8b: "**Desafio:** Colete todas as abóboras usando o método do último quebra-cabeça. "
+      courseE_farmer_functions8b_2018: "**Desafio:** Colete todas as abóboras usando o método do último quebra-cabeça. "
+      courseE_farmer_functions9: Use condicionais para simplificar seu programa.
       courseE_farmer_ramp11a: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2019: Enquanto houver uma pilha, remova a areia.
@@ -3206,6 +3461,7 @@ pt-BR:
       course_playlab_variables2: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       course_playlab_variables3: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       coursea_maze_ramp1_2018: Para este enigma, junte os blocos e clique em "▶ Executar"!
+      coursea_maze_ramp1_2019: Para este enigma, junte os blocos e clique em "▶ Executar"!
       flappy_1: Conecte um bloco no bloco "quando clicar" e, em seguida, clique em "Executar". Clique ou toque na tela para mover o passarinho em direção ao alvo.
       flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
       flappy_11_2018: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
@@ -3252,14 +3508,48 @@ pt-BR:
       frozen square loop 3x: "Vamos criar três quadrados, virando depois\nde cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado."
       frozen square loop: "Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado\ncom o bloco \"repita\", que usa menos blocos. Quantas vezes (???) o bloco\n\"repita\" deve repetir os blocos dentro dele para fazer um quadrado?"
       frozen square snowflake: "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?"
+      grade1_adventurer_loops1: Quatro pilhas de ouro! Colete todas elas.
+      grade1_artist_loops1: O Artista está tentando desenhar uma linha seis vezes, mas não consegue fazer direito. Você pode ajudá-lo?
+      grade1_artist_loops4: Hora de consertar as escadas! Repita esse padrão cinco vezes para que o artista possa alcançar o topo dos arbustos.
+      grade1_artist_loops7: As flores aqui embaixo são tão bonitas. Vamos olhar mais de perto.
+      grade1_artist_loops7b: Hora de ir para casa. Você pode consertar esta escada para ajudar o artista a descer?
+      grade1_artist_loops9: Eu ainda preciso de uma história pra este quebra-cabeça
       grade1_maze_sequence1: Altere o código para me levar até o porco!
+      grade1_maze_sequence10: Me mova ao redor da TNT para chegar até o porco.
       grade1_maze_sequence2: Altere o código para me levar até o porco!
+      grade1_maze_sequence3: Adicione 2 blocos para levar o pássaro até o porco.
+      grade1_maze_sequence4: Agora tente este quebra-cabeça do início!
       grade1_maze_sequence5: Mova-me por um caminho, e então por outro para me levar até o porco!
       grade1_maze_sequence6: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
       grade1_maze_sequence8: Analise este nível adicionando blocos para me levar até o porco!
       grade1_maze_sequence9: 'Desvie do TNT para me levar até o porco! '
       grade1_maze_sequenceA: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
+      grade1_maze_sequenceB: Corrija os erros para levar o pássaro até o porco.
+      grade1_maze_sequenceC: É com você! Leve o pássaro até o porco.
+      grade1_maze_sequenceD: Agora vá em qualquer direção para pegar aquele porco!
+      grade1_playlab_events1: Este jogo é chamado de "Brincando de Laboratório". Veja se você consegue descobrir o que cada bloco faz.
+      grade1_playlab_events1a: Faça seu robô dizer "Olá!" quando o botão é clicado.
+      grade1_playlab_events2: Este programa faz Robin voar. Você consegue fazê-la desaparecer quando você clicar nela?
+      grade1_playlab_events2a: Edite o código para que quando o segundo pássaro é clicado, seu programa toque um som!
+      grade1_playlab_events3: 'Este programa faz Robin voar. Você pode fazer com que o robô pule quando o botão para cima é pressionado?  '
+      grade1_playlab_events3a: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
+      grade1_playlab_events4: Adicione um bloco para fazer Robin desaparecer quando ela colidir com o robô.
+      grade1_playlab_events4a: Adicione código para fazer alguma coisa acontecer quando o quarto pássaro é clicado. Seja criativo!
+      grade1_playlab_events5: Adicione um bloco para o evento 'quando executar' que inicie o voo do dragão.
+      grade1_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      grade1_playlab_events6: Adicione um bloco para o evento 'quando ator 1 clicado' que faça o dragão voltar para o meio da tela.
+      grade1_playlab_events7: Adicione um bloco de modo que quando você pressiona o botão de seta para a esquerda, o cavaleiro surge em direção ao dragão.
+      grade1_playlab_events8: Adicione um bloco de modo que quando o cavaleiro colide com o dragão, toque um som.
+      grade1_playlab_events9 RYAN COPY: Agora, faça Robin esperar um segundo, então voltar depois que desaparecer.
+      grade1_playlab_events9: Agora, adicione um bloco para contar cada vez que o cavaleiro atinge o dragão.
+      grade1_sequence_pre: Brinque com estes blocos pra ver o que eles fazem o pássaro fazer!
+      grade1_video_frustrationRainbow: Este vídeo descreve o arco-íris da frustração e introduz persistência.
       grade2_CaringForNewPet_10: Leve-me até o porco!
+      grade2_CaringForNewPet_11: '"Mantenha a calma e ajude-me a encontrar aquele porco mau."'
+      grade2_CaringForNewPet_2: |-
+        "Aquele porco está bagunçando minhas penas."
+
+        Há um bloco extra que fará o pássaro cair. Jogue-o fora arrastando o de volta para a caixa de ferramentas.
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Agora desenhe o que você quiser!
       grade2_MakeDogTag_3: |-
@@ -3296,6 +3586,7 @@ pt-BR:
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
+      grade2_maze_debuggingPre: Brinque com estes blocos pra ver o que eles fazem o pássaro fazer!
       grade2_maze_intro10: Resolva este desafio.
       grade2_maze_intro9: Resolva este desafio.
       grade2_playlab_project_1: "Agora escreva um programa que faça Valfredo\nse mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!"
@@ -3309,6 +3600,11 @@ pt-BR:
         mova Valfredo com as setas até marcar pontos.
       grade2_puppy_loops2: "Você consegue pegar o porco criando um laço que usa\napenas um bloco \"avance\" dentro de um bloco \"repita\"?"
       grade2_puppy_loops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
+      grade3_AboutMyRobot_1: Faça seu robô dizer "Olá!" quando o botão é clicado.
+      grade3_AboutMyRobot_2: Edite o código para que quando o segundo pássaro é clicado, seu programa toque um som!
+      grade3_AboutMyRobot_3: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
+      grade3_AboutMyRobot_4: Adicione código para fazer alguma coisa acontecer quando o quarto pássaro é clicado. Seja criativo!
+      grade3_AboutMyRobot_5: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       grade3_ConditionalsElse_1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
       grade3_ConditionalsElse_2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade3_ConditionalsElse_3: "Agora só quero produzir mel. Algumas\ndessas nuvens podem ter colmeias atrás delas. Não se esqueça de procurar em todas as nuvens!"
@@ -3433,6 +3729,8 @@ pt-BR:
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! \\r\n\\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\\r\n\\r\nOs quadrados estão separados por uma distância de 75 pixels."
       grade4_artist_functions_challenge: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
       grade4_artist_functions_challenge2: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
+      grade4_artist_functions_stars1: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+      grade4_artist_functions_stars2: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       grade4_artist_nestedLoops_challenge: |-
         Clique aqui para ver as instruções completas novamente!\r
         \r
@@ -3639,7 +3937,15 @@ pt-BR:
       grade5_playlab_variables9: "Aqui temos uma função chamada \"patrulhe\".\n\\r\n\\r\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
       grade5_playlab_variables_freeplay: "Hora da atividade livre! Temos aqui todas as\nvariáveis que usamos até agora essa etapa, bem como algumas a mais caso\nvocê queira usá-las. \\r\n\\r\nObserve que agora há muitos blocos em nossa\ncaixa de ferramentas e eles precisam ser organizados! Aqui, colocamos cada peça em\numa categoria apropriada. Reserve um tempo para explorar tudo o que está disponível.\nQuando terminar de explorar, crie um jogo ou uma história usando repetições, variáveis\ne eventos.  \\r\n\\r\nDica: deslize a tela para baixo para ver todos os comandos na área de trabalho."
       gradek_artist_loops1: Ajude o artista a desenhar esta linha duas vezes mais rápido.
+      gradek_artist_loops3: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       gradek_artist_loopsPre: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      gradek_playlab_events1: Faça seu robô dizer "Olá!" quando o botão é clicado.
+      gradek_playlab_events2: Edite o código para que quando o segundo pássaro é clicado, seu programa toque um som!
+      gradek_playlab_events3: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
+      gradek_playlab_events3a: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
+      gradek_playlab_events4: Adicione código para fazer alguma coisa acontecer quando o quarto pássaro é clicado. Seja criativo!
+      gradek_playlab_events5: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      gradek_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       group test: Faça um jogo
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
       level 'grade3_Loops_10: |-
@@ -3665,6 +3971,7 @@ pt-BR:
       love_spring_1: Vamos celebrar a Primavera. Nós colocamos algumas sementes no chão para preparar para a estação das flores. Você consegue cobrir todas elas, para que os pássaros não as comam?
       marina_gameLab_play: Clone este nível e faça seus próprios blocos!
       mike3bit: Vamos começar com você com a imagem 4x2 que Maddie estava criando, más deixamos de fora alguns pixels. Termine a imagem descobrindo quais estão faltando e os codifique.
+      playEventsK1: Este jogo é chamado de "Brincando de Laboratório". Veja se você consegue descobrir o que cada bloco faz.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.
@@ -3681,3 +3988,4 @@ pt-BR:
       subgoalU3L2_TurtleSquare_right: "Desenhe um quadrado usando apenas avance\ne vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA\nda posição inicial."
       u3-old-drawing-view: FAÇA isso
       valentine_artist_03: Agora tente algo você mesmo!
+      weird_playLab: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.

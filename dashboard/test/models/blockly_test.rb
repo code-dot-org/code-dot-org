@@ -118,7 +118,7 @@ XML
   end
 
   test 'block XML contains no blank nodes' do
-    level = Level.create(instructions: 'test', type: 'Artist', start_blocks: @xml)
+    level = Level.create(short_instructions: 'test', type: 'Artist', start_blocks: @xml)
     assert_equal Nokogiri::XML.parse(level.start_blocks).serialize(save_with: Blockly::XML_OPTIONS),
       Nokogiri::XML.parse(level.start_blocks, &:noblanks).serialize(save_with: Blockly::XML_OPTIONS)
   end

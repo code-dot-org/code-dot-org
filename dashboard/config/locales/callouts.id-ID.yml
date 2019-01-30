@@ -565,10 +565,16 @@ id:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Angka ini memberitahu anda seberapa banyak blok yang
           dapat anda gunakan dalam teka-teki ini.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Angka ini memberitahu anda seberapa banyak blok yang
+          dapat anda gunakan dalam teka-teki ini.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Angka ini berarti bahwa hanya satu dari jenis blok
           ini yang dapat digunakan di jawaban akhir.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Angka ini berarti bahwa hanya satu dari jenis blok
+          ini yang dapat digunakan di jawaban akhir.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Angka ini berarti bahwa hanya satu dari jenis blok
           ini yang dapat digunakan di jawaban akhir.
       courseA_artist_loops7_forVideo_callout:
@@ -580,6 +586,9 @@ id:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Apakah Anda tahu bahwa Anda bisa menggambar ulang
           kapan pun Anda perlu?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Apakah Anda tahu bahwa Anda bisa menggambar ulang
+          kapan pun Anda perlu?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
@@ -588,10 +597,17 @@ id:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
+          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
+          tahapan.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
           yang dapat anda gunakan dalam teka-teki ini.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
+          yang dapat anda gunakan dalam teka-teki ini.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
           yang dapat anda gunakan dalam teka-teki ini.
       courseA_collector_preLoops1_callout:
@@ -619,6 +635,9 @@ id:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
@@ -632,6 +651,8 @@ id:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Gunakan tombol langkah agar dituntun langkah demi
@@ -651,10 +672,15 @@ id:
         courseA_playlab_events4_callout1: Ini merupakan satu seruan
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Ini merupakan satu seruan
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Ini merupakan satu seruan
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
           satu kejadian.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
+          satu kejadian.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
           satu kejadian.
       courseA_playLab_events6_callout:
@@ -665,13 +691,23 @@ id:
         courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
           suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
           sampai Anda mendengarnya!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
+          suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
+          sampai Anda mendengarnya!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam
           kotak peralatan. Mau digunakan untuk apa?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam
+          kotak peralatan. Mau digunakan untuk apa?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam
           kotak peralatan. Mau digunakan untuk apa?
       courseB_artist_loops5_callout:
@@ -685,9 +721,15 @@ id:
         courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
+          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
+          tahapan.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Gunakan tombol langkah agar dituntun langkah demi
@@ -706,6 +748,8 @@ id:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Bawalah aktor ke bendera ini untuk maju ke tahap
@@ -1424,6 +1468,9 @@ id:
         course_playlab_variables3_1: Ini adalah bagaimana anda menetapkan nilai variabel
           anda.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
       coursef_maze_ramp3_callout:
