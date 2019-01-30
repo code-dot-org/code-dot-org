@@ -412,7 +412,7 @@ export default class EnrollForm extends React.Component {
           <ButtonList
             id="attended_csf_intro_workshop"
             key="attended_csf_intro_workshop"
-            answers={Object.keys(ATTENDED_CSF_COURSES_OPTIONS).map( key => key)}
+            answers={Object.keys(ATTENDED_CSF_COURSES_OPTIONS)}
             groupName="attended_csf_intro_workshop"
             label="Have you attended a CS Fundamentals Intro Workshop before?"
             onChange={this.handleChange}
