@@ -208,6 +208,13 @@ ca:
       Overworld Move to Sheep: Afegeix una segona instrucció "avança" per arribar a l'ovella.
       Overworld Move to Sheep_2018: Afegeix una segona instrucció "avança" per arribar a l'ovella.
       Overworld Move to Sheep_2019: Afegeix una segona instrucció "avança" per arribar a l'ovella.
+      Ryan_Demo: |-
+        Anem a fer ballar aquest ant!
+
+        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou&#95;dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
+
+
+        Les **mesures** es fan servir per comptar el temps en la música. A aquest tutorial, una mesura té quatre temps de llarg.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)
       courseD_maze_nestedLoops4: 'Porta''m fins al girasol!'
       courseD_maze_nestedLoops4_2018: 'Porta''m fins al girasol!'

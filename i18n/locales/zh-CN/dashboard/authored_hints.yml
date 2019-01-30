@@ -3950,6 +3950,12 @@ zh-CN:
         turn_at_honeycomb_pointer: 除了酿蜂蜜, 你有没有看到你必须在蜂窝做的不同的事？
       Quantum Bee - Ryan_authored_hint:
         test_hint: 这是一个测试提示。
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+
+          *此关在 8 个小节后结束。*
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的来检查和处理熔岩代码都有了。您需要做的就是添加一个模块来移动。
         mc_11_b: 你的`向前移动`命令要在`如果`语句的里面还是后面？
@@ -4077,6 +4083,8 @@ zh-CN:
         allHallows2017_e: '丹妮说: "我不擅长双关语。尝试使用重复模块!"'
         allHallows2017_b: '贝克说: "芝加哥的蜡笔只在*绿色的线*上划。"'
         allHallows2017_f: '艾米说: "你能做到！发散一下思维。“'
+      allthethings_ttscsf contained_authored_hint:
+        courseE_farmer_ramp12a: 如果需要提示的话，可以回到上一关看看。看看如何只**当**有物品时，才捡起物品。
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
       artistLoopsK2_authored_hint:
@@ -5314,6 +5322,9 @@ zh-CN:
       courseA_artist_loops2_2018_authored_hint:
         courseA_artist_loops2_a: 无法想到怎样画线吗？请开始把模块添加到 <xml><block type="when_run"/></xml>模块看会发生什么。
         courseA_artist_loops2_b: 使用模块<xml><block type="simple_move_right"/></xml>来解决此关卡。
+      courseA_artist_loops2_2019_authored_hint:
+        courseA_artist_loops2_a: 无法想到怎样画线吗？请开始把模块添加到 <xml><block type="when_run"/></xml>模块看会发生什么。
+        courseA_artist_loops2_b: 使用模块<xml><block type="simple_move_right"/></xml>来解决此关卡。
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: 用手指慢慢地追踪程序, 看看是哪里出问题了。
         courseA_artist_loops3_b: |-
@@ -5321,6 +5332,12 @@ zh-CN:
 
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops3_2018_authored_hint:
+        courseA_artist_loops3_a: 用手指慢慢地追踪程序, 看看是哪里出问题了。
+        courseA_artist_loops3_b: |-
+          您将使用这样的模块来解决这个关卡。
+
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+      courseA_artist_loops3_2019_authored_hint:
         courseA_artist_loops3_a: 用手指慢慢地追踪程序, 看看是哪里出问题了。
         courseA_artist_loops3_b: |-
           您将使用这样的模块来解决这个关卡。
@@ -5334,6 +5351,10 @@ zh-CN:
         courseA_artist_loops4_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseA_artist_loops4_b: |-
           由于只能使用一个<xml><block type="simple_move_right"/></xml>模块, 请尝试将其放入<block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>循环中。
+      courseA_artist_loops4_2019_authored_hint:
+        courseA_artist_loops4_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
+        courseA_artist_loops4_b: |-
+          由于只能使用一个<xml><block type="simple_move_right"/></xml>模块, 请尝试将其放入<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> 循环中。
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: 请试着使用你已经学到的<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块知识来完成此关卡。
         courseA_artist_loops5_b: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
@@ -5342,10 +5363,17 @@ zh-CN:
         courseA_artist_loops5_a: 请试着使用你已经学到的<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块知识来完成此关卡。
         courseA_artist_loops5_b: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseA_artist_loops5_c: "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
+      courseA_artist_loops5_2019_authored_hint:
+        courseA_artist_loops5_a: 请试着使用你已经学到的<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块知识来完成此关卡。
+        courseA_artist_loops5_b: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
+        courseA_artist_loops5_c: "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: 无法想出如何制作山峰吗？请试着运行这些模块看它们每个是画什么的？
         courseA_artist_loops6_b: 您需要两个方向的两个模块来解决这个难题。
       courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: 无法想出如何制作山峰吗？请试着运行这些模块看它们每个是画什么的？
+        courseA_artist_loops6_b: 您需要两个方向的两个模块来解决这个难题。
+      courseA_artist_loops6_2019_authored_hint:
         courseA_artist_loops6_a: 无法想出如何制作山峰吗？请试着运行这些模块看它们每个是画什么的？
         courseA_artist_loops6_b: 您需要两个方向的两个模块来解决这个难题。
       courseA_artist_loops7_authored_hint:
@@ -5356,6 +5384,13 @@ zh-CN:
           <title name="TIMES">???</title>
           </block></xml>循环中放置多个块。
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
+        courseA_artist_loops7_b: 先写一个波浪的代码, 然后再重复来画另外两个。
+        courseA_artist_loops7_c: |-
+          请记住, 可以在<xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>循环中放置多个块。
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
         courseA_artist_loops7_b: 先写一个波浪的代码, 然后再重复来画另外两个。
         courseA_artist_loops7_c: |-
@@ -5377,11 +5412,19 @@ zh-CN:
         courseA_artist_loops8_a: 请尝试运行代码看已经为你写了些什么。
         courseA_artist_loops8_b: 如何循环已经给你的代码？
         courseA_artist_loops8_c: "这个代码是做什么的？\n它应该做什么？\n那告诉你什么？"
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_a: 请尝试运行代码看已经为你写了些什么。
+        courseA_artist_loops8_b: 如何循环已经给你的代码？
+        courseA_artist_loops8_c: "这个代码是做什么的？\n它应该做什么？\n那告诉你什么？"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: 将另一个模块添加到已经给您的代码中来绘制其余的楼梯。
         courseA_artist_loops9_b: "您添加的模块应该在<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>循环的内部。"
         courseA_artist_loops9_c: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: 将另一个模块添加到已经给您的代码中来绘制其余的楼梯。
+        courseA_artist_loops9_b: "您添加的模块应该在<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>循环的内部。"
+        courseA_artist_loops9_c: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: 将另一个模块添加到已经给您的代码中来绘制其余的楼梯。
         courseA_artist_loops9_b: "您添加的模块应该在<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>循环的内部。"
         courseA_artist_loops9_c: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
@@ -5394,6 +5437,10 @@ zh-CN:
         courseA_artist_loops_challenge2_b: 当您完成一个帐篷时，向上`跳跃`两次到达下一个!
         courseA_artist_loops_challenge2_c: 所有的模块都将需要在一个循环内才可以完成此关卡。
       courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: 像这样的模块 <xml> <block type="simple_move_up_left"/></xml>会让你的艺术家在斜面上移动!
+        courseA_artist_loops_challenge2_b: 当您完成一个帐篷时，向上`跳跃`两次到达下一个!
+        courseA_artist_loops_challenge2_c: 所有的模块都将需要在一个循环内才可以完成此关卡。
+      courseA_artist_loops_challenge2a_2019_authored_hint:
         courseA_artist_loops_challenge2_a: 像这样的模块 <xml> <block type="simple_move_up_left"/></xml>会让你的艺术家在斜面上移动!
         courseA_artist_loops_challenge2_b: 当您完成一个帐篷时，向上`跳跃`两次到达下一个!
         courseA_artist_loops_challenge2_c: 所有的模块都将需要在一个循环内才可以完成此关卡。
@@ -5421,6 +5468,11 @@ zh-CN:
           在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
           <xml> <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 一个简单的解决方案是向东移动两次, 然后得到宝藏。
+      courseA_collector_loops1_2019_authored_hint:
+        courseA_collector_loops1_a: |-
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: 一个简单的解决方案是向东移动两次, 然后得到宝藏。
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
         courseA_collector_loops2_b: |-
@@ -5431,16 +5483,27 @@ zh-CN:
         courseA_collector_loops2_b: |-
           在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
           <xml> <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019_authored_hint:
+        courseA_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
+        courseA_collector_loops2_b: |-
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "试试用\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops3_2018_authored_hint:
         courseA_collector_loops3_a: "试试用\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
+      courseA_collector_loops3_2019_authored_hint:
+        courseA_collector_loops3_a: "试试用\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
+        courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
         courseA_collector_loops4_b: 请别忘了罗瑞尔需要在她完成 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环后走下去收集所有的宝藏！
       courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
+        courseA_collector_loops4_b: 请别忘了罗瑞尔需要在她完成 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环后走下去收集所有的宝藏！
+      courseA_collector_loops4_2019_authored_hint:
         courseA_collector_loops4_a: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
         courseA_collector_loops4_b: 请别忘了罗瑞尔需要在她完成 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环后走下去收集所有的宝藏！
       courseA_collector_loops5_authored_hint:
@@ -5451,15 +5514,24 @@ zh-CN:
         courseA_collector_loops5_a: 如果你不能马上找到答案，试着用一张纸来找出你需要的箭头并找到一个图案。
         courseA_collector_loops5_b: 试着把问题分成2部分, 然后侧身移动, 然后向下。
         courseA_collector_loops5_c: 您将开始使用 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环, 来让劳雷尔向西移动并收集宝藏。
+      courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: 如果你不能马上找到答案，试着用一张纸来找出你需要的箭头并找到一个图案。
+        courseA_collector_loops5_b: 试着把问题分成2部分, 然后侧身移动, 然后向下。
+        courseA_collector_loops5_c: 您将开始使用 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环, 来让劳雷尔向西移动并收集宝藏。
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
         courseA_collector_loops6_b: 最短解决方案有 2 个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环, 一个接一个。
       courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
         courseA_collector_loops6_b: 最短解决方案有 2 个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环, 一个接一个。
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: 搞不清楚那里有错？尝试运行代码多次，看看会发生什么。
+        courseA_collector_loops6_b: 最短解决方案有 2 个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环, 一个接一个。
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: 如果您不知道接下来会发生什么，请尝试运行代码以查看罗瑞尔结束的位置。
       courseA_collector_loops7_2018_authored_hint:
+        courseA_collector_loops7_a: 如果您不知道接下来会发生什么，请尝试运行代码以查看罗瑞尔结束的位置。
+      courseA_collector_loops7_2019_authored_hint:
         courseA_collector_loops7_a: 如果您不知道接下来会发生什么，请尝试运行代码以查看罗瑞尔结束的位置。
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: 如果您遇到此难题，请尝试在一张纸上写下所有的动作并寻找规律。
@@ -5469,10 +5541,17 @@ zh-CN:
         courseA_collector_loops8_a: 如果您遇到此难题，请尝试在一张纸上写下所有的动作并寻找规律。
         courseA_collector_loops8_b: 尝试将这个谜题分解成3个单独的问题, 并为每一个编写循环。
         courseA_collector_loops8_c: 记住, 你可以一次写一段代码, 然后按 "运行" 来找出你需要去哪里。
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: 如果您遇到此难题，请尝试在一张纸上写下所有的动作并寻找规律。
+        courseA_collector_loops8_b: 尝试将这个谜题分解成3个单独的问题, 并为每一个编写循环。
+        courseA_collector_loops8_c: 记住, 你可以一次写一段代码, 然后按 "运行" 来找出你需要去哪里。
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: '如果无法发现使用循环的最佳位置, 请尝试逐步对其进行编码, 并寻找规律。 '
         courseA_collector_loops9_b: 尝试将你的两个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环之一放入另一个循环中, 来让代码更短!
       courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: '如果无法发现使用循环的最佳位置, 请尝试逐步对其进行编码, 并寻找规律。 '
+        courseA_collector_loops9_b: 尝试将你的两个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环之一放入另一个循环中, 来让代码更短!
+      courseA_collector_loops9_2019_authored_hint:
         courseA_collector_loops9_a: '如果无法发现使用循环的最佳位置, 请尝试逐步对其进行编码, 并寻找规律。 '
         courseA_collector_loops9_b: 尝试将你的两个<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>循环之一放入另一个循环中, 来让代码更短!
       courseA_collector_loops_challenge1_authored_hint:
@@ -5515,6 +5594,26 @@ zh-CN:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: 如果有错误，请尝试更改每个循环中的数字。
+        courseA_collector_loops_challenge1_b: 如果有什么事情只做一次，就不需要使用循环, 。
+        courseA_collector_loops_challenge1_c: 当你开始的时候, 有6个宝石在洞穴的右侧, 但你只需要向南移动5次获得宝藏。你知道这是为什么吗？
+        courseA_collector_loops_challenge1_d: |-
+          开始的程序没有收集最后两个宝石。尝试在末尾添加此代码: 
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: 你只需要用一个模块来解决这个问题。
         courseA_collector_loops_challenge2_a: 在向南移动之前，您可以再次在路径上移动。
@@ -5522,6 +5621,9 @@ zh-CN:
         courseA_collector_loops_challenge2kp_b: 请尝试此路径以获得解决方案。
         courseA_collector_loops_challenge2kp_a: 你能用循环来解决这个关卡吗？
       courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: 请尝试此路径以获得解决方案。
+        courseA_collector_loops_challenge2kp_a: 你能用循环来解决这个关卡吗？
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
         courseA_collector_loops_challenge2kp_b: 请尝试此路径以获得解决方案。
         courseA_collector_loops_challenge2kp_a: 你能用循环来解决这个关卡吗？
       courseA_collector_preLoops4_authored_hint:
@@ -5546,9 +5648,24 @@ zh-CN:
           一旦移动到了某个玉米上，用这个模块采摘它！
 
           <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops1_2019_authored_hint:
+        courseA_harvester_loops1_a: |-
+          一旦移动到了某个玉米上，用这个模块采摘它！
+
+          <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
+      courseA_harvester_loops2_2019_authored_hint:
+        courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
       courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          用一个这样的`重复`模块来帮忙！
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+        courseA_harvester_loops3_b: "要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。"
+      courseA_harvester_loops3_2019_authored_hint:
         courseA_harvester_loops3_a: |-
           用一个这样的`重复`模块来帮忙！
 
@@ -5559,7 +5676,15 @@ zh-CN:
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: 勇敢按下`运行`按钮，看看会发生什么！
         courseA_harvester_loops4_b: 有多少块玉米？你的代码重复了多少次？
+      courseA_harvester_loops4_2019_authored_hint:
+        courseA_harvester_loops4_a: 勇敢按下`运行`按钮，看看会发生什么！
+        courseA_harvester_loops4_b: 有多少块玉米？你的代码重复了多少次？
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
+        courseA_harvester_loops5_b: |-
+          最终的代码会有**一个**`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">6</title></block></xml>循环，**一个**`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>模块和**一个**`向东`<xml><block type="maze_moveEast" limit="1"/></xml>移动的模块。
+        courseA_harvester_loops5_c: 通过这条路来采摘所有的玉米。
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
         courseA_harvester_loops5_b: |-
           最终的代码会有**一个**`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">6</title></block></xml>循环，**一个**`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>模块和**一个**`向东`<xml><block type="maze_moveEast" limit="1"/></xml>移动的模块。
@@ -5569,18 +5694,38 @@ zh-CN:
           你需要一个`重复`循环连着另一个。
         courseA_harvester_loops5a_b: 一个循环要重复`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>，另一个要重复`向东移动`<xml><block type="maze_moveEast" limit="1"/></xml>。
         courseA_harvester_loops5a_c: 走这条路，先往一个方向走，再往另一个方向走。
+      courseA_harvester_loops5a_2019_authored_hint:
+        courseA_harvester_loops5a_a: |-
+          你需要一个`重复`循环连着另一个。
+        courseA_harvester_loops5a_b: 一个循环要重复`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>，另一个要重复`向东移动`<xml><block type="maze_moveEast" limit="1"/></xml>。
+        courseA_harvester_loops5a_c: 走这条路，先往一个方向走，再往另一个方向走。
       courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: 点击`运行`看看会发生什么！
+        courseA_harvester_loops5b_b: 你的循环重复了正确的次数吗？
+        courseA_harvester_loops5b_c: 沿着这条路往一个方向移动，然后往另一个方向移动。
+      courseA_harvester_loops5b_2019_authored_hint:
         courseA_harvester_loops5b_a: 点击`运行`看看会发生什么！
         courseA_harvester_loops5b_b: 你的循环重复了正确的次数吗？
         courseA_harvester_loops5b_c: 沿着这条路往一个方向移动，然后往另一个方向移动。
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
         courseA_harvester_loops6_b: 想要采摘所有玉米就得走这条路。
+      courseA_harvester_loops6_2019_authored_hint:
+        courseA_harvester_loops6_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
+        courseA_harvester_loops6_b: 想要采摘所有玉米就得走这条路。
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: |-
           你需要两个`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">5</title></block></xml>循环相连！
         courseA_harvester_loops7_b: 用两个循环来沿着这条路走。
+      courseA_harvester_loops7_2019_authored_hint:
+        courseA_harvester_loops7_a: |-
+          你需要两个`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">5</title></block></xml>循环相连！
+        courseA_harvester_loops7_b: 用两个循环来沿着这条路走。
       courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: 将这一关分成三个不同部分，一部分到达第一个角落，一部分到达第二个角落，最后一部分到达终点。
+        courseA_harvester_loops9_b: 在每个部分完成后，别害怕运行代码，看看会发生什么！
+        courseA_harvester_loops9_c: 沿这条路来收获所有的玉米。
+      courseA_harvester_loops9_2019_authored_hint:
         courseA_harvester_loops9_a: 将这一关分成三个不同部分，一部分到达第一个角落，一部分到达第二个角落，最后一部分到达终点。
         courseA_harvester_loops9_b: 在每个部分完成后，别害怕运行代码，看看会发生什么！
         courseA_harvester_loops9_c: 沿这条路来收获所有的玉米。
@@ -5601,6 +5746,10 @@ zh-CN:
         courseA_harvester_seq10_a: 被难住了？请试着先在一张纸上写下步骤。
         courseA_harvester_seq10_b: 你需要`向东移动`，然后`向北移动`。这样做两次。别忘了还要采摘所有的玉米！
         courseA_harvester_seq10_c: 试着用这条路捡起所有橡子。
+      courseA_harvester_seq10_2019_authored_hint:
+        courseA_harvester_seq10_a: 被难住了？请试着先在一张纸上写下步骤。
+        courseA_harvester_seq10_b: 你需要`向东移动`，然后`向北移动`。这样做两次。别忘了还要采摘所有的玉米！
+        courseA_harvester_seq10_c: 试着用这条路捡起所有橡子。
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: |-
           用这个模块来让收割者到达玉米时，采摘它。
@@ -5608,10 +5757,39 @@ zh-CN:
           <xml>
           <block type="harvester_corn"/>
           </xml>
+      courseA_harvester_seq13_2019_authored_hint:
+        courseA_bee_seq1_a: |-
+          用这个模块来让收割者到达玉米时，采摘它。
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq1_2019_authored_hint:
+        courseA_harvester_seq1_a: |-
+          用这个模块来让收割者一旦找到玉米，就采摘它！
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          收割者需要向东移动三次来采摘玉米，用这个模块：
+
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: 别忘了用<xml><block type="harvester_corn"/></xml>来采摘玉米！
         courseA_harvester_seq2_b: 请试着在纸张上写下步骤来找到解决方法！
+      courseA_harvester_seq2_2019_authored_hint:
+        courseA_harvester_seq2_a: 别忘了用<xml><block type="harvester_corn"/></xml>来采摘玉米！
+        courseA_harvester_seq2_b: 请试着在纸张上写下步骤来找到解决方法！
       courseA_harvester_seq3_authored_hint:
+        courseA_harvester_seq3_a: |-
+          还记得用这个模块吗？
+
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: 大声的说出这些步骤，来看看是否能帮你找到答案。
+      courseA_harvester_seq3_2019_authored_hint:
         courseA_harvester_seq3_a: |-
           还记得用这个模块吗？
 
@@ -5622,7 +5800,18 @@ zh-CN:
         courseA_harvester_seq4_b: |-
           你需要用5次`向西移动`和一次`采摘玉米`模块：
           <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq4_2019_authored_hint:
+        courseA_harvester_seq4_a: 在收割者和玉米之间有多少空间？工作区里已经有多少个模块了？
+        courseA_harvester_seq4_b: |-
+          你需要用5次`向西移动`和一次`采摘玉米`模块：
+          <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_a: 哪个模块将收割者移向了错误的路？
+        courseA_harvester_seq5_b: 你需要去掉一个模块。
+        courseA_harvester_seq5_c: |-
+          将这个模块扔进垃圾箱！
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq5_2019_authored_hint:
         courseA_harvester_seq5_a: 哪个模块将收割者移向了错误的路？
         courseA_harvester_seq5_b: 你需要去掉一个模块。
         courseA_harvester_seq5_c: |-
@@ -5630,14 +5819,39 @@ zh-CN:
           <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq6_authored_hint:
         courseA_harvester_seq6_a: 如果被难住了，试着大声的说出这些步骤。这会帮你找到正确的路径。
+      courseA_harvester_seq6_2019_authored_hint:
+        courseA_harvester_seq6_a: 如果被难住了，试着大声的说出这些步骤。这会帮你找到正确的路径。
       courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: 试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
+        courseA_harvester_seq7_b: 有困难了？这是收割者应该走的路。
+      courseA_harvester_seq7_2019_authored_hint:
         courseA_harvester_seq7_a: 试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
         courseA_harvester_seq7_b: 有困难了？这是收割者应该走的路。
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: 运行代码几次来看看发生了什么。收割者在哪里停下来了？
         courseA_harvester_seq9_b: 别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。
         courseA_harvester_seq9_c: 你应该用这条路来捡起所有橡子。
+      courseA_harvester_seq9_2019_authored_hint:
+        courseA_harvester_seq9_a: 运行代码几次来看看发生了什么。收割者在哪里停下来了？
+        courseA_harvester_seq9_b: 别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。
+        courseA_harvester_seq9_c: 你应该用这条路来捡起所有橡子。
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           你的代码应该会像这样：
 
@@ -5676,7 +5890,45 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
+        '1': |
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
         '1': |
           你的代码应该会像这样：
 
@@ -5717,11 +5969,46 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 记住，转向是从鸟的角度来看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
         '1': |-
           你的代码应该会像这样：
 
@@ -5750,6 +6037,9 @@ zh-CN:
       courseA_maze_seq10_2018_authored_hint:
         courseA_maze_seq10_a: 如果你有困难, 试着先写下一张纸上的步骤。
         courseA_maze_seq10_b: 您将需要移动3 个方向来通过此关卡。
+      courseA_maze_seq10_2019_authored_hint:
+        courseA_maze_seq10_a: 如果你有困难, 试着先写下一张纸上的步骤。
+        courseA_maze_seq10_b: 您将需要移动3 个方向来通过此关卡。
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
@@ -5762,7 +6052,20 @@ zh-CN:
         courseA_maze_seq13_c: |-
           这些 <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
+      courseA_maze_seq13_2019_authored_hint:
+        courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
+        courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
+        courseA_maze_seq13_c: |-
+          这些 <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
       courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          如果在让鸟移动时遇到问题, 请确保模块是被放置在<xml>
+          <block type="when_run"/>
+          </xml> 下面
+        courseA_maze_seq1_b: |-
+          这只鸟需要向西移动3次才能到达猪。用这个模块: <xml> <block type="maze_moveWest"/> </xml>
+      courseA_maze_seq1_2019_authored_hint:
         courseA_maze_seq1_a: |-
           如果在让鸟移动时遇到问题, 请确保模块是被放置在<xml>
           <block type="when_run"/>
@@ -5800,12 +6103,23 @@ zh-CN:
           你需要用这个模块：
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': 请试着在纸张上写下步骤来找到解决方法！
+        '2': |-
+          你需要用这个模块：
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
+        '1': 大声的说出这些步骤，来看看是否能帮你找到答案。
+      courseA_maze_seq5a_2019_authored_hint:
         '1': 大声的说出这些步骤，来看看是否能帮你找到答案。
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: 最终的代码应该有3个移动模块。
         courseA_maze_seq6_b: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
       courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: 最终的代码应该有3个移动模块。
+        courseA_maze_seq6_b: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
+      courseA_maze_seq6_2019_authored_hint:
         courseA_maze_seq6_a: 最终的代码应该有3个移动模块。
         courseA_maze_seq6_b: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
       courseA_maze_seq7_authored_hint:
@@ -5817,6 +6131,8 @@ zh-CN:
       courseA_maze_seq8_authored_hint:
         courseA_maze_seq8_a: 如果你被卡住了, 试着在纸上画出图像, 看看鸟儿应该如何移动。
       courseA_maze_seq8_2018_authored_hint:
+        courseA_maze_seq8_a: 如果你被卡住了, 试着在纸上画出图像, 看看鸟儿应该如何移动。
+      courseA_maze_seq8_2019_authored_hint:
         courseA_maze_seq8_a: 如果你被卡住了, 试着在纸上画出图像, 看看鸟儿应该如何移动。
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: 卡住了？请试着用手指来描绘鸟的路径。
@@ -5830,9 +6146,13 @@ zh-CN:
         courseA_maze_seq_challenge1_a: 这个关卡有两个解决方法。
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: 这个关卡有两个解决方法。
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: 这个关卡有两个解决方法。
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: 试着用手指数一下空格。记住不要数你开始的空间!
       courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: 试着用手指数一下空格。记住不要数你开始的空间!
+      courseA_maze_seq_challenge2_2019_authored_hint:
         courseA_maze_seq_challenge2_a: 试着用手指数一下空格。记住不要数你开始的空间!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: 请找出可以让狗说些什么的模块。
@@ -5864,6 +6184,21 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseA_playLab_events2_2019_authored_hint:
+        courseA_playLab_events2_a: 请找出可以让狗说些什么的模块。
+        courseA_playLab_events2_b: |-
+          这是你要解决这问题要用的代码：
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">你好。</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
         courseA_playLab_events3_a: |-
           拖拽此模块<xml><block type="studio_move">
@@ -5874,6 +6209,15 @@ zh-CN:
           </block></xml>
         courseA_playLab_events3_b: 请记住, 在您编写完程序后, 使用左箭头键将乔治移动到旗那里。当国旗变绿的时候就完成了.
       courseA_playLab_events3_2018_authored_hint:
+        courseA_playLab_events3_a: |-
+          拖拽此模块<xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml>并放在此模块的下面<xml><block type="studio_whenArrow">
+          <title name="VALUE">左</title>
+          </block></xml>
+        courseA_playLab_events3_b: 请记住, 在您编写完程序后, 使用左箭头键将乔治移动到旗那里。当国旗变绿的时候就完成了.
+      courseA_playLab_events3_2019_authored_hint:
         courseA_playLab_events3_a: |-
           拖拽此模块<xml><block type="studio_move">
           <title name="SPRITE">1</title>
@@ -5918,6 +6262,24 @@ zh-CN:
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
           </block></next></block></xml>
+      courseA_playLab_events4_2019_authored_hint:
+        courseA_playLab_events4_a: |-
+          这是您将要让乔治右移的事件模块：
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          这是您将要完成此关卡的代码：
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
@@ -5925,6 +6287,12 @@ zh-CN:
 
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          您是否知道可以通过单击块中的图片并选择新的键来更改事件的方向键？ 
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019_authored_hint:
         courseA_playLab_events5_a: "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           您是否知道可以通过单击块中的图片并选择新的键来更改事件的方向键？ 
@@ -5968,6 +6336,25 @@ zh-CN:
           <xml><block type="studio_playSound">
           <title name="SOUND">随机</title>
           </block></xml>
+      courseA_playLab_events6_2019_authored_hint:
+        courseA_playLab_events6_a: |-
+          这是您要使用在点击时让乔治做些事情的事件模块：
+
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          这是您要使用来改变背景的模块：
+
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          这是您要使用来播放随机声音的模块：
+
+          <xml><block type="studio_playSound">
+          <title name="SOUND">随机</title>
+          </block></xml>
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
           使用此块来控制当演员碰撞时会发生什么。 
@@ -5984,6 +6371,14 @@ zh-CN:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseA_playLab_events7_2019_authored_hint:
+        courseA_playLab_events7_a: |-
+          使用此块来控制当演员碰撞时会发生什么。 
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
@@ -5991,6 +6386,12 @@ zh-CN:
         courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_e: "最后，当点击史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_e: "最后，当点击史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+      courseA_playlab_events_challenge1_2019_authored_hint:
         courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
@@ -6077,6 +6478,33 @@ zh-CN:
           </block>
           </next>
           </block></xml>
+      courseA_playlab_events_challenge2_2019_authored_hint:
+        courseA_playlab_events_challenge2_a: "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge2_b: "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          你可以让生气的怪物咆哮。
+
+          <xml> <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
         courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
@@ -6084,6 +6512,9 @@ zh-CN:
         courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': 如果斯奎特做的和你想的不一样，确保两个模块都完全链接到了一起，然后再点击"运行"。
+        '2': 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': 如果斯奎特做的和你想的不一样，确保两个模块都完全链接到了一起，然后再点击"运行"。
         '2': 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -6102,7 +6533,42 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           你的代码应该会像这样：
 
@@ -6140,7 +6606,45 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           你的代码应该会像这样：
 
@@ -6175,16 +6679,39 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          你的代码应该会像这样：
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseB_artist_loops2_b: 尝试先运行代码, 看看艺术家最后会在那里。
       courseB_artist_loops2_2018_authored_hint:
         courseB_artist_loops2_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseB_artist_loops2_b: 尝试先运行代码, 看看艺术家最后会在那里。
+      courseB_artist_loops2_2019_authored_hint:
+        courseB_artist_loops2_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
+        courseB_artist_loops2_b: 尝试先运行代码, 看看艺术家最后会在那里。
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: 记住使用一个`重复`循环来更好地编码！
         courseB_artist_loops3_b: 艺术家会想向南移动, 画出这条线。
       courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_a: |-
+          记住使用一个`重复`循环来更好地编码！
+        courseB_artist_loops3_b: 艺术家会想向南移动, 画出这条线。
+      courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_a: |-
           记住使用一个`重复`循环来更好地编码！
         courseB_artist_loops3_b: 艺术家会想向南移动, 画出这条线。
@@ -6196,14 +6723,23 @@ zh-CN:
         courseB_artist_loops4_a: 跳转模块允许您在不绘制直线的情况下向前移动。
         courseB_artist_loops4_b: 您将需要添加一个模块到重复循环内，以解决这个关卡。
         courseB_artist_loops4_c: 不要忘记更改循环重复的次数。
+      courseB_artist_loops4_2019_authored_hint:
+        courseB_artist_loops4_a: 跳转模块允许您在不绘制直线的情况下向前移动。
+        courseB_artist_loops4_b: 您将需要添加一个模块到重复循环内，以解决这个关卡。
+        courseB_artist_loops4_c: 不要忘记更改循环重复的次数。
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: 拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
       courseB_artist_loops5_2018_authored_hint:
         courseB_artist_loops5_a: |-
           拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
+      courseB_artist_loops5_2019_authored_hint:
+        courseB_artist_loops5_a: |-
+          拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: 试着在一张纸上记下移动的路线, 并找出模式。
       courseB_artist_loops6_2018_authored_hint:
+        courseB_artist_loops6_b: 试着在一张纸上记下移动的路线, 并找出模式。
+      courseB_artist_loops6_2019_authored_hint:
         courseB_artist_loops6_b: 试着在一张纸上记下移动的路线, 并找出模式。
       courseB_artist_loops7_authored_hint:
         courseB_artist_loops7_a: 这个挑战使用了**4**个循环，一个接一个！
@@ -6215,10 +6751,18 @@ zh-CN:
         courseB_artist_loops7_b: |-
           请注意每个循环制作往不同方向上移动的楼梯模式。
         courseB_artist_loops7_c: "循环应该这样做：\n- 循环1\n- 向右\n- 向下\n\n- 循环2\n- 向右\n-向上\n\n- 循环3\n- 向左\n- 向上\n\n- 循环4\n- 向左\n- 向下"
+      courseB_artist_loops7_2019_authored_hint:
+        courseB_artist_loops7_a: 这个挑战使用了**4**个循环，一个接一个！
+        courseB_artist_loops7_b: |-
+          请注意每个循环制作往不同方向上移动的楼梯模式。
+        courseB_artist_loops7_c: "循环应该这样做：\n- 循环1\n- 向右\n- 向下\n\n- 循环2\n- 向右\n-向上\n\n- 循环3\n- 向左\n- 向上\n\n- 循环4\n- 向左\n- 向下"
       courseB_artist_loops8_authored_hint:
         courseB_artist_loops8_a: 您需要重复模式多少次来制作楼梯？
         courseB_artist_loops8_b: 尝试运行给出的代码来查看它的执行。
       courseB_artist_loops8_2018_authored_hint:
+        courseB_artist_loops8_a: 您需要重复模式多少次来制作楼梯？
+        courseB_artist_loops8_b: 尝试运行给出的代码来查看它的执行。
+      courseB_artist_loops8_2019_authored_hint:
         courseB_artist_loops8_a: 您需要重复模式多少次来制作楼梯？
         courseB_artist_loops8_b: 尝试运行给出的代码来查看它的执行。
       courseB_artist_loops9_authored_hint:
@@ -6226,6 +6770,10 @@ zh-CN:
         courseB_artist_loops9_b: 您将使用 W 模块来解决这个关卡。
         courseB_artist_loops9_c: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
       courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_a: 请记住, 跳跃模块可以用来移动, 而无需绘制直线。
+        courseB_artist_loops9_b: 您将使用 W 模块来解决这个关卡。
+        courseB_artist_loops9_c: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
+      courseB_artist_loops9_2019_authored_hint:
         courseB_artist_loops9_a: 请记住, 跳跃模块可以用来移动, 而无需绘制直线。
         courseB_artist_loops9_b: 您将使用 W 模块来解决这个关卡。
         courseB_artist_loops9_c: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
@@ -6237,10 +6785,17 @@ zh-CN:
         courseB_artist_loops_challenge1_a: '像这样的模块:  <xml> <block type="simple_move_up_right"/></xml> 将让您的艺术家在斜线上移动！'
         courseB_artist_loops_challenge1_b: 当你完成一个骰子, `跳`到下一个!
         courseB_artist_loops_challenge1_c: '您将需要`移动`或`跳过`一些相同的行两次。 '
+      courseB_artist_loops_challenge1_2019_authored_hint:
+        courseB_artist_loops_challenge1_a: '像这样的模块:  <xml> <block type="simple_move_up_right"/></xml> 将让您的艺术家在斜线上移动！'
+        courseB_artist_loops_challenge1_b: 当你完成一个骰子, `跳`到下一个!
+        courseB_artist_loops_challenge1_c: '您将需要`移动`或`跳过`一些相同的行两次。 '
       courseB_artist_loops_challenge2_authored_hint:
         courseB_artist_loops_challenge2_a: 绘制 X 的代码已经给你了。所有你需要做的是重复 X 和`跳转`到下一个点。
         courseB_artist_loops_challenge2_b: 您可以使用 "跳转" 模块移动到其他位置。
       courseB_artist_loops_challenge2_2018_authored_hint:
+        courseB_artist_loops_challenge2_a: 绘制 X 的代码已经给你了。所有你需要做的是重复 X 和`跳转`到下一个点。
+        courseB_artist_loops_challenge2_b: 您可以使用 "跳转" 模块移动到其他位置。
+      courseB_artist_loops_challenge2_2019_authored_hint:
         courseB_artist_loops_challenge2_a: 绘制 X 的代码已经给你了。所有你需要做的是重复 X 和`跳转`到下一个点。
         courseB_artist_loops_challenge2_b: 您可以使用 "跳转" 模块移动到其他位置。
       courseB_collector_loops1_authored_hint:
@@ -6251,7 +6806,12 @@ zh-CN:
       courseB_collector_loops10_2018_authored_hint:
         courseB_collector_loops10_a: 如果想不出在哪里放置`重复`循环，请逐步写下代码并寻找规律。
         courseB_collector_loops10_b: 试着在一张纸上写下移动的情况, 来寻找共同的模式。
+      courseB_collector_loops10_2019_authored_hint:
+        courseB_collector_loops10_a: 如果想不出在哪里放置`重复`循环，请逐步写下代码并寻找规律。
+        courseB_collector_loops10_b: 试着在一张纸上写下移动的情况, 来寻找共同的模式。
       courseB_collector_loops1_2018_authored_hint:
+        courseB_collector_loops1_a: 当您站在上面时, <xml><block type="collector_collect_simplified"/></xml> 块可以用来拾取宝藏。
+      courseB_collector_loops1_2019_authored_hint:
         courseB_collector_loops1_a: 当您站在上面时, <xml><block type="collector_collect_simplified"/></xml> 块可以用来拾取宝藏。
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
@@ -6259,10 +6819,16 @@ zh-CN:
       courseB_collector_loops2_2018_authored_hint:
         courseB_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
         courseB_collector_loops2_b: 当您到达有宝藏的地方时, 请使用 <xml><block type="collector_collect"/></xml>模块来拾取它。
+      courseB_collector_loops2_2019_authored_hint:
+        courseB_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
+        courseB_collector_loops2_b: 当您到达有宝藏的地方时, 请使用 <xml><block type="collector_collect"/></xml>模块来拾取它。
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_a: 请试着使用一个 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml>模块来收集宝藏。
         courseB_collector_prog3_b: 请记住, 您可以在重复循环中放置多个块。
       courseB_collector_loops3_2018_authored_hint:
+        courseB_collector_prog3_a: 请试着使用一个 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml>模块来收集宝藏。
+        courseB_collector_prog3_b: 请记住, 您可以在重复循环中放置多个块。
+      courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_a: 请试着使用一个 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml>模块来收集宝藏。
         courseB_collector_prog3_b: 请记住, 您可以在重复循环中放置多个块。
       courseB_collector_loops3_predict1_authored_hint:
@@ -6276,10 +6842,18 @@ zh-CN:
         courseB_collector_loops4_b: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
         courseB_collector_loops4_c: |-
           在完成了`重复`循环后，劳雷尔需要走下来, 并收集宝藏,!
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_a: 请试着使用步进按钮来找出问题所在。
+        courseB_collector_loops4_b: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
+        courseB_collector_loops4_c: |-
+          在完成了`重复`循环后，劳雷尔需要走下来, 并收集宝藏,!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: 请使用一个以上的循环来完成任务。
         courseB_collector_loops5_b: 尝试运行代码几次, 看看会发生什么。
       courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_a: 请使用一个以上的循环来完成任务。
+        courseB_collector_loops5_b: 尝试运行代码几次, 看看会发生什么。
+      courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_a: 请使用一个以上的循环来完成任务。
         courseB_collector_loops5_b: 尝试运行代码几次, 看看会发生什么。
       courseB_collector_loops6_authored_hint:
@@ -6293,20 +6867,34 @@ zh-CN:
         courseB_collector_loops6_c: |-
           您需使用 3次 ' 重复 ' 循环来解决这个关卡。
         courseB_collector_loops6_d: 如果你感到迷惑, 试着把这个关卡分成3块。
+      courseB_collector_loops6_2019_authored_hint:
+        courseB_collector_loops6_a: 无法找出哪里出错？请使用"步进"按钮来逐模块运行程序。
+        courseB_collector_loops6_b: 通过单击 "3" 并选择其他数字, 可以更改重复循环运行的次数。
+        courseB_collector_loops6_c: |-
+          您需使用 3次 ' 重复 ' 循环来解决这个关卡。
+        courseB_collector_loops6_d: 如果你感到迷惑, 试着把这个关卡分成3块。
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: 如果此关卡太难，请试着在纸张上把它画出来，看看怎么解决。
         courseB_collector_loops7_b: 你将需要3个重复循环来解决这个关卡, 最后不要忘记额外的宝藏!
       courseB_collector_loops7_2018_authored_hint:
         courseB_collector_loops7_a: 如果此关卡太难，请试着在纸张上把它画出来，看看怎么解决。
         courseB_collector_loops7_b: 你将需要3个重复循环来解决这个关卡, 最后不要忘记额外的宝藏!
+      courseB_collector_loops7_2019_authored_hint:
+        courseB_collector_loops7_a: 如果此关卡太难，请试着在纸张上把它画出来，看看怎么解决。
+        courseB_collector_loops7_b: 你将需要3个重复循环来解决这个关卡, 最后不要忘记额外的宝藏!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: 如果无法想出在哪里放置重复循环，请逐步写下代码并寻找规律。
       courseB_collector_loops8_2018_authored_hint:
+        courseB_collector_loops8_challenge_a: 如果无法想出在哪里放置重复循环，请逐步写下代码并寻找规律。
+      courseB_collector_loops8_2019_authored_hint:
         courseB_collector_loops8_challenge_a: 如果无法想出在哪里放置重复循环，请逐步写下代码并寻找规律。
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_a: '这看起来太难了吗？请把它分解成3个小问题，这样会感觉容易些。  '
         courseB_collector_loops9_b: 您将需要3个重复循环, 一个接一个, 来解决这个关卡。
       courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_a: '这看起来太难了吗？请把它分解成3个小问题，这样会感觉容易些。  '
+        courseB_collector_loops9_b: 您将需要3个重复循环, 一个接一个, 来解决这个关卡。
+      courseB_collector_loops9_2019_authored_hint:
         courseB_collector_loops9_a: '这看起来太难了吗？请把它分解成3个小问题，这样会感觉容易些。  '
         courseB_collector_loops9_b: 您将需要3个重复循环, 一个接一个, 来解决这个关卡。
       courseB_collector_loops_challenge1_authored_hint:
@@ -6381,6 +6969,77 @@ zh-CN:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2018_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          从循环执行以下命令开始：
+
+          <xml>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"></block>
+          </next>
+          </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: "在每条路径之间向东移动两次。\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\n只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。\n"
+        courseB_collector_loops_challenge1_d: |-
+          试试这个！
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge1_2019_authored_hint:
         courseB_collector_loops_challenge1_b: |
           从循环执行以下命令开始：
 
@@ -6583,6 +7242,10 @@ zh-CN:
         courseB_collector_loops_challenge2a_a: 如果出了问题，请试着调试它。不要放弃！
         courseB_collector_loops_challenge2a_b: 请看看此选项以通过迷宫。您是否看到了您可以重复的模式？
         courseB_collector_loops_challenge2a_c: 要收集所有的宝藏，要么需要添加2 个<xml> <block type="collector_collect"/></xml>模块到您的循环内，或者把此模块放到它自己的`重复`模块中。
+      courseB_collector_loops_challenge2a_2019_authored_hint:
+        courseB_collector_loops_challenge2a_a: 如果出了问题，请试着调试它。不要放弃！
+        courseB_collector_loops_challenge2a_b: 请看看此选项以通过迷宫。您是否看到了您可以重复的模式？
+        courseB_collector_loops_challenge2a_c: 要收集所有的宝藏，要么需要添加2 个<xml> <block type="collector_collect"/></xml>模块到您的循环内，或者把此模块放到它自己的`重复`模块中。
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: "你只需要使用一个![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png)模块来解决这个问题。\n\n"
         courseA_collector_loops_challenge2_a: |-
@@ -6601,7 +7264,21 @@ zh-CN:
         courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
         courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
         courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
+      courseB_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
+        courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
+        courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
+      courseB_iceage_loops1_2019_authored_hint:
+        courseB_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
+        courseB_iceage_loops1_b: |-
+          需要用这个模块：
+
+          <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
+        courseB_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
+        courseB_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
+      courseB_iceage_loops2_2019_authored_hint:
         courseB_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
         courseB_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
         courseB_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
@@ -6613,7 +7290,19 @@ zh-CN:
           </block></xml>
         courseB_iceage_loops3_b: |-
           要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
+      courseB_iceage_loops3_2019_authored_hint:
+        courseB_iceage_loops3_a: |-
+          用这个新的模块！
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: |-
+          要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
       courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_a: 写下斯奎特要到达橡子的步骤。找到规律了吗？
+        courseB_iceage_loops4_b: 别害怕运行你的代码，看看会发生什么！
+        courseB_iceage_loops4_c: 这是斯奎特应该走的路。
+      courseB_iceage_loops4_2019_authored_hint:
         courseB_iceage_loops4_a: 写下斯奎特要到达橡子的步骤。找到规律了吗？
         courseB_iceage_loops4_b: 别害怕运行你的代码，看看会发生什么！
         courseB_iceage_loops4_c: 这是斯奎特应该走的路。
@@ -6621,14 +7310,29 @@ zh-CN:
         courseB_iceage_loops6_a: 最终的代码会有**三个**移动模块。
         courseB_iceage_loops6_b: 你只需要再添加**一个**循环！
         courseB_iceage_loops6_c: 最终的路应该像这样。
+      courseB_iceage_loops6_2019_authored_hint:
+        courseB_iceage_loops6_a: 最终的代码会有**三个**移动模块。
+        courseB_iceage_loops6_b: 你只需要再添加**一个**循环！
+        courseB_iceage_loops6_c: 最终的路应该像这样。
       courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
+        courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
+      courseB_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
         courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
       courseB_iceage_loops8_authored_hint:
         courseB_iceage_loops8_a: 这些移动模块正确吗？你还能改什么？
         courseB_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
         courseB_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
+      courseB_iceage_loops8_2019_authored_hint:
+        courseB_iceage_loops8_a: 这些移动模块正确吗？你还能改什么？
+        courseB_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
+        courseB_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
       courseB_iceage_loops9_authored_hint:
+        courseB_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
+        courseB_iceage_loops9_b: 最后的代码会有**4**个循环。
+        courseB_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
+      courseB_iceage_loops9_2019_authored_hint:
         courseB_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
         courseB_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseB_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
@@ -6642,6 +7346,9 @@ zh-CN:
         courseB_maze_seq11_a: 请试着先在一张纸上写下步骤。
         courseB_maze_seq11_b: '解开关卡的两个部分: 一个在拐角前, 一个在拐角后。'
       courseB_maze_seq1_2018_authored_hint:
+        courseB_maze_seq1_a: 将模块连接到 <xml><block type="when_run"/></xml>模块以使鸟移动!
+        courseB_maze_seq1_b: 拖动三个 <xml><block type="maze_moveSouth"/></xml>箭头并将它们连接到<xml><block type="when_run"/></xml>模块中, 以将您的鸟带到猪那里。
+      courseB_maze_seq1_2019_authored_hint:
         courseB_maze_seq1_a: 将模块连接到 <xml><block type="when_run"/></xml>模块以使鸟移动!
         courseB_maze_seq1_b: 拖动三个 <xml><block type="maze_moveSouth"/></xml>箭头并将它们连接到<xml><block type="when_run"/></xml>模块中, 以将您的鸟带到猪那里。
       courseB_maze_seq2_authored_hint:
@@ -6664,11 +7371,18 @@ zh-CN:
       courseB_maze_seq4_2018_authored_hint:
         courseB_maze_seq4_a: 试着一次加一条指令，直到到达猪那里。
         courseB_maze_seq4_b: 您需要使用 <xml><block type="maze_moveEast"/></xml>模块来解决此关卡。
+      courseB_maze_seq4_2019_authored_hint:
+        courseB_maze_seq4_a: 试着一次加一条指令，直到到达猪那里。
+        courseB_maze_seq4_b: 您需要使用 <xml><block type="maze_moveEast"/></xml>模块来解决此关卡。
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: 如果你被卡住了, 试着在纸上画出路径。
         courseB_maze_seq5_b: 有两种方法来解决这个难题！
         courseB_maze_seq5_c: 不知道怎么去找猪？ 尝试此路径。
       courseB_maze_seq5_2018_authored_hint:
+        courseB_maze_seq5_a: 如果你被卡住了, 试着在纸上画出路径。
+        courseB_maze_seq5_b: 有两种方法来解决这个难题！
+        courseB_maze_seq5_c: 不知道怎么去找猪？ 尝试此路径。
+      courseB_maze_seq5_2019_authored_hint:
         courseB_maze_seq5_a: 如果你被卡住了, 试着在纸上画出路径。
         courseB_maze_seq5_b: 有两种方法来解决这个难题！
         courseB_maze_seq5_c: 不知道怎么去找猪？ 尝试此路径。
@@ -6682,11 +7396,20 @@ zh-CN:
         courseB_maze_seq6_b: 如果你被卡住了, 试着分成两个部分来解决关卡, 一个是侧面的路, 一条是从上到下的。
         courseB_maze_seq5_c: 有两种方法来解决这个难题！
         courseB_maze_seq5_d: 不知道怎么去找猪？尝试这条路!
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_a: 最终的代码应该有3个移动模块。
+        courseB_maze_seq6_b: 如果你被卡住了, 试着分成两个部分来解决关卡, 一个是侧面的路, 一条是从上到下的。
+        courseB_maze_seq5_c: 有两种方法来解决这个难题！
+        courseB_maze_seq5_d: 不知道怎么去找猪？尝试这条路!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: 添加一个模块, 让鸟到猪那！
         courseB_maze_seq7_b: 尝试运行给你的代码, 看看你是什么结果。
         courseB_maze_seq7_c: 够不到猪吗？ 尝试这条路!
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: 添加一个模块, 让鸟到猪那！
+        courseB_maze_seq7_b: 尝试运行给你的代码, 看看你是什么结果。
+        courseB_maze_seq7_c: 够不到猪吗？ 尝试这条路!
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_a: 添加一个模块, 让鸟到猪那！
         courseB_maze_seq7_b: 尝试运行给你的代码, 看看你是什么结果。
         courseB_maze_seq7_c: 够不到猪吗？ 尝试这条路!
@@ -6698,12 +7421,21 @@ zh-CN:
         courseB_maze_seq8_a: 试着一次添加一个模块, 直到你解开这个关卡。
         courseB_maze_seq8_b: 有两种方法来解决这个难题 ！
         courseB_maze_seq8_c: 不知道该走哪条路？尝试这条路!
+      courseB_maze_seq8_2019_authored_hint:
+        courseB_maze_seq8_a: 试着一次添加一个模块, 直到你解开这个关卡。
+        courseB_maze_seq8_b: 有两种方法来解决这个难题 ！
+        courseB_maze_seq8_c: 不知道该走哪条路？尝试这条路!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: 请试着先在一张纸上写下所有的步骤。
         courseB_maze_seq9_b: 每次生成一个模块，并在生成时进行测试。
         courseB_maze_seq9_c: 有两种方法来解决这个难题！
         courseB_maze_seq9_d: 卡住了? 尝试这条路!
       courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_a: 请试着先在一张纸上写下所有的步骤。
+        courseB_maze_seq9_b: 每次生成一个模块，并在生成时进行测试。
+        courseB_maze_seq9_c: 有两种方法来解决这个难题！
+        courseB_maze_seq9_d: 卡住了? 尝试这条路!
+      courseB_maze_seq9_2019_authored_hint:
         courseB_maze_seq9_a: 请试着先在一张纸上写下所有的步骤。
         courseB_maze_seq9_b: 每次生成一个模块，并在生成时进行测试。
         courseB_maze_seq9_c: 有两种方法来解决这个难题！
@@ -6719,10 +7451,16 @@ zh-CN:
       courseB_maze_seq_challenge1_2018_authored_hint:
         courseB_maze_seq_challenge1_a: 这一次最短路径可能无法解决问题。
         courseB_maze_seq_challenge1_b: 请尝试使用 <xml><block type="maze_moveWest"/></xml> 模块来开始。
+      courseB_maze_seq_challenge1_2019_authored_hint:
+        courseB_maze_seq_challenge1_a: 这一次最短路径可能无法解决问题。
+        courseB_maze_seq_challenge1_b: 请尝试使用 <xml><block type="maze_moveWest"/></xml> 模块来开始。
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: 您不需要添加或删除块来解决此关卡。
         courseB_maze_seq_challenge2_b: 重新排列模块, 并采取楼梯模式的路径。
       courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: 您不需要添加或删除块来解决此关卡。
+        courseB_maze_seq_challenge2_b: 重新排列模块, 并采取楼梯模式的路径。
+      courseB_maze_seq_challenge2_2019_authored_hint:
         courseB_maze_seq_challenge2_a: 您不需要添加或删除块来解决此关卡。
         courseB_maze_seq_challenge2_b: 重新排列模块, 并采取楼梯模式的路径。
       courseB_playlab_events2_authored_hint:
@@ -6736,6 +7474,16 @@ zh-CN:
           </block>
           </xml>
       courseB_playlab_events2_2018_authored_hint:
+        courseB_playlab_events2_a: |-
+          这个模块能让黛西说些什么
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">你好。</title>
+          </block>
+          </xml>
+      courseB_playlab_events2_2019_authored_hint:
         courseB_playlab_events2_a: |-
           这个模块能让黛西说些什么
 
@@ -6764,6 +7512,24 @@ zh-CN:
           </block>
           </xml>
       courseB_playlab_events3_2018_authored_hint:
+        courseB_playlab_events3_a: |-
+          这是用来添加事件的模块：
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          </block>
+          </xml>
+        courseB_playlab_events3_b: |-
+          这是用来改变黛西心情的模块。
+
+          <xml>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">random</title>
+          </block>
+          </xml>
+      courseB_playlab_events3_2019_authored_hint:
         courseB_playlab_events3_a: |-
           这是用来添加事件的模块：
 
@@ -6817,10 +7583,31 @@ zh-CN:
           <title name="DIR">8</title>
           </block>
           </xml>
+      courseB_playlab_events4_2019_authored_hint:
+        courseB_playlab_events4_a: |-
+          这是控制左方向键的事件：
+
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block>
+          </xml>
+        courseB_playlab_events4_b: |-
+          这就是让骑士向左移动的模块。
+
+          <xml>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block>
+          </xml>
       courseB_playlab_events5_authored_hint:
         courseB_playlab_events5_a: "这是控制右方向键的事件：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
         courseB_playlab_events5_b: "这是让骑士逃跑的模块：\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
       courseB_playlab_events5_2018_authored_hint:
+        courseB_playlab_events5_a: "这是控制右方向键的事件：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
+        courseB_playlab_events5_b: "这是让骑士逃跑的模块：\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      courseB_playlab_events5_2019_authored_hint:
         courseB_playlab_events5_a: "这是控制右方向键的事件：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
         courseB_playlab_events5_b: "这是让骑士逃跑的模块：\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
       courseB_playlab_events6_authored_hint:
@@ -6841,6 +7628,23 @@ zh-CN:
           ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: 得到所有的旗帜来通过!
       courseB_playlab_events6_2018_authored_hint:
+        courseB_playlab_events6_a: |-
+          你需要这些事件模块：
+
+          <xml>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+          </block>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">down</title>
+          </block>
+          </xml>
+        courseB_playlab_events6_b: |-
+          用绿色的"当 ___ 箭头按下" 块的下拉箭头来选择不同的方向。
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: 得到所有的旗帜来通过!
+      courseB_playlab_events6_2019_authored_hint:
         courseB_playlab_events6_a: |-
           你需要这些事件模块：
 
@@ -6884,6 +7688,32 @@ zh-CN:
           </block>
           </xml>
       courseB_playlab_events7_2018_authored_hint:
+        courseB_playlab_events7_a: |-
+          这是你要用到的事件模块：
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          这是用来播放一个声音的模块。
+
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          这是让骑士消失的模块。
+
+          <xml>
+          <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+      courseB_playlab_events7_2019_authored_hint:
         courseB_playlab_events7_a: |-
           这是你要用到的事件模块：
 
@@ -6970,6 +7800,30 @@ zh-CN:
           </next>
           </block>
           </xml>
+      courseB_playlab_events_challenge1_2019_authored_hint:
+        courseB_playlab_events_challenge1_a: "当按下`▼`时, 让其他动物向下移动。\n\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>"
+        courseB_playlab_events_challenge1_b: |
+          用这个模块改变动物的速度：
+
+          <xml>
+          <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          比赛结束后, 大家会怎么说？让他们交谈这次的活动：
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">啊哈！</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_playlab_events_challenge2_authored_hint:
         courseB_playlab_events_challenge2_a: 游戏中的每种动物都应该在被敲击时消失。它也应该在一两秒钟后回来！
         courseB_playlab_events_challenge2_b: |-
@@ -6993,6 +7847,28 @@ zh-CN:
 
           使一些动物比其他给出更多的分数。使用不同的声音。改变动物的情绪!
       courseB_playlab_events_challenge2_2018_authored_hint:
+        courseB_playlab_events_challenge2_a: 游戏中的每种动物都应该在被敲击时消失。它也应该在一两秒钟后回来！
+        courseB_playlab_events_challenge2_b: |-
+          使用其他事件模块使其他动物消失！
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          当点击动物时，使用额外的命令来播放声音或得分！
+
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">鼓掌</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          混合起来！
+
+          使一些动物比其他给出更多的分数。使用不同的声音。改变动物的情绪!
+      courseB_playlab_events_challenge2_2019_authored_hint:
         courseB_playlab_events_challenge2_a: 游戏中的每种动物都应该在被敲击时消失。它也应该在一两秒钟后回来！
         courseB_playlab_events_challenge2_b: |-
           使用其他事件模块使其他动物消失！
@@ -7080,6 +7956,28 @@ zh-CN:
           混合起来！
 
           使一些动物比其他给出更多的分数。使用不同的声音。改变动物的情绪!
+      courseB_playlab_events_challenge2_template_2019_authored_hint:
+        courseB_playlab_events_challenge2_a: 游戏中的每种动物都应该在被敲击时消失。它也应该在一两秒钟后回来！
+        courseB_playlab_events_challenge2_b: |-
+          使用其他事件模块使其他动物消失！
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          当点击动物时，使用额外的命令来播放声音或得分！
+
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">鼓掌</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          混合起来！
+
+          使一些动物比其他给出更多的分数。使用不同的声音。改变动物的情绪!
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: 尝试一次添加一个块, 然后单击 "运行" 以查看发生了什么。
         courseB_starWars_prog1_b: |
@@ -7092,14 +7990,25 @@ zh-CN:
           向东移动来通过本关。要移动多远？
 
           <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog1_2019_authored_hint:
+        courseB_starWars_prog1_a: 尝试一次添加一个块, 然后单击 "运行" 以查看发生了什么。
+        courseB_starWars_prog1_b: |
+          向东移动来通过本关。要移动多远？
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: 把这个问题分成两部分。得到一堆废铁, 然后弄清楚如何得到另一堆。
       courseB_starWars_prog2_2018_authored_hint:
+        courseB_starWars_prog2_a: 把这个问题分成两部分。得到一堆废铁, 然后弄清楚如何得到另一堆。
+      courseB_starWars_prog2_2019_authored_hint:
         courseB_starWars_prog2_a: 把这个问题分成两部分。得到一堆废铁, 然后弄清楚如何得到另一堆。
       courseB_starWars_prog3_authored_hint:
         courseB_starWars_prog3_a: 您将需要移动3条路来解决这个关卡。
         courseB_starWars_prog3_b: 一次生成一段代码。运行它, 找出下步去哪里。
       courseB_starWars_prog3_2018_authored_hint:
+        courseB_starWars_prog3_a: 您将需要移动3条路来解决这个关卡。
+        courseB_starWars_prog3_b: 一次生成一段代码。运行它, 找出下步去哪里。
+      courseB_starWars_prog3_2019_authored_hint:
         courseB_starWars_prog3_a: 您将需要移动3条路来解决这个关卡。
         courseB_starWars_prog3_b: 一次生成一段代码。运行它, 找出下步去哪里。
       courseB_starWars_prog4_authored_hint:
@@ -7120,6 +8029,15 @@ zh-CN:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog4_2019_authored_hint:
+        courseB_starWars_prog4_a: 一次生成一段代码。运行它, 找出下步去哪里。
+        courseB_starWars_prog4_b: |-
+          试试使用`重复`模块来缩短代码。
+
+          <xml> <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: 这种模式是不是有点像最后一个关卡？
         courseB_starWars_prog5_b: BB-8 会在他翻滚的时候抓住废铁。
@@ -7129,6 +8047,14 @@ zh-CN:
 
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
+        courseB_starWars_prog5_a: 这种模式是不是有点像最后一个关卡？
+        courseB_starWars_prog5_b: BB-8 会在他翻滚的时候抓住废铁。
+        courseB_starWars_prog5_c: 用你的手指追踪这个图案。在你移动的时候数一下金属碎片。
+        courseB_starWars_prog5_da: |-
+          看看如果你使用解决阶梯步进关卡一样的解决方案会如何:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2019_authored_hint:
         courseB_starWars_prog5_a: 这种模式是不是有点像最后一个关卡？
         courseB_starWars_prog5_b: BB-8 会在他翻滚的时候抓住废铁。
         courseB_starWars_prog5_c: 用你的手指追踪这个图案。在你移动的时候数一下金属碎片。
@@ -7154,11 +8080,24 @@ zh-CN:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog6_2019_authored_hint:
+        courseB_starWars_prog6_a: 这个图案只是一个台阶, 每方向移动两步!
+        courseB_starWars_prog6_b: |-
+          试试使用`重复`模块来缩短代码。
+
+          <xml> <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: 这种模式是不是有点像最后一个关卡？
         courseB_starWars_prog7_b: BB-8 会在他翻滚的时候抓住废铁。
         courseB_starWars_prog7_c: 试着画出这个关卡的大台阶图案。它能覆盖所有的废旧金属吗？
       courseB_starWars_prog7_2018_authored_hint:
+        courseB_starWars_prog7_a: 这种模式是不是有点像最后一个关卡？
+        courseB_starWars_prog7_b: BB-8 会在他翻滚的时候抓住废铁。
+        courseB_starWars_prog7_c: 试着画出这个关卡的大台阶图案。它能覆盖所有的废旧金属吗？
+      courseB_starWars_prog7_2019_authored_hint:
         courseB_starWars_prog7_a: 这种模式是不是有点像最后一个关卡？
         courseB_starWars_prog7_b: BB-8 会在他翻滚的时候抓住废铁。
         courseB_starWars_prog7_c: 试着画出这个关卡的大台阶图案。它能覆盖所有的废旧金属吗？
@@ -7182,11 +8121,26 @@ zh-CN:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog8_2019_authored_hint:
+        courseB_starWars_prog8_a: 回到你已经旅行过的一组空间里是可以的。
+        courseB_starWars_prog8_b: |-
+          请尝试使用 "重复" 块来查看在内部放置的代码会发生什么变化。
+
+          <xml>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         courseB_starWars_prog9_b: 解决这个难题有很多方法。
         courseB_starWars_prog9_c: 使用`重复`循环有帮助吗？
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
+        courseB_starWars_prog9_b: 解决这个难题有很多方法。
+        courseB_starWars_prog9_c: |-
+          使用`重复`循环有帮助吗？
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         courseB_starWars_prog9_b: 解决这个难题有很多方法。
         courseB_starWars_prog9_c: |-
@@ -16438,6 +17392,9 @@ zh-CN:
 
           完成后，让一个朋友尝试你的应用程序。
       coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: 如果小鸟不能到达猪，确保所有两个模块都完全连在了一起，然后再点击"运行"。
+        courseC_maze_programming1_b: 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
+      coursea_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_a: 如果小鸟不能到达猪，确保所有两个模块都完全连在了一起，然后再点击"运行"。
         courseC_maze_programming1_b: 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
       coursef_maze_ramp3_authored_hint:

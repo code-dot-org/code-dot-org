@@ -1009,14 +1009,20 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunku ruchu
-            '"tint"': odcień
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': inne
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
       binary_move:
         options:
           DIR:

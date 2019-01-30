@@ -863,14 +863,16 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': storlek
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-            '"tint"': färgton
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
       binary_move:
         options:
           DIR:

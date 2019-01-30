@@ -1099,3 +1099,23 @@ sl:
               name: Graditi temelje
             'Real-life Algorithms: Paper Planes':
               name: 'Življenjski algoritmi: Papirnata letala'
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Življenjski algoritmi: Zasadi seme'
+            Going Places Safely:
+              name: Kako varno potovati
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Premakni se, premakni
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Premakni se, premakni
+            Spelling Bee:
+              name: Čebelica črkuje besede
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Življenjski algoritmi: Zasadi seme'

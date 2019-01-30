@@ -300,10 +300,16 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': величина
+          CONDITION:
+            '"when"': када
+            '"while"': док је
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
       binary_move:
         options:
           DIR:

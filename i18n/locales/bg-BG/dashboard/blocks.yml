@@ -803,14 +803,16 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
       binary_move:
         options:
           DIR:

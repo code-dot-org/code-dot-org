@@ -1420,3 +1420,27 @@ hr:
               name: 'Algoritmi iz stvarnog života: Papirnati avioni'
             Binary Bracelets:
               name: Binarne narukvice
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Going Places Safely:
+              name: Sigurna putovanja
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Pomakni, pomakni
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Pomakni, pomakni
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+            Spelling Bee:
+              name: Slovkanje
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'

@@ -881,14 +881,16 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
       binary_move:
         options:
           DIR:

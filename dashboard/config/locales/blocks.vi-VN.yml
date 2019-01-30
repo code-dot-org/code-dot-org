@@ -879,14 +879,16 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': kích cỡ
-            '"x"': hoành độ
-            '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
+          CONDITION:
+            '"when"': Khi nào
+            '"while"': Lặp khi
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': Khi nào
+            '"while"': Lặp khi
       binary_move:
         options:
           DIR:
