@@ -1,6 +1,6 @@
 # coding: utf-8
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
-# added this comment to force all unit tests to rerun since this file was changed - change 2
+# added this comment to force all unit tests to rerun since this file was changed
 
 require 'cdo/chat_client'
 require 'cdo/test_run_utils'
