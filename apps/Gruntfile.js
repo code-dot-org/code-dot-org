@@ -610,6 +610,16 @@ describe('entry tests', () => {
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
+        minimizer: [
+          (compiler) => {
+            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+            const plugin = new UglifyJsPlugin({
+              cache: true,
+              parallel: true
+            });
+            plugin.apply(compiler);
+          }
+        ],
         splitChunks: {
           cacheGroups: {
             common: {
