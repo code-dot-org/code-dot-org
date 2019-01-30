@@ -1,5 +1,6 @@
 module Pd::Application
   module PdWorkshopHelper
+    include Pd::Application::RegionalPartnerTeacherconMapping
     def self.included(base)
       base.send :include, InstanceMethods
       base.extend ClassMethods

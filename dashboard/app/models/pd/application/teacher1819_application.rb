@@ -37,7 +37,6 @@
 module Pd::Application
   class Teacher1819Application < TeacherApplicationBase
     include ::Pd::Teacher1819ApplicationConstants
-    include RegionalPartnerTeacherconMapping
 
     validates_uniqueness_of :user_id
 
