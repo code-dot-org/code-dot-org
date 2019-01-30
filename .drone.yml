@@ -35,8 +35,9 @@ volumes:
   temp: {}
 
 trigger:
-  branch:
-  - drone
+  event:
+    include:
+    - pull_request
 
 # ---
 # kind: pipeline
@@ -94,5 +95,6 @@ trigger:
 #   temp: {}# 
 
 # trigger:
-#   branch:
-#   - drone
+#   event:
+#     include:
+#     - pull_request
