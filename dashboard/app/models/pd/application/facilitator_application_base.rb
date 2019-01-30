@@ -406,8 +406,7 @@ module Pd::Application
       return unless auto_assigned_fit_enrollment_id
 
       Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
-      self.auto_assigned_fit_enrollment_id = nil
-      save
+      update(auto_assigned_fit_enrollment_id: nil)
     end
 
     def application_url
@@ -436,8 +435,7 @@ module Pd::Application
         )
 
         destroy_fit_autoenrollment
-        self.auto_assigned_fit_enrollment_id = enrollment.id
-        save
+        update(auto_assigned_fit_enrollment_id: enrollment.id)
       end
     end
 
