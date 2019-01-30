@@ -1168,6 +1168,7 @@ zh-TW:
       Ryan - 4-5 Bee Conditionals 2: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
       Ryan - Bee Conditionals: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
       Ryan Test Locked Blocks: 這裡有個函式名叫 patrol（巡邏）。編輯它以讓貓向上移動 400 像素，然後往下 400 像素。
+      Ryan_Demo: 讓麋鹿在 4 個小節後開始新的動作！
       SG U3L07 - allSeaGrass: 用迴圈的方式在圖片上添加 50 個海草。（點擊觀看完整說明）
       SG U3L07 - bubbles: 用迴圈的方式在圖片上添加 200 個泡泡。（點擊觀看完整說明）
       SG U3L07 - fish: 用迴圈的方式在圖片上添加 15 隻魚。（點擊觀看完整說明）
@@ -1387,41 +1388,58 @@ zh-TW:
       course4_artist_fwp_challenge1: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
       courseA_artist_loops10: 幫我放些石頭，我不想掉下去！
       courseA_artist_loops10_2018: 幫我放些石頭，我不想掉下去！
+      courseA_artist_loops10_2019: 幫我放些石頭，我不想掉下去！
       courseA_artist_loops11: 幫我建置階梯，讓我可以看著船航行到遠方。
       courseA_artist_loops11_2018: 幫我建置階梯，讓我可以看著船航行到遠方。
+      courseA_artist_loops11_2019: 幫我建置階梯，讓我可以看著船航行到遠方。
       courseA_artist_loops12: 小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。
       courseA_artist_loops12_2018: 小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。
+      courseA_artist_loops12_2019: 小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。
       courseA_artist_loops3: 向前畫一條線，重複 5 次。
       courseA_artist_loops3_2018: 向前畫一條線，重複 5 次。
+      courseA_artist_loops3_2019: 向前畫一條線，重複 5 次。
       courseA_artist_loops7: 使用`重複`迴圈為水添加波紋。
       courseA_artist_loops7_2018: 使用`重複`迴圈為水添加波紋。
+      courseA_artist_loops7_2019: 使用`重複`迴圈為水添加波紋。
       courseA_artist_loops7_forVideo: 使用`重複`迴圈為水添加波紋。
       courseA_artist_loops9: 挑戰：修復這些階梯。
       courseA_artist_loops9_2018: 挑戰：修復這些階梯。
+      courseA_artist_loops9_2019: 挑戰：修復這些階梯。
       courseA_artist_loops_challenge2: 啾啾！你能幫我做兩個鳥屋嗎？
       courseA_artist_loops_challenge3: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseA_collector_loops1: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
       courseA_collector_loops10: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
       courseA_collector_loops10_2018: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
+      courseA_collector_loops10_2019: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
       courseA_collector_loops11: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseA_collector_loops11_2018: 幫助 Laurel 獲得洞穴中的所有寶石。
+      courseA_collector_loops11_2019: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseA_collector_loops12: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseA_collector_loops12_2018: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
+      courseA_collector_loops12_2019: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseA_collector_loops1_2018: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
+      courseA_collector_loops1_2019: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
       courseA_collector_loops2: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_collector_loops2_2018: 這裡有 3 堆黃金！把它們全部收集起來。
+      courseA_collector_loops2_2019: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_collector_loops4: 修正 Laurel 的路徑，讓牠能收集到寶藏。
       courseA_collector_loops4_2018: 修正 Laurel 的路徑，讓牠能收集到寶藏。
+      courseA_collector_loops4_2019: 修正 Laurel 的路徑，讓牠能收集到寶藏。
       courseA_collector_loops5: 用你學到的方法來收集到所有的寶藏。
       courseA_collector_loops5_2018: 用你學到的方法來收集到所有的寶藏。
+      courseA_collector_loops5_2019: 用你學到的方法來收集到所有的寶藏。
       courseA_collector_loops6: 添加積木到程式中，以收集到所有的寶藏。
       courseA_collector_loops6_2018: 添加積木到程式中，以收集到所有的寶藏。
+      courseA_collector_loops6_2019: 添加積木到程式中，以收集到所有的寶藏。
       courseA_collector_loops7: 要添加什麼程式積木才可以收集到所有的寶藏？
       courseA_collector_loops7_2018: 要添加什麼程式積木才可以收集到所有的寶藏？
+      courseA_collector_loops7_2019: 要添加什麼程式積木才可以收集到所有的寶藏？
       courseA_collector_loops8: 編寫程式來收集這些寶藏。
       courseA_collector_loops8_2018: 編寫程式來收集這些寶藏。
+      courseA_collector_loops8_2019: 編寫程式來收集這些寶藏。
       courseA_collector_loops9: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
       courseA_collector_loops9_2018: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
+      courseA_collector_loops9_2019: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
       courseA_collector_loops_challenge2: '試著收集到寶藏吧！ '
       courseA_collector_preLoops7: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_forVideoTest_artist: 使用`重複`迴圈為水添加波紋。
@@ -1429,15 +1447,20 @@ zh-TW:
       courseA_maze_ramp4_2018: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseA_maze_ramp5_2018: 小心 TNT 炸藥。
       courseA_maze_ramp5a_2018: 讓鳥抓到這隻豬！
+      courseA_maze_ramp5a_2019: 讓鳥抓到這隻豬！
       courseA_maze_seq1: 讓這隻鳥抓到壞豬豬！
       courseA_maze_seq10: '挑戰：繞開 TNT 炸蘗，讓鳥能夠抓到豬！ '
       courseA_maze_seq11: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到那頭豬。
       courseA_maze_seq11_2018: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到那頭豬。
+      courseA_maze_seq11_2019: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到那頭豬。
       courseA_maze_seq12: '抓住那頭豬！ '
       courseA_maze_seq12_2018: '抓住那頭豬！ '
+      courseA_maze_seq12_2019: '抓住那頭豬！ '
       courseA_maze_seq13: 抓到這頭豬，不管你用什麼方法！
       courseA_maze_seq13_2018: 抓到這頭豬，不管你用什麼方法！
+      courseA_maze_seq13_2019: 抓到這頭豬，不管你用什麼方法！
       courseA_maze_seq1_2018: 讓這隻鳥抓到壞豬豬！
+      courseA_maze_seq1_2019: 讓這隻鳥抓到壞豬豬！
       courseA_maze_seq2: 有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。
       courseA_maze_seq2_2018: 有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。
       courseA_maze_seq3: 修正這個程式，讓鳥抓到這頭豬！
@@ -1446,68 +1469,96 @@ zh-TW:
       courseA_maze_seq4_2018: "「移除」一個積木，讓鳥抓到這頭豬！"
       courseA_maze_seq6: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq6_2018: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
+      courseA_maze_seq6_2019: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq7: 想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！
       courseA_maze_seq7_2018: 想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！
       courseA_maze_seq8: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq8_2018: 完成這個關卡，讓鳥抓到這頭豬！
+      courseA_maze_seq8_2019: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq9: 找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！
       courseA_maze_seq9_2018: 找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！
       courseA_maze_seq_challenge1: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2018: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
+      courseA_maze_seq_challenge1_2019: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge2: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
       courseA_maze_seq_challenge2_2018: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
+      courseA_maze_seq_challenge2_2019: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
       courseA_playLab_events3: 將「移動-向左」積木連接到工作區裡的「當按向左鍵時」事件積木下。
       courseA_playLab_events3_2018: 將「移動-向左」積木連接到工作區裡的「當按向左鍵時」事件積木下。
+      courseA_playLab_events3_2019: 將「移動-向左」積木連接到工作區裡的「當按向左鍵時」事件積木下。
       courseA_playlab_events_challenge1: |-
         我的朋友藏在哪兒？
         你能寫個程式把我的朋友找出來嗎？
       courseA_playlab_events_challenge1_2018: |-
         我的朋友藏在哪兒？
         你能寫個程式把我的朋友找出來嗎？
+      courseA_playlab_events_challenge1_2019: |-
+        我的朋友藏在哪兒？
+        你能寫個程式把我的朋友找出來嗎？
       courseB_Scrat_ramp5a_2018: 讓鳥抓到這隻豬！
+      courseB_Scrat_ramp5a_2019: 讓鳥抓到這隻豬！
       courseB_artist_loops3: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
       courseB_artist_loops3_2018: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
+      courseB_artist_loops3_2019: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
       courseB_artist_loops6: 爬上藤，看看它在哪裡？
       courseB_artist_loops6_2018: 爬上藤，看看它在哪裡？
+      courseB_artist_loops6_2019: 爬上藤，看看它在哪裡？
       courseB_artist_loops7: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
       courseB_artist_loops7_2018: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
+      courseB_artist_loops7_2019: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
       courseB_artist_loops_challenge2: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_artist_loops_challenge2_2018: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
+      courseB_artist_loops_challenge2_2019: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_collector_loops1: 這位是冒險家 Laurel！你能幫助他移動以取得寶藏嗎？
       courseB_collector_loops10: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseB_collector_loops10_2018: 幫助 Laurel 獲得洞穴中的所有寶石。
+      courseB_collector_loops10_2019: 幫助 Laurel 獲得洞穴中的所有寶石。
       courseB_collector_loops11: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseB_collector_loops11_2018: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
+      courseB_collector_loops11_2019: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseB_collector_loops1_2018: 這位是冒險家 Laurel！你能幫助他移動以取得寶藏嗎？
+      courseB_collector_loops1_2019: 這位是冒險家 Laurel！你能幫助他移動以取得寶藏嗎？
       courseB_collector_loops2: 收集所有的 4 堆以通過這個關卡。
       courseB_collector_loops2_2018: 收集所有的 4 堆以通過這個關卡。
+      courseB_collector_loops2_2019: 收集所有的 4 堆以通過這個關卡。
       courseB_collector_loops3: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆寶石？
       courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆寶石？
+      courseB_collector_loops3_2019: Laurel 要怎麼只使用一個`向東`積木收集所有的 5 堆寶石？
       courseB_collector_loops3_predict1: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops4: 修正 Laurel 的路徑，讓牠能收集到寶藏！
       courseB_collector_loops4_2018: 修正 Laurel 的路徑，讓牠能收集到寶藏！
+      courseB_collector_loops4_2019: 修正 Laurel 的路徑，讓牠能收集到寶藏！
       courseB_collector_loops5: 添加類似上一關的程式來收集到寶藏。
       courseB_collector_loops5_2018: 添加類似上一關的程式來收集到寶藏。
+      courseB_collector_loops5_2019: 添加類似上一關的程式來收集到寶藏。
       courseB_collector_loops6: 想一想要怎麼編程才能幫助 Laurel 取得這些寶藏！
       courseB_collector_loops6_2018: 想一想要怎麼編程才能幫助 Laurel 取得這些寶藏！
+      courseB_collector_loops6_2019: 想一想要怎麼編程才能幫助 Laurel 取得這些寶藏！
       courseB_collector_loops7: 編寫程式來收集這些寶藏。
       courseB_collector_loops7_2018: 編寫程式來收集這些寶藏。
+      courseB_collector_loops7_2019: 編寫程式來收集這些寶藏。
       courseB_collector_loops8: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
       courseB_collector_loops8_2018: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
+      courseB_collector_loops8_2019: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
       courseB_collector_loops9: "*「幫我拿到深谷裡的所有寶藏。」*"
       courseB_collector_loops9_2018: "*「幫我拿到深谷裡的所有寶藏。」*"
+      courseB_collector_loops9_2019: "*「幫我拿到深谷裡的所有寶藏。」*"
       courseB_collector_loops_challenge1: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_loops_challenge1_2018: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
+      courseB_collector_loops_challenge1_2019: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_loops_challenge2a: 幫 Laurel 拿到至少 **5** 塊寶石。
       courseB_collector_loops_challenge2a_2018: 幫 Laurel 拿到至少 **5** 塊寶石。
+      courseB_collector_loops_challenge2a_2019: 幫 Laurel 拿到至少 **5** 塊寶石。
       courseB_collector_loops_challenge`: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_prog1: 這位是冒險家 Laurel！你能幫助她移動以取得黃金嗎？
       courseB_collector_prog3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_maze_seq12: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq12_2018: 現在抓到那頭豬，不管你用什麼方法！
+      courseB_maze_seq12_2019: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq2: "*「有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。」*"
       courseB_maze_seq4: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq4_2018: 添加 2 個積木讓鳥移動到豬那裡。
+      courseB_maze_seq4_2019: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq6: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseB_maze_seq7: 想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！
       courseB_maze_seq8: 輪到你了！要怎麼樣才能讓鳥抓到這頭豬呢？
@@ -1517,29 +1568,41 @@ zh-TW:
       courseB_maze_seqOld: '繞開 TNT 炸藥，讓鳥抓到這頭豬！ '
       courseB_playLab_events1: 看看你是否能指出每個積木的用途。
       courseB_playLab_events1_2018: 看看你是否能指出每個積木的用途。
+      courseB_playLab_events1_2019: 看看你是否能指出每個積木的用途。
       courseB_playlab_events_challenge2_embed: 這兒是你完成的遊戲！
       courseB_starWars_prog1: 幫助 BB-8 拿到所有廢金屬！
       courseB_starWars_prog10: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog10_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseB_starWars_prog10_2019: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog11: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog11_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseB_starWars_prog11_2019: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog1_2018: 幫助 BB-8 拿到所有廢金屬！
+      courseB_starWars_prog1_2019: 幫助 BB-8 拿到所有廢金屬！
       courseB_starWars_prog2: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog2_2018: 幫助 BB-8 收集到**所有的**發光廢金屬
+      courseB_starWars_prog2_2019: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog3: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog3_2018: 幫助 BB-8 收集到**所有的**發光廢金屬
+      courseB_starWars_prog3_2019: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog4: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog4_2018: 幫助 BB-8 收集到**所有的**發光廢金屬
+      courseB_starWars_prog4_2019: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog5: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog5_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseB_starWars_prog5_2019: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog6: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog6_2018: 幫助 BB-8 收集到**所有的**發光廢金屬
+      courseB_starWars_prog6_2019: 幫助 BB-8 收集到**所有的**發光廢金屬
       courseB_starWars_prog7: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog7_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseB_starWars_prog7_2019: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog8: "**挑戰：**幫助 BB-8 收集所有的發光廢金屬"
       courseB_starWars_prog8_2018: "**挑戰：**幫助 BB-8 收集所有的發光廢金屬"
+      courseB_starWars_prog8_2019: "**挑戰：**幫助 BB-8 收集所有的發光廢金屬"
       courseB_starWars_prog9: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog9_2018: 幫助 BB-8 收集到所有發光的廢金屬
+      courseB_starWars_prog9_2019: 幫助 BB-8 收集到所有發光的廢金屬
       courseC19_playLab_EOC5: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseC_PlayLab_events3: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_PlayLab_events3_2018: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？

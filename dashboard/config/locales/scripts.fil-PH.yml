@@ -11738,3 +11738,129 @@ fil:
           description_audience: CSP na mga Estudyante
         gamelab:
           title: Game Lab
+        coursea-2019:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga hindi
+            pa marunong magbasa.
+          description_audience: 'Mga Edad: 4-7'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa
+                mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan
+                na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin
+                nito?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
+                sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
+                na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
+                Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
+                ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
+                at ang kabaliktaran nito.\r\n"
+            'Programming: Happy Maps':
+              name: 'Pag-Program: Masayang mga Mapa'
+              description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program
+                ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa
+                kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod
+                na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa
+                mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng
+                madaliang code.
+            Programming in Maze:
+              name: Pag-Program sa Maze
+              description_teacher: Sa seryeng ito ng mga online na mga palaisipan,
+                ang mga estudyante ay bubuo sa kanilang pag-uunawa sa mga algoritmo,
+                pag-debug, at pangkaraniwang literasiya sa kompyuter. Nagpapakita
+                sa mga karakter mula sa larong Angry Birds, ang mga estudyante ay
+                bubuo ng mga sekwensyal na mga algoritmo para mapagawang makapunta
+                ang ibon sa baboy nang hindi nababanga sa mga balakid o TNT. Ang pag-debug
+                ng mga palaisipain ay naihalo din sa yugtong ito para sa karagdagang
+                pagsasanay sa paglutas ng problema at kritikal na pag-iisip.
+            Going Places Safely:
+              name: Matiwasay na pagpunta sa mga lugar
+              description_teacher: Sa pakikipagtulungan sa [r common-sense-media],
+                ang araling ito ay nakakatulong sa mga estudyante na matututo na maraming
+                mga website ang nagtatanong ng mga impormasyon na mga pribado at nagtatalakay
+                kung paano responsableng harapin ang mga ganong kahilingan. Makikita
+                din ng mga estudyante na sila ay maaaring makakapunta sa nakakatuwang
+                mga lugar online, ngunit kailangan nilang sumunod sa iilang mga tutunin
+                para manatiling ligtas.
+            'Loops: Happy Loops':
+              description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan
+                na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong
+                ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin
+                ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga
+                problema.
+            Loops in Harvester:
+              name: Mga Loops sa Harvester
+            Loops in Collector:
+              description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga
+                instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok
+                sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta
+                ng mga kayamanan sa Code.org.
+            Loops in Artist:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            'Events: The Big Event':
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
+                ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
+                ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
+                kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+            Events in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
+        courseb-2019:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_audience: 'Mga Edad: 5-8'
+          stages:
+            Move It, Move It:
+              name: Galawin ito, Galawin ito
+            Your Digital Footprint:
+              name: Ang Iyong Digital na Bakas
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+        pre-express-2019:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi
+            marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
+            unang baitang na mga kurso.'
+          description_audience: 'Mga Edad: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+            Move It, Move It:
+              name: Galawin ito, Galawin ito
+            Your Digital Footprint:
+              name: Ang Iyong Digital na Bakas
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Spelling Bee:
+              name: Spelling Bee
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'

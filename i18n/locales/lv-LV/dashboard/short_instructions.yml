@@ -332,11 +332,15 @@ lv:
       courseA_maze_seq10: 'Izaicinājums: tiec apkārt dinamītam, lai palīdzētu putnam nokļūt līdz cūkai! '
       courseA_maze_seq11: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai.
       courseA_maze_seq11_2018: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai.
+      courseA_maze_seq11_2019: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai.
       courseA_maze_seq12: 'Notver to cūku! '
       courseA_maze_seq12_2018: 'Notver to cūku! '
+      courseA_maze_seq12_2019: 'Notver to cūku! '
       courseA_maze_seq13: Notver to cūku, kā vien māki!
       courseA_maze_seq13_2018: Notver to cūku, kā vien māki!
+      courseA_maze_seq13_2019: Notver to cūku, kā vien māki!
       courseA_maze_seq1_2018: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
+      courseA_maze_seq1_2019: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
       courseA_maze_seq2: Izlabo kodu, lai palīdzētu putnam tikt līdz cūkai.
       courseA_maze_seq2_2018: Izlabo kodu, lai palīdzētu putnam tikt līdz cūkai.
       courseA_maze_seq3: Izlabo kodu, lai palīdzētu putnam nokļūt līdz cūkai!
@@ -345,14 +349,17 @@ lv:
       courseA_maze_seq4_2018: IZDZĒS bloku, lai palīdzētu putnam nokļūt līdz cūkai!
       courseA_maze_seq6: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
       courseA_maze_seq6_2018: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
+      courseA_maze_seq6_2019: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
       courseA_maze_seq7: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu putnam tikt līdz cūkai!
       courseA_maze_seq7_2018: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu putnam tikt līdz cūkai!
       courseA_maze_seq8: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2018: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
+      courseA_maze_seq8_2019: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq9: Atrodi kļūdas šajā līmenī, pievienojot blokus, lai palīdzētu putnam tikt līdz cūkai!
       courseA_maze_seq9_2018: Atrodi kļūdas šajā līmenī, pievienojot blokus, lai palīdzētu putnam tikt līdz cūkai!
       courseB_maze_seq12: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2018: Tagad notver to cūku, kā vien māki!
+      courseB_maze_seq12_2019: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq2: '*"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz cūkai."*'
       courseB_maze_seq6: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
       courseB_maze_seq7: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu putnam tikt līdz cūkai!

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete this drawing? The sides of all the shapes are 100 pixels long.",
+    "short_instructions": "Can you complete this drawing? The sides of all the shapes are 100 pixels long.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,7 +22,7 @@
     "y": "150",
     "ideal": "19",
     "slider_speed": ".5",
-    "markdown_instructions": "Can you complete this drawing? \r\n\r\nThe sides of all the shapes are 100 pixels long.",
+    "long_instructions": "Can you complete this drawing? \r\n\r\nThe sides of all the shapes are 100 pixels long.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

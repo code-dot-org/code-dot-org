@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "Great, the chicken moved! But then she stopped. In games, chickens walk forever. Use a `forever do` loop to keep these chickens moving.\r\n",
+    "short_instructions": "Great, the chicken moved! But then she stopped. In games, chickens walk forever. Use a `forever do` loop to keep these chickens moving.\r\n",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",

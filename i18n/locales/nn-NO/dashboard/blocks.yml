@@ -997,14 +997,16 @@ nn:
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': retninga til rørsla
-            '"tint"': farge
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
       binary_move:
         options:
           DIR:

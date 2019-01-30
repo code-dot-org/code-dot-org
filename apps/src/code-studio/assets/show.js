@@ -18,6 +18,7 @@ var Dialog = require('../LegacyDialog');
  * @param [options.showUnderageWarning] {boolean} Warn if underage.
  * @param [options.useFilesApi] {boolean} Use files API instead of assets API.
  * @param [options.disableAudioRecording] {boolean} Do not display option to record and upload audio files
+ * @param [options.elementId] {string} Logging Purposes: which element is the image chosen for
  */
 module.exports = function showAssetManager(assetChosen, typeFilter, onClose, options) {
   options = options || {};
@@ -48,7 +49,8 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
     showUnderageWarning: !!options.showUnderageWarning,
     projectId: dashboard.project.getCurrentId(),
     soundPlayer: sounds,
-    disableAudioRecording: options.disableAudioRecording
+    disableAudioRecording: options.disableAudioRecording,
+    elementId: options.elementId
   }), codeDiv);
 
   dialog.show();

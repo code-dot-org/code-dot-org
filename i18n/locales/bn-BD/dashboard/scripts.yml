@@ -899,3 +899,7 @@ bn:
           stages:
             'null':
               name: 'শূন্য'
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: বানান মৌমাছি

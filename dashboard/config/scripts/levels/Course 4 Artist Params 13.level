@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome!",
+    "short_instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
