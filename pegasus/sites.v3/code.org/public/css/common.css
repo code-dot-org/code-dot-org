@@ -539,6 +539,19 @@ button {
   font-weight: normal;
 }
 
+.impact-stats-link div {
+  background-color: #7665a0;
+}
+
+.impact-stats-link p{
+  color: white;
+}
+
+.impact-stats-link button{
+  float: right;
+}
+
+
 @media screen and (min-width: 970px) {
   #stats-carousel .slide .slide-img {
     width: 850px;
