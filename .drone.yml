@@ -18,6 +18,8 @@ steps:
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
   environment:
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -46,13 +48,14 @@ steps:
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
   commands:
     - pwd
     - whoami
     - id -u
     - id -g
     - ls -alh
-    - find /home/circleci/.rbenv
     - /entrypoint.sh docker/unit_tests.sh
 
 - name: ui-tests
@@ -61,6 +64,8 @@ steps:
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
   commands:
     - pwd
     - whoami
@@ -72,7 +77,9 @@ steps:
 
 volumes:
 - name: rbenv
-  temp: {}  
+  temp: {}
+- name: mysql
+  temp: {}
 
 trigger:
   branch:
