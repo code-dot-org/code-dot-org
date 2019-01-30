@@ -500,3 +500,24 @@ nn:
         desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette
           tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet
           av informatikk og korleis algoritmar spelar ei essensiell rolle.
+      PlantASeed_2019:
+        title: 'Verkelege algoritmar: Plante eit frø'
+        desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her
+          med det å plante eit frø som døme. Den fokuserer og på det større biletet
+          av informatikk og korleis algoritmer er ein viktig del av det.
+      UnplugHappyMaps_2019:
+        title: Glade Kart
+        desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte
+          ein figur gjennom ein labyrint med berre ein kommando.
+      GoingPlacesSafely_2019:
+        title: Går stader trygt
+        desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar
+          introduserer korleis du skal vere trygg når du navigerer på nettet.
+      courseA_unplugged_loops_2019:
+        desc: I denne oppgåve skal du lære om løkker!
+      MoveItMoveIt_2019:
+        title: Flytt den, flytt den
+      DigitalFootprint_2019:
+        title: Dine digitale fotspor
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg
+          sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.

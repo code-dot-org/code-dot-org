@@ -2017,6 +2017,11 @@ ro:
           Încercați să scrieți codul pas cu pas și să căutați un model.
         courseA_artist_loops7_b: Scrieți mai întâi codul pentru un singur val, apoi
           repetați pentru a desena celelalte două.
+      courseA_artist_loops7_2019_authored_hint:
+        courseA_artist_loops7_a: Nu reușiți să vă dați seama unde să puneți bucla?
+          Încercați să scrieți codul pas cu pas și să căutați un model.
+        courseA_artist_loops7_b: Scrieți mai întâi codul pentru un singur val, apoi
+          repetați pentru a desena celelalte două.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
@@ -2028,10 +2033,16 @@ ro:
       courseA_artist_loops8_2018_authored_hint:
         courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
           scris pentru dvs.
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_a: Încercați să rulați codul pentru a vedea ce a fost
+          scris pentru dvs.
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_c: Dacă nu reușiți să vă dați seama unde să puneți bucla,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_c: Dacă nu reușiți să vă dați seama unde să puneți bucla,
+          încercați să vă scrieți codul pas cu pas și să căutați modele.
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_c: Dacă nu reușiți să vă dați seama unde să puneți bucla,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
       courseA_artist_loops_challenge2_authored_hint:
@@ -2043,6 +2054,9 @@ ro:
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
+      courseA_collector_loops2_2019_authored_hint:
+        courseA_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
+          orice comoară.
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_b: Nu uitați că Laurel trebuie să meargă în jos și
           să colecteze comoara după ce termină <xml><block type="controls_repeat_simplified_dropdown"><title
@@ -2051,11 +2065,19 @@ ro:
         courseA_collector_loops4_b: Nu uitați că Laurel trebuie să meargă în jos și
           să colecteze comoara după ce termină <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> bucla!
+      courseA_collector_loops4_2019_authored_hint:
+        courseA_collector_loops4_b: Nu uitați că Laurel trebuie să meargă în jos și
+          să colecteze comoara după ce termină <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> bucla!
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
           să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
           nevoie și căutați un model structural.
       courseA_collector_loops5_2018_authored_hint:
+        courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
+          să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
+          nevoie și căutați un model structural.
+      courseA_collector_loops5_2019_authored_hint:
         courseA_collector_loops5_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați
           să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea
           nevoie și căutați un model structural.
@@ -2069,16 +2091,27 @@ ro:
           încercați să scrieți mișcările pe o bucată de hârtie și să căutați un model.
         courseA_collector_loops8_b: Încercați să rupeți acest puzzle în 3 probleme
           separate și să scrieți bucle pentru fiecare.
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: Dacă aveți dificultăți în rezolvarea acestui puzzle,
+          încercați să scrieți mișcările pe o bucată de hârtie și să căutați un model.
+        courseA_collector_loops8_b: Încercați să rupeți acest puzzle în 3 probleme
+          separate și să scrieți bucle pentru fiecare.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
           a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
       courseA_collector_loops9_2018_authored_hint:
         courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
           a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
+      courseA_collector_loops9_2019_authored_hint:
+        courseA_collector_loops9_a: 'Dacă nu identificați cele mai bune locuri pentru
+          a utiliza bucle, încercați să o codificați pas cu pas și căutați un model. '
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_a: Puteți să vă deplasați înapoi pe traseu
           a doua oară înainte de a vă deplasa spre sud.
       courseA_harvester_loops6_authored_hint:
+        courseA_harvester_loops6_a: Dacă vă împotmoliți, încercați să scrieți pașii
+          pe hârtie și să căutați modele repetate.
+      courseA_harvester_loops6_2019_authored_hint:
         courseA_harvester_loops6_a: Dacă vă împotmoliți, încercați să scrieți pașii
           pe hârtie și să căutați modele repetate.
       courseA_maze_ramp2_2018_authored_hint:
@@ -2097,9 +2130,44 @@ ro:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -2137,7 +2205,45 @@ ro:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -2172,7 +2278,29 @@ ro:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -2180,7 +2308,14 @@ ro:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -2201,7 +2336,42 @@ ro:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -2239,7 +2409,45 @@ ro:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -2274,10 +2482,31 @@ ro:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Amintiți-vă să utilizați o buclă `repetă` pentru
           un cod mai bun!
       courseB_artist_loops3_2018_authored_hint:
+        courseB_artist_loops3_a: |-
+          Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> pentru un cod mai bun!
+      courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_a: |-
           Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
           <title name="TIMES">???</title>
@@ -2290,16 +2519,26 @@ ro:
         courseB_artist_loops4_a: Blocul de săritură vă permite să vă deplasați înainte
           fără a trasa o linie.
         courseB_artist_loops4_c: Nu uitați să schimbați numărul de repetări ale buclei.
+      courseB_artist_loops4_2019_authored_hint:
+        courseB_artist_loops4_a: Blocul de săritură vă permite să vă deplasați înainte
+          fără a trasa o linie.
+        courseB_artist_loops4_c: Nu uitați să schimbați numărul de repetări ale buclei.
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
           și să căutați un model.
       courseB_artist_loops6_2018_authored_hint:
         courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
           și să căutați un model.
+      courseB_artist_loops6_2019_authored_hint:
+        courseB_artist_loops6_b: Încercați să puneți mișcările pe o foaie de hârtie
+          și să căutați un model.
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
       courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
+          Încercați să scrieți codul pas cu pas și să căutați un model.
+      courseB_artist_loops9_2019_authored_hint:
         courseB_artist_loops9_c: Nu reușiți să vă dați seama unde să puneți bucla?
           Încercați să scrieți codul pas cu pas și să căutați un model.
       courseB_collector_loops10_authored_hint:
@@ -2312,10 +2551,18 @@ ro:
           `repetă`, scrieți codul pas cu pas și căutați un model structural.
         courseB_collector_loops10_b: Încercați să scrieți mișcările pe o foaie de
           hârtie și să căutați un model.
+      courseB_collector_loops10_2019_authored_hint:
+        courseB_collector_loops10_a: Dacă nu vă puteți da seama unde să puneți buclele
+          `repetă`, scrieți codul pas cu pas și căutați un model structural.
+        courseB_collector_loops10_b: Încercați să scrieți mișcările pe o foaie de
+          hârtie și să căutați un model.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseB_collector_loops2_2018_authored_hint:
+        courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
+          orice comoară.
+      courseB_collector_loops2_2019_authored_hint:
         courseB_collector_loops2_a: Va trebui să vă deplasați înainte să puteți colecta
           orice comoară.
       courseB_collector_loops7_authored_hint:
@@ -2324,16 +2571,25 @@ ro:
       courseB_collector_loops7_2018_authored_hint:
         courseB_collector_loops7_b: Veți avea nevoie de 3 bucle repetitive pentru
           a rezolva acest puzzle și nu uitați comoara suplimentară de la sfârșit!
+      courseB_collector_loops7_2019_authored_hint:
+        courseB_collector_loops7_b: Veți avea nevoie de 3 bucle repetitive pentru
+          a rezolva acest puzzle și nu uitați comoara suplimentară de la sfârșit!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
           buclele `repetă`, scrieți codul pas cu pas și căutați un model.
       courseB_collector_loops8_2018_authored_hint:
         courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
           buclele `repetă`, scrieți codul pas cu pas și căutați un model.
+      courseB_collector_loops8_2019_authored_hint:
+        courseB_collector_loops8_challenge_a: Dacă nu vă puteți da seama unde să puneți
+          buclele `repetă`, scrieți codul pas cu pas și căutați un model.
       courseB_collector_loops9_authored_hint:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
       courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
+          alta, pentru această soluție.
+      courseB_collector_loops9_2019_authored_hint:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
       courseB_collector_loops_challenge1_authored_hint:
@@ -2352,10 +2608,21 @@ ro:
           <block type="maze_moveEast"></block></next></block>
           </xml>
           Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
+      courseB_collector_loops_challenge1_2019_authored_hint:
+        courseB_collector_loops_challenge1_c: |
+          Mutați Est de două ori între fiecare traseu.
+          <xml>
+          <block type="maze_moveEast"><next>
+          <block type="maze_moveEast"></block></next></block>
+          </xml>
+          Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_b: Uitați-vă la această opțiune pentru
           a trece prin labirint. Vedeți un model pe care îl puteți repeta?
       courseB_collector_loops_challenge2a_2018_authored_hint:
+        courseB_collector_loops_challenge2a_b: Uitați-vă la această opțiune pentru
+          a trece prin labirint. Vedeți un model pe care îl puteți repeta?
+      courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_b: Uitați-vă la această opțiune pentru
           a trece prin labirint. Vedeți un model pe care îl puteți repeta?
       courseB_collector_loops_challenge`_authored_hint:
@@ -2367,7 +2634,14 @@ ro:
         courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseB_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: Ferește-te de gheață! Scrat va cădea în apă!
+      courseB_iceage_loops1_2019_authored_hint:
+        courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
+          colțului și unul după colț.
+      courseB_iceage_loops2_2019_authored_hint:
         courseB_iceage_loops2_a: Împărțiți acest puzzle în două bucăți, unul în fața
           colțului și unul după colț.
       courseB_maze_seq8_authored_hint:

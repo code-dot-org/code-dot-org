@@ -99,15 +99,27 @@ es-MX:
             '"UNICORN"': todos los unicornios
           MOVE:
             '"rand"': "(Al azar)"
+            MOVES.XBend: Doblar
             MOVES.Roll: Vuelta completa
+            MOVES.XClapSide: Aplaudir
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
+            MOVES.XFever: Música disco
             MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
+            MOVES.XHeadHips: Cabeza + Caderas
+            MOVES.XHop: Saltar
+            MOVES.XHighKick: Patear
+            MOVES.XKnee: Rodilla
+            MOVES.XKneel: Arrodillarse
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Alcanzar
+            MOVES.XSlide: Deslizar
             MOVES.Kick: Estrella
+            MOVES.XArmsUp: Expandir
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
           DIR:
@@ -118,15 +130,27 @@ es-MX:
         options:
           MOVE:
             '"rand"': "(Al azar)"
+            MOVES.XBend: Doblar
             MOVES.Roll: Vuelta completa
+            MOVES.XClapSide: Aplaudir
             MOVES.ClapHigh: Aplauso alto
             MOVES.Dab: Dudar
+            MOVES.XFever: Música disco
             MOVES.DoubleJam: Doble abajo
             MOVES.Drop: Caída
             MOVES.Floss: Hilo
             MOVES.Fresh: Fresco
             MOVES.Clown: Payaso
+            MOVES.XHeadHips: Cabeza + Caderas
+            MOVES.XHop: Saltar
+            MOVES.XHighKick: Patear
+            MOVES.XKnee: Rodilla
+            MOVES.XKneel: Arrodillarse
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Alcanzar
+            MOVES.XSlide: Deslizar
             MOVES.Kick: Estrella
+            MOVES.XArmsUp: Expandir
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
           DIR:
@@ -192,10 +216,17 @@ es-MX:
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
       Dancelab_ifTime:
+        text: |-
+          si {UNIT} es {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': medidas
             '"seconds"': segundos
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
         options:
@@ -334,6 +365,7 @@ es-MX:
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fuegos artificiales
             '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile de láser
@@ -349,8 +381,12 @@ es-MX:
           PALETTE:
             '"rave"': Blanco y negro
             '"cool"': Azules
+            '"electronic"': Música electrónica
+            '"iceCream"': Helado
             '"default"': Luz
             '"neon"': Neón
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Rojos
       Dancelab_setBackgroundEffectWithPalette:
         text: establecer efecto de fondo {EFFECT} {PALETTE}
@@ -362,6 +398,7 @@ es-MX:
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fuegos artificiales
             '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile de láser
@@ -377,11 +414,15 @@ es-MX:
           PALETTE:
             '"rave"': Blanco y negro
             '"cool"': Azules
+            '"electronic"': Música electrónica
+            '"iceCream"': Helado
             '"default"': Luz
             '"neon"': Neón
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Rojos
       Dancelab_setDanceSpeed:
-        text: cambiar velocidad de danza [SPRITE][0] a [velocidad][1]
+        text: cambiar velocidad de danza {SPRITE} a {SPEED}
         options:
           SPEED:
             '1': normal
@@ -390,6 +431,7 @@ es-MX:
             '0.5': lento
             '0.25': muy lento
       Dancelab_setDanceSpeedEach:
+        text: cambiar velocidad de danza de {GROUP} a {SPEED}
         options:
           GROUP:
             sprites: todo
@@ -420,11 +462,13 @@ es-MX:
             '"hearts_red"': Corazones
             '"music_notes"': Notas de música
             '"pineapples"': Piñas
+            '"pizzas"': Pizzas
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arco iris
             '"smile_face"': Cara sonriente
             '"spotlight"': Destacado
+            '"color_lights"': Luces de palco
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: establecer efecto de primer plano {EFFECT}
@@ -437,11 +481,13 @@ es-MX:
             '"hearts_red"': Corazones
             '"music_notes"': Notas de música
             '"pineapples"': Piñas
+            '"pizzas"': Pizzas
             '"smiling_poop"': Caca
             '"rain"': Lluvia
             '"floating_rainbows"': Arco iris
             '"smile_face"': Cara sonriente
             '"spotlight"': Destacado
+            '"color_lights"': Luces de palco
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'definir {SPRITE} {PROPERTY} a {VAL} '
@@ -490,8 +536,9 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setTint:
-        text: definir tinte [SPRITE][0] a [VAL][1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
+        text: establecer tonalidad {THIS} a {VAL}
         options:
           THIS:
             sprites: todo
@@ -506,7 +553,7 @@ es-MX:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setTintInline:
-        text: definir tinte [SPRITE][0] a [VAL][1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setVisible:
         text: establecer {SPRITE} visible para {VISIBILITY}
         options:
@@ -581,6 +628,7 @@ es-MX:
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': 'n'
             '"o"': o
             '"p"': p
             '"r"': r
@@ -605,6 +653,8 @@ es-MX:
         text: añadir {SPRITE} al grupo {THIS}
       gamelab_addBehaviorSimple:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
+      gamelab_addBehaviorUntil:
+        text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       gamelab_beginBehavior:
         text: empiezo {BEHAVIOR}
       gamelab_bounceOff:
@@ -668,6 +718,9 @@ es-MX:
           hacer {STATEMENT}
       gamelab_getAnim:
         text: "{SPRITE} {COSTUME}"
+        options:
+          COSTUME:
+            '"costume"': aspectos
       gamelab_getDirection:
         text: "{SPRITE} direccion del movimiento"
       gamelab_getFrameDelay:
@@ -686,9 +739,32 @@ es-MX:
         text: número de graficos en {THIS}
       gamelab_hasBehavior:
         text: "{SPRITE} actualmente es {BEHAVIOR}"
+      gamelab_hideTitleScreen:
+        text: esconder pantalla de título
+      gamelab_hsbColor:
+        text: |-
+          Color HSB
+          H{HUE}S{SATURATION}B{BRIGHTNESS}
+      gamelab_isTouching:
+        text: "{THIS} está tocando {TARGET}"
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} está tocando los límites"
+      gamelab_joystickDirection:
+        text: dirección del joystick
       gamelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
+      gamelab_keyDown:
+        text: tecla está presionada {KEY}
+      gamelab_locationAdd:
+        text: "{LOC1} {OPERATOR} {LOC2}"
+        options:
+          OPERATOR:
+            "'plus'": "\\+"
+            "'minus'": "\\-"
+      gamelab_locationAt:
+        text: 'localización x: {X} y: {Y}'
       gamelab_locationConstant:
+        text: "{DIR}"
         options:
           DIR:
             "'north'": norte
@@ -696,6 +772,7 @@ es-MX:
             "'east'": este
             "'west'": oeste
       gamelab_locationDelta:
+        text: "{DISTANCE} píxeles {DIR} de {LOCATION}"
         options:
           DIR:
             "'north'": norte
@@ -715,21 +792,80 @@ es-MX:
         text: sur
       gamelab_locationWest:
         text: oeste
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_location_variable_get:
+        text: posición de {VAR}
+      gamelab_location_variable_set:
+        text: definir posición de {VAR} para {VAL}
+      gamelab_makeNewGroup:
+        text: crear un nuevo grupo
       gamelab_mirrorSprite:
+        text: "{SPRITE} encara {DIRECTION}"
         options:
           DIRECTION:
             '"right"': derecha
             '"left"': izquierda
       gamelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
+      gamelab_mouseDown:
+        text: ratón está parado
       gamelab_mouseLocation:
         text: posición del ratón
+      gamelab_moveDown:
+        text: "{THIS} se mueve hacia abajo"
+      gamelab_moveForward:
+        text: mover {SPRITE} {DISTANCE} píxeles hacia adelante
+      gamelab_moveInDirection:
+        text: mover {SPRITE} {DISTANCE} píxeles {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Este
+            '"South"': Sur
+            '"West"': Oeste
+      gamelab_moveInDirection2:
+        text: mover {SPRITE} píxeles {DISTANCE} hacia {DIRECTION}
+      gamelab_moveLeft:
+        text: "{THIS} se mueve a la izquierda"
+      gamelab_moveRight:
+        text: "{THIS} se mueve a la derecha"
+      gamelab_moveToward:
+        text: mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
+      gamelab_moveUp:
+        text: "{THIS} se mueve hacia arriba"
+      gamelab_pointInDirection:
+        text: apuntar {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Este
+            '"South"': Sur
+            '"West"': Oeste
+      gamelab_pointToward:
+        text: apuntar {SPRITE} hacia {LOCATION}
       gamelab_randColor:
         text: color al azar
       gamelab_randomColor:
         text: color al azar
+      gamelab_randomLocation:
+        text: posición aleatoria
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} detiene todo"
+      gamelab_removeBehaviorSimple:
+        text: gráfico {SPRITE} detiene {BEHAVIOR}
+      gamelab_removeTint:
+        text: eliminar color de {THIS}
+      gamelab_secondTouched:
+        text: segundo gráfico tocado
+      gamelab_setAnimation:
+        text: cambiar {THIS} traje a {ANIMATION}
       gamelab_setBackground:
         text: establecer color de fondo {COLOR}
+      gamelab_setDirection:
+        text: definir {SPRITE} dirección de movimiento {DIRECTION}
+      gamelab_setFrameDelay:
+        text: establecer {THIS} retraso de marco {VAL}
       gamelab_setPosition:
         text: mover {THIS} a la posición {POSITION}
         options:
@@ -745,6 +881,7 @@ es-MX:
             "{x: 350, y: 350}": abajo a la derecha
             '"random"': al azar
       gamelab_setProp:
+        text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -760,31 +897,71 @@ es-MX:
             '"scale"': tamaño
             '"width"': ancho
             '"height"': altura
+      gamelab_setTint:
+        text: cambiar color de {THIS} a {COLOR}
       gamelab_setup:
         text: instalación
+      gamelab_showTitleScreen:
+        text: mostrar pantalla de título {BREAK} título {TITLE} texto {SUBTITLE}
+      gamelab_spriteCostume:
+        text: "{COSTUME}"
+      gamelab_spriteDirection:
+        text: "{DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Este
+            '"South"': Sur
+            '"West"': Oeste
+      gamelab_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT}
       gamelab_spritesWhere:
+        text: gráficos donde {PROPERTY} es {VALUE}
         options:
           PROPERTY:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"costume"': aspectos
             '"direction"': dirección de movimiento
+            '"rotation"': rotación o dirección
             '"tint"': tinte
+      gamelab_spritesWhereFirst:
+        text: primer {VALUE}
       gamelab_spritesWhereGenerator:
+        text: gráficos donde {PROPERTY} {OP} {VALUE}
         options:
           PROPERTY:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"costume"': aspectos
             '"direction"': dirección de movimiento
+            '"rotation"': rotación o dirección
             '"tint"': tinte
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      gamelab_spritesWhereLast:
+        text: último {VALUE}
+      gamelab_spritesWhereRandom:
+        text: aleatorio en el grupo {VALUE}
       gamelab_thisBeginsBehaviorSimple:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
+        options:
+          SPRITE:
+            abc: este gráfico
       gamelab_turn:
+        text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
           DIRECTION:
             '"right"': derecha
             '"left"': izquierda
+      gamelab_whenDownArrow:
+        text: cuando se presiona la flecha abajo
+      gamelab_whenJoystick:
+        text: cuando el joystick
       gamelab_whenKey:
         text: al pulsar {KEY}
         options:
@@ -798,14 +975,38 @@ es-MX:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: cuando se presiona la flecha izquierda
+      gamelab_whenMouseClicked:
+        text: cuando se hace clic con el ratón
       gamelab_whenPressedAndReleased:
+        text: "cuando se presiona {DIR} \n{STATEMENT1}cuando se libera \n{STATEMENT2}"
         options:
           DIR:
             "'up'": arriba
             "'down'": abajo
             "'left'": izquierda
             "'right'": derecha
+      gamelab_whenRightArrow:
+        text: cuando se presiona la flecha derecha
+      gamelab_whenStartAndStopTouching:
+        text: |-
+          cuando {SPRITE1} empieza a tocar {SPRITE2} {STATEMENT1}cuando dejan de tocar
+          {STATEMENT2}
+      gamelab_whenTouching:
+        text: cuando {SPRITE1} toca {SPRITE2}
+      gamelab_whenTouchingAny:
+        text: cuando {SPRITE} toca cualquier {GROUP}
+      gamelab_whenTrue:
+        text: cuando {CONDITION} es verdadero
+      gamelab_whenUpArrow:
+        text: cuando se presiona la flecha arriba
+      gamelab_whileDownArrow:
+        text: mientras se presiona la flecha abajo
+      gamelab_whileJoystick:
+        text: mientras el joystick
       gamelab_whileKey:
+        text: mientras se presiona {KEY}
         options:
           KEY:
             '"up"': arriba
@@ -817,6 +1018,18 @@ es-MX:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: mientras se presiona la flecha izquierda
+      gamelab_whileRightArrow:
+        text: mientras se presiona la flecha derecha
+      gamelab_whileTouching:
+        text: mientras {SPRITE1} está tocando {SPRITE2}
+      gamelab_whileUpArrow:
+        text: mientras se presiona la flecha arriba
+      gamelab_xLocationOf:
+        text: coordenada x de {SPRITE}
+      gamelab_yLocationOf:
+        text: coordenada y de {SPRITE}
       Mikelab_addBehaviorSimple:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
       Mikelab_changePropBy:
@@ -848,13 +1061,17 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
       Mikelab_groupChangeAnim:
+        text: cambiar {SELECT} {COSTUME} a {COSTUME2}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
       Mikelab_groupChangePropBy:
+        text: cambiar {PROPERTY} de {SELECT} {COSTUME} por {VAL}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
           PROPERTY:
             '"scale"': tamaño
             '"rotation"': rotación
@@ -862,6 +1079,7 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
       Mikelab_groupCreateNewSprite:
+        text: hacer un nuevo {COSTUME} en {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -874,11 +1092,21 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
       Mikelab_groupDestroy:
+        text: eliminar {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
+      Mikelab_groupDisplace:
+        text: todos {COSTUME} bloquean el movimiento de {COSTUME2}
+      Mikelab_groupEdgesDisplace:
+        text: los límites bloquean el movimiento de {COSTUME}
       Mikelab_groupGetProp:
+        text: "{PROPERTY} de {SELECT} {COSTUME}"
         options:
+          SELECT:
+            '"average"': media
+            '"this"': este
           PROPERTY:
             '"scale"': tamaño
             '"rotation"': rotación
@@ -886,21 +1114,29 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
       Mikelab_groupRemoveAllBehaviors:
+        text: detener los comportamientos de {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} detiene {BEHAVIOR}"
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
       Mikelab_groupRemoveTint:
+        text: eliminar color de {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
       Mikelab_groupSetProp:
+        text: establecer {PROPERTY} de {SELECT} {COSTUME} de {VAL}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
           PROPERTY:
             '"scale"': tamaño
             '"rotation"': rotación
@@ -908,9 +1144,21 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
       Mikelab_groupSetTint:
+        text: cambiar color de {SELECT} {COSTUME} a {COLOR}
         options:
           SELECT:
             '"all"': todo
+            '"this"': este
+      Mikelab_groupWhenClickedOn:
+        text: cuando se hace clic en {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: cuando{COSTUME} toca {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: mientras hace click en {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          mientras{COSTUME} está tocando {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} actualmente es {BEHAVIOR}"
       Mikelab_ifDanceIs:
@@ -930,8 +1178,14 @@ es-MX:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Tal o cual
             MOVES.Rest: Ninguna
+      Mikelab_locationAt:
+        text: 'localización x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: color al azar
+      Mikelab_removeBehaviorSimple:
+        text: gráfico {SPRITE} detiene {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
@@ -950,6 +1204,7 @@ es-MX:
             '"right"': derecha
             '"left"': izquierda
       Mikelab_sprite:
+        text: nuevo gráfico de {COSTUME} en {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -986,6 +1241,8 @@ es-MX:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: cuando se hace clic con el ratón
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -993,19 +1250,49 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+      Mikelab_xLocationOf:
+        text: coordenada x de {SPRITE}
+      Mikelab_yLocationOf:
+        text: coordenada y de {SPRITE}
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
+      Vector_createSpriteWith:
+        text: |-
+          crear gráfico
+          hacer{STATEMENT}
       Vector_log:
         text: registro de mensaje {MESSAGE}
       Vector_positionCenter:
         text: centro
+      Vector_push:
+        text: establecer velocidad {VECTOR}
+      Vector_randomLocation:
+        text: posición aleatoria
+      Vector_setColor:
+        text: establecer color para {COLOR}
+      Vector_setSize:
+        text: establecer ancho {WIDTH} altura {HEIGHT}
+      Vector_teleportTo:
+        text: establecer posición {POSITION}
       Vector_vectorNorth:
         text: norte
+      Vector_where:
+        text: cada gráfico donde {PROPERTY} es {VALUE} hacer{STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": color
+      aalab_addBehaviorForDuration:
+        text: gráfico aalab {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
+      aalab_addBehaviorUntilBoolean:
+        text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+      aalab_addToSpriteGroup:
+        text: añadir gráfico {SPRITE} a grupo {GROUP}
       aalab_changeGroupPropBy:
+        text: cambiar grupo {GROUP} {PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1013,15 +1300,62 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-            '"direction"': dirección de movimiento
-            '"tint"': tinte
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+      aalab_createPropertyGroup:
+        text: |-
+          hacer un nuevo grupo de gráficos llamado {VAR}
+          de todos los gráficos {COSTUME}
+      aalab_createSpriteGroup:
+        text: hacer un nuevo grupo de gráficos llamado {VAR}
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': este
+      aalab_prompt:
+        text: preguntar {MESSAGE}
+      aalab_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+      binary_drawBin:
+        text: dibujar binario {BIN}
+      binary_drawBinScreen:
+        text: |-
+          dibujar pantalla
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: dibujar decimal {DEC}
+      binary_drawPixelHere:
+        text: establecer píxel {VAL}
+        options:
+          VAL:
+            '0': desactivado
+            '1': activado
+            '"toggle"': alternar
+      binary_drawString:
+        text: dibujar cadena {STR}
+      binary_goTo:
+        text: saltar a {LOC}
+      binary_goToHome:
+        text: saltar a la parte superior izquierda
+      binary_gridSize:
+        text: definir tamaño de cuadrícula {SIZE}
       binary_move:
+        text: mover {DIR}
         options:
           DIR:
             '"up"': arriba

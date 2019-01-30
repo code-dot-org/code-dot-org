@@ -1758,3 +1758,27 @@ de:
               name: Binäre Armbänder
         gamelab:
           title: Spielelabor
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'
+            Going Places Safely:
+              name: Sicher unterwegs
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+            Spelling Bee:
+              name: Buchstabierwettbewerb
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'

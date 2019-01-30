@@ -930,6 +930,13 @@ he:
         לפתור את החידה, פרח סגול יכול להכיל צוף 1 או להיות ריק...אבל לא תדע מראש כמה
         יש עד שתריץ את הקוד! \n\nהישמר שלא לנסות לאסוף צוף מפרח סגול שלא מכיל כלל
         צוף. \nעליך לבדוק בתחילה אם כמות הצוף בפרח שווה ל-1 בעזרת הבלוק \"אם צוף\"."
+      Ryan_Demo: "בואו נגרום למוּס הזה לרקוד!\n\nגררו אל חלל העבודה את הבלוק \n\n
+        <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title
+        name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title
+        name=\"DIR\">-1</title></block></xml>\n\nחברו אותו מתחת לבלוק \n\n<xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        \n\nהרקדן שלכם אמור להתחיל צעד ריקוד חדש אחרי התיבה הרביעית.\n\n**תיבות**
+        משמשות כדי ״לספור״ זמן במוזיקה. במדריך הזה, תיבה נמשכת תמיד 4 פעימות."
       Testing Quantum Farmer: "וואו, תראו את זה!\nאני לא יודע כמה אתים מלאי עפר צריך
         בשביל למלא את הבור הזה.\nהאם תוכלו לכתוב תוכנה שמשתמשת שוב ושוב בבלוק 'מלא'
         עד שהבור יתמלא?  "
@@ -983,6 +990,9 @@ he:
       courseA_collector_loops2_2018: |-
         אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019: |-
+        אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
+        <xml><block type="collector_collect"/></xml>
       courseA_collector_preLoops7: |-
         אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
         <xml><block type="collector_collect"/></xml>
@@ -990,6 +1000,8 @@ he:
         אחד אשר הולך לגרום לציפור להתרסק. \nזרוק אותו ע\"י הסרתו משאר הבלוקים וגרור
         אותו בחזרה אל תיבת הכלים."
       courseA_maze_ramp3b_2018: "ישנו בלוק עודף בסוף הקוד הזה! \n\nגרור אותו בחזרה
+        אל תיבת הכלים כדי להיפטר ממנו."
+      courseA_maze_ramp3b_2019: "ישנו בלוק עודף בסוף הקוד הזה! \n\nגרור אותו בחזרה
         אל תיבת הכלים כדי להיפטר ממנו."
       courseA_maze_ramp4_2018: |-
         *"עקוב אחר המסלול והבא אותי אל החזיר הטיפשי"*
@@ -1002,16 +1014,29 @@ he:
       courseB_Scrat_ramp1_2018: כדי להביא את סקראט הסנאי אל הבלוט חבר את הבלוק <xml><block
         type="maze_moveEast"/></xml> אל החלק התחתון של הבלוק <xml><block type="when_run"/></xml>
         ואז לחץ על "הרץ ▶"!
+      courseB_Scrat_ramp1_2019: כדי להביא את סקראט הסנאי אל הבלוט חבר את הבלוק <xml><block
+        type="maze_moveEast"/></xml> אל החלק התחתון של הבלוק <xml><block type="when_run"/></xml>
+        ואז לחץ על "הרץ ▶"!
       courseB_Scrat_ramp3b_2018: "ישנו בלוק עודף בסוף הקוד הזה! \n\nגרור אותו בחזרה
         אל תיבת הכלים כדי להיפטר ממנו."
+      courseB_Scrat_ramp3b_2019: "ישנו בלוק עודף בסוף הקוד הזה! \n\nגרור אותו בחזרה
+        אל תיבת הכלים כדי להיפטר ממנו."
       courseB_iceage_loops1: עזור לסקראט הסנאי לחצות את הקרח החלקלק כדי להגיע לבלוט!
+      courseB_iceage_loops1_2019: עזור לסקראט הסנאי לחצות את הקרח החלקלק כדי להגיע
+        לבלוט!
       courseB_iceage_loops2: השתמש גם בבלוק <xml><block type="maze_moveWest"/></xml>
         וגם בבלוק <xml><block type="maze_moveSouth"/></xml> כדי להגיע אל הבלוט!
+      courseB_iceage_loops2_2019: השתמש גם בבלוק <xml><block type="maze_moveWest"/></xml>
+        וגם בבלוק <xml><block type="maze_moveSouth"/></xml> כדי להגיע אל הבלוט!
       courseB_iceage_loops3: האם תוכל להשתמש רק בבלוק אחד מסוג <xml><block type="maze_moveWest"/></xml>
+        כדי להגיע אל הבלוט? נסה להשתמש בלולאה!
+      courseB_iceage_loops3_2019: האם תוכל להשתמש רק בבלוק אחד מסוג <xml><block type="maze_moveWest"/></xml>
         כדי להגיע אל הבלוט? נסה להשתמש בלולאה!
       courseB_playLab_events1: "משחק זה נקרא \"מעבדת הצעצועים\". \n\nנסה לראות אם
         תבין מה עושה בדיוק כל בלוק."
       courseB_playLab_events1_2018: "משחק זה נקרא \"מעבדת הצעצועים\". \n\nנסה לראות
+        אם תבין מה עושה בדיוק כל בלוק."
+      courseB_playLab_events1_2019: "משחק זה נקרא \"מעבדת הצעצועים\". \n\nנסה לראות
         אם תבין מה עושה בדיוק כל בלוק."
       courseC_PlayLab_events8: |-
         האם אתה יכול לגרום לוואדלס (שחקן 1) לנגן צליל "מטרה" ולומר "אאוץ'!" אם הוא מתנגש בצ'וֹמְפּ?
