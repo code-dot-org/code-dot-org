@@ -162,6 +162,7 @@ applabCommands.button = function (opts) {
   newButton.style.position = 'relative';
   newButton.style.color = color.white;
   newButton.style.backgroundColor = color.applab_button_teal;
+  elementUtils.setDefaultBorderStyles(newButton);
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
