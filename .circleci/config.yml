@@ -19,7 +19,7 @@ jobs:
         - /dtl_candidate_.*/
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:0.5
+      - image: jmkulwik/code-dot-org:0.6
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -43,9 +43,9 @@ jobs:
             - code-dot-org-source-v7-
 
       - checkout
-      - run:
-          name: merge staging
-          command: bin/circle/merge-base
+    #- run:
+        #name: merge staging
+        #command: bin/circle/merge-base
 
       - save_cache:
           key: code-dot-org-source-v7-{{ checksum "/home/circleci/today.date" }}
