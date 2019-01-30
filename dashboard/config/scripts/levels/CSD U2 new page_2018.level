@@ -12,10 +12,20 @@
     "teacher_markdown": "The logistics of creating a new HTML page may be difficult for students.  You can model creating a new page on this level so that students see how the process works.",
     "submittable": "false",
     "parent_level_id": 9030,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/"
+    ],
+    "map_reference": "/docs/concepts/html/lists/"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 23:31:36 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:51:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:31:36 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:51:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 02:32:51 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>
