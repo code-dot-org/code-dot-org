@@ -62,7 +62,7 @@ def fetch_metrics
     'petition_signatures' => 1_774_817,
     'lines_of_code' => 21_238_497_830,
     'project_count' => 35_000_000
-  }.merge(Properties.get(:metrics).delete_if {|_, v| v.nil?} || {})
+  }.merge((Properties.get(:metrics) || {}).delete_if {|_, v| v.nil?})
 end
 
 def fetch_project_count
