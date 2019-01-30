@@ -25,7 +25,6 @@ class SelectSectionDropdown extends React.Component {
 
   onChange = (event) => {
     const sectionId = event.target.value;
-    // TODO: navigate to *same* tab in teacher dashboard
     navigateToHref(`/teacher_dashboard/sections/${sectionId}`);
   };
 
