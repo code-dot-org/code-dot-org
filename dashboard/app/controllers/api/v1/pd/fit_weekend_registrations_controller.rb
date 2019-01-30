@@ -9,6 +9,6 @@ class Api::V1::Pd::FitWeekendRegistrationsController < Api::V1::Pd::FormsControl
   end
 
   def on_successful_create
-    @fit_registration.accepted? if @application.enroll_user
+    @application.enroll_user if @fit_registration.accepted?
   end
 end
