@@ -203,16 +203,19 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncSetSections = () => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
 
-  $.ajax({
-    method: 'GET',
-    url: '/dashboardapi/sections',
-    dataType: 'json'
-  }).success(sections => {
-    dispatch(setSections(sections));
-    dispatch({type: ASYNC_LOAD_END});
-  }).fail(err => {
-    console.error(err.message);
-    dispatch({type: ASYNC_LOAD_END});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      method: 'GET',
+      url: '/dashboardapi/sections',
+      dataType: 'json'
+    }).success(sections => {
+      dispatch(setSections(sections));
+      dispatch({type: ASYNC_LOAD_END});
+      resolve();
+    }).fail(err => {
+      dispatch({type: ASYNC_LOAD_END});
+      reject(new Error(err.message));
+    });
   });
 };
 
