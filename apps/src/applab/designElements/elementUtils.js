@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
+import color from "../../util/color";
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -179,4 +180,19 @@ export function getScreens() {
 
 export function getDefaultScreenId() {
   return getId(getScreens()[0]);
+}
+
+export function setDefaultBorderStyles(element) {
+  if (element.style.borderStyle === '') {
+    element.style.borderStyle = 'solid';
+  }
+  if (element.style.borderWidth === '') {
+    element.style.borderWidth = '0px';
+  }
+  if (element.style.borderColor === '') {
+    element.style.borderColor = color.black;
+  }
+  if (element.style.borderRadius === '') {
+    element.style.borderRadius = '0px';
+  }
 }
