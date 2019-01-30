@@ -280,18 +280,16 @@ class Blockly < Level
 
       # For historical reasons, `localized_instructions` and
       # `localized_authored_hints` should happen independent of `should_localize?`
-      # TODO: elijah: update these instructions values to new names once we
-      # migrate to the new keys
-      set_unless_nil(level_options, 'instructions', localized_short_instructions)
+      set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
         if script && !script.localize_long_instructions?
-          level_options.delete('markdownInstructions')
+          level_options.delete('longInstructions')
         else
-          set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
+          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         end
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
