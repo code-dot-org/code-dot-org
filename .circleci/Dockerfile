@@ -57,7 +57,7 @@ RUN wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz && \
     rm -r ruby-2.5.0
 
 # install bundler
-RUN gem install bundler && \
+RUN gem install bundler -v 1.17 && \
     mkdir -p /usr/local/bundle && \
     chown -R circleci /usr/local/bundle
 
