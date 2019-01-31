@@ -11644,6 +11644,13 @@ zh-CN:
       Room Escape Workshop - 9-2: "# 点击钥匙\\r\n\\r\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00\nPM.png\" style=\"width:170px;float:right\">\\r\n\\r\n一旦用户点击了钥匙，要显示为他们拿到了它。你可以通过把钥匙移到房间下面的角落来做到这一点。\\r\n\\r\n#这样做\\r\n\\r\n* 添加一个`onEvent`（当事件发生时）的模块用于用户点单击该键时触发。\\r\n* 在 `onEvent`（当事件发生时）模块内: \\r\n\\t* 使用 `setPosition`（设置位置） 将钥匙移到屏幕的下角。"
       Room Escape Workshop - 9: "# 点击钥匙\\r\n\\r\n<img src=\"https://images.code.org/349cff555af4337118791d84acf1a5b2-image-1490371172781.59.08\nAM.png\" style=\"width:200px;float:right\">\\r\n\\r\n一旦用户点击了钥匙，要显示为他们拿到了它。你可以通过把钥匙移到房间下面的角落来做到这一点。\\r\n\\r\n# 这样做\\r\n\\r\n* 在房间的右下角添加一个钥匙图像\\r\n* 在设计模式下将钥匙设置为隐藏"
       Room Escape Workshop - free play: "# 你做到了！\\r\n\\r\n你制作了一个密室逃脱游戏！现在是时候定制它了。 \\r\n\\r\n考虑一下：\\r\n\\r\n*\n添加更多房间\\r\n* 添加更多用户可以互动的东西\\r\n* 添加更多的房间款式"
+      Ryan_Demo: |-
+        让这只驼鹿舞动起来吧！
+
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">新舞者</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">线条</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。舞者应在第四个小节后开始新的动作。
+
+
+        **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
       SG Add Subgoals practice: |-
         # 现在试着添加子目标！\r
         \r
@@ -13064,6 +13071,7 @@ zh-CN:
         \r
         * 写代码在绿色椭圆后面画一个橙色的椭圆。\r
         * 别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。
+      allthethings_ttscsf contained: "帮助农夫走过这条路来找到所有的莴苣\\r\n\\r\n这一关中，莴苣会在每条路的最末端生长。如果她的前面有路，农夫会一直往前走。否则，她需要采摘所有的莴苣，然后转弯继续在路上走。 \\r\n\\r\n\\r\n\\r\n"
       allthethings_ttscsp: |-
         # 练习试试不同的事件类型
 
@@ -13380,11 +13388,19 @@ zh-CN:
         ## 是时候回到陆地。请帮助我放一些石头，这样我不会掉下去！\r
         \r
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## 是时候回到陆地。请帮助我放一些石头，这样我不会掉下去！\r
+        \r
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## 帮我建一些台阶来观看船驶离。\r
         \r
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2018: |-
+        ## 帮我建一些台阶来观看船驶离。\r
+        \r
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
         ## 帮我建一些台阶来观看船驶离。\r
         \r
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -13408,6 +13424,16 @@ zh-CN:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        画家看到远处有些滑稽的东西。画出你认为他看到的东西。\r
+        \r
+        ___\r
+        ### 点子\r
+        \r
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         帮助艺术家向前画这条线两次。\r
         \r
@@ -13416,10 +13442,17 @@ zh-CN:
         帮助艺术家向前画这条线两次。\r
         \r
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        帮助艺术家向前画这条线两次。\r
+        \r
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: |-
         我们的艺术家试图画一条线五次, 但还是不能把它的画好。你能帮忙吗？\r
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif) 
       courseA_artist_loops3_2018: |-
+        我们的艺术家试图画一条线五次, 但还是不能把它的画好。你能帮忙吗？\r
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif) 
+      courseA_artist_loops3_2019: |-
         我们的艺术家试图画一条线五次, 但还是不能把它的画好。你能帮忙吗？\r
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif) 
       courseA_artist_loops4: |-
@@ -13432,11 +13465,20 @@ zh-CN:
         name="TIMES" config="2-6">5</title></block></xml>循环画这条线5 次！\r
         \r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        现在使用 一个<xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml>循环画这条线5 次！\r
+        \r
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ## 画一条7步长的线。这将成为我们的地平线。\r
         \r
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
+        ## 画一条7步长的线。这将成为我们的地平线。\r
+        \r
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
         ## 画一条7步长的线。这将成为我们的地平线。\r
         \r
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
@@ -13448,6 +13490,10 @@ zh-CN:
         ## 让我们在后面放一座漂亮的小山。\r
         \r
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## 让我们在后面放一座漂亮的小山。\r
+        \r
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## 使用 <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -13455,6 +13501,12 @@ zh-CN:
         \r
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
+        ## 使用 <xml><block
+        type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        循环添加波浪到水中。\r
+        \r
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2019: |-
         ## 使用 <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         循环添加波浪到水中。\r
@@ -13474,11 +13526,19 @@ zh-CN:
         ## 我们需要一把梯子到船上去。\r
         \r
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## 我们需要一把梯子到船上去。\r
+        \r
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9: |-
         ##** 挑战: ** 通向码头的楼梯坏了。 帮我修好它。\r
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018: |-
+        ## ** 挑战: ** 通向码头的楼梯坏了。 帮我修好它。
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
         ## ** 挑战: ** 通向码头的楼梯坏了。 帮我修好它。
 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
@@ -13498,6 +13558,14 @@ zh-CN:
         这里有一些点子: \r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        可以使用循环在一行中绘制多条线。\r
+        \r
+        你能画一座房子吗？让它看起来和你喜欢的一样！尝试查找重复的模式! \r
+        \r
+        这里有一些点子: \r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2: |-
         ** 小鸟啾啾！**\r
         \r
@@ -13507,6 +13575,10 @@ zh-CN:
         \r
         使用工具箱中的模块来绘制这三个帐篷。
       courseA_artist_loops_challenge2a_2018: |-
+        *"帮我把营地做好!"* \r 
+        \r
+        使用工具箱中的模块来绘制这三个帐篷。
+      courseA_artist_loops_challenge2a_2019: |-
         *"帮我把营地做好!"* \r 
         \r
         使用工具箱中的模块来绘制这三个帐篷。
@@ -13535,7 +13607,12 @@ zh-CN:
         将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。
       courseA_collector_loops12: "*\"尤里卡! 拿到尽可能多的宝藏！\"*\\r\n(你不必得到全部。）"
       courseA_collector_loops12_2018: "*\"尤里卡! 拿到尽可能多的宝藏！\"*\\r\n(你不必得到全部。）"
+      courseA_collector_loops12_2019: "*\"尤里卡! 拿到尽可能多的宝藏！\"*\\r\n(你不必得到全部。）"
       courseA_collector_loops1_2018: |-
+        ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\r
+        \r
+        将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。
+      courseA_collector_loops1_2019: |-
         ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\r
         \r
         将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。
@@ -13543,10 +13620,13 @@ zh-CN:
         得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \\r\n  <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
+      courseA_collector_loops3_2019: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops_challenge1: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
       courseA_collector_loops_challenge1_2018: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
+      courseA_collector_loops_challenge1_2019: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
       courseA_collector_preLoops1: "这是冒险家罗瑞尔!\\r\n\\r\n按 \"运行\", 看到她走到宝藏, 并拿到它。"
       courseA_collector_preLoops2: "很好！现在你可以自己添加代码了！\\r\n\\r\n粘贴一个![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\n模块到程序的底部, 并单击 \"运行\"!"
       courseA_collector_preLoops3: "要拿到宝藏,粘贴两个![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)\n模块和一个 ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\n 模块到程序的底部, 然后单击 \"运行\"!"
@@ -13557,18 +13637,32 @@ zh-CN:
       courseA_harvester_forVideo: 你能只用**一个**移动模块来采摘所有玉米吗？
       courseA_harvester_loops1: 帮助收割者采摘所有的玉米！
       courseA_harvester_loops10: 帮助收割者捡起所有5束玉米！
+      courseA_harvester_loops10_2019: 帮助收割者捡起所有5束玉米！
       courseA_harvester_loops11: "试试自己做一个！\n"
+      courseA_harvester_loops11_2019: "试试自己做一个！\n"
+      courseA_harvester_loops1_2019: 帮助收割者采摘所有的玉米！
       courseA_harvester_loops2: 收割者需要采摘所有的玉米！找到规律了吗？
+      courseA_harvester_loops2_2019: 收割者需要采摘所有的玉米！找到规律了吗？
       courseA_harvester_loops3: 你能只用**一个**移动模块来采摘所有玉米吗？
+      courseA_harvester_loops3_2019: 你能只用**一个**移动模块来采摘所有玉米吗？
       courseA_harvester_loops4: |-
         *"我需要找到哪里错了！"*\r
         \r
         你能帮助收割者找到她代码里的错误吗？
+      courseA_harvester_loops4_2019: |-
+        *"我需要找到哪里错了！"*\r
+        \r
+        你能帮助收割者找到她代码里的错误吗？
       courseA_harvester_loops5: 自己试一试！你能也采摘最后的玉米吗？
+      courseA_harvester_loops5_2019: 自己试一试！你能也采摘最后的玉米吗？
       courseA_harvester_loops5a: 看看所有玉米？你能自己采摘它们吗？
+      courseA_harvester_loops5a_2019: 看看所有玉米？你能自己采摘它们吗？
       courseA_harvester_loops5b: 你能改变代码来让收割者采摘所有玉米吗？
+      courseA_harvester_loops5b_2019: 你能改变代码来让收割者采摘所有玉米吗？
       courseA_harvester_loops6: "你需要**一个** <xml><block\ntype=\"maze_moveWest\"></block></xml>模块和**一个** <xml><block type=\"maze_moveNorth\"></block></xml>\n模块来完成这关！"
+      courseA_harvester_loops6_2019: "你需要**一个** <xml><block\ntype=\"maze_moveWest\"></block></xml>模块和**一个** <xml><block type=\"maze_moveNorth\"></block></xml>\n模块来完成这关！"
       courseA_harvester_loops7: '自己试试吧！ '
+      courseA_harvester_loops7_2019: '自己试试吧！ '
       courseA_harvester_loops8: |-
         这是同样的难题，但现在你需要用这个模块重复**三次**，而不是**两次**：\r
         \r
@@ -13578,48 +13672,71 @@ zh-CN:
         config="2-10">3</title>\r
           </block></xml>
       courseA_harvester_loops9: 你能想出如何收集*所有*玉米吗？
+      courseA_harvester_loops9_2019: 你能想出如何收集*所有*玉米吗？
       courseA_harvester_seq1: 帮助收割者采摘玉米！
       courseA_harvester_seq10: 收割者需要采摘所有的玉米！找到规律了吗？
+      courseA_harvester_seq10_2019: 收割者需要采摘所有的玉米！找到规律了吗？
       courseA_harvester_seq11: 自己试试吧！采摘所有玉米。
+      courseA_harvester_seq11_2019: 自己试试吧！采摘所有玉米。
       courseA_harvester_seq12: "*谢谢你帮助我！*\n\\r\n\\r\n采摘所有的玉米。"
+      courseA_harvester_seq12_2019: "*谢谢你帮助我！*\n\\r\n\\r\n采摘所有的玉米。"
       courseA_harvester_seq13: 帮助农夫采摘玉米！
+      courseA_harvester_seq13_2019: 帮助农夫采摘玉米！
+      courseA_harvester_seq1_2019: 帮助收割者采摘玉米！
       courseA_harvester_seq2: '用<xml><block type="maze_moveWest"/></xml>模块 3 次来让收割者到达玉米的位置！ '
+      courseA_harvester_seq2_2019: '用<xml><block type="maze_moveWest"/></xml>模块 3 次来让收割者到达玉米的位置！ '
       courseA_harvester_seq3: 用<xml><block type="maze_moveNorth"/></xml>模块 3 次来让收割者到达玉米的位置，最后别忘了捡起它们。
+      courseA_harvester_seq3_2019: 用<xml><block type="maze_moveNorth"/></xml>模块 3 次来让收割者到达玉米的位置，最后别忘了捡起它们。
       courseA_harvester_seq4: 添加*一个*模块来帮助农夫采摘玉米。
+      courseA_harvester_seq4_2019: 添加*一个*模块来帮助农夫采摘玉米。
       courseA_harvester_seq5: 能找出这代码哪里出了问题吗？改正它来帮助收割者收获玉米。
+      courseA_harvester_seq5_2019: 能找出这代码哪里出了问题吗？改正它来帮助收割者收获玉米。
       courseA_harvester_seq6: 自己试一试！
+      courseA_harvester_seq6_2019: 自己试一试！
       courseA_harvester_seq7: 你得在两个方向上移动才能找到那朵花! 帮助收割者选择正确的方向。
+      courseA_harvester_seq7_2019: 你得在两个方向上移动才能找到那朵花! 帮助收割者选择正确的方向。
       courseA_harvester_seq8: 现在收割者需要采摘玉米两次！
+      courseA_harvester_seq8_2019: 现在收割者需要采摘玉米两次！
       courseA_harvester_seq9: 添加两个模块来完成这个关卡！
+      courseA_harvester_seq9_2019: 添加两个模块来完成这个关卡！
       courseA_maze_ramp2_2018: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶运行\"。\n"
+      courseA_maze_ramp2_2019: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶运行\"。\n"
       courseA_maze_ramp2a_2018: "将<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
       courseA_maze_ramp3_2018: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将它从其它模块上移除，并拖回工具箱来扔掉。"
       courseA_maze_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
+      courseA_maze_ramp3a_2019: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
       courseA_maze_ramp3b_2018: "在这个代码的末尾有一个多余的代码块!\n\n把它拖回工具箱来删除它。"
+      courseA_maze_ramp3b_2019: "在这个代码的末尾有一个多余的代码块!\n\n把它拖回工具箱来删除它。"
       courseA_maze_ramp4_2018: "*\"沿着这条路带我去找那只笨猪。\"*\\r\n\\r\n躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
       courseA_maze_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
+      courseA_maze_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018: |-
         *"沿着这条路，让我到猪那里！"*\r
         \r
         躲开TNT炸药。
       courseA_maze_ramp5a_2018: 试试自己完成它！
+      courseA_maze_ramp5a_2019: 试试自己完成它！
       courseA_maze_seq1: '*"摆弄这些模块并试着把我带到坏猪那里！"*'
       courseA_maze_seq10: |-
         **挑战：** 绕开TNT 把鸟带到猪那里！\r
         \r
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq10_2018: "**挑战：** 绕开TNT 把鸟带到猪那里！"
+      courseA_maze_seq10_2019: "**挑战：** 绕开TNT 把鸟带到猪那里！"
       courseA_maze_seq11: |-
         到了更短的关卡了！往一个方向移动，然后另一个方向把鸟带到猪那里。\r
         \r
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018: "到了更短的关卡了！往一个方向移动，然后另一个方向把鸟带到猪那里。\\r\n\\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
+      courseA_maze_seq11_2019: "到了更短的关卡了！往一个方向移动，然后另一个方向把鸟带到猪那里。\\r\n\\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
       courseA_maze_seq12: |-
         抓住那只猪！\r
         \r
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: "抓住那只猪！\\r\n\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+      courseA_maze_seq12_2019: "抓住那只猪！\\r\n\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq1_2018: '*"摆弄这些模块并试着把我带到坏猪那里！"*'
+      courseA_maze_seq1_2019: '*"摆弄这些模块并试着把我带到坏猪那里！"*'
       courseA_maze_seq2: |-
         *"一个缺陷！修复代码把我带到猪那里。"*\r
         \r
@@ -13645,7 +13762,12 @@ zh-CN:
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: 尝试一下。
+      courseA_maze_seq5_2019: 尝试一下。
       courseA_maze_seq5a_2018: |-
+        *"在这里，小猪！"*\r
+        \r
+        要在代码最后增加什么来让小鸟到达猪那里？
+      courseA_maze_seq5a_2019: |-
         *"在这里，小猪！"*\r
         \r
         要在代码最后增加什么来让小鸟到达猪那里？
@@ -13654,6 +13776,7 @@ zh-CN:
         \r
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: 往一条路走，然后走另一条把鸟带到猪那里！
+      courseA_maze_seq6_2019: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq7: |-
         找出什么缺少了，然后添加模块使鸟到达猪那！\r
         \r
@@ -13667,6 +13790,7 @@ zh-CN:
         \r
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: 通过这关，把鸟带到猪那！
+      courseA_maze_seq8_2019: 通过这关，把鸟带到猪那！
       courseA_maze_seq9: |-
         ** 挑战: ** 通过添加模块把鸟带到猪那里来调试这个关卡! \r
         \r
@@ -13677,6 +13801,7 @@ zh-CN:
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
       courseA_maze_seq_challenge1_2018: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
+      courseA_maze_seq_challenge1_2019: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
       courseA_playLab_events3: |-
         通过连接已经在工作区的<xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
@@ -13699,11 +13824,25 @@ zh-CN:
           </block></xml>事件模块帮助乔治狗移动。\r
         \r
         把乔治带到旗那里来过此关卡！
+      courseA_playLab_events3_2019: |-
+        通过连接已经在工作区的<xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> 模块到<xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">left</title>\r
+          </block></xml>事件模块帮助乔治狗移动。\r
+        \r
+        把乔治带到旗那里来过此关卡！
       courseA_playLab_events4: 现在，添加更多的模块，来让乔治在右方向键按下时，向右移动。
       courseA_playLab_events4_2018: 现在，添加另一个模块，来让乔治在右方向键按下时，向右移动。
+      courseA_playLab_events4_2019: 现在，添加另一个模块，来让乔治在右方向键按下时，向右移动。
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events5_2019: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events7_2018: "*任意发挥:* 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?"
+      courseA_playLab_events7_2019: "*任意发挥:* 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?"
       courseA_playlab_events_challenge1: |-
         点击奥丽芙将使罗宾出现！
         你能编写代码来显示其余的人物吗？\r
@@ -13713,6 +13852,14 @@ zh-CN:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge1_2018: |-
+        点击奥丽芙将使罗宾出现！
+        你能编写代码来显示其余的人物吗？\r
+        \r
+        在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      courseA_playlab_events_challenge1_2019: |-
         点击奥丽芙将使罗宾出现！
         你能编写代码来显示其余的人物吗？\r
         \r
@@ -13742,6 +13889,13 @@ zh-CN:
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challenge2_2019: |-
+        当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？\r
+        \r
+        在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseA_playlab_events_challengeClone: |-
         我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\r
         \r
@@ -13751,14 +13905,23 @@ zh-CN:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseB_Scrat_ramp1_2018: "让斯奎特到达橡子，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
+      courseB_Scrat_ramp1_2019: "让斯奎特到达橡子，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
       courseB_Scrat_ramp2_2018: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶ 运行\"。\n"
+      courseB_Scrat_ramp2_2019: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶ 运行\"。\n"
       courseB_Scrat_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
+      courseB_Scrat_ramp3a_2019: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
       courseB_Scrat_ramp3b_2018: |-
         在这个代码的末尾有一个多余的代码块!
 
         把它拖回工具箱来删除它。
+      courseB_Scrat_ramp3b_2019: |-
+        在这个代码的末尾有一个多余的代码块!
+
+        把它拖回工具箱来删除它。
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
+      courseB_Scrat_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018: 试试自己完成它！
+      courseB_Scrat_ramp5a_2019: 试试自己完成它！
       courseB_artist_loops10: |-
         运用你已经学到的知识来画一幅你认为艺术家在回到家的时会看到的画。\r
         \r
@@ -13779,19 +13942,34 @@ zh-CN:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2019: |-
+        运用你已经学到的知识来画一幅你认为艺术家在回到家的时会看到的画。\r
+        \r
+        ___\r
+        ###点子\r
+        \r
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops6: 在灌木丛后面是一条开满美丽花朵的藤。你能够爬上藤看它延到哪里吗？
       courseB_artist_loops6_2018: 在灌木丛后面是一条开满美丽花朵的藤。你能够爬上藤看它延到哪里吗？
+      courseB_artist_loops6_2019: 在灌木丛后面是一条开满美丽花朵的藤。你能够爬上藤看它延到哪里吗？
       courseB_artist_loops7: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops7_2018: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
+      courseB_artist_loops7_2019: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops_challenge1: '*"是时候掷骰子了! 你能帮我画这些吗？"*'
       courseB_artist_loops_challenge1_2018: '*"是时候掷骰子了! 你能帮我画这些吗？"*'
+      courseB_artist_loops_challenge1_2019: '*"是时候掷骰子了! 你能帮我画这些吗？"*'
       courseB_artist_loops_challenge2: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
       courseB_artist_loops_challenge2_2018: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
+      courseB_artist_loops_challenge2_2019: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
       courseB_collector_loops1: |-
         ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\r
         \r
         将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。
       courseB_collector_loops1_2018: "** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\\r\n\\r\n将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。"
+      courseB_collector_loops1_2019: "** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\\r\n\\r\n将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种珠宝来通过此关卡。"
       courseB_collector_loops2: |-
         移动罗瑞尔到宝藏, 然后使用<xml><block type="collector_collect"/></xml>模块来捡起它。\r
         \r
@@ -13802,8 +13980,14 @@ zh-CN:
         \r
         \r
         拿到所有四堆宝藏来通过此关卡。
+      courseB_collector_loops2_2019: |-
+        移动罗瑞尔到宝藏, 然后使用<xml><block type="collector_collect"/></xml>模块来捡起它。\r
+        \r
+        \r
+        拿到所有四堆宝藏来通过此关卡。
       courseB_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseB_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
+      courseB_collector_loops3_2019: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseB_collector_loops3_predict1: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_collector_loops_challenge2a: |-
         *”让我们得到宝藏！“*\r
@@ -13813,38 +13997,62 @@ zh-CN:
         *”让我们得到宝藏！“*\r
         \r
         帮助罗瑞尔得到至少**5** 片宝藏来完成此关卡。
+      courseB_collector_loops_challenge2a_2019: |-
+        *”让我们得到宝藏！“*\r
+        \r
+        帮助罗瑞尔得到至少**5** 片宝藏来完成此关卡。
       courseB_collector_prog3: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_iceage_loops1: 帮助斯奎特穿过溜滑的冰去拿到橡子！
       courseB_iceage_loops10: 帮助斯奎特走过去拿到橡子！
+      courseB_iceage_loops10_2019: 帮助斯奎特走过去拿到橡子！
       courseB_iceage_loops11: 帮助斯奎特得到橡子！
+      courseB_iceage_loops11_2019: 帮助斯奎特得到橡子！
       courseB_iceage_loops11_forVideo: 帮助斯奎特得到橡子！
       courseB_iceage_loops12: 用各种方法来拿到橡子！
+      courseB_iceage_loops12_2019: 用各种方法来拿到橡子！
+      courseB_iceage_loops1_2019: 帮助斯奎特穿过溜滑的冰去拿到橡子！
       courseB_iceage_loops2: "用 <xml><block type=\"maze_moveWest\"/></xml>\n和 <xml><block type=\"maze_moveSouth\"/></xml> 模块来获得橡子！"
+      courseB_iceage_loops2_2019: "用 <xml><block type=\"maze_moveWest\"/></xml>\n和 <xml><block type=\"maze_moveSouth\"/></xml> 模块来获得橡子！"
       courseB_iceage_loops3: 你能只用一个 <xml><block type="maze_moveWest"/></xml>模块来获得橡子吗？试试用循环！
+      courseB_iceage_loops3_2019: 你能只用一个 <xml><block type="maze_moveWest"/></xml>模块来获得橡子吗？试试用循环！
       courseB_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
+      courseB_iceage_loops4_2019: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseB_iceage_loops5: 你能再增加一个循环来获得橡子吗？
       courseB_iceage_loops6: 你能增加一个循环到达橡子吗？
+      courseB_iceage_loops6_2019: 你能增加一个循环到达橡子吗？
       courseB_iceage_loops7: "斯奎特真的想要那个橡子！\n"
+      courseB_iceage_loops7_2019: "斯奎特真的想要那个橡子！\n"
       courseB_iceage_loops8: '你能修好这段代码吗？ '
+      courseB_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseB_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseB_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseB_maze_seq3: '*"修复代码来让我到达那只猪！"*'
       courseB_maze_seq3_2018: '*"修复代码来让我到达那只猪！"*'
       courseB_maze_seq9: "**挑战：**绕开TNT炸药，让鸟到达猪那里。"
       courseB_maze_seq9_2018: "**挑战：**绕开破冰，让斯奎特到达橡子那里。"
+      courseB_maze_seq9_2019: "**挑战：**绕开破冰，让斯奎特到达橡子那里。"
       courseB_maze_seq9_challenge1: "那只猪现在藏在哪里？"
       courseB_maze_seqCold: "**挑战：**通过添加模块来调试这关, 让鸟到达猪那里!"
       courseB_maze_seq_challenge1: 每种移动模块你只有4个。你能在用完模块前，找到一条路吗？
       courseB_maze_seq_challenge1_2018: 每种移动模块你只有4个。你能在用完模块前，找到一条路吗？
+      courseB_maze_seq_challenge1_2019: 每种移动模块你只有4个。你能在用完模块前，找到一条路吗？
       courseB_playLab_events1: "这个游戏叫做\"剧本实验室\"。\\r\n\\r\n看看你能否指出每个模块做了什么。"
       courseB_playLab_events1_2018: "这个游戏叫做\"剧本实验室\"。\\r\n\\r\n看看你能否指出每个模块做了什么。"
+      courseB_playLab_events1_2019: "这个游戏叫做\"剧本实验室\"。\\r\n\\r\n看看你能否指出每个模块做了什么。"
       courseB_playlab_events3: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
       courseB_playlab_events3_2018: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
+      courseB_playlab_events3_2019: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
       courseB_playlab_events4: "骑士时间!  \\r\n\\r\n添加一个事件，当点击左箭头时，让骑士移向龙。"
       courseB_playlab_events4_2018: |-
         骑士时间！到达龙来完成这关。
 
         添加一个事件，当点击左箭头时，让骑士移向龙。
+      courseB_playlab_events4_2019: |-
+        骑士时间！到达龙来完成这关。
+
+        添加一个事件，当点击左箭头时，让骑士移向龙。
       courseB_playlab_events5_2018: "现在添加一个事件, 当你按下右方向键时, 让骑士逃离那个龙。  \n\n将骑士向右移动通过这一关。"
+      courseB_playlab_events5_2019: "现在添加一个事件, 当你按下右方向键时, 让骑士逃离那个龙。  \n\n将骑士向右移动通过这一关。"
       courseB_playlab_events6: |-
         帮助你的骑士得到所有的旗帜！\r
         \r
@@ -13853,10 +14061,16 @@ zh-CN:
         帮助你的骑士得到所有的旗帜！\r
         \r
         要做到这个，你需要添加事件来帮助骑士上下左右移动。
+      courseB_playlab_events6_2019: |-
+        帮助你的骑士得到所有的旗帜！\r
+        \r
+        要做到这个，你需要添加事件来帮助骑士上下左右移动。
       courseB_playlab_events7: "当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！\n\\r\n\\r\n当它们碰撞时，播放一个声音，让它感觉起来像真的一样。\\r\n\\r\n浏览所有的目标，然后撞上龙来通过这关。"
       courseB_playlab_events7_2018: "当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！\n\\r\n\\r\n当它们碰撞时，播放一个声音，让它感觉起来像真的一样。\\r\n\\r\n浏览所有的目标，然后撞上龙来通过这关。"
+      courseB_playlab_events7_2019: "当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！\n\\r\n\\r\n当它们碰撞时，播放一个声音，让它感觉起来像真的一样。\\r\n\\r\n浏览所有的目标，然后撞上龙来通过这关。"
       courseB_playlab_events_challenge1: "大型的动物比赛的时间到了! 当你按`▼`时, 让动物们往下移动。\\r\n\\r\n看谁跑得最快？"
       courseB_playlab_events_challenge1_2018: "大型的动物比赛的时间到了! 当你按`▼`时, 让动物们往下移动。\\r\n\\r\n看谁跑得最快？"
+      courseB_playlab_events_challenge1_2019: "大型的动物比赛的时间到了! 当你按`▼`时, 让动物们往下移动。\\r\n\\r\n看谁跑得最快？"
       courseB_playlab_events_challenge2: |-
         在你点击动物时，让它们消失。\r
         现在用狗先试试，然后帮助其它动物加入进来。你也可以增加声音和计分来做成一个捉动物的游戏！\r
@@ -13867,30 +14081,47 @@ zh-CN:
         现在用狗先试试，然后帮助其它动物加入进来。你也可以增加声音和计分来做成一个捉动物的游戏！\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
+        在你点击动物时，让它们消失。\r
+        现在用狗先试试，然后帮助其它动物加入进来。你也可以增加声音和计分来做成一个捉动物的游戏！\r
+        \r
+        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"BB-8，去拿到那块废旧金属！"_\r
         \r
         小心墙和大木箱。像这样的废旧金属：![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog10: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
       courseB_starWars_prog10_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
+      courseB_starWars_prog10_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
       courseB_starWars_prog11: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续！\"_"
       courseB_starWars_prog11_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续！\"_"
+      courseB_starWars_prog11_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续！\"_"
       courseB_starWars_prog1_2018: |-
+        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"BB-8，去拿到那块废旧金属！"_\r
+        \r
+        小心墙和大木箱。像这样的废旧金属：![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog1_2019: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"BB-8，去拿到那块废旧金属！"_\r
         \r
         小心墙和大木箱。像这样的废旧金属：![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog2: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"获得所有金属。\"_"
       courseB_starWars_prog2_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"获得所有金属。\"_"
+      courseB_starWars_prog2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"获得所有金属。\"_"
       courseB_starWars_prog3: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续，BB-8！\"_"
       courseB_starWars_prog3_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续，BB-8！\"_"
+      courseB_starWars_prog3_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"继续，BB-8！\"_"
       courseB_starWars_prog4: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"拿到它，BB-8！\"_"
       courseB_starWars_prog4_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"拿到它，BB-8！\"_"
+      courseB_starWars_prog4_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"拿到它，BB-8！\"_"
       courseB_starWars_prog5: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
       courseB_starWars_prog5_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
+      courseB_starWars_prog5_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能得到所有的吗？\"_"
       courseB_starWars_prog6: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseB_starWars_prog6_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
+      courseB_starWars_prog6_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseB_starWars_prog7: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"去拿到它！\"_"
       courseB_starWars_prog7_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"去拿到它！\"_"
+      courseB_starWars_prog7_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"去拿到它！\"_"
       courseB_starWars_prog8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8，坚持。"_\r
@@ -13901,8 +14132,14 @@ zh-CN:
         _"BB-8，坚持。"_\r
         \r
         **挑战**：收集所有的废旧金属。
+      courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8，坚持。"_\r
+        \r
+        **挑战**：收集所有的废旧金属。
       courseB_starWars_prog9: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseB_starWars_prog9_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
+      courseB_starWars_prog9_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseC19_playLab_EOC1: |-
         你学到的大量知识太令人惊奇了！让我们一步步做个游戏。\r
         \r
@@ -16886,6 +17123,7 @@ zh-CN:
       course_playlab_variables2: "现在，通过在两个地方改变变量的值来解码海盗的话！  \\r\n-\n\"arrrg\"应该是\"a\" \\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       course_playlab_variables3: "现在，通过在两个地方改变变量的值来解码海盗的话！  \\r\n-\n\"arrrg\"应该是\"a\" \\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       coursea_maze_ramp1_2018: "让小鸟到达猪那里，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
+      coursea_maze_ramp1_2019: "让小鸟到达猪那里，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
       coursef_maze_ramp3: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将其拖回工具箱来扔掉它。"
       coursef_maze_ramp3_2018: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将其拖回工具箱来扔掉它。"
       csd-post-survey-2017-FR: 有什么别的你想说的，关于在课程中的体验吗？

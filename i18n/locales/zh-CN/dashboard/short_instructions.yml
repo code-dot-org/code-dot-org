@@ -1431,6 +1431,7 @@ zh-CN:
       Ryan Doily Step 3: "现在你要把它重复旋转20次！\n那么每次转多少度，迭代20次以后能得到360度呢？"
       Ryan Test Locked Blocks: 这里有个函数叫做“巡逻”。编辑它来让猫向上移动400像素，再向下移动400像素。
       RyanTest3: 这个级别已打开了形状转换功能! 刷新来查看不同的变量。
+      Ryan_Demo: 让驼鹿在 4 个小节后做新动作！
       SG Add Subgoals practice: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       SG U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       SG U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
@@ -1655,6 +1656,7 @@ zh-CN:
       aE8: "现在，让我们把所有东西重复4次来画出这个画框。小心转角 -- 你不能只转90度！\\r\n\\r\n如果转60次3度，就会创建出一个半圆，什么样的代码能创建出1/4圆的转角？"
       allHallows2017: 通过绘制一个正方形320像素的边, 在蜡笔框中框住 Code.org 员工!
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: 做这个
+      allthethings_ttscsf contained: 摘下所有的莴苣(只在有莴苣的时候)。
       artistDebugVideo1: 使用 "重复" 循环在水中添加波浪。
       artistFunctionsVideo1: 按照说明来做出你自己的函数
       artistLoopsK1: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
@@ -1817,33 +1819,47 @@ zh-CN:
       courseA_artist_loops1: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseA_artist_loops10: 帮我放下石头, 免得我掉下去!
       courseA_artist_loops10_2018: 帮我放下石头, 免得我掉下去!
+      courseA_artist_loops10_2019: 帮我放下石头, 免得我掉下去!
       courseA_artist_loops11: 帮助我建楼梯, 让我可以看着船驶离。
       courseA_artist_loops11_2018: 帮助我建楼梯, 让我可以看着船驶离。
+      courseA_artist_loops11_2019: 帮助我建楼梯, 让我可以看着船驶离。
       courseA_artist_loops12: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
       courseA_artist_loops12_2018: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
+      courseA_artist_loops12_2019: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
       courseA_artist_loops1_2018: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
+      courseA_artist_loops1_2019: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseA_artist_loops2: 帮助艺术家两次向前来画这条线。
       courseA_artist_loops2_2018: 帮助艺术家两次向前来画这条线。
+      courseA_artist_loops2_2019: 帮助艺术家两次向前来画这条线。
       courseA_artist_loops3: 往前画一条线五次。
       courseA_artist_loops3_2018: 往前画一条线五次。
+      courseA_artist_loops3_2019: 往前画一条线五次。
       courseA_artist_loops4: 现在, 使用 `重复`循环来绘制这条线五次!
       courseA_artist_loops4_2018: 现在, 使用 `重复`循环来绘制这条线五次!
+      courseA_artist_loops4_2019: 现在, 使用 `重复`循环来绘制这条线五次!
       courseA_artist_loops5: 画一条七步长的线。这将成为我们的地平线。
       courseA_artist_loops5_2018: 画一条七步长的线。这将成为我们的地平线。
+      courseA_artist_loops5_2019: 画一条七步长的线。这将成为我们的地平线。
       courseA_artist_loops6: 让我们在后面放一座漂亮的小山。
       courseA_artist_loops6_2018: 让我们在后面放一座漂亮的小山。
+      courseA_artist_loops6_2019: 让我们在后面放一座漂亮的小山。
       courseA_artist_loops7: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops7_2018: 使用 "重复" 循环在水中添加波浪。
+      courseA_artist_loops7_2019: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops7_forVideo: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops8: 我们需要一个梯子到船上去。
       courseA_artist_loops8_2018: 我们需要一个梯子到船上去。
+      courseA_artist_loops8_2019: 我们需要一个梯子到船上去。
       courseA_artist_loops9: '挑战: 修楼梯。'
       courseA_artist_loops9_2018: '挑战: 修楼梯。'
+      courseA_artist_loops9_2019: '挑战: 修楼梯。'
       courseA_artist_loops_challenge1: 你能画房子吗？让它看起来和你喜欢的一样!
       courseA_artist_loops_challenge1_2018: 你能画房子吗？让它看起来和你喜欢的一样!
+      courseA_artist_loops_challenge1_2019: 你能画房子吗？让它看起来和你喜欢的一样!
       courseA_artist_loops_challenge2: '"你能帮我做两个鸟舍吗？"'
       courseA_artist_loops_challenge2a: '*"帮我把这三个帐篷搭建起来!"*'
       courseA_artist_loops_challenge2a_2018: '*"帮我把这三个帐篷搭建起来!"*'
+      courseA_artist_loops_challenge2a_2019: '*"帮我把这三个帐篷搭建起来!"*'
       courseA_artist_loops_challenge3: 让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？
       courseA_bee_seq1: 摆弄这些模块来帮助蜜蜂获得*一个*花蜜。
       courseA_bee_seq10: 自己试试吧！采集所有花蜜。
@@ -1862,30 +1878,43 @@ zh-CN:
       courseA_collector_loops1: 四处移动罗瑞尔, 得到尽可能多的宝藏!
       courseA_collector_loops10: 帮助罗瑞尔沿着这条道路得到所有的宝藏。
       courseA_collector_loops10_2018: 帮助罗瑞尔沿着这条道路得到所有的宝藏。
+      courseA_collector_loops10_2019: 帮助罗瑞尔沿着这条道路得到所有的宝藏。
       courseA_collector_loops11: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
       courseA_collector_loops11_2018: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
+      courseA_collector_loops11_2019: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
       courseA_collector_loops12: '*"发现宝藏了! 得到尽可能多的财富!"*'
       courseA_collector_loops12_2018: '*"发现宝藏了! 得到尽可能多的财富!"*'
+      courseA_collector_loops12_2019: '*"发现宝藏了! 得到尽可能多的财富!"*'
       courseA_collector_loops1_2018: 四处移动罗瑞尔, 得到尽可能多的宝藏!
+      courseA_collector_loops1_2019: 四处移动罗瑞尔, 得到尽可能多的宝藏!
       courseA_collector_loops2: 收集所有三个土堆来通关。
       courseA_collector_loops2_2018: 收集所有三个土堆来通关。
+      courseA_collector_loops2_2019: 收集所有三个土堆来通关。
       courseA_collector_loops4: 修复罗瑞尔的路径得到所有这些宝藏。
       courseA_collector_loops4_2018: 修复罗瑞尔的路径得到所有这些宝藏。
+      courseA_collector_loops4_2019: 修复罗瑞尔的路径得到所有这些宝藏。
       courseA_collector_loops5: 用你学到的东西来获取所有的宝藏。
       courseA_collector_loops5_2018: 用你学到的东西来获取所有的宝藏。
+      courseA_collector_loops5_2019: 用你学到的东西来获取所有的宝藏。
       courseA_collector_loops6: 在此代码中添加块以获取所有的宝藏。
       courseA_collector_loops6_2018: 在此代码中添加块以获取所有的宝藏。
+      courseA_collector_loops6_2019: 在此代码中添加块以获取所有的宝藏。
       courseA_collector_loops7: 你应该添加什么到这个代码来获得所有的宝藏？
       courseA_collector_loops7_2018: 你应该添加什么到这个代码来获得所有的宝藏？
+      courseA_collector_loops7_2019: 你应该添加什么到这个代码来获得所有的宝藏？
       courseA_collector_loops8: 编写代码来获取所有这些宝藏。
       courseA_collector_loops8_2018: 编写代码来获取所有这些宝藏。
+      courseA_collector_loops8_2019: 编写代码来获取所有这些宝藏。
       courseA_collector_loops9: "** 挑战: ** 宝藏在楼梯最上面! 编写代码来帮助罗瑞尔得到所有宝藏。"
       courseA_collector_loops9_2018: "** 挑战: ** 宝藏在楼梯最上面! 编写代码来帮助罗瑞尔得到所有宝藏。"
+      courseA_collector_loops9_2019: "** 挑战: ** 宝藏在楼梯最上面! 编写代码来帮助罗瑞尔得到所有宝藏。"
       courseA_collector_loops_challenge1: '*"你能帮我找出一些错误吗？"*'
       courseA_collector_loops_challenge1_2018: '*"你能帮我找出一些错误吗？"*'
+      courseA_collector_loops_challenge1_2019: '*"你能帮我找出一些错误吗？"*'
       courseA_collector_loops_challenge2: '得到所有的宝藏! '
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
+      courseA_collector_loops_challenge2kp_2019: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_preLoops1: "这是冒险家罗瑞尔!\\r\n\\r\n按 \"运行\", 看到她走到宝藏, 并拿到它。"
       courseA_collector_preLoops2: "太好了! 现在你可以自己添加代码了! \\r \n\\r \n把\"获取宝藏\" 块拉倒程序的底部, 然后单击 \"运行\"。"
       courseA_collector_preLoops3: 将两个 "向东" 块和一个 "获取宝藏" 块放到程序的底部, 然后单击 "运行"。
@@ -1897,49 +1926,84 @@ zh-CN:
       courseA_harvester_forVideo: 你能只用**一个**移动模块来采摘所有玉米吗？
       courseA_harvester_loops1: 帮助收割者采摘所有的玉米！
       courseA_harvester_loops10: 帮助收割者捡起所有5束玉米！
+      courseA_harvester_loops10_2019: 帮助收割者捡起所有5束玉米！
       courseA_harvester_loops11: "试试自己做一个！\n"
+      courseA_harvester_loops11_2019: "试试自己做一个！\n"
+      courseA_harvester_loops1_2019: 帮助收割者采摘所有的玉米！
       courseA_harvester_loops2: 确保采摘了所有的玉米！
+      courseA_harvester_loops2_2019: 确保采摘了所有的玉米！
       courseA_harvester_loops3: 你能只用**一个**移动模块来采摘所有玉米吗？
+      courseA_harvester_loops3_2019: 你能只用**一个**移动模块来采摘所有玉米吗？
       courseA_harvester_loops4: 你能帮助收割者找到她代码里的缺陷吗?
+      courseA_harvester_loops4_2019: 你能帮助收割者找到她代码里的缺陷吗?
       courseA_harvester_loops5: 自己试一试！你能也采摘最后的玉米吗？
+      courseA_harvester_loops5_2019: 自己试一试！你能也采摘最后的玉米吗？
       courseA_harvester_loops5a: 看看所有的玉米！你能自己采摘它们吗？
+      courseA_harvester_loops5a_2019: 看看所有的玉米！你能自己采摘它们吗？
       courseA_harvester_loops5b: 你能改变代码来让收割者采摘所有玉米吗？
+      courseA_harvester_loops5b_2019: 你能改变代码来让收割者采摘所有玉米吗？
       courseA_harvester_loops6: 你要用**一个**`向南移动`模块和**一个**`向西移动`模块。
+      courseA_harvester_loops6_2019: 你要用**一个**`向南移动`模块和**一个**`向西移动`模块。
       courseA_harvester_loops7: '自己试试吧！ '
+      courseA_harvester_loops7_2019: '自己试试吧！ '
       courseA_harvester_loops8: 这是同一关，但现在你需要重复**三次**！
       courseA_harvester_loops9: 你能想出如何收集所有玉米吗？
+      courseA_harvester_loops9_2019: 你能想出如何收集所有玉米吗？
       courseA_harvester_seq1: 摆弄这些模块来帮助收割者收获这个玉米。
       courseA_harvester_seq10: 确保采摘了所有的玉米！
+      courseA_harvester_seq10_2019: 确保采摘了所有的玉米！
       courseA_harvester_seq11: 自己试试吧！采摘所有玉米。
+      courseA_harvester_seq11_2019: 自己试试吧！采摘所有玉米。
       courseA_harvester_seq12: 捡起所有玉米。
+      courseA_harvester_seq12_2019: 捡起所有玉米。
       courseA_harvester_seq13: 摆弄这些模块来帮助收割者收获玉米。
+      courseA_harvester_seq13_2019: 摆弄这些模块来帮助收割者收获玉米。
+      courseA_harvester_seq1_2019: 摆弄这些模块来帮助收割者收获这个玉米。
       courseA_harvester_seq2: 用三个`向西移动`模块和一个`采摘玉米`模块来通过这关。
+      courseA_harvester_seq2_2019: 用三个`向西移动`模块和一个`采摘玉米`模块来通过这关。
       courseA_harvester_seq3: 用三个`向西移动`模块和一个`采摘玉米`模块。
+      courseA_harvester_seq3_2019: 用三个`向西移动`模块和一个`采摘玉米`模块。
       courseA_harvester_seq4: 添加一个模块来帮助收割者采摘玉米。
+      courseA_harvester_seq4_2019: 添加一个模块来帮助收割者采摘玉米。
       courseA_harvester_seq5: 找到缺陷，并修复它！
+      courseA_harvester_seq5_2019: 找到缺陷，并修复它！
       courseA_harvester_seq6: 自己试一试！
+      courseA_harvester_seq6_2019: 自己试一试！
       courseA_harvester_seq7: 自己试一试！
+      courseA_harvester_seq7_2019: 自己试一试！
       courseA_harvester_seq8: 现在收割者需要采摘玉米两次！
+      courseA_harvester_seq8_2019: 现在收割者需要采摘玉米两次！
       courseA_harvester_seq9: 添加两个模块来完成这个关卡！
+      courseA_harvester_seq9_2019: 添加两个模块来完成这个关卡！
       courseA_maze_ramp2_2018: 将所有模块接到一起来完成你的代码，然后点击"运行"。
+      courseA_maze_ramp2_2019: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp2a_2018: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp3_2018: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseA_maze_ramp3a_2018: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
+      courseA_maze_ramp3a_2019: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseA_maze_ramp3b_2018: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
+      courseA_maze_ramp3b_2019: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
       courseA_maze_ramp4_2018: 躲开TNT炸药，否则羽毛会被炸飞！
       courseA_maze_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
+      courseA_maze_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018: 躲开TNT炸药！
       courseA_maze_ramp5a_2018: 帮小鸟到达那只猪！
+      courseA_maze_ramp5a_2019: 帮小鸟到达那只猪！
       courseA_maze_seq1: 帮小鸟到达那只坏猪！
       courseA_maze_seq10: '挑战: 绕开TNT炸药, 把鸟撞到猪身上。 '
       courseA_maze_seq10_2018: '挑战: 绕开TNT炸药, 让鸟到达猪那里！ '
+      courseA_maze_seq10_2019: '挑战: 绕开TNT炸药, 让鸟到达猪那里！ '
       courseA_maze_seq11: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
       courseA_maze_seq11_2018: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
+      courseA_maze_seq11_2019: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
       courseA_maze_seq12: '去找那头猪! '
       courseA_maze_seq12_2018: '去找那头猪! '
+      courseA_maze_seq12_2019: '去找那头猪! '
       courseA_maze_seq13: 用各种方法把那头猪抓来!
       courseA_maze_seq13_2018: 用各种方法把那头猪抓来!
+      courseA_maze_seq13_2019: 用各种方法把那头猪抓来!
       courseA_maze_seq1_2018: 帮小鸟到达那只坏猪！
+      courseA_maze_seq1_2019: 帮小鸟到达那只坏猪！
       courseA_maze_seq2: 修改代码来让我到达那只猪！
       courseA_maze_seq2_2018: 修改代码来让我到达那只猪！
       courseA_maze_seq3: 修复代码, 让鸟到猪那!
@@ -1949,157 +2013,232 @@ zh-CN:
       courseA_maze_seq4a: 用尽可能少的块模块把鸟带到猪那里。
       courseA_maze_seq5: 从头开始尝试这一个。
       courseA_maze_seq5_2018: 尝试一下。
+      courseA_maze_seq5_2019: 尝试一下。
       courseA_maze_seq5a_2018: 你能在代码最后加上什么来让小鸟到达猪那里？
+      courseA_maze_seq5a_2019: 你能在代码最后加上什么来让小鸟到达猪那里？
       courseA_maze_seq6: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq6_2018: 往一条路走，然后走另一条把鸟带到猪那里！
+      courseA_maze_seq6_2019: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq7: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseA_maze_seq7_2018: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseA_maze_seq8: 通过这关，把鸟带到猪那！
       courseA_maze_seq8_2018: 通过这关，把鸟带到猪那！
+      courseA_maze_seq8_2019: 通过这关，把鸟带到猪那！
       courseA_maze_seq9: 通过添加块来调试这关，让鸟到达猪那里!
       courseA_maze_seq9_2018: 通过添加块来调试这关，让鸟到达猪那里!
       courseA_maze_seq_challenge1: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
       courseA_maze_seq_challenge1_2018: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
+      courseA_maze_seq_challenge1_2019: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
       courseA_maze_seq_challenge2: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseA_maze_seq_challenge2_2018: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
+      courseA_maze_seq_challenge2_2019: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseA_playLab_events1: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events1_2018: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
+      courseA_playLab_events1_2019: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events2: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events2_2018: 乔治狗想说“大家好”。你可以帮它吗？
+      courseA_playLab_events2_2019: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events3: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2018: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
+      courseA_playLab_events3_2019: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events4: 添加模块，在点击`右`按钮时向右移动。
       courseA_playLab_events4_2018: 添加另一个时间模块，在按下`右`按钮时，让乔治向右移动。
+      courseA_playLab_events4_2019: 添加另一个时间模块，在按下`右`按钮时，让乔治向右移动。
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events5_2019: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events6: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       courseA_playLab_events6_2018: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
+      courseA_playLab_events6_2019: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       courseA_playLab_events7: 添加任何你想要的到此游戏中。你能否让恐龙在乔治碰上它时消失？
       courseA_playLab_events7_2018: "*自由发挥*：把觉得好玩的东西添加到游戏里。"
+      courseA_playLab_events7_2019: "*自由发挥*：把觉得好玩的东西添加到游戏里。"
       courseA_playlab_events_challenge1: 你能写代码, 以显示我的其他朋友吗？提示能够一步一步的帮助你完成这个项目。
       courseA_playlab_events_challenge1_2018: 你能写代码, 以显示我的其他朋友吗？提示能够一步一步的帮助你完成这个项目。
+      courseA_playlab_events_challenge1_2019: 你能写代码, 以显示我的其他朋友吗？提示能够一步一步的帮助你完成这个项目。
       courseA_playlab_events_challenge2: 当你点击它们时，让每个人做点什么。
       courseA_playlab_events_challenge2_2018: 当你点击它们时，让每个人做点什么。
+      courseA_playlab_events_challenge2_2019: 当你点击它们时，让每个人做点什么。
       courseA_playlab_events_challengeClone: 我的朋友躲在哪里？你能写代码, 以显示我的其他朋友吗？
       courseA_toMakeLoopsVideo_Collector: 循环能让里面的代码不断的重复执行!
       courseA_video_events: 需要更好的游戏实验室/事件组合
       courseA_video_events_2018: 需要更好的游戏实验室/事件组合
+      courseA_video_events_2019: 需要更好的游戏实验室/事件组合
       courseB_Scrat_ramp1_2018: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
+      courseB_Scrat_ramp1_2019: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
       courseB_Scrat_ramp2_2018: 将所有模块接到一起来完成你的代码，然后点击"运行"。
+      courseB_Scrat_ramp2_2019: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseB_Scrat_ramp3a_2018: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
+      courseB_Scrat_ramp3a_2019: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseB_Scrat_ramp3b_2018: "将多余的块拖回工具箱即可将其删除。\n\n"
+      courseB_Scrat_ramp3b_2019: "将多余的块拖回工具箱即可将其删除。\n\n"
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
+      courseB_Scrat_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018: 帮小鸟到达那只猪！
+      courseB_Scrat_ramp5a_2019: 帮小鸟到达那只猪！
       courseB_artist_loops1: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseB_artist_loops10: 用你已经学到的画一副你想让艺术家回到家里看到的画。
       courseB_artist_loops10_2018: 用你已经学到的画一副你想让艺术家回到家里看到的画。
+      courseB_artist_loops10_2019: 用你已经学到的画一副你想让艺术家回到家里看到的画。
       courseB_artist_loops1_2018: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
+      courseB_artist_loops1_2019: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseB_artist_loops2: 艺术家试图画一条线 ** 6 ** 次, 但还没画好。 你能帮忙吗？
       courseB_artist_loops2_2018: 艺术家试图画一条线 ** 6 ** 次, 但还没画好。 你能帮忙吗？
+      courseB_artist_loops2_2019: 艺术家试图画一条线 ** 6 ** 次, 但还没画好。 你能帮忙吗？
       courseB_artist_loops3: 帮助艺术家画一条线7次, 来做花园墙。
       courseB_artist_loops3_2018: 帮助艺术家画一条线7次, 来做花园墙。
+      courseB_artist_loops3_2019: 帮助艺术家画一条线7次, 来做花园墙。
       courseB_artist_loops4: "现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。\n"
       courseB_artist_loops4_2018: "现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。\n"
+      courseB_artist_loops4_2019: "现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。\n"
       courseB_artist_loops5: 该去修楼梯了! 重复这个图案 ** 5** 次, 这样艺术家就可以到达灌木丛的顶端。
       courseB_artist_loops5_2018: 该去修楼梯了! 重复这个图案 ** 5** 次, 这样艺术家就可以到达灌木丛的顶端。
+      courseB_artist_loops5_2019: 该去修楼梯了! 重复这个图案 ** 5** 次, 这样艺术家就可以到达灌木丛的顶端。
       courseB_artist_loops6: 爬上藤蔓, 看看它延到哪里？
       courseB_artist_loops6_2018: 爬上藤蔓, 看看它延到哪里？
+      courseB_artist_loops6_2019: 爬上藤蔓, 看看它延到哪里？
       courseB_artist_loops7: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops7_2018: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
+      courseB_artist_loops7_2019: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops8: 该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？
       courseB_artist_loops8_2018: 该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？
+      courseB_artist_loops8_2019: 该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？
       courseB_artist_loops9: 让我们走捷径回家，越过池塘。你能帮助艺术家待在石头上吗？
       courseB_artist_loops9_2018: 让我们走捷径回家，越过池塘。你能帮助艺术家待在石头上吗？
+      courseB_artist_loops9_2019: 让我们走捷径回家，越过池塘。你能帮助艺术家待在石头上吗？
       courseB_artist_loops_challenge1: '"是时候掷骰子了! 你能帮我画这些吗？"'
       courseB_artist_loops_challenge1_2018: '"是时候掷骰子了! 你能帮我画这些吗？"'
+      courseB_artist_loops_challenge1_2019: '"是时候掷骰子了! 你能帮我画这些吗？"'
       courseB_artist_loops_challenge2: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
       courseB_artist_loops_challenge2_2018: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
+      courseB_artist_loops_challenge2_2019: "让我们玩游戏吧! 尽可能多地画 X。\n你可以做到一排放3 个吗？"
       courseB_collector_loops1: 这是冒险家罗瑞尔! 你能把她带到附近去找宝藏吗？
       courseB_collector_loops10: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
       courseB_collector_loops10_2018: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
+      courseB_collector_loops10_2019: 帮助罗瑞尔从这个洞穴得到所有的宝藏。
       courseB_collector_loops11: 发现宝藏了! 得到尽可能多的财富!
       courseB_collector_loops11_2018: 发现宝藏了! 得到尽可能多的财富!
+      courseB_collector_loops11_2019: 发现宝藏了! 得到尽可能多的财富!
       courseB_collector_loops1_2018: 这是冒险家罗瑞尔! 你能把她带到附近去找宝藏吗？
+      courseB_collector_loops1_2019: 这是冒险家罗瑞尔! 你能把她带到附近去找宝藏吗？
       courseB_collector_loops2: 收集所有四个土堆来通关。
       courseB_collector_loops2_2018: 收集所有四个土堆来通关。
+      courseB_collector_loops2_2019: 收集所有四个土堆来通关。
       courseB_collector_loops3: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
       courseB_collector_loops3_2018: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
+      courseB_collector_loops3_2019: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
       courseB_collector_loops3_predict1: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_collector_loops4: 修复罗瑞尔的路径得到所有这些宝藏！
       courseB_collector_loops4_2018: 修复罗瑞尔的路径得到所有这些宝藏！
+      courseB_collector_loops4_2019: 修复罗瑞尔的路径得到所有这些宝藏！
       courseB_collector_loops5: '添加代码到最后的关卡，得到所有的宝藏。 '
       courseB_collector_loops5_2018: '添加代码到最后的关卡，得到所有的宝藏。 '
+      courseB_collector_loops5_2019: '添加代码到最后的关卡，得到所有的宝藏。 '
       courseB_collector_loops6: 写出代码, 帮助罗瑞尔得到所有的宝藏!
       courseB_collector_loops6_2018: 写出代码, 帮助罗瑞尔得到所有的宝藏!
+      courseB_collector_loops6_2019: 写出代码, 帮助罗瑞尔得到所有的宝藏!
       courseB_collector_loops7: 编写代码来获取所有这些宝藏。
       courseB_collector_loops7_2018: 编写代码来获取所有这些宝藏。
+      courseB_collector_loops7_2019: 编写代码来获取所有这些宝藏。
       courseB_collector_loops8: "** 挑战: ** 宝藏在楼梯最底下! 编写代码来帮助罗瑞尔得到所有宝藏。"
       courseB_collector_loops8_2018: "** 挑战: ** 宝藏在楼梯最底下! 编写代码来帮助罗瑞尔得到所有宝藏。"
+      courseB_collector_loops8_2019: "** 挑战: ** 宝藏在楼梯最底下! 编写代码来帮助罗瑞尔得到所有宝藏。"
       courseB_collector_loops9: '"帮我从这个深谷里得到宝藏"*'
       courseB_collector_loops9_2018: '"帮我从这个深谷里得到宝藏"*'
+      courseB_collector_loops9_2019: '"帮我从这个深谷里得到宝藏"*'
       courseB_collector_loops_challenge1: '这次你的模块有限。得到所有的宝藏! '
       courseB_collector_loops_challenge1_2018: '这次你的模块有限。得到所有的宝藏! '
+      courseB_collector_loops_challenge1_2019: '这次你的模块有限。得到所有的宝藏! '
       courseB_collector_loops_challenge2: 让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？
       courseB_collector_loops_challenge2_2018: 让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？
       courseB_collector_loops_challenge2a: 帮助罗瑞尔获得至少**5**份财宝来通过这关。
       courseB_collector_loops_challenge2a_2018: 帮助罗瑞尔获得至少**5**份财宝来通过这关。
+      courseB_collector_loops_challenge2a_2019: 帮助罗瑞尔获得至少**5**份财宝来通过这关。
       courseB_collector_loops_challenge`: '这一次您只能每个箭头使用一次。去拿所有的宝藏吧! '
       courseB_collector_prog1: 这是冒险家罗瑞尔! 你能把她带到附近去找黄金吗？
       courseB_collector_prog2: 4堆金子！收集所有4堆。
       courseB_collector_prog3: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_iceage_loops1: 帮助斯奎特穿过冰去拿到橡子！
       courseB_iceage_loops10: 帮助斯奎特走过去拿到橡子！
+      courseB_iceage_loops10_2019: 帮助斯奎特走过去拿到橡子！
       courseB_iceage_loops11: 帮助斯奎特得到橡子！
+      courseB_iceage_loops11_2019: 帮助斯奎特得到橡子！
       courseB_iceage_loops11_forVideo: 帮助斯奎特得到橡子！
       courseB_iceage_loops12: 用各种方法来拿到橡子！
+      courseB_iceage_loops12_2019: 用各种方法来拿到橡子！
+      courseB_iceage_loops1_2019: 帮助斯奎特穿过冰去拿到橡子！
       courseB_iceage_loops2: 用两个不同的移动模块来获得橡子！
+      courseB_iceage_loops2_2019: 用两个不同的移动模块来获得橡子！
       courseB_iceage_loops3: 你能只用一个`W`模块来得到橡子吗？
+      courseB_iceage_loops3_2019: 你能只用一个`W`模块来得到橡子吗？
       courseB_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
+      courseB_iceage_loops4_2019: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseB_iceage_loops5: 你能再增加一个循环来获得橡子吗？
       courseB_iceage_loops6: 你能增加一个循环到达橡子吗？
+      courseB_iceage_loops6_2019: 你能增加一个循环到达橡子吗？
       courseB_iceage_loops7: "斯奎特真的想要那个橡子！\n"
+      courseB_iceage_loops7_2019: "斯奎特真的想要那个橡子！\n"
       courseB_iceage_loops8: '你能修好这段代码吗？ '
+      courseB_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseB_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseB_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseB_maze_seq1: "玩一玩这些模块, 看看他们能让小鸟做什么吧! \\r\n\\r\n把鸟送到猪那里来完成这关。"
       courseB_maze_seq10: 修复缺陷，让鸟到猪那。
       courseB_maze_seq10_2018: 修复缺陷，来帮助斯奎特到达橡子。
+      courseB_maze_seq10_2019: 修复缺陷，来帮助斯奎特到达橡子。
       courseB_maze_seq11: 都靠你了！让小鸟到达猪那里。
       courseB_maze_seq11_2018: 都靠你了！让斯奎特得到橡子。
+      courseB_maze_seq11_2019: 都靠你了！让斯奎特得到橡子。
       courseB_maze_seq12: 现在不管用什么办法，抓到那头猪!
       courseB_maze_seq12_2018: 现在不管用什么办法，抓到那头猪!
+      courseB_maze_seq12_2019: 现在不管用什么办法，抓到那头猪!
       courseB_maze_seq1_2018: "玩一玩这些模块, 看看他们能让斯奎特做什么吧! \\r\n\\r\n把斯奎特送到橡子那里来完成这关。"
+      courseB_maze_seq1_2019: "玩一玩这些模块, 看看他们能让斯奎特做什么吧! \\r\n\\r\n把斯奎特送到橡子那里来完成这关。"
       courseB_maze_seq2: '"有错误! 修复代码把我带到猪那里。*'
       courseB_maze_seq2_2018: 有错误! 修复代码把斯奎特带到橡子那里！
       courseB_maze_seq3: '"修复代码来让我到达那只猪！"'
       courseB_maze_seq4: 添加两个模块, 让鸟到猪那。
       courseB_maze_seq4_2018: 添加**两个**移动模块, 让斯奎特到达橡子那里。
+      courseB_maze_seq4_2019: 添加**两个**移动模块, 让斯奎特到达橡子那里。
       courseB_maze_seq5: 现在从开始试试这一关！
       courseB_maze_seq5_2018: 这一关有点棘手！
+      courseB_maze_seq5_2019: 这一关有点棘手！
       courseB_maze_seq6: 往一条路走，然后走另一条把鸟带到猪那里！
       courseB_maze_seq6_2018: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
+      courseB_maze_seq6_2019: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
       courseB_maze_seq7: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseB_maze_seq7_2018: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
+      courseB_maze_seq7_2019: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseB_maze_seq8: 该你了！ 你要怎么做才能把鸟送到猪那里？
       courseB_maze_seq8_2018: 该你了！ 你要怎么做才能把斯奎特送到橡子那里？
+      courseB_maze_seq8_2019: 该你了！ 你要怎么做才能把斯奎特送到橡子那里？
       courseB_maze_seq9: '挑战: 绕开TNT炸药, 让鸟到达猪那里。'
       courseB_maze_seq9_2018: '挑战: 绕开破冰，让斯奎特到达橡子那里。'
+      courseB_maze_seq9_2019: '挑战: 绕开破冰，让斯奎特到达橡子那里。'
       courseB_maze_seq9_challenge1: "那只猪现在藏在哪里？"
       courseB_maze_seqCold: '挑战：通过添加模块来调试这关, 让鸟到达猪那里!'
       courseB_maze_seqOld: '绕过 TNT炸药, 让鸟到达猪那里! '
       courseB_maze_seq_challenge1: 在你用完所有模块之前, 你能找到一条路吗？
       courseB_maze_seq_challenge1_2018: 在你用完所有模块之前, 你能找到一条路吗？
+      courseB_maze_seq_challenge1_2019: 在你用完所有模块之前, 你能找到一条路吗？
       courseB_maze_seq_challenge2: 调试本关卡。这些模块是正确的, 但他们的顺序错了!
       courseB_maze_seq_challenge2_2018: 调试本关卡。这些模块是正确的, 但他们的顺序错了!
+      courseB_maze_seq_challenge2_2019: 调试本关卡。这些模块是正确的, 但他们的顺序错了!
       courseB_playLab_events1: 看看你是否明白每个方块是做什么的。
       courseB_playLab_events1_2018: 看看你是否明白每个方块是做什么的。
+      courseB_playLab_events1_2019: 看看你是否明白每个方块是做什么的。
       courseB_playlab_events2: 当你点击"运行"时，让黛西龙说点什么。
       courseB_playlab_events2_2018: 当你点击"运行"时，让黛西龙说点什么。
+      courseB_playlab_events2_2019: 当你点击"运行"时，让黛西龙说点什么。
       courseB_playlab_events3: 使用事件在你点击她的时候，让黛西龙切换到随机的心情。
       courseB_playlab_events3_2018: 使用事件在你点击她的时候，让黛西龙切换到随机的心情。
+      courseB_playlab_events3_2019: 使用事件在你点击她的时候，让黛西龙切换到随机的心情。
       courseB_playlab_events4: 骑士时间到了！添加一个事件, 当左箭头被点击的时候让骑士移向龙。
       courseB_playlab_events4_2018: 让龙完成这一关！
+      courseB_playlab_events4_2019: 让龙完成这一关！
       courseB_playlab_events5: 现在添加一个事件，当你按下右箭头时，让骑士跑离龙。
       courseB_playlab_events5_2018: 添加一个事件，当你按下右箭头时，让骑士跑离龙。
+      courseB_playlab_events5_2019: 添加一个事件，当你按下右箭头时，让骑士跑离龙。
       courseB_playlab_events6: |-
         帮助你的骑士得到所有的旗帜！\r
         \r
@@ -2108,42 +2247,62 @@ zh-CN:
         帮助你的骑士得到所有的旗帜！\r
         \r
         要做到这个，你需要添加事件来帮助骑士上下左右移动。
+      courseB_playlab_events6_2019: |-
+        帮助你的骑士得到所有的旗帜！\r
+        \r
+        要做到这个，你需要添加事件来帮助骑士上下左右移动。
       courseB_playlab_events7: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
       courseB_playlab_events7_2018: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。  "
+      courseB_playlab_events7_2019: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。  "
       courseB_playlab_events8: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP_2018: "**自由发挥：** 运用你的想象力。你能做些什么让这个游戏更有趣？"
+      courseB_playlab_eventsFP_2019: "**自由发挥：** 运用你的想象力。你能做些什么让这个游戏更有趣？"
       courseB_playlab_eventsToolbox: 在骑士碰到龙的时候，播放声音并让骑士消失！
       courseB_playlab_events_challenge1: '当你按下时, 让动物们往下移动。 '
       courseB_playlab_events_challenge1_2018: '当你按下时, 让动物们往下移动。 '
+      courseB_playlab_events_challenge1_2019: '当你按下时, 让动物们往下移动。 '
       courseB_playlab_events_challenge2: 当点击动物时，让它们消失。
       courseB_playlab_events_challenge2_2018: 当点击动物时，让它们消失。
+      courseB_playlab_events_challenge2_2019: 当点击动物时，让它们消失。
       courseB_playlab_events_challenge2_embed: 这是你完成的游戏!
       courseB_playlab_events_challenge2_template: 点击来使动物们消失！你也可以添加声音和得分点, 创建一个有趣的动物标签游戏!
       courseB_playlab_events_challenge2_template_2018: 点击来使动物们消失！你也可以添加声音和得分点, 创建一个有趣的动物标签游戏!
+      courseB_playlab_events_challenge2_template_2019: 点击来使动物们消失！你也可以添加声音和得分点, 创建一个有趣的动物标签游戏!
       courseB_scrat_forVideo: 拿到橡子！
       courseB_starWars_prog1: '"去收集废金属, BB-8!”'
       courseB_starWars_prog10: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog10_2018: 帮助 BB-8 收集发光的废旧金属
+      courseB_starWars_prog10_2019: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog11: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog11_2018: 帮助 BB-8 收集发光的废旧金属
+      courseB_starWars_prog11_2019: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog1_2018: '"去收集废金属, BB-8!”'
+      courseB_starWars_prog1_2019: '"去收集废金属, BB-8!”'
       courseB_starWars_prog2: 把所有的金属都收集起来。
       courseB_starWars_prog2_2018: 把所有的金属都收集起来。
+      courseB_starWars_prog2_2019: 把所有的金属都收集起来。
       courseB_starWars_prog3: 得到所有的废金属
       courseB_starWars_prog3_2018: 得到所有的废金属
+      courseB_starWars_prog3_2019: 得到所有的废金属
       courseB_starWars_prog4: 得到所有的废金属
       courseB_starWars_prog4_2018: 得到所有的废金属
+      courseB_starWars_prog4_2019: 得到所有的废金属
       courseB_starWars_prog5: 获取废旧金属
       courseB_starWars_prog5_2018: 获取废旧金属
+      courseB_starWars_prog5_2019: 获取废旧金属
       courseB_starWars_prog6: 得到所有的废金属
       courseB_starWars_prog6_2018: 得到所有的废金属
+      courseB_starWars_prog6_2019: 得到所有的废金属
       courseB_starWars_prog7: 去拿!
       courseB_starWars_prog7_2018: 去拿!
+      courseB_starWars_prog7_2019: 去拿!
       courseB_starWars_prog8: "** 挑战: ** 帮助 BB-8 收集发光的废旧金属"
       courseB_starWars_prog8_2018: "** 挑战: ** 帮助 BB-8 收集发光的废旧金属"
+      courseB_starWars_prog8_2019: "** 挑战: ** 帮助 BB-8 收集发光的废旧金属"
       courseB_starWars_prog9: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog9_2018: 帮助 BB-8 收集发光的废旧金属
+      courseB_starWars_prog9_2019: 帮助 BB-8 收集发光的废旧金属
       courseC19_playLab_EOC1: 选择一个背景和地图，然后选择一个演员来作为你的游戏里的英雄。
       courseC19_playLab_EOC2: 用事件处理函数和行动来帮助你的英雄移动。
       courseC19_playLab_EOC3: 添加两个或更多的演员到你的游戏中，并让它们移动。
@@ -3719,6 +3878,7 @@ zh-CN:
       course_playlab_variables2: "现在，通过只在两处改变这些变量的值，就能解码海盗的语言！\\r\n"
       course_playlab_variables3: "现在，通过只在两处改变这些变量的值，就能解码海盗的语言！\\r\n"
       coursea_maze_ramp1_2018: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
+      coursea_maze_ramp1_2019: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
       coursef_explore_CYOA_Witch: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
       coursef_explore_playlab2: 你可以在剧本实验室做任何你想做的事! 下面是一个在剧本实验室中故事的例子。
       coursef_explore_playlab_cat_game: 你可以在剧本实验室做任何你想做的事! 下面是一个在剧本实验室里游戏的例子。

@@ -98,35 +98,38 @@ export default class QuestionsTable extends React.Component {
     };
 
     return (
-      <Table striped bordered>
-        <thead>
-          <tr>
-            <th style={labelThStyle} />
-            {this.props.options.map(option => (
-              <th
-                key={option}
-                style={thStyle}
-              >
-                <ControlLabel>
-                  {option}
-                </ControlLabel>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.questions.map(question =>
-            <QuestionRow
-              key={question.name}
-              question={question}
-              data={this.props.data}
-              errors={this.props.errors}
-              onChange={this.props.onChange}
-              options={this.props.options}
-            />
-          )}
-        </tbody>
-      </Table>
+      <FormGroup>
+        <ControlLabel>{this.props.label}</ControlLabel>
+        <Table striped bordered>
+          <thead>
+            <tr>
+              <th style={labelThStyle} />
+              {this.props.options.map(option => (
+                <th
+                  key={option}
+                  style={thStyle}
+                >
+                  <ControlLabel>
+                    {option}
+                  </ControlLabel>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.questions.map(question =>
+              <QuestionRow
+                key={question.name}
+                question={question}
+                data={this.props.data}
+                errors={this.props.errors}
+                onChange={this.props.onChange}
+                options={this.props.options}
+              />
+            )}
+          </tbody>
+        </Table>
+      </FormGroup>
     );
   }
 }
@@ -137,7 +140,8 @@ QuestionsTable.propTypes = {
   labelSpan: PropTypes.number,
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  questions: PropTypes.arrayOf(questionPropType).isRequired
+  questions: PropTypes.arrayOf(questionPropType).isRequired,
+  label: PropTypes.string
 };
 
 QuestionsTable.defaultProps = {

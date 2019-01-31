@@ -825,6 +825,13 @@ de:
         zu den Schafen zu gelangen.
       Overworld Move to Sheep_2019: Füge einen zweiten „Vorwärts“-Befehl hinzu, um
         zu den Schafen zu gelangen.
+      Ryan_Demo: |-
+        Lassen Sie den Elch tanzen!
+
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+
+
+        **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Testing Quantum Farmer: 'Wow, ich habe ein richtig tiefes Loch gefunden! Ich
         weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm
         schreiben, mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche
@@ -834,10 +841,15 @@ de:
         (Oder lösche es und ersetze es durch etwas ganz anderes)
       courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
         zum Schwein zu bringen!
+      courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel
+        zum Schwein zu bringen!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
         bisschen herum."
       courseB_artist_loops7_2018: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
+        ein bisschen herum."
+      courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
       courseB_maze_seq3: '*"Repariere den Code, damit ich das Schwein bekomme!*"'
       courseD_bee_nestedLoops5: Sammle den gesamten Nektar jeder Blüte und erzeuge

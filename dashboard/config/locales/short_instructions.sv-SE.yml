@@ -2041,6 +2041,7 @@ sv:
         Om det är en blomma så kan du samla nektar.
       Ryan Test Locked Blocks: Här är en funktion som kallas "patrol." Redigera den
         för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
+      Ryan_Demo: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
       SpecialFrozenLevel: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
       Standalone_Artist_1: Välkommen till Artist! Först och främst, låt oss försöka
         göra en enkel kvadrat med 'sväng höger' block och 'gå framåt' block. Varje
@@ -2241,6 +2242,7 @@ sv:
         ta bort det och ersätt det med någonting totalt annorlunda)
       courseA_maze_seq12: 'Fånga den där grisen! '
       courseA_maze_seq12_2018: 'Fånga den där grisen! '
+      courseA_maze_seq12_2019: 'Fånga den där grisen! '
       courseA_maze_seq2: Ändra koden för att få mig till grisen!
       courseA_maze_seq2_2018: Ändra koden för att få mig till grisen!
       courseC_PlayLab_events3: Kan du skriva ett program som får hunden Jorge (actor

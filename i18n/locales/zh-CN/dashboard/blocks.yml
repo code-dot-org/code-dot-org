@@ -1273,23 +1273,26 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       aalab_createPropertyGroup:
         text: |-
           创建一个叫做 {VAR} 的精灵组
           包括所有的 {COSTUME} 精灵
       aalab_createSpriteGroup:
         text: 创造一个叫做 {VAR} 的新精灵组
-      aalab_spritesWhere:
-        text: 精灵的 {PROPERTY} 为 {VALUE}
+      aalab_getThisSprite:
         options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-            '"costume"': 服装
-            '"direction"': 移动方向
-            '"rotation"': 旋转或方向
-            '"tint"': 色调
+          CHOICE:
+            '"other"': 其他
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       binary_drawPixelHere:
         options:
           VAL:

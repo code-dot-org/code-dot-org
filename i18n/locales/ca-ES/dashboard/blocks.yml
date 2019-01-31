@@ -806,11 +806,16 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': mida
-            '"direction"': direcció del moviment
+          CONDITION:
+            '"when"': quan
+            '"while"': mentres
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': quan
+            '"while"': mentres
       binary_move:
         options:
           DIR:

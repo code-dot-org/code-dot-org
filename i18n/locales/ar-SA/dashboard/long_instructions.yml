@@ -324,6 +324,13 @@ ar:
       Overworld Move to Sheep: أضف أمر "move forward" ثانيًا للوصول إلى الخراف.
       Overworld Move to Sheep_2018: أضف أمر "move forward" ثانيًا للوصول إلى الخراف.
       Overworld Move to Sheep_2019: أضف أمر "move forward" ثانيًا للوصول إلى الخراف.
+      Ryan_Demo: |-
+        لنجعل غزال الموظ هذا يرقص!
+
+        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
+
+
+        تُستخدَم **الإجراءات** لحساب الوقت منذ تشغيل الموسيقى. في هذا الدرس التعليمي، يكون الإجراء عبارة عن أربع خطوات بالطول.
       course4_artist_fwp_challenge1: حاول تشغيل هذا البرنامج، وإجراء تغييرات لنرى ماذا سيحدث. بأستطاعتك معرفة كيف تعمل؟ (أو حذفها واستبدالها بشيء مختلف تماما)
       courseD_bee_nestedLoops5: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ الزُهور \nوقم بِـإنْتاج عَسَل عند خلية النحل. \\r\n\\r\nقُم بِـإسْتِخْدَام \"حَلْقَة تِكرارات متداخِلة\". "
       courseD_bee_nestedLoops8: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ الزُهور \nوقم بِـإنْتاج عَسَل عند خلية النحل. \\r\n\\r\nقُم بِـإسْتِخْدَام \"حَلْقَة تِكرارات متداخِلة\". "
