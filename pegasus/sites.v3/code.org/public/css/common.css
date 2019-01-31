@@ -577,7 +577,8 @@ button {
 
 
 @media screen and (min-width: 970px) {
-  #stats-carousel .slide .slide-img {
+  #stats-carousel .slide .slide-img,
+  #stats-impact-carousel .slide .slide-img{
     width: 850px;
     height: 503px;
   }
