@@ -82,6 +82,14 @@
   vertical-align: middle;
 }
 
+.icon-fact .fa-times-circle{
+  color: lightgray;
+}
+
+.icon-fact .fa-check-circle{
+  color: dimgray;
+}
+
 .fact .fact-text {
   display: inline-block;
   text-align: left;
