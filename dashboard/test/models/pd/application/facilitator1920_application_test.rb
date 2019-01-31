@@ -207,35 +207,6 @@ module Pd::Application
       end
     end
 
-    test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@fit_workshop)
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @fit_workshop.id
-      @application.expects(:find_default_workshop).never
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
-
-      @application.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
-
-      @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
-    end
-
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
       assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
     end
@@ -427,6 +398,20 @@ module Pd::Application
       assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
       assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
       assert application_hash.key? :csp_training_requirement
+    end
+
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
+      # Workshops, Sessions, Enrollments
+      assert_queries 3 do
+        Facilitator1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
     end
   end
 end
