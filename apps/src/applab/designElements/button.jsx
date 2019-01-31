@@ -189,7 +189,7 @@ export default {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    elementUtils.setDefaultBorderStyles(element);
+    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
 

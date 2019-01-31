@@ -85,6 +85,23 @@ class ImageProperties extends React.Component {
           options={['fill','cover','contain','none']}
           handleChange={this.props.handleChange.bind(this, 'objectFit')}
         />
+        <PropertyRow
+          desc={'border width (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderWidth, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
+        />
+        <ColorPickerPropertyRow
+          desc={'border color'}
+          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          handleChange={this.props.handleChange.bind(this, 'borderColor')}
+        />
+        <PropertyRow
+          desc={'border radius (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderRadius, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -169,6 +186,7 @@ export default {
     const element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
+    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
 
@@ -180,6 +198,9 @@ export default {
     return element;
   },
   onDeserialize: function (element, updateProperty) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+
     const url = element.getAttribute('data-canonical-image-url') || '';
     if (url) {
       updateProperty(element, 'picture', url);

@@ -162,7 +162,7 @@ applabCommands.button = function (opts) {
   newButton.style.position = 'relative';
   newButton.style.color = color.white;
   newButton.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newButton);
+  elementUtils.setDefaultBorderStyles(newButton, { forceDefaults: true });
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -183,6 +183,7 @@ applabCommands.image = function (opts) {
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
+  elementUtils.setDefaultBorderStyles(newImage, { forceDefaults: true });
 
   Applab.updateProperty(newImage, 'objectFit', 'contain');
 
@@ -740,7 +741,10 @@ applabCommands.textInput = function (opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, { textInput: true });
+  elementUtils.setDefaultBorderStyles(newInput, {
+    forceDefaults: true,
+    textInput: true,
+  });
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -757,7 +761,7 @@ applabCommands.textLabel = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  elementUtils.setDefaultBorderStyles(newLabel);
+  elementUtils.setDefaultBorderStyles(newLabel, { forceDefaults: true });
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -814,7 +818,7 @@ applabCommands.dropdown = function (opts) {
   newSelect.style.position = 'relative';
   newSelect.style.color = color.white;
   newSelect.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newSelect, { forceDefaultBorderColor: true });
+  elementUtils.setDefaultBorderStyles(newSelect, { forceDefaults: true });
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };

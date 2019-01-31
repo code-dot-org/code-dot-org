@@ -188,7 +188,10 @@ PROPERTIES[ElementType.IMAGE] = {
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
     'hidden',
-    'fit'
+    'fit',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
