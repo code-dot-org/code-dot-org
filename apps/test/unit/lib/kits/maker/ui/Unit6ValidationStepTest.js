@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {assert} from '../../../../../util/configuredChai';
 import Unit6ValidationStep from '@cdo/apps/lib/kits/maker/ui/Unit6ValidationStep';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import {Unit6Intention} from "@cdo/apps/lib/kits/maker/util/discountLogic";
 
 describe('Unit6ValidationStep', () => {
   const defaultProps = {
@@ -48,7 +49,7 @@ describe('Unit6ValidationStep', () => {
       <Unit6ValidationStep
         {...defaultProps}
         stepStatus={Status.FAILED}
-        initialChoice="no"
+        initialChoice={Unit6Intention.NO}
       />
     );
     assert.equal(wrapper.find('input [value="no"]').props().checked, true);
@@ -60,10 +61,10 @@ describe('Unit6ValidationStep', () => {
       <Unit6ValidationStep
         {...defaultProps}
         stepStatus={Status.SUCCEEDED}
-        initialChoice="yes1819"
+        initialChoice={Unit6Intention.YES_18_19}
       />
     );
-    assert.equal(wrapper.find('input [value="yes1819"]').props().checked, true);
+    assert.equal(wrapper.find(`input [value="${Unit6Intention.YES_18_19}"]`).props().checked, true);
     assert.equal(wrapper.find('Button').length, 0);
   });
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import EligibilityChecklist from './EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import {Unit6Intention} from "../util/discountLogic";
 
 const defaultProps = {
   statusPD: Status.SUCCEEDED,
@@ -83,7 +84,7 @@ export default storybook => {
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
               getsFullDiscount={true}
-              unit6Intention="no"
+              unit6Intention={Unit6Intention.NO}
             />
           </div>
         )
@@ -99,7 +100,7 @@ export default storybook => {
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
               getsFullDiscount={true}
-              unit6Intention="yes1819"
+              unit6Intention={Unit6Intention.YES_18_19}
             />
           </div>
         )
