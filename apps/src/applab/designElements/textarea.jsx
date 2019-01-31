@@ -88,6 +88,23 @@ class TextAreaProperties extends React.Component {
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
+        <PropertyRow
+          desc={'border width (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderWidth, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
+        />
+        <ColorPickerPropertyRow
+          desc={'border color'}
+          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          handleChange={this.props.handleChange.bind(this, 'borderColor')}
+        />
+        <PropertyRow
+          desc={'border radius (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderRadius, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        />
         <BooleanPropertyRow
           desc={'read only'}
           initialValue={!element.isContentEditable}
@@ -168,6 +185,7 @@ export default {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
+    elementUtils.setDefaultBorderStyles(element, true);
 
     $(element).addClass('textArea');
 
@@ -177,6 +195,8 @@ export default {
   },
 
   onDeserialize: function (element) {
+    elementUtils.setDefaultBorderStyles(element, true);
+
     $(element).addClass('textArea');
 
     $(element).on('mousedown', function (e) {

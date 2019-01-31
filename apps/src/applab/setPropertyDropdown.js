@@ -215,7 +215,10 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'textAlign',
     'readonly',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CHART] = {
