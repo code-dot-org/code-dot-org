@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Getting Started: Screen Design\r\n\r\nYou should have already reviewed the planning guide for this project. Some of the work to turn this project guide into a working program has already been started. Based on the project guide you're going to do the rest of this work.\r\n\r\n# Do This\r\n\r\nWe've already created a \"start\" screen and included a title and \"play\" button. Using your planning guide, finish creating this screen. Specifically you'll want to:\r\n\r\n* Update the title text to say \"Emoji Race\"\r\n* Add instructions for playing using the ID \"instructions\"\r\n\r\nFeel free to add any other design tweaks that you'd like.",
+    "long_instructions": "# Getting Started: Screen Design\r\n\r\nYou should have already reviewed the planning guide for this project. Some of the work to turn this project guide into a working program has already been started. Based on the project guide you're going to do the rest of this work.\r\n\r\n# Do This\r\n\r\nWe've already created a \"start\" screen and included a title and \"play\" button. Using your planning guide, finish creating this screen. Specifically you'll want to:\r\n\r\n* Update the title text to say \"Emoji Race\"\r\n* Add instructions for playing using the ID \"instructions\"\r\n\r\nFeel free to add any other design tweaks that you'd like.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

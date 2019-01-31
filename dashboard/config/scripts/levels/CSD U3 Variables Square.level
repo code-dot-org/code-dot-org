@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Variables and Drawing\r\n\r\nVariables allow you to **use the same value multiple times in your program**. If a value will always be used many times in a program it is really useful to place that value in a variabnle. This lets you **quickly change the same value at many places in your program**. It also can make move obvious **how that value is used**.\r\n\r\n# Do This\r\n\r\n* Change the value that `size` is initialized to so that the program draws a **larger square**",
+    "long_instructions": "# Variables and Drawing\r\n\r\nVariables allow you to **use the same value multiple times in your program**. If a value will always be used many times in a program it is really useful to place that value in a variabnle. This lets you **quickly change the same value at many places in your program**. It also can make move obvious **how that value is used**.\r\n\r\n# Do This\r\n\r\n* Change the value that `size` is initialized to so that the program draws a **larger square**",
     "start_blocks": "var size = 10;\r\n\r\nfunction draw(){\r\n  rect(200,200,size,size);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,7 +40,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Change the value \"size\" initialized to make a larger square.",
+    "short_instructions": "Change the value \"size\" initialized to make a larger square.",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

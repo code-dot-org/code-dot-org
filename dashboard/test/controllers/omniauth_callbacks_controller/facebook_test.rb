@@ -22,7 +22,7 @@ module OmniauthCallbacksControllerTests
       sign_in_through_facebook
       assert_redirected_to '/users/sign_up'
       follow_redirect!
-      assert_template partial: '_sign_up'
+      assert_template partial: '_finish_sign_up'
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
       assert_redirected_to '/'
@@ -40,7 +40,7 @@ module OmniauthCallbacksControllerTests
           load-sign-up-page
           facebook-callback
           facebook-sign-up-error
-          load-sign-up-page
+          facebook-load-finish-sign-up-page
           facebook-sign-up-success
         )
       )
@@ -55,7 +55,7 @@ module OmniauthCallbacksControllerTests
       sign_in_through_facebook
       assert_redirected_to '/users/sign_up'
       follow_redirect!
-      assert_template partial: '_sign_up'
+      assert_template partial: '_finish_sign_up'
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
       assert_redirected_to '/home'
@@ -71,7 +71,7 @@ module OmniauthCallbacksControllerTests
           load-sign-up-page
           facebook-callback
           facebook-sign-up-error
-          load-sign-up-page
+          facebook-load-finish-sign-up-page
           facebook-sign-up-success
         )
       )

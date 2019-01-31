@@ -11,27 +11,12 @@
         = t('auth.already_signedup')
         = link_to t('nav.user.signin'), new_session_path(resource_name)
 
-  .row
-    .span8.signupblock
+  - if SignUpTracking.new_sign_up_experience?(session)
+    = render 'new_sign_up_form'
+  - else
+    = render 'old_sign_up_form'
 
-      - if SignUpTracking.new_sign_up_experience?(session)
-        = render 'new_sign_up_form'
-      - else
-        = render 'old_sign_up_form'
-
-      -# More information for students about email storage.
-      .student-options
-        %br/
-        %br/
-        *
-        -# Temporarily use student_terms so that existing translations get used.
-        != t('signup_form.student_terms')
-
-    .span4
-      .devise_links
-        = render "devise/shared/links"
-
-    %div{style: "clear:both"}
-    %br/
-    %br/
-    %br/
+%div{style: "clear:both"}
+%br/
+%br/
+%br/

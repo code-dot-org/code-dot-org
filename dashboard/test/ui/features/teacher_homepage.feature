@@ -115,7 +115,7 @@ Feature: Using the teacher homepage sections feature
     Then I wait to see a dialog containing text "unit is currently hidden"
 
     # Confirm the assignment
-    When I click selector "#confirm-assign"
+    When I press "confirm-assign"
     And I wait for the dialog to close
     And the section table row at index 0 has secondary assignment path "/s/csp2-2017"
 
@@ -135,7 +135,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
     And element "#assignment-version-year" has value "2017"
-    And I click selector "#assignment-version-year"
+    And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2018)" once I see it
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close

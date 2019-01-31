@@ -30,6 +30,7 @@ export default class Congrats extends Component {
     under13: PropTypes.bool,
     language: PropTypes.string.isRequired,
     randomDonorTwitter: PropTypes.string,
+    hideDancePartyFollowUp: PropTypes.bool
   };
 
   render() {
@@ -40,19 +41,22 @@ export default class Congrats extends Component {
       userType,
       under13,
       language,
-      randomDonorTwitter
+      randomDonorTwitter,
+      hideDancePartyFollowUp
     } = this.props;
 
     const isEnglish = language === 'en';
 
     const tutorialType = {
+      'dance': 'dance',
       'applab-intro': 'applab',
+      aquatic: '2018Minecraft',
       hero: '2017Minecraft',
       minecraft: 'pre2017Minecraft',
       mc: 'pre2017Minecraft',
     }[tutorial] || 'other';
 
-    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
+    const isMinecraft = /mc|minecraft|hero|aquatic/.test(tutorial);
 
     // Show a special link to a customizable certificate for users who complete
     // a Minecraft tutorial and are viewing the site in Korean.  The link
@@ -89,6 +93,7 @@ export default class Congrats extends Component {
             userType={userType}
             under13={under13}
             isEnglish={isEnglish}
+            hideDancePartyFollowUp={hideDancePartyFollowUp}
           />
           {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc/>

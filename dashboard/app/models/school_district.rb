@@ -36,22 +36,61 @@ class SchoolDistrict < ActiveRecord::Base
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
     options[:stub_school_data] ||= CDO.stub_school_data
-    options[:force] ||= false
 
-    # use a much smaller dataset in environments that reseed data frequently.
-    school_districts_tsv = get_seed_filename(options[:stub_school_data])
-    expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
-    raise "#{school_districts_tsv} contains no data" unless expected_count > 0
-
-    # It takes approximately 30 seconds to seed config/school_districts.tsv.
-    # Skip seeding if the data is already present. Note that this logic will
-    # not re-seed data if the number of records in the DB is greater than or
-    # equal to that in the TSV file, even if the data is different.
-    # Stubbed data is small enough to seed it every time.
-    if options[:stub_school_data] || options[:force] || SchoolDistrict.count < expected_count
-      CDO.log.debug "seeding school districts (#{expected_count} rows)"
+    if options[:stub_school_data]
+      # use a much smaller dataset in environments that reseed data frequently.
+      school_districts_tsv = get_seed_filename(true)
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
+      end
+      # Temporarily commenting out the case where we run the full seed_from_s3
+      # (i.e., in production) in order to separately run seed_from_s3
+      # manually so as not to slow down the production deploy.
+      # else
+      #   SchoolDistrict.seed_from_s3
+    end
+  end
+
+  def self.seed_from_s3
+    SchoolDistrict.transaction do
+      CDO.log.info "Seeding 2013-2014 school district data"
+      AWS::S3.seed_from_file('cdo-nces', "2013-2014/ccd/ag131a_supp.txt") do |filename|
+        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
+          {
+            id:    row['LEAID'].to_i,
+            name:  row['NAME'].upcase,
+            city:  row['LCITY'].to_s.upcase.presence,
+            state: row['LSTATE'].to_s.upcase.presence,
+            zip:   row['LZIP']
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2014-2015 school district data"
+      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
+        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
+          {
+            id:    row['LEAID'].to_i,
+            name:  row['LEA_NAME'].upcase,
+            city:  row['LCITY'].to_s.upcase.presence,
+            state: row['LSTATE'].to_s.upcase.presence,
+            zip:   row['LZIP']
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2017-2018 school district data"
+      import_options_1718 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1718, false) do |row|
+          {
+            id:    row['LEAID'].to_i,
+            name:  row['LEA_NAME'].upcase,
+            city:  row['LCITY'].to_s.upcase.presence,
+            state: row['LSTATE'].to_s.upcase.presence,
+            zip:   row['LZIP']
+          }
+        end
       end
     end
   end
@@ -60,13 +99,14 @@ class SchoolDistrict < ActiveRecord::Base
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
+  # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
       loaded = find_by_id(parsed[:id])
       if loaded.nil?
         SchoolDistrict.new(parsed).save!
-      else
+      elsif write_updates
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?
       end

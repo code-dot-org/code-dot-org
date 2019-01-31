@@ -10,6 +10,7 @@ const PageAction = makeEnum(
   'StartWebRequest',
   'StaticResourceFetchError',
   'PegasusSectionsRedirect',
+  'DancePartyOnInit',
   'BrambleError',
   'BrambleFilesystemResetSuccess',
   'BrambleFilesystemResetFailed'

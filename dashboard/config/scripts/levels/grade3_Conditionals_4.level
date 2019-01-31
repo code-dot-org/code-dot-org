@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Check this flower with an \"if\" block to see if there is any nectar available.",
+    "short_instructions": "Check this flower with an \"if\" block to see if there is any nectar available.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

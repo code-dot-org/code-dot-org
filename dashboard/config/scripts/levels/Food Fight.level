@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "You can make whatever you want in play lab! This is an example of a game you can make in play lab.",
+    "short_instructions": "You can make whatever you want in play lab! This is an example of a game you can make in play lab.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

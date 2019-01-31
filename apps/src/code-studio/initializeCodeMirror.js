@@ -68,7 +68,8 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
       updatePreview = editor => {
         ReactDOM.render(
           React.createElement(UnsafeRenderedMarkdown, {
-            markdown: editor.getValue()
+            markdown: editor.getValue(),
+            forceRemark: !editor.getOption('useMarked')
           }),
           previewElement[0],
         );
@@ -100,6 +101,7 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
   });
   if (callback) {
     editor.on('change', callback);
+    editor.on('refresh', callback);
   }
   if (updatePreview) {
      updatePreview(editor);

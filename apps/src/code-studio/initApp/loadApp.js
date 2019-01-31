@@ -280,15 +280,15 @@ function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
       if (project.hideBecauseAbusive()) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
+        renderAbusive(project, window.dashboard.i18n.t('project.abuse.tos'));
         return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
+        renderAbusive(project, window.dashboard.i18n.t('project.abuse.policy_violation'));
         return;
       }
       if (project.getSharingDisabled()) {
-        renderAbusive(window.dashboard.i18n.t('project.sharing_disabled'));
+        renderAbusive(project, window.dashboard.i18n.t('project.sharing_disabled'));
         return;
       }
       resolve(appOptions);
@@ -426,6 +426,12 @@ const sourceHandler = {
   },
   getMakerAPIsEnabled() {
     return getAppOptions().level.makerlabEnabled;
+  },
+  setSelectedSong(id) {
+    getAppOptions().level.selectedSong = id;
+  },
+  getSelectedSong() {
+    return getAppOptions().level.selectedSong;
   },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;

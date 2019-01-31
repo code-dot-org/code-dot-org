@@ -97,4 +97,14 @@ class SchoolStatsByYear < ActiveRecord::Base
   def has_k8_grades?
     grade_kg_offered || grade_01_offered || grade_02_offered || grade_03_offered || grade_04_offered || grade_05_offered || grade_06_offered || grade_07_offered || grade_08_offered
   end
+
+  def urm_percent
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
+  end
+
+  # returns what percent "count" is of the total student enrollment
+  def percent_of_students(count)
+    return nil unless count && students_total
+    (100.0 * count / students_total).round(2)
+  end
 end

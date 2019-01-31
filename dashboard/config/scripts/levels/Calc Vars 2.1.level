@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Here's a new variable called age-in-months. Use the variable age to set age-in-months.",
+    "short_instructions": "Here's a new variable called age-in-months. Use the variable age to set age-in-months.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a new variable called `age-in-months`. Use the variable `age` to set `age-in-months`.",
+    "long_instructions": "Here's a new variable called `age-in-months`. Use the variable `age` to set `age-in-months`.",
     "examples_required": "false",
     "never_autoplay_video": "false"
   }

@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_5_CSP_2_1_1'
+wrong 'A'
+wrong 'L'
+right 'V'
+wrong 'Y'
+markdown <<MARKDOWN
+ASCII is a character-encoding scheme that uses a numeric value to represent each character. For example, the uppercase letter "G" is represented by the decimal (base 10) value 71. A partial list of characters and their corresponding ASCII values are shown in the table below.
+<br><img src="https://curriculum.code.org/media/uploads/csp/31e90f701ec9183838fc7b2de0307c90" width="300"><br>
+ASCII characters can also be represented by hexadecimal numbers. According to ASCII character encoding, which of the following letters is represented by the hexadecimal (base 16) number 56?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1E, 2.1.1G, 2.1.1A, 2.1.1C, 2.1.1D**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

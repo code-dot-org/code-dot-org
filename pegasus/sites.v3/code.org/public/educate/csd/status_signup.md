@@ -1,6 +1,5 @@
 ---
 title: Computer Science Discoveries
-nav: educate_nav
 ---
 
 # CS Discoveries Status Updates
@@ -11,6 +10,10 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 <iframe src="http://go.pardot.com/l/153401/2017-08-24/jjjmqx" width="100%" height="200" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 
 ## Previous updates
+
+### 2019
+
+- <a href="http://go.pardot.com/webmail/153401/518235870/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">January 2019</a>
 
 ### 2018
 
@@ -23,6 +26,8 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - <a href="http://go.pardot.com/webmail/153401/442424065/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back-to-School 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/456073535/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">September 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/473305951/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">October 2018</a>
+- <a href="http://go.pardot.com/webmail/153401/495059452/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">November 2018</a>
+- <a href="http://go.pardot.com/webmail/153401/508603352/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2018</a>
 
 ### 2017
 

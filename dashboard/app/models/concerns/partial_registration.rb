@@ -22,7 +22,6 @@ module PartialRegistration
           user.send("#{param}=", cache.read(cache_key)) if cache
         end
         yield user if block_given?
-        user.valid? unless SignUpTracking.new_sign_up_experience?(session)
       end
     end
   end

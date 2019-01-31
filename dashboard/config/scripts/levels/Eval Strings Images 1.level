@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "The third type of data we're going to use is an Image. This star function takes in a Number and two Strings, and it evaluates to an Image. Use this function to make a solid red star with radius of 100.",
+    "short_instructions": "The third type of data we're going to use is an Image. This star function takes in a Number and two Strings, and it evaluates to an Image. Use this function to make a solid red star with radius of 100.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The third type of data we're going to use is an Image. This `star` function takes in a Number and two Strings, and it evaluates to an Image. Use this function to make a solid red star with radius of 100.",
+    "long_instructions": "The third type of data we're going to use is an Image. This `star` function takes in a Number and two Strings, and it evaluates to an Image. Use this function to make a solid red star with radius of 100.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

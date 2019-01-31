@@ -125,7 +125,8 @@ activateReferenceAreaOnLoad();
 // to put it on window :(
 window.CDOSounds = Sounds.getSingleton();
 
+const userType = document.querySelector(`script[data-usertype]`) ? getScriptData('usertype') : null;
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
-initSigninState();
+initSigninState(userType);
 initResponsive();

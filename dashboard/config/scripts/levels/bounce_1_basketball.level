@@ -14,7 +14,7 @@
       "leftButton"
     ],
     "use_flag_goal": "true",
-    "instructions": "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target.",
+    "short_instructions": "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0]]",
     "contained_level_names": null
   },

@@ -1,52 +1,29 @@
 :ruby
   show_single_hero = Homepage.show_single_hero
-  show_single_hero_mobile_gap = Homepage.show_single_hero_mobile_gap
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions
 
 - main_actions = capture_haml do
-
-  .hoc2018
-    .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
-    .hero-message-line2
-      .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_desktop)
-      .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-    .hero-message-gap.mobile-feature &nbsp;
-    .hero-message-line3
-      = hoc_s(:codeorg_homepage_hoc2018_header_line3)
-      %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
-
-  - actions.each do |entry|
-    .action.hoc2018
+  - if show_single_hero == "create"
+    .hero-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+  .action_buttons
+    - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
-        %a.linktag#hero-hoc{href: entry[:url]}
-          - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
-          - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
-          %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
-      - elsif false && entry[:type] == "video"  # There's a special video link for hoc2018, so don't show video action here
-        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();"}
-          %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
-          %span#playtext= I18n.t(entry[:text])
+        .action
+          %a.linktag#hero-hoc{href: entry[:url]}
+            - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
+            - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
+            %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
+      - elsif entry[:type] == "video"
+        .action
+          %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
+            %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
+            %span#playtext= I18n.t(entry[:text])
 
   .clear{style: "clear: both"}
 
 #hero{style: "position:relative"}
-
-  - if show_single_hero
-    .hoc2018
-      #blackbackground.desktop-feature
-        #blackbox
-        #blacktriangle
-          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 2 1"}
-            %g
-              %path{style: "fill: black", d: "M0,0 L2,0 L1,1 L0,1 z"}
-      #blackbackground.mobile-feature
-        #blackbox_mobile
-        #blacktriangle_mobile
-          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 2"}
-            %g
-              %path{style: "fill: black", d: "M0,1 L1,0 L1,2 L0,2 z"}
-
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -69,17 +46,10 @@
         = view :mobile_header_responsive
 
   - if show_single_hero
-    .bigannounce-hoc2018.desktop-feature
-      - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
-      %div{id: actions_id}
-        = main_actions
-    .bigannounce2-hoc2018.mobile-feature
-      - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
-      %div{id: actions_id}
-        = main_actions
+    #actions
+      = main_actions
 
   #caption_container.container_responsive
-
     - unless show_single_hero
       .col-66.desktop-feature{style: "position:relative;"}
         - heroes_arranged.each_with_index do |entry, index|

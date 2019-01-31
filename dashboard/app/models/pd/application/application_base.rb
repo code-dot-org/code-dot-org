@@ -2,24 +2,25 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
-#  accepted_at         :datetime
-#  properties          :text(65535)
-#  deleted_at          :datetime
+#  id                          :integer          not null, primary key
+#  user_id                     :integer
+#  type                        :string(255)      not null
+#  application_year            :string(255)      not null
+#  application_type            :string(255)      not null
+#  regional_partner_id         :integer
+#  status                      :string(255)
+#  locked_at                   :datetime
+#  notes                       :text(65535)
+#  form_data                   :text(65535)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  course                      :string(255)
+#  response_scores             :text(65535)
+#  application_guid            :string(255)
+#  accepted_at                 :datetime
+#  properties                  :text(65535)
+#  deleted_at                  :datetime
+#  status_timestamp_change_log :text(65535)
 #
 # Indexes
 #
@@ -42,6 +43,9 @@ module Pd::Application
   class ApplicationBase < ActiveRecord::Base
     include ApplicationConstants
     include Pd::Form
+    include SerializedProperties
+
+    self.table_name = 'pd_applications'
 
     acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -73,7 +77,7 @@ module Pd::Application
         'Native Hawaiian or other Pacific Islander',
         'American Indian/Alaska Native',
         OTHER,
-        'Prefer not to say'
+        'Prefer not to answer'
       ],
 
       course_hours_per_year: [
@@ -106,6 +110,14 @@ module Pd::Application
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     has_many :emails, class_name: 'Pd::Application::Email'
+    has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
+
+    serialized_attrs %w(
+      notes_2
+      notes_3
+      notes_4
+      notes_5
+    )
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -157,7 +169,14 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
-    self.table_name = 'pd_applications'
+    # Log the send email to the status log
+    def log_sent_email(email)
+      entry = {
+        time: Time.zone.now,
+        title: email.email_type + '_email'
+      }
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(entry).to_json)
+    end
 
     # Override in derived class
     def self.statuses
@@ -223,24 +242,16 @@ module Pd::Application
 
     # Override in derived class to provide headers
     # @param course [String] course name used to choose fields, since they differ between courses
-    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Override in derived class to provide the relevant csv data
-    # @param user [User] requesting user - used to handle field visibility differences
+    # @param course [String] course name used to choose fields, since they differ between courses
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
-    def to_csv_row(user)
-      raise 'Abstract method must be overridden by inheriting class'
-    end
-
-    # Override in derived class to provide csv data for cohort view
-    # @return [String] csv text row of values for cohort view ending in newline
-    #         The order of fields must be consistent between this and #self.cohort_csv_header
-    def to_cohort_csv_row
+    def to_csv_row(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
@@ -268,8 +279,14 @@ module Pd::Application
       raise 'Abstract method must be overridden in inheriting class'
     end
 
+    # Additional labels that we need in the form data hash, but aren't necessarily
+    # single answers to questions
+    def self.additional_labels
+      []
+    end
+
     def self.can_see_locked_status?(user)
-      true
+      false
     end
 
     # Include additional text for all the multi-select fields that have the option
@@ -284,7 +301,7 @@ module Pd::Application
             hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
             hash.delete additional_text_field_name
           end
-        end.slice(*self.class.filtered_labels(course).keys)
+        end.slice(*(self.class.filtered_labels(course).keys + self.class.additional_labels).uniq)
       end
     end
 
@@ -338,11 +355,6 @@ module Pd::Application
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
-    # Convert responses cores to a hash of underscore_cased symbols
-    def response_scores_hash
-      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
-    end
-
     def total_score
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
@@ -356,7 +368,59 @@ module Pd::Application
 
     # displays the iso8601 date (yyyy-mm-dd)
     def date_accepted
-      accepted_at.try {|datetime| datetime.to_date.iso8601}
+      accepted_at&.to_date&.iso8601
+    end
+
+    def date_applied
+      created_at.to_date.iso8601
+    end
+
+    # Convert responses cores to a hash of underscore_cased symbols
+    def response_scores_hash
+      (response_scores ? JSON.parse(response_scores) : default_response_score_hash).transform_keys {|key| key.to_s.underscore.to_sym}.deep_symbolize_keys
+    end
+
+    # Default response score hash
+    def default_response_score_hash
+      {}
+    end
+
+    def formatted_partner_contact_email
+      return nil unless regional_partner&.contact_email_with_backup.present?
+
+      if regional_partner.contact_name.present? && regional_partner.contact_email.present?
+        "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"
+      elsif regional_partner.program_managers&.first.present?
+        "\"#{regional_partner.program_managers.first.name}\" <#{regional_partner.program_managers.first.email}>"
+      elsif regional_partner.contact&.email.present?
+        "\"#{regional_partner.contact.name}\" <#{regional_partner.contact.email}>"
+      end
+    end
+
+    def sanitize_status_timestamp_change_log
+      if status_timestamp_change_log
+        JSON.parse(status_timestamp_change_log).map(&:symbolize_keys)
+      else
+        []
+      end
+    end
+
+    def update_lock_change_log(user)
+      update_status_timestamp_change_log(user, "Application is #{locked? ? 'locked' : 'unlocked'}")
+    end
+
+    # Record when the status changes and who changed it
+    # Ideally we'd implement this as an after_save action, but since we want the current
+    # user to be included, this needs to be explicitly passed in in the controller
+    def update_status_timestamp_change_log(user, title = status)
+      log_entry = {
+        title: title,
+        changing_user_id: user.try(:id),
+        changing_user_name: user.try(:name) || user.try(:email),
+        time: Time.zone.now
+      }
+
+      update(status_timestamp_change_log: sanitize_status_timestamp_change_log.append(log_entry).to_json)
     end
   end
 end

@@ -1,0 +1,62 @@
+name 'AP_practice_Qs_rqb_99_CSP_4_1_1'
+right '<pre>
+xPos &lt;- 3
+yPos &lt;- 3
+REPEAT 3 TIMES
+{
+    drawCircle(xPos, yPos, 3)
+    xPos &lt;- xPos + 6
+}
+</pre>'
+wrong '<pre>
+xPos &lt;- 3
+yPos &lt;- 3
+REPEAT 3 TIMES
+{
+    drawCircle(xPos, yPos, 3)
+    yPos &lt;- yPos + 6
+}
+</pre>'
+wrong '<pre>
+xPos &lt;- 3
+yPos &lt;- 3
+REPEAT 3 TIMES
+{
+    drawCircle(xPos, yPos, 3)
+    xPos &lt;- xPos + 6
+    yPos &lt;- yPos + 6
+}
+</pre>'
+wrong '<pre>
+xPos &lt;- 3
+yPos &lt;- 3
+REPEAT 3 TIMES
+{
+    drawCircle(xPos, yPos, 3)
+}  
+xPos &lt;- xPos - 6
+yPos &lt;- yPos - 6
+</pre>'
+markdown <<MARKDOWN
+You write a procedure DrawCircle(x, y, r) to draw a circle on the coordinate grid. The center of the circle is located at coordinate (x, y) and has a radius of r units. You want to use the procedure to draw the image as shown below. 
+
+<br><img src="https://curriculum.code.org/media/uploads/csp/f83fde39225ea815c1ac2706c10b517f" width="300"><br>
+
+Which of the following code segments can be used to draw the figure?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1B, 4.1.1D, 4.1.1E, 4.1.1F, 4.1.1A**
+<hr>
+ (A) <strong> This option is correct.  The code segment in this option draws the first circle centered at the coordinates (3,3), and then increments the xPos value by 6, drawing circles with centers at (9, 3) and (15, 3). There is no change in the yPos value so the circles will be drawn as shown in the image. </strong>
+
+<hr>
+ (B) <strong>This option is incorrect. </strong> The code segment in this option draws the first circle centered at the coordinates (3,3), and then increments the yPos value by 6, drawing circles with centers at (3, 9) and (3, 15). There is no change in the xPos value, so the circles will be drawn stacked vertically.
+
+<hr>
+ (C) <strong> This option is incorrect. </strong> The code segment in this option draws the first circle centered at the coordinates (3,3), and then increments the xPos and yPos values by 6, drawing circles with centers at (9,9) and (15,15). There are changes in xPos and yPos values, so the circles will be drawn diagonally.
+
+<hr>
+ (D) <strong>This option is incorrect. </strong> The code segment in this option draws the circle centered at the coordinates (3,3) three times, and then decrements the xPos and yPos values by 6.  There are changes in xPos and yPos values after the Repeat loop, so there will be only one circle drawn.
+
+MARKDOWN

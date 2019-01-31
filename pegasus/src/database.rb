@@ -7,14 +7,16 @@ require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
-  # The Tutorials pages used to source data from the tutorials and beyond_tutorials tables, which were imported from
-  # the GoogleDrive://Pegasus/Data/ HocTutorials and HocBeyondTutorials Google Sheets
-  # Those sheets have been ported to the "v3" Google Sheet format in the GoogleDrive://Pegasus/v3 folder
-  # and use datatype suffixes on the column names and have new table names to match the v3 convention:
-  #      cdo_tutorials and cdo_beyond_tutorials
-  # Prefix "cdo_" on the table name to use the new tables sourced from the new v3 Google Sheets
-  # and alias the database columns with names that have the datatype suffixes stripped off so that existing
-  # tutorial pages do not need to be modified to reference the new column names
+  # This class uses data from two GSheets:
+  #   GoogleDrive://Pegasus/v3/cdo-tutorials
+  #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
+  # These sheets are in the "v3" Google Sheet format and use datatype suffixes on the column names,
+  # and map to tables in the database to match the v3 convention:
+  #   cdo_tutorials
+  #   cdo_beyond_tutorials
+  # We alias the database columns with names that have the datatype suffixes stripped off for
+  # backwards-compatibility with some existing tutorial pages
+  # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
   def initialize(table)
     @table = "cdo_#{table}".to_sym
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")

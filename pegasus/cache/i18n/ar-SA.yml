@@ -33,12 +33,19 @@
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
   og_title: كل طفل يستحق فرصة
+  og_title_soon: ساعة البرمجة قادمة
+  og_title_here: هنا ساعة البرمجة!
   og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل
     شيء.
+  og_description_celeb: جرب البرامج التعليمية الجديدة، واحصل على فرصة للفوز لتتحدث
+    أنت أو فصلك مع أحد المشاهير!
   csedweek_og_title: ساعة من البرمجةهنا مدار للتعليمات البرمجية
   csedweek_og_description: الساعة البرنامجية هي حركة عالمية تصل الى عشرات الملايين
     من الطلاب على كافة الاعمار في اكثر من مءة ‏وثمانين لغة وفِي كثر من خمسة وأربعين
     دولة.
+  csedweek_og_description_soon: ساعة برمجة يأتيكم بين 3-9 ديسمبر 2018. تعتبر دراسة
+    علم الكمبيوتر أساسية لكل طالب.
+  csedweek_og_description_here: 'هنا ساعة البرمجة, علوم الحاسب مادة أساسية لكل الطلاب. '
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
   hoc2014_students: الطلاب
@@ -84,6 +91,7 @@
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   congratulations_volunteer: 'تهاني: الآن بعد أن جربت "ساعة من البرمجة"، <a href="https://code.org/volunteer">
     قم بالتسجيل للتطوع في الفصول دراسية</a> ومساعدة الطلاب تعلم "ساعة البرمجة"!'
+  congratulations_on_completing_course: تهانينا على إكمال %{course}
   congrats_next_tutorials_title: جرب هذه الدروس بعد ذلك
   congrats_next_tutorials_desc: جرب هذه الدروس الأقصر و التي تدوم ساعة واحدة ، أو
     جرب <a href="%{current_path}/next"> دروس شركائنا</a>.
@@ -244,7 +252,17 @@
   just_did_course2: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 2 - تَفَقَّدْ ذَلِك! @codeorg
   just_did_course3: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 3 - تَفَقَّدْ ذَلِك! @codeorg
   just_did_course4: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 4 - تَفَقَّدْ ذَلِك! @codeorg
+  just_did_coursea: لقد انتهيت للتو من دورة A-يمكنك مشاهدتها! @codeorg
+  just_did_courseb: لقد انتهيت للتو من دورة B-يمكنك مشاهدتها! @codeorg
+  just_did_coursec: لقد انتهيت للتو من دورة C-يمكنك مشاهدتها! @codeorg
+  just_did_coursed: لقد انتهيت للتو من دورة D-يمكنك مشاهدتها! @codeorg
+  just_did_coursee: لقد انتهيت للتو من دورة E-يمكنك مشاهدتها! @codeorg
+  just_did_coursef: لقد انتهيت للتو من دورة F-يمكنك مشاهدتها! @codeorg
   just_did_accelerated: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر المُسَرّع - تَفَقَّدْ ذَلِك!
+    @codeorg
+  just_did_hoc_donor: 'لقد أنهيت #ساعة_البرمجة ! (شكرا  %{donor_twitter} لدعمك @codeorg
+    )'
+  just_did_course_donor: لقد أكملت %{course} - شاهد ذلك! شكرا %{donor_twitter} لدعمكم
     @codeorg
   twitter_teach_cs: |-
     يتَّفِقُ 9 مِن بَيْنَ كُلِّ 10 أشخاص، المدارِس يَنْبَغِي أن تُدَرِّسّ عِلْمَ الحَاسُوب.
@@ -260,6 +278,7 @@
   lines_of_code: 'فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان.'
   lines_of_code_alt: "<b>#</b> اسطر الكود البرمجي التي كتبها الطلاب"
   who_has_done_hoc: 'من الذي اكمل #الساعة_من_البرمجة؟ @codeorg'
+  who_has_done_hoc_donor: 'من أكمل #ساعة_برمجة? (شكرا %{donor_twitter} لدعمكم @codeorg)'
   hoc_leaderboards: متصدرين الساعة من البرمجة
   students_and_lines: "%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines}
     اسطر من الكود البرمجي."
@@ -275,6 +294,8 @@
   studiobar_title_nolink: إستكشف ستوديو البرمجة
   studiobar_elementary_title: الدورات الابتدائية
   studiobar_elementary_body: دوراتنا الثلاث الجديدة لـ K&#8209;5
+  studiobar_dance_title: حفلة رقص
+  studiobar_dance_body: إنشاء حفلتك الراقصة ومشاركتها
   studiobar_hoc_title: الساعة من التعليمات البرمجية
   studiobar_hoc_body: تعلم البرمجة مع الطيور الغاضبة
   studiobar_flappy_title: رمز لعبة flappy
@@ -288,6 +309,12 @@
   studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
   studiobar_shop_title: تسوق
   studiobar_shop_body: اكسر الصور النمطية. و قم بارتداء شعارنا بكل فخر.
+  homepage_stats_students: من طلاب الولايات المتحدة لديهم حسابات على Code.org
+  homepage_stats_female: من طلابنا هم من الإناث
+  homepage_stats_teachers: من المعلمون يستخدمون Code.org
+  homepage_stats_hourofcodde: من طلاب العالم قاموا بتجريب "ساعة البرمجة"
+  homepage_stats_policy: غيرت الدول سياساتها لدعم علم الكمبيوتر
+  homepage_stats_title: أننا نصنع فرقا
   homepage_hero_text_malala: "&ldquo;اتحدى البنات في كل بلد تعلّم ساعة واحدة من البرمجة&rdquo;
     مالالى،  الحاصلة على جائزة نوبل للسلام"
   homepage_hero_text_susan: "&ldquo;إذا كان بإمكانك تغيير التكنولوجيا، يمكنك تغيير
@@ -298,6 +325,10 @@
     فرصة لتعلم علوم الحاسوب." شيريل، مدير الاستغلال بفيس بوك'
   homepage_hero_text_satya: '"علوم الحاسوب يمكنها تأمين أفضل الفرص في العالم." ساتيا،
     الرئيس التنفيذي لشركة مايكروسوفت'
+  homepage_hero_text_satya_new: |-
+    &ldquo;علم الكمبيوتر مكن
+    الطلاب من صنع عالم الغد.&rdquo;
+    Satya, المدير التنفيذي لشركة مايكروسوفت
   homepage_hero_text_bosh: '"إذا كنت تحسن البرمجة، يمكنك انتقاء واختيار مسار حياةك."
     كريس بوش'
   homepage_hero_text_student1: "\"غيرت هذه المهارات مستقبلي. ناهيك، أنها ممتعة. لوناً،
@@ -317,6 +348,8 @@
   homepage_hero_text_stat_loc: "#loc  الأسطر من التعليمات البرمجية التي كتبها الطلاب"
   homepage_hero_text_stat_students: '#student_count حساب طالب في "استوديو البرمجة"'
   homepage_hero_text_stat_served: 'ساعة البرمجة: #served خدمة قدمت'
+  homepage_hero_hoc_is_coming: ساعة البرمجة قادمة
+  homepage_hero_hoc_is_here: هنا ساعة البرمجة
   homepage_slot_text_hoc: الساعة من التعليمات البرمجية
   homepage_slot_text_frozen: ملكة الثلج مع أنّا و إلزا
   homepage_slot_text_teacher: لَوْحَة التَحَكُّم
@@ -336,6 +369,7 @@
   homepage_action_text_girlvideo: الهام بنت
   homepage_action_text_learn: ابدأ التعلم
   homepage_action_text_signpetition: وقّع على العريضة
+  homepage_action_text_wincelebritychat: اربح دردشة مع أحد المشاهير
   homepage_signpetition_dropdown: أوافق &#x25BE;
   homepage_diversity_pledge: التعهد بالتنوع
   homepage_banner_text_prizes: 'فعالية "ساعة برمجة" قادمة من جديد. 07 - 13 ديسمبر. '
@@ -357,6 +391,7 @@
   homepage_slot_text_title_hoc: ساعة البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
+  homepage_slot_text_link_about_hoc: عن ساعة البرمحة
   homepage_slot_text_link_host: استضافة ساعة البرمجة
   homepage_slot_text_link_hocserved: "#  خدمة قدمت"
   homepage_solot_text_link_volunteer: تطوع لفعالية "ساعة برمجة"
@@ -380,6 +415,7 @@
   homepage_slot_text_link_buy: إنضم
   homepage_slot_text_link_donate: تبرع
   homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
+  homepage_slot_text_link_administrators: وفر علم الكمبيوتر لمدرستك
   homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
   homepage_header_donors: موقع code.org  يشكر الداعمين له
   homepage_donors_seall: عرض الكل
@@ -454,16 +490,49 @@
   mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   mc_specs: العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح أعمارهم
     بين 6-106
+  minecraft_agent: 'ماين كرافت: رحلة البطل'
   minecraft_designer: مصمم Minecraft
   minecraft_adventurer: مغامر في Minecraft
+  minecraft_tutorials: دروس ساعة من البرمجة مع ماينكرافت
+  minecraft_specs: العديد من اللغات | المتصفحات الحديثة والأجهزة اللوحية | الصف الثاني+
+  minecraft_start_tutorial: ابدأ الدرس التعليمي
+  minecraft_agent_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
+    رحلة عبر Minecraft مع البرمجة.
   minecraft_agent_button: إبدأ
   minecraft_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
     الخاص بك من ماينكرافت.
   minecraft_designer_button: إبدأ
+  minecraft_adventurer_description: استخدم البرمجة لأخذ ألكس أو ستيف في مغامرة.
   minecraft_adventurer_button: إبدأ
   minecraft_no_internet: ليسَ لديكَ إنتِرْنِتّ؟
+  minecraft_download_adventurer: حمل مغامرة ماينكرافت نسخة عدم الاتصار.
   minecraft_subtitle: ساعة البرمجة ماين كرافت
+  minecraft_store_camps: مخيمات مجانية لساعة من البرمجة في متجر ماينكرافت
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>سجل
+    دخولك</a> من اجل رمز للحصول على ساعة برمجة الخاصة بماينكرافت مجانا في متجر مايكرسوفت
+    في استراليا, كندا, بورتو ريكو والولايات المتحدة. تعلم كيف تكون البرمجة لاي شخص
+    وينمي الابداع وحل المشاكل والكثير من المتعة."
+  minecraft_host_event: استضف حدث ساعة برمجة في ماينكرافت
+  minecraft_teach_resources: موارد المعلم وخطة الدرس.
+  minecraft_leader_guide: حمل الموارد لمساعدتك في التخطيط وقيادة الحدث.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>حمل</a>
+    دليل البدأ السريع المبسط و عروض PowerPoint للطلاب للأصغر والأكبر عمرا الان."
+  minecraft_join_online_training: هل أنت على استعداد لتزويد ساعة برمجة الخاصة بك بحرفة
+    استخراج الكنوز؟ راجع هذا الرابط <a href='%{minecraft_webinar_url}', target='_blank'>on-demand
+    webinar</a>. سوف تتعلم أفضل الممارسات، والوصول إلى مواد ميسرة جاهزة، واحصل على
+    جولة توضيحية في البرنامج التعليمي الجديد رحلة الأبطال Hero's Journey من فريق استخراج
+    الكنوز Minecraft. احصل على السبق في التفكير من خلال ما تحتاجه لتوفير ساعة برمجة
+    للصغار خلال أسبوع تعليم علم الكمبيوتر (4-10 ديسمبر) وما بعدها.
+  minecraft_continue_learning: 'علم الكمبيوتر للجميع: ما وراء ساعة برمجة في متجر مايكروسوف'
+  minecraft_future: ساعد جميع الفتية والفتيات ليكونوا مستعدين للمستقبل
+  sports_page_title: رياضة ساعة برمجة
+  sports_og_title: ادفع نفسك. يمكن لأي شخص أن يتعلم.
   sports_watch_video: شاهد الفيديو
+  sports_video_title: ادفع نفسك. يمكن لأي شخص أن يتعلم.
+  sports_select_theme: اختر موضوع درسك التعليمي
+  sports_basketball_title: اصنع لعبة كرة السلة
+  sports_featured_athletes: شاهد الرياضيين المميزين
+  sports_athletes_title: الرياضيون المميزون
   sports_athlete_Harrison: هاريسون بارنز، صاحب الميدالية الذهبية الأولمبية وبطل الدوري
     الأميركي للمحترفين، دالاس مافيريكس
   watch_inspirational_videos: قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة
@@ -473,13 +542,16 @@
   video_title_obama: الرئيس أوباما في علوم الحاسوب
   video_title_hoc_is_here: هنا ساعة البرمجة - يمكن لأي كان أي يتعلم
   video_title_anybody_can_learn: يمكن لأي كان أن يتعلم
+  video_title_steph_curry: ساعة برمجة مع ستف كاري
   video_title_draymond_green: ساعة البرمجة مع درايمن كرين
   video_title_russell_okung: ساعة البرمجة مع راسل أوكون
   video_title_real_madrid: ساعة البرمجة مع ريال مدريد
   video_title_marco_belinelli: ساعة البرمجة مع ماركو بيلينلي
   video_title_chris_bosh: كريس بوش في علوم الحاسوب
+  video_title_my_name_is_aracely: اسمي أراسلي
   video_1min: دقيقة
   video_2min: دقيقتان
+  video_3min: 3 دقائق
   video_5min: 5 دقائق
   speak_another_language: هلْ تَتَحَدَثُ لُغَةً أُخْرى؟
   help_translate: سَاعِدْنا في التَرْجَمَة.
@@ -503,6 +575,8 @@
     المتاحة عن طريق علوم الحاسوب ( و يكمن عمل هذا عن طريق محادثة مُصورة عبر الانترنت).
     اذا كنت لا تريد ان تتطوع <a href="%{url}"> تعلم المزيد </a> عن تنظيم "Hour of
     code" الخاص بك.'
+  volunteer_engineer_submission_intro_guide: اعرف المزيد حول <a href="%{volunteer_guide}">برنامجنا
+    التطوعي هنا</a>.
   volunteer_engineer_submission_intro_signup: الرجاء إدخال المعلومات التالية إذا كنت
     طالب علوم الحاسوب أو مختص في البرمجة. ادخال الحقول ب  <span class="form-required-field">
     *</span> لازمة.
@@ -552,6 +626,7 @@
     ظاهرة للعموم و خاصة المعلمين المحليين.
   volunteer_engineer_submission_checkbox_contact: 'أوافق على تمكين المعلمين بالاتصال
     بي لفرص التطوع (ملاحظة: لن تتم مشاركة عنوان البريد الإلكتروني الخاص بك)'
+  volunteer_engineer_submission_checkbox_age_18_plus: أقر بأني على الأقل بعمر 18 سنة.
   volunteer_engineer_submission_submit: تسجيل
   volunteer_engineer_submission_thankyou: شكرا على عملكم التطوعي على "حدث ساعة البرمجة".
     للاستعداد لحدث "ساعة  البرمجة" و دعوة  متطوعين آخرين، <a href="%{url}"> معرفة
@@ -670,6 +745,7 @@
   dashboard_assessments_view: 'عرض التقييمات في:'
   dashboard_assessments_summaries: الخلاصات
   dashboard_assessments_answers: جميع الأجوبة
+  dashboard_surveys_answers: استبيانات
   dashboard_filter_by_stage: 'الفلترة حسب المرحلة:'
   dashboard_filter_all: جميع
   dashboard_download_csv: تحميل CSV
@@ -684,6 +760,7 @@
   dashboard_navigation_view_progress: في تقدم
   dashboard_navigation_view_text_responses: استجابات النص
   dashboard_navigation_view_assessments: التقييمات
+  dashboard_navigation_view_assessments_surveys: التقييمات/الاستبيانات
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
@@ -700,6 +777,7 @@
   dashboard_progress_submitted: تم التقديم
   dashboard_progress_view: 'عرض التقدم في:'
   dashboard_progress_student_in_script: معلومات التقدم لــِ %{student_name} في %{script_name}
+  dashboard_progress_pair_programming: البرمجة الثنائية
   dashboard_responses_view: 'عرض استجابات النص في:'
   dashboard_sections_new_section: القسم جديد
   dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة
@@ -725,6 +803,17 @@
     الحساب وتعطى لكل طالب من طلابك بشكل فردي.
   dashboard_sections_switch_section: 'قسم التبديل:'
   dashboard_sections_close: إغلاق
+  dashboard_sections_move_to_section: 'الانتقال إلى القسم:'
+  dashboard_sections_enter_code: 'أدخل كود القسم:'
+  dashboard_sections_code_placeholder: كود مكون من 6 حروف (ABCDEF)
+  dashboard_sections_other_section: مدرس آخر
+  dashboard_sections_both_sections: هل تود أن يكون الطالب (الطلاب) في كلا القسمين؟
+  dashboard_sections_yes_both: نعم، أود أن أنسخ الطالب (الطلاب) في هذا القسم الحالي
+    وفي القسم الجديد
+  dashboard_sections_no_move: لا، أود أن أنقل الطالب (الطلاب) إلى القسم الجديد فقط.
+  dashboard_sections_move_students: انقل الطلاب
+  dashboard_sections_assign_hoc_script_desc: المشاركة في ساعة برمجة؟
+  dashboard_sections_assign_activity: حدد دورة تدريبية
   dashboard_students_add_multiple: 'اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:'
   dashboard_students_new_section: قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
     <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.
@@ -766,6 +855,15 @@
   dashboard_course2: 'الدرسة الثاني:'
   dashboard_course3: 'الدرس الثالت:'
   dashboard_course4: 'الدّرس 4 (تجريبي):'
+  dashboard_coursec: 'الدورة C: '
+  dashboard_coursed: 'الدورة D: '
+  dashboard_coursee: 'الدورة E: '
+  dashboard_coursef: 'الدورة F: '
+  dashboard_pre-express: 'دورة سريعة لمستوى ما قبل القراءة: '
+  dashboard_express: 'دورة سريعة: '
+  dashboard_unplugged: إذا كنت لا تملك كمبيوتر، <a href='%{unplugged_url}'>جرب هذه
+    الدروس غير المتطلبة للكمبيوتر</a> في فصلك.
+  dashboard_tools: 'أدوات: '
   dashboard_curriculum: المناهج
   dashboard_curriculum_overview: نظرة عامة على منهاج الروضة - صف 5
   dashboard_overview: لمحة عامة
@@ -783,6 +881,7 @@
   dashboard_curriculum_csins: 'علوم الحاسوب في مجال العلوم:'
   dashboard_curriculum_csp: 'مبادئ علوم الحاسوب بنظام ® AP:'
   dashboard_curriculum_ecs: 'استكشاف علوم الحاسوب:'
+  dashboard_curriculum_csd: 'اكتشافات علم الكمبيوتر: '
   dashboard_grade_k: روضة
   dashboard_grade_other: الأخرى
   dashboard_login_word: كلمة
@@ -928,7 +1027,34 @@
   course2_name: الدورة الثانية
   course3_name: الدورة الثالثة
   course4_name: الدورة 4
+  coursea-draft_name: الدورة A
+  coursea_name: الدورة A
+  courseb-draft_name: الدورة B
+  courseb_name: الدورة B
+  coursec-draft_name: الدورة C
+  coursec_name: الدورة C
+  coursed-draft_name: الدورة D
+  coursed_name: الدورة D
+  coursee-draft_name: الدورة E
+  coursee_name: الدورة E
+  coursef-draft_name: الدورة F
+  coursef_name: الدورة F
+  coursea-2017_name: الدورة A (2017)
+  courseb-2017_name: الدورة B (2017)
+  coursec-2017_name: الدورة C (2017)
+  coursed-2017_name: الدورة D (2017)
+  coursee-2017_name: الدورة E (2017)
+  coursef-2017_name: الدورة F (2017)
   accelerated_name: دورة تدريبية مسرّعة
+  express_name: دورة سريعة
+  pre-express_name: دورة سريعة لمستوى ما قبل القراءة
+  express-2017_name: دورة سريعة (2017)
+  pre-express-2017_name: دورة سريعة لمستوى ما قبل القراءة (2017)
+  pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
+  cspunit1_name: "(قديم) الوحدة 1: معلومات رقمية"
+  cspunit2_name: "(قديم) الوحدة 2: الإنترنت"
+  cspunit3_name: "(قديم) الوحدة 3: البرمجة"
+  cspunit4_name: "(قديم) الوحدة 4: البيانات"
   20-hour_name: دورة تدريبية مسرّعة
   algebra_name: علوم الحاسوب في الجبر
   AlgebraA_name: علوم الحاسوب في الجبر مُقَرّر أ
@@ -939,6 +1065,7 @@
   math_category_name: العمليات الحسابية
   hoc_category_name: ساعة البرمجة
   applab_name: مختبر التطبيق
+  basketball_name: اصنع لعبة كرة السلة
   applab_gradelevel: للأعمار 13 +
   codeorg_gradelevel: الأعمار 4-104
   codeintl_gradelevel: الأعمار 4-104
@@ -993,12 +1120,24 @@
   course2_gradelevel: الأعمار 6-18
   course3_gradelevel: الأعمار 8-18
   course4_gradelevel: الذين تتراوح أعمارهم بين 10-13
+  coursea_gradelevel: الأعمار 4-7
+  courseb_gradelevel: الأعمار 5-8
+  coursec_gradelevel: الأعمار 6-10
   coursed_gradelevel: الصفوف 8+
   coursee_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  coursef_gradelevel: الأعمار 9-13
+  coursea-2017_gradelevel: الأعمار 4-7
+  courseb-2017_gradelevel: الأعمار 5-8
+  coursec-2017_gradelevel: الأعمار 6-10
   coursed-2017_gradelevel: الصفوف 8+
   coursee-2017_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  coursef-2017_gradelevel: الأعمار 9-13
+  coursea-2018_gradelevel: الأعمار 4-7
+  courseb-2018_gradelevel: الأعمار 5-8
+  coursec-2018_gradelevel: الأعمار 6-10
   coursed-2018_gradelevel: الصفوف 8+
   coursee-2018_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  coursef-2018_gradelevel: الأعمار 9-13
   accelerated_gradelevel: الذين تتراوح أعمارهم بين 10-13
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
@@ -1541,79 +1680,127 @@
   starwars_shortcode: نجمة
   flappy_shortcode: رفرف
   header_courses: الدروس
+  header_course_catalog: فهرس الدورة
   header_project_gallery: المشاريع
+  header_sections: الأقسام
+  header_educate_overview: لمحة عن المعلم
+  header_educate_elementary: المدرسة الابتدائية
+  header_educate_middle: المرحلة المتوسطة
+  header_educate_high: المرحلة الثانوية
   header_educate_hoc: ساعة البرمجة
+  header_educate_partner: كن شريكا لنا
+  header_educate_beyond: بعد Code.org
+  header_educate_inspire: ألهم طالب
+  header_educate_community: مجتمع الإنترنت
+  header_educate_tools: الأدوات والفيديوهات
+  header_about_us: نبذة عنا
+  header_about_leadership: القيادة
+  header_about_donors: المتبرعون
+  header_about_partners: الشركاء
+  header_about_team: الفريق الكامل
+  header_about_news: مركز الأنباء
+  header_about_evaluation: التقييم
+  header_about_jobs: وظائف
+  header_about_contact: إتصل بنا
+  header_about_faqs: الأسئلة الشائعة
+  header_learn: تعلّم
+  header_teach: التعليم
   header_stats: الإحصائيات
+  header_help_us: ساعدنا
+  header_about: حول
+  header_teacher_community: مجتمع المدرسين
+  header_report_bug: أبلغ عن وجود خلل
   user_header_label: مرحباً %{username}
+  user_header_team: فريق
   user_header_settings: حسابي
   user_header_logout: تسجيل الخروج
   user_header_signin: تسجيل الدخول
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  congratulations_on_completing_course: Congratulations on completing %{course}
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_action_text_wincelebritychat: Win a celebrity chat
+  user_header_playlab: مختبر اللعب
+  user_header_dance: حفلة رقص
+  user_header_minecraft: Minecraft
+  user_header_flappy: فلابي
+  hero_name: 'ماين كرافت: رحلة البطل'
+  applab_tile_start_tutorial: إبدأ
+  applab_tile_teacher_guide: عرض دليل المعلم
+  aquatic_name: 'المائي: الرحلة المائية'
+  account_sign_up_email_opt_in: هل يمكننا إرسال بريد إلكتروني إليك حول تحديثات دوراتنا
+    أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟ (تقريباً مرة في الشهر)
+  account_sign_up_child_accept_terms: أؤكد على أنني حصلت على أذن من والدي أو الوصي
+    لاستعمال خدمات Code.org.
+  hoc_overview_dance_title: حفلة رقص
+  hoc_overview_partner_activities_title: مزيد من الأنشطة من الشركاء
+  hoc_overview_partner_activities_body: يحتوي موقع Hour of Code "ساعة من البرمجة"
+    على أكثر من 100 نشاط في علوم الكمبيوتر لجميع الأعمار ومستويات الخبرة التي طورها
+    موقع Code.org وشركاؤه.
+  hoc_overview_partner_activities_link: عرض الأنشطة
+  hoc_overview_start_tutorial: إبدأ
+  hoc_overview_view_teacher_guide: عرض دليل المعلم
+  hoc2018_creativity_create: أنشئ
+  hoc2018_creativity_what_will_you_create: ما الذي ستنشئه؟
+  hoc2018_mc_page_title: دروس ساعة من البرمجة مع ماينكرافت
+  hoc2018_mc_details: العديد من اللغات | المتصفحات الحديثة والأجهزة اللوحية | الصف
+    الثاني+
+  hoc2018_mc_aquatic_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من
+    البرمجة! رحلة عبر Minecraft مع البرمجة.
+  hoc2018_mc_hero_title: 'ماين كرافت: رحلة البطل'
+  hoc2018_mc_hero_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
+    رحلة عبر Minecraft مع البرمجة.
+  hoc2018_mc_designer_title: مصمم Minecraft
+  hoc2018_mc_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
+    الخاص بك من ماينكرافت.
+  hoc2018_mc_adventurer_title: مغامر في Minecraft
+  hoc2018_mc_adventurer_description: استخدم البرمجة لأخذ ألكس أو ستيف في مغامرة.
+  hoc2018_mc_start: إبدأ
+  hoc2018_mc_no_internet: ليسَ لديكَ إنتِرْنِتّ؟
+  hoc2018_mc_download_adventurer: حمل مغامرة ماينكرافت نسخة عدم الاتصار.
+  hoc2018_mc_educators_box2_button: تنزيل
+  hoc2018_mc_watch_videos: قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة
+  hoc2018_mc_videos_more: المزيد من <a href='%{inspiring_videos_playlist}'>الفيديوات
+    الملهمة</a> مع أبطال ومشاهير
+  hoc2018_mc_careers_more: المزيد من <a href='%{careers_url}' target='_blank'>الفيديوات
+    الملهمة</a> مع متخصصين في مجال التكنولوجيا
+  hoc2018_mc_video_1min: دقيقة
+  hoc2018_mc_video_2min: دقيقتان
+  hoc2018_mc_video_3min: 3 دقائق
+  hoc2018_mc_video_5min: 5 دقائق
+  hoc2018_mc_video_title_steph_curry: ساعة برمجة مع ستف كاري
+  hoc2018_mc_video_title_sports: ادفع نفسك. يمكن لأي شخص أن يتعلم.
+  hoc2018_mc_video_title_inspire_girl: الهام بنت
+  hoc2018_mc_video_title_cs_intro: تقديم لعلوم الحاسوب
+  hoc2018_mc_video_title_schools_dont_teach: ما لا تدرسه معظم المدارس
+  hoc2018_mc_video_title_obama: الرئيس أوباما في علوم الحاسوب
+  hoc2018_mc_video_title_hoc_is_here: هنا ساعة البرمجة - يمكن لأي كان أي يتعلم
+  hoc2018_mc_video_title_anybody_can_learn: يمكن لأي كان أن يتعلم
+  hoc2018_mc_video_title_my_name_is_aracely: اسمي أراسلي
+  hoc2018_mc_homepage_hoc_coming: سيبدأ حدث «ساعة من البرمجة» قريبًا
+  hoc2018_mc_homepage_what_create: ما الذي ستنشئه؟
+  hoc2018_mc_homepage_join_us: انضم إلينا
+  hoc2018_mc_homepage_try_it: جربها
+  hoc2018_mc_back: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
+  hoc2018_mc_back_journey: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
+    رحلة عبر Minecraft مع البرمجة.
+  hoc2018_mc_teacher_guide: عرض دليل المعلم
+  hoc2018_dance_party_main_heading: حفلة رقص
+  hoc2018_dance_create_your_own_dance_title: إنشاء حفلتك الراقصة الخاصة
+  hoc2018_dance_party_box_title: حفلة رقص
+  hoc2018_dance_party_box_description: برمِج حفلة رقص لمشاركتها مع أصدقائك!
+  hoc2018_dance_party_button: إبدأ
+  hoc2018_dance_keep_on_dancing_box_title: استمر في الرقص
+  hoc2018_dance_keep_on_dancing_description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+  hoc2018_dance_keep_on_dancing_button: بدء تشغيل الجزء الثاني
+  hoc2018_dance_teacher_resources_title: موارد المعلم
+  hoc2018_dance_teacher_resources_tile1_description: خطط الدروس والشهادات وتصفية الموسيقى.
+  hoc2018_dance_teacher_resources_tile1_button: خطة الدرس
+  hoc2018_dance_teacher_resources_tile2_title: حفلة راقصة مُسجلة بأدوات صوتية
+  hoc2018_dance_teacher_resources_tile2_description: ليست هناك حاجة لأجهزة الكمبيوتر!  تعلّم
+    مفاهيم البرمجة لتصميم رقصة حفلة الرقص.
+  hoc2018_dance_teacher_resources_tile2_button: نشاط غير موصول
+  hoc2018_dance_amazon_about_future_engineer_button: اعرف المزيد
+  hoc2018_dance_amazon_scholarship_programs_button: طبق الآن
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_administrators: Bring CS to your school
-  minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
-    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
-    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
-    from the Minecraft team. Get a head start on thinking through what you need to
-    bring Hour of Code to young people during Computer Science Education week (December
-    4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
+  homepage_gallery_header: Over %{project_count} million Code.org projects created
   minecraft_continue_learning_description: No computer science experience required!
     Help ensure all youth can learn the valuable skills gained through computer science
     education. Join us at the Microsoft Store to engage in a free series of three,
@@ -1621,7 +1808,6 @@
     become familiar with key computer science concepts, and get ready to lead an Hour
     of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
     target='_blank'>Sign up today</a>.
-  minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
     communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
@@ -1630,17 +1816,10 @@
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
-  sports_page_title: Hour of Code Sports
-  sports_og_title: Push yourself. Anybody can learn.
   sports_og_description: Champions and gold medalists encourage you to try the Hour
     of Code. Code your own sports game.
   sports_title: Code your own sports game
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
     Golden State Warriors
   sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
@@ -1667,13 +1846,6 @@
   sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
     Heat
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_steph_curry: Hour of Code with Steph Curry
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
@@ -1687,10 +1859,7 @@
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_progress_pair_programming: pair programming
   dashboard_responses_none: Most of our classes are designed to work for younger ages
     and do not require students to type text responses to questions, so you will not
     see any text responses here. For older students in middle and high school courses,
@@ -1701,17 +1870,6 @@
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Teacher
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move students
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
   dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
     save progress in this course from December 3 - 11 due to the amount of traffic
     our site will receive for the Hour of Code.  Everything else in this tutorial
@@ -1719,7 +1877,6 @@
     students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
     these in advance</a>.)  We will save and report student progress for every other
     week of the year.
-  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -1733,16 +1890,6 @@
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
@@ -1779,40 +1926,13 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   codesters_name: Codesters
-  coursea-draft_name: Course A
-  coursea_name: Course A
-  courseb-draft_name: Course B
-  courseb_name: Course B
-  coursec-draft_name: Course C
-  coursec_name: Course C
-  coursed-draft_name: Course D
-  coursed_name: Course D
-  coursee-draft_name: Course E
-  coursee_name: Course E
-  coursef-draft_name: Course F
-  coursef_name: Course F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
   coursea-2018_name: Course A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
   coursed-2018_name: Course D (2018)
   coursee-2018_name: Course E (2018)
   coursef-2018_name: Course F (2018)
-  express_name: Express Course
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
   express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: "(old) Unit 1: Digital Information"
-  cspunit2_name: "(old) Unit 2: The Internet"
-  cspunit3_name: "(old) Unit 3: Programming"
-  cspunit4_name: "(old) Unit 4: Data"
   cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
@@ -1890,24 +2010,11 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   gamelab_name: Game Lab
-  basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
   thinkersmithspanish_gradelevel: Por todos
-  coursea_gradelevel: Ages 4-7
-  courseb_gradelevel: Ages 5-8
-  coursec_gradelevel: Ages 6-10
-  coursef_gradelevel: Ages 9-13
-  coursea-2017_gradelevel: Ages 4-7
-  courseb-2017_gradelevel: Ages 5-8
-  coursec-2017_gradelevel: Ages 6-10
-  coursef-2017_gradelevel: Ages 9-13
-  coursea-2018_gradelevel: Ages 4-7
-  courseb-2018_gradelevel: Ages 5-8
-  coursec-2018_gradelevel: Ages 6-10
-  coursef-2018_gradelevel: Ages 9-13
   kodable_platformtext: iPad
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
@@ -1993,35 +2100,8 @@
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
-  header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
   csp_name: CS Principles
@@ -2032,9 +2112,7 @@
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
   user_header_gamelab: Game Lab
-  user_header_playlab: Play Lab
-  user_header_minecraft: Minecraft
-  user_header_flappy: Flappy
+  user_header_spritelab: Sprite Lab
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: View my projects
@@ -2089,18 +2167,119 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_create: Create
-  creativity_what_will_you_create: What will you create?
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. I’m in!
+  applab_tile_title: Intro to App Lab (Ages 13+)
+  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
+    Or take your skills to the next level with text-based programming. (English Only)
+  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends. Featuring
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  hoc_overview_title: Hour of Code Activities from Code.org
+  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
+    a global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
+    tutorials, available in over 45 languages.
+  hoc2018_creativity: creativity
+  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
+  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+    Watch our video.
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
+    I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
     What will you create?'
-  account_sign_up_email_opt_in: Can we email you about updates to our courses, local
-    opportunities, or other computer science news? (roughly once a month)
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.
+  hoc2018_creativity_courses: Go further with Code.org courses
+  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
+  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
+    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
+    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
+  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
+  hoc2018_mc_educators: For Educators
+  hoc2018_mc_educators_box1_title: Code with Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
+    curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: Get started
+  hoc2018_mc_educators_box2_title: Download Facilitator Guide
+  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
+    and engage your students in computer science.
+  hoc2018_mc_educators_box3_title: Attend a free student workshop
+  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
+    Hour of Code workshop. For participants of all skill levels, ages six and up.
+  hoc2018_mc_educators_box3_button: Find a workshop
+  hoc2018_mc_educators_box4_title: Access more computer science resources
+  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
+    and computer science education resources from Microsoft.
+  hoc2018_mc_educators_box4_button: Explore resources
+  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
+  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+  hoc2018_mc_homepage_watch_video: Watch our video
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continue learning with Minecraft.
+  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
+  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
+    to explore and build underwater worlds with code.
+  hoc2018_mc_journey: Journey through Minecraft with code.
+  hoc2018_dance_party_subheading: Help translate Dance Party
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
+  hoc2018_dance_featured_student_creations_title: Featured Student Creations
+  hoc2018_dance_videos_section_heading: Get Inspired
+  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
+  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+    (5 min)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: In partnership with
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
+    more</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
+    in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
+    of their music to Code.org.\n\n"
+  hoc2018_dance_measure: Measure
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home

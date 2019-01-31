@@ -133,42 +133,26 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    rowCount: PropTypes.number.isRequired
+    isInternational: PropTypes.bool,
   };
 
   componentDidMount() {
-    $('#hero').appendTo(ReactDOM.findDOMNode(this.refs.hero)).show();
-    $('#starwars').appendTo(ReactDOM.findDOMNode(this.refs.starwars)).show();
-    $('#frozen').appendTo(ReactDOM.findDOMNode(this.refs.frozen)).show();
-    $('#hourofcode').appendTo(ReactDOM.findDOMNode(this.refs.hourofcode)).show();
-    $('#flappy').appendTo(ReactDOM.findDOMNode(this.refs.flappy)).show();
-    $('#infinity').appendTo(ReactDOM.findDOMNode(this.refs.infinity)).show();
-    $('#playlab').appendTo(ReactDOM.findDOMNode(this.refs.playlab)).show();
-    $('#artist').appendTo(ReactDOM.findDOMNode(this.refs.artist)).show();
+    const tiles = this.props.isInternational
+      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+
+    tiles.forEach((tile, index) => {
+      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
+    });
   }
 
   render() {
     return (
-      <div>
-        <div className="row">
-          <ProtectedStatefulDiv ref="hero"/>
-          <ProtectedStatefulDiv ref="starwars"/>
-          <ProtectedStatefulDiv ref="frozen"/>
-          <ProtectedStatefulDiv ref="hourofcode"/>
-        </div>
-
-        {this.props.rowCount > 1 && (
-          <div>
-            <br/>
-            <br/>
-            <div className="row">
-              <ProtectedStatefulDiv ref="flappy"/>
-              <ProtectedStatefulDiv ref="infinity"/>
-              <ProtectedStatefulDiv ref="playlab"/>
-              <ProtectedStatefulDiv ref="artist"/>
-            </div>
-          </div>
-        )}
+      <div className="row">
+        <ProtectedStatefulDiv ref="0"/>
+        <ProtectedStatefulDiv ref="1"/>
+        <ProtectedStatefulDiv ref="2"/>
+        <ProtectedStatefulDiv ref="3"/>
       </div>
     );
   }
@@ -195,7 +179,7 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc rowCount={1}/>
+          <CourseBlocksHoc isInternational={!this.props.isEnglish}/>
         </ContentContainer>
 
         {!this.props.isEnglish && (

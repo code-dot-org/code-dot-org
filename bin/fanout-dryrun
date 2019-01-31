@@ -7,11 +7,6 @@ require_relative '../deployment'
 #
 # bin/fanout-dryrun [command]
 #
-# We expect you to run this command from the production-daemon server.
-# Before you do, you'll need to copy the required SSH configuration into place:
-#
-# cp ~/.ssh/config_fanout ~/.ssh/config
-#
 # See also: fanout, fanout-partial
 #
 

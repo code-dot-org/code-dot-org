@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "birds",
-    "instructions": "Move one way, then another to get me to the pig.",
+    "short_instructions": "Move one way, then another to get me to the pig.",
     "step_mode": "0",
     "is_k1": "true",
     "skip_instructions_popup": "true",

@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_34_CSP_2_1_1'
+wrong 'A question with multiple choice answers.'
+wrong 'Two questions sharing the same answer.'
+wrong 'A question with two possible answer types.'
+right 'A question which can be answered in only one of two possible ways.'
+markdown <<MARKDOWN
+Which of the following accurately defines a binary question?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1D**
+<hr>
+ (A) Incorrect Answer. Though multiple choice questions can have 2 answers to choose from, it can and usually has more than 2 options.
+
+<hr>
+ (B) Incorrect Answer. Binary refers to having 2 options, so they can\'t be the same.
+
+<hr>
+ (C) Incorrect Answer. Binary questions refers to 2 different answers, the type of the answer is insignificant. It doesn\'t matter whether the answers are Boolean, strings, floats or integers or any combination of types.
+
+<hr>
+ (D) Correct answer. A question with only 2 possible answers where 1 is the correct answer. A good example of a binary  question is a True and False question.
+
+MARKDOWN

@@ -35,7 +35,7 @@ ________________
 
 ### **Do you have an example job description for the Regional Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1vQ2wN6TnE7gllni-hW1zNzQ_WiKPDUGb2ycSi4_-rVg/edit" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require **0.5** of a FTE in the first year.
+See <a href="https://docs.google.com/document/d/1slXdNqoMhBfIvD1oomxT1vX5_Hu8WpvnLmJhW9dn0sw/edit?usp=sharing" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require **0.65** of a FTE in the first year.
 
 
 [**Back to the top**](#top)

@@ -48,12 +48,13 @@ export default class AssetManager extends React.Component {
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool,
-    //For logging upload failures
-    projectId: PropTypes.string,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
-    //Temp prop for logging - identifies if displayed by 'Manage Assets' flow
-    imagePicker: PropTypes.bool
+
+    // For logging purposes
+    imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
+    projectId: PropTypes.string,
+    elementId: PropTypes.string
   };
 
   constructor(props) {
@@ -126,7 +127,7 @@ export default class AssetManager extends React.Component {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: 'asset-upload-error',
         project_id: this.props.projectId,
         data_int: status
@@ -143,6 +144,21 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
+    firehoseClient.putRecord(
+      {
+        study: 'delete-asset',
+        study_group: this.props.assetChosen && typeof this.props.assetChosen === 'function' ? 'choose-assets' : 'manage-assets',
+        event: 'confirm',
+        project_id: this.props.projectId,
+        data_json: JSON.stringify(
+          {
+            assetName: name,
+            elementId: this.props.elementId
+          }
+        )
+      }
+    );
+
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + name + '" successfully deleted!'
@@ -223,6 +239,8 @@ export default class AssetManager extends React.Component {
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
             soundPlayer={this.props.soundPlayer}
             imagePicker={this.props.imagePicker}
+            projectId={this.props.projectId}
+            elementId={this.props.elementId}
           />
         );
       }.bind(this));

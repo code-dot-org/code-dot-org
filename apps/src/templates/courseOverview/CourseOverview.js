@@ -10,6 +10,13 @@ import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
+import {
+  onDismissRedirectDialog,
+  dismissedRedirectDialog,
+  onDismissRedirectWarning,
+  dismissedRedirectWarning
+} from '@cdo/apps/util/dismissVersionRedirect';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
 
@@ -62,10 +69,20 @@ export default class CourseOverview extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     versions: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired
+      version_year: PropTypes.string.isRequired,
+      version_title: PropTypes.string.isRequired,
+      can_view_version: PropTypes.bool.isRequired,
     })).isRequired,
     showVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    redirectToCourseUrl: PropTypes.string,
   };
+
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
+    this.state = {showRedirectDialog};
+  }
 
   onChangeVersion = event => {
     const courseName = event.target.value;
@@ -96,6 +113,13 @@ export default class CourseOverview extends Component {
     });
   };
 
+  onCloseRedirectDialog = () => {
+    onDismissRedirectDialog(this.props.name);
+    this.setState({
+      showRedirectDialog: false,
+    });
+  };
+
   render() {
     const {
       name,
@@ -113,6 +137,8 @@ export default class CourseOverview extends Component {
       hasVerifiedResources,
       versions,
       showVersionWarning,
+      showRedirectWarning,
+      redirectToCourseUrl,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -126,8 +152,29 @@ export default class CourseOverview extends Component {
     const showNotification = viewAs === ViewType.Teacher && isTeacher &&
       !isVerifiedTeacher && hasVerifiedResources;
 
+    // Only display viewable versions in course version dropdown.
+    const filteredVersions = versions.filter(version => version.can_view_version);
+
     return (
       <div style={mainStyle}>
+        {redirectToCourseUrl && !dismissedRedirectDialog(name) &&
+          <RedirectDialog
+            isOpen={this.state.showRedirectDialog}
+            details={i18n.assignedToNewerVersion()}
+            handleClose={this.onCloseRedirectDialog}
+            redirectUrl={redirectToCourseUrl}
+            redirectButtonText={i18n.goToAssignedVersion()}
+          />
+        }
+        {(showRedirectWarning && !dismissedRedirectWarning(name)) &&
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            onDismiss={() => onDismissRedirectWarning(name)}
+          />
+        }
         {showVersionWarning &&
           <Notification
             type={NotificationType.warning}
@@ -139,7 +186,7 @@ export default class CourseOverview extends Component {
         }
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {versions.length > 1 &&
+          {filteredVersions.length > 1 &&
             <span style={styles.versionWrapper}>
               <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
               <select
@@ -148,7 +195,7 @@ export default class CourseOverview extends Component {
                 style={styles.versionDropdown}
                 id="version-selector"
               >
-                {versions.map(version => (
+                {filteredVersions.map(version => (
                   <option key={version.name} value={version.name}>
                     {version.version_title}
                   </option>

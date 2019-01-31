@@ -31,6 +31,9 @@ const styles = {
   noPartner: {
     marginTop: 20
   },
+  bold: {
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
   workshop: {
     marginBottom: 20
   }
@@ -46,10 +49,12 @@ class RegionalPartnerSearch extends Component {
     super(props);
 
     let showZip = true;
+    let zipValue = "";
     let error = false;
     let loading = false;
 
     const partnerId = queryString.parse(window.location.search).partner;
+    const zip = queryString.parse(window.location.search).zip;
 
     if (partnerId) {
       if (partnerId === "0") {
@@ -66,13 +71,16 @@ class RegionalPartnerSearch extends Component {
         showZip = false;
         loading = true;
       }
+    } else if (zip) {
+      this.lookupZip(zip);
+      zipValue = zip;
+      loading = true;
     }
 
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
-      stateValue: "",
-      zipValue: "",
+      zipValue: zipValue,
       error: error,
       loading: loading
     };
@@ -109,8 +117,14 @@ class RegionalPartnerSearch extends Component {
   handleZipSubmit = (event) => {
     this.setState({partnerInfo: undefined, error: false, loading: true});
 
+    this.lookupZip(this.state.zipValue);
+
+    event.preventDefault();
+  };
+
+  lookupZip = (zipValue) => {
     $.ajax({
-      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
+      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + zipValue,
       type: "get",
       dataType: "json",
       jsonp: false,
@@ -118,8 +132,6 @@ class RegionalPartnerSearch extends Component {
         source_page_id: this.props.sourcePageId
       }
     }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
-
-    event.preventDefault();
   };
 
   render() {
@@ -151,12 +163,33 @@ class RegionalPartnerSearch extends Component {
           </form>
         )}
 
+        {/* Special message for NYC DOE teachers. */}
+        {partnerInfo && partnerInfo.name === "Mouse" && (
+          <div>
+            <h3 style={styles.bold}>NYC Department of Education teachers:</h3>
+            We will share a more specific option for NYC DOE teachers in February. The details are still being finalized. If you're a NYC DOE teacher, please complete
+            {' '}
+            <a href="https://goo.gl/forms/MEz3KmikwgPvIk332" target="_blank">this very short form</a>
+            {' '}
+            and we'll alert you when details are available.
+            <h3 style={styles.bold}>For all other teachers:</h3>
+          </div>
+        )}
+
         {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
-          <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
+          <div>
+            <br/>
+            <div>We are unable to find this ZIP code.  You can still apply directly:</div>
+            <a href={studio("/pd/application/teacher")}>
+              <button>
+                Start application
+              </button>
+            </a>
+          </div>
         )}
 
         {this.state.loading && (
@@ -165,8 +198,18 @@ class RegionalPartnerSearch extends Component {
 
         {this.state.error === WorkshopSearchErrors.no_partner && (
           <div style={styles.noPartner}>
-            <p>We do not yet have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
-            <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
+            <p>We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
+            <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.</p>
+            <p>
+              <span style={styles.bold}>Arkansas Teachers: </span>
+              Code.org does not have a Regional Partner in Arkansas, and we are unable to offer you a space in this program this year.  There are many great opportunities for
+              {' '}
+              <span style={styles.bold}>state-provided professional development </span>
+              for computer science in Arkansas in
+              {' '}
+              <a href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit" target="_blank">this document</a>
+              .
+            </p>
             <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,
@@ -174,10 +217,9 @@ class RegionalPartnerSearch extends Component {
               <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
-            <p>Applications will open soon.</p>
-            <a href={studio("/pd/regional_partner_contact/new")}>
+            <a href={studio("/pd/application/teacher")}>
               <button>
-                Notify me when I can apply
+                Start application
               </button>
             </a>
           </div>
@@ -185,7 +227,7 @@ class RegionalPartnerSearch extends Component {
 
         {partnerInfo && (
           <div>
-            <div>{partnerInfo.name}</div>
+            <div style={styles.bold}>{partnerInfo.name}</div>
             {partnerInfo.contact_name && (
               <div>{partnerInfo.contact_name}</div>
             )}
@@ -222,33 +264,35 @@ class RegionalPartnerSearch extends Component {
               <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
             )}
 
-            {partnerInfo.cost_scholarship_information && (
-              <div>
-                <h3>Cost and scholarship information:</h3>
-                <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
-              </div>
-            )}
+            <div className="professional_learning_information" id={`id-${partnerInfo.id}`}>
+              {partnerInfo.cost_scholarship_information && (
+                <div>
+                  <h3>Cost and scholarship information:</h3>
+                  <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
+                </div>
+              )}
 
-            {partnerInfo.additional_program_information && (
-              <div>
-                <h3>Additional program information:</h3>
-                <UnsafeRenderedMarkdown markdown={partnerInfo.additional_program_information}/>
-              </div>
-            )}
+              {partnerInfo.additional_program_information && (
+                <div>
+                  <h3>Additional program information:</h3>
+                  <UnsafeRenderedMarkdown markdown={partnerInfo.additional_program_information}/>
+                </div>
+              )}
+            </div>
 
             {appState === WorkshopApplicationStates.now_closed && (
               <div>Applications are now closed.</div>
             )}
 
             {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
-              <a href={studio("/pd/application/teacher")}>
+              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
                 <button>Start application</button>
               </a>
             )}
 
             {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
-              <a href={partnerInfo.link_to_partner_application} target="_blank">
-                <button>Apply on partner’s site</button>
+              <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={partnerInfo.link_to_partner_application} target="_blank">
+                <button>Apply on partner's site</button>
               </a>
             )}
 

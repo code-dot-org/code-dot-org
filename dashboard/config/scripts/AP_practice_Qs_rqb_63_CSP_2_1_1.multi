@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_63_CSP_2_1_1'
+wrong '8 more items can be uniquely identified.
+'
+wrong '8 times as many items can be uniquely identified.
+'
+right '2 times as many items can be uniquely identified.
+'
+wrong '10 times as many items can be uniquely identified.'
+markdown <<MARKDOWN
+You are asked to create a database that tracks items for a retail store. The store currently uses 7-bit binary barcodes to uniquely identify each item for sale. Which of the following best describes the result of increasing the barcode length from 7 bits to 8 bits?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1E**
+<hr>
+ (A) From the new length of 8 bits, we realize that the barcode length increased by 1 bit. With one extra bit, the barcode can represent two times as many possible unique identifiers. 
+
+<hr>
+ (B) From the new length of 8 bits, we realize that the barcode length increased by 1 bit. With one extra bit, the barcode can represent two times as many possible unique identifiers. 
+
+<hr>
+ (C) The length increased by 1 bit. With one extra bit, the barcode can represent two times as many possible unique identifiers. 
+
+<hr>
+ (D) With one extra bit, the barcode can represent two times as many possible unique identifiers. This stems from the fact that binary is base 2 (whereas decimal is base 10). 
+
+MARKDOWN

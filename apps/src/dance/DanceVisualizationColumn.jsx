@@ -4,12 +4,10 @@ import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import songLibrary from "../code-studio/songLibrary.json";
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import * as danceRedux from "../dance/redux";
-import Sounds from "../Sounds";
+import AgeDialog, {signedOutOver13} from "../templates/AgeDialog";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -20,61 +18,35 @@ const styles = {
   }
 };
 
-//TODO: Remove this during clean-up
-var songs = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
-};
-
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
+    enableSongSelection: PropTypes.bool,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
+    selectedSong: PropTypes.string,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    filterOff: PropTypes.bool.isRequired
   };
 
   changeSong = (event) => {
-    let song = event.target.value;
-    this.props.setSong(song);
-
-    //Load song
-    let options = {id: song};
-    options['mp3'] = songs[options.id].url;
-    Sounds.getSingleton().register(options);
+    const songId = event.target.value;
+    this.props.setSong(songId);
   };
 
   render() {
     return (
-      <div>
+      <div id="song-selector-wrapper">
         <label><b>{i18n.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
+        <select
+          id="song_selector"
+          style={styles.selectStyle}
+          onChange={this.changeSong}
+          value={this.props.selectedSong}
+          disabled={!this.props.enableSongSelection}
+        >
+          {Object.keys(this.props.songData).map((option, i) => (
+            (this.props.filterOff || !this.props.songData[option].pg13) &&
+              <option key={i} value={option}>{this.props.songData[option].title}</option>
+
           ))}
         </select>
       </div>
@@ -86,38 +58,112 @@ class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
+    levelIsRunning: PropTypes.bool,
+    levelRunIsStarting: PropTypes.bool,
+    isShareView: PropTypes.bool.isRequired,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    userType: PropTypes.string.isRequired
   };
+
+  state = {
+    filterOff: this.setFilterStatus()
+  };
+
+  /*
+    Turn the song filter off
+  */
+  turnFilterOff = () => {
+    this.setState({filterOff: true});
+  };
+
+  /*
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+   */
+  setFilterStatus() {
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const signedOutAge = signedOutOver13();
+    return signedInOver13 || signedOutAge;
+  }
 
   render() {
     const divDanceStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT,
-      backgroundColor: '#fff',
+      background: '#fff',
       position: 'relative',
       overflow: 'hidden',
     };
+
+    const p5LoadingStyle = {
+      width: 400,
+      height: 400,
+      display: 'none',
+      alignItems: 'center',
+      justifyContent: 'center'
+    };
+
+    const p5LoadingGifStyle = {
+      width: 100,
+      height: 100,
+    };
+
+    const filenameToImgUrl = {
+      "click-to-run": require('@cdo/static/dance/click-to-run.png'),
+    };
+
+    const imgSrc = filenameToImgUrl["click-to-run"];
+
+    const enableSongSelection = !this.props.levelIsRunning && !this.props.levelRunIsStarting;
+
     return (
-      <span>
-        <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
-        <ProtectedVisualizationDiv>
-          <div
-            id="divDance"
-            style={divDanceStyle}
+      <div>
+        {!this.props.isShareView &&
+          <AgeDialog
+            turnOffFilter={this.turnFilterOff}
           />
-        </ProtectedVisualizationDiv>
-        <GameButtons showFinishButton={this.props.showFinishButton}>
-          <ArrowButtons />
-        </GameButtons>
-        <BelowVisualization />
-      </span>
+        }
+        <span>
+          {!this.props.isShareView &&
+            <SongSelector
+              enableSongSelection={enableSongSelection}
+              setSong={this.props.setSong}
+              selectedSong={this.props.selectedSong}
+              songData={this.props.songData}
+              filterOff={this.state.filterOff}
+            />
+          }
+          <ProtectedVisualizationDiv>
+            <div
+              id="divDance"
+              style={divDanceStyle}
+            >
+              <div id="divDanceLoading" style={p5LoadingStyle}>
+                <img src="//curriculum.code.org/images/DancePartyLoading.gif" style={p5LoadingGifStyle}/>
+              </div>
+              {this.props.isShareView &&
+                <img src={imgSrc} id="danceClickToRun"/>
+              }
+            </div>
+          </ProtectedVisualizationDiv>
+          <GameButtons showFinishButton={this.props.showFinishButton}>
+            <ArrowButtons />
+          </GameButtons>
+          <BelowVisualization />
+        </span>
+      </div>
     );
   }
 }
 
 export default connect(state => ({
-  selectedSong: state.selectedSong,
-}), dispatch => ({
-  setSong: song => dispatch(danceRedux.setSong(song))
+  isShareView: state.pageConstants.isShareView,
+  songData: state.songs.songData,
+  selectedSong: state.songs.selectedSong,
+  userType: state.progress.userType,
+  levelIsRunning: state.runState.isRunning,
+  levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);

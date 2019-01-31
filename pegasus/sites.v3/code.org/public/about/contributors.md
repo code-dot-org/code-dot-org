@@ -4,7 +4,7 @@ nav: about_nav
 theme: responsive
 ---
 # Contributors
-We especially want to recognize the engineers from Facebook, Google, Microsoft, Twitter and many others who helped create these materials.
+We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.
 
 ## Active Contributors
 <%= view :about_headshots, people:DB[:cdo_contributors].where(kind_s:'active_headshot'), :columns=>3 %>

@@ -35,7 +35,7 @@
     "honey_goal": "0",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How could a `for` loop help in this puzzle?\",\"hint_id\":\"courseF_bee_fwp8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3c924921728f7085789f2bb2ea65045/courseF_bee_fwp8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Since the spiral gets smaller as you go in, your `for` loop should count down.\",\"hint_id\":\"courseF_bee_fwp8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f3e0d9e46fbd248bdedb6fb284e464de/courseF_bee_fwp8.mp3\"}]",
-    "instructions": "Use your new function to solve this spiral.",
+    "short_instructions": "Use your new function to solve this spiral.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

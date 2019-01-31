@@ -39,6 +39,7 @@
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
     μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
+  og_title_soon: Η Ώρα του Κώδικα έρχεται
   og_title_here: Η Ώρα του Κώδικα είναι εδώ!
   og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να μελετήσει την
     Πληροφορική. Αλλάζει τα πάντα.
@@ -334,6 +335,8 @@
   studiobar_title_nolink: Εξερευνήστε το Code Studio
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
+  studiobar_dance_title: Πάρτι Χορού
+  studiobar_dance_body: Δημιουργήστε και μοιραστείτε το δικό σας Πάρτι Χορού
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικας
@@ -358,13 +361,16 @@
     ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
   homepage_hero_text_susan: "&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
     να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube"
-  homepage_hero_text_fistbump: " Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
-    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα"
+  homepage_hero_text_fistbump: Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
+    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα
   homepage_hero_text_sheryl: "&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
     των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την Πληροφορική.&rdquo;
     Sheryl, COO του Facebook"
   homepage_hero_text_satya: "&ldquo;Η Πληροφορική μπορεί να ξεκλειδώσει τις καλύτερες
     ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Η επιστήμη της Πληροφορικής ενδυναμώνει τους μαθητές να δημιουργήσουν τον κόσμο του αύριο.&rdquo;
+    Satya, Διευθύνων Σύμβουλος της Microsoft
   homepage_hero_text_bosh: "&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
     την πορεία της ζωής σας.&rdquo; Κρις Μπος"
   homepage_hero_text_student1: "&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
@@ -385,6 +391,8 @@
   homepage_hero_text_stat_loc: "#loc γραμμές κώδικα γραμμένες από μαθητές"
   homepage_hero_text_stat_students: "#student_count λογαριασμοί μαθητών στο Code Studio"
   homepage_hero_text_stat_served: 'Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν'
+  homepage_hero_hoc_is_coming: Η Ώρα του Κώδικα έρχεται
+  homepage_hero_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
   homepage_slot_text_teacher: πίνακας Δασκάλου
@@ -406,6 +414,7 @@
   homepage_action_text_signpetition: 'Υπογράψτε την συλλογή υπογραφών
 
 '
+  homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
   homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
@@ -425,6 +434,7 @@
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
+  homepage_slot_text_link_about_hoc: Σχετικά με την Ώρα του Κώδικα
   homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
@@ -448,6 +458,7 @@
   homepage_slot_text_link_buy: Εμπλακείτε
   homepage_slot_text_link_donate: Κάντε μια δωρεά
   homepage_slot_text_link_shop: Μπλουζάκια, καπέλα, & περισσότερα
+  homepage_slot_text_link_administrators: Φέρτε το CS στο σχολείο σας
   homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
@@ -526,11 +537,15 @@
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   mc_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες
     6+
+  minecraft_agent: Ταξίδι του Ήρωα του Minecraft
   minecraft_designer: Σχεδιαστής Minecraft
   minecraft_adventurer: Ζήστε μια περιπέτεια στο Minecraft
   minecraft_tutorials: Μαθήματα Minecraft από την Ώρα του Κώδικα
   minecraft_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
     Ηλικίες 2+
+  minecraft_start_tutorial: Ξεκινήστε οδηγείες
+  minecraft_agent_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   minecraft_agent_button: Έναρξη
   minecraft_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
     στην δικιά σου έκδοση του Minecraft.
@@ -542,6 +557,21 @@
   minecraft_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
     Minecraft.
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Εγγραφείτε</a>
+    για την ελεύθερη ώρα Κωδικόυ Minecraft εργαστηρίο, σε καταστήματα της Microsoft
+    σε Αυστραλία, Καναδά, Πουέρτο Ρίκο ή τις ΗΠΑ. Μάθετε πώς η κωδικοποίηση είναι
+    για όλους και συνδυάζει τη δημιουργικότητα, την επίλυση προβλημάτων και τόνους
+    διασκέδασης."
+  minecraft_continue_learning: 'Πληροφορική για όλους: Πέρα από μια ώρα κωδικού στο
+    Κατάστημα της Microsoft'
+  minecraft_continue_learning_description: Δεν απαιτείται εμπειρία πληροφορικής! Βοηθήστε
+    να εξασφαλίσουμε οτι όλη η νεολαία μπορεί να μάθει την πολύτιμη δεξιότητα μέσω
+    της εκπαίδευσης στην Πληροφορική. Ελάτε στο Κατάστημα της Microsoft να συμμετάσχετε
+    σε μια ελεύθερη σειρά τριών, μονόωρων εργαστηρίων, όπου θα ζήσετε κωδικοποίηση
+    σε ένα διασκεδαστικό και χωρίς άγχος περιβάλλον, να εξοικειωθείτε με τις έννοιες
+    κλειδιά στην επιστήμη υπολογιστωών, και ετοιμαστείτε να οδηγήσετε μια ώρα κωδικοποίησης
+    στην τάξη σας ή την Κοινότητά σας. Το έχετε! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Εγγραφείτε σήμερα</a>.
   sports_page_title: Τα Αθλήματα της Ώρας του Κώδικα
   sports_og_title: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
   sports_og_description: Πρωταθλητές και Ολυμπιονίκες σας συνιστούμε να δοκιμάσετε
@@ -1912,33 +1942,100 @@
   header_help_support: 'Βοήθεια και υποστήριξη '
   csp_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
   user_header_label: Γεια σου %{username}
+  user_header_team: Ομάδα
   user_header_settings: Ο λογαριασμός μου
   user_header_logout: Αποσύνδεση
   user_header_signin: Σύνδεση
-  og_title_soon: The Hour of Code is coming
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_action_text_wincelebritychat: Win a celebrity chat
+  user_header_gamelab: Game Lab
+  user_header_playlab: Εργαστήριο Παιχνιδιού
+  user_header_dance: Πάρτι Χορού
+  user_header_minecraft: Minecraft
+  user_header_flappy: Πουλάκι
+  applab_tile_start_tutorial: Έναρξη
+  applab_tile_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  aquatic_name: 'Minecraft: Υδάτινο Ταξίδι'
+  hoc_overview_dance_title: Πάρτι Χορού
+  hoc_overview_partner_activities_title: Περισσότερες δραστηριότητες από συνεργάτες.
+  hoc_overview_partner_activities_body: Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από
+    100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα
+    εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του.
+  hoc_overview_partner_activities_link: Προβολή Δραστηριοτήτων
+  hoc_overview_start_tutorial: Έναρξη
+  hoc_overview_view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_creativity_create: Δημιουργία
+  hoc2018_creativity_what_will_you_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_page_title: Μαθήματα Minecraft από την Ώρα του Κώδικα
+  hoc2018_mc_details: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets
+    | Ηλικίες 2+
+  hoc2018_mc_aquatic_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα,
+    με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_hero_title: Ταξίδι του Ήρωα του Minecraft
+  hoc2018_mc_hero_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_designer_title: Σχεδιαστής Minecraft
+  hoc2018_mc_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
+    στην δικιά σου έκδοση του Minecraft.
+  hoc2018_mc_adventurer_title: Ζήστε μια περιπέτεια στο Minecraft
+  hoc2018_mc_adventurer_description: Χρησιμοποιήστε κώδικα για να οδηγήσετε τον Alex
+    ή τον Steve σε μια περιπέτεια.
+  hoc2018_mc_start: Έναρξη
+  hoc2018_mc_no_internet: Δεν έχετε Internet;
+  hoc2018_mc_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
+    Minecraft.
+  hoc2018_mc_educators_box2_button: Λήψη
+  hoc2018_mc_watch_videos: Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο
+  hoc2018_mc_videos_more: Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα
+    βίντεο</a> από ανθρώπους που αποτελούν πρότυπα και από διασημότητες
+  hoc2018_mc_careers_more: Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα
+    βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
+  hoc2018_mc_video_1min: 1 λεπτό
+  hoc2018_mc_video_2min: 2 λεπτά
+  hoc2018_mc_video_5min: 5 λεπτά
+  hoc2018_mc_video_title_sports: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
+  hoc2018_mc_video_title_inspire_girl: Εμπνεύστε ένα κορίτσι
+  hoc2018_mc_video_title_cs_intro: Εισαγωγή Πληροφορικής
+  hoc2018_mc_video_title_schools_dont_teach: Τι δεν διδάσκουν στα περισσότερα σχολεία
+  hoc2018_mc_video_title_obama: Ο Πρόεδρος Ομπάμα για την Πληροφορική
+  hoc2018_mc_video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί
+    να Μάθει
+  hoc2018_mc_video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  hoc2018_mc_homepage_hoc_coming: Η Ώρα του Κώδικα πλησιάζει...
+  hoc2018_mc_homepage_what_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_homepage_join_us: Ελάτε μαζί μας
+  hoc2018_mc_homepage_try_it: Δοκιμάστε το
+  hoc2018_mc_back_journey: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια
+    ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_dance_party_main_heading: Πάρτι Χορού
+  hoc2018_dance_create_your_own_dance_title: Δημιουργήστε και μοιραστείτε το δικό
+    σας Πάρτι Χορού
+  hoc2018_dance_party_box_title: Πάρτι Χορού
+  hoc2018_dance_party_box_description: Δημιουργήστε ένα δικό σας Πάρτι Χορού για να
+    το μοιραστείτε με τους φίλους σας!
+  hoc2018_dance_party_button: Έναρξη
+  hoc2018_dance_keep_on_dancing_box_title: Συνεχίστε να Χορεύετε
+  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς
+    ιδέες για πρότζεκτ.
+  hoc2018_dance_keep_on_dancing_button: Έναρξη δεύτερου μέρους
+  hoc2018_dance_teacher_resources_title: Πηγές για εκπαιδευτικούς
+  hoc2018_dance_teacher_resources_tile1_description: Σχέδια μαθήματος, πιστοποιητικά
+    και φίλτρα μουσικής.
+  hoc2018_dance_teacher_resources_tile1_button: Σχέδιο μαθήματος
+  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς καλώδια
+  hoc2018_dance_teacher_resources_tile2_description: 'Δεν απαιτούνται υπολογιστές!  Μάθετε
+    έννοιες προγραμματισμού για να χορογραφήσετε μαζί ένα πάρτι χορού. '
+  hoc2018_dance_teacher_resources_tile2_button: Αποσυνδεδεμένη Δραστηριότητα
+  hoc2018_dance_amazon_about_future_engineer_button: Μάθετε περισσότερα
+  hoc2018_dance_measure: Μέτρα
+  hoc2018_dance_measure_colon: 'Μέτρα:'
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_administrators: Bring CS to your school
-  minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  homepage_gallery_header: Over %{project_count} million Code.org projects created
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
@@ -1952,15 +2049,6 @@
     from the Minecraft team. Get a head start on thinking through what you need to
     bring Hour of Code to young people during Computer Science Education week (December
     4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
-    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
@@ -2255,10 +2343,7 @@
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
-  user_header_gamelab: Game Lab
-  user_header_playlab: Play Lab
-  user_header_minecraft: Minecraft
-  user_header_flappy: Flappy
+  user_header_spritelab: Sprite Lab
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: View my projects
@@ -2315,16 +2400,125 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_create: Create
-  creativity_what_will_you_create: What will you create?
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. I’m in!
-    What will you create?'
+  applab_tile_title: Intro to App Lab (Ages 13+)
+  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
+    Or take your skills to the next level with text-based programming. (English Only)
   account_sign_up_email_opt_in: Can we email you about updates to our courses, local
     opportunities, or other computer science news? (roughly once a month)
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
     permission to use the Code.org services.
+  hoc_overview_dance_subtitle: Code a Dance Party to share with your friends. Featuring
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  hoc_overview_title: Hour of Code Activities from Code.org
+  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
+    a global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
+    tutorials, available in over 45 languages.
+  hoc2018_creativity: creativity
+  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
+  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+    Watch our video.
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
+    I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
+    What will you create?'
+  hoc2018_creativity_courses: Go further with Code.org courses
+  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
+  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
+    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
+    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
+  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
+  hoc2018_mc_educators: For Educators
+  hoc2018_mc_educators_box1_title: Code with Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
+    curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: Get started
+  hoc2018_mc_educators_box2_title: Download Facilitator Guide
+  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
+    and engage your students in computer science.
+  hoc2018_mc_educators_box3_title: Attend a free student workshop
+  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
+    Hour of Code workshop. For participants of all skill levels, ages six and up.
+  hoc2018_mc_educators_box3_button: Find a workshop
+  hoc2018_mc_educators_box4_title: Access more computer science resources
+  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
+    and computer science education resources from Microsoft.
+  hoc2018_mc_educators_box4_button: Explore resources
+  hoc2018_mc_video_3min: 3 min
+  hoc2018_mc_video_title_steph_curry: Hour of Code with Steph Curry
+  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
+  hoc2018_mc_video_title_my_name_is_aracely: My Name is Aracely
+  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+  hoc2018_mc_homepage_watch_video: Watch our video
+  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continue learning with Minecraft.
+  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
+  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
+    to explore and build underwater worlds with code.
+  hoc2018_mc_journey: Journey through Minecraft with code.
+  hoc2018_dance_party_subheading: Help translate Dance Party
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
+  hoc2018_dance_featured_student_creations_title: Featured Student Creations
+  hoc2018_dance_videos_section_heading: Get Inspired
+  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
+  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+    (5 min)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: In partnership with
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
+    more</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
+  hoc2018_dance_amazon_scholarship_programs_button: Apply now
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
+    in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
+    of their music to Code.org.\n\n"
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home

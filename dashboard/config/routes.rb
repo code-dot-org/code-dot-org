@@ -1,6 +1,10 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
+  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -14,7 +18,7 @@ Dashboard::Application.routes.draw do
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
-  get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
@@ -209,7 +213,10 @@ Dashboard::Application.routes.draw do
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
-  resources :blocks, constraints: {id: /[^\/]+/}
+  get 'pools', to: 'pools#index', as: 'pools'
+  scope 'pools/:pool' do
+    resources :blocks, constraints: {id: /[^\/]+/}
+  end
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
@@ -403,11 +410,8 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
+      # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
+      post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
@@ -438,7 +442,6 @@ Dashboard::Application.routes.draw do
           get :quick_view
           get :cohort_view
           get :search
-          get :teachercon_cohort
           get :fit_cohort
         end
       end
@@ -483,13 +486,9 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
-    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
-    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
-    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
-    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
-    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'

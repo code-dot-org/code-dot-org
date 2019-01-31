@@ -1,59 +1,58 @@
 @no_mobile
 Feature: Create Dropdown in Header
 
-@skip
 Scenario: Create Dropdown does NOT show on level pages
   Given I create a student named "16 Year Old"
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
   And I wait until element ".create_menu" is not visible
   Then I sign out
 
-@skip
 Scenario: Signed Out - Correct Create Links
   Given I am on "http://code.org"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
   And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#create_dropdown_dance" is visible
   And I wait until element "#view_all_projects" is visible
 
-@skip
 Scenario: Teacher - Correct Create Links
   Given I am a teacher
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
   And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#create_dropdown_dance" is visible
   And I wait until element "#view_all_projects" is visible
 
-@skip
 Scenario: Student, Age 13+ - Correct Create Links
   Given I create a student named "16 Year Old"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
   And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#create_dropdown_dance" is visible
   And I wait until element "#view_all_projects" is visible
 
-@skip
 Scenario: Young Student, Not in Section - Correct Create Links
   Given I create a young student named "10 Year Old"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_minecraft" is visible
   And I wait until element "#create_dropdown_applab" is not visible
   And I wait until element "#create_dropdown_gamelab" is not visible
+  And I wait until element "#create_dropdown_dance" is visible
   And I wait until element "#view_all_projects" is visible
 
 Scenario: Young Student, In Section - Correct Create Links
@@ -66,9 +65,10 @@ Scenario: Young Student, In Section - Correct Create Links
   And I navigate to the section url
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
   And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#create_dropdown_dance" is visible
   And I wait until element "#view_all_projects" is visible

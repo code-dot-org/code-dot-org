@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Now nest this loop inside another loop to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete a 360 degree rotation.  ",
+    "short_instructions": "Now nest this loop inside another loop to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete a 360 degree rotation.  ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "270",

@@ -47,7 +47,7 @@ The Chemical Reactions module explores the conditions under which chemical react
 - [Background papers on complex systems](science/files/CS_in_Science_Background_papers.pdf)
 - [Models for use in the classroom](http://www.slnova.org/GUTS/)
 
-[Find more resources at the Project GUTS website](http://www.projectguts.org/CurriculumbyTopic)
+[Find more resources at the Project GUTS website](http://www.projectguts.org)
 
 
 

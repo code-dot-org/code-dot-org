@@ -11,7 +11,7 @@ social:
 - require 'country_codes'
 - require 'state_abbr'
 - require 'census_helper'
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
+
 - census_announcement = DCDO.get('census_announcement', nil)
 - census_announcement ||= {}
 - census_announcement['user_name'] = request.params["name"] if request.params["name"]
@@ -31,7 +31,7 @@ social:
 %script{src: minifiable_asset_path('js/code.org/public/yourschool.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
-%link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/census-map.css"}
 
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
