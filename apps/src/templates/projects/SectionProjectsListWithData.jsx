@@ -1,11 +1,14 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SectionProjectsList from './SectionProjectsList';
 
 class SectionProjectsListWithData extends Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string,
+
+    // Props provided by redux.
     sectionId: PropTypes.number,
-    studioUrlPrefix: PropTypes.string
   };
 
   state = {
@@ -48,4 +51,8 @@ class SectionProjectsListWithData extends Component {
   }
 }
 
-export default SectionProjectsListWithData;
+export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
+
+export default connect(state => ({
+  sectionId: state.sectionData.section.id,
+}))(SectionProjectsListWithData);
