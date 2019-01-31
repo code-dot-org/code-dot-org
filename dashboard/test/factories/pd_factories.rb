@@ -565,6 +565,7 @@ FactoryGirl.define do
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :teacher
+    association :enrollment
   end
 
   factory :pd_attendance_no_account, class: 'Pd::Attendance' do
