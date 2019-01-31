@@ -50,7 +50,13 @@ class ResourceLink extends React.Component {
     dialogSelected: false
   };
 
-  selectResource = () => {
+  selectResource = (e) => {
+    if (e.shiftKey || e.metaKey || e.altKey) {
+      // Don't open modal, just open link in new tab/window
+      return;
+    }
+    // Don't open link, just open modal.
+    e.preventDefault();
     var dialog = new LegacyDialog({
       body: $('<iframe>')
         .addClass('instructions-container')
