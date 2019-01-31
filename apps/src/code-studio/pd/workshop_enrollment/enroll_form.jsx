@@ -60,7 +60,9 @@ const CSF_COURSES = {
   "courseD" : "Course D",
   "courseE" : "Course E",
   "courseF" : "Course F",
-  "express" : "Express"
+  "express" : "Express",
+  "courses14" :  "Courses 1-4",
+  "accelerated" : "Accelerated"
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -280,7 +282,10 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
-    const csfCourses = Object.keys(CSF_COURSES).map(key => CSF_COURSES[key]).concat([
+    const csfCourses = Object.keys(CSF_COURSES)
+      .filter(key => key !== "accelerated" && key !== "courses14")
+      .map(key => CSF_COURSES[key])
+      .concat([
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_csf_course_other,
@@ -386,6 +391,7 @@ export default class EnrollForm extends React.Component {
             label="This workshop is designed for educators that have experience teaching CS Fundamentals. During the past year, how have you used CS Fundamentals course(s) with students?"
             onChange={this.handleCsfCourseExperienceChange}
             options={[
+              "none",
               "a few lessons",
               "most lessons",
               "all lessons"
