@@ -68,6 +68,7 @@ def geocoder_config
       config[:api_key] = CDO.google_maps_api_key
     # Normal execution path - use our Google Premium Maps Project
     elsif CDO.google_maps_client_id && CDO.google_maps_secret
+      config[:use_https] = true
       config[:lookup] = :google_premier
       config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
     end
