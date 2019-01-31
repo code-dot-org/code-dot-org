@@ -17,13 +17,15 @@
     %div{:id => "stats-impact-carousel-pagination"}
 
 .impact-stats-link
-  %div
-    .col-50
-      %p Want to see more data?
-      %p Code.org has a stats page with lots of pretty pictures!
-    .col-50
-      %a{:href=>'https://code.org/statistics'}
-        %button View Statistics
+  .left
+    %p.title
+      Want to see more data?
+    %p.details
+      Code.org has a stats page with lots of pretty pictures!
+  .right
+    %a{:href=>'https://code.org/statistics', target: "_blank"}
+      %button
+        View Statistic
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}

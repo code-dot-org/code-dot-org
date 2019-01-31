@@ -539,17 +539,41 @@ button {
   font-weight: normal;
 }
 
-.impact-stats-link div {
-  background-color: #7665a0;
-}
-
-.impact-stats-link p{
+.impact-stats-link{
+  width: 100%;
   color: white;
+  background-color: #7665a0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow:hidden;
+  padding: 16px;
 }
 
-.impact-stats-link button{
+.impact-stats-link .left {
+  float: left;
+}
+
+.impact-stats-link .left p.title {
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.impact-stats-link .left p.details {
+  margin-bottom: 0px;
+}
+
+.impact-stats-link .right {
   float: right;
 }
+
+.impact-stats-link button {
+  margin-top: 0px;
+  width: 150px;
+  height: 50px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
 
 
 @media screen and (min-width: 970px) {
