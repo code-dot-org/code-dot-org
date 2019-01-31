@@ -1,6 +1,7 @@
-drop table if exists analysis_pii.regional_partner_stats_csf;
-create table analysis_pii.regional_partner_stats_csf AS
+DROP VIEW IF EXISTS analysis_pii.regional_partner_stats_csf_view CASCADE;
 
+create view analysis_pii.regional_partner_stats_csf_view 
+AS
 with 
 completed as
 (
@@ -191,12 +192,10 @@ select
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
          and tmp.school_year = sa.school_year
+WITH NO SCHEMA BINDING
+
 ;
 
-GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
-GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;
-
--- ISSUES
--- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
-      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
-      -- to Mary, this does not seem ideal 
+GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csf_view TO dev;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csf_view TO reader_pii;
+GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csf_view TO admin;
