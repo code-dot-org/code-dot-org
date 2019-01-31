@@ -8,6 +8,7 @@ import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles'
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = 'Deep Dive';
 const NA = 'N/A';
+const LOCAL_SUMMER = '5-day Summer';
 
 export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
@@ -124,6 +125,11 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.accountRequiredForAttendance && (
             <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
           )}
+          {this.props.workshopSubject === LOCAL_SUMMER && (
+            <td>
+              {enrollment.attendances} / {this.props.numSessions}
+            </td>
+          )}
         </tr>
       );
     });
@@ -185,6 +191,9 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             {this.props.accountRequiredForAttendance && (
               <th style={styles.th}>Code Studio Account?</th>
             )}
+            {this.props.workshopSubject === LOCAL_SUMMER && (
+              <th style={styles.th}>Total Attendance</th>
+            )}
           </tr>
         </thead>
         <tbody>{enrollmentRows}</tbody>
@@ -198,5 +207,6 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
-  workshopSubject: PropTypes.string
+  workshopSubject: PropTypes.string.isRequired,
+  numSessions: PropTypes.number.isRequired
 };
