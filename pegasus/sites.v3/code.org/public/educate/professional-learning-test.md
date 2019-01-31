@@ -12,15 +12,21 @@ video_player: true
 </style>
 
 # Professional Learning#
+<div class="col-50" style="padding-right: 20px">
+<%= view :course_wide_block, cta_link: '/professional-development-workshops', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), cta_text: 'Find a local K-5 workshop', title: 'Elementary School', description: '<ul><li>No previous experience needed.</li><li>One-day, no cost workshops for elementary classroom teachers, librarians, and tech-ed specialists.</li><li>Experience our approach to teaching CS, design your own implementation plan, and collaborate with local educators.</li></ul>'%>
+</div>
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/professional-development-workshops'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), cta_text: 'Find a local K-5 workshop', title: 'Elementary School', description: '<ul><li>No previous experience needed - just bring your curiosity! </li><li> One-day, no cost workshops designed for elementary classroom teachers, librarians, and tech-ed specialists.</li><li>Experience our pedagogical approach to teaching CS, design your own implementation plan, and collaborate with local educators. Plus, you get classroom supplies and some pretty sweet swag!</li></ul>'%>
+[col-50]
+<%= view :course_wide_block, cta_link: '/educate/professional-learning/middle-high', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), cta_text: 'Sign up today', title: 'Middle and High School', description: "<ul><li>All teachers are welcome! No previous CS experience needed.</li><li>Ramp up with a 5-day summer workshop where you'll work with the curriculum and meet other teachers from your area.</li><li>Continue developing through follow-up workshops and community events.</li></ul>"%>
+[/col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/educate/professional-learning/middle-high'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), cta_text: 'Professional Learning for Middle and High School', title: 'Middle and High School', description: "<ul><li>All teachers are welcome! No previous experience teaching computer science is needed.</li><li>Ramp up with a 5-day summer workshop where you'll work hands-on with the curriculum and meet other teachers from your area.</li><li>Continue developing year round through follow-up workshops and community events.</li></ul>"%>
+<div style="clear: both;"></div>
 
+[Not in the US? Learn more.](#international)
 
-<br />
 <div class="col-50" style="padding-right: 20px;">
-
+<br>
+<br>
 <%=view :display_video_thumbnail, id: "professional_learning", video_code: "9VvuRiFQv10", play_button: 'center', letterbox: 'false' %>
 
 </div>
@@ -37,14 +43,6 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 <br>
 
-<summary style="font-size: 20px; color: #7665a0;">**International Professional Learning**</summary>
-<br/>
-Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
-
-At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices. Our forums are for teachers of all grade levels.
-
-You can also contact our [international partners](https://hourofcode.com/international-partners) for more information on local professional learning opportunities.
-
 ## Attendees love our professional learning!
 80,000 teachers have participated.
 98% of attendees would recommend our program to another teacher.
@@ -58,6 +56,14 @@ The majority of our workshop attendees rank it the **best professional developme
 <br>
 
 <img src="/images/k5pdcropped.jpg" width="100%"/>
+
+## <a name="international"></a> International Professional Learning
+Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
+
+At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices. Our forums are for teachers of all grade levels.
+
+You can also contact our [international partners](https://hourofcode.com/international-partners) for more information on local professional learning opportunities.
+
 
 ## Become a Code.org facilitator
 

@@ -11,7 +11,7 @@ social:
 - require 'country_codes'
 - require 'state_abbr'
 - require 'census_helper'
-%script{src: "https://cdn.optimizely.com/js/12977480133.js"}
+
 - census_announcement = DCDO.get('census_announcement', nil)
 - census_announcement ||= {}
 - census_announcement['user_name'] = request.params["name"] if request.params["name"]
