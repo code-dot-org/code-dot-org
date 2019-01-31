@@ -84,6 +84,23 @@ class LabelProperties extends React.Component {
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
+        <PropertyRow
+          desc={'border width (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderWidth, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
+        />
+        <ColorPickerPropertyRow
+          desc={'border color'}
+          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          handleChange={this.props.handleChange.bind(this, 'borderColor')}
+        />
+        <PropertyRow
+          desc={'border radius (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderRadius, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -169,9 +186,15 @@ export default {
     element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
+    elementUtils.setDefaultBorderStyles(element);
 
     this.resizeToFitText(element);
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
   },
 
   getCurrentSize: function (element) {
