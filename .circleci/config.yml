@@ -43,9 +43,9 @@ jobs:
             - code-dot-org-source-v7-
 
       - checkout
-    #- run:
-        #name: merge staging
-        #command: bin/circle/merge-base
+      - run:
+          name: merge staging
+          command: bin/circle/merge-base
 
       - save_cache:
           key: code-dot-org-source-v7-{{ checksum "/home/circleci/today.date" }}
