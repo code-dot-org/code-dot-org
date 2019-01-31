@@ -185,14 +185,14 @@ export default {
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
-    elementUtils.setDefaultBorderStyles(element, true);
+    elementUtils.setDefaultBorderStyles(element, { textInput: true });
 
     return element;
   },
 
   onDeserialize: function (element) {
     // Set border styles for older projects that didn't set them on create:
-    elementUtils.setDefaultBorderStyles(element, true);
+    elementUtils.setDefaultBorderStyles(element, { textInput: true });
 
     $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {

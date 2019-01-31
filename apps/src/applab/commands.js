@@ -740,7 +740,7 @@ applabCommands.textInput = function (opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, true);
+  elementUtils.setDefaultBorderStyles(newInput, { textInput: true });
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -814,6 +814,7 @@ applabCommands.dropdown = function (opts) {
   newSelect.style.position = 'relative';
   newSelect.style.color = color.white;
   newSelect.style.backgroundColor = color.applab_button_teal;
+  elementUtils.setDefaultBorderStyles(newSelect, { forceDefaultBorderColor: true });
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
