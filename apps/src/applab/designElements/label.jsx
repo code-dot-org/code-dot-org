@@ -27,7 +27,7 @@ class LabelProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'text'}
@@ -36,7 +36,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           lockState={$(element).data('lock-width') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-width')}
           initialValue={parseInt(element.style.width, 10)}
@@ -44,7 +44,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           lockState={$(element).data('lock-height') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-height')}
           initialValue={parseInt(element.style.height, 10)}
@@ -52,13 +52,13 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -74,7 +74,7 @@ class LabelProperties extends React.Component {
         />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -150,7 +150,7 @@ class LabelEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow/>
         <EventRow
