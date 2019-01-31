@@ -203,3 +203,15 @@ hr:
         title: Binarne narukvice
       PaperPlanes_2019:
         title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+      PlantASeed_2019:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      UnplugHappyMaps_2019:
+        title: Vesele karte
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
+          lika kroz labirint koristeći jednu naredbu.
+      GoingPlacesSafely_2019:
+        title: Sigurna putovanja
+      MoveItMoveIt_2019:
+        title: Pomakni, pomakni
+      DigitalFootprint_2019:
+        title: Tvoj digitalni trag

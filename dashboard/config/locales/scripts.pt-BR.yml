@@ -1234,6 +1234,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Unidade 1, dias 5-7 Pesquisa e Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
@@ -1264,6 +1266,8 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Advanced StarLogo Nova:
+              name: Avançado StarLogo Nova
             Remixing Phases 1 and 2:
               name: Remixando as fases 1 e 2
             Review StarLogo Nova:
@@ -1286,6 +1290,8 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Advanced StarLogo Nova:
+              name: Avançado StarLogo Nova
             Remixing Phases 1 and 2:
               name: Remixando as fases 1 e 2
             Review StarLogo Nova:
@@ -1312,6 +1318,8 @@ pt-BR:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
+            Advanced StarLogo Nova:
+              name: Avançado StarLogo Nova
             Remixing Phases 1 and 2:
               name: Remixando as fases 1 e 2
             Review StarLogo Nova:
@@ -1340,6 +1348,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Unidade 1, dias 5-7 Pesquisa e Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
@@ -1362,6 +1372,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Unidade 1, dias 5-7 Pesquisa e Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
@@ -2161,6 +2173,9 @@ pt-BR:
           description_audience: 8-18 anos de idade
         ECSPD1:
           description_short: Em parceria com o Projeto GUTS
+          stages:
+            Welcome to Phase 1!:
+              name: Bem-vindo a Fase 1!
         algebraFacilitator:
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
@@ -2207,6 +2222,15 @@ pt-BR:
               name: Algoritmos de Desvio - Árvore Geradora Mínima
             Algorithms Detour - Shortest Path:
               name: Algoritmos de Desvio - Caminho mais curto
+            Unit 1 - Encoding Numbers in the Real World:
+              name: Unidade 1 - Codificação de Números no Mundo Real
+            Unit 1 - Sending Bits in the Real World:
+              name: Unidade 1 - Enviando Bits no Mundo Real
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem:
+              name: Unidade 4 - Problemas Difíceis - O Problema do Vendedor Ambulante
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
+              name: Unidade 4 - Funções De Uma Via - O Problema de Ponto de Acesso
+                Wi-Fi
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -2319,6 +2343,8 @@ pt-BR:
             1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Unidade 1, dias 5-7 Pesquisa e Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unidade 1, Dias 8-9 Impacto de Computadores e da Comunicação
             Welcome!:
@@ -2692,6 +2718,8 @@ pt-BR:
               name: Revisão StarLogo Nova
             Reviewing the Modules:
               name: Revisando os módulos
+            Advanced StarLogo Nova:
+              name: Avançado StarLogo Nova
             Remixing Phases 1 and 2:
               name: Remixando as fases 1 e 2
             Thinking Ahead to Implementation:
@@ -2706,6 +2734,8 @@ pt-BR:
               name: Revisão StarLogo Nova
             Reviewing the Modules:
               name: Revisando os módulos
+            Advanced StarLogo Nova:
+              name: Avançado StarLogo Nova
             Remixing Phases 1 and 2:
               name: Remixando as fases 1 e 2
             Thinking Ahead to Implementation:
@@ -4122,3 +4152,128 @@ pt-BR:
               name: Pulseiras binárias
         gamelab:
           title: Laboratório de Jogos
+        coursea-2019:
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet.
+            No final deste curso, você irá irá seu próprio jogo ou história, que poderá
+            ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          description_audience: 'Idade: de 4 a 7 anos'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuração: Bugs não encontrados'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série
+                de etapas sobre depuração. Os estudantes irão aprender o mantra: "O
+                que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da vida real: plante uma semente'
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito
+                de algoritmos às atividades cotidianas da vida real, plantando uma
+                semente real. O objetivo aqui é começar a construir as habilidades
+                para traduzir situações do mundo real para cenários on-line e vice-versa.\r\n"
+            'Programming: Happy Maps':
+              name: 'Programação: Mapas felizes'
+              description_teacher: A ponte de algoritmos para programação pode ser
+                curta se os alunos entenderem a diferença entre planejar uma sequência
+                e programar esta sequência em uma linguagem apropriada. Esta atividade
+                irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos
+                abreviados.
+            Programming in Maze:
+              name: Programação no labirinto
+              description_teacher: Nesta série de quebra-cabeças online, os alunos
+                irão construir o entendimento de algoritmos, depuração, e alfabetização
+                geral em computadores. Com a apresentação de personagens do jogo Angry
+                Birds, os alunos irão desenvolver algoritmos sequenciais para levar
+                o pássaro até o porco sem bater nas paredes ou explosivos. Depurações
+                de quebra-cabeças também foram misturadas neste nível para adicionar
+                a prática com resolução de problemas e pensamento crítico.
+            Going Places Safely:
+              name: Navegando com segurança
+              description_teacher: Em colaboração com [r common-sense-media], esta
+                lição ajuda os alunos aprenderem que muitos websites pedem informações
+                que são privadas e discute como lidar de forma responsável com tais
+                situações. Os alunos também descobrem que podem ir a lugares incríveis
+                online, mas que eles precisam de seguir certas regras para se manterem
+                seguros.
+            'Loops: Happy Loops':
+              description_teacher: Repetições são uma ferramenta muito útil e poderosa
+                em programação. Para entender como repetições úteis podem ser, os
+                alunos precisarão ser levados a desejar uma maneira mais fácil de
+                resolver problemas mundanos.
+            Loops in Collector:
+              description_teacher: Aproveitando o conceito de repetição de instruções
+                da aula "Repetições Felizes", este nível os alunos irão usar repetições
+                para coletar tesouro de uma forma mais eficiente no Code.org.
+            Loops in Artist:
+              description_teacher: Retornando às repetições, os alunos aprendem a
+                desenhar imagens repetindo sequências simples de instruções. Na última
+                lição online, repetições foram utilizadas para atravessar um labirinto
+                e coletar tesouro. Aqui, as repetições estão criando padrões. No fim
+                deste nível, os alunos terão a oportunidade de criar as suas próprias
+                imagens usando repetições.
+            'Events: The Big Event':
+              description_teacher: |-
+                Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.
+                É para isto que os eventos servem.
+            Events in Play Lab:
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade
+                de aprender a como utilizar eventos no Laboratório de Jogos e aplicar
+                todas as habilidades de programação que eles aprenderam para criar
+                um jogo animado. É hora de ser criativo e criar uma história no Laboratório
+                de Jogos!
+            Ocean Scene with Loops:
+              name: Cena do Oceano com Repetições
+        courseb-2019:
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet.
+            No final deste curso, você irá irá seu próprio jogo ou história, que poderá
+            ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização
+            Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
+          stages:
+            Move It, Move It:
+              name: Criando caminhos
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
+            Your Digital Footprint:
+              name: Seu rastro digital
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Loops in Ice Age:
+              name: Repetições na Era do gelo
+        pre-express-2019:
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet.
+            No final deste curso, você irá irá seu próprio jogo ou história, que poderá
+            ser compartilhada.
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuração: Bugs não encontrados'
+            Move It, Move It:
+              name: Criando caminhos
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
+            Your Digital Footprint:
+              name: Seu rastro digital
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Loops in Ice Age:
+              name: Repetições na Era do gelo
+            Spelling Bee:
+              name: Soletrando
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuração: Bugs não encontrados'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos da vida real: plante uma semente'

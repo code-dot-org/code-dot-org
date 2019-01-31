@@ -214,7 +214,7 @@ it:
 
       %{name}
   parent_mailer:
-    student_associated_subject: 'Informazioni di login per Code.org'
+    student_associated_subject: 'Informazioni di accesso per Code.org'
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'

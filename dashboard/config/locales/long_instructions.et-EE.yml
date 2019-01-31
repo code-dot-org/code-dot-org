@@ -649,6 +649,13 @@ et:
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2018: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Ryan_Demo: |-
+        Paneme selle põdra tantisma!
+
+         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">uus&#95;tantsija</title>Lohistage<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> plokk töölauale. Ühendage see allpool <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"ühikud"</title></block></xml> plokiga. Sinu tantsija peaks alustama uue liigutusega peale neljandat ühikut.
+
+
+        * ühikuid * kasutatakse, et muusikas aega mõõta. Selle juhendi puhul on ühiku pikkuseks neli takti.
       Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\r\rMa ei
         tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \r Kas sa saaksid
         kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje:
