@@ -1280,6 +1280,7 @@
   "subtitle": "a visual programming environment",
   "success": "Success!",
   "summaryAssessmentsOverview": "Multiple choice questions overview",
+  "switchSection": "Switch section:",
   "syncClever": "Sync students from Clever",
   "syncGoogleClassroom": "Sync students from Google Classroom",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
