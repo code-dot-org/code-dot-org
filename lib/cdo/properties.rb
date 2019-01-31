@@ -55,10 +55,8 @@ end
 
 def fetch_metrics
   # Include stale default values as of 2017-06-21 (project count from 2019-1-20) so we never show 0.
-  # When getting metrics: If metrics were to be nil we use the empty hash as delete_if
-  # does not work on nil. Delete_if deals with any specific values that come back nil and removes them so
-  # the merge will use the default values instead of a nil value. All of this makes sure each value in the hash
-  # is not zero or nil.
+  # Note that project_count might be nil due to analyze_hoc_activity, and so we delete nil values prior to the merge,
+  # so that the merge doesn't overwrite our human-readable defaults with nil.
   {
     'created_at' => '2017-06-21T14:46:25+00:00',
     'created_on' => 'created_on"=>"2017-06-21',
