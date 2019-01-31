@@ -130,6 +130,13 @@ RUN eval "$(rbenv init -)" && rbenv global 2.5.0 && rbenv rehash && gem install 
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
+# We need git >= 2.15 to use git rev-parse --is-shallow-clone feature
+# TODO: consolidate apt-get installs
+RUN sudo apt-get install -y software-properties-common && sudo add-apt-repository ppa:git-core/ppa && sudo apt-get update && sudo apt-get install -y git
+
+# en_US.UTF-8 locale not available by default
+RUN sudo locale-gen en_US.UTF-8
+
 COPY entrypoint.sh /entrypoint.sh
 RUN sudo chmod +x /entrypoint.sh
 

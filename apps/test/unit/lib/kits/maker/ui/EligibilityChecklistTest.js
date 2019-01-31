@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {assert} from '../../../../../util/configuredChai';
 import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import {Unit6Intention} from "@cdo/apps/lib/kits/maker/util/discountLogic";
 
 
 describe('EligibilityChecklist', () => {
@@ -64,7 +65,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="yes1819"
+        unit6Intention={Unit6Intention.YES_18_19}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -78,7 +79,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="yes1819"
+        unit6Intention={Unit6Intention.YES_18_19}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -95,7 +96,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="yes1819"
+        unit6Intention={Unit6Intention.YES_18_19}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -111,7 +112,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="yes1819"
+        unit6Intention={Unit6Intention.YES_18_19}
         initialDiscountCode="MYCODE"
         initialExpiration="2018-12-31T00:00:00.000Z"
         getsFullDiscount={false}
@@ -124,7 +125,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="yes1819"
+        unit6Intention={Unit6Intention.YES_18_19}
         adminSetStatus={true}
         getsFullDiscount={true}
       />
@@ -136,7 +137,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="no"
+        unit6Intention={Unit6Intention.NO}
         adminSetStatus={true}
         getsFullDiscount={true}
       />
@@ -148,7 +149,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention="no"
+        unit6Intention={Unit6Intention.NO}
         adminSetStatus={true}
         getsFullDiscount={true}
       />
