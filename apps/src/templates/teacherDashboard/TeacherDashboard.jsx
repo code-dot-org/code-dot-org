@@ -8,19 +8,29 @@ import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStuden
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import PrintSignInCards from '@cdo/apps/templates/teacherDashboard/PrintSignInCards';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
+
+    // Provided by React router
+    location: PropTypes.object,
   };
 
   render() {
-    const {studioUrlPrefix} = this.props;
+    const {location, studioUrlPrefix} = this.props;
+    // Include header components unless we are on the /print_signin_cards page
+    const includeHeader = location.pathname !== "/print_signin_cards";
 
     return (
       <div>
-        <SelectSectionDropdown/>
-        <TeacherDashboardNavigation/>
+        {includeHeader &&
+          <div>
+            <SelectSectionDropdown/>
+            <TeacherDashboardNavigation/>
+          </div>
+        }
         <Switch>
           <Route
             path="/stats"
@@ -32,8 +42,7 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/manage_students"
-            component={props => <ManageStudentsTable studioUrlPrefix={studioUrlPrefix}/>
-            }
+            component={props => <ManageStudentsTable studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/projects"
@@ -46,6 +55,10 @@ export default class TeacherDashboard extends Component {
           <Route
             path="/assessments"
             component={props => <SectionAssessments/>}
+          />
+          <Route
+            path="/print_signin_cards"
+            component={props => <PrintSignInCards/>}
           />
           {/* Render <SectionProgress/> by default */}
           <Route component={props => <SectionProgress/>} />
