@@ -49,10 +49,12 @@ class RegionalPartnerSearch extends Component {
     super(props);
 
     let showZip = true;
+    let zipValue = "";
     let error = false;
     let loading = false;
 
     const partnerId = queryString.parse(window.location.search).partner;
+    const zip = queryString.parse(window.location.search).zip;
 
     if (partnerId) {
       if (partnerId === "0") {
@@ -69,13 +71,16 @@ class RegionalPartnerSearch extends Component {
         showZip = false;
         loading = true;
       }
+    } else if (zip) {
+      this.lookupZip(zip);
+      zipValue = zip;
+      loading = true;
     }
 
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
-      stateValue: "",
-      zipValue: "",
+      zipValue: zipValue,
       error: error,
       loading: loading
     };
@@ -112,8 +117,14 @@ class RegionalPartnerSearch extends Component {
   handleZipSubmit = (event) => {
     this.setState({partnerInfo: undefined, error: false, loading: true});
 
+    this.lookupZip(this.state.zipValue);
+
+    event.preventDefault();
+  };
+
+  lookupZip = (zipValue) => {
     $.ajax({
-      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
+      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + zipValue,
       type: "get",
       dataType: "json",
       jsonp: false,
@@ -121,8 +132,6 @@ class RegionalPartnerSearch extends Component {
         source_page_id: this.props.sourcePageId
       }
     }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
-
-    event.preventDefault();
   };
 
   render() {

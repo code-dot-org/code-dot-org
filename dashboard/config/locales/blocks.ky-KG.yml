@@ -407,12 +407,16 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+          CONDITION:
+            '"when"': качан
+            '"while"': болуп турганда
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': качан
+            '"while"': болуп турганда
       binary_move:
         options:
           DIR:

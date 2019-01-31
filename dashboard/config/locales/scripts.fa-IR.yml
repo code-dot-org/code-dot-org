@@ -1558,3 +1558,27 @@ fa:
               name: دستبند دودویی
         gamelab:
           title: کارگاه بازی سازی
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'

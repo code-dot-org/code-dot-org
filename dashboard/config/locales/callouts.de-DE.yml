@@ -244,6 +244,8 @@ de:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      Ryan_Demo_callout:
+        dance_callout_02: Fügen Sie diesen Block Ihrem Programm hinzu!
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout2: Drücken Sie "Ausführen" um ihr Programm zu
           speichern und auszuführen
@@ -286,10 +288,16 @@ de:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
           Puzzle verwendet werden können.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in diesem
+          Puzzle verwendet werden können.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
           diesem Puzzle verwendet werden können.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
+          diesem Puzzle verwendet werden können.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Diese Zahl gibt an, wie viele dieser Blöcke in
           diesem Puzzle verwendet werden können.
       courseD_bee_conditionals2_callout:
