@@ -66,7 +66,7 @@ scripts as
     from student_activity 
     GROUP BY 1, 2, 3), 
   
-    no_scripts as (
+no_scripts as (
     SELECT user_id,
              school_year,
              COUNT(DISTINCT student_id) students_total,
