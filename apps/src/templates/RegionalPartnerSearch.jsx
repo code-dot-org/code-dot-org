@@ -181,7 +181,15 @@ class RegionalPartnerSearch extends Component {
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
-          <div style={styles.noState}>Please enter a valid 5 digit ZIP code.</div>
+          <div>
+            <br/>
+            <div>We are unable to find this ZIP code.  You can still apply directly:</div>
+            <a href={studio("/pd/application/teacher")}>
+              <button>
+                Start application
+              </button>
+            </a>
+          </div>
         )}
 
         {this.state.loading && (
