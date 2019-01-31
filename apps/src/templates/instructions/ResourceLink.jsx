@@ -89,7 +89,7 @@ class ResourceLink extends React.Component {
               title={text}
             />
           </span>
-          <a style={styles.textLink}>
+          <a href={this.props.reference} style={styles.textLink}>
             {text}
           </a>
         </div>
