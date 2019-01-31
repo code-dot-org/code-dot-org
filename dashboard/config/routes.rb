@@ -2,8 +2,8 @@
 
 Dashboard::Application.routes.draw do
   # React-router will handle sub-routes on the client.
-  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#index', via: :all
-  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#index'
+  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
+  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
