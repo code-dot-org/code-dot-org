@@ -8,7 +8,7 @@ import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStuden
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
-import PrintSignInCards from '@cdo/apps/templates/teacherDashboard/PrintSignInCards';
+import PrintLoginCards from '@cdo/apps/templates/teacherDashboard/PrintLoginCards';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
@@ -20,8 +20,8 @@ export default class TeacherDashboard extends Component {
 
   render() {
     const {location, studioUrlPrefix} = this.props;
-    // Include header components unless we are on the /print_signin_cards page
-    const includeHeader = location.pathname !== "/print_signin_cards";
+    // Include header components unless we are on the /print_login_cards page.
+    const includeHeader = location.pathname !== "/print_login_cards";
 
     return (
       <div>
@@ -57,8 +57,8 @@ export default class TeacherDashboard extends Component {
             component={props => <SectionAssessments/>}
           />
           <Route
-            path="/print_signin_cards"
-            component={props => <PrintSignInCards/>}
+            path="/print_login_cards"
+            component={props => <PrintLoginCards/>}
           />
           {/* Render <SectionProgress/> by default */}
           <Route component={props => <SectionProgress/>} />
