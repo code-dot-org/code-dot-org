@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
+import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
@@ -18,6 +19,7 @@ export default class TeacherDashboard extends Component {
 
     return (
       <div>
+        <SelectSectionDropdown/>
         <TeacherDashboardNavigation/>
         <Switch>
           <Route
