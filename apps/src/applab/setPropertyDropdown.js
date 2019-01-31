@@ -148,7 +148,10 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {

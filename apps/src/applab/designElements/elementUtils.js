@@ -182,16 +182,15 @@ export function getDefaultScreenId() {
   return getId(getScreens()[0]);
 }
 
-export function setDefaultBorderStyles(element, isTextInput=false) {
-  if (element.style.borderStyle === '') {
-    element.style.borderStyle = 'solid';
-  }
+export function setDefaultBorderStyles(element, opts) {
+  const { textInput, forceDefaultBorderColor } = opts || {};
+  element.style.borderStyle = 'solid';
   if (element.style.borderWidth === '') {
-    element.style.borderWidth = isTextInput ? '1px' : '0px';
+    element.style.borderWidth = textInput ? '1px' : '0px';
   }
-  if (element.style.borderColor === '') {
+  if (element.style.borderColor === '' || forceDefaultBorderColor) {
     element.style.borderColor =
-      isTextInput ? color.text_input_default_border_color : color.black;
+    textInput ? color.text_input_default_border_color : color.black;
   }
   if (element.style.borderRadius === '') {
     element.style.borderRadius = '0px';

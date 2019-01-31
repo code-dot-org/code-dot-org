@@ -86,6 +86,23 @@ class DropdownProperties extends React.Component {
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
+        <PropertyRow
+          desc={'border width (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderWidth, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderWidth')}
+        />
+        <ColorPickerPropertyRow
+          desc={'border color'}
+          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          handleChange={this.props.handleChange.bind(this, 'borderColor')}
+        />
+        <PropertyRow
+          desc={'border radius (px)'}
+          isNumber
+          initialValue={parseInt(element.style.borderRadius, 10)}
+          handleChange={this.props.handleChange.bind(this, 'borderRadius')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -160,6 +177,7 @@ export default {
     element.style.margin = '0';
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(element, { forceDefaultBorderColor: true });
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -173,6 +191,9 @@ export default {
   },
 
   onDeserialize: function (element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+
     // In the future we may want to trigger this on focus events as well.
     $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {

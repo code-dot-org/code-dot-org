@@ -185,7 +185,7 @@ export default {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
-    elementUtils.setDefaultBorderStyles(element, true);
+    elementUtils.setDefaultBorderStyles(element, { textInput: true });
 
     $(element).addClass('textArea');
 
@@ -196,7 +196,7 @@ export default {
 
   onDeserialize: function (element) {
     // Set border styles for older projects that didn't set them on create:
-    elementUtils.setDefaultBorderStyles(element, true);
+    elementUtils.setDefaultBorderStyles(element, { textInput: true });
 
     $(element).addClass('textArea');
 
