@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import color from '../../../../util/color';
 
 const styles = {
   title: {
@@ -17,7 +18,10 @@ const styles = {
   bold: {
     fontFamily: '"Gotham 7r", sans-serif',
     display: 'inline',
-  }
+  },
+  expired: {
+    color: color.dark_red,
+  },
 };
 
 export default class DiscountCodeInstructions extends Component {
@@ -27,19 +31,36 @@ export default class DiscountCodeInstructions extends Component {
   };
 
   render() {
+    const expirationDate = new Date(this.props.expiration);
     // Date formated to be in form "December 31, 2018"
-    const expiration = (new Date(this.props.expiration)).toLocaleString('en-us',
+    const expirationString = expirationDate.toLocaleString('en-us',
       {timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric'});
+    const isExpired = expirationDate.getTime() < Date.now();
+
+    if (isExpired) {
+      return (
+        <div>
+          <h1 style={styles.title}>Subsidized Circuit Playground Kits</h1>
+          <h2>
+            <div>Discount code for subsidized kit: {this.props.discountCode}</div>
+            <div style={styles.expired}>(Expired {expirationString})</div>
+          </h2>
+          <div>
+            <UnsafeRenderedMarkdown markdown={expiredMd(expirationString)}/>
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div>
         <h1 style={styles.title}>Subsidized Circuit Playground Kits</h1>
         <h2>
           <div>Discount code for subsidized kit: {this.props.discountCode}</div>
-          <div>(Expires {expiration})</div>
+          <div>(Expires {expirationString})</div>
         </h2>
         <div>
-          <UnsafeRenderedMarkdown markdown={overviewMd}/>
+          <UnsafeRenderedMarkdown markdown={overviewMd(expirationString)}/>
         </div>
 
         <div style={styles.step}>
@@ -78,12 +99,17 @@ export default class DiscountCodeInstructions extends Component {
   }
 }
 
-const overviewMd = `
+const overviewMd = (expirationString) => `
 We're happy to share with you this discount code that will fully cover the cost of a $350 Circuit
 Playground kit. We're excited that you will be bringing this opportunity to your students!
 
 To order your kit with the discount code, follow the steps below.
-**You must use your discount code by December 31, 2019.**
+**You must use your discount code by ${expirationString}.**
+`;
+
+const expiredMd = (expirationString) => `
+Your discount code **expired ${expirationString}.**  If you believe this is in error,
+please contact [teacher@code.org](mailto:teacher@code.org).
 `;
 
 const endnoteMd = `

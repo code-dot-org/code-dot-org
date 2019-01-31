@@ -302,9 +302,8 @@ module Api::V1::Pd
       ].join
     end
 
-    # TODO: remove remaining teachercon references
     def get_optional_columns(_regional_partner_value)
-      {accepted_teachercon: false, registered_workshop: false}
+      {registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
@@ -315,7 +314,7 @@ module Api::V1::Pd
     end
 
     def prefetch(applications, role: nil)
-      type = TYPES_BY_ROLE[role.try(&:to_sym)] || Pd::Application::WorkshopAutoenrolledApplication
+      type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
     end
   end
