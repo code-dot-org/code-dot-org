@@ -128,7 +128,10 @@ PROPERTIES[ElementType.LABEL] = {
     'backgroundColor',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.DROPDOWN] = {

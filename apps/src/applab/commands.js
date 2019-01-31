@@ -757,6 +757,7 @@ applabCommands.textLabel = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
+  elementUtils.setDefaultBorderStyles(newLabel);
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
