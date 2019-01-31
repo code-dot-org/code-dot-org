@@ -152,6 +152,7 @@ class ContactRollups
     update_roles
     update_grades_taught
     update_ages_taught
+    update_district
     update_school
     update_courses_facilitated
     update_professional_learning_enrollment
