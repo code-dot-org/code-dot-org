@@ -185,7 +185,10 @@ export default {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
-    elementUtils.setDefaultBorderStyles(element, { textInput: true });
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true,
+    });
 
     $(element).addClass('textArea');
 

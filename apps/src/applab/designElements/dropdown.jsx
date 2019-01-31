@@ -177,7 +177,7 @@ export default {
     element.style.margin = '0';
     element.style.color = color.white;
     element.style.backgroundColor = color.applab_button_teal;
-    elementUtils.setDefaultBorderStyles(element, { forceDefaultBorderColor: true });
+    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';

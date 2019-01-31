@@ -185,7 +185,10 @@ export default {
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
-    elementUtils.setDefaultBorderStyles(element, { textInput: true });
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true,
+    });
 
     return element;
   },

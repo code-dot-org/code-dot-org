@@ -186,7 +186,7 @@ export default {
     element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    elementUtils.setDefaultBorderStyles(element);
+    elementUtils.setDefaultBorderStyles(element, { forceDefaults: true });
 
     this.resizeToFitText(element);
     return element;
