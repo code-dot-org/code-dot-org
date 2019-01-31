@@ -91,11 +91,11 @@
 }
 
 .fact.subfact {
-  color: #ddd;
+  color: dimgrey;
 }
 
 .fact > a {
-  color: white;
+  color: dimgrey;
 }
 
 #state-title {

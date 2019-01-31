@@ -1,0 +1,30 @@
+.join-coalition-wrapper{
+    width: 100%;
+    color: white;
+    background-color: #7665a0;
+    overflow: hidden;
+}
+
+.join-coalition-wrapper .left{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+}
+
+.join-coalition-wrapper .right{
+    float: right;
+    width: 50%;
+}
+
+.join-coalition-wrapper .right{
+    padding: 25px;
+    min-height: 260px;
+    box-sizing: 'border-box';
+}
+
+.join-coalition-wrapper .right p{
+    padding-right: 0px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: color.white;
+}
