@@ -63,6 +63,12 @@ def geocoder_config
     if CDO.google_maps_client_id && CDO.google_maps_secret
       config[:lookup] = :google_premier
       config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
+    # Temporarily allow fallback to a Google Maps Project that uses a new Billing Account while we resolve issues
+    # with our existing Billing Account.
+    elsif CDO.google_maps_api_key
+      config[:lookup] = :google
+      config[:use_https] = true
+      config[:api_key] = CDO.google_maps_api_key
     end
     config[:freegeoip] = {host: CDO.freegeoip_host} if CDO.freegeoip_host
   end
