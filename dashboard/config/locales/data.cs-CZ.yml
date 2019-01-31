@@ -192,7 +192,8 @@ cs:
           takže se neprovedou. Udělej nový program za použití bloku "počítat s" (v
           kategorii Cykly) a bloku "čítač" (v kategorii Proměnné) k nakreslení té
           samé spirály.
-        turtle_2_7_5: Upravit Kód
+        turtle_2_7_5: Máme novou funkci "nakreslit sněhuláka" (v kategorii Funkce).
+          Nakresli dva sněhuláky s výškou 250 a 100.
         turtle_2_8: Tohle bude záludné. Použij funkci "nakreslit sněhuláka" a nový
           blok "skočit vpřed" (v kategorii Akce). Nakresli 3 sněhuláky v různých barvách,
           100 pixelů od sebe.

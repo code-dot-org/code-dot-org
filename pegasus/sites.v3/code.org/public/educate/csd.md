@@ -134,7 +134,7 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground using App Lab."%>
 
 [/col-50]
 
@@ -232,30 +232,28 @@ Want to get notified when applications open for the 2019-2020 school year? [Prov
 ###  <a name="implementation"></a>I’m teaching CS Discoveries but have less than one semester with my students. What would you recommend?
 CS Discoveries consists of two semesters that build on each other.  Schools can choose to teach a single semester, two sequential semesters, or a single, year-long course.  For courses that meet fewer than three hours a week or last for less than a trimester, we recommend [CS Fundamentals Express](/educate/curriculum/express-course), a 30+ hour course that covers the foundational concepts of programming.
 
-Some schools may want to use parts of the CS Discoveries curriculum without running an entire semester of the course.  We always suggest starting with at least the first chapter of Unit 1 to build the classroom culture and problem solving skills the rest of the course depends on.  Afterwards, students can move on to any of Units 2 - 5, either completing the entire unit or stopping at the end of the Chapter 1 project.  Because of the programming knowledge required for Unit 6, students should only attempt it after completing Unit 3.
+Some schools may want to use parts of the CS Discoveries curriculum without running an entire semester of the course.  We always suggest starting with at least the first chapter of Unit 1 to build the classroom culture and problem solving skills the rest of the course depends on. Afterwards, students can move on to any of Units 2 - 5, either completing the entire unit or stopping at the end of the Chapter 1 project.  Because of the programming knowledge required for Unit 6, students should only attempt it after completing Unit 3.
 
 ### <a name="supplies"></a>What materials and supplies are required for CS Discoveries?
 
-* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper)
-* Computers
-* Worksheet Printing (There are worksheets with some lessons. Some teachers get around this by doing everything digitally.)
-* Couple Decks of Cards
-* Aluminum Foil
-* Containers that can hold water
-* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
+This course requires that students have access to computers with a modern web browser. At this time, our courses are not optimized for tablets or mobile devices. For more details, check out [Code.org's technology requirements](/educate/it).
 
-\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 40%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+In addition to computer access, you'll need:
+
+* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper)
+* Worksheet Printing (There are worksheets with some lessons. We currently also provide Google Docs of our activity guides, which some teachers use to help reduce printing.)
+* A few decks of cards (we recommend one deck per 8 students)
+* Aluminum foil
+* Containers that can hold water
+* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.
+
+Participants in our 2018-19 Professional Learning Program who are teaching in schools with 40%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 
 CS Discoveries is designed to fit naturally between our [CS Fundamentals](/educate/curriculum/elementary-school) courses and our [CS Principles](/educate/csp) course. While each of these courses is designed to be an age-appropriate entry point to computer science, students with previous experience will find many new topics to explore, and they will revisit familiar topics in novel and more challenging contexts.
 
 <!--
-#### Can I pilot the new course?
-
-We will be formally piloting the course with select groups in the Spring of the 16/17 school year - if you are interested in participating in this pilot please complete the application form here.
-
-As lessons are completed we will also be publishing them on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the forum.
 
 #### How/Where can I get professional development for this course?
 

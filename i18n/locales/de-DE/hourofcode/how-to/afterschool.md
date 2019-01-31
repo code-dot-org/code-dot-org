@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Gewusst wie: Eine Hour of Code als nachmittags oder nachschulische Veranstaltung durchführen
+# Wie unterrichtet man eine Hour of Code in Freizeit und Verein
 
 ### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie zusätzliche Hilfe brauchen, können Sie diese unter [Freiwillige vor Ort](%= codeorg_url('/volunteer/local') %) anfordern. Hier wird Ihnen geholfen, eine Hour of Code im nachschulischen Unterricht oder Clubs durchzuführen.
 

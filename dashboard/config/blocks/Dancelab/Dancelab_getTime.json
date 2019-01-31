@@ -2,17 +2,17 @@
   "category": "Music",
   "config": {
     "func": "getTime",
-    "blockText": "{UNIT} elapsed",
+    "blockText": "current time in {UNIT}",
     "args": [
       {
         "name": "UNIT",
         "options": [
           [
-            "Measures",
+            "measures",
             "\"measures\""
           ],
           [
-            "Seconds",
+            "seconds",
             "\"seconds\""
           ]
         ]

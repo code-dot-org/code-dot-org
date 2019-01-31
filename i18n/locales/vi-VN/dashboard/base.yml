@@ -39,6 +39,7 @@ vi:
   next_resource: Tài nguyên tiếp theo
   cancel: "Huỷ"
   okay: "Đồng ý"
+  or: "hoặc"
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
   add_teacher_form:
     code:
@@ -83,6 +84,7 @@ vi:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Tài khoản Microsoft'
+    microsoft_v2_auth: 'Tài khoản Microsoft'
     clever: 'Tài khoản Clever'
     powerschool: 'Tài khoản Powerschool'
     forgot_password: 'Quên mật khẩu?'
@@ -107,7 +109,6 @@ vi:
     age: 'Tuổi'
     user_type: 'Bạn là học viên hay Giáo viên?'
     submit: 'Đăng ký'
-    next: 'Tiếp'
     teacher: 'Bạn có phải là giáo viên?'
     valid_username: "Hợp lệ!"
     invalid_username: "Tên người dùng phải nhiều hơn 5 ký tự"
@@ -191,11 +192,11 @@ vi:
     subject: 'Tham gia lớp học của tôi ( trên Code.org)'
     body: |
       Nhấp vào liên kết dưới đây để đăng ký cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là "giáo viên" của bạn): 
-      
+
       %{link} 
-      
+
       Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng ví dụ, hướng dẫn, trờ chơi - giống trải nghiệm. Học lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, Angry Birds và Plants vs. Zombies! :-) 
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Thông tin đăng nhập vào Code.org'
@@ -298,14 +299,6 @@ vi:
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "Thông tin"
-    create_button:
-      create: 'Tạo'
-      applab: 'Phòng thí nghiệm ứng dụng'
-      artist: 'Họa sĩ'
-      gamelab: 'Kho Trò chơi'
-      playlab: 'Phòng trò chơi'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy bird'
     user:
       classroom: 'Trang chủ giáo viên'
       district_dashboard: 'khu vực điều khiển'
@@ -319,6 +312,14 @@ vi:
       team: 'Nhóm'
       driver: 'Người lái xe'
       navigator: 'Định hướng'
+      create: 'Tạo'
+      applab: 'Phòng thí nghiệm ứng dụng'
+      artist: 'Họa sĩ'
+      gamelab: 'Kho Trò chơi'
+      playlab: 'Phòng trò chơi'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy bird'
+      dance: 'Bữa tiệc khiêu vũ'
     popup:
       progress_for_user: "sự tiến bộ của %{name}"
       progress: 'Qua trình của bạn'
@@ -551,6 +552,8 @@ vi:
       body_short: "Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript, và chia sẻ ứng dụng của bạn trong vài giây."
       audience: 'Lứa tuổi 13 +'
       cta: 'Học cách làm'
+    dance:
+      title: 'Bữa tiệc khiêu vũ'
     hoc:
       title: 'Mê cung cổ điển'
       body: 'Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học các khóa này.'
@@ -592,9 +595,11 @@ vi:
     minecraft2016:
       title: "Minecraft"
       body: "Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft của riêng bạn."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
+      body: "Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã."
     sports:
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
     text-compression:
@@ -870,6 +875,7 @@ vi:
     mac: 'Hệ điều hành Mac OS X'
   locked_stage: 'Nội dung của giai đoạn này không hiển thị vì giai đoạn này hiện đang bị khóa. Giáo viên của bạn có thể mở khóa giai đoạn này khi đến lúc làm việc hoặc xem lại câu trả lời của bạn.'
   hidden_stage: "Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của bạn về bài học nào bạn nên vào."
+  view_teacher_guide: 'Xem hướng dẫn cho giáo viên'
   pd:
     form_labels:
       email: 'Thư điện tử'

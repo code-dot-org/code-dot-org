@@ -24,6 +24,7 @@
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
   belongs_to :circuit_playground_discount_code
+  belongs_to :school
 
   enum unit_6_intention: {
     no: 1,
@@ -31,10 +32,11 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     yes1819: 3,
     yesAfter: 4,
     unsure: 5,
+    yes1920: 6,
   }
 
   def eligible_unit_6_intention?
-    yes1718? || yes1819?
+    yes1819? || yes1920?
   end
 
   # We will set the application's school_id when the user confirms their school. This means
@@ -51,19 +53,42 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     where(user_id: associated_user_ids).first
   end
 
-  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
+  # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
   def self.user_pd_eligible?(user)
-    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
+    user_pd_eligible_as_teacher?(user) || user_pd_eligible_as_facilitator?(user)
+  end
 
-    return true if user.cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
-    return true if user.courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
-    return false
+  private_class_method def self.user_pd_eligible_as_teacher?(user)
+    Pd::Attendance.
+      joins(:workshop).
+      where(
+        pd_attendances: {
+          teacher_id: user.id
+        },
+        pd_workshops: {
+          course: Pd::Workshop::COURSE_CSD,
+          subject: [
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+            Pd::Workshop::SUBJECT_TEACHER_CON
+          ]
+        }
+      ).
+      where("pd_workshops.started_at > '2018-05-01'").
+      exists?
+  end
+
+  private_class_method def self.user_pd_eligible_as_facilitator?(user)
+    # We've got a specific list of facilitators eligible for the discount this year.
+    # Storing it in DCDO since this is a temporary list and not necessarily worth its
+    # own Rails model.
+    DCDO.get('facilitator_ids_eligible_for_maker_discount', []).include? user.id
   end
 
   # Looks to see if any of the users associated with this studio_person_id are eligibile
   # for our circuit playground discount
   def self.studio_person_pd_eligible?(user)
-    User.where(studio_person_id: user.studio_person_id).any? {|associated_user| user_pd_eligible?(associated_user)}
+    accounts = user.studio_person_id.nil? ? [user] : User.where(studio_person_id: user.studio_person_id)
+    accounts.any? {|associated_user| user_pd_eligible?(associated_user)}
   end
 
   # @return {boolean} true if we have at least one section that meets our eligibility
@@ -79,7 +104,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     # we have a school id associated with the user
     school_id = application.try(:school_id) || user.try(:school_info).try(:school_id)
 
-    status = {
+    {
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
@@ -91,19 +116,10 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
       expiration: application.try(:circuit_playground_discount_code).try(:expiration),
-      admin_set_status: application.try(:admin_set_status) || false
+      admin_set_status: application.try(:admin_set_status) || false,
+      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_progress_eligible: student_progress_eligible?(user)
     }
-
-    if application
-      # We won't let you create an application without meeting our eligibility requirements
-      # so no need to check them again if we find an existing application
-      status.merge({is_pd_eligible: true, is_progress_eligible: true})
-    else
-      status.merge(
-        is_pd_eligible: studio_person_pd_eligible?(user),
-        is_progress_eligible: student_progress_eligible?(user)
-      )
-    end
   end
 
   # Provides admin with information about the application status of a user's
@@ -125,12 +141,12 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       user_school: {
         id: user_school.try(:id),
         name: user_school.try(:name),
-        high_needs: user_school.try(:high_needs?),
+        high_needs: user_school.try(:maker_high_needs?),
       },
       application_school: {
         id: application_school.try(:id),
         name: application_school.try(:name),
-        high_needs: application_school.try(:high_needs?),
+        high_needs: application_school.try(:maker_high_needs?),
       },
       unit_6_intention: application.try(:unit_6_intention),
       full_discount: application.try(:full_discount),

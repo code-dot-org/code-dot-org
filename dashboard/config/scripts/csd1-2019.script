@@ -1,0 +1,37 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd-18/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit1/standards/"]]
+has_verified_resources true
+has_lesson_plan true
+version_year '2019'
+
+stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'csd-pre-survey-2017-levelgroup_2018_2019'
+
+stage 'Intro to Problem Solving', flex_category: 'csd1_1'
+named_level 'CSD U1L01 TFMD_2019'
+
+stage 'The Problem Solving Process', flex_category: 'csd1_1'
+named_level 'CSD U1L02 TFMD_2019'
+
+stage 'Exploring Problem Solving', flex_category: 'csd1_1'
+named_level 'CSD U1L03 TFMD_2019'
+
+stage 'What is a Computer?', flex_category: 'csd1_2'
+named_level 'CSD U1L04 TFMD_2019'
+named_level 'CSD What Makes a Computer a Computer Video_2019'
+
+stage 'Input and Output', flex_category: 'csd1_2'
+named_level 'CSD U1L05 TFMD_2019'
+
+stage 'Processing', flex_category: 'csd1_2'
+named_level 'CSD U1L06 TFMD_2019'
+
+stage 'Apps and Storage', flex_category: 'csd1_2'
+named_level 'CSD U1L07 TFMD_2019'
+
+stage 'Project - Propose an App', flex_category: 'csd1_2'
+named_level 'CSD U1L09 TFMD_2019'
+assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019', progression: 'Reflection'

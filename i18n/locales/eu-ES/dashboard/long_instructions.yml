@@ -108,7 +108,7 @@ eu:
       4-5 Nested Loops 12: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       4-5 Nested Loops 3: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       4-5 Nested Loops 5: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       4-5 Nested Loops 7: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
@@ -160,19 +160,23 @@ eu:
       NEW Course 4 Artist Vars 6: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r\n\\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r\n\\r\n\\r\n"
       Overworld Move to Sheep: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
       Overworld Move to Sheep_2018: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
+      Overworld Move to Sheep_2019: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
       Testing Quantum Farmer: "Primeran! Zulo benetan sakona aurkitu dudana! Ez dakit zenbat paletakada lur behar diren. Programa bat idatz dezakezu zuloa betetzeko gainazala laua izan arte? Pista: Oraingoan saia zaitez bitartean begizta erabiltzen."
       course4_artist_fwp_challenge1: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz desberdina den zerbaitekin aldatu)
       courseD_bee_nestedLoops5: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops8: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops8_2018: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
+      courseD_bee_nestedLoops8_2019: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bounce_events1: Iritsi banderara! Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi" jokalariak banderara mugitzeko.
       courseD_maze_nestedLoops4: 'Eraman nazazu ekiloreraino!'
       courseD_maze_nestedLoops4_2018: 'Eraman nazazu ekiloreraino!'
+      courseD_maze_nestedLoops4_2019: 'Eraman nazazu ekiloreraino!'
       courseE_bee_functions3: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
       courseE_bee_functions3_2018: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
       courseE_farmer_concept4: Orain goazen maila sakonago batera! kode-bloke oso hori kabiatu dugu beste begizta batean, baina artista bere lekura eraman behar duzu hurrengo lerroa marrazteko. Hauetako ze kode-bloke jar dezakezu kanpo-begiztaren amaieran lauki-sare osoa marrazteko?
       courseF_bee_for_challenge2: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge2_2018: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
+      courseF_bee_for_challenge2_2019: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
       frozen circle function in circle: Sor ditzagun orain 20 zirkulu gainjartzaile, zirkuluen artean 18 gradu biratuta.
       frozen circle function with parameter: Hona hemen "Sortu zirkulua" blokea, tamaina ezberdineko zirkuluak egiteko gai dena. Erabili al dezakezu 5 tamainako zirkulu txiki bat eta 10 tamainako handiago bat sortzeko?
       frozen circle function: Erabili "Sortu zirkulua" bloke berria 10 zirkulu gainjartzaile sortzeko. Ez ahaztu zirkuluean artean aurrerantz jauzi egiteaz.
@@ -235,14 +239,14 @@ eu:
       grade4_arist_nested_loop_triangles4: Marraztu krokodiloaren ahoko hortzak!
       grade4_arist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_arist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_functions2: "Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak \"marraztu karratua\" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu \"marraztu karratua\" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da."
       grade4_artist_nested_loop_flags1: Errepikatu emandako kodea haize-errota bat sortzeko.
       grade4_artist_nested_loop_polygons1: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
       grade4_artist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_artist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_triangles2: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
       grade4_bee_conditionals_quantum2: "Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu."

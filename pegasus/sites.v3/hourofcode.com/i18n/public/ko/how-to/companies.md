@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org 는 회사의 직원들이 Hour of Code 기간 중, 학교 교실 수업에 함께 참여하여 컴퓨터과학을 학생들에게 가르치면서, 전문적인 경험을 학생들과 나눌 수 있도록 [연결시켜 ](<%= resolve_url('https://code.org/volunteer') %>) 드립니다.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 

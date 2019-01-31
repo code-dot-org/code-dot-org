@@ -34,10 +34,38 @@ ta:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Dancelab_setDanceSpeed:
@@ -48,7 +76,19 @@ ta:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"height"': உயரம்
@@ -68,6 +108,7 @@ ta:
         options:
           KEY:
             '"space"': வெளி
+            '"x"': x
       gamelab_debugSprite:
         options:
           VAL:
@@ -119,11 +160,29 @@ ta:
         text: இடதுபுறம் திரும்பவும்
       RyanLab_turnRight:
         text: வலதுபுறம் திரும்பவும்
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': வெளி
       craft_ifPath:
         options:
           DIR:
             "'ahead'": மாருதி
       craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": மண்
+      craft_ifStandingOnLimit:
         options:
           TYPE:
             "'sand'": மண்

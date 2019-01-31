@@ -149,3 +149,37 @@ bs:
         title: Pomakni, Pomakni
       RelayProgramming_2018:
         title: Prijenos programiranja
+      courseB_unplugged_MRF_2019:
+        title: Moji Prijatelji Roboti
+      Conditionals_2019:
+        title: Uvjeti
+      GraphPaperProgramming_2019:
+        title: Papirno Programiranje Grafikona
+      RelayProgramming_2018_2019:
+        title: Prijenos programiranja
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Izvanmrežna aktivnost
+        desc: Danas ćete naučiti što znači biti digitalni građanin.
+      GettingLoopy_2019:
+        title: Zapetljavanje
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Izvanmrežna aktivnost
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
+      BigEvent_2019:
+        title: Veliki Događaj
+      BinaryBracelets_2019:
+        title: Binarne narukvice
+      PaperPlanes_2019:
+        title: 'Stvarni algoritmi: Papirni Planovi'
+      PlantASeed_2019:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      UnplugHappyMaps_2019:
+        title: Vesele Mape
+      GoingPlacesSafely_2019:
+        title: Sigurna Putovanja
+      courseA_unplugged_loops_2019:
+        desc: U ovoj lekciji, Vi ćete učiti o petljama!
+      MoveItMoveIt_2019:
+        title: Pomakni, Pomakni
+      DigitalFootprint_2019:
+        title: Digitalni otisak stopala

@@ -1,4 +1,4 @@
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 # A caching layer that sits in front of a datastore that
 # implements get and set

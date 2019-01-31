@@ -40,18 +40,54 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': در هم
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
       Dancelab_setDanceSpeed:
@@ -62,7 +98,20 @@ fa:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -86,10 +135,11 @@ fa:
         options:
           KEY:
             '"up"': بالا
-            '"down"': پایین
             '"left"': سمت چپ
+            '"down"': پایین
             '"right"': سمت راست
             '"space"': فضا
+            '"x"': طول (x)
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -178,6 +228,23 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
       Mikelab_randomColor:
         text: رنگ تصادفی
       Mikelab_setBG:
@@ -193,6 +260,11 @@ fa:
           CORNER:
             '"right"': سمت راست
             '"left"': سمت چپ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -228,6 +300,35 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+      binary_move:
+        options:
+          DIR:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
       craft_ifPath:
         options:
           DIR:
@@ -237,6 +338,10 @@ fa:
           TYPE:
             "'sand'": شن
             "'planksOak'": چوب بلوط
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": شن
       craft_moveForward:
         text: برو جلو
       craft_placeTorch:

@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org ofereix l'oportunitat als teus empleats de [connectar](<%= codeorg_url('/volunteer') %>) amb aules locals que fan l'Hora del Codi, on poden compartir la seva experiència en el camp de la tecnologia i inspirar els estudiants a estudiar informàtica.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 

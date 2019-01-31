@@ -17,6 +17,7 @@ const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
+const SET_USER_TYPE = 'progress/SET_USER_TYPE';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
@@ -49,6 +50,7 @@ const initialState = {
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
+  userType: 'unknown',
   postMilestoneDisabled: false,
   isHocScript: null,
   isAge13Required: false,
@@ -143,6 +145,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       signInState: action.isSignedIn ? SignInState.SignedIn : SignInState.SignedOut
+    };
+  }
+
+  if (action.type === SET_USER_TYPE) {
+    return {
+      ...state,
+      userType: action.userType
     };
   }
 
@@ -324,6 +333,7 @@ export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
+export const setUserType = userType => ({ type: SET_USER_TYPE, userType});
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
 export const setIsAge13Required = isAge13Required => ({ type: SET_IS_AGE_13_REQUIRED, isAge13Required });
 export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });

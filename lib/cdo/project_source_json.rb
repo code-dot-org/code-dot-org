@@ -18,7 +18,7 @@ class ProjectSourceJson
   end
 
   def to_json
-    raise Error("Can't convert unparseable body to JSON") if @unparseable
+    raise "Can't convert unparseable body to JSON" if @unparseable
     JSON.generate(@parsed_json)
   end
 

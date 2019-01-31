@@ -1013,7 +1013,7 @@ de:
             'Farmer: While Loops':
               name: 'Bauer: Solange-Schleifen'
         csd3-2017:
-          description_short: "Programmierung"
+          description_short: Programmierung
           stages:
             Functions:
               name: Funktionen
@@ -1079,6 +1079,8 @@ de:
               name: Binäre Armbänder
             Binary Images:
               name: Binärbilder
+            Play Lab:
+              name: Spielelabor
         csd2-2017:
           stages:
             Peer Review:
@@ -1429,6 +1431,7 @@ de:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1654,7 +1657,128 @@ de:
           stages:
             Artist:
               name: Künstler
+        dance:
+          stages:
+            Dance Party:
+              name: Tanzparty
+          title: Tanzparty
+          description_short: Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!
+          description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Künstler
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        dance-extras:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
+            The Artist:
+              name: Der Künstler
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tanzparty
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Relais-Programmierung
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Digital Citizenship:
+              name: Digitalen Staatsbürgerschaft
+            'Unplugged: Binary':
+              name: 'Offline: Binär'
+            Artist Binary:
+              name: Künstler Binär
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            Nested Loops:
+              name: Verschachtelte Schleifen
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Conditionals:
+              name: Bedingungen
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Relais-Programmierung
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
+            Binary Bracelets:
+              name: Binäre Armbänder
+            'Unplugged: Binary':
+              name: 'Offline: Binär'
+            Artist Binary:
+              name: Künstler Binär
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        andrea-test:
+          stages:
+            'null':
+              name: 'nichts'
+        dance-extras-gallery:
+          title: Tanzt weiter
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Grundlagen aufbauen
+            'Real-life Algorithms: Paper Planes':
+              name: 'Alltagsalgorithmen: Papierflieger'
+            Binary Bracelets:
+              name: Binäre Armbänder
+        gamelab:
+          title: Spielelabor
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'
+            Going Places Safely:
+              name: Sicher unterwegs
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+            Spelling Bee:
+              name: Buchstabierwettbewerb
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-Life-Algorithmen: Pflanze Samen'

@@ -1,0 +1,24 @@
+name 'AP_practice_Qs_rqb_94_CSP_5_3_1'
+wrong 'To allow software to communicate with the Internet.'
+right 'To connect software components, allowing them to communicate.'
+wrong 'To assist in debugging.'
+wrong 'To provide the programmer with a simple optimized programming environment.'
+markdown <<MARKDOWN
+What is the primary function of API\'s?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.3.1** and Essential Knowledge statements: **5.3.1O**
+<hr>
+ (A) This answer is incorrect.  Networks and protocols provide communication with the Internet.
+
+
+<hr>
+ (B) This response is correct.  API stands for Application Programming Interface, and an API provides a way to connect a program with another software application to use it\'s features.
+
+<hr>
+ (C) This answer is incorrect.  Helping to debug a program is not a function of an API.
+
+<hr>
+ (D) IDEs or (Integrated Development Environments) provide a programming environment, not APIs.
+
+MARKDOWN

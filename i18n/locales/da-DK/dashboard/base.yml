@@ -7,11 +7,16 @@ da:
   activerecord:
     errors:
       messages:
-        blank: "krævet"
+        blank: "påkrævet"
+        blank_plural: "påkrævet"
+        invalid: "er ugyldigt"
+        invalid_plural: "er ugyldige"
     attributes:
       user:
         name: 'Brugernavn'
+        name_example: 'Vis navn<br/>(f.eks. Cool Coder eller Jane S.)'
         email: 'E-mail'
+        parent_email: 'Forældres/værges e-mail adresse'
         username: 'brugernavn'
         password: 'Adgangskode'
         password_confirmation: 'Bekræft adgangskode'
@@ -20,6 +25,9 @@ da:
         age: 'Alder'
         gender: 'Køn'
         edit_header: 'Rediger kontooplysninger'
+        finish_sign_up_header: 'Afslut oprettelsen af din konto'
+        finish_sign_up_subheader: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: kan ikke være i fremtiden
   hello: "Hej verden"
@@ -30,13 +38,15 @@ da:
   unsubmit: Fortryd indsendelse
   previous_page: Forrige side
   next_page: Næste side
+  next_resource: Næste ressource
   cancel: "Annuller"
   okay: "Okay"
+  or: "eller"
   heading_x_of_y: "%{heading} (side %{x} af %{y})"
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
-      placeholder: "Afsnitskode (SOVS)"
+      placeholder: "Afsnitskode (ABCDEF)"
       instructions: "Indtast venligst koden din lærer har delt med dig. Det er en kode på 6 bogstaver som \"ABCDEF\"."
       instructions_short: "Angiv din sektionskode (6 tegn)"
     submit: 'Tilføj lærer'
@@ -50,13 +60,14 @@ da:
   trophies: "trofæer"
   courses: 'kurser'
   courses_page:
-    title_student: "Lære om Code Studio"
+    title_student: "Lær datalogi"
+    title_teacher: "Undervis i datalogi"
   unplugged_activity: 'Unplugged aktivitet'
   of: "af"
   more: "MERE"
   less: "MINDRE"
   beta: "beta"
-  try_hoc: "Prøv En Times Kodning, klik her >> "
+  try_hoc: "Prøv Hour of Code, klik her >> "
   try_k8intro: "Prøv vores grundskole introduktionskursus i programmering (15-25 timer)"
   k8intro: "Grundskole introduktion til datalogi kursus (15-25 timer)"
   already_started: "Allerede startet? Fortsæt her >> "
@@ -65,6 +76,7 @@ da:
   prize: 'præmie'
   more_info: 'Mere information'
   auth:
+    continue_with: 'Fortsæt med %{provider}'
     sign_in_with: 'Log ind med %{provider}'
     signed_in: 'Logget ind!'
     signed_out: 'Du har logget dig af <a href="%{url}"> Code.org</a>.'
@@ -75,12 +87,14 @@ da:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
+    microsoft_v2_auth: 'Microsoft-konto'
     forgot_password: 'Glemt din adgangskode?'
     need_confirmation: "Har du ikke modtaget bekræftelsesinstruktioner?"
     need_unlock: "Ikke modtaget lås op instruktioner?"
   signup_form:
     student_count: '%{count} elever har allerede tilmeldt sig.'
     teacher_count: '%{count} lærere har allerede tilmeldt sig.'
+    hoc_already_signed_up_heading: 'Begynd uden at logge ind'
     teacher_educator_guide: 'Se lærerens guide'
     title: "Tilmeld dig Code.org"
     school_name: 'Skolens navn (valgfrit)'
@@ -91,7 +105,7 @@ da:
     age: 'Alder'
     user_type: 'Er du elev eller lærer?'
     submit: 'Tilmeld'
-    next: 'Næste'
+    go_to_account: 'Gå til min konto'
     teacher: 'Er du lærer?'
     valid_username: "Tilgængelig!"
     invalid_username: "Brugernavn skal være mindst 5 tegn"
@@ -107,10 +121,11 @@ da:
     user_type_label: "Kontotype"
     user_type_teacher: "Lærer"
     user_type_student: "Elev"
-    field_is_required: "krævet"
+    field_is_required: "påkrævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
     email_preference_question: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+    email_preference_privacy: "(Se vores fortrolighedspolitik)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
   school_info:
@@ -170,11 +185,11 @@ da:
     subject: 'Deltag i min klasse (på Code.org)'
     body: |
       Klik på linket nedenunder for at tilmelde dig Computer Videnskabs vejledninger på Code.org (Med mig som din lærer):
-      
+
       %{link}
-      
+
       Vejledningerne er sjove, visuelt gode og de lærer alle basis koncepterne ved Computer Videnskab ved brug af simple, vejledende og en spil-lignende oplevelse. Lær at programmere med hjælp fra Bill Gates, Mark Zuckerberg, Angry Birds og Plants Vs. Zombies! :-)
-      
+
       %{name}
   parent_mailer:
     student_associated_subject: 'Login-oplysninger til Code.org'
@@ -252,13 +267,6 @@ da:
       help_us: "Hjælp os"
       teach: "Undervis"
       about: "Om"
-    create_button:
-      create: 'Opret'
-      applab: 'App Lab'
-      artist: 'Kunstner'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Særskilt betjeningspanel'
@@ -269,6 +277,15 @@ da:
       signin: 'Log ind'
       already_registered: 'Allerede registreret?'
       team: 'Hold'
+      navigator: 'Partner'
+      create: 'Opret'
+      applab: 'App Lab'
+      artist: 'Kunstner'
+      gamelab: 'Spil Laboratoriet'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dansefest'
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: 'Dine fremskridt'
@@ -302,7 +319,9 @@ da:
       example: 'Løsningseksempel'
       example_with_number: 'Løsningseksempel %{solution_number}'
       submitted_on: 'Indsendt den %{date}'
+      last_updated: 'Senest opdateret:'
       unsubmit: 'Fortryd indsendelse'
+      worked_with: 'Samarbejdede med'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -453,6 +472,8 @@ da:
     applab:
       title: 'App Lab'
       audience: 'Alder 13+'
+    dance:
+      title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'
@@ -470,6 +491,7 @@ da:
       title: "Galleri"
       body: "Se et galleri af app og kunstnerbilleder skabt af vores brugere"
     gamelab:
+      title: "Spil Laboratoriet"
       audience: "Alder 13+"
     hoc-encryption:
       title: "Enkel kryptering"
@@ -487,8 +509,11 @@ da:
       body: "Udforsk en Minecraft-verden gennem kode"
     minecraft2016:
       title: "Minecraft"
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
     unplugged:
       audience: "Alder 4+"
     unplugged_conditionals:
@@ -648,6 +673,7 @@ da:
       name: 'Eskalerede'
   flex_category:
     required: 'Oversigt'
+  view_teacher_guide: 'Vis lærervejledning'
   pd:
     form_labels:
       email: 'E-mail'
@@ -662,6 +688,7 @@ da:
         cs: 'Datalogi'
         math: 'Matematik'
         science: 'Videnskab'
+        la: 'Sprog kunst'
       resources:
         kodable: 'Kodable'
       robotics:

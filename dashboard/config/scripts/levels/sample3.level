@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "serialized_maze": "[[{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":4},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Now you can help bee make all of the honey using just the blocks in the toolbox.",
+    "short_instructions": "Now you can help bee make all of the honey using just the blocks in the toolbox.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

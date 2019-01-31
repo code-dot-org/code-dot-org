@@ -38,6 +38,7 @@ de:
   next_resource: Nächste Ressource
   cancel: "Abbrechen"
   okay: "Okay"
+  or: "oder"
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
   add_teacher_form:
     code:
@@ -80,6 +81,8 @@ de:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-Konto'
+    microsoft_v2_auth: 'Microsoft-Konto'
+    clever: 'Schlau'
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
@@ -101,7 +104,6 @@ de:
     age: 'Alter'
     user_type: 'Bist du Schüler oder Lehrer?'
     submit: 'Registrieren'
-    next: 'Weiter'
     teacher: 'Sind Sie ein Lehrer?'
     valid_username: "Verfügbar!"
     invalid_username: "Benutzernamen müssen mindestens 5 Zeichen lang sein"
@@ -183,11 +185,11 @@ de:
     subject: 'Zu meiner Klasse gehen (auf Code.org)'
     body: |
       Klicke unten und registriere dich für die Informatiktutorials auf Code.org (mit mir als "Lehrer"):
-      
+
       %{link}
-      
+
       Die Tutorials machen Spaß, sind visuell attraktiv und vermitteln spielend einfach die Grundlagen der Informatik. Lerne Programmieren mit Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. :-)
-      
+
       %{name}
   teacher_mailer:
     new_teacher_subject: 'Willkommen bei Code.org!'
@@ -202,6 +204,7 @@ de:
     type:
       word: 'Geheimwort'
       email: 'E-Mail'
+      google_classroom: 'Google Classroom'
       clever: 'Schlau'
   follower:
     invite_sent: 'Einladung gesendet'
@@ -277,14 +280,6 @@ de:
       help_us: "Helfen Sie uns"
       teach: "Unterrichten"
       about: "Über"
-    create_button:
-      create: 'Erstellen'
-      applab: 'App-Labor'
-      artist: 'Künstler'
-      gamelab: 'Spielelabor'
-      playlab: 'Spielelabor'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Lehrer-Homepage'
       district_dashboard: 'Landkreis-Dashboard'
@@ -298,6 +293,14 @@ de:
       team: 'Team'
       driver: 'Bediener'
       navigator: 'Navigator'
+      create: 'Erstellen'
+      applab: 'App-Labor'
+      artist: 'Künstler'
+      gamelab: 'Spielelabor'
+      playlab: 'Spielelabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Tanzparty'
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: 'Dein Fortschritt'
@@ -525,6 +528,8 @@ de:
       body_short: "Entwerfe eine App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden."
       audience: 'Ab 13 Jahren'
       cta: 'Lerne wie'
+    dance:
+      title: 'Tanzparty'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
@@ -566,8 +571,11 @@ de:
     minecraft2016:
       title: "Minecraft"
       body: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
     unplugged:
       title: "Offline Lektionen"
       audience: "Alter 4+"
@@ -849,10 +857,12 @@ de:
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
   hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
   return_course_overview: 'Gehe zur Übersicht'
+  view_teacher_guide: 'Lehrer-Leitfaden anzeigen'
   pd:
     form_labels:
       email: 'E-Mail'
       school_name: 'Schulname'
+      school_city: 'Stadt der Schule'
       school_country: 'Land der Schule'
     form_entries:
       gender:

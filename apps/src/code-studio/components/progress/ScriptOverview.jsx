@@ -1,20 +1,23 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import i18n from '@cdo/locale';
 import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED,
 } from './ScriptOverviewTopRow';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { sectionsNameAndId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
-import ScriptOverviewHeader from './ScriptOverviewHeader';
+import ScriptOverviewHeader, { scriptVersionShape } from './ScriptOverviewHeader';
 import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { onDismissRedirectDialog, dismissedRedirectDialog } from '@cdo/apps/util/dismissVersionRedirect';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -26,11 +29,10 @@ class ScriptOverview extends React.Component {
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired,
-      version_title: PropTypes.string.isRequired,
-    })).isRequired,
+    redirectScriptUrl: PropTypes.string,
+    showRedirectWarning: PropTypes.bool,
+    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
+    courseName: PropTypes.string,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -52,6 +54,21 @@ class ScriptOverview extends React.Component {
     selectedSectionId: PropTypes.string,
   };
 
+  constructor(props) {
+    super(props);
+    const showRedirectDialog = props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
+    this.state = {showRedirectDialog};
+  }
+
+  onCloseRedirectDialog = () => {
+    const {courseName, scriptName} = this.props;
+    // Use course name if available, and script name if not.
+    onDismissRedirectDialog(courseName || scriptName);
+    this.setState({
+      showRedirectDialog: false,
+    });
+  };
+
   render() {
     const {
       onOverviewPage,
@@ -71,10 +88,15 @@ class ScriptOverview extends React.Component {
       scriptAllowsHiddenStages,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
+      showRedirectWarning,
+      redirectScriptUrl,
       versions,
       hiddenStageState,
       selectedSectionId,
+      courseName,
     } = this.props;
+
+    const displayRedirectDialog = redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
@@ -90,11 +112,22 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
+            {displayRedirectDialog &&
+              <RedirectDialog
+                isOpen={this.state.showRedirectDialog}
+                details={i18n.assignedToNewerVersion()}
+                handleClose={this.onCloseRedirectDialog}
+                redirectUrl={redirectScriptUrl}
+                redirectButtonText={i18n.goToAssignedVersion()}
+              />
+            }
             <ScriptOverviewHeader
               showCourseUnitVersionWarning={showCourseUnitVersionWarning}
               showScriptVersionWarning={showScriptVersionWarning}
+              showRedirectWarning={showRedirectWarning}
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
+              courseName={courseName}
             />
             {!professionalLearningCourse && viewAs === ViewType.Teacher &&
                 (scriptHasLockableStages || scriptAllowsHiddenStages) &&

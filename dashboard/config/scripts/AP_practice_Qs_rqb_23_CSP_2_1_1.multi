@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_23_CSP_2_1_1'
+wrong 'I and II'
+wrong 'I and III'
+right 'II and III'
+wrong 'I, II, and III'
+markdown <<MARKDOWN
+A student is taking a survey of her class in order to determine their average hours of sleep per night.  She is tracking the number of students in her class that have replied.  She sees that the number of students who have replied is represented by the digits "12" but she does not remember what base she used.  Which of the following are possible bases that the number 12 could be in?
+I. Binary (base 2)
+II. Decimal (base 10)
+III. Hexadecimal (base 16)
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1D**
+<hr>
+ (A) This option is incorrect.  12 is a number in base 10, it is not a number that can be represented in binary because there is no 2 digit in binary.
+
+<hr>
+ (B) This option is incorrect.  12 is a number in base 16, but it is not a number that can be represented in binary because there is no 2 digit in binary.
+
+<hr>
+ (C) This option is correct.  12 is a number in both base 10 and 16 because 1 and 2 are both valid digits in base 10 and 16.
+
+<hr>
+ (D) This option is incorrect.  12 is a number in base 10 and 16, but not 2.
+
+MARKDOWN

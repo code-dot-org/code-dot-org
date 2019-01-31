@@ -375,7 +375,7 @@ eu:
       4-5 Nested Loops 2: 'Orain sartu begizta hau beste begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
       4-5 Nested Loops 3: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       4-5 Nested Loops 5: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       4-5 Nested Loops 7: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
@@ -676,6 +676,7 @@ eu:
       Course 4 SCV 6: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCVP 1: Parametrodun funtzio bat egin behar duzu artistak aurrera eta atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki positiboak eta negatiboak erabiiz).
       Course 4 Variables Assessment: Sor al dezakezu irudi hau aldeetarako aldagai bat erabiliz? Lerro bakoitza 50 pixelekoa izan beharko zukeen.
+      Course E MC Conditionals1: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       CourseF_PlayLab_vars10: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
       CourseF_PlayLab_vars2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       CourseF_PlayLab_vars3: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
@@ -912,25 +913,35 @@ eu:
       New Sports Project: 'Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.'
       Overworld Avoid Monsters: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
       Overworld Avoid Monsters_2018: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
+      Overworld Avoid Monsters_2019: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
       Overworld Chop Tree - allthethings: Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza botatzeko.
       Overworld Chop Tree: Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza botatzeko.
       Overworld Chop Tree_2018: Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza botatzeko.
+      Overworld Chop Tree_2019: Egurra baliabide garrantzitsua da. Gauza asko egiten dira egurrarekin. Joan zuhaitzera eta erabili "txikitu blokea" agindua zuhaitza botatzeko.
       Overworld Chop Trees: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik. Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
       Overworld Chop Trees_2018: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik. Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
+      Overworld Chop Trees_2019: Etxe bat eraiki behar dugu eguzkia ezkutatu aurretik. Etxeek egur asko eskatzen dute. Bota 3 zuhaitzak.
       Overworld Free Play 20x20: Zorionak! puzle guztiak osatu dituzu! Orain erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
       Overworld Free Play 20x20_2018: Zorionak! puzle guztiak osatu dituzu! Orain erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
+      Overworld Free Play 20x20_2019: Zorionak! puzle guztiak osatu dituzu! Orain erauzi, eraiki eta sortu zerbait berezia ikasitako guztia erabiliz.
       Overworld House Frame Chosen: Eraiki etxearen gainerakoa gustoko duzun materialearekin. "Errepika" komandoa oso erabilgarri izango duzu.
       Overworld House Frame Chosen_2018: Eraiki etxearen gainerakoa gustoko duzun materialearekin. "Errepika" komandoa oso erabilgarri izango duzu.
+      Overworld House Frame Chosen_2019: Eraiki etxearen gainerakoa gustoko duzun materialearekin. "Errepika" komandoa oso erabilgarri izango duzu.
       Overworld Move to Sheep: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
       Overworld Move to Sheep_2018: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
+      Overworld Move to Sheep_2019: Gehitu bigarren "mugitu aurrera" agindua ardiarengana iristeko.
       Overworld Place Wall: Etxe guztiak horma batekin hasten dira. Eraiki zure etxearen lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu begiztaren barnean jarriz.
       Overworld Place Wall_2018: Etxe guztiak horma batekin hasten dira. Eraiki zure etxearen lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu begiztaren barnean jarriz.
+      Overworld Place Wall_2019: Etxe guztiak horma batekin hasten dira. Eraiki zure etxearen lehenengo zatia "kokatu" eta "mugitu aurrera" aginduak errepikatu begiztaren barnean jarriz.
       Overworld Plant Crops: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan geroago gosez ez egoteko.
       Overworld Plant Crops_2018: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan geroago gosez ez egoteko.
+      Overworld Plant Crops_2019: Planifikatzea ona da. Uzta landatu uraren bi aldamenetan geroago gosez ez egoteko.
       Overworld Powered Minecart: Lan aparta! Baliabide ugari bildu duzu eta etxe xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko ateraino.
       Overworld Powered Minecart_2018: Lan aparta! Baliabide ugari bildu duzu eta etxe xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko ateraino.
+      Overworld Powered Minecart_2019: Lan aparta! Baliabide ugari bildu duzu eta etxe xumea eraiki ere. Orain luzatu errail bat maparen ertzetik zure etxeko ateraino.
       Overworld Shear Sheep: Ardiei ilea mozteko garaia! Erabili "ilea moztu" agindua bi ardietatik lana eskuratzeko.
       Overworld Shear Sheep_2018: Ardiei ilea mozteko garaia! Erabili "ilea moztu" agindua bi ardietatik lana eskuratzeko.
+      Overworld Shear Sheep_2019: Ardiei ilea mozteko garaia! Erabili "ilea moztu" agindua bi ardietatik lana eskuratzeko.
       PDK5 Conditionals 1: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.
       PDK5 Functions 2: Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da.
       PS copy 2-3 Bee Conditionals 5: "Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz."
@@ -963,12 +974,16 @@ eu:
       U4L02 - Objects - Template1_2018: Txantiloia
       Underground Avoiding Lava: Laba izkutuan dago bloke batzuen azpian. Blokeak suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke horiek suntsitzeko.
       Underground Avoiding Lava_2018: Laba izkutuan dago bloke batzuen azpian. Blokeak suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke horiek suntsitzeko.
+      Underground Avoiding Lava_2019: Laba izkutuan dago bloke batzuen azpian. Blokeak suntsitu behar dituzu aurrera egin baino lehen. "Baldin" agindua erabilgarri izango zaizu hemen. Gehitu "mugitu aurrera" agindu bat leku egokian bloke horiek suntsitzeko.
       Underground If Statements: Gauzak konplikatzen ari dira. 3 harri gorri suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten duzun labaren gainean galtzada-harriak jartzeko.
       Underground If Statements_2018: Gauzak konplikatzen ari dira. 3 harri gorri suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten duzun labaren gainean galtzada-harriak jartzeko.
+      Underground If Statements_2019: Gauzak konplikatzen ari dira. 3 harri gorri suntsitu baina laban erori gabe. Erabili "baldin" agindua estaldu gabe uzten duzun labaren gainean galtzada-harriak jartzeko.
       Underground Iron: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
       Underground Iron_2018: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
+      Underground Iron_2019: Urtutako labaren gainean ibiltzea ez da ideia ona. Jarri galtzada-harriak zubi bat egiteko, ondoren suntsitu gutxienez bi burdin bloke.
       Underground Mining Coal: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       Underground Mining Coal_2018: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
+      Underground Mining Coal_2019: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       aE7: "Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?"
       aE8: "Orain errepika dezagun guztia lau aldiz irudi-marko hau sortzeko. Kontuz izkinekin - ezin duzu besterik gabe 90 grado biratu! 3 gradoko birak 60 aldiz errepikatuz gero zirkulu erdia lortuko da, hauetako ze kode-blokek egingo du izkinetarako zirkulu laurdena?"
       beeDebugVideo1: Begizta bat erabiltzerik al duzu nektar guztia biltzeko?
@@ -1031,15 +1046,21 @@ eu:
         Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
       courseC_artist_prog5_2018: |-
         Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
+      courseC_artist_prog5_2019: |-
+        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
       courseC_maze_debugging10: Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
       courseD_artist_binary1: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
       courseD_artist_binary1_2018: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      courseD_artist_binary1_2019: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
       courseD_artist_binary4: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       courseD_artist_binary4_2018: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
+      courseD_artist_binary4_2019: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       courseD_artist_binary6: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
       courseD_artist_binary6_2018: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
+      courseD_artist_binary6_2019: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
       courseD_artist_binary7: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       courseD_artist_binary7_2018: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
+      courseD_artist_binary7_2019: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       courseD_autorun_binary4_2019: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       courseD_autorun_binary6_2019: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
       courseD_autorun_binary7_2019: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
@@ -1049,6 +1070,7 @@ eu:
       courseD_bee_nestedLoops6_2018: Eraman nazazu ekiloreraino!
       courseD_bee_nestedLoops8: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops8_2018: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
+      courseD_bee_nestedLoops8_2019: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bounce_events10: Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman" eta "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak erraketa jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun zure aurkariak bi tanto lortu aurretik.
       courseD_bounce_events11: Orain, blokeak gehitu ditzakezu "martxan dagoenean" blokean. "bota beste pilota bat" bloke berria gehitu behar duzu toki batean baino gehiagotan. Era berean, saia zaitez eszena aldatzen, edo erraketaren eta pilotaren abiadura, eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi tanto eskuratu aurretik.
       courseD_bounce_events12: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
@@ -1063,12 +1085,15 @@ eu:
       courseD_debugging_3: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       courseD_maze_nestedLoops4: 'Eraman nazazu ekiloreraino!'
       courseD_maze_nestedLoops4_2018: 'Eraman nazazu ekiloreraino!'
+      courseD_maze_nestedLoops4_2019: 'Eraman nazazu ekiloreraino!'
       courseD_maze_nestedLoops6: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6_2018: Eraman nazazu ekiloreraino!
+      courseD_maze_nestedLoops6_2019: Eraman nazazu ekiloreraino!
       courseE_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       courseE_artist_functions1_2018: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       courseE_bee_concept1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
       courseE_bee_concept1_2018: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
+      courseE_bee_concept1_2019: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
       courseE_bee_functions1: Bildu lore bakoitzeko nektar guztia.
       courseE_bee_functions1_2018: Bildu lore bakoitzeko nektar guztia.
       courseE_bee_functions3: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
@@ -1078,14 +1103,19 @@ eu:
       courseE_farmer_concept4: Orain goazen maila sakonago batera! kode-bloke oso hori kabiatu dugu beste begizta batean, baina artista bere lekura eraman behar duzu hurrengo lerroa marrazteko. Hauetako ze kode-bloke jar dezakezu kanpo-begiztaren amaieran lauki-sare osoa marrazteko?
       courseF_artist_for7: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       courseF_artist_for7_2018: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
+      courseF_artist_for7_2019: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       courseF_artist_for_challenge1: Badakizu nola egin berriro marrazki hau?
       courseF_artist_for_challenge1_2018: Badakizu nola egin berriro marrazki hau?
+      courseF_artist_for_challenge1_2019: Badakizu nola egin berriro marrazki hau?
       courseF_artist_for_challenge2: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_artist_for_challenge2_2018: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
+      courseF_artist_for_challenge2_2019: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_bee_for8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
       courseF_bee_for8_2018: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
+      courseF_bee_for8_2019: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
       courseF_bee_for_challenge2: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge2_2018: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
+      courseF_bee_for_challenge2_2019: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge3: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_functions4: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'
       courseF_bee_functions4_2018: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'
@@ -1233,7 +1263,7 @@ eu:
       grade4_arist_nested_loop_triangles4: Marraztu krokodiloaren ahoko hortzak!
       grade4_arist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_arist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
       grade4_artist_functions2: "Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak \"marraztu karratua\" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu \"marraztu karratua\" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da."
@@ -1251,7 +1281,7 @@ eu:
       grade4_artist_nested_loop_triangles1: 'Osatu kodea triangelu hauek marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
       grade4_artist_nested_loop_triangles5: |-
         Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-        
+
       grade4_artist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_squares1: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
       grade4_artist_parameters_triangles2: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.

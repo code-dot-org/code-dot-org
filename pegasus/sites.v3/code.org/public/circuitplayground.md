@@ -9,7 +9,7 @@ theme: responsive
 
 <div class="col-66" style="padding-right: 20px;">
 
-The Circuit Playground Classic is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground Classic enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studiocode.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
+The Circuit Playground Classic is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground Classic enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
 
 </div>
 
@@ -78,7 +78,7 @@ If you meet **all** of the eligibility requirements, you will qualify for a subs
 
 If a teacher has a smaller class size and does not qualify for or need a full 15 board kit (which supports 30 students), they may purchase a <a href="https://www.adafruit.com/product/3795", target=_"blank">Code.org Circuit Playground Individual Kit</a>. The Individual Kit is designed for a single student or share-pair and costs $29.95.
 
-**In January 2019,** teachers will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website. In the meantime, qualified teachers should make sure they're on track in the 2018-19 school year to complete the first semester of CS Discoveries (Units 1-3) with their students.
+**By the end of January 2019,** teachers will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website. In the meantime, qualified teachers should make sure they're on track in the 2018-19 school year to complete the first semester of CS Discoveries (Units 1-3) with their students.
 
 ### For teachers independently using the CS Discoveries curriculum
 

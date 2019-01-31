@@ -15,7 +15,7 @@ sl:
       jump: skoči
       set score: nastavi rezultat
       get nectar: dobi nektar
-      test: preizkusi
+      test: preizkus
       diamond: diamant
       move: premakni
       move right: premakni se desno

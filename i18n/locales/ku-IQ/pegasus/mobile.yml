@@ -249,7 +249,7 @@
   dashboard_navigation_manage_students: "بەڕێوەبردنی قوتابییەکان"
   dashboard_navigation_student: 'قوتابی: %{student_name}'
   dashboard_sections_table_students: "خوێندکارەکان"
-  dashboard_students_name: "ناو"
+  dashboard_students_name: 'ناو'
   dashboard_students_male: "نێر"
   dashboard_students_female: "مێ"
   dashboard_grade_other: "هی تر"
@@ -304,3 +304,10 @@
   user_header_settings: "هەژمارەکەم"
   user_header_logout: "دەرچوون"
   user_header_signin: "چوونەژوورەوە"
+  applab_tile_start_tutorial: "دەستپێبکە"
+  hoc_overview_start_tutorial: "دەستپێبکە"
+  hoc2018_creativity_create: "ez"
+  hoc2018_mc_start: "دەستپێبکە"
+  hoc2018_mc_homepage_try_it: "تاقیبکەوە"
+  hoc2018_dance_party_button: "دەستپێبکە"
+  hoc2018_dance_amazon_about_future_engineer_button: "زیاتر فێرببە"

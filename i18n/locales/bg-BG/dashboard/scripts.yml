@@ -1441,7 +1441,7 @@ bg:
             'Farmer: While Loops':
               name: 'Фермер - цикли "докато"'
         csd3-2017:
-          description_short: "Програмиране"
+          description_short: Програмиране
           stages:
             Velocity:
               name: Скорост
@@ -1506,6 +1506,8 @@ bg:
               name: Двоични гривни
             Binary Images:
               name: Бинарни образи(картини)
+            Play Lab:
+              name: Театрална лаборатория
         csd2-2017:
           stages:
             Peer Review:
@@ -2149,3 +2151,103 @@ bg:
           stages:
             Artist:
               name: Художник
+        aquatic:
+          title: 'Minecraft: Подводното пътешествие'
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            Conditionals with Cards:
+              name: Условия с карти
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление
+            The Artist:
+              name: Художникът
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            Digital Citizenship:
+              name: Цифрови граждани
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            Nested Loops:
+              name: Вмъкнати цикли
+            Conditionals with Cards:
+              name: Условия с карти
+            Conditionals:
+              name: Условия
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+            Conditionals in Minecraft:
+              name: Условия в Minecraft
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление
+            Binary Bracelets:
+              name: Двоични гривни
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+        andrea-test:
+          stages:
+            'null':
+              name: 'нула'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: Изграждане на база
+            'Real-life Algorithms: Paper Planes':
+              name: 'Реални алгоритми: Хартиени самолети'
+            Binary Bracelets:
+              name: Двоични гривни
+        gamelab:
+          title: Играта лаборатория
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Реални алгоритми: Засадете семената'
+            Going Places Safely:
+              name: Достигаме безопасно до места
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Преместете го, преместете го
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Преместете го, преместете го
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+            Spelling Bee:
+              name: Правопис
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Реални алгоритми: Засадете семената'

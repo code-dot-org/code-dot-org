@@ -212,12 +212,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: './node_modules/gif.js/dist',
-          src: ['gif.worker.js'],
-          dest: 'build/package/js/dance/'
-        },
-        {
-          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen
@@ -457,6 +451,7 @@ describe('entry tests', () => {
     'levels/textMatch':                    './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                       './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':               './src/sites/studio/pages/levels/_external_link.js',
+    'levels/show':                         './src/sites/studio/pages/levels/show.js',
     'projects/index':                      './src/sites/studio/pages/projects/index.js',
     'projects/public':                     './src/sites/studio/pages/projects/public.js',
     'projects/featured':                   './src/sites/studio/pages/projects/featured.js',
@@ -476,6 +471,7 @@ describe('entry tests', () => {
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
     'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'teacher_dashboard/show':              './src/sites/studio/pages/teacher_dashboard/show.js'
   };
 
   var internalEntries = {
@@ -494,6 +490,46 @@ describe('entry tests', () => {
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'libraries/edit':               './src/sites/studio/pages/libraries/edit.js',
     'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
+  };
+
+  var pegasusEntries = {
+    // code.org
+    'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/public/educate/regional-partner/playbook': './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
+    'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
+    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
+    'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
+
+    // hourofcode.com
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+    'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+  };
+
+  var professionalDevelopmentEntries = {
+    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+
+    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
+    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
+    'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
+    'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
+    'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
+    'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
+    'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
+    'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
+    'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
+    'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
+    'pd/fit_weekend_registration/new': './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
+    'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
+
+    'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+
+    'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
   };
 
   var otherEntries = {
@@ -515,51 +551,21 @@ describe('entry tests', () => {
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    // common entry points for pegasus js
-    'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
-    'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-
-    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
-    'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
-    'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
-    'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
-    'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
-    'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
-    'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
-    'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
-    'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
-    'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
-    'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
-    'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
-
-    'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
-
-    'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
 
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
-    'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-    'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
+    'gamelab-api': './src/gamelab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
-    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
-
     'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
-    'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
@@ -578,6 +584,8 @@ describe('entry tests', () => {
           appsEntries,
           codeStudioEntries,
           internalEntries,
+          pegasusEntries,
+          professionalDevelopmentEntries,
           otherEntries
         ),
         function (val) {

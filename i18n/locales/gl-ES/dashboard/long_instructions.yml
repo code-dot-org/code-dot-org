@@ -124,7 +124,7 @@ gl:
       4-5 Nested Loops 3: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       4-5 Nested Loops 5: Repite o código dado para crear un muiño de vento.
       4-5 Nested Loops 6: "Podes debuxar un hexágono repetindo o\ncódigo do triángulo?"
       4-5 Nested Loops 7: "Repite este debuxo 10 veces. Canto\nnecesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)"
@@ -176,18 +176,22 @@ gl:
       NEW Course 4 Artist Vars 6: "Debuxa este padrón colocando a\nvariábel lonxitude nos lugares correctos e definindo o valor correcto para\nlonxitude. (Pista: é un múltiplo de 10).  \\r\n\\r\nPercibes como defines o valor de\nlonxitude só unha vez e o código usa o valor correcto en todos os lugares?\\r\n\\r\n\\r\n"
       Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar á ovella.
       Overworld Move to Sheep_2018: Agrega un segundo comando "andar adiante" para chegar á ovella.
+      Overworld Move to Sheep_2019: Agrega un segundo comando "andar adiante" para chegar á ovella.
       Testing Quantum Farmer: "Uau, atopei un buraco realmente fondo! Non\nsei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle \"mentres\"."
       course4_artist_fwp_challenge1: Tenta executar este programa e fai as alteracións para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo por algo totalmente distinto)
       courseD_bee_nestedLoops5: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2019: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
       courseD_maze_nestedLoops4: 'Lévame até o xirasol!'
       courseD_maze_nestedLoops4_2018: 'Lévame até o xirasol!'
+      courseD_maze_nestedLoops4_2019: 'Lévame até o xirasol!'
       courseE_bee_functions3: "As funcións son bloques de código que realizan\nunha tarefa. Usa a función \"obteña 5\" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque."
       courseE_bee_functions3_2018: "As funcións son bloques de código que realizan\nunha tarefa. Usa a función \"obteña 5\" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque."
       courseE_farmer_concept4: "Agora, imos nos profundizar máis un nivel!\nAniñamos todo o bloque de código dentro de outro bucle, pero necesitas posicionar o artista no lugar para debuxar a próxima recta. Cal destes bloques de código podes colocar no final do bucle máis externo para debuxar toda a grade?"
       courseF_bee_for_challenge2: "Resolve este desafío usando o menor número\nde bloques posíbel."
       courseF_bee_for_challenge2_2018: "Resolve este desafío usando o menor número\nde bloques posíbel."
+      courseF_bee_for_challenge2_2019: "Resolve este desafío usando o menor número\nde bloques posíbel."
       frozen circle function in circle: "Agora imos crear 20 círculos\nsobrepostos, virando 18 graos entre cada círculo."
       frozen circle function with parameter: "Temos aquí un bloque \"cree un círculo\"\nque pode facer círculos de tamaños diferentes. Podes usar isto para crear\nun pequeno círculo de tamaño 5 e un círculo maior de tamaño 10?"
       frozen circle function: "Usa o novo bloque \"cree un círculo\" para\ncrear 10 círculos sobrepostos. Non te esquezas de avanzar entre os círculos."
@@ -262,7 +266,7 @@ gl:
       grade4_arist_nested_loop_triangles5: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       grade4_arist_nested_loop_triangles6: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_functions2: "As funcións permiten que definas novos bloques! Movemos\nos bloques para debuxar un cadrado para dentro dunha función chamada \"debuxa un cadrado\".\nPodes usar a función \"debuxa un cadrado\" para crear os lentes? Os cadrados están separados por 75 pixels."
       grade4_artist_nested_loop_flags1: Repite o código dado para crear un muiño de vento.
@@ -270,7 +274,7 @@ gl:
       grade4_artist_nested_loop_triangles5: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
-        
+
       grade4_artist_nested_loop_triangles6: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_parameters_triangles2: "Percibes algo diferente\nsobre estes bloques de función? Clica en \"Executar\" para ver o que acontece."
       grade4_bee_conditionals_quantum2: "Agora a abella só quere néctar. Lémbrate,\nnon todos os obxectos son flores, entón mira se o obxecto debaixo da nube é\nunha flor. Se é, entón podes recoller o néctar."

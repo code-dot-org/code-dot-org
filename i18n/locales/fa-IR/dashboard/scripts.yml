@@ -862,7 +862,7 @@ fa:
             'Farmer: While Loops':
               name: 'کشاورز: حلقه‌های "در حالیکه"'
         csd3-2017:
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           stages:
             Functions:
               name: توابع
@@ -919,6 +919,8 @@ fa:
               name: دستبند دودویی
             Binary Images:
               name: تصاویر دوتایی
+            Play Lab:
+              name: آزمایشگاه بازی
         csd2-2017:
           stages:
             Lists:
@@ -1236,6 +1238,13 @@ fa:
           stages:
             Creating Functions:
               name: ساختن تابع ها
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+          title: 'ماینکرافت: سفر قهرمانان'
+          description_short: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
+          description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1443,3 +1452,99 @@ fa:
           stages:
             Artist:
               name: هنرمند
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            The Artist:
+              name: هنرمند
+        coursed-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            Nested Loops:
+              name: حلقه های تو در تو
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Conditionals:
+              name: شرطی ها
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        express-2019:
+          stages:
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+            Artist Binary:
+              name: دودویی هنرمند
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        andrea-test:
+          stages:
+            'null':
+              name: 'خالی'
+        coursec-2019:
+          stages:
+            Building a Foundation:
+              name: ساختن بنیان
+            'Real-life Algorithms: Paper Planes':
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            Binary Bracelets:
+              name: دستبند دودویی
+        gamelab:
+          title: کارگاه بازی سازی
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'

@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Make the `\"background-color\"` of the left button `\"red\"` and the right one `\"blue\"`. Hover over a button with your mouse to read its `\"id\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)",
+    "long_instructions": "Make the `\"background-color\"` of the left button `\"red\"` and the right one `\"blue\"`. Hover over a button with your mouse to read its `\"id\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -13,6 +13,8 @@
 #  index_pd_fit_weekend1819_registrations_on_pd_application_id  (pd_application_id)
 #
 
+# NOTE: Unlike the other year-specific FiT Weekend Registration classes (Pd::FitWeekend1920Registration),
+# this class is in its own table and does not inherit from Pd::FitWeekendRegistrationBase.
 class Pd::FitWeekend1819Registration < ActiveRecord::Base
   include Pd::Form
 
@@ -25,7 +27,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
-    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
+    Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
   end
 
   YES = 'Yes'.freeze

@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Instead of using 5 \"move forward\" blocks, use the \"repeat\" block with a \"move forward\" block inside of it. In computer science, this is called a \"loop.\" ",
+    "short_instructions": "Instead of using 5 \"move forward\" blocks, use the \"repeat\" block with a \"move forward\" block inside of it. In computer science, this is called a \"loop.\" ",
     "start_direction": "1",
     "step_mode": 1,
     "is_k1": "true",

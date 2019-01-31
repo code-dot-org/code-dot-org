@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_30_CSP_2_3_1'
+type 'multi2'
+right 'Models and simulations often omit unnecessary features of the objects or phenomena under investigation.'
+wrong 'Writing very detailed models and simulations will help minimize costs as they are easier to write than more abstract models and simulations.'
+right 'Simple models and simulations will execute faster allowing more opportunity for rapid testing and development.'
+wrong 'Less abstract models and simulations omit details to simplify the study of the objects or processes involved.'
+markdown <<MARKDOWN
+You have been hired by a company to generate a simulation of a process within their multinational company.  You try to convince them that there is significant value to starting with a simple model even though it might not model their process exactly.  Which arguments below are viable supports for your position?  
+Select two answers.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.3.1** and Essential Knowledge statements: **2.3.1A**
+<hr>
+ (A) This option is correct.  Models and simulations often cannot include all the details of the real-world phenomena as to do so would take too much time or effort with little return.
+
+<hr>
+ (B) This option is incorrect. The more details that are left out of a simulation or model, the easier the code is to write and cheaper to produce.
+
+<hr>
+ (C) This option is correct. Less detailed models or simulations take less compute time allowing for more iteration.
+
+<hr>
+ (D) This option is incorrect. More abstract models or simulations omit details, not less abstract models and simulations. 
+
+MARKDOWN

@@ -67,6 +67,8 @@ et:
       MC HOC 2016 Village Test_failure_message_override: Pane Raud Golem taga ajama
         ja ründama zombisid.
       WhileAdventure_failure_message_override: Palju õnne!  Sa kogusid X münti!
+      courseC19_playLab_EOC3_failure_message_override: Peate lisama kaks või enam
+        uut liikuvat osalised oma mängu ning panema nad liikuma.
       courseE_playLab_scaffold3_failure_message_override: Peate lisama kaks või enam
         uut liikuvat osalised oma mängu ning panema nad liikuma.
       courseE_playLab_scaffold3_2018_failure_message_override: Peate lisama kaks või

@@ -39,6 +39,7 @@ tr:
   next_resource: Sonraki Kaynak
   cancel: "İptal"
   okay: "Tamam"
+  or: "veya"
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   add_teacher_form:
     code:
@@ -83,6 +84,7 @@ tr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    microsoft_v2_auth: 'Microsoft Hesabı'
     clever: 'Akıllı Hesap'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
@@ -106,7 +108,6 @@ tr:
     age: 'Yaş'
     user_type: 'Bir öğrenci ya da bir öğretmen misiniz?'
     submit: 'Kaydol'
-    next: 'Sonraki'
     teacher: 'Öğretmen misiniz?'
     valid_username: "Mevcut!"
     invalid_username: "Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır"
@@ -295,14 +296,6 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
-    create_button:
-      create: 'Oluştur'
-      applab: 'App Laboratuvarı'
-      artist: 'Sanatçı'
-      gamelab: 'Oyun Laboratuvarı'
-      playlab: 'Oyun Laboratuvarı'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'
@@ -316,6 +309,15 @@ tr:
       team: 'Takım'
       driver: 'Giriş yapılmış'
       navigator: 'Takım Arkadaşı'
+      create: 'Oluştur'
+      applab: 'App Laboratuvarı'
+      artist: 'Sanatçı'
+      gamelab: 'Oyun Laboratuvarı'
+      playlab: 'Oyun Laboratuvarı'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dans Partisi'
+      view_all: 'Tüm projeleri görüntüle...'
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: 'İlerlemeniz'
@@ -556,6 +558,8 @@ tr:
       body_short: " Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın."
       audience: '13 + Yaş grubu'
       cta: 'Nasıl olduğunu öğren'
+    dance:
+      title: 'Dans Partisi'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
@@ -598,8 +602,11 @@ tr:
     minecraft2016:
       title: "Minecraft"
       body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın"
     sports:
       title: "Spor"
       body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
@@ -937,6 +944,7 @@ tr:
   return_unit_overview: 'Ünite genel bakışına git'
   return_course_overview: 'Ünite genel bakışına git'
   view_all_units: 'Tüm üniteleri göster'
+  view_teacher_guide: 'Öğretmen kılavuzunu görüntüle'
   pd:
     form_labels:
       email: 'e-posta'

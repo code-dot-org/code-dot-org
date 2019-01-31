@@ -12,7 +12,6 @@ Feature: Big Game Versions
     And I close callout "0"
     And callout "0" is hidden
 
-  @no_safari
   @no_mobile
   Scenario: Big Game Versions
 
@@ -23,20 +22,20 @@ Feature: Big Game Versions
     And I press keys "VERSION_TEST" for element "#functionNameText"
     And I press "modalEditorClose"
     And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
-    And I click selector "#runButton"
+    And I press "runButton"
     And I wait until element "#resetButton" is visible
-    And I click selector "#resetButton"
+    And I press "resetButton"
 
     # Reset the puzzle to the start
     Then I reset the puzzle to the starting version
     And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "title"
 
     # Restore to the previous version, which should have title "VERSION_TEST"
-    Then I click selector "#versions-header"
+    Then I press "versions-header"
     And I wait to see a dialog titled "Version History"
     And I close the dialog
     And I wait for 3 seconds
-    Then I click selector "#versions-header"
+    Then I press "versions-header"
     And I wait until element "button:contains(Restore this Version):eq(0)" is visible
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"

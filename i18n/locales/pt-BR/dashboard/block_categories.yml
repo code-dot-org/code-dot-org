@@ -23,7 +23,7 @@ pt-BR:
       Picker: Seletor
       Comment: Comentário
       'Variables ': 'Variáveis '
-      everythingelse: variados
+      everythingelse: todoresto
       numbers: números
       Numbers: Números
       Input: Entrada
@@ -44,9 +44,13 @@ pt-BR:
       Movement: Movimento
       Booleans: Booleanos
       Functional: Funcional
+      While Events: Eventos Enquanto
+      Sprite Properties: Propriedades do Sprite
       Predefined: Predefinido
       test: teste
       test2: teste2
+      Use These Blocks: Use estes blocos
+      Do Not Use: Não use
       Foo: Foo
       Name: Nome
       NEW BLOCKS: NOVOS BLOCOS

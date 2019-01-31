@@ -357,6 +357,8 @@ bs:
         starwars_blocks_events: 'Ratovi zvijezda: Izgradite galaksiju kodom - događaji'
         starwars_blocks_congrats: 'Ratovi zvijezda - Izgradite galaksiju kodom - čestitamo'
         CSF_loops_AB: Petlje
+        hoc_dance_events: Plesna zabava - Događaji
+        hoc_dance_properties: Plesna zabava - Osobenosti
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka

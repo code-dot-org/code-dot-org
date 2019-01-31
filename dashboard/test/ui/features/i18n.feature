@@ -16,10 +16,10 @@ Scenario: Frozen tutorial in Spanish
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/es"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions p" has "es" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "es" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "es" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "es" text from key "data.short_instructions.frozen perpendicular"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -30,7 +30,7 @@ Scenario: Minecraft:Agent tutorial in Spanish
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
-  And element ".csf-top-instructions p" has "es" text from key "data.instructions.MC_HOC_2017_01_RETRY_instruction"
+  And element ".csf-top-instructions p" has "es" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -79,10 +79,10 @@ Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -93,7 +93,7 @@ Scenario: Minecraft:Agent tutorial in Portuguese
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
-  And element ".csf-top-instructions p" has "pt-BR" text from key "data.instructions.MC_HOC_2017_01_RETRY_instruction"
+  And element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -141,10 +141,10 @@ Scenario: Frozen tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/ar-sa"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.instructions.frozen perpendicular_instruction"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -155,7 +155,7 @@ Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.instructions.MC_HOC_2017_01_RETRY_instruction"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 

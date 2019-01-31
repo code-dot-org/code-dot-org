@@ -5,10 +5,8 @@ import {
   VIEW_ANIMATION_JSON,
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY,
-  SET_MOBILE_CONTROLS_CONFIG
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
-import {reducers as danceReducers} from '../dance/redux';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
@@ -52,26 +50,8 @@ function gridOverlay(state, action) {
   }
 }
 
-const defaultMobileControlsConfigState = {
-  spaceButtonVisible: true,
-  dpadVisible: true,
-  dpadFourWay: true,
-  mobileOnly: true,
-};
-function mobileControlsConfig(state, action) {
-  state = state || defaultMobileControlsConfigState;
-
-  switch (action.type) {
-    case SET_MOBILE_CONTROLS_CONFIG:
-      return action.mobileControlsConfig;
-    default:
-      return state;
-  }
-}
-
 module.exports = {
   ...jsDebuggerReducers,
-  ...danceReducers,
   animationPicker,
   animationTab,
   animationList,
@@ -80,6 +60,4 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
-  defaultMobileControlsConfigState,
-  mobileControlsConfig,
 };

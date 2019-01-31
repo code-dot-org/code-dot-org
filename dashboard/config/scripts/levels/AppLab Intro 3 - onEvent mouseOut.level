@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "The `\"mouseout\"` event fires when your mouse moves out of a button. Write code that will set the screen's `\"background-color\"` back to `\"black\"` and set the button's `\"text\"` to `\"Off!\"` when the mouse moves out of the button. Remember to use double quotes `\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/a3403900844f631cc2579539c8d68ed1-image-1505937421979.gif)",
+    "long_instructions": "The `\"mouseout\"` event fires when your mouse moves out of a button. Write code that will set the screen's `\"background-color\"` back to `\"black\"` and set the button's `\"text\"` to `\"Off!\"` when the mouse moves out of the button. Remember to use double quotes `\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/a3403900844f631cc2579539c8d68ed1-image-1505937421979.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

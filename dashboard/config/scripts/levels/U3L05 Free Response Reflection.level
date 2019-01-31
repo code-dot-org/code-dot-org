@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Programming Efficiency: Reflection",
-    "markdown_instructions": "In less than 50 words, summarize what efficiency means in programming.\n",
+    "long_instructions": "In less than 50 words, summarize what efficiency means in programming.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,55 +1,32 @@
- .full-resource-block {
-   width: 100%;
-   height: 244px;
-   margin-top: 10px;
- }
+.full-resource-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-resource-image { 
+  width: 100%; 
+}
 
 .description {
-   padding-bottom: 10px;
-   color: #fff;
- }
+  background-color: #00adbc;
+  color: #fff;
+  padding: 30px;
+}
 
- .resource-title {
-   padding: 0px;
-   margin: 0px;
-   font-size: 24px;
-   color: #FFFFFF;
-   padding-bottom: 10px;
- }
+.resource-title {
+  padding: 0px;
+  margin: 0px;
+  color: #5b6770;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
 
- .side-image {
-   float: left;
- }
+.white {
+  color: #ffffff;
+}
 
- .side-description-area {
-   float: left;
-   height: 100%;
-   background-color: #00adbc;
-   padding: 30px 30px;
- }
-
- .left, .right {
-   height: 100%;
-   float: left;
-   margin-bottom: 30px;
-   position: relative;
- }
-
- .gray-button {
-   background-color: #e7e8ea;
-   border-color: #c6cacd;
-   color: #5b6770;
-   margin-left: 120px;
- }
-
- .orange-button {
-   background-color: #ffa400;
- }
-
-.orange-button, .gray-button {
-  text-decoration: none;
-  bottom: 0;
-  position: absolute;
+.orange-button {
+  background-color: #ffa400;
 }
 
 @media screen and (min-width: 971px)
@@ -58,19 +35,8 @@
 
   .col-50-student img { width: 485px; height: 244px; }
 
-  .orange-button, .gray-button {
-    margin-bottom: 40px;
-  }
-
-  .right .side-image, .right .side-description-area {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-
-  .left .side-image, .left .side-description-area {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
+  .full-resource-block { flex-direction: row; }
+  .full-resource-block > * { width: 50%; }
 }
 
 @media screen and (min-width: 513px) and (max-width: 970px)
@@ -81,19 +47,15 @@
 
   .col-50-student img { width: 500px; height: 244px; }
 
-  .orange-button, .gray-button {
-    margin-bottom: 70px;
+  .right .side-image, .right .side-description-area {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: -10%;
   }
 
- .right .side-image, .right .side-description-area {
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
-   margin-top: -10%;
- }
-
   .left .side-image, .left .side-description-area {
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
  }
 }
 
@@ -108,10 +70,6 @@
   .side-description-area { width: 94vw; margin-top: -30px; }
 
   .description h2 { margin-top: -15px;}
-
-  .orange-button, .gray-button {
-    margin-bottom: 40px;
-  }
 
   .right .side-image, .right .side-description-area {
     border-bottom-left-radius: 5px;

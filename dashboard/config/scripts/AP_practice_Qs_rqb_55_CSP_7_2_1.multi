@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_55_CSP_7_2_1'
+right 'Manual blood pressure monitor.
+'
+wrong 'Social media based health support groups
+'
+wrong 'Heart rate monitors in smart watches
+'
+wrong 'A database with patient information
+'
+markdown <<MARKDOWN
+Which of these is NOT a computing-related innovation for the medical field?
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **7.2.1** and Essential Knowledge statements: **7.2.1G**
+<hr>
+ (A) The use of the word manual implies that it is being done by a nurse not a machine and is thus not using computing.
+
+<hr>
+ (B) Social media is a computing-innovation that can be used to connect people going through similar health challenges
+
+<hr>
+ (C) Heart rate monitors help track health and are an element of many smart watches which are computing-innovations
+
+<hr>
+ (D) Databases can help with patient diagnosis and communication. Big data and databases in general are computing innovations.
+
+MARKDOWN

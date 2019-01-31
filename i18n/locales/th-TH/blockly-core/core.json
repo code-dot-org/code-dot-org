@@ -314,7 +314,7 @@
     "REMOVE_COMMENT": "ลบความเห็น",
     "RENAME_PARAMETER": "เปลี่ยนชื่อพารามิเตอร์...",
     "RENAME_PARAMETER_TITLE": "เปลี่ยนชื่อพารามิเตอร์ '%1' ทั้งหมดเป็น:",
-    "RENAME_VARIABLE": "เปลี่ยนชื่อตัวแปร...",
+    "RENAME_VARIABLE": "แก้ไขชื่อตัวแปร...",
     "RENAME_VARIABLE_TITLE": "เปลี่ยนชื่อ '%1' ทั้งหมดเป็น:",
     "TEXT_APPEND_APPENDTEXT": "ผนวกข้อความต่อท้าย",
     "TEXT_APPEND_HELPURL": "",

@@ -24,6 +24,7 @@ ky:
   submit: Кошуу
   cancel: Жок кыл
   okay: Окай
+  or: же
   already_started: 'Баштап койдуңар беле? Мындан уланткыла >> '
   continue: Улантуу
   auth:
@@ -65,13 +66,12 @@ ky:
       my_dashboard: Менин тактам
       educate_hoc: Код сааты
       about_news: Жаңылыктар
-    create_button:
+    user:
+      signin: Кирүү
       create: Түзүү
       applab: App Lab
       artist: Сүрөтчү
       gamelab: Оюн лабы
-    user:
-      signin: Кирүү
   teacher:
     panel:
       section: Секция

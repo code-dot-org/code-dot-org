@@ -367,6 +367,9 @@ ne:
       Overworld Move to Sheep_2018: |-
         Add a second “move forward” command to
         reach the sheep.
+      Overworld Move to Sheep_2019: |-
+        Add a second “move forward” command to
+        reach the sheep.
       Testing Quantum Farmer: "Wow, look at that! \r\n\r\nI don't know how\nmany shovelfuls
         of dirt this hole needs.  \r\nCan you write a program that\nkeeps using the
         `fill` block until the ground is even?  "
@@ -384,6 +387,9 @@ ne:
         Solve this puzzle with the fewest number of blocks
         possible.
       courseF_bee_for_challenge2_2018: |-
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      courseF_bee_for_challenge2_2019: |-
         Solve this puzzle with the fewest number of blocks
         possible.
       frozen circle function in circle: |-

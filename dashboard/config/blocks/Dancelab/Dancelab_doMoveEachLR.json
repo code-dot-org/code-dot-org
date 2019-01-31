@@ -55,6 +55,10 @@
           [
             "all sharks",
             "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
@@ -62,19 +66,35 @@
         "name": "MOVE",
         "options": [
           [
-            "Clap High",
-            "MOVES.ClapHigh"
+            "(Random)",
+            "\"rand\""
           ],
           [
-            "Clown",
-            "MOVES.Clown"
+            "Bend",
+            "MOVES.XBend"
+          ],
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap",
+            "MOVES.XClapSide"
+          ],
+          [
+            "Clap High",
+            "MOVES.ClapHigh"
           ],
           [
             "Dab",
             "MOVES.Dab"
           ],
           [
-            "Double Jam",
+            "Disco",
+            "MOVES.XFever"
+          ],
+          [
+            "Double Down",
             "MOVES.DoubleJam"
           ],
           [
@@ -90,32 +110,56 @@
             "MOVES.Fresh"
           ],
           [
+            "Gangnam",
+            "MOVES.Clown"
+          ],
+          [
+            "Head + Hips",
+            "MOVES.XHeadHips"
+          ],
+          [
+            "Hop",
+            "MOVES.XHop"
+          ],
+          [
             "Kick",
+            "MOVES.XHighKick"
+          ],
+          [
+            "Knee",
+            "MOVES.XKnee"
+          ],
+          [
+            "Kneel",
+            "MOVES.XKneel"
+          ],
+          [
+            "Ole",
+            "MOVES.XOle"
+          ],
+          [
+            "Reach",
+            "MOVES.XArmsSide"
+          ],
+          [
+            "Slide",
+            "MOVES.XSlide"
+          ],
+          [
+            "Star",
             "MOVES.Kick"
           ],
           [
-            "Roll",
-            "MOVES.Roll"
+            "Stretch",
+            "MOVES.XArmsUp"
           ],
           [
             "This or That",
             "MOVES.ThisOrThat"
           ],
           [
-            "Thiller",
+            "Zombie",
             "MOVES.Thriller"
-          ],
-          [
-            "(Next)",
-            "\"next\""
-          ],
-          [
-            "(Previous)",
-            "\"prev\""
-          ],
-          [
-            "(Random)",
-            "\"rand\""
           ],
           [
             "None",

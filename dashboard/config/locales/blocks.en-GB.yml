@@ -34,10 +34,38 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': random
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
@@ -48,7 +76,19 @@ en-GB:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"height"': height
@@ -68,6 +108,7 @@ en-GB:
         options:
           KEY:
             '"space"': space
+            '"x"': x
       gamelab_debugSprite:
         options:
           VAL:
@@ -119,6 +160,20 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': space
       craft_ifPath:
         options:
           DIR:
@@ -128,7 +183,15 @@ en-GB:
           TYPE:
             "'sand'": sand
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        options:
+          blockType:
+            '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch

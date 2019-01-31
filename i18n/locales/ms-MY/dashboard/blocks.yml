@@ -38,12 +38,40 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': rawak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': rawak
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setDanceSpeed:
@@ -54,7 +82,20 @@ ms:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -78,10 +119,11 @@ ms:
         options:
           KEY:
             '"up"': atas
-            '"down"': bawah
             '"left"': kiri
+            '"down"': bawah
             '"right"': kanan
             '"space"': angkasa
+            '"x"': x
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -170,6 +212,23 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       Mikelab_randomColor:
         text: warna rawak
       Mikelab_setBG:
@@ -185,6 +244,11 @@ ms:
           CORNER:
             '"right"': kanan
             '"left"': kiri
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -201,6 +265,35 @@ ms:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
+      binary_move:
+        options:
+          DIR:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
       craft_ifPath:
         options:
           DIR:
@@ -210,6 +303,10 @@ ms:
           TYPE:
             "'sand'": pasir
             "'planksOak'": papan oak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pasir
       craft_moveForward:
         text: bergerak ke hadapan
       craft_placeTorch:

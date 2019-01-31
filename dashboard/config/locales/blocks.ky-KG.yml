@@ -52,21 +52,18 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Жок
-            '9': Roll
-            '10': This or That
-            '11': Thiller
+            MOVES.Rest: Жок
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -77,15 +74,45 @@ ky:
         options:
           GROUP:
             sprites: баары
+          FORMAT:
+            '"random"': туш келди
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': туш келди
       Dancelab_randomColor:
         text: кокус түс
       Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
             '"none"': Жок
@@ -97,7 +124,21 @@ ky:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: баары
+          SPEED:
+            '1': кадимки
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Жок
@@ -106,11 +147,22 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: баары
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -129,10 +181,12 @@ ky:
         options:
           KEY:
             '"up"': өйдө
-            '"down"': ылдый
             '"left"': солго
+            '"down"': ылдый
             '"right"': оңго
             '"space"': космос
+            '"x"': x
+            '"y"': y
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -235,6 +289,61 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': баары
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Жок
       Mikelab_randomColor:
         text: кокус түс
       Mikelab_setBG:
@@ -252,6 +361,11 @@ ky:
           CORNER:
             '"right"': оңго
             '"left"': солго
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -287,6 +401,37 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': качан
+            '"while"': болуп турганда
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': качан
+            '"while"': болуп турганда
+      binary_move:
+        options:
+          DIR:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
       craft_ifPath:
         options:
           DIR:
@@ -296,6 +441,10 @@ ky:
           TYPE:
             "'sand'": кум
             "'planksOak'": эмен тактайлары
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": кум
       craft_moveForward:
         text: алдыга жылдыр
       craft_placeTorch:

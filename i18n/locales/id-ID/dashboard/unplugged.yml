@@ -268,3 +268,50 @@ id:
         title: Gerakkan itu, Gerakkan itu
       RelayProgramming_2018:
         title: Pemrograman bergiliran
+      courseB_unplugged_MRF_2019:
+        title: Teman-teman robot saya
+      Conditionals_2019:
+        title: Kondisi
+        desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
+      GraphPaperProgramming_2019:
+        title: Pemrograman grafis diatas kertas
+        desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
+      RelayProgramming_2018_2019:
+        title: Pemrograman bergiliran
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Kegiatan tanpa komputer
+        desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
+      BinaryImages_2019:
+        title: gambar Biner
+        desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
+      GettingLoopy_2019:
+        title: Dapat berulang-ulang
+        desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Kegiatan tanpa komputer
+        desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
+      BigEvent_2019:
+        title: Acara besar
+        desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan.
+      BinaryBracelets_2019:
+        title: Gelang biner
+        desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
+      PaperPlanes_2019:
+        title: 'Algoritma kehidupan nyata: Pesawat Kertas'
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
+      PlantASeed_2019:
+        title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+        desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
+      UnplugHappyMaps_2019:
+        title: Pemetaan bahagia
+        desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal.
+      GoingPlacesSafely_2019:
+        title: Pergi ke tempat-tempat dengan aman
+        desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet.
+      courseA_unplugged_loops_2019:
+        desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
+      MoveItMoveIt_2019:
+        title: Gerakkan itu, Gerakkan itu
+      DigitalFootprint_2019:
+        title: Digital Footprint Kamu
+        desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.

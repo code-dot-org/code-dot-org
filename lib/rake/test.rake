@@ -22,7 +22,16 @@ namespace :test do
   task :regular_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--parallel', '120',
+        '--magic_retry',
+        '--with-status-page',
+        '--fail_fast'
+      )
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         ChatClient.log message
@@ -40,7 +49,18 @@ namespace :test do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--eyes', '--magic_retry', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-c', 'ChromeLatestWin7,iPhone',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--eyes',
+        '--magic_retry',
+        '--with-status-page',
+        '-f', eyes_features.join(","),
+        '--parallel', (eyes_features.count * 2).to_s
+      )
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         ChatClient.log message

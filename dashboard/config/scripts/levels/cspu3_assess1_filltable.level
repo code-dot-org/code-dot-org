@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 532,
   "properties": {
-    "markdown_instructions": "Use Top-Down Design strategy to fill in the table below. The first line is given to you. You may use as many or as few rows in the table as you see fit.\r\n\r\n_NOTE: Use a new line for each entry to the table. Write each line in the format of \"Function Name : Description\"_\r\n\r\n**Top-Down Design Strategy:**\r\n\r\n* Look at the big picture…\r\n* Identify a sub-task…\r\n* Break down that sub-task into smaller sub-task(s)...\r\n* Keep going until you’re down to the commands you already have access to.\r\n\r\n| Function Name   | Description / Justification |\r\n|-----------------|-----------------------------|\r\n| drawSnowflake() | Draw a 6 pointed snowflake  |\r\n| (Your answer)   | (Your answer)               |\r\n\r\n\r\n",
+    "long_instructions": "Use Top-Down Design strategy to fill in the table below. The first line is given to you. You may use as many or as few rows in the table as you see fit.\r\n\r\n_NOTE: Use a new line for each entry to the table. Write each line in the format of \"Function Name : Description\"_\r\n\r\n**Top-Down Design Strategy:**\r\n\r\n* Look at the big picture…\r\n* Identify a sub-task…\r\n* Break down that sub-task into smaller sub-task(s)...\r\n* Keep going until you’re down to the commands you already have access to.\r\n\r\n| Function Name   | Description / Justification |\r\n|-----------------|-----------------------------|\r\n| drawSnowflake() | Draw a 6 pointed snowflake  |\r\n| (Your answer)   | (Your answer)               |\r\n\r\n\r\n",
     "submittable": "false",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",

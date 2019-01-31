@@ -30,7 +30,7 @@ gem 'responders', '~> 2.0'
 
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
-gem 'mysql2', '~> 0.3.13'
+gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
 # Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
@@ -60,6 +60,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate'
+  gem 'pry'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -135,6 +136,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'

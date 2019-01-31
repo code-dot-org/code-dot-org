@@ -24,7 +24,7 @@ export default storybook => {
             <StudentsBeyondHoc
               completedTutorialType="other"
               userType="student"
-              userAge={14}
+              under13={false}
               isEnglish={true}
             />
         )
@@ -36,7 +36,7 @@ export default storybook => {
             <StudentsBeyondHoc
               completedTutorialType="other"
               userType="student"
-              userAge={10}
+              under13={true}
               isEnglish={true}
             />
         )
@@ -93,7 +93,7 @@ export default storybook => {
               completedTutorialType="pre2017Minecraft"
               userType="student"
               isEnglish={true}
-              userAge={8}
+              under13={true}
             />
         )
       },
@@ -105,7 +105,7 @@ export default storybook => {
               completedTutorialType="pre2017Minecraft"
               userType="student"
               isEnglish={true}
-              userAge={16}
+              under13={false}
             />
         )
       },
@@ -116,6 +116,85 @@ export default storybook => {
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
               userType="student"
+              isEnglish={false}
+            />
+        )
+      },
+      {
+        name: '2018 Minecraft, English, young student',
+        description: `2018 Aquatic Minecraft, signed in, English, under 13`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="2018Minecraft"
+              userType="student"
+              isEnglish={true}
+              under13={true}
+            />
+        )
+      },
+      {
+        name: '2018 Minecraft, English, older student',
+        description: `2018 Aquatic Minecraft, signed in, English, 13+, same for teachers`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="2018Minecraft"
+              userType="student"
+              isEnglish={true}
+              under13={false}
+            />
+        )
+      },
+      {
+        name: '2018 Minecraft, non-English',
+        description: `Same for signed out, young student, older student and teachers`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="2018Minecraft"
+              userType="student"
+              isEnglish={false}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed in, English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="student"
+              isEnglish={true}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed in, non-English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="student"
+              isEnglish={false}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed out, English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="signedOut"
+              isEnglish={true}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed out, non-English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="signedOut"
               isEnglish={false}
             />
         )

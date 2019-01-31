@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Pre-fill Input Fields with setText\r\n\r\nYou've set the text of labels, and you've set the text of buttons, but did you know you can also use `setText()` to pre-fill text input fields?\r\n\r\n# Do This\r\n\r\nThis app has four buttons, each of which should fill the \"nameInput\" field with a given name. For each button:\r\n\r\n* Add an `onEvent` block to run when the button is clicked\r\n* In the button's event handler, set the text of \"nameInput\" to the appropriate name\r\n\r\nWhen you've gotten all four buttons to work, add another button that will fill the input field with your name.",
+    "long_instructions": "# Pre-fill Input Fields with setText\r\n\r\nYou've set the text of labels, and you've set the text of buttons, but did you know you can also use `setText()` to pre-fill text input fields?\r\n\r\n# Do This\r\n\r\nThis app has four buttons, each of which should fill the \"nameInput\" field with a given name. For each button:\r\n\r\n* Add an `onEvent` block to run when the button is clicked\r\n* In the button's event handler, set the text of \"nameInput\" to the appropriate name\r\n\r\nWhen you've gotten all four buttons to work, add another button that will fill the input field with your name.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

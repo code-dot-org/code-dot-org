@@ -163,7 +163,7 @@ pl:
         2-3_Artist_Nested_Loops_7_a: "Jaki powinien być Twój ruch w każdej pętli?
           \  \n\nIle to jest 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |
+        2-3_Artist_Nested_Loops_9_a: |-
           Potrzebujesz pomocy w znalezieniu odpowiedniego kąta?
 
            ** 360 / 12 = 30 **
@@ -905,9 +905,217 @@ pl:
       Course 4 SCV 6_authored_hint:
         Course_4_SCV_6_b: 'Zyskasz korzyść z tworzenia 8 różnych zmiennych: czerwony1,
           zielony1, niebieski1, czerwony2, zielony2, niebieski2, długość oraz boki.'
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
+        mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
+        mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa`
           większą od `prędkość_kota`.
+      Dance short test 2_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 10 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance short test_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 10 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Zmień imię swojego tancerza.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          * Ten poziom kończy się po 11 taktach.
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 9 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz mieć co najmniej dwóch tancerzy.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+
+          * Ten poziom kończy się po 5 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Zmień odcień przynajmniej jednego tancerza.
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+
+          * Ten poziom kończy się po 7 taktach.
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 8 taktach.
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          * Ten poziom kończy się po 12 taktach.
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 10 taktach.
+        challenges: |-
+          ** Dodatkowe wyzwanie **
+
+          Zmieniaj efekt tła w różnych momentach piosenki, dodając nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+
+          * Ten poziom kończy się po 12 taktach.
+      Dance_Party_6_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz mieć co najmniej dwóch tancerzy.
+
+          * Ten poziom kończy się po 6 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+
+          * Ten poziom kończy się po 6 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Zmień odcień przynajmniej jednego tancerza.
+
+          * Ten poziom kończy się po 8 taktach.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Pierwsza podpowiedź.
@@ -925,6 +1133,112 @@ pl:
           będziesz się przemieszczać...
         Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj
           wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
+      Function intro Ryan_2019_authored_hint:
+        Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą
+          będziesz się przemieszczać...
+        Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj
+          wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest **
+          właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Postaraj się, aby na ekranie pojawił się tancerz.
+
+          * Ten poziom kończy się po 4 taktach.
+        challenges: |-
+          **Dodatkowe wyzwania**
+          * Wybierz inny utwór do odtwarzania.
+          * Wybierz innego tancerza, który wygląda jak łoś!
+          * Zmień imię swojego tancerza.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 8 taktach.
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+
+          * Ten poziom kończy się po 12 taktach.
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+
+          * Ten poziom kończy się po 10 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+
+          * Ten poziom kończy się po 12 taktach.
+      HOC Dance 5_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Musisz mieć co najmniej dwóch tancerzy.
+
+          * Ten poziom kończy się po 6 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+
+          * Ten poziom kończy się po 6 taktach.
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Zmień odcień przynajmniej jednego tancerza.
+
+          * Ten poziom kończy się po 8 taktach.
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 8 taktach.*
+      HOC Dance make group_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+
+          * Wystarczy być kreatywnym!
+
+          * Ten poziom kończy się po 8 taktach.*
       Harvesting_authored_hint:
         pointer_harvester_test: Jaki rodzaj bloku mogę użyć, aby coś sprawdzić i podjąć
           decyzję?
@@ -952,7 +1266,24 @@ pl:
           dla Agenta.
         MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta, możesz poruszać
           się graczem przy użyciu klawiszy strzałek!
+      MC_HOC_2017_01_RETRY_2019_authored_hint:
+        MC_HOC_2017_01_RETRY_a: Przeciągnij jeden blok "idź do przodu" ze skrzynki
+          z narzędziami do obszaru roboczego i umieść pod blokiem "po uruchomieniu".
+        MC_HOC_2017_01_RETRY_b: Nie zapomnij kliknąć na "Uruchom", aby uruchomić kod
+          dla Agenta.
+        MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta, możesz poruszać
+          się graczem przy użyciu klawiszy strzałek!
       MC_HOC_2017_02_Cole_authored_hint:
+        MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na
+          płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
+        MC_HOC_2017_02_Cole_b: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
+          swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż
+          zobaczysz, co dzieje się źle."
+        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby
+          gracz dotarł do mapy!
+        MC_HOC_2017_02_Cole_d: Upewnij się, że Agent podąża ścieżką nakreśloną na
+          mapie!
+      MC_HOC_2017_02_Cole_2019_authored_hint:
         MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na
           płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
         MC_HOC_2017_02_Cole_b: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
@@ -975,10 +1306,20 @@ pl:
           strzałek, aby gracz dotarł do kompasu!
         MC_HOC_2017_03_Cole_b: Czy uważasz, że kod jest trochę za długi?  Spróbuj
           użyć pętli "powtórze", aby zobaczyć, czy da się go skrócić!
+      MC_HOC_2017_03_Cole_2019_authored_hint:
+        MC_HOC_2017_03_Cole_a: Gdy Agent dotrze do płyty naciskowej, możesz użyć klawiszy
+          strzałek, aby gracz dotarł do kompasu!
+        MC_HOC_2017_03_Cole_b: Czy uważasz, że kod jest trochę za długi?  Spróbuj
+          użyć pętli "powtórze", aby zobaczyć, czy da się go skrócić!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "Przekroczenie tych dwóch płyt naciskowych otworzy
           przejście dla gracza. \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, Użyj bloku "skręć w prawo",
+          aby Agent się obrócił '
+        MC_HOC_2017_04POINT5_RYAN_a: Wystarczy, że Agent dotrze do pierwszej płyty
+          naciskowej, aby Alex lub Steve mogli dotrzeć do siekiery.
+      MC_HOC_2017_04POINT5_RYAN_2019_authored_hint:
         MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, Użyj bloku "skręć w prawo",
           aby Agent się obrócił '
         MC_HOC_2017_04POINT5_RYAN_a: Wystarczy, że Agent dotrze do pierwszej płyty
@@ -991,7 +1332,20 @@ pl:
           zobaczysz, co dzieje się źle."
         MC_HOC_2017_04_Cole_b: Gdy Agent dotrze do płyty naciskowej, otworzy drzwi
           dla gracza.
+      MC_HOC_2017_04_Cole_2019_authored_hint:
+        MC_HOC_2017_04_Cole_a: Agent musi wykonać "idź do przodu" siedem razy.  Jak
+          użyjesz pętli "powtórz", aby to zrobił?
+        MC_HOC_2017_04_Cole_c: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić
+          swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż
+          zobaczysz, co dzieje się źle."
+        MC_HOC_2017_04_Cole_b: Gdy Agent dotrze do płyty naciskowej, otworzy drzwi
+          dla gracza.
       MC_HOC_2017_05_Cole_authored_hint:
+        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden
+          fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu",
+          aby ukończyć tę łamigłówkę.
+        MC_HOC_2017_05_Cole_b: Przeprowadź Agenta przez rzekę, budując stopniowo most.
+      MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden
           fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu",
           aby ukończyć tę łamigłówkę.
@@ -1004,10 +1358,22 @@ pl:
         MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy powinna
           się powtórzyć?
         MC_HOC_2017_06_Cole_b: 'Pomóż Agentowi zbudować most przez calutką wodę! '
+      MC_HOC_2017_06_Cole_2019_authored_hint:
+        MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy powinna
+          się powtórzyć?
+        MC_HOC_2017_06_Cole_b: 'Pomóż Agentowi zbudować most przez calutką wodę! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Spróbuj umieścić w pętli "powtórz" więcej niż jedną
           instrukcję!
       MC_HOC_2017_07_Cole_authored_hint:
+        MC_HOC_2017_07_Cole_c: Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę
+          do Minecartu.
+        MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie
+          funkcji "clear path". Można ją wywołać wiele razy, używając zielonego bloczku
+          "clear path" znajdującego się w skrzynce z narzędziami.
+        MC_HOC_2017_07_Cole_b: Spróbuj użyć bloków funkcyjnych jednocześnie z innymi
+          blokami, aby ułatwić sobie rozwiązanie tej łamigłówki.
+      MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę
           do Minecartu.
         MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie
@@ -1033,6 +1399,10 @@ pl:
         MC_HOC_2017_10_Cole_b: Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną
           linię!
         MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
+      MC_HOC_2017_10_RETRY_2019_authored_hint:
+        MC_HOC_2017_10_Cole_b: Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną
+          linię!
+        MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem, aby wybudował kilka
           mostów. Dzięki temu Alex lub Steve będą mogli wyjść poza granice mapy.
@@ -1046,7 +1416,17 @@ pl:
         MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj
           kilka z nich!
         MC_HOC_2017_08_RY_c: Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę.
+      MC_HOC_2017_Ali_2019_authored_hint:
+        MC_HOC_2017_08_RY_a: "Naciśnij przycisk \"Uruchom\"! \nMożesz uruchomić swój
+          kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz,
+          co dzieje się źle."
+        MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj
+          kilka z nich!
+        MC_HOC_2017_08_RY_c: Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę.
       MC_HOC_2017_FP20x20_authored_hint:
+        MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka
+          dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
+      MC_HOC_2017_FP20x20_2019_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka
           dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
       NEW Course 4 Artist Functions 13_authored_hint:
@@ -1087,21 +1467,34 @@ pl:
         mc_8_a: Do wyboru jest kilka ścieżek. Która jest najkrótsza?
         mc_8_b: Wykorzystaj pętlę `repeat` aby uprościć swój kod.
         mc_8_c: Twoim celem jest dojście do wejścia domu na samej górze ekranu.
+      Overworld Avoid Monsters_2019_authored_hint:
+        mc_8_a: Do wyboru jest kilka ścieżek. Która jest najkrótsza?
+        mc_8_b: Wykorzystaj pętlę `repeat` aby uprościć swój kod.
+        mc_8_c: Twoim celem jest dojście do wejścia domu na samej górze ekranu.
       Overworld Chop Tree_authored_hint:
         mc_2_a: Aby stanąć przed drzewem musisz podwójnie `move forward`.
         mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: Aby stanąć przed drzewem musisz podwójnie `move forward`.
         mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
+      Overworld Chop Tree_2019_authored_hint:
+        mc_2_a: Aby stanąć przed drzewem musisz podwójnie `move forward`.
+        mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Trees_authored_hint:
         mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Trees_2018_authored_hint:
+        mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
+      Overworld Chop Trees_2019_authored_hint:
         mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld House Frame Chosen_authored_hint:
         mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
         mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld House Frame Chosen_2018_authored_hint:
+        mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
+          nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
+      Overworld House Frame Chosen_2019_authored_hint:
         mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
         mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
@@ -1117,19 +1510,33 @@ pl:
           więcej niż raz.
         mc_5_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      Overworld Place Wall_2019_authored_hint:
+        mc_5_a: Na początku użyj bloku `place`, następnie `move`.
+        mc_5_b: Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod
+          więcej niż raz.
+        mc_5_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
+          nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Overworld Plant Crops_authored_hint:
         mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Plant Crops_2018_authored_hint:
         mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
+      Overworld Plant Crops_2019_authored_hint:
+        mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Powered Minecart_authored_hint:
         mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
       Overworld Powered Minecart_2018_authored_hint:
+        mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
+      Overworld Powered Minecart_2019_authored_hint:
         mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
       Overworld Shear Sheep_authored_hint:
         mc_3_b: Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.
         mc_3_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_b: Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.
+        mc_3_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
+          nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      Overworld Shear Sheep_2019_authored_hint:
         mc_3_b: Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.
         mc_3_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
@@ -1141,10 +1548,19 @@ pl:
           innego, co musisz zrobić z każdym plastrem miodu?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Jest to testowa wskazówka.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Jak przejdę ten poziom?**
+          * Ten tancerz musi zmienić ruch po 4 taktach.
+
+          * Ten poziom kończy się po 7 taktach.
       Underground Avoiding Lava_authored_hint:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji
           `if` czy po niej?
       Underground Avoiding Lava_2018_authored_hint:
+        mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji
+          `if` czy po niej?
+      Underground Avoiding Lava_2019_authored_hint:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji
           `if` czy po niej?
       Underground If Statements_authored_hint:
@@ -1153,6 +1569,11 @@ pl:
         mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie
           umieść kostkę brukową. '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
+        mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
+        mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie
+          umieść kostkę brukową. '
+      Underground If Statements_2019_authored_hint:
         mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
         mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
         mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie
@@ -1167,11 +1588,20 @@ pl:
           bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!
         mc_10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
           nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      Underground Iron_2019_authored_hint:
+        mc_10_b: Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć
+          bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!
+        mc_10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje,
+          nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Underground Mining Coal_authored_hint:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
       Underground Mining Coal_2018_authored_hint:
+        mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
+        mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
+        mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
+      Underground Mining Coal_2019_authored_hint:
         mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
         mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
         mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
@@ -1358,10 +1788,16 @@ pl:
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Jeśli chcesz, aby pętla powtarzała się więcej niż
           4 razy, możesz zmienić wartość na górze bloku.
+      courseA_artist_loops4_2019_authored_hint:
+        courseA_artist_loops4_a: Jeśli chcesz, aby pętla powtarzała się więcej niż
+          4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż
           4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż
+          4 razy, możesz zmienić wartość na górze bloku.
+      courseA_artist_loops5_2019_authored_hint:
         courseA_artist_loops5_b: Jeśli chcesz, aby pętla powtarzała się więcej niż
           4 razy, możesz zmienić wartość na górze bloku.
       courseA_artist_loops6_authored_hint:
@@ -1370,10 +1806,16 @@ pl:
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby
           rozwiązać tą zagadkę.
+      courseA_artist_loops6_2019_authored_hint:
+        courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby
+          rozwiązać tą zagadkę.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz
           aby narysować pozostałe dwie.
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz
+          aby narysować pozostałe dwie.
+      courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz
           aby narysować pozostałe dwie.
       courseA_artist_loops7_forVideo_authored_hint:
@@ -1383,6 +1825,9 @@ pl:
         courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać
           swój kod krok po kroku oraz szukać wzorców.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać
+          swój kod krok po kroku oraz szukać wzorców.
+      courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać
           swój kod krok po kroku oraz szukać wzorców.
       courseA_artist_loops_challenge2_authored_hint:
@@ -1400,12 +1845,20 @@ pl:
           aby przejść do następnego!
         courseA_artist_loops_challenge2_c: Wszystkie Twoje bloki muszą być wewnątrz
           pętli aby ukończyć tą zagadkę.
+      courseA_artist_loops_challenge2a_2019_authored_hint:
+        courseA_artist_loops_challenge2_b: Jak skończysz jeden namiot, `jump` podwójnie
+          aby przejść do następnego!
+        courseA_artist_loops_challenge2_c: Wszystkie Twoje bloki muszą być wewnątrz
+          pętli aby ukończyć tą zagadkę.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś
           skarb.
       courseA_collector_loops2_2018_authored_hint:
+        courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś
+          skarb.
+      courseA_collector_loops2_2019_authored_hint:
         courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś
           skarb.
       courseA_collector_loops5_authored_hint:
@@ -1420,10 +1873,19 @@ pl:
           poszukaj wzorca.
         courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj
           się bokiem i potem na dół.
+      courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj
+          użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i
+          poszukaj wzorca.
+        courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj
+          się bokiem i potem na dół.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseA_collector_loops6_2019_authored_hint:
         courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops7_authored_hint:
@@ -1432,12 +1894,20 @@ pl:
       courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby
           zobaczyć gdzie Laurel skończy.
+      courseA_collector_loops7_2019_authored_hint:
+        courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby
+          zobaczyć gdzie Laurel skończy.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części,
           i napisać pętle dla każdej z nich.
         courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu,
           nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
       courseA_collector_loops8_2018_authored_hint:
+        courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części,
+          i napisać pętle dla każdej z nich.
+        courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu,
+          nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
+      courseA_collector_loops8_2019_authored_hint:
         courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części,
           i napisać pętle dla każdej z nich.
         courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu,
@@ -1452,6 +1922,11 @@ pl:
           jeśli coś wydaje się źle.
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
           coś tylko jeden raz.
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: Spróbuj zmienić wartości w każdej pętli,
+          jeśli coś wydaje się źle.
+        courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
+          coś tylko jeden raz.
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: Potrzebujesz tylko 1 bloku, aby to rozwiązać.
       courseA_collector_preLoops5_authored_hint:
@@ -1460,7 +1935,13 @@ pl:
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.
+      courseA_harvester_loops3_2019_authored_hint:
+        courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
+          następnie umieść tam blok, który chcesz aby się powtarzał.
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2
+          etapach, pierwsza część przed zakrętem, druga po zakręcie.
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2
           etapach, pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_ramp2_2018_authored_hint:
@@ -1479,9 +1960,44 @@ pl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1519,7 +2035,45 @@ pl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1554,10 +2108,29 @@ pl:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki
           i uruchom kod, aby zobaczyć co się stanie.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki
+          i uruchom kod, aby zobaczyć co się stanie.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki
           i uruchom kod, aby zobaczyć co się stanie.
       courseA_maze_seq2_authored_hint:
@@ -1590,12 +2163,23 @@ pl:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach,
           pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach,
+          pierwsza część przed zakrętem, druga po zakręcie.
+      courseA_maze_seq6_2019_authored_hint:
         courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach,
           pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_seq9_authored_hint:
@@ -1609,6 +2193,11 @@ pl:
         courseA_maze_seq9_c: Będziesz musiał poruszać się w 3 kierunkach aby rozwiązać
           tą łamigłówkę.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -1629,7 +2218,42 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1667,7 +2291,45 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1702,10 +2364,29 @@ pl:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż
           4 razy, możesz zmienić wartość na górze bloku.
       courseB_artist_loops2_2018_authored_hint:
+        courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż
+          4 razy, możesz zmienić wartość na górze bloku.
+      courseB_artist_loops2_2019_authored_hint:
         courseB_artist_loops2_a: Jeśli chcesz, aby pętla powtarzała się więcej niż
           4 razy, możesz zmienić wartość na górze bloku.
       courseB_artist_loops3_authored_hint:
@@ -1714,9 +2395,14 @@ pl:
       courseB_artist_loops3_2018_authored_hint:
         courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby
           rysować linię.
+      courseB_artist_loops3_2019_authored_hint:
+        courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby
+          rysować linię.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
       courseB_artist_loops4_2018_authored_hint:
+        courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
+      courseB_artist_loops4_2019_authored_hint:
         courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby
@@ -1726,10 +2412,17 @@ pl:
         courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby
           poruszać się bez rysowania linii.
         courseB_artist_loops9_b: Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.
+      courseB_artist_loops9_2019_authored_hint:
+        courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby
+          poruszać się bez rysowania linii.
+        courseB_artist_loops9_b: Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie
           nad niektórymi liniami. '
       courseB_artist_loops_challenge1_2018_authored_hint:
+        courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie
+          nad niektórymi liniami. '
+      courseB_artist_loops_challenge1_2019_authored_hint:
         courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie
           nad niektórymi liniami. '
       courseB_artist_loops_challenge2_authored_hint:
@@ -1742,10 +2435,18 @@ pl:
           co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
         courseB_artist_loops_challenge2_b: Możesz użyć bloków 'Skocz' aby przenieść
           się w inne miejsce.
+      courseB_artist_loops_challenge2_2019_authored_hint:
+        courseB_artist_loops_challenge2_a: Kod aby narysować X jest już Ci dany. Wszystko
+          co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
+        courseB_artist_loops_challenge2_b: Możesz użyć bloków 'Skocz' aby przenieść
+          się w inne miejsce.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć
           wzór.
       courseB_collector_loops10_2018_authored_hint:
+        courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć
+          wzór.
+      courseB_collector_loops10_2019_authored_hint:
         courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć
           wzór.
       courseB_collector_loops2_authored_hint:
@@ -1754,10 +2455,16 @@ pl:
       courseB_collector_loops2_2018_authored_hint:
         courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś
           skarb.
+      courseB_collector_loops2_2019_authored_hint:
+        courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś
+          skarb.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok
           wewnątrz powtarzającej się pętli.
       courseB_collector_loops3_2018_authored_hint:
+        courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok
+          wewnątrz powtarzającej się pętli.
+      courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok
           wewnątrz powtarzającej się pętli.
       courseB_collector_loops4_authored_hint:
@@ -1766,10 +2473,16 @@ pl:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_c: Laurel musi iść na dół i zebrać skarb po zakończeniu
           pętli `repeat`!
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_c: Laurel musi iść na dół i zebrać skarb po zakończeniu
+          pętli `repeat`!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć,
           co się dzieje.
       courseB_collector_loops5_2018_authored_hint:
+        courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć,
+          co się dzieje.
+      courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć,
           co się dzieje.
       courseB_collector_loops6_authored_hint:
@@ -1778,6 +2491,11 @@ pl:
         courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na
           3 części.
       courseB_collector_loops6_2018_authored_hint:
+        courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez
+          kliknięcie w "3" i wybranie innej wartości.
+        courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na
+          3 części.
+      courseB_collector_loops6_2019_authored_hint:
         courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez
           kliknięcie w "3" i wybranie innej wartości.
         courseB_collector_loops6_d: Jeśli nie wiesz co zrobić, rozbij tą zagadkę na
@@ -1802,7 +2520,15 @@ pl:
           Nie poddawaj się!
         courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się
           z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
+      courseB_collector_loops_challenge2a_2019_authored_hint:
+        courseB_collector_loops_challenge2a_a: Jeśli coś idzie źle, spróbuj to debugować.
+          Nie poddawaj się!
+        courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się
+          z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
       courseB_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie
+          umieść tam blok, który chcesz aby się powtarzał.
+      courseB_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie
           umieść tam blok, który chcesz aby się powtarzał.
       courseB_maze_seq10_authored_hint:
@@ -1819,20 +2545,32 @@ pl:
         courseB_maze_seq5_a: Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.
         courseB_maze_seq5_c: Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej
           ścieżki.
+      courseB_maze_seq5_2019_authored_hint:
+        courseB_maze_seq5_a: Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.
+        courseB_maze_seq5_c: Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej
+          ścieżki.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
         courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
         courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
+      courseB_maze_seq8_2019_authored_hint:
+        courseB_maze_seq8_b: Istnieją dwa sposoby, aby rozwiązać ten problem!
+        courseB_maze_seq8_c: Nie wiesz, w którą stronę iść? Wypróbuj tę ścieżkę!
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
       courseB_maze_seq_challenge1_2018_authored_hint:
+        courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
+      courseB_maze_seq_challenge1_2019_authored_hint:
         courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać
           tą zagadkę.
       courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać
+          tą zagadkę.
+      courseB_maze_seq_challenge2_2019_authored_hint:
         courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać
           tą zagadkę.
       courseB_starWars_prog5_authored_hint:
@@ -1841,11 +2579,18 @@ pl:
       courseB_starWars_prog5_2018_authored_hint:
         courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu
           jak się poruszasz.
+      courseB_starWars_prog5_2019_authored_hint:
+        courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu
+          jak się poruszasz.
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
           co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
+          co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
           co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
@@ -1859,10 +2604,18 @@ pl:
           akcję poniżej.
         courseC_PlayLab_events6_c: Kiedy skończysz, powinieneś być w stanie poruszać
           się Waddles dookoła używając strzałek na klawiaturze!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Każdy zielony blok `when arrow` powinien mieć jedną
+          akcję poniżej.
+        courseC_PlayLab_events6_c: Kiedy skończysz, powinieneś być w stanie poruszać
+          się Waddles dookoła używając strzałek na klawiaturze!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_b: Pętla `repeat forever` nie musi być połączona z
           żadnym innym blokiem zdarzeń; będzie działać samodzielnie.
       courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_b: Pętla `repeat forever` nie musi być połączona z
+          żadnym innym blokiem zdarzeń; będzie działać samodzielnie.
+      courseC_PlayLab_events7_2019_authored_hint:
         courseC_PlayLab_events7_b: Pętla `repeat forever` nie musi być połączona z
           żadnym innym blokiem zdarzeń; będzie działać samodzielnie.
       courseC_PlayLab_events9_authored_hint:
@@ -1870,6 +2623,10 @@ pl:
           touches` w swojej przestrzeni roboczej w tym samym czasie, więc nie musisz
           usuwać tego pierwszego!
       courseC_PlayLab_events9_2018_authored_hint:
+        courseC_PlayLab_events9_c: Możesz mieć więcej niż jedno zdarzenie `when actor
+          touches` w swojej przestrzeni roboczej w tym samym czasie, więc nie musisz
+          usuwać tego pierwszego!
+      courseC_PlayLab_events9_2019_authored_hint:
         courseC_PlayLab_events9_c: Możesz mieć więcej niż jedno zdarzenie `when actor
           touches` w swojej przestrzeni roboczej w tym samym czasie, więc nie musisz
           usuwać tego pierwszego!
@@ -1883,10 +2640,16 @@ pl:
       courseC_artist_loop1_2018_authored_hint:
         courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że
           umieścisz nad nią jeden blok.
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że
+          umieścisz nad nią jeden blok.
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić
           ilość jej powtórzeń.
       courseC_artist_loops2a_2018_authored_hint:
+        courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić
+          ilość jej powtórzeń.
+      courseC_artist_loops2a_2019_authored_hint:
         courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić
           ilość jej powtórzeń.
       courseC_artist_loops5b_authored_hint:
@@ -1895,10 +2658,16 @@ pl:
       courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać
           się do przodu i do tyłu o taką samą odległość.
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać
+          się do przodu i do tyłu o taką samą odległość.
       courseC_artist_loopsPre1a_authored_hint:
         courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku
           `turn`.
       courseC_artist_loopsPre1a_2018_authored_hint:
+        courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku
+          `turn`.
+      courseC_artist_loopsPre1a_2019_authored_hint:
         courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku
           `turn`.
       courseC_artist_prog2_authored_hint:
@@ -1907,6 +2676,11 @@ pl:
         courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
           o 90 stopni".
       courseC_artist_prog2_2018_authored_hint:
+        courseC_artist_prog2_a: Jeżeli użyjesz bloku "idź do przodu o 100 pikseli",
+          narysuję linię automatycznie.
+        courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
+          o 90 stopni".
+      courseC_artist_prog2_2019_authored_hint:
         courseC_artist_prog2_a: Jeżeli użyjesz bloku "idź do przodu o 100 pikseli",
           narysuję linię automatycznie.
         courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
@@ -1921,10 +2695,18 @@ pl:
           w lewo zanim narysujesz drugą linię.
         courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się
           w prawo zanim narysujesz 3 linię.
+      courseC_artist_prog_challenge2a_2019_authored_hint:
+        courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się
+          w lewo zanim narysujesz drugą linię.
+        courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się
+          w prawo zanim narysujesz 3 linię.
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj
           bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
       courseC_collector_prog1_2018_authored_hint:
+        courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj
+          bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
+      courseC_collector_prog1_2019_authored_hint:
         courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj
           bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
       courseC_collector_prog_challenge1_authored_hint:
@@ -1933,10 +2715,16 @@ pl:
       courseC_collector_prog_challenge1_2018_authored_hint:
         courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby
           zebrać dodatkowy skarb.
+      courseC_collector_prog_challenge1_2019_authored_hint:
+        courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby
+          zebrać dodatkowy skarb.
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby
           rozwiązać zagadkę!
       courseC_collector_prog_challenge2_2018_authored_hint:
+        courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby
+          rozwiązać zagadkę!
+      courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby
           rozwiązać zagadkę!
       courseC_flappy_events2_authored_hint:
@@ -1947,10 +2735,17 @@ pl:
         courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
         courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby
           rozwiązać zagadkę.
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
+        courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby
+          rozwiązać zagadkę.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że
           bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
       courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że
+          bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
+      courseC_flappy_events3_2019_authored_hint:
         courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że
           bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
       courseC_flappy_events5_authored_hint:
@@ -1959,9 +2754,14 @@ pl:
       courseC_flappy_events5_2018_authored_hint:
         courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten
           poziom.
+      courseC_flappy_events5_2019_authored_hint:
+        courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten
+          poziom.
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
       courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
+      courseC_flappy_events7_2019_authored_hint:
         courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_c: Jedna pętla będzie powtarzać komendę `move forward`,
@@ -1969,10 +2769,16 @@ pl:
       courseC_harvester_loops2_2018_authored_hint:
         courseC_harvester_loops2_c: Jedna pętla będzie powtarzać komendę `move forward`,
           a inna `pick pumpkin`.
+      courseC_harvester_loops2_2019_authored_hint:
+        courseC_harvester_loops2_c: Jedna pętla będzie powtarzać komendę `move forward`,
+          a inna `pick pumpkin`.
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_c: Jeśli chcesz uprościć swój kod, możesz umieścić
           jedną pętlę w drugiej! Nazywa się to **nested loop**.
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_c: Jeśli chcesz uprościć swój kod, możesz umieścić
+          jedną pętlę w drugiej! Nazywa się to **nested loop**.
+      courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_c: Jeśli chcesz uprościć swój kod, możesz umieścić
           jedną pętlę w drugiej! Nazywa się to **nested loop**.
       courseC_harvester_loops4_authored_hint:
@@ -1987,11 +2793,21 @@ pl:
           kodzie, kilka do zbierania kukurydzy a inne do zbierania dyni.
         courseC_harvester_loops4_c: Jeśli chcesz uprościć swój kod, możesz umieścić
           jedną pętlę w drugiej! Nazywa się to **nested loop**.
+      courseC_harvester_loops4_2019_authored_hint:
+        courseC_harvester_loops4_a: Użyj nowego bloku `pick corn` aby nazbierać kukurydzy.
+        courseC_harvester_loops4_b: Możesz użyć kilku pętli powtarzających się w swoim
+          kodzie, kilka do zbierania kukurydzy a inne do zbierania dyni.
+        courseC_harvester_loops4_c: Jeśli chcesz uprościć swój kod, możesz umieścić
+          jedną pętlę w drugiej! Nazywa się to **nested loop**.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: Czy ten stopień nie wygląda znajomo z poprzedniej
           zagadki? Ruchy powinny być podobne, pamiętaj tylko, aby zbierać plony po
           drodze.
       courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Czy ten stopień nie wygląda znajomo z poprzedniej
+          zagadki? Ruchy powinny być podobne, pamiętaj tylko, aby zbierać plony po
+          drodze.
+      courseC_harvester_loops8_2019_authored_hint:
         courseC_harvester_loops8_a: Czy ten stopień nie wygląda znajomo z poprzedniej
           zagadki? Ruchy powinny być podobne, pamiętaj tylko, aby zbierać plony po
           drodze.
@@ -2001,10 +2817,15 @@ pl:
         courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
       courseC_harvester_loops_challenge1a_2018_authored_hint:
         courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
+      courseC_harvester_loops_challenge1a_2019_authored_hint:
+        courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
       courseC_maze_debugging1_2018_authored_hint:
+        courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
+          tą zagadkę.
+      courseC_maze_debugging1_2019_authored_hint:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
       courseC_maze_debugging2_authored_hint:
@@ -2013,10 +2834,16 @@ pl:
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_debugging2_2019_authored_hint:
+        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_2018_authored_hint:
+        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_loops6_authored_hint:
@@ -2030,11 +2857,17 @@ pl:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_b: |-
           Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_b: |-
+          Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2019_authored_hint:
         courseC_maze_programming_challenge2_b: |-
           Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -2047,7 +2880,13 @@ pl:
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby
           zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops10_2019_authored_hint:
+        courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby
+          zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
+          co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops1_2019_authored_hint:
         courseC_starWars_loops1_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
           co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops2_authored_hint:
@@ -2056,16 +2895,25 @@ pl:
       courseC_starWars_loops2_2018_authored_hint:
         courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.
+      courseC_starWars_loops2_2019_authored_hint:
+        courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
+          następnie umieść tam blok, który chcesz aby się powtarzał.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w
           środku: `move forward`.'
       courseC_starWars_loops4_2018_authored_hint:
         courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w
           środku: `move forward`.'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w
+          środku: `move forward`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś
           prosto.
       courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś
+          prosto.
+      courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś
           prosto.
       courseC_starWars_loops7_authored_hint:
@@ -2078,7 +2926,15 @@ pl:
           wszystkie ruchy na kartce papieru i poszukać wzorca.
         courseC_starWars_loops7_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
           co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+      courseC_starWars_loops7_2019_authored_hint:
+        courseC_starWars_loops7_b: Jeśli masz problem z tą zagadką, spróbuj zapisać
+          wszystkie ruchy na kartce papieru i poszukać wzorca.
+        courseC_starWars_loops7_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
+          co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_binary1_authored_hint:
@@ -2087,10 +2943,16 @@ pl:
       courseD_artist_binary1_2018_authored_hint:
         courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną
           spację dla każdego 0.
+      courseD_artist_binary1_2019_authored_hint:
+        courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną
+          spację dla każdego 0.
       courseD_artist_binary3_authored_hint:
         courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku
           rozwiąże tą zagadkę!
       courseD_artist_binary3_2018_authored_hint:
+        courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku
+          rozwiąże tą zagadkę!
+      courseD_artist_binary3_2019_authored_hint:
         courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku
           rozwiąże tą zagadkę!
       courseD_artist_functions2_authored_hint:
@@ -2102,6 +2964,11 @@ pl:
           \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
           o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
       courseD_artist_nestedLoops3_2018_authored_hint:
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
+          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
+          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
+          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+      courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
           o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
           \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
@@ -2131,6 +2998,13 @@ pl:
           path ahead`, aby przejść przez ten labirynt.
         courseD_bee_conditionals2_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals2_b: Możesz wykorzystać pętlę `repeat` albo `while
+          path ahead`, aby przejść przez ten labirynt.
+        courseD_bee_conditionals2_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Potrzebujesz pomocy? Masz tutaj film z podpowiedzią.
         courseD_bee_conditionals2_b: Możesz wykorzystać pętlę `repeat` albo `while
@@ -2147,6 +3021,11 @@ pl:
           film!
         courseD_bee_conditionals3_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals3_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
@@ -2157,12 +3036,22 @@ pl:
           film!
         courseD_bee_conditionals4_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals4_2019_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals4_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
       courseD_bee_conditionals5_authored_hint:
         courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
       courseD_bee_conditionals5_2018_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals5_2019_authored_hint:
         courseD_bee_conditionals5_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals5_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
@@ -2181,12 +3070,24 @@ pl:
           twój kod?
         courseD_bee_conditionals6_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals6_2019_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals6_c: Czy jest pętla, której możesz użyć, aby uprościć
+          twój kod?
+        courseD_bee_conditionals6_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
+          film!
+        courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
+          w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals7_2019_authored_hint:
         courseD_bee_conditionals7_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
@@ -2213,6 +3114,13 @@ pl:
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
         courseD_bee_conditionals8_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_a: |-
+          ** Pamiętaj: **
+
+          Ta plansza jest inna za każdym uruchomieniem.
+
+          Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseD_scrat_ramp7_authored_hint:
@@ -2229,6 +3137,11 @@ pl:
           i wymaga obrotu w prawo o **60 stopni**.  '
         courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30**
           i wymaga obrotu w prawo o **120 stopni**. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
+          i wymaga obrotu w prawo o **60 stopni**.  '
+        courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30**
+          i wymaga obrotu w prawo o **120 stopni**. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Kwadraty mają boki o długości 100 pikseli, czyli
           musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
@@ -2241,6 +3154,9 @@ pl:
         courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
           przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
       courseE_artist_functions2_2018_authored_hint:
+        courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
+          przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+      courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
           przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
       courseE_artist_ramp12_authored_hint:
@@ -2317,11 +3233,22 @@ pl:
           O jaką wielkość zmienia się ta liczba za każdym razem?**
 
           Te pytania musisz zadać aby wypełnić puste pola w pętli `for`.
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_a: |-
+          **Jaka jest najmniejsza liczba, którą będziesz potrzebował?
+          Jak jest największa liczba?
+          O jaką wielkość zmienia się ta liczba za każdym razem?**
+
+          Te pytania musisz zadać aby wypełnić puste pola w pętli `for`.
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
           boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
           od poprzedniego."
       courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
+          boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
+          od poprzedniego."
+      courseF_artist_for_challenge1_2019_authored_hint:
         courseF_artist_for_challenge1_a: "`pen width` wynosi 1. Pierwszy kwadrat ma
           boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy
           od poprzedniego."
@@ -2332,6 +3259,12 @@ pl:
           `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą
           wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: "`pętla for` zmienia się od 5 do 250 z krokiem
+          równym 2. "
+        courseF_artist_for_challenge2_a: Zmiana koloru odbywa się poprzez użycie bloku
+          `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą
+          wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
+      courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: "`pętla for` zmienia się od 5 do 250 z krokiem
           równym 2. "
         courseF_artist_for_challenge2_a: Zmiana koloru odbywa się poprzez użycie bloku
@@ -2365,6 +3298,12 @@ pl:
           `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele
           razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
       courseF_artist_variables_challenge2_2018_authored_hint:
+        courseF_artist_variables_challenge2_a: Zmienne są pomocne, ponieważ można
+          do nich dodawać w każdym kroku pętli.
+        courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla
+          `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele
+          razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
+      courseF_artist_variables_challenge2_2019_authored_hint:
         courseF_artist_variables_challenge2_a: Zmienne są pomocne, ponieważ można
           do nich dodawać w każdym kroku pętli.
         courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla
@@ -2420,6 +3359,15 @@ pl:
           ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
 
           Jak te liczby są ze sobą powiązane?
+      courseF_bee_for10_2019_authored_hint:
+        courseF_bee_for10_c: |-
+          W zagadce pierwszy zestaw ma **14** kwiatów, drugi zestaw ma **10** kwiatów, trzeci zestaw ma **6** kwiatów a czwarty zestaw ma **2** kwiaty.
+
+          Zauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.
+
+          ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
+
+          Jak te liczby są ze sobą powiązane?
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
@@ -2429,6 +3377,14 @@ pl:
           wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
           pętli, aby zrobić 'licznik' miodu.
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
+          wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
+        courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
+          wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór
+          wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
+          pętli, aby zrobić 'licznik' miodu.
+      courseF_bee_for_challenge2_2019_authored_hint:
         courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
@@ -3132,6 +4088,12 @@ pl:
         grade5_artist_variables_triangles1_c: Wewnątrz pętli musisz pójść do przodu
           50 pikseli, a następnie skręcić w lewo o 120 stopni.
       grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny
+          kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.
+        grade5_artist_variables_triangles1_b: Aby skrócić swój kod użyj pętli 'powtórz'.
+        grade5_artist_variables_triangles1_c: Wewnątrz pętli musisz pójść do przodu
+          50 pikseli, a następnie skręcić w lewo o 120 stopni.
+      grade5_artist_variables_triangles1_2019_authored_hint:
         grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny
           kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.
         grade5_artist_variables_triangles1_b: Aby skrócić swój kod użyj pętli 'powtórz'.

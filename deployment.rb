@@ -12,6 +12,7 @@ require 'cdo/slog'
 require 'os'
 require 'cdo/aws/cdo_google_credentials'
 require 'cdo/git_utils'
+require 'uri'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -77,7 +78,8 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
-    'default_hoc_mode'            => 'soon-hoc', # overridden by 'hoc_mode' DCDO param, except in :test
+    'default_hoc_mode'            => 'post-hoc', # overridden by 'hoc_mode' DCDO param, except in :test
+    'default_hoc_launch'          => '', # overridden by 'hoc_launch' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -104,7 +106,6 @@ def load_configuration
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
-    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
@@ -136,8 +137,6 @@ def load_configuration
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
-    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
-
     # test environment should use precompiled, minified, digested assets like production,
     # unless it's being used for unit tests. This logic should be kept in sync with
     # the logic for setting config.assets.* under dashboard/config/.
@@ -147,6 +146,7 @@ def load_configuration
     config.merge! global_config
     config.merge! local_config
 
+    config['bundler_use_sudo']    ||= config['chef_managed']
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['cdn_enabled']         ||= config['chef_managed']
@@ -262,12 +262,19 @@ class CDOImpl < OpenStruct
     site_url('hourofcode.com', path, scheme)
   end
 
-  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+  # NOTE: When a new language is added to this set, make sure to also update
+  # the redirection rules for the cdo-curriculum S3 bucket. Otherwise, all
+  # links to CB for that language will attempt to point to the
+  # language-specific version of that content, even if we haven't translated
+  # that content yet.
+  CURRICULUM_LANGUAGES = Set['es-mx']
 
   def curriculum_url(locale, path = '')
-    locale = '/' + locale.downcase.to_s
-    locale = nil unless CURRICULUM_LANGUAGES.include? locale
-    "https://curriculum.code.org#{locale}/#{path}"
+    locale = locale.downcase.to_s
+    uri = URI("https://curriculum.code.org")
+    path = File.join(locale, path) if CURRICULUM_LANGUAGES.include? locale
+    uri += path
+    uri.to_s
   end
 
   def default_scheme

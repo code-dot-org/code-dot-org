@@ -544,6 +544,12 @@ en:
         MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic Conditionals'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Congratulations'
+        hoc_dance_warmup: Dance Party - Warm Up
+        hoc_dance_events: Dance Party - Events
+        hoc_dance_properties: Dance Party - Properties
+        hoc_dance_congrats: Dance Party - Party On!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

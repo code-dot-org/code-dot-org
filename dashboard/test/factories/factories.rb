@@ -1091,7 +1091,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).to_i + 1).to_s}
+    id {(School.maximum(:id).next).to_s}
     city "Seattle"
     state "WA"
     zip "98122"
@@ -1182,6 +1182,12 @@ FactoryGirl.define do
 
   factory :circuit_playground_discount_application do
     user {create :teacher}
+  end
+
+  factory :circuit_playground_discount_code do
+    sequence(:code) {|n| "FAKE#{n}_asdf123"}
+    full_discount true
+    expiration {Time.now + 30.days}
   end
 
   factory :seeded_s3_object do

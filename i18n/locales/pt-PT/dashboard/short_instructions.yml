@@ -407,7 +407,7 @@ pt:
       4-5 Nested Loops 3: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       4-5 Nested Loops 7: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
@@ -457,7 +457,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -542,7 +542,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
@@ -664,6 +664,7 @@ pt:
       Course 4 Play Labs For Loops 7: "Você poderia usar um laço \"para\" para me\najudar a falar a sequência 1, 4, 7, 10, 13, 16, 19, 22, 25?"
       Course 4 Play Labs For Loops 8: "Qual laço me faria falar\n19, 27, 35, 43, 51?"
       Course 4 Variables Assessment: "Você consegue criar essa imagem usando\numa variável para os lados? Cada linha deve ter 50 pixels de comprimento."
+      Course E MC Conditionals1: Vais encontrar os recursos mais valiosos no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo menos 2 carvões.
       CourseF_PlayLab_vars10: "Hora da atividade livre! Aqui estão todas as\nvariáveis que usamos até agora e também algumas a mais, caso você as\nqueira. Crie um jogo ou uma história que usa essas variáveis. Dica: role para baixo para\nver todos os comandos da área de trabalho."
       CourseF_PlayLab_vars2: "Essa corrida não foi muito justa! Altere\na variável \"velocidade_cão\" para garantir que você possa coletar mais bandeiras do que o\ngato. O primeiro a coletar 10 bandeiras vence!"
       CourseF_PlayLab_vars3: "Temos aqui um novo tipo de jogo! Use as\nsetas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se você\nconsegue coletar todas as bandeiras."
@@ -694,6 +695,18 @@ pt:
       Crack a Caesar Cipher_2018: Instruções
       Food Fight!: "Adicionamos uma última função para\nque você use. Programe seu jogo para chamar a função \"suba de nível\" se \"pontos_jogador\"\n> 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio."
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar um caminho até à tocha.
+      Function intro Ryan_2019: Utiliza a função "construir ponte" duas vezes para criar um caminho até à tocha.
+      HOC 2018 Level_1: Coleciona um barco do baú.
+      HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
+      HOC 2018 Level_11: 'Constrói um canal com Prismarine dentro do Monumento do Oceano.'
+      HOC 2018 Level_12: 'Cria o teu próprio ambiente subaquático, as decisões são tuas!'
+      HOC 2018 Level_2: 'Vai até ao final do cais.'
+      HOC 2018 Level_3: 'Navega os mares por bacalhau.'
+      HOC 2018 Level_4: Utiliza uma argola para chegar ao golfinho.
+      HOC 2018 Level_5: Explora o navio encalhado para chegar ao baú.
+      HOC 2018 Level_6: Navega pelo gelo para chegar ao salmão.
+      HOC 2018 Level_7a: Revista estas ruínas subaquáticas para encontrar um baú.
+      HOC 2018 Level_9b: 'Utiliza o coral como pontos de passagem para chegar ao tesouro.'
       Infinity_catch: "Você pode fazer Elsa (\"personagem 2\") alcançar\nAnna usando as setas do teclado?"
       Infinity_finale: Crie o que quiser e compartilhe!
       Infinity_move_collide: "Hiro é o \"personagem 1\". Mova-o em direção a\nBaymax e reproduza um som quando eles se tocarem."
@@ -850,25 +863,33 @@ pt:
       MC HOC 2016 Village Test: Oh, não! Os Mortos-Vivos aprisionaram-te no interior! Codifica o Golem de Ferro para que ele persiga e ataque os mortos-vivos!
       MC_HOC_2017_01_Cole: Tens de recolher todas as ferramentas nesta jornada. Desloca-te com as **teclas de seta** e chega ao baú no caminho para vencer
       MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime "Executar" e utiliza as teclas de seta para mover o jogador para fora da casa e recolher o baú. '
+      MC_HOC_2017_01_RETRY_2019: 'Leva o Agent até à placa de pressão, prime "Executar" e utiliza as teclas de seta para mover o jogador para fora da casa e recolher o baú. '
       MC_HOC_2017_02: Leva o Agent até à placa de pressão.
       MC_HOC_2017_02_Cole: 'Move o Agent até à placa de pressão para que {currentPlayerName} chegue ao mapa. '
+      MC_HOC_2017_02_Cole_2019: 'Move o Agent até à placa de pressão para que {currentPlayerName} chegue ao mapa. '
       MC_HOC_2017_02_Kiki: Leva o Agent até à placa de pressão e o jogador até ao quadrado cor de laranja.
       MC_HOC_2017_02_Will: Leva o Agent até à placa de pressão.
       MC_HOC_2017_03_Cole: 'Programa o Agent para abrir o portão. '
+      MC_HOC_2017_03_Cole_2019: 'Programa o Agent para abrir o portão. '
       MC_HOC_2017_03_Kiki: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o Agent a criar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04POINT5_RYAN: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04POINT5_RYAN_2019: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Cole: Leva o Agent até à placa de pressão.
+      MC_HOC_2017_04_Cole_2019: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Kiki: Leva o Agent até à placa de pressão.
       MC_HOC_2017_05: Utiliza uma função para ajudar o Agent a chegar à placa de pressão.
       MC_HOC_2017_05_Cole: Leva o jogador até à pá.
+      MC_HOC_2017_05_Cole_2019: Leva o jogador até à pá.
       MC_HOC_2017_05_Josh: Leva o jogador até à pá.
       MC_HOC_2017_05_Kiki: Leva o jogador até ao quadrado cor de laranja.
       MC_HOC_2017_06_Cole: Corrige este código para fazer com que o Agent construa uma ponte sobre este rio.
+      MC_HOC_2017_06_Cole_2019: Corrige este código para fazer com que o Agent construa uma ponte sobre este rio.
       MC_HOC_2017_06_Josh: Corrige este código para ajudar o Agent a construir uma ponte sobre este rio.
       MC_HOC_2017_06_Kiki: Corrige este código para ajudar o Agent a construir uma ponte sobre este rio.
       MC_HOC_2017_07_Cole: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
+      MC_HOC_2017_07_Cole_2019: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
       MC_HOC_2017_07_Kiki: Utiliza uma função para abrir caminho até ao quadrado cor de laranja.
       MC_HOC_2017_07a_Kiki: Abre caminho até ao quadrado cor de laranja.
       MC_HOC_2017_08_Cole: Muda a função apresentada para que funcione neste bioma.
@@ -881,14 +902,17 @@ pt:
       MC_HOC_2017_10_Cole_old: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_Kiki: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RETRY: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RETRY_2019: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RYAN: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_10_RYAN2: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_13_Cole: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_4.5v2: Leva o Agent até à placa de pressão.
       MC_HOC_2017_Ali: Utiliza as funções para atravessar a lava.
+      MC_HOC_2017_Ali_2019: Utiliza as funções para atravessar a lava.
       MC_HOC_2017_FP10x10: "**Jogo livre:** És capaz de recolher todos os diamantes neste nível? "
       MC_HOC_2017_FP10x10_RE: "**Jogo livre:** És capaz de recolher todos os diamantes neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo livre:**  É hora de explorar sozinho!"
+      MC_HOC_2017_FP20x20_2019: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_Ryan_03: Agora, utiliza ações circulares para ajudares o Agent a construir uma ponte sobre o rio através da colocação de blocos na água.
       MC_HOC_2017_Ryan_05: Destrói estes catos para o jogador conseguir atingir o objetivo.
       MC_HOC_Kiki_02: Leva o Agent até à placa de pressão.
@@ -965,25 +989,35 @@ pt:
       New Minecraft Hero Project: "**Jogo livre:**  É hora de explorar sozinho!"
       Overworld Avoid Monsters: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
       Overworld Avoid Monsters_2018: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
+      Overworld Avoid Monsters_2019: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
       Overworld Chop Tree - allthethings: A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.
       Overworld Chop Tree: A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.
       Overworld Chop Tree_2018: A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.
+      Overworld Chop Tree_2019: A madeira é um recurso muito importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco" para a cortares.
       Overworld Chop Trees: Temos de construir uma casa antes que o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Chop Trees_2018: Temos de construir uma casa antes que o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
+      Overworld Chop Trees_2019: Temos de construir uma casa antes que o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
       Overworld Free Play 20x20: Parabéns! Completaste todos os nossos quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste até agora. 
       Overworld Free Play 20x20_2018: Parabéns! Completaste todos os nossos quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste até agora. 
+      Overworld Free Play 20x20_2019: Parabéns! Completaste todos os nossos quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste até agora. 
       Overworld House Frame Chosen: Construa o resto da casa de qualquer material que goste. O comando "repetir" vai dar jeito.
       Overworld House Frame Chosen_2018: Construa o resto da casa de qualquer material que goste. O comando "repetir" vai dar jeito.
+      Overworld House Frame Chosen_2019: Construa o resto da casa de qualquer material que goste. O comando "repetir" vai dar jeito.
       Overworld Move to Sheep: Adiciona um segundo comando "mover para a frente" para chegares às ovelhas.
       Overworld Move to Sheep_2018: Adiciona um segundo comando "mover para a frente" para chegares às ovelhas.
+      Overworld Move to Sheep_2019: Adiciona um segundo comando "mover para a frente" para chegares às ovelhas.
       Overworld Place Wall: Cada casa começa com uma parede. Constrói a primeira parte da tua casa encaixando os comandos "colocar" e "mover para a frente" no interior da sequência de repetição.
       Overworld Place Wall_2018: Cada casa começa com uma parede. Constrói a primeira parte da tua casa encaixando os comandos "colocar" e "mover para a frente" no interior da sequência de repetição.
+      Overworld Place Wall_2019: Cada casa começa com uma parede. Constrói a primeira parte da tua casa encaixando os comandos "colocar" e "mover para a frente" no interior da sequência de repetição.
       Overworld Plant Crops: É bom fazer planos para o futuro. Planta plantações nos dois lados da água para não teres fome mais tarde.
       Overworld Plant Crops_2018: É bom fazer planos para o futuro. Planta plantações nos dois lados da água para não teres fome mais tarde.
+      Overworld Plant Crops_2019: É bom fazer planos para o futuro. Planta plantações nos dois lados da água para não teres fome mais tarde.
       Overworld Powered Minecart: Bom trabalho! Recolheste imensos recursos e construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta da tua casa.
       Overworld Powered Minecart_2018: Bom trabalho! Recolheste imensos recursos e construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta da tua casa.
+      Overworld Powered Minecart_2019: Bom trabalho! Recolheste imensos recursos e construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta da tua casa.
       Overworld Shear Sheep: Está na hora de tosquiar ovelhas! Utiliza o comando "tosquiar" para recolheres lã das duas ovelhas.
       Overworld Shear Sheep_2018: Está na hora de tosquiar ovelhas! Utiliza o comando "tosquiar" para recolheres lã das duas ovelhas.
+      Overworld Shear Sheep_2019: Está na hora de tosquiar ovelhas! Utiliza o comando "tosquiar" para recolheres lã das duas ovelhas.
       PDK5 Functions 2: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
       PS copy 2-3 Bee Conditionals 5: "As flores roxas podem ter 1 ou 0\nnéctar, mas você não sabe quanto! Tenha cuidado para não coletar néctar de\numa flor roxa se ela não tiver néctar. Verifique se o néctar é igual a 1\nusando o bloco se."
       Ryan - 4-5 Bee Conditionals 2: A abelha só quer néctar agora. Nem todos os objetos são flores, portanto procura debaixo de cada nuvem para ver se ela esconde uma. Se estiver, então podes recolher o néctar.
@@ -1012,12 +1046,16 @@ pt:
       U4 vigenere cipher 2: Instruções
       Underground Avoiding Lava: A lava esconde-se debaixo de alguns destes blocos, e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares estes blocos.
       Underground Avoiding Lava_2018: A lava esconde-se debaixo de alguns destes blocos, e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares estes blocos.
+      Underground Avoiding Lava_2019: A lava esconde-se debaixo de alguns destes blocos, e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares estes blocos.
       Underground If Statements: Agora as coisas começam a ficar difíceis. Escava 3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares empedrado sobre qualquer lava que destapares.
       Underground If Statements_2018: Agora as coisas começam a ficar difíceis. Escava 3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares empedrado sobre qualquer lava que destapares.
+      Underground If Statements_2019: Agora as coisas começam a ficar difíceis. Escava 3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares empedrado sobre qualquer lava que destapares.
       Underground Iron: Caminhar sobre lava derretida é má ideia. Coloca empedrado para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
       Underground Iron_2018: Caminhar sobre lava derretida é má ideia. Coloca empedrado para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
+      Underground Iron_2019: Caminhar sobre lava derretida é má ideia. Coloca empedrado para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
       Underground Mining Coal: Vais encontrar os recursos mais valiosos no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo menos 2 carvões.
       Underground Mining Coal_2018: Vais encontrar os recursos mais valiosos no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo menos 2 carvões.
+      Underground Mining Coal_2019: Vais encontrar os recursos mais valiosos no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo menos 2 carvões.
       aE7: "Se você copiar esse laço e virar para a esquerda ao invés\nda direita, o que acontece? Você pode repetir isso para desenhar essa onda?"
       aE8: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção aos cantos - você não pode\nsimplesmente virar 90 graus! Se repetir uma ação de virar 3 graus 60 vezes faz um semicírculo,\nqual desses blocos de código vai fazer um quarto de círculo para os cantos?"
       beeDebugVideo1: Você consegue usar um laço para coletar todo o néctar?
@@ -1064,13 +1102,18 @@ pt:
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_artist_prog5_2018: |-
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
+      courseC_artist_prog5_2019: |-
+        Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_maze_debugging10: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
       courseD_artist_binary4: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
       courseD_artist_binary4_2018: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
+      courseD_artist_binary4_2019: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
       courseD_artist_binary6: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_artist_binary6_2018: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
+      courseD_artist_binary6_2019: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_artist_binary7: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_artist_binary7_2018: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
+      courseD_artist_binary7_2019: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_autorun_binary4_2019: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
       courseD_autorun_binary6_2019: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_autorun_binary7_2019: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
@@ -1080,6 +1123,7 @@ pt:
       courseD_bee_nestedLoops6_2018: Leve-me até o girassol!
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
+      courseD_bee_nestedLoops8_2019: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
       courseD_bounce_events10: Agora há um alvo na parte de cima. Conecte os blocos "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque duas vezes.
       courseD_bounce_events11: Agora você pode conectar blocos ao bloco "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
       courseD_bounce_events12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
@@ -1094,12 +1138,15 @@ pt:
       courseD_debugging_3: "Esses blocos estão me incomodando. Conserte o(s)\nerro(s) para coletar todo o néctar e produzir todo o mel."
       courseD_maze_nestedLoops4: 'Leve-me até o girassol!'
       courseD_maze_nestedLoops4_2018: 'Leve-me até o girassol!'
+      courseD_maze_nestedLoops4_2019: 'Leve-me até o girassol!'
       courseD_maze_nestedLoops6: Leve-me até o girassol!
       courseD_maze_nestedLoops6_2018: Leve-me até o girassol!
+      courseD_maze_nestedLoops6_2019: Leve-me até o girassol!
       courseE_artist_functions1: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       courseE_artist_functions1_2018: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado."
       courseE_bee_concept1_2018: "Colete todo o néctar de cada flor.\nUse um laço aninhado."
+      courseE_bee_concept1_2019: "Colete todo o néctar de cada flor.\nUse um laço aninhado."
       courseE_bee_functions1: Colete todo o néctar de cada flor.
       courseE_bee_functions1_2018: Colete todo o néctar de cada flor.
       courseE_bee_functions3: "Funções são blocos de código que realizam\numa tarefa. Use a função \"obtenha 5\" para coletar 5 néctares de uma vez. Lembre-se também\nde usar um laço para obter um contador de bloco ideal."
@@ -1109,6 +1156,7 @@ pt:
       courseE_farmer_concept4: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
       courseF_bee_for8: "Se seu laço está contando, o\nincremento é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6 e 9 néctares?\\r\n"
       courseF_bee_for8_2018: "Se seu laço está contando, o\nincremento é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6 e 9 néctares?\\r\n"
+      courseF_bee_for8_2019: "Se seu laço está contando, o\nincremento é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6 e 9 néctares?\\r\n"
       courseF_bee_functions4: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use\na função para coletar todo o néctar."
       courseF_bee_functions4_2018: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use\na função para coletar todo o néctar."
       flappy_1: Liga um bloco ao bloco "quando clicar" e, depois, clica em "Executar". Para moveres o passarinho até ao alvo, clica no ecrã.
@@ -1271,7 +1319,7 @@ pt:
       grade4_arist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
@@ -1287,7 +1335,7 @@ pt:
       grade4_artist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
-        
+
       grade4_artist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_squares1: "Clique em \"editar\" para preencher a definição\nda função \"desenhe um quadrado\" e adicionar um parâmetro. Ela deve receber um parâmetro\ncomprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75\npixels de comprimento e separados por 100 pixels cada."
       grade4_artist_parameters_triangles2: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
@@ -1389,7 +1437,7 @@ pt:
         Atividade livre - Inspiração: agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa imagem
         inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
-        
+
         \r
         Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
