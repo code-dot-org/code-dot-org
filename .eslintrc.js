@@ -10,7 +10,8 @@ module.exports = {
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
   "env": {
     "browser": true,
@@ -53,10 +54,6 @@ module.exports = {
     "react/wrap-multilines": "error", // autofixable
     "semi": "off", // enforced by babel/semi
     "space-before-blocks": "error",
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never"
-    }],
     "strict": "error",
   }
 };
