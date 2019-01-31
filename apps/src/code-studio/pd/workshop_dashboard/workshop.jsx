@@ -716,7 +716,9 @@ export class Workshop extends React.Component {
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           workshopCourse={this.state.workshop.course}
+          workshopSubject={this.state.workshop.subject}
           workshopDate={firstSessionDate}
+          numSessions={this.state.workshop.sessions.length}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
           accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}
