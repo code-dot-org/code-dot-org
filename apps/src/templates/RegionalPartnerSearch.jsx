@@ -34,8 +34,41 @@ const styles = {
   bold: {
     fontFamily: "'Gotham 5r', sans-serif"
   },
+  workshopCollection: {
+    backgroundColor: color.lightest_purple,
+    padding: 20,
+    borderRadius: 10,
+    marginBottom: 20
+  },
+  halfWidth: {
+    width: "40%",
+    float: "left",
+    marginRight: 20,
+  },
+  fullWidth: {
+    width: "100%"
+  },
   workshop: {
     marginBottom: 20
+  },
+  action: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  scholarship: {
+    backgroundColor: color.lightest_gray,
+    padding: 20,
+    borderRadius: 10
+  },
+  partnerContact: {
+    marginBottom: 20
+  },
+  bigButton: {
+    padding: "10px 20px 10px 20px",
+    height: "initial"
+  },
+  clear: {
+    clear: "both"
   }
 };
 
@@ -148,6 +181,7 @@ class RegionalPartnerSearch extends Component {
       }
     ];
 
+    const workshopCollectionStyle = this.props.responsiveSize === "lg" ? styles.halfWidth : styles.fullWidth;
     const appState = partnerInfo && partnerInfo.application_state.state;
     const appsOpenDate = partnerInfo && partnerInfo.application_state.earliest_open_date;
 
@@ -176,16 +210,12 @@ class RegionalPartnerSearch extends Component {
           </div>
         )}
 
-        {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
-          <h3>Code.org Regional Partner for your region:</h3>
-        )}
-
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
           <div>
             <br/>
             <div>We are unable to find this ZIP code.  You can still apply directly:</div>
             <a href={studio("/pd/application/teacher")}>
-              <button>
+              <button style={styles.bigButton}>
                 Start application
               </button>
             </a>
@@ -198,6 +228,7 @@ class RegionalPartnerSearch extends Component {
 
         {this.state.error === WorkshopSearchErrors.no_partner && (
           <div style={styles.noPartner}>
+            <h3>Code.org Regional Partner for your region:</h3>
             <p>We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.</p>
             <p>
@@ -218,7 +249,7 @@ class RegionalPartnerSearch extends Component {
               {' '}
               for other Professional Development options in your area.</p>
             <a href={studio("/pd/application/teacher")}>
-              <button>
+              <button style={styles.bigButton}>
                 Start application
               </button>
             </a>
@@ -227,28 +258,13 @@ class RegionalPartnerSearch extends Component {
 
         {partnerInfo && (
           <div>
-            <div style={styles.bold}>{partnerInfo.name}</div>
-            {partnerInfo.contact_name && (
-              <div>{partnerInfo.contact_name}</div>
-            )}
-            {partnerInfo.contact_email && (
-              <div>{partnerInfo.contact_email}</div>
-            )}
-            {!partnerInfo.contact_email && (
-              <div>Direct any questions to your Regional Partner by
-                {' '}
-                <a href={studio("/pd/regional_partner_contact/new")}>completing this form</a>
-                .
-              </div>
-            )}
-
-            <h3>Workshop information:</h3>
+            <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
             {workshopCollections[0].workshops.length === 0 && workshopCollections[1].workshops.length === 0 && (
               <div>Workshop date and location information coming soon.</div>
             )}
 
             {workshopCollections.map((collection, collectionIndex) => collection.workshops.length > 0 && (
-              <div key={collectionIndex}>
+              <div key={collectionIndex} style={{...styles.workshopCollection, ...workshopCollectionStyle}}>
                 <h4>{collection.heading}</h4>
                 {collection.workshops.map((workshop, index) => (
                   <div key={index} style={styles.workshop}>
@@ -259,16 +275,53 @@ class RegionalPartnerSearch extends Component {
                 ))}
               </div>
             ))}
+            <div style={styles.clear}/>
 
-            {(workshopCollections[0].workshops.length > 0 || workshopCollections[1].workshops.length > 0) && (
-              <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
-            )}
+            <div style={styles.action}>
+              {(workshopCollections[0].workshops.length > 0 || workshopCollections[1].workshops.length > 0) && (
+                <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
+              )}
+
+              {appState === WorkshopApplicationStates.now_closed && (
+                <div>Applications are now closed.</div>
+              )}
+
+              {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
+                <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
+                  <button style={styles.bigButton}>Start application</button>
+                </a>
+              )}
+
+              {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
+                <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={partnerInfo.link_to_partner_application} target="_blank">
+                  <button style={styles.bigButton}>Apply on partner's site</button>
+                </a>
+              )}
+
+              {appState === WorkshopApplicationStates.opening_at && (
+                <h3>Applications will open on {appsOpenDate}.</h3>
+              )}
+
+              {appState === WorkshopApplicationStates.opening_sometime && (
+                <h3>Program information and the application for this region will be available soon!</h3>
+              )}
+
+              {appState !== WorkshopApplicationStates.currently_open && (
+                <a href={studio("/pd/regional_partner_contact/new")}>
+                  <button style={styles.bigButton}>
+                    Notify me when I can apply
+                  </button>
+                </a>
+              )}
+            </div>
 
             <div className="professional_learning_information" id={`id-${partnerInfo.id}`}>
               {partnerInfo.cost_scholarship_information && (
                 <div>
-                  <h3>Cost and scholarship information:</h3>
-                  <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
+                  <h3>Scholarship, discounts, and cost information:</h3>
+                  <div style={styles.scholarship}>
+                    <UnsafeRenderedMarkdown markdown={partnerInfo.cost_scholarship_information}/>
+                  </div>
                 </div>
               )}
 
@@ -280,37 +333,38 @@ class RegionalPartnerSearch extends Component {
               )}
             </div>
 
-            {appState === WorkshopApplicationStates.now_closed && (
-              <div>Applications are now closed.</div>
-            )}
+            <div style={styles.partnerContact}>
+              <h3>Have more questions?</h3>
+              <div>Your Code.org Regional Partner is here to help:</div>
+              <div style={styles.bold}>{partnerInfo.name}</div>
+              {partnerInfo.contact_name && (
+                <div>{partnerInfo.contact_name}</div>
+              )}
+              {partnerInfo.contact_email && (
+                <div>{partnerInfo.contact_email}</div>
+              )}
+              {!partnerInfo.contact_email && (
+                <div>Direct any questions to your Regional Partner by
+                  {' '}
+                  <a href={studio("/pd/regional_partner_contact/new")}>completing this form</a>
+                  .
+                </div>
+              )}
+            </div>
 
+            {/* These two links duplicate the buttons that appear above. */}
             {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
               <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={studio("/pd/application/teacher")}>
-                <button>Start application</button>
+                Start application
               </a>
             )}
 
             {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
               <a className="professional_learning_link" id={`id-${partnerInfo.id}`} href={partnerInfo.link_to_partner_application} target="_blank">
-                <button>Apply on partner's site</button>
+                Apply on partner's site
               </a>
             )}
 
-            {appState === WorkshopApplicationStates.opening_at && (
-              <h3>Applications will open on {appsOpenDate}.</h3>
-            )}
-
-            {appState === WorkshopApplicationStates.opening_sometime && (
-              <h3>Program information and the application for this region will be available soon!</h3>
-            )}
-
-            {appState !== WorkshopApplicationStates.currently_open && (
-              <a href={studio("/pd/regional_partner_contact/new")}>
-                <button>
-                  Notify me when I can apply
-                </button>
-              </a>
-            )}
           </div>
         )}
       </div>
