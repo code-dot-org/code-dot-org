@@ -91,7 +91,12 @@ class WordOrPictureLoginCards extends React.Component {
           <li>{i18n.printLoginCards_step1({joinUrl: "http://code.org/join"})}</li>
           <li>{i18n.printLoginCards_step2({code: section.code})}</li>
           <li>{i18n.printLoginCards_step3()}</li>
-          <li>{i18n.printLoginCards_step4({wordOrPicture: section.loginType})}</li>
+          {section.loginType === SectionLoginType.picture &&
+            <li>{i18n.printLoginCards_step4_secretPicture()}</li>
+          }
+          {section.loginType === SectionLoginType.word &&
+            <li>{i18n.printLoginCards_step4_secretWords()}</li>
+          }
           <li>{i18n.printLoginCards_step5()}</li>
         </ol>
         <p>{i18n.printLoginCards_stepsReset({wordOrPicture: section.loginType})}</p>
@@ -116,6 +121,9 @@ class WordOrPictureLoginCards extends React.Component {
   }
 }
 
+/**
+ * LoginCard component for word and picture logins.
+ */
 class LoginCard extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
@@ -144,12 +152,20 @@ class LoginCard extends React.Component {
           <span style={styles.bold}>{i18n.loginCard_name()}</span>
           {` ${student.name}`}
         </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_secret({wordOrPicture: section.loginType})}</span>
-          <br/>
-          {/* TODO: fix link below */}
-          <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path} style={styles.img}/>
-        </p>
+        {section.loginType === SectionLoginType.picture &&
+          <p style={styles.text}>
+            <span style={styles.bold}>{i18n.loginCard_secretPicture()}</span>
+            <br/>
+            {/* TODO: fix link below */}
+            <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path} style={styles.img}/>
+          </p>
+        }
+        {section.loginType === SectionLoginType.word &&
+          <p style={styles.text}>
+            <span style={styles.bold}>{i18n.loginCard_secretWords()}</span>
+            <span>{` ${student.secret_words}`}</span>
+          </p>
+        }
       </div>
     );
   }
