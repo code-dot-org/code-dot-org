@@ -512,7 +512,7 @@ button {
   background-color: #f7f7f7;
 }
 #stats-carousel .slide-prev,
-#stats-impact-carousel .slide-prev,{
+#stats-impact-carousel .slide-prev{
   left: 0;
 }
 #stats-carousel .slide-next,
