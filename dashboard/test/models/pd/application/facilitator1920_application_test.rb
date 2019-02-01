@@ -413,5 +413,37 @@ module Pd::Application
         assert_equal workshop, application.workshop
       end
     end
+
+    test 'enroll_user creates enrollment' do
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
+
+      assert_nil application.auto_assigned_fit_enrollment_id
+      assert_creates(Pd::Enrollment) do
+        application.enroll_user
+      end
+
+      assert application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'enroll_user for a different workshop deletes previous enrollment' do
+      original_fit_workshop = create :pd_workshop, :fit
+      new_fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
+
+      application.enroll_user
+      original_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal original_fit_workshop.id, original_enrollment.pd_workshop_id
+
+      application.fit_workshop_id = new_fit_workshop.id
+
+      # actually creates a new enrollment and destroys the old one,
+      # and this method checks that the total enrollment count does not change
+      refute_creates_or_destroys(Pd::Enrollment) do
+        application.enroll_user
+      end
+      new_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal new_fit_workshop.id, new_enrollment.pd_workshop_id
+    end
   end
 end
