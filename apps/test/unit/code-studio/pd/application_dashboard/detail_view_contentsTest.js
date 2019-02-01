@@ -226,5 +226,28 @@ describe("DetailViewContents", () => {
         expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
       });
     });
+
+    describe('Scholarship Teacher? row', () => {
+      it('on teacher applications', () => {
+        const detailView = mountDetailView('Teacher');
+        const lastRow = detailView.find('tr').filterWhere(row => row.text().includes('Scholarship Teacher?'));
+        const dropdown = lastRow.find('Select');
+
+        // Dropdown is disabled
+        expect(dropdown).to.have.prop('disabled', true);
+
+        // Click "Edit"
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // Dropdown is enabled
+        expect(dropdown).to.have.prop('disabled', false);
+
+        // Click "Save"
+        detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+        // Dropdown is disabled
+        expect(dropdown).to.have.prop('disabled', true);
+      });
+    });
   }
 });

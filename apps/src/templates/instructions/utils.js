@@ -43,7 +43,7 @@ export function scrollTo(element, scrollTop, animate=400) {
  * @param {boolean} withPadding - whether or not to include padding
  * @see convertXmlToBlockly
  */
-function shrinkBlockSpaceContainer(blockSpace, withPadding) {
+export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
   const container = blockSpace.blockSpaceEditor.getSVGElement().parentNode;
 
   // calculate the minimum required size for the container
