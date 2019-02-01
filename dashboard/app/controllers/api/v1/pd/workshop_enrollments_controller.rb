@@ -97,7 +97,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       role: params[:role],
-      grades_teaching: params[:grades_teaching]
+      grades_teaching: params[:grades_teaching],
+      attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
+      csf_course_experience: params[:csf_course_experience],
+      csf_courses_planned: params[:csf_courses_planned]
     }
   end
 
