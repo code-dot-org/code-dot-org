@@ -40,18 +40,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
   end
 
-  after_create :send_teachercon_confirmation_email
-  def send_teachercon_confirmation_email
-    if regional_partner_id?
-      Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
-    elsif pd_application_id?
-      return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
-      Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
-    else
-      Pd::Teachercon1819RegistrationMailer.lead_facilitator(self).deliver_now
-    end
-  end
-
   def self.options
     {
       dietary_needs: [

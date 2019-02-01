@@ -1414,27 +1414,44 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      aalab_clickedOn:
+        text: "[CONDITION][0] [SPRITE][1] clicked"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_createNewSpriteAdvanced:
+        text: "make a new sprite called [NAME][0] \n with costume [COSTUME][1] \n at [LOCATION][2]"
       aalab_createPropertyGroup:
         text: |-
           make a new sprite group called [VAR][0]
            of all [COSTUME][1] sprites
       aalab_createSpriteGroup:
         text: make a new sprite group called [VAR][0]
+      aalab_getSpritesByName:
+        text: any sprite named [NAME][0]
+      aalab_getThisSprite:
+        text: "[CHOICE][0] sprite"
+        options:
+          CHOICE:
+            '"this"': this
+            '"other"': other
+      aalab_nameStringSay:
+        text: "[NAMESTRING][0] says [MESSAGE][1]"
       aalab_prompt:
         text: ask question [MESSAGE][0]
+      aalab_removeAdvanced:
+        text: removeAdvanced [THIS][0]
+      aalab_speakerSaysConsole:
+        text: "[SPRITE][0] says [MESSAGE][1]"
       aalab_spriteSay:
         text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
-      aalab_spritesWhere:
-        text: sprites where [PROPERTY][0] is [VALUE][1]
+      aalab_whenTouching:
+        text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2]"
         options:
-          PROPERTY:
-            '"scale"': size
-            '"x"': x position
-            '"y"': y position
-            '"costume"': costume
-            '"direction"': movement direction
-            '"rotation"': rotation or direction
-            '"tint"': tint
+          CONDITION:
+            '"when"': when
+            '"while"': while
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
