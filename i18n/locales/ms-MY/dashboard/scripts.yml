@@ -423,3 +423,7 @@ ms:
           stages:
             'null':
               name: 'null'
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: Lebah Ejaan

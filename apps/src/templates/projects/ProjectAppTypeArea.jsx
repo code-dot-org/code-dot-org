@@ -109,6 +109,7 @@ class ProjectAppTypeArea extends React.Component {
       <ProjectCardRow
         projects={filteredList}
         galleryType={this.props.galleryType}
+        isDetailView ={this.props.isDetailView}
       />
     );
   }

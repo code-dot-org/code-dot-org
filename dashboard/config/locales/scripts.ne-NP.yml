@@ -1366,3 +1366,27 @@ ne:
               name: 'Real-life Algorithms: Paper Planes'
             Binary Bracelets:
               name: Binary Bracelets
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+            Going Places Safely:
+              name: Going Places Safely
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Move It, Move It
+            Your Digital Footprint:
+              name: Your Digital Footprint
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Move It, Move It
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Spelling Bee:
+              name: Spelling Bee
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'

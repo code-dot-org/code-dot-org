@@ -1276,3 +1276,27 @@ ca:
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
             Binary Bracelets:
               name: Polseres binàries
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmes reals: Planta una llavor'
+            Going Places Safely:
+              name: Anant a llocs segurs
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+            Your Digital Footprint:
+              name: La vostra empremta digital
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+            Your Digital Footprint:
+              name: La vostra empremta digital
+            Spelling Bee:
+              name: Abella ortogràfica
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmes reals: Planta una llavor'

@@ -2000,3 +2000,32 @@ bs:
               name: 'Stvarni algoritmi: Papirni Planovi'
             Binary Bracelets:
               name: Binarne narukvice
+        coursea-2019:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            'Programming: Happy Maps':
+              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
+            Going Places Safely:
+              name: Sigurna Putovanja
+        courseb-2019:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+        pre-express-2019:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+            Spelling Bee:
+              name: Spelovanje
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'

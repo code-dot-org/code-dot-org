@@ -479,6 +479,8 @@ pt-BR:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
           não precisa se preocupar com os favos de mel.
+      Ryan_Demo_callout:
+        dance_callout_02: Adicione este bloco ao seu programa!
       SG U3L08 how to add comments_callout:
         comment_highlight: Arraste um bloco de comentário daqui para seu código
       SG U3L2_Turtle3by3Grid_callout:
@@ -587,10 +589,16 @@ pt-BR:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Este número te diz quantos destes blocos você pode
           usar neste quebra-cabeças.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Este número te diz quantos destes blocos você pode
+          usar neste quebra-cabeças.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
+          bloco pode ser usado na resposta final.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
           bloco pode ser usado na resposta final.
       courseA_artist_loops7_forVideo_callout:
@@ -602,16 +610,25 @@ pt-BR:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma
           linha sempre que precisar?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma
+          linha sempre que precisar?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
+          se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
           pode usar neste quebra-cabeças.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
+          pode usar neste quebra-cabeças.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Este número te diz quantos destes blocos você
           pode usar neste quebra-cabeças.
       courseA_collector_preLoops1_callout:
@@ -634,6 +651,9 @@ pt-BR:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
+          blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará
           blocos extras para completar seus quebra-cabeças.
@@ -647,6 +667,8 @@ pt-BR:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use o botão de passo para ir passo-a-passo através
@@ -664,9 +686,13 @@ pt-BR:
         courseA_playlab_events4_callout1: Este é um texto explicativo
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Este é um texto explicativo
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Este é um texto explicativo
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Clique aqui para mudar a direção da seta.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Clique aqui para mudar a direção da seta.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Clique aqui para mudar a direção da seta.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
@@ -674,13 +700,22 @@ pt-BR:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
           que significa que você não sabe o que você vai obter até que você o ouça!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Isto permite que você escolha um som "aleatório",
+          que significa que você não sabe o que você vai obter até que você o ouça!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para rodar o programa.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
           você vai usá-lo?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
+          você vai usá-lo?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como
           você vai usá-lo?
       courseB_artist_loops5_callout:
@@ -692,9 +727,14 @@ pt-BR:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
           se preocupe, mostraremos como usá-los mais tarde no palco.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não
+          se preocupe, mostraremos como usá-los mais tarde no palco.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use o botão de passo para ir passo-a-passo através
@@ -712,6 +752,9 @@ pt-BR:
         courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
           a direção.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
+          a direção.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Use a seta verde no campo de seleção para mudar
           a direção.
       courseC19_playLab_EOC3_callout:
@@ -1421,6 +1464,9 @@ pt-BR:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Assim é como se insere o valor da variável.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
+          para iniciar o programa.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para iniciar o programa.
       coursef_maze_ramp3_callout:

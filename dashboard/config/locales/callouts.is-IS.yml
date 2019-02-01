@@ -547,10 +547,16 @@ is:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Þessi tala segir þér hve marga af þessum kubbum þú
           mátt nota í þessari þraut.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Þessi tala segir þér hve marga af þessum kubbum þú
+          mátt nota í þessari þraut.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Þessi tala táknar að það má bara nota einn svona
           kubb í lokasvarinu.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Þessi tala táknar að það má bara nota einn svona
+          kubb í lokasvarinu.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Þessi tala táknar að það má bara nota einn svona
           kubb í lokasvarinu.
       courseA_artist_loops7_forVideo_callout:
@@ -562,16 +568,25 @@ is:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Veistu að þú getur teiknað aftur yfir línu hvenær
           sem þú þarft?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Veistu að þú getur teiknað aftur yfir línu hvenær
+          sem þú þarft?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
           Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
           Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
+          Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum
           þú mátt nota í þessari þraut.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum
+          þú mátt nota í þessari þraut.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum
           þú mátt nota í þessari þraut.
       courseA_collector_preLoops1_callout:
@@ -594,6 +609,9 @@ is:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
           kubba til að klára þrautirnar.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
+          kubba til að klára þrautirnar.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
           kubba til að klára þrautirnar.
@@ -607,6 +625,8 @@ is:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Smelltu á ljósperuna ef þú þarft vísbendingu!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Smelltu á ljósperuna ef þú þarft vísbendingu!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Smelltu á ljósperuna ef þú þarft vísbendingu!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Notaðu skrefahnappinn til að keyra forritið skref
@@ -624,9 +644,13 @@ is:
         courseA_playlab_events4_callout1: Þetta er skýring
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Þetta er skýring
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Þetta er skýring
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Smelltu hér til að breyta stefnu atburðarörvarinnar.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Smelltu hér til að breyta stefnu atburðarörvarinnar.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Smelltu hér til að breyta stefnu atburðarörvarinnar.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Með þessu getur þú valið "eitthvað" hljóð, sem
@@ -634,13 +658,22 @@ is:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Með þessu getur þú valið "eitthvað" hljóð, sem
           þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Með þessu getur þú valið "eitthvað" hljóð, sem
+          þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á
+          "Keyra" til að ræsa forritið.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á
           "Keyra" til að ræsa forritið.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig
           ætlar þú að nota hann?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig
+          ætlar þú að nota hann?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig
           ætlar þú að nota hann?
       courseB_artist_loops5_callout:
@@ -652,9 +685,14 @@ is:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
           Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
+          Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Smelltu á ljósperuna ef þú þarft vísbendingu!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Smelltu á ljósperuna ef þú þarft vísbendingu!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Smelltu á ljósperuna ef þú þarft vísbendingu!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Notaðu skrefahnappinn til að keyra forritið skref
@@ -671,6 +709,8 @@ is:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Notaðu græna fellilistann til að skipta um stefnu.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Notaðu græna fellilistann til að skipta um stefnu.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Notaðu græna fellilistann til að skipta um stefnu.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Komdu leikmanninum til flaggsins til að komast

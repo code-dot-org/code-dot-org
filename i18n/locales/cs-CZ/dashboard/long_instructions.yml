@@ -417,6 +417,13 @@ cs:
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2018: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
+      Ryan_Demo: |-
+        Roztančeme tohoto losa!
+
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+
+
+        **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Testing Quantum Farmer: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       course2_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech **10** kousků pokladu?

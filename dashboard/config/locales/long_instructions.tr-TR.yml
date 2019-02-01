@@ -6187,6 +6187,13 @@ tr:
         Şimdi zaman özelleştirme için. \r \r Dikkatew al:\r \r * daha fazla oda ekleme
         * kullanıcı odalarla etkileşim kurabilir \r * Odalara için daha fazla stil
         ekle"
+      Ryan_Demo: |-
+        Bu geyik dansını alalım!
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> bloğunu çalışma alanına sürükleyin. <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> bloğunun altına bağlayın. Dansçınız dördüncü ölçüden sonra yeni bir harekete başlayacaktır.
+
+
+        **Ölçüler** müziğin içindeki zamanı hesaplamak için kullanılır. Bu eğitimde bir ölçü dört vuruş uzunluğundadır.
       SG U3L01 Assessment1: "Bugünün etkinliği için tasarladığınız algoritmayı düşünün.
         Talimatlarınızı yorumlamanın birden çok yolunun olabileceği iki örneği belirleyin
         ve açıklıklarını geliştirmek için yapılabilecek iyileştirmeler önerin.\r\n"
@@ -6377,6 +6384,10 @@ tr:
         elipsin arkasına turuncu bir elips oluşturmak için kod yazın.\r\n* Yeşil elips
         tamamen turuncu elipsin içinde olduğu müddetçe, turuncu elipsin tam boyutu
         için endişelenme."
+      allthethings_ttscsf contained: "Şimdi çiftçi maruldan daha fazla şey büyüyor!
+        \ \r \r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer
+        marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \r \r
+        \r \r\n"
       artistLoopsK2: "<div style=\"color: #7665a0; font-size:\n1.6em; line-height:
         1.4em;\" >\r Tekrarla bloğu kullanarak bu satırı 5 defa çiz!<br/><br/>\r </div>\r
         \r <img src=\"https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif\"\nwidth=\"300\"/>\r\n"
@@ -6599,18 +6610,28 @@ tr:
       courseA_artist_loops10_2018: "<div style=\"color: #7665a0;\nfont-size: 1.6em;
         line-height: 1.4em;\" >\rAraziye dönüş zamanı. Taş dizmeme yardım et!<br/><br/>\r
         </div>\r \r <img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\"\nwidth=\"300\"/>\r"
+      courseA_artist_loops10_2019: "<div style=\"color: #7665a0;\nfont-size: 1.6em;
+        line-height: 1.4em;\" >\rAraziye dönüş zamanı. Taş dizmeme yardım et!<br/><br/>\r
+        </div>\r \r <img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\"\nwidth=\"300\"/>\r"
       courseA_artist_loops11: "<div style=\"color: #7665a0;\nfont-size: 1.6em; line-height:
         1.4em;\" >\rMerdivenleri yapmama yardım etki geminin gittiğini izleyebileyim.<br/>\r
         </div>\r \r <img src=\"https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif\""
       courseA_artist_loops11_2018: "<div style=\"color: #7665a0;\nfont-size: 1.6em;
         line-height: 1.4em;\" >\rMerdivenleri yapmama yardım etki geminin gittiğini
         izleyebileyim.<br/>\r </div>\r \r <img src=\"https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif\""
+      courseA_artist_loops11_2019: "<div style=\"color: #7665a0;\nfont-size: 1.6em;
+        line-height: 1.4em;\" >\rMerdivenleri yapmama yardım etki geminin gittiğini
+        izleyebileyim.<br/>\r </div>\r \r <img src=\"https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif\""
       courseA_artist_loops12: "Sanatçı uzaklarda eğlenceli bir şeyler gördü. Onun
         gördüğü şey hakkında ne düşündüğünü çiz.\r\n\r\n___\r\n###Fikirler\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseA_artist_loops12_2018: "Sanatçı uzaklarda eğlenceli bir şeyler gördü.
         Onun gördüğü şey hakkında ne düşündüğünü çiz.\r\n\r\n___\r\n###Fikirler\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseA_artist_loops12_2019: "Sanatçı uzaklarda eğlenceli bir şeyler gördü.
+        Onun gördüğü şey hakkında ne düşündüğünü çiz.\r\n\r\n___\r\n###Fikirler\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseA_artist_loops2: "Bu çizgiyi iki kez ileri. \r \r Sanatçı yardım! [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
       courseA_artist_loops2_2018: "Bu çizgiyi iki kez ileri. \r \r Sanatçı yardım!
+        [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
+      courseA_artist_loops2_2019: "Bu çizgiyi iki kez ileri. \r \r Sanatçı yardım!
         [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
       courseA_artist_loops4: "Şimdi, beş kez bu çizgiyi çizmek için bir tane <xml><block
         type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\" config=\"2-6\">5</title></block></xml>
@@ -6618,28 +6639,44 @@ tr:
       courseA_artist_loops4_2018: "Şimdi, beş kez bu çizgiyi çizmek için bir tane
         <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
         config=\"2-6\">5</title></block></xml> döngüsünü kullan!\r\n\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
+      courseA_artist_loops4_2019: "Şimdi, beş kez bu çizgiyi çizmek için bir tane
+        <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
+        config=\"2-6\">5</title></block></xml> döngüsünü kullan!\r\n\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
       courseA_artist_loops5: "##7 adım uzunluğunda bir çizgi çiz.\nBu bizim ufuk çizgimiz
         olacak.\r\n\r\n![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
       courseA_artist_loops5_2018: "##7 adım uzunluğunda bir çizgi çiz.\nBu bizim ufuk
         çizgimiz olacak.\r\n\r\n![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
+      courseA_artist_loops5_2019: "##7 adım uzunluğunda bir çizgi çiz.\nBu bizim ufuk
+        çizgimiz olacak.\r\n\r\n![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
       courseA_artist_loops6: "##Geride güzel bir tepe oluşturalım.\r\n\r\n![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
       courseA_artist_loops6_2018: "##Geride güzel bir tepe oluşturalım.\r\n\r\n![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
+      courseA_artist_loops6_2019: "##Geride güzel bir tepe oluşturalım.\r\n\r\n![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
       courseA_artist_loops7: "##Suya dalgalar eklemek için 'tekrarla' döngüsünü kullan.\r\n\r\n![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
       courseA_artist_loops7_2018: "##Suya dalgalar eklemek için 'tekrarla' döngüsünü
+        kullan.\r\n\r\n![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
+      courseA_artist_loops7_2019: "##Suya dalgalar eklemek için 'tekrarla' döngüsünü
         kullan.\r\n\r\n![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
       courseA_artist_loops7_forVideo: "##Suya dalgalar eklemek için 'tekrarla' döngüsünü
         kullan.\r\n\r\n![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
       courseA_artist_loops8: "##Tekneye çıkmak için bir merdivene ihtiyacımız var.\r\n\r\n![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
       courseA_artist_loops8_2018: "##Tekneye çıkmak için bir merdivene ihtiyacımız
         var.\r\n\r\n![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
+      courseA_artist_loops8_2019: "##Tekneye çıkmak için bir merdivene ihtiyacımız
+        var.\r\n\r\n![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
       courseA_artist_loops9: "##**Meydan Okuma:** Rıhtıma inen merdivenler kırıldı.
         Onları tamir etmem için bana yardım et.\r\n\r\n![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
       courseA_artist_loops9_2018: "##**Meydan Okuma:** Rıhtıma inen merdivenler kırıldı.
+        Onları tamir etmem için bana yardım et.\r\n\r\n![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
+      courseA_artist_loops9_2019: "##**Meydan Okuma:** Rıhtıma inen merdivenler kırıldı.
         Onları tamir etmem için bana yardım et.\r\n\r\n![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
       courseA_artist_loops_challenge1: "Bir satırda bir çok çizgi çizmek için bir
         döngü kullanabilirsin .\r\n\r\nBir ev çizebilir misin? İstediğin şekilde görünmesini
         sağla!  Tekrar eden desenleri bulmaya çalış!\r\n\r\nİşte bazı fikirler:\r\n\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
       courseA_artist_loops_challenge1_2018: "Bir satırda bir çok çizgi çizmek için
+        bir döngü kullanabilirsin .\r\n\r\nBir ev çizebilir misin? İstediğin şekilde
+        görünmesini sağla!  Tekrar eden desenleri bulmaya çalış!\r\n\r\nİşte bazı
+        fikirler:\r\n\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
+      courseA_artist_loops_challenge1_2019: "Bir satırda bir çok çizgi çizmek için
         bir döngü kullanabilirsin .\r\n\r\nBir ev çizebilir misin? İstediğin şekilde
         görünmesini sağla!  Tekrar eden desenleri bulmaya çalış!\r\n\r\nİşte bazı
         fikirler:\r\n\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
@@ -6653,7 +6690,13 @@ tr:
         almak zorunda değilsin.)"
       courseA_collector_loops12_2018: "Buldum! Alabildiğin kadar çok hazine al! \r\n(Tamamını
         almak zorunda değilsin.)"
+      courseA_collector_loops12_2019: "Buldum! Alabildiğin kadar çok hazine al! \r\n(Tamamını
+        almak zorunda değilsin.)"
       courseA_collector_loops1_2018: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
+        ettir ve alabildiğin kadar hazine aldır.\r\n\r\nÇalışma alanına blokları sürükle
+        ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için en az
+        bir tane nesne al."
+      courseA_collector_loops1_2019: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
         ettir ve alabildiğin kadar hazine aldır.\r\n\r\nÇalışma alanına blokları sürükle
         ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için en az
         bir tane nesne al."
@@ -6663,13 +6706,21 @@ tr:
       courseA_collector_loops2_2018: "Laurel i hazine taşıyın ve sonra <xml><block
         type=\"collector_collect\"/></xml> bloğu kullanarak hazineyi toplayın \r \r
         \nSeviyeyi geçmek için 3 yığınıda alın."
+      courseA_collector_loops2_2019: "Laurel i hazine taşıyın ve sonra <xml><block
+        type=\"collector_collect\"/></xml> bloğu kullanarak hazineyi toplayın \r \r
+        \nSeviyeyi geçmek için 3 yığınıda alın."
       courseA_collector_loops3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını
         nasıl toplayabilir?
       courseA_collector_loops3_2018: Laurel '[E-->]' sadece bir blok kullanarak beş
         yığını nasıl toplayabilir?
+      courseA_collector_loops3_2019: Laurel '[E-->]' sadece bir blok kullanarak beş
+        yığını nasıl toplayabilir?
       courseA_collector_loops_challenge1: '*"Bazı hataları bulmama yardım eder misin?
         Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan emin değilim."*'
       courseA_collector_loops_challenge1_2018: '*"Bazı hataları bulmama yardım eder
+        misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan
+        emin değilim."*'
+      courseA_collector_loops_challenge1_2019: '*"Bazı hataları bulmama yardım eder
         misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan
         emin değilim."*'
       courseA_collector_preLoops1: "Bu maceracı Laurel!\r\n\r\nOnun hazineye doğru
@@ -6695,11 +6746,17 @@ tr:
       courseA_maze_seq11_2018: "Daha kısa bir bulmaca Zamanı!  Önce bir yana sonra
         öbür yöne giderek kuşu domuza ulaştır <img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"
         width=\"200px\"/> \r\n"
+      courseA_maze_seq11_2019: "Daha kısa bir bulmaca Zamanı!  Önce bir yana sonra
+        öbür yöne giderek kuşu domuza ulaştır <img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"
+        width=\"200px\"/> \r\n"
       courseA_maze_seq12: "O domuzu yakala! \r \r <img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"
         width=\"200px\"/> \r"
       courseA_maze_seq12_2018: "O domuzu yakala! \r \r <img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"
         width=\"200px\"/> \r\n"
+      courseA_maze_seq12_2019: "O domuzu yakala! \r \r <img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"
+        width=\"200px\"/> \r\n"
       courseA_maze_seq1_2018: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
+      courseA_maze_seq1_2019: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
       courseA_maze_seq3: "*\"Kodu düzelt ve domuza ulaştır!\"*\r \r <img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
       courseA_maze_seq3_2018: "*\"Kodu düzelt ve domuza ulaştır!\"*\r \r <img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
       courseA_maze_seq4: "*\"Bir şeyler doğru değil.\"* \r \r Blok kaldır ve kuşu
@@ -6710,10 +6767,12 @@ tr:
       courseA_maze_seq6: "Bir yöne ilerle sonra öteki yöne ve kuşu domuza ulaştır!\r
         \r <img src=\"https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq6_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
+      courseA_maze_seq6_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq7: "Eksik bloğu bul be kuşu domuza ulaştır!\r \r <img src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq7_2018: "Eksik bloğu bul be kuşu domuza ulaştır!\r \r <img src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq8: "Bu seviyeyi çöz ve kuşu domuza ulaştır!\r \r <img src=\"https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq8_2018: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
+      courseA_maze_seq8_2019: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq9: "**Meydan okuma:** Blok ekleyerek kodu düzelt ve kuşu domuza
         ulaştır!\r \r <img src=\"https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq9_2018: "**Meydan okuma:** Blok ekleyerek kodu düzelt ve kuşu
@@ -6724,6 +6783,9 @@ tr:
       courseA_maze_seq_challenge1_2018: |-
         Hatayı ayıkla.
         Fazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!
+      courseA_maze_seq_challenge1_2019: |-
+        Hatayı ayıkla.
+        Fazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!
       courseA_playLab_events3: "Köpek Jorge u hareket ettirmek için  ! [] (https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
         bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
         olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa
@@ -6732,17 +6794,27 @@ tr:
         bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
         olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa
         ulaştır!"
+      courseA_playLab_events3_2019: "Köpek Jorge u hareket ettirmek için  ! [] (https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
+        bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
+        olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa
+        ulaştır!"
       courseA_playLab_events4: Şimdi, sağ ok butonuna tıklandığında Jorge' u sağa
         hareket ettir.
       courseA_playLab_events4_2018: Şimdi, sağ ok butonuna tıklandığında Jorge' u
+        sağa hareket ettir.
+      courseA_playLab_events4_2019: Şimdi, sağ ok butonuna tıklandığında Jorge' u
         sağa hareket ettir.
       courseA_playLab_events5: Yukarı ve aşağı ok tuşlarına basıldığında Jorge' u
         yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playLab_events5_2018: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
         u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
+      courseA_playLab_events5_2019: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
+        u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesin. Kim en hızlı koşar
       courseA_playlab_events_challenge1_2018: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
+        aşağı ilerlesin. Kim en hızlı koşar
+      courseA_playlab_events_challenge1_2019: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesin. Kim en hızlı koşar
       courseA_playlab_events_challenge1a: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesin. Kim en hızlı koşar
@@ -6752,6 +6824,11 @@ tr:
         bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
         şeyler sunacak!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challenge2_2018: "Hadi bir parti verelim!\nArkadaşlarımın
+        her birine, onlara tıkladığında ya da dokunduğunda yapabilecekleri bir şeyler
+        ver. Hayvanlar nasıl ses çıkarır? Ya da neler gerçekleşir?\r\n\r\n\r\n\r\nBu
+        bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
+        şeyler sunacak!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
+      courseA_playlab_events_challenge2_2019: "Hadi bir parti verelim!\nArkadaşlarımın
         her birine, onlara tıkladığında ya da dokunduğunda yapabilecekleri bir şeyler
         ver. Hayvanlar nasıl ses çıkarır? Ya da neler gerçekleşir?\r\n\r\n\r\n\r\nBu
         bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
@@ -6770,19 +6847,32 @@ tr:
         Big City</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Birthday Cake</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n "
+      courseB_artist_loops10_2019: "Öğrendiklerini kullan ve resmi çiz. Sizce sanatçı
+        eve gittiğinde ne gördü.\r\n\r\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
+        Singing Snail</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
+        Big City</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
+        Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
+        Birthday Cake</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n "
       courseB_artist_loops6: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya
         tırmanıp nereye gittiğini görebilir misin?
       courseB_artist_loops6_2018: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya
         tırmanıp nereye gittiğini görebilir misin?
+      courseB_artist_loops6_2019: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya
+        tırmanıp nereye gittiğini görebilir misin?
       courseB_artist_loops7: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops7_2018: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
+      courseB_artist_loops7_2019: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops_challenge1: Zar atma zamanı! Çizmek için yardımcı olabilir
         misin?
       courseB_artist_loops_challenge1_2018: Zar atma zamanı! Çizmek için yardımcı
         olabilir misin?
+      courseB_artist_loops_challenge1_2019: Zar atma zamanı! Çizmek için yardımcı
+        olabilir misin?
       courseB_artist_loops_challenge2: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
         Üst üste 3 alabilir miyim?
       courseB_artist_loops_challenge2_2018: Bir oyun oynayalım! Çizebildiğin kadar
+        X çiz! Üst üste 3 alabilir miyim?
+      courseB_artist_loops_challenge2_2019: Bir oyun oynayalım! Çizebildiğin kadar
         X çiz! Üst üste 3 alabilir miyim?
       courseB_collector_loops1: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
         ettir ve alabildiğin kadar hazine aldır.\r\n\r\nÇalışma alanına blokları sürükle
@@ -6792,21 +6882,31 @@ tr:
         ettir ve alabildiğin kadar hazine aldır.\r\n\r\nÇalışma alanına blokları sürükle
         ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için en az
         bir tane nesne al."
+      courseB_collector_loops1_2019: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
+        ettir ve alabildiğin kadar hazine aldır.\r\n\r\nÇalışma alanına blokları sürükle
+        ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için en az
+        bir tane nesne al."
       courseB_collector_loops2: "Laurel i hazine taşıyın ve sonra <xml><block type=\"collector_collect\"/></xml>
         bloğu kullanarak hazineyi toplayın \r \r \nSeviyeyi geçmek için 4 yığınıda
         alın."
       courseB_collector_loops2_2018: "Laurel i hazine taşıyın ve sonra <xml><block
         type=\"collector_collect\"/></xml> bloğu kullanarak hazineyi toplayın \r \r
         \nSeviyeyi geçmek için 4 yığınıda alın."
+      courseB_collector_loops2_2019: "Laurel i hazine taşıyın ve sonra <xml><block
+        type=\"collector_collect\"/></xml> bloğu kullanarak hazineyi toplayın \r \r
+        \nSeviyeyi geçmek için 4 yığınıda alın."
       courseB_collector_loops3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını
         nasıl toplayabilir?
       courseB_collector_loops3_2018: Laurel '[E-->]' sadece bir blok kullanarak beş
+        yığını nasıl toplayabilir?
+      courseB_collector_loops3_2019: Laurel '[E-->]' sadece bir blok kullanarak beş
         yığını nasıl toplayabilir?
       courseB_collector_loops3_predict1: Laurel '[E-->]' sadece bir blok kullanarak
         beş yığını nasıl toplayabilir?
       courseB_collector_prog3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını
         nasıl toplayabilir?
       courseB_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseB_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_iceage_loops11_forVideo: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_maze_seq3: Beni domuza götürmek için kodu değiştir
       courseB_maze_seq9: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza eriştirin.'
@@ -6816,9 +6916,13 @@ tr:
         bitirmeden bir yol bulabilir misin?
       courseB_maze_seq_challenge1_2018: Her yönde yalnızca 4 kez ilerleyebilirsin.
         Blokları bitirmeden bir yol bulabilir misin?
+      courseB_maze_seq_challenge1_2019: Her yönde yalnızca 4 kez ilerleyebilirsin.
+        Blokları bitirmeden bir yol bulabilir misin?
       courseB_playLab_events1: "Bu oyuna \"Play Lab\" denir.  \r\n\r\nHer bloğun ne
         yaptığını anlamaya çalışın."
       courseB_playLab_events1_2018: "Bu oyuna \"Play Lab\" denir.  \r\n\r\nHer bloğun
+        ne yaptığını anlamaya çalışın."
+      courseB_playLab_events1_2019: "Bu oyuna \"Play Lab\" denir.  \r\n\r\nHer bloğun
         ne yaptığını anlamaya çalışın."
       courseB_playlab_events_challenge1: Bu oyun eğlenceli hale getirmek için şovalye
         dragona geldiğinde yok olmasını sağlayın! Daha gerçekçi olmasını istiyorsan
@@ -6826,10 +6930,17 @@ tr:
       courseB_playlab_events_challenge1_2018: Bu oyun eğlenceli hale getirmek için
         şovalye dragona geldiğinde yok olmasını sağlayın! Daha gerçekçi olmasını istiyorsan
         çarptığında ses çal.
+      courseB_playlab_events_challenge1_2019: Bu oyun eğlenceli hale getirmek için
+        şovalye dragona geldiğinde yok olmasını sağlayın! Daha gerçekçi olmasını istiyorsan
+        çarptığında ses çal.
       courseB_playlab_events_challenge2: "Haydi, onlara tıklandığında hayvanları kaybedelim.
         Şimdi domuz ile oynamayı dene sonra diğer hayvanların eğlenceye katılmasına
         yardım et.\r\nHayvan Etiketi oyunu oluşturmak için sesler ve puanlar da ekleyebilirsin.!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_playlab_events_challenge2_2018: "Haydi, onlara tıklandığında hayvanları
+        kaybedelim. Şimdi domuz ile oynamayı dene sonra diğer hayvanların eğlenceye
+        katılmasına yardım et.\r\nHayvan Etiketi oyunu oluşturmak için sesler ve puanlar
+        da ekleyebilirsin.!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseB_playlab_events_challenge2_2019: "Haydi, onlara tıklandığında hayvanları
         kaybedelim. Şimdi domuz ile oynamayı dene sonra diğer hayvanların eğlenceye
         katılmasına yardım et.\r\nHayvan Etiketi oyunu oluşturmak için sesler ve puanlar
         da ekleyebilirsin.!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
@@ -6842,13 +6953,22 @@ tr:
       courseB_starWars_prog10_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hepsini alabilir misin?"_
+      courseB_starWars_prog10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Hepsini alabilir misin?"_
       courseB_starWars_prog11: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Devam et!"_
       courseB_starWars_prog11_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Devam et!"_
+      courseB_starWars_prog11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Devam et!"_
       courseB_starWars_prog1_2018: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)\n\r\nBB-8
+        yanmakta olan hurda metalleri topluyor. Hepsini toplayabilmesi için ona yardım
+        et!\r\n\r\nDuvarlara ve sandıklara dikkat et! \r\n\r"
+      courseB_starWars_prog1_2019: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)\n\r\nBB-8
         yanmakta olan hurda metalleri topluyor. Hepsini toplayabilmesi için ona yardım
         et!\r\n\r\nDuvarlara ve sandıklara dikkat et! \r\n\r"
       courseB_starWars_prog2: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
@@ -6857,10 +6977,16 @@ tr:
       courseB_starWars_prog2_2018: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
         \ Şimdi, BB-8' in parlayan hurda metalin **tamamını** toplamasına yardım et!
         \r\n\r\nKasalara ve duvarlara dikkat et!  \r\n\r\n"
+      courseB_starWars_prog2_2019: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        \ Şimdi, BB-8' in parlayan hurda metalin **tamamını** toplamasına yardım et!
+        \r\n\r\nKasalara ve duvarlara dikkat et!  \r\n\r\n"
       courseB_starWars_prog3: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Devam et, BB-8!"_
       courseB_starWars_prog3_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Devam et, BB-8!"_
+      courseB_starWars_prog3_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Devam et, BB-8!"_
       courseB_starWars_prog4: |-
@@ -6869,10 +6995,16 @@ tr:
       courseB_starWars_prog4_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Al onu, BB-8!"_
+      courseB_starWars_prog4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Al onu, BB-8!"_
       courseB_starWars_prog5: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hepsini alabilir misin?"_
       courseB_starWars_prog5_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Hepsini alabilir misin?"_
+      courseB_starWars_prog5_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hepsini alabilir misin?"_
       courseB_starWars_prog6: |-
@@ -6881,20 +7013,31 @@ tr:
       courseB_starWars_prog6_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bunu yapabilirsin!"_
+      courseB_starWars_prog6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Bunu yapabilirsin!"_
       courseB_starWars_prog7: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Git ve onu al!"_
       courseB_starWars_prog7_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Git ve onu al!"_
+      courseB_starWars_prog7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Git ve onu al!"_
       courseB_starWars_prog8: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\r\n\r\n**Meydan Okuma**: Tüm hurda metali topla."
       courseB_starWars_prog8_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
+        et, BB-8.\"_\r\n\r\n**Meydan Okuma**: Tüm hurda metali topla."
+      courseB_starWars_prog8_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\r\n\r\n**Meydan Okuma**: Tüm hurda metali topla."
       courseB_starWars_prog9: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bunu yapabilirsin!"_
       courseB_starWars_prog9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Bunu yapabilirsin!"_
+      courseB_starWars_prog9_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bunu yapabilirsin!"_
       courseC19_playLab_EOC1: "Ne kadar öğrendiğin hayret verici! Adım adım bir oyun

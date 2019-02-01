@@ -2147,6 +2147,7 @@ cs:
         ano, můžeš získat nektar.
       Ryan Test Locked Blocks: Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí
         Kočky 400 pixelů a pak dolů 400 pixelů.
+      Ryan_Demo: Přiměj losa začít po 4 taktech nový pohyb!
       SG U3L07 - introSquare: Použijte smyčku k nakreslení čtverce. Pak přidejte další
         smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím
         zobrazíte plné pokyny)
@@ -2420,19 +2421,25 @@ cs:
         něčím naprosto jiným)
       courseA_artist_loops7: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_2018: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_artist_loops7_2019: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_forVideo: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_collector_loops_challenge2: 'Získejte všechen poklad! '
       courseA_forVideoTest_artist: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_harvester_seq12: Posbírej všechnu kukuřici.
+      courseA_harvester_seq12_2019: Posbírej všechnu kukuřici.
       courseA_maze_ramp5_2018: Vyhni se TNT!
       courseA_maze_ramp5a_2018: Dostaň mne k prasátku!
+      courseA_maze_ramp5a_2019: Dostaň mne k prasátku!
       courseA_maze_seq1: Dostaň mne k prasátku!
       courseA_maze_seq12: 'Dostaň to prase! '
       courseA_maze_seq12_2018: 'Dostaň to prase! '
+      courseA_maze_seq12_2019: 'Dostaň to prase! '
       courseA_maze_seq1_2018: Dostaň mne k prasátku!
+      courseA_maze_seq1_2019: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq2_2018: Změň kód, abys mne dostal k prasátku!
       courseB_Scrat_ramp5a_2018: Dostaň mne k prasátku!
+      courseB_Scrat_ramp5a_2019: Dostaň mne k prasátku!
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul

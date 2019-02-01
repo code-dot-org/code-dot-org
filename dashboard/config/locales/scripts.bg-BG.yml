@@ -2319,3 +2319,27 @@ bg:
               name: Двоични гривни
         gamelab:
           title: Играта лаборатория
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Реални алгоритми: Засадете семената'
+            Going Places Safely:
+              name: Достигаме безопасно до места
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Преместете го, преместете го
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Преместете го, преместете го
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+            Spelling Bee:
+              name: Правопис
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Реални алгоритми: Засадете семената'

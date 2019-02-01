@@ -14,6 +14,12 @@ const announcement = {
   link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
 };
 
+const announcementNoLink = {
+  heading: "Go beyond an Hour of Code",
+  buttonText: "Go Beyond",
+  description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
+};
+
 const information = {
   notice: "Did you know Clark Kent grew up in Kansas?",
   details: "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
@@ -89,6 +95,42 @@ describe('Notification', () => {
         <div/>
       </div>
     );
+  });
+  it('renders an announcement notification with no button because no link provided', () => {
+    const wrapper = shallow(
+      <Notification
+        type="bullhorn"
+        notice={announcementNoLink.heading}
+        details={announcementNoLink.description}
+        dismissible={false}
+        buttonText={announcementNoLink.buttonText}
+        buttonLink={announcementNoLink.link}
+        newWindow={true}
+        analyticId={announcementNoLink.id}
+      />, {context: {store}},
+    ).dive();
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <div>
+          <div>
+            <FontAwesome icon="bullhorn"/>
+          </div>
+          <div>
+            <div>
+              <div>
+                {announcementNoLink.heading}
+              </div>
+              <div>
+                {announcementNoLink.description}
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      <div/>
+      </div>
+  );
   });
   it('renders an information notification', () => {
     const wrapper = shallow(

@@ -1221,6 +1221,12 @@ he:
         mc_3_a: 'בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  '
         mc_3_b: 'אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  '
         mc_3_c: 'אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.  '
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
       Underground Avoiding Lava_authored_hint:
         mc_11_a: כל הקוד מוכן ומזומן לבדוק האם יש בשטח לבה, ולהתמודד איתה. כל שעליכם לעשות הוא להוסיף בלוק כדי לזוז.
         mc_11_b: האם פקודת ה`זוז קדימה` שהצבתם צריכה להיות בתוך הצהרת ה`אם` - או אחריה?
@@ -1305,24 +1311,57 @@ he:
         courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       courseA_artist_loops8_2018_authored_hint:
         courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
       courseA_collector_loops_challenge2kp_2018_authored_hint:
         courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
+        courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_c: השתמשו בנתיב כדי לאסוף את כל התירס!
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_c: השתמשו בנתיב כדי לאסוף את כל התירס!
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: לחצו 'הרץ' וראו מה קורה!
         courseA_harvester_loops5b_c: זוזו בכיוון אחד, ואז בכיוון השני בנתיב הזה.
+      courseA_harvester_loops5b_2019_authored_hint:
+        courseA_harvester_loops5b_a: לחצו 'הרץ' וראו מה קורה!
+        courseA_harvester_loops5b_c: זוזו בכיוון אחד, ואז בכיוון השני בנתיב הזה.
       courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_b: השתמשו בשתי לולאות כדי ללכת בנתיב הזה.
+      courseA_harvester_loops7_2019_authored_hint:
         courseA_harvester_loops7_b: השתמשו בשתי לולאות כדי ללכת בנתיב הזה.
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_c: לך בנתיב כדי לאסוף את כל התירס.
+      courseA_harvester_loops9_2019_authored_hint:
+        courseA_harvester_loops9_c: לך בנתיב כדי לאסוף את כל התירס.
       courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_c: נסו להשתמש בנתיב הזה כדי לאסוף את כל התירס.
+      courseA_harvester_seq10_2019_authored_hint:
         courseA_harvester_seq10_c: נסו להשתמש בנתיב הזה כדי לאסוף את כל התירס.
       courseA_harvester_seq5_authored_hint:
         courseA_harvester_seq5_b: אתם צריכים למחוק בלוק אחד.
+      courseA_harvester_seq5_2019_authored_hint:
+        courseA_harvester_seq5_b: אתם צריכים למחוק בלוק אחד.
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1361,6 +1400,25 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           הקוד שלך צריך להיראות כך:
@@ -1380,7 +1438,45 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1422,9 +1518,30 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
       courseA_maze_seq5_2018_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
@@ -1432,9 +1549,20 @@ he:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -1453,7 +1581,42 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1491,7 +1654,45 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1529,9 +1730,30 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_collector_loops_challenge2a_2018_authored_hint:
+        courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
+      courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!
@@ -1540,17 +1762,37 @@ he:
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!
+      courseB_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!
+      courseB_iceage_loops1_2019_authored_hint:
+        courseB_iceage_loops1_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!
+        courseB_iceage_loops1_b: |-
+          יהיה עליך להשתמש בבלוק הזה:
+          <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.
+        courseB_iceage_loops2_b: אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.
+        courseB_iceage_loops2_c: לך בנתיב אשר יביא את סקראט אל הבלוט.
+      courseB_iceage_loops2_2019_authored_hint:
         courseB_iceage_loops2_a: נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.
         courseB_iceage_loops2_b: אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.
         courseB_iceage_loops2_c: לך בנתיב אשר יביא את סקראט אל הבלוט.
       courseB_iceage_loops6_authored_hint:
         courseB_iceage_loops6_a: בקוד הסופי שלכם יהיו **שלושה** בלוקים של תנועה.
+      courseB_iceage_loops6_2019_authored_hint:
+        courseB_iceage_loops6_a: בקוד הסופי שלכם יהיו **שלושה** בלוקים של תנועה.
       courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?
+      courseB_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?
       courseB_iceage_loops9_authored_hint:
         courseB_iceage_loops9_c: סקראט צריך ללכת בדרך המובילה אל הבלוט.
+      courseB_iceage_loops9_2019_authored_hint:
+        courseB_iceage_loops9_c: סקראט צריך ללכת בדרך המובילה אל הבלוט.
       courseB_maze_seq1_2018_authored_hint:
+        courseB_maze_seq1_a: חבר את הבלוקים אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט לזוז!
+        courseB_maze_seq1_b: גרור את שלושת החצים <xml><block type="maze_moveSouth"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט להגיע אל הבלוט.
+      courseB_maze_seq1_2019_authored_hint:
         courseB_maze_seq1_a: חבר את הבלוקים אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט לזוז!
         courseB_maze_seq1_b: גרור את שלושת החצים <xml><block type="maze_moveSouth"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט להגיע אל הבלוט.
       courseB_maze_seq2_2018_authored_hint:
@@ -1561,11 +1803,17 @@ he:
         courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
       courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
+      courseB_maze_seq5_2019_authored_hint:
+        courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
       courseB_maze_seq6_2018_authored_hint:
         courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: הוסף בלוק אחד כדי להזיז את סקראט אל הבלוט.
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_a: הוסף בלוק אחד כדי להזיז את סקראט אל הבלוט.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: ישנן 2 דרכים לפתור את החידה הזו!
@@ -1573,13 +1821,19 @@ he:
         courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
       courseB_maze_seq9_2018_authored_hint:
         courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
+      courseB_maze_seq9_2019_authored_hint:
+        courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
       courseB_playlab_events6_authored_hint:
         courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
       courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
+      courseB_playlab_events6_2019_authored_hint:
+        courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 'אם תשתמש בבלוק ''הזז קדימה ב 100 פיקסלים'', אני אצייר קו בצורה אוטומטית.'
@@ -2529,6 +2783,9 @@ he:
       courseF_playlab_variables6c_2018_authored_hint:
         courseF_playlab_variables6c_a: תחת איזור "קלט", השתמש בבלוק "שאל" כדי לקבל קלט ממשתמשים.
       coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
+        courseC_maze_programming1_b: אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
+      coursea_maze_ramp1_2019_authored_hint:
         courseC_maze_programming1_a: אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
         courseC_maze_programming1_b: אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       coursef_maze_ramp3_authored_hint:
