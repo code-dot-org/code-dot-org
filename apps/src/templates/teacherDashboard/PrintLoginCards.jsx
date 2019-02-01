@@ -48,6 +48,13 @@ const styles = {
     fontSize: 14,
     fontFamily: '"Gotham 4r", sans-serif',
     color: 'dimgray',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+  img: {
+    width: 150,
+    marginTop: 10,
   }
 };
 
@@ -118,25 +125,28 @@ class LoginCard extends React.Component {
 
     return (
       <div style={styles.card}>
-        <div>
+        <p>
           {/* TODO: fix link below */}
           {i18n.loginCard_instructions({url: "http://code.org/join", code: section.code})}
-        </div>
-        <div>
+        </p>
+        <p>
+          <span style={styles.bold}>{i18n.loginCard_directUrl()}</span>
           {/* TODO: fix link below */}
-          {i18n.loginCard_directUrl() + `studio.code.org/sections/${section.code}`}
-        </div>
-        <div>
-          {i18n.loginCard_sectionName() + section.name}
-        </div>
-        <div>
-          {i18n.loginCard_name() + student.name}
-        </div>
-        <div>
-          {i18n.loginCard_secret({wordOrPicture: section.loginType})}
+          {` studio.code.org/sections/${section.code}`}
+        </p>
+        <p>
+          <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
+          {` ${section.name}`}
+        </p>
+        <p>
+          <span style={styles.bold}>{i18n.loginCard_name()}</span>
+          {` ${student.name}`}
+        </p>
+        <p>
+          <div style={styles.bold}>{i18n.loginCard_secret({wordOrPicture: section.loginType})}</div>
           {/* TODO: fix link below */}
-          <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path}/>
-        </div>
+          <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path} style={styles.img}/>
+        </p>
       </div>
     );
   }
