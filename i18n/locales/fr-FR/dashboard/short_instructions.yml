@@ -1134,6 +1134,7 @@ fr:
       Ryan - 4-5 Bee Conditionals 2: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
       Ryan - Bee Conditionals: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
       Ryan Test Locked Blocks: Voici une fonction appelée «Patrouille». Modifie-la pour déplacer le Chat vers le haut de 400 pixels, puis vers le bas de 400 pixels.
+      Ryan_Demo: Faites que l'orignal commence un nouveau mouvement après 4 mesures !
       SpecialFrozenLevel: Tu es officiellement devenu un artiste maître ! Crée un merveilleux paysage hivernal.
       Standalone_Artist_1: Bienvenue à l'Artiste ! Tout d'abord, nous allons essayer de faire un simple carré à l'aide du bloc «Tourner à droite» et du bloc «Avancer». Chaque côté doit mesurer 100 pixels.
       Standalone_Artist_2: Dessine ce losange avec des angles de 120 et 60 degrés et des côtés de 150 pixels de long.
@@ -1253,27 +1254,36 @@ fr:
       course4_artist_fwp_challenge1: Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)
       courseA_artist_loops12: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
       courseA_artist_loops12_2018: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
+      courseA_artist_loops12_2019: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
       courseA_artist_loops7: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       courseA_artist_loops7_2018: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
+      courseA_artist_loops7_2019: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       courseA_artist_loops7_forVideo: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       courseA_artist_loops9: 'Défi : Réparer l’escalier.'
       courseA_artist_loops9_2018: 'Défi : Réparer l’escalier.'
+      courseA_artist_loops9_2019: 'Défi : Réparer l’escalier.'
       courseA_collector_loops1: Déplace Laurel et récupère autant de trésors que tu peux!
       courseA_collector_loops10: Aide Laurel à récupérer tous les trésors de cette vallée profonde.
       courseA_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de cette vallée profonde.
+      courseA_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de cette vallée profonde.
       courseA_collector_loops11: Aide Laurel à récupérer tous les trésors de cette cave.
       courseA_collector_loops11_2018: Aide Laurel à récupérer tous les trésors de cette cave.
+      courseA_collector_loops11_2019: Aide Laurel à récupérer tous les trésors de cette cave.
       courseA_collector_loops12: 'Eurêka !  Récupère autant de trésors que tu peux!'
       courseA_collector_loops12_2018: 'Eurêka !  Récupère autant de trésors que tu peux!'
+      courseA_collector_loops12_2019: 'Eurêka !  Récupère autant de trésors que tu peux!'
       courseA_collector_loops1_2018: Déplace Laurel et récupère autant de trésors que tu peux!
+      courseA_collector_loops1_2019: Déplace Laurel et récupère autant de trésors que tu peux!
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\\r\n\\r\nPress \"Run\" to see her walk up to the treasure and grab it."
       courseA_forVideoTest_artist: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       courseA_maze_seq2: Modifie le code pour m'amener au cochon !
       courseA_maze_seq2_2018: Modifie le code pour m'amener au cochon !
       courseB_collector_loops10: Aide Laurel à récupérer tous les trésors de cette cave.
       courseB_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de cette cave.
+      courseB_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de cette cave.
       courseB_collector_loops11: Eurêka !  Récupère autant de trésors que tu peux!
       courseB_collector_loops11_2018: Eurêka !  Récupère autant de trésors que tu peux!
+      courseB_collector_loops11_2019: Eurêka !  Récupère autant de trésors que tu peux!
       courseC_PlayLab_events3: "Peux-tu écrire un programme pour que ce c\nhien se déplace jusqu'au chat ?"
       courseC_PlayLab_events3_2018: "Peux-tu écrire un programme pour que ce c\nhien se déplace jusqu'au chat ?"
       courseC_PlayLab_events3_2019: "Peux-tu écrire un programme pour que ce c\nhien se déplace jusqu'au chat ?"

@@ -35,10 +35,12 @@
 #
 
 module Pd::Application
-  class FacilitatorApplicationBase < WorkshopAutoenrolledApplication
+  class FacilitatorApplicationBase < ApplicationBase
+    include PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
 
     serialized_attrs %w(
+      pd_workshop_id
       fit_workshop_id
       auto_assigned_fit_enrollment_id
       question_1
@@ -96,6 +98,10 @@ module Pd::Application
       fit_workshop.try(&:date_and_location_name)
     end
 
+    def assigned_workshop_date_and_location
+      Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
     def log_fit_workshop_change(user)
       update_status_timestamp_change_log(user, "Fit Workshop: #{fit_workshop_id ? fit_workshop_date_and_location : 'Unassigned'}")
     end
@@ -103,6 +109,14 @@ module Pd::Application
     def registered_fit_workshop?
       # inspect the cached fit_workshop.enrollments rather than querying the DB
       fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id
+    end
+
+    def friendly_registered_workshop(workshop_id = pd_workshop_id)
+      Pd::Enrollment.find_by(user: user, workshop: workshop_id) ? 'Yes' : 'No'
+    end
+
+    def friendly_registered_fit_workshop
+      friendly_registered_workshop(fit_workshop_id)
     end
 
     def self.options
@@ -395,9 +409,34 @@ module Pd::Application
       self.auto_assigned_fit_enrollment_id = nil
     end
 
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_facilitators/#{id}", CDO.default_scheme)
+    end
+
     # override
     def enroll_user
-      super
+      return unless pd_workshop_id
+
+      enrollment = Pd::Enrollment.where(
+        pd_workshop_id: pd_workshop_id,
+        email: user.email
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update!(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+
+        destroy_autoenrollment
+        self.auto_assigned_enrollment_id = enrollment.id
+      end
+
       return unless fit_workshop_id
 
       enrollment = Pd::Enrollment.where(
@@ -410,34 +449,17 @@ module Pd::Application
       #   - save a reference to it in properties
       #   - delete the previous auto-created enrollment if it exists
       if enrollment.new_record?
-        enrollment.update(
+        enrollment.update!(
           user: user,
           school_info: user.school_info,
           full_name: user.name
         )
-        enrollment.save!
 
         destroy_fit_autoenrollment
         self.auto_assigned_fit_enrollment_id = enrollment.id
       end
     end
 
-    # Assigns the default FiT workshop, if one is not yet assigned
-    def assign_default_fit_workshop!
-      return if fit_workshop_id
-      update! fit_workshop_id: find_default_fit_workshop.try(:id)
-    end
-
-    def find_default_fit_workshop
-      return unless regional_partner
-
-      find_fit_workshop(
-        course: workshop_course,
-        city: find_default_fit_teachercon[:city]
-      )
-    end
-
-    # override
     def self.prefetch_associated_models(applications)
       # also prefetch fit workshops
       prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact

@@ -1,20 +1,25 @@
 import React, {PropTypes, Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
+import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import StatsTableWithData from './StatsTableWithData';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 
 export default class TeacherDashboard extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
     studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {sectionId, studioUrlPrefix} = this.props;
+    const {studioUrlPrefix} = this.props;
 
     return (
       <div>
+        <SelectSectionDropdown/>
         <TeacherDashboardNavigation/>
         <Switch>
           <Route
@@ -23,25 +28,27 @@ export default class TeacherDashboard extends Component {
           />
           <Route
             path="/progress"
-            component={props => <div>Progress content goes here!</div>}
+            component={props => <SectionProgress/>}
           />
           <Route
             path="/manage_students"
-            component={props => <div>Manage Students content goes here!</div>}
+            component={props => <ManageStudents studioUrlPrefix={studioUrlPrefix}/>
+            }
           />
           <Route
             path="/projects"
-            component={props => <SectionProjectsListWithData {...props} sectionId={sectionId} studioUrlPrefix={studioUrlPrefix}/>}
+            component={props => <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix}/>}
           />
           <Route
             path="/text_responses"
-            component={props => <div>Text responses content goes here!</div>}
+            component={props => <TextResponses/>}
           />
           <Route
             path="/assessments"
-            component={props => <div>Assessments/Surveys content goes here!</div>}
+            component={props => <SectionAssessments/>}
           />
-          <Route component={props => <div>Progress content goes here - default for now.</div>} />
+          {/* Render <SectionProgress/> by default */}
+          <Route component={props => <SectionProgress/>} />
         </Switch>
       </div>
     );

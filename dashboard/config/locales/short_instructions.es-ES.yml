@@ -2290,6 +2290,7 @@ es:
         para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.
       RyanTest3: "¡Este nivel tiene activado el cambio de forma! Actualiza para ver
         diferentes variantes."
+      Ryan_Demo: "¡Haz que el alce inicie un movimiento nuevo después de 4 compases!"
       SG U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea simplemente usando
         punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos sean
         transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
@@ -2623,6 +2624,7 @@ es:
       courseA_maze_seq2_2018: Cambie el código para traerme al cerdo!
       courseB_starWars_prog1: '"Ve a tomar el pedazo de metal, BB-8"'
       courseB_starWars_prog1_2018: '"Ve a tomar el pedazo de metal, BB-8"'
+      courseB_starWars_prog1_2019: '"Ve a tomar el pedazo de metal, BB-8"'
       courseC_PlayLab_events3: "¿Puedes escribir un programa para hacer que el perro
         se mueva hasta el gato?"
       courseC_PlayLab_events3_2018: "¿Puedes escribir un programa para hacer que el

@@ -467,6 +467,8 @@ sk:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať včelie plásty.
+      Ryan_Demo_callout:
+        dance_callout_02: Pridaj tento blok do svojho programu!
       SG U3L08 how to add comments_callout:
         comment_highlight: Presuňte blok s komentárom odtiaľto do Vášho kódu
       SG U3L2_Turtle3by3Grid_callout:
@@ -531,6 +533,12 @@ sk:
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Toto číslo znamená počet blokov, ktoré môžete použiť v tejto
           hre.
+      behaviors 1_callout:
+        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 4_callout:
+        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 5_callout:
+        behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral
           všetok nektár (alebo med) z jedného kvetu (alebo medového plástu).
@@ -568,10 +576,16 @@ sk:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Toto číslo znamená počet blokov, ktoré môžete použiť
           v tejto hre.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Toto číslo znamená počet blokov, ktoré môžete použiť
+          v tejto hre.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Toto číslo znamená, že len jeden typ blokov môže
           byť použitý v riešení.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Toto číslo znamená, že len jeden typ blokov môže
+          byť použitý v riešení.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Toto číslo znamená, že len jeden typ blokov môže
           byť použitý v riešení.
       courseA_artist_loops7_forVideo_callout:
@@ -583,16 +597,25 @@ sk:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Vedel si, že môžeš kedykoľvek po čiare kresliť aj
           smerom naspäť?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Vedel si, že môžeš kedykoľvek po čiare kresliť aj
+          smerom naspäť?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
           použiť v tejto hre.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
+          použiť v tejto hre.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
           použiť v tejto hre.
       courseA_collector_preLoops1_callout:
@@ -615,6 +638,9 @@ sk:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
           pre dokončenie Vaších cvičení.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
+          pre dokončenie Vaších cvičení.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
           pre dokončenie Vaších cvičení.
@@ -628,6 +654,8 @@ sk:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Ak potrebuješ nápovedu, klikni na žiarovku!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Použite tlačidlo "Kroky" na prejdenie programom
@@ -645,9 +673,13 @@ sk:
         courseA_playlab_events4_callout1: Toto je hlásenie
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Toto je hlásenie
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Toto je hlásenie
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Kliknite sem pre zmenu smeru šípky s akciou.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Kliknite sem pre zmenu smeru šípky s akciou.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Kliknite sem pre zmenu smeru šípky s akciou.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Toto Vám umožní vybrať "náhodný" zvuk, čo znamená,
@@ -655,13 +687,22 @@ sk:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Toto Vám umožní vybrať "náhodný" zvuk, čo znamená,
           že nebudete vedieť, čo sa bude hrať až kým to nespustíte!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Toto Vám umožní vybrať "náhodný" zvuk, čo znamená,
+          že nebudete vedieť, čo sa bude hrať až kým to nespustíte!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
           pre spustenie vášho programu.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi.
           Ako ho použijete?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi.
+          Ako ho použijete?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi.
           Ako ho použijete?
       courseB_artist_loops5_callout:
@@ -673,9 +714,14 @@ sk:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Ak potrebuješ nápovedu, klikni na žiarovku!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Použite tlačidlo "Kroky" na prejdenie programom
@@ -690,6 +736,8 @@ sk:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Použite zelenú šípku pre zmenu smeru.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Použite zelenú šípku pre zmenu smeru.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Použite zelenú šípku pre zmenu smeru.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Dostaňte herca k tejto vlajočke pre postup do
@@ -754,6 +802,9 @@ sk:
         courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
+      courseC_maze_debugging9_2019_callout:
+        courseC_maze_debugging9_2019_1: Presuň bloky zo zoznamu do tvojej pracovnej
+          plochy.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_maze_programming1_callout:
@@ -983,6 +1034,8 @@ sk:
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.
+      courseE_aboutme_4_callout:
+        courseE_aboutme_4_callout_1: Klikni sem pre nakreslenie postavy.
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého
           štvorca.
@@ -1365,12 +1418,18 @@ sk:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlač tlačidlo "Spustiť",
           ktoré spustí tvoj program.
+      coursea_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: Po pospájaní všetkých blokov stlač tlačidlo "Spustiť",
+          ktoré spustí tvoj program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov
           pre ich odstránenie.
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov
           pre ich odstránenie.
+      express_maze_debugging9_2019_callout:
+        express_maze_debugging9_2019_1: Presuň bloky zo zoznamu do tvojej pracovnej
+          plochy.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu"
           a zmeň veľkost.

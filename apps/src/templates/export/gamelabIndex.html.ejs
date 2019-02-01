@@ -24,8 +24,8 @@
       }
     </style>
   </head>
-  <body class="<%- exportClass %>" style="margin:0; overflow:hidden; position:absolute; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
-    <div id="sketch" class="<%- exportClass %>" style="position: absolute;"></div>
+  <body class="<%- exportClass %>" style="margin:0; overflow:hidden; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; position:fixed; top:0; left:0; width:<%- appWidth %>px; height:<%- appHeight %>px;">
+    <div id="sketch" class="<%- exportClass %>" style="position:absolute;"></div>
     <div id="soft-buttons" class="soft-buttons-none">
       <button id="leftButton" disabled className="arrow">
       </button>

@@ -277,3 +277,17 @@ hu:
       PaperPlanes_2019:
         title: 'Hétköznapi algoritmusok: Papírrepülők'
         desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető szerepet a számítástechnikában az algoritmusok.
+      PlantASeed_2019:
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető szerepet.
+      UnplugHappyMaps_2019:
+        title: Vidám térképek
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre, hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+      GoingPlacesSafely_2019:
+        title: Biztonságos utazás
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják, hogyan maradhat biztonságos az interneten való jelenlét.
+      MoveItMoveIt_2019:
+        title: Mozgás, mozgás
+      DigitalFootprint_2019:
+        title: A digitális lábnyomod
+        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.

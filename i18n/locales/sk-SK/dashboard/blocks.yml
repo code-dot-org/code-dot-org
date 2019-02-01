@@ -963,14 +963,16 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
-      aalab_spritesWhere:
+      aalab_clickedOn:
         options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-            '"direction"': smeru pohybu
-            '"tint"': sfarbenie
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
       binary_move:
         options:
           DIR:

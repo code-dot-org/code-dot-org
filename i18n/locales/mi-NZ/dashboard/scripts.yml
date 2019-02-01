@@ -1301,3 +1301,27 @@ mi:
               name: 'Hātepe Motuhenga: Waka Rererangi Pepa'
             Binary Bracelets:
               name: Kōmore Ā-Rua
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Hātepe Motuhenga: Whakatōkia he Kano'
+            Going Places Safely:
+              name: Te Karore Haumaru
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: E Neke, E Neke
+            Your Digital Footprint:
+              name: Tō Tapuwae Matihiko
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: E Neke, E Neke
+            Your Digital Footprint:
+              name: Tō Tapuwae Matihiko
+            Spelling Bee:
+              name: Ohu Takikupu
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Hātepe Motuhenga: Whakatōkia he Kano'

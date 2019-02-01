@@ -1518,3 +1518,27 @@ kk:
               name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
             Binary Bracelets:
               name: Екілік Білезіктер
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+            Going Places Safely:
+              name: Қауіпсіз Жерді Табу
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+            Your Digital Footprint:
+              name: Сіздің сандық іздеріңіз
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+            Your Digital Footprint:
+              name: Сіздің сандық іздеріңіз
+            Spelling Bee:
+              name: Сөз жазушы Ара
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'

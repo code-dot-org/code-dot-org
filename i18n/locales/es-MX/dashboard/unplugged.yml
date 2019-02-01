@@ -321,3 +321,20 @@ es-MX:
       PaperPlanes_2019:
         title: 'Algoritmos de la vida real : Aviones de papel'
         desc: Esta lección muestra la manera en que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel esencial.
+      PlantASeed_2019:
+        title: 'Algoritmos de la vida real: Planta una semilla'
+        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
+      UnplugHappyMaps_2019:
+        title: Mapas felices
+        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
+      GoingPlacesSafely_2019:
+        title: Ir a sitios seguros
+        desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
+      courseA_unplugged_loops_2019:
+        title: Ciclos desconectados
+        desc: '¡En esta lección aprenderas sobre ciclos!'
+      MoveItMoveIt_2019:
+        title: Muévelo, Muévelo
+      DigitalFootprint_2019:
+        title: Tu huella dactilar
+        desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.

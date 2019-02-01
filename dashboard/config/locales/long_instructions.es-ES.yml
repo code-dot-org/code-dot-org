@@ -1375,6 +1375,13 @@ es:
         Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.
         * Terminar
         la imagen al descubrir qué dos colores faltan y codificarlos.
+      Ryan_Demo: |-
+        ¡Pongamos a este alce a bailar!
+
+        Arrastra el bloque de «floss» <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo bajo el bloque de «compases» <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Tu bailarín debería iniciar un nuevo movimiento después del cuarto compás.
+
+
+        Los **compases** se utilizan para contar el tiempo en música. En este tutorial, un compás tiene cuatro tiempos.
       Testing Quantum Farmer: "Wow, mira eso! \r\n\r\nYo no\nse cuántas palas de tierra
         necesita este hoyo. \r\n¿Puedes tu escribir un programa\nque siga usando el
         bloque `llenar` hasta que el suelo esté parejo?\n  "

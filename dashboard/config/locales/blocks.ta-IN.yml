@@ -160,6 +160,16 @@ ta:
         text: இடதுபுறம் திரும்பவும்
       RyanLab_turnRight:
         text: வலதுபுறம் திரும்பவும்
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
+      aalab_whenTouching:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
       binary_whenKey:
         options:
           KEY:
