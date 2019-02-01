@@ -1,3 +1,4 @@
+---
 kind: pipeline
 name: unit
 
@@ -98,3 +99,8 @@ trigger:
 #   event:
 #     include:
 #     - pull_request
+---
+kind: signature
+hmac: 9f72be71d82bcfea9865aad1a6c4ed47fe6b29d8f1be25cc00b895005a846e94
+
+...
