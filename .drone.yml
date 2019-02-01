@@ -1,0 +1,100 @@
+kind: pipeline
+name: unit
+
+clone:
+  depth: 50
+
+steps:
+- name: unit-tests
+  image: wintercdo/code-dot-org:0.7
+  volumes:
+  - name: rbenv
+    path: /home/circleci/.rbenv
+  - name: mysql
+    path: /var/lib/mysql
+  environment:
+    CLOUDFRONT_KEY_PAIR_ID:
+      from_secret: CLOUDFRONT_KEY_PAIR_ID
+    CLOUDFRONT_PRIVATE_KEY:
+      from_secret: CLOUDFRONT_PRIVATE_KEY
+    PROPERTIES_ENCRYPTION_KEY:
+      from_secret: PROPERTIES_ENCRYPTION_KEY
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
+  commands:
+    - pwd
+    - sudo chown -R circleci:circleci .
+    - /entrypoint.sh docker/unit_tests.sh
+
+volumes:
+- name: rbenv
+  temp: {}
+- name: mysql
+  temp: {}
+
+trigger:
+  event:
+    include:
+    - pull_request
+
+# ---
+# kind: pipeline
+# name: ui
+
+# clone:
+#   depth: 50
+
+# services:
+# - name: ui-tests-redis
+#   image: redis
+#   ports:
+#   - 6379
+
+# steps:
+# - name: ui-tests
+#   image: wintercdo/code-dot-org:0.7
+#   volumes:
+#   - name: rbenv
+#     path: /home/circleci/.rbenv
+#   - name: mysql
+#     path: /var/lib/mysql
+#   environment:
+#     CLOUDFRONT_KEY_PAIR_ID:
+#       from_secret: CLOUDFRONT_KEY_PAIR_ID
+#     CLOUDFRONT_PRIVATE_KEY:
+#       from_secret: CLOUDFRONT_PRIVATE_KEY
+#     PROPERTIES_ENCRYPTION_KEY:
+#       from_secret: PROPERTIES_ENCRYPTION_KEY
+#     AWS_ACCESS_KEY_ID:
+#       from_secret: AWS_ACCESS_KEY_ID
+#     AWS_SECRET_ACCESS_KEY:
+#       from_secret: AWS_SECRET_ACCESS_KEY
+#     APPLITOOLS_KEY:
+#       from_secret: APPLITOOLS_KEY
+#     FIREBASE_NAME:
+#       from_secret: FIREBASE_NAME
+#     SAUCE_USERNAME:
+#       from_secret: SAUCE_USERNAME
+#     SAUCE_ACCESS_KEY:
+#       from_secret: SAUCE_ACCESS_KEY
+#   commands:
+#     - pwd
+#     - whoami
+#     - id -u
+#     - id -g
+#     - ls -alh
+#     - sudo chown -R circleci:circleci .
+#     - /entrypoint.sh docker/ui_tests.sh
+
+# volumes:
+# - name: rbenv
+#   temp: {}
+# - name: mysql
+#   temp: {}
+
+# trigger:
+#   event:
+#     include:
+#     - pull_request
