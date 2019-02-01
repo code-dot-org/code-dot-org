@@ -40,6 +40,7 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
         var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
         worker.attachToDocument(session.getDocument());
         var newOptions = {
+          eqeqeq: false,
           unused: true,
           undef: true,
           maxerr: 1000,
