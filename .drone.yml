@@ -6,6 +6,10 @@ clone:
   depth: 50
 
 steps:
+- name: verify-pr
+  image: wintercdo/code-dot-org:0.7
+  commands:
+    - env
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
   volumes:
