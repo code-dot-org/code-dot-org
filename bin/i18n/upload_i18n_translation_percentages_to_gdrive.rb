@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative('../../dashboard/config/environment')
+require_relative('../../dashboard/config/deployment')
 require 'cdo/languages'
 require 'cdo/google_drive'
 require 'csv'
