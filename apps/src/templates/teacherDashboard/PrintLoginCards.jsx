@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -35,6 +34,24 @@ export default connect(state => ({
   students: state.sectionData.section.students,
 }))(PrintLoginCards);
 
+const styles = {
+  container: {
+    width: 840,
+  },
+  card: {
+    border: '1px dashed black',
+    width: 378,
+    height: 324,
+    padding: 10,
+    margin: 8,
+    float: 'left',
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: 'dimgray',
+  }
+};
+
+
 class WordOrPictureLoginCards extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
@@ -42,7 +59,8 @@ class WordOrPictureLoginCards extends React.Component {
   };
 
   printLoginCards = () => {
-    const printArea = $('#printArea').html();
+    const printArea = document.getElementById('printArea').outerHTML;
+    // TODO: add uniqueId to window name
     let printWindow = window.open('', 'printWindow', '');
     const {section} = this.props;
 
@@ -79,9 +97,9 @@ class WordOrPictureLoginCards extends React.Component {
           onClick={this.printLoginCards}
         />
         <br/>
-        <div id="printArea">
+        <div id="printArea" style={styles.container}>
           {(students || []).map(student => (
-            <LoginCard key={student.id} student={student}/>
+            <LoginCard key={student.id} section={section} student={student}/>
           ))}
         </div>
       </div>
@@ -91,15 +109,34 @@ class WordOrPictureLoginCards extends React.Component {
 
 class LoginCard extends React.Component {
   static propTypes = {
+    section: PropTypes.object.isRequired,
     student: PropTypes.object.isRequired,
   };
 
   render() {
-    const {student} = this.props;
+    const {section, student} = this.props;
 
     return (
-      <div>
-        {student.name}
+      <div style={styles.card}>
+        <div>
+          {/* TODO: fix link below */}
+          {i18n.loginCard_instructions({url: "http://code.org/join", code: section.code})}
+        </div>
+        <div>
+          {/* TODO: fix link below */}
+          {i18n.loginCard_directUrl() + `studio.code.org/sections/${section.code}`}
+        </div>
+        <div>
+          {i18n.loginCard_sectionName() + section.name}
+        </div>
+        <div>
+          {i18n.loginCard_name() + student.name}
+        </div>
+        <div>
+          {i18n.loginCard_secret({wordOrPicture: section.loginType})}
+          {/* TODO: fix link below */}
+          <img src={'http://localhost.code.org:3000/images/' + student.secret_picture_path}/>
+        </div>
       </div>
     );
   }
