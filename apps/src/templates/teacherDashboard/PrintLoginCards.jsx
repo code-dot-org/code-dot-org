@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -40,8 +41,15 @@ class WordOrPictureLoginCards extends React.Component {
     students: PropTypes.array.isRequired,
   };
 
-  printLoginCards = (event) => {
-    // TODO: implement this
+  printLoginCards = () => {
+    const printArea = $('#printArea').html();
+    let printWindow = window.open('', 'printWindow', '');
+    const {section} = this.props;
+
+    printWindow.document.write(`<html><head><title>${i18n.printLoginCards_windowTitle({sectionName: section.name})}</title></head>`);
+    printWindow.document.write('<body onafterprint="self.close()">');
+    printWindow.document.write(printArea);
+    printWindow.document.write('</body></html>');
   };
 
   render() {
@@ -52,6 +60,7 @@ class WordOrPictureLoginCards extends React.Component {
         <h1>{i18n.printLoginCards_signingIn()}</h1>
         <p>{i18n.printLoginCards_steps()}</p>
         <ol>
+          {/* TODO: make code.org/join link below dynamic */}
           <li>{i18n.printLoginCards_step1({joinUrl: "http://code.org/join"})}</li>
           <li>{i18n.printLoginCards_step2({code: section.code})}</li>
           <li>{i18n.printLoginCards_step3()}</li>
@@ -70,9 +79,11 @@ class WordOrPictureLoginCards extends React.Component {
           onClick={this.printLoginCards}
         />
         <br/>
-        {(students || []).map(student => (
-          <LoginCard key={student.id} student={student}/>
-        ))}
+        <div id="printArea">
+          {(students || []).map(student => (
+            <LoginCard key={student.id} student={student}/>
+          ))}
+        </div>
       </div>
     );
   }

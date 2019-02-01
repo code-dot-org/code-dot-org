@@ -964,6 +964,7 @@
   "printLoginCards_step3": "Choose their display name.",
   "printLoginCards_step4": "Choose their secret {wordOrPicture}.",
   "printLoginCards_step5": "Click the \"Sign in\" button.",
+  "printLoginCards_windowTitle": "Login Cards for {sectionName}",
   "privacyDocExplanation": "Click here for our privacy document that can be shared or printed for your students.",
   "professionalLearning": "Professional Learning",
   "professionalLearningDescription": "Our highly-rated professional learning prepares you for your next computer science class.",
