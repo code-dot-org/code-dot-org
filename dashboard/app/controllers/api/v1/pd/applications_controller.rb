@@ -70,18 +70,8 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          if [:csd_teachers, :csp_teachers].include? role
-            csv_text = get_csv_text applications, role
-            send_csv_attachment csv_text, "#{role}_applications.csv"
-          else
-            prefetch applications, role: role
-            course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-            csv_text = [
-              TYPES_BY_ROLE[role].csv_header(course, current_user),
-              *applications.map {|a| a.to_csv_row(current_user)}
-            ].join
-            send_csv_attachment csv_text, "#{role}_applications.csv"
-          end
+          csv_text = get_csv_text applications, role
+          send_csv_attachment csv_text, "#{role}_applications.csv"
         end
       end
     end
@@ -124,22 +114,16 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          if [:csd_teachers, :csp_teachers].include? role.to_sym
-            csv_text = get_csv_text applications, role
-            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-          else
-            optional_columns = get_optional_columns(regional_partner_value)
-            csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
-            send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-          end
+          csv_text = get_csv_text applications, role
+          send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
         end
       end
     end
 
     # GET /api/v1/pd/applications/fit_cohort
     def fit_cohort
-      serialized_fit_cohort = Pd::Application::Facilitator1819Application.fit_cohort(@applications).map do |application|
-        TcFitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
+      serialized_fit_cohort = FACILITATOR_APPLICATION_CLASS.fit_cohort(@applications).map do |application|
+        FitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
       end
 
       render json: serialized_fit_cohort
@@ -318,9 +302,8 @@ module Api::V1::Pd
       ].join
     end
 
-    # TODO: remove remaining teachercon references
     def get_optional_columns(_regional_partner_value)
-      {accepted_teachercon: false, registered_workshop: false}
+      {registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
@@ -331,7 +314,7 @@ module Api::V1::Pd
     end
 
     def prefetch(applications, role: nil)
-      type = TYPES_BY_ROLE[role.try(&:to_sym)] || Pd::Application::WorkshopAutoenrolledApplication
+      type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
     end
   end

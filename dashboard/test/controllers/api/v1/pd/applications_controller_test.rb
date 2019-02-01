@@ -994,28 +994,119 @@ module Api::V1::Pd
       response_csv = CSV.parse @response.body
 
       expected_headers = [
+        'Date Applied',
         'Date Accepted',
-        'Name',
-        'School District',
-        'School Name',
-        'Email',
         'Status',
-        'Assigned Workshop',
-        'General Notes',
-        'Notes 2',
-        'Notes 3',
-        'Notes 4',
-        'Notes 5',
-        'Question 1 Support Teachers',
-        'Question 2 Student Access',
-        'Question 3 Receive Feedback',
-        'Question 4 Give Feedback',
-        'Question 5 Redirect Conversation',
-        'Question 6 Time Commitment',
-        'Question 7 Regional Needs'
+        'Locked',
+        'Meets Minimum Requirements?',
+        'Teaching Experience Score',
+        'Leadership Score',
+        'Champion for CS Score',
+        'Equity Score',
+        'Growth Minded Score',
+        'Content Knowledge Score',
+        'Program Commitment Score',
+        'Application Total Score',
+        'Interview Total Score',
+        'Grand Total Score',
+        "General Notes",
+        "Notes 2",
+        "Notes 3",
+        "Notes 4",
+        "Notes 5",
+        "Title",
+        "First Name",
+        "Last Name",
+        "Account Email",
+        "Alternate Email",
+        "Home or Cell Phone",
+        "Home Address",
+        "City",
+        "State",
+        "Zip Code",
+        "Gender Identity",
+        "Race",
+        'Assigned Summer Workshop',
+        'Registered Summer Workshop?',
+        'Assigned FiT Workshop',
+        'Registered FiT Workshop?',
+        'Regional Partner',
+        'Link to Application',
+        'What type of institution do you work for?',
+        'Current employer',
+        'What is your job title?',
+        'Program',
+        'Are you currently (or have you been) a Code.org facilitator?',
+        'In which years did you work as a Code.org facilitator?',
+        'Please check the Code.org programs you currently facilitate, or have facilitated in the past:',
+        'Do you have experience as a classroom teacher?',
+        'Have you led learning experiences for adults?',
+        'Can you commit to attending the 2019 Facilitator Summit (May 17 - 19, 2019)?',
+        'Can you commit to facilitating a minimum of 4-6 one-day workshops starting summer 2019 and continuing throughout the 2019-2020 school year?',
+        'Can you commit to attending monthly webinars, or watching recordings, and staying up to date through bi-weekly newsletters and online facilitator communities?',
+        'Can you commit to engaging in appropriate development and preparation to be ready to lead workshops (time commitment will vary depending on experience with the curriculum and experience as a facilitator)?',
+        'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
+        'How are you currently involved in CS education?',
+        'If you do have classroom teaching experience, what grade levels have you taught? Check all that apply.',
+        'Do you have experience teaching the full {{CS Program}} curriculum to students?',
+        'Do you plan on teaching this course in the 2019-20 school year?',
+        'Have you attended a Code.org CS Fundamentals workshop?',
+        'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays.',
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Code.org's Professional Learning Programs are open to all teachers, regardless of their experience with CS education.
+          Why do you think Code.org believes that all teachers should have access to the opportunity to teach CS?"
+        ),
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Please describe a workshop you've led (or a lesson you've taught, if you haven't facilitated a workshop). Include a brief description of the workshop/lesson
+          topic and audience (one or two sentences). Then describe two strengths you demonstrated, as well as two facilitation skills you would like to improve.",
+        ),
+        Pd::Facilitator1920ApplicationConstants.clean_multiline(
+          "Code.org Professional Learning experiences incorporate inquiry-based learning into the workshops. Please briefly define  inquiry-based
+          learning as you understand it (one or two sentences). Then, if you have led an inquiry-based activity for students, provide a concrete
+          example of an inquiry-based lesson or activity you led. If you have not led an inquiry-based lesson, please write 'N/A.'",
+        ),
+        'Why do you want to become a Code.org facilitator? Please describe what you hope to learn and the impact you hope to make.',
+        'Is there anything else you would like us to know? You can provide a link to your resume, LinkedIn profile, website, or summarize your relevant past experience.',
+        'How did you hear about this opportunity?',
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_1]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_2]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_3]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_4]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_5]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_6]}",
+        "Interview #{Pd::Facilitator1920ApplicationConstants::INTERVIEW_QUESTIONS[:question_7]}"
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
+    end
+
+    test 'fit_cohort' do
+      fit_workshop = create :pd_workshop, :fit
+
+      # create some applications to be included in fit_cohort
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :waitlisted
+
+      #create some applications that won't be included in fit_cohort
+      # not locked
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
+
+      # not accepted or waitlisted
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id
+
+      # no workshop
+      create FACILITATOR_APPLICATION_FACTORY
+
+      sign_in @workshop_admin
+
+      get :fit_cohort
+      assert_response :success
+
+      result = JSON.parse response.body
+      actual_applications = result.map {|a| a["id"]}
+      expected_applications = FACILITATOR_APPLICATION_CLASS.fit_cohort.map(&:id)
+
+      assert_equal expected_applications, actual_applications
     end
 
     test 'search finds applications by email for workshop admins' do

@@ -49,10 +49,12 @@ class RegionalPartnerSearch extends Component {
     super(props);
 
     let showZip = true;
+    let zipValue = "";
     let error = false;
     let loading = false;
 
     const partnerId = queryString.parse(window.location.search).partner;
+    const zip = queryString.parse(window.location.search).zip;
 
     if (partnerId) {
       if (partnerId === "0") {
@@ -69,13 +71,16 @@ class RegionalPartnerSearch extends Component {
         showZip = false;
         loading = true;
       }
+    } else if (zip) {
+      this.lookupZip(zip);
+      zipValue = zip;
+      loading = true;
     }
 
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
-      stateValue: "",
-      zipValue: "",
+      zipValue: zipValue,
       error: error,
       loading: loading
     };
@@ -112,8 +117,14 @@ class RegionalPartnerSearch extends Component {
   handleZipSubmit = (event) => {
     this.setState({partnerInfo: undefined, error: false, loading: true});
 
+    this.lookupZip(this.state.zipValue);
+
+    event.preventDefault();
+  };
+
+  lookupZip = (zipValue) => {
     $.ajax({
-      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
+      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + zipValue,
       type: "get",
       dataType: "json",
       jsonp: false,
@@ -121,8 +132,6 @@ class RegionalPartnerSearch extends Component {
         source_page_id: this.props.sourcePageId
       }
     }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
-
-    event.preventDefault();
   };
 
   render() {
@@ -172,7 +181,15 @@ class RegionalPartnerSearch extends Component {
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
-          <div style={styles.noState}>Please enter a valid 5 digit ZIP code.</div>
+          <div>
+            <br/>
+            <div>We are unable to find this ZIP code.  You can still apply directly:</div>
+            <a href={studio("/pd/application/teacher")}>
+              <button>
+                Start application
+              </button>
+            </a>
+          </div>
         )}
 
         {this.state.loading && (
@@ -183,6 +200,16 @@ class RegionalPartnerSearch extends Component {
           <div style={styles.noPartner}>
             <p>We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.</p>
+            <p>
+              <span style={styles.bold}>Arkansas Teachers: </span>
+              Code.org does not have a Regional Partner in Arkansas, and we are unable to offer you a space in this program this year.  There are many great opportunities for
+              {' '}
+              <span style={styles.bold}>state-provided professional development </span>
+              for computer science in Arkansas in
+              {' '}
+              <a href="https://docs.google.com/document/d/1OeLNx97wiLon69e8lp45M6ox0BuYLCOSZedzrtMB8_k/edit" target="_blank">this document</a>
+              .
+            </p>
             <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,

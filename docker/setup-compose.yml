@@ -1,0 +1,34 @@
+# Docker Compose file for running the site locally.
+#
+# Set the FIXUID and FIXGID env variables with these commands (or put them in your .bash_profile / .bashrc):
+# export FIXUID=$(id -u)
+# export FIXGID=$(id -g)
+#
+# then run:
+# docker-compose -f unit-tests-compose.yml up
+# 
+# To clean up:
+# docker-compose -f unit-tests-compose.yml down
+
+version: '3'
+services:
+  site:
+    image: wintercdo/code-dot-org:0.7
+    user: ${FIXUID:-1000}:${FIXGID:-1000}
+    volumes:
+      - ../:/home/circleci/code-dot-org:delegated
+      - nodemodules:/home/circleci/code-dot-org/apps/node_modules
+      - rbenv:/home/circleci/.rbenv
+      - mysqldata:/var/lib/mysql
+      - yarncache:/home/circleci/.cache
+    env_file:
+      - env.list
+    ports:
+      - "3000:3000"
+    command: bash -c "docker/dev_setup.sh"
+
+volumes:
+  nodemodules:
+  mysqldata:
+  rbenv:
+  yarncache:
