@@ -1,8 +1,10 @@
--statistics = DB[:cdo_promote_impact_statistics].all.to_a
--statistics.each do |statistic|
-  %img{:style=>'max-width: 100%; margin-bottom: 20px;', :src=>"#{statistic[:share_url_s]}"}
-
-.share-buttons
-.stats-sources-link
-  %a{:href=>'https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'}<
-    Source data
+.impact-stats-link
+  .left
+    %p.title
+      Want to see more data?
+    %p.details
+      View more data on Code.org's impact on schools
+  .right
+    %a{:href=>'https://code.org/statistics', target: "_blank"}
+      %button
+        View Code.org Stats
