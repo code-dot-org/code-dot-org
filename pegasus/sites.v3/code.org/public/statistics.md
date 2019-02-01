@@ -40,7 +40,7 @@ Two-thirds of computing jobs are outside the tech sector, which is why we need t
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
 
 <br>
 
