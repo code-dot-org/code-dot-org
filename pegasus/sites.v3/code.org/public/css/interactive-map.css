@@ -30,7 +30,7 @@
 
 #infobox button {
   margin-top: 18px;
-  margin-bottom: 18px;
+  width: 100%;
 }
 
 #infobox b {
@@ -43,21 +43,6 @@
   background-color: #e2e4e3;
   color: #595959;
   margin-bottom: 10px;
-}
-
-.state-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.state-button {
-  margin: 10px;
-}
-
-.state-button button {
-  height: 60px;
-  white-space: initial;
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
@@ -84,6 +69,10 @@
 
 .icon-fact .fa-times-circle{
   color: lightgray;
+}
+
+.fa-circle{
+  color: dimgray;
 }
 
 .icon-fact .fa-check-circle{
