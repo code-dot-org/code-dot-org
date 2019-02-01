@@ -3,6 +3,8 @@ name: unit
 
 clone:
   depth: 50
+  git:
+    image: plugins/git:next
 
 steps:
 - name: unit-tests
