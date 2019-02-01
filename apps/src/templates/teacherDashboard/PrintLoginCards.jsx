@@ -41,7 +41,6 @@ const styles = {
   card: {
     border: '1px dashed black',
     width: 378,
-    height: 324,
     padding: 10,
     margin: 8,
     float: 'left',
